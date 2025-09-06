@@ -50,13 +50,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Productivity Tools"
               description="Task management, time tracking, and workflow optimization tools"
-              features={[
+              features={[}
                 "Task management systems",
                 "Time tracking & reporting",
                 "Team collaboration tools",
                 "Project management dashboards",
                 "Automation workflows",
-                "Integration APIs"
+                "Integration APIs"}
               ]}
               pricing="From $2,999/month"
               icon="⚡"
@@ -67,13 +67,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Marketing Tools"
               description="Email marketing, social media management, and campaign optimization"
-              features={[
+              features={[}
                 "Email marketing automation",
                 "Social media scheduling",
                 "Campaign analytics",
                 "Lead generation tools",
                 "A/B testing platforms",
-                "ROI tracking"
+                "ROI tracking"}
               ]}
               pricing="From $3,500/month"
               icon="📢"
@@ -84,13 +84,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Analytics Tools"
               description="Business intelligence, data visualization, and reporting solutions"
-              features={[
+              features={[}
                 "Custom dashboards",
                 "Data visualization",
                 "Real-time reporting",
                 "Predictive analytics",
                 "Custom metrics",
-                "Export capabilities"
+                "Export capabilities"}
               ]}
               pricing="From $2,200/month"
               icon="📊"
@@ -101,13 +101,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Communication Tools"
               description="Team chat, video conferencing, and collaboration platforms"
-              features={[
+              features={[}
                 "Team messaging",
                 "Video conferencing",
                 "File sharing",
                 "Screen sharing",
                 "Mobile apps",
-                "Integration hub"
+                "Integration hub"}
               ]}
               pricing="From $1,800/month"
               icon="💬"
@@ -118,13 +118,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Financial Tools"
               description="Invoicing, expense tracking, and financial management solutions"
-              features={[
+              features={[}
                 "Automated invoicing",
                 "Expense tracking",
                 "Financial reporting",
                 "Tax preparation",
                 "Payment processing",
-                "Budget management"
+                "Budget management"}
               ]}
               pricing="From $2,500/month"
               icon="💰"
@@ -135,13 +135,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Customer Support Tools"
               description="Helpdesk, ticketing, and customer service automation"
-              features={[
+              features={[}
                 "Ticket management",
                 "Knowledge base",
                 "Live chat integration",
                 "Customer feedback",
                 "Performance metrics",
-                "Multi-channel support"
+                "Multi-channel support"}
               ]}
               pricing="From $1,600/month"
               icon="🎧"
@@ -166,25 +166,25 @@ export default function MicroSaaSPage() {
               step="1"
               title="Discovery & Planning"
               description="Market research, user interviews, and technical architecture planning"
-              features={["Market analysis", "User research", "Technical planning", "MVP definition"]
+              features={["Market analysis", "User research", "Technical planning", "MVP definition"]}
             />
             <DevelopmentStep
               step="2"
               title="Design & Prototyping"
               description="UI/UX design, user flow mapping, and interactive prototyping"
-              features={["User experience design", "Interface design", "Prototyping", "User testing"]
+              features={["User experience design", "Interface design", "Prototyping", "User testing"]}
             />
             <DevelopmentStep
               step="3"
               title="Development & Testing"
               description="Full-stack development, API integration, and comprehensive testing"
-              features={["Frontend development", "Backend development", "API integration", "Quality assurance"]
+              features={["Frontend development", "Backend development", "API integration", "Quality assurance"]}
             />
             <DevelopmentStep
               step="4"
               title="Launch & Growth"
               description="Deployment, marketing, user onboarding, and growth optimization"
-              features={["Production deployment", "Marketing setup", "User onboarding", "Growth optimization"]
+              features={["Production deployment", "Marketing setup", "User onboarding", "Growth optimization"]}
             />
           </div>
         </div>
@@ -204,43 +204,43 @@ export default function MicroSaaSPage() {
             <FeatureCard
               title="User Authentication"
               description="Secure login, registration, and user management"
-              features={["OAuth integration", "Multi-factor authentication", "Role-based access", "Password recovery"]
+              features={["OAuth integration", "Multi-factor authentication", "Role-based access", "Password recovery"]}
               icon="🔐"
             />
             <FeatureCard
               title="Subscription Billing"
               description="Flexible pricing plans and automated billing"
-              features={["Multiple pricing tiers", "Stripe integration", "Invoice generation", "Payment analytics"]
+              features={["Multiple pricing tiers", "Stripe integration", "Invoice generation", "Payment analytics"]}
               icon="💳"
             />
             <FeatureCard
               title="Analytics Dashboard"
               description="Comprehensive usage and business analytics"
-              features={["User analytics", "Revenue tracking", "Usage metrics", "Custom reports"]
+              features={["User analytics", "Revenue tracking", "Usage metrics", "Custom reports"]}
               icon="📈"
             />
             <FeatureCard
               title="API Integration"
               description="RESTful APIs for third-party integrations"
-              features={["RESTful APIs", "Webhook support", "SDK libraries", "Documentation"]
+              features={["RESTful APIs", "Webhook support", "SDK libraries", "Documentation"]}
               icon="🔌"
             />
             <FeatureCard
               title="Admin Panel"
               description="Complete admin interface for management"
-              features={["User management", "Content management", "System settings", "Monitoring tools"]
+              features={["User management", "Content management", "System settings", "Monitoring tools"]}
               icon="⚙️"
             />
             <FeatureCard
               title="Mobile Responsive"
               description="Optimized for all devices and screen sizes"
-              features={["Responsive design", "Mobile apps", "Touch optimization", "Offline support"]
+              features={["Responsive design", "Mobile apps", "Touch optimization", "Offline support"]}
               icon="📱"
             />
           </div>
         </div>
       </section>
-
+}
       {/* Technology Stack */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,12 +276,12 @@ export default function MicroSaaSPage() {
               price="$2,999"
               period="month"
               description="Perfect for MVPs and early-stage startups"
-              features={[
+              features={[}
                 "Basic SaaS features",
                 "Up to 1,000 users",
                 "Email support",
                 "Basic analytics",
-                "Standard hosting"
+                "Standard hosting"}
               ]}
               popular={false}
             />
@@ -290,13 +290,13 @@ export default function MicroSaaSPage() {
               price="$4,999"
               period="month"
               description="Ideal for growing businesses"
-              features={[
+              features={[}
                 "Advanced features",
                 "Up to 10,000 users",
                 "Priority support",
                 "Advanced analytics",
                 "Premium hosting",
-                "API access"
+                "API access"}
               ]}
               popular={true}
             />
@@ -305,13 +305,13 @@ export default function MicroSaaSPage() {
               price="Custom"
               period=""
               description="For large-scale operations"
-              features={[
+              features={[}
                 "Custom features",
                 "Unlimited users",
                 "24/7 support",
                 "Custom analytics",
                 "Dedicated hosting",
-                "White-label options"
+                "White-label options"}
               ]}
               popular={false}
             />

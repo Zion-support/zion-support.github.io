@@ -67,13 +67,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="Computer Vision"
               description="Image and video analysis solutions for object detection, recognition, and processing"
-              features={[
+              features={[}
                 "Object detection & recognition",
                 "Facial recognition systems",
                 "Image classification",
                 "Video analysis",
                 "OCR & document processing",
-                "Medical image analysis"
+                "Medical image analysis"}
               ]}
               pricing="From $4,200/month"
               icon="👁️"
@@ -84,13 +84,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="Machine Learning Models"
               description="Custom ML models for predictive analytics, recommendation systems, and data insights"
-              features={[
+              features={[}
                 "Predictive modeling",
                 "Recommendation engines",
                 "Anomaly detection",
                 "Time series forecasting",
                 "Clustering algorithms",
-                "Model optimization"
+                "Model optimization"}
               ]}
               pricing="From $2,800/month"
               icon="🧠"
@@ -101,13 +101,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="AI Chatbots & Assistants"
               description="Intelligent conversational AI for customer support, sales, and internal operations"
-              features={[
+              features={[}
                 "Multi-channel chatbots",
                 "Voice assistants",
                 "Intent recognition",
                 "Context management",
                 "Integration APIs",
-                "Analytics dashboard"
+                "Analytics dashboard"}
               ]}
               pricing="From $1,500/month"
               icon="💬"
@@ -118,13 +118,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="RAG Systems"
               description="Retrieval-Augmented Generation systems for intelligent document processing and Q&A"
-              features={[
+              features={[}
                 "Document indexing",
                 "Semantic search",
                 "Knowledge base integration",
                 "Context-aware responses",
                 "Source citation",
-                "Real-time updates"
+                "Real-time updates"}
               ]}
               pricing="From $5,000/month"
               icon="📚"
@@ -135,13 +135,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="Predictive Analytics"
               description="Advanced analytics and forecasting for business intelligence and decision making"
-              features={[
+              features={[}
                 "Demand forecasting",
                 "Risk assessment",
                 "Customer behavior prediction",
                 "Market trend analysis",
                 "Real-time dashboards",
-                "Automated reporting"
+                "Automated reporting"}
               ]}
               pricing="From $3,800/month"
               icon="📊"
@@ -165,28 +165,28 @@ export default function AIServicesPage() {
             <IndustryCard
               title="Healthcare AI"
               description="Medical diagnosis, drug discovery, and patient care optimization"
-              features={["Medical imaging analysis", "Drug interaction prediction", "Patient risk assessment"]
+              features={["Medical imaging analysis", "Drug interaction prediction", "Patient risk assessment"]}
               icon="🏥"
               pricing="From $8,000/month"
             />
             <IndustryCard
               title="Financial AI"
               description="Fraud detection, algorithmic trading, and risk management"
-              features={["Fraud detection", "Credit scoring", "Algorithmic trading"]
+              features={["Fraud detection", "Credit scoring", "Algorithmic trading"]}
               icon="💰"
               pricing="From $6,500/month"
             />
             <IndustryCard
               title="E-commerce AI"
               description="Product recommendations, inventory optimization, and customer insights"
-              features={["Product recommendations", "Price optimization", "Customer segmentation"]
+              features={["Product recommendations", "Price optimization", "Customer segmentation"]}
               icon="🛒"
               pricing="From $2,200/month"
             />
             <IndustryCard
               title="Manufacturing AI"
               description="Predictive maintenance, quality control, and process optimization"
-              features={["Predictive maintenance", "Quality control", "Supply chain optimization"]
+              features={["Predictive maintenance", "Quality control", "Supply chain optimization"]}
               icon="🏭"
               pricing="From $4,500/month"
             />
@@ -209,30 +209,30 @@ export default function AIServicesPage() {
               step="1"
               title="Discovery & Analysis"
               description="Understanding your business needs, data sources, and success metrics"
-              features={["Requirements gathering", "Data assessment", "Success metrics definition"]
+              features={["Requirements gathering", "Data assessment", "Success metrics definition"]}
             />
             <ProcessStep
               step="2"
               title="Model Development"
               description="Building and training custom AI models tailored to your specific use case"
-              features={["Data preprocessing", "Model training", "Performance optimization"]
+              features={["Data preprocessing", "Model training", "Performance optimization"]}
             />
             <ProcessStep
               step="3"
               title="Integration & Testing"
               description="Seamlessly integrating AI solutions into your existing systems and workflows"
-              features={["API development", "System integration", "Comprehensive testing"]
+              features={["API development", "System integration", "Comprehensive testing"]}
             />
             <ProcessStep
               step="4"
               title="Deployment & Support"
               description="Launching your AI solution with ongoing monitoring, maintenance, and optimization"
-              features={["Production deployment", "Performance monitoring", "Continuous improvement"]
+              features={["Production deployment", "Performance monitoring", "Continuous improvement"]}
             />
           </div>
         </div>
       </section>
-
+}
       {/* Technology Stack */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

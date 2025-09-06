@@ -271,13 +271,13 @@ export default function AIPoweredCRMPage() {
             price="$99"
             period="user/month"
             description="Perfect for small teams getting started with AI CRM"
-            features={[
+            features={[}
               "Up to 5 users",
               "AI lead scoring",
               "Basic automation",
               "Email integration",
               "Mobile app access",
-              "Standard support"
+              "Standard support"}
             ]}
           />
           <PricingTier
@@ -285,14 +285,14 @@ export default function AIPoweredCRMPage() {
             price="$199"
             period="user/month"
             description="Most popular for growing sales teams"
-            features={[
+            features={[}
               "Up to 25 users",
               "Advanced AI features",
               "Predictive analytics",
               "Conversation intelligence",
               "Custom integrations",
               "Priority support",
-              "Advanced reporting"
+              "Advanced reporting"}
             ]}
             popular={true}
           />
@@ -301,14 +301,14 @@ export default function AIPoweredCRMPage() {
             price="$399"
             period="user/month"
             description="For large organizations with complex needs"
-            features={[
+            features={[}
               "Unlimited users",
               "Full AI suite",
               "Custom AI models",
               "Dedicated support",
               "White-label options",
               "Advanced security",
-              "Custom development"
+              "Custom development"}
             ]}
           />
         </div>

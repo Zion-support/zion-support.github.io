@@ -127,13 +127,13 @@ export default function AIMeetingAssistantPage() {
             price="$49"
             period="per month"
             description="Perfect for small teams and individual users"
-            features={[
+            features={[}
               "Up to 10 hours/month",
               "Basic transcription",
               "Meeting summaries",
               "Action item extraction",
               "Email support",
-              "Basic analytics"
+              "Basic analytics"}
             ]}
             cta="Start Free Trial"
             popular={false}
@@ -143,14 +143,14 @@ export default function AIMeetingAssistantPage() {
             price="$149"
             period="per month"
             description="Most popular for growing teams and businesses"
-            features={[
+            features={[}
               "Up to 50 hours/month",
               "Advanced AI features",
               "Team collaboration",
               "Custom integrations",
               "Priority support",
               "Advanced analytics",
-              "API access"
+              "API access"}
             ]}
             cta="Start Free Trial"
             popular={true}
@@ -160,14 +160,14 @@ export default function AIMeetingAssistantPage() {
             price="$399"
             period="per month"
             description="For large organizations with high meeting volumes"
-            features={[
+            features={[}
               "Unlimited hours",
               "Custom AI models",
               "White-label options",
               "Dedicated support",
               "Custom integrations",
               "Advanced security",
-              "SLA guarantee"
+              "SLA guarantee"}
             ]}
             cta="Contact Sales"
             popular={false}

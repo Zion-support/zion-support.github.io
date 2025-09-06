@@ -127,13 +127,13 @@ export default function SmartInvoiceGeneratorPage() {
             price="$29"
             period="per month"
             description="Perfect for freelancers and solo entrepreneurs"
-            features={[
+            features={[}
               "Up to 50 invoices/month",
               "Basic AI features",
               "Payment processing",
               "Mobile app",
               "Email support",
-              "Basic reporting"
+              "Basic reporting"}
             ]}
             cta="Start Free Trial"
             popular={false}
@@ -143,14 +143,14 @@ export default function SmartInvoiceGeneratorPage() {
             price="$79"
             period="per month"
             description="Most popular for small to medium businesses"
-            features={[
+            features={[}
               "Up to 500 invoices/month",
               "Advanced AI features",
               "Team collaboration",
               "Custom branding",
               "Priority support",
               "Advanced analytics",
-              "API access"
+              "API access"}
             ]}
             cta="Start Free Trial"
             popular={true}
@@ -160,14 +160,14 @@ export default function SmartInvoiceGeneratorPage() {
             price="$199"
             period="per month"
             description="For large organizations with complex needs"
-            features={[
+            features={[}
               "Unlimited invoices",
               "Custom AI models",
               "White-label options",
               "Dedicated support",
               "Custom integrations",
               "Advanced security",
-              "SLA guarantee"
+              "SLA guarantee"}
             ]}
             cta="Contact Sales"
             popular={false}

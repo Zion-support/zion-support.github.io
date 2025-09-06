@@ -108,12 +108,12 @@ export default function ServicesOverviewPage() {
             description="Cutting-edge artificial intelligence solutions for automation, analytics, and intelligent decision making."
             href="/ai-services"
             icon="🤖"
-            features={[
+            features={[}
               "AI chatbots & assistants",
               "Machine learning models",
               "Natural language processing",
               "Computer vision",
-              "Predictive analytics"
+              "Predictive analytics"}
             ]}
             pricing="From $5,000/month"
           />
@@ -122,12 +122,12 @@ export default function ServicesOverviewPage() {
             description="End-to-end product development with billing, auth, analytics and growth optimization."
             href="/micro-saas"
             icon="🚀"
-            features={[
+            features={[}
               "Custom SaaS development",
               "Payment integration",
               "User authentication",
               "Analytics dashboard",
-              "API development"
+              "API development"}
             ]}
             pricing="From $10,000/month"
           />
@@ -136,12 +136,12 @@ export default function ServicesOverviewPage() {
             description="Complete IT infrastructure, cloud migration, and digital transformation solutions."
             href="/it-services"
             icon="💻"
-            features={[
+            features={[}
               "Cloud migration",
               "DevOps & CI/CD",
               "Infrastructure management",
               "Security solutions",
-              "24/7 support"
+              "24/7 support"}
             ]}
             pricing="From $3,000/month"
           />

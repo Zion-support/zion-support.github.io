@@ -50,13 +50,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Cloud Services"
               description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP"
-              features={[
+              features={[}
                 "Cloud migration planning",
                 "Multi-cloud architecture",
                 "Cost optimization",
                 "Auto-scaling setup",
                 "Disaster recovery",
-                "Cloud security"
+                "Cloud security"}
               ]}
               pricing="From $3,500/month"
               icon="☁️"
@@ -67,13 +67,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="DevOps & CI/CD"
               description="Automated deployment pipelines, infrastructure as code, and continuous integration"
-              features={[
+              features={[}
                 "CI/CD pipeline setup",
                 "Infrastructure as Code",
                 "Container orchestration",
                 "Monitoring & alerting",
                 "Automated testing",
-                "Deployment automation"
+                "Deployment automation"}
               ]}
               pricing="From $4,200/month"
               icon="🔄"
@@ -84,13 +84,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Cybersecurity"
               description="Comprehensive security solutions and compliance management"
-              features={[
+              features={[}
                 "Security assessment",
                 "Penetration testing",
                 "Threat detection",
                 "Compliance management",
                 "Security training",
-                "Incident response"
+                "Incident response"}
               ]}
               pricing="From $5,000/month"
               icon="🔒"
@@ -101,13 +101,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Network Management"
               description="Network design, implementation, and ongoing management"
-              features={[
+              features={[}
                 "Network design & planning",
                 "Router & switch configuration",
                 "VPN setup",
                 "Network monitoring",
                 "Performance optimization",
-                "Troubleshooting"
+                "Troubleshooting"}
               ]}
               pricing="From $2,800/month"
               icon="🌐"
@@ -118,13 +118,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="System Administration"
               description="Server management, maintenance, and optimization"
-              features={[
+              features={[}
                 "Server setup & configuration",
                 "User account management",
                 "Backup & recovery",
                 "Performance monitoring",
                 "Security updates",
-                "System maintenance"
+                "System maintenance"}
               ]}
               pricing="From $3,200/month"
               icon="🖥️"
@@ -135,13 +135,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Database Management"
               description="Database design, optimization, and maintenance"
-              features={[
+              features={[}
                 "Database design",
                 "Performance optimization",
                 "Backup & recovery",
                 "Security hardening",
                 "Query optimization",
-                "Monitoring & tuning"
+                "Monitoring & tuning"}
               ]}
               pricing="From $2,500/month"
               icon="🗄️"
@@ -165,25 +165,25 @@ export default function ITServicesPage() {
             <ManagedServiceCard
               title="24/7 Monitoring"
               description="Round-the-clock system monitoring and alerting"
-              features={["Real-time monitoring", "Automated alerts", "Performance tracking", "Uptime reporting"]
+              features={["Real-time monitoring", "Automated alerts", "Performance tracking", "Uptime reporting"]}
               icon="📊"
             />
             <ManagedServiceCard
               title="Help Desk Support"
               description="Dedicated technical support for your team"
-              features={["Phone & email support", "Remote assistance", "Ticket management", "Knowledge base"]
+              features={["Phone & email support", "Remote assistance", "Ticket management", "Knowledge base"]}
               icon="🎧"
             />
             <ManagedServiceCard
               title="Security Management"
               description="Comprehensive security monitoring and management"
-              features={["Threat detection", "Vulnerability scanning", "Security updates", "Compliance monitoring"]
+              features={["Threat detection", "Vulnerability scanning", "Security updates", "Compliance monitoring"]}
               icon="🛡️"
             />
             <ManagedServiceCard
               title="Backup & Recovery"
               description="Automated backup and disaster recovery solutions"
-              features={["Automated backups", "Disaster recovery", "Data retention", "Recovery testing"]
+              features={["Automated backups", "Disaster recovery", "Data retention", "Recovery testing"]}
               icon="💾"
             />
           </div>
@@ -285,12 +285,12 @@ export default function ITServicesPage() {
               price="$3,000"
               period="month"
               description="Essential IT support for small businesses"
-              features={[
+              features={[}
                 "5 hours/month support",
                 "Email & phone support",
                 "Basic monitoring",
                 "Security updates",
-                "Backup management"
+                "Backup management"}
               ]}
               popular={false}
             />
@@ -299,13 +299,13 @@ export default function ITServicesPage() {
               price="$5,000"
               period="month"
               description="Comprehensive IT management for growing businesses"
-              features={[
+              features={[}
                 "15 hours/month support",
                 "24/7 monitoring",
                 "Priority support",
                 "Advanced security",
                 "Cloud management",
-                "Monthly reporting"
+                "Monthly reporting"}
               ]}
               popular={true}
             />
@@ -314,13 +314,13 @@ export default function ITServicesPage() {
               price="Custom"
               period=""
               description="Full IT management for large organizations"
-              features={[
+              features={[}
                 "Unlimited support",
                 "Dedicated team",
                 "Custom solutions",
                 "Enterprise security",
                 "Multi-cloud management",
-                "Quarterly reviews"
+                "Quarterly reviews"}
               ]}
               popular={false}
             />
@@ -342,31 +342,31 @@ export default function ITServicesPage() {
             <IndustrySolutionCard
               title="Healthcare IT"
               description="HIPAA-compliant IT solutions"
-              features={["HIPAA compliance", "Secure data handling", "Medical device integration"]
+              features={["HIPAA compliance", "Secure data handling", "Medical device integration"]}
               icon="🏥"
             />
             <IndustrySolutionCard
               title="Financial Services"
               description="Bank-grade security and compliance"
-              features={["PCI DSS compliance", "Fraud detection", "Audit trails"]
+              features={["PCI DSS compliance", "Fraud detection", "Audit trails"]}
               icon="🏦"
             />
             <IndustrySolutionCard
               title="E-commerce"
               description="High-availability e-commerce infrastructure"
-              features={["High availability", "Payment processing", "Inventory management"]
+              features={["High availability", "Payment processing", "Inventory management"]}
               icon="🛒"
             />
             <IndustrySolutionCard
               title="Manufacturing"
               description="Industrial IT and IoT solutions"
-              features={["IoT integration", "Production monitoring", "Supply chain management"]
+              features={["IoT integration", "Production monitoring", "Supply chain management"]}
               icon="🏭"
             />
           </div>
         </div>
       </section>
-
+}
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center px-4">
