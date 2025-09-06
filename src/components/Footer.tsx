@@ -4,7 +4,7 @@ import {  Twitter,
   Facebook,
   Instagram,
   Github,
-  ChevronUp,;
+  ChevronUp
 } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
@@ -13,6 +13,7 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
     return fallback;
   }
   return envVar;
+}
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
@@ -295,5 +296,3 @@ export function Footer() {
     </footer>
   );
 }
-}
-;

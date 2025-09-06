@@ -1634,8 +1634,7 @@ export default function Services(): React.JSX.Element {
     </main>
   );
 }
-    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
-    icon: Brain,
+
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -1650,28 +1649,27 @@ export default function Services() {
     site: 'https://ziontechgroup.com',
   };
 
-            </div>
-          </div>
-        </section>
-
+  return (
+    <>
+      <Head>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI, IT, and Micro SaaS services for modern businesses." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Our Services
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                Comprehensive technology solutions designed to transform your business and drive growth.
+                Comprehensive technology solutions powered by cutting-edge AI and modern development practices
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started
-                </button>
-                <button className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                  View Pricing
-                </button>
-              </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
+        <section className="py-16 px-4">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -2101,5 +2099,4 @@ export default function Services() {
       <Footer />
     </>
   );
-  )
 }
