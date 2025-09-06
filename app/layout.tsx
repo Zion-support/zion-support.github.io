@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Link from 'next/link';
 import './globals.css';
@@ -45,7 +46,6 @@ function Header() {
           <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
         </div>
-        {/* Mobile menu button */}
         <button className="md:hidden p-2" aria-label="Toggle menu">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -77,6 +77,7 @@ function Footer() {
             <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
             <div className="space-y-2">
               <Link href="/" className="block text-gray-600 hover:text-blue-600 transition-colors">Home</Link>
+              <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
               <a href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600 transition-colors">Main Site</a>
             </div>
@@ -111,3 +112,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

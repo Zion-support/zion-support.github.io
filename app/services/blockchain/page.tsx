@@ -1,12 +1,12 @@
 export const metadata = { 
-  title: 'Blockchain Services | Zion Tech Group',
+title: 'Blockchain Services | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
   keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'
 };
 
 export default function BlockchainPage() {
   return (
-    <div className="animate-fade-in">
+<div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           Blockchain Services
@@ -283,23 +283,32 @@ function BlockchainUseCase({ title, description, examples, icon }: {
   );
 }
 
-function BlockchainBenefitCard({ title, description, icon }: { 
+function ServiceCard({ title, description, price, features }: { 
   title: string; 
   description: string; 
-  icon: string; 
+  price: string; 
+  features: string[] 
 }) {
   return (
-    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-200">
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-1">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
 function Pricing() {
   return (
-    <section className="mb-16">
+<section className="mb-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Blockchain Service Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan 

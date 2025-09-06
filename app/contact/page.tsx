@@ -1,3 +1,4 @@
+
 export const metadata = { 
   title: 'Contact | Zion Tech Group',
   description: 'Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day.',
@@ -54,7 +55,7 @@ export default function ContactPage() {
             <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
               <h3 className="font-semibold text-blue-900 mb-2">Quick Response</h3>
               <p className="text-blue-800 text-sm">
-                For urgent matters, call us directly. For project inquiries, email us with your requirements and we'll get back to you within one business day.
+                For urgent matters, call us directly. For project inquiries, email us with your requirements and we&apos;ll get back to you within one business day.
               </p>
             </div>
           </div>
@@ -115,7 +116,7 @@ export default function ContactPage() {
                   <option value="ai-services">AI Services</option>
                   <option value="micro-saas">Micro SaaS Development</option>
                   <option value="it-services">IT Services</option>
-                  <option value="blockchain">Blockchain Services</option>
+                  <option value="blockchain">Blockchain Solutions</option>
                   <option value="cybersecurity">Cybersecurity</option>
                   <option value="data-analytics">Data Analytics</option>
                   <option value="consulting">General Consulting</option>
@@ -159,3 +160,6 @@ export default function ContactPage() {
     </div>
   );
 }
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b

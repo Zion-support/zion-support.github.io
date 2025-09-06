@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   const features = [
@@ -50,9 +48,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -266,8 +262,6 @@ const Home: React.FC = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
