@@ -1,286 +1,4 @@
 import js from '@eslint/js';
-<<<<<<< HEAD
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import next from '@next/eslint-plugin-next';
-
-export default [
-  js.configs.recommended,
-  {
-<<<<<<< HEAD
-    files: ['**/*.{js,jsx,ts,tsx}'],
-=======
-    files: ["**/*.{js,jsx,ts,tsx}"],
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
-    ignores: [
-      '.next/**',
-      'out/**',
-      'dist/**',
-      'build/**',
-      'node_modules/**',
-<<<<<<< HEAD
-      '.eslintrc.js',
-=======
-      'coverage/**',
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      'scripts/**',
-      'automation/**',
-      'backup-merge-conflicts/**',
-      '**/*.backup.*',
-      '**/*.old.*',
-      '**/*.disabled.*',
-      '**/*.broken.*',
-      '**/*.corrupted.*',
-      '**/*.temp.*',
-      '**/*.test.*',
-      '**/*.spec.*',
-<<<<<<< HEAD
-      '**/test-utils.*',
-      '**/jest.setup.*',
-      '**/jest.config.*',
-      '**/vite.config.*',
-      '**/postcss.config.*',
-      '**/playwright.config.*',
-      '**/cypress.config.*',
-      '**/bundle-analyzer.config.*',
-      '**/csp-config.*',
-      '**/ecosystem.config.*',
-      '**/Dockerfile*',
-      '**/docker-compose*',
-      '**/pm2-*',
-      '**/fix-*',
-      '**/clean-*',
-      '**/batch-*',
-      '**/merge-*',
-      '**/resolve-*',
-      '**/systematic-*',
-      '**/ultimate-*',
-      '**/structural-*',
-      '**/quick-*',
-      '**/comprehensive-*',
-      '**/enhanced-*',
-      '**/complete-*',
-      '**/app-optimizer.*',
-      '**/improve-*',
-      '**/find-*',
-      '**/git-ops.*',
-      '**/pr-manager.*',
-      '**/merge-strategy.*',
-      '**/resolve-and-merge-*',
-      '**/merge-all-*',
-      '**/merge-prs.*',
-      '**/pr-*',
-      '**/batch_*',
-      '**/check_*',
-      '**/commit-*',
-      '**/complete_*',
-      '**/deploy-*',
-      '**/fix_*',
-      '**/git_*',
-      '**/health-*',
-      '**/quick-*',
-      '**/run-*',
-      '**/start-*',
-      '**/test-*',
-      '**/ultimate-*',
-      '**/utils/next-*',
-      '**/utils/performance-*',
-      '**/utils/rate-*',
-      '**/utils/input-*',
-      '**/utils/csrf-*',
-      '**/utils/dynamic-*',
-      '**/utils/env-*',
-      '**/utils/messageChannel*',
-      '**/utils/sanitize*',
-      '**/utils/seo-*',
-      '**/utils/testing-*',
-      '**/utils/accessibility-*',
-      '**/utils/api.*',
-      '**/utils/monitoring.*',
-      '**/utils/performance.*',
-      '**/utils/seo-optimizer.*',
-      '**/types/empty.*',
-      '**/types/index.*',
-      '**/types/service-*',
-      '**/supabase/**',
-      '**/src/main.*',
-      '**/src/data/**',
-      '**/src/utils/**',
-      '**/src/components/**',
-      '**/src/App.*',
-      '**/components/ui/**',
-      '**/components/layout/**',
-      '**/components/performance/**',
-      '**/hooks/**',
-      '**/lib/**',
-      '**/api-backup/**',
-      '**/deployment/**',
-      '**/deployments/**',
-      '**/docs/**',
-      '**/e2e/**',
-      '**/content/**',
-      '**/data/**',
-      '**/config/**',
-      '**/__tests__/**',
-      '**/automation-reports/**',
-      '**/error-prevention-reports/**',
-      '**/performance-reports/**',
-      '**/link-reports/**',
-      '**/monitoring/**',
-      '**/pm2-automation/**',
-      '**/automation/logs/**',
-      '**/automation/backup/**',
-      '**/backup-merge-conflicts/**',
-      '**/temp_backup/**',
-      '**/temp_broken_components/**',
-      '**/temp_working/**',
-      '**/temp_*/**',
-      '**/ai-optimization-backups/**',
-      '**/ai-analysis-reports/**',
-      '**/optimization-reports/**',
-      '**/public/reports/**',
-      '**/pages_backup*/**',
-      '**/pages.*/**',
-      '**/pages-*/**',
-      '**/pages_disabled*/**',
-      '**/pages.disabled*/**',
-      '**/pages.broken*/**',
-      '**/pages.corrupted*/**',
-      '**/pages.old*/**',
-      '**/pages._*/**',
-      '**/pages.__*/**',
-      '**/backup-pages/**',
-      '**/src.pages.disabled/**',
-      '**/lib_backup*/**',
-      '**/src_backup*/**',
-      '**/corrupted-files-backup*/**',
-      '**/performance-reports*/**',
-      '**/log-analysis-reports*/**',
-      '**/link-reports*/**',
-      '**/lint-target*/**',
-      '**/monitoring*/**',
-      '**/pm2-automation*/**',
-      '**/automation/logs*/**',
-      '**/automation/backup*/**',
-      '**/performance-*.json',
-      '**/performance-*.js',
-      '**/performance-*.cjs',
-      '**/performance-*.sh',
-      '**/performance-*.html',
-      '**/performance-*.md',
-<<<<<<< HEAD
-      '**/performance-*.txt',
-      'backup-problematic-files/**'
-=======
-      '**/performance-*.txt'
-=======
-      '**/zion-os/**',
-      '**/zion-website/**',
-      '**/zion-academy/**',
-      '**/zion-film/**',
-      '**/zion-ai-assistant/**',
-      '**/*.min.js',
-      '**/*.bundle.js',
-      '**/public/**',
-      '**/static/**',
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
-    ],
-    languageOptions: {
-      parser: typescriptParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-      globals: {
-        // Browser globals
-<<<<<<< HEAD
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        fetch: 'readonly',
-        process: 'readonly',
-        // DOM types
-        Element: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        MouseEvent: 'readonly',
-        KeyboardEvent: 'readonly',
-        Node: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEventTiming: 'readonly',
-        LayoutShift: 'readonly',
-        performance: 'readonly',
-        IntersectionObserver: 'readonly',
-        IntersectionObserverEntry: 'readonly',
-=======
-        window: "readonly",
-        document: "readonly",
-        console: "readonly",
-        localStorage: "readonly",
-        sessionStorage: "readonly",
-        fetch: "readonly",
-        URL: "readonly",
-        URLSearchParams: "readonly",
-        location: "readonly",
-        navigator: "readonly",
-        performance: "readonly",
-        addEventListener: "readonly",
-        removeEventListener: "readonly",
-        requestAnimationFrame: "readonly",
-        setTimeout: "readonly",
-        clearTimeout: "readonly",
-        setInterval: "readonly",
-        clearInterval: "readonly",
-        self: "readonly",
-        // Node.js globals
-        process: "readonly",
-        Buffer: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        module: "readonly",
-        require: "readonly",
-        exports: "readonly",
-        global: "readonly",
-        // DOM types
-        Element: "readonly",
-        HTMLElement: "readonly",
-        HTMLInputElement: "readonly",
-        HTMLTextAreaElement: "readonly",
-        HTMLSelectElement: "readonly",
-        HTMLDivElement: "readonly",
-        MouseEvent: "readonly",
-        KeyboardEvent: "readonly",
-        Node: "readonly",
-        PerformanceObserver: "readonly",
-        PerformanceNavigationTiming: "readonly",
-        PerformanceEventTiming: "readonly",
-        LayoutShift: "readonly",
-        IntersectionObserver: "readonly",
-        IntersectionObserverEntry: "readonly",
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
-        // React
-        React: 'readonly',
-        // Jest/Testing globals
-=======
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -343,7 +61,6 @@ export default [
         ...globals.node,
         React: 'readonly',
         jest: 'readonly',
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -351,28 +68,6 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-<<<<<<< HEAD
-        afterAll: 'readonly',
-        jest: 'readonly',
-        // Node.js globals
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
-        global: 'readonly',
-        Buffer: 'readonly'
-      }
-    },
-    plugins: {
-      '@typescript-eslint': typescript,
-      'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': next,
-    },
-    rules: {
-      ...typescript.configs.recommended.rules,
-=======
         afterAll: 'readonly'
       },
       parserOptions: {
@@ -386,35 +81,13 @@ export default [
       'react-hooks': reactHooks
     },
     rules: {
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      ...next.configs.recommended.rules,
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'error',
       'no-var': 'error',
       'react/prop-types': 'off',
-<<<<<<< HEAD
-      'react/react-in-jsx-scope': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    files: ['**/*.cjs'],
-    languageOptions: {
-      sourceType: 'commonjs',
-      globals: {
-        // Node.js globals
-        process: 'readonly',
-        console: 'readonly',
-=======
       'react/react-in-jsx-scope': 'off'
     }
   },
@@ -484,80 +157,11 @@ export default [
         ...globals.node,
         console: 'readonly',
         process: 'readonly',
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         require: 'readonly',
         module: 'readonly',
         exports: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
-<<<<<<< HEAD
-        global: 'readonly',
-        Buffer: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        setImmediate: 'readonly',
-        clearImmediate: 'readonly',
-      },
-    },
-  },
-<<<<<<< HEAD
-  {
-    ignores: [
-      // Node/build outputs
-      'node_modules/**',
-      '.next/**',
-      'dist/**',
-      'build/**',
-<<<<<<< HEAD
-      'node_modules/**',
-      // Public assets/scripts
-      'public/**',
-      // Root-level noisy files
-      '*.config.js',
-      '*.config.cjs',
-      '*.config.mjs',
-      '*.backup.*',
-      '*.old.*',
-      '*.disabled.*',
-      '*.broken.*',
-      '*.corrupted.*',
-      '*.temp.*',
-      'backup-problematic-files/**'
-    ]
-  }
-=======
-      'out/**',
-      'coverage/**',
-      '*.log',
-      '*.tsbuildinfo',
-      // Generated files
-      '**/*.min.js',
-      '**/*.bundle.js',
-      '**/static/**',
-      '**/public/**',
-      '**/backup*/**',
-      '**/backups/**',
-      '**/cache/**',
-      '**/temp/**',
-      '**/tmp/**',
-      // Build artifacts
-      '**/ecosystem*.cjs',
-      '**/comprehensive-*.cjs',
-      '**/advanced-*.cjs',
-      '**/enhanced-*.cjs',
-      '**/automation/**',
-      '**/scripts/**',
-      '**/tools/**',
-      '**/zion-os/**',
-      '**/zion-website/**',
-    ],
-  },
-=======
->>>>>>> 3e0b5e734e328fa6b9be04237a4c9f63bf064ddb
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
-=======
         Buffer: 'readonly',
         global: 'readonly'
       }
@@ -568,5 +172,4 @@ export default [
       'no-undef': 'error'
     }
   }
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 ];

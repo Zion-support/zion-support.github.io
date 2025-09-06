@@ -1,21 +1,30 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 =======
 import {defineConfig, splitVendorChunkPlugin} from 'vite';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import react from '@vitejs/plugin-react';
+<<<<<<< HEAD
 import path from 'node: path',
+=======
+import path from 'node:path';
+
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 export default defineConfig({
   plugins: [
     react({
       include: '**/*.{jsx,js,ts,tsx}',
       fastRefresh: true,
+<<<<<<< HEAD
       jsxRuntime: 'automatic'
     }),
     splitVendorChunkPlugin()
@@ -25,6 +34,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     },
     extensions: ['.js.jsx.ts.tsx']
+=======
+      jsxRuntime: 'automatic',
+    }),
+    splitVendorChunkPlugin(),
+  ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
   },
   build: {
     target: 'esnext',
@@ -33,6 +53,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
           'react-vendor': ['reactreact-dom'],
           'ui-vendor': [
             '@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar@radix-ui/react-checkbox',
@@ -47,6 +68,40 @@ export default defineConfig({
           'icons-vendor': ['lucide-react'],
           'state-vendor': ['@reduxjs/toolkitreact-redux'],
           'router-vendor': ['react-router-dom']
+=======
+          'react-vendor': ['react', 'react-dom'],
+          'ui-vendor': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-collapsible',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-hover-card',
+            '@radix-ui/react-label',
+            '@radix-ui/react-menubar',
+            '@radix-ui/react-navigation-menu',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-scroll-area',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-toggle',
+            '@radix-ui/react-tooltip',
+          ],
+          'animation-vendor': ['framer-motion'],
+          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          'icons-vendor': ['lucide-react'],
+          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
+          'router-vendor': ['react-router-dom'],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
@@ -54,34 +109,50 @@ export default defineConfig({
           if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
+<<<<<<< HEAD
           return 'assets/[name]-[hash].[ext]',
         }
       }
+=======
+          return 'assets/[name]-[hash].[ext]';
+        },
+      },
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
         pure_funcs: ['console.logconsole.infoconsole.debugconsole.warn'],
+=======
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
         passes: 2,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
         unsafe_proto: true,
         unsafe_regexp: true,
-        unsafe_undefined: true
+        unsafe_undefined: true,
       },
       mangle: {
         safari10: true,
         properties: {
+<<<<<<< HEAD
           regex: /^_/
         }
       }
+=======
+          regex: /^_/,
+        },
+      },
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
     emptyOutDir: true,
-    assetsInlineLimit: 4096
+    assetsInlineLimit: 4096,
   },
   optimizeDeps: {
     include: [
@@ -95,14 +166,22 @@ export default defineConfig({
     ],
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
+<<<<<<< HEAD
       target: 'esnext'
     }
   },
   css: {
     devSourcemap: false
+=======
+      target: 'esnext',
+    },
+  },
+  css: {
+    devSourcemap: false,
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
   },
   esbuild: {
-    jsx: 'automatic'
+    jsx: 'automatic',
   },
   server: {
     port: 3000,
@@ -110,23 +189,34 @@ export default defineConfig({
     open: true,
     cors: true,
     hmr: {
-      overlay: false
+      overlay: false,
     },
     fs: {
+<<<<<<< HEAD
       allow: ['..']
     }
+=======
+      allow: ['..'],
+    },
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
   },
   preview: {
     port: 4173,
     host: true,
-    open: true
+    open: true,
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+<<<<<<< HEAD
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   },
   envPrefix: ['VITE_ZION_'],
+=======
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+  },
+  envPrefix: ['VITE_', 'ZION_'],
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
   experimental: {
     renderBuiltUrl(filename, { hostType }) {
       if (hostType === 'js') {
@@ -134,6 +224,7 @@ export default defineConfig({
       } else {
         return { relative: true };
       }
+<<<<<<< HEAD
     }
   }
 <<<<<<< HEAD
@@ -211,3 +302,8 @@ export default defineConfig({
 })
 >>>>>>> origin/chore/fix-build-nav-links
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+    },
+  },
+});
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-625a

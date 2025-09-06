@@ -56,46 +56,46 @@ class AppOptimizer {
 // Run optimization
 =======
 #!/usr/bin/env node;
-;
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-;
-class AppOptimizer {;
-  constructor() {;
+
+class AppOptimizer {
+  constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(this.projectRoot, 'optimization.log'),
   }
-;
-  log(message) {;
+
+  log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + '\n'),
   }
-;
-  async optimize() {;
+
+  async optimize() {
     this.log('🚀 Starting app optimization...');
-    ;
-    try {;
+    
+    try {
       // Run build optimization;
       this.log('📦 Running build optimization...');
 
       execSync('npm run build', { stdio:'inherit' });
-      ;
+      
       // Run performance optimization;
       this.log('⚡ Running performance optimization...');
       execSync('npm run perf:audit', { stdio:'inherit' });
-      ;
+      
       this.log('✅ App optimization completed successfully!');
-    } catch (error) {;
+    } catch (error) {
       this.log(`❌ Optimization failed:${error.message}`);
       throw error;
 
     }
   }
 }
-;
+
 // Run optimization;
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
