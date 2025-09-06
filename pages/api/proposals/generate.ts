@@ -40,7 +40,7 @@ export default async function handler(
       budgetOrResolution,
       supportingMultiverses,
       contentMarkdown,
-      language,
+      language
     });
     return res && res.status(200).json({ meta, markdown: contentMarkdown });
   } catch (error: any) {

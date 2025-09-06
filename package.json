@@ -308,6 +308,7 @@
     "@types/react": "17.0.88",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
+    "aws-sdk": "^2.1692.0",
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",

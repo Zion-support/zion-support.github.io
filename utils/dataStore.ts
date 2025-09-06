@@ -32,6 +32,7 @@ class DataStore {
   findProjectById(id: string): Project | undefined {
     return this && this.projects.find(project => project && project.id === id);
   }
+}
 
   createProject(data: Partial<Project>): Project {
     const project: Project = {

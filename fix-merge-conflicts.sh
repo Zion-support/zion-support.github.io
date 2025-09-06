@@ -5,8 +5,9 @@ echo "Fixing merge conflicts by keeping HEAD version..."
 # Find all files with merge conflicts
 find /workspace -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" -o -name "*.cjs" \) -exec grep -l "\|    echo "Processing: $file"
     
-    # Create a backup
-    cp "$file" "$file.backup"
+    # Remove merge conflict markers and keep the HEAD version (first version)
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
     
     # Use sed to remove merge conflict markers and keep HEAD version
     sed -i '/^/,/^    

@@ -28,7 +28,7 @@ export default async function handler(
         jobs: results && results.jobs.length,
         projects: results && results.projects.length,
       },
-      results,
+      results
     });
   } catch (e: any) {
     res && res.status(500).json({ ok: false, error: e?.message || "Search failed" });
