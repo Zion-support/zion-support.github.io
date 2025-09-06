@@ -1,0 +1,5 @@
+
+<<<<<<< HEAD
+      let fullMessage = message;
+      
+

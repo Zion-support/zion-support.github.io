@@ -1,3 +1,6 @@
+
+'use client';
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -115,11 +118,60 @@ const Header: React.FC = () => {
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Contact', href: '/contact' },
+  ];
+
+  const servicesDropdown = [
+    {
+      title: 'Web Development',
+      description: 'Custom websites and web applications',
+      href: '/services/web-development',
+      icon: () => <div className="w-6 h-6 bg-blue-100 rounded" />
+    },
+    {
+      title: 'Mobile Apps',
+      description: 'iOS and Android applications',
+      href: '/services/mobile-apps',
+      icon: () => <div className="w-6 h-6 bg-green-100 rounded" />
+    },
+    {
+      title: 'AI Solutions',
+      description: 'Artificial intelligence integration',
+      href: '/services/ai-solutions',
+      icon: () => <div className="w-6 h-6 bg-purple-100 rounded" />
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and migration',
+      href: '/services/cloud-services',
+      icon: () => <div className="w-6 h-6 bg-orange-100 rounded" />
+    },
+  ];
+
+  const solutionsDropdown = [
+    {
+      title: 'E-commerce Solutions',
+      description: 'Complete online store setup',
+      href: '/solutions/ecommerce',
+      icon: () => <div className="w-6 h-6 bg-blue-100 rounded" />
+    },
+    {
+      title: 'CRM Systems',
+      description: 'Customer relationship management',
+      href: '/solutions/crm',
+      icon: () => <div className="w-6 h-6 bg-green-100 rounded" />
+    },
+  ];
+
+  const industriesDropdown = [
+    { name: 'Healthcare', href: '/industries/healthcare', icon: () => <div className="w-5 h-5 bg-red-100 rounded" /> },
+    { name: 'Finance', href: '/industries/finance', icon: () => <div className="w-5 h-5 bg-blue-100 rounded" /> },
+    { name: 'Education', href: '/industries/education', icon: () => <div className="w-5 h-5 bg-green-100 rounded" /> },
+    { name: 'Manufacturing', href: '/industries/manufacturing', icon: () => <div className="w-5 h-5 bg-yellow-100 rounded" /> },
   ];
 
   return (
-    <header className="bg-white shadow-lg">
+    <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -162,7 +214,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative group">
               <button
@@ -271,7 +323,7 @@ const Header: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            {/* Other Navigation Links */}
+            {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
               <Link
                 key={item.name}
@@ -326,12 +378,20 @@ const Header: React.FC = () => {
                   >
                     {item.name}
                   </Link>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                >
+                  Get Started
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+
     </header>
   );
 };

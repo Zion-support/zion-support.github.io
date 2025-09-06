@@ -80,12 +80,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
+
+          
           {/* Sidebar */}
           <motion.div
-            initial={{ x: '-100%' }}
+            initial={{ x: -300 }}
             animate={{ x: 0 }}
-            exit={{ x: '-100%' }}
-            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
+            exit={{ x: -300 }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
+
           >
             <div className="p-6">
               {/* Header */}

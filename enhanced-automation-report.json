@@ -23,9 +23,9 @@
     },
     "performanceOptimization": {
       "success": false,
-      "duration": 7536,
+      "duration": 1636,
       "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webpimage/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
       ],
       "warnings": []
     },
@@ -48,9 +48,9 @@
     },
     "buildOptimization": {
       "success": false,
-      "duration": 390,
+      "duration": 1129,
       "errors": [
-        "Command failed: npm run build:production\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+        "Command failed: npm run build:production\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nInvalid next.config.js options detected: \n    Expected 'image/avif' | 'image/webp', received 'image/webpimage/avif' at \"images.formats[0]\"\nSee more info here: https://nextjs.org/docs/messages/invalid-next-config\n"
       ],
       "warnings": []
     },

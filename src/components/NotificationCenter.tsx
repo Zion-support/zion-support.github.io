@@ -1,0 +1,9 @@
+
+<<<<<<< HEAD
+    unreadCount, 
+    markAsRead, 
+<<<<<<< HEAD
+
+
+
+

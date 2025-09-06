@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-}};
-=======
 };
 };
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+// App optimizer script
+console.log('App optimizer starting...');
