@@ -26,18 +26,22 @@ jest.mock("next/router", () => ({
 
 // Mock Next.js Image component
 jest.mock("next/image", () => {
+  const React = require("react");
   return function MockedImage({ src, alt, ...props }) {
     return React.createElement("img", { src, alt, ...props });
   };
 });
 
 // Mock Next.js Link component
-jest.mock("next/link", () => ({
-  _esModule: true,
-  default: ({ children, href, ...props }) => {
-    return React.createElement("a", { href, ...props }, children);
-  },
-}));
+jest.mock("next/link", () => {
+  const React = require("react");
+  return {
+    _esModule: true,
+    default: ({ children, href, ...props }) => {
+      return React.createElement("a", { href, ...props }, children);
+    },
+  };
+});
 
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
