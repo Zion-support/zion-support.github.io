@@ -20,16 +20,18 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
     let content = slide.content;
     try {
       const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
-          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' };
-          { role: 'user', content: prompt }];
-        temperature: 0.6;
-        response_format: { type: 'json_object' } as any});
+          { role: 'system', content: 'You rewrite concise investor content and return JSON only.' },
+          { role: 'user', content: prompt }
+        ],
+        temperature: 0.6,
+        response_format: { type: 'json_object' } as any
+      });
       const raw = chat.choices?.[0]?.message?.content || '{}';
       const parsed = JSON.parse(raw);
       title = parsed.title || title;
-      content = parsed.content || content
+      content = parsed.content || content;
     } catch (err) {
       // keep original if AI fails
     }

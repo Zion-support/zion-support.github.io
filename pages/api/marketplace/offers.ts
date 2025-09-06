@@ -33,15 +33,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       const offer: Offer = {
-        id: uuidv4();
-        createdAtIso: new Date().toISOString();
-        clientId: client.id;
-        talentSlug;
-        startDateIso;
-        scopeSummary;
-        paymentTerms: paymentTerms as PaymentTerms;
-        agreementUrl;
-        status: "SENT"};
+        id: uuidv4(),
+        createdAtIso: new Date().toISOString(),
+        clientId: client.id,
+        talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms: paymentTerms as PaymentTerms,
+        agreementUrl,
+        status: "SENT"
+      };
 
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer })
@@ -60,23 +61,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED";
         // Create a project upon acceptance
         const project: Project = {
-          id: uuidv4();
-          title: `Project with ${existing.talentSlug}`;
-          summary: existing.scopeSummary;
-          clientId: existing.clientId;
-          talentSlug: existing.talentSlug;
-          startDateIso: existing.startDateIso;
-          status: "ACTIVE";
-          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [];
+          id: uuidv4(),
+          title: `Project with ${existing.talentSlug}`,
+          summary: existing.scopeSummary,
+          clientId: existing.clientId,
+          talentSlug: existing.talentSlug,
+          startDateIso: existing.startDateIso,
+          status: "ACTIVE",
+          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
           documents: existing.agreementUrl
             ? [
                 {
-                  id: uuidv4();
-                  name: "Agreement";
-                  url: existing.agreementUrl;
-                  uploadedAtIso: new Date().toISOString()}]
-            : [];
-          notes: []};
+                  id: uuidv4(),
+                  name: "Agreement",
+                  url: existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString()
+                }]
+            : [],
+          notes: []
+        };
         saveProject(project);
         existing.projectId = project.id;
         saveOffer(existing);

@@ -35,17 +35,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date().toISOString();
   const existing = db[userId];
   const profile: KycProfile = existing || {
-    userId;
-    role;
-    fullLegalName;
-    businessName;
-    businessRegistrationNumber;
-    documents: [];
-    status: 'in_progress';
-    amlStatus: 'unknown';
-    createdAt: now;
-    lastUpdatedAt: now;
-    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
+    userId,
+    role,
+    fullLegalName,
+    businessName,
+    businessRegistrationNumber,
+    documents: [],
+    status: 'in_progress',
+    amlStatus: 'unknown',
+    createdAt: now,
+    lastUpdatedAt: now,
+    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
+  } as KycProfile;
 
   profile.role = role;
   if (fullLegalName) profile.fullLegalName = fullLegalName;
@@ -56,8 +57,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   save(db);
 
   res.status(200).json({
-    ok: true;
-    profile;
-    requiredDocuments: getRequiredDocuments(role);
-    optionalDocuments: getOptionalDocuments(role)})
+    ok: true,
+    profile,
+    requiredDocuments: getRequiredDocuments(role),
+    optionalDocuments: getOptionalDocuments(role)
+  });
 }
