@@ -1,31 +1,79 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' }
+  ];
+
   return (
-    <header className="bg-background border-b">
+    <header className="bg-background border-b sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">Z</span>
             </div>
             <span className="text-xl font-bold text-foreground">Zion Tech Group</span>
-          </div>
+          </Link>
+          
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-6">
-            <a href="#services" className="text-foreground/80 hover:text-primary transition-colors">
-              Services
-            </a>
-            <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">
-              About
-            </a>
-            <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">
-              Contact
-            </a>
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`transition-colors ${
+                  location.pathname === item.href
+                    ? 'text-primary font-medium'
+                    : 'text-foreground/80 hover:text-primary'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
-          <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-            Get Started
-          </button>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
+        
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden mt-4 pb-4">
+            <div className="space-y-2">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`block px-3 py-2 rounded-lg transition-colors ${
+                    location.pathname === item.href
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-foreground/80 hover:bg-muted'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

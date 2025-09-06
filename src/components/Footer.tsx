@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
 
 export function Footer() {
@@ -16,44 +17,44 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-foreground/80 hover:text-primary">About</a></li>
-              <li><a href="#contact" className="text-foreground/80 hover:text-primary">Contact</a></li>
-              <li><a href="#careers" className="text-foreground/80 hover:text-primary">Careers</a></li>
+              <li><Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">About</Link></li>
+              <li><Link to="/contact" className="text-foreground/80 hover:text-primary transition-colors">Contact</Link></li>
+              <li><a href="#careers" className="text-foreground/80 hover:text-primary transition-colors">Careers</a></li>
             </ul>
           </div>
 
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#services" className="text-foreground/80 hover:text-primary">Services</a></li>
-              <li><a href="#pricing" className="text-foreground/80 hover:text-primary">Pricing</a></li>
+              <li><Link to="/services" className="text-foreground/80 hover:text-primary transition-colors">Services</Link></li>
+              <li><Link to="/pricing" className="text-foreground/80 hover:text-primary transition-colors">Pricing</Link></li>
             </ul>
           </div>
 
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Support</h3>
             <ul className="space-y-2">
-              <li><a href="#help" className="text-foreground/80 hover:text-primary">Help Center</a></li>
-              <li><a href="#docs" className="text-foreground/80 hover:text-primary">Documentation</a></li>
+              <li><a href="#help" className="text-foreground/80 hover:text-primary transition-colors">Help Center</a></li>
+              <li><a href="#docs" className="text-foreground/80 hover:text-primary transition-colors">Documentation</a></li>
             </ul>
           </div>
 
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Connect</h3>
             <div className="flex space-x-4">
-              <a href="https://twitter.com/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="Twitter">
+              <a href="https://twitter.com/ziontechgroup" className="text-foreground/80 hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="LinkedIn">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-foreground/80 hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://facebook.com/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="Facebook">
+              <a href="https://facebook.com/ziontechgroup" className="text-foreground/80 hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://instagram.com/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="Instagram">
+              <a href="https://instagram.com/ziontechgroup" className="text-foreground/80 hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="GitHub">
+              <a href="https://github.com/ziontechgroup" className="text-foreground/80 hover:text-primary transition-colors" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </div>
