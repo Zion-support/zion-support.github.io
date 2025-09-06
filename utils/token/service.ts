@@ -33,26 +33,8 @@ export function getConfig() {
   };
 }
 
-<<<<<<< HEAD
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
-=======
-export function setConfig(config: any) {
-  // Mock implementation
-}
-
-export function revokeTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    userId,
-    amount: -amount, // Negative amount for revocation
-    reason,
-    timestamp: Date.now()
-  };
-  transactions.push(transaction);
-  return transaction;
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

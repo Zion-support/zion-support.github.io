@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Button } from './ui/button';
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from './ui/use-toast';
 import { useTranslation } from 'react-i18next';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function SocialShareSection() {
@@ -124,10 +115,6 @@ export function SocialShareSection() {
       </div>
     </section>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   navigator.clipboard.writeText (window.location.href) .then ( () => {;
   toast ({;
@@ -138,14 +125,7 @@ export function SocialShareSection() {
 });
 };
 }</div> </div> </div> </section>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

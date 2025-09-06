@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 
 type MilestoneFormValues = z.infer<typeof formSchema>;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -239,7 +232,6 @@ export function AddMilestoneForm({
       </Form>
     </div>
   );
-<<<<<<< HEAD
 
 }//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {;
   projectScope ;
@@ -267,14 +259,6 @@ export function AddMilestoneForm({
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") ;
 }</Button> </div> </form> </Form> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-type MilestoneFormValues = z.infer<typeof formSchema>;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

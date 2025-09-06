@@ -455,20 +455,7 @@ export function PerformanceDashboard() {
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-        
-        observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 } 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

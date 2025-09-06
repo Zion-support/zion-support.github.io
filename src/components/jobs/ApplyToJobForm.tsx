@@ -1,12 +1,4 @@
-<<<<<<< HEAD
     
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
-import { useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useResume } from "@/hooks/useResume";
@@ -191,7 +183,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       </div>
     </form>
   );
-<<<<<<< HEAD
   ;
 }setError (null);
 if (success) {;
@@ -216,12 +207,6 @@ handleSubmit ;
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"
-=======
-
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

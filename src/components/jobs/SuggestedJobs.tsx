@@ -1,16 +1,4 @@
-<<<<<<< HEAD
     updateJobMatchStatus, 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useAuth } from '@/hooks/useAuth';
-import { Loader2 } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { useJobSuggestions } from '@/hooks/useJobSuggestions';
-import { JobMatchesCard } from './JobMatchesCard';
-import { NoJobsCard } from './NoJobsCard';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'
@@ -123,7 +111,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }= useJobSuggestions (currentTalentId);
 const handleApply = (matchId: string, jobId: string) => {;
@@ -177,12 +164,6 @@ if (isLoading) {;
 }</div> </div>) ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    updateJobMatchStatus, 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

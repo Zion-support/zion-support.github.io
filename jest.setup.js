@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Jest setup file
 import '@testing-library/jest-dom';
 
@@ -81,11 +77,5 @@ global.ResizeObserver = class ResizeObserver {
 beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
-<<<<<<< HEAD
 });
-=======
-});
-=======
-import '@testing-library/jest-dom';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

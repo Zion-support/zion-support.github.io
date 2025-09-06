@@ -21,10 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }
     ]
   };
-<<<<<<< HEAD
 
   res.status(200).json(data);
-=======
-  res.status(200).json(data)
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }

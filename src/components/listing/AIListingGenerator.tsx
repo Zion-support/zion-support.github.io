@@ -1,31 +1,6 @@
-<<<<<<< HEAD
     
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Sparkles } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { AIListingForm } from './AIListingForm';
-import { GeneratedContentDisplay } from './GeneratedContentDisplay';
-import { LoadingContentSkeleton } from './LoadingContentSkeleton';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-=======
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client";
-import { AIListingForm } from "./AIListingForm";
-import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
-import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
-import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -132,7 +107,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }: AIListingGeneratorProps) {;
   const {;
@@ -200,16 +174,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>) ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

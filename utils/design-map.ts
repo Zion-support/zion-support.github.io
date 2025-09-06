@@ -5,7 +5,6 @@ export function getDesignMap() {
     pages: [],
     styles: []
   };
-<<<<<<< HEAD
 
 export type TokenSet = {
   colors: Record<string, string>;
@@ -79,6 +78,3 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   } catch {
     return null;
   }
-=======
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,16 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-=======
-
-import React from "react";
-import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface FraudTabContentProps {

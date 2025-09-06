@@ -1,23 +1,5 @@
-<<<<<<< HEAD
       let fullMessage = message;
       
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useJobApplications } from '@/hooks/useJobApplications';
-import { useMessaging } from '@/context/MessagingContext';
-import { toast } from '@/hooks/use-toast';
-import { ResumeSelector, ResumeOption } from '../resume-selector';
-import { MessageTab } from './MessageTab';
-import { ResumeTab } from './ResumeTab';
-import { Job } from './types';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
@@ -192,7 +174,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       </div>
     </>
   );
-<<<<<<< HEAD
   if (!message.trim () ) {;
   toast ({;
   return;
@@ -252,13 +233,6 @@ return (<> <Tabs value= {;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-      let fullMessage = message;
-      
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

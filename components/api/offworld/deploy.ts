@@ -3,28 +3,16 @@ import { execSync } from 'child_process';
 import path from 'path';
 import fs from 'fs';
 import { addDirectory } from '@/utils/offworld/ipfs';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
-<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });  try {
     // Ensure export
     const outDir = path.resolve(process.cwd(), 'out');
     try {
-=======
-    return res.status(405).json({ error: 'Method not allowed' });
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -33,7 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Ensure export
     const outDir = path.resolve(process.cwd(), 'out');
     try {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       execSync('npm run export', { stdio: 'inherit' });
@@ -49,15 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         .status(500)
         .json({ error: 'Export failed, no out/ directory found' });    }
 =======
-        execSync('next build && next export', { stdio: 'inherit' });
-=======
-      execSync('npm run export', { stdio: 'inherit' })
-    } catch (e) {
-      // attempt minimal static export
-      try {
-        execSync('next build && next export', { stdio: 'inherit' })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       execSync('npm run export', { stdio: 'inherit' })
     } catch (e) {
       // attempt minimal static export
@@ -69,13 +47,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (!fs.existsSync(outDir)) {
 <<<<<<< HEAD
-<<<<<<< HEAD
       return res
         .status(500)
         .json({ error: 'Export failed, no out/ directory found' });
-=======
-      return res.status(500).json({ error: 'Export failed, no out/ directory found' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
       return res.status(500).json({ error: 'Export failed, no out/ directory found' });
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -85,25 +59,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { cid, provider } = await addDirectory(outDir);
     if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
 
-<<<<<<< HEAD
     return res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return res.status(200).json({ cid, provider });
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Unknown error' });
-  }
-=======
-    return res.status(200).json({ cid, provider })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
-  };
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     return res.status(200).json({ cid, provider })
   } catch (error: any) {

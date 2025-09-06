@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { StarIcon } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { StarIcon } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
@@ -161,21 +148,7 @@ export function ListingScoreCard({
         )}
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-    <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group",
-<<<<<<< HEAD
-                  key={star}
-                  className={cn("h-4 w-4", star <= Math.round(rating) 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

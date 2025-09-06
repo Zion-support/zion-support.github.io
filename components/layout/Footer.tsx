@@ -1,9 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
 
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { 
   Phone, 
   Mail, 
@@ -25,7 +22,6 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'Web Development', href: '/services/web-development' },
-<<<<<<< HEAD
     { name: 'Mobile Apps', href: '/services/mobile-apps' },
     { name: 'AI Solutions', href: '/services/ai-solutions' },
     { name: 'Cloud Services', href: '/services/cloud-services' },
@@ -37,21 +33,11 @@ const Footer: React.FC = () => {
     { name: 'Data Analytics', href: '/solutions/analytics' },
     { name: 'Automation', href: '/solutions/automation' },
 
-=======
-    { name: 'Mobile Development', href: '/services/mobile-development' },
-    { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
-    { name: 'Database Management', href: '/services/database-management' },
-    { name: 'Security Services', href: '/services/security' },
-    { name: 'Performance Optimization', href: '/services/performance' }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ];
 
   const company = [
     { name: 'About Us', href: '/about' },
-<<<<<<< HEAD
 
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
@@ -63,7 +49,6 @@ const Footer: React.FC = () => {
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
-<<<<<<< HEAD
     { name: 'Instagram', href: '#', icon: Instagram },
 
   ];
@@ -75,17 +60,6 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-=======
-    { name: 'Instagram', href: '#', icon: Instagram }
-  ];
-
-  return (
-    <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Code className="w-5 h-5 text-white" />
@@ -136,30 +110,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
-=======
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -174,7 +124,6 @@ const Footer: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
 
 
@@ -249,8 +198,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </div>
 
         {/* Bottom Bar */}
@@ -266,25 +213,18 @@ const Footer: React.FC = () => {
               <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
-<<<<<<< HEAD
               <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
 
               </Link>
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </div>
           </div>
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
 
   );
 
-=======
-  );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 
 export default Footer;

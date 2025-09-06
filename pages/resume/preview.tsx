@@ -14,18 +14,6 @@
 }//Placeholder: fetch resume data for the logged-in user and versions if any const initialData: ResumeData = {
   name: 'Your Name', contact: {
   email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' 
-<<<<<<< HEAD
-=======
-import { GetServerSideProps } from 'next';
-import React, { useMemo, useRef, useState } from 'react';
-import PdfExportButton from '../../components/ui/PdfExportButton';
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
-import { createServerClient } from '../../utils/supabase/server';
-export type ResumePreviewPageProps = {
-  initialData: ResumeData,
-  versions?: Array<{ id: string, label: string, data: ResumeData }>
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 
 export default function ResumePreviewPage({
@@ -35,37 +23,12 @@ export default function ResumePreviewPage({
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id || 'current'
-<<<<<<< HEAD
   );  const targetRef = useRef<HTMLDivElement>(null);
-=======
-  );
-import { GetServerSideProps } from 'next';
-import React, { useMemo, useRef, useState } from 'react';
-import PdfExportButton from '../../components/ui/PdfExportButton';
-import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview';
-import { createServerClient } from '../../utils/supabase/server';
-export type ResumePreviewPageProps = {
-  initialData: ResumeData,
-  versions?: Array<{ id: string, label: string, data: ResumeData }>
-};
-
-export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current');
-  const [selectedVersionId, setSelectedVersionId] = useState<string>(versions[0]?.id || 'current');
-ursor/integrate-build-improve-and-re-verify-b76c
-  const targetRef = useRef<HTMLDivElement>(null);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data || initialData;
-<<<<<<< HEAD
-=======
-    return found?.data || initialData
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [selectedVersionId, initialData, versions]);
 
   return (
@@ -79,39 +42,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
             className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black'
           >
             <option value='light'>Light</option>
-<<<<<<< HEAD
             <option value='dark'>Dark</option>          </select>
-=======
-            <option value='dark'>Dark</option>
-    return found?.data || initialData
-  }, [selectedVersionId, initialData, versions]);
-
-  return (
-    <div className="relative">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <label className="text-sm">Theme</label>
-          <select
-            value={theme}
-            onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-          >
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-ursor/integrate-build-improve-and-re-verify-b76c
-          </select>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
           {versions.length > 0 && (
             <>
               <label className='text-sm ml-4'>Version</label>
-<<<<<<< HEAD
-=======
-              <label className="text-sm ml-4">Version</label>
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <select
                 value={selectedVersionId}
                 onChange={e => setSelectedVersionId(e.target.value)}
@@ -121,23 +56,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>
                     {v.label}
-<<<<<<< HEAD
                   </option>                ))}
-=======
-                  </option>
-              <label className="text-sm ml-4">Version</label>
-              <select
-                value={selectedVersionId}
-                onChange={(e) => setSelectedVersionId(e.target.value)}
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-              >
-                <option value="current">Current</option>
-                {versions.map(v => (
-                  <option value={v.id} key={v.id}>{v.label}</option>
-                  <option value={v.id} key={v.id}>{v.label}</option>
-ursor/integrate-build-improve-and-re-verify-b76c
-                ))}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </select>
             </>
           )}
@@ -148,11 +67,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         targetRef={targetRef}
         fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
       />
-<<<<<<< HEAD
-=======
-      <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       <div className='mx-auto'>
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
@@ -161,26 +75,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
-<<<<<<< HEAD
   // Simple auth guard for talent users; adjust with real roles when available  const supabase = createServerClient();
-=======
-  // Simple auth guard for talent users; adjust with real roles when available
-      <PdfExportButton targetRef={targetRef} fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
-
-      <div className="mx-auto">
-        <ResumePreview ref={targetRef} data={activeData} theme={theme} />
-      </div>
-    </div>
-  )
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  // Simple auth guard for talent users, adjust with real roles when available
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  // Simple auth guard for talent users, adjust with real roles when available
-ursor/integrate-build-improve-and-re-verify-b76c
-  const supabase = createServerClient();
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const user = await (supabase as any).auth.getUser?.();
 
   if (!user) {
@@ -189,15 +84,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         destination: '/auth',
         permanent: false,
       },
-<<<<<<< HEAD
     };  }
-=======
-    };
-        permanent: false}}
-        permanent: false}}
-ursor/integrate-build-improve-and-re-verify-b76c
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Placeholder: fetch resume data for the logged-in user and versions if any
   const initialData: ResumeData = {
@@ -217,21 +104,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       'Node.js',
       'Next.js',
     ],
-<<<<<<< HEAD
     technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [
-=======
-    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],
-    contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
-    summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',
-    skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],
-    technologies: ['OpenAISupabasePostgresVercelDocker'],
-    contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
-    summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
-    skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],
-    technologies: ['OpenAISupabasePostgresVercelDocker'],
-ursor/integrate-build-improve-and-re-verify-b76c
-    experience: [
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       {
         title: 'Senior AI Engineer',
         company: 'Zion AI',
@@ -244,11 +117,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         ],
       },
     ],
-<<<<<<< HEAD
-=======
-          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     education: [
       {
         institution: 'University of Example',
@@ -278,21 +146,4 @@ ursor/integrate-build-improve-and-re-verify-b76c
   const versions = [] as Array<{ id: string; label: string; data: ResumeData }>;
 
   return { props: { initialData, versions } };
-<<<<<<< HEAD
 };
-=======
-};
-          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.']}];
-    education: [
-      { institution: 'University of Example', degree: 'B.Sc. Computer Science', start: '2016', end: '2020' }],
-    certifications: ['AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate'],
-    portfolio: [
-ursor/integrate-build-improve-and-re-verify-b76c
-      { title: 'Agentic Resume Builder', description: 'Automated resume generation using LLMs and vector search.', link: 'https://example.com' },
-      { title: 'AI Marketplace', description: 'Talent dashboard with export features.' }]},
-  const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
-  return { props: { initialData, versions } }
-};
-};
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

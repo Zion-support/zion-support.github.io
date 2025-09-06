@@ -1,51 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- projects: [ {
-  name: Desktop Chrome', use: {
-  browserName: chromium', channel: window.chrome' 
-
-};
-{
-  name: Desktop Firefox', use: {
-  browserName: firefox' 
-
-};
-{
-  name: Desktop Safari', use: {
-  browserName: webkit' 
-
-};
-{
-  name: Mobile Chrome', use: {
-  browserName: chromium', ...devices['Pixel 5'] 
-
-};
-{
-  name: Mobile Safari', use: {
-  browserName: webkit', ...devices['iPhone 12'] 
-
-}];
-reporter: [ 
-=======
-import { defineConfig, devices } from @playwright/test';
-default defineConfig({
-  testDir: tests/e2e',  use: {
-      
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'
-    },
-    projects: [
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { defineConfig, devices } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
   projects: [
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       name: Desktop Chrome',      use: {
@@ -71,10 +28,6 @@ default defineConfig({
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

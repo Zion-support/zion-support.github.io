@@ -4,7 +4,6 @@ export function tryWriteToFirestore(doc: any): Promise<boolean> {
   return Promise.resolve(true);
 }
 
-<<<<<<< HEAD
 export type FeedbackRecord = {
   id: string;
   createdAtIso: string;
@@ -31,9 +30,3 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   items.push(rec);
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
-=======
-export function saveFeedbackFallback(doc: any): void {
-  // Mock implementation - in a real app, this would save to a fallback store
-  console.log('Feedback saved:', doc);
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

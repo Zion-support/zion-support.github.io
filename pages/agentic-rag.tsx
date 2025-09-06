@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 import {
@@ -13,11 +12,6 @@ import {
   MapPin,
   Rocket,;
 } from 'lucide-react';
-=======
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function AgenticRAGPage() {
   const contactInfo = {
@@ -27,7 +21,6 @@ export default function AgenticRAGPage() {
     website: 'https://ziontechgroup.com',
   };
 
-<<<<<<< HEAD
   const plans = [
     {
       name: 'Starter',
@@ -55,20 +48,6 @@ export default function AgenticRAGPage() {
       items: ['Siloed indexes', 'SOC2/ISO support', 'Private VPC', 'SAML/SSO'],
     },
   ];
-=======
-	const plans = [
-		{ name: 'Starter', price: '$199/month', items: ['100K tokens/month', 'Web/PDF ingestion', 'Basic reranker', 'CSV export'] },
-		{ name: 'Pro', price: '$599/month', items: ['2M tokens/month', 'GitHub/S3 connectors', 'Hybrid search + rerank', 'Eval kits'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexes', 'SOC2/ISO support', 'Private VPC', 'SAML/SSO'] }];
-
-	return (
-		<UltraFuturisticBackground>
-			<Head>
-				<title>Agentic RAG Platform | Zion Tech Group</title>
-				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
-				<link rel="canonical" href="https://ziontechgroup.com/agentic-rag" />
-			</Head>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <UltraFuturisticMatrixBackground>
@@ -129,7 +108,6 @@ export default function AgenticRAGPage() {
           ))}
         </div>
 
-<<<<<<< HEAD
         <div className='max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6'>
           <div className='bg-black/20 border border-gray-700/50 rounded-2xl p-6'>
             <div className='text-gray-400 text-sm mb-2'>Ingestion</div>
@@ -190,19 +168,3 @@ export default function AgenticRAGPage() {
       </div>
     </UltraFuturisticMatrixBackground>
   );
-=======
-				<div className="max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
-						<div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
-						<div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-						<div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
-					</div>
-					<div className="text-center">
-						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</a>
-					</div>
-				</div>
-			</div>
-		</UltraFuturisticBackground>
-	);
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

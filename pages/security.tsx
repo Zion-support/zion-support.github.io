@@ -15,17 +15,6 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-<<<<<<< HEAD
-=======
-
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function Security() {
   const securityMeasures = [
     {
@@ -39,19 +28,7 @@ export default function Security() {
         'Secure data centers with 24/7 monitoring',
         'Data residency compliance for global clients',
       ],
-<<<<<<< HEAD
     },    {
-=======
-    },
-        'End-to-end encryption for all data in transitAES-256 encryption for data at restRegular automated backups with encryptionSecure data centers with 24/7 monitoringData residency compliance for global clients'
-      ]
-    };
-        'End-to-end encryption for all data in transitAES-256 encryption for data at restRegular automated backups with encryptionSecure data centers with 24/7 monitoringData residency compliance for global clients'
-      ]
-    };
-ursor/integrate-build-improve-and-re-verify-b76c
-    {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       id: 'access-control',
       title: 'Access Control',
       icon: Key,
@@ -62,19 +39,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Regular access reviews and deprovisioning',
         'Single sign-on (SSO) integration',
       ],
-<<<<<<< HEAD
     },    {
-=======
-    },
-        'Multi-factor authentication (MFA) requiredRole-based access control (RBAC)Principle of least privilege implementationRegular access reviews and deprovisioningSingle sign-on (SSO) integration'
-      ]
-    };
-        'Multi-factor authentication (MFA) requiredRole-based access control (RBAC)Principle of least privilege implementationRegular access reviews and deprovisioningSingle sign-on (SSO) integration'
-      ]
-    };
-ursor/integrate-build-improve-and-re-verify-b76c
-    {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       id: 'infrastructure',
       title: 'Infrastructure Security',
       icon: Server,
@@ -85,19 +50,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Automated security patching',
         'DDoS protection and rate limiting',
       ],
-<<<<<<< HEAD
     },    {
-=======
-    },
-        'Network segmentation and firewallsIntrusion detection and prevention systemsRegular vulnerability assessmentsAutomated security patchingDDoS protection and rate limiting'
-      ]
-    };
-        'Network segmentation and firewallsIntrusion detection and prevention systemsRegular vulnerability assessmentsAutomated security patchingDDoS protection and rate limiting'
-      ]
-    };
-ursor/integrate-build-improve-and-re-verify-b76c
-    {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       id: 'monitoring',
       title: 'Security Monitoring',
       icon: Eye,
@@ -108,34 +61,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Security incident response team',
         'Continuous security monitoring tools',
       ],
-<<<<<<< HEAD
     },  ];
-=======
-    },
-        '24/7 security operations center (SOC)Real-time threat detection and responseComprehensive audit loggingSecurity incident response teamContinuous security monitoring tools'
-      ]
-    }
-        '24/7 security operations center (SOC)Real-time threat detection and responseComprehensive audit loggingSecurity incident response teamContinuous security monitoring tools'
-      ]
-    }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
     { name: 'GDPR', status: 'Compliant' },
     { name: 'HIPAA', status: 'Compliant' },
-<<<<<<< HEAD
     { name: 'PCI DSS', status: 'Compliant' },  ];
-=======
-    { name: 'PCI DSS', status: 'Compliant' },
-    { name: 'PCI DSS', status: 'Compliant' }
-    { name: 'PCI DSS', status: 'Compliant' }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <>
@@ -147,13 +80,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-<<<<<<< HEAD
-=======
-        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, certifications, and commitment to protecting your data and privacy." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </Head>
 
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -161,48 +87,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-6'>
-<<<<<<< HEAD
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
-=======
-          <div className='max-w-4xl mx-auto text-center'>
-        <meta name="description" content="Learn about Zion Tech Group's comprehensive security measures, certifications, and commitment to protecting your data and privacy." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <EnhancedNavigation />
-
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-        <section className="pt-32 pb-20 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-ursor/integrate-build-improve-and-re-verify-b76c
-            <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='flex items-center justify-center mb-6'
-<<<<<<< HEAD
-=======
-              className="flex items-center justify-center mb-6"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <Shield className='w-16 h-16 text-cyan-400' />
             </motion.div>
-<<<<<<< HEAD
-=======
-
-              className="flex items-center justify-center mb-6"
-            >
-              <Shield className="w-16 h-16 text-cyan-400" />
-            </motion.div>
-
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -211,21 +103,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
             >
               Security First
             </motion.h1>
-<<<<<<< HEAD
-=======
-
-              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
-            >
-              Security First
-            </motion.h1>
-            
-              className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent mb-6"
-            >
-              Security First
-            </motion.h1>
-            
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -233,44 +110,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
               className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
             >
               Your security and privacy are our top priorities. Learn about our
-<<<<<<< HEAD
               comprehensive security measures and industry-leading practices.            </motion.p>
-=======
-              comprehensive security measures and industry-leading practices.
-              className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-            >
-              Your security and privacy are our top priorities. Learn about our comprehensive security measures and industry-leading practices.
-              className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
-            >
-              Your security and privacy are our top priorities. Learn about our comprehensive security measures and industry-leading practices.
-ursor/integrate-build-improve-and-re-verify-b76c
-            </motion.p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </div>
         </section>
 
         {/* Security Overview */}
         <section className='py-20 px-6'>
-<<<<<<< HEAD
           <div className='max-w-6xl mx-auto'>            <motion.div
-=======
-          <div className='max-w-6xl mx-auto'>
-        <section className="py-20 px-6">
-          <div className="max-w-6xl mx-auto">
-        <section className="py-20 px-6">
-          <div className="max-w-6xl mx-auto">
-ursor/integrate-build-improve-and-re-verify-b76c
-            <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
-<<<<<<< HEAD
-=======
-              className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
                 Enterprise-Grade Security
@@ -281,34 +131,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid md:grid-cols-2 gap-8 mb-16'>              {securityMeasures.map((measure, index) => (
-=======
-            <div className='grid md:grid-cols-2 gap-8 mb-16'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Security</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We implement multiple layers of security controls to protect your data and ensure business continuity.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-ursor/integrate-build-improve-and-re-verify-b76c
-              {securityMeasures.map((measure, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <motion.div
                   key={measure.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300'
-<<<<<<< HEAD
-=======
-                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <div className='flex items-center mb-6'>
                     <measure.icon className='w-8 h-8 text-cyan-400 mr-4' />
@@ -323,28 +152,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
                         <span className='text-gray-300 leading-relaxed'>
                           {feature}
-<<<<<<< HEAD
                         </span>                      </li>
-=======
-                        </span>
-                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-                >
-                  <div className="flex items-center mb-6">
-                    <measure.icon className="w-8 h-8 text-cyan-400 mr-4" />
-                    <h3 className="text-2xl font-bold text-white">{measure.title}</h3>
-                  </div>
-                  
-                  <ul className="space-y-3">
-                    {measure.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300 leading-relaxed">{feature}</span>
-                      <li key={featureIndex} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300 leading-relaxed">{feature}</span>
-ursor/integrate-build-improve-and-re-verify-b76c
-                      </li>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     ))}
                   </ul>
                 </motion.div>
@@ -362,23 +170,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 Security Certifications & Compliance
               </h3>
 
-<<<<<<< HEAD
               <div className='grid md:grid-cols-5 gap-6'>                {certifications.map((cert, index) => (
-=======
-              <div className='grid md:grid-cols-5 gap-6'>
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
-              
-              <div className="grid md:grid-cols-5 gap-6">
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
-              
-              <div className="grid md:grid-cols-5 gap-6">
-ursor/integrate-build-improve-and-re-verify-b76c
-                {certifications.map((cert, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <motion.div
                     key={cert.name}
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -390,23 +182,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <h4 className='text-white font-semibold mb-1'>
                       {cert.name}
                     </h4>
-<<<<<<< HEAD
                     <p className='text-cyan-400 text-sm'>{cert.status}</p>                  </motion.div>
-=======
-                    <p className='text-cyan-400 text-sm'>{cert.status}</p>
-                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
-                  >
-                    <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                    <h4 className="text-white font-semibold mb-1">{cert.name}</h4>
-                    <p className="text-cyan-400 text-sm">{cert.status}</p>
-                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
-                  >
-                    <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
-                    <h4 className="text-white font-semibold mb-1">{cert.name}</h4>
-                    <p className="text-cyan-400 text-sm">{cert.status}</p>
-ursor/integrate-build-improve-and-re-verify-b76c
-                  </motion.div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 ))}
               </div>
             </motion.div>
@@ -417,11 +193,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               className='mb-16'
-<<<<<<< HEAD
-=======
-              className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h3 className='text-3xl font-bold text-white mb-6'>
                 Incident Response
@@ -433,55 +204,19 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       <Eye className='w-5 h-5 text-cyan-400 mr-2' />
                       Detection & Response
                     </h4>
-<<<<<<< HEAD
                     <ul className='space-y-2 text-gray-300'>                      <li>• 24/7 security monitoring</li>
-=======
-                    <ul className='space-y-2 text-gray-300'>
-              className="mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6">Incident Response</h3>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h4 className="text-white font-semibold mb-4 flex items-center">
-                      <Eye className="w-5 h-5 text-cyan-400 mr-2" />
-                      Detection & Response
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                    <ul className="space-y-2 text-gray-300">
-ursor/integrate-build-improve-and-re-verify-b76c
-                      <li>• 24/7 security monitoring</li>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       <li>• Automated threat detection</li>
                       <li>• Rapid incident response team</li>
                       <li>• Regular security drills</li>
                     </ul>
                   </div>
 
-<<<<<<< HEAD
-=======
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <div>
                     <h4 className='text-white font-semibold mb-4 flex items-center'>
                       <Lock className='w-5 h-5 text-cyan-400 mr-2' />
                       Business Continuity
                     </h4>
-<<<<<<< HEAD
                     <ul className='space-y-2 text-gray-300'>                      <li>• Disaster recovery plans</li>
-=======
-                    <ul className='space-y-2 text-gray-300'>
-                  
-                  <div>
-                    <h4 className="text-white font-semibold mb-4 flex items-center">
-                      <Lock className="w-5 h-5 text-cyan-400 mr-2" />
-                      Business Continuity
-                    </h4>
-                    <ul className="space-y-2 text-gray-300">
-                    <ul className="space-y-2 text-gray-300">
-ursor/integrate-build-improve-and-re-verify-b76c
-                      <li>• Disaster recovery plans</li>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       <li>• Regular backup testing</li>
                       <li>• Redundant infrastructure</li>
                       <li>• Recovery time objectives (RTO)</li>
@@ -497,11 +232,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
               className='mb-16'
-<<<<<<< HEAD
-=======
-              className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h3 className='text-3xl font-bold text-white mb-6'>
                 Vulnerability Management
@@ -546,46 +276,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     </h4>
                     <p className='text-gray-300 text-sm'>
                       Quick patching and vulnerability resolution
-<<<<<<< HEAD
                     </p>                  </div>
-=======
-                    </p>
-              className="mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6">Vulnerability Management</h3>
-              <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  We maintain a proactive approach to identifying and addressing security vulnerabilities:
-                </p>
-                
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Eye className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <h4 className="text-white font-semibold mb-2">Regular Scanning</h4>
-                    <p className="text-gray-300 text-sm">Continuous automated vulnerability scanning</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Shield className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <h4 className="text-white font-semibold mb-2">Penetration Testing</h4>
-                    <p className="text-gray-300 text-sm">Annual third-party security assessments</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-cyan-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <h4 className="text-white font-semibold mb-2">Rapid Remediation</h4>
-                    <p className="text-gray-300 text-sm">Quick patching and vulnerability resolution</p>
-                    <h4 className="text-white font-semibold mb-2">Rapid Remediation</h4>
-                    <p className="text-gray-300 text-sm">Quick patching and vulnerability resolution</p>
-ursor/integrate-build-improve-and-re-verify-b76c
-                  </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             </motion.div>
@@ -596,11 +287,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               className='bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20'
-<<<<<<< HEAD
-=======
-              className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h3 className='text-3xl font-bold text-white mb-6 flex items-center'>
                 <Shield className='w-8 h-8 text-red-400 mr-4' />
@@ -635,47 +321,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <Key className='w-5 h-5 text-red-400 mr-3' />
                   <div>
                     <p className='text-white font-semibold'>PGP Key</p>
-<<<<<<< HEAD
                     <p className='text-gray-300'>Available on request</p>                  </div>
-=======
-                    <p className='text-gray-300'>Available on request</p>
-              className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 text-red-400 mr-4" />
-                Report Security Issues
-              </h3>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                If you discover a security vulnerability, please report it to our security team immediately: </p>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                <div className="flex items-center">
-                  <Mail className="w-5 h-5 text-red-400 mr-3" />
-                  <div>
-                    <p className="text-white font-semibold">Security Email</p>
-                    <p className="text-gray-300">security@ziontechgroup.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <Phone className="w-5 h-5 text-red-400 mr-3" />
-                  <div>
-                    <p className="text-white font-semibold">Emergency Hotline</p>
-                    <p className="text-gray-300">+1 (555) 123-HELP</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center">
-                  <Key className="w-5 h-5 text-red-400 mr-3" />
-                  <div>
-                    <p className="text-white font-semibold">PGP Key</p>
-                    <p className="text-gray-300">Available on request</p>
-                    <p className="text-white font-semibold">PGP Key</p>
-                    <p className="text-gray-300">Available on request</p>
-ursor/integrate-build-improve-and-re-verify-b76c
-                  </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             </motion.div>
@@ -685,13 +331,4 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <EnhancedFooter />
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
-  );
-  )
-}
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

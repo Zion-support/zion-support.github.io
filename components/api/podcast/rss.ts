@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const EPISODES_PATH = path.join(
   process.cwd(),
@@ -14,17 +9,11 @@ const EPISODES_PATH = path.join(
   'episodes.json'
 );
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml');
-<<<<<<< HEAD
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-=======
-=======
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
-const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
@@ -34,13 +23,8 @@ function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 <<<<<<< HEAD
-<<<<<<< HEAD
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-=======
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -52,28 +36,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const items = episodes
-<<<<<<< HEAD
     .filter(e => e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();
-=======
-<<<<<<< HEAD
-    .filter(e => e.audio?.mp3Url)
-    .map(e => {
-=======
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
-}
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-
-  const siteUrl = process.env.SITE_URL || 'http: //localhost:3000',
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-
-  const items = episodes
-    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     .filter((e) => e.audio?.mp3Url)
     .map((e) => {
@@ -106,11 +70,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 </rss>`;
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 
 }) .join ('\n');
@@ -118,14 +77,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   siteUrl 
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items 
-<<<<<<< HEAD
 }</channel> </rss>`;
-=======
-}</channel> </rss>`;
-=======
-  return res.status(200).json({ ok: true, path: '/podcast.xml' })
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }

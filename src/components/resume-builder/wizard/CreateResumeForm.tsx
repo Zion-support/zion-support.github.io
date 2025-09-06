@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
 import { CreateResumeFormProps } from './types';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export const CreateResumeForm = ({
@@ -51,80 +42,21 @@ export const CreateResumeForm = ({
               Create
             </Button>
           </div>
-<<<<<<< HEAD
 
           <Button variant='ghost' onClick={onCancel} className='mt-4'>            Cancel
-=======
-<<<<<<< HEAD
-
-          <Button variant='ghost' onClick={onCancel} className='mt-4'>
-=======
-
-import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Loader2 } from 'lucide-react'
-import { CreateResumeFormProps } from "./types";
-export const CreateResumeForm = ({ 
-  onCreateResume,
-  onCancel;
-  isLoading 
-}: CreateResumeFormProps) => {
-
-  const [ newResumeTitle, setNewResumeTitle ] = useState(''),
-
-
-  const handleSubmit = async () => {
-    if (!newResumeTitle.trim()) return;
-    await onCreateResume(newResumeTitle)
-  };
-
-  return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardContent className="py-8">
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-2">Create New Resume</h2>
-          <p className="text-muted-foreground mb-6">Give your resume a title to get started</p>
-          
-          <div className="flex gap-2 max-w-md mx-auto">
-            <input
-              type="text"
-              placeholder="Resume Title (e.g. 'AI Engineer Resume')"
-              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-              value={newResumeTitle}
-              onChange={(e) => setNewResumeTitle(e.target.value)}
-            />
-            <Button 
-              onClick={handleSubmit}
-              disabled={!newResumeTitle.trim() || isLoading}
-            >
-              {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              Create
-            </Button>
-          </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           
           <Button
             variant="ghost"
             onClick={onCancel}
             className="mt-4"
           >
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Cancel
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </Button>
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   );
 };
 w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text-center"> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className=" text-muted-foreground mb-6">Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={;
@@ -133,16 +65,7 @@ w-full max-w-2xl mx-auto"> <CardContent className=" py-8"> <div className=" text
   !newResumeTitle.trim () || isLoading ;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>) ;
 };
-<<<<<<< HEAD
 '"
-=======
-'"
-=======
-  )
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 };

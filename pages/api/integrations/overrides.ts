@@ -6,7 +6,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ overrides: state.overrides });
   }
   if (req.method === 'POST') {
-<<<<<<< HEAD
     const { jobId, disableCrmSync, disableAtsSync } = req.body as {
       jobId?: string;
       disableCrmSync?: boolean;
@@ -29,16 +28,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
   }
   return res.status(405).json({ error: 'Method not allowed' });
-=======
-    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean };
-    if (!jobId) return res.status(400).json({ error: 'jobId is required' });
-    const updated = writeState(state => {
-      const idx = state.overrides.findIndex(o => o.jobId === jobId);
-      const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
-      if (idx >= 0) state.overrides[idx] = entry; else state.overrides.push(entry);
-    });
-    return res.status(200).json({ ok: true, override: updated.overrides.find(o => o.jobId === jobId) });
-  }
-  return res.status(405).json({ error: 'Method not allowed' });
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

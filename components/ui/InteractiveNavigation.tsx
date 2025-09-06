@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -82,12 +78,6 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   );
 
 };
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-import Link from 'next/link';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default InteractiveNavigation;

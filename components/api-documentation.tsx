@@ -1,11 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Code,
   Database,
@@ -58,25 +53,7 @@ export default function APIDocumentation() {
         </ul>
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-=======
-import { 
-  Code, Database, Shield, Zap, Globe, Cpu, 
-  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
-} from 'lucide-react';
-
-export default function APIDocumentation() {
-=======
-import { 
-  Code, Database, Shield, Zap, Globe, Cpu, 
-  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
-} from 'lucide-react';
-
-export default function APIDocumentation() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -95,8 +72,5 @@ export default function APIDocumentation() {
 		</div>
 	);
 }
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

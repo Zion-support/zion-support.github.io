@@ -1,20 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function TrustBadge({
   type,
 }: {
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
-<<<<<<< HEAD
-=======
-=======
-export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const colorMap = {
     Verified:
@@ -28,21 +18,6 @@ export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' })
       <span className='leading-none'>{type}</span>
     </span>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
-  const colorMap = {
-    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
-  return (
-    <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>
-      <span className="leading-none">{type}</span>
-    </span>
-  )
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function MicroTestimonial({
   quote,
@@ -58,12 +33,7 @@ export function MicroTestimonial({
         — {author}
       </figcaption>
     </figure>
-<<<<<<< HEAD
   );
-=======
-  );
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

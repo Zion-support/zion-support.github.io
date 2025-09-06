@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface PerformanceMetrics {
   loadTime: number, firstContentfulPaint: number,
@@ -89,11 +85,4 @@ export function usePerformanceMonitor() {
   return { metrics, isSupported };
 }
 
-<<<<<<< HEAD
-=======
-=======
-};
-;
-export default usePerformanceMonitor;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

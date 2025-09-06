@@ -4,10 +4,6 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useEffect, useState } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 
-<<<<<<< HEAD
-=======
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -45,44 +41,10 @@ export default function JobsListPage() {
                   subtitle={j.subtitle}
                   description={j.description}
                   footer={<span className='text-blue-600'>View Job →</span>}
-<<<<<<< HEAD
                 />              </a>
-=======
-                />
-export default function JobsListPage() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []);
-
-  const jobs = [
-    { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
-    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
-  return (
-    <div className="space-y-4">
-      <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
-      {loading ? (
-        <EnhancedLoading lines={4} />
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {jobs.map((j) => (
-            <Link key={j.slug} href={`/jobs/${j.slug}`}>
-              <a>
-                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
-                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
-ursor/integrate-build-improve-and-re-verify-b76c
-              </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </Link>
           ))}
         </div>
       )}
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-  )
-}
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

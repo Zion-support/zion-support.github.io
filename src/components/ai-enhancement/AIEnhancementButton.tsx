@@ -1,11 +1,4 @@
-<<<<<<< HEAD
   
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
@@ -132,7 +125,6 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>
     </Button>
   );
-<<<<<<< HEAD
 
 };";
 <Button type="button" variant="ghost" size="sm" onClick={;
@@ -142,12 +134,6 @@ export function AIEnhancementButton({
 }return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
 }</Button>) ;
 }"
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

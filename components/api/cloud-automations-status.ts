@@ -1,13 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -19,13 +12,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
         if (f.endsWith('.json')) {
           const fp = path.join(dir, f);
 <<<<<<< HEAD
-<<<<<<< HEAD
           data[f.replace('.json', '')] = JSON.parse(
             fs.readFileSync(fp, 'utf8')
           );
-=======
-          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
           data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -36,16 +25,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   } catch (e) {
     // ignore
   }
-<<<<<<< HEAD
   res.status(200).json({ ok: true, data });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.status(200).json({ ok: true, data });
-=======
-  res.status(200).json({ ok: true, data })
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   res.status(200).json({ ok: true, data })
 }

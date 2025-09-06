@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 export const config = {
   api: {
-<<<<<<< HEAD
     responseLimit: false,
   },
 };
@@ -10,10 +9,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-=======
-    responseLimit: false}};
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const { companyId, invoiceId } = req.query;
   if (
     !companyId ||
@@ -24,17 +19,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: 'companyId and invoiceId required' });
   }
 
-<<<<<<< HEAD
   if (req.method !== 'GET')
     return res.status(405).json({ error: 'method_not_allowed' });
-=======
-  if (req.method !== 'GET') return res.status($1).json({$2});
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Minimal PDF bytes (single-page PDF saying Invoice). This is a static placeholder.
   const pdfBase64 =
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=';
   const pdfBuffer = Buffer.from(pdfBase64, 'base64');
-<<<<<<< HEAD
 
   res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
@@ -42,9 +32,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `attachment; filename="invoice-${invoiceId}.pdf"`
   );
   res.status(200).send(pdfBuffer);
-=======
-  res.setHeader('Content-Typeapplication/pdf');
-  res.setHeader('Content-Disposition', `attachment, filename="invoice-${invoiceId}.pdf"`);
-  res.status(200).send(pdfBuffer)
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React from 'react';
 import {
   Card,
@@ -16,16 +11,6 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-<<<<<<< HEAD
-=======
-=======
-import React from "react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
-import Link from "next/link";
-import { cn } from "@/lib/utils";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface InteractiveFeaturesProps {
   className?: string;

@@ -15,13 +15,6 @@ export default function WhitepaperPreview() {
       .then(r => (r.ok ? r.json() : Promise.reject()))
       .then(d => setMarkdown(d.markdown || ''))
       .catch(() => setNotFound(true));
-<<<<<<< HEAD
-=======
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((d) => setMarkdown(d.markdown || ''))
-      .catch(() => setNotFound(true))
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [id]);
 
   if (notFound)
@@ -38,26 +31,4 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-      .then((r) => (r.ok ? r.json() : Promise.reject()))
-      .then((d) => setMarkdown(d.markdown || ''))
-      .catch(() => setNotFound(true))
-  }, [id]);
-
-  if (notFound) return <div className="container mx-auto px-4 py-6">Preview not available or expired.</div>;
-  if (!markdown) return <div className="container mx-auto px-4 py-6">Loading…</div>;
-
-  return (
-    <div className="container mx-auto px-4 py-6">
-      <h1 className="text-xl font-semibold mb-4">Whitepaper Preview</h1>
-      <pre className="whitespace-pre-wrap text-sm leading-6">{markdown}</pre>
-    </div>
-  )
-}
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -3,11 +3,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Brain,
   Cloud,
@@ -16,13 +11,7 @@ import {
   Shield,
   BarChart3,
   ArrowRight,
-<<<<<<< HEAD
   Zap,;} from 'lucide-react';
-=======
-  Zap,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   Brain;
   Cloud, 
@@ -32,10 +21,7 @@ import {
   BarChart3;
   ArrowRight;
   Zap
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -44,11 +30,6 @@ const ServicesSection: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Development',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       description:
         'Custom AI solutions and machine learning models tailored to your business needs.',
       features: [
@@ -57,14 +38,8 @@ const ServicesSection: React.FC = () => {
         'Computer Vision',
         'Predictive Analytics',
       ],
-<<<<<<< HEAD
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development',
-=======
-=======
-      description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: ['Machine Learning ModelsNatural Language ProcessingComputer VisionPredictive Analytics'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development'
     };
@@ -82,7 +57,6 @@ const ServicesSection: React.FC = () => {
       description: 'End-to-end digital transformation services to modernize your business.',
       features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy'],
       color: 'from-green-500 to-emerald-500',
-<<<<<<< HEAD
       href: '/services/digital-transformation',
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
@@ -121,16 +95,11 @@ const ServicesSection: React.FC = () => {
 =======
       href: '/services/digital-transformation'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      href: '/services/digital-transformation'
-    };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: [
@@ -142,10 +111,6 @@ const ServicesSection: React.FC = () => {
 <<<<<<< HEAD
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms',
-=======
-=======
-      features: ['Sensor NetworksReal-time MonitoringData AnalyticsEdge Computing'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms'
     };
@@ -155,7 +120,6 @@ const ServicesSection: React.FC = () => {
       description: 'Decentralized technology platforms and smart contract development.',
       features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
-<<<<<<< HEAD
       href: '/services/blockchain-solutions',
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
@@ -180,16 +144,11 @@ const ServicesSection: React.FC = () => {
 =======
       href: '/services/blockchain-solutions'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      href: '/services/blockchain-solutions'
-    };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       icon: BarChart3,
       title: 'Data Analytics',
       description: 'Advanced analytics and business intelligence solutions.',
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       features: [
@@ -202,14 +161,6 @@ const ServicesSection: React.FC = () => {
       href: '/services/data-analytics',
 <<<<<<< HEAD
     },  ];
-=======
-    },
-=======
-      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
-      color: 'from-teal-500 to-blue-500',
-      href: '/services/data-analytics'
-    }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
       features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
       color: 'from-teal-500 to-blue-500',
@@ -224,7 +175,6 @@ const ServicesSection: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
         staggerChildren: 0.1,
       },
     },  };
@@ -232,17 +182,6 @@ const ServicesSection: React.FC = () => {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        staggerChildren: 0.1,
-      },
-    },
-=======
-        staggerChildren: 0.1
-      }
-    }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
         staggerChildren: 0.1
       }
@@ -253,11 +192,7 @@ const ServicesSection: React.FC = () => {
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
 <<<<<<< HEAD
-<<<<<<< HEAD
     visible: { opacity: 1, y: 0 },
-=======
-    visible: { opacity: 1, y: 0 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
@@ -269,25 +204,7 @@ const ServicesSection: React.FC = () => {
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />
       </div>
 
-<<<<<<< HEAD
       <div className='relative container mx-auto px-4'>        {/* Section Header */}
-=======
-<<<<<<< HEAD
-      <div className='relative container mx-auto px-4'>
-=======
-    visible: { opacity: 1, y: 0 }
-  };
-
-  return (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]" />
-      </div>
-
-      <div className="relative container mx-auto px-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
       <div className="relative container mx-auto px-4">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -298,15 +215,7 @@ const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center mb-16'        >
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='text-center mb-16'
-=======
-          className="text-center mb-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
           className="text-center mb-16"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -317,15 +226,7 @@ const ServicesSection: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
-=======
-            className="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           >
             <Zap className='w-5 h-5 text-blue-400' />
@@ -338,40 +239,15 @@ const ServicesSection: React.FC = () => {
               Solutions
             </span>
           </h2>
-<<<<<<< HEAD
 
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.          </p>
-=======
-<<<<<<< HEAD
-
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            We deliver cutting-edge technology solutions that drive innovation,
-            efficiency, and growth for businesses across all industries.
-=======
-            className="inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6"
-          >
-            <Zap className="w-5 h-5 text-blue-400" />
-            <span className="text-blue-400 font-medium">Our Services</span>
-          </motion.div>
-          
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Comprehensive Technology
-            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h2>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth 
             for businesses across all industries.
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </p>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         </motion.div>
@@ -379,24 +255,10 @@ const ServicesSection: React.FC = () => {
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
-<<<<<<< HEAD
           initial='hidden'
           whileInView='visible'
           viewport={{ once: true }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'        >
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          initial='hidden'
-          whileInView='visible'
-          viewport={{ once: true }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'
-=======
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
           initial="hidden"
           whileInView="visible"
@@ -410,15 +272,7 @@ const ServicesSection: React.FC = () => {
               key={service.title}
               variants={cardVariants}
               whileHover={{ y: -10 }}
-<<<<<<< HEAD
               className='group relative'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='group relative'
-=======
-              className="group relative"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <div className='relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden'>
@@ -438,35 +292,11 @@ const ServicesSection: React.FC = () => {
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {service.title}
                 </h3>
-<<<<<<< HEAD
 
                 <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
                 </p>
 
                 {/* Features */}
-=======
-<<<<<<< HEAD
-
-                <p className='text-gray-300 mb-6 leading-relaxed'>
-=======
-              className="group relative"
-            >
-              <div className="relative h-full bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8 hover:border-gray-700 transition-all duration-300 overflow-hidden">
-                {/* Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-                
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 
                 <p className="text-gray-300 mb-6 leading-relaxed">
@@ -475,7 +305,6 @@ const ServicesSection: React.FC = () => {
                 </p>
 
                 {/* Features */}
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <ul className='space-y-2 mb-8'>
@@ -487,20 +316,12 @@ const ServicesSection: React.FC = () => {
                       <div className='w-2 h-2 bg-blue-400 rounded-full' />
 <<<<<<< HEAD
                       <span className='text-sm'>{feature}</span>                    </li>
-=======
-                      <span className='text-sm'>{feature}</span>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <ul className="space-y-2 mb-8">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3 text-gray-400">
                       <div className="w-2 h-2 bg-blue-400 rounded-full" />
                       <span className="text-sm">{feature}</span>
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </li>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   ))}
@@ -509,15 +330,7 @@ const ServicesSection: React.FC = () => {
                 {/* CTA */}
                 <Link
                   href={service.href}
-<<<<<<< HEAD
                   className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1'
-=======
-                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <span className='font-medium'>Learn More</span>
@@ -525,21 +338,7 @@ const ServicesSection: React.FC = () => {
                 </Link>
 
                 {/* Hover Effect */}
-<<<<<<< HEAD
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />              </div>
-=======
-<<<<<<< HEAD
-                <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />
-=======
-                  className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300 group-hover:translate-x-1"
-                >
-                  <span className="font-medium">Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-
-                {/* Hover Effect */}
-                <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -555,15 +354,7 @@ const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
           className='text-center'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='text-center'
-=======
-          className="text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
@@ -579,28 +370,7 @@ const ServicesSection: React.FC = () => {
               className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1'
             >
               <span>Get Started Today</span>
-<<<<<<< HEAD
               <ArrowRight className='w-5 h-5' />            </Link>
-=======
-<<<<<<< HEAD
-              <ArrowRight className='w-5 h-5' />
-=======
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Let&apos,s discuss how our technology solutions can drive your success and accelerate your growth.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-            >
-              <span>Get Started Today</span>
-              <ArrowRight className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
               <ArrowRight className="w-5 h-5" />
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -610,24 +380,10 @@ const ServicesSection: React.FC = () => {
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
   );
 };
 
 export default ServicesSection;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-
-export default ServicesSection;
-=======
-  )
-};
-
-export default ServicesSection;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 };

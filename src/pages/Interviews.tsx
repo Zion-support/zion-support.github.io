@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useEffect, useState } from 'react';
 import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
@@ -13,21 +8,6 @@ import { InterviewCard } from '@/components/interviews/InterviewCard';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, Video } from 'lucide-react';
 import { format, isAfter, parseISO, startOfDay } from 'date-fns';
-<<<<<<< HEAD
-=======
-=======
-
-import React, { useEffect, useState } from "react";
-import { useInterviews } from "@/hooks/useInterviews";
-import { Interview } from "@/types/interview";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { InterviewCard } from "@/components/interviews/InterviewCard";
-import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 function InterviewsContent() {
@@ -231,15 +211,7 @@ export default function Interviews() {
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
-<<<<<<< HEAD
   );
-=======
-  );
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -19,14 +18,6 @@ export default async function handler(
       c.providerId === 'zoho' ||
       c.providerId === 'pipedrive'
   );
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { resume } = req.body as { resume?: Record<string, any> };
-  if (!resume) return res.status(400).json({ error: 'resume is required' });
-  const state = readState();
-  const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const results: any[] = [];
    = await crm.addEmailTouchpoint(conn, {
       subject: 'Resume viewed',
@@ -35,9 +26,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     writeState(s => s.logs.push(log));
     results.push({ providerId: conn.providerId, ok: true });
   }
-<<<<<<< HEAD
   res.status(200).json({ ok: true, results });
-=======
-  res.status(200).json({ ok: true, results });
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-import { useEffect, useState } from 'react';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface Partner {
   id: string;
@@ -72,29 +67,7 @@ const AdminPartnersPage: React.FC = () => {
     setTimeout(() => {
       setPartners(mockPartners);
       setLoading(false);
-<<<<<<< HEAD
     }, 1000);  }, []);
-=======
-    }, 1000);
-import { useEffect, useState } from 'react';
-
-export default function AdminPartners() {
-  const [partners, setPartners] = useState<any[]>([]);
-  const [selected, setSelected] = useState<string>('');
-  const [flags, setFlags] = useState<any[]>([]);
-
-  useEffect(() => {
-ursor/integrate-build-improve-and-re-verify-b76c
-    (async () => {
-      try {
-        const res = await fetch('/api/admin/partners/list');
-        const json = await res.json();
-        setPartners(json.partners || [])
-      } catch {}
-    })()
-ursor/integrate-build-improve-and-re-verify-b76c
-  }, []);
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
@@ -104,32 +77,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
     });
     const res = await fetch('/api/admin/partners/list');
     const json = await res.json();
-<<<<<<< HEAD
     setPartners(json.partners || []);  }
-=======
-    setPartners(json.partners || []);
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || [])
-      body: JSON.stringify({ code, ...updates })});
-    const res = await fetch('/api/admin/partners/list');
-    const json = await res.json();
-    setPartners(json.partners || [])
-ursor/integrate-build-improve-and-re-verify-b76c
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   async function viewFlags(code: string) {
     setSelected(code);
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-<<<<<<< HEAD
-=======
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const json = await res.json();
     setFlags(json.flags || []);
   }
@@ -156,42 +110,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <td className='py-2 pr-4'>{p.status}</td>
                 <td className='py-2 pr-4'>
                   <input
-<<<<<<< HEAD
                     type='number'                    defaultValue={p.commission_rate}
-=======
-                    type='number'
-    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-    const json = await res.json();
-    setFlags(json.flags || [])
-  }
-
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
-      <div className="overflow-auto">
-        <table className="min-w-full text-sm">
-          <thead>
-            <tr className="text-left border-b">
-              <th className="py-2 pr-4">Code</th>
-              <th className="py-2 pr-4">Name</th>
-              <th className="py-2 pr-4">Status</th>
-              <th className="py-2 pr-4">Commission</th>
-              <th className="py-2 pr-4">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {partners.map((p) => (
-              <tr key={p.code} className="border-b">
-                <td className="py-2 pr-4">{p.code}</td>
-                <td className="py-2 pr-4">{p.name}</td>
-                <td className="py-2 pr-4">{p.status}</td>
-                <td className="py-2 pr-4">
-                  <input
-                    type="number"
-                    type="number"
-ursor/integrate-build-improve-and-re-verify-b76c
-                    defaultValue={p.commission_rate}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     min={0}
                     max={1}
                     step={0.01}
@@ -225,26 +144,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     onClick={() => viewFlags(p.code)}
                   >
                     Fraud Flags
-<<<<<<< HEAD
                   </button>                </td>
-=======
-                  </button>
-                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
-                    className="w-24 border rounded px-2 py-1"
-                  />
-                </td>
-                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
-                    className="w-24 border rounded px-2 py-1"
-                  />
-                </td>
-ursor/integrate-build-improve-and-re-verify-b76c
-                <td className="py-2 pr-4 space-x-2">
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
-                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
-                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
-ursor/integrate-build-improve-and-re-verify-b76c
-                </td>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </tr>
             ))}
           </tbody>
@@ -255,13 +155,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <div className='p-4 rounded border'>
           <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
           <ul className='list-disc pl-6'>
-<<<<<<< HEAD
-=======
-        <div className="p-4 rounded border">
-          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
-          <ul className="list-disc pl-6">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {flags.map((f, idx) => (
               <li key={idx}>
                 <span className='font-medium'>{f.type}</span> — {f.severity}{' '}
@@ -437,28 +330,4 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </main>
     </>
-<<<<<<< HEAD
   );
-=======
-  );
-        <div className="p-4 rounded border">
-          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
-          <ul className="list-disc pl-6">
-            {flags.map((f, idx) => (
-              <li key={idx}>
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
-              </li>
-            ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
-          </ul>
-        </div>
-      )}
-    </div>
-  )
-}
-      )}
-    </div>
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

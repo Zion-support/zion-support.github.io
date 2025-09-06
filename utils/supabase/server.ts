@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 const supabaseUrl =
@@ -16,22 +15,3 @@ export function getServerSupabase(): SupabaseClient {
     auth: { persistSession: false, autoRefreshToken: false },
   });
   return cachedClient;
-=======
-// Mock Supabase server utility
-export function getServerSupabase() {
-  return {
-    from: (table: string) => ({
-      select: (columns: string) => ({
-        eq: (column: string, value: any) => ({
-          gte: (column: string, value: any) => ({
-            order: (column: string, options: any) => Promise.resolve({ data: [], error: null })
-          })
-        })
-      }),
-      update: (data: any) => ({
-        eq: (column: string, value: any) => Promise.resolve({ data: null, error: null })
-      })
-    })
-  };
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

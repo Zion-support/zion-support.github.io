@@ -3,11 +3,6 @@ import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const features = [
     'k6/Gatling-compatible test runner',
     'SLO-aware latency reports',
@@ -75,21 +70,7 @@ export default function ApiPerformanceTestingPage() {
         </section>
       </main>
     </>
-<<<<<<< HEAD
   );
-=======
-  );
-=======
-	const features = [
-		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
-	];
-
-=======
-	const features = [
-		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
-	];
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
@@ -119,10 +100,6 @@ export default function ApiPerformanceTestingPage() {
 			</main>
 		</>
 	);
-<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

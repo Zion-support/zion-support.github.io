@@ -1,10 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 import { EndpointSpec } from '../../../data/api-docs/types';
-<<<<<<< HEAD
 
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function toOpenApi() {
   const paths: Record<string, any> = {};
   v1.sections.forEach(section => {
@@ -15,7 +12,6 @@ function toOpenApi() {
         summary: ep.title,
         description: ep.description,
         parameters: [
-<<<<<<< HEAD
           ...(ep.params
             ? Object.entries(ep.params).map(([name, desc]) => ({
                 in: 'path',
@@ -64,19 +60,6 @@ function toOpenApi() {
       version: 'v1',
       description: 'Zion OS API generated from internal spec',
     },
-=======
-          ...(ep.params ? Object.entries(ep.params).map(([name, desc]) => ({ in: 'path', name, required: true, schema: { type: 'string' }, description: desc })) : []),
-          ...(ep.query ? Object.entries(ep.query).map(([name, desc]) => ({ in: 'query', name, required: false, schema: { type: 'string' }, description: desc })) : [])],
-        requestBody: ep.requestBodySchema ? { content: { 'application/json': { schema: ep.requestBodySchema } } } : undefined,
-        responses: {
-          '200': { description: 'OK', content: { 'application/json': { schema: ep.responseBodySchema || { type: 'object' } } } }},
-        security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []}
-    })
-  });
-  return {
-    openapi: '3.0.3',
-    info: { title: 'Zion OS API', version: 'v1', description: 'Zion OS API generated from internal spec' },
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     servers: [{ url: 'https://api.zion.os' }],
     paths,
     components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }
@@ -85,9 +68,4 @@ function toOpenApi() {
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
   res.status(200).json(toOpenApi());
-=======
-  res.status(200).json(toOpenApi());
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

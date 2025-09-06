@@ -451,28 +451,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-};
-=======
-
-<<<<<<< HEAD
-
-          if (entry.name === src && entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-            
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  );
-},
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

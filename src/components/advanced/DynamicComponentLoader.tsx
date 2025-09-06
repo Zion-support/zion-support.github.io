@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 'use client';
 
 import React, {
@@ -18,11 +13,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
-=======
-=======
-'use client'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface LoadingState {
@@ -350,18 +340,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
-<<<<<<< HEAD
 export default DynamicComponentLoader;
-=======
-<<<<<<< HEAD
-export default DynamicComponentLoader;
-=======
-
-<<<<<<< HEAD
-      setLoadingState(prev => ({
-        ...prev;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default DynamicComponentLoader 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

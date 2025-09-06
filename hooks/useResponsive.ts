@@ -1,7 +1,4 @@
-<<<<<<< HEAD
         "isDesktop": width >= 1024})};
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
@@ -44,7 +41,6 @@ const useResponsive = (): ResponsiveState => {
   return state;
 };
 
-<<<<<<< HEAD
 export default useResponsive;
     updateDimensions();
     window.addEventListener(;
@@ -54,6 +50,3 @@ export default useResponsive;
   return state};
 export default useResponsive;
 ;
-=======
-export default useResponsive;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

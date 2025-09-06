@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import { ArrowRight, Phone } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { AppStoreButtons } from './AppStoreButtons';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import Link from "next/link";
@@ -60,15 +49,7 @@ export const MobileAppHero: React.FC = () => {
     </section>
   )
 };
-<<<<<<< HEAD
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

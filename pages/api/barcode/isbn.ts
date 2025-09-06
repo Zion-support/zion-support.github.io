@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -9,16 +8,6 @@ export default async function handler(
   if (!code) {
     res.status(400).json({ error: 'Missing code' });
     return;  }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-const bwipjs = require('bwip-js');
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = (req.query.code as string) || '';
-  if (!code) {
-    res.status(400).json({ error: 'Missing code' });
-    return;
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   try {
     const png = await bwipjs.toBuffer({

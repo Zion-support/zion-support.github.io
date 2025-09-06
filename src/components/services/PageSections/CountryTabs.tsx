@@ -149,18 +149,7 @@ export function CountryTabs({
         )}
       </TabsContent>
     </Tabs>
-<<<<<<< HEAD
   );
-=======
-<<<<<<< HEAD
-  );
-=======
-
-<<<<<<< HEAD
-  const countriesPerPage = 50;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 }

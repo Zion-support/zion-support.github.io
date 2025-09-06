@@ -233,17 +233,8 @@ export const useApiErrorHandler = () => {
     });
   };
 
-<<<<<<< HEAD
   return { handleApiError };
 };
-=======
-<<<<<<< HEAD
-  return { handleApiError };
-};
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   return { handleApiError }
 }, 

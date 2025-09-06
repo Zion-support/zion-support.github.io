@@ -1,12 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface Revolutionary2025ITService {
   id: string;
@@ -45,42 +38,10 @@ export interface Revolutionary2025ITService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number;
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services
   {
-=======
-<<<<<<< HEAD
-  reviews: number;
-=======
-export interface Revolutionary2025ITService {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   reviews: number
 }
@@ -89,7 +50,6 @@ export interface Revolutionary2025ITService {
 export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   // 🔒 Next-Generation Cybersecurity Services
   {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'quantum-cybersecurity-platform',
@@ -148,15 +108,6 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.',
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne'],
     marketSize: '$200B cybersecurity market',
-=======
-=======
-    id: 'quantum-cybersecurity-platform';
-    name: 'Quantum Cybersecurity Platform';
-    tagline: 'Unhackable Security with Quantum Encryption & AI Threat Detection';
-    price: '$899';
-    period: '/month';
-    description: 'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
     ];
@@ -537,26 +488,7 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   }
 ];
 
-<<<<<<< HEAD
 export default revolutionary2025ITServices;
-=======
-    id: 'quantum-cybersecurity-platform', name: 'Quantum Cybersecurity Platform',
-    tagline: 'Unhackable Security with Quantum Encryption & AI Threat Detection', price: '$899',
-    period: '/month',
-    description: 'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.',
-    features: [
-      'Quantum encryption algorithmsAI-powered threat detectionZero-trust architectureReal-time threat responseQuantum key distributionAdvanced malware protectionCompliance automationSecurity orchestration'
-    ];
-    popular: true, icon: '🔒',
-    color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform', marketPosition: 'Most advanced cybersecurity platform. Traditional security solutions are vulnerable to quantum attacks and lack AI integration.',
-    targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Defense contractors',
-    trialDays: 30, setupTime: '8 hours',
-    category: 'Cybersecurity & Quantum Security', realService: true,
-    technology: ['Quantum ComputingAI/MLZero TrustPythonQuantum APIsCloud Security'], integrations: ['SIEM systemsFirewallsIdentity providersSecurity tools'],
-    useCases: ['Enterprise securityGovernment securityFinancial securityHealthcare securityDefense security'], roi: 'Enterprises see 4000%+ ROI through unhackable security and reduced breach risks.',
-    competitors: ['Palo Alto NetworksCrowdStrikeSentinelOne'], marketSize: '$200B cybersecurity market',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     growthRate: '800% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
@@ -1151,11 +1083,7 @@ export default revolutionary2025ITServices;
   },
 ];
 
-<<<<<<< HEAD
 export default revolutionary2025ITServices;
-=======
-export default revolutionary2025ITServices;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default revolutionary2025ITServices;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

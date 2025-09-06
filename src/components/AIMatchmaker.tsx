@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -11,18 +6,6 @@ import { AIMatchingResults } from '@/components/AIMatchingResults';
 import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
 import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AIMatchingResults } from "@/components/AIMatchingResults";
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles, Search } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
@@ -161,18 +144,7 @@ export function AIMatchmaker({
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
   );
-=======
-  );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-      
-      logInfo('AI matching results:', { data: results }),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -294,17 +294,7 @@ class ChunkErrorHandler {
 export const chunkErrorHandler = new ChunkErrorHandler();
 
 // Export for manual usage
-<<<<<<< HEAD
 export default chunkErrorHandler;
-=======
-<<<<<<< HEAD
-export default chunkErrorHandler;
-=======
-          background: #666, color: white,
-          border: none, padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem, font-size: 1rem,
-          cursor: pointer,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default chunkErrorHandler;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

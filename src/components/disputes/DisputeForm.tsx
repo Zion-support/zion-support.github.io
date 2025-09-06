@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-<<<<<<< HEAD
-=======
-=======
-import React, { useState } from "react";
-import { useForm, ControllerRenderProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
@@ -250,11 +236,6 @@ export function DisputeForm({
       </Form>
     </div>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 };
 const removeFile = (index: number) => {;
@@ -290,20 +271,7 @@ description: values.description ;
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-      setFiles(prev => [...prev, ...newFiles]);
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-        
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -2,18 +2,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import jwt from 'jsonwebtoken';
 import { ethers } from 'ethers';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
-<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
   const { message, signature, address, chainId } = req.body || {};
   if (!message || !signature || !address) return res.status(400).json({ error: 'Missing fields' });
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).end();
-  const { message, signature, address, chainId } = req.body || {};
-  if (!message || !signature || !address) return res.status($1).json({$2});
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   try {
     const recovered = ethers.utils.verifyMessage(message, signature).toLowerCase();
     if (recovered !== String(address).toLowerCase()) {
@@ -23,12 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
     const nonce = match[1];
-<<<<<<< HEAD
     if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Nonce mismatch' });
 
-=======
-    if (!String(message).includes(`Nonce: ${nonce}`)) return res.status(400).json({ error: 'Invalid nonce' });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const token = jwt.sign({ sub: address.toLowerCase(), chain: 'evm', chainId }, JWT_SECRET, { expiresIn: '7d' });
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`);
     return res.status(200).json({ ok: true })

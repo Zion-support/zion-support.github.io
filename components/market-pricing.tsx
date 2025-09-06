@@ -1,15 +1,9 @@
-<<<<<<< HEAD
  ];
   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
   ];
 pricingAnalysis: {
   lowEnd: '$0.005 per 1K tokens', midRange: '$0.015 per 1K tokens', highEnd: '$0.025 per 1K tokens', ourPosition: 'Mid-range with premium features' 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const marketData = {
   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
 =======
@@ -883,7 +877,6 @@ export default function MarketPricing() {
   )
 };
 
-<<<<<<< HEAD
 };
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -915,9 +908,6 @@ pricingAnalysis: {
 
 };
 export default MarketPricing;
-=======
-export default MarketPricing;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default MarketPricing;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -18,10 +13,6 @@ import {
 } from '@/components/ui/card';
 import { Sparkles } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function UsageStats() {
@@ -200,17 +191,8 @@ export function UsageStats() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 }"
-=======
-<<<<<<< HEAD
-
-}"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

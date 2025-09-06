@@ -1,27 +1,13 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',};
 
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
-=======
-  website: 'https://ziontechgroup.com',
-=======
-const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 const contact = {
   mobile: '+1 302 464 0950';
@@ -33,7 +19,6 @@ const contact = {
 
 export const newRealServices: EnhancedRealMicroSaasService[] = [
   {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'llm-observability-suite',
@@ -61,15 +46,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/llm-observability-suite',
     marketPosition:
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
-=======
-=======
-    id: 'llm-observability-suite';
-    name: 'LLM Observability Suite';
-    tagline: 'Track latency, cost, quality and drift across all prompts';
-    price: '$199';
-    period: '/month';
-    description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
     ];
@@ -767,19 +743,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 3
   }
 ];
-<<<<<<< HEAD
-=======
-    id: 'llm-observability-suite', name: 'LLM Observability Suite',
-    tagline: 'Track latency, cost, quality and drift across all prompts',
-    price: '$199', period: '/month',
-    description: 'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
-    features: [
-      'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters'
-    ];
-    popular: true, icon: '📈',
-    color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/llm-observability-suite', marketPosition: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     targetAudience: 'AI product teams, platform engineers, data teams',
     trialDays: 21,
     setupTime: '1 day',
@@ -1541,7 +1504,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/vendor-risk-automation',
     marketPosition: 'Faster and lighter than legacy GRC.',
     targetAudience: 'Security, procurement',
-<<<<<<< HEAD
     trialDays: 14,
     setupTime: '1–3 days',
     category: 'Security & Compliance',
@@ -1563,21 +1525,6 @@ export const newRealServices: EnhancedRealMicroSaasService[] = [
     reviews: 3,
   },
 ];
-=======
-    trialDays: 14, setupTime: '1–3 days',
-    category: 'Security & Compliance', realService: true,
-    technology: ['Node.jsReact'], integrations: ['SecurityScorecard'],
-    useCases: ['Vendor due diligence'], roi: 'Cut cycle time by 50%+',
-    competitors: ['WhisticOneTrust'], marketSize: '$4B Third-party Risk',
-    growthRate: 'High', variant: 'quantum-cyberpunk',
-    contactInfo: contact, realImplementation: true,
-    implementationDetails: 'Portal + integrations + reports.', launchDate: '2025-01-19',
-    customers: 6, rating: 4.5,
-    reviews: 3
-  }
-];
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

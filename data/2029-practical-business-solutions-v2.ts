@@ -1,12 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface PracticalBusinessSolution2029 {
   id: string;
@@ -46,42 +39,10 @@ export interface PracticalBusinessSolution2029 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
   reviews: number;
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
-=======
-<<<<<<< HEAD
-  reviews: number;
-=======
-export interface PracticalBusinessSolution2029 {
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
-    mobile: string, email: string,
-    address: string,
-    website: string
-  
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
-  rating: number,
-  reviews: number
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   reviews: number
 }
@@ -90,7 +51,6 @@ export interface PracticalBusinessSolution2029 {
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'ai-business-intelligence-suite',
@@ -136,15 +96,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     useCases: [
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making',
     ],
-=======
-=======
-    id: 'ai-business-intelligence-suite';
-    name: 'AI Business Intelligence Suite';
-    tagline: 'Intelligent insights and predictive analytics for business growth';
-    price: '$2,499';
-    period: '/month';
-    description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
@@ -502,30 +453,9 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-<<<<<<< HEAD
     return price >= minPrice && price <= maxPrice;
   });
 };
-=======
-    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
-    tagline: 'Intelligent insights and predictive analytics for business growth',
-    price: '$2,499',
-    period: '/month',
-    description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
-    features: [
-      'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
-      'Market opportunity identificationCompetitive intelligence'
-    ];
-    popular: true, icon: '📊',
-    color: 'from-blue-500 via-indigo-500 to-purple-500', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite', marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
-    targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies',
-    trialDays: 21, setupTime: '2-3 weeks',
-    category: 'AI Business Intelligence', realService: true,
-    technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
-    integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
-    useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
     competitors: ['Tableau, Power BI, Qlik, Looker, Domo'],
     marketSize: '$18B market',
@@ -1003,15 +933,9 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 ) => {
   return practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-<<<<<<< HEAD
     return price >= minPrice && price <= maxPrice;
   });
 };
-=======
-    return price >= minPrice && price <= maxPrice
-  })
-};
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     return price >= minPrice && price <= maxPrice
   })

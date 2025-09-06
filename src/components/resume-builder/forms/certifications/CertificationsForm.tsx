@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -99,15 +92,7 @@ export function CertificationsForm({
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
-<<<<<<< HEAD
       ...cert,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      ...cert,
-=======
-      ...cert;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date),
@@ -199,27 +184,11 @@ export function CertificationsForm({
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }> {;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-      ...cert;
-      issue_date: formatDateValue(cert.issue_date),
-      expiration_date: formatDateValue(cert.expiration_date)})
-  };
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

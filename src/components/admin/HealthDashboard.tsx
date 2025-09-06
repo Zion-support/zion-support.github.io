@@ -449,19 +449,7 @@ const HealthDashboard: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default HealthDashboard;
-=======
-<<<<<<< HEAD
-export default HealthDashboard;
-=======
-
-<<<<<<< HEAD
-
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default HealthDashboard, 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React from 'react';
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-
-import React from "react";
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Button } from "@/components/ui/button";
-import { X } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ActiveFiltersProps {
@@ -126,15 +112,7 @@ export function ActiveFilters({
         Clear All
       </Button>
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -4,21 +4,9 @@ export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
     fetch('/api/cloud-automations-status')
-<<<<<<< HEAD
       .then(r => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }));  }, []);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      .then(r => r.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }));
-=======
-      .then((r) => r.json())
-      .then(setData)
-      .catch(() => setData({ ok: false }))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
       .then((r) => r.json())
       .then(setData)
@@ -30,11 +18,6 @@ export default function CloudAutomationsPage() {
   const items = data?.data ? Object.entries(data.data) : [];
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <div className='space-y-6'>
       <h1 className='text-3xl font-bold'>Cloud Automations</h1>
       <p className='text-gray-600 dark:text-gray-300'>
@@ -42,14 +25,6 @@ export default function CloudAutomationsPage() {
         ops.
       </p>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-<<<<<<< HEAD
-=======
-=======
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Cloud Automations</h1>
-      <p className="text-gray-600 dark:text-gray-300">Autonomous agents running in the cloud. No servers to babysit. No manual ops.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {items.map(([key, value]: any) => (
           <div
@@ -69,29 +44,9 @@ export default function CloudAutomationsPage() {
               {value.success ? 'Success' : 'Failed'}
             </p>
             {value.metrics ? (
-<<<<<<< HEAD
               <pre className='mt-2 text-xs whitespace-pre-wrap'>
                 {JSON.stringify(value.metrics, null, 2)}
               </pre>            ) : null}
-=======
-<<<<<<< HEAD
-              <pre className='mt-2 text-xs whitespace-pre-wrap'>
-                {JSON.stringify(value.metrics, null, 2)}
-              </pre>
-=======
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Cloud Automations</h1>
-      <p className="text-gray-600 dark:text-gray-300">Autonomous agents running in the cloud. No servers to babysit. No manual ops.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {items.map(([key, value]: any) => (
-          <div key={key} className="border rounded p-4 bg-gray-50 dark:bg-gray-900">
-            <h2 className="text-xl font-semibold">{value.name || key}</h2>
-            <p className="text-sm text-gray-500">Started: {value.startedAt || '—'}</p>
-            <p className="text-sm text-gray-500">Finished: {value.finishedAt || '—'}</p>
-            <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
-            {value.metrics ? (
-              <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
               <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -102,14 +57,7 @@ export default function CloudAutomationsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

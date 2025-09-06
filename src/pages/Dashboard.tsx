@@ -503,10 +503,6 @@ export default function Dashboard() {
       <GuidedTour role={roleForTour} />
     </>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 };";
 return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-8"> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> {;
@@ -598,21 +594,7 @@ toast ({";
 }/> API Keys </h3> <ApiKeysManager /> </div> </div> </div> </div> </div> </div> </div> <GuidedTour role= {;
   roleForTour ;
 }/> </>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-
-  const userWithExtendedProps = user as any;
-  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent';
-  const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent';
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

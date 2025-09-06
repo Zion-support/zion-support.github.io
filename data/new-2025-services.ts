@@ -1,24 +1,10 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',};
-=======
-  website: 'https://ziontechgroup.com',
-=======
-const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 const contact = {
   mobile: '+1 302 464 0950';
@@ -32,11 +18,6 @@ const contact = {
 // Additional 2025 real micro-SaaS, AI and IT services
 export const new2025Services: EnhancedRealMicroSaasService[] = [
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'llm-safety-observability-suite',
     name: 'LLM Safety & Observability Suite',
     tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
@@ -44,7 +25,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     period: '/month',
     description:
       'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
-<<<<<<< HEAD
     features: [
       'Prompt/output policy engine',
       'Jailbreak and injection detection',
@@ -77,15 +57,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
     contactInfo: contact,
-=======
-=======
-    id: 'llm-safety-observability-suite';
-    name: 'LLM Safety & Observability Suite';
-    tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards';
-    price: '$129';
-    period: '/month';
-    description: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates'
     ];
@@ -746,26 +717,6 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     reviews: 6
   }
 ];
-<<<<<<< HEAD
-=======
-    id: 'llm-safety-observability-suite', name: 'LLM Safety & Observability Suite',
-    tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
-    price: '$129', period: '/month',
-    description: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
-    features: [
-      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates'
-    ];
-    popular: true, icon: '🛡️',
-    color: 'from-rose-600 to-red-700', textColor: 'text-rose-300',
-    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite', marketPosition: 'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.',
-    targetAudience: 'Teams shipping AI copilots and assistants', trialDays: 14,
-    setupTime: '30 minutes', category: 'AI & Data',
-    realService: true, technology: ['TypeScriptOpenAIAnthropicOpenTelemetry'],
-    integrations: ['SlackPagerDutyDatadogGitHub Actions'], useCases: ['Prevent unsafe outputsCompliance readinessModel regression detection'],
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks', competitors: ['LakeraGuardrails AIAzure AI Content Safety'],
-    marketSize: '$3.5B+ AI safety & governance', growthRate: '200% annual growth',
-    variant: 'holographic-matrix', contactInfo: contact,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     realImplementation: true,
     implementationDetails:
       'Inline middleware, policy DSL, exporters and dashboards.',
@@ -1502,16 +1453,9 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     launchDate: '2025-03-07',
     customers: 10,
     rating: 4.6,
-<<<<<<< HEAD
     reviews: 6,
   },
 ];
-=======
-    reviews: 6
-  }
-];
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

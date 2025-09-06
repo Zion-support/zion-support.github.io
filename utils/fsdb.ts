@@ -24,7 +24,6 @@ export function writeJson<T>(filePath: string, data: T): void {
   } catch (error) {
     console.error('Error writing file:', error);
   }
-<<<<<<< HEAD
   await writeAllDisputes(all);
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {
@@ -39,6 +38,3 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
-=======
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react'
@@ -32,10 +25,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     </Badge>
   )
 };
-<<<<<<< HEAD
 "
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -64,10 +54,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
     </Badge>
   )
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,32 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ContractTemplate } from '@/types/contracts';
-import { Button } from '@/components/ui/button';
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
-import { useContractTemplates } from '@/hooks/useContractTemplates';
-import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { useAuth } from '@/hooks/useAuth';
-=======
-
-import { ContractTemplate } from "@/types/contracts";
-import { Button } from "@/components/ui/button";
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { useAuth } from "@/hooks/useAuth";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 import {
@@ -191,7 +163,6 @@ export function TemplateList({
       </AlertDialog>
     </div>
   );
-<<<<<<< HEAD
 
 };
 const handleSetDefault = async (templateId: string) => {;
@@ -224,10 +195,6 @@ return ;
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

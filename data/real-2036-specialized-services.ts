@@ -14,15 +14,7 @@ export type Real2036SpecializedService = {
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
-<<<<<<< HEAD
   technology?: string[];};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  technology?: string[];
-=======
-  technology?: string[]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   technology?: string[]
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -32,11 +24,6 @@ export type Real2036SpecializedService = {
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'neuromorphic-computing-platform',
     name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for next-generation AI applications',
@@ -491,22 +478,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
       'Customer management',
     ],
   },
-<<<<<<< HEAD
 ];
-=======
-];
-=======
-      'Tourism management systemSafety protocolsTraining programsFlight operationsCustomer managementCompliance toolsCustom developmentExpert consultation'
-    ];
-    link: 'https://ziontechgroup.com/services/space-tourism-platform', launchDate: '2036-05-15',
-    rating: 4.6, marketSize: '$1.2B',
-    targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies',
-    competitiveAdvantage: 'Space expertise, Safety focus, Comprehensive management',
-    integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'], useCases: ['Space tourismTraining programsSafety managementCustomer experience'],
-    technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
-  }
-];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';

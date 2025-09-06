@@ -1,74 +1,7 @@
-<<<<<<< HEAD
 import React, { JSX } from 'react',
-=======
-import React, { JSX, useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Building, 
-  ShoppingCart, 
-  Heart, 
-  GraduationCap, 
-  Factory, 
-  Truck, 
-  CreditCard,
-  Menu,
-  X,
-  Phone,
-  Mail,
-  ExternalLink,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Award,
-  Globe,
-  Lock,
-  Cpu,
-  Database,
-  BarChart3
-} from 'lucide-react';
-
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ContactForm from './components/ContactForm';
-import LoadingSpinner from './components/LoadingSpinner';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import Analytics from './components/Analytics';
-import SEOHead from './components/SEOHead';
-import AccessibilityProvider from './components/AccessibilityProvider';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-
-interface Service {
-  title: string,
-  description: string,
-  icon: React.ComponentType<{ className?: string }>,
-  features: string[],
-  href: string,
-  color: string,
-}
-
-interface Testimonial {
-  name: string,
-  company: string,
-  content: string,
-  rating: number,
-  avatar?: string;
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function App(): JSX.Element {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <main>
       <h1>Hello App</h1>
     </main>

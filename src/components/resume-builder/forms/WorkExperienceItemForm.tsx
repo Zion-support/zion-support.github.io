@@ -350,10 +350,6 @@ export function WorkExperienceItemForm({
       />
     </>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 is current: z.boolean () .default (false);
 description: z.string () .optional ();
@@ -381,17 +377,7 @@ setIsEnhancementDialogOpen (false);
 }/> </FormControl> <FormMessage /> </FormItem>) ";
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
-<<<<<<< HEAD
 }"
-=======
-}"
-=======
-
-<<<<<<< HEAD
-      location: initialData?.location || ""}}),
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

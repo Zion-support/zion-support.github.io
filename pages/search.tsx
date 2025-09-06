@@ -39,29 +39,6 @@ import {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-<<<<<<< HEAD
-=======
-
-import { 
-  Search, Filter, Grid, List, ArrowRight, ExternalLink, 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-  X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-import { 
-  Search, Filter, Grid, List, ArrowRight, ExternalLink, 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-  X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
@@ -71,15 +48,7 @@ export default function SearchPage() {
     category: 'all',
     status: 'all',
     priceRange: 'all',
-<<<<<<< HEAD
     technology: 'all',  });
-=======
-    technology: 'all',
-    technology: 'all'
-    technology: 'all'
-ursor/integrate-build-improve-and-re-verify-b76c
-  });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const [sortBy, setSortBy] = useState('relevance');
   const [showFilters, setShowFilters] = useState(false);
 
@@ -89,15 +58,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 'ai-business-intelligence',
       title: 'AI Business Intelligence',
       description:
-<<<<<<< HEAD
         'Transform data into actionable insights with AI-powered analytics and predictive modeling',      category: 'AI & Machine Learning',
-=======
-        'Transform data into actionable insights with AI-powered analytics and predictive modeling',
-      description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling',
-      description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling',
-ursor/integrate-build-improve-and-re-verify-b76c
-      category: 'AI & Machine Learning',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       status: 'active',
       price: '$499/month',
       technology: 'AI/ML',
@@ -107,11 +68,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Real-time insights',
         'Custom reporting',
       ],
-<<<<<<< HEAD
-=======
-      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       link: '/ai-business-intelligence',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
@@ -121,24 +77,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
       description:
-<<<<<<< HEAD
         'Future-proof security with quantum-resistant encryption and AI threat detection',      category: 'Cybersecurity',
-=======
-        'Future-proof security with quantum-resistant encryption and AI threat detection',
-      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
-      link: '/ai-business-intelligence',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      relevance: 95
-    };
-    {
-      id: 'quantum-cybersecurity',
-      title: 'Quantum Cybersecurity',
-      description: 'Future-proof security with quantum-resistant encryption and AI threat detection',
-      description: 'Future-proof security with quantum-resistant encryption and AI threat detection',
-ursor/integrate-build-improve-and-re-verify-b76c
-      category: 'Cybersecurity',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       status: 'active',
       price: '$799/month',
       technology: 'Quantum',
@@ -148,11 +87,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Zero-trust architecture',
         '24/7 monitoring',
       ],
-<<<<<<< HEAD
-=======
-      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       link: '/quantum-cybersecurity',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -162,24 +96,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 'ai-customer-experience',
       title: 'AI Customer Experience',
       description:
-<<<<<<< HEAD
         'Deliver personalized customer experiences at scale with AI-driven insights',      category: 'AI & Machine Learning',
-=======
-        'Deliver personalized customer experiences at scale with AI-driven insights',
-      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
-      link: '/quantum-cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-orange-500',
-      relevance: 92
-    };
-    {
-      id: 'ai-customer-experience',
-      title: 'AI Customer Experience',
-      description: 'Deliver personalized customer experiences at scale with AI-driven insights',
-      description: 'Deliver personalized customer experiences at scale with AI-driven insights',
-ursor/integrate-build-improve-and-re-verify-b76c
-      category: 'AI & Machine Learning',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       status: 'active',
       price: '$399/month',
       technology: 'AI/ML',
@@ -189,11 +106,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Sentiment analysis',
         'Predictive support',
       ],
-<<<<<<< HEAD
-=======
-      features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       link: '/ai-customer-experience',
       icon: Users,
       color: 'from-green-500 to-teal-500',
@@ -203,24 +115,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 'edge-computing-orchestration',
       title: 'Edge Computing Orchestration',
       description:
-<<<<<<< HEAD
         'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Edge Computing',
-=======
-        'Deploy and manage applications at the edge with intelligent orchestration',
-      features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],
-      link: '/ai-customer-experience',
-      icon: Users,
-      color: 'from-green-500 to-teal-500',
-      relevance: 88
-    };
-    {
-      id: 'edge-computing-orchestration',
-      title: 'Edge Computing Orchestration',
-      description: 'Deploy and manage applications at the edge with intelligent orchestration',
-      description: 'Deploy and manage applications at the edge with intelligent orchestration',
-ursor/integrate-build-improve-and-re-verify-b76c
-      category: 'Edge Computing',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       status: 'active',
       price: '$349/month',
       technology: 'Edge',
@@ -230,11 +125,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Real-time monitoring',
         'Auto-scaling',
       ],
-<<<<<<< HEAD
-=======
-      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       link: '/edge-computing-orchestration',
       icon: Network,
       color: 'from-purple-500 to-pink-500',
@@ -243,37 +133,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
     {
       id: 'space-technology',
       title: 'Space Technology Innovation',
-<<<<<<< HEAD
       description:
         'Accelerate space exploration with cutting-edge technology solutions',
-=======
-      description: 'Accelerate space exploration with cutting-edge technology solutions',
-      category: 'Space Technology',
-      status: 'beta',
-      price: '$2,499/month';
-      technology: 'Space',
-      features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],
-      link: '/space-technology',
-      icon: Rocket,
-      color: 'from-violet-500 to-purple-500',
-      relevance: 82
-    };
-    {
-      id: 'neural-interface',
-      title: 'Neural Interface Development',
-      description:
-        'Build the future of human-computer interaction with neural interfaces',
-      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
-      link: '/edge-computing-orchestration',
-      icon: Network,
-      color: 'from-purple-500 to-pink-500',
-      relevance: 85
-    };
-    {
-      id: 'space-technology',
-      title: 'Space Technology Innovation',
-      description: 'Accelerate space exploration with cutting-edge technology solutions',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       category: 'Space Technology',
       status: 'beta',
       price: '$2,499/month',
@@ -292,15 +153,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
     {
       id: 'neural-interface',
       title: 'Neural Interface Development',
-<<<<<<< HEAD
       description:
         'Build the future of human-computer interaction with neural interfaces',      category: 'Biotechnology',
-=======
-      description: 'Build the future of human-computer interaction with neural interfaces',
-      description: 'Build the future of human-computer interaction with neural interfaces',
-ursor/integrate-build-improve-and-re-verify-b76c
-      category: 'Biotechnology',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       status: 'beta',
       price: '$899/month',
       technology: 'Biotech',
@@ -310,41 +164,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'AI pattern recognition',
         'Safety protocols',
       ],
-<<<<<<< HEAD
       link: '/neural-interface',
       icon: Brain,
       color: 'from-pink-500 to-rose-500',
       relevance: 78,
     },
-=======
-      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
-ursor/integrate-build-improve-and-re-verify-b76c
-      link: '/neural-interface',
-      icon: Brain,
-      color: 'from-pink-500 to-rose-500',
-      relevance: 78
-    };
-    {
-      id: 'quantum-neural-networks',
-      title: 'Quantum Neural Networks',
-      description: 'Quantum-powered AI with advanced consciousness capabilities',
-      category: 'Quantum Computing',
-      status: 'beta',
-      price: '$1,299/month';
-      technology: 'Quantum',
-      features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],
-      link: '/quantum-neural-networks',
-      icon: Atom,
-      color: 'from-blue-500 to-cyan-500',
-      relevance: 75,
-    },
-      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
-      link: '/neural-interface',
-      icon: Brain,
-      color: 'from-pink-500 to-rose-500',
-      relevance: 78
-    };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       id: 'quantum-neural-networks',
       title: 'Quantum Neural Networks',
@@ -363,17 +187,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
       link: '/quantum-neural-networks',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
-<<<<<<< HEAD
       relevance: 75,
     },    {
-=======
-      relevance: 75
-    };
-      relevance: 75
-    };
-ursor/integrate-build-improve-and-re-verify-b76c
-    {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       id: 'autonomous-devops',
       title: 'Autonomous DevOps',
       description: 'AI-powered DevOps optimization and automation platform',
@@ -387,55 +202,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'Security scanning',
         'Cost optimization',
       ],
-<<<<<<< HEAD
       link: '/autonomous-devops',
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500',
       relevance: 72,
     },
-=======
-      features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],
-ursor/integrate-build-improve-and-re-verify-b76c
-      link: '/autonomous-devops',
-      icon: Cpu,
-      color: 'from-emerald-500 to-teal-500',
-      relevance: 72
-    };
-    {
-      id: 'ai-autonomous-business',
-      title: 'AI Autonomous Business Manager',
-      description: 'Fully autonomous business operations powered by advanced AI',
-      category: 'AI & Machine Learning',
-      status: 'beta',
-      price: '$1,999/month';
-      technology: 'AI/ML',
-      features: ['Business automationDecision makingResource allocationPerformance optimization'],
-      link: '/ai-autonomous-business',
-      icon: Target,
-      color: 'from-indigo-500 to-purple-500',
-      relevance: 70
-    };
-    {
-      id: 'quantum-financial-trading',
-      title: 'Quantum Financial Trading',
-      description: 'Quantum computing powered financial analysis and trading strategies',
-      category: 'Financial Technology',
-      status: 'beta',
-      price: '$3,999/month';
-      technology: 'Quantum',
-      features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],
-      link: '/quantum-financial-trading',
-      icon: TrendingUp,
-      color: 'from-emerald-500 to-green-500',
-      relevance: 68,
-    },
-      features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],
-      link: '/autonomous-devops',
-      icon: Cpu,
-      color: 'from-emerald-500 to-teal-500',
-      relevance: 72
-    };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       id: 'ai-autonomous-business',
       title: 'AI Autonomous Business Manager',
@@ -474,17 +245,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
       link: '/quantum-financial-trading',
       icon: TrendingUp,
       color: 'from-emerald-500 to-green-500',
-<<<<<<< HEAD
       relevance: 68,
     },  ];
-=======
-      relevance: 68
-    }
-      relevance: 68
-    }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const categories = [
     { id: 'all', name: 'All Categories', icon: '📂' },
@@ -495,44 +257,20 @@ ursor/integrate-build-improve-and-re-verify-b76c
     { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐' },
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
-<<<<<<< HEAD
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },  ];
-=======
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
-<<<<<<< HEAD
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' },  ];
-=======
-    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' },
-    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
-    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', icon: '💰' },
     { id: 'under-500', name: 'Under $500/month', icon: '💵' },
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
-<<<<<<< HEAD
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' },  ];
-=======
-    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' },
-    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
-    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const technologies = [
     { id: 'all', name: 'All Technologies', icon: '🔧' },
@@ -541,26 +279,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
     { id: 'Edge', name: 'Edge', icon: '🌐' },
     { id: 'Space', name: 'Space', icon: '🚀' },
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
-<<<<<<< HEAD
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' },  ];
-=======
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' },
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
       setSearchResults([]);
       return;
-<<<<<<< HEAD
-=======
-      return
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
 
     setIsSearching(true);
@@ -583,29 +308,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
         const matchesTechnology =
           filters.technology === 'all' ||
           service.technology === filters.technology;
-<<<<<<< HEAD
-=======
-
-      return
-    }
-
-    setIsSearching(true);
-    
-    // Simulate search delay
-    setTimeout(() => {
-      const results = allServices.filter(service => {
-ursor/integrate-build-improve-and-re-verify-b76c
-        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                            service.technology.toLowerCase().includes(searchTerm.toLowerCase());
-        
-        const matchesCategory = filters.category === 'all' || service.category === filters.category;
-        const matchesStatus = filters.status === 'all' || service.status === filters.status;
-        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
-        
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         let matchesPrice = true;
         if (filters.priceRange !== 'all') {
           const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -631,23 +333,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           matchesStatus &&
           matchesTechnology &&
           matchesPrice
-<<<<<<< HEAD
         );      });
-=======
-        );
-              break
-          }
-        }
-        
-        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
-              break
-          }
-        }
-        
-        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
-ursor/integrate-build-improve-and-re-verify-b76c
-      });
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Sort results
       const sortedResults = results.sort((a, b) => {
@@ -663,74 +349,28 @@ ursor/integrate-build-improve-and-re-verify-b76c
             return (
               parseInt(b.price.replace(/[^0-9]/g, '')) -
               parseInt(a.price.replace(/[^0-9]/g, ''))
-<<<<<<< HEAD
             );          case 'name':
-=======
-            );
-            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-          case 'price-high':
-            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
-            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-          case 'price-high':
-            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
-ursor/integrate-build-improve-and-re-verify-b76c
-          case 'name':
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             return a.title.localeCompare(b.title);
           case 'status':
             return a.status.localeCompare(b.status);
           default:
-<<<<<<< HEAD
             return 0;        }
-=======
-            return 0;
-          default: return 0
-          default: return 0
-ursor/integrate-build-improve-and-re-verify-b76c
-        }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       });
 
       setSearchResults(sortedResults);
       setIsSearching(false);
-<<<<<<< HEAD
     }, 500);  };
-=======
-    }, 500);
-      setIsSearching(false)
-    }, 500)
-      setIsSearching(false)
-    }, 500)
-ursor/integrate-build-improve-and-re-verify-b76c
-  };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-<<<<<<< HEAD
       performSearch();    }
-=======
-      performSearch();
-      performSearch()
-      performSearch()
-ursor/integrate-build-improve-and-re-verify-b76c
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
-<<<<<<< HEAD
       performSearch();    }
-=======
-      performSearch();
-      performSearch()
-      performSearch()
-ursor/integrate-build-improve-and-re-verify-b76c
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, [filters, sortBy]);
 
   // Clear all filters
@@ -740,11 +380,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
       status: 'all',
       priceRange: 'all',
       technology: 'all',
-<<<<<<< HEAD
-=======
-      technology: 'all'
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     });
     setSortBy('relevance');
   };
@@ -762,43 +397,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
           property='og:description'
           content='Advanced search across all services and solutions.'
         />
-<<<<<<< HEAD
         <link rel='canonical' href='https://ziontechgroup.com/search' />      </Head>
-=======
-        <link rel='canonical' href='https://ziontechgroup.com/search' />
-      technology: 'all'
-    });
-    setSortBy('relevance')
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <Head>
-        <title>Search | Zion Tech Group</title>
-ursor/integrate-build-improve-and-re-verify-b76c
-        <meta name="description" content="Search across all AI and technology services, solutions, and resources at Zion Tech Group. Find exactly what you need with our advanced search and filtering." />
-        <meta property="og:title" content="Search | Zion Tech Group" />
-        <meta property="og:description" content="Advanced search across all services and solutions." />
-        <link rel="canonical" href="https://ziontechgroup.com/search" />
-ursor/integrate-build-improve-and-re-verify-b76c
-      </Head>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       <SmartHeader />
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-6'>
-<<<<<<< HEAD
         <div className='max-w-7xl mx-auto text-center'>          <motion.div
-=======
-        <div className='max-w-7xl mx-auto text-center'>
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-      <section className="pt-32 pb-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-ursor/integrate-build-improve-and-re-verify-b76c
-          <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -809,25 +414,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
               Find the perfect AI and technology solutions for your business
               needs. Search across our comprehensive service catalog with
-<<<<<<< HEAD
               advanced filtering options.            </p>
-=======
-              advanced filtering options.
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
-              Search Our Services
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Find the perfect AI and technology solutions for your business needs. 
-              Search across our comprehensive service catalog with advanced filtering options.
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
-              Search Our Services
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Find the perfect AI and technology solutions for your business needs. 
-              Search across our comprehensive service catalog with advanced filtering options.
-ursor/integrate-build-improve-and-re-verify-b76c
-            </p>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </motion.div>
         </div>
       </section>
@@ -836,13 +423,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
           <div className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6'>
-<<<<<<< HEAD
-=======
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             {/* Search Bar */}
             <div className='flex flex-col lg:flex-row gap-6 items-center justify-between mb-6'>
               <div className='flex-1 max-w-2xl'>
@@ -858,33 +438,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   />
                   <button
                     onClick={performSearch}
-<<<<<<< HEAD
                     className='absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors'                  >
-=======
-                    className='absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors'
-      <section className="px-6 pb-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
-            {/* Search Bar */}
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
-              <div className="flex-1 max-w-2xl">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-6 h-6" />
-                  <input
-                    type="text"
-                    placeholder="Search for services, technologies, or solutions..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    onKeyPress={handleKeyPress}
-                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all text-lg"
-                  />
-                  <button
-                    onClick={performSearch}
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
-ursor/integrate-build-improve-and-re-verify-b76c
-                  >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     Search
                   </button>
                 </div>
@@ -892,11 +446,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
               {/* View Mode Toggle */}
               <div className='flex items-center gap-2'>
-<<<<<<< HEAD
-=======
-              <div className="flex items-center gap-2">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -905,22 +454,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
-<<<<<<< HEAD
                   <Grid className='w-5 h-5' />                </button>
-=======
-                  <Grid className='w-5 h-5' />
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-lg transition-all duration-300 ${
-                    viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
-                  <Grid className="w-5 h-5" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
@@ -929,33 +463,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
-<<<<<<< HEAD
                   <List className='w-5 h-5' />                </button>
-=======
-                  <List className='w-5 h-5' />
-                    viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
-                    viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                </button>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
             </div>
 
             {/* Filters and Sort */}
             <div className='flex flex-col lg:flex-row gap-4 items-center justify-between'>
               <div className='flex items-center gap-4'>
-<<<<<<< HEAD
-=======
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-              <div className="flex items-center gap-4">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className='flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors'
@@ -976,37 +490,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <option value='price-low'>Sort by Price: Low to High</option>
                   <option value='price-high'>Sort by Price: High to Low</option>
                   <option value='name'>Sort by Name</option>
-<<<<<<< HEAD
                   <option value='status'>Sort by Status</option>                </select>
-=======
-                  <option value='status'>Sort by Status</option>
-            <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-              <div className="flex items-center gap-4">
-                <button
-                  onClick={() => setShowFilters(!showFilters)}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
-                >
-                  <Sliders className="w-4 h-4" />
-                  Filters
-                  {Object.values(filters).some(f => f !== 'all') && (
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  )}
-                </button>
-                
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                >
-ursor/integrate-build-improve-and-re-verify-b76c
-                  <option value="relevance">Sort by Relevance</option>
-                  <option value="price-low">Sort by Price: Low to High</option>
-                  <option value="price-high">Sort by Price: High to Low</option>
-                  <option value="name">Sort by Name</option>
-                  <option value="status">Sort by Status</option>
-ursor/integrate-build-improve-and-re-verify-b76c
-                </select>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
 
               {Object.values(filters).some(f => f !== 'all') && (
@@ -1014,19 +498,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   onClick={clearFilters}
                   className='flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors'
                 >
-<<<<<<< HEAD
                   <X className='w-4 h-4' />                  Clear Filters
-=======
-                  <X className='w-4 h-4' />
-                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <X className="w-4 h-4" />
-                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <X className="w-4 h-4" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                  Clear Filters
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </button>
               )}
             </div>
@@ -1038,11 +510,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 className='mt-6 pt-6 border-t border-white/20'
-<<<<<<< HEAD
-=======
-                className="mt-6 pt-6 border-t border-white/20"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               >
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
                   {/* Category Filter */}
@@ -1065,27 +532,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           key={category.id}
                           value={category.id}
                           className='bg-slate-800 text-white'
-<<<<<<< HEAD
                         >                          {category.icon} {category.name}
-=======
-                        >
-                className="mt-6 pt-6 border-t border-white/20"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {/* Category Filter */}
-                  <div>
-                    <label className="block text-white font-medium mb-2">Category</label>
-                    <select
-                      value={filters.category}
-                      onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {categories.map(category => (
-                        <option key={category.id} value={category.id} className="bg-slate-800 text-white">
-                        <option key={category.id} value={category.id} className="bg-slate-800 text-white">
-ursor/integrate-build-improve-and-re-verify-b76c
-                          {category.icon} {category.name}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </option>
                       ))}
                     </select>
@@ -1096,11 +543,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <label className='block text-white font-medium mb-2'>
                       Status
                     </label>
-<<<<<<< HEAD
-=======
-                    <label className="block text-white font-medium mb-2">Status</label>
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <select
                       value={filters.status}
                       onChange={e =>
@@ -1116,22 +558,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           key={status.id}
                           value={status.id}
                           className='bg-slate-800 text-white'
-<<<<<<< HEAD
                         >                          {status.icon} {status.name}
-=======
-                        >
-                    <label className="block text-white font-medium mb-2">Status</label>
-                    <select
-                      value={filters.status}
-                      onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {statuses.map(status => (
-                        <option key={status.id} value={status.id} className="bg-slate-800 text-white">
-                        <option key={status.id} value={status.id} className="bg-slate-800 text-white">
-ursor/integrate-build-improve-and-re-verify-b76c
-                          {status.icon} {status.name}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </option>
                       ))}
                     </select>
@@ -1142,11 +569,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <label className='block text-white font-medium mb-2'>
                       Price Range
                     </label>
-<<<<<<< HEAD
-=======
-                    <label className="block text-white font-medium mb-2">Price Range</label>
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <select
                       value={filters.priceRange}
                       onChange={e =>
@@ -1162,22 +584,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           key={range.id}
                           value={range.id}
                           className='bg-slate-800 text-white'
-<<<<<<< HEAD
                         >                          {range.icon} {range.name}
-=======
-                        >
-                    <label className="block text-white font-medium mb-2">Price Range</label>
-                    <select
-                      value={filters.priceRange}
-                      onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {priceRanges.map(range => (
-                        <option key={range.id} value={range.id} className="bg-slate-800 text-white">
-                        <option key={range.id} value={range.id} className="bg-slate-800 text-white">
-ursor/integrate-build-improve-and-re-verify-b76c
-                          {range.icon} {range.name}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </option>
                       ))}
                     </select>
@@ -1188,11 +595,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <label className='block text-white font-medium mb-2'>
                       Technology
                     </label>
-<<<<<<< HEAD
-=======
-                    <label className="block text-white font-medium mb-2">Technology</label>
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <select
                       value={filters.technology}
                       onChange={e =>
@@ -1208,22 +610,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           key={tech.id}
                           value={tech.id}
                           className='bg-slate-800 text-white'
-<<<<<<< HEAD
                         >                          {tech.icon} {tech.name}
-=======
-                        >
-                    <label className="block text-white font-medium mb-2">Technology</label>
-                    <select
-                      value={filters.technology}
-                      onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {technologies.map(tech => (
-                        <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
-                        <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
-ursor/integrate-build-improve-and-re-verify-b76c
-                          {tech.icon} {tech.name}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </option>
                       ))}
                     </select>
@@ -1238,12 +625,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
       {/* Search Results */}
       <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
-<<<<<<< HEAD
-=======
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           {/* Results Header */}
           <div className='mb-8'>
             <h2 className='text-3xl font-bold text-white mb-2'>
@@ -1254,24 +635,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <p className='text-white/60'>
               {isSearching
                 ? 'Searching...'
-<<<<<<< HEAD
                 : `${searchResults.length} services found`}              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
-=======
-                : `${searchResults.length} services found`}
-      <section className="px-6 pb-20">
-        <div className="max-w-7xl mx-auto">
-          {/* Results Header */}
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-white mb-2">
-              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'}
-            </h2>
-            <p className="text-white/60">
-              {isSearching ? 'Searching...' : `${searchResults.length} services found`}
-            <p className="text-white/60">
-              {isSearching ? 'Searching...' : `${searchResults.length} services found`}
-ursor/integrate-build-improve-and-re-verify-b76c
-              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             </p>
           </div>
 
@@ -1281,23 +645,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
                 <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
               </div>
-<<<<<<< HEAD
               <p className='text-white/60'>Searching our services...</p>            </div>
-=======
-              <p className='text-white/60'>Searching our services...</p>
-            <div className="text-center py-20">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
-                <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-              <p className="text-white/60">Searching our services...</p>
-            <div className="text-center py-20">
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
-                <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-              </div>
-              <p className="text-white/60">Searching our services...</p>
-ursor/integrate-build-improve-and-re-verify-b76c
-            </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           )}
 
           {/* No Results */}
@@ -1309,37 +657,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <h3 className='text-2xl font-semibold text-white mb-2'>
                 No services found
               </h3>
-<<<<<<< HEAD
               <p className='text-white/60 mb-6'>                Try adjusting your search terms or filters
               </p>
               <button
                 onClick={clearFilters}
                 className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'              >
-=======
-              <p className='text-white/60 mb-6'>
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-              <p className="text-white/60 mb-6">
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-              <p className="text-white/60 mb-6">
-ursor/integrate-build-improve-and-re-verify-b76c
-                Try adjusting your search terms or filters
-              </p>
-              <button
-                onClick={clearFilters}
-                className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Clear All Filters
               </button>
             </div>
@@ -1354,32 +676,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                     : 'space-y-6'
                 }
-<<<<<<< HEAD
               >                {searchResults.map((service, index) => (
-=======
-              >
-            <AnimatePresence mode="wait">
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            <AnimatePresence mode="wait">
-              <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-ursor/integrate-build-improve-and-re-verify-b76c
-                {searchResults.map((service, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
-<<<<<<< HEAD
                       viewMode === 'grid'                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-=======
-                      viewMode === 'grid'
-                      viewMode === 'grid' 
-                      viewMode === 'grid' 
-ursor/integrate-build-improve-and-re-verify-b76c
-                        ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
                     }`}
                   >
@@ -1390,15 +694,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}
                         >
                           <service.icon className='w-8 h-8 text-white' />
-<<<<<<< HEAD
-=======
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                    <div className="relative z-10">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}>
-                          <service.icon className="w-8 h-8 text-white" />
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </div>
                         <div className='flex flex-col items-end gap-2'>
                           <span
@@ -1443,60 +738,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                               key={idx}
                               className='flex items-center gap-2 text-sm text-white/70'
                             >
-<<<<<<< HEAD
                               <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />                              <span>{feature}</span>
-=======
-                              <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
-                    <div className="relative z-10">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}>
-                          <service.icon className="w-8 h-8 text-white" />
-                        </div>
-                        <div className="flex flex-col items-end gap-2">
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            service.status === 'active' ? 'bg-green-500/20 text-green-300' :
-                            service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
-                            'bg-blue-500/20 text-blue-300'
-                          }`}>
-                            {service.status}
-                          </span>
-                          <span className="text-xs text-white/40">{service.technology}</span>
-                        </div>
-                      </div>
-                      
-                      <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
-                      <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
-                      
-                      {/* Price */}
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      </div>
-                      
-                      {/* Features */}
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
-                        <div className="space-y-2">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-                            <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                              <span>{feature}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                             </div>
                           ))}
                         </div>
                       </div>
 
                       <div className='flex items-center justify-between'>
-<<<<<<< HEAD
-=======
-                      
-                      <div className="flex items-center justify-between">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         <a
                           href={service.link}
                           className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'
@@ -1508,27 +756,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         </a>
                         <a
                           href='mailto:kleber@ziontechgroup.com'
-<<<<<<< HEAD
                           className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105'                        >
-=======
-                          className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105'
-                      
-                      <div className="flex items-center justify-between">
-                        <a
-                          href={service.link}
-                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
-                        >
-                          <span className="text-sm font-medium">Learn More</span>
-                          <ExternalLink className="w-4 h-4 ml-2" />
-                        </a>
-                        <a
-                          href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
-                          href="mailto:kleber@ziontechgroup.com"
-                          className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
-ursor/integrate-build-improve-and-re-verify-b76c
-                        >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           Get Quote
                         </a>
                       </div>
@@ -1544,13 +772,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
-<<<<<<< HEAD
-=======
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               </div>
               <h3 className='text-2xl font-semibold text-white mb-2'>
                 Start Your Search
@@ -1566,45 +787,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   'Cybersecurity',
                   'Quantum Computing',
                   'Edge Computing',
-<<<<<<< HEAD
                 ].map(term => (                  <button
-=======
-                ].map(term => (
-            <div className="text-center py-20">
-              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
-                <Search className="w-12 h-12 text-white/40" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-2">Start Your Search</h3>
-              <p className="text-white/60 mb-6">
-                Enter keywords above to find the perfect technology solutions for your business
-              </p>
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="text-sm text-white/40">Popular searches:</span>
-                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
-              <div className="flex flex-wrap justify-center gap-2">
-                <span className="text-sm text-white/40">Popular searches:</span>
-                {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
-ursor/integrate-build-improve-and-re-verify-b76c
-                  <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     key={term}
                     onClick={() => {
                       setSearchTerm(term);
                       performSearch();
                     }}
-<<<<<<< HEAD
                     className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'                  >
-=======
-                    className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'
-                      performSearch()
-                    }}
-                    className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
-                      performSearch()
-                    }}
-                    className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
-ursor/integrate-build-improve-and-re-verify-b76c
-                  >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     {term}
                   </button>
                 ))}
@@ -1616,13 +805,4 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <SmartFooter />
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-  )
-}
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,24 +1,11 @@
-<<<<<<< HEAD
  </div> </div>) ) 
 }</div> </div>) 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- </div> </div>) ) 
-}</div> </div>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datanews-digest.json');
-<<<<<<< HEAD
   let items: NewsItem[] = [];
-=======
-  let items: NewsItem[] = [],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
@@ -50,10 +37,6 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

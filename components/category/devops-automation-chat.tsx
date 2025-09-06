@@ -1,13 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const DevopsAutomationChat: NextPage = () => {
@@ -16,26 +9,7 @@ const DevopsAutomationChat: NextPage = () => {
       <Head>
         <title>DevopsAutomationChat - Zion Tech Solutions</title>
 <<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content='DevopsAutomationChat blog post' />
-=======
-        <meta name="description" content="DevopsAutomationChat blog post" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      </Head>
-      
-      <main>
-        <h1>DevopsAutomationChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
-    </div>
-  )
-};
-
-<<<<<<< HEAD
-export default DevopsAutomationChat;
-=======
-        <meta name="description" content="DevopsAutomationChat blog post" />
       </Head>
       
       <main>
@@ -48,7 +22,6 @@ export default DevopsAutomationChat;
 };
 
 export default DevopsAutomationChat;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default DevopsAutomationChat;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

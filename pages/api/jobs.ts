@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Job } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
-<<<<<<< HEAD
 
 const FILE = 'jobs.json';
 
@@ -16,16 +15,6 @@ export default async function handler(
     const jobs = readJsonFile<Job[]>(FILE, []);
     res.status(200).json({ jobs });
     return;  }
-=======
-const FILE = 'jobs.json';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
-  if (req.method === 'GET') {
-    const jobs = readJsonFile<Job[]>(FILE, []);
-    res.status(200).json({ jobs });
-    return
-  }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   if (req.method === 'POST') {
     const {
@@ -36,20 +25,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
-<<<<<<< HEAD
       clientEmail,
-=======
-      clientEmail
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     } = req.body || {};
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
       return;    }
-=======
-      return;
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const nowIso = new Date().toISOString();
     const job: Job = {
@@ -68,7 +48,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
-<<<<<<< HEAD
       const skills = (job.requiredSkills || []).map(s => s.toLowerCase());
       if (
         skills.some(
@@ -87,13 +66,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       )
         job.category = 'Cloud';
       else job.category = 'General';    }
-=======
-      const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
-      if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
-      else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
-      else job.category = 'General';
-    }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
@@ -102,11 +74,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-<<<<<<< HEAD
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-=======
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

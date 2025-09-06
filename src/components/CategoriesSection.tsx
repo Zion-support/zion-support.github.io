@@ -1,18 +1,6 @@
-<<<<<<< HEAD
         color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
         ...cat;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from './GradientHeading';
-import Link from 'next/link';
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
@@ -187,7 +175,6 @@ export function CategoriesSection({
       </div>
     </section>
   );
-<<<<<<< HEAD
   switch (iconName) {;
   ;
 
@@ -240,14 +227,6 @@ icon: getIcon (cat.iconName) ;
   t ('home.view all categories') ;
 }</Link> </div> </div> </section>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-        ...cat;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

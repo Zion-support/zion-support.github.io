@@ -786,10 +786,6 @@ export default function Marketplace() {
         )}
       </AnimatePresence>
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   );
 }//Navigate to admin products page router.push ('/admin/products') ;
 }, [isAuthenticated, user, router, toast]);
@@ -1031,19 +1027,7 @@ case 'newest': ;
 }";
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-
-        variant: "destructive"}),
-      return;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 }

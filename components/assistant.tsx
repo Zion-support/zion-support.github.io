@@ -1,10 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -13,19 +8,10 @@ export default function Assistant() {
   const params =
     typeof window !== 'undefined'
       ? new URLSearchParams(window.location.search)
-<<<<<<< HEAD
       : new URLSearchParams();  const tenantId = params.get('tenantId') || '';
   const brand = params.get('brand') || 'Zion AI';
 
   const [messages, setMessages] = useState<Message[]>([
-=======
-      : new URLSearchParams();
-=======
-interface Message { role: 'user' | 'assistant', content: string }
-
-export default function Assistant() {
-  const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 interface Message { role: 'user' | 'assistant', content: string }
 
@@ -36,7 +22,6 @@ export default function Assistant() {
   const brand = params.get('brand') || 'Zion AI';
 
   const [messages, setMessages] = useState<Message[]>([
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
@@ -59,14 +44,6 @@ export default function Assistant() {
   );
 <<<<<<< HEAD
 =======
-=======
-    { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
-  const [input, setInput] = useState('');
-
-  const faqs: Record<string, string> = useMemo(() => ({
-    'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
 
@@ -79,23 +56,12 @@ export default function Assistant() {
     const lower = question.toLowerCase();
     const faq = Object.keys(faqs).find(key => lower.includes(key));
     if (faq) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       setMessages(prev => [
         ...prev,
         { role: 'user', content: question },
         { role: 'assistant', content: faqs[faq] },
       ]);
       return;
-<<<<<<< HEAD
-=======
-=======
-      setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
-      return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
     // Basic fallback
@@ -122,10 +88,6 @@ export default function Assistant() {
       </div>
       <div className='flex-1 overflow-auto p-4 space-y-3'>
         {messages.map((m, idx) => (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <div
             key={idx}
             className={
@@ -133,29 +95,7 @@ export default function Assistant() {
                 ? 'text-gray-800'
                 : 'text-gray-900 font-medium'
             }
-<<<<<<< HEAD
           >            {m.content}
-=======
-          >
-=======
-      setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: faqs[faq] }]),
-      return
-    }
-    // Basic fallback
-    setMessages(prev => [...prev, { role: 'user', content: question }, { role: 'assistant', content: 'Thanks! A recruiter will follow up shortly.' }])
-  }
-
-  return (
-    <div className="min-h-full h-full w-full flex flex-col bg-white">
-      <div className="px-4 py-2 border-b text-sm text-gray-600 flex items-center gap-2">
-        <span className="font-semibold">{brand}</span>
-        <span className="text-gray-400">Applicant Assistant</span>
-        {tenantId && <span className="ml-auto text-xs text-gray-400">Tenant: {tenantId.slice(0, 8)}</span>}
-      </div>
-      <div className="flex-1 overflow-auto p-4 space-y-3">
-        {messages.map((m, idx) => (
-          <div key={idx} className={m.role === 'assistant' ? 'text-gray-800' : 'text-gray-900 font-medium'}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
           <div key={idx} className={m.role === 'assistant' ? 'text-gray-800' : 'text-gray-900 font-medium'}>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -165,11 +105,6 @@ export default function Assistant() {
         ))}
       </div>
       <form
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         className='p-3 border-t flex gap-2'
         onSubmit={e => {
           e.preventDefault();
@@ -178,12 +113,6 @@ export default function Assistant() {
             setInput('');
           }
         }}
-<<<<<<< HEAD
-=======
-=======
-        className="p-3 border-t flex gap-2"
-        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       >
         <input
@@ -200,27 +129,7 @@ export default function Assistant() {
         </button>
       </form>
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-<<<<<<< HEAD
-=======
-        className="p-3 border-t flex gap-2"
-        onSubmit={(e) => { e.preventDefault(), if (input.trim()) { handleAsk(input.trim()), setInput('') } }}
-      >
-        <input
-          className="flex-1 border rounded px-3 py-2 text-sm"
-          placeholder="Ask about the role..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <button type="submit" className="bg-gray-900 text-white text-sm rounded px-3 py-2">Send</button>
-      </form>
-    </div>
-  );
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

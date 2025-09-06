@@ -295,26 +295,9 @@ export const verifyPolyfills = () => {
   //Prevent webpack chunk loading errors if (selfRef.webpackChunk N E && typeof selfRef.webpackChunk N E.push === 'function') {;
   ;
 
-<<<<<<< HEAD
 export default {}; // Ensure this can be imported as a module
   ;
 }, // Ensure this can be imported as a module'"
-=======
-<<<<<<< HEAD
-export default {}; // Ensure this can be imported as a module
-  ;
-}, // Ensure this can be imported as a module'"
-=======
-
-<<<<<<< HEAD
-    
-<<<<<<< HEAD
-
-  const originalOnUnhandledRejection = window.onunhandledrejection;
-<<<<<<< HEAD
-    selfDefined: typeof self !== 'undefined', webpackChunkDefined: typeof webpackChunk_N_E !== 'undefined' || (typeof self !== 'undefined' && typeof self.webpackChunk_N_E !== 'undefined'),
-    tsHelpersDefined: typeof __extends !== 'undefined' && typeof __assign !== 'undefined',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 // Auto-verify in development
 if (process.env.NODE_ENV === 'development') {

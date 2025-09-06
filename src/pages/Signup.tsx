@@ -537,10 +537,6 @@ export default function Signup() {
       </div>
     </AuthLayout>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }) ;
 };
@@ -590,36 +586,7 @@ request: err.request ? 'Request made but no response': 'No request';
 }<p>⚠️ We detected some authentication service issues.</p> <p>If signup fails, please try again in a few minutes or contact support.</p> </div>) ;
 }</form> </div>) ;
 }</div> </div> </AuthLayout>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-
-  const isPartnerSignup = router.query.type === 'partner';
-  const signupSource = router.query.source as string || 'direct';
-
-<<<<<<< HEAD
-        
-<<<<<<< HEAD
-        
-<<<<<<< HEAD
-        
-        if (res.status === 201) {
-          const data = res.data;
-          
-<<<<<<< HEAD
-            
-<<<<<<< HEAD
-        
-        const status = err.response?.status;
-        // Try both 'error' and 'message' fields for compatibility
-        const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
-        
-        logInfo('Processed error message:', { data: errorMsg }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

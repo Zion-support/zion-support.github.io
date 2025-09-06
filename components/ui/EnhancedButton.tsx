@@ -1,20 +1,5 @@
-<<<<<<< HEAD
 import React from "react";
 import clsx from "clsx";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import clsx from "clsx";
-=======
-import React from 'react';
-import clsx from 'clsx';
-export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  fullWidth?: boolean
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export type EnhancedButtonProps =
@@ -36,36 +21,10 @@ const variantStyles: Record<
   string
 > = {
   primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400',
-<<<<<<< HEAD
   secondary:
     'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',
   ghost:
     'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100',
-=======
-  secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',
-  ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'},
-export default function EnhancedButton({
-  className;
-  variant = 'primary';
-  size = 'md';
-  fullWidth;
-  ...props
-}: EnhancedButtonProps) {
-  return (
-    <button
-      className={clsx(baseStyles, sizeStyles[size], variantStyles[variant], fullWidth && 'w-full', className)}
-      {...props}
-    />
-  );
-<<<<<<< HEAD
-=======
-import React from 'react';
-import clsx from 'clsx';
-export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  fullWidth?: boolean
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 
 export default function EnhancedButton({
@@ -77,12 +36,7 @@ export default function EnhancedButton({
 }: EnhancedButtonProps) {
   
     />
-<<<<<<< HEAD
   );
-=======
-  );
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

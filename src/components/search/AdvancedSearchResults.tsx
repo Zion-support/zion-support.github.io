@@ -692,10 +692,6 @@ export const AdvancedSearchResults: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export default AdvancedSearchResults;
   suggestion ;
 }</Button>) ) ;
@@ -754,27 +750,7 @@ setHasMore (data.hasMore);
 }</div>) ;
 };
 export default AdvancedSearchResults;
-<<<<<<< HEAD
 '"
-=======
-'"
-=======
-
-<<<<<<< HEAD
-
-
-// No Results Component
-const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
-  searchTerm,
-  onNewSearch ;
-
-<<<<<<< HEAD
-
-
-
-export default AdvancedSearchResults, 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default AdvancedSearchResults, 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

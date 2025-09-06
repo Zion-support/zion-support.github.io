@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   TrendingUp,
   Star,
@@ -21,13 +16,7 @@ import {
   BarChart3,
   Target as TargetIcon,
   Award,;
-<<<<<<< HEAD
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-=======
-} from 'lucide-react';
-=======
-import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -37,13 +26,6 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { revolutionary2026Services } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function MarketPricing2026() {
@@ -53,15 +35,9 @@ export default function MarketPricing2026() {
   // Combine all 2026 services
   const allServices = [
 <<<<<<< HEAD
-<<<<<<< HEAD
     ...revolutionary2026Services,
     ...emergingTech2026Services,
     ...comprehensiveIT2026Services,
-=======
-    ...revolutionary2026Services;
-    ...emergingTech2026Services;
-    ...comprehensiveIT2026Services
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     ...revolutionary2026Services;
     ...emergingTech2026Services;
@@ -72,11 +48,6 @@ export default function MarketPricing2026() {
 
   // Filter services based on selection
   const filteredServices = allServices.filter(service => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const matchesCategory =
       selectedCategory === 'all' || service.category.includes(selectedCategory);
     const matchesPrice =
@@ -137,34 +108,10 @@ export default function MarketPricing2026() {
       count: allServices.filter(
         s => s.category.includes('Cloud') || s.category.includes('DevOps')
       ).length,
-<<<<<<< HEAD
     },  ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All price ranges' },
-=======
-    },
-=======
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    const matchesPrice = priceRange === 'all' || 
-      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
-      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) ||
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000);
-    return matchesCategory && matchesPrice
-  });
-
-  const categories = [
-=======
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
-    const matchesPrice = priceRange === 'all' || 
-      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) ||
-      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) ||
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000);
-    return matchesCategory && matchesPrice
-  });
-
-  const categories = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length },
     { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
     { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
@@ -172,15 +119,11 @@ export default function MarketPricing2026() {
     { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
     { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', range: 'All price ranges' },
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
@@ -200,13 +143,6 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
     },  ];
 =======
-    },
-=======
-    { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' },
-    { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' },
-    { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' },
     { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' },
     { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
@@ -218,15 +154,7 @@ export default function MarketPricing2026() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',  };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     website: 'https://ziontechgroup.com'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -236,11 +164,6 @@ export default function MarketPricing2026() {
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: allServices.length,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     averagePrice:
       allServices.reduce(
         (sum, service) =>
@@ -260,15 +183,6 @@ export default function MarketPricing2026() {
     averageRating:
       allServices.reduce((sum, service) => sum + service.rating, 0) /
       allServices.length,
-<<<<<<< HEAD
-=======
-=======
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length;
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
-    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0);
-    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
@@ -276,10 +190,6 @@ export default function MarketPricing2026() {
     >
       <div className='min-h-screen'>
         <Head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <title>
             Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+
             Solutions
@@ -310,31 +220,7 @@ export default function MarketPricing2026() {
           <link
             rel='canonical'
             href='https://ziontechgroup.com/market-pricing-2026'
-<<<<<<< HEAD
           />        </Head>
-=======
-          />
-=======
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length;
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
-    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0);
-    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length
-  };
-
-  return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="extreme" 
-      colorScheme="quantum-fusion"
-      particleCount={600}
-      animationSpeed={2.5}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-    >
-      <div className="min-h-screen">
-        <Head>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <title>Zion Tech Group - 2026 Market Pricing & Competitive Analysis | 1500+ Solutions</title>
           <meta name="description" content="Comprehensive market pricing analysis for Zion Tech Group's revolutionary 2026 services. Compare prices, ROI, and competitive positioning. Contact: +1 302 464 0950" />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, emerging technology pricing, IT solutions pricing, competitive analysis, market positioning, ROI analysis" />
@@ -345,10 +231,7 @@ export default function MarketPricing2026() {
           <meta property="og:url" content="https://ziontechgroup.com/market-pricing-2026" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/market-pricing-2026" />
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </Head>
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
@@ -356,18 +239,8 @@ export default function MarketPricing2026() {
         <UltraAdvancedNavigation />
 
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>
-=======
-        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -378,18 +251,8 @@ export default function MarketPricing2026() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
               <h1 className='text-5xl md:text-7xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h1 className='text-5xl md:text-7xl font-bold mb-6'>
-                <span className='bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent'>
-=======
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   2026 Market Pricing
                 </span>
@@ -426,51 +289,11 @@ export default function MarketPricing2026() {
                   </div>
                   <div className='text-gray-400 text-sm'>Highest Price</div>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
                   <div className='text-3xl font-bold text-yellow-400 mb-2'>
                     {pricingStats.totalCustomers.toLocaleString()}+
                   </div>
-<<<<<<< HEAD
                   <div className='text-gray-400 text-sm'>Total Customers</div>                </div>
-=======
-                  <div className='text-gray-400 text-sm'>Total Customers</div>
-=======
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  2026 Market Pricing
-                </span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive pricing analysis and competitive positioning for our revolutionary AI,
-                quantum computing, and emerging technology services
-              </p>
-              
-              {/* Pricing Statistics */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12">
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{pricingStats.totalServices}</div>
-                  <div className="text-gray-400 text-sm">Total Services</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">${pricingStats.averagePrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Avg. Price/Month</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">${pricingStats.lowestPrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Lowest Price</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-green-400 mb-2">${pricingStats.highestPrice.toFixed(0)}</div>
-                  <div className="text-gray-400 text-sm">Highest Price</div>
-                </div>
-                <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">{pricingStats.totalCustomers.toLocaleString()}+</div>
-                  <div className="text-gray-400 text-sm">Total Customers</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
                   <div className="text-3xl font-bold text-yellow-400 mb-2">{pricingStats.totalCustomers.toLocaleString()}+</div>
@@ -484,11 +307,6 @@ export default function MarketPricing2026() {
         </section>
 
         {/* Filters Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'>
@@ -498,20 +316,7 @@ export default function MarketPricing2026() {
                   <label className='block text-white font-semibold mb-3'>
                     Service Category
                   </label>
-<<<<<<< HEAD
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (
-=======
-                  <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>
-=======
-        <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {/* Category Filter */}
-                <div>
-                  <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -533,28 +338,13 @@ export default function MarketPricing2026() {
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
                         }`}
                       >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         <div className='flex items-center justify-center space-x-2'>
                           <category.icon className='w-4 h-4' />
                           <span>{category.name}</span>
                         </div>
                         <div className='text-xs mt-1 opacity-75'>
                           ({category.count})
-<<<<<<< HEAD
                         </div>                      </button>
-=======
-                        </div>
-=======
-                        <div className="flex items-center justify-center space-x-2">
-                          <category.icon className="w-4 h-4" />
-                          <span>{category.name}</span>
-                        </div>
-                        <div className="text-xs mt-1 opacity-75">({category.count})</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                         <div className="flex items-center justify-center space-x-2">
                           <category.icon className="w-4 h-4" />
@@ -570,22 +360,10 @@ export default function MarketPricing2026() {
 
                 {/* Price Range Filter */}
                 <div>
-<<<<<<< HEAD
                   <label className='block text-white font-semibold mb-3'>
                     Price Range
                   </label>
                   <div className='space-y-2'>                    {priceRanges.map(range => (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <label className='block text-white font-semibold mb-3'>
-                    Price Range
-                  </label>
-                  <div className='space-y-2'>
-=======
-                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
-                  <div className="space-y-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                   <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
                   <div className="space-y-2">
@@ -601,18 +379,8 @@ export default function MarketPricing2026() {
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
                         }`}
                       >
-<<<<<<< HEAD
                         <div className='font-medium'>{range.name}</div>
                         <div className='text-xs opacity-75'>{range.range}</div>                      </button>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <div className='font-medium'>{range.name}</div>
-                        <div className='text-xs opacity-75'>{range.range}</div>
-=======
-                        <div className="font-medium">{range.name}</div>
-                        <div className="text-xs opacity-75">{range.range}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                         <div className="font-medium">{range.name}</div>
                         <div className="text-xs opacity-75">{range.range}</div>
@@ -628,18 +396,8 @@ export default function MarketPricing2026() {
         </section>
 
         {/* Market Analysis Section */}
-<<<<<<< HEAD
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-=======
-        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -650,11 +408,6 @@ export default function MarketPricing2026() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               className='text-center mb-12'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
@@ -663,39 +416,22 @@ export default function MarketPricing2026() {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our services are strategically positioned to provide maximum
                 value while maintaining competitive pricing in the rapidly
-<<<<<<< HEAD
                 evolving technology landscape              </p>
             </motion.div>
 
             {/* Market Insights Grid */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>              <motion.div
-=======
-                evolving technology landscape
-=======
-              className="text-center mb-12"
-            >
-=======
-              className="text-center mb-12"
-            >
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & Competitive Positioning</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our services are strategically positioned to provide maximum value while maintaining competitive pricing 
                 in the rapidly evolving technology landscape
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </motion.div>
 
             {/* Market Insights Grid */}
 <<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -705,15 +441,7 @@ export default function MarketPricing2026() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-<<<<<<< HEAD
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-=======
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               >
                 <div className='text-4xl mb-4'>📊</div>
@@ -725,25 +453,8 @@ export default function MarketPricing2026() {
                   affordable than enterprise competitors while providing
                   superior features and ROI
                 </p>
-<<<<<<< HEAD
                 <div className='flex items-center text-cyan-400 text-sm'>
                   <TrendingUp className='w-4 h-4 mr-2' />                  <span>20-40% cost savings</span>
-=======
-<<<<<<< HEAD
-                <div className='flex items-center text-cyan-400 text-sm'>
-                  <TrendingUp className='w-4 h-4 mr-2' />
-=======
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
-              >
-                <div className="text-4xl mb-4">📊</div>
-                <h3 className="text-xl font-bold text-white mb-3">Competitive Pricing</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Our pricing is strategically positioned to be 20-40% more affordable than enterprise competitors 
-                  while providing superior features and ROI
-                </p>
-                <div className="flex items-center text-cyan-400 text-sm">
-                  <TrendingUp className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 <div className="flex items-center text-cyan-400 text-sm">
                   <TrendingUp className="w-4 h-4 mr-2" />
@@ -758,15 +469,7 @@ export default function MarketPricing2026() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-=======
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               >
                 <div className='text-4xl mb-4'>🎯</div>
@@ -777,25 +480,8 @@ export default function MarketPricing2026() {
                   Every service comes with our 1000% ROI guarantee, ensuring
                   that customers see exceptional returns on their investment
                 </p>
-<<<<<<< HEAD
                 <div className='flex items-center text-green-400 text-sm'>
                   <Award className='w-4 h-4 mr-2' />                  <span>1000% ROI guarantee</span>
-=======
-<<<<<<< HEAD
-                <div className='flex items-center text-green-400 text-sm'>
-                  <Award className='w-4 h-4 mr-2' />
-=======
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
-              >
-                <div className="text-4xl mb-4">🎯</div>
-                <h3 className="text-xl font-bold text-white mb-3">ROI Guarantee</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Every service comes with our 1000% ROI guarantee, ensuring that customers see 
-                  exceptional returns on their investment
-                </p>
-                <div className="flex items-center text-green-400 text-sm">
-                  <Award className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 <div className="flex items-center text-green-400 text-sm">
                   <Award className="w-4 h-4 mr-2" />
@@ -810,15 +496,7 @@ export default function MarketPricing2026() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-<<<<<<< HEAD
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
-=======
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               >
                 <div className='text-4xl mb-4'>🚀</div>
@@ -829,25 +507,8 @@ export default function MarketPricing2026() {
                   Our 2026 services incorporate cutting-edge technologies that
                   will remain relevant and competitive for years to come
                 </p>
-<<<<<<< HEAD
                 <div className='flex items-center text-purple-400 text-sm'>
                   <Zap className='w-4 h-4 mr-2' />                  <span>Future-proof solutions</span>
-=======
-<<<<<<< HEAD
-                <div className='flex items-center text-purple-400 text-sm'>
-                  <Zap className='w-4 h-4 mr-2' />
-=======
-                className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm"
-              >
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-xl font-bold text-white mb-3">Future-Proof Technology</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  Our 2026 services incorporate cutting-edge technologies that will remain 
-                  relevant and competitive for years to come
-                </p>
-                <div className="flex items-center text-purple-400 text-sm">
-                  <Zap className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 <div className="flex items-center text-purple-400 text-sm">
                   <Zap className="w-4 h-4 mr-2" />
@@ -861,18 +522,8 @@ export default function MarketPricing2026() {
         </section>
 
         {/* Services Pricing Grid */}
-<<<<<<< HEAD
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto'>
-=======
-        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -883,30 +534,16 @@ export default function MarketPricing2026() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               className='text-center mb-12'
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Service Pricing & Features
               </h2>
-<<<<<<< HEAD
               <p className='text-xl text-gray-300'>                {filteredServices.length} services found matching your criteria
               </p>
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices.map((service, index) => (
-=======
-              <p className='text-xl text-gray-300'>
-=======
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">Service Pricing & Features</h2>
-              <p className="text-xl text-gray-300">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
               className="text-center mb-12"
             >
@@ -918,11 +555,7 @@ export default function MarketPricing2026() {
             </motion.div>
 
 <<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -933,15 +566,7 @@ export default function MarketPricing2026() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
                   className='group'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='group'
-=======
-                  className="group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
@@ -949,21 +574,7 @@ export default function MarketPricing2026() {
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
-<<<<<<< HEAD
                         <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular
-=======
-<<<<<<< HEAD
-                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>
-=======
-                  className="group"
-                >
-                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                    {/* Service Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">{service.icon}</div>
-                      {service.popular && (
-                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                         <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -974,7 +585,6 @@ export default function MarketPricing2026() {
                     </div>
 
                     {/* Service Title */}
-<<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
 
@@ -987,13 +597,6 @@ export default function MarketPricing2026() {
                       <div className='text-center'>
                         <div className='text-3xl font-bold text-cyan-400 mb-1'>
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
-=======
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {service.name}
@@ -1001,11 +604,7 @@ export default function MarketPricing2026() {
 
                     {/* Tagline */}
 <<<<<<< HEAD
-<<<<<<< HEAD
                     <p className='text-gray-300 text-sm mb-4'>
-=======
-                    <p className="text-gray-300 text-sm mb-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                     <p className="text-gray-300 text-sm mb-4">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -1014,39 +613,21 @@ export default function MarketPricing2026() {
 
                     {/* Pricing Section */}
 <<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
                       <div className='text-center'>
                         <div className='text-3xl font-bold text-cyan-400 mb-1'>
-=======
-                    <div className="bg-gray-700/30 rounded-xl p-4 mb-4">
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-cyan-400 mb-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           {service.price}
                           <span className='text-gray-400 text-lg font-normal'>
                             {service.period}
                           </span>
                         </div>
-<<<<<<< HEAD
                         <div className='text-gray-400 text-sm'>
                           Starting price
                         </div>                      </div>
                     </div>
 
                     {/* Market Position */}
-=======
-<<<<<<< HEAD
-=======
-                    <div className="bg-gray-700/30 rounded-xl p-4 mb-4">
-                      <div className="text-center">
-                        <div className="text-3xl font-bold text-cyan-400 mb-1">
-                          {service.price}
-                          <span className="text-gray-400 text-lg font-normal">{service.period}</span>
-                        </div>
-                        <div className="text-gray-400 text-sm">Starting price</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                         <div className="text-gray-400 text-sm">Starting price</div>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -1055,7 +636,6 @@ export default function MarketPricing2026() {
 
                     {/* Market Position */}
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
@@ -1063,13 +643,6 @@ export default function MarketPricing2026() {
                       </h4>
 <<<<<<< HEAD
                       <p className='text-gray-400 text-xs leading-relaxed'>                        {service.marketPosition}
-=======
-                      <p className='text-gray-400 text-xs leading-relaxed'>
-=======
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2 text-sm">Market Position</h4>
-                      <p className="text-gray-400 text-xs leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Market Position</h4>
@@ -1081,21 +654,9 @@ export default function MarketPricing2026() {
                     </div>
 
                     {/* ROI & Customers */}
-<<<<<<< HEAD
                     <div className='grid grid-cols-2 gap-4 mb-4'>
                       <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
                         <div className='text-lg font-bold text-green-400 mb-1'>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div className='grid grid-cols-2 gap-4 mb-4'>
-                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
-                        <div className='text-lg font-bold text-green-400 mb-1'>
-=======
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">
-                        <div className="text-lg font-bold text-green-400 mb-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           {service.roi.split(' ')[0]}
                         </div>
@@ -1105,28 +666,10 @@ export default function MarketPricing2026() {
                         <div className='text-lg font-bold text-blue-400 mb-1'>
                           {service.customers.toLocaleString()}+
                         </div>
-<<<<<<< HEAD
                         <div className='text-gray-400 text-xs'>Customers</div>                      </div>
                     </div>
 
                     {/* Key Features */}
-=======
-<<<<<<< HEAD
-                        <div className='text-gray-400 text-xs'>Customers</div>
-=======
-                    <div className="grid grid-cols-2 gap-4 mb-4">
-                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">
-                        <div className="text-lg font-bold text-green-400 mb-1">
-                          {service.roi.split(' ')[0]}
-                        </div>
-                        <div className="text-gray-400 text-xs">ROI</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-700/30 rounded-lg">
-                        <div className="text-lg font-bold text-blue-400 mb-1">
-                          {service.customers.toLocaleString()}+
-                        </div>
-                        <div className="text-gray-400 text-xs">Customers</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                         <div className="text-gray-400 text-xs">Customers</div>
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -1134,7 +677,6 @@ export default function MarketPricing2026() {
                     </div>
 
                     {/* Key Features */}
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <div className='mb-4'>
@@ -1149,16 +691,6 @@ export default function MarketPricing2026() {
                           >
 <<<<<<< HEAD
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}
-=======
-                            <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
-=======
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
-                      <ul className="space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className="text-gray-400 text-xs flex items-center">
-                            <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features</h4>
@@ -1175,11 +707,6 @@ export default function MarketPricing2026() {
                     </div>
 
                     {/* Technology Stack */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
                         Technology
@@ -1189,21 +716,11 @@ export default function MarketPricing2026() {
                           <span
                             key={idx}
                             className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'
-<<<<<<< HEAD
                           >                            {tech}
                           </span>
                         ))}
                         {service.technology.length > 3 && (
                           <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                            +{service.technology.length - 3} more
-=======
-                          >
-=======
-                    <div className="mb-4">
-                      <h4 className="text-white font-semibold mb-2 text-sm">Technology</h4>
-                      <div className="flex flex-wrap gap-1">
-                        {service.technology.slice(0, 3).map((tech, idx) => (
-                          <span key={idx} className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Technology</h4>
@@ -1216,11 +733,7 @@ export default function MarketPricing2026() {
                         ))}
                         {service.technology.length > 3 && (
 <<<<<<< HEAD
-<<<<<<< HEAD
                           <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
-=======
-                          <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                           <span className="text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -1234,15 +747,7 @@ export default function MarketPricing2026() {
                     {/* CTA Button */}
                     <a
                       href={service.link}
-<<<<<<< HEAD
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
-=======
-                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -1260,11 +765,6 @@ export default function MarketPricing2026() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 className='text-center py-16'
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -1273,17 +773,7 @@ export default function MarketPricing2026() {
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your category or price range filters
-<<<<<<< HEAD
                 </p>              </motion.div>
-=======
-                </p>
-=======
-                className="text-center py-16"
-              >
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your category or price range filters</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 className="text-center py-16"
               >
@@ -1298,18 +788,8 @@ export default function MarketPricing2026() {
         </section>
 
         {/* Contact Section */}
-<<<<<<< HEAD
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-4xl mx-auto text-center'>
-=======
-        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1320,15 +800,7 @@ export default function MarketPricing2026() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
               className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
-=======
-              className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -1359,7 +831,6 @@ export default function MarketPricing2026() {
 
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
-<<<<<<< HEAD
                   href='/contact'
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'                >
                   Get Custom Quote
@@ -1367,39 +838,6 @@ export default function MarketPricing2026() {
                 <a
                   href='/2026-services-showcase'
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                >
-=======
-<<<<<<< HEAD
-                  href='/contact'
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
-=======
-              className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our team to discuss pricing, implementation, and how our revolutionary 2026 services 
-                can transform your business with exceptional ROI
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="flex items-center justify-center space-x-3 text-cyan-300">
-                  <span className="text-2xl">📱</span>
-                  <span className="font-semibold">{contactInfo.mobile}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-purple-300">
-                  <span className="text-2xl">✉️</span>
-                  <span className="font-semibold">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-pink-300">
-                  <span className="text-2xl">📍</span>
-                  <span className="font-semibold text-sm">{contactInfo.address}</span>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
@@ -1409,13 +847,8 @@ export default function MarketPricing2026() {
                 </a>
                 <a
 <<<<<<< HEAD
-<<<<<<< HEAD
                   href='/2026-services-showcase'
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'
-=======
-                  href="/2026-services-showcase"
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                   href="/2026-services-showcase"
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
@@ -1431,14 +864,7 @@ export default function MarketPricing2026() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

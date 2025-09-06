@@ -31,27 +31,4 @@ export default function LegalPage() {
         </ul>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
-  );
-export default function LegalPage() {
-export default function LegalPage() {
-ursor/integrate-build-improve-and-re-verify-b76c
-	return (
-		<>
-			<SEO title="Legal | Zion Tech Group" description="Legal resources including privacy policy, terms of service, and cookies." canonical="/legal" />
-			<div className="container mx-auto px-4 py-16">
-				<h1 className="text-4xl font-bold mb-6">Legal</h1>
-				<ul className="list-disc ml-6 text-gray-300 space-y-2">
-					<li><Link href="/privacy" className="text-cyan-400">Privacy Policy</Link></li>
-					<li><Link href="/terms" className="text-cyan-400">Terms of Service</Link></li>
-					<li><Link href="/cookies" className="text-cyan-400">Cookie Policy</Link></li>
-				</ul>
-			</div>
-		</>
-	)
-}
-}
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

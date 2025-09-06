@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -22,29 +17,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image
-<<<<<<< HEAD
-=======
-=======
-import { format } from "date-fns";
-import { JobApplication } from "@/types/jobs";
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { 
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow
-} from "@/components/ui/table";
-import { ApplicationActions } from "./ApplicationActions";
-import { StatusBadge } from "./StatusBadge";
-import { Briefcase, User } from 'lucide-react'
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
-import React, { useState } from "react", // Import React and useState
-import { toast } from "@/hooks/use-toast";
-import Image from 'next/image', // Import next/image
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface ApplicationsTableProps {
@@ -193,10 +165,6 @@ export function ApplicationsTable({
       />
     </>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   /* Using Renamed AvatarPrimitive */ ;
 }{;
@@ -241,19 +209,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }onConfirm= {;
   handleHireConfirmed ;
 }/> </>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-  const talentName = application.talent_profile?.full_name || "Candidate";
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

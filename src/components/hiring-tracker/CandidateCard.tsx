@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 import { useState } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
-import { useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -243,10 +235,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       />
     </>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
   setShowNotes (false);
@@ -324,18 +312,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 }onConfirm= {;
   handleHireConfirmed ;
 }/> </>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-
-  const candidateName = application.talent_profile?.full_name || "Candidate";
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

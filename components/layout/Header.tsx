@@ -2,30 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-<<<<<<< HEAD
     Menu,
     X
   } from 'lucide-react';
 
-=======
-<<<<<<< HEAD
-    Menu,
-    X
-  } from 'lucide-react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  Menu;
-  X;
-} from 'lucide-react';
-
-=======
-import React from 'react';
-import Link from 'next/link';
-import Button from '../ui/Button';
->>>>>>> pr-11992
 const Header: React.FC = () => {
   const [, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

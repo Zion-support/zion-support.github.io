@@ -1,36 +1,4 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,;
-} from '@/components/ui/dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
-import { Save } from 'lucide-react';
-import { TalentProfile } from '@/types/talent';
-import { ContractForm, ContractFormValues } from './components/ContractForm';
-import { ContractPreview } from './components/ContractPreview';
-import { TemplateManager } from './templates/TemplateManager';
-import { SmartContractBuilder } from './SmartContractBuilder';
-
-=======
-import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import { Save } from 'lucide-react'
-import { TalentProfile } from "@/types/talent";
-import { ContractForm, ContractFormValues } from "./components/ContractForm";
-import { ContractPreview } from "./components/ContractPreview";
-import { TemplateManager } from "./templates/TemplateManager";
-import { SmartContractBuilder } from "./SmartContractBuilder";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface ContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -146,7 +114,6 @@ export function ContractBuilder({
       </DialogContent>
     </Dialog>
   );
-<<<<<<< HEAD
 
 };
 
@@ -172,10 +139,6 @@ export function ContractBuilder({
   formValues ;
 }/> </DialogContent> </Dialog>) ;
 }"
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

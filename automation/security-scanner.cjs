@@ -328,20 +328,9 @@ export function securityHeaders(req, res, next) {
         recommendations.push('Add rate limiting for authentication endpoints');
         recommendations.push('Implement two-factor authentication');
       } else {
-<<<<<<< HEAD
     recommendations.push('Consider implementing authentication system'),
     recommendations.push('Add user registration and login functionality')
   }
-=======
-<<<<<<< HEAD
-    recommendations.push('Consider implementing authentication system'),
-    recommendations.push('Add user registration and login functionality')
-  }
-=======
-        recommendations.push('Consider implementing authentication system');
-        recommendations.push('Add user registration and login functionality');
-      }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       this.results.authenticationSecurity = {
@@ -412,20 +401,9 @@ export function securityHeaders(req, res, next) {
 
 // Run the security scanner
 if (require.main === module) {
-<<<<<<< HEAD
     const scanner = new SecurityScanner();
     scanner.run().catch(console.error);
 }
-=======
-<<<<<<< HEAD
-    const scanner = new SecurityScanner(),
-    scanner.run().catch(console.error)
-  }
-=======
-  const scanner = new SecurityScanner();
-  scanner.run().catch(console.error);
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 module.exports = SecurityScanner;

@@ -1,31 +1,5 @@
-<<<<<<< HEAD
   quotes;
   isArchived = false;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,;
-} from '@/components/ui/dropdown-menu';
-import { QuoteStatusBadge } from '@/components/quotes/QuoteStatusBadge';
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-import { formatDate } from '@/utils/dateUtils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
@@ -214,15 +188,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
 '"
-=======
-
-<<<<<<< HEAD
-  quotes;
-  isArchived = false;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

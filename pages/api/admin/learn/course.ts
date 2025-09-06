@@ -1,21 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
-<<<<<<< HEAD
-
 const coursesPath = path.join(process.cwd(), 'data', 'courses.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST');
     return res.status(405).end('Method Not Allowed')
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   try {

@@ -1,18 +1,7 @@
-<<<<<<< HEAD
  return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
- return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
@@ -67,8 +56,5 @@ export default function IncidentAutomationSuitePage() {
   );
 }
 
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

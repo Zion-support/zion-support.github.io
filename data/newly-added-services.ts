@@ -1,27 +1,13 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',};
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
-=======
-  website: 'https://ziontechgroup.com',
-=======
-const contact = {
-	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 const contact = {
 	mobile: '+1 302 464 0950';
@@ -33,7 +19,6 @@ const contact = {
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'managed-ml-feature-store-starter',
@@ -62,15 +47,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     trialDays: 14,
     setupTime: '1-3 days',
     category: 'AI & Data',
-=======
-=======
-    id: 'managed-ml-feature-store-starter';
-    name: 'Managed ML Feature Store Starter';
-    tagline: 'Production-ready feature store with governance and lineage';
-    price: '$249';
-    period: '/month';
-    description: 'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality testsRBAC and audit logs'
     ];
@@ -1694,21 +1670,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2
   }
 ];
-<<<<<<< HEAD
-=======
-    id: 'managed-ml-feature-store-starter', name: 'Managed ML Feature Store Starter',
-    tagline: 'Production-ready feature store with governance and lineage', price: '$249',
-    period: '/month',
-    description: 'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.',
-    features: [
-      'Online/offline consistency checksSchema/version governanceBackfills and point-in-time joinsDrift alerts and quality testsRBAC and audit logs'
-    ];
-    popular: true, icon: '🧬',
-    color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-300',
-    link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter', marketPosition: 'Accelerates ML platform maturity versus building from scratch.',
-    targetAudience: 'ML platform teams and data engineering', trialDays: 14,
-    setupTime: '1-3 days', category: 'AI & Data',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     realService: true,
     technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'],
     integrations: ['dbt, Airflow, Kafka, Snowflake, BigQuery'],
@@ -3597,7 +3558,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     link: 'https://ziontechgroup.com/services/ai-governance-policy-center',
     marketPosition: 'Practical governance for teams shipping AI features.',
     targetAudience: 'AI platform, legal, risk',
-<<<<<<< HEAD
     trialDays: 14,
     setupTime: '2–5 days',
     category: 'Quality & Monitoring',
@@ -3619,21 +3579,6 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2,
   },
 ];
-=======
-    trialDays: 14, setupTime: '2–5 days',
-    category: 'Quality & Monitoring', realService: true,
-    technology: ['RegistryEvalsWorkflows'], integrations: ['GitHubJiraSlack'],
-    useCases: ['Model registryRisk trackingPolicy compliance'], roi: 'Reduce policy drift and audit risk',
-    competitors: ['Holistic AI (lite)'], marketSize: '$1.5B AI governance',
-    growthRate: '21% CAGR', variant: 'holographic-matrix',
-    contactInfo: contact, realImplementation: true,
-    implementationDetails: 'Registry + eval runners + approval flows.', launchDate: '2025-08-15',
-    customers: 5, rating: 4.6,
-    reviews: 2
-  }
-];
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

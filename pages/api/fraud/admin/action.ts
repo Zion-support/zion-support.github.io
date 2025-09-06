@@ -1,23 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
-<<<<<<< HEAD
-=======
-function ensureAdmin(req: NextApiRequest): boolean {
-  const token = req.headers['x-admin-token'];
-  if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
-  return token === process.env.ADMIN_TOKEN
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-  }
-  if (!ensureAdmin(req)) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }
 
   const { fraudId, action, reason, adminId } = req.body || {};
@@ -33,7 +16,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const store = getFraudStore();
-<<<<<<< HEAD
   await store.recordAction({
     fraudId,
     action: act,
@@ -45,10 +27,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await store.updateEventStatus(fraudId, newStatus);
 
   res.status(200).json({ ok: true, status: newStatus });
-=======
-  await store.recordAction(fraudId, act, reason || null, adminId || null);
-  const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
-  await store.updateEventStatus(fraudId, newStatus);
-  res.status(200).json({ ok: true, status: newStatus })
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

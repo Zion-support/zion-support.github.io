@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
@@ -16,39 +11,7 @@ temperature: 0.3
 const content = response.choices[0]?.message?.content || '';
 const typeMatch = content.match (/type\s*:\s* (.+) $/im);
 
-<<<<<<< HEAD
       return { summary: description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');
-=======
-      return { summary: description.slice(0, 280), type: 'unknown' };
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
-async function loadRequests(): Promise<any[]> {
-  try {
-    const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
-    return JSON.parse(raw)
-  } catch {
-    return []
-  }
-}
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
-async function loadRequests(): Promise<any[]> {
-  try {
-    const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8');
-    return JSON.parse(raw)
-  } catch {
-    return []
-  }
-}
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 async function saveRequests(requests: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
@@ -57,10 +20,7 @@ async function saveRequests(requests: any[]) {
 async function summarizeWithOpenAI(description: string) {
   try {
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' };
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const { OpenAI } = await import('openai');
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -68,23 +28,11 @@ async function summarizeWithOpenAI(description: string) {
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         { role: 'system', content: 'You are a helpful assistant.' },
         { role: 'user', content: prompt },
       ],
       temperature: 0.3,
     });
-<<<<<<< HEAD
-=======
-=======
-        { role: 'system', content: 'You are a helpful assistant.' };
-        { role: 'user', content: prompt }];
-      temperature: 0.3});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     const content = response.choices[0]?.message?.content || '';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
@@ -103,35 +51,10 @@ export default async function handler(
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const { name, email, budget, timeline, description, talentSlug } =
     req.body || {};
   if (!name || !email || !description)
     return res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-=======
-=======
-        { role: 'system', content: 'You are a helpful assistant.' };
-        { role: 'user', content: prompt }];
-      temperature: 0.3
-      });
-    const content = response.choices[0]?.message?.content || '';
-    const typeMatch = content.match(/type\s*:\s*(.+)$/im);
-    return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
-  } catch (err) {
-    return { summary: description.slice(0, 280), type: 'unknown' }
-  };
-}
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-  const { name, email, budget, timeline, description, talentSlug } = req.body || {};
-  if (!name || !email || !description) return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   const { name, email, budget, timeline, description, talentSlug } = req.body || {};
   if (!name || !email || !description) return res.status(400).json({ error: 'Missing required fields' });
@@ -145,11 +68,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const now = new Date().toISOString();
   const id = `req_${Date.now()}`;
   const record = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id,
     name,
     email,
@@ -162,20 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     status: 'new',
     createdAt: now,
     updatedAt: now,
-<<<<<<< HEAD
   };  requests.push(record);
-=======
-  };
-=======
-    id;
-    name;
-    email;
-    budget: normalizedBudget, timeline: String(timeline || ''),
-    description: String(description), talentSlug: talentSlug || null,
-    aiSummary: ai.summary, aiType: ai.type,
-    status: 'new', createdAt: now,
-    updatedAt: now};
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     id;
     name;
@@ -197,14 +102,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
   return res.status(200).json({ id, status: 'ok' });
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

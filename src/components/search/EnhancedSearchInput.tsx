@@ -1,30 +1,4 @@
-<<<<<<< HEAD
           
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types/search';
-import { useDebounce } from '@/hooks/useDebounce';
-import { useRouter } from 'next/router';
-import { slugify } from '@/lib/slugify';
-import { debounce } from 'lodash';
-=======
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useRouter } from "next/router";
-import { slugify } from "@/lib/slugify";
-import { debounce } from "lodash";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
 
@@ -282,7 +256,6 @@ export function EnhancedSearchInput({
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
-<<<<<<< HEAD
   );
 
 }setIsFocused (false);
@@ -307,12 +280,6 @@ break ;
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-          
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 }

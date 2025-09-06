@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import {
   Menu,
   X,
@@ -19,16 +14,6 @@ import {
   ChevronDown,;
 } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-
-=======
-import { 
-  Menu, X, Home, Brain, Cpu, Rocket, 
-  Phone, Mail, MapPin, Globe, ChevronDown
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 import { 
   Menu, X, Home, Brain, Cpu, Rocket, 
@@ -44,26 +29,11 @@ const Navigation: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);  }, []);
-=======
-    return () => window.removeEventListener('scroll', handleScroll);
-=======
-      setIsScrolled(window.scrollY > 50)
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
       setIsScrolled(window.scrollY > 50)
     };
@@ -78,18 +48,8 @@ const Navigation: React.FC = () => {
     {
       name: 'Home',
       href: '/',
-<<<<<<< HEAD
       icon: Home,
     },    {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Home,
-    },
-=======
-      icon: Home
-    };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
       icon: Home
     };
@@ -100,11 +60,6 @@ const Navigation: React.FC = () => {
       href: '/services',
       icon: Rocket,
       dropdown: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         {
           name: 'AI Services',
           href: '/ai-services',
@@ -131,20 +86,10 @@ const Navigation: React.FC = () => {
         },
       ],
     },
-<<<<<<< HEAD
     {
       name: 'Solutions',
       href: '/solutions',
       icon: Cpu,
-=======
-=======
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' },
-        { name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' }
-      ]
-    };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Solutions',
       href: '/solutions',
@@ -158,7 +103,6 @@ const Navigation: React.FC = () => {
     {
       name: 'Contact',
       href: '/contact',
-<<<<<<< HEAD
       icon: Phone,
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     },
@@ -176,10 +120,6 @@ const Navigation: React.FC = () => {
 =======
       icon: Phone
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      icon: Phone
-    }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -188,15 +128,7 @@ const Navigation: React.FC = () => {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',  };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     website: 'https://ziontechgroup.com'
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -211,18 +143,8 @@ const Navigation: React.FC = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-<<<<<<< HEAD
           isScrolled
             ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          isScrolled
-            ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10'
-=======
-          isScrolled 
-            ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             : 'bg-transparent'
         }`}
@@ -240,41 +162,13 @@ const Navigation: React.FC = () => {
                     Z
                   </span>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <div className='hidden sm:block'>
                   <div className='text-white font-bold text-lg lg:text-xl'>
                     Zion Tech Group
                   </div>
                   <div className='text-cyan-400 text-xs'>
                     Revolutionary Technology
-<<<<<<< HEAD
                   </div>                </div>
-=======
-                  </div>
-=======
-          isScrolled 
-            ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
-            : 'bg-transparent'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-2"
-            >
-              <Link href="/" className="flex items-center space-x-2 group">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-400/25 transition-all duration-300">
-                  <span className="text-white font-bold text-lg lg:text-xl">Z</span>
-                </div>
-                <div className="hidden sm:block">
-                  <div className="text-white font-bold text-lg lg:text-xl">Zion Tech Group</div>
-                  <div className="text-cyan-400 text-xs">Revolutionary Technology</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 <div className="hidden sm:block">
                   <div className="text-white font-bold text-lg lg:text-xl">Zion Tech Group</div>
@@ -286,24 +180,12 @@ const Navigation: React.FC = () => {
             </motion.div>
 
             {/* Desktop Navigation */}
-<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>                  {item.dropdown ? (
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='hidden lg:flex items-center space-x-8'>
-              {navigationItems.map(item => (
-                <div key={item.name} className='relative group'>
-=======
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
             <div className="hidden lg:flex items-center space-x-8">
               {navigationItems.map((item) => (
@@ -314,22 +196,12 @@ const Navigation: React.FC = () => {
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
 <<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
                     >
                       <span className='font-medium'>{item.name}</span>
                       <ChevronDown className='w-4 h-4 transition-transform duration-300 group-hover:rotate-180' />
 <<<<<<< HEAD
-=======
-
-=======
-                      className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300"
-                    >
-                      <span className="font-medium">{item.name}</span>
-                      <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-                      
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                       className="flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300"
                     >
@@ -346,15 +218,7 @@ const Navigation: React.FC = () => {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
-<<<<<<< HEAD
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
-=======
-                            className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           >
                             <div className='grid grid-cols-1 gap-3'>
@@ -369,36 +233,11 @@ const Navigation: React.FC = () => {
                                       <div className='text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300'>
                                         {dropdownItem.name}
                                       </div>
-<<<<<<< HEAD
                                       <div className='text-gray-400 text-sm'>                                        {dropdownItem.description}
                                       </div>
                                     </div>
                                   </Link>
                                 );                              })}
-=======
-<<<<<<< HEAD
-                                      <div className='text-gray-400 text-sm'>
-=======
-                            className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4"
-                          >
-                            <div className="grid grid-cols-1 gap-3">
-                              {item.dropdown.map((dropdownItem) => {
-                                const Icon = dropdownItem.icon;
-                                return (
-                                  <Link
-                                    key={dropdownItem.name}
-                                    href={dropdownItem.href}
-                                    className="flex items-center space-x-3 p-3 rounded-xl hover:bg-cyan-500/10 hover:border border-cyan-500/30 transition-all duration-300 group/item"
-                                  >
-                                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300">
-                                      <Icon className="w-5 h-5 text-cyan-400" />
-                                    </div>
-                                    <div>
-                                      <div className="text-white font-medium group-hover/item:text-cyan-400 transition-colors duration-300">
-                                        {dropdownItem.name}
-                                      </div>
-                                      <div className="text-gray-400 text-sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                                       <div className="text-gray-400 text-sm">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -407,11 +246,7 @@ const Navigation: React.FC = () => {
                                     </div>
                                   </Link>
 <<<<<<< HEAD
-<<<<<<< HEAD
                                 );
-=======
-                                )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                                 )
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -425,24 +260,10 @@ const Navigation: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-<<<<<<< HEAD
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
                       <span className='font-medium'>{item.name}</span>                    </Link>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
-                    >
-                      <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
-                      <span className='font-medium'>{item.name}</span>
-=======
-                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
-                    >
-                      <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-medium">{item.name}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                       className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
                     >
@@ -457,33 +278,13 @@ const Navigation: React.FC = () => {
             </div>
 
             {/* CTA Button */}
-<<<<<<< HEAD
             <div className='hidden lg:block'>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='hidden lg:block'>
-=======
-            <div className="hidden lg:block">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
-=======
-<<<<<<< HEAD
-                className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'
-=======
-            <div className="hidden lg:block">
-              <motion.a
-                href="/contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -494,42 +295,18 @@ const Navigation: React.FC = () => {
             </div>
 
             {/* Mobile Menu Button */}
-<<<<<<< HEAD
             <div className='lg:hidden'>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='lg:hidden'>
-=======
-            <div className="lg:hidden">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               <motion.button
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setIsOpen(!isOpen)}
                 className='text-gray-300 hover:text-white transition-colors duration-300'
               >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 {isOpen ? (
                   <X className='w-6 h-6' />
                 ) : (
                   <Menu className='w-6 h-6' />
-<<<<<<< HEAD
                 )}              </motion.button>
-=======
-                )}
-=======
-            <div className="lg:hidden">
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -548,15 +325,7 @@ const Navigation: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className='fixed inset-0 z-40 lg:hidden'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='fixed inset-0 z-40 lg:hidden'
-=======
-            className="fixed inset-0 z-40 lg:hidden"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           >
             {/* Backdrop */}
@@ -564,20 +333,6 @@ const Navigation: React.FC = () => {
               className='absolute inset-0 bg-black/50 backdrop-blur-sm'
               onClick={() => setIsOpen(false)}
             />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-            className="fixed inset-0 z-40 lg:hidden"
-          >
-            {/* Backdrop */}
-            <div 
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={() => setIsOpen(false)}
-            />
-            
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
             
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -588,15 +343,7 @@ const Navigation: React.FC = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ duration: 0.3 }}
-<<<<<<< HEAD
               className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
-=======
-              className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <div className='p-6'>
@@ -607,29 +354,12 @@ const Navigation: React.FC = () => {
                     onClick={() => setIsOpen(false)}
                     className='text-gray-300 hover:text-white transition-colors duration-300'
                   >
-<<<<<<< HEAD
                     <X className='w-6 h-6' />                  </motion.button>
                 </div>
 
                 {/* Mobile Menu Items */}
                 <div className='space-y-4'>
                   {navigationItems.map(item => (
-=======
-<<<<<<< HEAD
-                    <X className='w-6 h-6' />
-=======
-              className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl"
-            >
-              <div className="p-6">
-                {/* Close Button */}
-                <div className="flex justify-end mb-6">
-                  <motion.button
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsOpen(false)}
-                    className="text-gray-300 hover:text-white transition-colors duration-300"
-                  >
-                    <X className="w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                     <X className="w-6 h-6" />
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -638,13 +368,8 @@ const Navigation: React.FC = () => {
 
                 {/* Mobile Menu Items */}
 <<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='space-y-4'>
                   {navigationItems.map(item => (
-=======
-                <div className="space-y-4">
-                  {navigationItems.map((item) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     <div key={item.name}>
                       {item.dropdown ? (
@@ -669,38 +394,7 @@ const Navigation: React.FC = () => {
                                     </div>
                                   </div>
                                 </Link>
-<<<<<<< HEAD
                               );                            })}
-=======
-<<<<<<< HEAD
-                              );
-=======
-                <div className="space-y-4">
-                  {navigationItems.map((item) => (
-                    <div key={item.name}>
-                      {item.dropdown ? (
-                        <div className="space-y-2">
-                          <div className="text-gray-400 font-medium text-sm uppercase tracking-wider">
-                            {item.name}
-                          </div>
-                          <div className="pl-4 space-y-2">
-                            {item.dropdown.map((dropdownItem) => {
-                              const Icon = dropdownItem.icon;
-                              return (
-                                <Link
-                                  key={dropdownItem.name}
-                                  href={dropdownItem.href}
-                                  onClick={() => setIsOpen(false)}
-                                  className="flex items-center space-x-3 p-3 rounded-lg hover: bg-cyan-500/10 transition-all duration-300"
-                                >
-                                  <Icon className="w-5 h-5 text-cyan-400" />
-                                  <div>
-                                    <div className="text-white font-medium">{dropdownItem.name}</div>
-                                    <div className="text-gray-400 text-sm">{dropdownItem.description}</div>
-                                  </div>
-                                </Link>
-                              )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                               )
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -712,26 +406,12 @@ const Navigation: React.FC = () => {
                         <Link
                           href={item.href}
                           onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                         >
                           <item.icon className='w-5 h-5 text-cyan-400' />
                           <span className='text-white font-medium'>
                             {item.name}
-<<<<<<< HEAD
                           </span>                        </Link>
-=======
-                          </span>
-=======
-                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-                        >
-                          <item.icon className="w-5 h-5 text-cyan-400" />
-                          <span className="text-white font-medium">{item.name}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                           className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
                         >
@@ -746,11 +426,6 @@ const Navigation: React.FC = () => {
                 </div>
 
                 {/* Contact Information */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
                     Contact Information
@@ -758,15 +433,6 @@ const Navigation: React.FC = () => {
                   <div className='space-y-2 text-sm'>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
-<<<<<<< HEAD
-=======
-=======
-                <div className="mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20">
-                  <h3 className="text-cyan-400 font-semibold mb-3">Contact Information</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <Phone className="w-4 h-4 text-cyan-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       <span>{contactInfo.mobile}</span>
                     </div>
@@ -774,31 +440,9 @@ const Navigation: React.FC = () => {
                       <Mail className='w-4 h-4 text-purple-400' />
                       <span>{contactInfo.email}</span>
                     </div>
-<<<<<<< HEAD
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <MapPin className='w-4 h-4 text-pink-400' />
                       <span className='text-xs'>{contactInfo.address}</span>                    </div>
-=======
-<<<<<<< HEAD
-                    <div className='flex items-center space-x-2 text-gray-300'>
-                      <MapPin className='w-4 h-4 text-pink-400' />
-                      <span className='text-xs'>{contactInfo.address}</span>
-=======
-                <div className="mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20">
-                  <h3 className="text-cyan-400 font-semibold mb-3">Contact Information</h3>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <Phone className="w-4 h-4 text-cyan-400" />
-                      <span>{contactInfo.mobile}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <Mail className="w-4 h-4 text-purple-400" />
-                      <span>{contactInfo.email}</span>
-                    </div>
-                    <div className="flex items-center space-x-2 text-gray-300">
-                      <MapPin className="w-4 h-4 text-pink-400" />
-                      <span className="text-xs">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                     <div className="flex items-center space-x-2 text-gray-300">
                       <MapPin className="w-4 h-4 text-pink-400" />
@@ -810,33 +454,13 @@ const Navigation: React.FC = () => {
                 </div>
 
                 {/* Mobile CTA */}
-<<<<<<< HEAD
                 <div className='mt-6'>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className='mt-6'>
-=======
-                <div className="mt-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <motion.a
                     href='/contact'
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsOpen(false)}
-<<<<<<< HEAD
                     className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'                  >
-=======
-<<<<<<< HEAD
-                    className='block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25'
-=======
-                <div className="mt-6">
-                  <motion.a
-                    href="/contact"
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsOpen(false)}
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                     className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 shadow-lg shadow-cyan-500/25"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -851,24 +475,10 @@ const Navigation: React.FC = () => {
         )}
       </AnimatePresence>
     </>
-<<<<<<< HEAD
   );
 };
 
 export default Navigation;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-
-export default Navigation;
-=======
-  )
-};
-
-export default Navigation;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 };

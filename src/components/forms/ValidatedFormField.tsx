@@ -354,35 +354,9 @@ export const commonValidations = {
         return 'Please enter a valid phone number';
       }
       return null;
-<<<<<<< HEAD
     },
   },
 };
-=======
-<<<<<<< HEAD
-    },
-  },
-};
-=======
-
-<<<<<<< HEAD
-
-  const fieldError = form.formState.errors[name];
-  const isTouched = form.formState.touchedFields[name];
-
-
-<<<<<<< HEAD
-
-
-      default:
-        return (
-
-<<<<<<< HEAD
-      return null;
-    };
-  }},
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     };
   }},

@@ -114,19 +114,7 @@ export function AuthButtons({
         </Button>
       )}
     </div>
-<<<<<<< HEAD
   );
-=======
-  );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
-  const gridCols = `grid-cols-${providers.length}`;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

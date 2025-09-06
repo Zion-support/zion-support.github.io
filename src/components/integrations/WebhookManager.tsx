@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import React, { useEffect, useState } from 'react';
 import {
   Card,
@@ -26,10 +21,6 @@ import {
   SelectValue,;
 } from '@/components/ui/select';
 import { toast } from 'sonner';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function WebhookManager() {
@@ -348,10 +339,6 @@ export function WebhookManager() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 }setNewWebhook ({;
   ...newWebhook;
@@ -423,20 +410,7 @@ newWebhook.secret || undefined);";
   testResult.responseBody || '<empty>' ;
 }</pre> </div> </div> </CardContent> </Card>) ;
 }</div> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
-
-  
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

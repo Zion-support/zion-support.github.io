@@ -1,12 +1,4 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
-import { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useRouter } from 'next/router';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -555,10 +547,6 @@ export function DynamicListingPage({
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   );
 
 };
@@ -621,22 +609,7 @@ setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-    max: 10000}),
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                        logInfo('Rating selected:', { data: rating }),
-                        setSelectedRating(rating);
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 }

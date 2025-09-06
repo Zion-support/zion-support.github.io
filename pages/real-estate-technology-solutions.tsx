@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 export default function Page() {  return (
-=======
-export default function Page() {
-import Head from 'next/head';
-export default function RealEstateTechnologySolutions() {
-import Head from 'next/head';
-export default function RealEstateTechnologySolutions() {
-ursor/integrate-build-improve-and-re-verify-b76c
-  return (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     <>
       <Head>
         <title>Real Estate Technology Solutions | Zion Tech Group</title>
@@ -21,12 +11,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
           rel='canonical'
           href='https://ziontechgroup.com/real-estate-technology-solutions'
         />
-<<<<<<< HEAD
-=======
-        <meta name="description" content="Data, analytics, and automation for real estate technology including valuation, risk modeling, and operations." />
-        <link rel="canonical" href="https://ziontechgroup.com/real-estate-technology-solutions" />
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       </Head>
       <div className='min-h-screen bg-black text-white'>
         <section className='container mx-auto px-4 py-20'>
@@ -40,23 +24,4 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
-  );
-        <meta name="description" content="Data, analytics, and automation for real estate technology including valuation, risk modeling, and operations." />
-        <link rel="canonical" href="https://ziontechgroup.com/real-estate-technology-solutions" />
-      </Head>
-      <div className="min-h-screen bg-black text-white">
-        <section className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold mb-6">Real Estate Technology Solutions</h1>
-          <p className="text-gray-300">Unlock data-driven decisions and automation across property lifecycle, valuation, and operations.</p>
-        </section>
-      </div>
-    </>
-  )
-}
-  )
-}
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

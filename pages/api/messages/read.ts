@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
-<<<<<<< HEAD
 import {
   getConversationById,
   markAsRead,;
@@ -18,17 +17,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(404).json({ error: 'Conversation not found' });
   markAsRead(conversationId, user.id);
   res.status(200).json({ success: true });
-=======
-import { getConversationById, markAsRead } from '../../../utils/messaging/storage';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  if (req.method !== 'POST') return res.status($1).json({$2});
-  const { conversationId } = req.body || {};
-  if (!conversationId) return res.status($1).json({$2});
-  const conv = getConversationById(conversationId);
-  if (!conv || !conv.participants.includes(user.id)) return res.status($1).json({$2});
-  markAsRead(conversationId, user.id);
-  res.status(200).json({ success: true })
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

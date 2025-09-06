@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -23,24 +18,6 @@ import { BlogPost } from '@/types/blog';
 import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { Search } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useDebounce } from "@/hooks/useDebounce";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
-import { BlogPost } from "@/types/blog";
-import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
-import { BLOG_POSTS } from "@/data/blog-posts";
-import { Search } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -336,10 +313,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }, [query]);
 //Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory;
 });
@@ -396,20 +369,7 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   ;
 
 }</div> </div> </>) ;
-<<<<<<< HEAD
 }'"
-=======
-}'"
-=======
-
-<<<<<<< HEAD
-
-      selectedCategory === "All Categories" || post.category === selectedCategory;
-
-<<<<<<< HEAD
-
-  logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

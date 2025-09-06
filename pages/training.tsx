@@ -32,20 +32,7 @@ import {
   Lightbulb,
   Building,
   Globe,
-<<<<<<< HEAD
   Server,;} from 'lucide-react';
-=======
-  Server,;
-ursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  GraduationCap, Users, Clock, Award, BookOpen, Video, 
-  Headphones, Code, Brain, Atom, Rocket, Shield, Zap;
-  Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp;
-  Play, Download, ExternalLink, Calendar, MapPin, DollarSign;
-  TrendingUp, Target, Lightbulb, Building, Globe, Server
-ursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default function TrainingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -56,55 +43,18 @@ export default function TrainingPage() {
     { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
-<<<<<<< HEAD
     { id: 'enterprise-it', name: 'Enterprise IT', count: 5 },  ];
-=======
-    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 },
-    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
-    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const featuredPrograms = [
     {
       id: 1,
       title: 'AI Consciousness Developer Certification',
       description:
-<<<<<<< HEAD
         'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',      category: 'ai-consciousness',
       duration: '12 weeks',
       level: 'Intermediate to Advanced',
       price: '$2,999',
       rating: 4.9,
-=======
-        'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
-      description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
-      category: 'ai-consciousness',
-      duration: '12 weeks',
-      level: 'Intermediate to Advanced',
-      price: '$2,999',
-      description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',
-      category: 'ai-consciousness',
-      duration: '12 weeks',
-      level: 'Intermediate to Advanced',
-      price: '$2,999';
-ursor/integrate-build-improve-and-re-verify-b76c
-      rating: 4.9,
-      students: '1,247';
-      featured: true,
-      icon: <Brain className="w-12 h-12" />,
-      highlights: [
-        'Hands-on AI consciousness platform developmentReal-world project implementationExpert mentorship and supportIndustry-recognized certificationLifetime access to course materials'
-      ]
-    };
-    {
-      id: 2,
-      title: 'Quantum Computing Implementation Specialist',
-      description:
-        'Learn to implement quantum computing solutions in enterprise environments with practical applications.',
-    rating: 4.9,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       students: '1,247',
       featured: true,
       icon: <Brain className='w-12 h-12' />,
@@ -119,25 +69,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
     {
       id: 2,
       title: 'Quantum Computing Implementation Specialist',
-<<<<<<< HEAD
       description:
         'Learn to implement quantum computing solutions in enterprise environments with practical applications.',      category: 'quantum-computing',
       duration: '16 weeks',
       level: 'Advanced',
       price: '$3,499',
-=======
-      description: 'Learn to implement quantum computing solutions in enterprise environments with practical applications.',
-      category: 'quantum-computing',
-      duration: '16 weeks',
-      level: 'Advanced',
-      price: '$3,499',
-      description: 'Learn to implement quantum computing solutions in enterprise environments with practical applications.',
-      category: 'quantum-computing',
-      duration: '16 weeks',
-      level: 'Advanced',
-      price: '$3,499';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       rating: 4.8,
       students: '892',
       featured: true,
@@ -154,36 +90,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 3,
       title: 'Autonomous Business Operations Master',
       description:
-<<<<<<< HEAD
         'Transform your organization with fully autonomous business operations and AI-driven automation.',      category: 'autonomous-ops',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,499',
-=======
-        'Transform your organization with fully autonomous business operations and AI-driven automation.',
-    rating: 4.8,
-      students: '892',
-      featured: true,
-      icon: <Atom className="w-12 h-12" />,
-      highlights: [
-        'Quantum algorithm developmentEnterprise integration strategiesPerformance optimization techniquesSecurity and compliance considerationsHands-on quantum simulator access'
-      ]
-    };
-    {
-      id: 3,
-      title: 'Autonomous Business Operations Master',
-      description: 'Transform your organization with fully autonomous business operations and AI-driven automation.',
-      category: 'autonomous-ops',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      price: '$2,499',
-      description: 'Transform your organization with fully autonomous business operations and AI-driven automation.',
-      category: 'autonomous-ops',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      price: '$2,499';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       rating: 4.9,
       students: '1,156',
       featured: true,
@@ -195,24 +105,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         'ROI measurement and optimization',
         'Industry best practices and case studies',
       ],
-<<<<<<< HEAD
     },  ];
-=======
-    },
-    rating: 4.9,
-      students: '1,156',
-    featured: true,
-      icon: <Rocket className="w-12 h-12" />,
-      highlights: [
-        'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
-      ]
-    }
-        'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
-      ]
-    }
-ursor/integrate-build-improve-and-re-verify-b76c
-  ];
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const allPrograms = [
     // AI Consciousness Programs
@@ -220,61 +113,22 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 4,
       title: 'AI Consciousness Fundamentals',
       description:
-<<<<<<< HEAD
         'Introduction to artificial consciousness concepts and basic implementation.',      category: 'ai-consciousness',
       duration: '6 weeks',
       level: 'Beginner',
       price: '$1,299',
       rating: 4.7,
-=======
-        'Introduction to artificial consciousness concepts and basic implementation.',
-      description: 'Introduction to artificial consciousness concepts and basic implementation.',
-      category: 'ai-consciousness',
-      duration: '6 weeks',
-      level: 'Beginner',
-      price: '$1,299',
-      description: 'Introduction to artificial consciousness concepts and basic implementation.',
-      category: 'ai-consciousness',
-      duration: '6 weeks',
-      level: 'Beginner',
-      price: '$1,299';
-ursor/integrate-build-improve-and-re-verify-b76c
-      rating: 4.7,
-      students: '2,341';
-      icon: <Brain className="w-8 h-8" />
-    };
-    {
-      id: 5,
-      title: 'Advanced AI Consciousness Architecture',
-      description:
-        'Deep dive into complex AI consciousness system design and optimization.',
-    rating: 4.7,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       students: '2,341',
       icon: <Brain className='w-8 h-8' />,
     },
     {
       id: 5,
       title: 'Advanced AI Consciousness Architecture',
-<<<<<<< HEAD
       description:
         'Deep dive into complex AI consciousness system design and optimization.',      category: 'ai-consciousness',
       duration: '14 weeks',
       level: 'Advanced',
       price: '$3,999',
-=======
-      description: 'Deep dive into complex AI consciousness system design and optimization.',
-      category: 'ai-consciousness',
-      duration: '14 weeks',
-      level: 'Advanced',
-      price: '$3,999',
-      description: 'Deep dive into complex AI consciousness system design and optimization.',
-      category: 'ai-consciousness',
-      duration: '14 weeks',
-      level: 'Advanced',
-      price: '$3,999';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       rating: 4.9,
       students: '567',
       icon: <Brain className='w-8 h-8' />,
@@ -283,7 +137,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 6,
       title: 'AI Ethics and Governance',
       description:
-<<<<<<< HEAD
         'Learn responsible AI development practices and governance frameworks.',      category: 'ai-consciousness',
       duration: '8 weeks',
       level: 'Intermediate',
@@ -292,49 +145,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
       students: '1,023',
       icon: <Shield className='w-8 h-8' />,
     },
-=======
-        'Learn responsible AI development practices and governance frameworks.',
-    rating: 4.9,
-      students: '567',
-      icon: <Brain className="w-8 h-8" />
-    };
-    {
-      id: 6,
-      title: 'AI Ethics and Governance',
-      description: 'Learn responsible AI development practices and governance frameworks.',
-      category: 'ai-consciousness',
-      duration: '8 weeks',
-      level: 'Intermediate',
-      price: '$1,899',
-      description: 'Learn responsible AI development practices and governance frameworks.',
-      category: 'ai-consciousness',
-      duration: '8 weeks',
-      level: 'Intermediate',
-      price: '$1,899';
-ursor/integrate-build-improve-and-re-verify-b76c
-      rating: 4.8,
-      students: '1,023';
-      icon: <Shield className="w-8 h-8" />
-    };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     {
       id: 7,
       title: 'AI Consciousness API Development',
       description:
-<<<<<<< HEAD
         'Build robust APIs for AI consciousness applications and services.',      category: 'ai-consciousness',
-=======
-        'Build robust APIs for AI consciousness applications and services.',
-    rating: 4.8,
-      students: '1,023',
-    icon: <Shield className="w-8 h-8" />
-    };
-    {
-      id: 7,
-      title: 'AI Consciousness API Development',
-      description: 'Build robust APIs for AI consciousness applications and services.',
-      category: 'ai-consciousness',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,199',
@@ -342,84 +157,27 @@ ursor/integrate-build-improve-and-re-verify-b76c
       students: '789',
       icon: <Code className='w-8 h-8' />,
     },
-<<<<<<< HEAD
-=======
-    rating: 4.7,
-      students: '789',
-      icon: <Code className="w-8 h-8" />
-    };
-      description: 'Build robust APIs for AI consciousness applications and services.',
-      category: 'ai-consciousness',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      price: '$2,199';
-      rating: 4.7,
-      students: '789',
-      icon: <Code className="w-8 h-8" />
-    };
-ursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // Quantum Computing Programs
     {
       id: 8,
       title: 'Quantum Computing Basics',
       description:
-<<<<<<< HEAD
         'Foundation course covering quantum mechanics and computing principles.',      category: 'quantum-computing',
       duration: '8 weeks',
       level: 'Beginner',
       price: '$1,599',
       rating: 4.6,
-=======
-        'Foundation course covering quantum mechanics and computing principles.',
-      description: 'Foundation course covering quantum mechanics and computing principles.',
-      category: 'quantum-computing',
-      duration: '8 weeks',
-      level: 'Beginner',
-      price: '$1,599',
-      description: 'Foundation course covering quantum mechanics and computing principles.',
-      category: 'quantum-computing',
-      duration: '8 weeks',
-      level: 'Beginner',
-      price: '$1,599';
-ursor/integrate-build-improve-and-re-verify-b76c
-      rating: 4.6,
-      students: '1,456';
-      icon: <Atom className="w-8 h-8" />
-    };
-    {
-      id: 9,
-      title: 'Quantum Machine Learning',
-      description:
-        'Combine quantum computing with machine learning for breakthrough applications.',
-    rating: 4.6,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       students: '1,456',
       icon: <Atom className='w-8 h-8' />,
     },
     {
       id: 9,
       title: 'Quantum Machine Learning',
-<<<<<<< HEAD
       description:
         'Combine quantum computing with machine learning for breakthrough applications.',      category: 'quantum-computing',
       duration: '12 weeks',
       level: 'Advanced',
       price: '$3,299',
-=======
-      description: 'Combine quantum computing with machine learning for breakthrough applications.',
-      category: 'quantum-computing',
-      duration: '12 weeks',
-      level: 'Advanced',
-      price: '$3,299',
-      description: 'Combine quantum computing with machine learning for breakthrough applications.',
-      category: 'quantum-computing',
-      duration: '12 weeks',
-      level: 'Advanced',
-      price: '$3,299';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       rating: 4.8,
       students: '423',
       icon: <Atom className='w-8 h-8' />,
@@ -428,20 +186,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 10,
       title: 'Quantum Security and Cryptography',
       description:
-<<<<<<< HEAD
         'Implement quantum-resistant security solutions and cryptographic protocols.',      category: 'quantum-computing',
-=======
-        'Implement quantum-resistant security solutions and cryptographic protocols.',
-    rating: 4.8,
-      students: '423',
-      icon: <Atom className="w-8 h-8" />
-    };
-    {
-      id: 10,
-      title: 'Quantum Security and Cryptography',
-      description: 'Implement quantum-resistant security solutions and cryptographic protocols.',
-      category: 'quantum-computing',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,399',
@@ -449,48 +194,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
       students: '678',
       icon: <Shield className='w-8 h-8' />,
     },
-<<<<<<< HEAD
-=======
-    rating: 4.7,
-      students: '678',
-      icon: <Shield className="w-8 h-8" />
-    };
-      description: 'Implement quantum-resistant security solutions and cryptographic protocols.',
-      category: 'quantum-computing',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      price: '$2,399';
-      rating: 4.7,
-      students: '678',
-      icon: <Shield className="w-8 h-8" />
-    };
-ursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // Autonomous Operations Programs
     {
       id: 11,
       title: 'Business Process Automation',
       description:
-<<<<<<< HEAD
         'Learn to automate complex business processes with AI and robotics.',      category: 'autonomous-ops',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,999',
-=======
-        'Learn to automate complex business processes with AI and robotics.',
-      description: 'Learn to automate complex business processes with AI and robotics.',
-      category: 'autonomous-ops',
-      duration: '8 weeks',
-      level: 'Intermediate',
-      price: '$1,999',
-      description: 'Learn to automate complex business processes with AI and robotics.',
-      category: 'autonomous-ops',
-      duration: '8 weeks',
-      level: 'Intermediate',
-      price: '$1,999';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       rating: 4.8,
       students: '945',
       icon: <Zap className='w-8 h-8' />,
@@ -499,20 +211,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 12,
       title: 'Autonomous Decision Systems',
       description:
-<<<<<<< HEAD
         'Design and implement AI-powered autonomous decision-making systems.',      category: 'autonomous-ops',
-=======
-        'Design and implement AI-powered autonomous decision-making systems.',
-    rating: 4.8,
-      students: '945',
-      icon: <Zap className="w-8 h-8" />
-    };
-    {
-      id: 12,
-      title: 'Autonomous Decision Systems',
-      description: 'Design and implement AI-powered autonomous decision-making systems.',
-      category: 'autonomous-ops',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       duration: '12 weeks',
       level: 'Advanced',
       price: '$2,999',
@@ -520,48 +219,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
       students: '567',
       icon: <Target className='w-8 h-8' />,
     },
-<<<<<<< HEAD
-=======
-    rating: 4.9,
-      students: '567',
-      icon: <Target className="w-8 h-8" />
-    };
-      description: 'Design and implement AI-powered autonomous decision-making systems.',
-      category: 'autonomous-ops',
-      duration: '12 weeks',
-      level: 'Advanced',
-      price: '$2,999';
-      rating: 4.9,
-      students: '567',
-      icon: <Target className="w-8 h-8" />
-    };
-ursor/integrate-build-improve-and-re-verify-b76c
-
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // Enterprise IT Programs
     {
       id: 13,
       title: 'Enterprise AI Integration',
       description:
-<<<<<<< HEAD
         'Integrate AI solutions into existing enterprise infrastructure and systems.',      category: 'enterprise-it',
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,299',
-=======
-        'Integrate AI solutions into existing enterprise infrastructure and systems.',
-      description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
-      category: 'enterprise-it',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      price: '$2,299',
-      description: 'Integrate AI solutions into existing enterprise infrastructure and systems.',
-      category: 'enterprise-it',
-      duration: '10 weeks',
-      level: 'Intermediate',
-      price: '$2,299';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       rating: 4.7,
       students: '823',
       icon: <Building className='w-8 h-8' />,
@@ -570,68 +236,22 @@ ursor/integrate-build-improve-and-re-verify-b76c
       id: 14,
       title: 'Cloud-Native AI Development',
       description:
-<<<<<<< HEAD
         'Build and deploy AI applications using cloud-native technologies and practices.',      category: 'enterprise-it',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
       rating: 4.6,
-=======
-        'Build and deploy AI applications using cloud-native technologies and practices.',
-    rating: 4.7,
-      students: '823',
-      icon: <Building className="w-8 h-8" />
-    };
-    {
-      id: 14,
-      title: 'Cloud-Native AI Development',
-      description: 'Build and deploy AI applications using cloud-native technologies and practices.',
-      category: 'enterprise-it',
-      duration: '8 weeks',
-      level: 'Intermediate',
-      price: '$1,899',
-      description: 'Build and deploy AI applications using cloud-native technologies and practices.',
-      category: 'enterprise-it',
-      duration: '8 weeks',
-      level: 'Intermediate',
-      price: '$1,899';
-ursor/integrate-build-improve-and-re-verify-b76c
-      rating: 4.6,
-      students: '1,134';
-      icon: <Server className="w-8 h-8" />
-    };
-    {
-      id: 15,
-      title: 'DevOps for AI Systems',
-      description:
-        'Implement DevOps practices specifically for AI and machine learning systems.',
-    rating: 4.6,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       students: '1,134',
       icon: <Server className='w-8 h-8' />,
     },
     {
       id: 15,
       title: 'DevOps for AI Systems',
-<<<<<<< HEAD
       description:
         'Implement DevOps practices specifically for AI and machine learning systems.',      category: 'enterprise-it',
       duration: '6 weeks',
       level: 'Intermediate',
       price: '$1,599',
-=======
-      description: 'Implement DevOps practices specifically for AI and machine learning systems.',
-      category: 'enterprise-it',
-      duration: '6 weeks',
-      level: 'Intermediate',
-      price: '$1,599',
-      description: 'Implement DevOps practices specifically for AI and machine learning systems.',
-      category: 'enterprise-it',
-      duration: '6 weeks',
-      level: 'Intermediate',
-      price: '$1,599';
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       rating: 4.8,
       students: '756',
       icon: <Zap className='w-8 h-8' />,
@@ -640,23 +260,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   const filteredPrograms = allPrograms.filter(
     program =>
-<<<<<<< HEAD
       selectedCategory === 'all' || program.category === selectedCategory  );
-=======
-      selectedCategory === 'all' || program.category === selectedCategory
-    rating: 4.8,
-      students: '756',
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  const filteredPrograms = allPrograms.filter(program => 
-    selectedCategory === 'all' || program.category === selectedCategory
-  const filteredPrograms = allPrograms.filter(program => 
-    selectedCategory === 'all' || program.category === selectedCategory
-ursor/integrate-build-improve-and-re-verify-b76c
-  );
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const getCategoryIcon = (category: string) => {
     const icons = {
@@ -669,25 +273,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       icons[category as keyof typeof icons] || (
         <GraduationCap className='w-6 h-6' />
       )
-<<<<<<< HEAD
     );  };
-=======
-    );
-      'ai-consciousness': <Brain className="w-6 h-6" />;
-      'quantum-computing': <Atom className="w-6 h-6" />;
-      'autonomous-ops': <Rocket className="w-6 h-6" />;
-      'enterprise-it': <Building className="w-6 h-6" />
-    };
-    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
-      'ai-consciousness': <Brain className="w-6 h-6" />;
-      'quantum-computing': <Atom className="w-6 h-6" />;
-      'autonomous-ops': <Rocket className="w-6 h-6" />;
-      'enterprise-it': <Building className="w-6 h-6" />
-    };
-    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
-ursor/integrate-build-improve-and-re-verify-b76c
-  };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -695,80 +281,30 @@ ursor/integrate-build-improve-and-re-verify-b76c
       'quantum-computing': 'purple',
       'autonomous-ops': 'green',
       'enterprise-it': 'blue',
-<<<<<<< HEAD
-=======
-      'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     };
     return colors[category as keyof typeof colors] || 'gray';
   };
 
   const toggleProgram = (id: number) => {
-<<<<<<< HEAD
     setExpandedProgram(expandedProgram === id ? null : id);  };
-=======
-    setExpandedProgram(expandedProgram === id ? null : id);
-      'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
-    };
-    return colors[category as keyof typeof colors] || 'gray'
-  };
-
-  const toggleProgram = (id: number) => {
-    setExpandedProgram(expandedProgram === id ? null : id)
-    setExpandedProgram(expandedProgram === id ? null : id)
-ursor/integrate-build-improve-and-re-verify-b76c
-  };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <Layout>
       <SEO
         title='Training & Certification - Zion Tech Group'
         description='Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career.'
-<<<<<<< HEAD
-=======
-      <SEO 
-        title="Training & Certification - Zion Tech Group"
-        description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       />
 
       <div className='min-h-screen'>
         {/* Hero Section */}
         <section className='relative py-20 lg:py-32 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10' />
-<<<<<<< HEAD
           <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
-=======
-          <div className='relative z-10 container mx-auto px-4 text-center'>
-      <SEO 
-        title="Training & Certification - Zion Tech Group"
-        description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
-      />
-      
-      <div className="min-h-screen">
-        {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative z-10 container mx-auto px-4 text-center">
-        <section className="relative py-20 lg:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative z-10 container mx-auto px-4 text-center">
-ursor/integrate-build-improve-and-re-verify-b76c
-            <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-<<<<<<< HEAD
-=======
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Training & Certification
               </h1>
               <p className='text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>
@@ -776,49 +312,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 programs in AI consciousness, quantum computing, and autonomous
                 operations.
               </p>
-<<<<<<< HEAD
               <div className='flex flex-wrap justify-center gap-4 text-gray-400'>
                 <div className='flex items-center gap-2'>
                   <GraduationCap className='w-5 h-5' />
-=======
-              <div className="flex flex-wrap justify-center gap-4 text-gray-400">
-                <div className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5" />
-                  <span>Expert-Led Training</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5" />
-                  <span>Industry Certifications</span>
-                </div>
-                <div className='flex items-center gap-2'>
-                  <Users className='w-5 h-5' />
-              <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
-                Training & Certification
-              </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Master the future of technology with our comprehensive training programs in AI consciousness, quantum computing, and autonomous operations.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 text-gray-400">
-                <div className="flex items-center gap-2">
-                  <GraduationCap className="w-5 h-5" />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   <span>Expert-Led Training</span>
                 </div>
                 <div className='flex items-center gap-2'>
                   <Award className='w-5 h-5' />
                   <span>Industry Certifications</span>
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-center gap-2'>
                   <Users className='w-5 h-5' />                  <span>Global Community</span>
-=======
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5" />
-                <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                  <span>Global Community</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </div>
               </div>
             </motion.div>
@@ -829,18 +333,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <section className='py-10'>
           <div className='container mx-auto px-4'>
             <div className='flex flex-wrap justify-center gap-3'>
-<<<<<<< HEAD
               {trainingCategories.map(category => (                <button
-=======
-              {trainingCategories.map(category => (
-ursor/integrate-build-improve-and-re-verify-b76c
-        <section className="py-10">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-3">
-              {trainingCategories.map((category) => (
-ursor/integrate-build-improve-and-re-verify-b76c
-                <button
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
@@ -858,27 +351,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
         {/* Featured Programs */}
         <section className='py-20'>
-<<<<<<< HEAD
           <div className='container mx-auto px-4'>            <motion.div
-=======
-          <div className='container mx-auto px-4'>
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-ursor/integrate-build-improve-and-re-verify-b76c
-            <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
-<<<<<<< HEAD
-=======
-              className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Featured Programs
@@ -888,26 +366,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid lg:grid-cols-3 gap-8 mb-16'>              {featuredPrograms.map((program, index) => (
-=======
-            <div className='grid lg:grid-cols-3 gap-8 mb-16'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Featured Programs
-              </h2>
-              <p className="text-xl text-gray-400">
-                Our most popular and comprehensive training programs
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            
-            <div className="grid lg:grid-cols-3 gap-8 mb-16">
-ursor/integrate-build-improve-and-re-verify-b76c
-              {featuredPrograms.map((program, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <motion.div
                   key={program.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -915,11 +374,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
-<<<<<<< HEAD
-=======
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <div className='h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center'>
                     {program.icon}
@@ -958,41 +412,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           {program.rating}
                         </span>
                       </div>
-<<<<<<< HEAD
                       <span className='text-2xl font-bold text-cyan-400'>
                         {program.price}
-=======
-                      <span className="text-2xl font-bold text-cyan-400">{program.price}</span>
-                    </div>
-                    
-                    <div className="space-y-2 mb-6">
-                      {program.highlights.slice(0, 3).map((highlight, highlightIndex) => (
-                        <div key={highlightIndex} className="flex items-center gap-2 text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400" />
-                          <span>{highlight}</span>
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <a
-                      href="#"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                    >
-                      Enroll Now
-                      <ArrowRight className='w-4 h-4' />
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-                >
-                  <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                    {program.icon}
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`px-3 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded-full text-sm border border-${getCategoryColor(program.category)}-500/30`}>
-                        {program.category.replace('- ')}
-                      </span>
-                      <span className="text-gray-400 text-sm">
-                        {program.level}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       </span>
                     </div>
 
@@ -1015,14 +436,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       className='w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'
                     >
                       Enroll Now
-<<<<<<< HEAD
                       <ArrowRight className='w-4 h-4' />                    </a>
-=======
-                      <ArrowRight className="w-4 h-4" />
-                      <ArrowRight className="w-4 h-4" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                    </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   </div>
                 </motion.div>
               ))}
@@ -1032,27 +446,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
         {/* All Programs */}
         <section className='py-20 bg-black/50'>
-<<<<<<< HEAD
           <div className='container mx-auto px-4'>            <motion.div
-=======
-          <div className='container mx-auto px-4'>
-        <section className="py-20 bg-black/50">
-          <div className="container mx-auto px-4">
-        <section className="py-20 bg-black/50">
-          <div className="container mx-auto px-4">
-ursor/integrate-build-improve-and-re-verify-b76c
-            <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
-<<<<<<< HEAD
-=======
-              className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
                 All Training Programs
@@ -1063,26 +462,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='space-y-4'>              {filteredPrograms.map((program, index) => (
-=======
-            <div className='space-y-4'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                All Training Programs
-              </h2>
-              <p className="text-xl text-gray-400">
-                Comprehensive collection of training programs across all technology domains
-              </p>
-            </motion.div>
-            
-            <div className="space-y-4">
-            
-            <div className="space-y-4">
-ursor/integrate-build-improve-and-re-verify-b76c
-              {filteredPrograms.map((program, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <motion.div
                   key={program.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -1090,11 +470,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
-<<<<<<< HEAD
-=======
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <div className='p-6'>
                     <div className='flex items-start gap-4'>
@@ -1120,123 +495,36 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <p className='text-gray-300 text-sm mb-3'>
                           {program.description}
                         </p>
-<<<<<<< HEAD
 
                         <div className='flex items-center gap-4 text-xs text-gray-400 mb-3'>
                           <div className='flex items-center gap-1'>
                             <Clock className='w-3 h-3' />
-=======
-                        
-                        <div className="flex items-center gap-4 text-xs text-gray-400 mb-3">
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
-                            <span>{program.duration}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Users className="w-3 h-3" />
-                            <span>{program.students} students</span>
-                          </div>
-                          <div className='flex items-center gap-1'>
-                            <Star className='w-3 h-3 text-yellow-400 fill-current' />
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-                >
-                  <div className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        {program.icon}
-                      </div>
-                      
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded text-xs border border-${getCategoryColor(program.category)}-500/30`}>
-                            {program.category.replace('- ')}
-                          </span>
-                          <span className="text-gray-400 text-xs">
-                            {program.level}
-                          </span>
-                        </div>
-                        
-                        <h3 className="text-lg font-bold text-white mb-2">
-                          {program.title}
-                        </h3>
-                        <p className="text-gray-300 text-sm mb-3">
-                          {program.description}
-                        </p>
-                        
-                        <div className="flex items-center gap-4 text-xs text-gray-400 mb-3">
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-3 h-3" />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                             <span>{program.duration}</span>
                           </div>
                           <div className='flex items-center gap-1'>
                             <Users className='w-3 h-3' />
                             <span>{program.students} students</span>
                           </div>
-<<<<<<< HEAD
                           <div className='flex items-center gap-1'>
                             <Star className='w-3 h-3 text-yellow-400 fill-current' />                            <span>{program.rating}</span>
-=======
-                          <div className="flex items-center gap-1">
-                            <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                          <div className="flex items-center gap-1">
-                            <Star className="w-3 h-3 text-yellow-400 fill-current" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                            <span>{program.rating}</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           </div>
                         </div>
                       </div>
 
                       <div className='text-right flex-shrink-0'>
-<<<<<<< HEAD
                         <div className='text-2xl font-bold text-cyan-400 mb-2'>                          {program.price}
-=======
-                        <div className='text-2xl font-bold text-cyan-400 mb-2'>
-                      
-                      <div className="text-right flex-shrink-0">
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">
-                      
-                      <div className="text-right flex-shrink-0">
-                        <div className="text-2xl font-bold text-cyan-400 mb-2">
-ursor/integrate-build-improve-and-re-verify-b76c
-                          {program.price}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         </div>
                         <button
                           onClick={() => toggleProgram(program.id)}
                           className='text-gray-400 hover:text-white transition-colors duration-300'
-<<<<<<< HEAD
-=======
-                          className="text-gray-400 hover:text-white transition-colors duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                         >
                           {expandedProgram === program.id ? (
                             <ChevronUp className='w-5 h-5' />
                           ) : (
-<<<<<<< HEAD
                             <ChevronDown className='w-5 h-5' />                          )}
                         </button>
                       </div>
                     </div>
-=======
-                            <ChevronDown className='w-5 h-5' />
-                          className="text-gray-400 hover:text-white transition-colors duration-300"
-                        >
-                          {expandedProgram === program.id ? (
-                            <ChevronUp className="w-5 h-5" />
-                          ) : (
-                            <ChevronDown className="w-5 h-5" />
-                            <ChevronDown className="w-5 h-5" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                          )}
-                        </button>
-                      </div>
-                    </div>
-
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     {expandedProgram === program.id && (
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
@@ -1244,47 +532,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
                         className='mt-4 pt-4 border-t border-gray-700'
-<<<<<<< HEAD
-=======
-                        className="mt-4 pt-4 border-t border-gray-700"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       >
                         <div className='grid md:grid-cols-2 gap-6'>
                           <div>
-<<<<<<< HEAD
                             <h4 className='text-white font-semibold mb-3'>
                               What You'll Learn
                             </h4>
                             <ul className='space-y-2 text-sm text-gray-300'>
                               <li className='flex items-center gap-2'>
                                 <CheckCircle className='w-4 h-4 text-green-400' />
-=======
-                            <h4 className="text-white font-semibold mb-3">What You'll Learn</h4>
-                            <ul className="space-y-2 text-sm text-gray-300">
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
-                                <span>Core concepts and principles</span>
-                              </li>
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
-                                <span>Hands-on practical exercises</span>
-                              </li>
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
-                                <span>Real-world project implementation</span>
-                              </li>
-                              <li className='flex items-center gap-2'>
-                                <CheckCircle className='w-4 h-4 text-green-400' />
-                        className="mt-4 pt-4 border-t border-gray-700"
-                      >
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div>
-                            <h4 className="text-white font-semibold mb-3">What You'll Learn</h4>
-                            <ul className="space-y-2 text-sm text-gray-300">
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                                 <span>Core concepts and principles</span>
                               </li>
                               <li className='flex items-center gap-2'>
@@ -1295,25 +551,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                                 <CheckCircle className='w-4 h-4 text-green-400' />
                                 <span>Real-world project implementation</span>
                               </li>
-<<<<<<< HEAD
                               <li className='flex items-center gap-2'>
                                 <CheckCircle className='w-4 h-4 text-green-400' />                                <span>Industry best practices</span>
-=======
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
-                              <li className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-green-400" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                                <span>Industry best practices</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                               </li>
                             </ul>
                           </div>
 
-<<<<<<< HEAD
-=======
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           <div>
                             <h4 className='text-white font-semibold mb-3'>
                               Program Details
@@ -1341,78 +584,22 @@ ursor/integrate-build-improve-and-re-verify-b76c
                                 <span>Support:</span>
                                 <span className='text-white'>
                                   24/7 Community + Mentors
-<<<<<<< HEAD
                                 </span>                              </div>
-=======
-                                </span>
-                          
-                          <div>
-                            <h4 className="text-white font-semibold mb-3">Program Details</h4>
-                            <div className="space-y-2 text-sm text-gray-300">
-                              <div className="flex justify-between">
-                                <span>Duration:</span>
-                                <span className="text-white">{program.duration}</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span>Level:</span>
-                                <span className="text-white">{program.level}</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span>Format:</span>
-                                <span className="text-white">Online + Live Sessions</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span>Support:</span>
-                                <span className="text-white">24/7 Community + Mentors</span>
-                                <span className="text-white">24/7 Community + Mentors</span>
-ursor/integrate-build-improve-and-re-verify-b76c
-                              </div>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                             </div>
                           </div>
                         </div>
 
                         <div className='mt-6 flex gap-3'>
-<<<<<<< HEAD
                           <a
                             href='#'
                             className='flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'
-=======
-                        
-                        <div className="mt-6 flex gap-3">
-ursor/integrate-build-improve-and-re-verify-b76c
-                          <a
-                            href="#"
-                            className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
-                          >
-                            Enroll Now
-                            <ArrowRight className="w-4 h-4" />
-                          </a>
-                          <a
-                            href='#'
-                            className='inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
-                        
-                        <div className="mt-6 flex gap-3">
-                          <a
-                            href="#"
-                            className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                           >
                             Enroll Now
                             <ArrowRight className='w-4 h-4' />
                           </a>
                           <a
-<<<<<<< HEAD
                             href='#'
                             className='inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'                          >
-=======
-                            href="#"
-                            className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                            href="#"
-                            className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-                          >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                             Learn More
                           </a>
                         </div>
@@ -1427,27 +614,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
         {/* Learning Paths */}
         <section className='py-20'>
-<<<<<<< HEAD
           <div className='container mx-auto px-4'>            <motion.div
-=======
-          <div className='container mx-auto px-4'>
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-ursor/integrate-build-improve-and-re-verify-b76c
-            <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
-<<<<<<< HEAD
-=======
-              className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             >
               <h2 className='text-4xl font-bold text-white mb-4'>
                 Learning Paths
@@ -1514,64 +686,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     'Change Management',
                     'Performance Optimization',
                   ],
-<<<<<<< HEAD
                 },              ].map((path, index) => (
-=======
-                },
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Learning Paths
-              </h2>
-              <p className="text-xl text-gray-400">
-                Structured learning journeys to master complete technology domains
-              </p>
-            </motion.div>
-            
-            <div className="grid lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'AI Consciousness Expert',
-                  description: 'Complete path from fundamentals to advanced AI consciousness development.',
-                  duration: '6-12 months',
-                  courses: 8,
-                  level: 'Beginner to Expert',
-                  icon: <Brain className="w-12 h-12" />,
-                  color: 'cyan',
-                  path: [
-                    'AI Consciousness FundamentalsConsciousness Architecture DesignAdvanced ImplementationEthics and GovernanceAPI DevelopmentSystem OptimizationReal-world ApplicationsExpert Certification'
-                  ]
-                };
-                {
-                  title: 'Quantum Computing Specialist',
-                  description: 'Master quantum computing from basic principles to enterprise implementation.',
-                  duration: '8-16 months',
-                  courses: 6,
-                  level: 'Intermediate to Expert',
-                  icon: <Atom className="w-12 h-12" />,
-                  color: 'purple',
-                  path: [
-                    'Quantum Computing BasicsQuantum AlgorithmsMachine Learning IntegrationSecurity ImplementationEnterprise SolutionsAdvanced Applications'
-                  ]
-                };
-                {
-                  title: 'Autonomous Operations Leader',
-                  description: 'Lead the transformation to fully autonomous business operations.',
-                  duration: '6-10 months',
-                  courses: 5,
-                  level: 'Intermediate to Advanced',
-                  icon: <Rocket className="w-12 h-12" />,
-                  color: 'green',
-                  path: [
-                    'Business Process AnalysisAutomation StrategySystem ImplementationChange ManagementPerformance Optimization'
-                  ]
-                }
-                    'Business Process AnalysisAutomation StrategySystem ImplementationChange ManagementPerformance Optimization'
-                  ]
-                }
-ursor/integrate-build-improve-and-re-verify-b76c
-              ].map((path, index) => (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <motion.div
                   key={path.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -1579,11 +694,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                   className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300'
-<<<<<<< HEAD
-=======
-                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <div className='text-center mb-6'>
                     <div
@@ -1594,7 +704,6 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <h3 className='text-2xl font-bold text-white mb-3'>
                       {path.title}
                     </h3>
-<<<<<<< HEAD
                     <p className='text-gray-300 mb-4'>{path.description}</p>
                     <div className='flex items-center justify-center gap-4 text-sm text-gray-400'>
                       <div className='flex items-center gap-1'>
@@ -1603,52 +712,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       </div>
                       <div className='flex items-center gap-1'>
                         <BookOpen className='w-4 h-4' />                        <span>{path.courses} courses</span>
-=======
-                    <p className="text-gray-300 mb-4">
-                      {path.description}
-                    </p>
-                    <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{path.duration}</span>
-                      </div>
-                      <div className='flex items-center gap-1'>
-                        <BookOpen className='w-4 h-4' />
-                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="text-center mb-6">
-                    <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                      {path.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-3">
-                      {path.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      {path.description}
-                    </p>
-                    <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
-                      <div className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{path.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <BookOpen className="w-4 h-4" />
-                      <div className="flex items-center gap-1">
-                        <BookOpen className="w-4 h-4" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                        <span>{path.courses} courses</span>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                       </div>
                     </div>
                   </div>
 
                   <div className='space-y-3 mb-6'>
-<<<<<<< HEAD
-=======
-                  
-                  <div className="space-y-3 mb-6">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                     {path.path.map((step, stepIndex) => (
                       <div
                         key={stepIndex}
@@ -1667,32 +735,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`}
                   >
                     Start Learning Path
-<<<<<<< HEAD
                     <ArrowRight className='w-4 h-4' />                  </a>
-=======
-                    <ArrowRight className='w-4 h-4' />
-                  
-                  <div className="space-y-3 mb-6">
-                    {path.path.map((step, stepIndex) => (
-                      <div key={stepIndex} className="flex items-center gap-3 text-sm">
-                        <div className="w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs font-bold">
-                          {stepIndex + 1}
-                        </div>
-                        <span className="text-gray-300">{step}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <a
-                    href="#"
-                    className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`}
-                  >
-                    Start Learning Path
-                    <ArrowRight className="w-4 h-4" />
-                    <ArrowRight className="w-4 h-4" />
-ursor/integrate-build-improve-and-re-verify-b76c
-                  </a>
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 </motion.div>
               ))}
             </div>
@@ -1701,28 +744,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10'>
-<<<<<<< HEAD
           <div className='container mx-auto px-4 text-center'>            <motion.div
-=======
-          <div className='container mx-auto px-4 text-center'>
-        <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
-          <div className="container mx-auto px-4 text-center">
-        <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
-          <div className="container mx-auto px-4 text-center">
-ursor/integrate-build-improve-and-re-verify-b76c
-            <motion.div
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h2 className='text-4xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
-              <h2 className="text-4xl font-bold text-white mb-6">
-ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 Ready to Transform Your Career?
               </h2>
               <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -1733,40 +761,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
-<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'                >
-=======
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Career?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   Get Personalized Guidance
                 </a>
                 <a
                   href='/resources'
-<<<<<<< HEAD
                   className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'                >
-=======
-                  className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
-                  href="/resources"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                  href="/resources"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                   Explore Free Resources
                 </a>
               </div>
@@ -1826,16 +826,4 @@ ursor/integrate-build-improve-and-re-verify-b76c
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
-<<<<<<< HEAD
 };export default Training;
-=======
-};
-  )
-};
-
-  )
-};
-
-ursor/integrate-build-improve-and-re-verify-b76c
-export default Training;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,22 +1,14 @@
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
 const LOG_DIR = path.join(process.cwd(), 'data', 'analytics');
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const LOG_DIR = path.join(process.cwd(), 'dataanalytics');
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl');
 function ensureLogFile() {
   if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '');
 }
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -33,12 +25,6 @@ export default async function handler(
   } = req.body || {};
   if (!name || typeof name !== 'string')
     return res.status(400).json({ error: 'Invalid event name' });
-=======
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
-  const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {};
-  if (!name || typeof name !== 'string') return res.status($1).json({$2});
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const nowIso = new Date().toISOString();
   const event = {
     name,
@@ -49,23 +35,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ua: req.headers['user-agent'] || '',
     ip: (req.headers['x-forwarded-for'] || req.socket.remoteAddress || '') as string
   };
-<<<<<<< HEAD
 
   try {
     ensureLogFile();
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n');
-=======
-  try {
-    ensureLogFile();
-    fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   } catch (e) {
     // ignore file errors in serverless
   }
 
-<<<<<<< HEAD
   res.status(200).json({ ok: true });
-=======
-  res.status(200).json({ ok: true })
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }

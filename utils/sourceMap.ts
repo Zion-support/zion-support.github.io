@@ -13,7 +13,6 @@ export function getGitStatus() {
   };
 }
 
-<<<<<<< HEAD
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
@@ -54,12 +53,3 @@ export function deployBasicTemplateForPath(
   }
 
   return { createdPaths, skippedPaths };
-=======
-export function deployBasicTemplateForPath(path: string) {
-  return {
-    path,
-    deployed: true,
-    template: 'basic'
-  };
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

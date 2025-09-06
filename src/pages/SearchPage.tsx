@@ -1,13 +1,5 @@
-<<<<<<< HEAD
   const pageKey = `search-${routeKey}-${router.asPath}`;
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-=======
-import { useEffect, useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -249,7 +241,6 @@ export default function SearchPage() {
         )}
       </main>
     </div>
-<<<<<<< HEAD
   );
   setQuery (urlQuery) ;
 
@@ -318,13 +309,6 @@ router.push (`/search?q=$ {;
 }</TabsContent> </Tabs>) ;
 }</main> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  const pageKey = `search-${routeKey}-${router.asPath}`;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   )
 }

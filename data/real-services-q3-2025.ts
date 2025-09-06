@@ -1,12 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface Q3Service {
   id: string;
@@ -35,33 +28,16 @@ export interface Q3Service {
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   reviews?: number;
 
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',};
 
 export const realServicesQ32025: Q3Service[] = [
   {
-=======
-  website: 'https://ziontechgroup.com',
-=======
-  reviews?: number
-}
-
-const contact = {
-  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
   reviews?: number
 }
@@ -76,7 +52,6 @@ const contact = {
 
 export const realServicesQ32025: Q3Service[] = [
   {
-<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     id: 'subscription-analytics-revenue-optimization',
@@ -103,15 +78,6 @@ export const realServicesQ32025: Q3Service[] = [
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
     marketPosition:
       'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
-=======
-=======
-    id: 'subscription-analytics-revenue-optimization';
-    name: 'Subscription Analytics & Revenue Optimization';
-    tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth';
-    price: '$599';
-    period: '/month';
-    description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
     ];
@@ -229,21 +195,8 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.8;
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-<<<<<<< HEAD
     contactInfo: contact,
   },
-=======
-    id: 'subscription-analytics-revenue-optimization', name: 'Subscription Analytics & Revenue Optimization',
-    tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
-    price: '$599', period: '/month',
-    description: 'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.',
-    features: [
-      'Churn and retention analysisCohort and funnel dashboardsPrice testing and packaging experimentsRevenue leakage detectionRevenue forecasting modelsWeekly executive summaries'
-    ];
-    popular: true, icon: '📊',
-    color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization', marketPosition: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     targetAudience: 'SaaS startups, PLG companies, finance and growth teams',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -382,13 +335,8 @@ export const realServicesQ32025: Q3Service[] = [
     rating: 4.8,
     reviews: 12,
     // @ts-expect-error augment common shape for UI components that expect contactInfo
-<<<<<<< HEAD
     contactInfo: contact,
   },];
-=======
-    contactInfo: contact
-  }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     contactInfo: contact
   }

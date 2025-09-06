@@ -1,15 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
-<<<<<<< HEAD
 import {
   addMilestone,
   getProject,
   assertParticipantOrAdmin,
   isClient,;
 } from '../../../../utils/api/projects';
-=======
-import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 import { Milestone } from '../../../../utils/types/milestones';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
@@ -17,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { projectId } = req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
-<<<<<<< HEAD
     res.status(404).json({ error: 'Project not found' });
     return;
   }
@@ -49,37 +44,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const created = addMilestone(project, {
-=======
-    res.status(404).json({ error: 'Project not found' }),
-    return
-  }
-  if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: 'Forbidden' }),
-    return
-  }
-
-  if (req.method === 'GET') {
-    res.status(200).json({ milestones: project.milestones }),
-    return
-  }
-
-  if (req.method === 'POST') {
-    if (!isClient(project, user)) {
-      res.status(403).json({ error: 'Only client (or admin) can add milestones' }),
-      return
-    }
-    const body = req.body as Partial<Milestone>;
-    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
-      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
-      return
-    }
-    const created = addMilestone(project; {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       title: body.title,
       description: body.description,
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
-<<<<<<< HEAD
       attachments: body.attachments || [],
     });
     res.status(201).json({ milestone: created });
@@ -88,13 +56,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-=======
-      attachments: body.attachments || []}),
-    res.status(201).json({ milestone: created }),
-    return
-  }
-
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

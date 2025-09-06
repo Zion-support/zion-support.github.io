@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 };
 };
@@ -29,28 +25,6 @@ type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: Href,
   children: React.ReactNode,
 };
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-
-// Define HTMLAnchorElement type if not available
-interface HTMLElement {
-  className?: string;
-}
-
-interface HTMLAnchorElement extends HTMLElement {
-  href: string,
-  className?: string;
-}
-
-type Href = string | { pathname?: string; href?: string };
-
-type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: Href,
-  children: React.ReactNode,
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 function resolveHref(href: Href): string {
@@ -77,12 +51,5 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       {children}
     </a>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
