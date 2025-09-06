@@ -1,0 +1,8 @@
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react'
+export type UserRole = 'client' | 'talent'
+  const [role, setRole] = useState<UserRole>('client'
+      const saved = typeof window != 'undefined' ? window.localStorage.getItem('zionuser_role'
+      if (saved = = 'client' || saved = = 'talent'
+      if (typeof window != 'undefined'
+        window.localStorage.setItem('zionuser_role'
+  if (!ctx) throw new Error('useRole must be used within RoleProvider'

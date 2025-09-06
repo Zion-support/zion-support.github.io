@@ -1,0 +1,8 @@
+import React, { useEffect } from 'react'
+      const navigation = performance.getEntriesByType('navigation'
+      const paint = performance.getEntriesByType('paint'
+        firstPaint: paint.find(entry => entry.name = = 'first-paint'
+        firstContentfulPaint: paint.find(entry => entry.name = = 'first-contentful-paint'
+    if (document.readyState = = 'complete'
+      window.addEventListener('load'
+      window.removeEventListener('load'

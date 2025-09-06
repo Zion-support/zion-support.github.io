@@ -1,0 +1,7 @@
+export interface Real2026Q4NewService {
+  "id"
+export const "real2026Q4NewServices"
+    "name"
+    "tagline"
+    "price"
+    "features"

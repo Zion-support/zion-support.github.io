@@ -1,0 +1,23 @@
+console.log(' Starting build verification...'
+  console.log(' Testing component imports...'
+  const React = require('react'
+  console.log(' React import successful'
+  const { motion } = require('framer-motion'
+  console.log(' Framer Motion import successful'
+ try {  const React = require('react');  const { motion } = require('framer-motion');  const { ArrowRight,CheckCircle,Brain,Cloud,Shield,Zap,} = require('lucide-react');   } catch (error) { console.error(' Import error: any
+console.log(' Starting build verification...'
+  console.log(' Testing component imports...'
+  const React = require('react'
+  console.log(' React import successful'
+  const { motion } = require('framer-motion'
+  console.log(' Framer Motion import successful'
+  } = require('lucide-react'
+  console.log(' Lucide React icons import successful'
+    ArrowRight: any
+  console.log(' All core dependencies imported successfully!'
+  console.log(' Components should be ready for build'
+  console.error(' Import error: any
+console.log(' Build verification complete'
+    Zap} = require('lucide-react'
+  console.log(' Lucide React icons import successful'
+  console.error('

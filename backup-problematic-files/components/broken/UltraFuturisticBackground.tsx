@@ -1,0 +1,6 @@
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+    const ctx = canvas.getContext('2d'
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'
+    window.addEventListener('resize'
+      window.removeEventListener('resize'

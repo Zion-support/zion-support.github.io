@@ -1,0 +1,3 @@
+
+import { Card, CardContent } from "@/components/ui/
+  return (<Card className="border-red-200" > <CardContent className="p-6 text-center" > <h3 className="text-lg font-medium text-red-600 mb-1" >Something went wrong

@@ -1,0 +1,35 @@
+export interface PricingAnalysis {
+  "serviceId"
+  "pricingStrategy"
+  "competitiveAnalysis"
+  "roiAnalysis"
+  "contactInfo"
+website: string};export const "comprehensivePricingAnalysis2025"
+    "serviceName"
+    "currentPrice"
+    "period"
+    "marketAnalysis"
+      "priceRange"
+      "competitivePosition"
+      "targetMarket"
+      "marketSize"
+    "pricingStrategy"
+      "priceElasticity"
+  '
+  '
+  '
+      discountStructure['
+      bundlingOptions['
+  '
+  '
+      discountStructure['
+      bundlingOptions['
+  '
+  '
+      bundlingOptions['
+  '
+  '
+      bundlingOptions['
+  '
+  '
+      discountStructure['

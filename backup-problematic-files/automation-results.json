@@ -1,0 +1,3 @@
+
+  "timestamp": any
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n  Failed to load next.config.js, see more info here https: any

@@ -1,0 +1,6 @@
+
+  "name": any
+    "node": ">=20.18.1"
+    "npm": ">=10.0.0"
+  "scripts"
+    "dev": any

@@ -1,0 +1,8 @@
+
+  "summary"
+    "total_workflows"
+    "healthy_workflows"
+    "broken_workflows"
+    "health_score"
+  "details"
+    "timestamp": any

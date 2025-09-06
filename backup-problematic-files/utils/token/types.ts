@@ -1,0 +1,6 @@
+export type TokenSymbol = "ZION$"
+  | "earn"
+  | "burn"
+  | "issue"
+  | "revoke"
+  | "redeem"

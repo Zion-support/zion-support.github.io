@@ -1,0 +1,6 @@
+
+import React from "react"
+import ApiDocsLayout from "@/components/developers/
+import { CodeBlock } from "@/components/developers/
+</tbody> </table> </div> <h2>Handling Errors</h2> <p> Your application should be prepared to handle error responses appropriately: </p> <ul> <li><strong>401 and 403 errors</strong>: Check your API key and permissions</li> <li><strong>429 errors</strong>: Implement retry logic with backoff</li> <li><strong>5xx errors</strong>: These are server-side issues, retry with backoff</li> </ul> <h3>Rate Limiting
+</tbody> </table> </div> <h3>Rate Limit Headers</h3> <p> All API responses include headers to help you track your rate limit usage: </p> <ul> <li><code>X-RateLimit-Limit</code>: The maximum number of requests allowed per minute</li> <li><code>X-RateLimit-Remaining</code>: The number of requests remaining in the current window</li> <li><code>X-RateLimit-Reset</code>: The time at which the current rate limit window resets (Unix timestamp) </li> </ul> <h3>Best Practices for Rate Limits</h3> <ul> <li>Monitor the rate limit headers to avoid hitting limits</li> <li>Implement retry logic with exponential backoff for 429 errors</li> <li>Cache responses when possible to reduce API calls</li> <li>For high-volume needs, contact us about increased limits</li> </ul> <h2>Need Help?

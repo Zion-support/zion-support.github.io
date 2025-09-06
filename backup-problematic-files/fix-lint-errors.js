@@ -1,0 +1,4 @@
+ Skip nodemodules, .git, and other common directories}; if (!['nodemodules.gitdistbuild.next'].includes(item) {'
+function fixSyntaxErrors(content) {}; let fixed = content // Fix missing semicolons at end of lines (basic, cases) fixed = fixed.replace(/([^,{}])\n/
+function fixUndefinedVariables(content, filePath) {}; if (content.includes('React') && !content.includes("import React") {_"}; if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx') {_'}; fixed = "import React from 'react',\n" + fixed," }; // Common Next.js patterns; if (content.includes('useRouter') && !content.includes("import {useRouter}") {_"}; fixed = "import {useRouter} from 'next/
+    fixed = "import { useRouter } from 'next/

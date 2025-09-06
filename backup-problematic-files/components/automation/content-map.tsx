@@ -1,0 +1,6 @@
+import fs from 'fs'
+import path from 'path'
+import type { GetStaticProps } from 'next'
+    const file = path.join(process.cwd(), 'publicautomationcontent-map.json'
+    const raw = fs.readFileSync(file, 'utf8'
+            <li key={sec} className="flex justify-between"><span>{sec || 'root'

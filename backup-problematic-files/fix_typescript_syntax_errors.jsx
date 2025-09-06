@@ -1,0 +1,1 @@
+/usr/bin/env node; const fs = require(\'fs-extra\'); const path = require(\'path\'); const glob = require(\'glob\'); async function fixTypeScriptSyntaxErrors() { const files = glob.sync(\'pages*-chat.tsx\'); for (const file of files) { try { let modified = false; const lines = content.split(\'\n\'); for (const i = 0 i 

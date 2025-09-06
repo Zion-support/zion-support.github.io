@@ -1,12 +1,7 @@
-{
-  "timestamp": "2025-09-06T09:31:03.020Z",
-  "filesFixed": 5,
-  "errors": 0,
-  "fixedFiles": [
-    "pages/api/enterprise/companies/[companyId]/members.ts",
-    "pages/api/enterprise/companies/[companyId]/usage.ts",
-    "pages/api/generate-service-description.ts",
-    "pages/api/integrations/logs.ts",
-    "pages/api/integrations/oauth/[provider]/callback.ts"
-  ]
-}
+
+  "timestamp": any
+    "pages/api/enterprise/companies/[companyId]/
+    "pages/api/enterprise/companies/[companyId]/
+    "pages/api/
+    "pages/api/integrations/
+    "pages/api/integrations/oauth/[provider]/

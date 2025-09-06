@@ -1,0 +1,5 @@
+import React from 'react'
+    window.addEventListener('online'
+    window.addEventListener('offline'
+      window.removeEventListener('online'
+      window.removeEventListener('offline'

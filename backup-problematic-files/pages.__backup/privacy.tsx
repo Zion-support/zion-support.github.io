@@ -1,0 +1,1 @@
+import Head from; \'next/head\'; export default function PrivacyPage() { return ( <div className=\'container mx-auto px-4 py-12\'> <Head> <title>Privacy Policy - Zion Tech Solutions</title> <meta name=\'description\'; content=\'Privacy Policy for Zion Tech Solutions.\'/> </Head> <h1 className=\'text-3xl font-bold mb-6\'>Privacy Policy

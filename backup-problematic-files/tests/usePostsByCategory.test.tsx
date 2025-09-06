@@ -1,0 +1,4 @@
+import { renderHook,waitFor } from @testing-library/react\''; import { QueryClient,QueryClientProvider } from \'@tanstack/react-query\'; import { usePostsByCategory } from \'@/hooks/usePostsByCategory\'; import * as forumService from \'@/services/
+import { renderHook,waitFor } from @testing-library/react''; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { usePostsByCategory } from '@/hooks/usePostsByCategory'; import * as forumService from '@/services/
+import { renderHook,waitFor } from @testing-library/react''; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { usePostsByCategory } from '@/hooks/usePostsByCategory'; import * as forumService from '@/services/
+import { renderHook,waitFor } from @testing-library/react''; import { QueryClient,QueryClientProvider } from '@tanstack/react-query'; import { usePostsByCategory } from '@/hooks/usePostsByCategory'; import * as forumService from '@/services/

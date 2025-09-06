@@ -1,0 +1,11 @@
+export interface RealServiceQ22025 {
+  "id"
+export const "realServicesQ22025"
+    "name"
+    "price"
+    "features"
+    "category"
+    "name"
+    "price"
+    "features"
+    "category"

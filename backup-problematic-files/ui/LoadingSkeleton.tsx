@@ -1,0 +1,6 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+  className = ''
+  height = 'h-4'
+  width = 'w-full'
+  rounded = 'rounded'

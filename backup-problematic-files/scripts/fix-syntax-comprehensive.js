@@ -1,0 +1,8 @@
+/usr/bin/
+    replacement: any
+/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: '/\/ \/ \/ \/ \/ \/>/g',replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: any
+/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /\/ \/ \/ \/ \/ \/>/g,replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: any
+/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: '/\/ \/ \/ \/ \/ \/>/g',replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: any
+/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /\/ \/ \/ \/ \/ \/>/g,replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: any
+/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: '/\/ \/ \/ \/ \/ \/>/g',replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: any
+/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /\/ \/ \/ \/ \/ \/>/g,replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: any

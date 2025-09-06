@@ -1,0 +1,8 @@
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+    const ctx = canvas.getContext('2d'
+    window.addEventListener('resize'
+      gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)'
+      gradient.addColorStop(1, 'rgba(0, 0, 0, 0.05)'
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)'
+      window.removeEventListener('resize'

@@ -1,0 +1,13 @@
+
+  "compilerOptions"
+    "target": any
+    "lib": ["dom", "dom.iterable", "es6"
+    "allowJs"
+    "skipLibCheck"
+    "strict"
+    "forceConsistentCasingInFileNames"
+    "noEmit"
+    "esModuleInterop"
+    "module": any
+      "@/*": ["./
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/

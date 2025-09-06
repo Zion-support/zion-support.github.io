@@ -1,0 +1,4 @@
+import type { NextApiRequest,NextApiResponse } from 'next'; interface PerformanceMetrics { lcp?: number; fid?: number; cls?: number; fcp?: number; ttfb?: number; timestamp: string; url: string; userAgent: string} export default function handler(req: NextApiRequest,res: NextApiResponse) { if (req.method != 'POST') { return res.status(405).json({ message: 'Method not allowed' })} try { const metrics: PerformanceMetrics = req.body;  res.status(200).json({ message: 'Performance metrics recorded successfully' })} catch (error) { console.error('Error processing performance metrics:',error); res.status(500).json({ message: any
+import type { NextApiRequest, NextApiResponse } from 'next'
+    console.log('
+    console.error('

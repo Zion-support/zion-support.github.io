@@ -1,0 +1,6 @@
+
+  "manifest_version"
+  "name": any
+  "description": "Ask ZionGPT, post jobs, search resumes, and track projects."
+  "action"
+    "default_title": any

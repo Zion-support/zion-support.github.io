@@ -1,0 +1,3 @@
+/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } checkTestFiles() { const testDirs = ['__tests__','src/
+const fs = // //
+const path = // //

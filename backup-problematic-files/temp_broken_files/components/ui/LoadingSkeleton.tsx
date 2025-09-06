@@ -1,0 +1,8 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+  className = ''
+  height = 'h-4'
+  width = 'w-full'
+  rounded = 'rounded'
+export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = (_{_className = ''
+export const HeroSkeleton: React.FC<HeroSkeletonProps> = (_{_className = ''

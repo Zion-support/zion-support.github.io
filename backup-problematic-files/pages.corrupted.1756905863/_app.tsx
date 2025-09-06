@@ -1,0 +1,4 @@
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Head from \'next/head\'; import ErrorBoundary from \'../components/ErrorBoundary\'; import \'../styles/
+import _React from 'react'; import type { AppProps } from 'next/app'; import Head from 'next/head'; import ErrorBoundary from '../components/ErrorBoundary'; import '../styles/

@@ -1,0 +1,13 @@
+export interface RealMarketAugmentation2025 {
+  "id"
+export const "realMarketAugmentations2025"
+    "name"
+    "tagline"
+    "price"
+    "features"
+  "id"
+export const "realMarketAugmentations2025"
+    "name"
+    "tagline"
+    "price"
+    "features"

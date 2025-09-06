@@ -1,0 +1,5 @@
+export default function AIAutonomousResearchAssistantPage() {;
+  return (;
+    
+<section className="bg-gradient-to-r from-red-600 to-pink-600 text-white py-20"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> <h1 className="text-4xl md: any
+<section className="py-20"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"> <div> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"> Autonomous Research at Scale </h2> <p className="text-lg text-gray-600 mb-6"> Our AI Autonomous Research Assistant is a breakthrough platform that combines advanced machine learning, natural language processing, and autonomous decision-making to revolutionize how research is conducted across all industries. </p> <p className="text-lg text-gray-600 mb-6"> The system operates independently, continuously learning from new data, identifying patterns, generating hypotheses, and conducting experiments without human intervention. This enables unprecedented research velocity and discovery potential. 

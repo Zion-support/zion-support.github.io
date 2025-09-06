@@ -1,0 +1,10 @@
+import React, { useEffect, useRef } from 'react'
+import { motion } from 'framer-motion'
+    const ctx = canvas.getContext('2d'
+        color: ['#06b6d4#3b82f6#8b5cf6#ec4899'
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.1)'
+      ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)'
+    window.addEventListener('resize'
+      window.removeEventListener('resize'
+            `, _backgroundSize: '50px 50px', _animation: any

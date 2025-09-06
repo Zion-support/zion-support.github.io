@@ -1,0 +1,10 @@
+
+import { z } from "zod"
+  fullName:z.string().min(1, "Full name is required"
+  title:z.string().min(1, "Professional title is required"
+  email:z.string().email("Invalid email address"
+  website:z.string().url().optional().or(z.literal(""
+  fullName: z.string () .min (1, "Full name is required"
+title: z.string () .min (1, "Professional title is required"
+email: z.string () .email ("Invalid email address"
+website: z.string () .url () .optional () .or (z.literal (""

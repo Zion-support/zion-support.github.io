@@ -1,0 +1,4 @@
+import React from \'react\'; import type { NextPage } from \'next\'; import MainLayout from \'../../components/layout/MainLayout\'; import { CheckCircle,Users,BarChart3,FileText } from \"lucide-react\"; import Link from \'next/
+import _React from 'react'; import type { NextPage } from 'next'; import MainLayout from '../../components/layout/MainLayout'; import { CheckCircle,Users,BarChart3,FileText } from "lucide-react"; import Link from 'next/
+import React from \'react\'; import type { NextPage } from \'next\'; import MainLayout from \'../../components/layout/MainLayout\'; import { CheckCircle,Users,BarChart3,FileText } from \"lucide-react\"; import Link from \'next/
+import _React from 'react'; import type { NextPage } from 'next'; import MainLayout from '../../components/layout/MainLayout'; import { CheckCircle,Users,BarChart3,FileText } from "lucide-react"; import Link from 'next/

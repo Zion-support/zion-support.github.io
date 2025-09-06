@@ -1,0 +1,11 @@
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved'
+  | 'Scope Disagreement'
+  | 'Quality Issues'
+  | 'Delivery Delay'
+  | 'Payment Issue'
+  | 'Communication Breakdown'
+  | 'Other'
+  authorRole: any
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved'
+export type DisputeReason = | 'Scope Disagreement' | 'Quality Issues' | 'Delivery Delay' | 'Payment Issue' | 'Communication Breakdown' | 'Other'
+id' | 'projectId' | 'createdAt' | 'status'

@@ -1,0 +1,12 @@
+export interface RealAugmentedService2025Batch3 {
+  "id"
+export const "augmentedServicesBatch3"
+    "name"
+    "tagline"
+    "price"
+    "features"
+    "id"
+    "name"
+    "tagline"
+    "price"
+    "features"

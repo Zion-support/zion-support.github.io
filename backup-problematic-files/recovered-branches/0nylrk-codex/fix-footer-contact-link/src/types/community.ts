@@ -1,0 +1,8 @@
+
+export type ForumCategory = ;
+  | 'getting-hired'
+  | 'project-help'
+  | 'ai-tools'
+  | 'feedback'
+  | 'announcements'
+ export type ForumCategory = | 'getting-hired' | 'project-help' | 'ai-tools' | 'feedback' | 'announcements'
