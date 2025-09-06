@@ -1,42 +1,30 @@
 import React from 'react';
-import Card from './Card';
 
 interface ServiceCardProps {
   title: string;
   description: string;
   icon: string;
-  features: string[];
-  isActive?: boolean;
-  onMouseEnter?: () => void;
+  className?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
   icon,
-  features,
-  isActive = false,
-  onMouseEnter,
+  className = ''
 }) => {
   return (
-    <Card
-      className={`cursor-pointer ${
-        isActive ? 'ring-2 ring-blue-400 shadow-lg shadow-blue-400/25' : ''
-      }`}
-      onMouseEnter={onMouseEnter}
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-2xl font-semibold text-white mb-4">{title}</h3>
-      <p className="text-gray-300 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li key={index} className="text-sm text-gray-400 flex items-center">
-            <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </Card>
+    <div className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20 ${className}`}>
+      <div className="text-5xl mb-6 text-center">
+        {icon}
+      </div>
+      <h3 className="text-2xl font-bold text-white mb-4 text-center">
+        {title}
+      </h3>
+      <p className="text-gray-300 leading-relaxed text-center">
+        {description}
+      </p>
+    </div>
   );
 };
 

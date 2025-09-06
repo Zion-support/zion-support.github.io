@@ -1,540 +1,495 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Micro SaaS Solutions | Zion Tech Group',
-  description: 'Comprehensive micro SaaS development services including AI-powered tools, productivity apps, business automation, and revenue-generating solutions. From MVP to enterprise scale.',
+export const metadata = { 
+  title: 'Micro SaaS Development | Zion Tech Group',
+  description: 'Complete micro SaaS solutions including productivity tools, automation platforms, analytics dashboards, and specialized business applications. From MVP to scale.'
 };
 
-export default function MicroSaasPage() {
+export default function MicroSaaSPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Micro SaaS Solutions
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Build profitable, scalable micro SaaS products that generate real revenue. 
-              From AI-powered tools to business automation, we create solutions that solve real problems.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Call +1 302 464 0950
-              </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-              >
-                Email kleber@ziontechgroup.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Micro SaaS Solutions */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Micro SaaS Solutions</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Proven micro SaaS products that generate real revenue and solve real business problems.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <MicroSaaSCard
-              title="AI Content Generator Pro"
-              description="Advanced AI-powered content creation tool with multi-language support, SEO optimization, and brand voice customization."
-              features={[
-                "GPT-4 powered content generation",
-                "Multi-language support (50+ languages)",
-                "SEO optimization tools",
-                "Brand voice training",
-                "Content scheduling & publishing",
-                "Analytics & performance tracking"
-              ]}
-              pricing="$29-99/month"
-              marketSize="$2.1B content marketing market"
-              icon="🤖"
-            />
-            <MicroSaaSCard
-              title="Smart Invoice Manager"
-              description="Automated invoicing and payment processing with AI-powered expense categorization and financial insights."
-              features={[
-                "Automated invoice generation",
-                "Payment processing integration",
-                "Expense categorization AI",
-                "Financial reporting dashboard",
-                "Multi-currency support",
-                "Client portal access"
-              ]}
-              pricing="$19-79/month"
-              marketSize="$4.2B invoicing software market"
-              icon="📊"
-            />
-            <MicroSaaSCard
-              title="Social Media Scheduler"
-              description="AI-driven social media management with optimal posting times, hashtag suggestions, and performance analytics."
-              features={[
-                "Multi-platform scheduling",
-                "AI-optimized posting times",
-                "Hashtag suggestion engine",
-                "Content calendar management",
-                "Engagement analytics",
-                "Team collaboration tools"
-              ]}
-              pricing="$15-59/month"
-              marketSize="$6.1B social media management market"
-              icon="📱"
-            />
-            <MicroSaaSCard
-              title="Email Marketing Automation"
-              description="Intelligent email marketing platform with behavioral triggers, A/B testing, and advanced segmentation."
-              features={[
-                "Behavioral trigger automation",
-                "Advanced segmentation",
-                "A/B testing framework",
-                "Template library",
-                "Deliverability optimization",
-                "ROI tracking & analytics"
-              ]}
-              pricing="$25-99/month"
-              marketSize="$7.5B email marketing market"
-              icon="📧"
-            />
-            <MicroSaaSCard
-              title="Project Management Hub"
-              description="AI-enhanced project management with predictive analytics, resource optimization, and team productivity insights."
-              features={[
-                "AI-powered task prioritization",
-                "Resource allocation optimization",
-                "Predictive deadline management",
-                "Team productivity analytics",
-                "Integration ecosystem",
-                "Custom workflow automation"
-              ]}
-              pricing="$35-149/month"
-              marketSize="$5.3B project management market"
-              icon="📋"
-            />
-            <MicroSaaSCard
-              title="Customer Support AI"
-              description="Intelligent customer support platform with chatbot automation, sentiment analysis, and knowledge base management."
-              features={[
-                "AI chatbot automation",
-                "Sentiment analysis",
-                "Knowledge base management",
-                "Multi-channel support",
-                "Performance analytics",
-                "Custom integration APIs"
-              ]}
-              pricing="$45-199/month"
-              marketSize="$8.9B customer service market"
-              icon="🎧"
-            />
-            <MicroSaaSCard
-              title="Analytics Dashboard Pro"
-              description="Comprehensive business analytics with real-time data visualization, predictive insights, and custom reporting."
-              features={[
-                "Real-time data visualization",
-                "Predictive analytics engine",
-                "Custom report builder",
-                "Data source integrations",
-                "Automated insights",
-                "White-label options"
-              ]}
-              pricing="$39-179/month"
-              marketSize="$3.8B business intelligence market"
-              icon="📈"
-            />
-            <MicroSaaSCard
-              title="E-commerce Optimization"
-              description="AI-powered e-commerce tools for conversion optimization, inventory management, and customer behavior analysis."
-              features={[
-                "Conversion rate optimization",
-                "Inventory management AI",
-                "Customer behavior analysis",
-                "Pricing optimization",
-                "Abandoned cart recovery",
-                "Multi-platform sync"
-              ]}
-              pricing="$49-249/month"
-              marketSize="$6.2B e-commerce tools market"
-              icon="🛒"
-            />
-            <MicroSaaSCard
-              title="HR Management Suite"
-              description="Comprehensive HR management with AI-powered recruitment, employee analytics, and performance tracking."
-              features={[
-                "AI-powered candidate screening",
-                "Employee performance analytics",
-                "Automated onboarding",
-                "Benefits management",
-                "Compliance tracking",
-                "Custom HR workflows"
-              ]}
-              pricing="$29-149/month"
-              marketSize="$4.7B HR software market"
-              icon="👥"
-            />
-            <MicroSaaSCard
-              title="Lead Generation Engine"
-              description="AI-powered lead generation and qualification system with automated outreach and CRM integration."
-              features={[
-                "AI lead scoring & qualification",
-                "Automated email sequences",
-                "LinkedIn & social prospecting",
-                "CRM integration (Salesforce, HubSpot)",
-                "Lead nurturing workflows",
-                "ROI tracking & analytics"
-              ]}
-              pricing="$39-199/month"
-              marketSize="$3.2B lead generation market"
-              icon="🎯"
-            />
-            <MicroSaaSCard
-              title="Time Tracking & Productivity"
-              description="Advanced time tracking with AI insights, productivity analytics, and team performance optimization."
-              features={[
-                "AI-powered time categorization",
-                "Productivity analytics & insights",
-                "Team performance dashboards",
-                "Project profitability tracking",
-                "Automated timesheet generation",
-                "Integration with 50+ tools"
-              ]}
-              pricing="$12-79/month"
-              marketSize="$2.8B time tracking market"
-              icon="⏰"
-            />
-            <MicroSaaSCard
-              title="Customer Feedback Analytics"
-              description="AI-powered customer feedback analysis with sentiment tracking, trend identification, and actionable insights."
-              features={[
-                "Multi-channel feedback collection",
-                "AI sentiment analysis",
-                "Trend identification & alerts",
-                "Competitor analysis",
-                "Actionable insights dashboard",
-                "Custom reporting & exports"
-              ]}
-              pricing="$25-149/month"
-              marketSize="$1.9B feedback management market"
-              icon="💬"
-            />
-            <MicroSaaSCard
-              title="Inventory Management AI"
-              description="Intelligent inventory management with demand forecasting, automated reordering, and cost optimization."
-              features={[
-                "AI demand forecasting",
-                "Automated reorder points",
-                "Multi-location inventory sync",
-                "Cost optimization algorithms",
-                "Supplier performance tracking",
-                "Real-time stock alerts"
-              ]}
-              pricing="$45-299/month"
-              marketSize="$4.1B inventory management market"
-              icon="📦"
-            />
-            <MicroSaaSCard
-              title="Document Management System"
-              description="AI-powered document management with OCR, smart categorization, and automated workflow processing."
-              features={[
-                "OCR & text extraction",
-                "AI document categorization",
-                "Automated workflow processing",
-                "Version control & collaboration",
-                "Advanced search capabilities",
-                "Compliance & audit trails"
-              ]}
-              pricing="$19-129/month"
-              marketSize="$5.6B document management market"
-              icon="📄"
-            />
-            <MicroSaaSCard
-              title="Expense Management Pro"
-              description="Automated expense tracking with receipt scanning, policy compliance, and intelligent categorization."
-              features={[
-                "Receipt scanning & OCR",
-                "AI expense categorization",
-                "Policy compliance checking",
-                "Automated approval workflows",
-                "Multi-currency support",
-                "Integration with accounting systems"
-              ]}
-              pricing="$15-89/month"
-              marketSize="$2.3B expense management market"
-              icon="💰"
-            />
-            <MicroSaaSCard
-              title="Website Performance Monitor"
-              description="Comprehensive website monitoring with performance optimization, uptime tracking, and user experience analytics."
-              features={[
-                "Real-time performance monitoring",
-                "Uptime & availability tracking",
-                "User experience analytics",
-                "Core Web Vitals monitoring",
-                "Automated alerts & notifications",
-                "Performance optimization recommendations"
-              ]}
-              pricing="$29-199/month"
-              marketSize="$3.7B website monitoring market"
-              icon="🌐"
-            />
-            <MicroSaaSCard
-              title="API Management Platform"
-              description="Complete API lifecycle management with monitoring, security, documentation, and developer portal."
-              features={[
-                "API gateway & routing",
-                "Rate limiting & throttling",
-                "Authentication & authorization",
-                "API documentation generator",
-                "Developer portal",
-                "Analytics & monitoring"
-              ]}
-              pricing="$99-999/month"
-              marketSize="$4.8B API management market"
-              icon="🔌"
-            />
-            <MicroSaaSCard
-              title="A/B Testing Platform"
-              description="Advanced A/B testing platform with statistical significance, multivariate testing, and conversion optimization."
-              features={[
-                "Visual editor for tests",
-                "Statistical significance calculator",
-                "Multivariate testing",
-                "Conversion funnel analysis",
-                "Real-time results dashboard",
-                "Integration with analytics tools"
-              ]}
-              pricing="$49-399/month"
-              marketSize="$1.4B A/B testing market"
-              icon="🧪"
-            />
-            <MicroSaaSCard
-              title="Customer Onboarding Automation"
-              description="Automated customer onboarding with personalized journeys, progress tracking, and success metrics."
-              features={[
-                "Personalized onboarding flows",
-                "Progress tracking & analytics",
-                "Automated email sequences",
-                "In-app guidance & tooltips",
-                "Success metrics dashboard",
-                "Integration with CRM systems"
-              ]}
-              pricing="$35-199/month"
-              marketSize="$1.8B customer onboarding market"
-              icon="🚀"
-            />
-            <MicroSaaSCard
-              title="Subscription Billing Engine"
-              description="Flexible subscription billing with proration, dunning management, and revenue recognition."
-              features={[
-                "Flexible pricing models",
-                "Proration & billing adjustments",
-                "Dunning management",
-                "Revenue recognition",
-                "Tax calculation & compliance",
-                "Analytics & reporting"
-              ]}
-              pricing="$79-599/month"
-              marketSize="$2.9B subscription billing market"
-              icon="💳"
-            />
-            <MicroSaaSCard
-              title="White-Label Mobile App Builder"
-              description="No-code mobile app builder with white-label options, custom branding, and app store deployment."
-              features={[
-                "Drag-and-drop app builder",
-                "White-label customization",
-                "App store deployment",
-                "Push notifications",
-                "Analytics & user tracking",
-                "Custom integrations"
-              ]}
-              pricing="$199-1,999/month"
-              marketSize="$6.2B mobile app development market"
-              icon="📱"
-            />
-            <MicroSaaSCard
-              title="Workflow Automation Hub"
-              description="Visual workflow automation platform connecting 200+ apps with conditional logic and error handling."
-              features={[
-                "Visual workflow designer",
-                "200+ app integrations",
-                "Conditional logic & branching",
-                "Error handling & retry logic",
-                "Real-time execution monitoring",
-                "Custom webhook support"
-              ]}
-              pricing="$29-299/month"
-              marketSize="$5.1B workflow automation market"
-              icon="⚡"
-            />
-            <MicroSaaSCard
-              title="Data Backup & Recovery"
-              description="Automated data backup with point-in-time recovery, cross-platform sync, and disaster recovery planning."
-              features={[
-                "Automated backup scheduling",
-                "Point-in-time recovery",
-                "Cross-platform synchronization",
-                "Disaster recovery planning",
-                "Encryption & security",
-                "Compliance reporting"
-              ]}
-              pricing="$19-199/month"
-              marketSize="$3.4B data backup market"
-              icon="💾"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Solutions?</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We combine technical expertise with market insights to create profitable, scalable micro SaaS products.
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Micro SaaS Development</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Complete micro SaaS solutions including productivity tools, automation platforms, 
+            analytics dashboards, and specialized business applications. From MVP to scale.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <FeatureCard
-            title="Market-Validated"
-            description="Every solution is based on real market needs and validated business models."
+
+        {/* Micro SaaS Categories */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <MicroSaaSCategory
+            title="Productivity Tools"
+            icon="⚡"
+            description="Tools that enhance team productivity and workflow efficiency"
+            services={[
+              "Task management systems",
+              "Time tracking applications",
+              "Project collaboration tools",
+              "Note-taking platforms",
+              "Calendar scheduling apps",
+              "Workflow automation tools"
+            ]}
           />
-          <FeatureCard
-            title="Rapid Development"
-            description="From concept to launch in 4-12 weeks with modern development practices."
+          <MicroSaaSCategory
+            title="Business Analytics"
+            icon="📊"
+            description="Data-driven insights and reporting solutions"
+            services={[
+              "Custom dashboards",
+              "KPI monitoring tools",
+              "Financial reporting apps",
+              "Customer analytics platforms",
+              "Sales tracking systems",
+              "Performance metrics tools"
+            ]}
           />
-          <FeatureCard
-            title="Revenue-Focused"
-            description="Built with monetization in mind, featuring proven pricing strategies and payment integration."
-          />
-          <FeatureCard
-            title="Scalable Architecture"
-            description="Cloud-native architecture designed to handle growth from startup to enterprise scale."
+          <MicroSaaSCategory
+            title="Marketing Automation"
+            icon="🎯"
+            description="Marketing tools and automation platforms"
+            services={[
+              "Email marketing platforms",
+              "Social media schedulers",
+              "Lead generation tools",
+              "Content management systems",
+              "A/B testing platforms",
+              "Campaign analytics tools"
+            ]}
           />
         </div>
-      </section>
 
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Development Packages</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <PricingCard
-            name="MVP Sprint"
-            price="$8,000 - $20,000"
-            duration="2-4 weeks"
-            features={[
-              "Core functionality development",
-              "Basic UI/UX design",
-              "Stripe payment integration",
-              "User authentication",
-              "Basic analytics",
-              "Deployment & hosting setup"
-            ]}
-            bestFor="Startups and entrepreneurs"
-          />
-          <PricingCard
-            name="Growth Package"
-            price="$20,000 - $60,000"
-            duration="6-10 weeks"
-            features={[
-              "Full-featured application",
-              "Advanced UI/UX design",
-              "SEO-optimized marketing site",
-              "Email marketing integration",
-              "Advanced analytics & reporting",
-              "API development",
-              "Mobile responsiveness",
-              "Performance optimization"
-            ]}
-            bestFor="Growing businesses"
-            popular={true}
-          />
-          <PricingCard
-            name="Enterprise Scale"
-            price="$60,000+"
-            duration="Custom timeline"
-            features={[
-              "Enterprise-grade architecture",
-              "Multi-tenant support",
-              "Advanced security features",
-              "Custom integrations",
-              "White-label options",
-              "24/7 monitoring & support",
-              "SLA guarantees",
-              "Custom development"
-            ]}
-            bestFor="Large enterprises"
-          />
+        {/* Real Micro SaaS Solutions */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Micro SaaS Solutions We Build</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <MicroSaaSSolution
+              title="Team Productivity Hub"
+              description="All-in-one workspace for remote teams"
+              features={[
+                "Task management & kanban boards",
+                "Time tracking & reporting",
+                "Team chat & video calls",
+                "File sharing & collaboration",
+                "Project templates",
+                "Mobile app"
+              ]}
+              price="$15k - $35k"
+              timeline="8-12 weeks"
+              useCase="Remote teams, agencies, startups"
+              marketSize="$2.5B"
+            />
+            <MicroSaaSSolution
+              title="E-commerce Analytics Dashboard"
+              description="Advanced analytics for online stores"
+              features={[
+                "Real-time sales tracking",
+                "Customer behavior analysis",
+                "Inventory management",
+                "Revenue forecasting",
+                "Multi-store support",
+                "Custom reports"
+              ]}
+              price="$12k - $28k"
+              timeline="6-10 weeks"
+              useCase="E-commerce, retail, online stores"
+              marketSize="$1.8B"
+            />
+            <MicroSaaSSolution
+              title="Social Media Scheduler"
+              description="Multi-platform social media management"
+              features={[
+                "Content calendar",
+                "Auto-posting to all platforms",
+                "Analytics & insights",
+                "Team collaboration",
+                "Content library",
+                "Hashtag optimization"
+              ]}
+              price="$10k - $25k"
+              timeline="6-8 weeks"
+              useCase="Marketing agencies, influencers, brands"
+              marketSize="$3.2B"
+            />
+            <MicroSaaSSolution
+              title="Invoice & Payment Tracker"
+              description="Streamlined invoicing and payment management"
+              features={[
+                "Automated invoicing",
+                "Payment tracking",
+                "Client portal",
+                "Recurring billing",
+                "Tax calculations",
+                "Financial reporting"
+              ]}
+              price="$8k - $20k"
+              timeline="4-8 weeks"
+              useCase="Freelancers, consultants, small businesses"
+              marketSize="$1.2B"
+            />
+            <MicroSaaSSolution
+              title="Customer Support Ticketing"
+              description="Help desk and customer service platform"
+              features={[
+                "Ticket management system",
+                "Knowledge base",
+                "Live chat integration",
+                "Automated responses",
+                "Performance analytics",
+                "Multi-channel support"
+              ]}
+              price="$18k - $40k"
+              timeline="8-14 weeks"
+              useCase="SaaS companies, e-commerce, service businesses"
+              marketSize="$4.1B"
+            />
+            <MicroSaaSSolution
+              title="Lead Generation Platform"
+              description="Automated lead capture and nurturing"
+              features={[
+                "Lead capture forms",
+                "Email sequences",
+                "Lead scoring",
+                "CRM integration",
+                "Analytics dashboard",
+                "A/B testing"
+              ]}
+              price="$14k - $32k"
+              timeline="6-12 weeks"
+              useCase="B2B companies, agencies, consultants"
+              marketSize="$2.8B"
+            />
+            <MicroSaaSSolution
+              title="Employee Onboarding System"
+              description="Streamlined new hire experience"
+              features={[
+                "Digital forms & documents",
+                "Task checklists",
+                "Training modules",
+                "Progress tracking",
+                "Manager dashboard",
+                "Compliance tracking"
+              ]}
+              price="$16k - $38k"
+              timeline="8-12 weeks"
+              useCase="HR departments, growing companies"
+              marketSize="$1.5B"
+            />
+            <MicroSaaSSolution
+              title="Inventory Management System"
+              description="Smart inventory tracking and optimization"
+              features={[
+                "Real-time stock levels",
+                "Automated reordering",
+                "Barcode scanning",
+                "Supplier management",
+                "Cost tracking",
+                "Analytics & forecasting"
+              ]}
+              price="$20k - $45k"
+              timeline="10-16 weeks"
+              useCase="Retail, manufacturing, warehouses"
+              marketSize="$2.1B"
+            />
+            <MicroSaaSSolution
+              title="Event Management Platform"
+              description="Complete event planning and management solution"
+              features={[
+                "Event registration",
+                "Payment processing",
+                "Attendee management",
+                "Event analytics",
+                "Mobile check-in",
+                "Post-event surveys"
+              ]}
+              price="$22k - $50k"
+              timeline="10-18 weeks"
+              useCase="Event planners, venues, organizations"
+              marketSize="$1.9B"
+            />
+          </div>
         </div>
-      </section>
 
-      <section className="py-12 bg-blue-50 rounded-lg">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Build Your Micro SaaS?</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss your idea and create a custom solution that generates real revenue. 
-            Our team has launched 50+ successful micro SaaS products with combined revenue of $2M+.
+        {/* Core Features */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Core Features We Include</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <CoreFeature
+              title="Multi-tenant Architecture"
+              description="Secure, scalable architecture for multiple customers"
+              features={["Data isolation", "Custom branding", "Scalable infrastructure", "Security compliance"]}
+            />
+            <CoreFeature
+              title="Authentication & Security"
+              description="Enterprise-grade security and user management"
+              features={["SSO integration", "2FA support", "Role-based access", "Audit logs"]}
+            />
+            <CoreFeature
+              title="Payment & Billing"
+              description="Flexible billing and subscription management"
+              features={["Stripe integration", "Multiple plans", "Proration", "Dunning management"]}
+            />
+            <CoreFeature
+              title="Analytics & Reporting"
+              description="Comprehensive insights and business intelligence"
+              features={["Usage analytics", "Revenue tracking", "User behavior", "Custom reports"]}
+            />
+            <CoreFeature
+              title="API & Integrations"
+              description="Connect with existing tools and workflows"
+              features={["RESTful APIs", "Webhook support", "Third-party integrations", "Custom connectors"]}
+            />
+            <CoreFeature
+              title="Mobile & Responsive"
+              description="Native mobile apps and responsive web design"
+              features={["iOS & Android apps", "Progressive Web App", "Offline support", "Push notifications"]}
+            />
+          </div>
+        </div>
+
+        {/* Technology Stack */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Technology Stack</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <TechStack
+              category="Frontend"
+              technologies={["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]}
+            />
+            <TechStack
+              category="Backend"
+              technologies={["Node.js", "Python", "PostgreSQL", "Redis", "GraphQL"]}
+            />
+            <TechStack
+              category="Cloud & DevOps"
+              technologies={["AWS", "Docker", "Kubernetes", "Terraform", "CI/CD"]}
+            />
+            <TechStack
+              category="Integrations"
+              technologies={["Stripe", "SendGrid", "Auth0", "Zapier", "Webhooks"]}
+            />
+          </div>
+        </div>
+
+        {/* Pricing Plans */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Development Packages</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <MicroSaaSPricingPlan
+              name="MVP Sprint"
+              price="$8k - $20k"
+              duration="4-8 weeks"
+              features={[
+                "Core functionality",
+                "Basic authentication",
+                "Stripe billing",
+                "Admin dashboard",
+                "Mobile responsive",
+                "Basic analytics"
+              ]}
+              popular={false}
+            />
+            <MicroSaaSPricingPlan
+              name="Growth Platform"
+              price="$25k - $60k"
+              duration="8-16 weeks"
+              features={[
+                "Full feature set",
+                "Advanced analytics",
+                "API integrations",
+                "Mobile apps",
+                "Advanced billing",
+                "Customer support"
+              ]}
+              popular={true}
+            />
+            <MicroSaaSPricingPlan
+              name="Enterprise Scale"
+              price="$60k+"
+              duration="12+ weeks"
+              features={[
+                "Custom architecture",
+                "Advanced security",
+                "Multi-tenant",
+                "White-label options",
+                "SLA guarantees",
+                "Ongoing maintenance"
+              ]}
+              popular={false}
+            />
+          </div>
+        </div>
+
+        {/* Success Stories */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Success Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <SuccessStory
+              title="TaskFlow Pro"
+              description="Project management tool for remote teams"
+              metrics={["$50k MRR", "2,500+ users", "95% retention"]}
+              industry="SaaS"
+            />
+            <SuccessStory
+              title="AnalyticsHub"
+              description="E-commerce analytics dashboard"
+              metrics={["$35k MRR", "1,800+ stores", "40% growth"]}
+              industry="E-commerce"
+            />
+            <SuccessStory
+              title="SocialScheduler"
+              description="Multi-platform social media tool"
+              metrics={["$28k MRR", "3,200+ users", "85% satisfaction"]}
+              industry="Marketing"
+            />
+          </div>
+        </div>
+
+        {/* Contact CTA */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Ready to Build Your Micro SaaS?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's discuss your micro SaaS idea and create a profitable, scalable solution that generates recurring revenue.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Email kleber@ziontechgroup.com
+              Email Us
             </a>
           </div>
-          <p className="text-sm text-gray-500 mt-4">
-            Address: 364 E Main St STE 1008, Middletown DE 19709
-          </p>
+          <div className="mt-6 text-sm">
+            <p>364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </div>
+=======
+    <div className="animate-fade-in">
+      <section className="text-center py-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Micro SaaS Development
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          We design, build, launch and operate revenue-generating micro SaaS products end-to-end. 
+          From MVP to scale, we handle everything so you can focus on growth.
+        </p>
+      </section>
+
+      <section className="py-12">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Micro SaaS Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <MicroSaaSCard
+            title="AI-Powered Analytics Dashboard"
+            description="Real-time business intelligence with AI insights and predictive analytics"
+            features={["Custom dashboards", "AI-powered insights", "Real-time data", "Export capabilities", "Team collaboration"]}
+            price="$2,999/month"
+            icon="📊"
+          />
+          <MicroSaaSCard
+            title="Automated Social Media Manager"
+            description="AI-driven social media scheduling, content creation, and engagement optimization"
+            features={["AI content generation", "Multi-platform posting", "Analytics & insights", "Auto-engagement", "Brand voice training"]}
+            price="$1,999/month"
+            icon="📱"
+          />
+          <MicroSaaSCard
+            title="Smart Email Marketing Platform"
+            description="Advanced email automation with AI personalization and behavioral triggers"
+            features={["AI personalization", "Behavioral triggers", "A/B testing", "Advanced segmentation", "Deliverability optimization"]}
+            price="$1,499/month"
+            icon="📧"
+          />
+          <MicroSaaSCard
+            title="Project Management AI Assistant"
+            description="Intelligent project tracking with predictive timelines and resource optimization"
+            features={["AI task prioritization", "Predictive timelines", "Resource optimization", "Risk assessment", "Team productivity insights"]}
+            price="$2,499/month"
+            icon="📋"
+          />
+          <MicroSaaSCard
+            title="Customer Support Automation"
+            description="AI-powered chatbot and ticket management with sentiment analysis"
+            features={["AI chatbot", "Sentiment analysis", "Ticket routing", "Knowledge base", "Multi-language support"]}
+            price="$1,799/month"
+            icon="🤖"
+          />
+          <MicroSaaSCard
+            title="Financial Analytics & Forecasting"
+            description="AI-driven financial planning, budgeting, and cash flow forecasting"
+            features={["AI forecasting", "Budget optimization", "Cash flow analysis", "Investment insights", "Risk assessment"]}
+            price="$3,499/month"
+            icon="💰"
+          />
         </div>
       </section>
+
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Core Development Stack</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Item 
+            title="Core Features" 
+            details={[
+              "Multi-tenant architecture with data isolation",
+              "Advanced authentication (OAuth, SSO, MFA)",
+              "Stripe billing with subscription management",
+              "Real-time admin dashboard & analytics",
+              "Progressive web app (PWA) capabilities",
+              "API-first architecture with webhooks"
+            ]} 
+          />
+          <Item 
+            title="Growth & Marketing" 
+            details={[
+              "SEO-optimized marketing website",
+              "Content management system (CMS)",
+              "Email marketing automation",
+              "Referral & affiliate program",
+              "A/B testing framework",
+              "Conversion tracking & analytics"
+            ]} 
+          />
+          <Item 
+            title="Operations & Reliability" 
+            details={[
+              "CI/CD pipeline with automated testing",
+              "Comprehensive monitoring & alerting",
+              "Error tracking & performance metrics",
+              "Automated backups & disaster recovery",
+              "Security hardening & compliance",
+              "24/7 uptime monitoring"
+            ]} 
+          />
+        </div>
+      </section>
+
+      <Pricing />
+      <ContactSection />
     </div>
   );
 }
 
-function MicroSaaSCard({ 
-  title, 
-  description, 
-  features, 
-  pricing, 
-  marketSize, 
-  icon 
-}: { 
+function MicroSaaSCard({ title, description, features, price, icon }: { 
   title: string; 
   description: string; 
   features: string[]; 
-  pricing: string; 
-  marketSize: string; 
+  price: string; 
   icon: string; 
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
-      <div className="mb-4">
-        <div className="text-lg font-semibold text-blue-600 mb-1">{pricing}</div>
-        <div className="text-sm text-gray-500">{marketSize}</div>
-      </div>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
       <ul className="space-y-2">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center text-sm text-gray-600">
-            <span className="text-blue-500 mr-2">✓</span>
+            <span className="text-green-500 mr-2">✓</span>
             {feature}
           </li>
         ))}
@@ -543,32 +498,208 @@ function MicroSaaSCard({
   );
 }
 
-function FeatureCard({ title, description }: { title: string; description: string }) {
+function Item({ title, details }: { title: string; details: string[] }) {
   return (
-    <div className="text-center p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="bg-white border border-gray-200 rounded-xl p-6">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start text-gray-600">
+            <span className="text-blue-500 mr-2 mt-1">•</span>
+            {detail}
+          </li>
+        ))}
+      </ul>
+>>>>>>> main
     </div>
   );
 }
 
-function PricingCard({ 
-  name, 
-  price, 
-  duration, 
-  features, 
-  bestFor, 
-  popular = false 
-}: { 
-  name: string; 
-  price: string; 
-  duration: string; 
-  features: string[]; 
-  bestFor: string; 
-  popular?: boolean; 
+function MicroSaaSCategory({ title, icon, description, services }: {
+  title: string;
+  icon: string;
+  description: string;
+  services: string[];
 }) {
   return (
-    <div className={`relative bg-white border rounded-xl p-8 ${popular ? 'border-blue-500 shadow-lg' : 'border-gray-200'}`}>
+    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
+      <div className="text-3xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {services.map((service, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="text-blue-500 mr-2">•</span>
+            {service}
+          </li>
+        ))}
+      </ul>
+    <section className="py-12">
+      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Development Packages</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="MVP Sprint" 
+          price="$8k–$20k" 
+          duration="2–4 weeks"
+          features={[
+            "Core MVP features",
+            "Stripe billing integration", 
+            "Basic analytics dashboard",
+            "User authentication",
+            "Admin panel",
+            "Mobile responsive design"
+          ]} 
+        />
+        <Plan 
+          name="Growth Ready" 
+          price="$20k–$60k" 
+          duration="6–10 weeks"
+          features={[
+            "Full feature set",
+            "SEO-optimized marketing site",
+            "Email marketing automation",
+            "Advanced analytics",
+            "API documentation",
+            "Performance optimization"
+          ]} 
+        />
+        <Plan 
+          name="Enterprise Scale" 
+          price="$60k+" 
+          duration="12+ weeks"
+          features={[
+            "Custom enterprise features",
+            "Advanced security & compliance",
+            "Multi-region deployment",
+            "24/7 monitoring & support",
+            "SLA guarantees",
+            "Dedicated success manager"
+          ]} 
+        />
+      </div>
+    </section>
+  );
+}
+
+function Plan({ name, price, duration, features }: { 
+  name: string; 
+  price: string; 
+  duration: string;
+  features: string[]; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="text-green-500 mr-3">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+function MicroSaaSSolution({ title, description, features, price, timeline, useCase, marketSize }: {
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  timeline: string;
+  useCase: string;
+  marketSize: string;
+}) {
+  return (
+    <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="mb-4 flex flex-wrap gap-2">
+        <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+          {useCase}
+        </span>
+        <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+          {marketSize} market
+        </span>
+      </div>
+      <ul className="space-y-1 mb-4">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <div className="flex justify-between items-center pt-4 border-t border-gray-200">
+        <div>
+          <div className="font-bold text-blue-600">{price}</div>
+          <div className="text-sm text-gray-500">{timeline}</div>
+        </div>
+        <a
+          href="tel:+13024640950"
+          className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Get Quote
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function CoreFeature({ title, description, features }: {
+  title: string;
+  description: string;
+  features: string[];
+}) {
+  return (
+    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+      <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-1">
+        {features.map((feature, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="text-blue-500 mr-2">•</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function TechStack({ category, technologies }: { category: string; technologies: string[] }) {
+  return (
+    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+      <h3 className="font-bold text-gray-900 mb-4">{category}</h3>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((tech, index) => (
+          <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function MicroSaaSPricingPlan({ name, price, duration, features, popular }: {
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+  popular: boolean;
+}) {
+  return (
+    <div className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-blue-500' : 'border-gray-200'} relative`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
@@ -577,25 +708,80 @@ function PricingCard({
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
       <div className="text-3xl font-bold text-blue-600 mb-1">{price}</div>
       <div className="text-gray-500 mb-6">{duration}</div>
-      <ul className="space-y-3 mb-8">
+      <ul className="space-y-3">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center text-gray-600">
-            <span className="text-blue-500 mr-3">✓</span>
+            <span className="text-green-500 mr-3">✓</span>
             {feature}
           </li>
         ))}
       </ul>
-      <div className="text-sm text-gray-500 mb-4">Best for: {bestFor}</div>
       <a
         href="tel:+13024640950"
-        className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+        className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
           popular 
             ? 'bg-blue-600 text-white hover:bg-blue-700' 
-            : 'border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white'
+            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >
         Get Started
       </a>
     </div>
+  );
+}
+
+function SuccessStory({ title, description, metrics, industry }: {
+  title: string;
+  description: string;
+  metrics: string[];
+  industry: string;
+}) {
+  return (
+    <div className="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+      <h3 className="font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="mb-4">
+        <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+          {industry}
+        </span>
+      </div>
+      <div className="space-y-1">
+        {metrics.map((metric, index) => (
+          <div key={index} className="text-sm font-semibold text-green-600">
+            {metric}
+          </div>
+        ))}
+      </div>
+    </div>
+function ContactSection() {
+  return (
+    <section className="py-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg">
+      <div className="text-center">
+        <h3 className="text-3xl font-bold text-gray-900 mb-4">
+          Ready to Build Your Micro SaaS?
+        </h3>
+        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss your idea and create a custom solution that drives real revenue. 
+          Our team has launched 50+ successful micro SaaS products.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
+      </div>
+    </section>
   );
 }

@@ -1,248 +1,202 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import Footer from '../components/Footer';
-import { GradientHeading } from '../components/GradientHeading';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Badge } from '../components/ui/badge';
-import { Check, X, Star } from 'lucide-react';
+import Button from '../components/Button';
+import Card from '../components/Card';
+import Modal from '../components/Modal';
 
 const Pricing: React.FC = () => {
-  const [isAnnual, setIsAnnual] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const plans = [
     {
       name: 'Starter',
+      price: '$99',
+      period: '/month',
       description: 'Perfect for small businesses getting started',
-      monthlyPrice: 99,
-      annualPrice: 79,
       features: [
         'Up to 5 team members',
-        'Basic AI features',
+        'Basic AI services',
         'Email support',
-        '5GB storage',
-        'Basic analytics',
         'Standard security',
+        '1GB storage'
       ],
-      color: 'from-gray-500 to-gray-600',
-      popular: false,
+      popular: false
     },
     {
       name: 'Professional',
+      price: '$299',
+      period: '/month',
       description: 'Ideal for growing businesses',
-      monthlyPrice: 199,
-      annualPrice: 159,
       features: [
         'Up to 25 team members',
-        'Advanced AI features',
+        'Advanced AI services',
         'Priority support',
-        '50GB storage',
-        'Advanced analytics',
         'Enhanced security',
-        'API access',
-        'Custom integrations',
+        '10GB storage',
+        'Custom integrations'
       ],
-      color: 'from-blue-500 to-blue-600',
-      popular: true,
+      popular: true
     },
     {
       name: 'Enterprise',
-      description: 'For large organizations with complex needs',
-      monthlyPrice: 499,
-      annualPrice: 399,
+      price: '$999',
+      period: '/month',
+      description: 'For large organizations',
       features: [
         'Unlimited team members',
-        'Premium AI features',
-        '24/7 phone support',
-        'Unlimited storage',
-        'Custom analytics',
+        'Full AI suite',
+        '24/7 dedicated support',
         'Enterprise security',
-        'Full API access',
-        'Custom integrations',
-        'Dedicated account manager',
-        'SLA guarantee',
+        'Unlimited storage',
+        'Custom development',
+        'SLA guarantee'
       ],
-      color: 'from-purple-500 to-purple-600',
-      popular: false,
-    },
+      popular: false
+    }
   ];
 
-  const faqs = [
-    {
-      question: 'Can I change plans anytime?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.',
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.',
-    },
-    {
-      question: 'Is there a free trial?',
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required.',
-    },
-    {
-      question: 'What happens if I exceed my limits?',
-      answer: 'We\'ll notify you before you reach your limits and offer options to upgrade or purchase additional capacity.',
-    },
-  ];
+  const handleSelectPlan = (planName: string) => {
+    setSelectedPlan(planName);
+    setIsModalOpen(true);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <Header onMenuClick={() => {}} />
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <GradientHeading text="Simple, Transparent Pricing" />
-            <p className="text-xl text-gray-600 mt-6 max-w-3xl mx-auto">
-              Choose the perfect plan for your business. All plans include our core features 
-              with no hidden fees or surprises.
-            </p>
-          </div>
-        </section>
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+            Pricing Plans
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+            Choose the perfect plan for your business needs. All plans include our core 
+            AI and technology services with flexible scaling options.
+          </p>
+        </div>
 
-        {/* Pricing Toggle */}
-        <section className="py-8 px-4">
-          <div className="container mx-auto text-center">
-            <div className="inline-flex items-center bg-gray-200 rounded-lg p-1">
-              <button
-                onClick={() => setIsAnnual(false)}
-                className={`px-6 py-2 rounded-md transition-colors ${
-                  !isAnnual
-                    ? 'bg-white text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {plans.map((plan, index) => (
+            <div
+              key={plan.name}
+              className={`relative bg-slate-800 rounded-lg shadow-lg p-8 border-2 transition-all duration-300 hover:scale-105 ${
+                plan.popular 
+                  ? 'border-blue-500 ring-2 ring-blue-500 ring-opacity-50' 
+                  : 'border-slate-700 hover:border-blue-400'
+              }`}
+            >
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+              )}
+              
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                <p className="text-gray-400 mb-4">{plan.description}</p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className="text-gray-400 ml-1">{plan.period}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {plan.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-gray-300">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <Button
+                variant={plan.popular ? 'primary' : 'outline'}
+                size="large"
+                className="w-full"
+                onClick={() => handleSelectPlan(plan.name)}
               >
-                Monthly
-              </button>
-              <button
-                onClick={() => setIsAnnual(true)}
-                className={`px-6 py-2 rounded-md transition-colors ${
-                  isAnnual
-                    ? 'bg-white text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Annual
-                <Badge className="ml-2 bg-green-500 text-white">Save 20%</Badge>
-              </button>
+                Choose {plan.name}
+              </Button>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
 
-        {/* Pricing Cards */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {plans.map((plan, index) => (
-                <Card
-                  key={index}
-                  className={`relative ${
-                    plan.popular
-                      ? 'ring-2 ring-blue-500 shadow-xl scale-105'
-                      : 'hover:shadow-lg'
-                  } transition-all duration-200`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <Badge className="bg-blue-500 text-white px-4 py-1">
-                        <Star className="h-3 w-3 mr-1" />
-                        Most Popular
-                      </Badge>
-                    </div>
-                  )}
-                  
-                  <CardHeader className="text-center pb-8">
-                    <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                    <p className="text-gray-600 mt-2">{plan.description}</p>
-                    <div className="mt-6">
-                      <span className="text-4xl font-bold text-gray-900">
-                        ${isAnnual ? plan.annualPrice : plan.monthlyPrice}
-                      </span>
-                      <span className="text-gray-600 ml-2">
-                        /{isAnnual ? 'year' : 'month'}
-                      </span>
-                    </div>
-                    {isAnnual && (
-                      <p className="text-sm text-green-600 mt-2">
-                        Save ${(plan.monthlyPrice - plan.annualPrice) * 12} per year
-                      </p>
-                    )}
-                  </CardHeader>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-8">Need a Custom Solution?</h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            We understand that every business is unique. Contact us to discuss 
+            custom pricing and solutions tailored to your specific requirements.
+          </p>
+          <Button variant="outline" size="large" onClick={() => window.location.href = '/contact'}>
+            Contact Sales
+          </Button>
+        </div>
 
-                  <CardContent className="pt-0">
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
-                          <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <Button
-                      className={`w-full ${
-                        plan.popular
-                          ? 'bg-blue-600 hover:bg-blue-700'
-                          : 'bg-gray-900 hover:bg-gray-800'
-                      }`}
-                    >
-                      {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-xl text-gray-600">
-                Everything you need to know about our pricing
+        <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+          <h2 className="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Can I change plans anytime?</h3>
+              <p className="text-gray-300">
+                Yes, you can upgrade or downgrade your plan at any time. Changes take effect 
+                immediately and we'll prorate any billing differences.
               </p>
             </div>
-
-            <div className="max-w-3xl mx-auto space-y-6">
-              {faqs.map((faq, index) => (
-                <Card key={index} className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-600">{faq.answer}</p>
-                </Card>
-              ))}
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Is there a free trial?</h3>
+              <p className="text-gray-300">
+                We offer a 14-day free trial for all plans. No credit card required to get started.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">What payment methods do you accept?</h3>
+              <p className="text-gray-300">
+                We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Do you offer discounts?</h3>
+              <p className="text-gray-300">
+                Yes, we offer annual billing discounts and special pricing for non-profits and educational institutions.
+              </p>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Join thousands of businesses already using our platform.
-            </p>
-            <div className="space-x-4">
-              <Button size="lg" variant="secondary">
-                Start Free Trial
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
-                Contact Sales
-              </Button>
-            </div>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={`Choose ${selectedPlan} Plan`}
+      >
+        <div className="text-center">
+          <p className="text-gray-600 mb-6">
+            You're about to select the {selectedPlan} plan. This will redirect you to our secure checkout process.
+          </p>
+          <div className="flex space-x-4">
+            <Button
+              variant="outline"
+              onClick={() => setIsModalOpen(false)}
+              className="flex-1"
+            >
+              Cancel
+            </Button>
+            <Button
+              variant="primary"
+              onClick={() => {
+                setIsModalOpen(false);
+                // In a real app, this would redirect to checkout
+                alert('Redirecting to checkout...');
+              }}
+              className="flex-1"
+            >
+              Continue to Checkout
+            </Button>
           </div>
-        </section>
-      </main>
-
-      <Footer />
+        </div>
+      </Modal>
     </div>
   );
 };
