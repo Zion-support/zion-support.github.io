@@ -6,317 +6,16 @@ export const metadata = {
   keywords: 'blockchain development, DeFi, NFTs, smart contracts, Web3, cryptocurrency, dApps, tokenization'
 };
 
-<<<<<<< HEAD
-export default function BlockchainSolutionsPage() { 
-  return ( 
-    <div className="animate-fade-in">
-      <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Blockchain Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <BlockchainServiceCard
-            title="DeFi Protocol Development"
-            description="Decentralized finance protocols with yield farming, liquidity pools, and automated market makers"
-            features={["Smart contract development", "Yield farming mechanisms", "Liquidity pool management", "Governance tokens", "Security auditing"]}
-            price="$25k–$100k"
-            icon="🏦"
-          />
-          <BlockchainServiceCard
-            title="NFT Marketplace & Collections"
-            description="Complete NFT platforms with minting, trading, and marketplace functionality"
-            features={["NFT minting contracts", "Marketplace development", "Royalty management", "Metadata optimization", "IPFS integration"]}
-            price="$15k–$60k"
-            icon="🎨"
-          />
-          <BlockchainServiceCard
-            title="Web3 Applications"
-            description="Decentralized applications with wallet integration and blockchain connectivity"
-            features={["Wallet integration", "Smart contract interaction", "Token management", "User authentication", "Transaction handling"]}
-            price="$20k–$80k"
-            icon="🌐"
-          />
-          <BlockchainServiceCard
-            title="Smart Contract Auditing"
-            description="Comprehensive security auditing and optimization of smart contracts"
-            features={["Security vulnerability analysis", "Gas optimization", "Code review", "Test coverage", "Compliance checking"]}
-            price="$5k–$25k"
-            icon="🔍"
-          />
-          <BlockchainServiceCard
-            title="Token Development & ICO"
-            description="Custom token creation and initial coin offering management"
-            features={["ERC-20/ERC-721 tokens", "Tokenomics design", "ICO platform", "Vesting mechanisms", "Distribution management"]}
-            price="$10k–$40k"
-            icon="🪙"
-          />
-          <BlockchainServiceCard
-            title="Cross-Chain Solutions"
-            description="Interoperability solutions for multi-blockchain connectivity"
-            features={["Bridge development", "Cross-chain swaps", "Multi-chain wallets", "Interoperability protocols", "Asset migration"]}
-            price="$30k–$120k"
-            icon="🔗"
-          />
-          <BlockchainServiceCard
-            title="DAO Development & Governance"
-            description="Decentralized autonomous organization platforms with governance mechanisms"
-            features={["Governance token design", "Voting mechanisms", "Treasury management", "Proposal systems", "Member management", "Transparency tools"]}
-            price="$20k–$80k"
-            icon="🗳️"
-          />
-          <BlockchainServiceCard
-            title="Metaverse & Virtual Worlds"
-            description="Blockchain-powered virtual worlds and metaverse platforms"
-            features={["Virtual land NFTs", "Avatar systems", "In-world economies", "Social features", "Gaming mechanics", "VR/AR integration"]}
-            price="$40k–$150k"
-            icon="🌍"
-          />
-          <BlockchainServiceCard
-            title="Blockchain Gaming & Play-to-Earn"
-            description="Gaming platforms with blockchain integration and tokenized rewards"
-            features={["Game development", "NFT integration", "Token economics", "Marketplace features", "Guild systems", "Tournament management"]}
-            price="$30k–$120k"
-            icon="🎮"
-          />
-          <BlockchainServiceCard
-            title="Supply Chain & Traceability"
-            description="Blockchain solutions for supply chain transparency and product traceability"
-            features={["Product tracking", "Quality verification", "Authenticity proof", "Compliance reporting", "Stakeholder management", "IoT integration"]}
-            price="$25k–$90k"
-            icon="📦"
-          />
-          <BlockchainServiceCard
-            title="Identity & KYC Solutions"
-            description="Decentralized identity management and KYC/AML compliance systems"
-            features={["Digital identity", "KYC verification", "Privacy protection", "Compliance reporting", "Cross-platform integration", "Biometric authentication"]}
-            price="$20k–$70k"
-            icon="🆔"
-          />
-          <BlockchainServiceCard
-            title="Real Estate Tokenization"
-            description="Property tokenization and fractional ownership platforms"
-            features={["Property tokenization", "Fractional ownership", "Rental income distribution", "Property management", "Legal compliance", "Marketplace integration"]}
-            price="$35k–$100k"
-            icon="🏠"
-          />
-          <BlockchainServiceCard
-            title="Carbon Credit & ESG Trading"
-            description="Blockchain platforms for carbon credit trading and ESG compliance"
-            features={["Carbon credit tokenization", "ESG reporting", "Trading mechanisms", "Verification systems", "Compliance tracking", "Impact measurement"]}
-            price="$30k–$80k"
-            icon="🌱"
-          />
-          <BlockchainServiceCard
-            title="Insurance & Risk Management"
-            description="Decentralized insurance protocols and risk management solutions"
-            features={["Smart insurance contracts", "Risk assessment", "Claims processing", "Payout automation", "Reinsurance protocols", "Parametric insurance"]}
-            price="$25k–$90k"
-            icon="🛡️"
-          />
-          <BlockchainServiceCard
-            title="Healthcare Data Management"
-            description="Secure healthcare data sharing and patient record management"
-            features={["Patient data privacy", "Interoperability", "Consent management", "Data sharing protocols", "Compliance frameworks", "AI integration"]}
-            price="$40k–$120k"
-            icon="🏥"
-          />
-          <BlockchainServiceCard
-            title="Energy Trading & Grid Management"
-            description="Peer-to-peer energy trading and smart grid management systems"
-            features={["Energy tokenization", "P2P trading", "Smart contracts", "Grid optimization", "Renewable energy tracking", "Billing automation"]}
-            price="$35k–$100k"
-            icon="⚡"
-          />
-          <BlockchainServiceCard
-            title="Voting & Governance Systems"
-            description="Secure and transparent voting systems for organizations and governments"
-            features={["Secure voting", "Identity verification", "Result transparency", "Audit trails", "Multi-level governance", "Mobile integration"]}
-            price="$20k–$60k"
-            icon="🗳️"
-          />
-          <BlockchainServiceCard
-            title="Intellectual Property & Patents"
-            description="IP protection and patent management on blockchain"
-            features={["IP registration", "Patent tracking", "Royalty distribution", "Dispute resolution", "Licensing management", "Prior art verification"]}
-            price="$25k–$70k"
-            icon="💡"
-          />
-          <BlockchainServiceCard
-            title="Gaming Assets & Marketplaces"
-            description="Cross-game asset trading and gaming NFT marketplaces"
-            features={["Asset interoperability", "Cross-game trading", "Rarity systems", "Marketplace features", "Guild management", "Tournament rewards"]}
-            price="$20k–$80k"
-            icon="🎯"
-          />
-          <BlockchainServiceCard
-            title="Decentralized Storage Solutions"
-            description="Distributed storage networks and file sharing protocols"
-            features={["Distributed storage", "File encryption", "Access control", "Redundancy management", "Cost optimization", "API integration"]}
-            price="$15k–$50k"
-            icon="💾"
-          />
-          <BlockchainServiceCard
-            title="Prediction Markets & Oracles"
-            description="Decentralized prediction markets and oracle data feeds"
-            features={["Market creation", "Oracle integration", "Liquidity management", "Dispute resolution", "Data verification", "API services"]}
-            price="$25k–$80k"
-            icon="🔮"
-          />
-          <BlockchainServiceCard
-            title="Social Media & Content Platforms"
-            description="Decentralized social media and content monetization platforms"
-            features={["Content monetization", "Creator rewards", "Community governance", "Censorship resistance", "Data ownership", "Token economics"]}
-            price="$30k–$100k"
-            icon="📱"
-          />
-          <BlockchainServiceCard
-            title="Lending & Borrowing Protocols"
-            description="Decentralized lending platforms with automated risk management"
-            features={["Collateral management", "Interest rate algorithms", "Liquidation mechanisms", "Risk assessment", "Governance tokens", "Multi-asset support"]}
-            price="$25k–$90k"
-            icon="💰"
-          />
-          <BlockchainServiceCard
-            title="Stablecoin Development"
-            description="Custom stablecoin creation with price stability mechanisms"
-            features={["Price stability", "Collateral management", "Governance systems", "Audit compliance", "Multi-chain deployment", "Integration APIs"]}
-            price="$20k–$60k"
-            icon="💎"
-          />
-          <BlockchainServiceCard
-            title="Blockchain Analytics & Monitoring"
-            description="Comprehensive blockchain data analysis and monitoring tools"
-            features={["Transaction analysis", "Address tracking", "Risk scoring", "Compliance monitoring", "Real-time alerts", "Custom dashboards"]}
-            price="$15k–$50k"
-            icon="📊"
-          />
-        </div>
-
-        {/* Core Blockchain Services */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Core Blockchain Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <BlockchainServiceCard 
-              title="Smart Contract Development" 
-              description="Secure, audited smart contracts for various blockchain platforms"
-              features={["Solidity development", "Security audits", "Gas optimization", "Multi-chain support"]}
-              price="Starting at $15k"
-              icon="📜"
-            />
-            <BlockchainServiceCard 
-              title="DeFi Protocols" 
-              description="Decentralized finance applications and yield farming platforms"
-              features={["DEX development", "Lending protocols", "Yield farming", "Liquidity pools"]}
-              price="Starting at $25k"
-              icon="💰"
-            />
-            <BlockchainServiceCard 
-              title="NFT Marketplaces" 
-              description="Complete NFT platforms with minting, trading, and auction features"
-              features={["NFT minting", "Marketplace UI", "Royalty system", "Metadata management"]}
-              price="Starting at $20k"
-              icon="🎨"
-            />
-            <BlockchainServiceCard 
-              title="Web3 Applications" 
-              description="Decentralized applications with wallet integration and blockchain connectivity"
-              features={["Wallet integration", "MetaMask support", "IPFS storage", "User authentication"]}
-              price="Starting at $18k"
-              icon="🌐"
-            />
-            <BlockchainServiceCard 
-              title="Token Development" 
-              description="Custom token creation and tokenomics design"
-              features={["ERC-20/ERC-721", "Tokenomics design", "Vesting contracts", "Multi-signature wallets"]}
-              price="Starting at $12k"
-              icon="🪙"
-            />
-            <BlockchainServiceCard 
-              title="Blockchain Integration" 
-              description="Integrate blockchain functionality into existing applications"
-              features={["API development", "Node management", "Transaction handling", "Event monitoring"]}
-              price="Starting at $10k"
-              icon="🔗"
-            />
-          </div>
-        </div>
-
-        {/* Specialized Blockchain Solutions */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Specialized Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <SpecializedBlockchainCard 
-              title="Enterprise Blockchain" 
-              description="Private blockchain solutions for enterprise use cases and supply chain management"
-              features={["Hyperledger Fabric", "Consortium networks", "Supply chain tracking", "Data privacy"]}
-              price="$50k - $200k"
-              icon="🏢"
-            />
-            <SpecializedBlockchainCard 
-              title="Gaming & Metaverse" 
-              description="Blockchain gaming platforms and virtual world applications"
-              features={["Play-to-earn games", "Virtual assets", "Cross-game compatibility", "VR integration"]}
-              price="$40k - $150k"
-              icon="🎮"
-            />
-            <SpecializedBlockchainCard 
-              title="Identity & Authentication" 
-              description="Decentralized identity solutions and KYC/AML compliance"
-              features={["DID protocols", "Zero-knowledge proofs", "KYC integration", "Privacy preservation"]}
-              price="$35k - $120k"
-              icon="🆔"
-            />
-            <SpecializedBlockchainCard 
-              title="Cross-Chain Solutions" 
-              description="Interoperability solutions and cross-chain bridge development"
-              features={["Bridge protocols", "Cross-chain swaps", "Asset migration", "Multi-chain DApps"]}
-              price="$60k - $250k"
-              icon="🌉"
-            />
-          </div>
-        </div>
-
-        {/* Technical Stack */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Technical Expertise</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <TechStackCard 
-              title="Blockchain Platforms" 
-              details={["Ethereum", "Polygon", "BSC", "Solana", "Avalanche", "Arbitrum"]} 
-            />
-            <TechStackCard 
-              title="Development Tools" 
-              details={["Solidity", "Web3.js", "Ethers.js", "Hardhat", "Truffle", "OpenZeppelin"]} 
-            />
-            <TechStackCard 
-              title="Infrastructure" 
-              details={["Node.js", "IPFS", "The Graph", "Alchemy", "Infura", "AWS/GCP"]} 
-            />
-          </div>
-        </div>
-
-        <Pricing />
-        <ContactSection />
-      </section>
-    </div>
-  ); 
-} 
-
-function BlockchainServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-=======
 interface BlockchainServiceProps {
   title: string;
   description: string;
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-  price: string;
   features: string[];
-  benefits: string[];
+  price: string;
   icon: string;
   href: string;
 }
 
-function BlockchainService({ title, description, price, features, benefits, icon, href }: BlockchainServiceProps) {
+function BlockchainServiceCard({ title, description, features, price, icon, href }: BlockchainServiceProps) {
   return (
     <a
       href={href}
@@ -334,181 +33,139 @@ function BlockchainService({ title, description, price, features, benefits, icon
         <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
         <ul className="space-y-1">
           {features.map((feature, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center">
-              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-              {feature}
+            <li key={index} className="flex items-start">
+              <span className="text-blue-500 mr-2">•</span>
+              <span className="text-sm text-gray-600">{feature}</span>
             </li>
           ))}
         </ul>
-      </div>
-      <div>
-        <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
-        <div className="flex flex-wrap gap-1">
-          {benefits.map((benefit, index) => (
-            <span key={index} className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">
-              {benefit}
-            </span>
-          ))}
-        </div>
       </div>
     </a>
   );
 }
 
 export default function BlockchainSolutionsPage() {
-  return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-lg">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          Blockchain Solutions
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security. Build the future of finance with our blockchain expertise.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Solutions Consultation"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Free Consultation
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-        </div>
-      </section>
+  const services = [
+    {
+      title: "DeFi Protocol Development",
+      description: "Decentralized finance protocols with yield farming, liquidity pools, and automated market makers",
+      features: [
+        "Smart contract development",
+        "Yield farming mechanisms", 
+        "Liquidity pool management",
+        "Governance tokens",
+        "Security auditing"
+      ],
+      price: "$25k–$100k",
+      icon: "🏦",
+      href: "/contact"
+    },
+    {
+      title: "NFT Marketplace",
+      description: "Complete NFT marketplace solutions with minting, trading, and auction capabilities",
+      features: [
+        "NFT minting contracts",
+        "Marketplace functionality",
+        "Auction mechanisms",
+        "Royalty management",
+        "Metadata storage"
+      ],
+      price: "$15k–$50k",
+      icon: "🎨",
+      href: "/contact"
+    },
+    {
+      title: "Smart Contract Development",
+      description: "Custom smart contracts for various use cases with comprehensive testing and auditing",
+      features: [
+        "Custom contract logic",
+        "Gas optimization",
+        "Security testing",
+        "Upgradeable contracts",
+        "Documentation"
+      ],
+      price: "$10k–$40k",
+      icon: "📜",
+      href: "/contact"
+    },
+    {
+      title: "Token Development",
+      description: "ERC-20, ERC-721, and ERC-1155 token development with full ecosystem support",
+      features: [
+        "Token standards compliance",
+        "Custom tokenomics",
+        "Vesting mechanisms",
+        "Multi-signature wallets",
+        "Token distribution"
+      ],
+      price: "$5k–$20k",
+      icon: "🪙",
+      href: "/contact"
+    },
+    {
+      title: "Web3 Integration",
+      description: "Integrate Web3 functionality into existing applications and websites",
+      features: [
+        "Wallet integration",
+        "MetaMask support",
+        "Transaction handling",
+        "Event listening",
+        "Error handling"
+      ],
+      price: "$8k–$25k",
+      icon: "🌐",
+      href: "/contact"
+    },
+    {
+      title: "Blockchain Consulting",
+      description: "Strategic blockchain consulting and architecture design for enterprise solutions",
+      features: [
+        "Architecture design",
+        "Technology selection",
+        "Security assessment",
+        "Implementation planning",
+        "Team training"
+      ],
+      price: "$5k–$15k",
+      icon: "💡",
+      href: "/contact"
+    }
+  ];
 
-      {/* Blockchain Services Grid */}
-      <section className="py-12">
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Blockchain Services</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive blockchain solutions for modern businesses and innovative projects.
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Blockchain Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security. 
+            Build the future of finance with our blockchain expertise.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <BlockchainService
-            title="DeFi Protocol Development"
-            description="Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions"
-            price="Starting at $50,000"
-            features={[
-              "DEX development",
-              "Lending protocols",
-              "Yield farming",
-              "Liquidity pools",
-              "Governance tokens"
-            ]}
-            benefits={["Decentralization", "Transparency", "Accessibility", "Innovation"]}
-            icon="🏦"
-            href="/services/defi-protocols"
-          />
-          <BlockchainService
-            title="NFT Marketplace"
-            description="Complete NFT marketplace development with minting, trading, and auction capabilities"
-            price="Starting at $25,000"
-            features={[
-              "NFT minting",
-              "Marketplace trading",
-              "Auction system",
-              "Royalty management",
-              "Multi-chain support"
-            ]}
-            benefits={["Digital Ownership", "Creator Economy", "New Revenue", "Community Building"]}
-            icon="🎨"
-            href="/services/nft-marketplace"
-          />
-          <BlockchainService
-            title="Smart Contract Development"
-            description="Secure smart contracts for various use cases including tokens, governance, and automation"
-            price="Starting at $15,000"
-            features={[
-              "Token contracts",
-              "Governance systems",
-              "Automation protocols",
-              "Security audits",
-              "Gas optimization"
-            ]}
-            benefits={["Automation", "Trust", "Efficiency", "Cost Reduction"]}
-            icon="📜"
-            href="/services/smart-contracts"
-          />
-          <BlockchainService
-            title="Web3 Applications"
-            description="Decentralized applications (dApps) with wallet integration and blockchain connectivity"
-            price="Starting at $30,000"
-            features={[
-              "Wallet integration",
-              "Blockchain connectivity",
-              "User authentication",
-              "Transaction management",
-              "Real-time updates"
-            ]}
-            benefits={["User Control", "Interoperability", "Innovation", "Future-Proof"]}
-            icon="🌐"
-            href="/services/web3-applications"
-          />
-          <BlockchainService
-            title="Token Development"
-            description="Custom token creation including utility tokens, security tokens, and stablecoins"
-            price="Starting at $10,000"
-            features={[
-              "ERC-20/721/1155 tokens",
-              "Security tokens",
-              "Stablecoins",
-              "Token economics",
-              "Compliance features"
-            ]}
-            benefits={["Digital Assets", "Liquidity", "Utility", "Investment"]}
-            icon="🪙"
-            href="/services/token-development"
-          />
-          <BlockchainService
-            title="Blockchain Consulting"
-            description="Strategic blockchain consulting and implementation guidance for enterprise adoption"
-            price="Starting at $5,000"
-            features={[
-              "Strategy development",
-              "Technology selection",
-              "Implementation planning",
-              "Compliance guidance",
-              "Training & support"
-            ]}
-            benefits={["Expert Guidance", "Risk Mitigation", "Cost Optimization", "Innovation"]}
-            icon="💼"
-            href="/services/blockchain-consulting"
-          />
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {services.map((service, index) => (
+            <BlockchainServiceCard key={index} {...service} />
+          ))}
         </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Build the Future with Blockchain?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss how blockchain technology can transform your business and create new opportunities.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Build on Blockchain?
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Let's discuss your blockchain project and bring your vision to life
+          </p>
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=Blockchain Project Inquiry"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            href="/contact"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-200"
           >
-            Start Your Blockchain Journey
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Call +1 302 464 0950
+            Get Started Today
           </a>
         </div>
-        <div className="mt-8 text-sm">
-          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-          <p>Email: kleber@ziontechgroup.com</p>
-        </div>
-      </section>
+      </div>
     </div>
   );
 }
