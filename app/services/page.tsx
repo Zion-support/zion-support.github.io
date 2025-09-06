@@ -1,44 +1,8 @@
 import Link from "next/link";
-<<<<<<< HEAD
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-
-};
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate - fade - in">;
-      {" "}
-      <div className="text - center mb - 16">;
-        {" "}
-        <h1 className="text - 4xl font - bold text - gray - 900 mb - 6">;
-          Our Services;
-        </h1>{" "}
-        <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-          {" "}
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 16">;
-        {" "}
-        <ServiceCard;
-          href="/services / micro - saas";
-          title="Micro SaaS";
-          description="End - to - end product development with billing, auth, and analytics";
-          bullets={[;
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
-          ]}
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-=======
 
 export const metadata = {
   title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
   description: "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 };
 
 export default function ServicesOverviewPage() {
@@ -80,44 +44,16 @@ export default function ServicesOverviewPage() {
         </div>
       </div>
 
-<<<<<<< HEAD
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
-};
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
-      {" "}
-      <div className="text-center mb-16">
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>{" "}
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          {" "}
-          Product engineering and AI-first consulting to deliver measurable
-          outcomes for your business.{" "}
-        </p>{" "}
-      </div>{" "}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
+      {/* Core Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS Solutions"
           description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
           bullets={[
-<<<<<<< HEAD
-            "Foundational architecture",
-            "Billing + subscriptions", 
-            "Growth analytics"
-=======
             "15+ specialized micro SaaS tools",
             "End-to-end development & deployment",
             "Revenue optimization & scaling"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
           ]}
           icon="🚀"
           pricing="From $2,999/month"
@@ -125,28 +61,18 @@ export default function ServicesOverviewPage() {
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-<<<<<<< HEAD
-          description="LLM applications, RAG systems, and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-=======
           description="Advanced AI solutions including LLM applications, RAG systems, and enterprise AI platforms"
           bullets={[
             "15+ AI service categories",
             "Custom LLM development",
             "Enterprise AI integration"
           ]}
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
           icon="🤖"
           pricing="From $5,000/project"
         />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
-<<<<<<< HEAD
-          description="Cloud migration, DevOps, and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
-=======
           description="Comprehensive IT solutions including cloud migration, DevOps, security, and infrastructure management"
           bullets={[
             "15+ IT service categories",
@@ -191,13 +117,16 @@ export default function ServicesOverviewPage() {
           ]}
           icon="🎓"
           pricing="From $30,000/project"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         />
         <ServiceCard
           href="/services/blockchain-solutions"
           title="Blockchain Solutions"
           description="DeFi, NFTs, smart contracts, and Web3 applications with enterprise-grade security"
-          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
+          bullets={[
+            "Smart contracts development",
+            "DeFi protocols & DApps",
+            "Web3 integration & consulting"
+          ]}
           icon="⛓️"
           pricing="From $15,000/project"
         />
@@ -205,54 +134,189 @@ export default function ServicesOverviewPage() {
           href="/services/automation-solutions"
           title="Automation Solutions"
           description="RPA, workflow automation, and AI-powered automation for maximum efficiency"
-          bullets={["Process automation", "Workflow optimization", "AI automation"]}
+          bullets={[
+            "Process automation",
+            "Workflow optimization",
+            "AI-powered automation"
+          ]}
           icon="⚡"
-<<<<<<< HEAD
-=======
           pricing="From $2,500/month"
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
-<<<<<<< HEAD
-      <CTA />
-          description="Business intelligence, predictive analytics, and data engineering"
-          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
-          icon="📊"
-        />
-        <ServiceCard
-          href="/services/digital-transformation"
-          title="Digital Transformation"
-          description="Complete digital transformation solutions and legacy modernization"
-          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
-          icon="🔄"
-        />
-        <ServiceCard
-          href="/services/cybersecurity"
-          title="Cybersecurity"
-          description="Comprehensive security solutions and compliance management"
-          bullets={["Security assessment", "Threat detection", "Compliance"]}
-          icon="🔒"
-        />
-        <ServiceCard
-          href="/services/cloud-services"
-          title="Cloud Services"
-          description="Cloud migration, architecture, and optimization solutions"
-          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
-          icon="☁️"
-        />
-      </div>
-      <CTA />{" "}
-=======
           description="Business intelligence, predictive analytics, and data engineering for data-driven decisions"
-          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
+          bullets={[
+            "BI dashboards",
+            "Predictive analytics",
+            "Data engineering"
+          ]}
           icon="📊"
           pricing="From $4,000/month"
         />
       </div>
       
-      {/* Statistics Section */}
+      {/* Additional Services Section */}
+      <section className="py-16 bg-gray-50 rounded-xl mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Specialized Solutions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Industry-specific solutions and cutting-edge technologies to address unique business challenges.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <ServiceCard
+              href="/services/ai-chatbot"
+              title="AI Chatbot Platform"
+              description="Intelligent conversational AI for customer support and engagement"
+              bullets={[
+                "Natural language processing",
+                "Multi-channel integration",
+                "Custom training & deployment"
+              ]}
+              icon="💬"
+              pricing="From $1,500/month"
+            />
+            <ServiceCard
+              href="/services/ai-content-generation"
+              title="AI Content Generation"
+              description="Automated content creation for marketing, blogs, and social media"
+              bullets={[
+                "SEO-optimized content",
+                "Multi-language support",
+                "Brand voice customization"
+              ]}
+              icon="✍️"
+              pricing="From $800/month"
+            />
+            <ServiceCard
+              href="/services/ai-analytics-dashboard"
+              title="AI Analytics Dashboard"
+              description="Real-time business intelligence with predictive insights"
+              bullets={[
+                "Real-time data visualization",
+                "Predictive analytics",
+                "Custom KPI tracking"
+              ]}
+              icon="📈"
+              pricing="From $2,200/month"
+            />
+            <ServiceCard
+              href="/services/ai-project-management"
+              title="AI Project Management"
+              description="Intelligent project tracking and resource optimization"
+              bullets={[
+                "Smart task prioritization",
+                "Resource allocation AI",
+                "Progress prediction"
+              ]}
+              icon="📋"
+              pricing="From $1,800/month"
+            />
+            <ServiceCard
+              href="/services/ai-customer-support"
+              title="AI Customer Support"
+              description="Automated customer service with human-like interactions"
+              bullets={[
+                "24/7 automated support",
+                "Sentiment analysis",
+                "Escalation management"
+              ]}
+              icon="🎧"
+              pricing="From $1,200/month"
+            />
+            <ServiceCard
+              href="/services/ai-marketing-automation"
+              title="AI Marketing Automation"
+              description="Intelligent marketing campaigns and lead nurturing"
+              bullets={[
+                "Behavioral targeting",
+                "A/B testing automation",
+                "ROI optimization"
+              ]}
+              icon="📢"
+              pricing="From $2,500/month"
+            />
+            <ServiceCard
+              href="/services/ai-financial-analytics"
+              title="AI Financial Analytics"
+              description="Advanced financial modeling and risk assessment"
+              bullets={[
+                "Risk prediction models",
+                "Fraud detection",
+                "Investment analysis"
+              ]}
+              icon="💰"
+              pricing="From $3,500/month"
+            />
+            <ServiceCard
+              href="/services/ai-inventory-management"
+              title="AI Inventory Management"
+              description="Smart inventory optimization and demand forecasting"
+              bullets={[
+                "Demand forecasting",
+                "Automated reordering",
+                "Waste reduction"
+              ]}
+              icon="📦"
+              pricing="From $1,600/month"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Enterprise Solutions */}
+      <section className="py-16 mb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Solutions</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Scalable, secure, and robust solutions designed for large organizations and enterprise needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <ServiceCard
+              href="/services/cloud-migration"
+              title="Cloud Migration"
+              description="Seamless migration to AWS, Azure, or GCP with zero downtime"
+              bullets={[
+                "Multi-cloud strategy",
+                "Data migration automation",
+                "Cost optimization"
+              ]}
+              icon="☁️"
+              pricing="From $15,000/project"
+            />
+            <ServiceCard
+              href="/services/cybersecurity"
+              title="Cybersecurity Suite"
+              description="Comprehensive security solutions and compliance management"
+              bullets={[
+                "Security assessment",
+                "Threat detection",
+                "Compliance automation"
+              ]}
+              icon="🔒"
+              pricing="From $8,000/month"
+            />
+            <ServiceCard
+              href="/services/devops-automation"
+              title="DevOps Automation"
+              description="CI/CD pipelines, infrastructure as code, and automated deployments"
+              bullets={[
+                "CI/CD pipeline setup",
+                "Infrastructure automation",
+                "Monitoring & alerting"
+              ]}
+              icon="🔄"
+              pricing="From $5,000/month"
+            />
+          </div>
+        </div>
+      </section>
+      
+      {/* Why Choose Us Section */}
       <section className="py-16 bg-gray-50 rounded-xl mb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -287,7 +351,6 @@ export default function ServicesOverviewPage() {
       </section>
       
       <CTA />
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
     </div>
   );
 }
@@ -297,12 +360,8 @@ function ServiceCard({
   title,
   description,
   bullets,
-<<<<<<< HEAD
-  icon
-=======
   icon,
   pricing
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 }: {
   href: string;
   title: string;
@@ -316,8 +375,6 @@ function ServiceCard({
       href={href}
       className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
-<<<<<<< HEAD
-=======
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
         {title}
@@ -336,7 +393,6 @@ function ServiceCard({
     </Link>
   );
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
 
 function StatCard({ 
   number, 
@@ -353,25 +409,6 @@ function StatCard({
       <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
       <div className="text-sm text-gray-600">{description}</div>
     </div>
-<<<<<<< HEAD
-      {" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">
-        {" "}
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>
-        ))}{" "}
-      </ul>{" "}
-    </Link>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
   );
 }
 
@@ -382,16 +419,9 @@ function CTA() {
         Ready to Get Started?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
-        {" "}
-        Talk to our experts about your project. We&apos;ll help you choose the right
-        service and create a custom solution for your business needs.{" "}
-      </p>{" "}
-=======
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.
       </p>
->>>>>>> cursor/expand-services-advertise-and-build-project-134f
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
@@ -405,6 +435,9 @@ function CTA() {
         >
           Email Us
         </a>
+      </div>
+      <div className="mt-6 text-sm text-gray-600">
+        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
       </div>
     </div>
   );
