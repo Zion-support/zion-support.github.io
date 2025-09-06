@@ -1,71 +1,44 @@
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import { NextSeo } from '@/components/NextSeo';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-import {
-  ShoppingCart,
-  Star,
-  Truck,
-  Shield,
-  RotateCcw,
-  Clock,
-  AlertTriangle,
-  ArrowLeft,;
-} from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router';
-import { NextSeo } from '@/components/NextSeo';
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { getStripe } from "@/utils/getStripe";
-import { useCart } from '@/context/CartContext';
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry';
-import { equipmentListings } from '@/data/equipmentData';
-import { ProductListing } from '@/types/listings';
 import { motion } from 'framer-motion';
+import { Star, Heart, Share2, ShoppingCart, ArrowLeft, Minus, Plus, Check, Truck, Shield, RotateCcw } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+import { useAuth } from '@/hooks/useAuth';
+import { useCart } from '@/hooks/useCart';
 import { useCurrency } from '@/hooks/useCurrency';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { equipmentListings } from '@/data/equipmentListings';
+
 interface EquipmentSpecification {
   name: string;
-value: string ;
-}interface EquipmentDetails {;
+  value: string;
+}
+
+interface EquipmentDetails {
   id: string;
-name: string;
-description: string;
-brand: string;
-category: string;
-subcategory?: string;
-images: string[];
-price: number;
-currency: string;
-rating?: number;
-reviewCount?: number;
-inStock: boolean;
-expectedShipping?: string;
-specifications: EquipmentSpecification[];
-features: string[];
-warranty?: string;
-returnPolicy?: string ;
-}return {;
-  id: item.id, name: item.title, description: item.description, brand: item.brand || 'Unknown', category: item.category, subcategory: item.subcategory, images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price || 0, currency: item.currency || '$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' || !item.availability, expectedShipping: item.availability || 'In Stock',  specifications: (item.specifications || []) .map ( (spec) => ({';
-  name: spec, value: '' ;
-}) );
-features: item.tags || [];';
-warranty: '1 Year Manufacturer Warranty';';
-returnPolicy: '30-day return policy' ;
+  name: string;
+  description: string;
+  brand: string;
+  category: string;
+  subcategory?: string;
+  images: string[];
+  price: number;
+  currency: string;
+  rating: number;
+  reviewCount?: number;
+  inStock: boolean;
+  expectedShipping?: string;
+  specifications: EquipmentSpecification[];
+  features: string[];
+  warranty?: string;
+  returnPolicy?: string;
+}
 
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(
-  item: ProductListing
+  item: any
 ): EquipmentDetails {
   return {
     id: item.id,
@@ -74,25 +47,25 @@ function convertProductListingToEquipmentDetails(
     brand: item.brand || 'Unknown',
     category: item.category,
     subcategory: item.subcategory,
-    images: item.images || [
-      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
-    ],
+    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],
     price: item.price || 0,
     currency: item.currency || '$',
     rating: item.rating,
     reviewCount: item.reviewCount,
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
-    specifications: (item.specifications || []).map(spec => ({
+    specifications: (item.specifications || []).map((spec: string) => ({
       name: spec,
-      value: '',    })),
+      value: '',
+    })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy',
   };
+}
 
 // Build sample data from the shared equipment listings
-export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
+const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings.reduce(
     (acc, item) => {
       acc[item.id] = convertProductListingToEquipmentDetails(item);
@@ -100,6 +73,7 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
     },
     {} as { [key: string]: EquipmentDetails }
   );
+
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -109,81 +83,27 @@ export default function EquipmentDetail() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
+  const equipment = id ? SAMPLE_EQUIPMENT[id] : null;
 
-  useEffect((,) => {
-    async function loadEquipment() {
-      if (!id) {
-        setLoading(false);
-        setError('No equipment ID provided');
-        return;
-      }
-
-      try {
-        setLoading(true);
-        setError(null);
-
-        // Try to find in static data first
-        const equipmentFromSample = SAMPLE_EQUIPMENT[id];
-        if (equipmentFromSample) {
-          setEquipment(equipmentFromSample);
-          setLoading(false);
-          return;
-        }
-
-        // Try to get from sessionStorage (for dynamically generated equipment)
-        if (typeof window !== 'undefined') {
-          try {
-            const stored = sessionStorage.getItem(`equipment:${id}`);
-            if (stored) {
-              const storedData = JSON.parse(stored);
-
-              // Check if it's already in EquipmentDetails format or needs conversion
-              let equipmentData: EquipmentDetails;
-              if (storedData.name) {
-                // Already in EquipmentDetails format
-                equipmentData = storedData;
-              } else {
-                // It's a ProductListing, convert it
-                equipmentData = convertProductListingToEquipmentDetails(
-                  storedData as ProductListing
-                );
-              }
-
-              setEquipment(equipmentData);
-              setLoading(false);
-              return;
-            }
-          } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', {
-              data: storageError,
-            });
-          }
-        }
-
-        // If not found anywhere, set error
-        setError('Equipment not found');
-        setLoading(false);
-      } catch (error) {
-        logErrorToProduction('Error loading equipment:', { data: error });
-        setError('Failed to load equipment details');
-        setLoading(false);
-      }
-    }
-
-    loadEquipment();
-  }, [id]);
+  if (!equipment) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Equipment Not Found</h1>
+          <p className="text-gray-600 mb-6">The equipment you're looking for doesn't exist.</p>
+          <Button onClick={() => router.push('/equipment')}>
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Equipment
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   const handleAddToCart = async () => {
-    if (!equipment || !isAuthenticated) {
-      toast({
-        title: 'Authentication Required',
-        description: 'Please log in to add items to cart',
-        variant: 'destructive',
-      });
+    if (!isAuthenticated) {
+      router.push('/login');
       return;
     }
 
@@ -193,400 +113,232 @@ export default function EquipmentDetail() {
         type: 'ADD_ITEM',
         payload: {
           id: equipment.id,
-          name: equipment.name,
+          title: equipment.name,
           price: equipment.price,
           quantity,
+          image: equipment.images[0],
         },
-      });
-
-      toast({
-        title: 'Added to Cart',
-        description: `${equipment.name} has been added to your cart.`,
-      });
-    } catch (error) {
-      toast({
-        title: 'Error',
-        description: 'Failed to add item to cart. Please try again.',
-        variant: 'destructive',
       });
     } finally {
       setIsAdding(false);
     }
   };
 
-  const inCart = items.some(item => item.id === equipment?.id);
-
-  // Loading state
-  if (loading) {
-    return (
-      <>
-        <NextSeo title='Loading Equipment...' />
-        <div className='min-h-screen bg-zion-blue py-12 px-4'>
-          <div className='container mx-auto'>
-            <div className='text-center py-20'>
-              <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>
-              <p className='text-zion-slate-light'>
-                Loading equipment details...
-              </p>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  // Error state
-  if (error || !equipment) {
-    return (
-      <>
-        <NextSeo
-          title='Equipment Not Found'
-          description="The equipment you're looking for doesn't exist or has been removed."
-        />
-        <div className='min-h-screen bg-zion-blue py-12 px-4'>
-          <div className='container mx-auto'>
-            <motion.div
-              className='text-center py-20'
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              <AlertTriangle className='mx-auto h-16 w-16 text-red-500 mb-6' />
-              <h1 className='text-3xl font-bold text-white mb-4'>
-                {error === 'Equipment not found'
-                  ? 'Equipment Not Found'
-                  : 'Something went wrong'}
-              </h1>
-              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
-                {error === 'Equipment not found'
-                  ? "The equipment you're looking for doesn't exist or has been removed."
-                  : error ||
-                    "We couldn't load the equipment details. Please try again."}
-              </p>
-              <div className='space-x-4'>
-                <Button
-                  onClick={() => router.back()}
-                  variant='outline'
-                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'                >
-                  <ArrowLeft className='h-4 w-4 mr-2' />
-                  Go Back
-                </Button>
-                <Button
-                  onClick={() => router.push('/equipment')}
-                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
-                  Browse Equipment
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </>
-    );
-  }
+  const handleQuantityChange = (newQuantity: number) => {
+    if (newQuantity >= 1) {
+      setQuantity(newQuantity);
+    }
+  };
 
   return (
-    <>
-      <NextSeo
-        title={`${equipment.name} - Zion Marketplace`}
-        description = {equipment.description,}
-        openGraph={{
-          title: `${equipment.name} - Zion Marketplace`,
-          description: equipment.description,
-          images:
-            equipment.images.length > 0 && equipment.images[0]
-              ? [{ url: equipment.images[0] }]
-              : undefined,
-        }}
-      />
-      <div className='min-h-screen bg-zion-blue py-8 px-4'>
-        <div className='container mx-auto'>
-          {/* Breadcrumb */}
-          <motion.nav
-            className='flex mb-8'
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        {/* Breadcrumb */}
+        <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
+          <button
+            onClick={() => router.push('/equipment')}
+            className="hover:text-blue-600"
           >
-            <button
-              onClick={() => router.push('/equipment')}
-              className='text-zion-cyan hover:text-white transition-colors'            >
-              Equipment
-            </button>
-            <span className='mx-2 text-zion-slate-light'>/</span>
-            <span className='text-zion-slate-light'>{equipment.name}</span>
-          </motion.nav>
+            Equipment
+          </button>
+          <span>/</span>
+          <span className="text-gray-900">{equipment.name}</span>
+        </nav>
 
-          <div className='grid lg:grid-cols-2 gap-12'>
-            {/* Images */}
-            <motion.div
-              className='space-y-4'
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <AspectRatio
-                ratio={1}
-                className='bg-zion-blue-light rounded-lg overflow-hidden'
-              >
-                <ImageWithRetry
-                  src={
-                    equipment.images[selectedImageIndex] ||
-                    equipment.images[0] ||
-                    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
-                  }
-                  alt={equipment.name}
-                  className='object-cover'                />
-              </AspectRatio>
-
-              {equipment.images.length > 1 && (
-                <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image, index) => (                    <button
-                      key = {index,}
-                      onClick = {(,) => setSelectedImageIndex(index),}
-                      className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
-                        selectedImageIndex === index
-                          ? 'border-zion-cyan'
-                          : 'border-transparent hover:border-zion-slate-light'
-                      }`}
-                    >
-                      <ImageWithRetry
-                        src = {image,}
-                        alt={`${equipment.name} view ${index + 1}`}
-                        className='object-cover'
-                      />
-                    </button>
-                  ))}
-                </div>
-              )}
-            </motion.div>
-
-            {/* Product Details */}
-            <motion.div
-              className='space-y-6'
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              {/* Header */}
-              <div className='space-y-2'>
-                <div className='flex items-center gap-2 mb-2'>
-                  <Badge
-                    variant='secondary'
-                    className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Images */}
+          <div className="space-y-4">
+            <div className="aspect-square bg-white rounded-lg overflow-hidden">
+              <img
+                src={equipment.images[selectedImageIndex]}
+                alt={equipment.name}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {equipment.images.length > 1 && (
+              <div className="grid grid-cols-4 gap-2">
+                {equipment.images.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedImageIndex(index)}
+                    className={`aspect-square rounded-lg overflow-hidden border-2 ${
+                      selectedImageIndex === index
+                        ? 'border-blue-600'
+                        : 'border-gray-200'
+                    }`}
                   >
-                    {equipment.category}
-                  </Badge>
-                  <Badge
-                    variant='outline'
-                    className='border-zion-slate-light text-zion-slate-light'
-                  >
-                    {equipment.brand}
-                  </Badge>
-                </div>
-
-                <h1 className='text-3xl font-bold text-white'>
-                  {equipment.name}
-                </h1>
-
-                {equipment.rating && (
-                  <div className='flex items-center gap-2'>
-                    <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (                        <Star
-                          key = {i,}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(equipment.rating!)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-zion-slate-light'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {equipment.rating?.toFixed(1)} ({equipment.reviewCount}{' '}
-                      reviews)
-                    </span>
-                  </div>
-                )}
+                    <img
+                      src={image}
+                      alt={`${equipment.name} ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
               </div>
+            )}
+          </div>
 
-              {/* Price */}
-              <div className='bg-zion-blue-light rounded-lg p-4'>
-                <div className='text-3xl font-bold text-zion-cyan mb-2'>
-                  {formatPrice(equipment.price)}
-                </div>
-                <div className='flex items-center gap-2 text-sm'>
-                  <Clock className='h-4 w-4 text-zion-cyan' />
-                  <span
-                    className={
-                      equipment.inStock ? 'text-green-400' : 'text-yellow-400'
-                    }
-                  >
-                    {equipment.expectedShipping}
+          {/* Product Info */}
+          <div className="space-y-6">
+            <div>
+              <div className="flex items-center space-x-2 mb-2">
+                <Badge variant="outline">{equipment.brand}</Badge>
+                <Badge variant="outline">{equipment.category}</Badge>
+              </div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">
+                {equipment.name}
+              </h1>
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-5 w-5 ${
+                        i < Math.floor(equipment.rating)
+                          ? 'text-yellow-400 fill-current'
+                          : 'text-gray-300'
+                      }`}
+                    />
+                  ))}
+                  <span className="ml-2 text-sm text-gray-600">
+                    {equipment.rating} ({equipment.reviewCount || 0} reviews)
                   </span>
                 </div>
               </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {equipment.description}
+              </p>
+            </div>
 
-              {/* Description */}
-              <div className='space-y-4'>
-                <h3 className='text-lg font-semibold text-white'>
-                  Description
-                </h3>
-                <p className='text-zion-slate-light leading-relaxed'>
-                  {equipment.description}
-                </p>
+            <Separator />
+
+            {/* Price */}
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-gray-900">
+                {formatPrice(equipment.price)}
+              </div>
+              <div className="flex items-center space-x-4 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <Check className="h-4 w-4 text-green-600 mr-1" />
+                  {equipment.inStock ? 'In Stock' : 'Out of Stock'}
+                </div>
+                {equipment.expectedShipping && (
+                  <div className="flex items-center">
+                    <Truck className="h-4 w-4 text-blue-600 mr-1" />
+                    {equipment.expectedShipping}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Quantity and Add to Cart */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <span className="text-sm font-medium text-gray-700">Quantity:</span>
+                <div className="flex items-center border border-gray-300 rounded-lg">
+                  <button
+                    onClick={() => handleQuantityChange(quantity - 1)}
+                    className="p-2 hover:bg-gray-100"
+                    disabled={quantity <= 1}
+                  >
+                    <Minus className="h-4 w-4" />
+                  </button>
+                  <span className="px-4 py-2 text-sm font-medium">{quantity}</span>
+                  <button
+                    onClick={() => handleQuantityChange(quantity + 1)}
+                    className="p-2 hover:bg-gray-100"
+                  >
+                    <Plus className="h-4 w-4" />
+                  </button>
+                </div>
               </div>
 
-              {/* Specifications */}
-              {equipment.specifications.length > 0 && (
-                <div className='space-y-4'>
-                  <h3 className='text-lg font-semibold text-white'>
-                    Specifications
-                  </h3>
-                  <div className='grid gap-2'>
-                    {equipment.specifications.map((spec, index) => (
-                      <div
-                        key={index}
-                        className='flex justify-between py-2 border-b border-zion-blue-light'
-                      >
-                        <span className='text-zion-slate-light'>
-                          {spec.name}
-                        </span>
-                        <span className='text-white'>
-                          {spec.value || 'Enterprise Grade'}
-                        </span>                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Add to Cart */}
-              <div className='space-y-4 pt-6 border-t border-zion-blue-light'>
-                <div className='flex items-center gap-4'>
-                  <label className='text-white font-medium'>Quantity:</label>
-                  <div className='flex items-center gap-2'>
-                    <Button
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className='h-8 w-8 p-0'                    >
-                      -
-                    </Button>
-                    <span className='text-white w-8 text-center'>
-                      {quantity}
-                    </span>
-                    <Button
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setQuantity(quantity + 1)}
-                      className='h-8 w-8 p-0'                    >
-                      +
-                    </Button>
-                  </div>
-                </div>
-
+              <div className="flex space-x-4">
                 <Button
                   onClick={handleAddToCart}
-                  disabled={isAdding || !equipment.inStock}
-                  size='lg'
-                  variant='outline'
-                  className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
-                  data-testid='add-to-cart-button'                >
-                  <ShoppingCart className='h-4 w-4 mr-2' />
-                  {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
+                  disabled={!equipment.inStock || isAdding}
+                  className="flex-1"
+                >
+                  <ShoppingCart className="h-4 w-4 mr-2" />
+                  {isAdding ? 'Adding...' : 'Add to Cart'}
+                </Button>
+                <Button variant="outline" size="icon">
+                  <Heart className="h-4 w-4" />
+                </Button>
+                <Button variant="outline" size="icon">
+                  <Share2 className="h-4 w-4" />
                 </Button>
               </div>
+            </div>
 
-              {/* Additional Info */}
-              <div className='space-y-4 border-t border-zion-blue-light pt-4'>
-                {/* Shipping */}
-                <div className='flex gap-3 text-zion-slate-light'>
-                  <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                  <div>
-                    <p className='text-white text-sm font-medium'>
-                      Free Shipping
-                    </p>
-                    <p className='text-xs'>
-                      For orders over $100 within the US
-                    </p>
-                  </div>
-                </div>
-
-                {/* Warranty */}
-                {equipment.warranty && (
-                  <div className='flex gap-3 text-zion-slate-light'>
-                    <Shield className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
-                      <p className='text-white text-sm font-medium'>Warranty</p>
-                      <p className='text-xs'>{equipment.warranty}</p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Return Policy */}
-                {equipment.returnPolicy && (
-                  <div className='flex gap-3 text-zion-slate-light'>
-                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
-                      <p className='text-white text-sm font-medium'>Returns</p>
-                      <p className='text-xs'>{equipment.returnPolicy}</p>
-                    </div>
-                  </div>
-                )}
+            {/* Features */}
+            {equipment.features.length > 0 && (
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Features</h3>
+                <ul className="space-y-2">
+                  {equipment.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-600">
+                      <Check className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </motion.div>
+            )}
+
+            {/* Additional Info */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="flex items-center p-3 bg-blue-50 rounded-lg">
+                <Truck className="h-5 w-5 text-blue-600 mr-3" />
+                <div>
+                  <p className="text-white text-sm font-medium">Free Shipping</p>
+                  <p className="text-xs">For orders over $100 within the US</p>
+                </div>
+              </div>
+              <div className="flex items-center p-3 bg-green-50 rounded-lg">
+                <Shield className="h-5 w-5 text-green-600 mr-3" />
+                <div>
+                  <p className="text-white text-sm font-medium">Warranty</p>
+                  <p className="text-xs">{equipment.warranty}</p>
+                </div>
+              </div>
+              <div className="flex items-center p-3 bg-purple-50 rounded-lg">
+                <RotateCcw className="h-5 w-5 text-purple-600 mr-3" />
+                <div>
+                  <p className="text-white text-sm font-medium">Returns</p>
+                  <p className="text-xs">{equipment.returnPolicy}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Specifications */}
+        {equipment.specifications.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-12"
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle>Specifications</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {equipment.specifications.map((spec, index) => (
+                    <div key={index} className="flex justify-between py-2 border-b border-gray-100">
+                      <span className="font-medium text-gray-700">{spec.name}</span>
+                      <span className="text-gray-600">{spec.value || 'N/A'}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        )}
       </div>
-    </>
+    </div>
   );
-
-}finally {;
-  setIsAdding (false) ;
-
-};
-const inCart = items.some (item => item.id === equipment?.id);
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button ;
-}return (<> <NextSeo title= {;
-  `$ {;
-  equipment.name ;
-}- Zion Marketplace` ;
-}description= {;
-  equipment.description ;
-}openGraph= {;
-  {;
-  title: `$ {;
-  equipment.name ;
-}- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {;
-  url: equipment.images[0] ;
-}] : undefined ;
-
-}/> key= {;
-  index ;
-}onClick={;
-  () => setSelectedImageIndex (index) ;
-}className= {;
-  `aspect-square rounded-md overflow-hidden border-2 transition-all $ {';
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light' ;
-}` ;
-}> <ImageWithRetry /> </button>) ) ;
-}</div>) ;
-}</motion.div> {;
-  /* Product Details */ ;
-}<motion.div <Star key= {;
-  i ;
-}className= {;
-  `h-4 w-4 $ {';
-  i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light' ;
-}` ;
-}/>) ) ;
-}</div> </span> </div>) ;
-}</div> </span> </div> </div> </div>) ) ;
-}</div> </div>) ";
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {;
-  equipment.warranty ;
-}</p> </div> </div>) ";
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {;
-  equipment.returnPolicy ;
-}</p> </div> </div>) ;
-}</div> </motion.div> </div> </div> </div> </>) ;
-}'"}
-
+}

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState } from 'react';
@@ -33,8 +32,10 @@ const Header: React.FC = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   const servicesDropdown = [
     {
@@ -121,7 +122,8 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">      {/* Top Bar */}
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm">
@@ -297,7 +299,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               className="p-2"
@@ -309,155 +311,46 @@ const Header: React.FC = () => {
       </nav>
 
       {/* Mobile Menu */}
+      <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden"
+            className="lg:hidden bg-white shadow-lg"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+            <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => (
-                <div key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
                 <Link
-                  href="/contact"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                  key={item.name}
+                  href={item.href}
+                  className="block text-gray-700 hover:text-blue-600 font-medium"
+                  onClick={closeMenu}
                 >
-                  Get Started
+                  {item.name}
                 </Link>
+              ))}
+              <Link
+                href="/contact"
+                onClick={closeMenu}
+                className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+              >
+                Get Started
+              </Link>
+            </div>
+            <div className="pt-4 border-t border-gray-200">
+              <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                <Phone className="h-4 w-4 mr-2" />
+                +1 302 464 0950
+              </div>
+              <div className="flex items-center px-3 py-2 text-sm text-gray-600">
+                <Mail className="h-4 w-4 mr-2" />
+                kleber@ziontechgroup.com
               </div>
             </div>
           </motion.div>
         )}
-
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className={`lg:hidden p-2 rounded-lg transition-colors duration-200 ${
-              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
-            }`}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white shadow-lg"
-            >
-              <div className="px-4 py-6 space-y-4">
-                <Link
-                  href="/"
-                  onClick={closeMenu}
-                  className="block text-gray-700 hover:text-blue-600 font-medium"
-                >
-                  Home
-                </Link>
-                <div>
-                  <button
-                    onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className="flex items-center justify-between w-full text-gray-700 hover:text-blue-600 font-medium"
-                  >
-                    <span>Services</span>
-                    <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
-                      isServicesOpen ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                  <AnimatePresence>
-                    {isServicesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="mt-2 ml-4 space-y-2"
-                      >
-                        {servicesDropdown.map((service, index) => (
-                          <button
-                            key={index}
-                            onClick={() => handleServiceClick(service.href)}
-                            className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 text-left w-full"
-                          >
-                            <service.icon className="h-5 w-5 text-blue-600" />
-                            <div>
-                              <h3 className="font-medium text-gray-900 text-sm">
-                                {service.title}
-                              </h3>
-                              <p className="text-gray-600 text-xs">
-                                {service.description}
-                              </p>
-                            </div>
-                          </button>
-                        ))}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-                <Link
-                  href="/about"
-                  onClick={closeMenu}
-                  className="block text-gray-700 hover:text-blue-600 font-medium"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/contact"
-                  onClick={closeMenu}
-                  className="block text-gray-700 hover:text-blue-600 font-medium"
-                >
-                  Contact
-                </Link>
-                <div className="pt-4 border-t border-gray-200">
-                  <Link
-                    href="/contact"
-                    onClick={closeMenu}
-                    className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-                  >
-                    Get Started
-                  </Link>
-                </div>
-                <div className="pt-4 border-t border-gray-200">
-                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
-                    <Phone className="h-4 w-4 mr-2" />
-                    +1 302 464 0950
-                  </div>
-                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
-                    <Mail className="h-4 w-4 mr-2" />
-                    kleber@ziontechgroup.com
-                  </div>
-                  <div className="flex items-center px-3 py-2 text-sm text-gray-600">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    364 E Main St STE 1008, Middletown DE 19709
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
+      </AnimatePresence>
     </header>
   );
 };

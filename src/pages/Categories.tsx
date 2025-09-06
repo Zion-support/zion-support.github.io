@@ -1,132 +1,155 @@
-      logErrorToProduction('Categories API error:', { data: response.statusText }),
-      return CATEGORIES as CategoryType[];
-    fallbackData: initialCategories}),
-  const categories = data || [];
-  const isLoading = !data && !error;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
+interface CategoryType {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  serviceCount: number;
 }
-import React from "react";
-import { Brain, Cloud, Shield, Code, Database, Network } from "lucide-react";"});"});
-}
-const Categories: React.FC: = () => {,";
-  const categories = [];
-  return (";
-    <div: className = "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">",",";
-      <div: className="max-w-6xl mx-auto px-4 sm: px-6: lg:px-8: py-16">",";";
-        <div: className="text - center mb-12">",";
-          <h1: className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>",",
-          <p: className = "text-xl text-gray-600">Explore our comprehensive range of technology services</p>",",
-        </div>";
-        <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-6">"," {categories.map((category, index) => (";
-            <div: key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md: transition-shadow">",";";
-              <div: className="flex items-center mb-4">",",
-                <category.icon: className = "h-8 w-8 text-blue-600 mr-3" />",",";
-                <h2: className="text - xl font-semibold text-gray-900">{category.name}</h2>",";
-              <p: className = "text-gray-600 mb-4">"," {category.count} services: available in this category,
-";
-const Categories: React.FC = () => {",
-  const categories = [];
-  return (";
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;";
-      <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,";
-        <div className="text-center mb-12">,";
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>,",
-          <p className = "text-xl text-gray-600">Explore our comprehensive range of technology services</p>,
-        </div>,";
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {categories.map((category, index) => (;";
-            <div key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow">,",
-              <div className = "flex items-center mb-4">,";
-                <category.icon className="h-8 w-8 text-blue-600 mr-3" />,";
-                <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>;";
-              <p className="text-gray-600 mb-4"> {category.count} services available in this category;
-              </p>;
-              <a>;
-                href = {"/services ? category=${category.name.toLowerCase().replace(" ", "-")}"}">;
-                className="text-blue-600 hover : text-blue-700 font-medium">,
-                View Services →,
-              </a>,
-          ))}"lucide-react";&apos;&apos;
-const Categories: React.FC = () => {}
 
-  const;const categories = [;
-    { name: &apos,AI Services&apos, icon: Brain, count: 25 } { name: &apos,Cloud Solutions&apos, icon: Cloud, count: 15 } { name: &apos,Cybersecurity&apos, icon: Shield, count: 12 } { name: &apos,Development&apos, icon: Code, count: 18 } { name: &apos,Data Analytics&apos, icon: Database, count: 10 } { name: &apos,Infrastructure&apos, icon: Network, count: 8 }
+const CATEGORIES: CategoryType[] = [
+  {
+    id: '1',
+    name: 'Artificial Intelligence',
+    slug: 'artificial-intelligence',
+    description: 'AI solutions for automation, machine learning, and intelligent systems',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+    serviceCount: 12
+  },
+  {
+    id: '2',
+    name: 'Cloud Computing',
+    slug: 'cloud-computing',
+    description: 'Scalable cloud infrastructure and migration services',
+    icon: Cloud,
+    color: 'from-blue-500 to-cyan-500',
+    serviceCount: 8
+  },
+  {
+    id: '3',
+    name: 'Cybersecurity',
+    slug: 'cybersecurity',
+    description: 'Advanced security solutions and threat protection',
+    icon: Shield,
+    color: 'from-red-500 to-orange-500',
+    serviceCount: 15
+  },
+  {
+    id: '4',
+    name: 'Software Development',
+    slug: 'software-development',
+    description: 'Custom software solutions and application development',
+    icon: Code,
+    color: 'from-green-500 to-teal-500',
+    serviceCount: 20
+  },
+  {
+    id: '5',
+    name: 'Data Analytics',
+    slug: 'data-analytics',
+    description: 'Data processing, analysis, and business intelligence',
+    icon: Database,
+    color: 'from-indigo-500 to-purple-500',
+    serviceCount: 10
+  },
+  {
+    id: '6',
+    name: 'Network Solutions',
+    slug: 'network-solutions',
+    description: 'Network infrastructure and connectivity solutions',
+    icon: Network,
+    color: 'from-yellow-500 to-orange-500',
+    serviceCount: 6
+  }
+];
 
-  return(&apos;";
-    <div className="&apos;min-h-screen" bg-gradient-to-br from-slate-50 to-blue-50&apos;>&apos,";
-      <div className="&apos;max-w-6xl" mx-auto px-4 sm: px-6 lg:px-8 py-16&apos,>&apos,";
-        <div className="&apos;text-center" mb-12&apos;>&apos,";
-          <h1 className="&apos;text-4xl" font-bold text-gray-900 mb-4&apos;>Service Categories&apos,</h1>",
-          <p className="&apos;text-xl" text-gray-600&apos;>Explore our comprehensive range of technology services&apos,</p>";
-        <div className = "&apos,grid" grid-cols-1 md:grid-cols-2 l,g: grid-cols-3 gap-6&apos,>;
-          {categories.map((category, index) => (&apos}";
-            <div key="{index}" className="&apos;bg-white" rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow&apos,>&apos,";
-              <div className="&apos;flex" items-center mb-4&apos;>&apos,";
-                <category.icon className="&apos;h-8" w-8 text-blue-600 mr-3&apos; />&apos,",
-                <h2 className="&apos,text-xl" font-semibold text-gray-900&apos,>{category.name}&apos;</h2>";
-              <p className="&apos;text-gray-600" mb-4&apos;>;
-                {category.count} services available in this category&apos,
-  const categories = [";
-    { nam,";
-    e: "AI Services", icon: Brain, count: 25 } { name: "Cloud Solutions", icon: Cloud, count: 15 },";
-  const categories = [";
-    { name: "AI Services", icon: Brain, count: 25 } { name: "Cloud Solutions", icon: Cloud, count: 15 },";
-    { name: "Cybersecurity", icon: Shield, count: 12 } { name: "Development", icon: Code, count: 18 },
-    { name: "Data Analytics", icon: Database, count: 10 } { name: "Infrastructure", icon: Network, count: 8 }";
-  return(";
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">";
-      <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16">";
-        <div className="text-center mb-12">";
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>";
-          <p className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>";
-        </div>";
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">",
-          {categories.map((category, index) => (";
-            <div key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow">";
-              <div className="flex items-center mb-4">";
-                <category .icon className="h-8 w-8 text-blue-600 mr-3" /">",
-                <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>";
-              <p className="text-gray-600 mb-4">;
-                {category.count} services available in this category,
-              </p>";
-              <a";
-                href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}
-  const categories = [";
-    { name: "AI Services", icon: Brain, count: 25 } { name: "Cloud Solutions", icon: Cloud, count: 15 } { name: "Cybersecurity", icon: Shield, count: 12 } { name: "Development", icon: Code, count: 18 } { name: "Data Analytics", icon: Database, count: 10 } { name: "Infrastructure", icon: Network, count: 8 }";
-  return(";
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>";
-      <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16>";
-        <div className="text-center mb-12>";
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Categories</h1>";
-          <p className="text-xl text-gray-600">Explore our comprehensive range of technology services</p>",
-        <div className="grid grid-cols-1 m>;
-    d:grid-cols-2 l,";
-    g: grid-cols-3 gap-6">",
-          {categories.map((category, index) => (";
-            <div key="{index}" className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover: shadow-md transition-shadow>";
-              <div className="flex items-center mb-4>";
-                <category.icon className="h-8 w-8 text-blue-600 mr-3" />",
-                <h2 className="text-xl font-semibold text-gray-900">{category.name}</h2>;
-              <a";
-                href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}"">;
-              <a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"} className="text-blue-600 hover: text-blue-700 font-medium">",
-              <a href={"/services?category=${category.name.toLowerCase().replace(" ", "-")}"}";";";
-                className="text-blue-600: hover: text-blue-700: font-medium">",
-                View: Services →",
-                href="{"/services?category=${category.name.toLowerCase().replace(&apos," &apos, &apos;-&apos)}"}";
-                className="&apos;text-blue-600" hover: text-blue-700 font-medium&apos,>,
-                View Services →&apos,&apos,
-              <a;
-                href = {"/services?category=${category.name.toLowerCase().replace(" ,-")}"}
-                className="text-blue-600 hover: text-blue-700 font-medium">;
-                View Services →;
-              </a>,
-    <,</div>";
-  )}"";
-export default Categories"";
-";
-  )}
+export default function CategoriesPage() {
+  return (
+    <>
+      <Head>
+        <title>Service Categories | Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive range of technology services across AI, cloud computing, cybersecurity, and more." />
+        <meta property="og:title" content="Service Categories | Zion Tech Group" />
+        <meta property="og:description" content="Explore our comprehensive range of technology services across AI, cloud computing, cybersecurity, and more." />
+        <meta property="og:type" content="website" />
+      </Head>
 
-export: default Categories,
-export default Categories," ];
-export default Categories"")))))))))
+      <div className="min-h-screen bg-white">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">Service Categories</h1>
+              <p className="text-xl text-blue-100 mb-8">
+                Discover our comprehensive range of technology services designed to transform your business
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Categories Grid */}
+        <div className="container mx-auto px-4 py-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {CATEGORIES.map((category) => {
+              const IconComponent = category.icon;
+              return (
+                <Card key={category.id} className="group hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader>
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mb-4`}>
+                      <IconComponent className="h-6 w-6 text-white" />
+                    </div>
+                    <CardTitle className="text-xl">{category.name}</CardTitle>
+                    <CardDescription className="text-gray-600">
+                      {category.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-gray-500">
+                        {category.serviceCount} services
+                      </span>
+                      <Button asChild variant="outline" size="sm">
+                        <Link href={`/services/${category.slug}`}>
+                          Explore Services
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gray-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold mb-4">Need Something Specific?</h2>
+              <p className="text-gray-600 mb-8">
+                Can't find what you're looking for? Our team can create custom solutions tailored to your unique needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild>
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="/services">View All Services</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
