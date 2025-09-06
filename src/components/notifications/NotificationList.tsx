@@ -1,30 +1,24 @@
 interface NotificationListProps {
   loading: boolean;
+  error: string | null;
   notifications: Notification[];
-  onMarkAsRead: (id: string) => void;
-  onMarkAllAsRead: () => void;
-  onClearAll: () => void;
-}
-
-  return (
-import { Bell } from 'lucide-react';
-interface NotificationListProps {;
-  loading: boolean,;
-  error: string | null,;
-  notifications: Notification[],;
-  onMarkAsRead: (id: string,) => Promise<void>,;
-  onDismiss: (id: string,) => Promise<void>,;
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
   onRetry: () => void;
 }
 
-  return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
-      {error ? (;
-        <div className="p-8 text-center text-amber-500">;
-          <p>{error}</p>;
-          <Button
 
-    </ScrollArea>;
+  if (notifications.length === 0) {
+    return (
+      <EmptyState
+        icon={Bell}
+        title="No notifications"
+        description="You're all caught up! Check back later for updates."
+      />
+    );
+  }
+
+  return (
   );
 };
 

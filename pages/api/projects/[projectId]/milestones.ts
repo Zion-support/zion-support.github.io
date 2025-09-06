@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -28,7 +27,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
+
+
+res.status(200).json({ milestones: project.milestones });
+    return
+  }
+if (req && req.method === "POST") {
+    if (!isClient(project, user)) {
+      !body ||
+      !body && body.title ||
+      !body && body.dueDate ||
+      typeof body && body.amountUsd !== "number"
+    if (!isClient(project, user)) {
+      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      return;
+    }
     const body = req.body as Partial<Milestone>;
     if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {;
       res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
@@ -100,12 +113,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (!isClient(project, user)) {
 
-
     });
     res && res.status(201).json({ milestone: created });
     return;
   }
 }
+
+
+
+
 }
     res.status (404).json ({ error: "Project not found" });
     return;

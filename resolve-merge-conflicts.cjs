@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,13 +18,16 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 #!/usr/bin/env node
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/main
+
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -32,6 +36,8 @@ const { execSync } = require('child_process');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+=======
+>>>>>>> origin/main
 console.log('🔧 Resolving merge conflicts...');
 
 function resolveMergeConflicts(filePath) {
@@ -128,6 +134,7 @@ for (const file of files) {
     console.error(`❌ Error processing ${file}:`, error.message);
     errorCount++;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -339,5 +346,8 @@ if (resolveMergeConflicts()) {
 =======
 console.log('\n🎉 Merge conflict resolution completed!');
 >>>>>>> main
+=======
+
+>>>>>>> origin/main
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

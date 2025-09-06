@@ -1,31 +1,11 @@
 
 
-import type { NextApiRequest, NextApiResponse } from "next";
-import nodemailer from "nodemailer";
-import crypto from "crypto";
-import {
 
-
-  getProposal,
-  updateProposalMeta,
-  updateArtifacts,;
-
-
-} from "../../../utils/data/proposals";
-async function submitByEmail(
-  to: string
-  subject: string
-  text: string
-  attachments: any[] = []
-) {
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import { getProposal, updateProposalMeta, updateArtifacts } from '../../../utils/data/proposals';
+
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
@@ -125,18 +105,6 @@ function submitByEmail() {
     secure: port === 465,
     auth: { user, pass },
   });
-  const transporter = nodemailer.createTransport({
-    host
-    port
-    secure: port === 465
-    auth: { user, pass }
-  });
-  await transporter.sendMail({ from, to, subject, text, attachments });
-}
-  if (req.method !== "POST") return res.status($1).json({ $2 });
-  try {
-    const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}
-    if (!id) return res.status($1).json({ $2 });
     const meta = getProposal(id);
     if (!meta) return res && res.status($1).json({ $2 });
     // Email submission
@@ -183,8 +151,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .status(500)
 
       .json({ error: error?.message |"Submission failed" });
-  }
-}
   try {
     const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
     if (!id) return res.status($1).json({$2});
@@ -211,35 +177,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Submission failed' })
 
-  const from = process.env.EMAIL_FROM || user;
-
-  await transporter.sendMail({ from, to, subject, text, attachments });
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
   }
 
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
+
+
+
