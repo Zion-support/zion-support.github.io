@@ -1,11 +1,5 @@
- try {
-  const tx = handleAction (userId, action, metadata);
-return res.status (200) .json ({
-  tx 
-}) 
-}catch (err: any) {
-  return res.status (400) .json ({
-  error: err.message 
-}) 
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 }

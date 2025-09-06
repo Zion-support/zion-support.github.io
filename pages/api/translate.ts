@@ -1,4 +1,5 @@
- for (const lng of targets) {
-  const langName = (lng.startsWith ('pt') ? 'Portuguese' : lng.startsWith ('es') ? 'Spanish' : lng.startsWith ('ar') ? 'Arabic' : 'English' 
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 }

@@ -1,8 +1,5 @@
- const lines = markdown .replace (/\r\n/g, '\n') .split ('\n') 
-}if (current) wrapped.push (current);
-return wrapped.length ? wrapped : [' '] 
-});
-}return pdfDoc.save () 
-}
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 }

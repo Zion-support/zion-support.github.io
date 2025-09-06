@@ -1,3 +1,5 @@
- x.projectId === r.projectId && x.fromRole !== r.fromRole && x.toRole !== r.toRole && x.approved && (targetType === 'talent' && p.talentSlug === targetId) || (targetType === 'client' && p.clientId === targetId) ) ) .length;
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Reviews list endpoint' });
 }

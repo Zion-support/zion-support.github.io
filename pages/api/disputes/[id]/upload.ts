@@ -1,18 +1,6 @@
- dispute.attachments.push ({
-  id: `$ {
-  Date.now () 
-}-$ {
-  safeName 
-}`;
-fileName: safeName;
-fileSize: buffer.length;
-mimeType: f.mimeType || 'application/octet-stream';
-path: filePath;
-uploadedAt: now;
-uploadedByUserId: user.id 
-}) 
-}
-}res.setHeader ('AllowPOST');
-return res.status (405) .end ('Method Not Allowed') 
-}
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
 }

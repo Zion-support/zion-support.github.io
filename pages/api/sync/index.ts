@@ -1,9 +1,5 @@
- export default function handler (req: NextApiRequest, res: NextApiResponse) {
-  const state = readState ();
-status: "ok";
-instanceId: state.config.instanceId;
-config: state.config;
-lastSyncedAt: state.lastSyncedAt;
-counts: {
-  totalEvents: scopedEvents.length;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Sync index endpoint' });
 }

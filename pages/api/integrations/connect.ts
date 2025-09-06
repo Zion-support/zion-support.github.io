@@ -1,6 +1,5 @@
- const connection: ProviderConnection = {
-  providerId: providerId as any, status: 'connected', accessToken: 'mock access token', refreshToken: 'mock refresh token', expiresAt: now + 1000 * 60 * 60, connectedAt: now, syncRules: syncRules || {
-  
-};
-lastSyncAt: undefined;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 }
