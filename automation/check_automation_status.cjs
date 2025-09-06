@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -20,8 +24,12 @@ async function checkAutomationStatus() {
     console.log('📋 Checking PM2 processes...');
     try {
       const pm2List = execSync('pm2 jlist', { encoding: 'utf8' });
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   
   const statusReport = {
     "timestamp": new Date().toISOString(),
@@ -53,6 +61,13 @@ async function checkAutomationStatus() {
       );
 <<<<<<< HEAD
 <<<<<<< HEAD
+      
+    } catch (error) {
+      
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     } catch (error) {
       
     } catch (error) {
@@ -60,6 +75,9 @@ async function checkAutomationStatus() {
       console.log(`✅ Found ${runningProcesses.length} running PM2 processes`);
     } catch (error) {
       console.log('⚠️  PM2 not available or no processes running');
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,6 +116,7 @@ async function checkAutomationStatus() {
     } catch (error) {
       
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
       statusReport.pm2Processes = [];
     }
 
@@ -165,6 +184,8 @@ async function checkAutomationStatus() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -205,6 +226,7 @@ async function checkAutomationStatus() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         "name": script,
         exists,
         isExecutable,
@@ -264,7 +286,36 @@ async function checkAutomationStatus() {
     }
 
     // Save report
+<<<<<<< HEAD
+=======
+        name: script,
+        exists,
+        path: scriptPath
+      });
+      
+      if (exists) {
+        console.log(`✅ ${script} - Available`);
+      } else {
+        console.log(`❌ ${script} - Missing`);
+      }
+    }
+    // Check system health
+    try {
+      const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
+      statusReport.systemHealth.healthCheck = 'passed';
+      console.log('✅ Health check passed');
+    } catch (error) {
+      statusReport.systemHealth.healthCheck = 'failed';
+      console.log('❌ Health check failed');
+    }
+
+    return statusReport;
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     const reportPath = path.join(
       process.cwd(),
       'automation-status-report.json'
@@ -279,6 +330,13 @@ async function checkAutomationStatus() {
 
 <<<<<<< HEAD
     return statusReport;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  } catch (error) {
+    console.error('❌ Error checking automation "status": ', error.message);
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     console.log('📋 Checking system health...');
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
@@ -327,6 +385,9 @@ async function checkAutomationStatus() {
 
   } catch (error) {
     console.error('❌ Error checking automation status:', error.message);
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -386,6 +447,7 @@ async function checkAutomationStatus() {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     statusReport.overallStatus = 'error';
   }
 
@@ -394,11 +456,18 @@ async function checkAutomationStatus() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 // Run if called directly
 >>>>>>> main
 if (require.main === module) {
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
   checkAutomationStatus().then(report => {
@@ -413,6 +482,7 @@ module.exports = checkAutomationStatus;
 <<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   checkAutomationStatus()
     .then(() => {
       process.exit(0);
@@ -425,7 +495,10 @@ module.exports = checkAutomationStatus;
 
 module.exports = { checkAutomationStatus };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -438,7 +511,12 @@ module.exports = { checkAutomationStatus };
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -450,6 +528,10 @@ const { execSync } = require('child_process')
     console.error(' Error checking automation "status")
       console.error('Fatal "error")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 if (require.main === module) {
   checkAutomationStatus().then(report => {
@@ -460,6 +542,9 @@ module.exports = checkAutomationStatus;
 
 module.exports = checkAutomationStatus;
 <<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 =======
 =======
 module.exports = checkAutomationStatus;
@@ -469,3 +554,4 @@ module.exports = checkAutomationStatus;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

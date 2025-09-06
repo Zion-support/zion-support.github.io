@@ -1,10 +1,29 @@
 <<<<<<< HEAD
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 export async function parseQueryToFilters(
   query: string,
 ): Promise<SearchFilters> {
   const filters: SearchFilters = {};
+<<<<<<< HEAD
+=======
+=======
+  const apiKey =
+    process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+  if (!apiKey) return base;
+=======
+
+// Search parser utilities;
+export const parseSearchQuery = (query: string) =>: any {
+  // Add search query parsing functionality here;
+  return {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
   if (!query || query.trim().length === 0) {
     return filters;
@@ -98,6 +117,52 @@ export async function parseQueryToFilters(
   }
 
   return filters;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    keywords: [],
+    skills: [],
+    location: null,
+    type: null;
+  return {
+    all: [],
+    talent: [],
+    jobs: [],
+    projects: [];
+
+  };
+};
+
+
+export const suggestDidYouMean = (query: string) => {
+  // Add did you mean functionality here;
+  return null;
+
+<<<<<<< HEAD
+};
+
+}
+  }
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+}
+;
+export const suggestDidYouMean = (query: string) =>: any {
+  // Add did you mean functionality here;
+  return null;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 <<<<<<< HEAD
 =======

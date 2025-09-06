@@ -1,47 +1,32 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+
+const Page = () => {
+  return (
+    <MainLayout
+      title="Security - Zion Tech Group"
+      description="Security solutions from Zion Tech Group"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Security</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
 origin/automation-improvements-final
 
 
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-
-import React from 'react';
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
 import Layout from '../components/Layout';
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 const securityStats = [
   { number: '99.9%', label: 'Uptime Guarantee' }
   { number: '24/7', label: 'Security Monitoring' }
@@ -49,17 +34,12 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   return (
     <Layout
       title="Security - Zion Tech Group"
       description="Learn about our comprehensive security measures and how we protect your data and systems."
-<<<<<<< HEAD
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
@@ -74,11 +54,6 @@ export default function SecurityPage() {
       description="Learn about our comprehensive security measures and how we protect your data and systems."
       keywords="security, data protection, encryption, compliance, cybersecurity">;
       <div className="min-h-screen bg-gray-50">;
-=======
-      keywords="security, data protection, encryption, compliance, cybersecurity"
-    >
-      <div className="min-h-screen bg-gray-50">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Hero Section */}
 
 
@@ -89,11 +64,6 @@ export default function SecurityPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -167,10 +137,6 @@ export default function Security(req, res) {
 }
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -233,7 +199,6 @@ export default function Security(req, res) {
             </motion.p>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Security Stats */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -245,9 +210,6 @@ export default function Security(req, res) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Security Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -255,11 +217,6 @@ export default function Security(req, res) {
 }
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -541,10 +498,6 @@ function SecurityPage() {
                 </div>;
                 <h3 className="text-lg font-bold text-gray-900 mb-2">HIPAA</h3>;
                 <p className="text-gray-600 text-sm">Health Insurance Portability and Accountability Act</p>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                   className="bg - white rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 p - 6";
                 >;
                   <div className="flex items - center mb - 4">;
@@ -563,10 +516,6 @@ function SecurityPage() {
                         <li key={idx} className="flex items - center text - sm text - gray - 600">;
                           <CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
                           {detail}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                         </li>))}
                     </ul>;
                   </div>;
@@ -574,22 +523,6 @@ function SecurityPage() {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-=======
-=======
-                        </li>
-                      ))}
-<<<<<<< HEAD
-=======
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         {/* Compliance Section */}
         <section className="py - 16 bg - white">;
           <div className="container mx - auto px - 4">;
@@ -641,10 +574,6 @@ function SecurityPage() {
         </section>;
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -671,16 +600,10 @@ function SecurityPage() {
   }
 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-<<<<<<< HEAD
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
@@ -1137,19 +1060,10 @@ origin/automation-improvements-final
                   </div>
                 </div>
 </Link>
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-</Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
     </Layout>
       </div>
     </Layout>
@@ -1160,12 +1074,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
         <EnhancedFooter />
       </div>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
                   View Compliance Details;
                 </Link>;
@@ -1178,23 +1088,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
-<<<<<<< HEAD
     </>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   );
-=======
-  );
-
-  )
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
   )
 }
@@ -1207,83 +1109,4 @@ origin/main
   )
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-}
-  );
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-}  )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
-
-  );
-}
-
-=======
-  )
-}
-        {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white">;
-          <div className="container mx - auto px - 4 text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Questions About Our Security?;
-              </h2>;
-              <p className="text - xl mb - 8 max - w-2xl mx - auto">;
-                Our security team is available to answer any questions about our security measures and compliance.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:bg - gray - 100 transition - all duration - 300 font - semibold inline - flex items - center justify - center";
-                >;
-                  Contact Security Team;
-                </Link>;
-                <Link;
-                  href="/compliance";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
-                >;
-                  View Compliance Details;
-</Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
-}  );
-}
-);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-const Page = () => {
-  return (
-    <MainLayout
-      title="Security - Zion Tech Group"
-      description="Security solutions from Zion Tech Group"
-    >
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Security</h1>
-          <p className="text-xl text-gray-600">Coming soon...</p>
-        </div>
-      </div>
-    </MainLayout>
-  );
-};
-
-export default Page;
->>>>>>> main
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

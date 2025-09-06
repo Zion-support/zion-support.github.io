@@ -1,28 +1,45 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ErrorBoundary from './components/ErrorBoundary';
+import ToastContainer from './components/ToastContainer';
+import { ThemeProvider } from './components/ThemeProvider';
+import ScrollToTop from './components/ScrollToTop';
+import BackToTop from './components/BackToTop';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
 
 function App() {
-  console.log('App component rendering...');
-  
   return (
-    <div className="min-h-screen bg-gray-50 p-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Zion Tech Group
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Leading AI & Technology Solutions for a Smarter Future
-        </p>
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <h2 className="text-2xl font-semibold mb-4">Site is Working!</h2>
-          <p className="text-gray-700 mb-4">
-            ✅ The React application is now loading correctly!
-          </p>
-          <p className="text-gray-600">
-            The console errors have been resolved and the site is functional.
-          </p>
-        </div>
-      </div>
-    </div>
+    <ThemeProvider>
+      <ErrorBoundary>
+        <Router>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/pricing" element={<Pricing />} />
+              </Routes>
+            </main>
+            <Footer />
+            <ToastContainer />
+            <BackToTop />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 }
 

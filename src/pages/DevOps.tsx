@@ -4,96 +4,96 @@ import { Link } from 'react-router-dom';
 const DevOps: React.FC = () => {
   const services = [
     {
-      title: "CI/CD Pipeline Setup",
-      description: "Automated build, test, and deployment pipelines",
+      title: 'CI/CD Pipeline Setup',
+      description: 'Automated build, test, and deployment pipelines',
       features: [
-        "GitHub Actions / GitLab CI",
-        "Docker containerization",
-        "Automated testing",
-        "Deployment automation",
-        "Rollback capabilities"
+        'GitHub Actions / GitLab CI',
+        'Docker containerization',
+        'Automated testing',
+        'Deployment automation',
+        'Rollback capabilities',
       ],
-      price: "$3,000 - $15,000",
-      duration: "2-6 weeks"
+      price: '$3,000 - $15,000',
+      duration: '2-6 weeks',
     },
     {
-      title: "Infrastructure as Code",
-      description: "Manage infrastructure with code using Terraform and Ansible",
+      title: 'Infrastructure as Code',
+      description: 'Manage infrastructure with code using Terraform and Ansible',
       features: [
-        "Terraform modules",
-        "Ansible playbooks",
-        "CloudFormation templates",
-        "Infrastructure versioning",
-        "Environment management"
+        'Terraform modules',
+        'Ansible playbooks',
+        'CloudFormation templates',
+        'Infrastructure versioning',
+        'Environment management',
       ],
-      price: "$4,000 - $20,000",
-      duration: "3-8 weeks"
+      price: '$4,000 - $20,000',
+      duration: '3-8 weeks',
     },
     {
-      title: "Monitoring & Alerting",
-      description: "Comprehensive monitoring and alerting solutions",
+      title: 'Monitoring & Alerting',
+      description: 'Comprehensive monitoring and alerting solutions',
       features: [
-        "Application monitoring",
-        "Infrastructure monitoring",
-        "Log aggregation",
-        "Alert management",
-        "Performance dashboards"
+        'Application monitoring',
+        'Infrastructure monitoring',
+        'Log aggregation',
+        'Alert management',
+        'Performance dashboards',
       ],
-      price: "$2,500 - $12,000",
-      duration: "2-4 weeks"
+      price: '$2,500 - $12,000',
+      duration: '2-4 weeks',
     },
     {
-      title: "DevOps Consulting",
-      description: "Strategic DevOps transformation and best practices",
+      title: 'DevOps Consulting',
+      description: 'Strategic DevOps transformation and best practices',
       features: [
-        "DevOps assessment",
-        "Process optimization",
-        "Team training",
-        "Tool selection",
-        "Culture transformation"
+        'DevOps assessment',
+        'Process optimization',
+        'Team training',
+        'Tool selection',
+        'Culture transformation',
       ],
-      price: "$5,000 - $25,000",
-      duration: "4-12 weeks"
-    }
+      price: '$5,000 - $25,000',
+      duration: '4-12 weeks',
+    },
   ];
 
   const tools = [
-    "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions",
-    "Terraform", "Ansible", "Prometheus", "Grafana", "ELK Stack",
-    "AWS CodePipeline", "Azure DevOps", "Google Cloud Build", "Helm", "Istio"
+    'Docker', 'Kubernetes', 'Jenkins', 'GitLab CI', 'GitHub Actions',
+    'Terraform', 'Ansible', 'Prometheus', 'Grafana', 'ELK Stack',
+    'AWS CodePipeline', 'Azure DevOps', 'Google Cloud Build', 'Helm', 'Istio',
   ];
 
   const benefits = [
     {
-      title: "Faster Deployments",
-      description: "Deploy code changes in minutes, not hours",
-      icon: "⚡"
+      title: 'Faster Deployments',
+      description: 'Deploy code changes in minutes, not hours',
+      icon: '⚡',
     },
     {
-      title: "Reduced Errors",
-      description: "Automated testing reduces human errors",
-      icon: "🎯"
+      title: 'Reduced Errors',
+      description: 'Automated testing reduces human errors',
+      icon: '🎯',
     },
     {
-      title: "Better Collaboration",
-      description: "Improved communication between teams",
-      icon: "🤝"
+      title: 'Better Collaboration',
+      description: 'Improved communication between teams',
+      icon: '🤝',
     },
     {
-      title: "Cost Efficiency",
-      description: "Optimize resource usage and reduce costs",
-      icon: "💰"
+      title: 'Cost Efficiency',
+      description: 'Optimize resource usage and reduce costs',
+      icon: '💰',
     },
     {
-      title: "Scalability",
-      description: "Scale applications automatically",
-      icon: "📈"
+      title: 'Scalability',
+      description: 'Scale applications automatically',
+      icon: '📈',
     },
     {
-      title: "Reliability",
-      description: "Higher uptime and system reliability",
-      icon: "🛡️"
-    }
+      title: 'Reliability',
+      description: 'Higher uptime and system reliability',
+      icon: '🛡️',
+    },
   ];
 
   return (
@@ -103,7 +103,7 @@ const DevOps: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">DevOps & SRE Services</h1>
           <p className="text-xl text-teal-100 max-w-3xl mx-auto mb-8">
-            Accelerate your development lifecycle with modern DevOps practices. 
+            Accelerate your development lifecycle with modern DevOps practices.
             Our team helps you build, deploy, and maintain applications with confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

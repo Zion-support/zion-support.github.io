@@ -1,8 +1,18 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import crypto from "crypto";
 
 
 }
 =======
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
@@ -48,9 +58,33 @@ export function verifySignature(
     .digest("hex");
   return signature === expectedSignature;
 }
+<<<<<<< HEAD
 
 export function generateNonce(): string {
   return crypto.randomBytes(16).toString("hex");
+=======
+<<<<<<< HEAD
+
+export function generateNonce(): string {
+  return crypto.randomBytes(16).toString("hex");
+=======
+// Signature utilities;
+export const signature = {
+  // Add signature functionality here;
+=======
+
+import crypto from 'crypto';
+
+
+}
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  verify: (signature: string, message: string, address: string) => false,
+  sign: (message: string, private_key: string) => '',
+  recover: (signature: string, message: string) => '';
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 
 export function hashData(data: string): string {

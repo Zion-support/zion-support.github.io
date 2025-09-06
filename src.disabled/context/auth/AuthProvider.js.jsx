@@ -1,6 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+import _React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';
+=======
+import React,{ useEffect } from \'react\''\';\' import { supabase,getFromProfiles } from \'../../integrations/supabase/client\''\';\' import { useAuthOperations } from \'../../hooks/useAuthOperations\''\';\' import { AuthContext } from \'./AuthContext\''\';\' import { cleanupAuthState } from \'../../utils/authUtils\''\'; import { useNavigate,useLocation } from\';\';react-router-dom\''\';\' import { useAuthState } from \'./useAuthState\''\';\' import { useAuthEventHandlers } from \'./useAuthEventHandlers\''\';\' import { mapProfileToUser } from \'./profileMapper\''\';\' import { loginUser,registerUser } from \'@/services/authService\''\';\' import { safeStorage } from \'@/utils/safeStorage\''\';\' import { toast } from \'@/hooks/use-toast\''\';\';
+const React,{ useEffect } from "react""";" import { supabase,getFromProfiles } from "././integrations/supabase/client""";" import { useAuthOperations } from "././hooks/useAuthOperations""";" import { AuthContext } from "./AuthContext""";" import { cleanupAuthState } from "././utils/authUtils"""; import { useNavigate,useLocation } from";";react-router-dom""";" import { useAuthState } from "./useAuthState""";" import { useAuthEventHandlers } from "./useAuthEventHandlers""";" import { mapProfileToUser } from "./profileMapper""";" import { loginUser,registerUser } from "@/services/authService""";" import { safeStorage } from "@/utils/safeStorage""";" import { toast } from "@/hooks/use-toast""";";''"
+import _React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+<<<<<<< HEAD
 
 
 =======
@@ -23,6 +33,9 @@ import React,{ useEffect } from \'react\''\';\' import { supabase,getFromProfile
 const React,{ useEffect } from "react""";" import { supabase,getFromProfiles } from "././integrations/supabase/client""";" import { useAuthOperations } from "././hooks/useAuthOperations""";" import { AuthContext } from "./AuthContext""";" import { cleanupAuthState } from "././utils/authUtils"""; import { useNavigate,useLocation } from";";react-router-dom""";" import { useAuthState } from "./useAuthState""";" import { useAuthEventHandlers } from "./useAuthEventHandlers""";" import { mapProfileToUser } from "./profileMapper""";" import { loginUser,registerUser } from "@/services/authService""";" import { safeStorage } from "@/utils/safeStorage""";" import { toast } from "@/hooks/use-toast""";";''"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import _React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 import _React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';
 =======
@@ -31,3 +44,4 @@ const React,{ useEffect } from "react""";" import { supabase,getFromProfiles } f
 import _React,{ useEffect } from 'react''';' import { supabase,getFromProfiles } from '../../integrations/supabase/client''';' import { useAuthOperations } from '../../hooks/useAuthOperations''';' import { AuthContext } from './AuthContext''';' import { cleanupAuthState } from '../../utils/authUtils'''; import { useNavigate,useLocation } from';';react-router-dom''';' import { useAuthState } from './useAuthState''';' import { useAuthEventHandlers } from './useAuthEventHandlers''';' import { mapProfileToUser } from './profileMapper''';' import { loginUser,registerUser } from '@/services/authService''';' import { safeStorage } from '@/utils/safeStorage''';' import { toast } from '@/hooks/use-toast''';';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

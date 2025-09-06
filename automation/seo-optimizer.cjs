@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node
 <<<<<<< HEAD
 =======
@@ -120,6 +122,7 @@ class SEOOptimizer {
 }
 <<<<<<< HEAD
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
         
       }
@@ -232,6 +235,10 @@ for (const check of seoChecks) {
     successCount++;
   } catch (error) {
     
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+=======
   }
 }
 
@@ -281,6 +288,7 @@ console.log(' SEO Optimizer Starting...\n')
 <<<<<<< HEAD
     "status"
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -407,11 +415,56 @@ class SEOOptimizer {
     }, 6 * 60 * 60 * 1000);
 
     this.log('🔄 SEO Optimizer is running. Optimization every 6 hours.');
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   }
 }
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+// Generate SEO report
+const report = {
+  "timestamp": new Date().toISOString(),
+  "checks": seoChecks.map(check => ({
+    name: check.name,
+    "status": 'completed'})),
+  "summary": {
+    total: totalCount,
+    "successful": successCount,
+    "failed": totalCount - successCount}};
+
+const reportsDir = path.join(process.cwd(), 'automation-reports');
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });
+}
+
+const reportFile = path.join(reportsDir, `seo-report-${Date.now()}.json`);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
+>>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+console.log(' SEO Optimizer Starting...\n')
+    "name"
+    "name"
+    "name"
+    "name"
+    "name"
+    "name"
+    "status"
+=======
+#!/usr/bin/env node
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -424,6 +477,7 @@ optimizer.optimizeSEO().catch(console.error);
 =======
 #!/usr/bin/env node
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 /**
  * SEO Optimizer
  * Automatically optimizes SEO for the application
@@ -552,8 +606,20 @@ class SEOOptimizer {
   }
 }
 
+<<<<<<< HEAD
+// Run if called directly
+if (require.main === module) {
+  const optimizer = new SEOOptimizer();
+  optimizer.start().catch(console.error);
+}
+
+module.exports = SEOOptimizer;
+>>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+=======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Run if called directly
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
@@ -563,11 +629,17 @@ module.exports = SEOOptimizer;
 
 module.exports = SEOOptimizer;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
 // Run SEO optimization
 const optimizer = new SEOOptimizer();
 <<<<<<< HEAD
 optimizer.optimize().catch(console.error);
+<<<<<<< HEAD
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 =======
 optimizer.optimizeSEO().catch(console.error);
 >>>>>>> origin/main
@@ -578,3 +650,4 @@ optimizer.optimizeSEO().catch(console.error);
 =======
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

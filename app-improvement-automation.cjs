@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 class AppImprovementAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -93,7 +102,14 @@ class AppImprovementAutomation {}
 });
       };
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     const reportPath = path.join(this.projectRoot, 'improvement-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`Improvement report generated: ${reportPath}`);
@@ -120,4 +136,11 @@ if (require.main === module) {}
   const automation = new AppImprovementAutomation();
   automation.run();
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = AppImprovementAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = AppImprovementAutomation;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
@@ -20,30 +11,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
-<<<<<<< HEAD
   const events = state.events.filter(
     (e) => e.type === "zion.talent.matched" && e.timestamp > sinceTs
-=======
-  const events = state && state.events.filter(
-    (e) => e && e.type === "zion && zion.talent.matched" && e && e.timestamp > sinceTs,
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   );
   res.status(200).json({ events });
 }
-<<<<<<< HEAD
-
-
-
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state  } from '../../../../lib / integrations / file_store';
@@ -56,7 +28,6 @@ function handler() {
     return res.status (405).json ({ error: "Method not allowed" })) {
   $2
 }
-<<<<<<< HEAD
 =======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../../lib/integrations/fileStore";
@@ -64,23 +35,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET");
     return res.status(405).json({ error: "Method not allowed" });
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   const { since } = req.query as { since?: string }
-  const state = read_state ();
-  const since_ts = since ? Number (since) : 0;
-  const events = state.events.filter (
-    (e) => e.type === "zion.talent.matched" && e.timestamp > since_ts,
+  const state = readState();
+  const sinceTs = since ? Number(since) : 0;
+const events = state && state.events.filter(
+    (e) => e && e.type === "zion && zion.talent.matched" && e && e.timestamp > sinceTs
   );
-  res.status (200).json ({ events });
+  res && res.status(200).json({ events });
 }
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -117,14 +83,9 @@ function handler() {
   const state = read_state ();
   const since_ts = since ? Number (since) : 0;
   const events = state.events.filter (
-    (e) => e.type === "zion.talent.matched" && e.timestamp > since_ts,
+    (e) => e.type === "zion.talent.matched" && e.timestamp > since_ts
   );
   res.status (200).json ({ events });
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

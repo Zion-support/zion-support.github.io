@@ -3,8 +3,13 @@ command = "npm ci && npm run build"
 publish = "dist"
 
 [build.environment]
+<<<<<<< HEAD
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+>>>>>>> main
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -13,9 +18,15 @@ publish = "dist"
   directory = "netlify/functions"
 
 [[redirects]]
+<<<<<<< HEAD
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
+=======
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+>>>>>>> main
 
 # Security and caching headers for static assets
 [[headers]]
@@ -80,6 +91,12 @@ to = "/services/smart-crm-intelligence-suite/"
 status = 301
 
 [[redirects]]
+<<<<<<< HEAD
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
+=======
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
+>>>>>>> main

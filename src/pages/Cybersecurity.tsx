@@ -4,63 +4,63 @@ import { Link } from 'react-router-dom';
 const Cybersecurity: React.FC = () => {
   const services = [
     {
-      title: "Security Audits & Assessments",
-      description: "Comprehensive security evaluation of your systems and infrastructure",
+      title: 'Security Audits & Assessments',
+      description: 'Comprehensive security evaluation of your systems and infrastructure',
       features: [
-        "Vulnerability assessments",
-        "Penetration testing",
-        "Code security reviews",
-        "Compliance audits",
-        "Risk analysis reports"
+        'Vulnerability assessments',
+        'Penetration testing',
+        'Code security reviews',
+        'Compliance audits',
+        'Risk analysis reports',
       ],
-      price: "$2,500 - $15,000",
-      duration: "1-4 weeks"
+      price: '$2,500 - $15,000',
+      duration: '1-4 weeks',
     },
     {
-      title: "Threat Monitoring & Detection",
-      description: "24/7 monitoring and threat detection services",
+      title: 'Threat Monitoring & Detection',
+      description: '24/7 monitoring and threat detection services',
       features: [
-        "SIEM implementation",
-        "Real-time threat detection",
-        "Incident response",
-        "Security analytics",
-        "Threat intelligence"
+        'SIEM implementation',
+        'Real-time threat detection',
+        'Incident response',
+        'Security analytics',
+        'Threat intelligence',
       ],
-      price: "$3,000 - $8,000/month",
-      duration: "Ongoing"
+      price: '$3,000 - $8,000/month',
+      duration: 'Ongoing',
     },
     {
-      title: "Compliance Management",
-      description: "Ensure compliance with industry standards and regulations",
+      title: 'Compliance Management',
+      description: 'Ensure compliance with industry standards and regulations',
       features: [
-        "SOC 2 Type II",
-        "ISO 27001",
-        "GDPR compliance",
-        "HIPAA compliance",
-        "PCI DSS"
+        'SOC 2 Type II',
+        'ISO 27001',
+        'GDPR compliance',
+        'HIPAA compliance',
+        'PCI DSS',
       ],
-      price: "$5,000 - $25,000",
-      duration: "3-6 months"
+      price: '$5,000 - $25,000',
+      duration: '3-6 months',
     },
     {
-      title: "Security Training & Awareness",
-      description: "Educate your team on cybersecurity best practices",
+      title: 'Security Training & Awareness',
+      description: 'Educate your team on cybersecurity best practices',
       features: [
-        "Phishing simulations",
-        "Security awareness training",
-        "Incident response training",
-        "Policy development",
-        "Regular assessments"
+        'Phishing simulations',
+        'Security awareness training',
+        'Incident response training',
+        'Policy development',
+        'Regular assessments',
       ],
-      price: "$1,500 - $5,000",
-      duration: "Ongoing"
-    }
+      price: '$1,500 - $5,000',
+      duration: 'Ongoing',
+    },
   ];
 
   const technologies = [
-    "AWS Security Hub", "Azure Security Center", "Splunk", "QRadar", "CrowdStrike",
-    "Palo Alto Networks", "Fortinet", "Check Point", "Nessus", "Burp Suite",
-    "OWASP ZAP", "Metasploit", "Wireshark", "Nmap", "Kali Linux"
+    'AWS Security Hub', 'Azure Security Center', 'Splunk', 'QRadar', 'CrowdStrike',
+    'Palo Alto Networks', 'Fortinet', 'Check Point', 'Nessus', 'Burp Suite',
+    'OWASP ZAP', 'Metasploit', 'Wireshark', 'Nmap', 'Kali Linux',
   ];
 
   return (
@@ -70,7 +70,7 @@ const Cybersecurity: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">Cybersecurity Services</h1>
           <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
-            Protect your digital assets with comprehensive cybersecurity solutions. 
+            Protect your digital assets with comprehensive cybersecurity solutions.
             Our expert team provides 24/7 monitoring, threat detection, and compliance management.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
