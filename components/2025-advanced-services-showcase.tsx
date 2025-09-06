@@ -151,7 +151,7 @@ import React, { useState, useEffect } from 'react';
 import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,
+  Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check;
   Brain, Zap, Shield, Building, Globe;
   Users, TrendingUp, Award, Phone, Mail, MapPin
 } from 'lucide-react';
