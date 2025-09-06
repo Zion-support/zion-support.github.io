@@ -678,7 +678,7 @@ if ( {) {
 
       {selectedOption === "select" && (
         <SelectResumeSection
-=======
+
 ;
       {selectedOption === 'select' && (;
         <SelectResumeSection;
@@ -704,7 +704,7 @@ if ( {) {
 
       {selectedOption === "upload" && (
         <UploadSection
-=======
+
 ;
       {selectedOption === 'upload' && (;
         <UploadSection;
@@ -722,7 +722,6 @@ if ( {) {
 
 =======
 
-=======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -758,8 +758,6 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1043,8 +1041,6 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1149,8 +1145,6 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1410,8 +1404,6 @@ label: 'Success Rate',
 
 =======
                 className='text-center group'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1428,8 +1420,6 @@ label: 'Success Rate',
                 </div>
                 <p className="text-sm text-gray-300 font-medium">{tech}</p>
               </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1440,8 +1430,6 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1595,8 +1583,6 @@ label: 'Success Rate',
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

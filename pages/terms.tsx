@@ -154,11 +154,7 @@ function Terms() {
 =======
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+
 import React from 'react';
 ] 
 };

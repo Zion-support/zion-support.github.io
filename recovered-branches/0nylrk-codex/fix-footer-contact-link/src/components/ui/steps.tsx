@@ -26,7 +26,7 @@ interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   className?: string
 }
 

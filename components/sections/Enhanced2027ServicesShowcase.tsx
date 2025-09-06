@@ -1048,8 +1048,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                     </div>;
 =======
                     </div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1304,7 +1302,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
 
           className="mt-20 text-center"
-=======
+
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
 
@@ -1503,11 +1501,6 @@ export default Enhanced2027ServicesShowcase;
 /* Search and Filters */;
 =======
   );
-<<<<<<< HEAD
-}
-/* Search and Filters */
-=======
-};
 
 <<<<<<< HEAD
   /* Search and Filters */ 

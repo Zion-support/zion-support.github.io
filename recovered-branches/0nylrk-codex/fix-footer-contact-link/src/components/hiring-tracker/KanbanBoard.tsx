@@ -181,8 +181,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
       ...columns,
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}),
-    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus),

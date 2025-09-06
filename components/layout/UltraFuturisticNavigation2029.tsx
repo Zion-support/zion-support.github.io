@@ -325,8 +325,6 @@ export default function UltraFuturisticNavigation2029() {;
               href={`tel:${contactInfo.mobile}`}
               className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
             >
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

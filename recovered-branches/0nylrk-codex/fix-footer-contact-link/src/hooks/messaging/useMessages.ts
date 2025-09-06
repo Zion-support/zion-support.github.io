@@ -87,7 +87,7 @@ if ( {) {
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
-=======
+
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;

@@ -97,7 +97,7 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Digital reality",
       "Metaverse platform",
       "Advanced graphics",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       "Social interactions"
     ],
     link: "/services/2026-metaverse-digital-reality",

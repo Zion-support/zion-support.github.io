@@ -156,7 +156,7 @@ app.command('/zion', async ({ command, ack, respond }) => {;
     await respond({ response_type: 'ephemeral', text: helpText() });
   } catch (err: any) {;
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   }
 })
 (async () => {

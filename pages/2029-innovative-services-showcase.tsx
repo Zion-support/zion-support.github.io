@@ -193,7 +193,7 @@ color: 'from - cyan - 600 via - teal - 600 to - emerald - 600',
 
 =======
                 Experience the future of technology with our revolutionary AI autonomous ecosystems, 
-=======
+
                 Experience the future of technology with our revolutionary AI autonomous ecosystems,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

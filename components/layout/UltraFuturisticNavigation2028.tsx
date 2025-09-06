@@ -680,8 +680,6 @@ function UltraFuturisticNavigation2028() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
             {/* Company Links */}
             {companyLinks.slice(1, 5).map((link) => (

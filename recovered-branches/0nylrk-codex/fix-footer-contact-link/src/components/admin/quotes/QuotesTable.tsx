@@ -54,7 +54,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   onViewDetails: (quote: QuoteRequest) => void
 }
 

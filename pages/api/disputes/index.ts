@@ -301,7 +301,7 @@ export default async function handler(req, res) {
       description,;
       attachments: [],;
       messages: []},;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {

@@ -626,13 +626,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-          >
-            {subtitle}
-          </motion.p>
-=======
-            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'          >
 
           >
 
@@ -650,8 +643,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -992,8 +983,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
                       <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1163,8 +1152,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({;
                   <div className="mt-auto">
 =======
                   <div className='mt-auto'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -594,20 +594,6 @@ ease: 'linear',
           animate={{
             y: [0, 1000]}}
           transition={{
-<<<<<<< HEAD
-            duration: 8
-            repeat: Infinity as any
-            ease: "linear"
-          }}
-        />
-=======
-            duration: 8,
-            repeat: Infinity as any,
-            ease: "linear"
-          }}
-        />
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -851,8 +837,6 @@ ease: 'linear',
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

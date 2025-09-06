@@ -21,7 +21,7 @@ export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promi
     await client.query('BEGIN');
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
     const result = await fn(client);
-=======
+
 import { Pool, PoolClient } from 'pg',;
 let pool: Pool | null = null,;
 export function getPool(): Pool {;

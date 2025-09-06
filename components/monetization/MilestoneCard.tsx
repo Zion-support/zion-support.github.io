@@ -368,23 +368,6 @@ function MilestoneCard() {
 =======
         </button>
       </div>
-<<<<<<< HEAD
-      <div className='mt-3'>
-        <div className='flex items-center gap-2'>
-          {statusSteps.map((step, idx) => (
-            <div key={step} className='flex items-center'>
-              <div
-                className={
-                  'h-2 w-2 rounded-full ' +
-                  (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')                }
-                title={step}
-              />
-              {idx < statusSteps.length - 1 && (          {statusSteps.map((step, idx) => (
-            <div key={step} className="flex items-center">
-              <div
-                className={
-                  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -395,17 +378,6 @@ function MilestoneCard() {
                 title={step}
               />
               {idx < statusSteps.length - 1 && (
-<<<<<<< HEAD
-                <div
-                  className={
-                    'h-0.5 w-8 ' +
-                    (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')
-                  }
-                />              )}
-            </div>
-          ))}
-        </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

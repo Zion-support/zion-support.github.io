@@ -1,5 +1,4 @@
 
-
   id: string;
   name: string;
   tagline: string;

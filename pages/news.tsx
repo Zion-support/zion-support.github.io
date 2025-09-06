@@ -2447,7 +2447,7 @@ export default function NewsPage(req, res) {
 
 =======
                 For press inquiries, media interviews, or additional information, 
-=======
+
                 For press inquiries, media interviews, or additional information,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

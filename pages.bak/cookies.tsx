@@ -56,5 +56,3 @@ export default function Cookies(): any ({ }: CookiesProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

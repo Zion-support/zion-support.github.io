@@ -26,19 +26,15 @@ export async function getServerSideProps() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-<tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
-=======
- <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
 export async function getServerSideProps() {
 =======
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
-=======
+
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }</tbody> </table> </div> </div>) import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
@@ -68,9 +64,6 @@ function getServerSideProps() {
 =======
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
-    routes = json.routes |[];
-    generatedAt = json.generatedAt |''
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch {}

@@ -152,7 +152,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 
 
   const topic = String(ctx.params?.topic || '');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return { props: { topic, posts } }

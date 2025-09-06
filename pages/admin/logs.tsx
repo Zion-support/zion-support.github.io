@@ -68,7 +68,7 @@ import { GetServerSideProps } from 'next';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import fs from 'fs';
 import path from 'path';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -108,10 +108,9 @@ import {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
-=======
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LogEntry {
@@ -194,7 +193,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   lastUpdated,;
 
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
-=======
+
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
 ;
@@ -583,7 +582,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);

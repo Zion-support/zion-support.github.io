@@ -63,7 +63,6 @@ export const MobileEmailCapture: React.FC = () => {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSuccess, setIsSuccess] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -77,8 +76,7 @@ export const MobileEmailCapture: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 1000)),
       setIsSuccess(true),
       setEmail(""),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       setTimeout(() => {
         setIsSuccess(false)
       }, 5000)

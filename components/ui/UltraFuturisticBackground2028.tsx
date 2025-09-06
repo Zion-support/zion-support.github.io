@@ -923,8 +923,6 @@ if ( {) {
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 4 }}
       >
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

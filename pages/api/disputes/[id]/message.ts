@@ -204,7 +204,7 @@ export default async function handler(req, res) {
       authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),;
       body,;
       createdAt: now}),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });

@@ -13,7 +13,6 @@ type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | '
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -129,7 +128,6 @@ export async function createNotification({;
   }
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
  * Creates a hire request notification for admin and talent
  */

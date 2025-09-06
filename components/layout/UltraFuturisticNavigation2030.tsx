@@ -608,8 +608,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1001,8 +999,6 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1195,7 +1191,7 @@ className="flex items-center space-x-2 text-gray-300 hover:text-white transition
                 <div className="space-y-3 pt-4 border-t border-purple-500/20">
 =======
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
-=======
+
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>
 
                       </Link>

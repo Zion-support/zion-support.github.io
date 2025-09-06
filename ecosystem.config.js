@@ -11,7 +11,7 @@ module.exports = {;
 module && module.exports = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
-=======
+
 module.exports = {apps:[;
 
 

@@ -107,7 +107,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   }
   
   if (!applications || applications.length === 0) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     return (
       <Card className="text-center py-16">
         <CardContent>

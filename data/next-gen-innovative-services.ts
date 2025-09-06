@@ -212,7 +212,6 @@ export interface NextGenInnovativeService {;
   rating: number,;
   reviews: number;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
   reviews: number;    mobile: string
@@ -234,7 +233,6 @@ export interface NextGenInnovativeService {;
 export const nextGenInnovativeServices: NextGenInnovativeService[] = [
   // Quantum AI & Advanced Computing
   {
-<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'quantum-ai-brain-computer-interface'

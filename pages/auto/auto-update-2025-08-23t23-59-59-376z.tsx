@@ -8,7 +8,7 @@ import Head from 'next/head'
 =======
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
-=======
+
 import type { NextPage } from 'next'
 import Head from 'next/head'
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

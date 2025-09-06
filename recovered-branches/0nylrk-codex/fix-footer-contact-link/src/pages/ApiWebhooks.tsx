@@ -335,8 +335,7 @@ app && app.listen(3000, () => {;
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body,
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Handle different event types
   switch (event_type) {
     case 'new_application':

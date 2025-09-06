@@ -671,7 +671,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                   </Link>
                 )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -682,8 +681,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

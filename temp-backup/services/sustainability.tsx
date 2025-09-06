@@ -53,5 +53,3 @@ export default function Sustainability(): any ({ }: SustainabilityProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -407,12 +407,12 @@ import {
   saveProject,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "../../../utils/marketplace/store";
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 <<<<<<< HEAD
 =======

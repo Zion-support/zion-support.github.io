@@ -67,7 +67,7 @@ export default async function handler(req, res) {
 
 
     return res.status(500).json({ error: e?.message });
-=======
+
     const { error } = await supabase.from('payout_requests').insert({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       partner_code: String(code).toLowerCase(),

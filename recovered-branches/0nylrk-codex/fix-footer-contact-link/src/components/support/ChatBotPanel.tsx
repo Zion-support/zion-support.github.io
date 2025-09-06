@@ -271,7 +271,6 @@ export function ChatBotPanel() {;
   }, []),
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSendMessage = async (text: string = inputValue) => {
     if (!text.trim()) return
     const userMessage: Message = {

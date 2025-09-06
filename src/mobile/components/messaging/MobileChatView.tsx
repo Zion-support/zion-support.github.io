@@ -203,13 +203,6 @@ import { toast } from 'sonner'
             placeholder='Type a message...'
             className='flex-1'          />
 
-          <Button
-            size='icon'
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
           </Button>
         </div>
       </div>;

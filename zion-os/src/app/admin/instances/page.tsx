@@ -229,10 +229,7 @@ export default function InstancesPage() {;
 =======
                     </div>;
                   )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   <div className="flex items-center gap-2 text-sm text-white/70">;
                     <span className="w-4 h-4">🔧</span>;
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
@@ -385,12 +382,7 @@ export default function InstancesPage() {;
                 <div className="flex-1">;
                   <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
                   <div className="flex items-center space-x-2 mb-2">;
-<<<<<<< HEAD
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-=======
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
-                      inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                       inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
@@ -439,10 +431,7 @@ export default function InstancesPage() {;
 =======
                   </div>;
                 )}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <span>💎</span>;

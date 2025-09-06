@@ -214,12 +214,6 @@ export default function AdminDisputesDashboard() {;
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  const disputes = useMemo(() => {
-<<<<<<< HEAD
-    const list = data?.disputes |[];
-    if (statusFilter === 'All') return list;
-    return list.filter((d: any) => d.status === statusFilter);  }, [data, statusFilter]);
 
 =======
     const list = data?.disputes || [],

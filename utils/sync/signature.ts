@@ -8,7 +8,6 @@ import crypto from 'crypto';
   sign: (message: string, privateKey: string) => '',
   recover: (signature: string, message: string) => '';
 };
-=======
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

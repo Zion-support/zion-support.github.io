@@ -140,7 +140,7 @@ export default function ContentGenerator() {;
       if (error) throw error,
       
       setPreviewContent(data),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
     } catch (error) {
       console.error("Error generating content:", error),
@@ -207,8 +207,7 @@ export default function ContentGenerator() {;
 
       
       if (error) throw error,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error),

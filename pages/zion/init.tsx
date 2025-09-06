@@ -481,7 +481,7 @@ const InitPage: NextPage = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
           <div>
             <label className="block text-sm font-medium">Logo URL</label>
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.logoUrl} onChange={(e) => setState({ ...state, branding: { ...state.branding, logoUrl: e.target.value } })} />

@@ -70,8 +70,7 @@ serve(async (req) => {
 
 
       }
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
         method: "POST"
         headers: {

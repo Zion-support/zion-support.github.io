@@ -872,8 +872,6 @@ href={item && item.href}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
-<<<<<<< HEAD
-=======
 
           >
 <<<<<<< HEAD

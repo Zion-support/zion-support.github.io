@@ -155,8 +155,7 @@ export function IntegrationConnectionModal(): any ({;
         {integration.status === "connected" ||
 
         integration.status === "warning" ? (
-=======
-        
+
         {(integration.status === "connected" || integration.status === "warning") ? (
 
 

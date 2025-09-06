@@ -1282,8 +1282,6 @@ transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
             >
 =======
               className='text-center'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

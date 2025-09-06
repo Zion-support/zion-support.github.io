@@ -17,7 +17,7 @@ import { useEffect, useState } from 'react',
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
   useEffect__(() => {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

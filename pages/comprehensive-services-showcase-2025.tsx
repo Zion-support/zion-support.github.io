@@ -177,7 +177,7 @@ import Link from 'next/link';
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <>
       <Head>

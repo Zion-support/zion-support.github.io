@@ -44,7 +44,7 @@ declare module "@radix-ui/react-toggle",
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 declare module '@tanstack/react-query',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 declare module 'react-day-picker' {
 
 declare module "cmdk",;

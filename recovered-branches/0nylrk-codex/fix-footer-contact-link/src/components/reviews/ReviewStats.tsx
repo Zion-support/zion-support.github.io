@@ -15,7 +15,7 @@ interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
   ratingDistribution?: Record<number number>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
 

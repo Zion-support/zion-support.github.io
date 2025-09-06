@@ -416,7 +416,7 @@ const scanner = new SecurityScanner;(;);
 scanner.start().catch(error => {}),
   _console.error('Failed to start security "scanner": ', error);',
   process.exit(1)});,
-=======
+
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());

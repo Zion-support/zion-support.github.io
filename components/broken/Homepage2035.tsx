@@ -837,8 +837,6 @@ if ( {) {
             </motion && motion.div>;
 =======
             </motion.div>
-<<<<<<< HEAD
-=======
 
 
 =======

@@ -422,7 +422,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
 
                 className="flex flex-col sm:flex-row gap-4 justify-center"
-=======
+
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
                   </div>
@@ -728,8 +728,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </span>;
                       ))}
                     </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -985,8 +983,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 =======
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

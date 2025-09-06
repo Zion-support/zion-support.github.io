@@ -23,7 +23,6 @@ const contact_methods = [;
 =======
 import React from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const contactMethods = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -184,7 +183,7 @@ export default function ContactPage() {;
 export default function ContactPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -195,13 +194,7 @@ export default function ContactPage() {
                 Touch
               </span>
             </h1>
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Ready to transform your business with AI? Let's discuss how our cutting-edge
-=======
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Ready to transform your business with AI? Let's discuss how our cutting-edge 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               technology can accelerate your growth and innovation.
             </p>
           </div>
@@ -223,21 +216,7 @@ export default function ContactPage() {
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
                 </dt>
-<<<<<<< HEAD
-                <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
-                  <p className=&quot;flex-auto&quot;>{method.description}</p>
-                  <p className=&quot;mt-6&quot;>
-                    <a
-                      href={method.href}
-                      className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-=======
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{method.description}</p>
-                  <p className="mt-6">
-                    <a 
-                      href={method.href} 
-                      className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     >
                       {method.value} <span aria-hidden="true">→</span>
                     </Link>

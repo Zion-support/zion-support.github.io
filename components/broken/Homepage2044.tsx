@@ -692,7 +692,7 @@ const featured_services = useMemo ( () => allRevolutionaryServices.slice (0, 6),
 <<<<<<< HEAD
 
 </div>);
-=======
+
  </div>);
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======

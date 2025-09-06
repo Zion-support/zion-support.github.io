@@ -24,7 +24,7 @@ export interface InstanceConfig {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -93,7 +93,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;

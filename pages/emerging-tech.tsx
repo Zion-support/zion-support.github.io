@@ -45,9 +45,9 @@ export default function EmergingTechPage() {_const _features = [
     {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
     {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
     {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
   return (_<Layout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />

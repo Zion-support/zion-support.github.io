@@ -91,13 +91,12 @@ interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;
   success: boolean,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
+
 // Define RequestInit if not available
 interface File extends Blob {
   name: string;
   lastModified: number;
->>>>>>> origin/main
+
 }
 interface Blob {
   size: number;
@@ -243,10 +242,7 @@ interface AbortSignal extends EventTarget {
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 interface ApiResponse<T = unknown> {
   data?: T;
   error?: string;

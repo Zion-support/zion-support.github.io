@@ -580,7 +580,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const fixer = new AdvancedSourceFixer();
   fixer.fixAllSourceFiles().catch(console.error);
 }
-<<<<<<< HEAD
 
 export default AdvancedSourceFixer;
 <<<<<<< HEAD
@@ -626,9 +625,7 @@ if (require.main === module) {
   fixer.fixAllSourceFiles().catch(console.error);
 
 module.exports = AdvancedSourceFixer;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
-=======
+
 export default AdvancedSourceFixer;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

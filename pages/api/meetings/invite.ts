@@ -126,7 +126,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     console.error(e);
     return res.status(200).json({ ok: true, skipped: true });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   }
 <<<<<<< HEAD
 }

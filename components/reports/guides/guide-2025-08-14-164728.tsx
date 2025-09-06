@@ -11,8 +11,6 @@ export default function Page() {;
         <title>Guide — Implementation</title>;
 =======
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

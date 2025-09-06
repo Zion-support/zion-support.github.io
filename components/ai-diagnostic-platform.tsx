@@ -242,8 +242,6 @@ import Layout from '../components/layout/Layout';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -412,8 +410,6 @@ import Layout from '../components/layout/Layout';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

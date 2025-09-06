@@ -58,5 +58,3 @@ export default function Platformengineering(): any ({ }: PlatformengineeringProp
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

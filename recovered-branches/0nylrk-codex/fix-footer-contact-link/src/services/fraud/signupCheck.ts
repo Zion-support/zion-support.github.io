@@ -35,7 +35,7 @@ export const checkSignupPatterns = async (;
       if (!error && recentSignups && recentSignups.length >= 3) {
 
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
-=======
+
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { analyzeEmail } from './analyzeEmail',;

@@ -1115,7 +1115,6 @@ export default function UltraFuturisticNavigation2033() {;
                 </Link>
               ))}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Contact Button */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -1354,10 +1353,6 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 =======
                   </div>
                 </div>
-<<<<<<< HEAD
-                {/* Mobile Contact Button */}
-                <div className='pt-4'>
-=======
 
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>

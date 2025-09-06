@@ -45,9 +45,9 @@ export default function EnterpriseITPage() {_const _features = [
     {_name: 'Cloud Cost Optimizer', _href: '/cloud-cost-optimizer'},
     {_name: 'Data Pipeline Observability', _href: '/data-pipeline-observability'},
     {_name: 'Uptime & SLO Monitor', _href: '/uptime-slo-monitor'}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
   return (_<Layout>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
         <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />

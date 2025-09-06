@@ -736,8 +736,6 @@ export default function UltraFuturisticNavigation2034() {;
 =======
 =======
 
-                >
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
@@ -1267,10 +1265,7 @@ function UltraFuturisticNavigation2034() {
                     </AnimatePresence>
                   </div>
                 ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 <Link
                   href='/contact'
                   onClick={() => setIsOpen(false)}

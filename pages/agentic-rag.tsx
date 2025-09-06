@@ -254,30 +254,9 @@ export default function AgenticRAGPage() {
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-	}
-	const plans = [
-		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] }
-		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] }
-		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }]
 
-	return (
-		<UltraFuturisticMatrixBackground>
-=======
-	},
-	const plans = [
-		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
-		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] },
-		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }],
-export default function AgenticRAGPage() {_const _contactInfo = {
-		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
-	const _plans = [
-		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
-		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
-		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 	return (_<UltraFuturisticMatrixBackground>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />

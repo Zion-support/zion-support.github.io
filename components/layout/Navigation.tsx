@@ -594,13 +594,6 @@ import Link from 'next/link';
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group'
                     >
                       <item.icon className='w-4 h-4 group-hover:scale-110 transition-transform duration-300' />
-<<<<<<< HEAD
-                      <span className='font-medium'>{item.name}</span>                    </Link>                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 group"
-                    >
-                      <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                      <span className="font-medium">{item.name}</span>
-=======
-                      <span className='font-medium'>{item.name}</span>                    </Link>
 
                     </Link>
 
@@ -613,10 +606,6 @@ import Link from 'next/link';
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
-            {/* CTA Button */}
-            <div className='hidden lg:block'>
-=======
 
             {/* CTA Button */}
             <div className='hidden lg:block'>
@@ -742,8 +731,6 @@ import Link from 'next/link';
             >
 =======
               className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -619,8 +619,6 @@ export default function UltraFuturisticFooter2029V2() {
               >
 =======
                 className='group'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -729,8 +727,6 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

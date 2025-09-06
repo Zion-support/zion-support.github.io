@@ -172,26 +172,7 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;

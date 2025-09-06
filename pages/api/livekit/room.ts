@@ -98,7 +98,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { projectId, preferredName } = req.body |{}
     if (!projectId) {
       return res.status(400).json({ error: "Missing projectId" });
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
 
@@ -120,7 +120,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     }
     if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
       return res.status(500).json({ error: "LiveKit env vars not configured" });

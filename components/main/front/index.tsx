@@ -195,7 +195,7 @@ export default function MainFrontIndex() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function MainFrontIndex() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const { scrollYProgress } = useScroll();
   const progressX = useSpring(scrollYProgress, {
     stiffness: 90
@@ -680,8 +680,6 @@ export default function MainFrontIndex() {
 =======
               className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl'
               onClick={e => e.stopPropagation()}
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -809,10 +807,6 @@ export default function MainFrontIndex() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-          className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'      <div role="main" className="relative z-10">
-=======
-          className='mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24'
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -5015,8 +5009,6 @@ label: 'Live Dashboards',
             ))}
           </div>
         </motion.section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -5030,8 +5022,6 @@ label: 'Live Dashboards',
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -6970,8 +6960,6 @@ className="mx-auto max-w-7xl px-6 pb-14"
               ['🚀SpeedContinuous delivery to main with safe, incremental changes.'];
 =======
           className='mx-auto max-w-7xl px-6 pb-14'
-<<<<<<< HEAD
-=======
 
         >
 <<<<<<< HEAD
@@ -10622,7 +10610,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 }</div> 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }</div> </div> </div>) ) 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

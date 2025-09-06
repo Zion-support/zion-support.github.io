@@ -221,7 +221,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 export const nextGenAIServices: NextGenAIService[] = [
   // Advanced AI & Neural Network Services
   {
-<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'neural-quantum-brain-interface'
@@ -2216,7 +2215,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 89
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 89
@@ -2541,7 +2539,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 52
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 52
@@ -2972,7 +2969,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 38
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 38
@@ -3214,7 +3210,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
     reviews: 245
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     reviews: 245

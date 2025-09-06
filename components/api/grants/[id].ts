@@ -46,9 +46,6 @@ function writeGrant(record: GrantApplication) {
   ensureDir()
 =======
 
-function writeGrant(record: GrantApplication) {
-  ensureDir(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

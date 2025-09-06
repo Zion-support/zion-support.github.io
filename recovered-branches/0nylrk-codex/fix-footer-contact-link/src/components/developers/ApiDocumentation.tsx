@@ -78,7 +78,7 @@ headers = {
 )
 data = response.json()
 print(data)`
-=======
+
 import { useState } from "react",;
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;

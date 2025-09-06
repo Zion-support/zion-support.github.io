@@ -64,7 +64,7 @@ try {;
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       // Resolve conflicts by accepting our version;
 
 

@@ -15,5 +15,3 @@ export default function _app({ }: _appProps) {
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

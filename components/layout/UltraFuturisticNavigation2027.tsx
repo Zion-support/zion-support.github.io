@@ -1865,10 +1865,6 @@ icon: <Building className="w-5 h-5" />,
               </div>
             ))}
           </nav>
-<<<<<<< HEAD
-          {/* Right Side */}
-          <div className='flex items-center space-x-4'>
-=======
 
           {/* Right Side */}
           <div className='flex items-center space-x-4'>
@@ -1938,10 +1934,6 @@ icon: <Building className="w-5 h-5" />,
                 <span>{contactInfo.email}</span>
               </a>
             </div>
-<<<<<<< HEAD
-            {/* CTA Button */}
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-=======
 
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -2016,8 +2008,6 @@ icon: <Building className="w-5 h-5" />,
                         <Link;
 =======
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

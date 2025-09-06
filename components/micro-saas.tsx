@@ -4092,10 +4092,7 @@ export default function MicroSaasPage() {;
       impact: 'High'
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const categories = [...new Set(microSaasServices.map(service => service.category))];
   const competitiveAdvantages = [
     {

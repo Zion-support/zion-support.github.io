@@ -472,7 +472,7 @@ function FrontLanding() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'
-=======
+
             <motion.h1
               initial={{ opacity: 0, y: 8 }  } catch (error) {
     console.error("Error:", error);

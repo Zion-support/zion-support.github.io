@@ -138,7 +138,6 @@ export interface InnovativeMicroSaasService2029V2 {;
       "Automated decision making",
       "Custom workflow builder",
       "Performance analytics dashboard"
-<<<<<<< HEAD
 
 
     link: "https://ziontechgroup && ziontechgroup.com/services/intelligent-workflow-automation", marketPosition: "AI-powered business process automation leader",
@@ -244,7 +243,6 @@ export interface InnovativeMicroSaasService2029V2 {;
       "Sales performance analytics",
       "Customer behavior prediction",
       "Automated follow-up sequences"
-<<<<<<< HEAD
 
 
     link: "https://ziontechgroup && ziontechgroup.com/services/ai-sales-intelligence-platform", marketPosition: "Next-generation AI sales intelligence solution",
@@ -354,7 +352,6 @@ export interface InnovativeMicroSaasService2029V2 {;
       "Privacy impact assessment",
       "Automated data retention policies",
       "Comprehensive audit trails"
-<<<<<<< HEAD
 
 
     link: "https://ziontechgroup && ziontechgroup.com/services/intelligent-data-governance", marketPosition: "AI-driven data governance and compliance leader",
@@ -460,7 +457,6 @@ export interface InnovativeMicroSaasService2029V2 {;
       "Risk assessment and mitigation",
       "Cost optimization algorithms",
       "Sustainability impact analysis"
-<<<<<<< HEAD
 
 
     link: "https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization", marketPosition: "AI-driven supply chain optimization leader",
@@ -566,7 +562,6 @@ export interface InnovativeMicroSaasService2029V2 {;
       "Skills gap analysis",
       "Compensation optimization",
       "Diversity and inclusion metrics"
-<<<<<<< HEAD
 
 
     link: "https://ziontechgroup && ziontechgroup.com/services/intelligent-hr-analytics", marketPosition: "AI-driven HR analytics and talent management leader",

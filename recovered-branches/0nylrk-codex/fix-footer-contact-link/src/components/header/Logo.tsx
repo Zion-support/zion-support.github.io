@@ -31,8 +31,7 @@ interface LogoProps {
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
   // Use the white-label color if available and no specific customColor is provided
   const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   if (logoToUse) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
@@ -64,7 +63,7 @@ interface LogoProps {
 
 
 }
-=======
+
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

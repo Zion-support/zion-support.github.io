@@ -255,7 +255,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
 
       {/* Card Content */}
       <div className='relative p-6'>
-=======
 
       {/* Card Content */}
       <div className='relative p-6'>

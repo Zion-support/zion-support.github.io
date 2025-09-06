@@ -100,7 +100,7 @@ serve(async (req) => {
         if (!error && user) {
 
           userId = user.id
-=======
+
 ;
   try {;
     const { service, quoteDetails } = await req.json() as RequestBody,;

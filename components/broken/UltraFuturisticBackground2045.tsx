@@ -519,13 +519,7 @@ if ( {) {
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-<<<<<<< HEAD
-            `
-            backgroundSize: '50px 50px'
-=======
-            `,
-            backgroundSize: '50px 50px',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           }}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px']
@@ -639,8 +633,6 @@ if ( {) {
           }}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
         />
-<<<<<<< HEAD
-=======
 
         {/* Floating Neon Shapes */}
         <motion.div

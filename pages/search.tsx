@@ -1745,10 +1745,9 @@ className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transi
 </Link>
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                     </div>
-=======
+
                       </Link>                    </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   </motion.div>
                 ))}
               </div>

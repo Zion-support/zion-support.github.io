@@ -671,8 +671,6 @@ ease: "easeInOut"
       </div>
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

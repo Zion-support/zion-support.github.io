@@ -770,8 +770,6 @@ export default function Revolutionary2026ServicesShowcase() {;
 =======
           initial='hidden'
           whileInView='visible'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1143,8 +1141,6 @@ export default function Revolutionary2026ServicesShowcase() {;
 =======
           initial='hidden'
           whileInView='visible'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

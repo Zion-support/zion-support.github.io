@@ -252,20 +252,7 @@ export function useFocusTrap(enabled: boolean = true) {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-<<<<<<< HEAD
-            e.preventDefault();
-            lastElement.focus();
-          }
-        } else {if (document.activeElement === lastElement) {;
-            e.preventDefault();
-=======
-            e.preventDefault(),;
-            lastElement.focus();
-          }
-        } else {;
-          if (document.activeElement === lastElement) {;
-            e.preventDefault(),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             firstElement.focus();
           }
         }

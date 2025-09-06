@@ -1480,11 +1480,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
               <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
-<<<<<<< HEAD
-          )}
-        </div>
-      </section>
-=======
 
             </div>
 
@@ -1502,8 +1497,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-<<<<<<< HEAD
-=======
 
               Detailed Analysis
 <<<<<<< HEAD
@@ -1776,7 +1769,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       </section>;
 
 
-=======
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -256,7 +256,7 @@ function SolutionsPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our AI solutions are designed to adapt and excel across diverse industries, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -375,7 +375,7 @@ function SolutionsPage() {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             From initial assessment to ongoing optimization, we guide you through every step 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             of your AI transformation journey.
           </p>
         </div>
@@ -484,7 +484,7 @@ function SolutionsPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI solutions can accelerate your growth and give you a 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             competitive edge in your industry.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">

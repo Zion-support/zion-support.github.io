@@ -643,8 +643,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className='mb-20'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

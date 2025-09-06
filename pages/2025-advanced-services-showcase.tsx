@@ -271,7 +271,7 @@ function AdvancedServicesShowcase2025() {
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             {/* Stats */}
-=======
+
               Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions,
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>

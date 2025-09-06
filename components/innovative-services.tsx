@@ -498,11 +498,6 @@ if ( {) {
 =======
                     </select>
                   </div>
-<<<<<<< HEAD
-                  {/* View Mode Toggle */}
-                  <div className='flex-shrink-0'>
-                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-=======
 
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
@@ -926,8 +921,6 @@ if ( {) {
 =======
             </div>
           </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -939,8 +932,6 @@ if ( {) {
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

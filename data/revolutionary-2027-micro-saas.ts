@@ -97,7 +97,7 @@ export const revolutionary2027MicroSaasServices: Revolutionary2027MicroSaas[] = 
       "Transformative capabilities",
       "Advanced technology",
       "Innovation platform",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       "Future-ready solutions"
     ],
     link: "/services/2027-revolutionary-micro-saas",

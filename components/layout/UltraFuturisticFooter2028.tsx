@@ -436,8 +436,6 @@ export default function UltraFuturisticFooter2028() {
             {/* Social Links */}
             <div className='flex space-x-4 mt-6'>
               {socialLinks.map(social => (
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -743,11 +741,6 @@ export default function UltraFuturisticFooter2028() {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-          {/* Quick Links */}
-          <div className='lg:col-span-1'>
-            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
-=======
 
           {/* Quick Links */}
           <div className='lg:col-span-1'>

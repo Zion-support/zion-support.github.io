@@ -1082,8 +1082,6 @@ className="ml - 8 mt - 2 space - y-2";
                           activeSubmenu === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1217,8 +1215,6 @@ className="ml - 8 space - y-2";
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1264,8 +1260,6 @@ className="ml - 8 space - y-2";
           </motion.div>
         )}
       </AnimatePresence>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

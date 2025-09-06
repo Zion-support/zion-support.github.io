@@ -38,8 +38,6 @@ export async function getServerSideProps() {;
 =======
 <<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
 }</tbody> </table> </div>)
@@ -76,9 +74,6 @@ function getServerSideProps() {
 =======
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
-    outdated = json.outdated |[];
-    generatedAt = json.generatedAt |''
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch {}

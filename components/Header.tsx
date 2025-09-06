@@ -25,8 +25,6 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 "use client";
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
 "use client";
 "use client";
@@ -593,7 +591,7 @@ className="lg:hidden bg-white shadow-lg">;
 }
 =======
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-=======
+
                   )}
                 </div>
               ))}

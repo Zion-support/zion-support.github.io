@@ -1252,7 +1252,6 @@ export default SolutionsPage;
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     <ul className="space-y-2 mb-6">
                       {solution.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">

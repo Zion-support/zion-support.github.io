@@ -534,8 +534,6 @@ import { motion } from 'framer-motion';
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -548,8 +546,6 @@ import { motion } from 'framer-motion';
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 2 }}
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

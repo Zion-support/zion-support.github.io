@@ -38,7 +38,7 @@ export default function AccountSettingsPage() {
 export default function AccountSettingsPage(req, res) {
   try {
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
 
 

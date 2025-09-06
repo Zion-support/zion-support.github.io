@@ -468,8 +468,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
                   <h3 className="text-xl font-bold mb-4 text-white">{service.title}</h3>
 =======
                 className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
-<<<<<<< HEAD
-=======
 
               >
 <<<<<<< HEAD
@@ -852,8 +850,6 @@ function HomePage() {
               >
 =======
                 className='text-center'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

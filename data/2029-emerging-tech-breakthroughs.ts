@@ -97,7 +97,7 @@ export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[
       "Innovation platform",
       "Future capabilities",
       "Advanced features",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       "Expert insights"
     ],
     link: "/services/2029-emerging-tech-breakthrough",

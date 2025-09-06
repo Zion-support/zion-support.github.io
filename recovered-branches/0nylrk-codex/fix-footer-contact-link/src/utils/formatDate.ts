@@ -45,7 +45,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       } else {
 
         return dateObj.toLocaleDateString()
-=======
+
 /**;
  * Format a date string or timestamp into a readable format;
  * @param date Date to format;

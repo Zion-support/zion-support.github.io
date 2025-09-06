@@ -22,15 +22,6 @@ const CERTS_FILE = path && path.join(
 =======
 <<<<<<< HEAD
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const CERTS_FILE = path.join(
   process.cwd()
   'data'

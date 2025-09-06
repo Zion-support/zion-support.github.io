@@ -106,7 +106,7 @@ function CaseStudyPage() {
 
 =======
                   A leading financial services company serving millions of customers with banking, 
-=======
+
                   A leading financial services company serving millions of customers with banking,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -56,5 +56,3 @@ export default function Talent(): any ({ }: TalentProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

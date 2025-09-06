@@ -18,7 +18,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
             </li>

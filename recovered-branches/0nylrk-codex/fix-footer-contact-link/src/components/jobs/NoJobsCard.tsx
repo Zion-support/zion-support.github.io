@@ -67,7 +67,6 @@ interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }
 

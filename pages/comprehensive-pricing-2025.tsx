@@ -133,7 +133,7 @@ export default function ComprehensivePricingPage(req, res) {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const calculateYearlyPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
     return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly

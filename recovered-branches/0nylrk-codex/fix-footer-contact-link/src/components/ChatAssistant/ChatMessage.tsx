@@ -31,7 +31,7 @@ interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
   timestamp?: Date,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   key?: string | number
 }
 

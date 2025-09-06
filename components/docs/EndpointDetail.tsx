@@ -274,7 +274,6 @@ export default function EndpointDetail(): any ({;
         </div>
       )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
@@ -286,8 +285,6 @@ export default function EndpointDetail(): any ({;
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
-<<<<<<< HEAD
-=======
 
             ))}
 

@@ -49,7 +49,6 @@ import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Import our new innovative services
 <<<<<<< HEAD
 import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
@@ -912,10 +911,7 @@ if ( {) {
   if (isLoading) {
     return <QuantumLoadingFallback />;
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const allServices = [
     ...innovative2046AIServices
     ...innovative2046ITServices
@@ -939,24 +935,6 @@ if ( {) {
         {/* Enhanced animated background */}
         <div className='absolute inset-0'>
           {/* Quantum grid effect */}
-<<<<<<< HEAD
-          <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>  ];
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch
-  });
-  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
-  return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden">
-        {/* Enhanced animated background */}
-        <div className="absolute inset-0">
-          {/* Quantum grid effect */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
-=======
-          <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -968,8 +946,6 @@ if ( {) {
             <motion.div
               key={i}
               className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -982,15 +958,7 @@ if ( {) {
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
-<<<<<<< HEAD
-                duration: Math.random() * 10 + 10
-                repeat: Infinity
-                ease: 'easeInOut'
-=======
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: 'easeInOut',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               }}
               style={{
                 left: Math.random() * 100 + '%'
@@ -1040,11 +1008,6 @@ if ( {) {
           id='hero'
           className='relative z-10 min-h-screen flex items-center justify-center px-4'
         >
-<<<<<<< HEAD
-          <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
-          <div className="text-center max-w-6xl mx-auto">
-=======
-          <div className='text-center max-w-6xl mx-auto'>            <motion.div
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

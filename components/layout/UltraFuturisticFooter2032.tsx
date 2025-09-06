@@ -1282,11 +1282,6 @@ function UltraFuturisticFooter2032() {
 =======
               </div>
             </motion.div>
-<<<<<<< HEAD
-            {/* Quick Links & Company Info */}
-            <motion.div variants={itemVariants} className='lg:col-span-1'>
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
 
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
@@ -1397,8 +1392,6 @@ function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1489,8 +1482,6 @@ function UltraFuturisticFooter2032() {
               </div>
             </motion.div>
           </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1504,8 +1495,6 @@ function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

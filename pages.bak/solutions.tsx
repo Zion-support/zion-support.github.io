@@ -56,5 +56,3 @@ export default function Solutions(): any ({ }: SolutionsProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

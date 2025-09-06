@@ -13,7 +13,6 @@ export interface Version {
   compareVersions: (v1: string, v2: string) => 0,
   incrementVersion: (version: string) => version;
 };
-=======
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -58,5 +58,3 @@ export default function Smartchurn(): any ({ }: SmartchurnProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

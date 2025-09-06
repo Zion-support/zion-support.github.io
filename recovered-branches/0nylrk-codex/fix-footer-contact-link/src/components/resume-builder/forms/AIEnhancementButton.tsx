@@ -77,7 +77,7 @@ export function AIEnhancementButton({
   context,
   onEnhanced,
   buttonText = "Enhance with AI",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),

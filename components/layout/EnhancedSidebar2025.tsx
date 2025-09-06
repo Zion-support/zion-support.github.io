@@ -986,7 +986,6 @@ const supportLinks = [
   }
 ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const resources = [
   { name: 'Documentation', href: '/docs', icon: <FileText className="w-4 h-4" /> }
   { name: 'API Reference', href: '/api-documentation', icon: <Settings className="w-4 h-4" /> }
@@ -996,19 +995,7 @@ const resources = [
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ];
 const supportLinks = [
-<<<<<<< HEAD
-  { name: 'Contact Support', href: '/support', description: 'Get help from our team' }
-  { name: 'Documentation', href: '/docs', description: 'Technical guides' }
-  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' }
-  { name: 'Status Page', href: '/status', description: 'Service status' }
-  { name: 'Training', href: '/training', description: 'Learn our platforms' }
-=======
-  { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
-  { name: 'Documentation', href: '/docs', description: 'Technical guides' },
-  { name: 'API Reference', href: '/api-documentation', description: 'Developer documentation' },
-  { name: 'Status Page', href: '/status', description: 'Service status' },
-  { name: 'Training', href: '/training', description: 'Learn our platforms' },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   { name: 'Community', href: '/community', description: 'Connect with users' }
 ];
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -1165,8 +1152,6 @@ const supportLinks = [
                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
               )}
             </button>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1659,8 +1644,6 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1691,8 +1674,6 @@ className="text - center p - 3 bg - gray - 800 / 30 rounded - lg border border -
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

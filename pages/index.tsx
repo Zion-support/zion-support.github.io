@@ -49,7 +49,7 @@ export default function Home() {
 
     ),
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (;
     <>;
       <Head>;
@@ -711,7 +711,7 @@ function HomePage() {
           </div>
         </section>
         {/* Services Overview */}
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
         <section className="py-16 px-4" role="main">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" id="service-categories">
@@ -811,9 +811,7 @@ function HomePage() {
       </ErrorBoundary>
     </>
   )
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 }
 
           </div>;
@@ -895,7 +893,7 @@ function HomePage() {
 =======
 }
           </div>
-=======
+
 }          </div>
 
         </section>
@@ -923,7 +921,7 @@ function HomePage() {
 
               </p>
             </motion.div>
-=======
+
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
@@ -1109,6 +1107,7 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
 
@@ -1251,10 +1250,10 @@ We deliver exceptional results through innovation, expertise, and dedication;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 <p className="text-gray-600">{item.description}</p>
->>>>>>> origin/main
+
                 </motion.div>
               ))}
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+
             </div>
           </div>
         </section>
@@ -1396,8 +1395,7 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
 =======
 <p className="text-gray-600">{item.description}</p>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
                 </motion.div>
 
 =======
@@ -1476,9 +1474,9 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
-=======
+
                 </Link>              </div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+
             </motion.div>
 =======
 
@@ -1775,8 +1773,7 @@ We deliver exceptional results through innovation, expertise, and dedication;
 
           </div>
         </section>
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
           </div>
         </section>
 

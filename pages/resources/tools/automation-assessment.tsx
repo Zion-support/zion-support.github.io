@@ -280,10 +280,6 @@ if ( {) {
 <<<<<<< HEAD
   const currentQ = questions[currentQuestion]
 
-=======
-}
-  const currentQ = questions[currentQuestion],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -619,7 +615,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {

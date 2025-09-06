@@ -44,6 +44,36 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
           <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
         </div>
+
+        <div className='mt-12 pt-8 border-t border-primary/20'>
+          <div className='flex flex-col md:flex-row justify-between items-center'>
+            <p className='text-foreground/80 text-sm'>
+              &copy; {new Date().getFullYear()} Zion Tech Group. All rights
+              reserved.
+            </p>
+            <div className='flex space-x-6 mt-4 md:mt-0'>
+              <Link
+                href='/privacy'
+                className='text-foreground/80 hover:text-primary text-sm transition-colors'
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href='/terms'
+                className='text-foreground/80 hover:text-primary text-sm transition-colors'
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href='/status'
+                className='text-foreground/80 hover:text-primary text-sm transition-colors'
+              >
+                API Status
+              </Link>
+            </div>
+          </div>
+        </div>
+        <FeedbackWidget />
       </div>
     </footer>
   );

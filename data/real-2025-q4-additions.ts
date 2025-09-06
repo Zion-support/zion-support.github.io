@@ -1850,12 +1850,7 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-<<<<<<< HEAD
-    marketPosition:;
-      'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
-=======
-    marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',

@@ -579,7 +579,7 @@ if ( {) {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
       session.confidence = intent.confidence
-=======
+
 ;
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
@@ -1102,7 +1102,7 @@ if ( {) {
 
       topCategories;
       agentPerformance
-=======
+
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;

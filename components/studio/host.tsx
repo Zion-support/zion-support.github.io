@@ -658,14 +658,12 @@ function StudioHostPage() {
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
-=======
 
     }
   };
 
   return (
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </div>
       </section>

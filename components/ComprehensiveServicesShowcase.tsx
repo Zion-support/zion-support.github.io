@@ -981,11 +981,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
                   {category.count}
                 </span>              </button>                <span className="text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
               </button>
-<<<<<<< HEAD
-            ))}
-          </div>
-        </motion.div>
-=======
 
             ))}
           </div>
@@ -1542,7 +1537,6 @@ import { specializedEmergingTechServices } from '../data / specialized - emergin
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Contact CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}

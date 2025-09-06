@@ -157,7 +157,7 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Calculate market statistics
   const totalMarketSize = allServices.reduce((sum, service) => {
     const marketSize = service.marketSize.match(/\$([\d.]+)B/)

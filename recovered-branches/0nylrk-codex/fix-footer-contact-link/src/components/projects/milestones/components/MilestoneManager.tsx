@@ -29,7 +29,7 @@ interface MilestoneManagerProps {
   onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
   onDeleteMilestone: (id: string) => Promise<boolean>,
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   refetch: () => Promise<void>
 }
 

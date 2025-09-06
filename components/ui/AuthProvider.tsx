@@ -4,7 +4,6 @@ type UserRole = 'talent' | 'client';
 
 
       if (stored === 'talent' || stored === 'client') {
-        setRoleState(stored);      }
 
 
 =======
@@ -160,7 +159,7 @@ export function useAuth() {;
 
 return useContext(AuthContext);
 }
-=======
+
   return (
 
 

@@ -18,21 +18,7 @@
 =======
 import React from 'react';
 export default function SEOIndex() {
-<<<<<<< HEAD
 
-  const [slugs, setSlugs] = React.useState<string[]>([])
-  React.useEffect(() => {
-    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
-    setSlugs([])
-  }, [])
-
-=======
-  const [slugs, setSlugs] = React.useState<string[]>([]),
-  React.useEffect(() => {
-    // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
-    setSlugs([])
-  }, []),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div>
       <h1 className="text-2xl font-semibold mb-4">SEO Landing Pages</h1>

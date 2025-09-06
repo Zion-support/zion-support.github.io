@@ -514,14 +514,7 @@ Schedule Consultation
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
-<<<<<<< HEAD
-            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
-              Let's discuss how our AI solutions can drive innovation
-              efficiency, and growth for your organization.
-=======
-            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">

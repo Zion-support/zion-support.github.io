@@ -81,9 +81,7 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();

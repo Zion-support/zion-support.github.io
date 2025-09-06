@@ -181,7 +181,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="space-y-4">

@@ -1374,10 +1374,7 @@ if (> 0.8) { // Quantum tunneling) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -1767,8 +1764,6 @@ animate ();
           </div>
         )}
       </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

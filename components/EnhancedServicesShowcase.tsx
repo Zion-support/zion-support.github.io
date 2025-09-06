@@ -170,7 +170,7 @@ interface Service {
 
               {/* Service Content */}
               <div className='p-8'>
-=======
+
         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 

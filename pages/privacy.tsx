@@ -796,7 +796,7 @@ const PrivacyPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-4">
                   Usage Information
                 </h3>
-=======
+
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
 >>>>>>> origin/automation-improvements-final
                 <ul className="list-disc pl-6 mb-6">

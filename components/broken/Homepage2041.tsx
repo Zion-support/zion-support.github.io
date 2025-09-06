@@ -546,7 +546,6 @@ const Homepage2041: React.FC = () => {
             <motion.div 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
@@ -579,7 +578,6 @@ const Homepage2041: React.FC = () => {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               className="text-center mt-12"
-=======
 
 
             <motion.div
@@ -668,7 +666,6 @@ const Homepage2041: React.FC = () => {
             <motion.div 
 
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
-=======
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}

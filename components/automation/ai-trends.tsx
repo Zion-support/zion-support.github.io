@@ -62,9 +62,9 @@ export type Trend = {
 export async function getServerSideProps() {
 =======
 </div> </div>) ) 
-=======
+
  </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {

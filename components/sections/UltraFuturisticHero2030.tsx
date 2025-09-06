@@ -368,10 +368,6 @@ className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from
 
 =======
           transition={{ duration: 0.8, delay: 1.2 }}
-<<<<<<< HEAD
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-=======
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

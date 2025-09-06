@@ -539,62 +539,6 @@ import { motion } from 'framer-motion';
     timeToValue: '< 30 days'
     globalReach: '150+ countries',  }
 
-=======
-        'Access to 25+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
-      ],
-      icon: <Sparkles className="w-8 h-8" />,
-      variant: 'quantum' as const,
-      popular: false,
-      cta: 'Start Free Trial',
-      ctaVariant: 'secondary' as const
-    },
-    {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
-      features: [
-        'Access to 50+ ServicesAdvanced AI IntegrationPriority Support (24/7)60-Day Free TrialAdvanced Analytics DashboardPhone & Email Support99.9% Uptime GuaranteeAdvanced Security Features',
-        'Custom IntegrationsPerformance Monitoring'
-      ],
-      icon: <Rocket className="w-8 h-8" />,
-      variant: 'ai-futuristic' as const,
-      popular: true,
-      cta: 'Start Free Trial',
-      ctaVariant: 'primary' as const
-    },
-    {
-      name: 'Enterprise',
-      description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
-      features: [
-        'Access to ALL ServicesFull AI & Quantum IntegrationDedicated Support Team90-Day Free TrialEnterprise Analytics Suite24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security Features',
-        'Custom DevelopmentWhite-label SolutionsAPI AccessSLA Guarantees'
-      ],
-      icon: <Crown className="w-8 h-8" />,
-      variant: 'quantum-futuristic' as const,
-      popular: false,
-      cta: 'Contact Sales',
-      ctaVariant: 'primary' as const
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  // Market analysis
-  const marketAnalysis = {
-    totalMarketSize: '$150B+',
-    growthRate: '250% annually',
-    customerSatisfaction: '98%',
-    averageROI: '500%',
-    timeToValue: '< 30 days',
-    globalReach: '150+ countries'
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">

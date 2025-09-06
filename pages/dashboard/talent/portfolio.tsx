@@ -194,7 +194,7 @@ import { createServerClient } from '../../../utils/supabase/server',
 export default function TalentPortfolio() {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const ref = useRef<HTMLDivElement>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const data: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country' },
@@ -205,7 +205,7 @@ export default function TalentPortfolio() {
     education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],
     certifications: ['AWS SAA-C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">

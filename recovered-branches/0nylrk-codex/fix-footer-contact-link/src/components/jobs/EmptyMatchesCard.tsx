@@ -22,7 +22,7 @@ import { Sparkles, RefreshCcw } from "lucide-react";
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">

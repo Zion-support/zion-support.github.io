@@ -459,14 +459,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Service Header */}
                 <div className='relative z-10'>
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center space-x-3'>
                       <div className='text-4xl'>{service.icon}</div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -766,7 +763,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
 
             className="text-center"
-=======
 
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (

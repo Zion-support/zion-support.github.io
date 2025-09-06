@@ -736,7 +736,6 @@ const "Services": NextPage = () => {;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   <Link
                     href={service && service.href}
                     className=\"text-blue-600 \"hover\": text-blue-700 font-medium flex items-center\">;

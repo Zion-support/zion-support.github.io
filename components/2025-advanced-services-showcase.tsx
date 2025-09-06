@@ -1,7 +1,5 @@
 
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -1112,8 +1110,6 @@ if ( {) {
               <a
 
         </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -45,9 +45,8 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from 'react';
 
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewSummary from '../../components/reviews/ReviewSummary';
 import ReviewCard from '../../components/reviews/ReviewCard';

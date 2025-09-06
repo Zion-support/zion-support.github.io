@@ -436,15 +436,12 @@ const service_categories = [;
 
         {/* Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1090,8 +1087,6 @@ const service_categories = [;
               <div className="flex space-x-3">
 =======
               <div className='flex space-x-3'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

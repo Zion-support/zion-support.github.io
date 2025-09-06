@@ -97,7 +97,7 @@
 
               onAccept={setSummary}
               authorizationToken={operatorToken}
-=======
+
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -140,7 +140,7 @@
 
             onAccept={setExperience}
             authorizationToken={operatorToken}
-=======
+
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -182,7 +182,7 @@
 
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
-=======
+
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

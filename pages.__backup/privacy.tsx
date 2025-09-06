@@ -51,5 +51,3 @@ export default function Privacy(): any ({ }: PrivacyProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

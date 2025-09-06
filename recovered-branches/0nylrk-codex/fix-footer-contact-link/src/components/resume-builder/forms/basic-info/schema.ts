@@ -52,7 +52,7 @@ export const basicInfoSchema = z.object({
   location: z.string().optional(),
   website: z.string().url().optional().or(z.literal("")),
   linkedin: z.string().optional(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()}),
 

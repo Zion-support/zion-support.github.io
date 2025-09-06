@@ -301,8 +301,6 @@ export default function UltraFuturisticHero2029() {
     { number: '99.9%', label: 'Success Rate', icon: Star }
     { number: '24/7', label: 'AI Operations', icon: Zap }
   ];
-<<<<<<< HEAD
-=======
 
 
         {/* Gradient Orbs */}
@@ -630,8 +628,6 @@ export default function UltraFuturisticHero2029() {
         {_/* CTA Buttons */}
 =======
           className='mb-8'
-<<<<<<< HEAD
-=======
 
         >
 <<<<<<< HEAD
@@ -658,8 +654,6 @@ export default function UltraFuturisticHero2029() {
             Experience the future of technology with Zion Tech Group's revolutionary 2029 services.
             From AI consciousness evolution to quantum space mining, we're building tomorrow's solutions today.
         </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -695,8 +689,6 @@ export default function UltraFuturisticHero2029() {
         {_/* Features Grid */}
 =======
           className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -732,8 +724,6 @@ export default function UltraFuturisticHero2029() {
             <Zap className="w-5 h-5" />
           </Link>
         </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -413,7 +413,6 @@ if (return) {
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
@@ -1158,8 +1157,6 @@ if ( {) {
           ease: 'easeInOut'
         }}
       />
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

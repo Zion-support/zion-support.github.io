@@ -206,17 +206,7 @@ if (return) {
 =======
       try {
         const data = await fetchMilestones(projectId as string);
-<<<<<<< HEAD
-        if (!cancelled) setMilestones(data.milestones |[]);
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message |'Failed to load milestones');
-      } finally {
-=======
-        if (!cancelled) setMilestones(data.milestones || []);
-      } catch (error) {
-        if (!cancelled) setError(e?.message || 'Failed to load milestones');
-      } finally {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         if (!cancelled) setLoading(false);
         } catch (error) {
     console.error("Error:", error);

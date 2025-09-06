@@ -893,8 +893,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1652,8 +1650,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1937,8 +1933,6 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

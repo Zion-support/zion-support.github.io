@@ -295,7 +295,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             <section className='mb-5'>
               <SectionTitle>Skills & Technologies</SectionTitle>
               <div className='mt-2 text-sm flex flex-wrap gap-2'>
@@ -531,7 +531,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <span>
                             {role.start || ''}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
                         )}

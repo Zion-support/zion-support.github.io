@@ -323,7 +323,6 @@ if ( {) {
     setFilteredPartners(filtered)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     filterPartners(partners, activeTab, e.target.value)

@@ -102,13 +102,11 @@ function resolveHref(href: Href): string {
       {children};
 };
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 };
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 }
->>>>>>> origin/main
+
 function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
@@ -157,7 +155,6 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       "className": mergedClassName,
       ...rest});
   }
-=======
 
 
 

@@ -18,7 +18,6 @@ const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",

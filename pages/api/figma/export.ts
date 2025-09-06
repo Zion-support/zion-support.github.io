@@ -136,7 +136,7 @@ export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -181,9 +181,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+
   }
 }
   } catch (error) {

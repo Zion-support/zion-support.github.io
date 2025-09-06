@@ -1043,8 +1043,6 @@ export default function UltraFuturisticFooter2030() {
 =======
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1055,8 +1053,6 @@ export default function UltraFuturisticFooter2030() {
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1204,20 +1200,6 @@ export default function UltraFuturisticFooter2030() {
                     <a
                       key={index}
                       href={social.href}
-<<<<<<< HEAD
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
-                    >
-                      <social.icon className='w-5 h-5' />                    </a>                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40"
-                    >
-                      <social.icon className="w-5 h-5" />
-                  ))}
-                </div>
-              </div>
-=======
 
                     </a>
 
@@ -1234,8 +1216,6 @@ export default function UltraFuturisticFooter2030() {
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

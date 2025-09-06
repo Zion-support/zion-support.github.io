@@ -79,10 +79,9 @@ function fixFile(filePath) {
 
 =======
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+}
+
 async function main() {
 
   const patterns = ['src/**/*.tsx',
@@ -121,6 +120,7 @@ main().catch(console.error);
   console.log('🎉 Comprehensive syntax fixes completed!');
 }
 
+  console.log(`\nFixed ${totalFixed} files`)}
 main().catch(console.error);
 
 =======

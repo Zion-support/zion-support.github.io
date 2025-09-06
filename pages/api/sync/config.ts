@@ -76,7 +76,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     writeState(state),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     return res.status(200).json({ config: state.config })
     } catch (error) {
     console.error("Error:", error);

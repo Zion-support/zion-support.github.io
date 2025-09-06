@@ -459,7 +459,7 @@ if ( {) {
         />
 
         {/* Triangle */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{

@@ -11,7 +11,8 @@
 
 
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
+  
+  return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));
 }
 
 =======

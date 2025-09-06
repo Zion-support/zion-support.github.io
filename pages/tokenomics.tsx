@@ -664,7 +664,7 @@ function jurisdictionalNote(): any (j: string) {;
     'Governance Model'
     'Risks + Disclaimers'
   ];
-=======
+
 }
   const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
 <<<<<<< HEAD

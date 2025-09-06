@@ -547,8 +547,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature}</h3>
               </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -559,8 +557,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -572,8 +568,6 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

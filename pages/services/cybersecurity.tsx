@@ -224,7 +224,7 @@ import { motion } from 'framer-motion';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
-=======
+
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Advanced security solutions that protect your digital assets and ensure business continuity
 <<<<<<< HEAD

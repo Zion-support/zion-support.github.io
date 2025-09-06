@@ -87,17 +87,6 @@ export default function EdgeComputingPage() {;
     },;
   ];
 
-=======
-      title: "Global Distribution",
-      description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
-      color: "from-yellow-500 to-orange-500"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     "Reduce latency by 80-90% with edge processing",
     "Cut bandwidth costs by 60% through local data processing",

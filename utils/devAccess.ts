@@ -8,13 +8,13 @@
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
-      stdio: ['ignore', 'pipe', 'ignore']
+      stdio: ['ignore', 'pipe', 'ignore'],
     })
       .toString()
       .trim();
-    return { connected: true, branch }
+    return { connected: true, branch };
   } catch {
-    return { connected: false }
+    return { connected: false };
   }
 }
 
@@ -29,11 +29,7 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
-<<<<<<< HEAD
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
-=======
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
   return { isAuthenticated: false, roles: [] }
 }
@@ -50,10 +46,10 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function requireRoles(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: ApiRequest,
+  res: ApiResponse,
   allowed: DevRole[]
-): DevIdentity | undefined {;
+): DevIdentity | undefined {
   const identity = getDevIdentity(req);
   if (!identity.isAuthenticated) {
     res.status(401).json({ error: 'Unauthorized' });

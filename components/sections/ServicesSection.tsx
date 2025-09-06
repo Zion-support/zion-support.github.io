@@ -483,7 +483,7 @@ const ServicesSection: React.FC = () => {;
       </div>
       <div className="relative container mx-auto px-4">
         {/* Section Header */}
-=======
+
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -494,16 +494,11 @@ const ServicesSection: React.FC = () => {;
 
         {/* Section Header */}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className='text-center mb-16'        >          className="text-center mb-16"
-=======
-          className='text-center mb-16'        >
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

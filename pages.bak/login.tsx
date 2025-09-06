@@ -56,5 +56,3 @@ export default function Login(): any ({ }: LoginProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

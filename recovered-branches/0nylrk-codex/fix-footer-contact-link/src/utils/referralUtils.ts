@@ -112,7 +112,7 @@ function track_referral() {
       // Clear the stored referral code
 
       localStorage.removeItem('referral_code')
-=======
+
 ;
 /**;
  * Track referral when a user signs up;

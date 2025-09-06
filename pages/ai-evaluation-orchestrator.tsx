@@ -155,8 +155,6 @@ const AIEvaluationOrchestrator: React.FC = () => {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
-<<<<<<< HEAD
-import Head from 'next/head';
 
 import Layout from '../components/layout/Layout';
 const AIEvaluationOrchestrator: React.FC = () => {

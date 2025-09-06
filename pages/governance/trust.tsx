@@ -299,7 +299,7 @@ import Link from 'next / link';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 risk registers, and post-mortems.
               </div>
-=======
+
         <section className="space-y-4">
           <h2 className="text-2xl font-semibold">Governance</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">

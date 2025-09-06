@@ -281,60 +281,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxF
 }
 export default SyntaxFixer;
     })
-<<<<<<< HEAD
-  }
-  async fixExportIssues() {
-    const files = this.getSourceFiles()
-    files.forEach(file => {
-      try {
-        let content = fs.readFileSync(file, &quot;utf8&quot;)
-        let modified = false
-        // Fix export statements
-        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,')
-        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {
-          modified = true
-        }
-        if (modified) {
-          fs.writeFileSync(file, content)
-          this.fixesApplied++
-          this.log(`Fixed export issues in ${file}`)
-        }
-      } catch (error) {
-this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
-      }
-    })
-  }
-  getSourceFiles() {
-    const files = []
-    const srcDir = path.join(process.cwd(), &quot;src&quot;)
-    if (fs.existsSync(srcDir)) {
-      const walkDir = (dir) => {
-        const items = fs.readdirSync(dir)
-        items.forEach(item => {
-          const fullPath = path.join(dir, item)
-          const stat = fs.statSync(fullPath)
-          if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {
-            walkDir(fullPath)
-          } else if (item.endsWith(&quot;.ts&quot;) |item.endsWith(&quot;.tsx&quot;) |item.endsWith(&quot;.js&quot;) |item.endsWith(&quot;.jsx&quot;)) {
-=======
-  },
-,
-  async fixExportIssues() {,
-    const files = this.getSourceFiles(),
-    files.forEach(file => {,
-      try {,
-        let content = fs.readFileSync(file, "utf8"),
-        let modified = false,
-,
-        // Fix export statements,
-        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
-<<<<<<< HEAD
-,;
-        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
-=======
-,
-        if (content !== fs.readFileSync(file, "utf8")) {,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
           modified = true
         },
 ,
@@ -358,13 +305,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
   },
 ,
   getSourceFiles() {,
-<<<<<<< HEAD
-    const files = [],;
-    const srcDir = path.join(process.cwd(), &quot;src&quot;),
-=======
-    const files = [],
-    const srcDir = path.join(process.cwd(), "src"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -376,7 +317,7 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             files.push(fullPath)
           }
         })

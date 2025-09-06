@@ -262,7 +262,7 @@ role=&quot;banner&quot;
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Services menu"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               >
                 Services
                 <svg className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

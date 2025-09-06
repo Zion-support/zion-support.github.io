@@ -590,8 +590,6 @@ const UltraFuturisticFooter2029 = () =>: any {
 =======
             </div>
           </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -603,8 +601,6 @@ const UltraFuturisticFooter2029 = () =>: any {
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
             <div className='space-y-4'>
               {footerSections.map(section => (
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -914,8 +910,6 @@ const UltraFuturisticFooter2029 = () =>: any {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -927,8 +921,6 @@ const UltraFuturisticFooter2029 = () =>: any {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='text-sm text-gray-400'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

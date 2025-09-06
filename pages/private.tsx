@@ -296,10 +296,10 @@ if ( {) {
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
                 <div>
                   <span className="font-medium">Last Sign In: </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'

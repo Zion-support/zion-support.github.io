@@ -56,5 +56,3 @@ export default function Services(): any ({ }: ServicesProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

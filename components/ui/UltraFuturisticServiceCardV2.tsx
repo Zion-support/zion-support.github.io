@@ -659,17 +659,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
               </motion.div>
             ))}
             {service.features.length > 3 && (
-<<<<<<< HEAD
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >
-                <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
-                <span className="text-gray-300">{feature}</span>
-              </motion.div>
-            ))}
-            {service.features.length > 3 && (
-              <div className="text-xs text-gray-500 mt-2">
-                +{service.features.length - 3} more features
-=======
-              <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features
 
                 +{service.features.length - 3} more features
 
@@ -682,8 +671,6 @@ const UltraFuturisticServiceCardV2: React.FC < ServiceCardProps> = ({
             )}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

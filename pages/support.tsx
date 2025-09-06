@@ -13,7 +13,7 @@ export default function Support() {
       name: 'AI Services',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       description: 'Support for AI consciousness and autonomous systems',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       articles: 25
     }
     {
@@ -210,7 +210,7 @@ status: 'Limited';
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             {/* Search Bar */}
-=======
+
               Get the support you need for our AI consciousness, quantum computing,
               and autonomous systems. Our expert team is here to help 24/7.
             </p>

@@ -21,7 +21,7 @@ import {
 
 
 export default function WebsitePerformanceMonitorPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const features = [
@@ -425,8 +425,6 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -438,8 +436,6 @@ export default function WebsitePerformanceMonitorPage() {;
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -571,8 +567,6 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

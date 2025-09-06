@@ -208,24 +208,11 @@ export default function CloudPlatformPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Enterprise Security',
-<<<<<<< HEAD
-      description: 'SOC 2 compliant with advanced threat protection',
-    },;
-  ];
 
-=======
-      description: 'SOC 2 compliant with advanced threat protection'
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const benefits = [
     '99.99% uptime guaranteeGlobal edge locationsReal-time monitoringAutomated scalingPay-as-you-go pricing24/7 expert support'
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
 
 =======

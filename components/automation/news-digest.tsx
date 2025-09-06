@@ -15,19 +15,15 @@ export async function getServerSideProps() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-</div> </div>) )
-=======
- </div> </div>) ) 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
 export async function getServerSideProps() {
 =======
 </div> </div>) ) 
-=======
+
  </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
@@ -57,9 +53,6 @@ function getServerSideProps() {
 =======
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
-<<<<<<< HEAD
-    items = json.items |[];
-    generatedAt = json.generatedAt |''
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch {}

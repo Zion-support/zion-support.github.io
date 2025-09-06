@@ -1,4 +1,3 @@
-import React from 'react';
 
 export function Button({ 
   children, 
@@ -50,3 +49,6 @@ export function Button({
     </button>
   );
 }
+
+'
+

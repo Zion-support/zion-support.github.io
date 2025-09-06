@@ -313,7 +313,7 @@ export interface QRCodeOptions {;
 
   getErrorCorrectionInfo(): Record<string, any> {
     return this.ERROR_CORRECTION_LEVELS
-=======
+
 ;
   getErrorCorrectionInfo(): Record<string any> {;
     return this.ERROR_CORRECTION_LEVELS;

@@ -270,7 +270,6 @@ export default function ServicesIndexPage() {
 =======
   }, {} as Record<string, Service[]>),
 
-=======
   }, {} as Record<string Service[]>),
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -697,7 +696,7 @@ if (return null, ) {
                             key={`${service.id || service.name}-${index}`}
 
                             service={service}
-=======
+
                             key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1268,7 +1267,7 @@ if (return null, ) {
                           key={`${service.id || service.name}-${index}`}
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           service={service}
-=======
+
                           key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

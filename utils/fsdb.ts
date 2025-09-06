@@ -3,7 +3,6 @@
     }
   } catch (error) {
     console.error('Error reading file:', error);
-=======
 
   await writeAllDisputes(all);
   } catch (error) {

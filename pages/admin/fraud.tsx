@@ -67,12 +67,6 @@ function FraudAdminPage() {
   }
 }
 export default function FraudAdminPage() {
-<<<<<<< HEAD
-  const [items, setItems] = useState<FraudItem[]>([])
-  const [adminToken, setAdminToken] = useState<string>('')
-  const [loading, setLoading] = useState<boolean>(false)
-  const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
 
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)

@@ -228,7 +228,7 @@ import Layout from '../components/Layout';
 
 
 export default function AccessibilityPage() {
-=======
+
 interface AccessibilityProps {
   className?: string;
 }
@@ -284,14 +284,7 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Ensuring digital inclusion for everyone
               </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
             </motion.div>
           </div>
         </section>
@@ -990,18 +983,7 @@ function AccessibilityPage() {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-=======
-            </div>
-          </div>
-        </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
       </div>
     </MainLayout>;
   );

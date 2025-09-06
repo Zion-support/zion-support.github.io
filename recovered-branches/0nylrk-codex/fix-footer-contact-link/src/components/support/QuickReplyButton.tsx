@@ -30,7 +30,7 @@ export function QuickReplyButton(): any ({ text, onClick }: QuickReplyButtonProp
         "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
 
         "transition-colors duration-200"
-=======
+
         "border-zion-purple/30 hover:bg-zion-purple hover:text-white",
         "transition-colors duration-200"
 import React from "react",;

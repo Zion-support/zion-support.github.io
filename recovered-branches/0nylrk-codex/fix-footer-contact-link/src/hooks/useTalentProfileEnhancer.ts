@@ -58,7 +58,7 @@ export function useTalentProfileEnhancer() {;
 
       if (error) {
         throw new Error(error.message)
-=======
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export interface TalentProfileData {;

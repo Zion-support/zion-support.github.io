@@ -750,7 +750,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
-=======
+
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;

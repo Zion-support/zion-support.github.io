@@ -290,10 +290,7 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Neural network node class
     class NeuralNode {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -667,7 +664,6 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {

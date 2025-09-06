@@ -2844,27 +2844,13 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
         </div>
       </section>
     </main>
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
-=======
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -2957,7 +2943,6 @@ export default function Services() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3178,25 +3163,6 @@ export default function Services() {
         border: 'border-purple-500/40'
         ring: 'focus:ring-purple-500'
       },      green: {
-<<<<<<< HEAD
-        bg: 'bg-green-600'
-        hover: 'hover:bg-green-700'
-        text: 'text-green-400'
-        border: 'border-green-500/40'
-        ring: 'focus:ring-green-500'
-      }
-    }
-    return colors[color as keyof typeof colors] |colors.blue;  }
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
-=======
-        bg: 'bg-green-600',
-        hover: 'hover:bg-green-700',
-        text: 'text-green-400',
-        border: 'border-green-500/40',
-        ring: 'focus:ring-green-500',
-      },
-    };
-    return colors[color as keyof typeof colors] || colors.blue;  };
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -3325,7 +3291,7 @@ export default function Services() {
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 350+ Innovative Solutions for Modern Businesses
->>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+
               </p>
             </div>
 <<<<<<< HEAD

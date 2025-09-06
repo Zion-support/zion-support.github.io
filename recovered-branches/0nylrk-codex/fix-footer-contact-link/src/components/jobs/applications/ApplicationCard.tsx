@@ -35,7 +35,6 @@ interface ApplicationCardProps {
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleDownloadResume = () => {
     // This would typically download the resume file

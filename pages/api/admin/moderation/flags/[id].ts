@@ -20,7 +20,6 @@ import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { getFlagById } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const user = parseUserFromRequest(req)

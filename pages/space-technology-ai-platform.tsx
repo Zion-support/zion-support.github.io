@@ -414,62 +414,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
 export default function SpaceTechnologyAIPlatform() {
 
   const contactInfo = {
-<<<<<<< HEAD
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-  const features = [
-    'AI-powered satellite operations'
-    'Autonomous space exploration'
-    'Space data analytics'
-    'Satellite constellation management'
-    'Space debris tracking'
-    'Real-time monitoring'
-    'Predictive maintenance'
-    'Mission planning tools'
-    'API access'
-    'Expert consultation'
-  ];
-  const useCases = [
-    'Satellite operations'
-    'Space exploration'
-    'Earth observation'
-    'Space debris monitoring'
-    'Mission planning'
-    'Space research'
-  ];
-  const integrations = [
-    'NASA APIs'
-    'ESA APIs'
-    'Satellite ground stations'
-    'GIS systems'
-    'Slack'
-    'Microsoft Teams'
-    'Custom applications'
-  ];
-  const competitors = [
-    'Maxar ($5000-50000/month)'
-    'Planet Labs ($1000-10000/month)'
-    'Airbus Defence ($10000-100000/month)'
-    'Lockheed Martin'
-    'Boeing'
-    'Northrop Grumman'
-  ];
 
-=======
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',;
-  };
-
-=======
-    website: 'https://ziontechgroup.com'
-  },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const features = [
     'AI-powered satellite operationsAutonomous space explorationSpace data analyticsSatellite constellation managementSpace debris trackingReal-time monitoringPredictive maintenanceMission planning tools',
     'API accessExpert consultation'

@@ -11,7 +11,7 @@ type Props = { vendor: Vendor | null };
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function VendorProfilePage({ vendor }: Props) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 

@@ -12,4 +12,4 @@ describe('ErrorBoundarydynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ErrorBoundarydynamic from "./components/ErrorBoundary.dynamic"; describe('ErrorBoundarydynamic', () => { test("renders without crashing",() => { render(<ErrorBoundarydynamic />); expect(screen.getByTestId("errorboundary.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<ErrorBoundarydynamic />)}); test("applies correct styling"
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

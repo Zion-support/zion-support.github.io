@@ -340,10 +340,6 @@ export default function Revolutionary2030ServicesPage() {
 =======
         />
       </Head>
-<<<<<<< HEAD
-      {/* Navigation */}
-      <UltraFuturisticNavigation2030 />
-=======
 
 
 

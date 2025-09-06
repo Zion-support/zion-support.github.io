@@ -217,11 +217,7 @@ class PerformanceOptimizer {ursor / migrate - github - actions - to - pm2 - and 
         "imageOptimization": imageOptimization
         "dependencies": dependencyAnalysis
         "recommendations": this.generateRecommendations()
-<<<<<<< HEAD
-      }
-=======
-      };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       this.saveReport(report);
       this.log('Performance optimization completed');
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

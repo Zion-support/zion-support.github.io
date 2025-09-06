@@ -56,5 +56,3 @@ export default function Blog(): any ({ }: BlogProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

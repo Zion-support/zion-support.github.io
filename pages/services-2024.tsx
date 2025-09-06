@@ -351,7 +351,7 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
 
         />;

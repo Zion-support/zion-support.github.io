@@ -82,7 +82,6 @@ try {
 } catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   performanceChecks.bundleAnalysis = true} catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
 try {

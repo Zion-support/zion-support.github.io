@@ -1298,7 +1298,6 @@ className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
-=======
   )
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

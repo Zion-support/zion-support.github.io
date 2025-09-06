@@ -96,7 +96,7 @@ const TalentProfile: NextPage = () => {;
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="space-y-6 pb-20">
       <Head>

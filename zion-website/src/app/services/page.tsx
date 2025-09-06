@@ -233,20 +233,10 @@ function ServicesPage() {
     name: 'Global Support'
     description: '24/7 support and maintenance services across multiple time zones.'
     icon: GlobeAltIcon}]
-<<<<<<< HEAD
-export default function ServicesPage() {
-=======
 
-<<<<<<< HEAD
-export default function ServicesPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-=======
-const Page: React.FC<PageProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -257,13 +247,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 AI Services
               </span>
             </h1>
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              From strategy to implementation, our comprehensive AI services help you navigate
-=======
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              From strategy to implementation, our comprehensive AI services help you navigate 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
@@ -276,13 +260,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Comprehensive AI Solutions
           </p>
-<<<<<<< HEAD
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We offer end-to-end AI services designed to accelerate your digital transformation
-=======
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            We offer end-to-end AI services designed to accelerate your digital transformation 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             and drive measurable business outcomes.
           </p>
         </div>
@@ -409,7 +387,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             from your AI investment.
           </p>
         </div>

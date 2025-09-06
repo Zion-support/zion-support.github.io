@@ -56,5 +56,3 @@ export default function Marketplace(): any ({ }: MarketplaceProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

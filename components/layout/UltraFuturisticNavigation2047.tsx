@@ -950,8 +950,6 @@ const navigation_items: NavigationItem[] = [;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1003,8 +1001,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                       <motion.div;
 =======
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1152,8 +1148,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                 <div className="px-3 pt-2">;
 =======
                         className='ml-4 mt-2 space-y-1'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1165,16 +1159,6 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                           <Link
                             key={child.name}
                             href={child.href}
-<<<<<<< HEAD
-                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}                      >
-                        {item.children?.map((child) => (
-                          <Link
-                            key={child.name}
-                            href={child.href}
-                            className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200"
-                            onClick={closeMenu}
-=======
-                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}
 
                             onClick={closeMenu}
 
@@ -1192,10 +1176,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   </AnimatePresence>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>

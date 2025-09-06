@@ -743,13 +743,6 @@ import React from 'react';
   opacity: 0, y: 30
 }whileInView= {
   {
-<<<<<<< HEAD
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8, delay: categoryIndex * 0.2
-=======
-  opacity: 1, y: 0 
 
 }transition= {
   {

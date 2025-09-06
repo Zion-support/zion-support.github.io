@@ -190,15 +190,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.setHeader('Allow', 'GET');
     return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
-  const { courseId, userId = 'demo-user' } = req.query as {
-    courseId: string;
-    userId?: string;
-  }
-=======
 
-  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   try {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
@@ -207,59 +199,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!course) return res.status(404).json({ error: 'Course not found' });
     if (!user) return res.status(404).json({ error: 'User not found' });
     res.setHeader('Content-Type', 'application/pdf');
-<<<<<<< HEAD
-    res.setHeader(
-      'Content-Disposition'
-      `attachment; filename="${courseId}-certificate.pdf"`
-    );
-    const doc = new PDFDocument({ size: 'A4', margin: 50 });
-    res.setHeader('Content-Typeapplication/pdf');
-    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
-    const doc = new PDFDocument({ size: 'A4', margin: 50 })
-=======
-    res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
-    const doc = new PDFDocument({ size: 'A4', margin: 50 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     // Pipe to response
     // @ts-ignore
     doc.pipe(res);
     // Zion certificate template (simple)
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
     doc.fill('#ffffff');
-<<<<<<< HEAD
-    doc
-      .fontSize(28)
-      .text('Zion AI Marketplace', { align: 'center', underline: false });    doc.moveDown(0.5);
-=======
-    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
-    doc.moveDown(0.5);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
     doc.fontSize(14).text(`This certifies that`, { align: 'center' });
     doc.moveDown(0.5);
-<<<<<<< HEAD
-    doc.fontSize(22).text(user.name |user.userId, { align: 'center' });
-=======
-    doc.fontSize(22).text(user.name || user.userId, { align: 'center' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     doc.moveDown(0.5);
     doc.fontSize(14).text(`has successfully completed`, { align: 'center' });
     doc.moveDown(0.5);
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
-<<<<<<< HEAD
-    doc
-      .fontSize(12)
-      .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
-=======
-    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     const date = new Date().toLocaleDateString();
     doc.moveDown(2);
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
     doc.end();
-<<<<<<< HEAD
 
   } catch (e: any) {
     res

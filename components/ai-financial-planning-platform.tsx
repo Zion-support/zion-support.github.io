@@ -853,8 +853,6 @@ className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
             <motion&& motion.div
 =======
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -873,8 +871,6 @@ className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                   </div>
                   <span className="text-white font-medium text-sm">{useCase}</span>
                 </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

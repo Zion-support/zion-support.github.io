@@ -47,7 +47,7 @@ import {
     linkedin: "https://linkedin.com/in/klebersantos"
     twitter: "https://twitter.com/klebersantos"
     github: "https://github.com/klebersantos"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
     expertise: [
       "Strategic Leadership"
       "AI/ML"

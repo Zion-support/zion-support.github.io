@@ -633,8 +633,6 @@ export default function InnovativeServicesShowcase() {;
                     <h3 className='text - 2xl font - bold text - white mb - 4'>;
 =======
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -903,8 +901,6 @@ export default function InnovativeServicesShowcase() {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -915,13 +911,6 @@ export default function InnovativeServicesShowcase() {;
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-<<<<<<< HEAD
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-=======
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
 
               initial={{ opacity: 0, y: 30 }}
 
@@ -1220,13 +1209,6 @@ export default function InnovativeServicesShowcase() {;
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
-<<<<<<< HEAD
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-=======
-              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
 
               initial={{ opacity: 0, y: 30 }}
 

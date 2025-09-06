@@ -2481,7 +2481,7 @@ export default function MicroSaasPage() {;
       description: "Each of our 65+ services is designed for a specific business need, ensuring deep functionality and expertise without feature bloat.",
       icon: "🎯"
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     {
       icon: '💰'
       title: 'Transparent Pricing'

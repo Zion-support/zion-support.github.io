@@ -982,8 +982,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1245,8 +1243,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
 =======
               </Link>
             </div>
-<<<<<<< HEAD
-=======
 
 
 =======

@@ -490,8 +490,6 @@ export default function UltraFuturisticFooter2034() {;
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

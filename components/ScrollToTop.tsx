@@ -140,8 +140,6 @@ const ScrollToTop: React.FC = () => {
   if (!isVisible) {
     return null;
   }
-<<<<<<< HEAD
-=======
 
 
 
@@ -160,7 +158,7 @@ const ScrollToTop: React.FC = () => {
 
     });  };      behavior: 'smooth'})
   }
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
   return (
     <>
       {isVisible && (

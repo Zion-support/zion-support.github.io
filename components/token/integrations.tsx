@@ -241,7 +241,7 @@ export default function TokenIntegrationsPage() {;
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
-=======
+
               </div>
 
 <<<<<<< HEAD

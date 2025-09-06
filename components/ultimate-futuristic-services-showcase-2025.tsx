@@ -507,8 +507,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               </select>;
 =======
               </select>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -520,8 +518,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -885,10 +881,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     Popular
                   </div>
                 )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Service Header */}
                 <div
                   className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}
@@ -899,8 +892,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
                     >
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

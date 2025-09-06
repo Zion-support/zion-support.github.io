@@ -333,8 +333,6 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025
                 </span>
               </motion.h1>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -432,8 +430,6 @@ export default function CuttingEdgePricing2025() {;
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -554,8 +550,6 @@ export default function CuttingEdgePricing2025() {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -663,8 +657,6 @@ export default function CuttingEdgePricing2025() {;
             </div>;
 =======
             </div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -1016,8 +1008,6 @@ export default function CuttingEdgePricing2025() {;
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

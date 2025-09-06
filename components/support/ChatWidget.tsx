@@ -116,7 +116,7 @@ function generateSessionId(): any (): string {;
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
       setShowEscalation(true)
-=======
+
       setShowEscalation(true);    } catch {}
 
 <<<<<<< HEAD
@@ -405,7 +405,6 @@ function generateSessionId(): any (): string {;
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>

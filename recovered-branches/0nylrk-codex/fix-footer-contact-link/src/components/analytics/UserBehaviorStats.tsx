@@ -215,7 +215,7 @@ if (eventsByDate[date][event.event_type] = 0) {
     if (!behaviorData || behaviorData.length === 0) return ['page_view'],
     
     const allKeys = new Set<string>(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     behaviorData.forEach(item => {
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)

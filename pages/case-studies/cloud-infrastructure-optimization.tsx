@@ -176,7 +176,7 @@ function CaseStudyPage() {
                   We built a comprehensive cloud infrastructure solution that automatically scales, 
 
                   monitors, and heals itself while optimizing costs and performance.
-=======
+
                   We built a comprehensive cloud infrastructure solution that automatically scales,
                   monitors, and heals itself while optimizing costs and window.window.window.performance.
 

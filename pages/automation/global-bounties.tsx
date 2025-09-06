@@ -20,7 +20,7 @@
 }
               </div>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             </li>
           ))  } catch (error) {
     console.error("Error:", error);

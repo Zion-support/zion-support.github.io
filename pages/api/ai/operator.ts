@@ -155,7 +155,7 @@ const sys = system || 'You are a professional writing assistant. Write clear, co
 =======
     console.error('Operator error', err);
     return res.status(500).json({ error: 'Internal Server Error' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   }
 }
   ipToRequests[ip] = bucket;

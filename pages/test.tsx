@@ -50,7 +50,7 @@ export default function TestPage() {;
     </Layout>;
   );
 }
-=======
+
 import React from 'react'
 import Head from 'next/head'
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -93,8 +93,7 @@ export default function TestPage() {
     </>;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
->>>>>>> origin/main
-=======
+
 );
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

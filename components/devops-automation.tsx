@@ -966,8 +966,6 @@ export default function DevOpsAutomationPage() {_const _features = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -979,8 +977,6 @@ export default function DevOpsAutomationPage() {_const _features = [
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
                 How We Compare to the Competition
 <<<<<<< HEAD
@@ -1171,8 +1167,6 @@ export default function DevOpsAutomationPage() {_const _features = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1183,8 +1177,6 @@ export default function DevOpsAutomationPage() {_const _features = [
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
               Ready to Automate Your DevOps?
 <<<<<<< HEAD

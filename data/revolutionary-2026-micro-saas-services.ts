@@ -97,7 +97,7 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
       "Transformative capabilities",
       "Advanced technology",
       "Innovation platform",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       "Future-ready solutions"
     ],
     link: "/services/2026-revolutionary-micro-saas",

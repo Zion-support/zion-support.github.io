@@ -343,7 +343,7 @@ export interface Project {
   id: string, title: string,
   description: string, image: string,
   technologies: string[], liveUrl?: string,
->>>>>>> origin/automation-improvements-final
+
   githubUrl?: string;
   featured: boolean;
   name?: string;
@@ -373,7 +373,7 @@ export interface Project {
   };
 
   deliverables?: {
-=======
+
     allocated: number;
     spent: number;
     currency: string;
@@ -565,9 +565,6 @@ export interface HeroSection {
 }
 
 
-export interface FooterLink {;
-  name: string;
-  href: string;
 }
 
 export interface FooterSection {;

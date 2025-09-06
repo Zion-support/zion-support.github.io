@@ -551,18 +551,7 @@ color: 'from-indigo-500 to-purple-500'
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
-<<<<<<< HEAD
-            {/* Features Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {[
-=======
-            {/* Features Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -603,7 +592,7 @@ color: 'from-indigo-500 to-purple-500'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               ].map((feature, index) => (
                 <div key={index} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">

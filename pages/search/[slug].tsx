@@ -485,7 +485,7 @@ export default function SearchResultsPage(): any ({;
 =======
 
 }: SearchResultsPageProps) {  const router = useRouter();
-=======
+
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

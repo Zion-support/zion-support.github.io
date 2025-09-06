@@ -218,7 +218,7 @@ if (return) {
         
 
         ctx.restore()
-=======
+
         return this.life <= 0 || this.opacity < 0.01;      }
 
 <<<<<<< HEAD

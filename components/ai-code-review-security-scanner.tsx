@@ -699,52 +699,6 @@ const AICodeReviewSecurityScanner = () => {;
                   </motion.div>
                 ))}
               </div>
-<<<<<<< HEAD
-              <div className='space-y-8'>
-                  {
-                    icon: <CheckCircle className='w-8 h-8' />
-                    title: 'Ensure Compliance with Security Standards'
-                    description:
-                      'Meet SOC2, ISO27001, and other compliance requirements with automated security testing and reporting.'
-                  }
-                  {
-                    icon: <Users className='w-8 h-8' />
-                    title: 'Reduce Technical Debt & Bugs'
-                    description:
-                      'Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs.'
-                  }
-                  {
-                    icon: <Star className='w-8 h-8' />
-                    title: 'Enable Faster Development Cycles'
-                    description:
-                      'Confident code deployment with automated security validation accelerates your development and release processes.'
-                  },                ].map((benefit, index) => (                    icon: <Star className="w-8 h-8" />
-                    title: "Enable Faster Development Cycles"
-                    description: "Confident code deployment with automated security validation accelerates your development and release processes."
-                  }
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className='flex items-start'
-                  >
-                    <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0'>
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className='text-xl font-semibold text-white mb-2'>
-                        {benefit.title}
-                      </h3>
-                      <p className='text-gray-300'>{benefit.description}</p>                    </div>                  >
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-gray-300">{benefit.description}</p>
-                    </div>
-=======
 
                     </div>
 
@@ -759,8 +713,6 @@ const AICodeReviewSecurityScanner = () => {;
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -773,11 +725,6 @@ const AICodeReviewSecurityScanner = () => {;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-              className='text-center mb-16'        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-              className='text-center mb-16'
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

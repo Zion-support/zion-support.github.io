@@ -24,7 +24,7 @@ import {
 
 
 export default function DemosPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
@@ -289,8 +289,6 @@ export default function DemosPage() {;
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                 >
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -433,8 +431,6 @@ export default function DemosPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -447,8 +443,6 @@ export default function DemosPage() {;
           <div className='text-center mb-12'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
               <Play className='w-4 h-4 mr-2' />
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -719,7 +713,6 @@ export default function DemosPage() {;
       </section>;
 
 
-=======
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

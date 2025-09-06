@@ -119,14 +119,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
 
   const section = String(req.query.section |"General");
   const file = String(req.query.file |"");

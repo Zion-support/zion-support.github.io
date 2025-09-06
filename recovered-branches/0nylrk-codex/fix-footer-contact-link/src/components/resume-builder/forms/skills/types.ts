@@ -49,7 +49,7 @@ export interface AddSkillFormProps {;
   resumeId: string;
   onAddSkill: (skill: Skill) => Promise<boolean>;
   defaultCategory?: string
-=======
+
 import { Skill } from '@/types/resume',;
 export interface SkillsFormProps {;
   resumeId: string,;
@@ -101,7 +101,6 @@ export interface BulkAddSkillsProps {
 
 ;
 
-=======
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

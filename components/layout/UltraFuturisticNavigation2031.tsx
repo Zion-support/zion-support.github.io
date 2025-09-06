@@ -451,8 +451,6 @@ className="relative group"
                   </Link>;
 =======
                   className='relative group'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -808,8 +806,6 @@ function UltraFuturisticNavigation2031() {
                     <category.icon className="w-4 h-4" />
                     <span className="text-sm font-medium">{category.title.split(' ')[0]}</span>
                     <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
-<<<<<<< HEAD
-=======
 
                   </button>
 
@@ -827,8 +823,6 @@ function UltraFuturisticNavigation2031() {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -885,8 +879,6 @@ function UltraFuturisticNavigation2031() {
                                 <Link;
 =======
                                 className='group cursor-pointer'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -74,7 +74,6 @@ export default function APIRateLimiterPage() {;
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const testRateLimiting = async () => {
     if (!endpoint.trim() |!rateLimit |!timeWindow) return;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -742,16 +741,6 @@ if (break) {
                     Rate Limit
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-<<<<<<< HEAD
-                    {rateLimits.map(limit => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
-                    Rate Limit
-                  ">
-                    Rate Limit
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {rateLimits.map((limit) => (
-=======
-                    {rateLimits.map(limit => (                      <button
 
                       <button
 
@@ -816,16 +805,6 @@ if (break) {
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-<<<<<<< HEAD
-                    {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
-                    Time Window
-                  ">
-                    Time Window
-                  </label>
-                  <div className="grid grid-cols-2 gap-3">
-                    {timeWindows.map((window) => (
-=======
-                    {timeWindows.map(window => (                      <button
 
                       <button
 

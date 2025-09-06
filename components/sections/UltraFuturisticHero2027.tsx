@@ -738,8 +738,6 @@ export default function UltraFuturisticHero2027() {
                 >;
 =======
                 className='text-center group'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

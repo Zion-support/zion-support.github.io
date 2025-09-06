@@ -441,13 +441,6 @@ const HeroSection: React.FC = () => {;
             <Star className='w-5 h-5 text-yellow-400 fill-current' />
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider
-<<<<<<< HEAD
-            </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
-          >
-            <Star className="w-5 h-5 text-yellow-400 fill-current" />
-            <span className="text-white font-medium">Leading Technology Solutions Provider</span>
-=======
-            </span>          </motion.div>
 
           </motion.div>
 
@@ -482,8 +475,6 @@ const HeroSection: React.FC = () => {;
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             </span>
           </motion.h1>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -509,13 +500,6 @@ const HeroSection: React.FC = () => {;
           >
             From AI development to cloud architecture, we help companies
             revolutionize their digital presence and achieve sustainable growth
-<<<<<<< HEAD
-            in the modern technology landscape.          </motion.p>            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-          >
-            From AI development to cloud architecture, we help companies revolutionize their digital presence
-            and achieve sustainable growth in the modern technology landscape.
-=======
-            in the modern technology landscape.          </motion.p>
 
 <<<<<<< HEAD
           </motion.p>
@@ -556,8 +540,6 @@ const HeroSection: React.FC = () => {;
           {_/* Stats */}
 =======
             className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -591,8 +573,6 @@ const HeroSection: React.FC = () => {;
               <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

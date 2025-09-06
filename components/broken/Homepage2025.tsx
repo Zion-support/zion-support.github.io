@@ -1,7 +1,7 @@
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
 ...innovative2035ITServices;
@@ -98,19 +98,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }initial= {
   {
-<<<<<<< HEAD
-  opacity: 0, y: 50
-}whileInView= {
-  {
-  opacity: 1, y: 0
-=======
-  opacity: 0, y: 50 
 
-}whileInView= {
-  {
-  opacity: 1, y: 0 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
 
@@ -299,7 +287,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 
 }export default Homepage2025;export default Homepage2025;
-<<<<<<< HEAD
 
 
 export default Homepage2025;

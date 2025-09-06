@@ -53,5 +53,3 @@ export default function Clouddevops(): any ({ }: ClouddevopsProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

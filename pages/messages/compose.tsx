@@ -336,7 +336,7 @@ export default function ComposePage(req, res) {
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const [message, setMessage] = React.useState('');
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);

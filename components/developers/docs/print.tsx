@@ -111,7 +111,6 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
 <<<<<<< HEAD
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {;
     const id = setTimeout(() => window.print(), 500);

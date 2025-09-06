@@ -60,7 +60,6 @@ export default function AccountSettings() {
   const [didHandle, setDidHandle] = useState(''),
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     try {

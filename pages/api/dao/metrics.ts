@@ -40,7 +40,7 @@ async function fetchJson(url: string) {;
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
-=======
+
 ;
 function readJson(p: string) {;
   return JSON.parse(fs.readFileSync(p, 'utf-8'));
@@ -94,7 +94,7 @@ export default async function handler(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();

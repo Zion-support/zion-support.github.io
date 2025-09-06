@@ -3,7 +3,7 @@
 import {supabase} from "@/integrations/supabase/client";
 
 import type { UserDetails } from "@/types/auth";
-=======
+
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 

@@ -443,8 +443,6 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -485,11 +483,7 @@ export default function QuantumCybersecurityPage() {
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-<<<<<<< HEAD
-                Our advanced security platform provides comprehensive protection against both current and future threats.
-=======
-                Our advanced security platform provides comprehensive protection against both current and future threats. 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 Stay ahead of the curve with quantum-resistant technology.
               </p>
               <div className="space-y-4">
@@ -608,8 +602,6 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -852,8 +844,6 @@ export default function QuantumCybersecurityPage() {
                   </div>
                   <p className="text-slate-600">{plan.description}</p>
                 </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -884,8 +874,6 @@ export default function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 
 =======

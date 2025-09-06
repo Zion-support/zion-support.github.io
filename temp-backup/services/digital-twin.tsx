@@ -53,5 +53,3 @@ export default function Digitaltwin(): any ({ }: DigitaltwinProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

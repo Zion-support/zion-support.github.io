@@ -768,8 +768,6 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -810,8 +808,6 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
-<<<<<<< HEAD
-=======
 
 
 =======
@@ -933,8 +929,6 @@ export default function UltraFuturisticFooter2026() {
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -947,8 +941,6 @@ export default function UltraFuturisticFooter2026() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

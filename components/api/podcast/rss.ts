@@ -193,7 +193,6 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
   items 
 }</channel> </rss>`;
 
-=======
   items 
 
 }</channel> </rss>`;

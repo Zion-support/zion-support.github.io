@@ -564,8 +564,6 @@ transition={{ duration: 0 && 0.8 }}>;
 =======
                 </select>
               </div>
-<<<<<<< HEAD
-=======
 
 =======
 

@@ -60,7 +60,7 @@ export function ApiKeysManager() {
 =======
   const { 
     keys,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
     loading, 
     newApiKey,
     fetchApiKeys, 
@@ -73,8 +73,7 @@ export function ApiKeysManager() {
   const [showCreateDialog, setShowCreateDialog] = useState(false),
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),

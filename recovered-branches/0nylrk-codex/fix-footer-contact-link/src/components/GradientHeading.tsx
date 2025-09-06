@@ -32,7 +32,7 @@ import React from "react",
 interface GradientHeadingProps {
   children: React.ReactNode,
   className?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 }
 

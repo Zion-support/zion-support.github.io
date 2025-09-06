@@ -160,7 +160,7 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -193,10 +193,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
       })
   ),

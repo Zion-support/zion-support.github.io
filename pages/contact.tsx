@@ -36,7 +36,12 @@ import React from 'react';
 
 
 
-=======
+import React from 'react';
+
+import Layout from '../components/Layout';
+
+import Layout from '../components/Layout';
+
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
@@ -109,7 +114,7 @@ export default function Contact() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 import React from 'react';
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -627,28 +632,16 @@ function Contact() {
                   </li>
                 </ul>
               </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </Layout>;
-=======
-    </>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
+
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

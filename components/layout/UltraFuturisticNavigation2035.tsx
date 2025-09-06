@@ -2235,8 +2235,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               </a>
 =======
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2268,23 +2266,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeDropdowns}
-<<<<<<< HEAD
-                              >                        onMouseLeave={closeDropdowns}
-                      >
-                        <div className="p-6">
-                          <div className="flex items-center gap-3 mb-4">
-                            {item.icon}
-                            <div>
-                              <h3 className="font-semibold text-white">{item.title |item.name}</h3>
-                              {item.description && (
-                                <p className="text-sm text-gray-400">{item.description}</p>
-                              )}
-                            </div>
-                          </div>
-                          <div className="space-y-2">
-                            {item.children?.map((child) => (
-=======
-                              >
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2302,22 +2283,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                 }`}
                                 onClick={closeDropdowns}
                               >
-<<<<<<< HEAD
-                                {child.featured && (
-                                  <Star className='w-4 h-4 text-cyan-400' />
-                                )}
-                                <div className='flex-1'>
-                                  <div className='font-medium'>
-                                    {child.name}
-                                  </div>
-                                    <div className='text-sm opacity-75'>
-                                      {child.description}
-                                    </div>
-                                  )}
-                                </div>
-                                <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />
-                              </Link>
-=======
 
                               </Link>
 
@@ -2395,13 +2360,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
             <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
               <div className='flex items-center gap-2'>
-<<<<<<< HEAD
-                {quickActions.map(action => (                  <Link            <div className="hidden lg:flex items-center gap-4">
-              {/* Quick Actions */}
-              <div className="flex items-center gap-2">
-                {quickActions.map((action) => (
-=======
-                {quickActions.map(action => (                  <Link
 
                   <Link
 
@@ -2423,8 +2381,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   </Link>
                 ))}
               </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2455,8 +2411,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                   <span className="hidden xl:inline">{contactInfo.email}</span>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2479,8 +2433,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -111,7 +111,7 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       "Business applications",
       "Real-world use cases",
       "Easy integration",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       "Affordable pricing"
     ],
     link: "/services/2029-practical-business-solution",

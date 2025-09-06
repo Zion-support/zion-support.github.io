@@ -46,7 +46,6 @@ function handleError(error, context) {
 =======
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n');
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   fs.appendFileSync(errorLogFile, JSON.stringify(errorDetails, null, 2) + '\n')}
 // Automation functions
 const automations = {
@@ -429,7 +428,6 @@ async function fixTypeScriptErrors() {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   log('Critical syntax errors fixed')}
 async function fixTypeScriptErrors() {
   log('Fixing TypeScript errors...');

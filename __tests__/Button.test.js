@@ -62,4 +62,4 @@ describe('Button', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

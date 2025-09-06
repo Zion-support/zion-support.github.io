@@ -29,7 +29,6 @@ const values = [;
 =======
 import React from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const values = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   {
@@ -285,7 +284,7 @@ export default function AboutPage() {;
 export default function AboutPage() {
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -296,13 +295,7 @@ export default function AboutPage() {
                 Zion Tech Group
               </span>
             </h1>
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              We are pioneers in artificial intelligence, quantum computing, and autonomous systems
-=======
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
@@ -323,13 +316,7 @@ export default function AboutPage() {
                 <RocketLaunchIcon className="h-8 w-8 text-blue-400" />
                 <h3 className="text-xl font-semibold text-white">Our Mission</h3>
               </div>
-<<<<<<< HEAD
-              <p className=&quot;text-gray-300&quot;>
-                To accelerate human progress through cutting-edge AI and technology solutions that solve
-=======
-              <p className="text-gray-300">
-                To accelerate human progress through cutting-edge AI and technology solutions that solve 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 the world's most complex challenges while maintaining the highest ethical standards.
               </p>
             </div>
@@ -338,13 +325,7 @@ export default function AboutPage() {
                 <LightBulbIcon className="h-8 w-8 text-purple-400" />
                 <h3 className="text-xl font-semibold text-white">Our Vision</h3>
               </div>
-<<<<<<< HEAD
-              <p className=&quot;text-gray-300&quot;>
-                A future where AI and technology seamlessly enhance human capabilities, creating a more
-=======
-              <p className="text-gray-300">
-                A future where AI and technology seamlessly enhance human capabilities, creating a more 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 intelligent, efficient, and sustainable world for generations to come.
               </p>
             </div>
@@ -359,41 +340,7 @@ export default function AboutPage() {
             From Research to Revolution
           </p>
         </div>
-<<<<<<< HEAD
-        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
-          <div className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm&quot;>
-            <p className=&quot;text-lg text-gray-300 mb-6&quot;>
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs
-              Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge
-              research and real-world applications.
-            </p>
-            <p className=&quot;text-lg text-gray-300 mb-6&quot;>
-              What started as a small research lab has grown into a global technology powerhouse
-              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+
-              researchers, engineers, and business professionals work tirelessly to push the
-              boundaries of what's possible.
-            </p>
-            <p className=&quot;text-lg text-gray-300&quot;>
-              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative
-              startups, helping them harness the power of AI to transform their operations and
-=======
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <div className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
-            <p className="text-lg text-gray-300 mb-6">
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
-              Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
-              research and real-world applications.
-            </p>
-            <p className="text-lg text-gray-300 mb-6">
-              What started as a small research lab has grown into a global technology powerhouse, 
-              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
-              researchers, engineers, and business professionals work tirelessly to push the 
-              boundaries of what's possible.
-            </p>
-            <p className="text-lg text-gray-300">
-              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
-              startups, helping them harness the power of AI to transform their operations and 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               accelerate their growth.
             </p>
           </div>
@@ -601,7 +548,7 @@ export default function AboutPage() {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Ready to be part of the AI revolution? Let's discuss how we can work together to 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             transform your organization.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">

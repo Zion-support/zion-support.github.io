@@ -13,4 +13,3 @@ export default function Team({ }: TeamProps) {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

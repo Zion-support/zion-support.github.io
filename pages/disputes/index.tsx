@@ -106,16 +106,6 @@ function DisputesIndexPage() {
 =======
 <<<<<<< HEAD
 
-import useSWR from 'swr';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import Link from 'next/link';
-const fetcher = (url: string) => fetch(url).then(r => r.json())
-=======
-import useSWR from 'swr',
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-import Link from 'next/link',
-const fetcher = (url: string) => fetch(url).then(r => r.json()),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
   const disputes = data?.disputes |[]

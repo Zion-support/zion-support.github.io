@@ -166,7 +166,7 @@ const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 
@@ -178,36 +178,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   }
   try {
-<<<<<<< HEAD
-    const { roomName, identity, name, audioOnly } = req.body |{}
-    if (!roomName |!identity) {
-      return res.status(400).json({ error: "Missing roomName or identity" });
-    }
-    if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
-      return res.status(500).json({ error: "LiveKit env vars not configured" });
-    }
-    const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
-      identity: String(identity)
-      name: name ? String(name) : String(identity)
-      ttl: 60 * 60, // 1 hour
-=======
-    const { roomName, identity, name, audioOnly } = req.body || {};
 
-    if (!roomName || !identity) {
-      return res.status(400).json({ error: 'Missing roomName or identity' });
-    }
-    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
-      return res.status(500).json({ error: 'LiveKit env vars not configured' });
-    }
-
-    const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
-      identity: String(identity),
-      name: name ? String(name) : String(identity),
-      ttl: 60 * 60 // 1 hour
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     });
     at.addGrant({
       roomJoin: true

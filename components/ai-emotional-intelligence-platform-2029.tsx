@@ -900,8 +900,6 @@ class ErrorBoundary extends React.Component {
                 <div className={`flex justify-center mb-6`}>
 =======
                 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -961,8 +959,6 @@ class ErrorBoundary extends React.Component {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1070,13 +1066,6 @@ class ErrorBoundary extends React.Component {
                 className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20'
               >
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0' />
-<<<<<<< HEAD
-                <span className='text-white text-lg'>{benefit}</span>              </motion.div>                className="flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20"
-              >
-                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-white text-lg">{benefit}</span>
-=======
-                <span className='text-white text-lg'>{benefit}</span>              </motion.div>
 
               </motion.div>
 
@@ -1089,8 +1078,6 @@ class ErrorBoundary extends React.Component {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1193,8 +1180,6 @@ class ErrorBoundary extends React.Component {
                 <div className={`flex justify-center mb-6`}>
 =======
                 className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white/10 border border-white/10 backdrop-blur-sm hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1254,8 +1239,6 @@ class ErrorBoundary extends React.Component {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1369,8 +1352,6 @@ class ErrorBoundary extends React.Component {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1662,8 +1643,6 @@ export default AIEmotionalIntelligencePlatform2029;
 export default AIEmotionalIntelligencePlatform2029);
 =======
             className='text-center'
-<<<<<<< HEAD
-=======
 
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

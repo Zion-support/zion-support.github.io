@@ -146,7 +146,7 @@ function getAllFiles(dir, extensions) {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   let files = [];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;

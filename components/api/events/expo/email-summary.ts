@@ -59,10 +59,7 @@ export default async function handler(
     if (provider === 'none') {
       console.log('[EmailSummary] Stub: no provider configured');
       return res.status(200).json({ status: 'queued', provider: 'stub' });
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     // TODO: Integrate with actual provider
     return res.status(200).json({ status: 'queued', provider });

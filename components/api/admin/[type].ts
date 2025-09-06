@@ -160,10 +160,7 @@ function toCsv(rows: any[]): string {
     rows.map(r => headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -311,7 +308,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

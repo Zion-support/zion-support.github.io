@@ -471,9 +471,7 @@ main();
 
 
 #!/usr/bin/env node;
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 // Function to fix common lint errors;
 function fixLintErrors(content) {
   let fixed = content;
@@ -836,7 +834,7 @@ function fixUndefinedVariables(content, filePath) {};
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
     fixed = "import { useEffect } from 'react',\n" + fixed,";
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 };
 ;
 

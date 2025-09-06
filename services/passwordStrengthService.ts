@@ -491,7 +491,7 @@ if ( {) {
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`;
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`;
     return `${Math.ceil(seconds / 31536000)} years`
-=======
+
 ;
   /**;
    * Estimate time to crack password;
@@ -652,7 +652,7 @@ if ( {) {
     for (let i = 4, i < length, i++) {
 
       password += charset[Math.floor(Math.random() * charset.length)]
-=======
+
 ;
   /**;
    * Generate a strong password;

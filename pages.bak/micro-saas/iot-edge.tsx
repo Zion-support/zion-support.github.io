@@ -56,5 +56,3 @@ export default function Iotedge(): any ({ }: IotedgeProps) {;
 
 =======
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

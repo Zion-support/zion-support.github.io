@@ -429,8 +429,6 @@ export default function TrainingPage() {
 =======
 };export default Training;
 
->>>>>>> origin/main
-=======
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };

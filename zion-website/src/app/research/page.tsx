@@ -210,20 +210,10 @@ function ResearchPage() {
     location: 'Tokyo, Japan'
     focus: 'Robotics & Autonomous Systems'
     collaboration: 'Robotic learning and human-robot interaction'}]
-<<<<<<< HEAD
-export default function ResearchPage() {
-=======
 
-<<<<<<< HEAD
-export default function ResearchPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-=======
-const Page: React.FC<PageProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-black">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
       {/* Hero section */}
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
@@ -234,13 +224,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Innovation
               </span>
             </h1>
-<<<<<<< HEAD
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Pushing the boundaries of artificial intelligence through groundbreaking research
-=======
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Pushing the boundaries of artificial intelligence through groundbreaking research, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
               innovative discoveries, and academic collaboration.
             </p>
           </div>
@@ -253,13 +237,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Focus Areas
           </p>
-<<<<<<< HEAD
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our research spans the cutting edge of AI and technology, driving innovation
-=======
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our research spans the cutting edge of AI and technology, driving innovation 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             and advancing the state of the art.
           </p>
         </div>
@@ -468,7 +446,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research has made significant contributions to the field, 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             influencing both academia and industry.
           </p>
         </div>
@@ -574,7 +552,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             We collaborate with leading academic institutions worldwide to advance 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             the frontiers of AI research and innovation.
           </p>
         </div>
@@ -689,7 +667,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
             Let's explore opportunities to work together.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
