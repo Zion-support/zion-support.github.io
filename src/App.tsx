@@ -6,7 +6,7 @@ import ServiceCard from './components/ServiceCard';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './pages/About';
-import Services from './pages/Services';
+import Services from './pages/ServicesPage';
 import Contact from './pages/Contact';
 
 const Home = () => (
