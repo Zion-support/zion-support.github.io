@@ -10,8 +10,152 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = null;
+=======
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const heroStats = [
+  {
+    label: 'AI Services Delivered'
+    value: '200+'
+    icon: <Brain className='w-5 h-5' />
+  }
+  {
+    label: 'Happy AI Clients'
+    value: '500+'
+    icon: <Users className='w-5 h-5' />
+  }
+  {
+    label: 'AI Success Rate'
+    value: '99.8%'
+    icon: <Award className='w-5 h-5' />
+  }
+  {
+    label: 'AI ROI Average'
+    value: '500%'
+    icon: <TrendingUp className='w-5 h-5' />
+  },];
+const serviceCategories = [
+  {
+    title: 'AI Development Tools'
+    description: 'Advanced AI-powered development and testing automation'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Development Tools'
+    )
+    icon: Code
+    color: 'from-emerald-500 to-teal-600'
+    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence']
+  }
+  {
+    title: 'AI Testing & Quality Assurance'
+    description: 'Intelligent testing automation with AI-driven insights'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Testing & Quality Assurance'
+    )
+    icon: TestTube
+    color: 'from-purple-500 to-indigo-600'
+    features: ['Test Generation', 'Performance Testing', 'Quality Assurance']
+  }
+  {
+    title: 'AI DevOps & Infrastructure'
+    description: 'Self-managing infrastructure with AI optimization'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI DevOps & Infrastructure'
+    )
+    icon: Server
+    color: 'from-blue-500 to-indigo-600'
+    features: [
+      'Infrastructure Management'
+      'Deployment Optimization'
+      'Performance Monitoring'
+    ]
+  }
+  {
+    title: 'AI Cybersecurity'
+    description: 'Proactive threat detection and response with AI'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Cybersecurity'
+    )
+    icon: SecurityIcon
+    color: 'from-red-500 to-pink-600'
+    features: ['Threat Detection', 'Incident Response', 'Security Automation']
+  }
+  {
+    title: 'AI Data Management'
+    description: 'Intelligent data infrastructure with AI automation'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Data Management'
+    )
+    icon: Database
+    color: 'from-cyan-500 to-blue-600'
+    features: [
+      'Pipeline Management'
+      'Quality Assurance'
+      'Governance Automation'
+    ]
+  },];
+const heroFeatures = [
+  {
+    title: 'AI-Powered Automation'
+    description:
+      'Advanced AI algorithms that automate complex development, testing, and operations tasks.'
+    icon: Brain
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
+  }
+  {
+    title: 'Intelligent Optimization'
+    description:
+      'AI-driven optimization that continuously improves performance, security, and efficiency.'
+    icon: Sparkles
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
+  }
+  {
+    title: 'Autonomous Operations'
+    description:
+      'Self-managing systems that operate independently with minimal human intervention.'
+    icon: Settings
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600'
+  }
+  {
+    title: 'Predictive Analytics'
+    description:
+      'AI-powered insights that predict issues before they occur and optimize performance.'
+    icon: BarChart3
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
+  },];
+const testimonials = [
+  {
+    name: 'Dr. Michael Chen'
+    role: 'CTO, TechFlow Solutions'
+    company: 'TechFlow Solutions'
+    content:
+      "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly."
+    rating: 5
+    avatar: '👨‍💻'
+  },  {
+    name: 'Sarah Rodriguez'
+    role: 'DevOps Director, CloudScale Inc.'
+    company: 'CloudScale Inc.'
+    content:
+      'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.'
+    rating: 5
+    avatar: '👩‍💼'
+  },  {
+    name: 'David Kim'
+    role: 'Security Manager, SecureNet Corp.'
+    company: 'SecureNet Corp.'
+    content:
+      'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.'
+    rating: 5
+    avatar: '👨‍🔒'
+  },];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function AdvancedAIAutomationServices() {
   return (
     <Layout>
@@ -43,7 +187,6 @@ export default function AdvancedAIAutomationServices() {
           href='https://ziontechgroup.com/advanced-ai-automation-services'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
@@ -92,7 +235,6 @@ export default function AdvancedAIAutomationServices() {
             </div>
           </motion.div>
         </div>
-
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -106,12 +248,11 @@ export default function AdvancedAIAutomationServices() {
               Why Choose Our AI Automation Services?
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI automation services provide unprecedented efficiency,
+              Our AI automation services provide unprecedented efficiency
               accuracy, and cost savings across all aspects of technology
               operations
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -139,7 +280,6 @@ export default function AdvancedAIAutomationServices() {
             ))}
           </div>
         </div>
-
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -157,7 +297,6 @@ export default function AdvancedAIAutomationServices() {
               modern technology operations
             </p>
           </motion.div>
-
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -180,7 +319,6 @@ export default function AdvancedAIAutomationServices() {
                     {category.description}
                   </p>
                 </div>
-
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -253,7 +391,6 @@ export default function AdvancedAIAutomationServices() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -271,7 +408,6 @@ export default function AdvancedAIAutomationServices() {
               operations with our AI automation services
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -305,7 +441,6 @@ export default function AdvancedAIAutomationServices() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div

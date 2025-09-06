@@ -8,10 +8,10 @@ function filename = path.basename(filePath);
     const validName = convertToValidVariableName(filename);
     // Replace the invalid variable name with the valid one
     const fixedContent = content.replace(
-      new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),
+      new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g')
       `const ${validName}: NextPage`
     ).replace(
-export default ${filename.replace('.tsx', '')};`, 'g'),
+export default ${filename.replace('.tsx', '')};`, 'g')
 export default ${validName};`;
     );
     fs.writeFileSync(filePath, fixedContent);

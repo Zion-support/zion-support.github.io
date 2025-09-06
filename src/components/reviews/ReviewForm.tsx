@@ -25,8 +25,8 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean
 }
-
 interface ReviewFormProps {
+<<<<<<< HEAD
   projectId: string;
   revieweeId: string;
   revieweeName: string;
@@ -228,6 +228,12 @@ export function ReviewForm({
         </Button>
       </form>
     </Form>
+=======
+  projectId: string
+  revieweeId: string
+  revieweeName: string
+  onSubmit: (data: any) => Promise<boolean>
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }
-;

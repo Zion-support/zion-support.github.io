@@ -25,7 +25,66 @@ export function TeamManagement() {
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
   // Mock team members data
+<<<<<<< HEAD
   const teamMembers = null;
+=======
+  const teamMembers = [
+    {
+      id: 1
+      name: "Alex Johnson"
+      email: "alex@example.com"
+      role: "Admin"
+      status: "active"
+      lastActive: "2 hours ago"}
+    {
+      id: 2
+      name: "Jamie Smith"
+      email: "jamie@example.com"
+      role: "Recruiter"
+      status: "active"
+      lastActive: "Yesterday"}
+    {
+      id: 3
+      name: "Sam Williams"
+      email: "sam@example.com"
+      role: "Manager"
+      status: "pending"
+      lastActive: "Never"}
+    {
+      id: 4
+      name: "Taylor Brown"
+      email: "taylor@example.com"
+      role: "Viewer"
+      status: "active"
+      lastActive: "3 days ago"}]
+  const handleAddMember = () => {
+    // In a real app, this would make an API call to add the member
+    if (!newMemberEmail) {
+      toast({
+        title: "Email required"
+        description: "Please enter an email address for the new team member."
+        variant: "destructive"})
+      return
+    }
+    toast({
+      title: "Invitation sent"
+      description: `An invitation has been sent to ${newMemberEmail}`})
+    setNewMemberEmail("");
+    setIsAddingMember(false)
+  }
+  const handleRemoveMember = (memberId: number) => {
+    // In a real app, this would make an API call to remove the member
+    toast({
+      title: "Team member removed"
+      description: "The team member has been removed from your workspace."})
+  }
+  const handleResendInvite = (memberEmail: string) => {
+    // In a real app, this would make an API call to resend the invitation
+    toast({
+      title: "Invitation resent"
+      description: `A new invitation has been sent to ${memberEmail}`})
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -82,7 +141,6 @@ export function TeamManagement() {
           </DialogContent>
         </Dialog>
       </div>
-
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -155,4 +213,3 @@ export function TeamManagement() {
     </div>
   )
 }
-;

@@ -1,25 +1,76 @@
 import React, { useMemo, useState } from 'react';
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+<<<<<<< HEAD
+=======
+  path: string; // full URL or relative
+  requiresAuth: boolean;
+export default function TryItConsole({
+  method
+  path
+  requiresAuth
+}: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   path: string, // full URL or relative
   requiresAuth: boolean
 }
-
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
   const [token, setToken] = useState('');
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
   const url = null;
+=======
+  const url = useMemo(() => {
+    if (path.startsWith('http')) return path;
+    return baseUrl.replace(/\/$/, '') + path;  }, [baseUrl, path]);    return baseUrl.replace(/\/$/, '') + path
+  }, [baseUrl, path]);
+  async function onSend() {
+    setLoading(true);
+    setResponse('');
+    try {
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/json'
+      }
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+        method
+        headers
+        body:
+          method === 'GET' |method === 'DELETE'
+            ? undefined
+            : body |undefined
+      });
+      const text = await res.text();
+      setResponse(text);
+    } catch (e: any) {
+      setResponse(String(e?.message |e));
+    } finally {
+      setLoading(false);    }
+  }
+  return (
+    <div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+        method;
+        headers;
+        body: method === 'GET' |method === 'DELETE' ? undefined : body |undefined})
+      const text = await res.text();
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       setResponse(text)
     } catch (e: any) {
-      setResponse(String(e?.message || e))
+      setResponse(String(e?.message |e))
     } finally {
       setLoading(false)
     }
   }
-
   return (
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
@@ -48,7 +99,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
             readOnly
           />        </div>
       </div>
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>        <div>
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
@@ -62,7 +113,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>
           <label className='block text-sm mb-1'>Request Body (JSON)</label>
           <textarea

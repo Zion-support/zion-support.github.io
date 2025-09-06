@@ -8,19 +8,109 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
+<<<<<<< HEAD
   matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
+=======
+  matches: MatchResultItem[]
+  onSelectMatch?: (match: MatchResultItem) => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isLoading?: boolean;
   projectDescription?: string;
   serviceType?: string
 }
-
 export function AIMatchingResults({
   matches;
   onSelectMatch;
+<<<<<<< HEAD
   isLoading;
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
+=======
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all");
+  // Group matches by category
+  const categories = {
+    all: matches
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
+    services: matches.filter(match => match.category.toLowerCase().includes("service"))
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+  }
+  // Get the icon for a category
+  const getCategoryIcon = (category: string) => {
+    const lowerCategory = category.toLowerCase();
+    if (lowerCategory.includes("talent")) return User;
+    if (lowerCategory.includes("equipment")) return Monitor
+    return BriefcaseIcon
+  }
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        <Skeleton className="h-10 w-full" />
+        <div className="space-y-3">
+          <Skeleton className="h-[120px] w-full" />
+          <Skeleton className="h-[120px] w-full" />
+          <Skeleton className="h-[120px] w-full" />
+        </div>
+      </div>
+    )
+  }
+  if (matches.length === 0) {
+    return (
+      <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">
+        <CardContent className="pt-6">
+          <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />
+          <p className="text-white font-medium mb-2">No matches found</p>
+          <p className="text-zion-slate-light text-sm mb-4">
+            Try adjusting your search criteria or description for better results.
+          </p>
+          {projectDescription && (
+            <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">
+              <p className="text-xs text-zion-slate-light">Your search:</p>
+              <p className="text-sm text-white">{projectDescription}</p>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    )
+  }
+  return (
+    <div className="space-y-4">
+      <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
+          <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">
+            All ({categories.all.length})
+          </TabsTrigger>
+          <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">
+            Talent ({categories.talent.length})
+          </TabsTrigger>
+          <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">
+            Services ({categories.services.length})
+          </TabsTrigger>
+          <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">
+            Equipment ({categories.equipment.length})
+          </TabsTrigger>
+        </TabsList>
+        {Object.entries(categories).map(([tab, items]) => (
+          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
+            {items.length > 0 ? (
+              items.map((match) => {
+                const CategoryIcon = getCategoryIcon(match.category);
+                return (
+                  <Card
+                    key={match.id}
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
+                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                  >
+                    <div className="flex">
+                      <div className={cn(
+                        "w-2"
+                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :
+                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" :
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                         "bg-green-500"
                       )} />
                       <div className="flex-1 p-4">
@@ -34,7 +124,6 @@ export function AIMatchingResults({
                               </AvatarFallback>
                             )}
                           </Avatar>
-                          
                           <div className="flex-1">
                             <div className="flex justify-between">
                               <div>
@@ -50,7 +139,6 @@ export function AIMatchingResults({
                                 </div>
                               )}
                             </div>
-                            
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline" className="text-xs bg-zion-blue text-zion-cyan border-zion-cyan/30">
                                 {match.category}
@@ -78,4 +166,4 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   )
-};
+}

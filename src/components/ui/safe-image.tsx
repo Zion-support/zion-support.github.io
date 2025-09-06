@@ -6,10 +6,10 @@ import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {
   src: string
   alt: string;  width?: number;interface SafeImageProps {
-  src: string,
-  alt: string,
-
+  src: string
+  alt: string
 interface SafeImageProps {
+<<<<<<< HEAD
   src: string;
   alt: string;
   width?: number;
@@ -25,10 +25,46 @@ export function SafeImage({
   width;
   height;
   className;
+=======
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  className?: string
+  fallbackSrc?: string
+  priority?: boolean
+  sizes?: string
+  quality?: number
+export function SafeImage({
+  src
+  alt
+  width
+  height
+  className = ''
+  fallbackSrc
+  priority = false
+  sizes
+  quality = 75
+}: SafeImageProps) {
+  const [hasError, setHasError] = useState(false)
+  const [currentSrc, setCurrentSrc] = useState(src)
+  const handleError = () => {
+    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
+      setCurrentSrc(fallbackSrc)
+      setHasError(true)
+      // Try serving the image directly through our custom API route
+      const fallbackUrl = `/api/image${src}`
+      setCurrentSrc(fallbackUrl)
+      setHasError(true)
+    } else if (!hasError) {
+      setHasError(true)
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   // If we have an error and no fallback, show a placeholder
-  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
+  if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
         return (
-      <div 
+      <div
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
@@ -37,7 +73,6 @@ export function SafeImage({
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-
     />
   );        aria-label={alt}
       >
@@ -45,7 +80,6 @@ export function SafeImage({
       </div>
     )
   }
-
     />
   ); return (
     <Image
@@ -60,4 +94,4 @@ export function SafeImage({
       unoptimized = {hasError,}
     />
   )
-} 
+}

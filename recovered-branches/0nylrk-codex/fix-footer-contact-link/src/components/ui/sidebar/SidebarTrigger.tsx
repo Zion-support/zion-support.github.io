@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -23,3 +24,5 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
     </Button>
   )
 }
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

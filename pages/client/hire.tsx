@@ -14,15 +14,44 @@ export default function ClientHirePage() {
   async function sendOffer() {
     setLoading(true);
     setResult(null);
+<<<<<<< HEAD
     const paymentTerms = null;
       setShowFeedback(true)
     }
+=======
+    const paymentTerms =
+      termsType === 'hourly'
+        ? { type: 'hourly', hourlyRateUsd }
+        : termsType === 'fixed'
+          ? { type: 'fixed', fixedAmountUsd }
+          : { type: 'milestone', milestones: [] }
+    const res = await fetch('/api/marketplace/offers', {
+      method: 'POST'
+      headers: {
+        'Content-Type': 'application/json'
+        'x-demo-user-role': 'client'
+        'x-demo-user-id': 'client-1'
+      }
+      body: JSON.stringify({
+        talentSlug
+        startDateIso
+        scopeSummary
+        paymentTerms
+        agreementUrl
+      })
+    });
+    const json = await res.json();
+    setLoading(false);
+    if (!json.ok) {
+      alert(json.error |'Failed to send offer');
+    } else {
+      setResult(json.offer);
+      setShowFeedback(true);    }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
-
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-6'>
       <h1 className='text-xl font-semibold'>Hire Talent</h1>
-
       <div className='space-y-4 border rounded p-4'>
         <div>
           <label className='block text-sm font-medium'>Talent</label>
@@ -32,7 +61,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium'>Start date</label>
           <input
@@ -42,7 +70,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium'>Scope summary</label>
           <input
@@ -51,7 +78,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div>
           <label className='block text-sm font-medium'>Payment terms</label>
           <select
@@ -64,7 +90,6 @@ export default function ClientHirePage() {
             <option value='milestone'>Milestone</option>
           </select>
         </div>
-
         {termsType === 'hourly' && (
           <div>
             <label className='block text-sm font-medium'>
@@ -78,7 +103,6 @@ export default function ClientHirePage() {
             />
           </div>
         )}
-
         {termsType === 'fixed' && (
           <div>
             <label className='block text-sm font-medium'>
@@ -91,7 +115,6 @@ export default function ClientHirePage() {
               className='w-full border rounded px-3 py-2'
             />          </div>
         )}
-
         <div>
           <label className='block text-sm font-medium'>
             Agreement URL (optional)
@@ -103,7 +126,6 @@ export default function ClientHirePage() {
             className='w-full border rounded px-3 py-2'
           />
         </div>
-
         <div className='flex justify-end'>
           <button
             onClick={sendOffer}
@@ -113,23 +135,21 @@ export default function ClientHirePage() {
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
         </div>
       </div>
-
       {result && (
         <div className='border rounded p-4 bg-emerald-50'>
           <div className='font-medium'>Offer sent</div>
           <div className='text-sm'>Offer ID: {result.id}</div>        </div>
       )}
-
       <FeedbackModal
         isOpen={showFeedback}
         onClose={() => setShowFeedback(false)}
         defaultContext={{
-          actionType: 'listing_publish',
-          metadata: { talentSlug },
+          actionType: 'listing_publish'
+          metadata: { talentSlug }
         }}
         userHeaders={{
-          'x-demo-user-role': 'client',
-          'x-demo-user-id': 'client-1',
+          'x-demo-user-role': 'client'
+          'x-demo-user-id': 'client-1'
         }}
       />
     </div>

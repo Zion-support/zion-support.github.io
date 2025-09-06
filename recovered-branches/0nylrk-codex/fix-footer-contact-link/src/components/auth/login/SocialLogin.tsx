@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth";
 import { Web3Login } from "./Web3Login";
 export function SocialLogin() {
+<<<<<<< HEAD
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } = useAuth();
+=======
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =
+    useAuth();
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="mt-6">
       <div className="relative">
@@ -17,7 +22,6 @@ export function SocialLogin() {
           </span>
         </div>
       </div>
-
       <div className="mt-6 grid grid-cols-4 gap-3">
         <Button
           type="button"

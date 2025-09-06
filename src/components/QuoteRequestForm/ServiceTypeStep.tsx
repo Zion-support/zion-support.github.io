@@ -68,6 +68,7 @@ const listingSchema = null;
             />
           </div>
 
+<<<<<<< HEAD
           {error && (
             <div className="text-center text-red-400 text-sm">{error}</div>
           )}
@@ -108,6 +109,15 @@ const listingSchema = null;
         </div>
       )}
     </div>
+=======
+const listingSchema = z.object({
+  id: z.string()
+  title: z.string()
+  category: z.string()
+  image: z.string().optional()})
+      const maxRetries = 3
+  const sourceListings = listings
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }
-;

@@ -5,7 +5,6 @@ import { Award } from "lucide-react";
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
-
 export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
   if (!featured) return null;
   return (

@@ -5,7 +5,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface Notification {
   id: string;
   type: 'message' | 'order' | 'system' | 'promotion';
@@ -15,7 +19,13 @@ interface Notification {
   read: boolean;
   actionUrl?: string;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 const getNotificationIcon = (type: string) => {
   switch (type) {
     case 'message':
@@ -29,8 +39,7 @@ const getNotificationIcon = (type: string) => {
     default:
       return <Bell className="h-4 w-4 text-gray-500" />;
   }
-};
-
+}
 const getNotificationBadge = (type: string) => {
   switch (type) {
     case 'message':
@@ -40,74 +49,66 @@ const getNotificationBadge = (type: string) => {
     default:
       return <Badge variant="outline">Notification</Badge>;
   }
-};
-
+}
 export default function Notifications() {
   const { user } = useAuth();
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     // Mock data - replace with actual API call
     const mockNotifications: Notification[] = [
       {
-        id: '1',
-        type: 'message',
-        title: 'New Message',
-        message: 'You have received a new message from John Doe',
+        id: '1'
+        type: 'message'
+        title: 'New Message'
+        message: 'You have received a new message from John Doe'
         timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-        read: false,
+        read: false
         actionUrl: '/messaging'
-      },
+      }
       {
-        id: '2',
-        type: 'order',
-        title: 'Order Update',
-        message: 'Your order #12345 has been shipped',
+        id: '2'
+        type: 'order'
+        title: 'Order Update'
+        message: 'Your order #12345 has been shipped'
         timestamp: new Date(Date.now() - 1000 * 60 * 60 * 2), // 2 hours ago
-        read: true,
+        read: true
         actionUrl: '/orders'
-      },
+      }
       {
-        id: '3',
-        type: 'system',
-        title: 'System Maintenance',
-        message: 'Scheduled maintenance will occur tonight at 2 AM',
+        id: '3'
+        type: 'system'
+        title: 'System Maintenance'
+        message: 'Scheduled maintenance will occur tonight at 2 AM'
         timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24), // 1 day ago
         read: false
       }
     ];
-
     setNotifications(mockNotifications);
     setLoading(false);
   }, []);
-
   const markAsRead = (id: string) => {
-    setNotifications(prev => 
-      prev.map(notification => 
-        notification.id === id 
+    setNotifications(prev =>
+      prev.map(notification =>
+        notification.id === id
           ? { ...notification, read: true }
           : notification
       )
     );
-  };
-
+  }
   const markAllAsRead = () => {
-    setNotifications(prev => 
+    setNotifications(prev =>
       prev.map(notification => ({ ...notification, read: true }))
     );
     toast({
-      title: "Success",
-      description: "All notifications marked as read",
+      title: "Success"
+      description: "All notifications marked as read"
     });
-  };
-
+  }
   const deleteNotification = (id: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id));
-  };
-
+  }
   const unreadCount = notifications.filter(n => !n.read).length;
-
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -122,6 +123,7 @@ export default function Notifications() {
       </div>
     );
   }
+<<<<<<< HEAD
 
 =======
 import React, { useState } from 'react';
@@ -138,6 +140,8 @@ import { SEO  } from '@/components/SEO';
 import { useRouter  } from 'next/router';
 import { cn } from '@/lib/utils';
 const getNotificationIcon = null;
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex items-center justify-between mb-6">
@@ -149,7 +153,6 @@ const getNotificationIcon = null;
           </Button>
         )}
       </div>
-
       {notifications.length === 0 ? (
         <Card>
           <CardContent className="flex flex-col items-center justify-center py-12">
@@ -161,8 +164,8 @@ const getNotificationIcon = null;
       ) : (
         <div className="space-y-4">
           {notifications.map((notification) => (
-            <Card 
-              key={notification.id} 
+            <Card
+              key={notification.id}
               className={`transition-all hover:shadow-md ${
                 !notification.read ? 'border-l-4 border-l-blue-500 bg-blue-50' : ''
               }`}
@@ -216,3 +219,7 @@ const getNotificationIcon = null;
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

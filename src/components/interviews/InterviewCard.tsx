@@ -13,11 +13,15 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
+<<<<<<< HEAD
   interview: Interview;
+=======
+  interview: Interview
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onRefresh: () => Promise<void>
 }
-
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
+<<<<<<< HEAD
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
@@ -174,6 +178,21 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         </DialogContent>
       </Dialog>
     </Card>
+=======
+  const { user } = useAuth()
+  const { respondToInterview, cancelInterview } = useInterviews()
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const isClient = user?.id === interview.client_id
+  const isTalent = user?.id === interview.talent_id
+  const formattedEndTime = format(endTime, 'h: mm a')
+  const isInterviewPending = interview.status === 'requested'
+  const isInterviewConfirmed = interview.status === 'confirmed'
+  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>
+      default:
+        return <Badge>{interview.status}</Badge>
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }
-;

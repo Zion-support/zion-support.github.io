@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import Head from 'next/head';
 import Button from '../components/ui/Button';
 export default function QuantumCybersecurityPlatform() {

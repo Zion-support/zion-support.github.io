@@ -2,21 +2,18 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
-
 const EnhancedHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-    };
+    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services', dropdown: [
@@ -35,30 +32,25 @@ const EnhancedHeader: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
   ];
-
   const contactInfo = [
     { icon: 'Phone', text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: 'Mail', text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: 'MapPin', text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
-
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
+  }
   const closeMobileMenu = () => {
     setIsOpen(false);
     setActiveDropdown(null);
-  };
-
+  }
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       // Handle search logic here
       // console.log('Searching for:', searchQuery);
     }
-  };
-
+  }
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -72,7 +64,6 @@ const EnhancedHeader: React.FC = () => {
             </div>
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -90,7 +81,6 @@ const EnhancedHeader: React.FC = () => {
                     {item.name}
                   </Link>
                 )}
-
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {item.dropdown && activeDropdown === item.name && (
@@ -118,7 +108,6 @@ const EnhancedHeader: React.FC = () => {
               </div>
             ))}
           </nav>
-
           {/* Search and Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             <form onSubmit={handleSearch} className="relative">
@@ -131,7 +120,6 @@ const EnhancedHeader: React.FC = () => {
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
             </form>
-
             <div className="flex items-center space-x-2">
               <button className="p-2 text-gray-700 hover:text-blue-600 transition-colors">
                 <User className="w-5 h-5" />
@@ -144,7 +132,6 @@ const EnhancedHeader: React.FC = () => {
               </button>
             </div>
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -153,7 +140,6 @@ const EnhancedHeader: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -175,7 +161,6 @@ const EnhancedHeader: React.FC = () => {
                   />
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 </form>
-
                 {/* Mobile Navigation */}
                 {navigationItems.map((item) => (
                   <div key={item.name}>
@@ -214,7 +199,6 @@ const EnhancedHeader: React.FC = () => {
                     )}
                   </div>
                 ))}
-
                 {/* Contact Info */}
                 <div className="pt-4 border-t border-gray-200">
                   <div className="space-y-2">
@@ -235,6 +219,5 @@ const EnhancedHeader: React.FC = () => {
       </div>
     </header>
   );
-};
-
+}
 export default EnhancedHeader;

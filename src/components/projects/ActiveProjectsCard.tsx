@@ -1,11 +1,26 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { BriefcaseIcon, Clock } from 'lucide-react'
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
+=======
+import { Button } from '@/components/ui/button'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { useProjects } from '@/hooks/useProjects'
+import { Project } from '@/types/projects'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -46,7 +61,6 @@ export function ActiveProjectsCard() {
   }
     )
   }
-  
   if (activeProjects.length === 0) {
     return (
       <Card>
@@ -74,7 +88,6 @@ export function ActiveProjectsCard() {
       </Card>
     )
   }
-
   return (
     <Card>
       <CardHeader>
@@ -83,7 +96,7 @@ export function ActiveProjectsCard() {
         </CardTitle>
         <CardDescription>Your ongoing work</CardDescription>
       </CardHeader>
-      <CardContent className='space-y-4'>  
+      <CardContent className='space-y-4'>
   return (
     <Card>
       <CardHeader>
@@ -108,7 +121,7 @@ export function ActiveProjectsCard() {
                 }          <div key={project.id} className="border rounded-md p-3">
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
-              <Badge 
+              <Badge
                 variant = {project.status === "in_progress" ? "default" : "outline",}
                 className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
               >
@@ -140,11 +153,11 @@ export function ActiveProjectsCard() {
     </Card>
   )
 }, [projects, isLoading])
-return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) ) 
-}</div> </CardContent> </Card>) 
+return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent>) )
+}</div> </CardContent> </Card>)
 }if (activeProjects.length === 0) {'"
-  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) ) 
+  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> <CardContent className="text-center py-6" > <p className="text-muted-foreground mb-2" >You don't have any active projects at the moment.</p> <Button variant="outline" asChild> <Link href="/jobs" >Find Opportunities</Link> </Button> </CardContent> </Card> return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <BriefcaseIcon className="h-5 w-5 text-primary" /> <span>Active Projects</span> </CardTitle> <CardDescription>Your ongoing work</CardDescription> </CardHeader> </Button> </div>) )
 }</CardContent> {"
-  activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>) 
-}</Card>) 
+  activeProjects.length > 2 && (<CardFooter> <Button variant="ghost" className="w-full" asChild> <Link href="/projects">View All Projects</Link> </Button> </CardFooter>)
+}</Card>)
 }'"}

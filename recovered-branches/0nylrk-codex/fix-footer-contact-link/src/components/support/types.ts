@@ -7,7 +7,6 @@ export interface HelpArticle {
   lastUpdated: string;
   tags: string[]
 }
-
 export interface HelpCategory {
   id: string;
   name: string;
@@ -15,7 +14,6 @@ export interface HelpCategory {
   icon: ReactNode;
   articles: HelpArticle[]
 }
-
 export interface SupportTicket {
   id: string;
   userId: string;
@@ -24,5 +22,10 @@ export interface SupportTicket {
   status: "open" | "in-progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
   createdAt: string;
+<<<<<<< HEAD
   updatedAt: string
 }
+=======
+  updatedAt: string;
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

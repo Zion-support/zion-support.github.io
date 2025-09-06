@@ -19,6 +19,7 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
+<<<<<<< HEAD
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
@@ -81,3 +82,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
   )
 }
 ;
+=======
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

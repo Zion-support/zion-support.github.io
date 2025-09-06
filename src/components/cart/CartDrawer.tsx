@@ -6,7 +6,20 @@ import { ShoppingCart } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 export function CartDrawer() {
+<<<<<<< HEAD
   const items = null;
+=======
+  const items = useSelector((s: RootState) => s.cart.items);  const count = items.reduce((sum, i) => sum + i.quantity, 0);  const items = useSelector((s: RootState) => s.cart.items)
+  const count = items.reduce((sum, i) => sum + i.quantity, 0)
+  const { isAuthenticated } = useAuth()
+  const [loginOpen, setLoginOpen] = React.useState(false)
+  const handleClick = (e: React.MouseEvent,) => {
+    if (!isAuthenticated) {
+      e.preventDefault()
+      setLoginOpen(true)
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Link
@@ -28,4 +41,3 @@ export function CartDrawer() {
     </>
   )
 }
-;

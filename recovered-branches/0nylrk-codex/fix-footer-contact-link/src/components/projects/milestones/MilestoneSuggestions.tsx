@@ -7,14 +7,21 @@ import { Loader2, Sparkles, Check  } from 'lucide-react';
 import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
   projectName: string;
   scopeSummary: string;
   startDate: Date;
   endDate?: Date;
   projectType: string;
+=======
+  projectName: string
+  scopeSummary: string
+  startDate: Date
+  endDate?: Date;
+  projectType: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
-
 export function MilestoneSuggestions({
   projectName;
   scopeSummary;
@@ -25,14 +32,39 @@ export function MilestoneSuggestions({
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
+<<<<<<< HEAD
   const handleGenerateMilestones = null;
+=======
+  const handleGenerateMilestones = async () => {
+    const input: MilestoneInput = {
+      scope: `${projectName}: ${scopeSummary}`
+      startDate: startDate.toISOString()
+      endDate: endDate ? endDate.toISOString() : null
+      projectType: projectType |"Other"
+    }
+    const milestones = await generateMilestones(input);
+    if (milestones.length > 0) {
+      setShowSuggestions(true);
+      if (onMilestonesGenerated) {
+        onMilestonesGenerated(milestones)
+      }
+    }
+  }
+  const formatDate = (dateString: string) => {
+    try {
+      return format(parseISO(dateString), 'MMM dd, yyyy')
+    } catch (error) {
+      return dateString
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-4">
       {!showSuggestions && (
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
+          disabled={isGenerating |!scopeSummary |!startDate}
           className="w-full"
         >
           {isGenerating ? (
@@ -48,7 +80,6 @@ export function MilestoneSuggestions({
           )}
         </Button>
       )}
-
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className="pb-3">
@@ -78,7 +109,6 @@ export function MilestoneSuggestions({
                   </div>
                 </div>
               ))}
-
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
                 <Check className="h-4 w-4 mr-1 text-green-500" />
                 These milestones will be added to your contract
@@ -90,4 +120,3 @@ export function MilestoneSuggestions({
     </div>
   )
 }
-;

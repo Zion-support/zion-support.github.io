@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
+=======
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
-
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -23,7 +33,6 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="title"
@@ -37,7 +46,6 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="email"
@@ -51,7 +59,6 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={control}
         name="phone"

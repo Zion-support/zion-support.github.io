@@ -1,6 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 type ProposalListItem = any;
+=======
+type ProposalListItem = {
+  id: string
+  title: string
+  targetInstitution: string
+  regionalScope: string
+  type: string
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
+  createdAt: string
+}
+export default function InternationalProposalsPage() {
+  const [items, setItems] = useState<ProposalListItem[]>([])
+  const [filter, setFilter] = useState('All')
+  useEffect(() => {
+    fetch('/api/proposals')
+      .then((r) => r.json())
+      .then((d) => setItems(d.items |[]))
+      .catch(() => setItems([]))
+  }, [])
+  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -38,4 +60,4 @@ type ProposalListItem = any;
       </div>
     </EnhancedLayout>
   )
-};
+}

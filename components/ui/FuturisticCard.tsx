@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
 type Props = any;
+=======
+import React from "react";
+type Props = {
+  title: string;
+  description: string;
+  cta?: React.ReactNode;
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (
     <div className="futuristic-card">

@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
 import { generateZionWiki;
   buildMarkdownFromWiki;
   buildWikitextFromWiki;
@@ -9,6 +10,33 @@ function CopyButton({ text, label }: { text: string, label: string }) {
   return (
     <button
       onClick;
+=======
+import {
+  generateZionWiki
+  buildMarkdownFromWiki
+  buildWikitextFromWiki
+  operatorPrompt
+  slugify} from '../utils/data/zionContent'
+function CopyButton({ text, label }: { text: string, label: string }) {
+  const [copied, setCopied] = useState(false)
+  return (
+    <button
+      onClick={async () => {
+        await navigator.clipboard.writeText(text)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 1500)
+      }}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label}
+    </button>
+  )
+}
+export default function WikiPage() {
+  const wiki = useMemo(() => generateZionWiki(), [])
+  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
+  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
@@ -26,7 +54,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {
           </li>
         </ul>
       </aside>
-
       <article className="prose dark:prose-invert max-w-none">
         <h1>{wiki.title}</h1>
         <div className="not-prose border rounded p-4 bg-white/60 dark:bg-black/20 mb-4">
@@ -38,7 +65,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {
           </div>
         </div>
         <p>{wiki.intro}</p>
-
         {wiki.sections.map((s) => (
           <section key={s.id} id={slugify(s.title)}>
             <h2>{s.title}</h2>
@@ -47,14 +73,12 @@ function CopyButton({ text, label }: { text: string, label: string }) {
             ))}
           </section>
         ))}
-
         <h2 id="references">References</h2>
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
           ))}
         </ol>
-
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="flex items-center justify-between mb-2">
             <div className="font-semibold">Export</div>
@@ -67,7 +91,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {
 {md}
           </pre>
         </div>
-
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
           <div className="font-semibold mb-2">Operator Prompt</div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
@@ -75,4 +98,4 @@ function CopyButton({ text, label }: { text: string, label: string }) {
       </article>
     </div>
   )
-};
+}

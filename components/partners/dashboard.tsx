@@ -6,12 +6,66 @@ export default function PartnerDashboard() {
   const [usage, setUsage] = useState<any>(null),
   const [loading, setLoading] = useState(false);
   useEffect(() => {
+<<<<<<< HEAD
     const saved = null;
+=======
+    const saved = localStorage.getItem('zion_partner_token');
+    if (saved) setToken(saved);
+  }, []);
+  async function getToken() {
+    const res = await fetch('/api/partners/token', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ apiKey })
+    });
+    const data = await res.json();
+    if (data.token) {
+      localStorage.setItem('zion_partner_token', data.token);
+      setToken(data.token);    }  }, []);
+  async function getToken() {
+    const res = await fetch("/api/partners/token", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify({ apiKey })})
+    const data = await res.json();
+    if (data.token) {
+      localStorage.setItem("zion_partner_token", data.token);
+      setToken(data.token)
+    }
+  }
+  async function fetchUsage() {
+    setLoading(true);
+    const res = await fetch('/api/partners/usage', {
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+    });
+    const data = await res.json();
+    setUsage(data.summary |null);
+    setLoading(false);
+  }
+  async function regenerateKey() {
+    const res = await fetch('/api/partners/key', {
+      method: 'POST'
+      headers: token ? { Authorization: `Bearer ${token}` } : {}
+    });
+    const data = await res.json();
+    if (data.apiKey) {
+      alert(`New API Key: ${data.apiKey}`);    }
+  }
+  return (
+    <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res.json();
+    setUsage(data.summary |null);
+    setLoading(false)
+  }
+  async function regenerateKey() {
+    const res = await fetch("/api/partners/key", {
+      method: "POST"
+      headers: token ? { Authorization: `Bearer ${token}` } : {}})
+    const data = await res.json();
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
     }
   }
-
   return (
     <div className='min-h-screen bg-gray-50 text-gray-900'>
         <title>Zion Partner Dashboard</title>
@@ -21,7 +75,6 @@ export default function PartnerDashboard() {
         <p className='text-gray-600 mb-6'>
           Manage access, view usage, and download SDKs.
         </p>
-
         {!token && (
           <div className='bg-white p-6 rounded-lg shadow mb-8'>
             <h2 className='text-lg font-medium mb-3'>Authenticate</h2>
@@ -47,7 +100,6 @@ export default function PartnerDashboard() {
               <button onClick={getToken} className="bg-black text-white px-4 py-2 rounded">Get JWT</button>
           </div>
         )}
-
         <div className='grid md:grid-cols-3 gap-6'>
           <div className='bg-white p-6 rounded-lg shadow'>
             <h3 className='font-medium mb-2'>API Keys</h3>
@@ -61,7 +113,6 @@ export default function PartnerDashboard() {
               Old key becomes inactive.
             </p>
           </div>
-
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>
             <h3 className='font-medium mb-2'>Usage</h3>
             <button
@@ -78,11 +129,10 @@ export default function PartnerDashboard() {
                 <div className='mt-3'>
                   <p className='font-medium'>By Endpoint</p>
                   <ul className='list-disc ml-6'>
-                    {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (
+                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>
                         {k}: {v as any}
                       </li>                    ))}          </div>
-
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
@@ -92,7 +142,7 @@ export default function PartnerDashboard() {
                 <div className="mt-3">
                   <p className="font-medium">By Endpoint</p>
                   <ul className="list-disc ml-6">
-                    {Object.entries(usage.byEndpoint || {}).map(([k, v]) => (
+                    {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
                     ))}
                   </ul>
@@ -106,7 +156,6 @@ export default function PartnerDashboard() {
             )}
           </div>
         </div>
-
         <div className='bg-white p-6 rounded-lg shadow mt-6'>
           <h3 className='font-medium mb-2'>SDKs</h3>
           <a

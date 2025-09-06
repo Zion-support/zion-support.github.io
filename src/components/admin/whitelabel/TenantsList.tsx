@@ -25,6 +25,7 @@ export function TenantsList() {
     loadTenants()
   }, []),
 
+<<<<<<< HEAD
   const loadTenants = null;
   return (
     <div className="space-y-4">
@@ -156,6 +157,8 @@ export function TenantsList() {
       )}
     </div>
   )
+=======
+        .order('created_at', { ascending: false })
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 }
-;

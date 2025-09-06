@@ -1,18 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
+    { name: 'Home', href: '/' }
+    { name: 'About', href: '/about' }
+    { name: 'Services', href: '/services' }
+    { name: 'Pricing', href: '/pricing' }
     { name: 'Contact', href: '/contact' }
   ]
-
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
@@ -27,7 +24,6 @@ const Header = () => {
               <p className="text-sm text-gray-600">AI & Technology Solutions</p>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
@@ -40,7 +36,6 @@ const Header = () => {
               </Link>
             ))}
           </div>
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -49,7 +44,6 @@ const Header = () => {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
@@ -69,5 +63,4 @@ const Header = () => {
     </header>
   )
 }
-
 export default Header

@@ -1,9 +1,22 @@
 import React from 'react'
 import { BadgeDollarSign } from 'lucide-react'
+<<<<<<< HEAD
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import Skeleton from "@/components/ui/skeleton";
+=======
+import { useWallet } from '@/hooks/useWallet'
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import Skeleton from '@/components/ui/skeleton'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
   return (
@@ -21,7 +34,7 @@ export function TokenDisplay() {
         ) : (
           <div className='flex flex-col gap-2'>
             <div className='flex items-end'>
-              <span className='text-3xl font-bold'>{wallet?.balance || 0}</span>
+              <span className='text-3xl font-bold'>{wallet?.balance |0}</span>
               <span className='ml-1 text-muted-foreground'>ZION$</span>
             </div>
             <p className='text-sm text-muted-foreground'>
@@ -40,4 +53,3 @@ export function TokenDisplay() {
     </Card>
   )
 }
-;

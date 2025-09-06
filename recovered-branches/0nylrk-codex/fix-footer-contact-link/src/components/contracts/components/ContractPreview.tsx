@@ -15,17 +15,29 @@ interface ContractPreviewProps {
   deployStatus?: string;
   deploymentInfo?: SmartContractInfo | null
 }
-
-export function ContractPreview({ 
+export function ContractPreview({
   contractContent;
+<<<<<<< HEAD
   generatedContract;
   status;
+=======
+  generatedContract
+  status = 'ready'
+  onDeploy
+  onSign;
+  onClose;
+  deployStatus;
+  deploymentInfo
+}: ContractPreviewProps) {
+  // Use either contractContent or generatedContract, whichever is provided
+  const displayContent = contractContent |generatedContract |"";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Contract Preview</h2>
         {status === 'ready' ? (
-          <Badge 
+          <Badge
             variant="secondary"
             className="text-sm bg-green-100 text-green-800"
           >
@@ -42,7 +54,6 @@ export function ContractPreview({
           <Badge variant="outline">Draft</Badge>
         )}
       </div>
-      
       {/* Contract content */}
       <div className="border rounded-lg p-6 bg-muted/50">
         {/* Render the contract content as markdown or formatted text */}
@@ -50,17 +61,15 @@ export function ContractPreview({
           {displayContent}
         </div>
       </div>
-
       {/* Deployment info if available */}
       {deploymentInfo && (
         <div className="mt-4 p-4 bg-primary/10 rounded-lg">
           <h3 className="font-medium mb-2">Contract Deployment Info</h3>
-          <p className="text-sm">Contract Address: {deploymentInfo.deployedAddress || "Pending..."}</p>
-          <p className="text-sm">Network: {deploymentInfo.networkName || "Unknown"}</p>
+          <p className="text-sm">Contract Address: {deploymentInfo.deployedAddress |"Pending..."}</p>
+          <p className="text-sm">Network: {deploymentInfo.networkName |"Unknown"}</p>
           <p className="text-sm">Status: {deploymentInfo.status}</p>
         </div>
       )}
-      
       {/* Actions */}
       <div className="flex justify-end space-x-3 mt-4">
         {onClose && (
@@ -68,13 +77,11 @@ export function ContractPreview({
             Close
           </Button>
         )}
-        
         {status === 'ready' && onSign && (
           <Button onClick={onSign}>
             Sign Contract
           </Button>
         )}
-        
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain
@@ -84,4 +91,3 @@ export function ContractPreview({
     </div>
   )
 }
-;

@@ -8,7 +8,150 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
   ShoppingCart
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD
 const contactInfo = null;
+=======
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',}
+const features = [
+  {
+    title: 'Real-time Content Analytics'
+    description:
+      'Monitor content performance across all channels with live dashboards and insights'
+    icon: BarChart3
+    color: 'from-blue-500 to-cyan-500'
+  }
+  {
+    title: 'AI-Powered Optimization'
+    description:
+      'Get intelligent suggestions for content improvement based on performance data'
+    icon: Brain
+    color: 'from-purple-500 to-pink-500'
+  }
+  {
+    title: 'Predictive Performance Modeling'
+    description:
+      'Forecast content success before publishing using advanced AI algorithms'
+    icon: TrendingUp
+    color: 'from-green-500 to-emerald-500'
+  },  {
+    title: 'Multi-Channel Strategy'
+    description: 'Optimize content across all digital platforms simultaneously'
+    icon: Globe
+    color: 'from-orange-500 to-red-500'
+  }
+  {
+    title: 'Competitor Analysis'
+    description:
+      'Track competitor content performance and identify opportunities'
+    icon: Target
+    color: 'from-indigo-500 to-blue-500'
+  },  {
+    title: 'SEO Content Intelligence'
+    description: 'AI-powered SEO optimization and keyword gap identification'
+    icon: Zap
+    color: 'from-yellow-500 to-orange-500'
+  },];
+const pricingPlans = [
+  {
+    name: 'Starter'
+    price: '$2,500'
+    period: '/month'
+    description: 'Perfect for small businesses and content creators'
+    features: [
+      'Real-time content analytics'
+      'AI optimization suggestions'
+      'Basic performance tracking'
+      'SEO content insights'
+      'Email support'
+      'Up to 100 content pieces/month'
+    ]
+    popular: false
+    color: 'from-gray-500 to-gray-600'
+  },  {
+    name: 'Professional'
+    price: '$5,000'
+    period: '/month'
+    description: 'Ideal for growing businesses and marketing teams'
+    features: [
+      'Everything in Starter'
+      'Predictive performance modeling'
+      'Advanced competitor analysis'
+      'Multi-channel optimization'
+      'Priority support'
+      'Up to 500 content pieces/month'
+      'Custom integrations'
+    ]
+    popular: true
+    color: 'from-blue-500 to-purple-600'
+  },  {
+    name: 'Enterprise'
+    price: '$10,000'
+    period: '/month'
+    description: 'For large organizations with complex content needs'
+    features: [
+      'Everything in Professional'
+      'Custom AI models'
+      'Advanced analytics'
+      'Dedicated account manager'
+      '24/7 phone support'
+      'Unlimited content pieces'
+      'White-label solutions'
+      'API access'
+    ]
+    popular: false
+    color: 'from-purple-500 to-pink-600'
+  },];
+const useCases = [
+  {
+    title: 'Content Marketing Optimization'
+    description:
+      'Optimize your content strategy based on real-time performance data and AI insights'
+    icon: Target
+    color: 'from-blue-500 to-cyan-500'
+  }
+  {
+    title: 'SEO Strategy Enhancement'
+    description:
+      'Identify content gaps and optimize for search engines with AI-powered recommendations'
+    icon: TrendingUp
+    color: 'from-green-500 to-emerald-500'
+  }
+  {
+    title: 'Social Media Management'
+    description:
+      'Create engaging content that performs across all social media platforms'
+    icon: Globe
+    color: 'from-purple-500 to-pink-500'
+  }
+  {
+    title: 'E-commerce Content'
+    description:
+      'Optimize product descriptions and marketing content for better conversions'
+    icon: ShoppingCart
+    color: 'from-orange-500 to-red-500'
+  }
+];
+const integrations = [
+  'WordPress'
+  'Shopify'
+  'HubSpot'
+  'Mailchimp'
+  'Google Analytics'
+  'Facebook Ads'
+  'Google Ads'
+  'LinkedIn'
+  'Twitter'
+  'Instagram'
+  'YouTube'
+  'TikTok'
+  'Slack'
+  'Zapier'
+  'API Access',];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function AIContentIntelligencePlatform() {
   return (
     <Layout>
@@ -47,7 +190,6 @@ export default function AIContentIntelligencePlatform() {
             Create, optimize, and manage content intelligently with our AI-powered content platform.
           </p>
         </div>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'></div>
@@ -114,7 +256,6 @@ export default function AIContentIntelligencePlatform() {
             </motion.div>
           </div>
         </div>
-
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -156,7 +297,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -198,7 +338,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -266,7 +405,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -298,7 +436,6 @@ export default function AIContentIntelligencePlatform() {
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div

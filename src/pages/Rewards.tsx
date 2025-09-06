@@ -1,7 +1,20 @@
 import { Gift } from 'lucide-react'
+<<<<<<< HEAD
 
 const REWARDS = null;
 export default function RewardsPage() {
+=======
+const REWARDS = [
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
+  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
+]
+const REWARDS = [
+  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
+  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
+  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
+]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='container max-w-xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Rewards</h1>
@@ -21,4 +34,3 @@ export default function RewardsPage() {
     </div>
   )
 }
-;

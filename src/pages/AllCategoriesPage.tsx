@@ -4,7 +4,39 @@ import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBou
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
+<<<<<<< HEAD
 const categories = null;
+=======
+const categories = [
+  {
+    title: 'Services'
+    description: 'On-demand IT support, consulting, development, and more'
+    icon: <Briefcase className='w-10 h-10' />
+    link: '/services', // Link for the card itself
+  }
+  {
+    title: 'Talents'
+    description: 'Connect with AI experts, developers, and tech specialists'
+    icon: <Users className='w-10 h-10' />
+    link: '/talent', // Link for the card itself
+    color: undefined, // Let CategoryCard use default color
+  }
+  {
+    title: 'Equipment'
+    description: 'Rent or buy specialized hardware, servers, and devices'
+    icon: <HardDrive className='w-10 h-10' />
+    link: '/equipment', // Link for the card itself
+    color: undefined, // Let CategoryCard use default color
+  }
+  {
+    title: 'Innovation'
+    description: 'Discover cutting-edge solutions and tech breakthroughs'
+    icon: <Lightbulb className='w-10 h-10' />
+    link: '/innovation'
+    color: undefined, // Let CategoryCard use default color
+  }
+]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function AllCategoriesPage() {
   return (
     <div className='min-h-screen bg-zion-blue'>
@@ -21,7 +53,6 @@ export default function AllCategoriesPage() {
             exactly what you're looking for to enhance your business or personal
             projects.          </p>
         </div>
-
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (
@@ -34,7 +65,6 @@ export default function AllCategoriesPage() {
               />
             ))}
           </div>
-
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -61,4 +91,3 @@ export default function AllCategoriesPage() {
     </div>
   )
 }
-;

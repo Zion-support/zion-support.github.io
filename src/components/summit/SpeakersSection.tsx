@@ -9,21 +9,37 @@ interface Speaker {
   linkedin?: string
 }
 interface Speaker {
+<<<<<<< HEAD
   name: string;
   title: string;
   avatar: string;
   twitter?: string;
+=======
+  name: string
+  title: string
+  avatar: string
+  twitter?: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   linkedin?: string
 }
-
 const speakers: Speaker[] = [
   {
+<<<<<<< HEAD
     name: 'Alex Zion';
     title: 'Founder & CEO';
     avatar: 'https://placehold.co/100x100';
     twitter: '#';
     linkedin: '#'}],
 
+=======
+    name: 'Alex Zion'
+    title: 'Founder & CEO'
+    avatar: 'https://placehold.co/100x100'
+    twitter: '#'
+    linkedin: '#'
+  }
+]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function SpeakersSection() {
   return (
     <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>
@@ -89,4 +105,3 @@ export function SpeakersSection() {
     </section>
   )
 }
-;

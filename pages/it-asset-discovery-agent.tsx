@@ -2,6 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
+<<<<<<< HEAD
 export default function ITAssetDiscoveryAgentPage() {
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
@@ -38,6 +39,8 @@ export default function ITAssetDiscoveryAgentPage() {
 	)
 }
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function ITAssetDiscoveryAgentPage() {
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>

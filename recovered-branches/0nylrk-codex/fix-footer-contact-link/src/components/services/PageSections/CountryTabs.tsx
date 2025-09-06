@@ -7,19 +7,32 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryTabsProps {
+<<<<<<< HEAD
   popularCountries: string[];
   filteredCountries: CountryPricing[];
   handleCountrySelect: (country: CountryPricing) => void;
   searchQuery: string;
+=======
+  popularCountries: string[]
+  filteredCountries: CountryPricing[]
+  handleCountrySelect: (country: CountryPricing) => void
+  searchQuery: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   setSearchQuery: (query: string) => void
 }
-
-export function CountryTabs({ 
+export function CountryTabs({
   popularCountries;
+<<<<<<< HEAD
   filteredCountries;
   handleCountrySelect;
   searchQuery;
   setSearchQuery 
+=======
+  filteredCountries
+  handleCountrySelect
+  searchQuery
+  setSearchQuery
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -31,7 +44,6 @@ export function CountryTabs({
           All Countries
         </TabsTrigger>
       </TabsList>
-      
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">Featured Service Locations</h2>
@@ -39,14 +51,13 @@ export function CountryTabs({
             Browse our most popular service destinations
           </p>
         </div>
-        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
-              <CountryServiceCard 
-                key={country.country} 
-                country={country} 
+              <CountryServiceCard
+                key={country.country}
+                country={country}
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />
@@ -54,7 +65,6 @@ export function CountryTabs({
           }
         </div>
       </TabsContent>
-      
       <TabsContent value="all" className="mt-0">
         <div className="mb-6 max-w-md mx-auto">
           <div className="relative">
@@ -68,18 +78,16 @@ export function CountryTabs({
             />
           </div>
         </div>
-        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {filteredCountries.slice(0, 12).map(country => (
-            <CountryServiceCard 
-              key={country.country} 
-              country={country} 
+            <CountryServiceCard
+              key={country.country}
+              country={country}
               onSelect={handleCountrySelect}
               isPopular={popularCountries.includes(country.country)}
             />
           ))}
         </div>
-        
         {filteredCountries.length > 12 && (
           <div className="text-center mt-8">
             <Button

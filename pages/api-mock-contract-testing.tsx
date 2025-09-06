@@ -4,7 +4,47 @@ import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Ch
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
 export default function ApiMockContractTestingPage() {
+<<<<<<< HEAD
   const contactInfo = null;
+=======
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  }
+  const adItems = [
+    {
+      title: '🧪 API Mock & Contract Testing Platform'
+      description:
+        'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
+      price: 'Starting at $69/month'
+      features: [
+        'OpenAPI/GraphQL import and live mock server'
+        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
+        'Dynamic data generators and scenario templates'
+        'Snapshot diffs and changelog with approvals'
+      ]
+      link: 'https://ziontechgroup.com/api-mock-contract-testing'
+      contactInfo
+    }
+  ];
+  const tiers = [
+    {
+      name: 'Starter'
+      price: '$69/month'
+      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks']
+    }
+    {
+      name: 'Team'
+      price: '$149/month'
+      items: ['5 projects', 'Unlimited mocks', 'Record/replay', 'Slack alerts']
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
+    },  ];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Layout>
       <Head>
@@ -18,14 +58,12 @@ export default function ApiMockContractTestingPage() {
           href='https://ziontechgroup.com/api-mock-contract-testing'
         />
       </Head>
-
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>
         <ServiceAds
           heading='API Quality Fast-Track'
           subheading='Mock, validate, and ship with confidence.'
           items={adItems}
         />
-
         <div className='max-w-5xl mx-auto mt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {tiers.map(t => (
@@ -52,7 +90,6 @@ export default function ApiMockContractTestingPage() {
               </div>
             ))}
           </div>
-
           <div className='mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4'>
               <div className='flex items-center justify-center gap-2 text-cyan-400 w-4 h-4'>

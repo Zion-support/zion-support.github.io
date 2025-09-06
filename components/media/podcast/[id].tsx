@@ -1,7 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function EpisodePage() {
+<<<<<<< HEAD
   const router = null;
+=======
+  const router = useRouter();
+  const { id } = router.query as { id?: string }
+  const [episode, setEpisode] = useState<any>(null);
+  useEffect(() => {
+    if (!id) return;
+    (async () => {
+      const res = await fetch('/api/podcast/get?id=' + id);
+      const data = await res.json();
+      setEpisode(data.episode);
+    })();      setEpisode(data.episode)
+    })()
+  }, [id]);
+  if (!episode) return <div>Loading…</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='space-y-4'>
       <h1 className='text-2xl font-bold'>{episode.title}</h1>

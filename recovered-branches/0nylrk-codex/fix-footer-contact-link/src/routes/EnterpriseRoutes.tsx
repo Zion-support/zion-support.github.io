@@ -5,4 +5,23 @@ import EnterpriseAdmin from "../pages/EnterpriseAdmin",
 import CompanyWorkspace from "../pages/CompanyWorkspace",
 import EnterpriseBilling from "../pages/EnterpriseBilling";
 import ZionHireAI from "../pages/ZionHireAI";
+<<<<<<< HEAD
 const EnterpriseRoutes = null;
+=======
+const EnterpriseRoutes = () => {
+  return (
+    <Routes>
+      {/* Enterprise Routes */}
+      <Route path="/enterprise" element={<EnterprisePlans />} />
+      <Route path="/plans/enterprise" element={<EnterprisePlans />} />
+      <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />
+      <Route path="/company/:companySlug" element={<CompanyWorkspace />} />
+      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
+      {/* Zion Hire AI Routes */}
+      <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+      <Route path="/hire-ai" element={<ZionHireAI />} />
+    </Routes>
+  )
+}
+export default EnterpriseRoutes;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

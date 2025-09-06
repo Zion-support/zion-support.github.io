@@ -1,6 +1,7 @@
 
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react'
+<<<<<<< HEAD
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
 import { 
   FormField;
@@ -16,10 +17,44 @@ import { Button } from "@/components/ui/button",
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
+=======
+import { UseFormReturn, ControllerRenderProps } from 'react-hook-form'
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { Calendar } from '@/components/ui/calendar'
+import { ContractFormValues } from './ContractForm'
+import { format } from "date-fns"
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form"
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Button } from "@/components/ui/button"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Calendar } from "@/components/ui/calendar"
+import { ContractFormValues } from "./ContractForm"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
 }
-
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
     <>
@@ -27,7 +62,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         control={form.control}
         name='projectName'
         render={({
-          field,
+          field
         }: {
           field: ControllerRenderProps<ContractFormValues, 'projectName'>
         }) => (
@@ -46,12 +81,11 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={form.control}
         name='scopeSummary'
         render={({
-          field,
+          field
         }: {
           field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>
         }) => (          <FormItem>
@@ -60,7 +94,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
               <Textarea
                 placeholder='Describe the project scope, deliverables, and expectations...'
                 className='min-h-[120px]'                {...field}        render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> },) => (
-      
       <FormField
         control={form.control}
         name="scopeSummary"
@@ -82,17 +115,16 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
           </FormItem>
         )}
       />
-
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <FormField
           control={form.control}
           name='startDate'
           render={({
-            field,
+            field
           }: {
             field: ControllerRenderProps<ContractFormValues, 'startDate'>
           }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>      
+            <FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <FormField
           control = {form.control,}
@@ -147,16 +179,15 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name='endDate'
           render={({
-            field,
+            field
           }: {
             field: ControllerRenderProps<ContractFormValues, 'endDate'>
           }) => (
-            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>        
+            <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
         <FormField
           control = {form.control,}
           name="endDate"
@@ -180,10 +211,10 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
                     mode='single'
-                    selected={field.value || undefined}
+                    selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={date => date < form.getValues('startDate')}                    initialFocus                    mode="single"
-                    selected = {field.value || undefined,}
+                    selected = {field.value |undefined,}
                     onSelect = {field.onChange,}
                     disabled = {(date,) => date < form.getValues("startDate"),}
                     >
@@ -199,7 +230,7 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
                 <PopoverContent className="w-auto p-0" align="start">
                   <Calendar
                     mode="single"
-                    selected={field.value || undefined}
+                    selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={(date) => date < form.getValues("startDate")}
                     initialFocus

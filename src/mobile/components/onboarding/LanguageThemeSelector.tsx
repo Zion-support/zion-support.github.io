@@ -9,11 +9,11 @@ interface Language {
   name: string;
   flag: string
 const languages: Language[] = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'en', name: 'English', flag: '🇺🇸' }
+  { code: 'es', name: 'Español', flag: '🇪🇸' }
+  { code: 'fr', name: 'Français', flag: '🇫🇷' }
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
+  { code: 'zh', name: '中文', flag: '🇨🇳' }
 ]
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
@@ -24,7 +24,6 @@ export function LanguageThemeSelector() {
       <div className='space-y-2'>
         <h2 className='text-xl font-medium'>Select your language</h2>
         <p className='text-muted-foreground'>Choose your preferred language</p>
-
         <div className='grid grid-cols-2 gap-3 mt-4'>
           {languages.map(language => (
             <Card
@@ -32,10 +31,9 @@ export function LanguageThemeSelector() {
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Select your language</h2>
         <p className="text-muted-foreground">Choose your preferred language</p>
-        
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language,) => (
-            <Card 
+            <Card
               key = {language.code,}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
@@ -51,11 +49,11 @@ export function LanguageThemeSelector() {
                 </div>
                 {selectedLanguage === language.code && (
                   <Check className='h-4 w-4 text-primary' />                )}          {languages.map((language) => (
-            <Card 
+            <Card
               key={language.code}
               className={`cursor-pointer transition-all ${
-                selectedLanguage === language.code 
-                  ? "border-primary bg-primary/5" 
+                selectedLanguage === language.code
+                  ? "border-primary bg-primary/5"
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}
@@ -73,13 +71,11 @@ export function LanguageThemeSelector() {
           ))}
         </div>
       </div>
-
       <div className='space-y-2'>
         <h2 className='text-xl font-medium'>Choose theme</h2>
         <p className='text-muted-foreground'>
           Select your preferred appearance
         </p>
-
         <div className='flex gap-3 mt-4'>
           <Card
               theme === 'light'
@@ -96,7 +92,6 @@ export function LanguageThemeSelector() {
               )}
             </CardContent>
           </Card>
-
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
@@ -116,11 +111,10 @@ export function LanguageThemeSelector() {
               )}
             </CardContent>
           </Card>
-          
-          <Card 
+          <Card
             className={`flex-1 cursor-pointer transition-all ${
-              theme === 'dark' 
-                ? "border-primary bg-primary/5" 
+              theme === 'dark'
+                ? "border-primary bg-primary/5"
                 : "border-border hover:border-primary/40"
             }`}
             onClick={() => setTheme('dark')}
@@ -138,4 +132,3 @@ export function LanguageThemeSelector() {
     </div>
   )
 }
-;

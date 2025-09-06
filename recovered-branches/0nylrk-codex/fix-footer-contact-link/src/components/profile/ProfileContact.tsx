@@ -10,19 +10,43 @@ interface ProfileContactProps {
   profileName: string;
   profileType: 'service' | 'talent'
 }
+<<<<<<< HEAD
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
   const handleSendMessage = null;
+=======
+export function ProfileContact({
+  email
+  profileName
+  profileType
+}: ProfileContactProps) {
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const handleSendMessage = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
+    // Here would be the actual API call to send the message
+    setTimeout(() => {
+      setIsSending(false);
+      setMessage("");
+      (setSubject("")
+        toast({
+          title: "Message Sent"
+          description: `Your message has been sent to ${profileName}.`
+        }));
+    }, 1000);
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
@@ -34,7 +58,6 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
           </a>
         </div>
       )}
-
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>

@@ -1,6 +1,7 @@
 
 import React from "react";
 import {
+<<<<<<< HEAD
   Table;
   TableBody;
   TableCell;
@@ -20,6 +21,99 @@ import {
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = null;
+=======
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+} from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
+import { Switch } from '@/components/ui/switch'
+import { toast } from '@/hooks/use-toast'; import { InfoIcon } from 'lucide-react'
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+export function RoleManagement() {
+  // Mock team members data
+  const teamMembers = [
+    {
+      id: 1
+      name: 'Alex Johnson'
+      email: 'alex@example.com'
+      role: 'Admin'
+      permissions: {
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: true
+        viewBilling: true
+        manageBilling: true
+      }
+    }
+    {
+      id: 2
+      name: 'Jamie Smith'
+      email: 'jamie@example.com'
+      role: 'Recruiter'
+      permissions: {
+        viewCandidates: true
+        editCandidates: true
+        createJobs: true
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false
+      }
+    }
+    {
+      id: 3
+      name: 'Sam Williams'
+      email: 'sam@example.com'
+      role: 'Manager'
+      permissions: {
+        viewCandidates: true
+        editCandidates: false
+        createJobs: true
+        manageTeam: false
+        viewBilling: true
+        manageBilling: false
+      }
+    }
+    {
+      id: 4
+      name: 'Taylor Brown'
+      email: 'taylor@example.com'
+      role: 'Viewer'
+      permissions: {
+        viewCandidates: true
+        editCandidates: false
+        createJobs: false
+        manageTeam: false
+        viewBilling: false
+        manageBilling: false
+      }
+    }
+  ]
+  const handlePermissionChange = (
+    _memberId: number
+    permission: string
+    value: boolean
+  ) => {    // In a real app, this would make an API call to update permissions
+    toast({
+      title: 'Permission updated'
+      description: `Permission ${permission} has been ${value ? 'granted' : 'revoked'}.`
+    })
+  }
+  const roleDescriptions: Record<string, string> = {
+    Admin: 'Full access to all features and settings'
+    Recruiter: 'Can manage candidates and job postings'
+    Manager: 'Can view candidates and create jobs'
+    Viewer: 'Read-only access to candidates'
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='space-y-6'>
       <div>
@@ -39,7 +133,6 @@ export function RoleManagement() {
           ))}
         </div>
       </div>
-
       <div className='rounded-md border'>
         <Table>
           <TableHeader>
@@ -147,8 +240,8 @@ export function RoleManagement() {
                     checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
-                        member.id,
-                        'viewCandidates',
+                        member.id
+                        'viewCandidates'
                         checked
                       )
                     }                  />
@@ -159,8 +252,8 @@ export function RoleManagement() {
                     checked={member.permissions.editCandidates}
                     onCheckedChange={checked =>
                       handlePermissionChange(
-                        member.id,
-                        'editCandidates',
+                        member.id
+                        'editCandidates'
                         checked
                       )
                     }                  />
@@ -197,4 +290,3 @@ export function RoleManagement() {
     </div>
   )
 }
-;

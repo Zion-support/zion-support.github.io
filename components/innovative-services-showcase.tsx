@@ -1,7 +1,27 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
+=======
+import {
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Shield
+  DollarSign
+  Users
+  Clock
+  CheckCircle
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  ExternalLink;} from 'lucide-react';import {
+  Star, TrendingUp, Zap, Brain, Rocket, Shield
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -10,7 +30,151 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
+<<<<<<< HEAD
   const contactInfo = null;
+=======
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'
+  }
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+        delayChildren: 0.2
+      }
+    },  };        delayChildren: 0.2
+      }
+    }
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 }
+    visible: {
+      opacity: 1
+      y: 0
+      transition: {
+        duration: 0.6
+        ease: 'easeOut'
+      }
+    },  };        ease: "easeOut"
+      }
+    }
+  }
+  const featuredServices = [
+    {
+      title: '🔐 Quantum Internet Security Platform'
+      description:
+        'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.'
+      price: '$8,999/month'
+      marketData: '$150B cybersecurity market, 300% annual growth'
+      savings: 'Quantum-level protection vs. traditional methods'
+      features: [
+        'Quantum key distribution (QKD)'
+        'Post-quantum cryptography'
+        'Quantum-resistant VPN tunnels'
+        'Real-time threat detection'
+        'Zero-trust architecture'
+      ]
+      link: 'https://ziontechgroup.com/quantum-internet-security-platform'
+      color: 'from-indigo-600 to-purple-700'
+    }
+    {
+      title: '🧬 AI-Powered Quantum Drug Discovery'
+      description:
+        'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.'
+      price: '$12,999/month'
+      marketData: '$150B AI in healthcare, 400% annual growth'
+      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)'
+      savings: '100x faster drug discovery vs. traditional methods'
+      features: [
+        'Quantum molecular simulation'
+        'AI-powered drug screening'
+        'Protein folding prediction'
+        'Drug interaction modeling'
+        'Clinical trial optimization'
+      ]
+      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery'
+      color: 'from-emerald-600 to-teal-700'
+    }
+    {
+      title: '💰 Autonomous Quantum Trading System'
+      description:
+        'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.'
+      price: '$15,999/month'
+      marketData: '$15T algorithmic trading, 200% annual growth'
+      competitors: 'Renaissance Technologies, Two Sigma, Citadel'
+      savings: 'Accessible quantum AI for smaller firms'
+      features: [
+        'Quantum AI trading algorithms'
+        'Nanosecond execution'
+        'Real-time market analysis'
+        'Risk management'
+        'Portfolio optimization'
+      ]
+      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system'
+      color: 'from-yellow-600 to-orange-700'
+    }
+    {
+      title: '🧠 Neural Interface Development Platform'
+      description:
+        'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.'
+      price: '$19,999/month'
+      marketData: '$5B neural interface market, 500% annual growth'
+      competitors: 'Basic research tools, Traditional medical devices'
+      savings: 'First comprehensive neural interface platform'
+      features: [
+        'Neural signal processing'
+        'Brain activity monitoring'
+        'AI-powered interpretation'
+        'Real-time communication'
+        'Safety protocols'
+      ]
+      link: 'https://ziontechgroup.com/neural-interface-development-platform'
+      color: 'from-purple-600 to-indigo-700'
+    },  ];
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
+    }
+    {
+      title: '🧬 AI-Powered Quantum Drug Discovery'
+      description: 'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.'
+      price: '$12,999/month';
+      marketData: '$150B AI in healthcare, 400% annual growth';
+      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)';
+      savings: '100x faster drug discovery vs. traditional methods'
+      features: ['Quantum molecular simulationAI-powered drug screeningProtein folding predictionDrug interaction modelingClinical trial optimization']
+      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery'
+      color: 'from-emerald-600 to-teal-700'
+    }
+    {
+      title: '💰 Autonomous Quantum Trading System'
+      description: 'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.'
+      price: '$15,999/month';
+      marketData: '$15T algorithmic trading, 200% annual growth';
+      competitors: 'Renaissance Technologies, Two Sigma, Citadel';
+      savings: 'Accessible quantum AI for smaller firms'
+      features: ['Quantum AI trading algorithmsNanosecond executionReal-time market analysisRisk managementPortfolio optimization']
+      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system'
+      color: 'from-yellow-600 to-orange-700'
+    }
+    {
+      title: '🧠 Neural Interface Development Platform'
+      description: 'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.'
+      price: '$19,999/month';
+      marketData: '$5B neural interface market, 500% annual growth';
+      competitors: 'Basic research tools, Traditional medical devices';
+      savings: 'First comprehensive neural interface platform'
+      features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communicationSafety protocols']
+      link: 'https://ziontechgroup.com/neural-interface-development-platform'
+      color: 'from-purple-600 to-indigo-700'
+    }
+  ];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>
@@ -44,7 +208,6 @@ export default function InnovativeServicesShowcase() {
             href='https://ziontechgroup.com/innovative-services-showcase'
           />
         </Head>
-
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -60,13 +223,11 @@ export default function InnovativeServicesShowcase() {
                 <br />
                 <span className='text-white'>Services Showcase</span>
               </h1>
-
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
                 Experience the future of technology with our most revolutionary
                 and cutting-edge services. These are the innovations that will
                 transform industries and reshape the world.
               </p>
-
               {/* Contact Info */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12'>
                 <div className='text-center'>
@@ -90,7 +251,6 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* Featured Innovative Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -114,7 +274,6 @@ export default function InnovativeServicesShowcase() {
                 of what's possible
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>              {featuredServices.map((service, index) => (                  Featured
                 </span> Innovative Services
               </h2>
@@ -122,7 +281,6 @@ export default function InnovativeServicesShowcase() {
                 Our most revolutionary services that are pushing the boundaries of what's possible
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -140,7 +298,6 @@ export default function InnovativeServicesShowcase() {
                     <p className='text-gray-300 mb-6 leading-relaxed'>
                       {service.description}
                     </p>
-
                     <div className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6'>
                       <div className='text-2xl font-bold text-cyan-400 mb-2'>
                         {service.price}
@@ -152,7 +309,6 @@ export default function InnovativeServicesShowcase() {
                         {service.savings}
                       </div>
                     </div>
-
                     <div className='mb-6'>
                       <h4 className='text-lg font-semibold text-white mb-3'>
                         Key Features:
@@ -167,13 +323,11 @@ export default function InnovativeServicesShowcase() {
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                    
                     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                       <div className="text-sm text-gray-400">{service.marketData}</div>
                       <div className="text-sm text-green-400 mt-1">{service.savings}</div>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -185,7 +339,6 @@ export default function InnovativeServicesShowcase() {
                         ))}
                       </ul>
                     </div>
-
                     <div className='flex flex-col sm:flex-row gap-3'>
                       <a
                         href={service.link}
@@ -216,7 +369,6 @@ export default function InnovativeServicesShowcase() {
             </div>
           </div>
         </section>
-
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -240,7 +392,6 @@ export default function InnovativeServicesShowcase() {
                 transforming industries
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -283,7 +434,6 @@ export default function InnovativeServicesShowcase() {
                   </motion.div>
                 ))}
             </div>
-
             <motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}                  Emerging
                 </span> Tech Services
@@ -292,7 +442,6 @@ export default function InnovativeServicesShowcase() {
                 Discover the latest technologies that are emerging and transforming industries
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                               {emergingTechServicesEnhanced2025.slice(0, 6).map((service, index) => (
                 <motion.div
@@ -322,7 +471,6 @@ export default function InnovativeServicesShowcase() {
                 </motion.div>
               ))}
             </div>
-
             <motion.div
               className="text-center mt-16"
               initial={{ opacity: 0, y: 30 }}
@@ -347,7 +495,6 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* ArrowRight-Gen AI Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -371,7 +518,6 @@ export default function InnovativeServicesShowcase() {
                 advanced services
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {nextGenAIServices.slice(0, 6).map((service, index) => (                  ArrowRight-Generation
                 </span> AI Services
               </h2>
@@ -379,7 +525,6 @@ export default function InnovativeServicesShowcase() {
                 Experience the future of artificial intelligence with our most advanced services
               </p>
             </motion.div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
@@ -429,7 +574,6 @@ export default function InnovativeServicesShowcase() {
                 </motion.div>
               ))}
             </div>
-
             <motion.div
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}              className="text-center mt-16"
               initial={{ opacity: 0, y: 30 }}
@@ -454,7 +598,6 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
           </div>
         </section>
-
         {/* Call to Action */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -472,7 +615,6 @@ export default function InnovativeServicesShowcase() {
                 Join the revolution and transform your business with our
                 cutting-edge services
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
@@ -486,7 +628,6 @@ export default function InnovativeServicesShowcase() {
               <p className="text-xl text-gray-300 mb-8">
                 Join the revolution and transform your business with our cutting-edge services
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -502,7 +643,6 @@ export default function InnovativeServicesShowcase() {
                   Explore All Services
                 </a>
               </div>
-
               <div className='mt-12 text-center'>
                 <p className='text-gray-400 mb-4'>Contact us directly:</p>
                 <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>

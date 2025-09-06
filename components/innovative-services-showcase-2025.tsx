@@ -1,7 +1,41 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Search, Filter, Star, CheckCircle, ArrowRight;
+=======
+import {
+  Search
+  Filter
+  Star
+  CheckCircle
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  Users
+  Award
+  Zap
+  Globe
+  Cpu
+  Database
+  Lock
+  Cloud
+  Stethoscope
+  GraduationCap
+  Leaf
+  Truck;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Search, Filter, Star, CheckCircle, ArrowRight
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -19,7 +53,159 @@ import { realMicroSaasServices2025  } from '../data/2025-real-micro-saas-service
 import { innovativeAIServices2025  } from '../data/2025-innovative-ai-services';
 import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+<<<<<<< HEAD
 const contactInfo = null;
+=======
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
+}
+const serviceCategories = [
+  {
+    id: 'financial-technology'
+    title: '💰 Financial Technology'
+    description: 'Innovative fintech, DeFi, and financial services'
+    icon: TrendingUp
+    color: 'from-green-500 to-emerald-500'
+    services: [...innovativeFinancialServices2025]
+    gradient: 'from-green-500/20 to-emerald-500/20'
+    badge: 'New'
+  },  {    badge: 'New'
+  }
+  {
+    id: 'healthcare-biotech'
+    title: '🏥 Healthcare & Biotech'
+    description: 'AI-powered healthcare and biotechnology solutions'
+    icon: Stethoscope
+    color: 'from-blue-500 to-indigo-500'
+    services: [...innovativeHealthcareServices2025]
+    gradient: 'from-blue-500/20 to-indigo-500/20'
+    badge: 'Hot'
+  },  {    badge: 'Hot'
+  }
+  {
+    id: 'education-technology'
+    title: '🎓 Education Technology'
+    description: 'AI-powered learning and educational innovation'
+    icon: GraduationCap
+    color: 'from-purple-500 to-pink-500'
+    services: [...innovativeEducationServices2025]
+    gradient: 'from-purple-500/20 to-pink-500/20'
+    badge: 'Innovative'
+  },  {    badge: 'Innovative'
+  }
+  {
+    id: 'sustainability-green-tech'
+    title: '🌱 Sustainability & Green Tech'
+    description: 'Environmental technology and sustainability solutions'
+    icon: Leaf
+    color: 'from-emerald-500 to-teal-500'
+    services: [...innovativeSustainabilityServices2025]
+    gradient: 'from-emerald-500/20 to-teal-500/20'
+    badge: 'Eco-Friendly'
+  },  {    badge: 'Eco-Friendly'
+  }
+  {
+    id: 'logistics-supply-chain'
+    title: '🚚 Logistics & Supply Chain'
+    description: 'Autonomous logistics and supply chain optimization'
+    icon: Truck
+    color: 'from-orange-500 to-red-500'
+    services: [...innovativeLogisticsServices2025]
+    gradient: 'from-orange-500/20 to-red-500/20'
+    badge: 'Autonomous'
+  }
+  {
+    id: 'ai-consciousness'
+    title: '🧠 AI & Consciousness'
+    description:
+      'Revolutionary AI consciousness and emotional intelligence platforms',    icon: Brain
+    color: 'from-violet-500 to-purple-500'
+    services: [...innovativeAIServices2025]
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+    badge: 'Revolutionary'
+  },  {    badge: 'Autonomous'
+  }
+  {
+    id: 'ai-consciousness'
+    title: '🧠 AI & Consciousness'
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms'
+    color: 'from-violet-500 to-purple-500'
+    services: [...innovativeAIServices2025]
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+    badge: 'Revolutionary'
+  },    badge: 'Revolutionary'
+  }
+  {
+    id: 'quantum-emerging'
+    title: '⚛️ Quantum & Emerging Tech'
+    description: 'Quantum computing, DNA computing, and beyond'
+    icon: Atom
+    color: 'from-indigo-500 to-blue-500'
+    services: [...emergingTechServices2025]
+    gradient: 'from-indigo-500/20 to-cyan-500/20'
+    badge: 'Quantum'
+  },  {    badge: 'Quantum'
+  }
+  {
+    id: 'enterprise-it'
+    title: '🏙️ Enterprise IT'
+    description: 'Autonomous operations and zero-trust security'
+    icon: Shield
+    color: 'from-blue-500 to-cyan-500'
+    services: [...innovativeITServices2025]
+    gradient: 'from-blue-500/20 to-teal-500/20'
+    badge: 'Enterprise'
+  },  {    badge: 'Enterprise'
+  }
+  {
+    id: 'micro-saas'
+    title: '🎯 Micro SAAS'
+    description: 'Innovative solutions for every business need'
+    icon: Target
+    color: 'from-teal-500 to-green-500'
+    services: [...realMicroSaasServices2025]
+    gradient: 'from-teal-500/20 to-green-500/20'
+    badge: 'Popular'
+  },];    badge: 'Popular'
+  }
+];
+export default function InnovativeServicesShowcase2025() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
+  const filteredServices = serviceCategories.flatMap(category =>
+    category.services.filter(
+      service =>
+        (selectedCategory === 'all' |category.id === selectedCategory) &&
+        (searchTerm === '' |
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+          service.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) |
+          service.category.toLowerCase().includes(searchTerm.toLowerCase()))    )  const filteredServices = serviceCategories.flatMap(category =>
+    category.services.filter(service =>
+      (selectedCategory === 'all' |category.id === selectedCategory) &&
+      (searchTerm === '' |
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.category.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price':
+        return a.pricing.starter.price - b.pricing.starter.price;
+      case 'category':
+        return a.category.localeCompare(b.category);
+      default:
+        return 0;    }      default: return 0
+    }
+  });
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Layout>
       <Head>
@@ -45,35 +231,29 @@ const contactInfo = null;
           content='https://ziontechgroup.com/innovative-services-showcase-2025'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
           <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
           <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
         </div>
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'      </Head>
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
-        
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
-
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -93,7 +273,7 @@ const contactInfo = null;
               <span className='text-white'>Showcase</span>
             </h1>
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-              Discover our comprehensive collection of revolutionary micro SAAS,
+              Discover our comprehensive collection of revolutionary micro SAAS
               AI, healthcare, fintech, and emerging technology services that are
               transforming industries worldwide.            </p>          >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
@@ -111,7 +291,6 @@ const contactInfo = null;
               Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.
             </p>
           </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -122,7 +301,7 @@ const contactInfo = null;
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
                 {serviceCategories.reduce(
-                  (total, category) => total + category.services.length,
+                  (total, category) => total + category.services.length
                   0
                 )}
                 +
@@ -173,7 +352,6 @@ const contactInfo = null;
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className='py-16 bg-gradient-to-b from-black to-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -198,7 +376,6 @@ const contactInfo = null;
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-600/30 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50"
                 />
               </div>
-
               {/* Category Filter */}
               <div>
                 <select
@@ -216,7 +393,6 @@ const contactInfo = null;
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
                 <select
@@ -237,7 +413,6 @@ const contactInfo = null;
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -264,7 +439,7 @@ const contactInfo = null;
                         {service.category}
                       </div>
                       <div className='text-2xl font-bold text-white'>
-                        ${service.pricing?.starter?.price || 'Custom'}
+                        ${service.pricing?.starter?.price |'Custom'}
                       </div>
                       <div className='text-sm text-gray-400'>/month</div>
                     </div>
@@ -281,7 +456,7 @@ const contactInfo = null;
                     </div>
                                       <div className="text-right">
                     <div className="text-sm text-gray-400">{service.category}</div>
-                    <div className="text-2xl font-bold text-white">${service.pricing?.starter?.price || 'Custom'}</div>
+                    <div className="text-2xl font-bold text-white">${service.pricing?.starter?.price |'Custom'}</div>
                     <div className="text-sm text-gray-400">/month</div>
                   </div>
                   </div>
@@ -292,7 +467,6 @@ const contactInfo = null;
                     {service.description}
                   </p>
                 </div>
-
                 {/* Features */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wide'>
@@ -326,7 +500,6 @@ const contactInfo = null;
                     )}
                   </ul>
                 </div>
-
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
                   <div>
@@ -341,7 +514,6 @@ const contactInfo = null;
                       {service.targetAudience}
                     </div>                  </div>
                 </div>
-
                 {/* CTA */}
                 <div className='flex gap-3'>
                   <a
@@ -355,7 +527,6 @@ const contactInfo = null;
                     <div className="text-white font-semibold truncate">{service.targetAudience}</div>
                   </div>
                 </div>
-
                 {/* CTA */}
                 <div className='flex gap-3'>
                   <a
@@ -378,7 +549,6 @@ const contactInfo = null;
               </motion.div>
             ))}
           </div>
-
           {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -397,7 +567,6 @@ const contactInfo = null;
           )}
         </div>
       </section>
-
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
@@ -417,7 +586,6 @@ const contactInfo = null;
               can revolutionize your operations and drive growth.
             </p>
           </motion.div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -426,7 +594,6 @@ const contactInfo = null;
               Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -446,7 +613,6 @@ const contactInfo = null;
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">{contactInfo.mobile}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -465,7 +631,6 @@ const contactInfo = null;
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">{contactInfo.email}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -490,4 +655,3 @@ const contactInfo = null;
     </Layout>
   );
 }
-;

@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+=======
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Textarea } from "@/components/ui/textarea";
 import { FormValues } from "./useHireRequestForm";
 interface ProjectDetailsFieldProps {
   form: UseFormReturn<FormValues>;
 }
-
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
   return (
     <FormField

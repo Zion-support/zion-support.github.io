@@ -35,6 +35,7 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     )
   }
 
+<<<<<<< HEAD
   // Error state
   if (error) {
     return (
@@ -185,3 +186,8 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   )
 }
 ;
+=======
+    let filteredTalents = allTalents
+    }
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

@@ -22,6 +22,7 @@ interface JobMatchProps {
   onInvite?: (matchId: string) => void
 }
 
+<<<<<<< HEAD
 export function JobMatchCard({ 
   matchId;
   talentId;
@@ -118,6 +119,15 @@ export function JobMatchCard({
       </CardContent>
     </Card>
   )
+=======
+  talentId
+  name
+  title
+  company
+  avatar
+  location
+  category
+  matchPercent
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 }
-;

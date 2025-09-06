@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import Link from 'next/link',
@@ -5,6 +6,47 @@ import { SEO } from "@/components/SEO",
 import JsonLd from "@/components/JsonLd",
 import { Button } from "@/components/ui/button",
 import ImageWithRetry from '@/components/ui/ImageWithRetry',
+=======
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+import { SEO } from '@/components/SEO'
+import JsonLd from '@/components/JsonLd'
+import { Button } from '@/components/ui/button'
+import ImageWithRetry from '@/components/ui/ImageWithRetry'
+import {
+  ArrowLeft
+  Calendar
+  Clock
+  ChevronLeft
+  ChevronRight
+  Share2
+  Facebook
+  Twitter
+  Linkedin
+} from 'lucide-react'
+import type { BlogPost as BlogPostType } from '@/types/blog'
+import { Separator } from '@/components/ui/separator'
+import ReactMarkdown from 'react-markdown'
+import { logErrorToProduction } from '@/utils/productionLogger'
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+import { BLOG_POSTS } from '@/data/blog-posts'
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout'
+import { fetchWithRetry } from '@/utils/fetchWithRetry'
+export default function BlogPost() {
+  const router = useRouter()
+  const { slug } = router.query as { slug: string }
+  const [post, setPost] = useState<BlogPostType | null>(null)
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
+  const [showShareMenu, setShowShareMenu] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const timedOut = useSkeletonTimeout(20000)
+  useEffect(() => {import { useRouter } from 'next/router'
+import { SEO } from "@/components/SEO"
+import JsonLd from "@/components/JsonLd"
+import { Button } from "@/components/ui/button"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
@@ -15,8 +57,107 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
+<<<<<<< HEAD
 
   const router = null;
+=======
+  const router = useRouter()
+  const { slug } = router.query as { slug: string }
+  const [post, setPost] = useState<BlogPostType | null>(null)
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([])
+  const [showShareMenu, setShowShareMenu] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const timedOut = useSkeletonTimeout(20000)
+  useEffect((,) => {
+    const fetchPost = async () => {
+      setIsLoading(true)
+      setError(null)
+      try {
+        const data = await fetchWithRetry(`/api/blog/${slug}`)
+        setPost(data)
+        const related = BLOG_POSTS.filter(
+          p =>
+            p.id !== data.id &&
+            (p.category === data.category |
+              p.tags.some(tag => data.tags.includes(tag)))
+        ).slice(0, 3)
+        setRelatedPosts(related)
+        setIsLoading(false)
+        return } catch (err) {
+        logErrorToProduction('Failed to fetch blog post', { data: err })
+        setError('Failed to load article')
+      }
+      const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
+        setPost(currentPost)
+        const related = BLOG_POSTS.filter(
+          p =>
+            p.id !== currentPost.id &&
+            (p.category === currentPost.category |
+              p.tags.some(tag => currentPost.tags.includes(tag)))
+        ).slice(0, 3)
+        setRelatedPosts(related) } else {
+        router.replace('/blog')
+      }
+      setIsLoading(false)
+    }
+    fetchPost()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [slug, router])
+  if (isLoading && !timedOut) {
+    return (
+      <div className='min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center'>
+        <div className='animate-pulse'>Loading article...</div>
+      </div>
+    )
+  }
+  if (!post && (error |timedOut)) {
+    return (
+      <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
+        <p>Failed to load article.</p>
+        <Button onClick={(,) => router.reload()}>Retry</Button>
+      </div>
+    )
+  }
+  // If post is still null after loading, show not found
+  if (!post) {
+    return (
+      <div className='min-h-screen bg-zion-blue text-white p-8 flex flex-col justify-center items-center space-y-4'>
+        <p>Article not found.</p>
+        <Button onClick={(,) => router.push('/blog')}>Back to Blog</Button>
+      </div>
+    )
+  }
+  // Helper function to get share URL
+  const getShareUrl = (platform: string) => {
+    if (!post) return ''
+    const url = encodeURIComponent(window.location.href)
+    const title = encodeURIComponent(post.title)
+    switch (platform) {
+      case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
+    switch (platform) {
+      case 'facebook':
+        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
+      case 'twitter':
+        return `https://twitter.com/intent/tweet?url=${url}&text=${title}`
+      case 'linkedin':
+        return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`
+      default:
+        return '#'
+  }
+  const articleLd = {
+    '@context': 'https://schema.org'
+    '@type': 'BlogPosting'
+    headline: post.title
+    description: post.excerpt
+    image: post.featuredImage
+    datePublished: post.publishedDate
+    author: {
+      '@type': 'Person'
+      name: post.author.name
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <SEO
@@ -41,7 +182,6 @@ export default function BlogPost() {
               </Link>
             </Button>
           </div>
-
           {/* Article header */}
           <div className='mb-8 max-w-4xl mx-auto'>
             <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-4'>
@@ -51,7 +191,6 @@ export default function BlogPost() {
               {post.title}
             </h1>
             <p className='text-xl text-zion-slate-light mb-8'>{post.excerpt}</p>
-
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
               <div className='flex items-center mb-4 sm:mb-0'>
@@ -67,7 +206,6 @@ export default function BlogPost() {
                   </p>
                 </div>
               </div>
-
               <div className='flex items-center space-x-4'>
                 <div className='flex items-center text-zion-slate-light'>
                   <Calendar className='h-4 w-4 mr-1' />
@@ -86,7 +224,6 @@ export default function BlogPost() {
                     <Share2 className='h-4 w-4 mr-1' />
                     <span className='text-sm'>Share</span>
                   </Button>
-
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
                       <a
@@ -125,24 +262,21 @@ export default function BlogPost() {
               </div>
             </div>
           </div>
-
           {/* Featured image */}
           <div className='mb-12 max-w-5xl mx-auto'>
             <div className='aspect-[21/9] rounded-lg overflow-hidden'>
               <ImageWithRetry
                 src={post.featuredImage}
-                alt={post.featuredImageAlt || post.title}
+                alt={post.featuredImageAlt |post.title}
                 className='object-cover w-full h-full'
                 fallbackSrc='/images/blog-placeholder.svg'              />
             </div>
           </div>
-
           {/* Article content */}
           <div className='max-w-4xl mx-auto'>
             <div className='prose prose-lg prose-invert max-w-none'>
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
-
             {/* Tags */}
             <div className='flex flex-wrap gap-2 mt-12'>
               {post.tags.map(tag => (
@@ -153,9 +287,7 @@ export default function BlogPost() {
                 </span>
               ))}
             </div>
-
             <Separator className='my-12 bg-zion-blue-light' />
-
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className='mt-12'>
@@ -172,7 +304,7 @@ export default function BlogPost() {
                         <ImageWithRetry
                           src={relatedPost.featuredImage}
                           alt={
-                            relatedPost.featuredImageAlt || relatedPost.title
+                            relatedPost.featuredImageAlt |relatedPost.title
                           }
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder.svg'                        />
@@ -190,7 +322,6 @@ export default function BlogPost() {
                 </div>
               </div>
             )}
-
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
                 Ready to put these ideas into action? Explore our{' '}
@@ -204,7 +335,6 @@ export default function BlogPost() {
                 to accelerate your projects.
               </p>
             </div>
-
             {/* Navigation */}
             <div className='flex justify-between items-center mt-12'>
               <Button
@@ -226,52 +356,52 @@ export default function BlogPost() {
 }
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
   getShareUrl ('facebook') "
-}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>) 
+}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
 }</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
-  post.content 
+  post.content
 }</ReactMarkdown> </div> <span key= {
   tag "
 }className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
-  tag 
+  tag
 }</span>) ) "
-}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) ) 
+}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
 }</div> </div>) "
-}<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) 
+}<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
 }'"import React from 'react'
 import { SEO } from '@/components / SEO'
 export default function Page() {
-    ],,
+    ],
 }
   const formatDate = (dateString: string) => {
     return new Date(dateString) .toLocaleDateString('en - US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',,
-}) 
+      year: 'numeric'
+      month: 'long'
+      day: 'numeric',
+})
 }
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {
-      ai: Brain,
-      quantum: Cpu,
-      security: Shield,
-      cloud: Cloud,
-      business: TrendingUp,
-      iot: Network,
-      emerging: Zap,,
+      ai: Brain
+      quantum: Cpu
+      security: Shield
+      cloud: Cloud
+      business: TrendingUp
+      iot: Network
+      emerging: Zap,
 }
-    return categoryIcons[category] || BookOpen
+    return categoryIcons[category] |BookOpen
 }
   const getCategoryName = (category: string) => {
     const categoryNames: { [key: string]: string } = {
-      ai: 'Artificial Intelligence',
-      quantum: 'Quantum Computing',
-      security: 'Cybersecurity',
-      cloud: 'Cloud & DevOps',
-      business: 'Business Insights',
-      iot: 'IoT & Edge',
-      emerging: 'Emerging Tech',,
+      ai: 'Artificial Intelligence'
+      quantum: 'Quantum Computing'
+      security: 'Cybersecurity'
+      cloud: 'Cloud & DevOps'
+      business: 'Business Insights'
+      iot: 'IoT & Edge'
+      emerging: 'Emerging Tech',
 }
-    return categoryNames[category] || 'Uncategorized'
+    return categoryNames[category] |'Uncategorized'
 }
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
       <SEO
@@ -301,7 +431,7 @@ export default function Page() {
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',,
+                  className: 'w-4 h-4',
 }) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>
@@ -510,7 +640,7 @@ export default function Page() {
           </motion.div>
         </div>
       </section>
-    </div>) 
+    </div>)
 }
 export default function BlogPost() {return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">"
@@ -525,4 +655,3 @@ export default function BlogPost() {return ("
 }
 }
 }
-;

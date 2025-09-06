@@ -38,69 +38,61 @@ export function FilterSidebar({
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
           Filters
         </h3>
-        <Button 
-          variant="ghost" 
-          size="sm" 
+        <Button
+          variant="ghost"
+          size="sm"
           onClick={clearFilters}
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
         >
           Clear All
         </Button>
       </div>
-      
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      
       {/* Sorting */}
       <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
-      
       {/* Skills */}
-      <SkillsFilter 
-        selectedSkills={selectedSkills} 
-        toggleSkill={toggleSkill} 
-        expanded={expandedSections.skills} 
+      <SkillsFilter
+        selectedSkills={selectedSkills}
+        toggleSkill={toggleSkill}
+        expanded={expandedSections.skills}
         toggleSection={() => toggleSection('skills')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Availability */}
-      <AvailabilityFilter 
-        selectedAvailability={selectedAvailability} 
-        toggleAvailability={toggleAvailability} 
-        expanded={expandedSections.availability} 
+      <AvailabilityFilter
+        selectedAvailability={selectedAvailability}
+        toggleAvailability={toggleAvailability}
+        expanded={expandedSections.availability}
         toggleSection={() => toggleSection('availability')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Region */}
-      <RegionFilter 
-        selectedRegions={selectedRegions} 
-        toggleRegion={toggleRegion} 
-        expanded={expandedSections.region} 
+      <RegionFilter
+        selectedRegions={selectedRegions}
+        toggleRegion={toggleRegion}
+        expanded={expandedSections.region}
         toggleSection={() => toggleSection('region')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Years of Experience */}
-      <ExperienceFilter 
-        experienceRange={experienceRange} 
-        setExperienceRange={setExperienceRange} 
-        expanded={expandedSections.experience} 
+      <ExperienceFilter
+        experienceRange={experienceRange}
+        setExperienceRange={setExperienceRange}
+        expanded={expandedSections.experience}
         toggleSection={() => toggleSection('experience')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {/* Price Range */}
-      <PriceFilter 
-        priceRange={priceRange} 
-        setPriceRange={setPriceRange} 
-        expanded={expandedSections.price} 
+      <PriceFilter
+        priceRange={priceRange}
+        setPriceRange={setPriceRange}
+        expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
         isMobileFilterOpen={isMobileFilterOpen}
       />
-      
       {isMobileFilterOpen && (
-        <Button 
+        <Button
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >

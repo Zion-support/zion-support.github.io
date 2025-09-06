@@ -13,9 +13,27 @@ export function SupportWidget() {
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
+<<<<<<< HEAD
           onClick;
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
+=======
+          onClick={() => setIsOpen(true)}
+          size="icon"
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50"
+          aria-label="Open support"
+        >
+          <MessageSquare className="h-6 w-6" />
+        </Button>
+      )}
+      {/* Support panel */}
+      {isOpen && (
+        <div
+          className={cn(
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
+            theme === "dark"
+              ? "bg-zion-blue-dark border border-zion-blue-light"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}
@@ -48,11 +66,9 @@ export function SupportWidget() {
               </Button>
             </div>
           </div>
-          
           <ChatBotPanel />
         </div>
       )}
     </>
   )
 }
-;

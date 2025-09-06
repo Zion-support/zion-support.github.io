@@ -5,7 +5,22 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 export function CurrentSubscription() {
   // Mock subscription data
+<<<<<<< HEAD
   const subscription = null;
+=======
+  const subscription = {
+    plan: "Business"
+    status: "active"
+    billingCycle: "Annual"
+    startDate: "May 1, 2025";
+    nextBillingDate: "May 1, 2026";
+    amount: "$1,999.00";
+    teamSeats: {
+      used: 32
+      total: 50
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Card>
       <CardHeader>
@@ -44,7 +59,6 @@ export function CurrentSubscription() {
             </p>
           </div>
         </div>
-        
         <div className="rounded-lg bg-muted p-4 mt-4">
           <div className="space-y-2">
             <div className="flex items-center justify-between">
@@ -64,4 +78,3 @@ export function CurrentSubscription() {
     </Card>
   )
 }
-;

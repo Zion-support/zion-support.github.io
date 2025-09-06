@@ -1,5 +1,32 @@
 import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 type Holder = any;
+=======
+type Holder = { address: string, amount: string }
+type Metrics = {
+  updatedAt: number
+  tokenDistribution: { address: string, percent: number }[]
+  topHolders: Holder[]
+  activeProposals: any[]
+  governanceParticipationRate: number
+  cached?: boolean
+}
+export default function DaoMetrics() {
+  const [data, setData] = useState<Metrics | null>(null)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json)
+      setLoading(false)
+    }
+    load()
+  }, [])
+  if (loading) return <div>Loading...</div>
+  if (!data) return <div>Error loading data</div>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -8,7 +35,6 @@ type Holder = any;
           <div className="text-xs text-gray-500">Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
         </div>
       </div>
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Token Distribution (top ~sample)</div>
@@ -26,7 +52,6 @@ type Holder = any;
             ))}
           </div>
         </div>
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -47,7 +72,6 @@ type Holder = any;
           </table>
         </div>
       </section>
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -61,7 +85,6 @@ type Holder = any;
             <div className="text-sm text-gray-600">No active proposals.</div>
           )}
         </div>
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
           <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>
@@ -73,4 +96,4 @@ type Holder = any;
       </section>
     </div>
   )
-};
+}

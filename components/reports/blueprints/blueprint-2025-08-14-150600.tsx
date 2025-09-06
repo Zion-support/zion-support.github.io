@@ -1,5 +1,9 @@
 import Head from 'next/head';
+<<<<<<< HEAD
 export default function Page(){
+=======
+export default function Page() {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
@@ -26,7 +30,7 @@ export default function Page(){
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>',
+              '<p>Signal source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>

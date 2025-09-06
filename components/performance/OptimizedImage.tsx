@@ -1,9 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-
 interface OptimizedImageProps {
-
-  src: string, alt: string,
+  src: string, alt: string
   width?: number;
   height?: number;
   className?: string;
@@ -13,6 +11,7 @@ interface OptimizedImageProps {
   fill?: boolean;
   style?: React.CSSProperties;
 }
+<<<<<<< HEAD
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
@@ -20,6 +19,19 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width;
   height;
   priority;
+=======
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src
+  alt
+  width
+  height
+  className = ''
+  priority = false
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+  quality = 85
+  fill = false
+  style
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }) => {
   if (fill) {
     return (
@@ -35,19 +47,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       />
     );
   }
-
     <Image
       src={src}
       alt={alt}
-
-      width={width || 800}
-      height={height || 600}
+      width={width |800}
+      height={height |600}
       className={className}
       priority={priority}
       sizes={sizes}
 quality={quality}
       style={style}
   );
-};
-
+}
 export default OptimizedImage;

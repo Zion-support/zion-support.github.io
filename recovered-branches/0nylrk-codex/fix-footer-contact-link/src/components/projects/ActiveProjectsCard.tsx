@@ -9,11 +9,23 @@ import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
+<<<<<<< HEAD
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {
     if (projects && !isLoading) {
       const active = null;
+=======
+  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+  useEffect(() => {
+    if (projects && !isLoading) {
+      const active = projects.filter(p =>
+        ['offer_acceptedin_progress'].includes(p.status)
+      ).slice(0, 3), // Limit to 3 most recent projects
+      setActiveProjects(active)
+    }
+  }, [projects, isLoading]);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (isLoading) {
     return (
       <Card>
@@ -34,7 +46,6 @@ export function ActiveProjectsCard() {
       </Card>
     )
   }
-  
   if (activeProjects.length === 0) {
     return (
       <Card>
@@ -54,7 +65,6 @@ export function ActiveProjectsCard() {
       </Card>
     )
   }
-  
   return (
     <Card>
       <CardHeader>
@@ -69,7 +79,7 @@ export function ActiveProjectsCard() {
           <div key={project.id} className="border rounded-md p-3">
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
-              <Badge 
+              <Badge
                 variant={project.status === "in_progress" ? "default" : "outline"}
                 className={project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
               >
@@ -96,4 +106,3 @@ export function ActiveProjectsCard() {
     </Card>
   )
 }
-;

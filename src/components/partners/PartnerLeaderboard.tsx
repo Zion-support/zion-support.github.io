@@ -5,19 +5,28 @@ import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from 'lucide-react'
 
 interface LeaderboardEntry {
+<<<<<<< HEAD
   id: string;
   rank: number;
   name: string;
   avatar?: string;
   referrals: number;
   earnings: number;
+=======
+  id: string
+  rank: number
+  name: string
+  avatar?: string
+  referrals: number
+  earnings: number
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   badges: string[]
 }
-
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
   const leaderboard: LeaderboardEntry[] = [
     {
+<<<<<<< HEAD
       id: "1";
       rank: 1;
       name: "AI Tech Guru";
@@ -60,10 +69,55 @@ export function PartnerLeaderboard() {
       avatar: "";
       referrals: 87;
       earnings: 2175;
+=======
+      id: "1"
+      rank: 1
+      name: "AI Tech Guru"
+      avatar: "", // URL would be here
+      referrals: 178
+      earnings: 4500
+      badges: ["gold", "trending"]
+    }
+    {
+      id: "2"
+      rank: 2
+      name: "Machine Learning Hub"
+      avatar: ""
+      referrals: 145
+      earnings: 3625
+      badges: ["silver"]
+    }
+    {
+      id: "3"
+      rank: 3
+      name: "Neural Networks Pro"
+      avatar: ""
+      referrals: 124
+      earnings: 3100
+      badges: ["bronze"]
+    }
+    {
+      id: "4"
+      rank: 4
+      name: "AI Career Insights"
+      avatar: ""
+      referrals: 98
+      earnings: 2450
+      badges: []
+    }
+    {
+      id: "5"
+      rank: 5
+      name: "Deep Learning Daily"
+      avatar: ""
+      referrals: 87
+      earnings: 2175
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       badges: ["newcomer"]
     }
   ]
   // Function to render rank badge
+<<<<<<< HEAD
   const renderRankBadge = null;
   return (
     <div className="space-y-6">
@@ -188,6 +242,18 @@ export function PartnerLeaderboard() {
         </CardContent>
       </Card>
     </div>
+=======
+  const renderRankBadge = (rank: number,) => {
+    switch(rank) {
+      case 1:
+        return <Trophy className="h-5 w-5 text-yellow-500" />
+      case 2:
+        return <Medal className="h-5 w-5 text-gray-400" />
+      case 3:
+        return <Medal className="h-5 w-5 text-amber-700" />
+      default:
+        return <span className="text-sm font-semibold">{rank}</span>
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }
-;

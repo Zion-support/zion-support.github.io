@@ -11,6 +11,7 @@ export interface EmergingTechnologyService {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string
   }
 }
@@ -34,6 +35,35 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
     realImplementation: true;
     contactInfo: {
       mobile: "+1 302 464 0950";
+=======
+    address: string;
+  }
+export const emergingTechnologyServices: EmergingTechnologyService[] = [
+  {
+    id: 'blockchain-platform'
+    name: 'Blockchain Development Platform'
+    tagline: 'Build and deploy blockchain applications'
+    price: '$179/month'
+    description:
+      'Comprehensive blockchain development platform for creating decentralized applications.'
+    features: [
+      'Smart contract development'
+      'DApp deployment'
+      'Blockchain integration'
+      'Security auditing'
+      'Performance monitoring'
+    ]
+    link: '/services/blockchain-platform'
+    category: 'Emerging Tech'
+    realImplementation: true
+    contactInfo: {
+      mobile: '+1 302 464 0950'
+      email: 'kleber@ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];      mobile: "+1 302 464 0950";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }

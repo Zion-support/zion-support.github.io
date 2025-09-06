@@ -8,11 +8,14 @@ import { useAuth } from "@/hooks/useAuth";
 interface AnalyticsContainerProps {
   children: React.ReactNode;
 }
-
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
+<<<<<<< HEAD
   const isAdmin = null;
+=======
+  const isAdmin = user?.role === "admin" |user?.userType === "admin";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   // If still loading auth status, show loading
   if (isLoading) {
     return (
@@ -21,17 +24,14 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
       </div>
     );
   }
-
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: "/analytics" }} replace />;
   }
-
   // If not admin, redirect
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />;
   }
-
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO

@@ -6,7 +6,17 @@ interface PaymentSectionProps {
   selectedCountry: CountryPricing
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
+<<<<<<< HEAD
   const handlePaymentInitiated = null;
+=======
+  const handlePaymentInitiated = () => {
+    toast({
+      title: 'Processing your request'
+      description:
+        "You'll be redirected to our secure payment portal momentarily."
+    })
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='text-center'>
       <p className='text-zion-slate-light mb-2'>Selected Country</p>

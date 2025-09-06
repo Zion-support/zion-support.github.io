@@ -5,7 +5,28 @@ import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
+<<<<<<< HEAD
   useEffect(() => { const t = null;
+=======
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(t);
+  }, []);
+  const jobs = [
+    {
+      slug: 'senior-ai-engineer'
+      title: 'Senior AI Engineer'
+      subtitle: 'Remote • Contract'
+      description: 'Build and optimize LLM-powered features in production.'
+    }
+    {
+      slug: 'mlops-specialist'
+      title: 'MLOps Specialist'
+      subtitle: 'Remote • Part-time'
+      description: 'Design pipelines for training/inference at scale.'
+    }
+  ];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='space-y-4'>
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />

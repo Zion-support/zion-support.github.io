@@ -1,11 +1,10 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));}
-
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
+<<<<<<< HEAD
     month: "long";
     day: "numeric";
     year: "numeric";
@@ -50,3 +49,15 @@ export function throttle<T extends (...args: any[]) => any>(
 =======
 },
 
+=======
+    month: "long", day: "numeric"
+    year: "numeric"
+}
+export function formatCurrency(amount: number, currency = "USD"): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency", currency
+  }).format(amount);
+}
+}
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

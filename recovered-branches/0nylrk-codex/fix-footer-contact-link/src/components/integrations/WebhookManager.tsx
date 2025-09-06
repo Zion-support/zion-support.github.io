@@ -10,9 +10,13 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
 export function WebhookManager() {
-  const { 
+  const {
     webhooks;
+<<<<<<< HEAD
     loading;
+=======
+    loading
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     error;
     testResult;
     fetchWebhooks;
@@ -22,24 +26,74 @@ export function WebhookManager() {
     testWebhook
   } = useWebhooks();
   const [newWebhook, setNewWebhook] = useState({
+<<<<<<< HEAD
     name: "";
     url: "";
     selectedEvent: "" as WebhookEventType;
     eventTypes: [] as WebhookEventType[];
+=======
+    name: ""
+    url: ""
+    selectedEvent: "" as WebhookEventType
+    eventTypes: [] as WebhookEventType[]
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     secret: ""
   });
   const eventOptions: { value: WebhookEventType, label: string }[] = [
-    { value: "new_application", label: "New Application Received" },
-    { value: "quote_received", label: "Quote Request Received" },
-    { value: "milestone_approved", label: "Milestone Approved" },
+    { value: "new_application", label: "New Application Received" }
+    { value: "quote_received", label: "Quote Request Received" }
+    { value: "milestone_approved", label: "Milestone Approved" }
     { value: "talent_hired", label: "Talent Hired" }
   ];
-  
   useEffect(() => {
     fetchWebhooks()
   }, []);
+<<<<<<< HEAD
   
   const handleAddEvent = null;
+=======
+  const handleAddEvent = () => {
+    if (!newWebhook.selectedEvent) return;
+    if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
+      toast.error("This event is already added");
+      return
+    }
+    setNewWebhook({
+      ...newWebhook;
+      eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
+      selectedEvent: "" as WebhookEventType
+    })
+  }
+  const handleRemoveEvent = (event: WebhookEventType) => {
+    setNewWebhook({
+      ...newWebhook
+      eventTypes: newWebhook.eventTypes.filter(e => e !== event)
+    })
+  }
+  const handleCreateWebhook = async () => {
+    if (!newWebhook.name |!newWebhook.url |newWebhook.eventTypes.length === 0) {
+      toast.error("Please fill in all required fields");
+      return
+    }
+    await createWebhook(
+      newWebhook.name
+      newWebhook.url
+      newWebhook.eventTypes
+      newWebhook.secret |undefined
+    );
+    // Reset form
+    setNewWebhook({
+      name: ""
+      url: ""
+      selectedEvent: "" as WebhookEventType
+      eventTypes: []
+      secret: ""
+    })
+  }
+  const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+    await testWebhook(webhookId, eventType)
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-8">
       <Card>
@@ -53,34 +107,32 @@ export function WebhookManager() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="webhook-name">Webhook Name</Label>
-              <Input 
-                id="webhook-name" 
+              <Input
+                id="webhook-name"
                 placeholder="e.g., Job Postings Webhook"
                 value={newWebhook.name}
                 onChange={(e) => setNewWebhook({...newWebhook, name: e.target.value})}
               />
             </div>
-            
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
-              <Input 
-                id="webhook-url" 
+              <Input
+                id="webhook-url"
                 placeholder="https://example.com/webhook"
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />
             </div>
           </div>
-          
           <div className="space-y-2">
             <Label>Events</Label>
             <div className="flex flex-wrap gap-2 mb-2">
               {newWebhook.eventTypes.map(event => (
-                <ClickableBadge 
-                  key={event} 
+                <ClickableBadge
+                  key={event}
                   onRemove={() => handleRemoveEvent(event)}
                 >
-                  {eventOptions.find(e => e.value === event)?.label || event}
+                  {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
               ))}
             </div>
@@ -105,11 +157,10 @@ export function WebhookManager() {
               </Button>
             </div>
           </div>
-          
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
-            <Input 
-              id="webhook-secret" 
+            <Input
+              id="webhook-secret"
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
@@ -125,10 +176,8 @@ export function WebhookManager() {
           </Button>
         </CardFooter>
       </Card>
-      
       <div>
         <h3 className="text-lg font-medium mb-4">Your Webhooks</h3>
-        
         {loading ? (
           <p>Loading webhooks...</p>
         ) : error ? (
@@ -153,8 +202,8 @@ export function WebhookManager() {
                         <span className="text-sm">{webhook.is_active ? 'Active' : 'Inactive'}</span>
                       </div>
                       <div className="flex-shrink-0">
-                        <Button 
-                          variant="outline" 
+                        <Button
+                          variant="outline"
                           size="sm"
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >
@@ -171,13 +220,13 @@ export function WebhookManager() {
                       <div className="flex flex-wrap gap-2 mt-1">
                         {webhook.event_types.map(event => (
                           <ClickableBadge key={event} variant="secondary">
-                            {eventOptions.find(e => e.value === event)?.label || event}
+                            {eventOptions.find(e => e.value === event)?.label |event}
                           </ClickableBadge>
                         ))}
                       </div>
                     </div>
                     <div className="text-xs text-muted-foreground">
-                      {webhook.last_triggered_at 
+                      {webhook.last_triggered_at
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`
                         : 'Never triggered'}
                     </div>
@@ -191,7 +240,6 @@ export function WebhookManager() {
                   >
                     <Trash className="h-4 w-4 mr-2" /> Delete
                   </Button>
-                  
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
                   >
@@ -202,7 +250,7 @@ export function WebhookManager() {
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map(event => (
                         <SelectItem key={event} value={event}>
-                          Test {eventOptions.find(e => e.value === event)?.label || event}
+                          Test {eventOptions.find(e => e.value === event)?.label |event}
                         </SelectItem>
                       ))}
                     </SelectContent>
@@ -212,7 +260,6 @@ export function WebhookManager() {
             ))}
           </div>
         )}
-        
         {testResult && (
           <Card className="mt-4 border-blue-200">
             <CardHeader>
@@ -229,7 +276,7 @@ export function WebhookManager() {
                 <div>
                   <span className="font-medium">Response:</span>
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">
-                    {testResult.responseBody || '<empty>'}
+                    {testResult.responseBody |'<empty>'}
                   </pre>
                 </div>
               </div>
@@ -240,4 +287,3 @@ export function WebhookManager() {
     </div>
   )
 }
-;

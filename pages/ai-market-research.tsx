@@ -1,10 +1,28 @@
 import React from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AIMarketResearchPage() {
   const service = null;
+=======
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Search;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AIMarketResearchPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-market-research')
+  );  if (!service) return null;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Layout>
       <Head>
@@ -84,7 +102,6 @@ export default function AIMarketResearchPage() {
             </div>
           </div>
         </div>
-
         <div className="bg-indigo-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Understand Your Market</h2>
           <p className="text-lg text-gray-700 mb-6">

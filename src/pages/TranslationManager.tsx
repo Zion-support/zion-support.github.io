@@ -15,6 +15,7 @@ import { useTranslationService } from "@/hooks/useTranslationService";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function TranslationManager() {
 
+<<<<<<< HEAD
   const { t, i18n } = useTranslation();
   const isMobile = null;
   return (
@@ -184,6 +185,9 @@ export default function TranslationManager() {
       </main>
     </>
   )
+=======
+    let sourceText = ''
+    for (const lang of supportedLanguages.map(l => l.code)) {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 }
-;

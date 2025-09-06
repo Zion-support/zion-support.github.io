@@ -4,6 +4,7 @@ import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {LogIn, User, Eye, EyeOff} from "lucide-react";
+<<<<<<< HEAD
 
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button";
@@ -18,10 +19,40 @@ import {
 import { Link } from "react-router-dom";
 // Form validation schema
 const loginSchema = null;
+=======
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Link} from "react-router-dom";
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min(1, "Email is required");
+  password: z.string().min(6, "Password must be at least 6 characters")});
+type LoginFormValues = z.infer<typeof loginSchema>;
+export function LoginForm() {
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema)
+    defaultValues: {
+      email: ""
+      password: ""}})
+  const onSubmit = async (data: LoginFormValues) => {
+    if (isSubmitting) return;
+    try {
+      setIsSubmitting(true)
+      await login(data.email, data.password)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Form {...form}>
-      <form 
-        onSubmit={form.handleSubmit(onSubmit)} 
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >
@@ -46,7 +77,6 @@ const loginSchema = null;
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="password"
@@ -85,7 +115,6 @@ const loginSchema = null;
             </FormItem>
           )}
         />
-
         <div className="flex items-center justify-between">
           <div className="text-sm">
             <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">
@@ -93,16 +122,14 @@ const loginSchema = null;
             </Link>
           </div>
         </div>
-
         <Button
           type="submit"
           className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-          disabled={isLoading || isSubmitting}
+          disabled={isLoading |isSubmitting}
         >
-          {isLoading || isSubmitting ? "Logging in..." : "Login"}
+          {isLoading |isSubmitting ? "Logging in..." : "Login"}
         </Button>
       </form>
     </Form>
   )
 }
-;

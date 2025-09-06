@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+  CardFooter
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -17,9 +17,20 @@ interface JobMatchCardProps {
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
+<<<<<<< HEAD
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
+=======
+export function JobMatchesCard({
+  match
+  onApply
+  onDecline
+  showApplied = false
+}: JobMatchCardProps) {
+  const job = match.job
+  if (!job) return null
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>
       <CardHeader className='p-4 pb-2'>
@@ -44,7 +55,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied;
         <p className='text-sm text-muted-foreground line-clamp-2 mb-3'>
           {job.description}
         </p>
-
         {match.matched_skills?.length > 0 && (
           <div className='mb-3'>
             <p className='text-xs text-muted-foreground mb-1'>
@@ -63,7 +73,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied;
             </div>
           </div>
         )}
-
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
             <DollarSign className='h-4 w-4 mr-1 text-muted-foreground' />$
@@ -76,7 +85,7 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied;
         </div>
       </CardContent>
       <CardFooter className='p-4 pt-0'>
-        {match.status === 'applied' || showApplied ? (
+        {match.status === 'applied' |showApplied ? (
           <div className='w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md'>
             <CheckCircle className='h-4 w-4 mr-2' />
             Applied
@@ -106,4 +115,3 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied;
     </Card>
   )
 }
-;

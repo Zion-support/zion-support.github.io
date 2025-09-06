@@ -5,8 +5,9 @@ import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
-  const { 
+  const {
     isAuthenticated;
+<<<<<<< HEAD
     userDetails;
     savedTalents;
     handleToggleSave 
@@ -15,6 +16,16 @@ export function useTalentDirectory() {
   const { 
     talents;
     isLoading 
+=======
+    userDetails
+    savedTalents
+    handleToggleSave
+  } = useAuthStatus();
+  // Fetch talent data
+  const {
+    talents
+    isLoading
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   } = useTalentData();
   // Apply filters and sorting
   const {
@@ -84,4 +95,3 @@ export function useTalentDirectory() {
     handleToggleSave
   }
 }
-;

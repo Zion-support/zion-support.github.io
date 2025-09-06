@@ -1,4 +1,5 @@
 import React, { JSX } from 'react';
+<<<<<<< HEAD
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -88,11 +89,12 @@ import React, { JSX } from 'react';
     return <LoadingSpinner fullScreen text="Loading Zion Tech Group..." />;
   }
 
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function App() {
   return (
     <main>
       <h1>Hello App</h1>
     </main>
-
   );
 }

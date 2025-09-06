@@ -7,11 +7,10 @@ interface SaveTalentButtonProps {
   onSave: (talentId: string) => void
   isSaved: boolean
 export function SaveTalentButton({
-  talentId,
-  onSave,
-  isSaved,
+  talentId
+  onSave
+  isSaved
 }: SaveTalentButtonProps) {
-  
       onClick={() => onSave(talentId)}
       variant={isSaved ? 'default' : 'outline'}
       size='sm'
@@ -22,11 +21,15 @@ export function SaveTalentButton({
       }    >
 import { Button } from "@/components/ui/button"
 interface SaveTalentButtonProps {
+<<<<<<< HEAD
   talentId: string;
   onSave: (talentId: string) => void;
+=======
+  talentId: string
+  onSave: (talentId: string,) => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   isSaved: boolean
 }
-
 export function SaveTalentButton({ talentId, onSave, isSaved }: SaveTalentButtonProps) {
   return (
     <Button

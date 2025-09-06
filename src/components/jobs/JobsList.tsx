@@ -11,6 +11,7 @@ import { format } from "date-fns",
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
+<<<<<<< HEAD
   filter?: JobStatus;
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
@@ -21,10 +22,74 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchJobs = null;
+=======
+  filter?: JobStatus
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth()
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect((,) => {
+    const fetchJobs = async () => {
+      if (!user) return
+      try {
+        let query = supabase
+          .from("jobs")
+          .select("*")
+          .eq("client_id", user.id)
+          .order("created_at", { ascending: false })
+        if (filter) {
+          query = query.eq("status", filter)
+        }
+        const { data, error } = await query
+        if (error) throw error
+        setJobs(data as Job[])
+      } catch (error) {
+        logErrorToProduction('Error fetching jobs:', { data: error })
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    fetchJobs()
+  }, [user, filter])
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center p-8">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    )
+  }
+  if (jobs.length === 0) {
+    return(<div className="text-center p-8 border rounded-md bg-muted/20">
+        <p className="text-lg text-muted-foreground">
+          {filter
+            ? `No jobs with status "${filter}" found.`
+            : "You haven't posted any jobs yet.", }
+        </p>
+        <Button asChild className="mt-4">
+          <Link href="/post-job">Post Your First Job</Link>
+        </Button>
+      </div>
+    )
+  }
+  const getStatusColor = (status: JobStatus,) => {
+    switch (status) {
+      case "new": return "bg-blue-100 text-blue-800"
+      case "in_progress":
+        return "bg-yellow-100 text-yellow-800"
+      case "filled":
+        return "bg-green-100 text-green-800"
+      case "closed":
+        return "bg-gray-100 text-gray-800"
+      default:
+        return "bg-gray-100 text-gray-800"
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job,) => (
-        <Card 
+        <Card
           key = {job.id,}
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
@@ -91,21 +156,21 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 };"
 return (<div className="grid gap-6 md:grid-cols-2" > {
   jobs.map ( (job) => (<Card key= {
-  job.id 
+  job.id
 }className= {
   `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
-  onSelectJob ? "cursor-pointer" : "" 
-}` 
+  onSelectJob ? "cursor-pointer" : ""
+}`
 }onClick={
-  () => onSelectJob?. (job.id, job.title) 
-}job.description 
+  () => onSelectJob?. (job.id, job.title)
+}job.description
 }</p> + {
-  job.skills.length - 3 
+  job.skills.length - 3
 }more </Badge>) "
 }</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {
-  job.budget.min 
+  job.budget.min
 }- $ {
   job.budget.max "
-}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) ) 
-}</div>) 
+}</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
+}</div>)
 }'"}

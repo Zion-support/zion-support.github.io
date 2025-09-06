@@ -5,7 +5,22 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
+<<<<<<< HEAD
   const schema = null;
+=======
+  const schema = {
+    '@context': 'https://schema.org'
+    '@type': 'WebPage'
+    name: 'Talent Marketplace'
+    description:
+      'Hire vetted AI and tech professionals from around the world on Zion.'
+    url: 'https://app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema.org"
+    "@type": "WebPage"
+    "name": "Talent Marketplace"
+    "description": "Hire vetted AI and tech professionals from around the world on Zion."
+    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <SEO
@@ -112,4 +127,3 @@ export default function TalentMarketplace() {
     </>
   )
 }
-;

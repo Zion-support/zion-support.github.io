@@ -1,13 +1,23 @@
+<<<<<<< HEAD
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
+=======
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from "lucide-react";
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
 }
-
 export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
   if (isLoading) {
     return (
@@ -29,7 +39,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </Card>
     );
   }
-
   if (rewards.length === 0) {
     return (
       <Card>
@@ -53,7 +62,6 @@ export function RewardsCard({ rewards, isLoading }: RewardsCardProps) {
       </Card>
     );
   }
-
   return (
     <Card>
       <CardHeader>

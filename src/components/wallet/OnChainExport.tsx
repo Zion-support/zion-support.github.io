@@ -11,6 +11,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
+<<<<<<< HEAD
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
@@ -75,6 +76,28 @@ export function OnChainExport() {
         )}
       </CardContent>
     </Card>
+=======
+  const [isConnected, setIsConnected] = useState(false)
+  const [isExporting, setIsExporting] = useState(false)
+  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle')
+  const { toast } = useToast()
+  const { user } = useAuth()
+  const handleConnectWallet = async () => {
+    try {
+      // Check if wallet is available
+      const ethereum = (window as any).ethereum
+      if (!ethereum) {
+        toast({
+          title: "Wallet not detected"
+          description: "Please install MetaMask or another Ethereum wallet to use this feature"
+          variant: "destructive"
+        })
+        return
+      }
+      // Request accounts
+      const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+      const address = accounts[0]
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   )
 }
-;

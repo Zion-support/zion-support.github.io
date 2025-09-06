@@ -11,12 +11,17 @@ import { Button } from "@/components/ui/button",
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
+<<<<<<< HEAD
   application: JobApplication;
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
+=======
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
-
 export function ApplicationActions({
   application;
   processingId;
@@ -25,19 +30,18 @@ export function ApplicationActions({
 }: ApplicationActionsProps) {
   return (
     <div className="flex items-center justify-end gap-2">
-      <Button 
-        variant="outline" 
-        size="sm" 
+      <Button
+        variant="outline"
+        size="sm"
         onClick={() => onViewApplication(application.id)}
         disabled={!!application.viewed_at}
       >
         <Eye className="h-4 w-4" />
       </Button>
-      
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="sm"
             disabled={processingId === application.id}
           >
@@ -49,22 +53,22 @@ export function ApplicationActions({
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "shortlisted")}
           >
             Shortlist
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "interview")}
           >
             Schedule Interview
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "hired")}
           >
             Hire
           </DropdownMenuItem>
-          <DropdownMenuItem 
+          <DropdownMenuItem
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
@@ -72,9 +76,8 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      
-      <Button 
-        variant="default" 
+      <Button
+        variant="default"
         size="sm"
         asChild
       >

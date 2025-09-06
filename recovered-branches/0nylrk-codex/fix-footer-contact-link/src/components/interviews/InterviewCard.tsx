@@ -13,16 +13,110 @@ import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
 import { toast } from "@/components/ui/use-toast";
 import { InterviewResponseForm } from "./InterviewResponseForm";
 interface InterviewCardProps {
+<<<<<<< HEAD
   interview: Interview;
+=======
+  interview: Interview
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onRefresh: () => Promise<void>
 }
-
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
   const isClient = null;
+=======
+  const isClient = user?.id === interview.client_id;
+  const isTalent = user?.id === interview.talent_id;
+  // Format interview date and time
+  const interviewDate = parseISO(interview.scheduled_date);
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d');
+  const formattedTime = format(interviewDate, 'h: mm a')
+  // Calculate when interview ends
+  const endTime = new Date(interviewDate);
+  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
+  const formattedEndTime = format(endTime, 'h: mm a')
+  const isInterviewPending = interview.status === 'requested';
+  const isInterviewConfirmed = interview.status === 'confirmed';
+  const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
+  const isInterviewPast = isPast(interviewDate);
+  const getRelativeTime = () => {
+    if (isPast(interviewDate)) {
+      return `Took place ${formatDistanceToNow(interviewDate)} ago`
+    } else {
+      return `Starts in ${formatDistanceToNow(interviewDate)}`
+    }
+  }
+  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
+    setIsLoading(true)
+    const success = await respondToInterview(interview.id, {
+      interview_id: interview.id
+      status
+    });
+    if (success) {
+      toast({
+        title: `Interview ${status}`
+        description: `You have successfully ${status} the interview request.`
+      });
+      setIsResponseDialogOpen(false);
+      await onRefresh()
+    } else {
+      toast({
+        title: "Error"
+        description: "Failed to respond to the interview request. Please try again."
+        variant: "destructive"
+      })
+    }
+    setIsLoading(false)
+  }
+  const handleCancelInterview = async () => {
+    setIsLoading(true);
+    const success = await cancelInterview(interview.id);
+    if (success) {
+      toast({
+        title: "Interview cancelled"
+        description: "The interview has been cancelled successfully."
+      });
+      await onRefresh()
+    } else {
+      toast({
+        title: "Error"
+        description: "Failed to cancel the interview. Please try again."
+        variant: "destructive"
+      })
+    }
+    setIsLoading(false)
+  }
+  const getStatusBadge = () => {
+    switch (interview.status) {
+      case 'requested':
+        return <Badge className="bg-amber-500">Pending</Badge>;
+      case 'confirmed':
+        return isInterviewLive ?
+          <Badge className="bg-green-500 animate-pulse">Live Now</Badge> :
+          <Badge className="bg-green-600">Confirmed</Badge>;
+      case 'declined':
+        return <Badge variant="destructive">Declined</Badge>;
+      case 'rescheduled':
+        return <Badge className="bg-blue-500">Rescheduled</Badge>;
+      case 'completed':
+        return <Badge className="bg-green-700">Completed</Badge>;
+      case 'cancelled':
+        return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>;
+      default:
+        return <Badge>{interview.status}</Badge>
+    }
+  }
+  const getOtherPartyName = () => {
+    if (isClient) {
+      return interview.talent_name |'Talent'
+    } else {
+      return interview.client_name |'Client'
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2 relative">
@@ -34,7 +128,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           with {getOtherPartyName()}
         </p>
       </CardHeader>
-      
       <CardContent className="pt-2">
         <div className="space-y-3">
           <div className="flex items-start gap-3">
@@ -49,7 +142,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
               </p>
             </div>
           </div>
-
           {interview.meeting_platform && (
             <div className="flex items-center gap-3">
               <Video className="h-4 w-4 text-muted-foreground" />
@@ -58,7 +150,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
               </div>
             </div>
           )}
-          
           {interview.notes && (
             <div className="flex items-start gap-3">
               <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />
@@ -67,7 +158,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           )}
         </div>
       </CardContent>
-      
       <CardFooter className="pt-2">
         <div className="grid grid-cols-1 gap-2 w-full">
           {/* For clients with pending requests */}
@@ -87,8 +177,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                 </AlertDialogHeader>
                 <AlertDialogFooter>
                   <AlertDialogCancel>Go Back</AlertDialogCancel>
-                  <AlertDialogAction 
-                    onClick={handleCancelInterview} 
+                  <AlertDialogAction
+                    onClick={handleCancelInterview}
                     disabled={isLoading}
                     className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                   >
@@ -98,7 +188,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
               </AlertDialogContent>
             </AlertDialog>
           )}
-          
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (
             <div className="grid grid-cols-2 gap-2">
@@ -110,25 +199,23 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
               </Button>
             </div>
           )}
-          
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (
             <>
               {interview.meeting_link ? (
                 <Button className="w-full" asChild disabled={!isInterviewLive}>
                   <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">
-                    <Video className="h-4 w-4 mr-2" /> 
+                    <Video className="h-4 w-4 mr-2" />
                     {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                     <ExternalLink className="h-3 w-3 ml-2" />
                   </a>
                 </Button>
               ) : (
                 <Button className="w-full" disabled={!isInterviewLive}>
-                  <Video className="h-4 w-4 mr-2" /> 
+                  <Video className="h-4 w-4 mr-2" />
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>
               )}
-              
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
@@ -144,8 +231,8 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
                   </AlertDialogHeader>
                   <AlertDialogFooter>
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
-                    <AlertDialogAction 
-                      onClick={handleCancelInterview} 
+                    <AlertDialogAction
+                      onClick={handleCancelInterview}
                       disabled={isLoading}
                       className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
                     >
@@ -158,14 +245,13 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
           )}
         </div>
       </CardFooter>
-      
       {/* Response dialog for talents */}
       <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>
         <DialogContent className="sm:max-w-[500px] bg-zion-blue-dark border-zion-blue-light text-white">
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
-          <InterviewResponseForm 
+          <InterviewResponseForm
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
@@ -176,4 +262,3 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
     </Card>
   )
 }
-;

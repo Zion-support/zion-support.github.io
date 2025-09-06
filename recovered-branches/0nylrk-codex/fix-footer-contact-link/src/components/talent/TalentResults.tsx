@@ -5,6 +5,7 @@ import { ActiveFilters } from "@/components/talent/ActiveFilters",
 import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
 interface TalentResultsProps {
+<<<<<<< HEAD
   filteredTalents: TalentProfile[];
   isLoading: boolean;
   viewProfile: (id: string) => void;
@@ -20,13 +21,29 @@ interface TalentResultsProps {
     selectedRegions: string[];
     toggleRegion: (region: string) => void;
     priceRange: [number, number],
+=======
+  filteredTalents: TalentProfile[]
+  isLoading: boolean
+  viewProfile: (id: string) => void
+  handleRequestHire: (talent: TalentProfile) => void
+  savedTalents: string[]
+  handleToggleSave: (id: string, isSaved: boolean) => void
+  isAuthenticated: boolean
+  activeFiltersProps: {
+    selectedSkills: string[]
+    toggleSkill: (skill: string) => void
+    selectedAvailability: string[]
+    toggleAvailability: (availability: string) => void
+    selectedRegions: string[]
+    toggleRegion: (region: string) => void
+    priceRange: [number, number];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
     setPriceRange: (range: [number, number]) => void;
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void;
     clearFilters: () => void
   }
 }
-
 export function TalentResults({
   filteredTalents;
   isLoading;
@@ -41,15 +58,13 @@ export function TalentResults({
     <div className="flex-1">
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />
-      
       {/* Results count */}
-      <ResultsHeader 
-        isLoading={isLoading} 
-        resultCount={filteredTalents.length} 
+      <ResultsHeader
+        isLoading={isLoading}
+        resultCount={filteredTalents.length}
       />
-      
       {/* Talents grid */}
-      <TalentGrid 
+      <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}

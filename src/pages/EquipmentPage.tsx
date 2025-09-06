@@ -42,6 +42,7 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     )
   }
 
+<<<<<<< HEAD
   // Error state
   if (error && equipment.length === 0) {
     return (
@@ -169,8 +170,9 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
       </AnimatePresence>
     </div>
   )
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
-
 // Main export with error boundary
 export default function EquipmentPage() {
   return (
@@ -179,4 +181,3 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
-;

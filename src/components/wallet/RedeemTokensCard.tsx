@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
 import {
+<<<<<<< HEAD
   Dialog;
   DialogContent;
   DialogDescription;
@@ -13,6 +14,61 @@ import {
   DialogTrigger} from "@/components/ui/dialog",
 
 type RewardOption = any;
+=======
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+  Dialog
+  DialogContent
+  DialogDescription
+  DialogHeader
+  DialogTitle
+  DialogTrigger
+} from '@/components/ui/dialog'
+type RewardOption = {
+  id: string
+title: string
+description: string
+cost: number;'
+type: 'credit' | 'feature' | 'course'
+}
+const REWARD_OPTIONS: RewardOption[] = [
+  {
+    id: 'premium-week'
+    title: 'Premium Week'
+    description:
+      '7 days of premium features including top placement in search results'
+    cost: 100
+    type: 'feature'
+  }
+  {
+    id: 'resume-review'
+    title: 'AI Resume Review'
+    description: 'Get your resume analyzed and optimized by our AI'
+    cost: 50
+    type: 'feature'
+  }
+  {
+    id: 'platform-credit'
+    title: '$5 Platform Credit'
+    description: 'Get $5 credit to use on any paid service'
+    cost: 100
+    type: 'credit'
+  }
+]
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet()
+  const [open, setOpen] = useState(false)
+  const handleRedeem = async (option: RewardOption) => {
+    if (!wallet |wallet.balance < option.cost) return
+    await spendTokens(option.cost, `Redeemed: ${option.title}`)
+    setOpen(false)
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Card>
       <CardHeader>
@@ -33,7 +89,7 @@ type RewardOption = any;
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
                 Exchange your tokens for these rewards. You currently have{' '}
-                {wallet?.balance || 0} ZION$.
+                {wallet?.balance |0} ZION$.
               </DialogDescription>
             </DialogHeader>
             <div className='space-y-4 py-4'>
@@ -58,7 +114,7 @@ type RewardOption = any;
                           ? 'default'
                           : 'outline'
                       }
-                      disabled={!wallet || wallet.balance < option.cost}
+                      disabled={!wallet |wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}                    >
                       Redeem <ArrowRight className='ml-1 h-3 w-3' />
                     </Button>
@@ -84,4 +140,3 @@ type RewardOption = any;
     </Card>
   )
 }
-;

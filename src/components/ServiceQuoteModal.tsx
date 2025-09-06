@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -139,6 +140,11 @@ const BUDGET_RANGES = null;
       </DialogContent>
     </Dialog>
   )
+=======
+...formData;            startDate: startDate?.toISOString()
+            endDate: endDate?.toISOString()}
+        }
+      })
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 }
-;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { Header  } from '@/components/Header';
@@ -176,6 +177,8 @@ export default function ProjectRoom() {
       </main>
     </>
   )
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 }
 }
-;

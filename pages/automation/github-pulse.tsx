@@ -2,12 +2,17 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
+<<<<<<< HEAD
   const repo = null;
+=======
+  const repo = data?.repo |{}
+  const last24h = data?.last24h |{}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
         <h1 className="text-3xl font-bold">GitHub Pulse</h1>
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt |'—'}</p>
         <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
           <Metric label="Stars" value={repo.stargazers_count} />
           <Metric label="Forks" value={repo.forks} />
@@ -20,7 +25,6 @@ export default function GithubPulsePage() {
     </EnhancedLayout>
   )
 }
-
 function Metric({ label, value }: { label: string, value: any }) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
@@ -28,4 +32,4 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
   )
-};
+}

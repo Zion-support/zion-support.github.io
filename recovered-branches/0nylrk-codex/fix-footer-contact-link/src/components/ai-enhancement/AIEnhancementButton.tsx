@@ -5,19 +5,68 @@ import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 interface AIEnhancementButtonProps {
+<<<<<<< HEAD
   options: AIEnhancementOptions;
   onEnhanced: (enhancedContent: string) => void;
+=======
+  options: AIEnhancementOptions
+  onEnhanced: (enhancedContent: string) => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   buttonText?: string;
   className?: string;
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   contentLength?: number
 }
-
 export function AIEnhancementButton({
   options;
   onEnhanced;
+<<<<<<< HEAD
   buttonText;
+=======
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+  const [showActions, setShowActions] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+  const handleEnhance = async () => {
+    if ((!options.content |options.content.trim().length < contentLength) &&
+        (!options.context |options.context.trim().length < contentLength)) {
+      toast({
+        title: "Not enough content"
+        description: `Please enter at least ${contentLength} characters before enhancing.`
+        variant: "destructive"
+      });
+      return
+    }
+    const enhancedContent = await enhanceContent(options);
+    if (enhancedContent) {
+      setGeneratedContent(enhancedContent);
+      setShowActions(true)
+    }
+  }
+  const handleAccept = () => {
+    if (generatedContent) {
+      onEnhanced(generatedContent);
+      setShowActions(false);
+      setGeneratedContent(null);
+      toast({
+        title: "Content applied"
+        description: "AI-enhanced content has been applied."})
+    }
+  }
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  }
+  const handleCancel = () => {
+    setShowActions(false);
+    setGeneratedContent(null)
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -59,7 +108,6 @@ export function AIEnhancementButton({
       </div>
     )
   }
-  
   return (
     <Button
       type="button"
@@ -78,4 +126,3 @@ export function AIEnhancementButton({
     </Button>
   )
 }
-;

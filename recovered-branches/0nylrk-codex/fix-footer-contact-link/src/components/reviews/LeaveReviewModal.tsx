@@ -12,13 +12,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
+<<<<<<< HEAD
   projectId: string;
   revieweeId: string;
   revieweeName: string;
   isOpen: boolean;
+=======
+  projectId: string
+  revieweeId: string
+  revieweeName: string
+  isOpen: boolean
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onClose: () => void
 }
-
 export function LeaveReviewModal({
   projectId;
   revieweeId;
@@ -30,8 +36,35 @@ export function LeaveReviewModal({
   useEffect(() => {
     setOpen(isOpen)
   }, [isOpen]);
+<<<<<<< HEAD
   
   const handleOpenChange = null;
+=======
+  const handleOpenChange = (open: boolean) => {
+    setOpen(open)
+    if (!open) {
+      onClose()
+    }
+  }
+  const handleSubmit = async (formValues: any) => {
+    if (userReview) {
+      // Update existing review
+      const { project_id, reviewee_id, ...updates } = formValues;
+      const success = await updateReview(userReview.id, updates);
+      if (success) {
+        handleOpenChange(false)
+      }
+      return success
+    } else {
+      // Create new review
+      const success = await submitReview(formValues);
+      if (success) {
+        handleOpenChange(false)
+      }
+      return success
+    }
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent className="max-w-md">
@@ -43,17 +76,15 @@ export function LeaveReviewModal({
             Your feedback helps build a trustworthy community. It will be visible after moderation.
           </DialogDescription>
         </DialogHeader>
-        
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}
           revieweeName={revieweeName}
           onSubmit={handleSubmit}
-          defaultValues={userReview || undefined}
+          defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
         />
       </DialogContent>
     </Dialog>
   )
 }
-;

@@ -1,9 +1,26 @@
 import React from 'react',
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Code, Database, Shield, Zap, Globe, Cpu;
   BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
  } from 'lucide-react';
+=======
+import {
+  Code
+  Database
+  Shield
+  Zap
+  Globe
+  Cpu
+  BookOpen
+  CheckCircle
+  ArrowRight
+  BarChart3
+  Lock
+  Brain;
+} from 'lucide-react';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function APIDocumentation() {
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
@@ -57,5 +74,5 @@ export default function APIDocumentation() {
 				</ul>
 			</div>
 		</div>
-	),
+	)
 }

@@ -1,7 +1,25 @@
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = any;
+=======
+
+}
+type Props = { report: Report | null }
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 21600 }
+  } catch {
+    return { props: { report: null }, revalidate: 21600 }
+  }
+}
+export default function SiteValidator({ report }: Props) {
+  if (!report) return <div>No validation report yet.</div>;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="space-y-6">
       <header className="space-y-1">

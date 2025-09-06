@@ -1,6 +1,90 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
+=======
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import {
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  TrendingUp
+  CheckCircle
+  Users
+  Building
+  Globe
+  Award
+  Clock
+  BarChart3
+  Cloud
+  Shield
+} from 'lucide-react';
+const caseStudies = [
+  {
+    id: 1
+    title: "AI-Powered Customer Service Transformation"
+    client: "Global E-commerce Retailer"
+    industry: "E-commerce"
+    challenge: "High customer service costs and inconsistent response quality"
+    solution: "Implemented AI-powered chatbot and intelligent routing system"
+    results: [
+      "60% reduction in support costs"
+      "40% faster response times"
+      "95% customer satisfaction rate"
+      "$2M annual savings"
+    ]
+    duration: "3 months"
+    team: "8 experts"
+    technologies: ["AI/ML", "NLP", "Cloud", "Analytics"]
+    image: "/images/case-studies/ecommerce-ai.jpg"
+  }
+  {
+    id: 2
+    title: "Cloud Migration for Financial Services"
+    client: "Regional Bank"
+    industry: "Financial Services"
+    challenge: "Legacy systems limiting scalability and innovation"
+    solution: "Complete cloud migration with microservices architecture"
+    results: [
+      "99.9% uptime achieved"
+      "50% faster application deployment"
+      "30% reduction in infrastructure costs"
+      "Enhanced security compliance"
+    ]
+    duration: "6 months"
+    team: "12 experts"
+    technologies: ["AWS", "Kubernetes", "Microservices", "DevOps"]
+    image: "/images/case-studies/cloud-migration.jpg"
+  }
+  {
+    id: 3
+    title: "Cybersecurity Enhancement for Healthcare"
+    client: "Healthcare Network"
+    industry: "Healthcare"
+    challenge: "Increasing cyber threats and compliance requirements"
+    solution: "Comprehensive security framework and threat detection system"
+    results: [
+      "Zero security breaches"
+      "100% compliance with HIPAA"
+      "24/7 threat monitoring"
+      "50% faster incident response"
+    ]
+    duration: "4 months"
+    team: "6 experts"
+    technologies: ["Cybersecurity", "SIEM", "Compliance", "Monitoring"]
+    image: "/images/case-studies/healthcare-security.jpg"
+  }
+];
+const stats = [
+  { number: "500+", label: "Projects Completed" }
+  { number: "50+", label: "Happy Clients" }
+  { number: "99.9%", label: "Success Rate" }
+  { number: "24/7", label: "Support Available" }
+];
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -15,7 +99,6 @@ export default function CaseStudiesPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -30,13 +113,12 @@ export default function CaseStudiesPage() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Discover how we've helped businesses transform and achieve their goals 
+                Discover how we've helped businesses transform and achieve their goals
                 through innovative technology solutions.
               </p>
             </motion.div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -59,7 +141,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
         {/* Case Studies */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -74,11 +155,10 @@ export default function CaseStudiesPage() {
                 Featured Case Studies
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Real projects, real results. See how we've helped businesses across 
+                Real projects, real results. See how we've helped businesses across
                 different industries achieve their technology goals.
               </p>
             </motion.div>
-
             <div className="max-w-6xl mx-auto">
               <div className="space-y-16">
                 {caseStudies.map((study, index) => (
@@ -98,14 +178,12 @@ export default function CaseStudiesPage() {
                           </span>
                           <span className="text-gray-500 text-sm">{study.duration}</span>
                         </div>
-
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
                           {study.title}
                         </h3>
                         <p className="text-gray-600 mb-6">
                           <strong>Client:</strong> {study.client}
                         </p>
-
                         <div className="space-y-4 mb-6">
                           <div>
                             <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>
@@ -116,7 +194,6 @@ export default function CaseStudiesPage() {
                             <p className="text-gray-600">{study.solution}</p>
                           </div>
                         </div>
-
                         <div className="mb-6">
                           <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>
                           <ul className="space-y-2">
@@ -128,7 +205,6 @@ export default function CaseStudiesPage() {
                             ))}
                           </ul>
                         </div>
-
                         <div className="flex flex-wrap gap-2 mb-6">
                           {study.technologies.map((tech, idx) => (
                             <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
@@ -136,7 +212,6 @@ export default function CaseStudiesPage() {
                             </span>
                           ))}
                         </div>
-
                         <div className="flex items-center justify-between">
                           <div className="flex items-center text-sm text-gray-600">
                             <Users className="w-4 h-4 mr-2" />
@@ -151,7 +226,6 @@ export default function CaseStudiesPage() {
                           </a>
                         </div>
                       </div>
-
                       <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 flex items-center justify-center">
                         <div className="text-center text-white">
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />
@@ -168,7 +242,6 @@ export default function CaseStudiesPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">
           <div className="container mx-auto px-4">
@@ -183,7 +256,7 @@ export default function CaseStudiesPage() {
                 Ready to Start Your Success Story?
               </h2>
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-                Let's work together to create your own success story. 
+                Let's work together to create your own success story.
                 Contact us today to discuss your project.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -209,7 +282,6 @@ export default function CaseStudiesPage() {
 }
 import Link from 'next/link';
 import Layout from '../components/Layout';
-
 export default function CaseStudiesPage() {
   return (
     <Layout>
@@ -231,8 +303,7 @@ export default function CaseStudiesPage() {
       </section>
     </Layout>
   );
-
- </Head> </section> </Layout> 
+ </Head> </section> </Layout>
 	return (
 		<Layout>
 			<Head>

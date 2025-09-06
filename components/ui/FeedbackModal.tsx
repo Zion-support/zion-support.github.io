@@ -1,8 +1,56 @@
 import { useState } from 'react';
+<<<<<<< HEAD
 export type FeedbackContext = any;
     onClose(true)
+=======
+export type FeedbackContext = { actionType?: string; metadata?: any }
+export default function FeedbackModal({
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
+}: {
+  isOpen: boolean;
+  onClose: (submitted: boolean) => void;
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal({
+  isOpen;
+  onClose;
+  defaultContext;
+  defaultKind = 'general';
+  userHeaders}: {
+  isOpen: boolean
+  onClose: (submitted: boolean) => void
+  defaultContext?: FeedbackContext;
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>
+}) {
+  const [rating, setRating] = useState<number>(0);
+  const [hover, setHover] = useState<number>(0);
+  const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
+  const [comment, setComment] = useState('');
+  const [loading, setLoading] = useState(false);
+  if (!isOpen) return null;
+  async function submit() {
+    if (rating < 1) return onClose(false);
+    setLoading(true);
+    try {
+      await fetch('/api/feedback', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json', ...(userHeaders |{}) }
+        body: JSON.stringify({
+          rating
+          comment
+          kind
+          context: defaultContext |{}
+        })
+      });
+    setLoading(false);
+    onClose(true);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   }
-
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>
       <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>
@@ -18,7 +66,7 @@ export type FeedbackContext = any;
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
               className={
-                hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
+                hover >= n |rating >= n ? 'text-yellow-500' : 'text-gray-300'
               }
               aria-label={`${n} stars`}
             >
@@ -73,7 +121,7 @@ export type FeedbackContext = any;
           </button>
           <button
             onClick={submit}
-            disabled={loading || rating < 1}
+            disabled={loading |rating < 1}
             className='px-3 py-2 rounded bg-gray-900 text-white'
           >
             {loading ? 'Submitting…' : 'Submit'}
@@ -99,7 +147,7 @@ export type FeedbackContext = any;
         </div>
         <div className="flex justify-end gap-2">
           <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>
-          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+          <button onClick={submit} disabled={loading |rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
     </div>

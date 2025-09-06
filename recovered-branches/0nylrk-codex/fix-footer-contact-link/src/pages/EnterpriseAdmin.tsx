@@ -10,14 +10,17 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
   const { user } = useAuth();
   // Check if user has enterprise admin role
+<<<<<<< HEAD
   const isEnterpriseAdmin = null;
+=======
+  const isEnterpriseAdmin = user?.role === "enterprise_admin";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />
   }
-
   return (
     <ProtectedRoute>
-      <SEO 
+      <SEO
         title="Enterprise Admin - Zion AI Marketplace"
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace."
       />
