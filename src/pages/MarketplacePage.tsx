@@ -83,8 +83,8 @@ import { addItem } from '@/store/cartSlice';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { toast } from '@/hooks/use-toast';
 // Product card
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {
-  const { formatPrice } = useCurrency(),
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {
+  const { formatPrice } = useCurrency();
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">

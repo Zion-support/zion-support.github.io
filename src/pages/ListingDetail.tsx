@@ -17,7 +17,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,;
+  DialogTitle,
 } from '@/components/ui/dialog';
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {

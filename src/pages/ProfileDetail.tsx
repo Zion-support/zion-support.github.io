@@ -7,7 +7,7 @@ export default function ProfileDetail() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect((,) => {
+  useEffect(() => {
     const fetchProfile = async () => {
       setIsLoading(true);
       setError(null);

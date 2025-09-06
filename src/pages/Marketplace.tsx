@@ -11,8 +11,9 @@ import {
   SortAsc,
   Sparkles,
   TrendingUp,
-  Star,;
-} from 'lucide-react';import { SkeletonCard } from '@/components/ui/skeleton';
+  Star,
+} from 'lucide-react';
+import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
 import { ProductsEmptyState } from '@/components/marketplace/EmptyState';
 import { Button } from '@/components/ui/button';

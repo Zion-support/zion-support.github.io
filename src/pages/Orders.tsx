@@ -8,7 +8,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
+  TableRow,
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import Skeleton from '@/components/ui/skeleton';
