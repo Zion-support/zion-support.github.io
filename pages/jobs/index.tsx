@@ -1,8 +1,8 @@
-import Link from 'next/link'
-import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard'
-import EnhancedLoading from '../../components/ui/EnhancedLoading'
+import Link from 'next/link',
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
+import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import { useEffect, useState } from 'react',
-import InteractiveSearch from '../../components/ui/InteractiveSearch'
+import InteractiveSearch from '../../components/ui/InteractiveSearch',
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true),
   useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []),
@@ -14,19 +14,19 @@ export default function JobsListPage() {
   return (
     <div className="space-y-4">
       <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
-      {_loading ? (
+      {loading ? (
         <EnhancedLoading lines={4} />
-      ) : (_<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {_jobs.map((j) => (
-            <Link key={j.slug} href={_`/jobs/${j.slug}`}>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {jobs.map((j) => (
+            <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
-                <EnhancedMarketplaceCard title={_j.title} subtitle={_j.subtitle} description={_j.description} footer={_<span className="text-blue-600">View Job →</span>} />
-              </a>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
+              </Link>
             </Link>
           ))}
-        </div>
+        </div>;
       )}
-    </div>
-  )
+    </div>;
+  );
 }

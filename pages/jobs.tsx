@@ -1,6 +1,6 @@
-import type { NextPage } from 'next'
-import Seo from '../components/seo/Seo'
-import { JobPostingJsonLd } from 'next-seo'
+import type { NextPage } from 'next',
+import Seo from '../components/seo/Seo',
+import { JobPostingJsonLd } from 'next-seo',
 const Jobs: NextPage = () => {
   const job = {
     title: 'Senior Full-Stack Engineer (Next.js + AI)',
@@ -17,28 +17,26 @@ const Jobs: NextPage = () => {
       sameAs: 'https://ziontechgroup.netlify.app',
       logo: 'https://ziontechgroup.netlify.app/logo.png'},
     jobLocationType: 'TELECOMMUTE'} as const,
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <div>
-      <Seo title=&quot;Jobs&quot; description=&quot;Open roles at Zion Tech Solutions.&quot; />
+      <Seo title="Jobs" description="Open roles at Zion Tech Solutions." />
       <JobPostingJsonLd
-        datePosted={_job.datePosted}
-        description={_job.description}
-        employmentType={_job.employmentType}
-        hiringOrganization={_job.hiringOrganization}
-        jobLocationType={_job.jobLocationType}
-        title={_job.title}
-        validThrough={_job.validThrough}
-        baseSalary={_job.baseSalary}
-      />
-      <main>
-        <h1>Jobs</h1>
-        <p>{_job.title}</p>
-        <p>{_job.description}</p>
-      </main>
-    </div>
-  )
-},
-
-export default Jobs
+        datePosted={job.datePosted}
+        description={job.description}
+        employmentType={job.employmentType}
+        hiringOrganization={job.hiringOrganization}
+        jobLocationType={job.jobLocationType}
+        title={job.title}
+        validThrough={job.validThrough}
+        baseSalary={job.baseSalary}
+      />;
+      <main>;
+        <h1>Jobs</h1>;
+        <p>{job.title}</p>;
+        <p>{job.description}</p>;
+      </main>;
+    </div>;
+  );
+},;
+export default Jobs;

@@ -1,178 +1,163 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Link from 'next/link'
-interface SearchResult {
-  title: string,
-  description: string,
-  url: string,
-  type: 'service' | 'page' | 'category'
+import React, { useState } from 'react';
+import { Search, X } from 'lucide-react';
+
+interface SearchBarProps {
+  onSearch?: (query: string) => void;
+  placeholder?: string;
+  className?: string;
 }
 
-const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState(''),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [isOpen, setIsOpen] = useState(false),
-  const [isLoading, setIsLoading] = useState(false),
-  const searchRef = useRef<HTMLDivElement>(null)
-  const inputRef = useRef<HTMLInputElement>(null)
+const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
+  placeholder = 'Search...',
+  className = '',
+}) => {
+  const [query, setQuery] = useState('');
 
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-      type: 'category'
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-      type: 'category'
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
-      type: 'category'
-    },
-    {
-      title: 'Cloud Cost Guard',
-      description: 'FinOps Assistant for anomaly detection and cost optimization',
-      url: '/services',
-      type: 'service'
-    },
-    {
-      title: 'Contact',
-      description: 'Get in touch with our team',
-      url: '/contact',
-      type: 'page'
-    },
-    {
-      title: 'Pricing',
-      description: 'View our transparent pricing for all services',
-      url: '/pricing',
-      type: 'page'
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (onSearch && query.trim()) {
+      onSearch(query.trim());
     }
-  ],
+  };
 
-  const handleSearch = async (searchQuery: string) => {
-    if (!searchQuery.trim()) {
-      setResults([]),
-      setIsOpen(false),
-      return
-    }
-
-    setIsLoading(true),
-
-    // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 300)),
-
-    const filteredResults = searchData.filter(item =>
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.description.toLowerCase().includes(searchQuery.toLowerCase())
-    ),
-
-    setResults(filteredResults),
-    setIsOpen(true),
-    setIsLoading(false)
-  },
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value
-    setQuery(value),
-    handleSearch(value)
-  },
-
-  const handleResultClick = () => {
-    setIsOpen(false),
-    setQuery('')
-  },
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      setIsOpen(false),
-      inputRef.current?.blur()
-    }
-  },
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false)
-      }
-    },
-
-    document.addEventListener('mousedown', handleClickOutside),
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, []),
+  const handleClear = () => {
+    setQuery('');
+  };
 
   return (
-    <div ref={searchRef} className="relative w-full max-w-md">
-      <div className="relative">
-        <input
-          ref={inputRef}
-          type="text"
-          value={query}
-          onChange={handleInputChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          placeholder="Search services, pages..."
-          className="w-full px-4 py-2 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-        />
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+    <div className={'relative ' + className}>
+      <form onSubmit={handleSubmit} className="relative">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+          <input
+            type="text"
+            value={query}
+            onChange={e => setQuery(e.target.value)}
+            onFocus={() => {}}
+            placeholder={placeholder}
+            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={handleClear}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
         </div>
-        {isLoading && (
-          <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-          </div>
-        )}
-      </div>
-
-      {/* Search Results Dropdown */}
-      {isOpen && (
-        <div className="absolute z-50 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-96 overflow-y-auto">
-          {results.length > 0 ? (
-            <div className="py-2">
-              {results.map((result, index) => (
-                <Link
-                  key={index}
-                  href={result.url}
-                  onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0">
-                      <div className={`w-2 h-2 rounded-full ${
-                        result.type === 'service' ? 'bg-blue-500' :
-                        result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
-                      }`}></div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate">
-                        {result.title}
-                      </p>
-                      <p className="text-sm text-gray-500 truncate">
-                        {result.description}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : query && !isLoading ? (
-            <div className="px-4 py-3 text-sm text-gray-500">
-              No results found for &quot,{query}&quot,
-            </div>
-          ) : null}
-        </div>
-      )}
+      </form>
     </div>
-  )
-},
+  );
+};
 
-export default SearchBar
+export default SearchBar;
+import React { useState, useRef, useEffect } from 'react',;
+import Link from 'next/link',;
+,;
+interface SearchResult {,;
+  titl: e: string,;
+  descriptio: n: string,;
+  ur: l: string,;
+  typ: e: 'service' | 'page' | 'category';
+},;
+,;
+const: SearchBar: React.FC = () => {,;
+  const [query, setQuery] = useState(''),;
+  const [results, setResults] = useState<SearchResult[]>([]),;
+  const [isOpen, setIsOpen] = useState(false),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const searchRef = useRef<HTMLDivElement>(null),;
+  const inputRef = useRef<HTMLInputElement>(null),;
+,;
+  // Mock search data - in a real app, this would come from an API,;
+  const: searchData: SearchResult[] = [,;
+    {,;
+      titl: e: 'Micro SaaS Products',;
+      descriptio: n: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',;
+      ur: l: '/micro-saas',;
+      typ: e: 'category';
+    },;
+    {,;
+      titl: e: 'AI Services',;
+      descriptio: n: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',;
+      ur: l: '/ai-services',;
+      typ: e: 'category';
+    },;
+    {,;
+      titl: e: 'IT Services',;
+      descriptio: n: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',;
+      ur: l: '/it-services',;
+      typ: e: 'category';
+    },;
+    {,;
+      titl: e: 'Cloud Cost Guard',;
+      descriptio: n: 'FinOps Assistant for anomaly detection and cost optimization',;
+      ur: l: '/services',;
+      typ: e: 'service';
+    },;
+    {,;
+      titl: e: 'Contact Us',;
+      descriptio: n: 'Get in touch with our experts for consultation and quotes',;
+      ur: l: '/contact',;
+      typ: e: 'page';
+    },;
+    {,;
+      titl: e: 'Pricing',;
+      descriptio: n: 'View our transparent pricing for all services',;
+      ur: l: '/pricing',;
+      typ: e: 'page';
+    }
+  ],;
+,;
+  const handleSearch = async (searchQuer: y: string) => {,;
+    if (!searchQuery.trim()) {,;
+      setResults([]),;
+      setIsOpen(false),;
+      return;
+    },;
+,;
+    setIsLoading(true),;
+,;
+    // Simulate API delay,;
+    await new Promise(resolve => setTimeout(resolve, 300)),;
+,;
+    const filteredResults = searchData.filter(item =>,;
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,;
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()),;
+    ),;
+,;
+    setResults(filteredResults),;
+    setIsOpen(true),;
+    setIsLoading(false);
+  },;
+,;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {,;
+    const value = e.target.value,;
+    setQuery(value),;
+    handleSearch(value);
+  },;
+,;
+  const handleResultClick = () => {,;
+    setIsOpen(false),;
+    setQuery('');
+  },;
+,;
+  const handleKeyDown = (e: React.KeyboardEvent) => {,;
+    if (e.key === 'Escape') {,;
+      setIsOpen(false),;
+      inputRef.current?.blur();
+    }
+  },;
+,;
+  useEffect(() => {,;
+    const handleClickOutside = (even: t: MouseEvent) => {,;
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {,;
+        setIsOpen(false);
+      }
+    }
+},;
+,;
+export default SearchBar;

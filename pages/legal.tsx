@@ -1,10 +1,10 @@
-import React from 'react'
-import SEO from '../components/SEO'
-import Link from 'next/link'
+import React from 'react',
+import SEO from '../components/SEO',
+import Link from 'next/link',
 export default function LegalPage() {
 	return (
 		<>
-			<SEO title="Legal | Zion Tech Group" description="Legal resources including privacy policy, _terms of service, _and cookies." canonical="/legal" />
+			<SEO title="Legal | Zion Tech Group" description="Legal resources including privacy policy, terms of service, and cookies." canonical="/legal" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-6">Legal</h1>
 				<ul className="list-disc ml-6 text-gray-300 space-y-2">
@@ -16,4 +16,3 @@ export default function LegalPage() {
 		</>
 	)
 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

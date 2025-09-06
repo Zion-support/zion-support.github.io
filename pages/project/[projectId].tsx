@@ -1,37 +1,28 @@
 import { useEffect, useState } from "react",
-import { useRouter } from "next/router"
-import FeedbackModal from "../../components/ui/FeedbackModal"
+import { useRouter } from "next/router",
+import FeedbackModal from "../../components/ui/FeedbackModal",
 export default function ProjectPage() {
-  const router = useRouter()
-  const { projectId } = router.query as { projectId?: string }
+  const router = useRouter(),
+  const { projectId } = router.query as { projectId?: string },
   const [project, setProject] = useState<any | null>(null),
   const [loading, setLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
 
-export default function ProjectPage() {_const _router = useRouter();
-  const { projectId} = router.query as {_projectId?: string};
-  const [project, setProject] = useState<any | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [note, setNote] = useState("&quot;);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-
   const headers = {
-    &quot;x-demo-user-role&quot;: &quot;client&quot;,
-    &quot;x-demo-user-id&quot;: &quot;client-1&quot;,
+    "x-demo-user-role": "client",
+    "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
+    // "x-demo-user-role": "talent",
+    // "x-demo-talent-slug": "ava-chen"} as Record<string string>,
 
   useEffect(() => {
     async function load() {
       if (!projectId) return,
       try {
-      try {
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
         setLoading(true),
         const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
-        const json = await res.json()
+        const json = await res.json(),
         if (!json.ok) throw new Error(json.error || "Failed to load project"),
         setProject(json.project)
       } catch (e: any) {
@@ -39,7 +30,6 @@ export default function ProjectPage() {_const _router = useRouter();
       } finally {
         setLoading(false)
       }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
     }
     load()
   }, [projectId]),
@@ -48,6 +38,14 @@ export default function ProjectPage() {_const _router = useRouter();
 
   async function addNote() {
     const res = await fetch(`/api/marketplace/projects`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json", ...headers },
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
+    const json = await res.json(),
+    if (json.ok) {
+      setProject(json.project),
+      setNote(""),
+      setShowFeedback(true)
     }
   }
 
@@ -56,7 +54,7 @@ export default function ProjectPage() {_const _router = useRouter();
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
-    const json = await res.json()
+    const json = await res.json(),
     if (json.ok) {
       setProject(json.project),
       setShowFeedback(true)
@@ -64,108 +62,145 @@ export default function ProjectPage() {_const _router = useRouter();
   }
 
   return (
-    <div className=&quot;max-w-4xl mx-auto p-6 space-y-6&quot;>
-      {loading && <div>Loading…</div>}
-      {error && <div className=&quot;text-red-600&quot;>{error}</div>}
-      {project && (
-        <div className=&quot;space-y-6&quot;>
-          <div className=&quot;flex items-center gap-3&quot;>
-            <h1 className=&quot;text-2xl font-semibold&quot;>Project Kickoff</h1>
-            <span className={`px-2 py-0.5 rounded text-xs ${project.status === &quot;ACTIVE&quot; ? &quot;bg-emerald-100 text-emerald-700&quot; : &quot;bg-gray-200&quot;}`}>
-              {project.status}
-            </span>
-          </div>
-
-          <section className=&quot;rounded border p-4&quot;>
-            <h2 className=&quot;font-medium mb-2&quot;>Project Summary</h2>
-            <div className=&quot;text-sm&quot;>
-              <div><b>Client</b>: {project.clientId}</div>
-              <div><b>Talent</b>: {project.talentSlug}</div>
-              <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>
-              <div className=&quot;mt-2&quot;>{project.summary}</div>
-            </div>
-          </section>
-
-          <section className=&quot;rounded border p-4&quot;>
-            <h2 className=&quot;font-medium mb-2&quot;>Timeline</h2>
-            <ul className=&quot;list-disc pl-6 space-y-1 text-sm&quot;>
-              {project.timeline?.length ? (
-                project.timeline.map((m: any) => (
-                  <li key={m.id}>
-                    <span className=&quot;font-medium&quot;>{m.title}</span>
-                    {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
-                    {m.amountUsd && <span> • ${m.amountUsd}</span>}
-                    {m.status && <span> • {m.status}</span>}
-  async function addNote() {_const _res = await fetch(`/api/marketplace/projects`, _{
-      method: "PATCH", _headers: { "Content-Type": "application/json", _...headers},
-      body: JSON.stringify({_id: projectId, _action: "add_note", _content: note})});
-    const _json = await res.json();
-    if (json.ok) {_setProject(json.project);
-      setNote("");
-      setShowFeedback(true);}
-  }
-
-  async function markCompleted() {_const _res = await fetch(`/api/marketplace/projects`, _{
-      method: "PATCH", _headers: { "Content-Type": "application/json", _...headers},
-      body: JSON.stringify({_id: projectId, _action: "mark_completed"})});
-    const _json = await res.json();
-    if (json.ok) {_setProject(json.project);
-      setShowFeedback(true);}
-  }
-
-  return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
-      {_loading && <div>Loading…</div>}
-      {_error && <div className="text-red-600">{error}</div>}
-      {_project && (
+      {loading && <div>Loading…</div>}
+      {error && <div className="text-red-600">{error}</div>}
+      {project && (
         <div className="space-y-6">
           <div className="flex items-center gap-3">
             <h1 className="text-2xl font-semibold">Project Kickoff</h1>
             <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" : "bg-gray-200"}`}>
-              {_project.status}
+              {project.status}
             </span>
           </div>
 
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Project Summary</h2>
             <div className="text-sm">
-              <div><b>Client</b>: {_project.clientId}</div>
-              <div><b>Talent</b>: {_project.talentSlug}</div>
-              <div><b>Start</b>: {_new Date(project.startDateIso).toLocaleDateString()}</div>
-              <div className="mt-2">{_project.summary}</div>
+              <div><b>Client</b>: {project.clientId}</div>
+              <div><b>Talent</b>: {project.talentSlug}</div>
+              <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>
+              <div className="mt-2">{project.summary}</div>
             </div>
           </section>
 
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">
-              {_project.timeline?.length ? (_project.timeline.map((m: unknown) => (
+              {project.timeline?.length ? (
+                project.timeline.map((m: any) => (
                   <li key={m.id}>
-                    <span className="font-medium">{_m.title}</span>
-                    {_m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
-                    {_m.amountUsd && <span> • ${m.amountUsd}</span>}
-                    {_m.status && <span> • {m.status}</span>}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-                  </li>
-                ))
-              ) : (
-                <li>No timeline defined</li>
+                    <span className="font-medium">{m.title}</span>
+import { useEffect, useState } from "react",;
+import { useRouter } from "next/router",;
+import FeedbackModal from "../../components/ui/FeedbackModal",;
+export default function ProjectPage() {;
+  const router = useRouter(),;
+  const { projectId } = router.query as { projectId?: string },;
+  const [project, setProject] = useState<any | null>(null),;
+  const [loading, setLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  const [note, setNote] = useState(""),;
+  const headers = {;
+    "x-demo-user-role": "client",;
+    "x-demo-user-id": "client-1",;
+    // For talent view demo, swap role and provide slug;
+    // "x-demo-user-role": "talent",;
+    // "x-demo-talent-slug": "ava-chen"} as Record<string string>,;
+  useEffect(() => {;
+    async function load() {;
+      if (!projectId) return,;
+      try {;
+        setLoading(true),;
+        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),;
+        const json = await res.json(),;
+        if (!json.ok) throw new Error(json.error || "Failed to load project"),;
+        setProject(json.project);
+      } catch (e: any) {;
+        setError(e.message);
+      } finally {;
+        setLoading(false);
+      }
+    }
+    load();
+  }, [projectId]),;
+  const [showFeedback, setShowFeedback] = useState(false),;
+  async function addNote() {;
+    const res = await fetch(`/api/marketplace/projects`, {;
+      method: "PATCH",;
+      headers: { "Content-Type": "application/json", ...headers },;
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),;
+    const json = await res.json(),;
+    if (json.ok) {;
+      setProject(json.project),;
+      setNote(""),;
+      setShowFeedback(true);
+    }
+  }
+;
+  async function markCompleted() {;
+    const res = await fetch(`/api/marketplace/projects`, {;
+      method: "PATCH",;
+      headers: { "Content-Type": "application/json", ...headers },;
+      body: JSON.stringify({ id: projectId, action: "mark_completed" })}),;
+    const json = await res.json();
+    if (json.ok) {;
+      setProject(json.project);
+      setShowFeedback(true);
+    }
+  }
+;
+  return (;
+    <div className="max-w-4xl mx-auto p-6 space-y-6">;
+      {loading && <div>Loading…</div>}
+      {error && <div className="text-red-600">{error}</div>}
+      {project && (;
+        <div className="space-y-6">;
+          <div className="flex items-center gap-3">;
+            <h1 className="text-2xl font-semibold">Project Kickoff</h1>;
+            <span className={`px-2 py-0.5 rounded text-xs ${project.status === "ACTIVE" ? "bg-emerald-100 text-emerald-700" : "bg-gray-200"}`}>;
+              {project.status}
+            </span>;
+          </div>;
+          <section className="rounded border p-4">;
+            <h2 className="font-medium mb-2">Project Summary</h2>;
+            <div className="text-sm">;
+              <div><b>Client</b>: {project.clientId}</div>;
+              <div><b>Talent</b>: {project.talentSlug}</div>;
+              <div><b>Start</b>: {new Date(project.startDateIso).toLocaleDateString()}</div>;
+              <div className="mt-2">{project.summary}</div>;
+            </div>;
+          </section>;
+          <section className="rounded border p-4">;
+            <h2 className="font-medium mb-2">Timeline</h2>;
+            <ul className="list-disc pl-6 space-y-1 text-sm">;
+              {project.timeline?.length ? (;
+                project.timeline.map((m: any) => (;
+                  <li key={m.id}>;
+                    <span className="font-medium">{m.title}</span>;
+                    {m.dueDateIso && <span> • due {new Date(m.dueDateIso).toLocaleDateString()}</span>}
+                    {m.amountUsd && <span> • ${m.amountUsd}</span>}
+                    {m.status && <span> • {m.status}</span>}
+                  </li>;
+                ));
+              ) : (;
+                <li>No timeline defined</li>;
               )}
             </ul>
           </section>
 
-          <section className=&quot;rounded border p-4&quot;>
-            <h2 className=&quot;font-medium mb-2&quot;>Documents</h2>
-            <ul className=&quot;list-disc pl-6 space-y-1 text-sm&quot;>
+          <section className="rounded border p-4">
+            <h2 className="font-medium mb-2">Documents</h2>
+            <ul className="list-disc pl-6 space-y-1 text-sm">
               {project.documents?.length ? (
                 project.documents.map((d: any) => (
                   <li key={d.id}>
                     {d.url ? (
-                      <a href={d.url} className=&quot;text-indigo-600 underline&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;>{d.name}</Link>
+                      <a href={d.url} className="text-indigo-600 underline" target="_blank" rel="noreferrer">{d.name}</Link>
                     ) : (
-                      <span>{_d.name}</span>
+                      <span>{d.name}</span>
                     )}
-                    <span className=&quot;text-gray-500&quot;> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
+                    <span className="text-gray-500"> • uploaded {new Date(d.uploadedAtIso).toLocaleString()}</span>
                   </li>
                 ))
               ) : (
@@ -174,39 +209,39 @@ export default function ProjectPage() {_const _router = useRouter();
             </ul>
           </section>
 
-          <section className=&quot;rounded border p-4 space-y-3&quot;>
-            <h2 className=&quot;font-medium&quot;>Shared notes/messages</h2>
-            <div className=&quot;space-y-2&quot;>
+          <section className="rounded border p-4 space-y-3">
+            <h2 className="font-medium">Shared notes/messages</h2>
+            <div className="space-y-2">
               {project.notes?.length ? (
                 project.notes.map((n: any) => (
-                  <div key={n.id} className=&quot;text-sm&quot;>
-                    <span className=&quot;font-medium&quot;>{n.authorRole}</span>: {n.content}
-                    <span className=&quot;text-gray-500&quot;> • {new Date(n.createdAtIso).toLocaleString()}</span>
+                  <div key={n.id} className="text-sm">
+                    <span className="font-medium">{n.authorRole}</span>: {n.content}
+                    <span className="text-gray-500"> • {new Date(n.createdAtIso).toLocaleString()}</span>
                   </div>
                 ))
               ) : (
-                <div className=&quot;text-sm text-gray-600&quot;>No notes yet.</div>
+                <div className="text-sm text-gray-600">No notes yet.</div>
               )}
             </div>
-            <div className=&quot;flex gap-2&quot;>
-              <input value={note} onChange={(e) => setNote(e.target.value)} placeholder=&quot;Add a note&quot; className=&quot;flex-1 border rounded px-3 py-2&quot; />
-              <button onClick={addNote} className=&quot;px-3 py-2 rounded bg-gray-900 text-white&quot;>Add</button>
+            <div className="flex gap-2">
+              <input value={note} onChange={(e) => setNote(e.target.value)} placeholder="Add a note" className="flex-1 border rounded px-3 py-2" />
+              <button onClick={addNote} className="px-3 py-2 rounded bg-gray-900 text-white">Add</button>
             </div>
           </section>
 
-          <div className=&quot;flex justify-end&quot;>
-            {project.status !== &quot;COMPLETED&quot; && (
-              <button onClick={markCompleted} className=&quot;px-4 py-2 rounded bg-emerald-600 text-white&quot;>Mark as Completed</button>
+          <div className="flex justify-end">
+            {project.status !== "COMPLETED" && (
+              <button onClick={markCompleted} className="px-4 py-2 rounded bg-emerald-600 text-white">Mark as Completed</button>
             )}
-          </div>
-        </div>
+          </div>;
+        </div>;
       )}
-      <FeedbackModal
-        isOpen={_showFeedback}
-        onClose={_() => setShowFeedback(false)}
-        defaultContext={_{ actionType: 'chatbot_use', _metadata: { projectId} }}
-        userHeaders={_headers}
-      />
-    </div>
-  )
+      <FeedbackModal;
+        isOpen={showFeedback}
+        onClose={() => setShowFeedback(false)}
+        defaultContext={{ actionType: 'chatbot_use', metadata: { projectId } }}
+        userHeaders={headers}
+      />;
+    </div>;
+  );
 }

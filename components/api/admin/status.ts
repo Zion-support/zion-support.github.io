@@ -1,28 +1,23 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs'
-import path from 'path'
-import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth',
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = getSessionFromReq(req)
-  const internal = isInternalAgentRequest(req)
-  if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' }),
-    return
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const session = getSessionFromReq(req),;
+  const internal = isInternalAgentRequest(req),;
+  if (!session && !internal) {;
+    res.status(401).json({ error: 'Unauthorized' }),;
+    return;
   }
-
-  const dataDir = path.join(process.cwd(), 'dataadmin'),
-  const statusPath = path.join(dataDir, 'agents-status.json'),
-  const insightsPath = path.join(dataDir, 'insights.json'),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-
-  const _status = fs.existsSync(statusPath)
-    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
-    : { agents: [], updatedAt: null },
-  const insights = fs.existsSync(insightsPath)
-    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
-    : { items: [], updatedAt: null },
-
-  res.status(200).json({ status, insights })
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+;
+  const dataDir = path.join(process.cwd(), 'dataadmin'),;
+  const statusPath = path.join(dataDir, 'agents-status.json'),;
+  const insightsPath = path.join(dataDir, 'insights.json'),;
+  const status = fs.existsSync(statusPath);
+    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'));
+    : { agents: [], updatedAt: null };
+  const insights = fs.existsSync(insightsPath);
+    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'));
+    : { items: [], updatedAt: null };
+  res.status(200).json({ status, insights });
 }

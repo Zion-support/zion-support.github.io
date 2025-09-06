@@ -1,18 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next",
-import { readState } from "../../../utils/sync/storage"
+import { readState } from "../../../utils/sync/storage",
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState()
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState()
-import type {_NextApiRequest, _NextApiResponse} from "next";
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+  const state = readState(),
 
-export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_const _state = readState();
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  if (req.method === &quot;GET&quot;) {
+  if (req.method === "GET") {
     return res.status(200).json({
-      route: &quot;/multiverse/hub&quot;,
+      route: "/multiverse/hub",
       instanceId: state.config.instanceId,
       peers: state.config.peers,
       scope: state.config.scope,
@@ -21,5 +14,21 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
       lastSyncedAt: state.lastSyncedAt})
   }
 
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+  return res.status(405).json({ error: "Method not allowed" })
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState } from "../../../utils/sync/storage",;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const state = readState(),;
+  if (req.method === "GET") {;
+    return res.status(200).json({;
+      route: "/multiverse/hub",;
+      instanceId: state.config.instanceId,;
+      peers: state.config.peers,;
+      scope: state.config.scope,;
+      optIn: state.config.optIn;
+      paused: state.config.paused;
+      lastSyncedAt: state.lastSyncedAt});
+  }
+;
+  return res.status(405).json({ error: "Method not allowed" });
 }

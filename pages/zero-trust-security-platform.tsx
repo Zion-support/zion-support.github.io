@@ -1,48 +1,61 @@
-import React from 'react'
-import Head from 'next/head'
-import ServiceLanding from '../components/sections/ServiceLanding'
+import React from 'react',
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
 		<>
 			<Head>
 				<title>Zero Trust Security Platform | Zion Tech Group</title>
-				<meta name=&quot;description&quot; content=&quot;Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege.&quot; />
-				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/zero-trust-security-platform&quot; />
-			</Head>
-			<ServiceLanding
-				title=&quot;Zero Trust Security Platform&quot;
-				description=&quot;Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services.&quot;
-				subtitle=&quot;Trust nothing, verify everything&quot;
-import React from 'react';
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-
-export default function ZeroTrustSecurityPlatformPage() {_return (
-		<>
-			<Head>
-				<title>Zero Trust Security Platform | Zion Tech Group</title>
-				<meta name="description" content="Design and enforce zero trust architecture: identity-first access, _microsegmentation, _continuous verification, _and least privilege." />
+				<meta name="description" content="Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege." />
 				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />
 			</Head>
 			<ServiceLanding
 				title="Zero Trust Security Platform"
-				description="Accelerate zero trust adoption with reference architectures, _policy-as-code, _identity-aware proxies, _microsegmentation, _and continuous verification across users, _devices, _and services."
-				subtitle="Trust nothing, _verify everything"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
+				subtitle="Trust nothing, verify everything"
 				pricePerMonthUSD={3499}
 				implementationWeeks="4-8 weeks"
+				roiNote="Reduce breach impact and lateral movement risk, meet compliance faster"
 				features={[
-					&quot;Policy-as-code and enforcement&quot;,
-					&quot;Identity-aware proxies and device posture&quot;,
-					&quot;Microsegmentation and service mesh integration&quot;,
-					&quot;Continuous authentication and authorization&quot;,
-					&quot;Visibility and audit for compliance&quot;,
-					&quot;Rollout playbooks and migration kits&quot;
+					"Policy-as-code and enforcement",
+					"Identity-aware proxies and device posture",
+					"Microsegmentation and service mesh integration",
+					"Continuous authentication and authorization",
+					"Visibility and audit for compliance",
+					"Rollout playbooks and migration kits"
+import React from 'react',;
+import Head from 'next/head',;
+import ServiceLanding from '../components/sections/ServiceLanding',;
+export default function ZeroTrustSecurityPlatformPage() {;
+	return (;
+		<>;
+			<Head>;
+				<title>Zero Trust Security Platform | Zion Tech Group</title>;
+				<meta name="description" content="Design and enforce zero trust architecture: identity-first access, microsegmentation, continuous verification, and least privilege." />;
+				<link rel="canonical" href="https://ziontechgroup.com/zero-trust-security-platform" />;
+			</Head>;
+			<ServiceLanding;
+				title="Zero Trust Security Platform";
+				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services.";
+				subtitle="Trust nothing, verify everything";
+				pricePerMonthUSD={3499}
+				implementationWeeks="4-8 weeks";
+				roiNote="Reduce breach impact and lateral movement risk, meet compliance faster";
+				features={[;
+					"Policy-as-code and enforcement",;
+					"Identity-aware proxies and device posture",;
+					"Microsegmentation and service mesh integration",;
+					"Continuous authentication and authorization";
+					"Visibility and audit for compliance";
+					"Rollout playbooks and migration kits";
 				]}
 				industries={["Enterprise IT", "Financial Services", "Healthcare", "SaaS", "Public Sector"]}
 				canonical="https: //ziontechgroup.com/zero-trust-security-platform"
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 			/>
 		</>
 	)
+				canonical="https: //ziontechgroup.com/zero-trust-security-platform";
+			/>;
+		</>;
+	);
 }

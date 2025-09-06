@@ -6,13 +6,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" }),
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
   return res.status(201).json({ ok: true, file: { name, url: url || null } })
-import type {_NextApiRequest, _NextApiResponse} from "next";
-
-export default function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "POST") return res.status(405).json({ ok: false, _error: "Method not allowed"});
-  const {_name, _url} = req.body || {};
-  if (!name) return res.status(400).json({_ok: false, _error: "Missing name"});
-  // Echo back window.URL; real impl would upload to storage (Supabase, S3, etc.)
-  return res.status(201).json({_ok: true, _file: { name, _url: url || null} });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+import type { NextApiRequest, NextApiResponse } from "next",;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" }),;
+  const { name, url } = req.body || {};
+  if (!name) return res.status(400).json({ ok: false, error: "Missing name" });
+  // Echo back URL, real impl would upload to storage (Supabase, S3, etc.);
+  return res.status(201).json({ ok: true, file: { name, url: url || null } });
 }

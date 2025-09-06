@@ -1,32 +1,23 @@
 import React, { useState } from 'react',
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion',
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
   const [value, setValue] = useState(''),
   return (
-    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className=&quot;relative&quot;>
+    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
       <input
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-        className=&quot;w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500&quot;
-import React, {_useState} from 'react';
-
-export default function InteractiveSearch(_{_placeholder = 'Search talent, _skills, _or jobs...'}: {_placeholder?: string}) {_const [value, _setValue] = useState('');
-  return (_<motion.div initial={{ opacity: 0, _y: 4}} animate={_{ opacity: 1, _y: 0}} className="relative">
-      <input
-        value={_value}
-        onChange={_(e) => setValue(e.target.value)}
-        placeholder={_placeholder}
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
       />
-      {_value && (_<button
+      {value && (
+        <button
           onClick={() => setValue('')}
-          className=&quot;absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300&quot;
+          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
         >
           ✕
         </button>
       )}
-    </motion.div>
-  )
+    </motion.div>;
+  );
 }

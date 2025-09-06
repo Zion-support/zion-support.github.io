@@ -10,8 +10,8 @@ export default function PrivacySettingsPage() {
     if (!userId) return,
     setLoading(true),
     setMessage(''),
-    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`)
-    const json = await res.json()
+    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`),
+    const json = await res.json(),
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut),
     else setMessage(json.error || 'Failed to load'),
     setLoading(false)
@@ -25,14 +25,14 @@ export default function PrivacySettingsPage() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, optOut })}),
-    const json = await res.json()
+    const json = await res.json(),
     if (res.ok) setMessage('Saved'),
     else setMessage(json.error || 'Save failed'),
     setLoading(false)
   },
 
   useEffect(() => {
-    const savedUser = localStorage.getItem('user-id')
+    const savedUser = localStorage.getItem('user-id'),
     if (savedUser) setUserId(savedUser)
   }, []),
 
@@ -41,24 +41,24 @@ export default function PrivacySettingsPage() {
     load()
   },
 
-  return (_<div className="p-6 max-w-2xl mx-auto">
+  return (
+    <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
       <div className="space-y-3">
         <div className="flex items-center gap-2">
-          <input className="border px-2 py-1 rounded w-80" placeholder="Your User ID" value={_userId} onChange={_(e) => setUserId(e.target.value)} />
-          <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={_onSaveUser}>Use</button>
+          <input className="border px-2 py-1 rounded w-80" placeholder="Your User ID" value={userId} onChange={(e) => setUserId(e.target.value)} />
+          <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveUser}>Use</button>
         </div>
         <div className="flex items-center gap-2">
-          <input id="optout" type="checkbox" checked={_optOut} onChange={_(_e) => setOptOut(e.target.checked)} />
+          <input id="optout" type="checkbox" checked={optOut} onChange={(e) => setOptOut(e.target.checked)} />
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
-          <button disabled={_!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={_save}>Save</button>
-          <button disabled={_!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={_load}>Reload</button>
-          {_message && <div>{message}</div>}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-        </div>
-      </div>
-    </div>
-  )
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+          {message && <div>{message}</div>}
+        </div>;
+      </div>;
+    </div>;
+  );
 }

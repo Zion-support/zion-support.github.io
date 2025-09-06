@@ -1,30 +1,26 @@
-import React from 'react'
-import { useRouter } from 'next/router'
-import TalentGrid from '../../components/seo/TalentGrid'
-import FAQ from '../../components/seo/FAQ'
-export type LandingPayload = {
-  title: string,
-  h1: string,
-  bodyHtml: string,
-  region?: string,
-  service?: string,
-  faq: Array<{ q: string, a: string }>
-},
-
-export default function SEOLandingPage() {
-  const router = useRouter()
-  const { slug } = router.query as { slug?: string }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-
-  const [payload, setPayload] = React.useState<LandingPayload | null>(null),
-
-  React.useEffect(() => {
-    if (!router.isReady || !slug) return,
-    const dataParam = (router.query?.data as string) || ''
-    if (dataParam) {
-      try {
-        setPayload(JSON.parse(decodeURIComponent(dataParam))),
-        return
+import React from 'react',;
+import { useRouter } from 'next/router',;
+import TalentGrid from '../../components/seo/TalentGrid',;
+import FAQ from '../../components/seo/FAQ',;
+export type LandingPayload = {;
+  title: string,;
+  h1: string,;
+  bodyHtml: string,;
+  region?: string,;
+  service?: string,;
+  faq: Array<{ q: string, a: string }>;
+},;
+export default function SEOLandingPage() {;
+  const router = useRouter(),;
+  const { slug } = router.query as { slug?: string },;
+  const [payload, setPayload] = React.useState<LandingPayload | null>(null),;
+  React.useEffect(() => {;
+    if (!router.isReady || !slug) return,;
+    const dataParam = (router.query?.data as string) || '',;
+    if (dataParam) {;
+      try {;
+        setPayload(JSON.parse(decodeURIComponent(dataParam))),;
+        return;
       } catch {}
     }
     // Fallback: render a basic placeholder until a generated page is deployed
@@ -34,20 +30,20 @@ export default function SEOLandingPage() {
   if (!payload) return null,
 
   return (
-    <div className=&quot;max-w-4xl mx-auto&quot;>
+    <div className="max-w-4xl mx-auto">
       <head>
         <title>{payload.title}</title>
-        <meta name=&quot;description&quot; content={`${payload.title} • Zion Marketplace`} />
+        <meta name="description" content={`${payload.title} • Zion Marketplace`} />
       </head>
-      <h1 className=&quot;text-2xl font-semibold mb-4&quot;>{payload.h1}</h1>
-      <div className=&quot;prose dark:prose-invert max-w-none&quot; dangerouslySetInnerHTML={{ __html: payload.bodyHtml }} />
+      <h1 className="text-2xl font-semibold mb-4">{payload.h1}</h1>
+      <div className="prose dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: payload.bodyHtml }} />
 
-      <div className=&quot;mt-8&quot;>
-        <h2 className=&quot;text-lg font-semibold mb-2&quot;>Featured Talent</h2>
+      <div className="mt-8">
+        <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
       </div>
 
-      <FAQ items={_payload.faq} />
+      <FAQ items={payload.faq} />
     </div>
   )
 }

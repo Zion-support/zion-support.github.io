@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Phone,
+  Menu, 
+  X, 
+  ChevronDown, 
+  Phone, 
   Mail, 
   Facebook, 
   Twitter, 
@@ -18,18 +21,20 @@ import {
   ShoppingCart,
   Heart,
   GraduationCap,
-  Factory,
-  Truck,
-  CreditCard
-} from 'lucide-react'
+  Briefcase,
+  Home,
+  Globe,
+  BarChart3
+} from 'lucide-react';
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false)
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   const servicesDropdown = [
     {
@@ -68,7 +73,7 @@ const Header: React.FC = () => {
       href: '/services/ai-automation',
       icon: Zap
     }
-  ]
+  ];
 
   const solutionsDropdown = [
     {
@@ -95,7 +100,7 @@ const Header: React.FC = () => {
       href: '/solutions/enterprise',
       icon: Building
     }
-  ]
+  ];
 
   const industriesDropdown = [
     { name: 'Technology', href: '/industries/technology', icon: Code },
@@ -104,7 +109,7 @@ const Header: React.FC = () => {
     { name: 'Education', href: '/industries/education', icon: GraduationCap },
     { name: 'Manufacturing', href: '/industries/manufacturing', icon: Building },
     { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
-  ]
+  ];
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -113,7 +118,7 @@ const Header: React.FC = () => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Industries', href: '/industries' },
     { name: 'Contact', href: '/contact' }
-  ]
+  ];
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -223,7 +228,7 @@ const Header: React.FC = () => {
         </AnimatePresence>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

@@ -1,23 +1,21 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Link from 'next/link'
+import type { NextPage } from 'next',
+import Head from 'next/head',
+import Link from 'next/link',
 const ApiDevelopmentChat: NextPage = () => {
   return (
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
     <div>
       <Head>
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;ApiDevelopmentChat service&quot; />
+        <meta name="description" content="ApiDevelopmentChat service" />
       </Head>
       
       <main>
         <h1>ApiDevelopmentChat</h1>
         <p>Service details coming soon...</p>
-        <a href=&quot;/services&quot;>Back to Services</a>
+        <a href="/services">Back to Services</a>
       </main>
     </div>
   )
 },
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
-export default ApiDevelopmentChat
+export default ApiDevelopmentChat,

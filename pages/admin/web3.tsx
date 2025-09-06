@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react',
-import Head from 'next/head'
+import Head from 'next/head',
 export default function AdminWeb3Page() {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
 
   useEffect(() => {
-    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null,
     setUsers(raw ? JSON.parse(raw) : [])
   }, []),
 
@@ -20,41 +20,74 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
 
-export default function AdminWeb3Page() {_const [users, _setUsers] = useState<{ id: string; enabled: boolean; chain?: string}[]>([]);
-
-  useEffect__(() => {_const _raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null;
-    setUsers(raw ? JSON.parse(raw) : []);}, []);
-
-  const _save = (_list: unknown) => {_if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', _JSON.stringify(list));
-    setUsers(list);};
-
-  const _metrics = {_total: users.length, _evm: users.filter(u => u.chain === 'evm').length, _sol: users.filter(u => u.chain === 'sol').length, _enabled: users.filter(u => u.enabled).length, _disabled: users.filter(u => !u.enabled).length};
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  return (_<>
+  return (
+    <>
       <Head><title>Admin — Web3</title></Head>
-      <div className=&quot;max-w-3xl mx-auto space-y-6&quot;>
-        <h1 className=&quot;text-xl font-semibold&quot;>Web3 Admin</h1>
-        <div className=&quot;rounded-md border p-4&quot;>
-          <div className=&quot;font-medium mb-2&quot;>Usage Metrics</div>
-          <div className=&quot;text-sm text-gray-600&quot;>Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
+      <div className="max-w-3xl mx-auto space-y-6">
+        <h1 className="text-xl font-semibold">Web3 Admin</h1>
+        <div className="rounded-md border p-4">
+          <div className="font-medium mb-2">Usage Metrics</div>
+          <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
         </div>
-        <div className=&quot;rounded-md border p-4&quot;>
-          <div className=&quot;font-medium mb-2&quot;>Users</div>
-          {users.length === 0 && <div className=&quot;text-sm text-gray-500&quot;>No data yet</div>}
-          <ul className=&quot;space-y-2&quot;>
+        <div className="rounded-md border p-4">
+          <div className="font-medium mb-2">Users</div>
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+          <ul className="space-y-2">
             {users.map((u, i) => (
-              <li key={i} className=&quot;flex items-center justify-between&quot;>
-                <div className=&quot;text-sm&quot;>{u.id}</div>
-                <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
+              <li key={i} className="flex items-center justify-between">
+                <div className="text-sm">{u.id}</div>
+                <label className="inline-flex items-center gap-2 text-sm">
                   <span>Web3</span>
+                  <input type="checkbox" checked={u.enabled} onChange={(e) => {
+                    const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next)
                   }} />
                 </label>
               </li>
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+export default function AdminWeb3Page() {;
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),;
+  useEffect(() => {;
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null,;
+    setUsers(raw ? JSON.parse(raw) : []);
+  }, []),;
+  const save = (list: any) => {;
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list)),;
+    setUsers(list);
+  },;
+  const metrics = {;
+    total: users.length,;
+    evm: users.filter(u => u.chain === 'evm').length,;
+    sol: users.filter(u => u.chain === 'sol').length,;
+    enabled: users.filter(u => u.enabled).length;
+    disabled: users.filter(u => !u.enabled).length};
+  return (;
+    <>;
+      <Head><title>Admin — Web3</title></Head>;
+      <div className="max-w-3xl mx-auto space-y-6">;
+        <h1 className="text-xl font-semibold">Web3 Admin</h1>;
+        <div className="rounded-md border p-4">;
+          <div className="font-medium mb-2">Usage Metrics</div>;
+          <div className="text-sm text-gray-600">Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>;
+        </div>;
+        <div className="rounded-md border p-4">;
+          <div className="font-medium mb-2">Users</div>;
+          {users.length === 0 && <div className="text-sm text-gray-500">No data yet</div>}
+          <ul className="space-y-2">;
+            {users.map((u, i) => (;
+              <li key={i} className="flex items-center justify-between">;
+                <div className="text-sm">{u.id}</div>;
+                <label className="inline-flex items-center gap-2 text-sm">;
+                  <span>Web3</span>;
+                  <input type="checkbox" checked={u.enabled} onChange={(e) => {;
+                    const next = users.slice(), next[i] = { ...u, enabled: e.target.checked }, save(next);
+                  }} />;
+                </label>;
+              </li>;
             ))}
-          </ul>
-        </div>
-      </div>
-    </>
-  )
+          </ul>;
+        </div>;
+      </div>;
+    </>;
+  );
 }

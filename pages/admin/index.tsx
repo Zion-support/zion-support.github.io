@@ -1,13 +1,10 @@
-import Link from 'next/link'
-
+import Link from 'next/link',
 export default function AdminIndex() {
   return (
     <div className="space-y-2">
       <h1 className="text-2xl font-semibold">Admin</h1>
       <ul className="list-disc pl-6">
-        <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>
-        <li><Link href="/admin/fraud"><a className="text-blue-600 underline">Fraud Monitoring</a></Link></li>
-        <li><Link href="/admin/automation-status"><a className="text-blue-600 underline">Automation Status</a></Link></li>
+        <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</Link></Link></li>
       </ul>
     </div>
   )

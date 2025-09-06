@@ -1,7 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
-import Card from '../components/ui/Card'
-import Button from '../components/ui/Button'
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import { 
   Search,
   Filter, 
@@ -24,12 +24,7 @@ export default function ToolComparisonPage() {
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
   const [sortBy, setSortBy] = React.useState('rating'),
 
-export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm] = React.useState('');
-  const [selectedCategory, _setSelectedCategory] = React.useState('All');
-  const [sortBy, _setSortBy] = React.useState('rating');
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-
-  const _allTools = [
+  const allTools = [
     // AI Tools
     {
       name: 'ChatGPT',
@@ -41,7 +36,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],
       cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],
       website: 'https://chat.openai.com',
-      icon: <Brain className=&quot;w-6 h-6&quot; />,
+      icon: <Brain className="w-6 h-6" />,
       color: 'text-green-400'
     },
     {
@@ -54,7 +49,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['High-quality outputCreative controlCommercial rightsActive community'],
       cons: ['Discord-only interfaceLimited customizationMonthly subscription'],
       website: 'https://midjourney.com',
-      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      icon: <Zap className="w-6 h-6" />,
       color: 'text-purple-400'
     },
     {
@@ -67,7 +62,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],
       cons: ['ExpensiveLimited free trialCan be repetitive'],
       website: 'https://jasper.ai',
-      icon: <Brain className=&quot;w-6 h-6&quot; />,
+      icon: <Brain className="w-6 h-6" />,
       color: 'text-blue-400'
     },
     // SaaS Tools
@@ -81,7 +76,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Easy to useExtensive integrationsReliableGreat support'],
       cons: ['Can get expensiveLimited customization'],
       website: 'https://zapier.com',
-      icon: <Zap className=&quot;w-6 h-6&quot; />,
+      icon: <Zap className="w-6 h-6" />,
       color: 'text-orange-400'
     },
     {
@@ -94,7 +89,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
       cons: ['Learning curveLimited offline accessCan be overwhelming'],
       website: 'https://notion.so',
-      icon: <Globe className=&quot;w-6 h-6&quot; />,
+      icon: <Globe className="w-6 h-6" />,
       color: 'text-gray-400'
     },
     {
@@ -107,7 +102,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
       cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],
       website: 'https://stripe.com',
-      icon: <DollarSign className=&quot;w-6 h-6&quot; />,
+      icon: <DollarSign className="w-6 h-6" />,
       color: 'text-blue-400'
     },
     // Startup Tools
@@ -121,7 +116,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
       cons: ['Can get expensiveComplex for small teamsLimited customization'],
       website: 'https://hubspot.com',
-      icon: <TrendingUp className=&quot;w-6 h-6&quot; />,
+      icon: <TrendingUp className="w-6 h-6" />,
       color: 'text-orange-400'
     },
     {
@@ -134,7 +129,7 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Free tierEasy to useGood templatesAffordable'],
       cons: ['Limited free featuresBasic automationCan be expensive'],
       website: 'https://mailchimp.com',
-      icon: <Users className=&quot;w-6 h-6&quot; />,
+      icon: <Users className="w-6 h-6" />,
       color: 'text-yellow-400'
     },
     {
@@ -147,27 +142,27 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       pros: ['Free tierEasy integrationProfessional appearanceTime-saving'],
       cons: ['Limited free featuresBasic customizationCan be expensive'],
       website: 'https://calendly.com',
-      icon: <Globe className=&quot;w-6 h-6&quot; />,
+      icon: <Globe className="w-6 h-6" />,
       color: 'text-blue-400'
     }
-  ],
-
-  const _filteredTools = allTools.filter(tool => {_const _matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory
-    return matchesSearch && matchesCategory
-  }),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-
-  const _sortedTools = [...filteredTools].sort(_(a, _b) => {_switch (sortBy) {
-      case 'rating':
-        return b.rating - a.rating,
-      case 'users':
-        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, '')),
-      case 'name':
-        return a.name.localeCompare(b.name),
-      default: return 0
+  ],;
+  const categories = ['AllAI AssistantAI ArtAI WritingAutomationProductivityPaymentsMarketing & Sales', 'Email Marketing'],;
+  const filteredTools = allTools.filter(tool => {;
+    const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         tool.bestFor.toLowerCase().includes(searchTerm.toLowerCase()),;
+    const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory,;
+    return matchesSearch && matchesCategory;
+  }),;
+  const sortedTools = [...filteredTools].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'rating':;
+        return b.rating - a.rating,;
+      case 'users':;
+        return parseInt(b.users.replace(/[^0-9]/g, '')) - parseInt(a.users.replace(/[^0-9]/g, '')),;
+      case 'name':;
+        return a.name.localeCompare(b.name),;
+      default: return 0;
     }
   }),
 
@@ -176,140 +171,138 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
     if (pricing.includes('$')) return 'text-blue-400',
     return 'text-gray-400'
   },
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
     <>
       <Head>
         <title>Tool Comparison - Zion Tech Group</title>
-        <meta name=&quot;description&quot; content=&quot;Compare SaaS tools, AI services, and business solutions. Find the perfect tools for your business needs with our comprehensive comparison.&quot; />
-        <meta property=&quot;og:title&quot; content=&quot;Tool Comparison - Zion Tech Group&quot; />
-        <meta property=&quot;og:description&quot; content=&quot;Comprehensive comparison of SaaS tools and AI services to help you make informed decisions.&quot; />
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+        <meta name="description" content="Compare SaaS tools, AI services, and business solutions. Find the perfect tools for your business needs with our comprehensive comparison." />
+        <meta property="og:title" content="Tool Comparison - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive comparison of SaaS tools and AI services to help you make informed decisions." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       {/* Hero Section */}
-      <section className=&quot;relative min-h-screen flex items-center justify-center overflow-hidden bg-black&quot;>
-        <div className=&quot;absolute inset-0&quot;>
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]&quot; />
-          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]&quot; />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
         </div>
 
-        <div className=&quot;absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20&quot; />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
 
-        <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
-          <div className=&quot;mb-20 animate-fade-in&quot;>
-            <div className=&quot;mb-8&quot;>
-              <div className=&quot;inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-scale-in&quot;>
-                <Search className=&quot;w-4 h-4 mr-2&quot; />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-20 animate-fade-in">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-scale-in">
+                <Search className="w-4 h-4 mr-2" />
                 Smart Tool Selection
               </div>
             </div>
             
-            <h1 className=&quot;text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight&quot;>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
               Tool Comparison
             </h1>
-            <p className=&quot;text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light&quot;>
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
               Compare SaaS tools, AI services, and business solutions. 
               Make informed decisions with our comprehensive analysis and expert insights.
             </p>
 
-            <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center items-center mb-20&quot;>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
               <Button
-                href=&quot;#comparison&quot;
-                size=&quot;lg&quot;
-                className=&quot;animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40&quot;
+                href="#comparison"
+                size="lg"
+                className="animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40"
                 style={{ animationDelay: '0.2s' }}
               >
                 Start Comparing
-                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-                href=&quot;/contact&quot;
-                variant=&quot;outline&quot;
-                size=&quot;lg&quot;
-                className=&quot;animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5&quot;
+                href="/contact"
+                variant="outline"
+                size="lg"
+                className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
                 style={{ animationDelay: '0.4s' }}
-              >
-                Get Expert Advice
-              </Button>
-            </div>
-          </div>
-
+              >;
+                Get Expert Advice;
+              </Button>;
+            </div>;
+          </div>;
           {/* Stats */}
-          <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in&quot; style={{ animationDelay: '0.6s' }}>
-            <div className=&quot;text-center group&quot;>
-              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300&quot;>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
                 {allTools.length}+
               </div>
-              <div className=&quot;text-gray-400 text-sm&quot;>Tools Analyzed</div>
+              <div className="text-gray-400 text-sm">Tools Analyzed</div>
             </div>
-            <div className=&quot;text-center group&quot;>
-              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300&quot;>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300">
                 9
               </div>
-              <div className=&quot;text-gray-400 text-sm&quot;>Categories</div>
+              <div className="text-gray-400 text-sm">Categories</div>
             </div>
-            <div className=&quot;text-center group&quot;>
-              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300&quot;>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
                 4.7+
               </div>
-              <div className=&quot;text-gray-400 text-sm&quot;>Avg Rating</div>
+              <div className="text-gray-400 text-sm">Avg Rating</div>
             </div>
-            <div className=&quot;text-center group&quot;>
-              <div className=&quot;text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300&quot;>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
                 250M+
               </div>
-              <div className=&quot;text-gray-400 text-sm&quot;>Total Users</div>
+              <div className="text-gray-400 text-sm">Total Users</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Filters and Search */}
-      <section className=&quot;py-16 bg-gray-900&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;flex flex-col lg:flex-row gap-6 items-center justify-between&quot;>
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
-            <div className=&quot;relative flex-1 max-w-md&quot;>
-              <Search className=&quot;absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5&quot; />
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
-                type=&quot;text&quot;
-                placeholder=&quot;Search tools, categories, or use cases...&quot;
+                type="text"
+                placeholder="Search tools, categories, or use cases..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className=&quot;w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent&quot;
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
             </div>
 
             {/* Category Filter */}
-            <div className=&quot;flex flex-wrap gap-2&quot;>
+            <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={_() => setSelectedCategory(category)}
-                  className={_`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-purple-600 text-white shadow-lg'
-                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}`}
-                >
-                  {_category}
-                </button>
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
+                    selectedCategory === category;
+                      ? 'bg-purple-600 text-white shadow-lg';
+                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white';
+                  }`}
+                >;
+                  {category}
+                </button>;
               ))}
-            </div>
-
+            </div>;
             {/* Sort */}
-            <div className=&quot;flex items-center space-x-2&quot;>
-              <Filter className=&quot;w-5 h-5 text-gray-400&quot; />
+            <div className="flex items-center space-x-2">
+              <Filter className="w-5 h-5 text-gray-400" />
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className=&quot;bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500&quot;
+                className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
-                <option value=&quot;rating&quot;>Sort by Rating</option>
-                <option value=&quot;users&quot;>Sort by Users</option>
-                <option value=&quot;name&quot;>Sort by Name</option>
+                <option value="rating">Sort by Rating</option>
+                <option value="users">Sort by Users</option>
+                <option value="name">Sort by Name</option>
               </select>
             </div>
           </div>
@@ -317,79 +310,79 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       </section>
 
       {/* Comparison Table */}
-      <section id=&quot;comparison&quot; className=&quot;py-24 bg-black&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
+      <section id="comparison" className="py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Tool Comparison
             </h2>
-            <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Compare features, pricing, and user ratings to find the perfect tools for your business needs.
             </p>
           </div>
 
-          <div className=&quot;overflow-x-auto&quot;>
-            <table className=&quot;w-full&quot;>
+          <div className="overflow-x-auto">
+            <table className="w-full">
               <thead>
-                <tr className=&quot;border-b border-gray-800&quot;>
-                  <th className=&quot;text-left py-4 px-6 text-gray-300 font-medium&quot;>Tool</th>
-                  <th className=&quot;text-left py-4 px-6 text-gray-300 font-medium&quot;>Category</th>
-                  <th className=&quot;text-left py-4 px-6 text-gray-300 font-medium&quot;>Pricing</th>
-                  <th className=&quot;text-left py-4 px-6 text-gray-300 font-medium&quot;>Rating</th>
-                  <th className=&quot;text-left py-4 px-6 text-gray-300 font-medium&quot;>Users</th>
-                  <th className=&quot;text-left py-4 px-6 text-gray-300 font-medium&quot;>Best For</th>
-                  <th className=&quot;text-left py-4 px-6 text-gray-300 font-medium&quot;>Actions</th>
+                <tr className="border-b border-gray-800">
+                  <th className="text-left py-4 px-6 text-gray-300 font-medium">Tool</th>
+                  <th className="text-left py-4 px-6 text-gray-300 font-medium">Category</th>
+                  <th className="text-left py-4 px-6 text-gray-300 font-medium">Pricing</th>
+                  <th className="text-left py-4 px-6 text-gray-300 font-medium">Rating</th>
+                  <th className="text-left py-4 px-6 text-gray-300 font-medium">Users</th>
+                  <th className="text-left py-4 px-6 text-gray-300 font-medium">Best For</th>
+                  <th className="text-left py-4 px-6 text-gray-300 font-medium">Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {sortedTools.map((tool, index) => (
-                  <tr key={index} className=&quot;border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200&quot;>
-                    <td className=&quot;py-4 px-6&quot;>
-                      <div className=&quot;flex items-center space-x-3&quot;>
+                  <tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
+                    <td className="py-4 px-6">
+                      <div className="flex items-center space-x-3">
                         <div className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool.color}`}>
                           {tool.icon}
                         </div>
                         <div>
-                          <div className=&quot;font-semibold text-white&quot;>{tool.name}</div>
+                          <div className="font-semibold text-white">{tool.name}</div>
                         </div>
                       </div>
                     </td>
-                    <td className=&quot;py-4 px-6&quot;>
-                      <span className=&quot;px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300&quot;>
+                    <td className="py-4 px-6">
+                      <span className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300">
                         {tool.category}
                       </span>
                     </td>
-                    <td className=&quot;py-4 px-6&quot;>
+                    <td className="py-4 px-6">
                       <span className={`font-medium ${getPricingColor(tool.pricing)}`}>
                         {tool.pricing}
                       </span>
                     </td>
-                    <td className=&quot;py-4 px-6&quot;>
-                      <div className=&quot;flex items-center space-x-1&quot;>
-                        <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
-                        <span className=&quot;text-white&quot;>{tool.rating}</span>
+                    <td className="py-4 px-6">
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-white">{tool.rating}</span>
                       </div>
                     </td>
-                    <td className=&quot;py-4 px-6 text-gray-300&quot;>{tool.users}</td>
-                    <td className=&quot;py-4 px-6&quot;>
-                      <div className=&quot;max-w-xs text-sm text-gray-400&quot;>{tool.bestFor}</div>
+                    <td className="py-4 px-6 text-gray-300">{tool.users}</td>
+                    <td className="py-4 px-6">
+                      <div className="max-w-xs text-sm text-gray-400">{tool.bestFor}</div>
                     </td>
-                    <td className=&quot;py-4 px-6&quot;>
-                      <div className=&quot;flex space-x-2&quot;>
+                    <td className="py-4 px-6">
+                      <div className="flex space-x-2">
                         <Button
                           href={tool.website}
-                          variant=&quot;outline&quot;
-                          size=&quot;sm&quot;
-                          className=&quot;text-xs&quot;
+                          variant="outline"
+                          size="sm"
+                          className="text-xs"
                         >
                           Visit
-                          <ExternalLink className=&quot;w-3 h-3 ml-1&quot; />
+                          <ExternalLink className="w-3 h-3 ml-1" />
                         </Button>
                         <Button
                           href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
-                          variant=&quot;ghost&quot;
-                          size=&quot;sm&quot;
-                          className=&quot;text-xs&quot;
+                          variant="ghost"
+                          size="sm"
+                          className="text-xs"
                         >
                           Details
                         </Button>
@@ -402,129 +395,131 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
           </div>
 
           {sortedTools.length === 0 && (
-            <div className=&quot;text-center py-20&quot;>
-              <Search className=&quot;w-16 h-16 text-gray-600 mx-auto mb-4&quot; />
-              <h3 className=&quot;text-xl font-semibold text-gray-400 mb-2&quot;>No tools found</h3>
-              <p className=&quot;text-gray-500&quot;>Try adjusting your search criteria or category filter.</p>
+            <div className="text-center py-20">
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
             </div>
           )}
-        </div>
-      </section>
-
+        </div>;
+      </section>;
       {/* Detailed Comparison Cards */}
-      <section className=&quot;py-24 bg-gray-900&quot;>
-        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;text-center mb-20&quot;>
-            <h2 className=&quot;text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight&quot;>
+      <section className="py-24 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               Detailed Analysis
             </h2>
-            <p className=&quot;text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed&quot;>
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Deep dive into each tool's pros, cons, and use cases to make the best decision for your business.
             </p>
           </div>
 
-          <div className=&quot;grid grid-cols-1 lg:grid-cols-2 gap-8&quot;>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {sortedTools.slice(0, 6).map((tool, index) => (
               <Card
                 key={index}
-                className=&quot;group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1&quot;
+                className="group border border-gray-800 hover:border-purple-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className=&quot;flex items-start space-x-4 mb-4&quot;>
+                <div className="flex items-start space-x-4 mb-4">
                   <div className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}>
                     {tool.icon}
                   </div>
-                  <div className=&quot;flex-1&quot;>
-                    <h3 className=&quot;text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300&quot;>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
                       {tool.name}
                     </h3>
-                    <div className=&quot;flex items-center space-x-4 text-sm text-gray-400&quot;>
-                      <span className=&quot;px-2 py-1 bg-gray-800 rounded-full&quot;>{tool.category}</span>
-                      <div className=&quot;flex items-center space-x-1&quot;>
-                        <Star className=&quot;w-4 h-4 text-yellow-400 fill-current&quot; />
+                    <div className="flex items-center space-x-4 text-sm text-gray-400">
+                      <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span>{tool.rating}</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className=&quot;mb-4&quot;>
-                  <h4 className=&quot;text-sm font-semibold text-gray-300 mb-2&quot;>Best For:</h4>
-                  <p className=&quot;text-sm text-gray-400&quot;>{tool.bestFor}</p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-300 mb-2">Best For:</h4>
+                  <p className="text-sm text-gray-400">{tool.bestFor}</p>
                 </div>
 
-                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-4 mb-4&quot;>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <h4 className=&quot;text-sm font-semibold text-green-400 mb-2 flex items-center&quot;>
-                      <Check className=&quot;w-4 h-4 mr-1&quot; />
+                    <h4 className="text-sm font-semibold text-green-400 mb-2 flex items-center">
+                      <Check className="w-4 h-4 mr-1" />
                       Pros
                     </h4>
-                    <ul className=&quot;space-y-1&quot;>
+                    <ul className="space-y-1">
                       {tool.pros.slice(0, 3).map((pro, proIndex) => (
-                        <li key={proIndex} className=&quot;text-xs text-gray-400 flex items-start&quot;>
-                          <span className=&quot;w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0&quot; />
+                        <li key={proIndex} className="text-xs text-gray-400 flex items-start">
+                          <span className="w-1 h-1 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0" />
                           {pro}
-                        </li>
+                        </li>;
                       ))}
                     </ul>
                   </div>
                   <div>
-                    <h4 className=&quot;text-sm font-semibold text-red-400 mb-2 flex items-center&quot;>
-                      <X className=&quot;w-4 h-4 mr-1&quot; />
+                    <h4 className="text-sm font-semibold text-red-400 mb-2 flex items-center">
+                      <X className="w-4 h-4 mr-1" />
                       Cons
                     </h4>
-                    <ul className=&quot;space-y-1&quot;>
+                    <ul className="space-y-1">
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
-                        <li key={conIndex} className=&quot;text-xs text-gray-400 flex items-start&quot;>
-                          <span className=&quot;w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0&quot; />
+                        <li key={conIndex} className="text-xs text-gray-400 flex items-start">
+                          <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
                           {con}
-                        </li>
+                        </li>;
                       ))}
                     </ul>
                   </div>
                 </div>
 
-                <div className=&quot;flex items-center justify-between&quot;>
+                <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     {tool.pricing}
-                  </span>
-                  <Button
+                  </span>;
+                  <Button;
                     href={tool.website}
-                    variant=&quot;outline&quot;
-                    size=&quot;sm&quot;
-                    className=&quot;group-hover:border-purple-500 group-hover:text-purple-400&quot;
+                    variant="outline"
+                    size="sm"
+                    className="group-hover:border-purple-500 group-hover:text-purple-400"
                   >
                     Visit Website
-                    <ExternalLink className=&quot;w-4 h-4 ml-2&quot; />
+                    <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
+          </div>;
+        </div>;
+      </section>;
       {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
             Need Help Choosing?
           </h2>
-          <p className=&quot;text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed&quot;>
+          <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Our experts can analyze your business needs and recommend the perfect combination of tools to accelerate your growth.
           </p>
-          <div className=&quot;flex flex-col sm:flex-row gap-6 justify-center&quot;>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
-              href=&quot;/contact&quot;
-              variant=&quot;secondary&quot;
-              size=&quot;lg&quot;
-              className=&quot;bg-white text-purple-600 hover:bg-gray-100 shadow-2xl&quot;
+              href="/contact"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-purple-600 hover:bg-gray-100 shadow-2xl"
             >
               Get Expert Consultation
-              <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-              href=&quot;/saas-marketplace&quot;
-              variant=&quot;outline&quot;
-              size=&quot;lg&quot;
-              className=&quot;border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl&quot;
+              href="/saas-marketplace"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
             >
               Explore All Tools
             </Button>
@@ -533,4 +528,36 @@ export default function ToolComparisonPage() {_const [searchTerm, _setSearchTerm
       </section>
     </>
   )
+      <section className="py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden">;
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">;
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">;
+            Need Help Choosing?;
+          </h2>;
+          <p className="text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed">;
+            Our experts can analyze your business needs and recommend the perfect combination of tools to accelerate your growth.;
+          </p>;
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">;
+            <Button;
+              href="/contact";
+              variant="secondary";
+              size="lg";
+              className="bg-white text-purple-600 hover:bg-gray-100 shadow-2xl";
+            >;
+              Get Expert Consultation;
+              <ArrowRight className="w-5 h-5 ml-2" />;
+            </Button>;
+            <Button;
+              href="/saas-marketplace";
+              variant="outline";
+              size="lg";
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl";
+            >;
+              Explore All Tools;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+    </>;
+  );
 }

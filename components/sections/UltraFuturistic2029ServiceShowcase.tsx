@@ -1,15 +1,14 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion'
-import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react',
-import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard'
-import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations'
-type Service = CuttingEdgeInnovation2029 | any,
-
-interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[],
-  title?: string,
-  subtitle?: string,
-  maxServices?: number
+import React, { useState } from 'react',;
+import { motion } from 'framer-motion',;
+import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles } from 'lucide-react',;
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',;
+import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations',;
+type Service = CuttingEdgeInnovation2029 | any,;
+interface UltraFuturistic2029ServiceShowcaseProps {;
+  services: Service[],;
+  title?: string,;
+  subtitle?: string,;
+  maxServices?: number;
 }
 
 const categoryColors: { [key: string]: string } = {
@@ -30,8 +29,8 @@ const categoryIcons: { [key: string]: any } = {
 
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
   services,
-  title = &quot;2029 Ultra-Futuristic Innovations&quot;,
-  subtitle = &quot;Experience the future of technology with our revolutionary services&quot;,
+  title = "2029 Ultra-Futuristic Innovations",
+  subtitle = "Experience the future of technology with our revolutionary services",
   maxServices = 12
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -39,32 +38,33 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
 
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(services.map(service => service.category)))],
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   // Filter and sort services
-  const _filteredServices = services
+  const filteredServices = services
     .filter(service => selectedCategory === 'all' || service.category === selectedCategory)
-    .sort(_(a, _b) => {
+    .sort((a, b) => {
       switch (sortBy) {
         case 'innovation':
           // Default to 'Advanced' if innovationLevel is not available
-          const aLevel = (a as any).innovationLevel || 'Advanced'
-          const bLevel = (b as any).innovationLevel || 'Advanced'
+          const aLevel = (a as any).innovationLevel || 'Advanced',
+          const bLevel = (b as any).innovationLevel || 'Advanced',
           const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
         case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'rating':
           return b.rating - a.rating,
         default: return 0
       }
-    })
-    .slice(0, maxServices),
-
-  const _containerVariants = {_hidden: { opacity: 0}
-    visible: {_opacity: 1, _transition: {
-        staggerChildren: 0.1}
+    });
+    .slice(0, maxServices),;
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      }
     }
   },
 
@@ -75,133 +75,131 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       y: 0,
       transition: {
         duration: 0.6,
-        ease: &quot;easeOut&quot; as const
+        ease: "easeOut" as const
       }
     }
   },
 
   return (
-    <section className=&quot;py-20 relative overflow-hidden&quot;>
+    <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className=&quot;absolute inset-0 pointer-events-none&quot;>
-        <div className=&quot;absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl&quot;></div>
-        <div className=&quot;absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl&quot;></div>
-        <div className=&quot;absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl&quot;></div>
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>
       </div>
 
-      <div className=&quot;relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <motion.div
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className=&quot;text-center mb-16&quot;
+          className="text-center mb-16"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className=&quot;text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6&quot;
+            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
           >
-            {_title}
-          </motion.h2>
-          <motion.p
+            {title}
+          </motion.h2>;
+          <motion.p;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className=&quot;text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed&quot;
+            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
-            {_subtitle}
-          </motion.p>
-        </motion.div>
-
-        {_/* Filters and Controls */}
-        <motion.div
+            {subtitle}
+          </motion.p>;
+        </motion.div>;
+        {/* Filters and Controls */}
+        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className=&quot;flex flex-col sm:flex-row items-center justify-between gap-4 mb-12&quot;
+          className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-12"
         >
           {/* Category Filter */}
-          <div className=&quot;flex items-center space-x-2&quot;>
-            <span className=&quot;text-gray-300 text-sm font-medium&quot;>Filter by:</span>
-            <div className=&quot;flex flex-wrap gap-2&quot;>
+          <div className="flex items-center space-x-2">
+            <span className="text-gray-300 text-sm font-medium">Filter by:</span>
+            <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
                   key={category}
-                  onClick={_() => setSelectedCategory(category)}
-                  className={_`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50'}`}
-                >
-                  {_category === 'all' ? 'All Categories' : category}
-                </button>
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${;
+                    selectedCategory === category;
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg';
+                      : 'bg-gray-900/50 text-gray-300 hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50';
+                  }`}
+                >;
+                  {category === 'all' ? 'All Categories' : category}
+                </button>;
               ))}
-            </div>
-          </div>
-
+            </div>;
+          </div>;
           {/* Sort Options */}
-          <div className=&quot;flex items-center space-x-2&quot;>
-            <span className=&quot;text-gray-300 text-sm font-medium&quot;>Sort by:</span>
+          <div className="flex items-center space-x-2">
+            <span className="text-gray-300 text-sm font-medium">Sort by:</span>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className=&quot;px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500&quot;
+              className="px-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 focus:outline-none focus:border-purple-500"
             >
-              <option value=&quot;innovation&quot;>Innovation Level</option>
-              <option value=&quot;price&quot;>Price</option>
-              <option value=&quot;rating&quot;>Rating</option>
+              <option value="innovation">Innovation Level</option>
+              <option value="price">Price</option>
+              <option value="rating">Rating</option>
             </select>
           </div>
         </motion.div>
 
-        {_/* Services Grid */}
-        <motion.div
+        {/* Services Grid */}
+        <motion.div;
           variants={containerVariants}
-          initial=&quot;hidden&quot;
-          whileInView=&quot;visible&quot;
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {_filteredServices.map(_(service, _index) => (
+          {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
-              className=&quot;group&quot;
+              className="group"
             >
               <UltraFuturisticServiceCard
                 service={service}
-                className=&quot;h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300&quot;
+                className="h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300"
               />
             </motion.div>
           ))}
-        </motion.div>
-
-        {_/* Call to Action */}
-        <motion.div
+        </motion.div>;
+        {/* Call to Action */}
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className=&quot;text-center mt-16&quot;
+          className="text-center mt-16"
         >
-          <div className=&quot;bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm&quot;>
-            <h3 className=&quot;text-3xl font-bold text-white mb-4&quot;>
+          <div className="bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Experience the Future?
             </h3>
-            <p className=&quot;text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot;>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of forward-thinking companies already using our revolutionary 2029 technology solutions.
             </p>
-            <div className=&quot;flex flex-col sm:flex-row items-center justify-center gap-4&quot;>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href=&quot;/contact&quot;
-                className=&quot;px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25&quot;
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25"
               >
                 Get Started Today
               </a>
               <a
-                href=&quot;/pricing&quot;
-                className=&quot;px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold&quot;
+                href="/pricing"
+                className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold"
               >
                 View Pricing
               </a>
@@ -209,39 +207,38 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
           </div>
         </motion.div>
 
-        {_/* Innovation Stats */}
-        <motion.div
+        {/* Innovation Stats */}
+        <motion.div;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className=&quot;mt-20&quot;
+          className="mt-20"
         >
-          <div className=&quot;grid grid-cols-1 md:grid-cols-4 gap-8&quot;>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
               { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-            ].map((stat, index) => (
-              <motion.div
+            ].map((stat, index) => (;
+              <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className=&quot;text-center&quot;
+                className="text-center"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className=&quot;w-8 h-8 text-white&quot; />
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className=&quot;text-3xl font-bold text-white mb-2&quot;>{stat.value}</div>
-                <div className=&quot;text-gray-400&quot;>{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )
-},
-
-export default UltraFuturistic2029ServiceShowcase
+          </div>;
+        </motion.div>;
+      </div>;
+    </section>;
+  );
+},;
+export default UltraFuturistic2029ServiceShowcase;

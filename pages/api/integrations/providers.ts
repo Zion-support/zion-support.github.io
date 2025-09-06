@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { PROVIDERS } from '../../../lib/integrations/registry'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' }),
-  res.status(200).json({ providers: PROVIDERS })
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { PROVIDERS } from '../../../lib/integrations/registry',;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  res.status(200).json({ providers: PROVIDERS });
 }

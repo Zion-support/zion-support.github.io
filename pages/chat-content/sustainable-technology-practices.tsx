@@ -1,16 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from 'next',
+import Head from 'next/head',
 const SustainableTechnologyPractices: NextPage = () => {
   return (
-import type {_NextPage} from 'next';
-import Head from 'next/head';
-
-const SustainableTechnologyPractices: NextPage = () => {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <div>
       <Head>
         <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;SustainableTechnologyPractices page&quot; />
+        <meta name="description" content="SustainableTechnologyPractices page" />
       </Head>
       
       <main>
@@ -20,6 +15,5 @@ const SustainableTechnologyPractices: NextPage = () => {_return (
     </div>
   )
 },
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
-export default SustainableTechnologyPractices
+export default SustainableTechnologyPractices,

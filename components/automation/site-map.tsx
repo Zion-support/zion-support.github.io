@@ -1,16 +1,15 @@
-import fs from 'fs'
-import path from 'path'
-type RouteInfo = { path: string, lastModified: string },
-
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datasite-map.json'),
-  let routes: RouteInfo[] = []
-  let generatedAt = ''
-  try {
-    const raw = fs.readFileSync(file, 'utf-8'),
-    const json = JSON.parse(raw)
-    routes = json.routes || [],
-    generatedAt = json.generatedAt || ''
+import fs from 'fs',;
+import path from 'path',;
+type RouteInfo = { path: string, lastModified: string },;
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datasite-map.json'),;
+  let routes: RouteInfo[] = [],;
+  let generatedAt = '',;
+  try {;
+    const raw = fs.readFileSync(file, 'utf-8'),;
+    const json = JSON.parse(raw);
+    routes = json.routes || [];
+    generatedAt = json.generatedAt || '';
   } catch {}
   return { props: { routes, generatedAt } }
 }
@@ -23,22 +22,21 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
       <div className="overflow-auto border rounded">
         <table className="min-w-full text-sm">
           <thead className="bg-gray-50">
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
             <tr>
-              <th className=&quot;text-left p-2&quot;>Route</th>
-              <th className=&quot;text-left p-2&quot;>Last Modified</th>
+              <th className="text-left p-2">Route</th>
+              <th className="text-left p-2">Last Modified</th>
             </tr>
           </thead>
           <tbody>
             {routes.map(r => (
-              <tr key={r.path} className=&quot;border-t&quot;>
-                <td className=&quot;p-2&quot;>{r.path}</td>
-                <td className=&quot;p-2&quot;>{new Date(r.lastModified).toLocaleString()}</td>
+              <tr key={r.path} className="border-t">
+                <td className="p-2">{r.path}</td>
+                <td className="p-2">{new Date(r.lastModified).toLocaleString()}</td>
               </tr>
             ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  )
+          </tbody>;
+        </table>;
+      </div>;
+    </div>;
+  );
 }

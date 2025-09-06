@@ -1,16 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
+import type { NextPage } from 'next',
+import Head from 'next/head',
 const FutureOfWorkAndAutomation: NextPage = () => {
   return (
-import type {_NextPage} from 'next';
-import Head from 'next/head';
-
-const FutureOfWorkAndAutomation: NextPage = () => {_return (
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <div>
       <Head>
         <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
-        <meta name=&quot;description&quot; content=&quot;FutureOfWorkAndAutomation page&quot; />
+        <meta name="description" content="FutureOfWorkAndAutomation page" />
       </Head>
       
       <main>
@@ -20,6 +15,5 @@ const FutureOfWorkAndAutomation: NextPage = () => {_return (
     </div>
   )
 },
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
-export default FutureOfWorkAndAutomation
+export default FutureOfWorkAndAutomation,

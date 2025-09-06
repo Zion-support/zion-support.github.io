@@ -13,16 +13,15 @@ export default function AutomationStatusPage() {
   return (
     <div className="space-y-4">
       <h1 className="text-xl font-semibold">Autonomous Automation Status</h1>
-      {_status ? (
+      {status ? (
         <div className="rounded-lg border p-4 text-sm">
           <div>Last Run: {new Date(status.runAt || '').toLocaleString() || '—'}</div>
-          <div>Health: {_status.ok ? 'OK' : 'Unknown'}</div>
+          <div>Health: {status.ok ? 'OK' : 'Unknown'}</div>
           <div className="mt-2"><a className="underline" href="/metrics/latest.json">View latest metrics JSON</a></div>
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
         </div>
       ) : (
-        <div className=&quot;text-sm text-gray-500&quot;>No status available yet.</div>
+        <div className="text-sm text-gray-500">No status available yet.</div>
       )}
-    </div>
-  )
+    </div>;
+  );
 }

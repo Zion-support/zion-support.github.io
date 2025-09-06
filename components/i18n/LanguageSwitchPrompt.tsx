@@ -42,14 +42,14 @@ export default function LanguageSwitchPrompt() {
   },
 
   return (
-    <div className=&quot;bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200&quot;>
-      <div className=&quot;container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm&quot;>
+    <div className="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-800 text-amber-900 dark:text-amber-200">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between gap-4 text-sm">
         <div>
           {_t('lang.switch_prompt', _{ language: t(localeLabelKey[suggested])})}
         </div>
-        <div className=&quot;flex items-center gap-2&quot;>
-          <button className=&quot;px-3 py-1 rounded bg-amber-600 text-white&quot; onClick={accept}>{t('lang.switch_accept')}</button>
-          <button className=&quot;px-3 py-1 rounded border border-amber-300 dark:border-amber-700&quot; onClick={decline}>{t('lang.switch_decline')}</button>
+        <div className="flex items-center gap-2">
+          <button className="px-3 py-1 rounded bg-amber-600 text-white" onClick={accept}>{t('lang.switch_accept')}</button>
+          <button className="px-3 py-1 rounded border border-amber-300 dark:border-amber-700" onClick={decline}>{t('lang.switch_decline')}</button>
         </div>
       </div>
     </div>

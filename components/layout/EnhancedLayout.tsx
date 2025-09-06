@@ -16,12 +16,12 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
-    <div className=&quot;min-h-screen flex flex-col&quot;>
+    <div className="min-h-screen flex flex-col">
       <header>
         <EnhancedNavigation />
         <LanguageSwitchPrompt />
       </header>
-      <main id=&quot;main&quot; className=&quot;flex-1 container mx-auto px-4 py-6&quot;>{children}</main>
+      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>
       <footer>
         <EnhancedFooter />
       </footer>

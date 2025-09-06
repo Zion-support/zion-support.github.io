@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next",
-import { v4 as uuidv4 } from "uuid"
-import { getDemoUser } from "../../../utils/marketplace/auth"
+import { v4 as uuidv4 } from "uuid",
+import { getDemoUser } from "../../../utils/marketplace/auth",
 import { getProjectById, saveProject } from "../../../utils/marketplace/store",
 import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplace/types",
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
@@ -13,15 +12,14 @@ function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true,
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true,
   return false
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const user = getDemoUser(req)
-    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string }
+    const user = getDemoUser(req),
+    const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string },
     if (!id) return bad(res, "Missing project id"),
-    const project = getProjectById(id)
+    const project = getProjectById(id),
     if (!project) return bad(res, "Not found", 404),
     if (!canAccess(user, project)) return bad(res, "Forbidden", 403),
 
@@ -30,12 +28,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     if (req.method === "PATCH") {
-      const { action } = req.body as { action: string }
+      const { action } = req.body as { action: string },
 
       if (action === "add_note") {
-        const { content } = req.body as { content: string }
+        const { content } = req.body as { content: string },
         if (!content) return bad(res, "Missing content"),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
         const note: ProjectNote = {
           id: uuidv4(),
           authorId: user.id,
@@ -61,22 +58,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
 
       if (action === "update_timeline") {
-        const { timeline } = req.body as { timeline: Project["timeline"] }
+        const { timeline } = req.body as { timeline: Project["timeline"] },
         project.timeline = Array.isArray(timeline) ? timeline : project.timeline,
         saveProject(project),
         return res.json({ ok: true, project })
       }
-
-      if (action === "mark_completed") {
-        project.status = "COMPLETED",
-        saveProject(project),
-        return res.json({ ok: true, project })
+;
+      if (action === "mark_completed") {;
+        project.status = "COMPLETED",;
+        saveProject(project);
+        return res.json({ ok: true, project });
       }
-
-      return bad(res, "Unknown action")
+;
+      return bad(res, "Unknown action");
     }
 
     return bad(res, "Method not allowed", 405)
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+  } catch (e: any) {
+    const status = e?.statusCode || 500,
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+;
+    return bad(res, "Method not allowed", 405);
+  } catch (e: any) {;
+    const status = e?.statusCode || 500;
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" });
   }
 }
