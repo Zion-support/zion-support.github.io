@@ -1,79 +1,46 @@
+import React, { useEffect, useState } from 'react';
 
-interface PerformanceMonitorProps {
-  enabled?: boolean;
-  logToConsole?: boolean;
-  sendToAnalytics?: boolean;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enabled = process.env.NODE_ENV === 'development',
-  logToConsole = true,
-  sendToAnalytics = false
-}) => {
-  const { measurePerformance, logPerformance } = usePerformance();
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    memoryUsage: 0,
+    renderTime: 0,
+  });
 
   useEffect(() => {
-    if (!enabled) return;
-
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        // Re-measure performance when page becomes visible
-        setTimeout(logPerformance, 1000);
-      }
+    // Monitor performance metrics
+    const startTime = performance.now();
+    
+    const updateMetrics = () => {
+      const loadTime = performance.now() - startTime;
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      const renderTime = performance.now() - startTime;
+      
+      setMetrics({
+        loadTime: Math.round(loadTime),
+        memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
+        renderTime: Math.round(renderTime),
+      });
     };
 
-    const handleBeforeUnload = () => {
-      // Log final performance metrics before page unload
-      logPerformance();
-    };
+    // Update metrics after component mount
+    const timer = setTimeout(updateMetrics, 100);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-    window.addEventListener('beforeunload', handleBeforeUnload);
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      window.removeEventListener('beforeunload', handleBeforeUnload);
-    };
-  }, [enabled, logPerformance]);
-
-  // Monitor Core Web Vitals
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
-
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (logToConsole) {
-          console.log(`Performance Entry: ${entry.name}`, {
-            duration: entry.duration,
-            startTime: entry.startTime,
-            entryType: entry.entryType
-          });
-        }
-
-        if (sendToAnalytics) {
-          // Send to analytics service
-          // analytics.track('performance_entry', {
-          //   name: entry.name,
-          //   duration: entry.duration,
-          //   startTime: entry.startTime,
-          //   entryType: entry.entryType
-          // });
-        }
-      }
-    });
-
-    try {
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint', 'largest-contentful-paint'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [enabled, logToConsole, sendToAnalytics]);
-
-  return null; // This component doesn't render anything
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-2 rounded-lg text-xs font-mono z-50">
+      <div>Load: {metrics.loadTime}ms</div>
+      <div>Memory: {metrics.memoryUsage}MB</div>
+      <div>Render: {metrics.renderTime}ms</div>
+    </div>
+  );
 };
 
-export default PerformanceMonitor;
+export { PerformanceMonitor };

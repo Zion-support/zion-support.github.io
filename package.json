@@ -89,10 +89,7 @@
     "quality:analyze": "node scripts/automation/ai-code-quality-analyzer.cjs",
     "quality:fix": "npm run lint:fix && npm run type-check",
     "security:scan": "node scripts/automation/ai-security-intelligence.cjs",
-<<<<<<< HEAD
-=======
     "security:audit": "node scripts/security-audit.cjs",
->>>>>>> origin/main
     "performance:analyze": "node scripts/automation/ai-performance-predictor.cjs",
     "performance:optimize": "node scripts/automation/advanced-performance-optimizer.cjs",
     "monitor:health": "node scripts/health-monitor-enhanced.cjs",
@@ -183,22 +180,9 @@
     "automation:health-monitor": "node scripts/intelligent/health-monitor.js",
     "automation:log-analyzer": "node scripts/intelligent/log-analyzer.js",
     "automation:resource-optimizer": "node scripts/intelligent/resource-optimizer.js",
-<<<<<<< HEAD
     "security:fix": "npm audit fix --force",
     "sitemap": "node scripts/generate-sitemap-enhanced.js",
     "sitemap:generate": "node scripts/generate-sitemap-enhanced.js",
-=======
-<<<<<<< HEAD
-    "security:audit": "node scripts/security-audit.js",
-    "security:fix": "npm audit fix --force",
-    "sitemap": "node scripts/generate-sitemap.js",
-    "sitemap:generate": "node scripts/generate-sitemap.js",
-=======
-    "security:fix": "npm audit fix --force",
-    "sitemap": "node scripts/generate-sitemap-enhanced.js",
-    "sitemap:generate": "node scripts/generate-sitemap-enhanced.js",
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "pm2:fastads:start": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && pm2 start ecosystem.fast-ads.local.cjs --update-env",
     "pm2:fastads:restart": "node -e \"const fs=require('fs');fs.mkdirSync('automation/logs',{recursive:true})\" && (pm2 restart ecosystem.fast-ads.local.cjs || pm2 start ecosystem.fast-ads.local.cjs --update-env)",
     "pm2:fastads:stop": "pm2 stop ecosystem.fast-ads.local.cjs || true",
@@ -216,17 +200,6 @@
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    "perf:monitor": "node scripts/performance-monitor.js",
-    "perf:audit": "npm run build:analyze",
-    "perf:lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
-    "format": "prettier --write .",
-    "automation:accessibility": "node automation/accessibility-checker.cjs",
-    "automation:security-audit": "node automation/security-audit.cjs",
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "perf:monitor": "node scripts/performance-monitor.cjs",
     "perf:audit": "npm run perf:monitor",
     "perf:lighthouse": "lighthouse https://ziontechgroup.com --output=html --output-path=./lighthouse-report.html",
@@ -234,7 +207,6 @@
     "automation:accessibility": "node automation/accessibility-checker.cjs",
     "automation:security-audit": "node automation/security-audit.cjs",
     "automation:code-quality-legacy": "node automation/code-quality.cjs",
->>>>>>> origin/main
     "format:check": "prettier --check .",
     "ci:full": "bash scripts/comprehensive-build-test.sh",
     "ci:auto": "npm ci && npm run lint:check && npm run type-check && npm run build && npm run test:smoke",
@@ -299,18 +271,12 @@
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
     "@hookform/resolvers": "^5.2.1",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     "@magneticwatermelon/mcp-toolkit": "^1.1.4",
     "@modelcontextprotocol/sdk": "^1.17.1",
     "@modelcontextprotocol/server-filesystem": "^2025.7.29",
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
     "@octokit/rest": "^22.0.0",
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -336,8 +302,9 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@radix-ui/react-tooltip": "^1.0.7",
-
-
+    "@reduxjs/toolkit": "^2.9.0",
+    "@sendgrid/mail": "^8.1.5",
+    "@stripe/stripe-js": "^7.9.0",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -363,19 +330,12 @@
     "d3-path": "^3.1.0",
     "d3-time-format": "^4.1.0",
     "date-fns": "^2.30.0",
-<<<<<<< HEAD
-    "events": "^3.3.0",
-=======
     "dotenv": "^17.2.2",
-<<<<<<< HEAD
     "epub-gen": "^0.1.0",
     "ethers": "^6.15.0",
-=======
->>>>>>> origin/main
     "events": "^3.3.0",
     "express-rate-limit": "^8.1.0",
     "fastify": "^5.6.0",
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "framer-motion": "^10.16.16",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
@@ -388,22 +348,12 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
-<<<<<<< HEAD
-    "postcss-preset-env": "^10.3.1",
-    "prettier": "^3.0.3",
-=======
-<<<<<<< HEAD
     "pdf-lib": "^1.17.1",
     "pdfkit": "^0.17.2",
     "postcss": "^8.4.32",
     "postcss-preset-env": "^10.3.1",
     "prettier": "^3.0.3",
     "puppeteer": "^24.19.0",
-=======
-    "postcss-preset-env": "^10.3.1",
-    "prettier": "^3.0.3",
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.3.1",
@@ -415,10 +365,7 @@
     "react-router-dom": "^6.30.1",
     "sharp": "^0.34.3",
     "sonner": "^2.0.7",
-<<<<<<< HEAD
-=======
     "swr": "^2.3.6",
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.1.0",
@@ -444,10 +391,7 @@
     "@netlify/plugin-nextjs": "^5.12.1",
     "@next/bundle-analyzer": "^13.5.6",
     "@next/eslint-plugin-next": "^15.5.2",
-<<<<<<< HEAD
-=======
     "@playwright/test": "^1.55.0",
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.8.0",
@@ -463,27 +407,14 @@
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
     "@vitejs/plugin-react": "^5.0.2",
-<<<<<<< HEAD
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.35.0",
-    "eslint-config-next": "^14.2.32",
-    "eslint-formatter-junit": "^8.40.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-=======
-    "autoprefixer": "^10.4.16",
-<<<<<<< HEAD
+    "axe-core": "^4.10.3",
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-formatter-junit": "^8.40.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-prettier": "^5.5.4",
-=======
-    "eslint": "^9.34.0",
-    "eslint-config-next": "^14.2.32",
-    "eslint-formatter-junit": "^8.40.0",
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
@@ -497,20 +428,10 @@
     "jsdom": "^24.0.0",
     "lighthouse": "^12.8.2",
     "pm2": "^6.0.8",
-<<<<<<< HEAD
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "rollup": "^4.50.0",
     "tailwindcss": "^3.4.17",
-=======
-    "postcss": "^8.4.31",
-    "prettier": "^3.6.2",
-    "rollup": "^4.50.0",
-    "tailwindcss": "^3.3.5",
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     "terser": "^5.43.1",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",

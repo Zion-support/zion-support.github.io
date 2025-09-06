@@ -1,125 +1,139 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import Button from './Button';
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
-  const navigation = [
+  const navigation = useMemo(() => [
     { name: 'Home', href: '/' },
+    { 
+      name: 'Services', 
+      href: '/services',
+      children: [
+        { name: 'AI Solutions', href: '/services/ai-solutions' },
+        { name: 'Blockchain', href: '/services/blockchain' },
+        { name: 'IT Solutions', href: '/services/it-solutions' },
+        { name: 'Consulting', href: '/services/consulting' },
+      ]
+    },
     { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-
+    { name: 'Contact', href: '/contact' },
+  ], []);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
-      <div className="container flex h-16 items-center px-4 sm:px-6">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Link to="/" className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-          </Link>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <motion.div
-                key={item.path}
-                whileHover={{ y: -2 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Link 
-                  to={item.path} 
-                  className={`transition-colors duration-200 relative ${
-                    location.pathname === item.path 
-                      ? 'text-white' 
-                      : 'text-gray-300 hover:text-white'
-                  }`}
+          <nav className="hidden md:flex space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  to={item.href}
+                  className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-200 flex items-center"
+                  onMouseEnter={() => item.children && setIsServicesOpen(true)}
+                  onMouseLeave={() => item.children && setIsServicesOpen(false)}
                 >
-                  {item.label}
-                  {location.pathname === item.path && (
-                    <motion.div
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600"
-                      layoutId="activeTab"
-                      initial={false}
-                      transition={{ duration: 0.3 }}
-                    />
-                  )}
+                  {item.name}
+                  {item.children && <ChevronDown className="ml-1 h-4 w-4" />}
                 </Link>
-              </motion.div>
+                
+                {/* Dropdown Menu */}
+                {item.children && isServicesOpen && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-gray-900 rounded-md shadow-lg border border-gray-700 py-1 z-50">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.name}
+                        to={child.href}
+                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 transition-colors duration-200"
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button variant="primary" size="small">
-                Get Started
-              </Button>
-            </motion.div>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
-              className="md:hidden border-t border-slate-700"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="py-4 space-y-4">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-lg mt-2 border border-gray-700">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  <Link
+                    to={item.href}
+                    className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors duration-200"
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <Link
-                      to={item.path}
-                      className={`block px-4 py-2 text-lg transition-colors ${
-                        location.pathname === item.path
-                          ? 'text-white bg-slate-800 rounded-lg'
-                          : 'text-gray-300 hover:text-white hover:bg-slate-800 rounded-lg'
-                      }`}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </motion.div>
-                ))}
-                <motion.div
-                  className="px-4 pt-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.5 }}
+                    {item.name}
+                  </Link>
+                  {item.children && (
+                    <div className="pl-4 space-y-1">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.name}
+                          to={child.href}
+                          className="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-gray-800 rounded-md transition-colors duration-200"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              <div className="pt-4">
+                <Link
+                  to="/contact"
+                  className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  <Button variant="primary" size="small" className="w-full">
-                    Get Started
-                  </Button>
-                </motion.div>
+                  Get Started
+                </Link>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            </div>
+          </div>
+        )}
       </div>
-    </motion.header>
+    </header>
   );
 };
 
-export default Header;
+export { Header };
