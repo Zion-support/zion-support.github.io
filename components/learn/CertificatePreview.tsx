@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export default function CertificatePreview({ courseId, userId;
 =======
@@ -9,15 +10,61 @@ import React from 'react';
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+import React from "react";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+import React from "react";
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CertificatePreview({
+<<<<<<< HEAD
   courseId
   userId = "demo-user"
 }: {
+=======
+  courseId,
+  userId = "demo-user",
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   courseId: string;
   userId?: string;
 }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <div className="border rounded p-4">
+      <div className="text-sm text-gray-600">Zion Certificate</div>
+      <div className="mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded">
+        <div className="text-center">
+          <div className="text-xl font-semibold">Certificate of Completion</div>
+          <div className="text-xs opacity-80">Preview</div>
+        </div>
+      </div>
+      <a
+        href={url}
+        className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
+      >
+        Download PDF
+      </a>
+    </div>
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+  const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>
@@ -36,24 +83,13 @@ export default function CertificatePreview({
     </div>
   );
 <<<<<<< HEAD
-  const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
-  return (
-    <div className="border rounded p-4">
-      <div className="text-sm text-gray-600">Zion Certificate</div>
-      <div className="mt-2 h-40 bg-gradient-to-br from-slate-800 to-slate-900 text-white flex items-center justify-center rounded">
-        <div className="text-center">
-          <div className="text-xl font-semibold">Certificate of Completion</div>
-          <div className="text-xs opacity-80">Preview</div>
-        </div>
-      </div>
-      <a
-        href={url}
-        className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
-      >
-        Download PDF
-      </a>
-    </div>
-  );
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

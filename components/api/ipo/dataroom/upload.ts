@@ -1,16 +1,24 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 export const config = null;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
 export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
@@ -64,10 +72,18 @@ const targetDir = resolveDataPath(path.join('dataroom', section));
     res.status(200).json({ ok: true });
 <<<<<<< HEAD
   });    appendAuditLog({ type: 'file_upload', section, name: path.basename(targetPath) });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     res.status(200).json({ ok: true })
   })
+<<<<<<< HEAD
 }
 =======
   });
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

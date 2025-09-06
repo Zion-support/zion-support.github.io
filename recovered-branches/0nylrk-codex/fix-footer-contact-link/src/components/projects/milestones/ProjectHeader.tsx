@@ -1,9 +1,11 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
+<<<<<<< HEAD
   title: string;
 }
 <<<<<<< HEAD
@@ -11,11 +13,30 @@ interface ProjectHeaderProps {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ProjectHeader({ title }: ProjectHeaderProps) {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  title: string
+}
+
+export function ProjectHeader({ title }: ProjectHeaderProps) {;
+  const navigate = useNavigate();
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft } from 'lucide-react',;
+interface ProjectHeaderProps {;
+  title: string;
+}
+
+export function ProjectHeader({ title }: ProjectHeaderProps) {
+  const navigate = useNavigate(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
       <div className="flex items-center">
@@ -33,5 +54,11 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </h1>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

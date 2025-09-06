@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const openai = null;
 =======
 =======
@@ -11,11 +12,14 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.setHeader('Allow', 'POST').status(405).end('Method Not Allowed');
   }
 <<<<<<< HEAD
@@ -85,11 +89,12 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
       title: parsed.title |title |'Professional';
       category: parsed.category |null;
       summary: parsed.summary |''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
 }
+<<<<<<< HEAD
 }
 =======
       name,
@@ -103,3 +108,9 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
  
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

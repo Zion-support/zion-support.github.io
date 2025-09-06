@@ -1,11 +1,18 @@
-import React from 'react',
-import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 const EnhancedFooter: React.FC;
 =======
+import React from 'react',
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+
 import {
+<<<<<<< HEAD
   Brain
   Mail
   Phone
@@ -14,6 +21,16 @@ import {
   Github
   Linkedin
   Twitter;
+=======
+  Brain,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,;
+  Twitter,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 =======
 import {
@@ -121,17 +138,33 @@ const EnhancedFooter: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const socialLinks = [
+<<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
+=======
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       name: 'LinkedIn'
       href: 'https://linkedin.com/company/ziontechgroup'
       icon: Linkedin
     }
     {
+<<<<<<< HEAD
       name: 'Twitter'
       href: 'https://twitter.com/ziontechgroup'
       icon: Twitter
     }
+=======
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+    },
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <footer className='bg-slate-950 border-t border-white/10'>
       <div className='max-w-7xl mx-auto px-6 py-16'>
@@ -177,8 +210,14 @@ const EnhancedFooter: React.FC = () => {
                 <MapPin className='w-4 h-4' />                <span>Global Operations</span>              <div className="flex items-center space-x-3 text-white/70">
                 <MapPin className="w-4 h-4" />
 =======
+<<<<<<< HEAD
                 <MapPin className='w-4 h-4' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 <span>Global Operations</span>
               </div>
             </div>
@@ -213,6 +252,14 @@ const EnhancedFooter: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
@@ -234,6 +281,7 @@ const EnhancedFooter: React.FC = () => {
             {/* Social Links */}
             <div className='flex items-center space-x-4'>
               {socialLinks.map(social => (
+<<<<<<< HEAD
                 <a
                   key={social.name}
                   href={social.href}
@@ -256,6 +304,20 @@ const EnhancedFooter: React.FC = () => {
                   <social.icon className='w-5 h-5' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </a>
+=======
+
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+
+            {/* Social Links */}
+
+                </a>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
@@ -265,12 +327,19 @@ const EnhancedFooter: React.FC = () => {
   );
 <<<<<<< HEAD
 };export default EnhancedFooter;  )
+<<<<<<< HEAD
 }
 =======
 };
+<<<<<<< HEAD
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default EnhancedFooter;
 import React from "react";
   FileText
@@ -474,4 +543,14 @@ company updates.;
       </button>
     </footer>
   )}"'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+export default EnhancedFooter;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default EnhancedFooter;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { useToast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
-=======
+<<<<<<< HEAD
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,44 +11,78 @@ import {
   CardTitle
   CardFooter
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
+import {Textarea} from "@/components/ui/textarea";
+import {Check, Pencil} from "lucide-react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
+import { Textarea } from "@/components/ui/textarea",
+import { Check, Pencil } from "lucide-react",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface GeneratedDescriptionDisplayProps {
   description: string;
 <<<<<<< HEAD
   onSave: (editedDescription: string) => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   onSave: (editedDescription: string) => void;
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
-
-export function GeneratedDescriptionDisplay({ 
-  description;
-  onSave 
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+<<<<<<< HEAD
 export function GeneratedDescriptionDisplay({
   description
   onSave
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
-}: GeneratedDescriptionDisplayProps) {
+
+=======
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+<<<<<<< HEAD
+}: GeneratedDescriptionDisplayProps) {;
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
-<<<<<<< HEAD
-  const handleSave = null;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}: GeneratedDescriptionDisplayProps) {
+  const { toast } = useToast(),
+  const [isEditing, setIsEditing] = useState(false),
+  const [editedDescription, setEditedDescription] = useState(description),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const handleSave = () => {
-    onSave(editedDescription);
-    setIsEditing(false);
+    onSave(editedDescription),
+    setIsEditing(false),
     toast({
       title: "Description Saved"
       description: "Your edited description has been saved."
+<<<<<<< HEAD
     });
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    })
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -74,6 +104,60 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />
                 Edit
               </>
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Check, Pencil } from "lucide-react",;
+interface GeneratedDescriptionDisplayProps {;
+  description: string,;
+  onSave: (editedDescription: string) => void;
+}
+;
+export function GeneratedDescriptionDisplay({;
+  description,;
+  onSave;
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast(),;
+  const [isEditing, setIsEditing] = useState(false),;
+  const [editedDescription, setEditedDescription] = useState(description),;
+  const handleSave = () => {;
+    onSave(editedDescription),;
+    setIsEditing(false),;
+    toast({;
+      title: "Description Saved";
+      description: "Your edited description has been saved.";
+    });
+  };
+  return (;
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center justify-between">;
+          Generated Description;
+          <Button;
+            variant="outline";
+            size="sm";
+            onClick={() => setIsEditing(!isEditing)}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white";
+          >;
+            {isEditing ? (;
+              <>;
+                <Check className="h-4 w-4 mr-1" />;
+                Done;
+              </>;
+            ) : (;
+              <>;
+                <Pencil className="h-4 w-4 mr-1" />;
+                Edit;
+              </>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </Button>
         </CardTitle>

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head',
+=======
+import {useEffect, useMemo, useState} from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
 <<<<<<< HEAD
@@ -7,9 +12,7 @@ import { TALENT_PROFILES } from '../data/talent';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function useFavorites() {
-<<<<<<< HEAD
-  const storageKey = null;
-=======
+
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
   useEffect(() => {
@@ -21,6 +24,7 @@ function useFavorites() {
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
   return { favorites, remove }
 }
+<<<<<<< HEAD
 =======
       if (raw) setFavorites(JSON.parse(raw));
     } catch {}
@@ -31,18 +35,35 @@ function useFavorites() {
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function FavoritesPage() {
+=======
+
+export default function FavoritesPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
 <<<<<<< HEAD
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
   );
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <div>
       <Head>
@@ -76,6 +97,7 @@ export default function FavoritesPage() {
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
+<<<<<<< HEAD
         </nav>
       </div>
 =======
@@ -163,5 +185,17 @@ export default function FavoritesPage() {
 );
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+          </ol>
+        </nav>
+      </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

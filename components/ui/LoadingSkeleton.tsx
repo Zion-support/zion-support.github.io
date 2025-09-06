@@ -1,21 +1,24 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   rounded?: string
 }
-
-const Skeleton: React.FC<SkeletonProps> = ({ 
-  className;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   rounded?: string;
 const Skeleton: React.FC<SkeletonProps> = ({
   className = ''
@@ -52,8 +55,14 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-5/6 mb-2" />
       <Skeleton className="h-4 w-4/6" />
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HeroSkeletonProps {
   className?: string
 }
@@ -70,8 +79,14 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StatsSkeletonProps {
   className?: string
 }
@@ -167,13 +182,14 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({
           ))}
         </div>
       </div>
-    </div>
+    </div>;
   );
 <<<<<<< HEAD
 }
 export default Skeleton;  )
 }
 export default Skeleton;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -181,3 +197,20 @@ export default Skeleton;
 
 export default Skeleton;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+interface SkeletonProps {
+  className?: string;
+  height?: string;
+  width?: string;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

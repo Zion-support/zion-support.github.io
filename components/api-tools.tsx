@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
+=======
+import React from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Code;
@@ -12,7 +18,11 @@ import { Code;
   Bot;
   BarChart3;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Code
   Database
   Globe
@@ -29,6 +39,29 @@ import {
   BookOpen
   Github
   Terminal;} from 'lucide-react';import {
+=======
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Zap,
+  Bot,
+  BarChart3,
+  Lock,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  ExternalLink,
+  Play,
+  BookOpen,
+<<<<<<< HEAD
+  Github,
+  Terminal,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  Github,;
+  Terminal,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Code;
   Database
   Globe
@@ -36,7 +69,7 @@ import {
   Zap
   Bot
   BarChart3
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Lock;
   ArrowRight;
   CheckCircle;
@@ -46,11 +79,7 @@ import {
   BookOpen;
   Github;
   Terminal
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function ApiToolsPage() {
-  const apiTools = null;
-=======
+
 export default function ApiToolsPage() {
   const apiTools = [
     {
@@ -429,6 +458,7 @@ export default function ApiToolsPage() {
         'Hardware security module (HSM) support'
       ]
       pricing: {
+<<<<<<< HEAD
         free: '1,000 operations/month'
         pro: '$119/month'
         enterprise: 'Custom'
@@ -446,18 +476,28 @@ export default function ApiToolsPage() {
         pro: '$119/month',
         enterprise: 'Custom',
       },
+<<<<<<< HEAD
       category: 'Security',
       color: 'bg-gradient-to-br from-gray-500 to-slate-600',
       gradient: 'from-gray-400 to-slate-500',
+=======
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500',
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       website: 'https://encrypt.api',
       docs: 'https://docs.encrypt.api',
       github: 'https://github.com/encrypt-api',
       status: 'Live',
       users: '4,200+',
+<<<<<<< HEAD
       rating: 4.9,
       responseTime: '<20ms',
     },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      responseTime: '<20ms',
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   ];
   const categories = [
     'All'
@@ -480,13 +520,18 @@ export default function ApiToolsPage() {
       <Head>  const filteredTools = selectedCategory === 'All'
     ? apiTools
     : apiTools.filter(tool => tool.category === selectedCategory);
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>
           API Tools & Developer Services | Zion Tech Group - Powerful APIs for
           Modern Applications
@@ -546,6 +591,15 @@ export default function ApiToolsPage() {
             {categories.map(category => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <button
+=======
+
+              <button
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -560,6 +614,14 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* API Tools Grid */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -568,6 +630,14 @@ export default function ApiToolsPage() {
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -619,9 +689,12 @@ export default function ApiToolsPage() {
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
@@ -704,8 +777,17 @@ export default function ApiToolsPage() {
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
 =======
+<<<<<<< HEAD
                         <ExternalLink className='w-4 h-4 mr-2' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                         Visit API
                       </Button>
                       <Button
@@ -753,11 +835,27 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -861,7 +959,23 @@ export default function ApiToolsPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

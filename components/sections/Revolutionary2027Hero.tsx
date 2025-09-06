@@ -1,13 +1,18 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom  } from 'lucide-react';
 import Link from 'next/link';
 const Revolutionary2027Hero = null;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   ArrowRight
   Brain
   Rocket
@@ -20,6 +25,20 @@ import {
   Zap
   Sparkles
   Atom;
+=======
+  ArrowRight,
+  Brain,
+  Rocket,
+  TestTube,
+  Globe,
+  Microscope,
+  Lock,
+  Star,
+  TrendingUp,
+  Zap,
+  Sparkles,;
+  Atom,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
 import Link from 'next/link';
@@ -78,10 +97,18 @@ const Revolutionary2027Hero = () => {
 =======
         staggerChildren: 0.1,
       },
+<<<<<<< HEAD
     },
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    },  };
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
@@ -111,7 +138,16 @@ const Revolutionary2027Hero = () => {
       {/* Animated Grid Pattern */}
       <div className='absolute inset-0 opacity-20'>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }
+=======
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
       {/* Enhanced Background Effects */}
@@ -125,6 +161,18 @@ const Revolutionary2027Hero = () => {
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </div>
+=======
+<<<<<<< HEAD
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
+
+      </div>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Floating Icons */}
       {floatingIcons.map((item, index) => (
         <motion.div
@@ -144,6 +192,7 @@ const Revolutionary2027Hero = () => {
           <item.icon className='w-8 h-8' />        </motion.div>
       ))}
       {/* Main Content */}
+<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
             rotate: [0, 5, -5, 0]}}
           transition={{
@@ -151,6 +200,21 @@ const Revolutionary2027Hero = () => {
             delay: item.delay
             repeat: Infinity
             ease: 'easeInOut'
+=======
+<<<<<<< HEAD
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
+            rotate: [0, 5, -5, 0]}}
+=======
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          transition={{
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         >
           <item.icon className='w-8 h-8' />            ease: "easeInOut"
@@ -174,6 +238,7 @@ const Revolutionary2027Hero = () => {
       ))}
       {/* Main Content */}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+<<<<<<< HEAD
         <motion.div
           variants={containerVariants}
           initial='hidden'
@@ -215,8 +280,30 @@ const Revolutionary2027Hero = () => {
               <span>Revolutionary</span>
               <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
 =======
+<<<<<<< HEAD
               <div className='w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full'></div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+          transition={{
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+        </motion.div>
+      ))}
+
+      {/* Main Content */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               <span>Technology</span>
             </div>
           </motion.div>
@@ -414,21 +501,39 @@ const Revolutionary2027Hero = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             }}
             transition={{
+<<<<<<< HEAD
               duration: 2
               repeat: Infinity
+=======
+              duration: 2,
+              repeat: Infinity,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               ease: 'easeInOut',            }}
           />
         </div>
       </motion.div>
       {/* Particle Effects */}
       <div className='absolute inset-0 pointer-events-none'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'
             style={{
+<<<<<<< HEAD
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
+=======
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}            animate={{
               y: [0, -100]
               opacity: [0, 1, 0]
@@ -454,6 +559,7 @@ export default Revolutionary2027Hero;              delay: Math.random() * 2}}
           />
         ))}
       </div>
+<<<<<<< HEAD
     </section>
   );
 <<<<<<< HEAD
@@ -461,6 +567,7 @@ export default Revolutionary2027Hero;              delay: Math.random() * 2}}
 export default Revolutionary2027Hero;  )
 }
 export default Revolutionary2027Hero;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -468,3 +575,15 @@ export default Revolutionary2027Hero;
 
 export default Revolutionary2027Hero;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+    </section>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </section>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

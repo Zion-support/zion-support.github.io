@@ -1,8 +1,7 @@
 <<<<<<< HEAD
 import { useEffect, useState } from 'react';
 <<<<<<< HEAD
-type Note = any;
-=======
+
 type Note = {
   id: string
   targetType: string
@@ -86,7 +85,52 @@ const AdminNotesPage: React.FC = () => {
     }
     if (isAdmin) load()
   }, [isAdmin])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+;
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+export default function AdminNotesConsole(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      try {
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (isAdmin) load()
+  }, [isAdmin]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -147,11 +191,15 @@ const AdminNotesPage: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <div>{n.text}</div>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
           ))}
         </div>
 <<<<<<< HEAD
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -260,3 +308,32 @@ const AdminNotesPage: React.FC = () => {
     </>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

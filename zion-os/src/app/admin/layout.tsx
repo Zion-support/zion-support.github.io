@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 import { ReactNode } from "react";
+<<<<<<< HEAD
 export default function AdminLayout({ children }: { children: ReactNode }) {return (;
+=======
+export default function AdminLayout({ children }: { children: ReactNode }) {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">;
 =======
 import { ReactNode } from 'react';
@@ -52,4 +57,14 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default Layout;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

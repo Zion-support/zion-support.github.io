@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 import React from 'react',
 import CodeSamples from './CodeSamples',
+=======
+import React from 'react';
+import CodeSamples from './CodeSamples';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
@@ -12,13 +18,30 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function EndpointDetail({
+<<<<<<< HEAD
   endpoint
 }: {
+=======
+  endpoint,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   endpoint: EndpointSpec;
 }) {
+<<<<<<< HEAD
+=======
+
+  return (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className='space-y-4'>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
           {endpoint.title}
@@ -61,6 +84,7 @@ export default function EndpointDetail({
         <CodeSamples samples={endpoint.samples} />
       </div>
       <div>
+<<<<<<< HEAD
         <div className='font-medium mb-2'>Try It</div>
         <TryItConsole
           method={endpoint.method}
@@ -91,13 +115,32 @@ export default function EndpointDetail({
               </li>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             ))}
+<<<<<<< HEAD
           </ul>
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+            ))}
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </ul>
+        </div>
+      )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
@@ -110,16 +153,38 @@ export default function EndpointDetail({
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
+<<<<<<< HEAD
 =======
               </li>
             ))}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+            ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           </ul>
         </div>
       )}
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+}
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

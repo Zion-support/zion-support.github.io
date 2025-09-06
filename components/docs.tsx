@@ -5,10 +5,22 @@ import Button from '../components/ui/Button';
 <<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-export default function DocsPage() {
-<<<<<<< HEAD
-  const contact = null;
 =======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function DocsPage() {
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const contact = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -101,12 +113,21 @@ export default function DocsPage() {
       color: 'text-purple-400'
     }
     {
+<<<<<<< HEAD
       title: 'Community Forum'
       description: 'Connect with other developers and users'
       icon: <ExternalLink className='w-6 h-6' />
       href: '/community'
       color: 'text-yellow-400'
     }
+=======
+      title: 'Community Forum',
+      description: 'Connect with other developers and users',
+      icon: <ExternalLink className='w-6 h-6' />,
+      href: '/community',
+      color: 'text-yellow-400',
+    },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const filteredDocs = documentationItems.filter(doc => {
     const matchesSearch =
@@ -178,6 +199,7 @@ export default function DocsPage() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
+<<<<<<< HEAD
       case 'Beginner':
         return 'bg-green-500/20 text-green-400';
       case 'Intermediate':
@@ -190,7 +212,14 @@ export default function DocsPage() {
       case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
       case 'Advanced': return 'bg-red-500/20 text-red-400'
       default: return 'bg-gray-500/20 text-gray-400'
+<<<<<<< HEAD
   }
+=======
+  };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric'
@@ -199,6 +228,7 @@ export default function DocsPage() {
     });  };      day: 'numeric'
     })
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
         return 'bg-gray-500/20 text-gray-400';
@@ -214,6 +244,13 @@ export default function DocsPage() {
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -271,6 +308,16 @@ export default function DocsPage() {
                       </a>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     </li>
+=======
+                      </a>                    </li>
+
+                    </li>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </ul>
               </Card>
@@ -304,6 +351,7 @@ export default function DocsPage() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+<<<<<<< HEAD
             </ul>
           </Card>
 =======
@@ -357,6 +405,25 @@ export default function DocsPage() {
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+<<<<<<< HEAD
+=======
+;
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+              ))}
+            </ul>
+          </Card>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

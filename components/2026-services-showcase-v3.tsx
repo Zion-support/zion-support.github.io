@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
@@ -7,14 +11,22 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
 <<<<<<< HEAD
 export default function ServicesShowcase2026V3() {
 <<<<<<< HEAD
-  const contactInfo = null;
-=======
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup.com',  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
   return (
     <UltraQuantumHolographicBackground
       intensity="extreme"
@@ -102,6 +114,15 @@ export default function ServicesShowcase2026V3() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
+=======
+        {/* Navigation */}
+        <UltraAdvancedNavigation2026 />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>
 <<<<<<< HEAD
@@ -111,6 +132,14 @@ export default function ServicesShowcase2026V3() {
           <div className='max-w-7xl mx-auto text-center'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -184,6 +213,14 @@ export default function ServicesShowcase2026V3() {
           <div className='max-w-4xl mx-auto text-center'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -290,7 +327,22 @@ export default function ServicesShowcase2026V3() {
     </UltraQuantumHolographicBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

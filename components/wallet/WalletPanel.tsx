@@ -1,14 +1,29 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = any;
       refresh()
 =======
+
+import React, { useEffect, useMemo, useState } from 'react';
+import Badges from './Badges';
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Tx = {
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
@@ -29,11 +44,18 @@ function getUserId(): string {
   window.localStorage.setItem('zion_user_id', generated);
   return generated;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function WalletPanel() {
+=======
+
+export default function WalletPanel() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -58,7 +80,12 @@ function getUserId(): string {
   window.localStorage.setItem("zion_user_id", generated);
   return generated
 }
+<<<<<<< HEAD
 export default function WalletPanel() {
+=======
+
+export default function WalletPanel() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
 =======
@@ -160,10 +187,14 @@ export default function WalletPanel() {
       refresh();    }
   }
   return (      refresh()
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
       refresh();
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
   return (
@@ -206,6 +237,7 @@ export default function WalletPanel() {
           <Badges balance={balance} />
         </div>
       </div>
+<<<<<<< HEAD
 =======
         <div className='mt-4'>
           <Badges balance={balance} />
@@ -213,6 +245,9 @@ export default function WalletPanel() {
       </div>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
         <div className='flex gap-3 mb-4 text-sm'>
           <button
@@ -303,7 +338,29 @@ export default function WalletPanel() {
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+          </div>
+
+        )}
+      </div>
+    </div>
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

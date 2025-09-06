@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
@@ -10,7 +15,11 @@ import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
 export default function AIFinancialPlanningPlatform() {
   const features = null;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   DollarSign
   TrendingUp
   Shield
@@ -28,6 +37,35 @@ import {
   Calculator;} from 'lucide-react';import {
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor
+=======
+  DollarSign,
+  TrendingUp,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  CheckCircle,
+  Star,
+  Globe,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+<<<<<<< HEAD
+  MessageCircle,
+  Calculator,;} from 'lucide-react';import { 
+=======
+<<<<<<< HEAD
+  MessageCircle,;
+  Calculator,;} from 'lucide-react';import {
+=======
+  MessageCircle,
+  Calculator,;} from 'lucide-react';import { 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   Award, MessageCircle, Calculator
 export default function AIFinancialPlanningPlatform() {
   const features = [
@@ -90,8 +128,13 @@ export default function AIFinancialPlanningPlatform() {
       icon: <BarChart3 className='w-6 h-6' />
       title: 'Real-Time Financial Insights'
       description:
+<<<<<<< HEAD
         'Live financial data, market analysis, and personalized recommendations updated in real-time.'
     }
+=======
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
+    },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const benefits = [
     'Increase investment returns by 25%'
@@ -271,7 +314,7 @@ export default function AIFinancialPlanningPlatform() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Intelligent financial planning and wealth management with AI. Get personalized plans
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 portfolio optimization, and risk management that drives financial success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -349,6 +392,14 @@ export default function AIFinancialPlanningPlatform() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <div className='text-yellow-400'>{feature.icon}</div>
@@ -371,10 +422,28 @@ export default function AIFinancialPlanningPlatform() {
                   </p>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
+=======
+                  </p>                </motion.div>
+
+                </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Benefits Section */}
         <section className='py-20 bg-black'>
 <<<<<<< HEAD
@@ -382,11 +451,22 @@ export default function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className='text-center mb-16'        <section className="py-20 bg-black">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              className='text-center mb-16'
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -444,6 +524,14 @@ export default function AIFinancialPlanningPlatform() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
 <<<<<<< HEAD
@@ -451,11 +539,22 @@ export default function AIFinancialPlanningPlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              className='text-center mb-16'
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -493,6 +592,14 @@ export default function AIFinancialPlanningPlatform() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
                     <Calculator className='w-6 h-6 text-yellow-400' />
@@ -509,18 +616,40 @@ export default function AIFinancialPlanningPlatform() {
                   </span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
 <<<<<<< HEAD
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 =======
+<<<<<<< HEAD
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+        {/* CTA Section */}
+        <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -575,7 +704,25 @@ export default function AIFinancialPlanningPlatform() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+}
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

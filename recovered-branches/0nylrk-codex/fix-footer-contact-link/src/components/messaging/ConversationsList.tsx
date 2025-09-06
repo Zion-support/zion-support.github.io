@@ -1,39 +1,65 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { User  } from 'lucide-react';
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   conversations: Conversation[];
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   conversations: Conversation[]
   activeConversation: Conversation | null
   setActiveConversation: (conversation: Conversation) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   markAsRead: (conversationId: string) => Promise<void>
 }
+<<<<<<< HEAD
 =======
   markAsRead: (conversationId: string) => Promise<void>;
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function ConversationsList({
   conversations;
-<<<<<<< HEAD
-  activeConversation;
-  setActiveConversation;
-  markAsRead 
-}: ConversationsListProps) {
-  return (
-    <div className;
-=======
+
   activeConversation
   setActiveConversation
   markAsRead
+=======
+
+export function ConversationsList({ ;
+  conversations;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',;
+import { User } from 'lucide-react',;
+import { Conversation } from '@/types/messaging',;
+import { ConversationItem } from './ConversationItem',;
+interface ConversationsListProps {;
+  conversations: Conversation[],;
+  activeConversation: Conversation | null,;
+  setActiveConversation: (conversation: Conversation) => void,;
+  markAsRead: (conversationId: string) => Promise<void>;
+}
+
+export function ConversationsList({ 
+  conversations,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  activeConversation, 
+  setActiveConversation, 
+  markAsRead 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -55,10 +81,20 @@ export function ConversationsList({
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
+<<<<<<< HEAD
               onClick={() => {
                 setActiveConversation(conversation);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 markAsRead(conversation.id)
+=======
+              onClick={() => {;
+                setActiveConversation(conversation);
+                markAsRead(conversation.id);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
             />
           ))}

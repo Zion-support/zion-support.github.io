@@ -38,6 +38,25 @@
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
 <<<<<<< HEAD
 <<<<<<< HEAD
+  --quantum-pulse: 0 0 40px rgba(0, 255, 255, 0.3);
+  --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
+  --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);
+=======
+  --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
+  --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
+  --futuristic-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
+  --holographic-shadow: 0 0 80px rgba(139, 92, 246, 0.4);
+  --cyberpunk-shadow: 0 0 70px rgba(236, 73, 153, 0.5);
+  --quantum-field: 0 0 100px rgba(0, 255, 255, 0.1);
+  --holographic-matrix: 0 0 120px rgba(139, 92, 246, 0.15);
+  --neural-network: 0 0 90px rgba(16, 185, 129, 0.2);
+  --quantum-ripple: 0 0 150px rgba(0, 255, 255, 0.08);
+  --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
+  --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+}
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -80,6 +99,7 @@
   --holographic-pulse: 0 0 50px rgba(139, 92, 246, 0.4);
   --neural-glow: 0 0 35px rgba(16, 185, 129, 0.5);}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 
 /* Base styles */
 @layer base {
@@ -282,13 +302,19 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> main
   animation: matrixMove 30s linear infinite;
 =======
   animation: particleFloat 20s linear infinite;
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+<<<<<<< HEAD
+}
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }
@@ -304,6 +330,7 @@ body::after {
 =======
   animation: matrixMove 30s linear infinite;}
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 
 /* Enhanced Quantum Grid Background */
 .quantum-grid {
@@ -488,6 +515,8 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -500,6 +529,7 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
   33% { transform: translateY(-20px) rotate(1deg); }
   66% { transform: translateY(20px) rotate(-1deg); }
 }
@@ -816,11 +846,14 @@ body::after {
   body::before,
   body::after {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
+>>>>>>> main
     display: none;
 =======
   25% { transform: translateY(-20px) rotate(1deg); }
@@ -883,6 +916,18 @@ body::after {
 @media (max-width: 768px) {
   .quantum-grid {
     background-size: 25px 25px;
+<<<<<<< HEAD
+  }
+  
+  .holographic-matrix {
+    background-size: 15px 15px;
+  }
+  
+  .neural-network {
+    background-size: 100px 100px;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+  }
+=======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
@@ -898,6 +943,7 @@ body::after {
 =======
     display: none;  }
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 }
 
 /* High Contrast Mode Support */
@@ -922,6 +968,9 @@ body::after {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
@@ -936,6 +985,7 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main
 
 /* Enhanced Focus States */
 .futuristic-focus:focus {
@@ -1084,6 +1134,9 @@ body::after {
   100% { transform: translate(0); }
 }
 <<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-30ec
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1099,3 +1152,4 @@ body::after {
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> main

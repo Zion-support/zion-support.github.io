@@ -3,8 +3,12 @@ import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Messages: NextPage;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const Messages: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -15,6 +19,7 @@ const Messages: NextPage = () => {
       <EmptyState
         title="No messages yet"
         description="Start a conversation by requesting a quote or responding to an existing one."
+<<<<<<< HEAD
 =======
 
 const Messages: NextPage = () => {
@@ -30,6 +35,9 @@ const Messages: NextPage = () => {
         title='No messages yet'
         description='Start a conversation by requesting a quote or responding to an existing one.'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         icon={<span>📫</span>}
         primaryAction={{ label: 'Explore talent', href: '/talent' }}
         secondaryAction={{ label: 'Browse services', href: '/services' }}
@@ -39,6 +47,7 @@ const Messages: NextPage = () => {
   )
 }
 export default Messages;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
   );
@@ -47,3 +56,36 @@ export default Messages;
 
 export default Messages;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default Messages,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        icon={<span>📫</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        primaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        secondaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      />;
+    </div>;
+  );
+},;
+export default Messages;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

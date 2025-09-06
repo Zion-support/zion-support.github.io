@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Zap
   Globe
   Phone
@@ -59,16 +68,80 @@ import {
   Video
   Headphones;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  Zap,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  BookOpen,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  MessageCircle,
+  MessageSquare,
+  ArrowUp,
+  ExternalLink,
+  Building,
+  Code,
+  Database,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Camera,
+  Gamepad2,
+  Palette,
+  Music,
+  Film,
+  BookOpenCheck,
+  HelpCircle,
+  FileText,
+<<<<<<< HEAD
+  Video,
+  Headphones,;} from 'lucide-react';import { 
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  Video,;
+  Headphones,;} from 'lucide-react';import {
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, ;
+=======
+  Video,
+  Headphones,;} from 'lucide-react';import { 
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -408,6 +481,7 @@ const footerSections = [
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' }
       { name: 'Biotech AI Research', href: '/biotech-ai-research-platform' }
     ]
+<<<<<<< HEAD
   }
   {
     title: 'Resources'
@@ -435,6 +509,30 @@ const footerSections = [
     ]
   }
 ];
+=======
+  };
+  {
+    title: 'Resources',
+    description: 'Documentation, support, and learning',
+    icon: <BookOpen className='w-5 h-5 text-cyan-400' />,
+
+    links: [
+
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api-documentation' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Blog & News', href: '/blog' },
+      { name: 'Support Center', href: '/support' },
+      { name: 'Developer Portal', href: '/developer' },
+      { name: 'Training & Certification', href: '/training' },
+      { name: 'Community Forum', href: '/community' },
+      { name: 'Market Pricing', href: '/market-pricing' },
+      { name: 'Services Advertising', href: '/services-advertising' },
+    ],
+  },
+];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const socialLinks = [
   {
     name: 'Twitter'
@@ -697,8 +795,15 @@ const socialLinks = [
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
+<<<<<<< HEAD
     window.scrollTo({ top: 0, behavior: 'smooth' });
+<<<<<<< HEAD
   }
+=======
+  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <footer className='relative bg-black text-white overflow-hidden'>
       {/* Background Effects */}
@@ -723,6 +828,15 @@ const UltraFuturisticFooter2035: React.FC = () => {
             duration: 20
             repeat: Infinity
             ease: 'linear',          }}
+=======
+<<<<<<< HEAD
+
+          }}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+          }}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       <div className='relative z-10'>            ease: 'linear'
@@ -782,6 +896,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <p className='text-gray-300 leading-relaxed max-w-md'>
                   Leading the future with cutting-edge AI consciousness, quantum
                   computing, and innovative micro SAAS solutions. Transform your
@@ -843,15 +958,36 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       rel="noopener noreferrer"
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
 =======
+<<<<<<< HEAD
                       className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'
                     >
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                {/* Social Links */}
+
+                    >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       {social.icon}
                     </a>
                   ))}
                 </div>
               </motion.div>
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div
@@ -860,6 +996,14 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='space-y-4'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='flex items-center gap-2'>
                   {section.icon}
@@ -892,6 +1036,14 @@ const UltraFuturisticFooter2035: React.FC = () => {
                             ? 'text-cyan-400 hover:text-cyan-300'                          link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'
                             : 'text-gray-400 hover:text-white'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         }`}
                       >
                         {link.name}
@@ -902,12 +1054,28 @@ const UltraFuturisticFooter2035: React.FC = () => {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Bottom Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-sm text-gray-400'>
@@ -975,8 +1143,21 @@ const UltraFuturisticFooter2035: React.FC = () => {
 =======
 };
 
+<<<<<<< HEAD
   /* Animated grid */
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+  /* Animated grid */ 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+/* Animated grid */ 
+=======
+  /* Animated grid */ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon
 }</a>) )
@@ -996,6 +1177,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 }> </li>) )
 }</ul> </motion.div>) )
 }</div> {
+<<<<<<< HEAD
   /* Bottom Section */
 }<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)
 <<<<<<< HEAD
@@ -1003,6 +1185,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 export default UltraFuturisticFooter2035;  )
 }
 export default UltraFuturisticFooter2035;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -1010,3 +1193,23 @@ export default UltraFuturisticFooter2035;
 
 export default UltraFuturisticFooter2035;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+  /* Bottom Section */ 
+}<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
+};
+<<<<<<< HEAD
+export default UltraFuturisticFooter2035;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default UltraFuturisticFooter2035;  )
+};
+
+export default UltraFuturisticFooter2035;
+=======
+export default UltraFuturisticFooter2035;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

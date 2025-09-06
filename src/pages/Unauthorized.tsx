@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/Header';
@@ -7,32 +8,51 @@ import { ShieldAlert } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Header } from '@/components/Header'
+import { ShieldAlert } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+export default function Unauthorized() {
+  const { t } = useTranslation()
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import Link from "next/link",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header";
 import { ShieldAlert } from 'lucide-react'
+<<<<<<< HEAD
 import { useTranslation } from "react-i18next";
+=======
+import { useTranslation } from "react-i18next",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Unauthorized() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(),
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Header />
-      <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12'>
-        <div className='bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light'>
-          <div className='flex justify-center mb-6'>
-            <div className='bg-zion-purple/20 p-4 rounded-full'>
-              <ShieldAlert className='h-12 w-12 text-zion-purple' />
+      <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">
+        <div className="bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light">
+          <div className="flex justify-center mb-6">
+            <div className="bg-zion-purple/20 p-4 rounded-full">
+              <ShieldAlert className="h-12 w-12 text-zion-purple" />
             </div>
           </div>
-          <h1 className='text-3xl font-bold text-white mb-3'>
-            {t('errors.access_denied')}
-          </h1>
-          <p className='text-zion-slate-light mb-6'>
+          <h1 className="text-3xl font-bold text-white mb-3">{t('errors.access_denied')}</h1>
+          <p className="text-zion-slate-light mb-6">
             {t('errors.no_permission')}
           </p>
-          <div className='flex flex-col gap-3'>
+          <div className="flex flex-col gap-3">
             <Link
+<<<<<<< HEAD
               href='/'
 <<<<<<< HEAD
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'            >
@@ -41,6 +61,13 @@ export default function Unauthorized() {
             <Link
               href='/auth/login'
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'            >              href="/"
+=======
+              href="/"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
 =======
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center'
@@ -49,6 +76,7 @@ export default function Unauthorized() {
               {t('errors.return_home')}
             </Link>
             <Link
+<<<<<<< HEAD
               href='/auth/login'
 <<<<<<< HEAD
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
@@ -61,11 +89,70 @@ export default function Unauthorized() {
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </>
 <<<<<<< HEAD
   )
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      </div>;
+    </>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              href="/auth/login"
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
+            >
+import Link from "next/link",;
+import { Button } from "@/components/ui/button",;
+import { Header } from "@/components/Header",;
+import { ShieldAlert } from 'lucide-react';
+import { useTranslation } from "react-i18next",;
+export default function Unauthorized() {;
+  const { t } = useTranslation();
+  return (;
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center px-4 py-12">;
+        <div className="bg-zion-blue-dark rounded-xl p-8 max-w-md w-full text-center shadow-lg border border-zion-blue-light">;
+          <div className="flex justify-center mb-6">;
+            <div className="bg-zion-purple/20 p-4 rounded-full">;
+              <ShieldAlert className="h-12 w-12 text-zion-purple" />;
+            </div>;
+          </div>;
+          <h1 className="text-3xl font-bold text-white mb-3">{t('errors.access_denied')}</h1>;
+          <p className="text-zion-slate-light mb-6">;
+            {t('errors.no_permission')}
+          </p>;
+          <div className="flex flex-col gap-3">;
+            <Link;
+              href="/";
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";
+            >;
+              {t('errors.return_home')}
+            </Link>;
+            <Link;
+              href="/auth/login";
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center";
+            >;
+              {t('errors.login_different_account')}
+            </Link>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

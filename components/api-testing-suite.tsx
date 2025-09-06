@@ -26,21 +26,38 @@ import { Zap, Star } from 'lucide-react';
   ArrowRight,
   Play,
   AlertTriangle,
+<<<<<<< HEAD
   Clock,
   Database,;
 } from 'lucide-react';
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  Clock,;
+  Database,;
+<<<<<<< HEAD
+} from 'lucide-react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+export default function APITestingSuitePage() {;
+=======
+} from 'lucide-react';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function APITestingSuitePage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
   const [apiKey, setApiKey] = useState('');
-<<<<<<< HEAD
-  const features = null;
-            and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure.
-=======
+
   const features = [
     {
 <<<<<<< HEAD
@@ -114,6 +131,7 @@ export default function APITestingSuitePage() {
       ]
     }
     {
+<<<<<<< HEAD
       name: 'Integration Testing'
       description:
         'Test how your APIs integrate with other systems and services.'
@@ -128,13 +146,26 @@ export default function APITestingSuitePage() {
       tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
     }
 =======
+<<<<<<< HEAD
+=======
+      name: 'Integration Testing',
+      description:
+        'Test how your APIs integrate with other systems and services.',
+      tests: [
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         'End-to-end workflows',
         'Third-party integrations',
         'Data flow validation',
         'Error propagation',
       ],
+<<<<<<< HEAD
     },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    },  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   ];
   const pricing = [
     {
@@ -282,12 +313,22 @@ export default function APITestingSuitePage() {
             threshold: 'Authenticated'
           }
           {
+<<<<<<< HEAD
             name: 'Rate Limiting'
             status: 'pass'
             value: 'Within limits'
             threshold: 'No throttling'
           }
         ]
+=======
+            name: 'Rate Limiting',
+            status: 'pass',
+            value: 'Within limits',
+            threshold: 'No throttling',
+          },
+        ],
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         recommendations: [
           'Consider implementing response caching for better performance'
           'Monitor response times during peak usage'
@@ -347,7 +388,10 @@ export default function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>
@@ -446,6 +490,7 @@ export default function APITestingSuitePage() {
               View Pricing
             </Button>
             <Button
+<<<<<<< HEAD
               href='/contact'
               variant='outline'
               size='lg'
@@ -526,6 +571,15 @@ export default function APITestingSuitePage() {
                     <p className='text-gray-400 leading-relaxed'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature.description}
+=======
+
+                      {feature.description}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -534,11 +588,27 @@ export default function APITestingSuitePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -595,6 +665,14 @@ export default function APITestingSuitePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Demo Test Results */}
       {testResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -697,10 +775,28 @@ export default function APITestingSuitePage() {
                         </span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </div>
+=======
+                        </span>                      </div>
+
+                      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   ))}
                 </div>
               </Card>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -712,6 +808,14 @@ export default function APITestingSuitePage() {
                     <span className='text-indigo-400 font-bold'>
                       {testResults.responseTime}
                     </span>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -761,20 +865,44 @@ export default function APITestingSuitePage() {
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
 =======
+<<<<<<< HEAD
                     <span className='text-gray-300'>{rec}</span>
                   </div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                    <span className='text-gray-300'>{rec}</span>                  </div>
+
+                  </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 ))}
               </div>
             </Card>
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -818,7 +946,12 @@ export default function APITestingSuitePage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -849,6 +982,17 @@ export default function APITestingSuitePage() {
                       <CheckCircle className='w-5 h-5 text-indigo-400 mr-3 flex-shrink-0' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
+=======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -866,19 +1010,48 @@ export default function APITestingSuitePage() {
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
 =======
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
+=======
+
+            Ready to Test Your APIs?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
@@ -914,7 +1087,22 @@ export default function APITestingSuitePage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

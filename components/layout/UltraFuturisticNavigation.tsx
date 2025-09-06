@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -11,8 +10,16 @@ interface UltraFuturisticNavigationProps {
 export default function UltraFuturisticNavigation({ className;
   return (
 =======
+import React, { useState, useEffect } from 'react',
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -24,17 +31,36 @@ import {
   Brain
   Atom
   Shield;
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,;
+  Shield,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 interface UltraFuturisticNavigationProps {
   className?: string;
 export default function UltraFuturisticNavigation({
+<<<<<<< HEAD
   className = ''
+=======
+  className = '',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {
   className?: string
 }
+<<<<<<< HEAD
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {
 =======
+<<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
@@ -58,6 +84,11 @@ export default function UltraFuturisticNavigation({
   className = '',
 }: UltraFuturisticNavigationProps) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -129,6 +160,42 @@ export default function UltraFuturisticNavigation({
     { name: 'About', href: '/about' }
     { name: 'Contact', href: '/contact' }
     { name: 'Pricing', href: '/pricing' }
+=======
+          name: 'View All Services',
+          href: '/services',
+          icon: Rocket,
+          color: 'from-gray-500 to-gray-600',
+        },
+      ],
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+<<<<<<< HEAD
+    { name: 'Pricing', href: '/pricing' },  ];
+
+  ];
+=======
+<<<<<<< HEAD
+    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
+        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
+        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
+        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+      ]
+    };
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' }
+=======
+    { name: 'Pricing', href: '/pricing' },  ];
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -137,7 +204,7 @@ export default function UltraFuturisticNavigation({
     >
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>          {/* Logo */}  return (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl'
@@ -175,6 +242,14 @@ export default function UltraFuturisticNavigation({
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             className='flex items-center space-x-3'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl'>
               <Rocket className='w-7 h-7 text-white' />
@@ -227,10 +302,21 @@ export default function UltraFuturisticNavigation({
                     </button>                      <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
+<<<<<<< HEAD
 =======
                     </button>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
@@ -265,6 +351,7 @@ export default function UltraFuturisticNavigation({
                                   >
                                     <dropdownItem.icon className='w-5 h-5 text-white' />
                                   </div>
+<<<<<<< HEAD
                                   <div>
                                     <div className='text-white font-medium group-hover/item:text-cyan-300 transition-colors'>
                                       {dropdownItem.name}
@@ -289,6 +376,12 @@ export default function UltraFuturisticNavigation({
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                     )}
                                   </div>
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                 </Link>
                               ))}
                             </div>
@@ -303,8 +396,18 @@ export default function UltraFuturisticNavigation({
 <<<<<<< HEAD
                     className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'                  >                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
 =======
+<<<<<<< HEAD
                     className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                    className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'                  >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   >
                     {item.name}
                   </Link>
@@ -312,6 +415,14 @@ export default function UltraFuturisticNavigation({
               </div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             {/* Contact Info */}
@@ -329,8 +440,19 @@ export default function UltraFuturisticNavigation({
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
             </div>
+<<<<<<< HEAD
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+=======
+
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'
@@ -371,6 +493,14 @@ export default function UltraFuturisticNavigation({
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -398,6 +528,7 @@ export default function UltraFuturisticNavigation({
                   {item.hasDropdown ? (
                     <div>
                       <button
+<<<<<<< HEAD
                         onClick={() =>
                           setActiveDropdown(
                             activeDropdown === item.name ? null : item.name
@@ -412,9 +543,19 @@ export default function UltraFuturisticNavigation({
                         />
                       </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: -10 }}
@@ -422,6 +563,14 @@ export default function UltraFuturisticNavigation({
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
                           className='ml-4 mt-2 space-y-2'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         >
                           {item.dropdownItems?.map(dropdownItem => (
                             <Link
@@ -452,6 +601,16 @@ export default function UltraFuturisticNavigation({
                               <span className='text-gray-300 hover:text-white transition-colors'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                 {dropdownItem.name}
+=======
+                              <span className='text-gray-300 hover:text-white transition-colors'>                                {dropdownItem.name}
+
+                                {dropdownItem.name}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </span>
                             </Link>
                           ))}
@@ -467,16 +626,38 @@ export default function UltraFuturisticNavigation({
                       className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       onClick={() => setIsOpen(false)}
+=======
+                      className='block text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'                      onClick={() => setIsOpen(false)}
+
+                      onClick={() => setIsOpen(false)}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       {item.name}
                     </Link>
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile Contact Info */}
               <div className='pt-6 border-t border-gray-700/50 space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
                   <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -530,7 +711,27 @@ export default function UltraFuturisticNavigation({
     </nav>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+}
+}
+}
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

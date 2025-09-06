@@ -1,6 +1,6 @@
 'use client';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -16,10 +16,13 @@ import { Brain;
  } from 'lucide-react';
 const ServicesSection: React.FC;
 =======
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Brain
   Cloud
   RefreshCw
@@ -28,6 +31,16 @@ import {
   BarChart3
   ArrowRight
   Zap;} from 'lucide-react';import {
+=======
+  Brain,
+  Cloud,
+  RefreshCw,
+  Wifi,
+  Shield,
+  BarChart3,
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   Cloud
   RefreshCw
@@ -266,6 +279,8 @@ const ServicesSection: React.FC = () => {
       }
     },  }
   const cardVariants = {
+<<<<<<< HEAD
+<<<<<<< HEAD
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
       }
@@ -276,9 +291,21 @@ const ServicesSection: React.FC = () => {
     visible: { opacity: 1, y: 0 }
   }
 =======
+<<<<<<< HEAD
         staggerChildren: 0.1,
       },
     },
+=======
+    hidden: { opacity: 0, y: 20 },
+<<<<<<< HEAD
+    visible: { opacity: 1, y: 0 },        staggerChildren: 0.1
+      }
+    }
+=======
+    visible: { opacity: 1, y: 0 },
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   };
 
   const cardVariants = {
@@ -286,7 +313,12 @@ const ServicesSection: React.FC = () => {
     visible: { opacity: 1, y: 0 },
   };
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>
       {/* Background Elements */}
@@ -296,6 +328,13 @@ const ServicesSection: React.FC = () => {
       </div>
 <<<<<<< HEAD
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  }
+=======
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
+=======
+        {/* Section Header */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
       {/* Background Elements */}
@@ -309,6 +348,18 @@ const ServicesSection: React.FC = () => {
       <div className='relative container mx-auto px-4'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
         {/* Section Header */}
+=======
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20 },
+
+        {/* Section Header */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -317,8 +368,18 @@ const ServicesSection: React.FC = () => {
 <<<<<<< HEAD
           className='text-center mb-16'        >          className="text-center mb-16"
 =======
+<<<<<<< HEAD
           className='text-center mb-16'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+          className='text-center mb-16'        >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -326,6 +387,15 @@ const ServicesSection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
+<<<<<<< HEAD
+=======
+
+          >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -338,6 +408,9 @@ const ServicesSection: React.FC = () => {
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
 <<<<<<< HEAD
             We deliver cutting-edge technology solutions that drive innovation
+=======
+            We deliver cutting-edge technology solutions that drive innovation,
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             efficiency, and growth for businesses across all industries.          </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
@@ -348,6 +421,14 @@ const ServicesSection: React.FC = () => {
           </p>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -444,12 +525,39 @@ const ServicesSection: React.FC = () => {
                 {/* Hover Effect */}
                 <div className="absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300" />
 =======
+<<<<<<< HEAD
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                <p className='text-gray-300 mb-6 leading-relaxed'>                  {service.description}
+                </p>
+
+                {/* Features */}
+
+                  {service.description}
+                </p>
+
+                {/* Features */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               </div>
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -457,6 +565,14 @@ const ServicesSection: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
           className='text-center'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -497,9 +613,15 @@ const ServicesSection: React.FC = () => {
   );
 <<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ServicesSection;  )
 }
 export default ServicesSection;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -507,3 +629,16 @@ export default ServicesSection;
 
 export default ServicesSection;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default ServicesSection;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default ServicesSection;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

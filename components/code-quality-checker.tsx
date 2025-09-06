@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+<<<<<<< HEAD
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Button from '../components/ui/Button';
+
 import {
+<<<<<<< HEAD
   Code
   CheckCircle
   AlertTriangle
@@ -18,9 +29,13 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 import {
+=======
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   Code,
   CheckCircle,
   AlertTriangle,
@@ -29,20 +44,33 @@ import {
   ArrowRight,
   Play,
   Shield,
+<<<<<<< HEAD
   Clock,
   TrendingUp,;
 } from 'lucide-react';
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  Clock,;
+  TrendingUp,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
+export default function CodeQualityCheckerPage() {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CodeQualityCheckerPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
-<<<<<<< HEAD
-  const features = null;
-            security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
-=======
+
   const features = [
     {
 <<<<<<< HEAD
@@ -83,6 +111,7 @@ export default function CodeQualityCheckerPage() {
   ];
   const supportedLanguages = [
     {
+<<<<<<< HEAD
       name: 'JavaScript/TypeScript'
       icon: '⚡'
       features: ['ESLint rules', 'TypeScript checks', 'React best practices']
@@ -119,6 +148,7 @@ export default function CodeQualityCheckerPage() {
     { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] }
     { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
 =======
+<<<<<<< HEAD
       name: 'PHP',
       icon: '🐘',
       features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'],
@@ -126,6 +156,54 @@ export default function CodeQualityCheckerPage() {
   ];
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      name: 'JavaScript/TypeScript',
+      icon: '⚡',
+      features: ['ESLint rules', 'TypeScript checks', 'React best practices'],
+    },
+    {
+      name: 'Python',
+      icon: '🐍',
+      features: ['PEP 8 compliance', 'Type hints', 'Security scanning'],
+    },
+    {
+      name: 'Java',
+      icon: '☕',
+      features: ['PMD rules', 'Checkstyle', 'SonarQube integration'],
+    },
+    {
+      name: 'C++',
+      icon: '⚙️',
+      features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'],
+    },
+    {
+      name: 'Go',
+      icon: '🟢',
+      features: ['Golangci-lint', 'Go vet', 'Performance analysis'],
+    },
+    {
+      name: 'PHP',
+      icon: '🐘',
+      features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'],
+    },  ];    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
+    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyleSonarQube integration'] },
+    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysisMemory leak detection'] },
+    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vetPerformance analysis'] },
+    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS FixerSecurity analysis'] }
+<<<<<<< HEAD
+
+  ];
+=======
+<<<<<<< HEAD
+=======
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const pricing = [
     {
       name: 'Developer'
@@ -272,6 +350,21 @@ export default function CodeQualityCheckerPage() {
           testCoverage: '85%'
           securityScore: '92%'
         }
+=======
+            type: 'error',
+            message: 'Missing semicolon at end of statement',
+            line: 18,
+            severity: 'high',
+          },
+        ],
+
+        metrics: {
+          complexity: 'Medium',
+          maintainability: 'Good',
+          testCoverage: '85%',
+          securityScore: '92%',
+        },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
@@ -384,7 +477,7 @@ export default function CodeQualityCheckerPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </p>
           {/* Code Input Form */}
           <div className="max-w-4xl mx-auto mb-8">
@@ -454,6 +547,7 @@ export default function CodeQualityCheckerPage() {
               View Pricing
             </Button>
             <Button
+<<<<<<< HEAD
               href='/contact'
               variant='outline'
               size='lg'
@@ -534,6 +628,15 @@ export default function CodeQualityCheckerPage() {
                     <p className='text-gray-400 leading-relaxed'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature.description}
+=======
+
+                      {feature.description}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </p>
                   </div>
                 </div>
@@ -542,11 +645,27 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Multi-Language Support
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -607,6 +726,14 @@ export default function CodeQualityCheckerPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -719,6 +846,14 @@ export default function CodeQualityCheckerPage() {
                   ))}
                 </div>
               </Card>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -730,6 +865,14 @@ export default function CodeQualityCheckerPage() {
                     <span className='text-orange-400 font-bold'>
                       {analysisResults.metrics.complexity}
                     </span>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Maintainability</span>
@@ -785,20 +928,44 @@ export default function CodeQualityCheckerPage() {
                     <CheckCircle className="w-5 h-5 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
 =======
+<<<<<<< HEAD
                     <span className='text-gray-300'>{rec}</span>
                   </div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                    <span className='text-gray-300'>{rec}</span>                  </div>
+
+                  </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 ))}
               </div>
             </Card>
           </div>
         </section>
       )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -842,7 +1009,12 @@ export default function CodeQualityCheckerPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -873,6 +1045,17 @@ export default function CodeQualityCheckerPage() {
                       <CheckCircle className='w-5 h-5 text-teal-400 mr-3 flex-shrink-0' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
+=======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -890,19 +1073,48 @@ export default function CodeQualityCheckerPage() {
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
 =======
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />
                 </Button>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
+=======
+
+            Ready to Improve Your Code Quality?
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers using our code quality checker to write
@@ -938,7 +1150,23 @@ export default function CodeQualityCheckerPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

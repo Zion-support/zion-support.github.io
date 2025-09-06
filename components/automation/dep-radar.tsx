@@ -1,28 +1,47 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 type Outdated = any;
     generatedAt = json.generatedAt || ''
 =======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
 }</tbody> </table> </div>)
 }</div>) import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
 export async function getServerSideProps() {
+=======
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+export async function getServerSideProps() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
+<<<<<<< HEAD
     outdated = json.outdated |[];
     generatedAt = json.generatedAt |''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch {}
   return { props: { outdated, generatedAt } }
 }
+=======
+    outdated = json.outdated || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { outdated, generatedAt } }
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string }) {
   return (
     <div className="space-y-6">
@@ -54,8 +73,15 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
           </table>
         </div>
       )}
+<<<<<<< HEAD
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 );
+<<<<<<< HEAD
 }
 =======
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
@@ -63,3 +89,14 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
 }</tbody> </table> </div>)
 }</div>)
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

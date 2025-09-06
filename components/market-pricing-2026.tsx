@@ -1,10 +1,10 @@
-import React, { useState } from 'react',
-import Head from 'next/head';
 <<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import React, { useState } from 'react',
 =======
+import React, { useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+
 import { motion } from 'framer-motion';
 import {
 <<<<<<< HEAD
@@ -22,6 +22,22 @@ import {
   BarChart3
   Target as TargetIcon
   Award;
+=======
+  TrendingUp,
+  Star,
+  Users,
+  Zap,
+  Brain,
+  Atom,
+  Sparkles,
+  Shield,
+  Target,
+  Cloud,
+  DollarSign,
+  BarChart3,
+  Target as TargetIcon,;
+  Award,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
 =======
   TrendingUp,
@@ -41,11 +57,12 @@ import {
 } from 'lucide-react';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
@@ -59,6 +76,13 @@ export default function MarketPricing2026() {
 <<<<<<< HEAD
   const allServices = null;
 =======
+=======
+export default function MarketPricing2026() {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [priceRange, setPriceRange] = useState('all');
+  // Combine all 2026 services
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const allServices = [
     ...revolutionary2026Services
     ...emergingTech2026Services
@@ -179,6 +203,10 @@ export default function MarketPricing2026() {
     },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
 <<<<<<< HEAD
     mobile: '+1 302 464 0950'
@@ -222,9 +250,24 @@ export default function MarketPricing2026() {
       allServices.length
 =======
       allServices.length,
+<<<<<<< HEAD
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       <div className='min-h-screen'>
         <Head>
@@ -269,11 +312,15 @@ export default function MarketPricing2026() {
           <meta property="og:url" content="https://ziontechgroup.com/market-pricing-2026" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/market-pricing-2026" />
+<<<<<<< HEAD
 =======
           />
         </Head>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Navigation */}
         <UltraAdvancedNavigation />
         {/* Hero Section */}
@@ -282,8 +329,26 @@ export default function MarketPricing2026() {
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
 =======
+<<<<<<< HEAD
           <div className='max-w-7xl mx-auto text-center'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+        </Head>
+
+        {/* Navigation */}
+        <UltraAdvancedNavigation />
+
+        {/* Hero Section */}
+        <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto text-center'>            <motion.div
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -335,7 +400,7 @@ export default function MarketPricing2026() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Comprehensive pricing analysis and competitive positioning for our revolutionary AI
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 quantum computing, and emerging technology services
               </p>
               {/* Pricing Statistics */}
@@ -387,9 +452,21 @@ export default function MarketPricing2026() {
                   <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
 =======
+<<<<<<< HEAD
                   <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>
                     {categories.map(category => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                  <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>                    {categories.map(category => (
+
+                    {categories.map(category => (
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       <button
                         key={category.id}
                         onClick={() => setSelectedCategory(category.id)}
@@ -418,6 +495,20 @@ export default function MarketPricing2026() {
                     ))}
                   </div>
                 </div>
+=======
+                        </div>                      </button>
+
+                      </button>
+
+                    ))}
+                  </div>
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-white font-semibold mb-3'>
@@ -447,6 +538,14 @@ export default function MarketPricing2026() {
                         <div className='text-xs opacity-75'>{range.range}</div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       </button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </div>
                 </div>
@@ -454,6 +553,14 @@ export default function MarketPricing2026() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Market Analysis Section */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
 <<<<<<< HEAD
@@ -463,6 +570,14 @@ export default function MarketPricing2026() {
           <div className='max-w-7xl mx-auto'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -495,11 +610,27 @@ export default function MarketPricing2026() {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-4xl mb-4'>📊</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -533,6 +664,14 @@ export default function MarketPricing2026() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-4xl mb-4'>🎯</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -565,6 +704,14 @@ export default function MarketPricing2026() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='text-4xl mb-4'>🚀</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -603,6 +750,14 @@ export default function MarketPricing2026() {
           <div className='max-w-7xl mx-auto'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -638,6 +793,14 @@ export default function MarketPricing2026() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className='group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
                     {/* Service Header */}
@@ -659,6 +822,20 @@ export default function MarketPricing2026() {
                         </span>
                       )}
                     </div>
+=======
+                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular
+
+                          Popular
+
+                        </span>
+                      )}
+                    </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Service Title */}
 <<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
@@ -687,6 +864,7 @@ export default function MarketPricing2026() {
                     <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
                       <div className='text-center'>
                         <div className='text-3xl font-bold text-cyan-400 mb-1'>
+<<<<<<< HEAD
                           {service.price}
                           <span className='text-gray-400 text-lg font-normal'>
                             {service.period}
@@ -702,11 +880,31 @@ export default function MarketPricing2026() {
                         </div>
                         <div className="text-gray-400 text-sm">Starting price</div>
 =======
+<<<<<<< HEAD
                         </div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                      {service.name}
+                    </h3>
+
+                    {/* Tagline */}
+
+                      {service.tagline}
+                    </p>
+
+                    {/* Pricing Section */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       </div>
                     </div>
                     {/* Market Position */}
+<<<<<<< HEAD
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
                         Market Position
@@ -719,12 +917,29 @@ export default function MarketPricing2026() {
                       <p className='text-gray-400 text-xs leading-relaxed'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                         {service.marketPosition}
+=======
+
+                        {service.marketPosition}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </p>
                     </div>
                     {/* ROI & Customers */}
                     <div className='grid grid-cols-2 gap-4 mb-4'>
                       <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
                         <div className='text-lg font-bold text-green-400 mb-1'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           {service.roi.split(' ')[0]}
                         </div>
                         <div className='text-gray-400 text-xs'>ROI</div>
@@ -751,6 +966,7 @@ export default function MarketPricing2026() {
                       </div>
                     </div>
                     {/* Key Features */}
+<<<<<<< HEAD
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
                         Key Features
@@ -769,13 +985,32 @@ export default function MarketPricing2026() {
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
 =======
+<<<<<<< HEAD
                             <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />
                             {feature}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                            {feature}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {/* Technology Stack */}
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
@@ -791,6 +1026,7 @@ export default function MarketPricing2026() {
                           </span>
                         ))}
                         {service.technology.length > 3 && (
+<<<<<<< HEAD
                           <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                            +{service.technology.length - 3} more                    <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Technology</h4>
                       <div className="flex flex-wrap gap-1">
@@ -809,18 +1045,48 @@ export default function MarketPricing2026() {
                           <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             +{service.technology.length - 3} more
+=======
+                          <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                            +{service.technology.length - 3} more
+
+                            {tech}
+                          </span>
+                        ))}
+                        {service.technology.length > 3 && (
+
+                            +{service.technology.length - 3} more
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </span>
                         )}
                       </div>
                     </div>
+<<<<<<< HEAD
                     {/* CTA Button */}
                     <a
                       href={service.link}
 <<<<<<< HEAD
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
 =======
+<<<<<<< HEAD
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                    {/* CTA Button */}
+                    <a
+                      href={service.link}
+                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     >
                       View Details
                     </a>
@@ -828,6 +1094,14 @@ export default function MarketPricing2026() {
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -854,6 +1128,20 @@ export default function MarketPricing2026() {
             )}
           </div>
         </section>
+=======
+                </p>              </motion.div>
+
+              </motion.div>
+
+            )}
+          </div>
+        </section>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
 <<<<<<< HEAD
@@ -863,11 +1151,27 @@ export default function MarketPricing2026() {
           <div className='max-w-4xl mx-auto text-center'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className='bg-gradient-to-r from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50 backdrop-blur-sm'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -951,7 +1255,26 @@ export default function MarketPricing2026() {
     </UltraAdvancedFuturisticBackground>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+}
+}
+}
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

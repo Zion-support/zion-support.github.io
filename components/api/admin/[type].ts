@@ -5,6 +5,7 @@ import { supabase as client  } from '../../../utils/supabase/client';
 import { MOCK_DATA } from '../../../utils/admin/mockData';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function isSupabaseConfigured() {
   return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co'
 }
@@ -22,6 +23,9 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 
 function isSupabaseConfigured() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
     process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
@@ -51,18 +55,39 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters
     format: (format as any) |undefined
   };    search;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    search,
+    sort,
+    order: (order as any) || 'desc',
+    page: page ? Number(page) : 0,
+    pageSize: pageSize ? Number(pageSize) : 20,
+    filters,
+    format: (format as any) || undefined,
+<<<<<<< HEAD
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
+<<<<<<< HEAD
+  };    search;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
 <<<<<<< HEAD
-    filters;
-    format: (format as any) || undefined}
 =======
+    filters,
+    format: (format as any) || undefined}
+}
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     filters
     format: (format as any) |undefined}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 =======
     search,
@@ -77,10 +102,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function toCsv(rows: any[]): string {
   if (!rows.length) return '';
-<<<<<<< HEAD
-  const headers = null;
-      return res.status(200).json({ ok: true })
-=======
+
   const headers = Object.keys(rows[0]);
   const escape = (v: any) => {
     if (v === null |v === undefined) return '';
@@ -93,22 +115,38 @@ function toCsv(rows: any[]): string {
   return lines.join('\n');
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
+<<<<<<< HEAD
 ) {
   const type = (req.query.type as AdminType) |'';
+=======
+) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!ADMIN_TYPES.includes(type))
 <<<<<<< HEAD
     return res.status(400).json({ error: 'Invalid type' });  }
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) |'';
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
   const useSupabase = isSupabaseConfigured();
 =======
@@ -202,6 +240,17 @@ const useSupabase = isSupabaseConfigured();
         }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
       }
+=======
+          );        }
+
+        }
+
+      }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
           const av = (a as any)[params.sort!];
@@ -226,10 +275,26 @@ const useSupabase = isSupabaseConfigured();
           `attachment; filename="${type}.csv"`
         );
         return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
+<<<<<<< HEAD
       return res.status(200).json({ items: pageItems, total });
    
 }
   }
+=======
+
+      }
+=======
+=======
+
+      }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
@@ -256,8 +321,10 @@ const useSupabase = isSupabaseConfigured();
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
+<<<<<<< HEAD
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
+<<<<<<< HEAD
 =======
    
 } else {
@@ -277,7 +344,24 @@ const updated = {
    
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -295,14 +379,20 @@ const updated = {
   return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );      return res.status(200).json({ ok: true })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );
 }
 =======
+<<<<<<< HEAD
    
 } else {
       const list = MOCK_DATA[type] || [];
@@ -319,3 +409,13 @@ return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data || []) );
 }return res.status (200) .send (toCsv (pageItems) );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

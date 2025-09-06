@@ -19,11 +19,7 @@ function grantPath(id: string) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-<<<<<<< HEAD
-  const p = null;
-  res.status(200).json({ record: existing })
-}
-=======
+
   const p = grantPath(id);
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
@@ -56,12 +52,12 @@ function isAuthorized(req: NextApiRequest) {
   );
 <<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
     return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req)) {
+  if (!isAuthorized(req)) {;
     res.status(401).json({ error: 'Unauthorized' });
 =======
 }
@@ -120,6 +116,7 @@ const ms = existing.milestones || [];
   existing.milestones = ms;
   existing.updatedAt = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 writeGrant(existing);
   res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
 }
@@ -129,3 +126,28 @@ writeGrant(existing);
   writeGrant(existing);
   res.status(200).json({ record: existing });
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+writeGrant(existing);
+  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+}
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+=======
+  writeGrant(existing);
+  res.status(200).json({ record: existing });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

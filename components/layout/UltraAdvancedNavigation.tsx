@@ -2,9 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -34,13 +39,45 @@ import {
   Code;
 } from 'lucide-react';
 import Link from 'next/link';import {
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  DollarSign,
+  Monitor,
+  Users,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,;
+  Code,;
+} from 'lucide-react';
+import Link from 'next/link';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
   Cpu, Zap, Atom, Database, Cloud, Lock, Code
  } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 const UltraAdvancedNavigation: React.FC;
 =======
@@ -78,6 +115,9 @@ import Link from 'next/link';
 
 const UltraAdvancedNavigation: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -522,6 +562,10 @@ const UltraAdvancedNavigation: React.FC = () => {
     },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
 <<<<<<< HEAD
     mobile: '+1 302 464 0950'
@@ -554,6 +598,14 @@ const UltraAdvancedNavigation: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className='flex items-center'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -637,8 +689,21 @@ const UltraAdvancedNavigation: React.FC = () => {
                     {item.icon && <item.icon className='w-4 h-4' />}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <span>{item.name}</span>
+<<<<<<< HEAD
+<<<<<<< HEAD
                   </Link>
                 )}
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  </Link>
+                )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -649,6 +714,14 @@ const UltraAdvancedNavigation: React.FC = () => {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         <div className='p-4'>
                           <div className='text-sm text-gray-400 mb-3'>
@@ -689,6 +762,14 @@ const UltraAdvancedNavigation: React.FC = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
@@ -698,6 +779,14 @@ const UltraAdvancedNavigation: React.FC = () => {
               >
                 <Phone className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </a>
               <a
                 href={`mailto:${contactInfo.email}`}
@@ -753,6 +842,14 @@ const UltraAdvancedNavigation: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -837,6 +934,16 @@ const UltraAdvancedNavigation: React.FC = () => {
                       {item.icon && <item.icon className='w-5 h-5' />}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>{item.name}</span>
+=======
+                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
+
+                      <span>{item.name}</span>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Link>
                   )}
                 </div>
@@ -844,7 +951,11 @@ const UltraAdvancedNavigation: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               {/* Mobile Contact Info */}
               <div className='pt-6 border-t border-gray-800/50'>
                 <div className='space-y-3 text-sm text-gray-400'>
@@ -908,9 +1019,15 @@ const UltraAdvancedNavigation: React.FC = () => {
   );
 <<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedNavigation;  )
 }
 export default UltraAdvancedNavigation;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -918,3 +1035,16 @@ export default UltraAdvancedNavigation;
 
 export default UltraAdvancedNavigation;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default UltraAdvancedNavigation;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraAdvancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

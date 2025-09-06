@@ -1,45 +1,26 @@
 
-<<<<<<< HEAD
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-=======
+
 const http = require('http')
 const fs = require('fs')
 const path = require('path')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 const server = http.createServer((req, res) => {
   if (req.url === '/' |req.url === '/index.html') {
     fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
       if (err) {
-<<<<<<< HEAD
-        res.writeHead(500);
-        res.end('Error loading offline.html');
-        return
-      }
-      res.writeHead(200, { 'Content-Type': 'text/html' });
-=======
+
         res.writeHead(500)
         res.end('Error loading offline.html')
         return
       }
+<<<<<<< HEAD
       res.writeHead(200, { 'Content-Type': 'text/html' })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       res.end(data)
     })
   } else if (req.url === '/online-check') {
     // Endpoint to check if we're online
-<<<<<<< HEAD
-    res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }))
-  } else {
-    res.writeHead(404);
-    res.end('Not found')
-  }
-}),
 
-const PORT = 8080;
-=======
     res.writeHead(200, { 'Content-Type': 'application/json' })
     res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
@@ -48,9 +29,23 @@ const PORT = 8080;
   }
 })
 const PORT = 8080
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+      res.writeHead(200, { 'Content-Type': 'text/html' }),;
+      res.end(data);
+    });
+  } else if (req.url === '/online-check') {;
+    // Endpoint to check if we're online;
+    res.writeHead(200, { 'Content-Type': 'application/json' }),;
+    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }));
+  } else {;
+    res.writeHead(404),;
+    res.end('Not found');
+  }
+}),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 server.listen(PORT, () => {
-  console.log(`
+  // // // console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -71,7 +66,43 @@ server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 <<<<<<< HEAD
+
 });
+
 =======
-});
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+}),
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;
+╔══════════════════════════════════════════════════════════════════╗;
+║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
+╠══════════════════════════════════════════════════════════════════╣;
+║                                                                  ║;
+║  🚀 Server running at: http://localhost:${PORT}                    ║;
+║                                                                  ║;
+║  ℹ️  This is a placeholder server that doesn't require npm       ║;
+║     dependencies. Most features will not work until you install  ║;
+║     the required npm packages.                                   ║;
+║                                                                  ║;
+║  🔍 See OFFLINE-DEV-README.md for detailed instructions.         ║;
+║                                                                  ║;
+║  🌐 When internet is available: ║;
+║     1. Run: chmod +x setup.sh                                    ║;
+║     2. Run: ./setup.sh npm                                       ║;
+║     3. Run: npm run dev                                          ║;
+║                                                                  ║;
+╚══════════════════════════════════════════════════════════════════╝;
+`);
+}),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

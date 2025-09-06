@@ -1,105 +1,113 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { JSX } from 'react';
 <<<<<<< HEAD
 =======
 import React, { JSX } from 'react',
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { JSX } from 'react',
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+export default function App(): JSX.Element {
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import Header from './src/components/Header';
+import Sidebar from './src/components/layout/Sidebar';
+import Footer from './src/components/Footer';
+import HomePage from './src/pages/Home';
+import AboutPage from './src/pages/About';
+import ContactPage from './src/pages/Contact';
+import ServicesPage from './src/pages/Services';
+import PricingPage from './src/pages/Pricing';
+<<<<<<< HEAD
+=======
+import React, { JSX } from 'react';
 
-    return () => clearTimeout(timer);
-  }, []);
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 
-  const services: Service[] = [
-    {
-      title: 'Micro SaaS Products';
-      description: 'Innovative, focused software solutions for modern businesses',
-      icon: Code;
-      features: ['AI-Powered Video Clip Maker', 'Smart Contract Analyzer', 'Cybersecurity Threat Intelligence', 'Multi-Language Website Translator'],
-      href: '/micro-saas';
-      color: 'blue'
-    },
-    {
-      title: 'AI Services';
-      description: 'Advanced artificial intelligence solutions and automation';
-      icon: Cpu;
-      features: ['Autonomous AI Agents', 'AI-Powered Financial Trading', 'AI Legal Document Analysis', 'AI-Powered Voice Analytics'],
-      href: '/ai-services';
-      color: 'purple'
-    },
-    {
-      title: 'IT & Cloud Services';
-      description: 'Comprehensive IT solutions and cloud infrastructure';
-      icon: Cloud;
-      features: ['Quantum Computing Consulting', 'Blockchain & Web3 Solutions', 'DevSecOps & Security Automation', 'Enterprise Data Platform'],
-      href: '/it-services';
-      color: 'green'
-    },
-    {
-      title: 'Cybersecurity';
-      description: 'Advanced security solutions and threat protection';
-      icon: Shield;
-      features: ['Threat Intelligence', 'Security Audits', 'Penetration Testing', 'Compliance Management'],
-      href: '/cybersecurity';
-      color: 'red'
-    },
-    {
-      title: 'Performance Optimization';
-      description: 'Speed and efficiency improvements for your applications';
-      icon: Zap;
-      features: ['Performance Audits', 'Code Optimization', 'Database Tuning', 'Caching Strategies'],
-      href: '/performance';
-      color: 'yellow'
-    },
-    {
-      title: 'Enterprise Solutions';
-      description: 'Comprehensive business technology solutions';
-      icon: Building;
-      features: ['Custom Software Development', 'System Integration', 'Digital Transformation', 'Process Automation'],
-      href: '/enterprise';
-      color: 'indigo'
-    }
-  ];
+<<<<<<< HEAD
+export default function App() {
+=======
+export default function App(): React.JSX.Element {
+=======
+import React, { JSX } from 'react',
 
-  const testimonials: Testimonial[] = [
-    {
-      name: 'Sarah Johnson';
-      company: 'TechCorp Inc.';
-      content: 'Zion Tech Group transformed our business with their AI-powered solutions. The results exceeded our expectations.';
-      rating: 5
-    },
-    {
-      name: 'Michael Chen';
-      company: 'StartupXYZ';
-      content: 'Their micro SaaS products helped us scale rapidly. The team is professional and innovative.';
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez';
-      company: 'Enterprise Solutions Ltd.';
-      content: 'Outstanding IT services and cloud solutions. They delivered on time and within budget.';
-      rating: 5
-    }
-  ];
-
-  const stats = null;
-    { label: 'Happy Clients', value: '500+', icon: Users }
-  ];
-
-  if (isLoading) {
-    return <LoadingSpinner fullScreen text="Loading Zion Tech Group..." />;
-  }
+export default function App(): JSX.Element {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+import React, { JSX } from 'react';
 
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export default function App() {
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+  return (
+<<<<<<< HEAD
+    <main>
+      <h1>Hello App</h1>
+    </main>
+=======
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Header />
+          <Sidebar />
+          <main className="flex-1 lg:ml-80">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+<<<<<<< HEAD
+    </ErrorBoundary>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  );
+}
+=======
+    </ErrorBoundary>;
+  );
+}
+=======
+import React, { JSX } from 'react';
+
+export default function App(): JSX.Element {
   return (
     <main>
       <h1>Hello App</h1>
     </main>
   );
 }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

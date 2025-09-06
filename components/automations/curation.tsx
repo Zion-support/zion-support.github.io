@@ -1,15 +1,31 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import fs from "fs";
 import path from "path";
 type Experiment = any;
+=======
+
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Experiment = {
   title: string;
 hypothesis?: string;
@@ -22,8 +38,13 @@ type Props = {
   updatedAt: string | null;
 items: Experiment[] }
 export default function CurationPage({ updatedAt, items }: Props) {
+<<<<<<< HEAD
   return (type Experiment = {
+<<<<<<< HEAD
   title: string
+=======
+  title: string,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -55,6 +76,11 @@ export default function CurationPage({ updatedAt, items }: Props) {
           next run.
         </p>
       )}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -88,6 +114,16 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 {exp.effort && exp.impact ? ' · ' : null}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
+<<<<<<< HEAD
+=======
+  return (
+
+};
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+
+=======
               </div>
             )}
           </div>
@@ -102,34 +138,76 @@ export default function CurationPage({ updatedAt, items }: Props) {
           </div>
         )}
       </div>
+    </main>;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              </div>
+            )}
+          </div>
+        ))}
+        {!items.length && (
+<<<<<<< HEAD
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
+            Nothing to show yet.
+=======
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
+
+            Nothing to show yet.
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+          </div>
+        )}
+      </div>
     </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export async function getStaticProps() {
   try {
     const filePath = path.join(
+<<<<<<< HEAD
       process.cwd()
       'data'
       'ai-curation'
       'growth-experiments.json'
+=======
+      process.cwd(),
+      'data',
+      'ai-curation',
+      'growth-experiments.json';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     );
 <<<<<<< HEAD
     const raw = fs.readFileSync(filePath, 'utf8');    const parsed = JSON.parse(raw);
     return {
       props: {
+<<<<<<< HEAD
         updatedAt: parsed.updatedAt |null
         items: parsed.items |[]
       }
       revalidate: 300
+=======
+        updatedAt: parsed.updatedAt || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     };  } catch {
     return {
       props: {
         updatedAt: null,}
 export async function getStaticProps() {
-  try {
+  try {;
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
     return {
@@ -143,15 +221,26 @@ export async function getStaticProps() {
   } catch {
     return {
       props: {
+<<<<<<< HEAD
+<<<<<<< HEAD
         updatedAt: null
         items: []
       }
       revalidate: 300
     }
   }        items: []}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       revalidate: 300}
 }
+<<<<<<< HEAD
 }
 =======
     const raw = fs.readFileSync(filePath, 'utf8');
@@ -173,3 +262,15 @@ export async function getStaticProps() {
     };
   }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+        updatedAt: null,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+        updatedAt: null,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

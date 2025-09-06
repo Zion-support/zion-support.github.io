@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 interface UltraQuantumHolographicBackgroundProps {
@@ -10,12 +11,11 @@ interface UltraQuantumHolographicBackgroundProps {
   animationSpeed?: number;
   className?: string
 }
-
-export default function UltraQuantumHolographicBackground({
-  children;
-  intensity;
-            ease: "easeInOut"
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 useEffect ( () => {
 =======
  useEffect ( () => {
@@ -63,6 +63,7 @@ case 'energy': // Energy field
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraQuantumHolographicBackground({
+<<<<<<< HEAD
   children
   intensity = 'high'
   colorScheme = 'quantum'
@@ -70,10 +71,19 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
+=======
+  children,
+  intensity = 'high',
+  colorScheme = 'quantum',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  className = '',
+}: UltraQuantumHolographicBackgroundProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const canvasRef = useRef<HTMLCanvasElement>(null);
 <<<<<<< HEAD
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
-export default function UltraQuantumHolographicBackground({
+export default function UltraQuantumHolographicBackground({;
   children;
   intensity = 'high';
   colorScheme = 'quantum';
@@ -312,11 +322,25 @@ export default function UltraQuantumHolographicBackground({
 <<<<<<< HEAD
             this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
 =======
+<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            this.vy = Math.random() * 2 + 1;          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (this.life <= 0) return;
         const alpha = this.life / this.maxLife;
@@ -499,8 +523,10 @@ export default function UltraQuantumHolographicBackground({
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
 =======
+<<<<<<< HEAD
 
           if (distance < 100 && p1.life > 0 && p2.life > 0) {
             ctx.beginPath();
@@ -508,9 +534,22 @@ export default function UltraQuantumHolographicBackground({
             ctx.lineTo(p2.x, p2.y);
             ctx.stroke();
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            ctx.stroke();          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Draw holographic grid
       ctx.strokeStyle = colors.secondary;
       ctx.lineWidth = 0.3;
@@ -589,8 +628,39 @@ export default function UltraQuantumHolographicBackground({
         }}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
       />
+<<<<<<< HEAD
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
+=======
+
+        }}
+      />
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+        />
+      </div>
+
+      {/* Content Layer */}
+      <div className='relative z-20'>{children}</div>
+
+      {/* Quantum Noise Effect */}
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0'
           animate={{
@@ -717,6 +787,24 @@ export default function UltraQuantumHolographicBackground({
             ease: 'easeInOut',
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           }}
+<<<<<<< HEAD
+=======
+=======
+
+        }}
+      />
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Content Layer */}
@@ -743,9 +831,11 @@ export default function UltraQuantumHolographicBackground({
             ]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
               `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
@@ -757,6 +847,16 @@ export default function UltraQuantumHolographicBackground({
             repeat: Infinity,
             ease: 'easeInOut',
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+            duration: 4,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }}
         />
       </div>
@@ -765,5 +865,24 @@ export default function UltraQuantumHolographicBackground({
 );  )
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          }}
+        />
+      </div>
+<<<<<<< HEAD
+    </div>
+<<<<<<< HEAD
+);  )
+}
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

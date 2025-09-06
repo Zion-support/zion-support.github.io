@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO';
@@ -15,10 +16,22 @@ import { Brain;
  } from 'lucide-react';
 const AIConsciousnessEvolutionPlatform: React.FC;
 =======
+
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
 =======
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+const AIConsciousnessEvolutionPlatform: React.FC = () => {
+=======
+ const AIConsciousnessEvolutionPlatform: React.FC = () => {
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -52,7 +65,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 <<<<<<< HEAD
 }animate= {
   {
+<<<<<<< HEAD
   opacity: 1, y: 0
+=======
+  opacity: 1, y: 0 
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.6, delay: index * 0.1
@@ -82,7 +100,12 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
 <<<<<<< HEAD
 }animate= {
   {
+<<<<<<< HEAD
   opacity: 1, y: 0
+=======
+  opacity: 1, y: 0 
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8
@@ -106,10 +129,12 @@ const containerVariants = {
 }
 visible: {
   opacity: 1, transition: {
+<<<<<<< HEAD
   staggerChildren: 0.1
 }
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 
@@ -146,13 +171,36 @@ const containerVariants = {
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1
+=======
+
+=======
+  staggerChildren: 0.1 
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 };
 
 };
 
+<<<<<<< HEAD
 };
 }
 
 export default AIConsciousnessEvolutionPlatform;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+};export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

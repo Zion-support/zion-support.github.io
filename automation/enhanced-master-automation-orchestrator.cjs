@@ -9,8 +9,6 @@ class EnhancedMasterAutomationOrchestrator {
     this.startTime = new Date();
     this.results = {};
   }
-
-  log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type}] ${message}`;
     console.log(logMessage);

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
@@ -6,13 +10,16 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 export default function CareersPage() {
-<<<<<<< HEAD
-  const openPositions = null;
-=======
+
   const openPositions = [
     {
+<<<<<<< HEAD
       title: "Senior AI Engineer"
       department: "AI & Machine Learning"
+=======
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       location: "San Francisco, CA / Remote";
       type: "Full-time"
       experience: "5+ years"
@@ -221,6 +228,14 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Open Positions */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -309,6 +324,14 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -338,8 +361,12 @@ export default function CareersPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       <EnhancedFooter />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

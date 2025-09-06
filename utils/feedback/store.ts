@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export interface FeedbackRecord {
+=======
+export interface FeedbackRecord {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   type: string;
   message: string;
@@ -9,6 +16,7 @@ export interface FeedbackRecord {
   ip: string;
 }
 const feedbackData: FeedbackRecord[] = [];
+<<<<<<< HEAD
 export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
   feedbackData.push(feedback);
   console.log('Feedback saved:', feedback.id);
@@ -19,6 +27,7 @@ export function writeAll(rows: any[]): void {
 }
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData];
+<<<<<<< HEAD
 }
 =======
 import fs from 'fs';
@@ -52,3 +61,27 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
+  feedbackData.push(feedback);
+  console.log('Feedback saved:', feedback.id);
+}
+
+export function writeAll(rows: any[]): void {;
+  console.log('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file
+}
+
+export function getAllFeedback(): FeedbackRecord[] {;
+  return [...feedbackData];
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

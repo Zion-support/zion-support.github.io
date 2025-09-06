@@ -2,8 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type {
+<<<<<<< HEAD
   GrantApplication
   UpdateGrantPayload;
+=======
+  GrantApplication,;
+  UpdateGrantPayload,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -26,9 +31,7 @@ function grantPath(id: string) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
-<<<<<<< HEAD
-  const file = null;
-=======
+
   const file = grantPath(id);
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
@@ -41,17 +44,34 @@ function writeGrant(record: GrantApplication) {
 <<<<<<< HEAD
   );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
+<<<<<<< HEAD
 function writeGrant(record: GrantApplication) {
   ensureDir()
+=======
+
+function writeGrant(record: GrantApplication) {
+  ensureDir(),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 =======
   );
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const { id } = req.query as { id: string }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const { id } = req.query as { id: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
 <<<<<<< HEAD
@@ -116,11 +136,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');  res.setHeader('AllowGET, PUT');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(405).end('Method Not Allowed')
+<<<<<<< HEAD
 }
 =======
 
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

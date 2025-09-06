@@ -6,21 +6,25 @@ import { PdfThemeColors } from '../themeConfig';
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addBasicInfoSection(
+=======
+import {jsPDF} from 'jspdf';
+import {ResumeBasicInfo} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+export function addBasicInfoSection(;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
   doc.setFontSize(24);
-<<<<<<< HEAD
-  doc.setTextColor(colors.heading);
-  doc.text(basicInfo.title || 'Resume', 20, 20);
-  let yPos = null;
-=======
+
   doc.setTextColor(colors.heading)
   doc.text(basicInfo.title |'Resume', 20, 20);
   let yPos = 30;
@@ -42,8 +46,47 @@ export function addBasicInfoSection(
     // Split text into multiple lines to fit within page width
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     yPos += (summaryLines.length * 6) + 10
+=======
+import { jsPDF } from 'jspdf',;
+import { ResumeBasicInfo } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+export function addBasicInfoSection(;
+  doc: jsPDF,;
+  basicInfo: ResumeBasicInfo,;
+  colors: PdfThemeColors;
+): number {;
+  // Add header with name and title;
+  doc.setFontSize(24),;
+  doc.setTextColor(colors.heading),;
+  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  let yPos = 30,;
+  if (basicInfo.headline) {;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(basicInfo.headline, 20, yPos),;
+    yPos += 5;
+  }
+;
+  // Add horizontal line divider;
+  doc.setDrawColor(colors.accent),;
+  doc.setLineWidth(0.5),;
+  doc.line(20, yPos, 190, yPos),;
+  yPos += 10,;
+  // Add summary if available;
+  if (basicInfo.summary) {;
+    doc.setFontSize(12),;
+    doc.setTextColor(colors.text),;
+    // Split text into multiple lines to fit within page width;
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
+    doc.text(summaryLines, 20, yPos);
+    yPos += (summaryLines.length * 6) + 10;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   return yPos
 }

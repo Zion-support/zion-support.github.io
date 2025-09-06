@@ -1,5 +1,27 @@
+<<<<<<< HEAD
 }})}; async fixImportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; async fixExportIssues() {const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'); if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true}; if (modified) {fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed export issues in ${file}`)}} catch (error) {this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})}; getSourceFiles() {const files = []; const srcDir = path.join(process.cwd(), "src"); if (fs.existsSync(srcDir)) {; const walkDir = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") |item.endsWith(".tsx") |item.endsWith(".js") |item.endsWith(".jsx")) {files.push(fullPath)}})}; walkDir(srcDir)}; return files}; async run() {this.log("🚀 Starting Syntax Fixer"); try {; await this.fixSyntaxErrors(); this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
 } catch (error) {this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}}
+=======
+}})};
+; async fixImportIssues() {; const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false;
+; // Fix import statements; content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'); content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,');
+; if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true};
+; if (modified) {; fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed import issues in ${file}`)}} catch (error) {; this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})};
+; async fixExportIssues() {; const files = this.getSourceFiles(); files.forEach(file = > {; try {; let content = fs.readFileSync(file, "utf8"); let modified = false;
+; // Fix export statements; content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,');
+; if (content ! = = fs.readFileSync(file, "utf8")) {; modified = true};
+; if (modified) {; fs.writeFileSync(file, content); this.fixesApplied++; this.log(`Fixed export issues in ${file}`)}} catch (error) {; this.log(`Failed to fix ${file}: ${error.message}`, "WARN")}})};
+; getSourceFiles() {; const files = []; const srcDir = path.join(process.cwd(), "src");
+; if (fs.existsSync(srcDir)) {; const walkDir = (dir) = > {; const items = fs.readdirSync(dir); items.forEach(item = > {; const fullPath = path.join(dir, item); const stat = fs.statSync(fullPath);
+; if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {; files.push(fullPath)}})};
+; walkDir(srcDir)};
+; return files};
+; async run() {; this.log("🚀 Starting Syntax Fixer");
+; try {; await this.fixSyntaxErrors();
+; this.log(" = " * 50); this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
+} catch (error) {; this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR")}}};
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Main execution;
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const fixer = new SyntaxFixer(); fixer.run().catch(console.error)}
 export default SyntaxFixer;
@@ -75,6 +97,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxF
 }
 export default SyntaxFixer;
     })
+<<<<<<< HEAD
   }
   async fixExportIssues() {
     const files = this.getSourceFiles()
@@ -109,6 +132,67 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
           if (stat.isDirectory() && !item.startsWith(&quot;.&quot;) && item !== &quot;node_modules&quot;) {
             walkDir(fullPath)
           } else if (item.endsWith(&quot;.ts&quot;) |item.endsWith(&quot;.tsx&quot;) |item.endsWith(&quot;.js&quot;) |item.endsWith(&quot;.jsx&quot;)) {
+=======
+  },
+,
+  async fixExportIssues() {,
+    const files = this.getSourceFiles(),
+    files.forEach(file => {,
+      try {,
+        let content = fs.readFileSync(file, "utf8"),
+        let modified = false,
+,
+        // Fix export statements,
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
+<<<<<<< HEAD
+,;
+        if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
+=======
+,
+        if (content !== fs.readFileSync(file, "utf8")) {,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          modified = true
+        },
+,
+        if (modified) {,
+          fs.writeFileSync(file, content),
+          this.fixesApplied++,
+          this.log(`Fixed export issues in ${file}`)
+        }
+      } catch (error) {,
+<<<<<<< HEAD
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
+<<<<<<< HEAD
+this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+    })
+  },
+,
+  getSourceFiles() {,
+<<<<<<< HEAD
+    const files = [],;
+    const srcDir = path.join(process.cwd(), &quot;src&quot;),
+=======
+    const files = [],
+    const srcDir = path.join(process.cwd(), "src"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+,
+    if (fs.existsSync(srcDir)) {,
+      const walkDir = (dir) => {,
+        const items = fs.readdirSync(dir),
+        items.forEach(item => {,
+          const fullPath = path.join(dir, item),
+          const stat = fs.statSync(fullPath),
+,
+          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
+            walkDir(fullPath)
+          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             files.push(fullPath)
           }
         })
@@ -116,17 +200,38 @@ this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
       walkDir(srcDir)
     }
     return files
+<<<<<<< HEAD
   }
   async run() {
     this.log(&quot;🚀 Starting Syntax Fixer&quot;)
     try {
       await this.fixSyntaxErrors()
 this.log("=" * 50)
+=======
+  },
+,
+  async run() {,
+    this.log("🚀 Starting Syntax Fixer"),
+,
+    try {,
+      await this.fixSyntaxErrors(),
+,
+<<<<<<< HEAD
+      this.log("=" * 50),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+this.log("=" * 50),
+=======
+      this.log("=" * 50),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
+<<<<<<< HEAD
 }
 // Main execution
 if (import.meta.url === `fil: e: //${process.argv[1]}`) {
@@ -137,9 +242,136 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {
 export default SyntaxFixer
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 =======
+<<<<<<< HEAD
 };
 ,
 }
 
 export default SyntaxFixer,
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+},
+,
+// Main execution,
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,
+  const fixer = new SyntaxFixer(),
+  fixer.run().catch(console.error)
+},
+,
+export default SyntaxFixer,
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
+
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+    });
+  },;
+,;
+  async fixImportIssues() {,;
+    const files = this.getSourceFiles(),;
+    files.forEach(file => {,;
+      try {,;
+        let content = fs.readFileSync(file, "utf8"),;
+        let modified = false,;
+,;
+        // Fix import statements,;
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),;
+        content = content.replace(/import\s+([^]+),\s*$/gm, 'import $1,'),;
+,;
+        if (content !== fs.readFileSync(file, "utf8")) {,;
+          modified = true;
+        },;
+,;
+        if (modified) {,;
+          fs.writeFileSync(file, content),;
+          this.fixesApplied++,;
+          this.log(`Fixed import issues in ${file}`),;
+        }
+      } catch (error) {,;
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+      }
+    });
+  },;
+,;
+  async fixExportIssues() {,;
+    const files = this.getSourceFiles(),;
+    files.forEach(file => {,;
+      try {,;
+        let content = fs.readFileSync(file, "utf8"),;
+        let modified = false,;
+,;
+        // Fix export statements,;
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),;
+,;
+        if (content !== fs.readFileSync(file, "utf8")) {,;
+          modified = true;
+        },;
+,;
+        if (modified) {,;
+          fs.writeFileSync(file, content),;
+          this.fixesApplied++,;
+          this.log(`Fixed export issues in ${file}`);
+        }
+      } catch (error) {,;
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN");
+      }
+    });
+  },;
+,;
+  getSourceFiles() {,;
+    const files = [],;
+    const srcDir = path.join(process.cwd(), "src"),;
+,;
+    if (fs.existsSync(srcDir)) {,;
+      const walkDir = (dir) => {,;
+        const items = fs.readdirSync(dir),;
+        items.forEach(item => {,;
+          const fullPath = path.join(dir, item),;
+          const stat = fs.statSync(fullPath),;
+,;
+          if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,;
+            walkDir(fullPath);
+          } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,;
+            files.push(fullPath);
+          }
+        });
+      },;
+,;
+      walkDir(srcDir);
+    },;
+,;
+    return files;
+  },;
+,;
+  async run() {,;
+    this.log("🚀 Starting Syntax Fixer"),;
+,;
+    try {,;
+      await this.fixSyntaxErrors(),;
+,;
+      this.log("=" * 50),;
+      this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`);
+    } catch (error) {,;
+      this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR");
+    }
+  }
+},;
+,;
+// Main execution,;
+if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
+  const fixer = new SyntaxFixer(),;
+  fixer.run().catch(console.error);
+},;
+;
+export default SyntaxFixer;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

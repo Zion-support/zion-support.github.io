@@ -2,12 +2,17 @@ import React from 'react';
 import { X } from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type SmartNudgeBannerProps = any;
 =======
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type SmartNudgeBannerProps = {
+=======
+
+export type SmartNudgeBannerProps = {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   role: 'talent' | 'client';
   userId?: string | null;
   message: string;
@@ -24,9 +29,17 @@ export default function SmartNudgeBanner({
   message
 }: SmartNudgeBannerProps) {
   const storageKey = React.useMemo(
+<<<<<<< HEAD
     () => `zion-nudge-${role}-${userId ?? 'anon'}`
     [role, userId]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`,
+    [role, userId];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   );  const [hidden, setHidden] = React.useState<boolean>(false);
 =======
   );
@@ -39,11 +52,20 @@ export default function SmartNudgeBanner({
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
 <<<<<<< HEAD
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
+<<<<<<< HEAD
   role: 'talent' | 'client'
   userId?: string | null;
   message: string
 }
 export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+=======
+  role: 'talent' | 'client',;
+  userId?: string | null;
+  message: string
+};
+
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
   const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -64,12 +86,22 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 <<<<<<< HEAD
         localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
 =======
+<<<<<<< HEAD
         localStorage.setItem(storageKey, 'dismissed');
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'>
       <button
@@ -90,6 +122,20 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     </div>
 );
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

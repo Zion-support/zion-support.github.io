@@ -2,20 +2,39 @@
 import React, { useState } from "react";
 =======
 import React, { useState } from 'react';
+<<<<<<< HEAD
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export interface TreeNode {;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export interface TreeNode {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   name: string;
   path: string;
-<<<<<<< HEAD
-  type: "folder" | "file";
-=======
+
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
+<<<<<<< HEAD
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
+=======
+
+interface TreeProps {
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function NodeItem({
   node
   depth
@@ -32,27 +51,28 @@ function NodeItem({
 <<<<<<< HEAD
     await navigator.clipboard.writeText(node.path);  }
 export interface TreeNode {
+<<<<<<< HEAD
   name: string
   path: string
   type: "folder" | "file"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  name: string,
+  path: string,
+  type: "folder" | "file",;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   exists?: boolean;
   children?: TreeNode[]
 }
 interface TreeProps {
-<<<<<<< HEAD
-  nodes: TreeNode[];
-=======
+
   nodes: TreeNode[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onDeploy?: (path: string) => void
 }
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
   const [open, setOpen] = useState<boolean>(false);
-<<<<<<< HEAD
 
-  const hasChildren = null;
-=======
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
   const copyPath = async () => {
@@ -144,6 +164,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
             />          ))}
         </div>
       )}
+<<<<<<< HEAD
     </div>        {hasChildren ? (
           <button className="text-sm" onClick={toggle} aria-label="Toggle">
             {open ? "▾" : "▸"}
@@ -165,12 +186,23 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
 =======
+<<<<<<< HEAD
             />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           ))}
         </div>
       )}
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -178,7 +210,8 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className='w-full'>
       {nodes.map(n => (        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
-    </div>
+<<<<<<< HEAD
+    </div>;
   );  )
 }
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -186,7 +219,11 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className="w-full">
       {nodes.map((n) => (
       ))}
+<<<<<<< HEAD
     </div>
+=======
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 =======
 }
@@ -227,9 +264,11 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+<<<<<<< HEAD
   onDeploy
 }/>) )
 }</div>)
+<<<<<<< HEAD
 <<<<<<< HEAD
 }export default Tree;}
 export default Tree;
@@ -237,3 +276,27 @@ export default Tree;
 =======
 }export default Tree;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+  onDeploy 
+}/>) ) 
+}</div>) ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}export default Tree;}
+export default Tree;
+<<<<<<< HEAD
+
+=======
+
+        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
+      ))}
+    </div>
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

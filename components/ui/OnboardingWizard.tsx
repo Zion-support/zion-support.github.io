@@ -1,22 +1,34 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OnboardingWizard() {
+=======
+export default function OnboardingWizard() {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const { role, setRole } = useRole();
   const [open, setOpen] = useState(false);
   useEffect(() => {
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       const has = null;
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       const has =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_has_onboarded')
@@ -44,12 +56,24 @@ export default function OnboardingWizard() {
     } catch {}
     setOpen(false)
 =======
+<<<<<<< HEAD
     setOpen(false);
   }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    setOpen(false);  }
+
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   if (!open) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'>
       <div className='w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl'>
@@ -177,12 +201,22 @@ export default function OnboardingWizard() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
 =======
+<<<<<<< HEAD
           </button>
         </div>
       </div>
     </div>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

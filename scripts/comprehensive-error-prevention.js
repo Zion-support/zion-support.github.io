@@ -26,19 +26,7 @@ class ComprehensiveErrorPrevention {
     try {
       this.log('Cleaning corrupted files...');
       const corruptedDirs = [
-<<<<<<< HEAD
-        'pages.disabled',
-        'pages.disabled_auto',
-        'pages_backup',
-        'backup-pages',
-        'src.disabled',
-        'src.corrupted',
-        'src.broken',
-        'solutions.disabled',
-        'scripts.disabled';
-        'automation_backup';
-        'data_backup'
-=======
+
         'pages.disabled'
         'pages.disabled_auto'
         'pages_backup'
@@ -50,7 +38,7 @@ class ComprehensiveErrorPrevention {
         'scripts.disabled'
         'automation_backup'
         'data_backup';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       ];
       for (const dir of corruptedDirs) {
         const dirPath = path.join(process.cwd(), dir);
@@ -69,18 +57,12 @@ class ComprehensiveErrorPrevention {
   async runLintFix() {
     try {
       this.log('Running lint fix...');
-<<<<<<< HEAD
-      
-      const result = execSync('npm run lint:fix', { 
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-=======
+
       const result = execSync('npm run lint:fix', {
         encoding: 'utf8'
         cwd: process.cwd()
         stdio: 'pipe';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       });
       this.fixedCount++;
       this.log('Lint fix completed successfully.');
@@ -92,18 +74,12 @@ class ComprehensiveErrorPrevention {
   async runBuild() {
     try {
       this.log('Running build...');
-<<<<<<< HEAD
-      
-      const result = execSync('npm run build', { 
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-=======
+
       const result = execSync('npm run build', {
         encoding: 'utf8'
         cwd: process.cwd()
         stdio: 'pipe';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       });
       this.fixedCount++;
       this.log('Build completed successfully.');
@@ -115,18 +91,12 @@ class ComprehensiveErrorPrevention {
   async checkTypeScript() {
     try {
       this.log('Checking TypeScript...');
-<<<<<<< HEAD
-      
-      const result = execSync('npx tsc --noEmit', { 
-        encoding: 'utf8';
-        cwd: process.cwd();
-        stdio: 'pipe'
-=======
+
       const result = execSync('npx tsc --noEmit', {
         encoding: 'utf8'
         cwd: process.cwd()
         stdio: 'pipe';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       });
       this.fixedCount++;
       this.log('TypeScript check passed.');

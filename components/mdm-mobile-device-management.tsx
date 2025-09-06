@@ -1,5 +1,4 @@
-import React from 'react',
-import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
@@ -11,25 +10,52 @@ export default function MDMPage() {
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
   Check
   ArrowRight
   Smartphone;
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,;
+  Smartphone,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function MDMPage() {
   const service = extraServices.find(s =>
-    s.link.endsWith('/mdm-mobile-device-management')
+    s.link.endsWith('/mdm-mobile-device-management');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-export default function MDMPage() {
+export default function MDMPage() {;
   const service = extraServices.find(s => s.link.endsWith('/mdm-mobile-device-management'));
 =======
 }
@@ -40,7 +66,7 @@ export default function MDMPage() {
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!service) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -134,4 +160,18 @@ export default function MDMPage() {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

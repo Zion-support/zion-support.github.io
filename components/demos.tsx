@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -8,11 +9,43 @@ import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = null;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
+import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
+import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
+import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
+import {
+  Mail,
+  Lock,
+  Link,
+  FileText,
+  CheckCircle,
+  Zap,
+  BarChart3,
+  Code,;
+  Play,;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+export default function DemosPage() {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
 import {
   Mail
   Lock
@@ -25,6 +58,7 @@ import {
   Play;
 } from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
 =======
+<<<<<<< HEAD
 import {
   Mail,
   Lock,
@@ -39,7 +73,11 @@ import {
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function DemosPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
@@ -144,7 +182,7 @@ export default function DemosPage() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>
@@ -348,6 +386,14 @@ export default function DemosPage() {
             {demos.map(demo => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               <button
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={demo.id}
                 onClick={() => setActiveDemo(demo.id)}
                 className={`p-4 rounded-lg border transition-all duration-300 text-left group ${
@@ -359,6 +405,14 @@ export default function DemosPage() {
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-br ${demo.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}
                 >
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {demo.icon}
                 </div>
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
@@ -385,6 +439,16 @@ export default function DemosPage() {
                     <CheckCircle className='w-4 h-4 mr-2' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     Active Demo
+=======
+                    <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo
+
+                    Active Demo
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                 )}
               </button>
@@ -392,12 +456,28 @@ export default function DemosPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-12'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
               <Play className='w-4 h-4 mr-2' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
@@ -409,6 +489,7 @@ export default function DemosPage() {
           </div>
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>
       </section>
+<<<<<<< HEAD
       {/* Features */}              Live Demo
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -422,16 +503,31 @@ export default function DemosPage() {
             {activeDemoData?.component}
           </div>
 =======
+<<<<<<< HEAD
             <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
+=======
+
+      {/* Features */}
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               {activeDemoData?.description}
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className='animate-fade-in'>{activeDemoData?.component}</div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         </div>
       </section>
       {/* Features */}
+<<<<<<< HEAD
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -482,6 +578,13 @@ export default function DemosPage() {
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -611,7 +714,22 @@ export default function DemosPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

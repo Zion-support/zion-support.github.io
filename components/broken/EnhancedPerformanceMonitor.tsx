@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity;
@@ -29,20 +30,19 @@ interface PerformanceMetrics {
     rtt: number
   }
 }
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-interface PerformanceRecommendation {
-  id: string;
-  title: string;
-  description: string;
-  priority: 'high' | 'medium' | 'low';
-  impact: string;
-  solution: string;
-  category: 'performance' | 'accessibility' | 'seo' | 'user-experience'
-}
-
-const EnhancedPerformanceMonitor: React.FC;
+//FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 //FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   recs.push ({
 =======
  //FCP recommendations if (metrics.fcp > 2000) {
@@ -105,6 +105,7 @@ if (!performanceData) {
 }
 export default EnhancedPerformanceMonitor;
 export default EnhancedPerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -113,3 +114,9 @@ export default EnhancedPerformanceMonitor;
 
 export default EnhancedPerformanceMonitor;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

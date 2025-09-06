@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { useRouter  } from 'next/router';
@@ -333,6 +334,9 @@ const startId =
         </motion.div>
         <ServicesLoadingGrid />
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
     allServices = [...allServices, ...newServices]
     let filteredServices = allServices
@@ -380,7 +384,7 @@ const ServicesPage: React.FC = () => {
             </a>
           </div>
         </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       </div>
     )
   }
@@ -467,6 +471,7 @@ const ServicesPage: React.FC = () => {
 export default ServicesPage
 }
 =======
+<<<<<<< HEAD
   );
 
 }animate= {;
@@ -612,3 +617,45 @@ export default ServicesPage
 }</AnimatePresence> </div>) ;
 }'"
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from 'react';
+
+const ServicesPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">IT Solutions</h3>
+            <p className="text-gray-600">
+              Comprehensive IT infrastructure and support services.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">AI Services</h3>
+            <p className="text-gray-600">
+              Artificial intelligence solutions and automation services.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Blockchain</h3>
+            <p className="text-gray-600">
+              Blockchain development and Web3 solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+<<<<<<< HEAD
+export default ServicesPage;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default ServicesPage;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

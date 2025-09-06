@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   EnvelopeIcon
   PhoneIcon
@@ -5,6 +6,10 @@ import {
   ClockIcon
   ChatBubbleLeftRightIcon
 } from '@heroicons/react/24/outline'
+=======
+import React from 'react';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const contactMethods = [
   {
     name: 'Email'
@@ -57,6 +62,7 @@ const faqs = [
 <<<<<<< HEAD
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
+<<<<<<< HEAD
 =======
     question: 'What security measures do you have?',
     answer:
@@ -66,50 +72,76 @@ const faqs = [
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export default function ContactPage() {;
+  return (;
+    <div className=&quot;bg-black&quot;>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function ContactPage() {
   return (
-    <div className=&quot;bg-black&quot;>
+    <div className="bg-black">
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Hero section */}
-      <div className=&quot;relative isolate px-6 pt-14 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl py-32 sm:py-48 lg:py-56&quot;>
-          <div className=&quot;text-center&quot;>
-            <h1 className=&quot;text-4xl font-bold tracking-tight text-white sm:text-6xl&quot;>
+      <div className="relative isolate px-6 pt-14 lg:px-8">
+        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Get in{' '}
-              <span className=&quot;bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent&quot;>
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
+<<<<<<< HEAD
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               Ready to transform your business with AI? Let's discuss how our cutting-edge
+=======
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Ready to transform your business with AI? Let's discuss how our cutting-edge 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               technology can accelerate your growth and innovation.
             </p>
           </div>
         </div>
       </div>
       {/* Contact methods */}
-      <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Contact Us</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Multiple ways to reach us
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <dl className=&quot;grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3&quot;>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {contactMethods.map((method) => (
-              <div key={method.name} className=&quot;flex flex-col group&quot;>
-                <dt className=&quot;flex items-center gap-x-3 text-base font-semibold leading-7 text-white&quot;>
-                  <method.icon className=&quot;h-5 w-5 flex-none text-blue-400&quot; aria-hidden=&quot;true&quot; />
+              <div key={method.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
                 </dt>
+<<<<<<< HEAD
                 <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
                   <p className=&quot;flex-auto&quot;>{method.description}</p>
                   <p className=&quot;mt-6&quot;>
                     <a
                       href={method.href}
                       className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
+=======
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p className="flex-auto">{method.description}</p>
+                  <p className="mt-6">
+                    <a 
+                      href={method.href} 
+                      className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     >
-                      {method.value} <span aria-hidden=&quot;true&quot;>→</span>
+                      {method.value} <span aria-hidden="true">→</span>
                     </Link>
                   </p>
                 </dd>
@@ -119,91 +151,102 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* Contact form */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Let's start a conversation
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
-          <form className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm&quot;>
-            <div className=&quot;grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2&quot;>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>
-                <label htmlFor=&quot;first-name&quot; className=&quot;block text-sm font-semibold leading-6 text-white&quot;>
+                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
                   First name
                 </label>
-                <div className=&quot;mt-2.5&quot;>
+                <div className="mt-2.5">
                   <input
-                    type=&quot;text&quot;
-                    name=&quot;first-name&quot;
-                    id=&quot;first-name&quot;
-                    autoComplete=&quot;given-name&quot;
-                    className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
+                    type="text"
+                    name="first-name"
+                    id="first-name"
+                    autoComplete="given-name"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor=&quot;last-name&quot; className=&quot;block text-sm font-semibold leading-6 text-white&quot;>
+                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white">
                   Last name
                 </label>
-                <div className=&quot;mt-2.5&quot;>
+                <div className="mt-2.5">
                   <input
-                    type=&quot;text&quot;
-                    name=&quot;last-name&quot;
-                    id=&quot;last-name&quot;
-                    autoComplete=&quot;family-name&quot;
-                    className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
+                    type="text"
+                    name="last-name"
+                    id="last-name"
+                    autoComplete="family-name"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
-              <div className=&quot;sm:col-span-2&quot;>
-                <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-semibold leading-6 text-white&quot;>
+              <div className="sm:col-span-2">
+                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
                   Email
                 </label>
-                <div className=&quot;mt-2.5&quot;>
+                <div className="mt-2.5">
                   <input
-                    type=&quot;email&quot;
-                    name=&quot;email&quot;
-                    id=&quot;email&quot;
-                    autoComplete=&quot;email&quot;
-                    className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
+                    type="email"
+                    name="email"
+                    id="email"
+                    autoComplete="email"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
-              <div className=&quot;sm:col-span-2&quot;>
-                <label htmlFor=&quot;company&quot; className=&quot;block text-sm font-semibold leading-6 text-white&quot;>
+              <div className="sm:col-span-2">
+                <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">
                   Company
                 </label>
-                <div className=&quot;mt-2.5&quot;>
+                <div className="mt-2.5">
                   <input
-                    type=&quot;text&quot;
-                    name=&quot;company&quot;
-                    id=&quot;company&quot;
-                    autoComplete=&quot;organization&quot;
-                    className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
+                    type="text"
+                    name="company"
+                    id="company"
+                    autoComplete="organization"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
-              <div className=&quot;sm:col-span-2&quot;>
-                <label htmlFor=&quot;message&quot; className=&quot;block text-sm font-semibold leading-6 text-white&quot;>
+              <div className="sm:col-span-2">
+                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
                   Message
                 </label>
-                <div className=&quot;mt-2.5&quot;>
+                <div className="mt-2.5">
                   <textarea
-                    name=&quot;message&quot;
-                    id=&quot;message&quot;
+                    name="message"
+                    id="message"
                     rows={4}
-                    className=&quot;block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6&quot;
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                     defaultValue={''}
                   />
                 </div>
               </div>
             </div>
-            <div className=&quot;mt-8 flex justify-end&quot;>
+            <div className="mt-8 flex justify-end">
               <button
-                type=&quot;submit&quot;
-                className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
+                type="submit"
+                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Send message
               </button>
@@ -212,36 +255,36 @@ export default function ContactPage() {
         </div>
       </div>
       {/* Office locations */}
-      <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Global Presence</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Global Presence</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Visit our offices worldwide
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3&quot;>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
             {officeLocations.map((office) => (
-              <div key={office.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <MapPinIcon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{office.name}</h3>
+              <div key={office.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center gap-x-3 mb-4">
+                  <MapPinIcon className="h-8 w-8 text-blue-400" />
+                  <h3 className="text-xl font-semibold text-white">{office.name}</h3>
                 </div>
-                <div className=&quot;space-y-3 text-gray-300&quot;>
-                  <p className=&quot;flex items-start gap-2&quot;>
-                    <MapPinIcon className=&quot;h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0&quot; />
+                <div className="space-y-3 text-gray-300">
+                  <p className="flex items-start gap-2">
+                    <MapPinIcon className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
                     {office.address}
                   </p>
-                  <p className=&quot;flex items-center gap-2&quot;>
-                    <PhoneIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+                  <p className="flex items-center gap-2">
+                    <PhoneIcon className="h-5 w-5 text-blue-400" />
                     {office.phone}
                   </p>
-                  <p className=&quot;flex items-center gap-2&quot;>
-                    <EnvelopeIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+                  <p className="flex items-center gap-2">
+                    <EnvelopeIcon className="h-5 w-5 text-blue-400" />
                     {office.email}
                   </p>
-                  <p className=&quot;flex items-center gap-2&quot;>
-                    <ClockIcon className=&quot;h-5 w-5 text-blue-400&quot; />
+                  <p className="flex items-center gap-2">
+                    <ClockIcon className="h-5 w-5 text-blue-400" />
                     {office.hours}
                   </p>;
                 </div>;
@@ -251,21 +294,32 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* FAQ */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Common questions
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
-          <dl className=&quot;space-y-8&quot;>
+        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
+          <dl className="space-y-8">
             {faqs.map((faq, index) => (
-              <div key={index} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm&quot;>
-                <dt className=&quot;text-lg font-semibold leading-7 text-white mb-4&quot;>
+              <div key={index} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
+                <dt className="text-lg font-semibold leading-7 text-white mb-4">
                   {faq.question}
                 </dt>
-                <dd className=&quot;text-base leading-7 text-gray-300&quot;>
+                <dd className="text-base leading-7 text-gray-300">
                   {faq.answer}
                 </dd>;
               </div>;
@@ -274,27 +328,39 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to get started?
           </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Our team is ready to help you explore the possibilities of AI and transform your business.
           </p>
-          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
-              href=&quot;/solutions&quot;
-              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
+              href="/solutions"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
             >
               Explore Solutions
             </Link>
-            <a href=&quot;/about&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              Learn More <span aria-hidden=&quot;true&quot;>→</span>
+            <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              Learn More <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Page;

@@ -1,5 +1,4 @@
-import React from 'react',
-import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Phone, Mail, MapPin, Check, ArrowRight, Car, Star  } from 'lucide-react';
@@ -11,7 +10,16 @@ export default function AutonomousVehicleAIPage() {
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -19,18 +27,37 @@ import {
   ArrowRight
   Car
   Star;
+=======
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,;
+  Star,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function AutonomousVehicleAIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/autonomous-vehicle-ai-platform')
+    s.link.endsWith('/autonomous-vehicle-ai-platform');
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AutonomousVehicleAIPage() {
+export default function AutonomousVehicleAIPage() {;
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-vehicle-ai-platform'));
 =======
 }
@@ -41,7 +68,7 @@ export default function AutonomousVehicleAIPage() {
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!service) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -138,5 +165,19 @@ export default function AutonomousVehicleAIPage() {
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

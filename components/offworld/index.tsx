@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+import {useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function OffworldConsole() {
+=======
+export default function OffworldConsole() {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -14,6 +22,7 @@ export default function OffworldConsole() {
   const [status, setStatus] = useState('');
   async function sendChat() {
     setStatus('Sending chat...');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const res = null;
@@ -27,8 +36,9 @@ export default function OffworldConsole() {
     setStatus(res.ok ? 'Chat sent' : 'Chat failed');
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
-
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
     const res = await fetch('/api/offworld/orbit?action=chat', {
       method: 'POST'
       headers: { 'content-type': 'application/json' }
@@ -74,6 +84,7 @@ export default function OffworldConsole() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }
   async function broadcast() {
+<<<<<<< HEAD
     setStatus('Broadcasting manifesto...');
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST'
@@ -81,7 +92,7 @@ export default function OffworldConsole() {
       body: JSON.stringify({ message: 'We build beyond platforms.' })
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen p-8 space-y-8'>
       <Head>
@@ -162,6 +173,20 @@ export default function OffworldConsole() {
 <<<<<<< HEAD
 );
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

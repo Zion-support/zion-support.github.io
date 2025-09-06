@@ -1,16 +1,12 @@
-import React from 'react';
-import { Heart } from 'lucide-react'
 <<<<<<< HEAD
-import { cn  } from '@/lib/utils';
-import { useWishlist  } from '@/hooks/useWishlist';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast  } from '@/hooks/use-toast';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger } from '@/components/ui/tooltip';
+import React from 'react';
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+import React from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Heart } from 'lucide-react'
+
 import { cn } from '@/lib/utils'
 import { useWishlist } from '@/hooks/useWishlist'
 import { useAuth } from '@/hooks/useAuth'
@@ -22,7 +18,7 @@ import {
   TooltipProvider
   TooltipTrigger
 } from '@/components/ui/tooltip'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface FavoriteButtonProps {
   itemId: string;
 <<<<<<< HEAD
@@ -35,21 +31,20 @@ interface FavoriteButtonProps {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
 <<<<<<< HEAD
-  const { isWishlisted, toggle } = useWishlist();
-  const { isAuthenticated } = useAuth();
-  const [loginOpen, setLoginOpen] = React.useState(false);
-  const handleClick = null;
-                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
-                )}
-              />
-=======
+
   const { isWishlisted, toggle } = useWishlist()
   const { isAuthenticated } = useAuth()
   const [loginOpen, setLoginOpen] = React.useState(false)
   const handleClick = (e: React.MouseEvent) => {
+=======
+  const { isWishlisted, toggle } = useWishlist();
+  const { isAuthenticated } = useAuth();
+  const [loginOpen, setLoginOpen] = React.useState(false);
+  const handleClick = (e: React.MouseEvent) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     e.stopPropagation();    if (!isAuthenticated) {
       setLoginOpen(true)
-      return
+      return;
     }
 <<<<<<< HEAD
     const wasWishlisted = isWishlisted(itemId)
@@ -70,15 +65,70 @@ const wasWishlisted = isWishlisted(itemId);
     })
   }
   const active = isWishlisted(itemId)
+=======
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Heart } from 'lucide-react';
+import { cn } from '@/lib/utils',;
+import { useWishlist } from '@/hooks/useWishlist',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from '@/hooks/use-toast',;
+import { LoginModal } from '@/components/auth/LoginModal',;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from '@/components/ui/tooltip',;
+interface FavoriteButtonProps {;
+  itemId: string,;
+  className?: string;
+}
+;
+export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
+  const { isWishlisted, toggle } = useWishlist(),;
+  const { isAuthenticated } = useAuth(),;
+  const [loginOpen, setLoginOpen] = React.useState(false),;
+  const handleClick = (e: React.MouseEvent) => {;
+    e.stopPropagation(),;
+    if (!isAuthenticated) {;
+      setLoginOpen(true),;
+      return;
+    }
+    
+    const wasWishlisted = isWishlisted(itemId),
+    toggle(itemId),
+    
+    // Provide feedback
+    toast({
+      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",
+      description: wasWishlisted 
+        ? "Item has been removed from your wishlist" 
+        : "Item has been added to your wishlist"})
+  },
+
+  const active = isWishlisted(itemId),
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
             <button
+<<<<<<< HEAD
               className = {cn(
                 'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
                 className
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
               onClick={handleClick}
               aria-label={
@@ -91,7 +141,7 @@ const wasWishlisted = isWishlisted(itemId);
                     ? 'fill-red-500 text-red-500 scale-110'
                     : 'text-zion-slate'
                 )}              />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </button>
           </TooltipTrigger>
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
@@ -126,6 +176,63 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+              className={cn(
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
+                className
+=======
+;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+    const wasWishlisted = isWishlisted(itemId),;
+    toggle(itemId),;
+    // Provide feedback;
+    toast({;
+      title: wasWishlisted ? "Removed from wishlist" : "Added to wishlist",;
+      description: wasWishlisted;
+        ? "Item has been removed from your wishlist";
+        : "Item has been added to your wishlist"});
+  },;
+  const active = isWishlisted(itemId),;
+  return (;
+    <>;
+      <TooltipProvider>;
+        <Tooltip>;
+          <TooltipTrigger asChild>;
+            <button;
+              className={cn(;
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
+                className;
+              )}
+              onClick={handleClick}
+              aria-label={active ? 'Remove from favorites' : 'Save to favorites'}
+            >;
+              <Heart;
+                className={cn(;
+                  'h-4 w-4 transition-transform duration-200';
+                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate';
+                )}
+              />;
+            </button>;
+          </TooltipTrigger>;
+          {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
+        </Tooltip>;
+      </TooltipProvider>;
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

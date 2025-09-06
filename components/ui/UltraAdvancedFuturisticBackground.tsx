@@ -10,13 +10,14 @@ window.addEventListener ('resize', resizeCanvas);
 particles.push ({
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic : 
 =======
   x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
-
-interface UltraAdvancedFuturisticBackgroundProps {
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :
 const UltraAdvancedFuturisticBackground: React.FC<
   UltraAdvancedFuturisticBackgroundProps
@@ -29,7 +30,7 @@ const UltraAdvancedFuturisticBackground: React.FC<
   enableHolographic = true
   enableQuantumEffects = true
   children,}) => {interface UltraAdvancedFuturisticBackgroundProps {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai';
   particleCount?: number;
@@ -39,9 +40,7 @@ const UltraAdvancedFuturisticBackground: React.FC<
   children: React.ReactNode
 }
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-<<<<<<< HEAD
-  intensity;
-=======
+
   intensity = 'high'
   colorScheme = 'quantum-fusion'
   particleCount = 300
@@ -273,12 +272,27 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 <<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
 =======
+<<<<<<< HEAD
             ctx.stroke();
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            ctx.stroke();          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
+<<<<<<< HEAD
     }
+=======
+    };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Holographic grid effect
     const createHolographicGrid = () => {
       if (!enableHolographic) return;
@@ -344,12 +358,27 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 <<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
 =======
+<<<<<<< HEAD
             ctx.stroke();
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            ctx.stroke();          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
+<<<<<<< HEAD
     }
+=======
+    };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -559,6 +588,10 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     enableHolographic
     enableQuantumEffects
   ]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
       <canvas
@@ -580,6 +613,10 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700'></div>
           </>
         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Holographic elements */}
         {enableHolographic && (
           <>
@@ -602,6 +639,11 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   );
 <<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
@@ -637,6 +679,7 @@ export default UltraAdvancedFuturisticBackground;
   )
 }
 export default UltraAdvancedFuturisticBackground;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -644,3 +687,16 @@ export default UltraAdvancedFuturisticBackground;
 
 export default UltraAdvancedFuturisticBackground;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default UltraAdvancedFuturisticBackground;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraAdvancedFuturisticBackground;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

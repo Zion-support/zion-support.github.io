@@ -4,6 +4,15 @@ export const metadata = {title: "Space Technology Solutions - Zion Tech Group | 
   description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
   keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
 export default function SpaceTechPage() {return (;
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
+  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
+export default function SpaceTechPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen">;
 =======
 import Link from 'next/link';
@@ -105,7 +114,11 @@ export default function SpaceTechPage() {
               </div>;
               <h3 className="text-xl font-semibold mb-3">Satellite Communications</h3>;
               <p className="text-gray-400 mb-4">;
+<<<<<<< HEAD
                 High-speed satellite internet, global connectivity solutions;
+=======
+                High-speed satellite internet, global connectivity solutions,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space-y-2 mb-6 text-sm text-gray-400">;

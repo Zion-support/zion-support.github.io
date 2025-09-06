@@ -3,14 +3,23 @@ import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Simple icons using inline SVG to avoid external assets
-<<<<<<< HEAD
-function StarIcon({ className;
-      setError(err?.message || 'Something went wrong.')
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Simple icons using inline SVG to avoid external assets
+
 function StarIcon({
   className = 'w-5 h-5 text-yellow-500'
 }: {
@@ -242,7 +251,15 @@ function SmartBanner({ iosUrl, androidUrl, deepLink }: { iosUrl: string, android
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -277,10 +294,13 @@ const testimonials = [
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -290,6 +310,17 @@ export default function MobileLaunchPage() {
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
 export default function MobileLaunchPage() {
+=======
+
+export default function MobileLaunchPage() {;
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error'
+  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
+  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
+  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
+export default function MobileLaunchPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
 =======
@@ -340,17 +371,37 @@ export default function MobileLaunchPage() {
       setStatus('error');
 <<<<<<< HEAD
       setError(err?.message |'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
+=======
+<<<<<<< HEAD
+      setError(err?.message || 'Something went wrong.');    }      if (!res.ok) throw new Error(await res.text());
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setStatus('success');
       setEmail('')
     } catch (err: any) {
       setStatus('error');
+<<<<<<< HEAD
       setError(err?.message |'Something went wrong.')
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
       setError(err?.message || 'Something went wrong.');
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+      setError(err?.message || 'Something went wrong.')
+=======
+      setError(err?.message || 'Something went wrong.');    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <EnhancedLayout>
       <Head>
@@ -487,6 +538,7 @@ export default function MobileLaunchPage() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
       </section>
       {/* Trust & Community */}
+<<<<<<< HEAD
       <section className='mt-12'>
         <div className='flex items-center gap-2'>
             <StarIcon key={i} />
@@ -568,8 +620,17 @@ export default function MobileLaunchPage() {
             disabled={status === 'loading'}
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 =======
+<<<<<<< HEAD
             className='rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -608,6 +669,7 @@ export default function MobileLaunchPage() {
         </div>
       </section>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 =======
           </Link>
@@ -630,7 +692,18 @@ export default function MobileLaunchPage() {
 }</div> </div> </section> <input type="email" required > {
   status === 'loading' ? 'Submitting…' : 'Notify me'
 <<<<<<< HEAD
+<<<<<<< HEAD
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 =======
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>)
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

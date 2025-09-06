@@ -1,13 +1,21 @@
 import React from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 <<<<<<< HEAD
 =======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const EnhancedFooter = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
@@ -27,7 +35,7 @@ const EnhancedFooter = () => {
               their digital presence with cutting-edge AI, cloud architecture
               and innovative development services.            </p>const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -158,15 +166,13 @@ const EnhancedFooter = () => {
         </div>
       </div>
     </footer>
+
 <<<<<<< HEAD
-  )
-};
-export default EnhancedFooter;
-=======
 );
 }
 export default EnhancedFooter;}
 export default EnhancedFooter;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
@@ -180,3 +186,11 @@ export default EnhancedFooter;
 
 export default EnhancedFooter;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+export default EnhancedFooter;},
+
+export default EnhancedFooter;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,12 +1,22 @@
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Course = any;
 =======
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+<<<<<<< HEAD
+export type Course = {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export type Course = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   title: string;
   durationMinutes: number;
@@ -25,6 +35,7 @@ export default function CourseCard({ course }: { course: Course }) {
   category: string
   certificationBadge: string
   description?: string
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
   description?: string;
@@ -32,6 +43,9 @@ export default function CourseCard({ course }: { course: Course }) {
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CourseCard({ course }: { course: Course }) {
   return (
     <div className='border rounded-lg p-4 hover:shadow-md transition'>
@@ -66,7 +80,7 @@ export default function CourseCard({ course }: { course: Course }) {
 <<<<<<< HEAD
           <a className='text-blue-600 hover:underline text-sm'>View course</a>        </Link>
       </div>
-    </div>
+    </div>;
   );
 }          <a className="text-blue-600 hover: underline text-sm">View course</a>
 =======
@@ -75,8 +89,20 @@ export default function CourseCard({ course }: { course: Course }) {
         </Link>
       </div>
     </div>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

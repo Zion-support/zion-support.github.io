@@ -1,21 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client',
-
-import { useState, useEffect  } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, ChevronDown;
-  Brain, Rocket, Shield;
-  Zap;
-  Target, Atom;
-  BookOpen;
-  Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
-  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
-  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
- } from 'lucide-react';
-const navigationItems = null;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 'use client';
 ]
 }];
@@ -72,7 +63,7 @@ const navigationItems = null;
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>)
 }</AnimatePresence> </>)
 };export default EnhancedNavigation2025;
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation2025() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -143,6 +134,14 @@ export default function EnhancedNavigation2025() {
                       activeSubmenu === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Submenu */}
                   <AnimatePresence>
                     {activeSubmenu === item.name && (
@@ -202,6 +201,14 @@ export default function EnhancedNavigation2025() {
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
@@ -217,6 +224,14 @@ export default function EnhancedNavigation2025() {
                 Get Started
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -227,6 +242,14 @@ export default function EnhancedNavigation2025() {
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -245,6 +268,14 @@ export default function EnhancedNavigation2025() {
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
                   </button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {activeDropdown === item.name && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
@@ -271,6 +302,10 @@ export default function EnhancedNavigation2025() {
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               {/* Mobile CTA */}
               <div className="pt-4">
                 <Link
@@ -287,6 +322,14 @@ export default function EnhancedNavigation2025() {
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
             />
+<<<<<<< HEAD
+=======
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
               <div className="p-6">
@@ -315,6 +358,14 @@ export default function EnhancedNavigation2025() {
                           activeSubmenu === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {/* Mobile Submenu */}
                       <AnimatePresence>
                         {activeSubmenu === item.name && (
@@ -342,6 +393,14 @@ export default function EnhancedNavigation2025() {
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">
                   <Link
@@ -381,11 +440,20 @@ export default function EnhancedNavigation2025() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Spacer for fixed navigation */}
       <div className="h-20" />
     </>
   )
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 'use client';
@@ -448,3 +516,6 @@ export default function EnhancedNavigation2025() {
 
 export default EnhancedNavigation2025;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,15 +1,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = any;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+ 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+=======
+ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 }
 type Props = { report: Report | null }
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
+  try {;
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);
@@ -17,10 +29,19 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   } catch {
     return { props: { report: null }, revalidate: 21600 }
   }
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SiteValidator({ report }: Props) {
+=======
+export default function SiteValidator({ report }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!report) return <div>No validation report yet.</div>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -53,10 +74,17 @@ export default function SiteValidator({ report }: Props) {
         </section>
       )}
     </div>
+<<<<<<< HEAD
 );
 }
 =======
+<<<<<<< HEAD
 
 
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

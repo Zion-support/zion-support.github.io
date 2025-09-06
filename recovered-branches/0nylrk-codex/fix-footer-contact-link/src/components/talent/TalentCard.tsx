@@ -1,10 +1,13 @@
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { TalentProfile } from "@/types/talent";
 export interface TalentCardProps {
+<<<<<<< HEAD
 <<<<<<< HEAD
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
@@ -13,12 +16,15 @@ export interface TalentCardProps {
   onToggleSave: (id: string, isSaved: boolean) => void;
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   talent: TalentProfile
   onViewProfile: (id: string) => void
   onRequestHire: (talent: TalentProfile) => void
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isAuthenticated: boolean
 }
 =======
@@ -27,6 +33,32 @@ export interface TalentCardProps {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function TalentCard({
+=======
+<<<<<<< HEAD
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
+import {useNavigate} from "react-router-dom";
+import {TalentProfile} from "@/types/talent";
+=======
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
+import { useNavigate } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
+<<<<<<< HEAD
+}
+
+export function TalentCard({;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   talent;
   onViewProfile;
   onRequestHire;
@@ -34,9 +66,7 @@ export function TalentCard({
   onToggleSave;
   isAuthenticated
 }: TalentCardProps) {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
@@ -59,9 +89,78 @@ export function TalentCard({
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     }
+<<<<<<< HEAD
   }
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) |[];
+=======
+import { useNavigate } from "react-router-dom",
+import { TalentProfile } from "@/types/talent",
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
+=======
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
+import { useNavigate } from "react-router-dom",;
+import { TalentProfile } from "@/types/talent",;
+export interface TalentCardProps {;
+  talent: TalentProfile,;
+  onViewProfile: (id: string) => void,;
+  onRequestHire: (talent: TalentProfile) => void,;
+  isSaved: boolean,;
+  onToggleSave: (id: string, isSaved: boolean) => void,;
+  isAuthenticated: boolean;
+}
+;
+export function TalentCard({;
+  talent,;
+  onViewProfile,;
+  onRequestHire,;
+  isSaved,;
+  onToggleSave,;
+  isAuthenticated;
+}: TalentCardProps) {;
+  const navigate = useNavigate(),;
+  const handleViewProfile = () => {;
+    // Navigate directly to the talent profile;
+    navigate(`/talent/${talent.id}`),;
+    // Also call the onViewProfile callback if provided;
+    if (onViewProfile) {;
+      onViewProfile(talent.id);
+    }
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  },;
+  const handleToggleSave = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onToggleSave) {;
+      onToggleSave(talent.id, !isSaved);
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) || [],
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
       <div className="p-6">
@@ -102,6 +201,14 @@ export function TalentCard({
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+<<<<<<< HEAD
+=======
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
               {talent.location && (
@@ -116,6 +223,7 @@ export function TalentCard({
                   <span>{talent.availability_type}</span>
                 </div>
               )}
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -149,6 +257,46 @@ export function TalentCard({
               </div>
             ) : (
               <div className="text-zion-slate-light">Rate not specified</div>
+=======
+            </div>;
+          </div>;
+        </div>;
+        {/* Skills */}
+        {skills.length > 0 && (;
+          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills.map((skill, index) => (;
+                <span;
+                  key={index}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
+                >;
+                  {skill}
+                </span>;
+              ))}
+              {(talent.skills?.length || 0) > 5 && (;
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                  +{(talent.skills?.length || 0) - 5} more;
+                </span>;
+              )}
+            </div>;
+          </div>;
+        )}
+;
+        {/* Hourly Rate & Actions */}
+        <div className="mt-5 flex items-center justify-between">;
+          <div>;
+            {talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </div>
           <div className="flex items-center gap-2">
@@ -166,8 +314,12 @@ export function TalentCard({
               size="sm"
               variant="ghost"
               onClick={(e) => {
+<<<<<<< HEAD
                 e.stopPropagation();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+                e.stopPropagation(),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"

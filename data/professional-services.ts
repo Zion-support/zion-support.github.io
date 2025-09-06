@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface ProfessionalService {
+=======
+export interface ProfessionalService {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -13,13 +19,37 @@ export interface ProfessionalService {
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string
+=======
+=======
+export interface ProfessionalService {;
+=======
+    address: string;
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   }
 =======
     address: string;
   };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
+<<<<<<< HEAD
 
 export const professionalServices: ProfessionalService[] = [
   {
@@ -42,10 +72,18 @@ export const professionalServices: ProfessionalService[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     address: string;
   }
 export const professionalServices: ProfessionalService[] = [
   {
+<<<<<<< HEAD
     id: 'it-consulting'
     name: 'IT Consulting Services'
     tagline: 'Expert IT consulting for business growth'
@@ -69,13 +107,14 @@ export const professionalServices: ProfessionalService[] = [
     }
   }
 ];      mobile: "+1 302 464 0950";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 =======
+<<<<<<< HEAD
     id: 'it-consulting',
     name: 'IT Consulting Services',
     tagline: 'Expert IT consulting for business growth',
@@ -93,10 +132,49 @@ export const professionalServices: ProfessionalService[] = [
     category: 'Professional Services',
     realImplementation: true,
     contactInfo: {
+=======
+    id: "it-consulting",
+    name: "IT Consulting Services",
+    tagline: "Expert IT consulting for business growth",
+    price: "$120/hour",
+    description: "Professional IT consulting services to help businesses optimize their technology investments.",
+    features: [
+      "Technology assessment",
+      "Strategic planning",
+      "Implementation guidance",
+      "Performance optimization",
+      "Ongoing support"
+    ],
+    link: "/services/it-consulting",
+    category: "Professional Services",
+    realImplementation: true,
+    contactInfo: {
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
+<<<<<<< HEAD
   },
 ];
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

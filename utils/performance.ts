@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import { PerformanceMetrics } from '../types';
 <<<<<<< HEAD
 export const measurePerformance = (): PerformanceMetrics | null => {
+<<<<<<< HEAD
   if (typeof window === 'undefined' |!('performance' in window)) {
+=======
+  if (typeof window === 'undefined' || !('performance' in window)) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return null;
   }
   try {
@@ -24,8 +29,14 @@ export const measurePerformance = (): PerformanceMetrics | null => {
     console.warn('Error measuring performance:', error);
     return null;
   }
+<<<<<<< HEAD
 }
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
+=======
+};
+
+export const getPerformanceScore = (metrics: PerformanceMetrics): {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   overall: 'good' | 'needs-improvement' | 'poor';
   scores: {
     fcp: 'good' | 'needs-improvement' | 'poor';
@@ -66,9 +77,17 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
   } else {
     overall = 'good';
   }
+<<<<<<< HEAD
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+=======
+
+  return { overall, scores };
+};
+
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   console.group(`🚀 ${label}`);
   if (metrics.fcp !== undefined) console.log('First Contentful Paint:', `${metrics.fcp.toFixed(2)}ms`);
   if (metrics.lcp !== undefined) console.log('Largest Contentful Paint:', `${metrics.lcp.toFixed(2)}ms`);
@@ -76,6 +95,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
+<<<<<<< HEAD
 }
 =======
 }
@@ -94,3 +114,16 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): { overall: 'go
 
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') = > { console.group(`🚀 ${label}`); console.log('Load Time: ', `${metrics.loadTime.toFixed(2)}ms`); console.log('First Contentful Paint: ', `${metrics.firstContentfulPaint.toFixed(2)}ms`); console.log('Largest Contentful Paint: ', `${metrics.largestContentfulPaint.toFixed(2)}ms`); console.log('Cumulative Layout Shift: ', metrics.cumulativeLayoutShift.toFixed(4)); console.log('First Input Delay: ', `${metrics.firstInputDelay.toFixed(2)}ms`); console.groupEnd()};
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

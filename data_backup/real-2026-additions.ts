@@ -1,11 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export interface Real2026Addition {
   "id": string;
   name: string;
   tagline: string;
   price: string;
   features: string[]}
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const "real2026Additions": Real2026Addition[] = [{
     id: '2026-addition-1',
     "name": '2026 Addition Service 1',
@@ -13,6 +24,7 @@ export const "real2026Additions": Real2026Addition[] = [{
     "price": '$699',
     "features": ['2026 features', 'Latest technology', 'Future-ready']},
 ];
+<<<<<<< HEAD
 export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]}
 }
 
@@ -29,3 +41,31 @@ export interface Real2026Addition { id: string; name: string; tagline: string; p
 }
 
 export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+=======
+export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export interface Real2026Addition {
+  "id": string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[]}
+export const "real2026Additions": Real2026Addition[] = [{
+    id: '2026-addition-1',
+    "name": '2026 Addition Service 1',
+    "tagline": '2026 innovation service',
+    "price": '$699',
+    "features": ['2026 features', 'Latest technology', 'Future-ready']},
+];
+<<<<<<< HEAD
+export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+=======
+export interface Real2026Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2026Additions: Real2026Addition[] = [ { id: '2026-addition-1',name: '2026 Addition Service 1',tagline: '2026 innovation service',price: '$699',features: ['2026 features','Latest technology','Future-ready'],},];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

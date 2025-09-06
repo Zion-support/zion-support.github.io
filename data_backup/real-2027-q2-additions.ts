@@ -1,11 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export interface Real2027Q2Addition {
   "id": string;
   name: string;
   tagline: string;
   price: string;
   features: string[]}
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const "real2027Q2Additions": Real2027Q2Addition[] = [{
     id: 'q2-2027-addition-1',
     "name": 'Q2 2027 Addition 1',
@@ -17,6 +28,7 @@ export const "real2027Q2Additions": Real2027Q2Addition[] = [{
       'Advanced solutions',
     ]},
 ];
+<<<<<<< HEAD
 export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]}
 }
 
@@ -33,3 +45,35 @@ export interface Real2027Q2Addition { id: string; name: string; tagline: string;
 }
 
 export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+=======
+export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export interface Real2027Q2Addition {
+  "id": string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[]}
+export const "real2027Q2Additions": Real2027Q2Addition[] = [{
+    id: 'q2-2027-addition-1',
+    "name": 'Q2 2027 Addition 1',
+    "tagline": 'Second quarter 2027 addition',
+    "price": '$1299',
+    "features": [
+      'Q2 2027 features',
+      'Mid-year innovations',
+      'Advanced solutions',
+    ]},
+];
+<<<<<<< HEAD
+export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+=======
+export interface Real2027Q2Addition { id: string; name: string; tagline: string; price: string; features: string[]} export const real2027Q2Additions: Real2027Q2Addition[] = [ { id: 'q2-2027-addition-1',name: 'Q2 2027 Addition 1',tagline: 'Second quarter 2027 addition',price: '$1299',features: [ 'Q2 2027 features','Mid-year innovations','Advanced solutions',],},];
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

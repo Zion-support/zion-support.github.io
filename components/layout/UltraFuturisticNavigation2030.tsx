@@ -1,13 +1,22 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
   Microscope, DollarSign, Home, Users, Briefcase;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -67,7 +76,68 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Infinity,
+  Hexagon,;
+  Network,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -75,10 +145,7 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
   Infinity, Hexagon, Network
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -447,6 +514,31 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
+=======
+        name: 'AI HR Management Suite 2030',
+        href: '/ai-hr-management-suite-2030',
+        description: 'Intelligent human resources management powered by AI',
+        price: '$149/month',
+      },
+    ],
+  },];      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' },
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' },
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },
+      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
+    ]
+  }
+<<<<<<< HEAD
+
+];
+=======
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -499,6 +591,7 @@ const quickLinks = [
   { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' }
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' }
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
+<<<<<<< HEAD
 =======
         name: 'AI HR Management Suite 2030',
         href: '/ai-hr-management-suite-2030',
@@ -561,7 +654,14 @@ const quickLinks = [
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function UltraFuturisticNavigation2030() {
+=======
+
+export default function UltraFuturisticNavigation2030() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -582,7 +682,7 @@ export default function UltraFuturisticNavigation2030() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       {/* Top Contact Bar */}
@@ -591,6 +691,14 @@ export default function UltraFuturisticNavigation2030() {
           <div className='flex items-center space-x-6'>
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <span>{contactInfo.mobile}</span>
             </div>
             <div className='flex items-center space-x-2'>
@@ -643,6 +751,14 @@ export default function UltraFuturisticNavigation2030() {
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Logo */}
             <div className='flex items-center space-x-4'>
               <Link href='/' className='flex items-center space-x-3 group'>
@@ -763,6 +879,7 @@ export default function UltraFuturisticNavigation2030() {
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
+<<<<<<< HEAD
                                 className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group'
                               >
                                 <div className='flex items-center justify-between'>
@@ -790,6 +907,15 @@ export default function UltraFuturisticNavigation2030() {
                                   </span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                                 </div>
+=======
+
+                                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </Link>
                             ))}
                           </div>
@@ -800,6 +926,14 @@ export default function UltraFuturisticNavigation2030() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link
@@ -855,6 +989,14 @@ export default function UltraFuturisticNavigation2030() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -863,6 +1005,14 @@ export default function UltraFuturisticNavigation2030() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Navigation Links */}
@@ -896,9 +1046,21 @@ export default function UltraFuturisticNavigation2030() {
                       <item.icon className='w-5 h-5' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       <span>{item.name}</span>
+<<<<<<< HEAD
                     </Link>
                   ))}
                 </div>
+=======
+
+                    </Link>
+                  ))}
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Mobile Services */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white px-3'>
@@ -910,10 +1072,23 @@ export default function UltraFuturisticNavigation2030() {
                   <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>
                   <div className="grid grid-cols-2 gap-3">
                     {quickLinks.map((link) => (
+<<<<<<< HEAD
 =======
                     {quickLinks.map(link => (
                       <Link
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+                      <Link
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
@@ -925,8 +1100,16 @@ export default function UltraFuturisticNavigation2030() {
                       >
                         <link.icon className='w-6 h-6 mx-auto mb-2' />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-')
                             ? `bg-gradient-to-r ${link.color} text-white`
+=======
+                        <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
+                            ? `bg-gradient-to-r ${link.color} text-white` 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                         }`}
                       >
@@ -941,6 +1124,23 @@ export default function UltraFuturisticNavigation2030() {
                 </div>
                 {/* Mobile CTA */}
                 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
+=======
+                        <span className='text-sm font-medium'>{link.name}</span>                      </Link>
+
+                      </Link>
+
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mobile CTA */}
+                <div className='space-y-3 pt-4 border-t border-purple-500/20'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -976,6 +1176,7 @@ export default function UltraFuturisticNavigation2030() {
           )}
         </AnimatePresence>
       </nav>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -984,6 +1185,24 @@ export default function UltraFuturisticNavigation2030() {
     </>
   );
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>
+    </>
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

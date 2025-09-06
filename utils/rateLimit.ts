@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function rateLimit(options: { windowMs: number; max: number }) {
   return (req: any, res: any, next: any) => {
     // Mock rate limiting implementation
@@ -7,13 +8,25 @@ export function rateLimit(options: { windowMs: number; max: number }) {
   };
 }
 =======
+=======
+
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
 const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
+<<<<<<< HEAD
   const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() |
              req.socket.remoteAddress |
+=======
+  const ip = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || 
+             req.socket.remoteAddress || ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
              'unknown';
   const now = Date.now();
   const key = `rate_limit_${ip}`;
@@ -34,6 +47,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   rateLimitMap.set(key, current);
   return true;
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -67,3 +81,15 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
   return true;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

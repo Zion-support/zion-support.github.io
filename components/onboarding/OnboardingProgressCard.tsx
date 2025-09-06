@@ -1,23 +1,39 @@
-import React from 'react',
-import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 export type OnboardingStep = any;
 =======
+import React from 'react',
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Link from 'next/link';
+
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export type OnboardingStep = {
+=======
+export type OnboardingStep = {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   id: string;
   label: string;
   completed: boolean;
   ctaLabel?: string;
   ctaHref?: string;
+<<<<<<< HEAD
 }
 export type OnboardingProgressCardProps = {
+=======
+};
+
+export type OnboardingProgressCardProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   title: string;
   steps: OnboardingStep[];
 <<<<<<< HEAD
@@ -25,6 +41,7 @@ export type OnboardingProgressCardProps = {
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
+<<<<<<< HEAD
   return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
   ctaHref?: string
 }
@@ -33,10 +50,27 @@ export type OnboardingProgressCardProps = {
   steps: OnboardingStep[]
   highlightColorClass?: string
 }
+=======
+<<<<<<< HEAD
+  return Math.round((completedCount / steps.length) * 100);  ctaLabel?: string;
+  ctaHref?: string
+};
+=======
+  return Math.round((completedCount / steps.length) * 100);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export type OnboardingProgressCardProps = {
+  title: string,
+  steps: OnboardingStep[],
+  highlightColorClass?: string;
+};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
+<<<<<<< HEAD
 =======
   highlightColorClass?: string;
 };
@@ -48,11 +82,21 @@ function computePercentage(steps: OnboardingStep[]): number {
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function OnboardingProgressCard({
+<<<<<<< HEAD
   title
   steps
   highlightColorClass = 'from-neon-green to-neon-blue'
 }: OnboardingProgressCardProps) {
+=======
+  title,
+  steps,
+  highlightColorClass = 'from-neon-green to-neon-blue',
+}: OnboardingProgressCardProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find(
@@ -69,11 +113,18 @@ export default function OnboardingProgressCard({
         <div
 <<<<<<< HEAD
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
-export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
+export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
   const allDone = percentage === 100;
   const firstIncomplete = steps.find((s) => !s.completed && s.ctaHref && s.ctaLabel);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+};
+
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length === 0) return 0;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">
@@ -106,7 +157,12 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       ) : null}
+<<<<<<< HEAD
       {/* Checklist */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <ul className='mt-4 space-y-2'>
         {steps.map(step => (
           <li key={step.id} className='flex items-center justify-between'>
@@ -127,8 +183,19 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
 <<<<<<< HEAD
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 =======
+<<<<<<< HEAD
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+      {/* Checklist */}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   {step.ctaLabel}
                 </a>
               </Link>
@@ -136,6 +203,14 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
           </li>
         ))}
       </ul>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className='mt-5'>
@@ -155,7 +230,22 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

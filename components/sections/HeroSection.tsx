@@ -1,12 +1,8 @@
 <<<<<<< HEAD
-'use client',
-
-import React from 'react',
-import Link from 'next/link';
-import { motion  } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
-const HeroSection: React.FC;
 =======
+'use client';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -26,6 +22,10 @@ const HeroSection: React.FC = () => {
     { icon: Zap, value: '24/7', label: 'Support Available' },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900'>
       {/* Animated Background Elements */}
@@ -50,9 +50,15 @@ const HeroSection: React.FC = () => {
             opacity: [0.6, 0.3, 0.6]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 10
             repeat: Infinity
             ease: 'easeInOut'
+=======
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
         />
         {/* Grid Pattern */}
@@ -106,6 +112,14 @@ const HeroSection: React.FC = () => {
           className='max-w-6xl mx-auto'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
         >
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -122,10 +136,22 @@ const HeroSection: React.FC = () => {
             <Star className="w-5 h-5 text-yellow-400 fill-current" />
             <span className="text-white font-medium">Leading Technology Solutions Provider</span>
 =======
+<<<<<<< HEAD
             </span>
           </motion.div>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            </span>          </motion.div>
+
+          </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -145,6 +171,14 @@ const HeroSection: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </span>
           </motion.h1>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -160,16 +194,40 @@ const HeroSection: React.FC = () => {
             From AI development to cloud architecture, we help companies revolutionize their digital presence
             and achieve sustainable growth in the modern technology landscape.
 =======
+<<<<<<< HEAD
             in the modern technology landscape.
           </motion.p>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            in the modern technology landscape.          </motion.p>
+
+<<<<<<< HEAD
+          </motion.p>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+          </motion.p>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link
               href='/contact'
@@ -201,6 +259,14 @@ const HeroSection: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </button>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -209,8 +275,18 @@ const HeroSection: React.FC = () => {
 <<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
 =======
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -219,6 +295,14 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                 className='text-center group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>
                   <stat.icon className='w-8 h-8 text-blue-400' />
@@ -237,10 +321,26 @@ const HeroSection: React.FC = () => {
                 <div className='text-gray-400 font-medium'>{stat.label}</div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -260,11 +360,29 @@ const HeroSection: React.FC = () => {
       </motion.div>
     </section>
   );
+<<<<<<< HEAD
 }
 export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
 =======
+<<<<<<< HEAD
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+};
+
+<<<<<<< HEAD
+export default HeroSection;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+=======
+export default HeroSection;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -286,6 +404,7 @@ export default HeroSection;        className="absolute bottom-8 left-1/2 transfo
           />
         </motion.div>
       </motion.div>
+<<<<<<< HEAD
     </section>
   );
 <<<<<<< HEAD
@@ -293,6 +412,7 @@ export default HeroSection;        className="absolute bottom-8 left-1/2 transfo
 export default HeroSection;  )
 }
 export default HeroSection;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -300,3 +420,15 @@ export default HeroSection;
 
 export default HeroSection;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+    </section>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </section>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

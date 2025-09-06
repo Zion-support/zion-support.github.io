@@ -1,16 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface ContentGenerationRequest {
+=======
+export interface ContentGenerationRequest {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
-<<<<<<< HEAD
-  keywords?: string[];
-=======
+
   keywords?: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   targetAudience?: string
 }
+<<<<<<< HEAD
 export interface ContentGenerationResponse {
+=======
+
+export interface ContentGenerationResponse {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   content: string;
   wordCount: number;
   seoScore: number;
@@ -18,32 +27,35 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
-<<<<<<< HEAD
-    description: string;
-=======
+
     description: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     tags: string[]
   }
 }
+<<<<<<< HEAD
 export interface ContentTemplate {
+=======
+
+export interface ContentTemplate {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
   type: string;
-<<<<<<< HEAD
-  preview: string;
-=======
+
   preview: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   price: number
 }
-export class AIContentGeneratorService {
-  private apiKey: string;
 <<<<<<< HEAD
-  private baseUrl: string;
-  constructor(apiKey: string, baseUrl: string;
+export class AIContentGeneratorService {
 =======
+
+export class AIContentGeneratorService {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  private apiKey: string;
+
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
@@ -60,6 +72,65 @@ export class AIContentGeneratorService {
         body: JSON.stringify(request)});
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
+=======
+<<<<<<< HEAD
+export interface ContentGenerationRequest {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
+  topic: string,;
+  tone: 'professional' | 'casual' | 'friendly' | 'formal',;
+  length: 'short' | 'medium' | 'long',;
+  keywords?: string[],;
+  targetAudience?: string;
+}
+;
+export interface ContentGenerationResponse {;
+  content: string,;
+  wordCount: number,;
+  seoScore: number,;
+  readabilityScore: number,;
+  suggestions: string[],;
+  metadata: {;
+    title: string,;
+    description: string,;
+    tags: string[];
+  }
+}
+;
+export interface ContentTemplate {;
+  id: string,;
+  name: string,;
+  description: string,;
+  type: string,;
+  preview: string,;
+  price: number;
+}
+;
+export class AIContentGeneratorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {;
+    try {;
+      // In a real implementation, this would call OpenAI, Claude, or similar API;
+      const response = await fetch(`${this.baseUrl}/content/generate`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify(request)}),;
+      if (!response.ok) {;
+        throw new Error(`Content generation failed: ${response.statusText}`);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       return await response.json()
     } catch (error) {
@@ -67,6 +138,11 @@ export class AIContentGeneratorService {
       return this.generateMockContent(request)
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
       {
@@ -100,11 +176,56 @@ export class AIContentGeneratorService {
         type: 'landing-page';
         preview: 'Turn visitors into customers with compelling copy...'
         price: 59
+=======
+;
+  async getTemplates(): Promise<ContentTemplate[]> {;
+    return [;
+      {;
+        id: 'blog-post-starter',;
+        name: 'Blog Post Starter',;
+        description: 'Professional blog post template with SEO optimization',;
+        type: 'blog-post',;
+        preview: 'Create engaging blog posts that rank well in search engines...',;
+        price: 29;
+      },;
+      {;
+        id: 'social-media-campaign',;
+        name: 'Social Media Campaign',;
+        description: 'Complete social media content strategy and posts',;
+        type: 'social-media',;
+        preview: 'Engage your audience with compelling social media content...',;
+        price: 49;
+      },;
+      {;
+        id: 'email-sequence',;
+        name: 'Email Sequence',;
+        description: 'Convert prospects with persuasive email sequences',;
+        type: 'email',;
+        preview: 'Build relationships and drive sales with email automation...',;
+        price: 39;
+      },;
+      {;
+        id: 'landing-page-copy',;
+        name: 'Landing Page Copy',;
+        description: 'High-converting landing page content',;
+        type: 'landing-page',;
+        preview: 'Turn visitors into customers with compelling copy...',;
+        price: 59;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     ]
   }
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -144,15 +265,67 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8
         'marketing': 1.5
+=======
+;
+This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
+## Key Points;
+- Point 1: ${request.topic} is essential for modern businesses;
+- Point 2: Implementing ${request.topic} can improve efficiency;
+- Point 3: Best practices for ${request.topic} implementation;
+## Conclusion;
+${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`,;
+    return {;
+      content: mockContent,;
+      wordCount: mockContent.split(' ').length,;
+      seoScore: 85,;
+      readabilityScore: 78,;
+      suggestions: [;
+        'Add more specific examplesInclude relevant statisticsOptimize for target keywords';
+      ],;
+      metadata: {;
+        title: `${request.topic} - Complete Guide`,;
+        description: `Learn everything about ${request.topic} and how to implement it effectively.`,;
+        tags: [request.topic, request.type, 'guidetutorial'];
+      }
+    }
+  }
+;
+  async analyzeContent(content: string): Promise<{;
+    seoScore: number,;
+    readabilityScore: number,;
+    suggestions: string[],;
+    keywordDensity: Record<string number>;
+  }> {;
+    // Mock content analysis;
+    return {;
+      seoScore: Math.floor(Math.random() * 30) + 70,;
+      readabilityScore: Math.floor(Math.random() * 30) + 70,;
+      suggestions: [;
+        'Add more headings for better structureInclude internal links to related contentOptimize meta description';
+      ],;
+      keywordDensity: {;
+        'content': 2.1,;
+        'seo': 1.8,;
+        'marketing': 1.5;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Pricing tiers for the AI Content Generator
 }
 
 export const AI_CONTENT_PRICING = {
-  starter: {
+  starter: {;
     name: 'Starter';
     price: 29;
     period: '/month'
@@ -176,8 +349,10 @@ export const AI_CONTENT_PRICING = {
 <<<<<<< HEAD
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
+<<<<<<< HEAD
   }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
       'Unlimited content generations',
@@ -217,3 +392,42 @@ body: JSON.stringify (request)
 
 }// Pricing tiers for the AI Content Generator 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+// Pricing tiers for the AI Content Generator;
+export const AI_CONTENT_PRICING = {;
+  starter: {;
+    name: 'Starter',;
+    price: 29,;
+    period: '/month',;
+    features: [;
+      '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality';
+    ];
+  },;
+  professional: {;
+    name: 'Professional',;
+    price: 99,;
+    period: '/month',;
+    features: [;
+      '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access';
+    ];
+  },;
+  enterprise: {;
+    name: 'Enterprise',;
+    price: 299,;
+    period: '/month',;
+    features: [;
+      'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
+    ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

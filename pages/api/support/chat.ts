@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
@@ -8,6 +9,9 @@ import { logSupportEventToOperator } from '[^']*';
 const SYSTEM_PROMPT = null;
         links: matchedArticles.map((a) => ({ title: a.title, href: `/help/${a.slug}` }))}})
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import { readJson } from "../../../utils/fsDb";
@@ -66,6 +70,31 @@ const articles = readJson<HelpArticle[]>('help/articles.json', []);
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import OpenAI from 'openai';
+import { readJson } from '../../../utils/fsDb';
+import { HelpArticle, matchIntent } from '../../../utils/support';
+import { logSupportEventToOperator } from '../../../utils/operator';
+const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> };
+  if (!messages || !Array.isArray(messages)) return res.status(400).json({ error: 'Invalid messages' });
+  const articles = readJson<HelpArticle[]>('help/articles.json', []);
+  const lastUser = [...messages].reverse().find((m) => m.role === 'user');
+  const intent = lastUser ? matchIntent(lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] },
+  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Build context with top matched articles as brief references
 <<<<<<< HEAD
   const matchedArticles = articles.filter((a) =>
@@ -124,13 +153,28 @@ const articles = readJson<HelpArticle[]>('help/articles.json', []);
         }))
       }
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(200).json({
       assistantMessage:
         "I could not reach the assistant right now. Please try again in a moment."
     });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+    return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   }
 }
 =======

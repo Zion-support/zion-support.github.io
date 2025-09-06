@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
@@ -11,6 +16,28 @@ export default function UltraFuturisticHero2027() {
   const features = null;
             ease: "easeInOut"
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,;
+  CheckCircle,;} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {
   Rocket
   Brain
@@ -59,6 +86,7 @@ import {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraFuturisticHero2027() {
   const features = [
+<<<<<<< HEAD
     {
       icon: Brain
       text: 'AI Consciousness Evolution'
@@ -75,11 +103,21 @@ export default function UltraFuturisticHero2027() {
       color: 'from-green-400 to-emerald-400'
     }
     {
+<<<<<<< HEAD
       icon: Shield
       text: 'Enterprise Security'
       color: 'from-red-400 to-orange-400'
     }
   ];
+=======
+      icon: Shield,
+      text: 'Enterprise Security',
+      color: 'from-red-400 to-orange-400',;
+    },;
+  ];
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const stats = [
     {
       number: '1000+'
@@ -134,6 +172,13 @@ export default function UltraFuturisticHero2027() {
             y: [0, -20, 0];
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]
+=======
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
           transition={{
             duration: 8
@@ -208,9 +253,17 @@ export default function UltraFuturisticHero2027() {
             scale: [1, 1.1, 1];
             opacity: [0.4, 0.7, 0.4]
           transition={{
+<<<<<<< HEAD
+<<<<<<< HEAD
             duration: 12
             repeat: Infinity
+=======
+            duration: 12,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',            ease: "easeInOut"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
           className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl'
@@ -224,6 +277,9 @@ export default function UltraFuturisticHero2027() {
             repeat: Infinity,
             ease: 'easeInOut',
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }}
         />
         {/* Grid Pattern */}
@@ -236,14 +292,43 @@ export default function UltraFuturisticHero2027() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center">
 =======
+<<<<<<< HEAD
         <div className='text-center'>
           {/* Main Heading */}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+            duration: 12,
+            repeat: Infinity,
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          }}
+        />
+
+        {/* Grid Pattern */}
+
+          {/* Main Heading */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -269,6 +354,14 @@ export default function UltraFuturisticHero2027() {
               </span>
             </h2>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -286,12 +379,28 @@ export default function UltraFuturisticHero2027() {
             will transform your business beyond imagination.
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </motion.p>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link
               href='/2027-services-showcase'
@@ -326,6 +435,14 @@ export default function UltraFuturisticHero2027() {
               <span>Start Your Journey</span>
             </Link>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -334,8 +451,18 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 =======
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           >
             {features.map((feature, index) => (
               <motion.div
@@ -344,6 +471,14 @@ export default function UltraFuturisticHero2027() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 className='group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   <div
@@ -362,11 +497,29 @@ export default function UltraFuturisticHero2027() {
                   <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     {feature.text}
+=======
+                  <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>                    {feature.text}
+
+                    {feature.text}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </h3>
                 </div>
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -375,8 +528,18 @@ export default function UltraFuturisticHero2027() {
 <<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
 =======
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'          >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -385,6 +548,14 @@ export default function UltraFuturisticHero2027() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
                 className='text-center group'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
@@ -414,12 +585,34 @@ export default function UltraFuturisticHero2027() {
               </motion.div>
             ))}
           </motion.div>
+=======
+                  />                </div>
+
+                </div>
+
+              </motion.div>
+            ))}
+          </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
             className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -445,11 +638,27 @@ export default function UltraFuturisticHero2027() {
               ].map((trust, index) => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
                   className='text-center'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3'>
                     <Shield className='w-8 h-8 text-cyan-400' />
@@ -464,11 +673,20 @@ export default function UltraFuturisticHero2027() {
                   <div className='text-cyan-300 font-medium'>{trust}</div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Bottom Glow */}
       <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
     </section>
@@ -477,6 +695,31 @@ export default function UltraFuturisticHero2027() {
     </section>
   )
 }
+<<<<<<< HEAD
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+      {/* Bottom Glow */}
+      <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
+    </section>
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

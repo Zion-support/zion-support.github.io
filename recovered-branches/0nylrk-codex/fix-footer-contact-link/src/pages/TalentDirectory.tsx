@@ -14,6 +14,24 @@ import { TalentProfile } from '@/types/talent';
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState } from "react";
+import {useNavigate} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+import {FilterSidebar} from "@/components/talent/FilterSidebar";
+import {TalentResults} from "@/components/talent/TalentResults";
+import {useTalentDirectory} from "@/hooks/useTalentDirectory";
+import {SORT_OPTIONS} from "@/data/sortOptions";
+import {X} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {TalentProfile} from "@/types/talent";
+export default function TalentDirectory() {;
+  const navigate = useNavigate();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -23,15 +41,25 @@ import { TalentResults } from "@/components/talent/TalentResults",
 import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { TalentProfile } from "@/types/talent";
 export default function TalentDirectory() {
-<<<<<<< HEAD
-  const navigate = null;
 =======
+import { Button } from "@/components/ui/button",
+import { TalentProfile } from "@/types/talent",
+export default function TalentDirectory() {
+  const navigate = useNavigate(),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {
+<<<<<<< HEAD
     filteredTalents;
     isLoading;
     searchTerm;
@@ -60,14 +88,55 @@ export default function TalentDirectory() {
     clearFilters;
     toggleSection;
     handleToggleSave} = useTalentDirectory();
+=======
+    filteredTalents,
+    isLoading,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    isAuthenticated,
+    savedTalents,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave} = useTalentDirectory(),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
+<<<<<<< HEAD
   }
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
     navigate(`/talent/${id}`)
   }
+=======
+  },
+  
+  const viewProfile = (id: string) => {
+    // Navigate to the talent profile page
+    navigate(`/talent/${id}`)
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -83,6 +152,7 @@ export default function TalentDirectory() {
             {/* Sidebar - Desktop */}
             <div className="w-full lg:w-64 shrink-0 hidden lg:block">
               <FilterSidebar
+<<<<<<< HEAD
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
                 selectedSkills={selectedSkills}
@@ -102,6 +172,73 @@ export default function TalentDirectory() {
                 clearFilters={clearFilters}
               />
             </div>
+=======
+import React, { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { TalentGrid } from "@/components/talent/TalentGrid",;
+import { FilterSidebar } from "@/components/talent/FilterSidebar",;
+import { TalentResults } from "@/components/talent/TalentResults",;
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",;
+import { SORT_OPTIONS } from "@/data/sortOptions",;
+import { X } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { TalentProfile } from "@/types/talent",;
+export default function TalentDirectory() {;
+  const navigate = useNavigate(),;
+  // Use our custom hook to manage state;
+  const {;
+    filteredTalents,;
+    isLoading,;
+    searchTerm,;
+    setSearchTerm,;
+    selectedSkills,;
+    selectedAvailability,;
+    selectedRegions,;
+    priceRange,;
+    setPriceRange,;
+    experienceRange,;
+    setExperienceRange,;
+    sortOption,;
+    setSortOption,;
+    isMobileFilterOpen,;
+    setIsMobileFilterOpen,;
+    isHireModalOpen,;
+    setIsHireModalOpen,;
+    selectedTalent,;
+    setSelectedTalent,;
+    expandedSections,;
+    isAuthenticated,;
+    savedTalents,;
+    toggleSkill,;
+    toggleAvailability,;
+    toggleRegion,;
+    clearFilters,;
+    toggleSection,;
+    handleToggleSave} = useTalentDirectory(),;
+  const handleRequestHire = (talent: TalentProfile) => {;
+    setSelectedTalent(talent),;
+    setIsHireModalOpen(true);
+  },;
+  const viewProfile = (id: string) => {;
+    // Navigate to the talent profile page;
+    navigate(`/talent/${id}`);
+  },;
+  return (;
+    <AppLayout>;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="flex flex-col space-y-8">;
+          <div>;
+            <h1 className="text-3xl font-bold text-white mb-2">AI & Tech Talent Directory</h1>;
+            <p className="text-zion-slate-light">;
+              Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.;
+            </p>;
+          </div>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">
               <Button
@@ -112,6 +249,14 @@ export default function TalentDirectory() {
                 Filter & Sort
               </Button>
             </div>
+<<<<<<< HEAD
+=======
+            
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Results */}
             <TalentResults
               filteredTalents={filteredTalents}
@@ -121,6 +266,7 @@ export default function TalentDirectory() {
               savedTalents={savedTalents}
               handleToggleSave={handleToggleSave}
               isAuthenticated={isAuthenticated}
+<<<<<<< HEAD
               activeFiltersProps={{
                 selectedSkills;
                 toggleSkill;
@@ -130,9 +276,24 @@ export default function TalentDirectory() {
                 toggleRegion;
                 priceRange;
                 setPriceRange;
+=======
+              activeFiltersProps={{;
+                selectedSkills,;
+                toggleSkill,;
+                selectedAvailability,;
+                toggleAvailability,;
+                selectedRegions,;
+                toggleRegion,;
+                priceRange,;
+                setPriceRange,;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 experienceRange;
                 setExperienceRange;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 clearFilters}}
             />
             {/* Mobile filter sidebar */}
@@ -174,9 +335,19 @@ export default function TalentDirectory() {
                 </div>
               </div>
             )}
+<<<<<<< HEAD
           </div>
         </div>
       </div>
     </AppLayout>
   )
 }
+=======
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

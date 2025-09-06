@@ -1,9 +1,48 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+type EventRow = {
+  name: string,
+  page?: string,
+  userType?: string,
+  properties?: Record<string, any>,
+  at: string
+},
+
+const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl'),
+
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return [],
+    const raw = fs.readFileSync(LOG_FILE, 'utf8'),
+    const lines = raw.split('\n').filter(Boolean),
+    const start = startIso ? new Date(startIso) : null,
+    const end = endIso ? new Date(endIso) : null,
+    const rows: EventRow[] = [],
+    for (const line of lines) {
+      try {
+        const obj = JSON.parse(line),
+        if (!obj.at) continue,
+        const t = new Date(obj.at),
+        if (start && t < start) continue,
+        if (end && t > end) continue,
+        rows.push(obj)
+      } catch {}
+    }
+    return rows
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
 type EventRow = {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -41,6 +80,9 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         // Skip invalid lines
       }
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   name: string
   page?: string
   userType?: string
@@ -65,6 +107,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         if (end && t > end) continue
         rows.push(obj)
       } catch {}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
         if (!obj.at) continue;
@@ -74,41 +117,57 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj);
       } catch {}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+  name: string;
+  page?: string;
+  userType?: string;
+  properties?: Record<string, any>;
+  at: string;
+};
+
+const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');
+
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return [];
+    const raw = fs.readFileSync(LOG_FILE, 'utf8');
+    const lines = raw.trim().split('\n').filter(Boolean);
+    const rows: EventRow[] = [];
+    
+    for (const line of lines) {
+      try {
+        const obj = JSON.parse(line);
+        const t = new Date(obj.at).getTime();
+        const start = startIso ? new Date(startIso).getTime() : 0;
+        const end = endIso ? new Date(endIso).getTime() : Infinity;
+        
+        if (t < start) continue;
+        if (end && t > end) continue;
+        rows.push(obj);
+      } catch {
+        // Skip invalid JSON lines
+      }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
     return rows;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch {
     return [];
   }
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  await ensureAdminFromApi(req, res);
-  
-  const { startIso, endIso } = req.query;
-  const events = parseLines(startIso as string, endIso as string);
-  
-  const pagesMostUsed = events
-    .filter(e => e.page)
-    .reduce((acc, e) => {
-      acc[e.page!] = (acc[e.page!] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-  
-  const eventCounts = events.reduce((acc, e) => {
-    acc[e.name] = (acc[e.name] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
-  
-  const funnel = events
-    .filter(e => e.name === 'page_view')
-    .map(e => e.page)
-    .filter(Boolean);
-  
-  res.status(200).json({ pagesMostUsed, events: eventCounts, line: events.length, funnel });
-}
+<<<<<<< HEAD
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+<<<<<<< HEAD
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -183,6 +242,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] |0 }))
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
     .sort((a, b) => b.value - a.value);
@@ -204,3 +264,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+    .sort((a, b) => b.value - a.value),
+
+  const days = Object.keys(byDay).sort(),
+  const line = days.map((d) => ({ date: d, value: byDay[d] })),
+
+  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
+  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
+;
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    await ensureAdminFromApi(req);
+    
+    if (req.method !== 'GET') {
+      res.setHeader('Allow', 'GET');
+      return res.status(405).end('Method Not Allowed');
+    }
+
+    const { start, end } = req.query;
+    const events = parseLines(start as string, end as string);
+    
+    res.json({ events });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

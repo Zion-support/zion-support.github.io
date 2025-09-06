@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 import { NextApiRequest } from 'next';
 <<<<<<< HEAD
 export function getUserFromRequest(req: any): User | null {
-  // Mock implementation - in production, this would extract user from JWT or session
+  // Mock implementation - in production, this would extract user from JWT or session;
   const authHeader = req.headers.authorization;
   if (!authHeader |!authHeader.startsWith('Bearer ')) {
     return null;
@@ -45,8 +46,13 @@ export function assertClient(req: NextApiRequest): DemoUser {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function assertTalentOrClientForOffer(
+<<<<<<< HEAD
   req: NextApiRequest
   offer: { clientId: string; talentSlug: string }
+=======
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -60,13 +66,31 @@ export function assertTalentOrClientForOffer(
   // @ts-ignore
   err.statusCode = 403;
 <<<<<<< HEAD
+<<<<<<< HEAD
   throw err;export function requireAuth(req: any): User {
+=======
+  throw err;export function requireAuth(req: any): User {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const user = getUserFromRequest(req);
   if (!user) {
     throw new Error('Authentication required')
   }
   return user;
 }
+<<<<<<< HEAD
 =======
   throw err;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

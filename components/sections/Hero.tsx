@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
@@ -6,17 +10,7 @@ interface HeroProps {
   subtitle: string;
   primaryAction?: {
     text: string;
-<<<<<<< HEAD
-    href: string
-  };
-  secondaryAction?: {
-    text: string;
-    href: string
-  };
-  stats?: Array<{
-    value: string;
-    label: string;
-=======
+
     href: string;
   }
   secondaryAction?: {
@@ -28,6 +22,10 @@ interface HeroProps {
     label: string;
     color: string;
   }>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const Hero: React.FC<HeroProps> = ({
   title
   subtitle
@@ -79,7 +77,7 @@ const Hero: React.FC<HeroProps> = ({
   stats?: Array<{
     value: string
     label: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     color: string
   }>
 }
@@ -90,9 +88,7 @@ const Hero: React.FC<HeroProps> = ({
   secondaryAction;
   stats}) => {
   return (
-<<<<<<< HEAD
-    <section className;
-=======
+
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Elements */}
       <div className="absolute inset-0">
@@ -124,12 +120,28 @@ const Hero: React.FC<HeroProps> = ({
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             {subtitle}
           </p>
+<<<<<<< HEAD
           {/* Action Buttons */}
 <<<<<<< HEAD
           {(primaryAction |secondaryAction) && (
 =======
+<<<<<<< HEAD
           {(primaryAction || secondaryAction) && (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
+
+            {subtitle}
+
+          </p>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+          {/* Action Buttons */}
+          {(primaryAction || secondaryAction) && (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
                 <Button
@@ -153,6 +165,16 @@ const Hero: React.FC<HeroProps> = ({
                   <ArrowRight className='w-5 h-5 ml-2' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Button>
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
               {secondaryAction && (
                 <Button
@@ -178,6 +200,14 @@ const Hero: React.FC<HeroProps> = ({
             </div>
           )}
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Stats Section */}
         {stats && (
           <div
@@ -208,11 +238,25 @@ const Hero: React.FC<HeroProps> = ({
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {stat.label}
+=======
+                <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}
+
+                  {stat.label}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
             ))}
           </div>
         )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
@@ -250,6 +294,7 @@ const Hero: React.FC<HeroProps> = ({
 <<<<<<< HEAD
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
       </div>
+<<<<<<< HEAD
       {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
@@ -272,6 +317,7 @@ const Hero: React.FC<HeroProps> = ({
 <<<<<<< HEAD
 }
 export default Hero;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -279,3 +325,25 @@ export default Hero;
 
 export default Hero;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+      {/* Decorative Elements */}
+
+        </div>
+      </div>
+
+      {/* Decorative Elements */}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

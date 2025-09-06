@@ -1,16 +1,34 @@
 <<<<<<< HEAD
 import { useState } from "react";
 import Head from "next/head";
+=======
+import { useState } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Partners() {
   const [form, setForm] = useState({
-<<<<<<< HEAD
-    name: "";
-    entityType: "";
-    pocName: "";
-    pocEmail: "";
-    useCaseType: "Education Partnership"});
-  const [result, setResult] = useState<any>(null),
 =======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     name: ''
     entityType: ''
     pocName: ''
@@ -21,6 +39,7 @@ export default function Partners() {
     pocName: ""
     pocEmail: ""
     useCaseType: "Education Partnership"})
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 import { useState } from 'react';
@@ -37,6 +56,9 @@ export default function Partners() {
   });
   const [result, setResult] = useState<any>(null);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [loading, setLoading] = useState(false);
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -44,8 +66,12 @@ export default function Partners() {
     setResult(null);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const res = null;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const res = await fetch('/api/partners/register', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' },      body: JSON.stringify({
@@ -133,7 +159,7 @@ export default function Partners() {
 <<<<<<< HEAD
             >              <option>Education Partnership</option>    const data = await res.json();
     setLoading(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setResult(data)
   }
   return (
@@ -246,16 +272,38 @@ export default function Partners() {
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+<<<<<<< HEAD
         )}
       </div>
     </div>
 );
+<<<<<<< HEAD
 }
 =======
             </a>
           </div>
+=======
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+          </div>
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         )}
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

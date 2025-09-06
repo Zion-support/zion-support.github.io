@@ -1,4 +1,19 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {Job, JobStatus} from "@/types/jobs";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, Edit, X, Eye} from "lucide-react";
+import {format} from "date-fns";
+import {Link} from "react-router-dom";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -7,9 +22,19 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from "lucide-react",
+<<<<<<< HEAD
 import { format } from "date-fns";
 import { Link } from "react-router-dom";
+=======
+import { format } from "date-fns",
+import { Link } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface JobsListProps {
+<<<<<<< HEAD
   filter?: JobStatus;
 <<<<<<< HEAD
   onSelectJob?: (jobId: string, jobTitle: string) => void
@@ -42,16 +67,42 @@ setJobs (data as Job[])
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  filter?: JobStatus,
+  onSelectJob?: (jobId: string, jobTitle: string) => void
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function JobsList({ filter, onSelectJob }: JobsListProps) {;
+  const { user } = useAuth();
+  const [jobs, setJobs] = useState<Job[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
+<<<<<<< HEAD
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-<<<<<<< HEAD
-    const fetchJobs = null;
 =======
+  const { user } = useAuth(),
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  useEffect(() => {
+
     const fetchJobs = async () => {
+<<<<<<< HEAD
       if (!user) return;
+=======
+      if (!user) return,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       try {
         let query = supabase
           .from("jobs")
@@ -70,15 +121,29 @@ const { data, error } = await query;
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
         if (error) throw error;
+=======
+
+        const { data, error } = await query,
+
+        if (error) throw error,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         setJobs(data as Job[])
       } catch (error) {
         console.error("Error fetching jobs:", error)
       } finally {
         setIsLoading(false)
       }
+<<<<<<< HEAD
     }
     fetchJobs()
   }, [user, filter]);
+=======
+    },
+
+    fetchJobs()
+  }, [user, filter]),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -103,18 +168,22 @@ const { data, error } = await query;
   }
   const getStatusColor = (status: JobStatus) => {
     switch (status) {
-      case "new": return "bg-blue-100 text-blue-800";
+      case "new": return "bg-blue-100 text-blue-800",
       case "in_progress":
-        return "bg-yellow-100 text-yellow-800";
+        return "bg-yellow-100 text-yellow-800",
       case "filled":
-        return "bg-green-100 text-green-800";
+        return "bg-green-100 text-green-800",
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
     }
+<<<<<<< HEAD
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
@@ -145,6 +214,123 @@ const { data, error } = await query;
             <div className="flex flex-wrap gap-1 mt-2">
               {job.skills.slice(0, 3).map((skill, index) => (
                 <Badge key={index} variant="outline" className="text-xs">
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Job, JobStatus } from "@/types/jobs",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Loader2, Edit, X, Eye } from "lucide-react",;
+import { format } from "date-fns",;
+import { Link } from "react-router-dom",;
+interface JobsListProps {;
+  filter?: JobStatus,;
+  onSelectJob?: (jobId: string, jobTitle: string) => void;
+}
+;
+export function JobsList({ filter, onSelectJob }: JobsListProps) {;
+  const { user } = useAuth(),;
+  const [jobs, setJobs] = useState<Job[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const fetchJobs = async () => {;
+      if (!user) return,;
+      try {;
+        let query = supabase;
+          .from("jobs");
+          .select("*");
+          .eq("client_id", user.id);
+          .order("created_at", { ascending: false }),;
+        if (filter) {;
+          query = query.eq("status", filter);
+        }
+;
+        const { data, error } = await query,;
+        if (error) throw error,;
+        setJobs(data as Job[]);
+      } catch (error) {;
+        console.error("Error fetching jobs:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    fetchJobs();
+  }, [user, filter]),;
+  if (isLoading) {;
+    return (;
+      <div className="flex justify-center items-center p-8">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+;
+  if (jobs.length === 0) {;
+    return (;
+      <div className="text-center p-8 border rounded-md bg-muted/20">;
+        <p className="text-lg text-muted-foreground">;
+          {filter;
+            ? `No jobs with status "${filter}" found.`;
+            : "You haven't posted any jobs yet.";
+          }
+        </p>;
+        <Button asChild className="mt-4">;
+          <Link to="/post-job">Post Your First Job</Link>;
+        </Button>;
+      </div>;
+    );
+  }
+;
+  const getStatusColor = (status: JobStatus) => {;
+    switch (status) {;
+      case "new": return "bg-blue-100 text-blue-800",;
+      case "in_progress":;
+        return "bg-yellow-100 text-yellow-800",;
+      case "filled":;
+        return "bg-green-100 text-green-800",;
+      case "closed":;
+        return "bg-gray-100 text-gray-800";
+      default:;
+        return "bg-gray-100 text-gray-800";
+    }
+  };
+  return (;
+    <div className="grid gap-6 md:grid-cols-2">;
+      {jobs.map((job) => (;
+        <Card;
+          key={job.id} ;
+          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${;
+            onSelectJob ? "cursor-pointer" : "";
+          }`}
+          onClick={() => onSelectJob?.(job.id, job.title)}
+        >
+          <CardHeader className="p-4">
+            <div className="flex justify-between items-start">
+              <div>
+                <CardTitle className="text-xl">{job.title}</CardTitle>
+                <CardDescription className="mt-1">
+                  Posted {format(new Date(job.created_at), "PPP")}
+                </CardDescription>
+              </div>
+              <Badge className={getStatusColor(job.status)}>
+                {job.status.replace("_", " ").toUpperCase()}
+              </Badge>
+            </div>
+          </CardHeader>
+          <CardContent className="p-4 pt-0">
+            <p className="line-clamp-3 text-sm text-muted-foreground mb-2">
+              {job.description}
+            </p>;
+            <div className="flex flex-wrap gap-1 mt-2">;
+              {job.skills.slice(0, 3).map((skill, index) => (;
+                <Badge key={index} variant="outline" className="text-xs">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {skill}
                 </Badge>
               ))}
@@ -180,6 +366,13 @@ const { data, error } = await query;
           </CardFooter>
         </Card>
       ))}
+<<<<<<< HEAD
     </div>
   )
 }
+=======
+    </div>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -3,12 +3,16 @@ import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { v4 as uuid } from 'uuid';
 import { translateText, detectLanguageSimple } from '@/utils/api/translate';
 <<<<<<< HEAD
 const hasSupabase = null;
         return res.status(201).json({ slug: item.slug })
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {v4, as, uuid} from 'uuid';
 import {translateText, detectLanguageSimple} from '@/utils/api/translate';
 =======
@@ -34,7 +38,7 @@ export default async function handler(
       if (hasSupabase) {
         const { data, error } = await supabaseClient
           .from('talent_profiles')
-          .select('*')
+          .select('*');
           .order('created_at', { ascending: false });
         if (error) throw error;
         return res.status(200).json({ items: data as TalentProfile[] });
@@ -49,7 +53,7 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     try {
-      if (hasSupabase) {
+      if (hasSupabase) {;
         const { data, error } = await supabaseClient.from('talent_profiles').select('*').order('created_at', { ascending: false });
         if (error) throw error;
         return res.status(200).json({ items: data as TalentProfile[] })
@@ -158,7 +162,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         } as any);
         if (error) throw error;
         return res.status(201).json({ slug: item.slug });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       }
 =======
           id: item.id,
@@ -205,7 +209,15 @@ return res
     .status(405)
 <<<<<<< HEAD
     .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+<<<<<<< HEAD
 }
 =======
     .end('Method Not Allowed');
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

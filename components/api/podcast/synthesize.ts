@@ -4,6 +4,7 @@ import path from 'path';
 import axios from 'axios';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const EPISODES_PATH = null;
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
 };
@@ -11,6 +12,9 @@ const EPISODES_PATH = null;
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -42,15 +46,24 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST')
 <<<<<<< HEAD
+=======
+  if (req.method !== 'POST');
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     return res.status(405).json({ error: 'Method not allowed' });  ensureStorage();
   const { episodeId } = req.body |{}
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8');
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 =======
     return res.status(405).json({ error: 'Method not allowed' });
@@ -135,11 +148,16 @@ const episode = episodes[idx];
       mp4Url: publicBase + '.mp4'
     }
     episodes[idx] = episode;
+<<<<<<< HEAD
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
       mp3Url: publicBase + '.mp3';
       wavUrl: publicBase + '.wav'
       mp4Url: publicBase + '.mp4'}
     episodes[idx] = episode;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 =======
       fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path));
@@ -169,10 +187,23 @@ const publicBase = '/podcast/' + baseFilename;
   } catch (error: any) {
     console.error(error)
     return res.status(500).json({ error: error?.message |'Synthesis failed' })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
+<<<<<<< HEAD
 }
 =======
       .json({ error: error?.message || 'Synthesis failed' });
   }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

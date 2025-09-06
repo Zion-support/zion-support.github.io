@@ -1,19 +1,6 @@
-<<<<<<< HEAD
 
-import { useState } from 'react';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuSeparator;
-  DropdownMenuTrigger 
- } from '@/components/ui/dropdown-menu';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle  } from '@/components/ui/dialog';
-import { Save, ChevronDown, Plus, Loader2  } from 'lucide-react';
-import { Resume  } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
-=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import {
   DropdownMenu
@@ -34,33 +21,46 @@ import {
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+import {useState} from 'react';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
+import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
+import {Resume} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
 <<<<<<< HEAD
   onResumeChange: (resumeId: string) => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   onResumeChange: (resumeId: string) => void;
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
-
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+<<<<<<< HEAD
 export function ResumeVersionSelector({
   currentResume
   onResumeChange
 }: ResumeVersionSelectorProps) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const handleCreateNewVersion = null;
-=======
+
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -69,12 +69,68 @@ export function ResumeVersionSelector({
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
+<<<<<<< HEAD
         setNewResumeTitle("");
       }
       setIsLoading(false);
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+        setNewResumeTitle('')
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useState } from 'react',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuSeparator,;
+  DropdownMenuTrigger;
+} from '@/components/ui/dropdown-menu',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog',;
+import { Save, ChevronDown, Plus, Loader2 } from 'lucide-react',;
+import { Resume } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+interface ResumeVersionSelectorProps {;
+  currentResume: Resume,;
+  onResumeChange: (resumeId: string) => void;
+}
+;
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
+  const { createResume, fetchResume } = useResume(),;
+  const [saveDialogOpen, setSaveDialogOpen] = useState(false),;
+  const [newResumeTitle, setNewResumeTitle] = useState(''),;
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const handleCreateNewVersion = async () => {;
+    if (newResumeTitle.trim()) {;
+      setIsLoading(true),;
+      const resumeId = await createResume({ title: newResumeTitle.trim() }),;
+      if (resumeId) {;
+        await fetchResume(resumeId),;
+        onResumeChange(resumeId),;
+        setSaveDialogOpen(false);
+        setNewResumeTitle('');
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }
+      setIsLoading(false);
+    }
+<<<<<<< HEAD
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   return (
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
@@ -118,12 +174,24 @@ export function ResumeVersionSelector({
             />
           </div>
           <DialogFooter>
+<<<<<<< HEAD
             <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
               Cancel
             </Button>
             <Button
               onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
+=======
+            <Button 
+              variant="outline" 
+              onClick={() => setSaveDialogOpen(false)}
+            >;
+              Cancel;
+            </Button>;
+            <Button;
+              onClick={handleCreateNewVersion}
+              disabled={!newResumeTitle.trim() || isLoading}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -134,5 +202,18 @@ export function ResumeVersionSelector({
         </DialogContent>
       </Dialog>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

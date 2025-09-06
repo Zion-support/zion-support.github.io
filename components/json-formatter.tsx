@@ -14,9 +14,22 @@ import {
   Upload
   Settings
   Eye;
+=======
+  Code,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
+  ArrowRight,
+  Download,
+  Upload,
+  Settings,;
+  Eye,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
+<<<<<<< HEAD
 =======
   Code,
   Copy,
@@ -33,6 +46,9 @@ import { Star } from 'lucide-react';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function JSONFormatterPage() {
+=======
+export default function JSONFormatterPage() {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
   const [isValid, setIsValid] = useState(true);
@@ -40,9 +56,7 @@ export default function JSONFormatterPage() {
   const [indentSize, setIndentSize] = useState(2);
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
-<<<<<<< HEAD
-  const formatJSON = null;
-=======
+
   const formatJSON = () => {
     if (!inputJson.trim()) {
       setFormattedJson('');
@@ -134,11 +148,21 @@ export default function JSONFormatterPage() {
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
   }
 =======
+<<<<<<< HEAD
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
     }
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }
+
+    }
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const clearAll = () => {
     setInputJson('');
     setFormattedJson('');
@@ -218,6 +242,7 @@ export default function JSONFormatterPage() {
     const lines = text.split('\n');
     return lines.map((_, index) => index + 1).join('\n');    return lines.map((_, index) => index + 1).join('\n')
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
         {
@@ -246,6 +271,9 @@ export default function JSONFormatterPage() {
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <>
       <Head>
@@ -480,11 +508,13 @@ export default function JSONFormatterPage() {
               <div className='space-y-4'>
                 <div className='relative'>
                   {showLineNumbers && (
+<<<<<<< HEAD
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}              <div className="space-y-4">
                 <div className="relative">
                   {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
 =======
+<<<<<<< HEAD
                   >
                     {isValid ? 'Valid' : 'Invalid'}
                   </span>
@@ -497,6 +527,17 @@ export default function JSONFormatterPage() {
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>
                       {getLineNumbers(inputJson)}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
+
+                      {getLineNumbers(inputJson)}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     </div>
                   )}
                   <textarea
@@ -519,7 +560,18 @@ export default function JSONFormatterPage() {
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
+<<<<<<< HEAD
+<<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+
+<<<<<<< HEAD
+                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+                <div className='flex space-x-3'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
@@ -544,8 +596,19 @@ export default function JSONFormatterPage() {
                   >
                     <Code className="w-5 h-5 mr-2" />
 =======
+<<<<<<< HEAD
                     <Code className='w-5 h-5 mr-2' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                <div className='flex space-x-3'>
+
+                    <strong>Error:</strong> {errorMessage}
+                  </div>
+                )}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     Format JSON
                   </Button>
                   <Button
@@ -680,20 +743,49 @@ export default function JSONFormatterPage() {
                     <p>• Lines: {formattedJson.split('\n').length}</p>
                     <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
 =======
+<<<<<<< HEAD
                     </p>
                   </div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                    </p>                  </div>
+
+                  </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+              Professional JSON Formatting Features
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -944,7 +1036,22 @@ export default function JSONFormatterPage() {
     </>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

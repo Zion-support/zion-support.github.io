@@ -4,9 +4,14 @@ import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ResumeBuilder: NextPage;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const ResumeBuilder: NextPage = () => {
+<<<<<<< HEAD
   const [role, setRole] = useState('Data Scientist')
   const [experienceYears, setExperienceYears] = useState(5)
   const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems')
@@ -22,6 +27,7 @@ const ResumeBuilder: NextPage = () => {
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   )
 =======
+<<<<<<< HEAD
 
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist');
@@ -47,6 +53,23 @@ const ResumeBuilder: NextPage = () => {
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`;
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  const [role, setRole] = useState('Data Scientist'),
+  const [experienceYears, setExperienceYears] = useState(5),
+  const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems'),
+  const [tone, setTone] = useState('clear and concise'),
+  const [summary, setSummary] = useState(''),
+  const [experience, setExperience] = useState(''),
+  const [skillsText, setSkillsText] = useState(''),
+  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
+  const generateSummaryPrompt = useMemo(() => (
+    `Create a professional resume summary for a ${role.toLowerCase()} with ${experienceYears} years of experience in ${skills}. Tone: ${tone}.\n\nReturn markdown only.`
+  ), [role, experienceYears, skills, tone]),
+  const improveSectionPrompt = (sectionName: string, content: string) => (
+    `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
+  ),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <div>
       <Head>
@@ -78,6 +101,7 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
+<<<<<<< HEAD
 =======
 
       <h1 className='text-2xl font-semibold mb-4'>Resume Builder</h1>
@@ -129,16 +153,43 @@ const ResumeBuilder: NextPage = () => {
               buttonLabel='Generate with AI'
               title='Generate Resume Summary'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               defaultPrompt={generateSummaryPrompt}
               onAccept={setSummary}
               authorizationToken={operatorToken}
+=======
+              defaultPrompt={generateSummaryPrompt  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onAccept={setSummary  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
             <AIAssistant
 <<<<<<< HEAD
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
+<<<<<<< HEAD
+<<<<<<< HEAD
               defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
 =======
+<<<<<<< HEAD
               buttonLabel='Improve with AI'
               title='Improve Resume Summary'
               defaultPrompt={improveSectionPrompt(
@@ -147,8 +198,33 @@ const ResumeBuilder: NextPage = () => {
                   'No content provided. Generate a summary based on role, years, and skills.'
               )}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               onAccept={setSummary}
               authorizationToken={operatorToken}
+=======
+              defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onAccept={setSummary  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
           </div>
         </div>
@@ -161,8 +237,11 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Experience"
+<<<<<<< HEAD
+<<<<<<< HEAD
             defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
 =======
+<<<<<<< HEAD
         <textarea
           value={summary}
           onChange={e => setSummary(e.target.value)}
@@ -182,8 +261,33 @@ const ResumeBuilder: NextPage = () => {
               experience || 'Add experience details to improve.'
             )}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             onAccept={setExperience}
             authorizationToken={operatorToken}
+=======
+            defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onAccept={setExperience  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         </div>
 <<<<<<< HEAD
@@ -195,8 +299,11 @@ const ResumeBuilder: NextPage = () => {
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Skills"
+<<<<<<< HEAD
+<<<<<<< HEAD
             defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
 =======
+<<<<<<< HEAD
         <textarea
           value={experience}
           onChange={e => setExperience(e.target.value)}
@@ -217,8 +324,33 @@ const ResumeBuilder: NextPage = () => {
                 `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`
             )}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
+=======
+            defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onAccept={setSkillsText  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            authorizationToken={operatorToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         </div>
 <<<<<<< HEAD
@@ -226,8 +358,11 @@ const ResumeBuilder: NextPage = () => {
       </section>
     </div>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 export default ResumeBuilder;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
         <textarea
@@ -244,3 +379,19 @@ export default ResumeBuilder;
 
 export default ResumeBuilder;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+},
+export default ResumeBuilder,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+<<<<<<< HEAD
+
+export default ResumeBuilder,;
+=======
+export default ResumeBuilder,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

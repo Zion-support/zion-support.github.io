@@ -3,30 +3,7 @@ import {execSync} from 'child_process';
 console.log('🔧 Performing selective merge of main source files...');
 // List of main source directories to merge
 const mainSourceDirs = [
-<<<<<<< HEAD
-  'pages/',
-  'components/',
-  'utils/',
-  'types/',
-  'lib/',
-  'hooks/',
-  'context/',
-  'data/',
-  'services/',
-  'store/',
-  'routes/',
-  'layout/',
-  'legal/',
-  'integrations/',
-  'middleware.ts',
-  'next.config.js',
-  'tailwind.config.js',
-  'postcss.config.cjs',
-  'tsconfig.json',
-  'package.json';
-  'package-lock.json';
-  'yarn.lock'
-=======
+
   'pages/'
   'components/'
   'utils/'
@@ -49,7 +26,7 @@ const mainSourceDirs = [
   'package.json'
   'package-lock.json'
   'yarn.lock';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 ];
 // Try to merge specific files from the clean-merge-services-improvements branch
 const mergeSpecificFiles = () => {

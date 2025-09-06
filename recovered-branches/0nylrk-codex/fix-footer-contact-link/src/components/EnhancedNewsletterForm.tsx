@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react";
@@ -12,13 +13,40 @@ import { Mail } from 'lucide-react';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function EnhancedNewsletterForm() {
+=======
+=======
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { Mail } from "lucide-react";
+export function EnhancedNewsletterForm() {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-<<<<<<< HEAD
-  const handleSubmit = null;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+<<<<<<< HEAD
+import { useState } from "react";
+import { Mail } from "lucide-react";
+=======
+import { useState } from "react",
+import { Mail } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function EnhancedNewsletterForm() {
+  const [email, setEmail] = useState(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isSubmitted, setIsSubmitted] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   const handleSubmit = (e: React.FormEvent) => {
+<<<<<<< HEAD
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate API call
@@ -27,7 +55,19 @@ export function EnhancedNewsletterForm() {
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    e.preventDefault(),
+    setIsSubmitting(true),
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false),
+      setIsSubmitted(true),
+      setEmail("")
+    }, 1000)
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -36,36 +76,34 @@ export function EnhancedNewsletterForm() {
         </div>
         <div>
           <h4 className="text-lg font-bold text-white">Stay Updated</h4>
-          <p className="text-zion-slate-light text-sm">
-            Get exclusive offers, trending AI news, and early access to best
-            deals
-          </p>
+          <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
-          <p className="text-zion-slate-light mt-1">
-            We'll keep you updated with the latest from Zion.
-          </p>
+          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>
         </div>
       ) : (
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
-        >
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">
           <Input
             type="email"
             placeholder="Enter your email"
             className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setEmail(e.target.value)
-            }
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
             required
           />
-          <Button
-            type="submit"
+          <Button 
+            type="submit" 
             disabled={isSubmitting}
             className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
           >
@@ -73,9 +111,14 @@ export function EnhancedNewsletterForm() {
           </Button>
         </form>
       )}
+<<<<<<< HEAD
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div
               key={i}
               className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan"
@@ -87,5 +130,88 @@ export function EnhancedNewsletterForm() {
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+      
+      <div className="mt-4 flex items-center text-xs text-zion-slate-light">
+        <div className="flex -space-x-1 mr-2">
+          {[...Array(3)].map((_, i) => (
+=======
+);
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { useState } from "react",;
+import { Mail } from "lucide-react",;
+export function EnhancedNewsletterForm() {;
+  const [email, setEmail] = useState(""),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [isSubmitted, setIsSubmitted] = useState(false),;
+  const handleSubmit = (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    setIsSubmitting(true),;
+    // Simulate API call;
+    setTimeout(() => {;
+      setIsSubmitting(false),;
+      setIsSubmitted(true);
+      setEmail("");
+    }, 1000);
+  };
+  return (;
+    <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
+      <div className="flex items-center mb-4">;
+        <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
+          <Mail className="h-6 w-6" />;
+        </div>;
+        <div>;
+          <h4 className="text-lg font-bold text-white">Stay Updated</h4>;
+          <p className="text-zion-slate-light text-sm">Get exclusive offers, trending AI news, and early access to best deals</p>;
+        </div>;
+      </div>;
+      {isSubmitted ? (;
+        <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">;
+          <p className="text-white font-medium">Thank you for subscribing!</p>;
+          <p className="text-zion-slate-light mt-1">We'll keep you updated with the latest from Zion.</p>;
+        </div>;
+      ) : (;
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2">;
+          <Input;
+            type="email";
+            placeholder="Enter your email";
+            className="flex-grow bg-zion-blue-dark text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple";
+            value={email}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+            required;
+          />;
+          <Button;
+            type="submit";
+            disabled={isSubmitting}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
+          >;
+            {isSubmitting ? "Subscribing..." : "Subscribe"}
+          </Button>;
+        </form>;
+      )}
+;
+      <div className="mt-4 flex items-center text-xs text-zion-slate-light">;
+        <div className="flex -space-x-1 mr-2">;
+          {[...Array(3)].map((_, i) => (;
+            <div key={i} className="h-5 w-5 rounded-full border border-zion-blue-dark bg-zion-blue flex items-center justify-center text-zion-cyan">;
+              {String.fromCharCode(65 + i)}
+            </div>
+          ))}
+        </div>;
+        <span>Join 10,000+ tech professionals who already subscribe</span>;
+      </div>;
+    </div>;
+  );
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req.body || {},
@@ -12,13 +13,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST')
 <<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req.body |{}
 =======
@@ -125,7 +134,12 @@ const { moduleTitle, moduleContent } = req.body || {};
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+<<<<<<< HEAD
+<<<<<<< HEAD
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
+=======
+      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { role: 'user', content: prompt }];
       temperature: 0.2});
 =======
@@ -143,7 +157,11 @@ const { moduleTitle, moduleContent } = req.body || {};
       const json = JSON.parse(text);
       return res.status(200).json(json);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     } catch {
 =======
    
@@ -160,7 +178,25 @@ const { moduleTitle, moduleContent } = req.body || {};
   } catch (err) {
     return fallback()
 }
+<<<<<<< HEAD
 }
 =======
   }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      return res.status(200).json(json);
+
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse(text);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

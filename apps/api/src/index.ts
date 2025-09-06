@@ -1,14 +1,17 @@
+<<<<<<< HEAD
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
+=======
+import Fastify from 'fastify';
+import cors from '@fastify/cors';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import rateLimit from '@fastify/rate-limit';
 <<<<<<< HEAD
 import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
 import dotenv from 'dotenv';
 dotenv.config();
-<<<<<<< HEAD
-const app = null;
-=======
+
 const app = Fastify({ logger: true });
 =======
 import dotenv from 'dotenv';
@@ -198,6 +201,7 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 <<<<<<< HEAD
 app.log.error(err);
 =======
+<<<<<<< HEAD
   app.log.error(err);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   (process as any).exit(1);
@@ -207,3 +211,23 @@ app.log.error(err);
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+app.log.error(err);
+=======
+  app.log.error(err);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  (process as any).exit(1);
+});  (process as any).exit(1)
+});
+
+<<<<<<< HEAD
+=======
+const port = Number(process.env.API_PORT || 4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+  app.log.error(err);
+  (process as any).exit(1);
+});
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

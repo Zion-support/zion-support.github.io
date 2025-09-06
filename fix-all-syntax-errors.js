@@ -22,7 +22,7 @@ const fixAccessibility = () => {
 const fixApi = () => {
   try {let content = fs.readFileSync('pages/api.tsx', 'utf8');
     // Ensure proper closing structure
-    if (!content.includes('export default')) {
+    if (!content.includes('export default')) {;
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
     fs.writeFileSync('pages/api.tsx', content);
@@ -84,19 +84,13 @@ const fixWebinars = () => {
 // Main execution
 const main = () => {console.log('Starting comprehensive syntax fixes...');
   const fixes = [
-<<<<<<< HEAD
-    fixAccessibility,
-    fixApi,
-    fixCareers;
-    fixSupport;
-    fixWebinars
-=======
+
     fixAccessibility
     fixApi
     fixCareers
     fixSupport
     fixWebinars;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ];
   let successCount = 0;
   for (const fix of fixes) {

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Smartphone, Tablet, Monitor, RotateCcw;
@@ -7,30 +8,23 @@ import { Smartphone, Tablet, Monitor, RotateCcw;
   Mouse, Hand
  } from 'lucide-react';
 // TouchEvent types are already defined in DOM
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-interface MobileOptimizerProps {
-  children: React.ReactNode;
-  showDebugInfo?: boolean;
-  enableTouchGestures?: boolean;
-  enableMobileLayout?: boolean;
-  enablePerformanceMode?: boolean
-}
-
-interface TouchGesture {
-  type: 'swipe' | 'pinch' | 'rotate' | 'longPress';
-  direction?: 'up' | 'down' | 'left' | 'right';
-  distance?: number;
-  duration?: number
-}
-
-const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
-  children;
-  showDebugInfo;
+setIsMobile (isMobileDevice);
+=======
+ setIsMobile (isMobileDevice);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 setIsMobile (isMobileDevice);
 =======
  setIsMobile (isMobileDevice);
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
@@ -214,6 +208,7 @@ useEffect ( () => {
 window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
+<<<<<<< HEAD
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
 <<<<<<< HEAD
 }
@@ -233,6 +228,19 @@ const getStatusIcon = (status: string) => {
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 children
+=======
+  setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
+};
+if (!showPanel || !isVisible) return null;
+
+};
+const getStatusIcon = (status: string) => {
+  switch (status) {
+  
+
+};
+children 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -250,6 +258,7 @@ children
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 
@@ -260,3 +269,22 @@ export default MobileOptimizer;
 
 export default MobileOptimizer;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

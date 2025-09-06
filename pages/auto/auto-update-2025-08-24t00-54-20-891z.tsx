@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const Page: NextPage;
@@ -7,8 +10,27 @@ const Page: NextPage;
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+import type { NextPage } from 'next'
+import Head from 'next/head'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+=======
+import type { NextPage } from 'next'
+import Head from 'next/head'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const Page: NextPage = () => {
   return (
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+const Page: NextPage = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
       <Head>
         <title>Auto Update 2025-08-24T00-54-20-891Z</title>
@@ -21,6 +43,8 @@ const Page: NextPage = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
         <meta name='description' content='Automatically generated content' />
@@ -38,4 +62,20 @@ const Page: NextPage = () => {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default Page;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+},
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231;
+export default Page
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+},
+<<<<<<< HEAD
+
+export default Page,;
+;
+=======
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231;
+export default Page
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

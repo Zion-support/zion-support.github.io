@@ -14,16 +14,19 @@ interface SlackRespond {
 interface SafeConsole {
   log: (message: string) => void
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Declare available globals
 declare const globalThis: {
   console?: SafeConsole;
   process?: {
     env: {
-<<<<<<< HEAD
-      PORT?: string;
-=======
+
       PORT?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       [key: string]: string | undefined
     }
   }
@@ -32,25 +35,60 @@ declare const globalThis: {
 class MockApp {
   private commandHandlers: Record<string, Function> = {}
   command(commandName: string, handler: Function) {
-<<<<<<< HEAD
-    this.commandHandlers[commandName] = handler;
-=======
+
     this.commandHandlers[commandName] = handler
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return this
   }
   async start(port?: number): Promise<void> {
     // Safely log without direct console reference
-<<<<<<< HEAD
-    const safeConsole = null;
-=======
+
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
+<<<<<<< HEAD
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
+=======
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+// Declare available globals;
+declare const globalThis: {;
+  console?: SafeConsole,;
+  process?: {;
+    env: {;
+      PORT?: string,;
+      [key: string]: string | undefined;
+    }
+  }
+},;
+// Mock App class that mimics the Slack Bolt SDK behavior;
+class MockApp {;
+  private commandHandlers: Record<string Function> = {},;
+  command(commandName: string, handler: Function) {;
+    this.commandHandlers[commandName] = handler,;
+    return this;
+  }
+;
+  async start(port?: number): Promise<void> {;
+    // Safely log without direct console reference;
+    const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
+    if (safeConsole && safeConsole.log) {;
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return Promise.resolve()
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
@@ -58,9 +96,28 @@ async function askZionGPT(prompt: string): Promise<string> {
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
+=======
+;
+// Create a mock app instance;
+const app = new MockApp(),;
+async function askZionGPT(prompt: string): Promise<string> {;
+  // Safely log without direct console reference;
+  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
+  if (safeConsole && safeConsole.log) {;
+    safeConsole.log(`ZionGPT was asked: ${prompt}`);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   return `AI response to: ${prompt}`
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -78,6 +135,30 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const project = args.join(' ');
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break
+=======
+;
+app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {;
+  await ack(),;
+  const [action, ...args] = command.text.split(/\s+/),;
+  switch (action) {;
+    case 'post-job':;
+      await respond('Please provide job details via the web interface.'),;
+      break,;
+    case 'suggest-talent': {;
+      const query = args.join(' '),;
+      const answer = await askZionGPT(`Suggest talent for ${query}`),;
+      await respond(answer),;
+      break;
+    }
+    case 'track-project': {;
+      const project = args.join(' '),;
+      await respond(`Tracking project **${project}** - feature coming soon.`),;
+      break;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     case 'help':
     default: await respond(
@@ -88,6 +169,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
           '`/zion help` - show this list'
       )
   }
+<<<<<<< HEAD
 });
 // Mock startup with safer environment access
 (async () => {
@@ -103,4 +185,20 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default app;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+}),;
+// Mock startup with safer environment access;
+(async () => {;
+  // Get PORT from environment or use default;
+  const env = typeof globalThis !== 'undefined' && globalThis.process ?;
+    globalThis.process.env : {},;
+  const port = env.PORT ? Number(env.PORT) : 3000,;
+  await app.start(port);
+})(),;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default app;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

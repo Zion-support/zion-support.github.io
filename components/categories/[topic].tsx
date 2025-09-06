@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import type { GetServerSideProps, NextPage } from 'next',
+=======
+import type { GetServerSideProps, NextPage } from 'next';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import Link from 'next/link';
 import { BlogPost  } from '@/utils/types/blog';
@@ -7,8 +11,12 @@ import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
 =======
 
@@ -80,6 +88,12 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const topic = String(ctx.params?.topic |'');
+=======
+};
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+  const topic = String(ctx.params?.topic || '');
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
 <<<<<<< HEAD
   return { props: { topic, posts } }
@@ -104,13 +118,28 @@ export default TopicPage;      </Head>
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
+<<<<<<< HEAD
   const topic = String(ctx.params?.topic |'');
+=======
+=======
+};
+
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+=======
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const topic = String(ctx.params?.topic || '');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
   return { props: { topic, posts } }
 }
 export default TopicPage;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
   return { props: { topic, posts } };
@@ -119,3 +148,9 @@ export default TopicPage;
 
 export default TopicPage;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

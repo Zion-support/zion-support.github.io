@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from 'react',
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import SEO from '../components/SEO';
 import Link from 'next/link';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -19,8 +24,9 @@ export default function SOC2ComplianceAutomationPage() {
 							</div>
 						))}
 					</div>
-
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   return (
     <>
       <SEO
@@ -37,7 +43,6 @@ export default function SOC2ComplianceAutomationPage() {
             pipelines, and prebuilt auditor workflows. Integrates with cloud
             providers and ticketing systems.
           </p>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
           <div className='mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {[
               {
@@ -168,7 +173,15 @@ export default function SOC2ComplianceAutomationPage() {
 			</section>
 		</>
 	)
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

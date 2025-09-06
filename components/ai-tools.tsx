@@ -4,6 +4,7 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain;
   MessageSquare;
   Image;
@@ -12,7 +13,11 @@ import { Brain;
   FileText;
   Zap;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Brain
   MessageSquare
   Image
@@ -25,6 +30,25 @@ import {
   CheckCircle
   TrendingUp
   Shield;} from 'lucide-react';import {
+=======
+  Brain,
+  MessageSquare,
+  Image,
+  Video,
+  Code,
+  FileText,
+  Zap,
+  Star,
+  ExternalLink,
+  CheckCircle,
+<<<<<<< HEAD
+  TrendingUp,
+  Shield,;} from 'lucide-react';import { 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  TrendingUp,;
+  Shield,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   MessageSquare
   Image
@@ -32,17 +56,13 @@ import {
   Code
   FileText
   Zap
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Shield
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AiToolsPage() {
-  const aiTools = null;
-=======
+
 export default function AiToolsPage() {
   const aiTools = [
     {
@@ -80,6 +100,14 @@ export default function AiToolsPage() {
         'Code generation & debugging'
         'Professional writing assistance'
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+=======
+        'Advanced reasoning & analysis',
+        'Web browsing & real-time info',
+        'Plugin ecosystem access',
+        'Code generation & debugging',
+        'Professional writing assistance',
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ];
       pricing: '$20/month'
       marketPrice: '$20/month'
@@ -281,6 +309,7 @@ export default function AiToolsPage() {
       description:
         'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
       features: [
+<<<<<<< HEAD
         'Content generation'
         'Brand voice training'
         'SEO optimization'
@@ -304,8 +333,15 @@ export default function AiToolsPage() {
         'Code generation',
         'Creative writing',
         'Research assistance',
+<<<<<<< HEAD
       ],
       pricing: '$20/month',
+=======
+      ],      pricing: '$20/month',
+
+      pricing: '$20/month',
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       marketPrice: '$20/month',
       website: 'https://claude.ai',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
@@ -314,6 +350,10 @@ export default function AiToolsPage() {
       popular: false,
       category: 'Conversational AI',
     },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     {
       icon: <FileText className='w-8 h-8 text-white' />,
       title: 'Jasper AI',
@@ -325,8 +365,15 @@ export default function AiToolsPage() {
         'SEO optimization',
         'Team collaboration',
         'Enterprise integrations',
+<<<<<<< HEAD
       ],
       pricing: '$39-125/month',
+=======
+      ],      pricing: '$39-125/month',
+
+      pricing: '$39-125/month',
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       marketPrice: '$40-150/month',
       website: 'https://jasper.ai',
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
@@ -334,8 +381,14 @@ export default function AiToolsPage() {
       gradient: 'from-teal-400 to-cyan-500',
       popular: false,
       category: 'Content Creation',
+<<<<<<< HEAD
     },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    },  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   ];
   const aiMarketStats = [
     {
@@ -501,7 +554,7 @@ export default function AiToolsPage() {
     },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>
@@ -605,11 +658,27 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -783,11 +852,28 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+              AI Tool Categories
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -830,11 +916,27 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -951,6 +1053,7 @@ export default function AiToolsPage() {
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
+<<<<<<< HEAD
             <Button
               href='/contact'
               variant='outline'
@@ -973,5 +1076,14 @@ export default function AiToolsPage() {
 );
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            <Button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

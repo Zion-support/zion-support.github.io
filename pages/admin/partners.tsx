@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 export default function AdminPartners() {
   const [partners, setPartners] = useState<any[]>([]),
@@ -13,6 +14,11 @@ export default function AdminPartners() {
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 interface Partner {
@@ -112,31 +118,91 @@ const AdminPartnersPage: React.FC = () => {
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
+<<<<<<< HEAD
     const json = await res.json();
     setFlags(json.flags |[]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useEffect, useState } from 'react';
+export default function AdminPartners(req, res) {
+  try {
+  const [partners, setPartners] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>('');
+  const [flags, setFlags] = useState<any[]>([]);
+  useEffect(() => {;
+    (async () => {;
+      try {
+        const res = await fetch('/api/admin/partners/list');
+        const json = await res.json();
+        setPartners(json.partners || []);
+      } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    })();
+  }, []),;
+  async function updatePartner(code: string, updates: any) {;
+    await fetch('/api/admin/partners/update', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify({ code, ...updates })}),;
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function viewFlags(code: string) {;
+    setSelected(code);
+    const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const json = await res.json();
+    setFlags(json.flags || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-    <div className='space-y-6'>
-      <h1 className='text-2xl font-semibold'>Admin • Partners</h1>
-      <div className='overflow-auto'>
-        <table className='min-w-full text-sm'>
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
+      <div className="overflow-auto">
+        <table className="min-w-full text-sm">
           <thead>
-            <tr className='text-left border-b'>
-              <th className='py-2 pr-4'>Code</th>
-              <th className='py-2 pr-4'>Name</th>
-              <th className='py-2 pr-4'>Status</th>
-              <th className='py-2 pr-4'>Commission</th>
-              <th className='py-2 pr-4'>Actions</th>
+            <tr className="text-left border-b">
+              <th className="py-2 pr-4">Code</th>
+              <th className="py-2 pr-4">Name</th>
+              <th className="py-2 pr-4">Status</th>
+              <th className="py-2 pr-4">Commission</th>
+              <th className="py-2 pr-4">Actions</th>
             </tr>
           </thead>
           <tbody>
-            {partners.map(p => (
-              <tr key={p.code} className='border-b'>
-                <td className='py-2 pr-4'>{p.code}</td>
-                <td className='py-2 pr-4'>{p.name}</td>
-                <td className='py-2 pr-4'>{p.status}</td>
-                <td className='py-2 pr-4'>
+            {partners.map((p) => (
+              <tr key={p.code} className="border-b">
+                <td className="py-2 pr-4">{p.code}</td>
+                <td className="py-2 pr-4">{p.name}</td>
+                <td className="py-2 pr-4">{p.status}</td>
+                <td className="py-2 pr-4">
                   <input
 <<<<<<< HEAD
                     type='number'                    defaultValue={p.commission_rate}
@@ -153,8 +219,42 @@ const AdminPartnersPage: React.FC = () => {
                       })
                     }
                     className='w-24 border rounded px-2 py-1'
+=======
+                    type="number"
+                    defaultValue={p.commission_rate  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    min={0  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    max={1  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    step={0.01  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="w-24 border rounded px-2 py-1"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   />
                 </td>
+<<<<<<< HEAD
                 <td className='py-2 pr-4 space-x-2'>
                   <button
                     className='px-2 py-1 rounded border'
@@ -183,26 +283,47 @@ const AdminPartnersPage: React.FC = () => {
                   </button>
                 </td>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                <td className="py-2 pr-4 space-x-2">
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'approved' })}>Approve</button>
+                  <button className="px-2 py-1 rounded border" onClick={() => updatePartner(p.code, { status: 'rejected' })}>Reject</button>
+                  <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
+                </td>
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               </tr>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </tbody>
         </table>
       </div>
       {selected && (
-        <div className='p-4 rounded border'>
-          <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
-          <ul className='list-disc pl-6'>
+        <div className="p-4 rounded border">
+          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
+          <ul className="list-disc pl-6">
             {flags.map((f, idx) => (
               <li key={idx}>
-                <span className='font-medium'>{f.type}</span> — {f.severity}{' '}
-                {f.note && <span className='text-gray-500'>({f.note})</span>}
+                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </li>
-            ))}
-            {flags.length === 0 && (
-              <li className='text-gray-500 list-none'>No flags</li>
-            )}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </ul>
         </div>
+<<<<<<< HEAD
 {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
@@ -368,7 +489,36 @@ const AdminPartnersPage: React.FC = () => {
       </main>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

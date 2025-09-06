@@ -2,14 +2,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 =======
 }
 
@@ -19,6 +24,9 @@ export default async function handler(
 ) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
+=======
+  try {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const supabase = createServerClient();
     const clientId = (req.query.clientId as string) |null
     const [jobsR, quotesR] = await Promise.allSettled([
@@ -133,7 +141,7 @@ export default async function handler(
       funnel: [
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         { label: 'Hire', value: 2 }]})
   }
 }

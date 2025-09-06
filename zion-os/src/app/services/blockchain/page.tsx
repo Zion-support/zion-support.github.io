@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 export default function BlockchainServicesPage() {return (;
+=======
+export default function BlockchainServicesPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-orange-600 to-red-600 py-20">;
@@ -35,7 +40,11 @@ export default function BlockchainServicesPage() {return (;
               <div className="text-4xl mb-6">💰</div>;
               <h2 className="text-3xl font-bold mb-4">DeFi Platform Development</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
                 Build next-generation decentralized finance platforms with lending, borrowing;
+=======
+                Build next-generation decentralized finance platforms with lending, borrowing,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 yield farming, and automated market making capabilities.;
               </p>;
               <div className="space-y-4 mb-8">;
@@ -78,7 +87,11 @@ export default function BlockchainServicesPage() {return (;
               <div className="text-4xl mb-6">🎨</div>;
               <h2 className="text-3xl font-bold mb-4">NFT Marketplace Development</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
                 Create cutting-edge NFT marketplaces with advanced features, multi-chain support;
+=======
+                Create cutting-edge NFT marketplaces with advanced features, multi-chain support,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 and innovative monetization strategies for digital assets.;
               </p>;
               <div className="space-y-4 mb-8">;
@@ -121,7 +134,11 @@ export default function BlockchainServicesPage() {return (;
               <div className="text-4xl mb-6">📜</div>;
               <h2 className="text-3xl font-bold mb-4">Smart Contract Development</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
                 Secure, audited smart contracts for any blockchain use case with comprehensive testing;
+=======
+                Secure, audited smart contracts for any blockchain use case with comprehensive testing,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 security analysis, and deployment support.;
               </p>;
               <div className="space-y-4 mb-8">;
@@ -164,7 +181,11 @@ export default function BlockchainServicesPage() {return (;
               <div className="text-4xl mb-6">🌐</div>;
               <h2 className="text-3xl font-bold mb-4">Web3 Infrastructure</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
                 Build robust Web3 infrastructure with node management, API gateways;
+=======
+                Build robust Web3 infrastructure with node management, API gateways,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 indexing services, and decentralized storage solutions.;
               </p>;
               <div className="space-y-4 mb-8">;
@@ -207,7 +228,11 @@ export default function BlockchainServicesPage() {return (;
               <div className="text-4xl mb-6">🏛️</div>;
               <h2 className="text-3xl font-bold mb-4">DAO Development</h2>;
               <p className="text-zinc-300 mb-6 text-lg">;
+<<<<<<< HEAD
                 Create sophisticated decentralized autonomous organizations with advanced governance;
+=======
+                Create sophisticated decentralized autonomous organizations with advanced governance,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 treasury management, and community engagement tools.;
               </p>;
               <div className="space-y-4 mb-8">;

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface EnhancedFuturisticBackgroundProps {
@@ -10,11 +11,11 @@ interface EnhancedFuturisticBackgroundProps {
   particleCount?: number;
   animationSpeed?: number
 }
-
-const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-  children;
-  className;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const colorSchemes = {
 =======
  const colorSchemes = {
@@ -335,10 +336,24 @@ const EnhancedFuturisticBackground: React.FC<
 <<<<<<< HEAD
           this.opacity *= 0.95;        }          this.opacity *= 0.95
 =======
+<<<<<<< HEAD
           this.opacity *= 0.95;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+          this.opacity *= 0.95;        }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
@@ -377,8 +392,23 @@ const EnhancedFuturisticBackground: React.FC<
       }
       isDead() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         return this.life <= 0 |this.opacity < 0.01;      }
+=======
+        return this.life <= 0 || this.opacity < 0.01;      }        
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore()
+=======
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -387,6 +417,10 @@ const EnhancedFuturisticBackground: React.FC<
       }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Connection lines between particles
     class Connection {
       p1: Particle;
@@ -515,10 +549,18 @@ const EnhancedFuturisticBackground: React.FC<
 =======
       };
 
+<<<<<<< HEAD
       return drawMatrix;
     };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      return drawMatrix;    };
+
+    };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const drawMatrix = matrixRain();
     // Main animation loop
     const animate = () => {
@@ -553,8 +595,13 @@ const EnhancedFuturisticBackground: React.FC<
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
       // Create connections between nearby particles
       connections = [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
+<<<<<<< HEAD
           const distance = Math.sqrt(
             Math.pow(particles[i].x - particles[j].x, 2) +
               Math.pow(particles[i].y - particles[j].y, 2)
@@ -568,11 +615,29 @@ const EnhancedFuturisticBackground: React.FC<
           if (distance < 150) {
             connections.push(new Connection(particles[i], particles[j]))
 =======
+<<<<<<< HEAD
             connections.push(new Connection(particles[i], particles[j]));
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+      }
+
+      // Create connections between nearby particles
+      connections = [];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Draw connections
       connections.forEach(connection => connection.draw());
       // Add floating geometric shapes
@@ -674,6 +739,7 @@ const EnhancedFuturisticBackground: React.FC<
   );
 }
 export default EnhancedFuturisticBackground;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
           background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,
@@ -690,3 +756,17 @@ export default EnhancedFuturisticBackground;
 
 export default EnhancedFuturisticBackground;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default EnhancedFuturisticBackground;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+export default EnhancedFuturisticBackground;
+=======
+export default EnhancedFuturisticBackground;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -2,15 +2,20 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = null;
         { label: 'ai', value: 1 }]})
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 =======
 }
 
@@ -20,6 +25,9 @@ export default async function handler(
 ) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
+=======
+  try {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const supabase = createServerClient();
     const talentId = (req.query.talentId as string) |null
     const [viewsR, invitesR, appsR, tagsR] = await Promise.allSettled([
@@ -92,9 +100,21 @@ export default async function handler(
         { label: 'ai', value: 1 }
       ]
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+}
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

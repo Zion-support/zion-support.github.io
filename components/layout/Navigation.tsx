@@ -2,9 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, Home, Brain, Cpu, Rocket;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Menu
   X
   Home
@@ -19,15 +24,15 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';import {
   Menu, X, Home, Brain, Cpu, Rocket
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Phone, Mail, MapPin, Globe, ChevronDown
  } from 'lucide-react';
-import Link from 'next/link';
-<<<<<<< HEAD
-const Navigation: React.FC;
 =======
+<<<<<<< HEAD
 =======
 import {
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   Menu,
   X,
   Home,
@@ -37,6 +42,7 @@ import {
   Phone,
   Mail,
   MapPin,
+<<<<<<< HEAD
   Globe,
   ChevronDown,;
 } from 'lucide-react';
@@ -44,6 +50,18 @@ import Link from 'next/link';
 
 const Navigation: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  Globe,;
+  ChevronDown,;
+} from 'lucide-react';
+import Link from 'next/link';import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
+  Phone, Mail, MapPin, Globe, ChevronDown;
+} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import Link from 'next/link';
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -249,6 +267,7 @@ const Navigation: React.FC = () => {
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className='flex items-center space-x-1 cursor-pointer text-gray-300 hover:text-white transition-colors duration-300'
                     >
                       <span className='font-medium'>{item.name}</span>
@@ -261,7 +280,15 @@ const Navigation: React.FC = () => {
 =======
 
                       {/* Dropdown Menu */}
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -270,6 +297,14 @@ const Navigation: React.FC = () => {
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -322,6 +357,15 @@ const Navigation: React.FC = () => {
                                 );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                               })}
+=======
+
+                              })}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </div>
                           </motion.div>
                         )}
@@ -339,15 +383,38 @@ const Navigation: React.FC = () => {
                       <item.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                       <span className="font-medium">{item.name}</span>
 =======
+<<<<<<< HEAD
                       <span className='font-medium'>{item.name}</span>
                     </Link>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                      <span className='font-medium'>{item.name}</span>                    </Link>
+
+                    </Link>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   )}
                 </div>
               ))}
             </div>
+<<<<<<< HEAD
             {/* CTA Button */}
             <div className='hidden lg:block'>
+=======
+
+            {/* CTA Button */}
+            <div className='hidden lg:block'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <motion.a
                 href='/contact'
                 whileHover={{ scale: 1.05 }}
@@ -391,6 +458,14 @@ const Navigation: React.FC = () => {
           </div>
         </div>
       </motion.nav>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -400,6 +475,14 @@ const Navigation: React.FC = () => {
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-40 lg:hidden'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             {/* Backdrop */}
             <div
@@ -408,14 +491,32 @@ const Navigation: React.FC = () => {
 <<<<<<< HEAD
             />          >
             {/* Backdrop */}
+<<<<<<< HEAD
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
 =======
+<<<<<<< HEAD
             />
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            <div 
+              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+              onClick={() => setIsOpen(false)}
+            />
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+            
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             {/* Mobile Menu */}
             <motion.div
               initial={{ x: '100%' }}
@@ -423,6 +524,14 @@ const Navigation: React.FC = () => {
               exit={{ x: '100%' }}
               transition={{ duration: 0.3 }}
               className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='p-6'>
                 {/* Close Button */}
@@ -455,6 +564,7 @@ const Navigation: React.FC = () => {
                 {/* Mobile Menu Items */}
                 <div className='space-y-4'>
                   {navigationItems.map(item => (
+<<<<<<< HEAD
                     <div key={item.name}>
                       {item.dropdown ? (
                         <div className='space-y-2'>
@@ -509,6 +619,20 @@ const Navigation: React.FC = () => {
                               );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             })}
+=======
+
+                  </motion.button>
+                </div>
+
+                {/* Mobile Menu Items */}
+
+                            })}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                         </div>
                       ) : (
@@ -526,13 +650,33 @@ const Navigation: React.FC = () => {
                           <item.icon className="w-5 h-5 text-cyan-400" />
                           <span className="text-white font-medium">{item.name}</span>
 =======
+<<<<<<< HEAD
                           </span>
                         </Link>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                          </span>                        </Link>
+
+                        </Link>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       )}
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -541,6 +685,14 @@ const Navigation: React.FC = () => {
                   <div className='space-y-2 text-sm'>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -593,9 +745,15 @@ const Navigation: React.FC = () => {
   );
 <<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Navigation;  )
 }
 export default Navigation;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -603,3 +761,16 @@ export default Navigation;
 
 export default Navigation;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default Navigation;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default Navigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

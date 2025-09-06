@@ -5,9 +5,7 @@ import dynamic from 'next/dynamic';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const isClient = typeof window !== 'undefined';
-<<<<<<< HEAD
-type Web3LoginModalProps = any;
-=======
+
 type Web3LoginModalProps = {
   isOpen: boolean;
   onClose: () => void;
@@ -194,7 +192,15 @@ const resp = await provider.connect();
     } finally {
 <<<<<<< HEAD
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+<<<<<<< HEAD
       onLoggedIn?.({ address: publicKey, chain: 'sol' })
+=======
+=======
+      setLoading(false);    }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+      onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -202,8 +208,14 @@ const resp = await provider.connect();
     } finally {
       setLoading(false)
 =======
+<<<<<<< HEAD
       setLoading(false);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      setLoading(false);    }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }, [onClose, onLoggedIn]);
   if (!isOpen) return null;
@@ -249,8 +261,18 @@ const resp = await provider.connect();
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
+=======
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
+  if (!isClient) return null;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return <ModalInner {...props} />;        </div>
         {error && (
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
@@ -272,10 +294,11 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
 }
 export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return <ModalInner {...props} />
 }
 =======
+<<<<<<< HEAD
 }
 }
 
@@ -283,3 +306,18 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {
   if (!isClient) return null;
   return <ModalInner {...props} />;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+export default function Web3LoginModal(props: Web3LoginModalProps) {;
+  if (!isClient) return null;
+<<<<<<< HEAD
+  return <ModalInner {...props} />;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return <ModalInner {...props} />
+}
+=======
+  return <ModalInner {...props} />;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

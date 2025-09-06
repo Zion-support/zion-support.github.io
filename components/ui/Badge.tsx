@@ -12,13 +12,15 @@ interface HTMLElement {
 interface HTMLDivElement extends HTMLElement {
   tagName: 'DIV';
 }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const badgeVariants = null;
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const badgeVariants = cva(
   "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
   {
@@ -36,7 +38,7 @@ const badgeVariants = cva(
     defaultVariants: {
       variant: "default"
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 );
 export interface BadgeProps
@@ -44,7 +46,7 @@ export interface BadgeProps
     VariantProps<typeof badgeVariants> {}
 function Badge({ className, variant, ...props }: BadgeProps) {
   return (
-    <div className={cn(badgeVariants({ variant }), className)} {...props} />
+    <div className={cn(badgeVariants({ variant }), className)} {...props} />;
   );
 }
 export { Badge, badgeVariants }

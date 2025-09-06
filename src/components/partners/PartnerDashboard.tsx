@@ -1,9 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
 import {
   Card
   CardContent
@@ -21,15 +21,17 @@ import { Button } from '@/components/ui/button'
 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
+<<<<<<< HEAD
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
-<<<<<<< HEAD
-  const stats = null;
 =======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const stats = {
     totalReferrals: 42
     pendingReferrals: 8
@@ -37,6 +39,7 @@ export function PartnerDashboard() {
     conversionRate: 18.5
     totalRevenue: 850.0
     pendingRevenue: 200.0
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 import {
@@ -57,6 +60,18 @@ import {
 } from 'lucide-react';
 }
 
+=======
+
+=======
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -64,23 +79,42 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
+<<<<<<< HEAD
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0,
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00
+  },
+  
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
-    <div className='space-y-6'>
+    <div className="space-y-6">
       {/* Stats Overview */}
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-        <Card className='bg-zion-blue-dark border-zion-blue-light'>
-          <CardHeader className='flex flex-row items-center justify-between pb-2'>
-            <CardTitle className='text-sm font-medium'>
-              Total Referrals
-            </CardTitle>
-            <Users className='h-4 w-4 text-zion-cyan' />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <Card className="bg-zion-blue-dark border-zion-blue-light">
+          <CardHeader className="flex flex-row items-center justify-between pb-2">
+            <CardTitle className="text-sm font-medium">Total Referrals</CardTitle>
+            <Users className="h-4 w-4 text-zion-cyan" />
           </CardHeader>
           <CardContent>
+<<<<<<< HEAD
             <div className='text-2xl font-bold'>{stats.totalReferrals}</div>
             <p className='text-xs text-zion-slate-light'>
               {stats.completedReferrals} completed, {stats.pendingReferrals}{' '}
@@ -102,11 +136,26 @@ export function PartnerDashboard() {
             </p>
           </CardContent>
         </Card>            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+=======
+            <div className="text-2xl font-bold">{stats.totalReferrals}</div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
           </CardContent>
         </Card>
+<<<<<<< HEAD
+=======
+        
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -123,9 +172,12 @@ export function PartnerDashboard() {
           </CardContent>
         </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
             <CardTitle className='text-sm font-medium'>
@@ -137,6 +189,15 @@ export function PartnerDashboard() {
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
 <<<<<<< HEAD
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
+=======
+        
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -145,16 +206,35 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
+<<<<<<< HEAD
 =======
             <p className='text-xs text-zion-slate-light'>
               ${stats.pendingRevenue} pending payout
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+              ${stats.pendingRevenue} pending payout
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             </p>
           </CardContent>
         </Card>
       </div>
 <<<<<<< HEAD
       {/* Performance Chart */}      {/* Performance Chart */}
+=======
+      
+      {/* Performance Chart */}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -167,6 +247,7 @@ export function PartnerDashboard() {
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
       {/* Recent Referrals */}
 =======
 
@@ -178,16 +259,33 @@ export function PartnerDashboard() {
           <CardDescription>
             Track your referral performance over time
           </CardDescription>
+=======
+      
+      {/* Recent Referrals */}
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader className="flex flex-row items-center justify-between">
+          <div>
+            <CardTitle>Recent Referrals</CardTitle>
+            <CardDescription>Your latest partner referrals</CardDescription>
+          </div>
+          <Button variant="outline" size="sm">View All</Button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </CardHeader>
-        <CardContent className='flex justify-center items-center p-6'>
-          <div className='text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full'>
-            <LineChart className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />
-            <p className='text-zion-slate-light'>
-              Detailed analytics will be available soon
+        <CardContent>
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
+            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
+            <p className="text-zion-slate-light mb-4">No referrals yet</p>
+            <p className="text-xs text-zion-slate-light">
+              Start sharing your referral links to earn rewards
             </p>
           </div>
         </CardContent>
       </Card>
+<<<<<<< HEAD
       {/* Recent Referrals */}
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
 <<<<<<< HEAD
@@ -227,11 +325,118 @@ export function PartnerDashboard() {
             </p>
           </div>
         </CardContent>
+<<<<<<< HEAD
       </Card>
     </div>
 <<<<<<< HEAD
   )
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      </Card>;
+    </div>;
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+    </div>
+  )
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
+export function PartnerDashboard() {;
+  // Placeholder data - would come from API in real implementation;
+  const stats = {;
+    totalReferrals: 42,;
+    pendingReferrals: 8,;
+    completedReferrals: 34,;
+    conversionRate: 18.5,;
+    totalRevenue: 850.00;
+    pendingRevenue: 200.00;
+  };
+  return (;
+    <div className="space-y-6">;
+      {/* Stats Overview */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
+        <Card className="bg-zion-blue-dark border-zion-blue-light">;
+          <CardHeader className="flex flex-row items-center justify-between pb-2">;
+            <CardTitle className="text-sm font-medium">Total Referrals</CardTitle>;
+            <Users className="h-4 w-4 text-zion-cyan" />;
+          </CardHeader>;
+          <CardContent>;
+            <div className="text-2xl font-bold">{stats.totalReferrals}</div>;
+            <p className="text-xs text-zion-slate-light">;
+              {stats.completedReferrals} completed, {stats.pendingReferrals} pending;
+            </p>;
+          </CardContent>;
+        </Card>;
+        <Card className="bg-zion-blue-dark border-zion-blue-light">;
+          <CardHeader className="flex flex-row items-center justify-between pb-2">;
+            <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>;
+            <TrendingUp className="h-4 w-4 text-zion-purple" />;
+          </CardHeader>;
+          <CardContent>;
+            <div className="text-2xl font-bold">{stats.conversionRate}%</div>;
+            <p className="text-xs text-zion-slate-light">;
+              Of clicks that convert to sign-ups;
+            </p>;
+          </CardContent>;
+        </Card>;
+        <Card className="bg-zion-blue-dark border-zion-blue-light">;
+          <CardHeader className="flex flex-row items-center justify-between pb-2">;
+            <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>;
+            <DollarSign className="h-4 w-4 text-green-500" />;
+          </CardHeader>;
+          <CardContent>;
+            <div className="text-2xl font-bold">${stats.totalRevenue}</div>;
+            <p className="text-xs text-zion-slate-light">;
+              ${stats.pendingRevenue} pending payout;
+            </p>;
+          </CardContent>;
+        </Card>;
+      </div>;
+      {/* Performance Chart */}
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader>;
+          <CardTitle>Performance Overview</CardTitle>;
+          <CardDescription>Track your referral performance over time</CardDescription>;
+        </CardHeader>;
+        <CardContent className="flex justify-center items-center p-6">;
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full">;
+            <LineChart className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
+            <p className="text-zion-slate-light">Detailed analytics will be available soon</p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+      {/* Recent Referrals */}
+      <Card className="bg-zion-blue-dark border-zion-blue-light">;
+        <CardHeader className="flex flex-row items-center justify-between">;
+          <div>;
+            <CardTitle>Recent Referrals</CardTitle>;
+            <CardDescription>Your latest partner referrals</CardDescription>;
+          </div>;
+          <Button variant="outline" size="sm">View All</Button>;
+        </CardHeader>;
+        <CardContent>;
+          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
+            <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
+            <p className="text-zion-slate-light mb-4">No referrals yet</p>;
+            <p className="text-xs text-zion-slate-light">;
+              Start sharing your referral links to earn rewards;
+            </p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

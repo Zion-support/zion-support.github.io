@@ -1,30 +1,40 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, optimizePrompt } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
   const token = null;
     return res.status(500).json({ error: 'Optimization failure' })
 =======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== "POST")
+  if (req.method !== "POST");
     return res.status(405).json({ error: "Method not allowed" });
   if (!isAuthorized(req))
     return res.status(401).json({ error: "Unauthorized" });
   function isAuthorized(req: NextApiRequest): boolean {
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
+<<<<<<< HEAD
     return !superToken |token === superToken;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+    return !superToken || token === superToken;
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   }
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-    if (req.method !== "POST")
+    if (req.method !== "POST");
       return res.status(405).json({ error: "Method not allowed" });
     if (!isAuthorized(req))
       return res.status(401).json({ error: "Unauthorized" });

@@ -1,11 +1,6 @@
 <<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout';
-import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
-export default function MDMPage() {
-  const features = null;
-=======
+<<<<<<< HEAD
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -38,6 +33,7 @@ export default function MDMPage() {
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' }
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' }
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }]
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
     {
@@ -52,6 +48,38 @@ export default function MDMPage() {
   ];
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function MDMPage() {
+  const features = [
+    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
+  const pricing = [
+    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
+    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' },
+    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }],
+  const references = [
+    { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
+    { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
+    { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <Layout>
       <Head>
@@ -69,9 +97,11 @@ export default function MDMPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</a>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
 =======
+<<<<<<< HEAD
         <meta
           name='description'
           content='Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration.'
@@ -102,6 +132,15 @@ export default function MDMPage() {
                 Market Pricing
               </a>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
+              <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             </div>
           </header>
           <section>
@@ -126,7 +165,11 @@ export default function MDMPage() {
                   <span className='text-gray-200'>{f}</span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
           <section>
@@ -139,7 +182,11 @@ export default function MDMPage() {
                   <div className="text-2xl font-bold text-white">{p.range}</div>
                   <div className="text-sm text-gray-400 mt-2">{p.note}</div>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
             <div className="text-sm text-gray-400 mt-3 text-center">We align with leading platforms like Intune, Jamf, and Workspace ONE.</div>
           </section>
@@ -187,8 +234,21 @@ export default function MDMPage() {
                   <ExternalLink className='w-4 h-4' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   <span>{r.name}</span>
+<<<<<<< HEAD
                 </a>
               ))}
+=======
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </section>
 <<<<<<< HEAD
@@ -211,8 +271,28 @@ export default function MDMPage() {
       </div>
     </Layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

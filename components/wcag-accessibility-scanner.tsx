@@ -5,25 +5,37 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function WCAGScannerPage() {
-<<<<<<< HEAD
-  const service = null;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
   const service = extraServices.find(s =>
     s.link.endsWith('/wcag-accessibility-scanner')
 <<<<<<< HEAD
   );  if (!service) return null;import { Star } from 'lucide-react';
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function WCAGScannerPage() {
+
+  const service = extraServices.find(s =>
+    s.link.endsWith('/wcag-accessibility-scanner');
+  );  if (!service) return null;import { Star } from 'lucide-react';
+export default function WCAGScannerPage() {;
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   if (!service) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -117,4 +129,18 @@ export default function WCAGScannerPage() {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

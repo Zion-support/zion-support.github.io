@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
@@ -11,6 +12,7 @@ const defaultState: SyncState = {
     paused: false
   }
   lastSyncedAt: new Date().toISOString()
+<<<<<<< HEAD
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {
@@ -18,6 +20,18 @@ export function readState(): SyncState {
 }
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
+=======
+};
+
+let state: SyncState = { ...defaultState };
+
+export function readState(): SyncState {;
+  return { ...state };
+}
+
+export function updateState(updates: Partial<SyncState>): void {;
+  state = { ...state, ...updates };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
 
@@ -89,7 +103,7 @@ export function writeState(state: MultiverseState): void {
 export function upsertEvent(
   state: MultiverseState
   event: SyncEvent
-): MultiverseState {
+): MultiverseState {;
   if (state.seenEventIds[event.eventId]) return state;
   const entityId = getEntityId(event);
   const currentVersion = state.latestVersionByEntityId[entityId] |0;
@@ -112,7 +126,7 @@ export function upsertEvent(
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function getEntityId(event: SyncEvent): string {
   switch (event.type) {
-    case 'proposal':
+    case 'proposal':;
       return (event.payload as any).proposalId;
     case 'token_transfer':
       return (event.payload as any).txId;
@@ -137,7 +151,7 @@ export function getEntityId(event: SyncEvent): string {
 export function filterEventsByScope(
   events: SyncEvent[]
   scope: InstanceConfig['scope']
-): SyncEvent[] {
+): SyncEvent[] {;
   if (scope === 'full') return events;
   if (scope === 'dao') {
     return events.filter(
@@ -157,5 +171,22 @@ export function filterEventsByScope(
   state = { ...defaultState }
 }
 =======
+<<<<<<< HEAD
   return events;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+}
+
+}
+}
+}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { DollarSign } from "lucide-react";
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export function ProductListingCard({ listing, view = 'grid', onRequestQuote, detailBasePath = '/marketplace/listing' }) {
   const isGrid = view === 'grid';

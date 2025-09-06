@@ -1,13 +1,18 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion  } from 'framer-motion';
 import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Star
   ExternalLink
   ArrowRight
@@ -16,8 +21,18 @@ import {
   Clock
   Shield
   Zap;
+=======
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface EnhancedServiceCardProps {
   service: {
     id: string;
@@ -50,18 +65,16 @@ interface EnhancedServiceCardProps {
       mobile: string;
       email: string;
       address: string;
-<<<<<<< HEAD
-      website: string
-    },
-=======
+
       website: string;
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     reviews: number
@@ -71,6 +84,12 @@ interface EnhancedServiceCardProps {
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
   const cardVariants = null;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+    reviews: number;
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     reviews: number;
   }
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
@@ -83,6 +102,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       y: 0
       scale: 1
       transition: {
+<<<<<<< HEAD
         duration: 0.6
         ease: 'easeOut' as const
       }
@@ -172,12 +192,62 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
   }
 =======
         duration: 0.6,
+<<<<<<< HEAD
         ease: 'easeInOut' as const,
       },
     },
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+        ease: 'easeOut' as const,
+      },
+    },    hover: {
+
+    hover: {
+
+      y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: 'easeOut' as const,
+      },
+    },  };
+
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 },
+    visible: {      rotate: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'backOut' as const,
+      },
+    },    hover: {
+
+  };
+
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 },
+
+      rotate: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+
+    hover: {
+
+      rotate: 360,
+      scale: 1.1,
+      transition: {
+        duration: 0.6,
+        ease: 'easeInOut' as const,
+      },
+    },
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       {/* Background Glow */}
       <div
@@ -217,8 +287,24 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </motion.div>
         </div>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Card Content */}
       <div className='relative p-6'>
+=======
+
+      {/* Card Content */}
+      <div className='relative p-6'>
+
+        {/* Header */}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
@@ -248,12 +334,17 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
         </p>
+<<<<<<< HEAD
         {/* Key Metrics */}
+=======
+        {/* Key Metrics */}          
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
         </div>
         {/* Title & Tagline */}
+<<<<<<< HEAD
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
           {service.name}
         </h3>
@@ -281,6 +372,23 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
               {service.customers}+
             </div>
             <div className='text-xs text-gray-400'>Customers</div>
+=======
+
+          {service.tagline}
+        </p>
+
+        {/* Description */}
+
+          {service.description}
+        </p>
+
+        {/* Key Metrics */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -341,8 +449,17 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 <<<<<<< HEAD
                 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 =======
+<<<<<<< HEAD
                 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 {feature}
               </motion.div>
             ))}
@@ -357,6 +474,14 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             )}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Market Info */}
         <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
@@ -364,6 +489,14 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
               Market Size
             </span>
             <span className='text-xs text-cyan-400'>{service.marketSize}</span>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-xs font-semibold text-white'>
@@ -390,6 +523,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </div>
         </div>
         {/* Trial & Setup Info */}
+<<<<<<< HEAD
         <div className='flex items-center justify-between mb-6 text-sm'>
           <div className='flex items-center gap-2 text-gray-400'>
             <Clock className='w-4 h-4' />
@@ -405,13 +539,32 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <div className="flex items-center gap-2 text-gray-400">
             <Shield className="w-4 h-4" />
 =======
+<<<<<<< HEAD
             <Shield className='w-4 h-4' />
             {service.setupTime}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+            {service.setupTime}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           </div>
         </div>
         {/* Action Buttons */}
         <div className='flex gap-3'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.a
             href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
@@ -454,6 +607,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </motion.a>
         </div>
         {/* Contact Info */}
+<<<<<<< HEAD
         <div className='mt-4 pt-4 border-t border-white/10'>
 <<<<<<< HEAD
           <div className='text-xs text-gray-500 text-center'>        <div className="mt-4 pt-4 border-t border-white/10">
@@ -462,6 +616,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <div className='text-xs text-gray-500 text-center'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             Contact: {service.contactInfo.email}
+=======
+
+            Contact: {service.contactInfo.email}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </div>
@@ -470,11 +633,21 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
     </motion.div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default EnhancedServiceCard;    </motion.div>
   )
 }
 export default EnhancedServiceCard;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -482,3 +655,17 @@ export default EnhancedServiceCard;
 
 export default EnhancedServiceCard;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+};
+
+export default EnhancedServiceCard;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default EnhancedServiceCard;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

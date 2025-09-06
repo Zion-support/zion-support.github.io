@@ -4,10 +4,32 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Play, Download, Code, Globe, Lock, Sparkles } from 'lucide-react';
 export default function AIContentGeneratorPage() {
   const features = null;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import {
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  Users,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Play,
+  Download,
+  Code,
+  Globe,
+  Lock,;
+  Sparkles,;
+} from 'lucide-react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import {
   Brain
   Zap
@@ -200,6 +222,7 @@ export default function AIContentGeneratorPage() {
       period: '/month'
       description: 'For large organizations and enterprises'
       features: [
+<<<<<<< HEAD
         'Unlimited words'
         'All templates + custom'
         'Full SEO suite'
@@ -220,6 +243,25 @@ export default function AIContentGeneratorPage() {
       color: 'border-purple-600'
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
+=======
+        'Unlimited words',
+        'All templates + custom',
+        'Full SEO suite',
+        'Dedicated support',
+        'Unlimited API access',
+        'Advanced analytics',
+        'White-label solution',
+        'Custom integrations',
+        'SLA guarantee',
+      ],
+      popular: false,
+      color: 'border-purple-600',
+      buttonColor: 'bg-purple-600 hover:bg-purple-700',
+    },  ];
+
+  ];
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const useCases = [
     {
       title: 'Blog Writing'
@@ -388,7 +430,13 @@ export default function AIContentGeneratorPage() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   ];
   const integrations = [
+<<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
+=======
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       name: 'Shopify'
       icon: '🛒'
@@ -402,7 +450,18 @@ export default function AIContentGeneratorPage() {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
     { name: 'Slack', icon: '💬', description: 'Team collaboration' }
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+<<<<<<< HEAD
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+
+  ];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   return (
     <>
       <Head>
@@ -566,6 +625,7 @@ export default function AIContentGeneratorPage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+<<<<<<< HEAD
 =======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Everything you need to create exceptional content at scale
@@ -573,6 +633,9 @@ export default function AIContentGeneratorPage() {
           </div>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -610,12 +673,29 @@ export default function AIContentGeneratorPage() {
                 <p className='text-gray-400 leading-relaxed'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   {feature.description}
+=======
+
+                  {feature.description}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -636,6 +716,7 @@ export default function AIContentGeneratorPage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+<<<<<<< HEAD
 =======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Versatile content creation for every industry and purpose
@@ -643,6 +724,9 @@ export default function AIContentGeneratorPage() {
           </div>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -687,6 +771,15 @@ export default function AIContentGeneratorPage() {
                           <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           {example}
+=======
+
+                          {example}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       ))}
                     </div>
@@ -697,6 +790,14 @@ export default function AIContentGeneratorPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -752,7 +853,12 @@ export default function AIContentGeneratorPage() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -781,6 +887,17 @@ export default function AIContentGeneratorPage() {
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       {feature}
+=======
+<<<<<<< HEAD
+
+                      {feature}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -805,6 +922,14 @@ export default function AIContentGeneratorPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -825,6 +950,7 @@ export default function AIContentGeneratorPage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+<<<<<<< HEAD
 =======
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Connect with your favorite tools and platforms
@@ -832,6 +958,9 @@ export default function AIContentGeneratorPage() {
           </div>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -861,15 +990,40 @@ export default function AIContentGeneratorPage() {
                 </p>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </Card>
+=======
+
+              </Card>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -928,4 +1082,14 @@ export default function AIContentGeneratorPage() {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

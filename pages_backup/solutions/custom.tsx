@@ -1,13 +1,48 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wrench } from 'lucide-react';
 import Layout from "../../components/Layout";";
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const features = [;
   {}
     title: 'Tailored Solutions,',
@@ -34,7 +69,10 @@ const features = [;
     benefits: ['24/7 Support, 'Regular Updates', 'Performance Monitoring', 'Bug Fixes']',
   }
 ;];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const technologies = [;
   { category: 'Frontend, techs: ['_React, 'Next.js', 'Vue.js', 'Angular', 'TypeScript'] },',
   { category: 'Backend, techs: ['Node.js, 'Python', 'Java', 'C#', 'Go'] },',
@@ -42,7 +80,10 @@ const technologies = [;
   { category: 'Cloud, techs: ['AWS, 'Azure', 'Google Cloud', 'Docker', 'Kubernetes'] },',
   { category: 'Mobile, techs: ['_React Native, 'Flutter', 'iOS', 'Android', 'PWA'] }',
 ;];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const process = [;
   { step: 'Discovery, description: 'Understanding your requirements and business goals' },',
   { step: 'Planning, description: 'Creating detailed project roadmap and architecture' },',
@@ -51,15 +92,21 @@ const process = [;
   { step: 'Deployment, description: 'Smooth deployment and go-live support' },',
   { step: 'Maintenance, description: 'Ongoing support and continuous improvement' }',
 ;];
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const stats = [;
   { number: '150+, label: 'Custom Projects' },',
   { number: '98%, label: 'Client Satisfaction' },',
   { number: 'On Time, label: 'Delivery Rate' },',
   { number: '5+, label: 'Years Experience' }',
 ;];
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function CustomDevelopmentPage() {
   return (;
     <Layout);
@@ -74,7 +121,10 @@ export default function CustomDevelopmentPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -109,7 +159,10 @@ export default function CustomDevelopmentPage() {
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
@@ -129,7 +182,10 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Features Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -146,7 +202,10 @@ export default function CustomDevelopmentPage() {
                 We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems;
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
               {features.map((feature, index) => (,
                 <motion.div}),
@@ -165,7 +224,10 @@ export default function CustomDevelopmentPage() {
                       <p className="text-gray-600">{feature.description}</p>"
                     </div>;
                   </div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   <ul className="space-y-3">";
                     {feature.benefits.map((benefit, benefitIndex) => (,
                       <li key={benefitIndex} className="flex items-center text-gray-600">"
@@ -179,7 +241,10 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Technologies Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -196,7 +261,10 @@ export default function CustomDevelopmentPage() {
                 We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {technologies.map((category, index) => (,
                 <motion.div}),
@@ -222,7 +290,10 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* Process Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -239,7 +310,10 @@ export default function CustomDevelopmentPage() {
                 Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,
               </p>;
             </motion.div>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {process.map((step, index) => (,
                 <motion.div}),
@@ -261,7 +335,10 @@ export default function CustomDevelopmentPage() {
             </div>,
           </div>;
         </section>;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

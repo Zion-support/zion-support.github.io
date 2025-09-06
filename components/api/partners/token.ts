@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 =======
@@ -11,11 +12,21 @@ import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
 <<<<<<< HEAD
@@ -37,9 +48,13 @@ export default async function handler(
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
+  if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" })
   }
@@ -47,15 +62,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!apiKey) {
     return res.status(400).json({ error: "apiKey required" })
   }
-<<<<<<< HEAD
-  const match = null;
-=======
+
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
     return res.status(401).json({ error: "Invalid API key" });
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
+<<<<<<< HEAD
     {
       sub: partner.id
       apiKeyId: key.id
@@ -91,9 +105,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       useCaseType: partner.useCaseType} as any;
     typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+<<<<<<< HEAD
 =======
     .json({ token, partner: { id: partner.id, name: partner.name } });
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+    {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+}
+=======
+
+  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

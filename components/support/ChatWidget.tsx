@@ -1,9 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
-<<<<<<< HEAD
-type ChatMessage = any;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+<<<<<<< HEAD
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+=======
+useEffect ( () => {
+  if (!isOpen && messages.length === 0) {
+  //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import { X } from 'lucide-react';
+
 type ChatMessage = {
   role: 'user' | 'assistant' | 'system'
   content: string
@@ -17,6 +26,7 @@ function generateSessionId(): string {
   window.localStorage.setItem('zion_support_session_id', id);
   return id
 }
+<<<<<<< HEAD
 =======
  useEffect ( () => {
   if (!isOpen && messages.length === 0) {
@@ -27,6 +37,9 @@ function generateSessionId(): string {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ChatWidget() {
+=======
+export default function ChatWidget() {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -85,23 +98,46 @@ export default function ChatWidget() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           sessionId: sessionIdRef.current
           eventType
           payload
         })
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
 =======
+<<<<<<< HEAD
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           sessionId: sessionIdRef.current,
           eventType,
           payload,
         }),
+<<<<<<< HEAD
       });
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+      });    } catch {}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
+      });    } catch {}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     } catch {}
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -119,13 +155,34 @@ export default function ChatWidget() {
         })
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })})
+=======
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       setShowEscalation(true)
 =======
+<<<<<<< HEAD
       setShowEscalation(true);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      setShowEscalation(true);    } catch {}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     } catch {}
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -219,7 +276,13 @@ export default function ChatWidget() {
       setIsLoading(false);    }
   }
   return (
+<<<<<<< HEAD
     <div className='fixed bottom-4 right-4 z-50'>      }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
           const next = n + 1;
@@ -237,11 +300,26 @@ export default function ChatWidget() {
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
 =======
       setIsLoading(false);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
+=======
+    <div className='fixed bottom-4 right-4 z-50'>
+
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='fixed bottom-4 right-4 z-50'>
       {!isOpen && (
@@ -308,6 +386,14 @@ export default function ChatWidget() {
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }
                 >
                   {m.content}
@@ -344,9 +430,21 @@ export default function ChatWidget() {
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
 =======
+<<<<<<< HEAD
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                   >
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
+
+                  >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     {q}
                   </button>
                 ))}
@@ -356,7 +454,11 @@ export default function ChatWidget() {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
               <div className='flex gap-2'>
@@ -375,6 +477,10 @@ export default function ChatWidget() {
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
               <div className="flex gap-2">
                 <input
@@ -383,15 +489,26 @@ export default function ChatWidget() {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+<<<<<<< HEAD
                       onSend()
                     }
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
 =======
+<<<<<<< HEAD
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 />
                 <button
                   onClick={() => onSend()}
@@ -440,7 +557,22 @@ export default function ChatWidget() {
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}};
 }
 
@@ -10,3 +11,23 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {}};
 }
 
 export default Test;""
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+=======
+<<<<<<< HEAD
+=======
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

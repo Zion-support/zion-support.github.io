@@ -7,8 +7,7 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
-=======
+
   colorScheme?:
     | 'quantum-fusion'
     | 'neon-cyber'
@@ -17,7 +16,7 @@ interface UltraFuturisticBackground2035Props {
     | 'space-time';  particleCount?: number;interface UltraFuturisticBackground2035Props {
   children: React.ReactNode
   intensity?: 'low' | 'medium' | 'high';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
 =======
     | 'space-time';
@@ -29,12 +28,12 @@ interface UltraFuturisticBackground2035Props {
   enableNeonEffects?: boolean;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   enableSpaceTime?: boolean
 }
-
-const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
-  intensity;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   enableSpaceTime?: boolean;
 const UltraFuturisticBackground2035: React.FC<
   UltraFuturisticBackground2035Props
@@ -564,6 +563,8 @@ const UltraFuturisticBackground2035: React.FC<
                 opacity: [0, 1, 0];
                 scaleX: [0, 1, 0]
               }}
+<<<<<<< HEAD
+<<<<<<< HEAD
               transition={{
                 duration: 3
                 delay: i * 0.1
@@ -580,6 +581,33 @@ const UltraFuturisticBackground2035: React.FC<
                 ease: 'easeInOut',
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               }}
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              transition={{
+                duration: 3,
+                delay: i * 0.1,
+                repeat: Infinity,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ease: 'easeInOut',              }}
+
+              }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
           ))}
         </div>
@@ -588,9 +616,15 @@ const UltraFuturisticBackground2035: React.FC<
   );
 <<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -598,3 +632,16 @@ export default UltraFuturisticBackground2035;
 
 export default UltraFuturisticBackground2035;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default UltraFuturisticBackground2035;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraFuturisticBackground2035;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

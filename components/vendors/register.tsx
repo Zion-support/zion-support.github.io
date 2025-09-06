@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
 <<<<<<< HEAD
 =======
@@ -6,19 +7,28 @@ import { FormEvent, useState } from 'react';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-  const [message, setMessage] = useState<string | null>(null),
-
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+<<<<<<< HEAD
+import { FormEvent, useState } from 'react';
+=======
+import {FormEvent, useState} from 'react';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function VendorRegisterPage() {
+=======
+export default function VendorRegisterPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [loading, setLoading] = useState(false);
+
   const [message, setMessage] = useState<string | null>(null);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     setMessage(null);
-<<<<<<< HEAD
-    const form = null;
-=======
+
     const form = e.currentTarget;
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries())
@@ -58,6 +68,15 @@ export default function VendorRegisterPage() {
 <<<<<<< HEAD
       setLoading(false);    }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -70,7 +89,9 @@ export default function VendorRegisterPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       form.reset()
     } catch (err: any) {
       setMessage(err.message)
@@ -81,7 +102,13 @@ export default function VendorRegisterPage() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+<<<<<<< HEAD
     <div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
         Apply to become a Vendor Partner
@@ -152,5 +179,19 @@ export default function VendorRegisterPage() {
 );
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+    }
+  }
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

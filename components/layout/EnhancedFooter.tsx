@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import Link from 'next/link';
@@ -13,6 +14,12 @@ const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
 <<<<<<< HEAD
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
@@ -22,6 +29,10 @@ import { Phone, Mail, MapPin, Globe;
  } from 'lucide-react';
 const contactInfo = null;
   ];
+=======
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const company = null;
   ];
@@ -30,7 +41,7 @@ const contactInfo = null;
   ];
 
   const socialLinks = null;
-=======
+
 const EnhancedFooter: React.FC = () => {const currentYear = new Date().getFullYear();
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -98,12 +109,21 @@ const socialLinks = [
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
+<<<<<<< HEAD
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
     { name: 'Micro SaaS', href: '/micro-saas' }
     { name: 'Security', href: '/security' }
     { name: 'Case Studies', href: '/case-studies' }
+=======
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+    { name: 'Micro SaaS', href: '/micro-saas' },;
+    { name: 'Security', href: '/security' },;
+    { name: 'Case Studies', href: '/case-studies' },;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -122,9 +142,19 @@ export default function EnhancedFooter() {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin }
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ];
+<<<<<<< HEAD
+=======
+=======
+
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
+<<<<<<< HEAD
     <footer className;
                   return (
                     <a
@@ -156,6 +186,20 @@ export default function EnhancedFooter() {
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
               Be the first to know about new services and breakthrough technologies.
+=======
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {" "}
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="text-2xl font-bold text-blue-400 mb-4">
+              Zion Tech Group
+            </div>
+            <p className="text-gray-300 mb-6">
+              Leading technology solutions provider helping businesses transform
+              their digital presence.
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex space-x-4">
               <a
@@ -297,10 +341,26 @@ export default function EnhancedFooter() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
 export default EnhancedFooter;
 =======
+<<<<<<< HEAD
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider helping businesses transform their digital presence.
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+};
+
+export default EnhancedFooter;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

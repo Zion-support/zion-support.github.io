@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
@@ -11,6 +12,15 @@ import { Heart, DollarSign, Factory, ShoppingCart, Building2;
 const SolutionsPage: React.FC;
 export default Solutions;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -58,10 +68,19 @@ export default Solutions;
   opacity: 0, y: 30
 }whileInView= {
   {
+<<<<<<< HEAD
   opacity: 1, y: 0
 }transition= {
   {
   duration: 0.8, delay: categoryIndex * 0.2
+=======
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.8, delay: categoryIndex * 0.2 
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }viewport= {
   {
   once: true
@@ -101,6 +120,7 @@ export default Solutions;
 }
 export default Solutions;}
 export default Solutions;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
  const SolutionsPage: React.FC = () => {
@@ -207,3 +227,27 @@ export default Solutions;
 
 export default Solutions;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

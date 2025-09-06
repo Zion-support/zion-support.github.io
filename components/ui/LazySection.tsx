@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -9,21 +10,39 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
+=======
+=======
+ const getInitialPosition = () => {
+  switch (direction) {
+  case 'up': 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-export const LazySection: React.FC<LazySectionProps> = ({
-  children;
-  className;
+const getInitialPosition = () => {
 =======
 const getInitialPosition = () => {
+=======
+ const getInitialPosition = () => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   switch (direction) {
   case 'up':
 export const LazySection: React.FC<LazySectionProps> = ({
+<<<<<<< HEAD
   children
   className = ''
   threshold = 0.1
   delay = 0
   direction = 'up'
 }) => {
+=======
+  children,
+  className = '',
+  threshold = 0.1,
+  delay = 0,
+  direction = 'up',
+}) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -120,6 +139,7 @@ export default LazySection;      case 'down':
   )
 }
 export default LazySection;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -127,3 +147,9 @@ export default LazySection;
 
 export default LazySection;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

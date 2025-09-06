@@ -1,16 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraAdvancedQuantumBackgroundProps {
   children: React.ReactNode;
   className?: string
 }
-
-const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({ 
-  children;
-  className;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 canvas.width = window.innerWidth;
 =======
  canvas.width = window.innerWidth;
@@ -134,10 +135,24 @@ const UltraAdvancedQuantumBackground: React.FC<
 <<<<<<< HEAD
           this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
 =======
+<<<<<<< HEAD
           this.y = Math.random() * canvas.height;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+          this.y = Math.random() * canvas.height;        }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         }
       }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       draw() {
         if (!ctx) return;
         ctx.save();
@@ -389,8 +404,18 @@ const UltraAdvancedQuantumBackground: React.FC<
 <<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
 =======
+<<<<<<< HEAD
             ctx.stroke();
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            ctx.stroke();          }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }
         }
       }
@@ -510,23 +535,32 @@ const UltraAdvancedQuantumBackground: React.FC<
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
+<<<<<<< HEAD
           duration: 6
           repeat: Infinity
           ease: 'easeInOut'
           delay: 2,          ease: "easeInOut"
           delay: 2
 =======
+<<<<<<< HEAD
         className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl'
         animate={{
           scale: [1, 1.4, 1],
           opacity: [0.2, 0.6, 0.2],
         }}
         transition={{
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           duration: 6,
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 2,
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         }}
         transition={{
           duration: 5
@@ -546,6 +580,14 @@ const UltraAdvancedQuantumBackground: React.FC<
           ease: 'easeInOut'
           delay: 2,        }}
       />
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -561,6 +603,7 @@ const UltraAdvancedQuantumBackground: React.FC<
       />
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>
+<<<<<<< HEAD
       {/* Quantum Energy Waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
         <motion.div
@@ -588,8 +631,21 @@ const UltraAdvancedQuantumBackground: React.FC<
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
+=======
+};
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+export default UltraAdvancedQuantumBackground;            ease: "linear",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             delay: 2
 =======
             duration: 10,
@@ -600,6 +656,10 @@ export default UltraAdvancedQuantumBackground;            ease: "linear"
           }}
         />
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   );
 <<<<<<< HEAD
@@ -607,6 +667,7 @@ export default UltraAdvancedQuantumBackground;            ease: "linear"
 export default UltraAdvancedQuantumBackground;  )
 }
 export default UltraAdvancedQuantumBackground;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -614,3 +675,24 @@ export default UltraAdvancedQuantumBackground;
 
 export default UltraAdvancedQuantumBackground;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+
+          }}
+        />
+      </div>
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

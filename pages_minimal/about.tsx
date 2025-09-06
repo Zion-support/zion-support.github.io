@@ -14,6 +14,6 @@ export default function About() {
           We are a leading provider of advanced IT solutions and AI services.
         </p>
       </main>
-    </div>
+    </div>;
   );
 }

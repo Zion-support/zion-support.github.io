@@ -2,6 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ext = null;
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
               ].map((o) => (
@@ -16,6 +17,9 @@ const ext = null;
 
 const ext = (url: string) => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   <a
     className='text-cyan-400 underline'
     href={`/out?u=${encodeURIComponent(url)}`}
@@ -2805,7 +2809,7 @@ export default function ServicesAdvertisingPage() {
               >
                 Learn more
               </a>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </div>
           </section>
           <section id='multi-tenant-rate-limiter' className='space-y-2'>
@@ -2833,6 +2837,14 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -3102,7 +3114,7 @@ export default function ServicesAdvertisingPage() {
           </a>
         </div>
       </div>
-    </div>
+    </div>;
   );
 <<<<<<< HEAD
 =======
@@ -4765,8 +4777,23 @@ export default function ServicesAdvertisingPage() {
 				</div>
 			</div>
 		</div>
+<<<<<<< HEAD
 	)
 }
 =======
+<<<<<<< HEAD
 }</li> </ul> <div><a className=" text-cyan-400 underline"href=" /services/email-dmarc-monitor">Learn more</a></div> </section> </section> <a href="tel:+13024640950"className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Call +1 302 464 0950</a> <a href="mailto:kleber@ziontechgroup.com"className="px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white">Email kleber@ziontechgroup.com</a> <a href="/pricing"className="px-4 py-2 rounded-lg border border-cyan-500/40 text-cyan-300">View Pricing</a>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+	),
+<<<<<<< HEAD
+};
+;
+=======
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

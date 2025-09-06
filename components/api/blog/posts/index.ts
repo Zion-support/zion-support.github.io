@@ -10,10 +10,11 @@ import { requireAdmin } from '@/utils/api/auth';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
-  if (req.method;
-    return res.status(201).json(post)
-=======
+
   if (req.method === 'GET') {
+=======
+  if (req.method === 'GET') {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const { status, topic, tag, author, limit, offset } = req.query;
     let posts = readPosts();
     if (status && typeof status === 'string')
@@ -73,6 +74,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       tags: body.tags |[]
       topics: body.topics |[]
       seo: {
+<<<<<<< HEAD
         metaTitle: body.seo?.metaTitle |body.title!
         metaDescription: body.seo?.metaDescription |''
         ogImageUrl: body.seo?.ogImageUrl |body.coverImageUrl |''
@@ -85,13 +87,47 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     writePosts(posts);
     return res.status(201).json(post);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   }
 return res.status(405).end();
 }
 =======
+<<<<<<< HEAD
  
 }
 
   return res.status(405).end();
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+        metaTitle: body.seo?.metaTitle || body.title!,
+        metaDescription: body.seo?.metaDescription || '',
+        ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',
+      },
+      body: body.body || '',
+      status: body.status || 'draft',
+      metrics: { views: 0, likes: 0, shares: 0 },
+    };
+    posts.unshift(post);
+    writePosts(posts);
+    return res.status(201).json(post);
+  }
+
+<<<<<<< HEAD
+  return res.status(405).end();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+return res.status(405).end();
+}
+
+}
+}
+=======
+  return res.status(405).end();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

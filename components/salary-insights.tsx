@@ -1,15 +1,25 @@
 import React, { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = any;
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   LineChart
   BarChart
   DonutChart;
+=======
+  LineChart,
+  BarChart,;
+  DonutChart,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../components/salary/InsightCharts';
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -32,13 +42,21 @@ type InsightResponse = {
   regionalComparison: { region: string, medianHourlyUsd: number }[]
   tags: string[]
   gptRecommendation?: string
+<<<<<<< HEAD
 =======
   gptRecommendation?: string;
 };
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function SalaryInsightsPage() {
+=======
+
+export default function SalaryInsightsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -124,10 +142,24 @@ export default function SalaryInsightsPage() {
     } finally {
       setLoading(false)
 =======
+<<<<<<< HEAD
       setLoading(false);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      setLoading(false);    }
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -192,9 +224,23 @@ export default function SalaryInsightsPage() {
         history.unshift(payload);
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
+<<<<<<< HEAD
+<<<<<<< HEAD
       } catch {}
     })();
   }
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      } catch {}
+    })();
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const donutData = useMemo(() => {
 <<<<<<< HEAD
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
@@ -225,7 +271,7 @@ export default function SalaryInsightsPage() {
     ];
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [data]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div>
       <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>
@@ -467,6 +513,7 @@ export default function SalaryInsightsPage() {
               ) : (
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
               )}
+<<<<<<< HEAD
               {data && (
                 <table className='w-full mt-3 text-sm'>
                   <thead>
@@ -542,6 +589,13 @@ export default function SalaryInsightsPage() {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               )}
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -552,6 +606,11 @@ export default function SalaryInsightsPage() {
 <<<<<<< HEAD
               </p>            </div>
           )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
@@ -594,5 +653,23 @@ export default function SalaryInsightsPage() {
 );
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {data && (
+
+            </div>
+          )}
+
+          {data && (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

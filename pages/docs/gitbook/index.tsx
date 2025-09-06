@@ -1,14 +1,18 @@
 <<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
-import Link from 'next/link';
-function list(dir: string, baseDir: string) {
-  const items = null;
-=======
+<<<<<<< HEAD
+
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 function list(dir: string, baseDir: string) {
   const items = fs.readdirSync(dir)
   return items.map((name) => {
@@ -17,6 +21,7 @@ function list(dir: string, baseDir: string) {
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
+<<<<<<< HEAD
 }
 =======
 
@@ -38,8 +43,53 @@ export async function getStaticProps() {
         title: entry.name
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
     : []
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return { props: { sections }, revalidate: 600 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
+function list(dir: string, baseDir: string) {;
+  const items = fs.readdirSync(dir);
+  return items.map((name) => {;
+    const full = path.join(dir, name);
+    const rel = path.relative(baseDir, full);
+    const stat = fs.statSync(full);
+    return { name, rel, isDir: stat.isDirectory()   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+  });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export async function getStaticProps() {;
+  const base = path.join(process.cwd(), 'docs/gitbook'),;
+  const sections = fs.existsSync(base);
+    ? list(base, base).map((entry) => ({;
+        title: entry.name;
+        items: entry.isDir ? list(path.join(base, entry.name), base) : []}));
+    : [];
+  return { props: { sections }, revalidate: 600   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
   return (
@@ -54,6 +104,7 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
               {s.items.map((it) => (
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
+<<<<<<< HEAD
 =======
     ? list(base, base).map(entry => ({
         title: entry.name,
@@ -92,8 +143,13 @@ export default function DocsIndex({
                     rel='noreferrer'
                   >
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     {it.rel}
                   </a>
+<<<<<<< HEAD
+=======
                 </li>
               ))}
             </ul>
@@ -102,8 +158,48 @@ export default function DocsIndex({
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+                    {it.rel  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </Link>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+                </li>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </ul>;
+          </div>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

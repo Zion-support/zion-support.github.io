@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from "fs";
@@ -15,7 +16,7 @@ files.forEach((file) => {
     let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 
-    // Fix import statements with double punctuation (comma + semicolon)
+    // Fix import statements with double punctuation (comma + semicolon);
     const originalContent = content;
     content = content.replace(
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
@@ -28,7 +29,7 @@ files.forEach((file) => {
     // Fix import statements missing semicolons
     content = content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-      (match) => {
+      (match) => {;
         if (!match.trim().endsWith(";")) {
           modified = true;
           return match.trim() + ";";
@@ -74,7 +75,16 @@ files.forEach((file) => {
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
   }
+<<<<<<< HEAD
+=======
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+=======
+  }
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }},
+<<<<<<< HEAD
 ,
 // Run all fixes,
 fixFooter();
@@ -84,3 +94,24 @@ fixApiDocs();
 fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
+=======
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed'),
+}},;
+// Run all fixes,;
+fixFooter(),;
+fixAccessibility(),;
+fixAiServices(),;
+fixApiDocs(),;
+fixCareers(),;
+// // // console.log('🎉 Syntax error fixes completed'),;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

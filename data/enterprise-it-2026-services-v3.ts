@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 export interface EnterpriseIt2026ServiceV3 {
+=======
+export interface EnterpriseIt2026ServiceV3 {;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -13,13 +19,37 @@ export interface EnterpriseIt2026ServiceV3 {
     email: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     address: string
+=======
+=======
+export interface EnterpriseIt2026ServiceV3 {;
+=======
+    address: string;
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   }
 =======
     address: string;
   };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 }
+<<<<<<< HEAD
 
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
   {
@@ -42,10 +72,18 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
     contactInfo: {
       mobile: "+1 302 464 0950";
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     address: string;
   }
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
   {
+<<<<<<< HEAD
     id: '2026-enterprise-it-v3'
     name: '2026 Enterprise IT Solutions V3'
     tagline: 'Third generation enterprise IT'
@@ -69,13 +107,14 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
     }
   }
 ];      mobile: "+1 302 464 0950";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 =======
+<<<<<<< HEAD
     id: '2026-enterprise-it-v3',
     name: '2026 Enterprise IT Solutions V3',
     tagline: 'Third generation enterprise IT',
@@ -93,10 +132,49 @@ export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
     category: 'Enterprise IT 2026 V3',
     realImplementation: true,
     contactInfo: {
+=======
+    id: "2026-enterprise-it-v3",
+    name: "2026 Enterprise IT Solutions V3",
+    tagline: "Third generation enterprise IT",
+    price: "$499/month",
+    description: "Third generation of the 2026 enterprise IT solutions with enhanced capabilities and features.",
+    features: [
+      "Third generation IT",
+      "Enhanced solutions",
+      "Advanced infrastructure",
+      "Improved security",
+      "Better performance"
+    ],
+    link: "/services/2026-enterprise-it-v3",
+    category: "Enterprise IT 2026 V3",
+    realImplementation: true,
+    contactInfo: {
+<<<<<<< HEAD
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
+<<<<<<< HEAD
   },
 ];
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  },;
+];      mobile: "+1 302 464 0950";
+      email: "kleber@ziontechgroup.com";
+=======
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

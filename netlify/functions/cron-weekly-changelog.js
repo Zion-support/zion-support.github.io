@@ -1,6 +1,7 @@
 const { upsertFile } = require('./_lib/github');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
@@ -11,9 +12,10 @@ async function fetchJson(url, token) {
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json()
 }
-
 =======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+
   const resp = await fetch(url, {
     headers: token
       ? {
@@ -40,6 +42,7 @@ exports.handler = async function () {
     const commits = await fetchJson(commitsUrl, token);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const byAuthor = {},
     const messages = [],
     for (const c of commits) {
@@ -60,6 +63,9 @@ exports.handler = async function () {
       totalCommits: commits.length,
 <<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const byAuthor = {}
     const messages = [];
     );    }    const byAuthor = {}
@@ -72,9 +78,13 @@ exports.handler = async function () {
       updatedAt: Date.now()
       since
       totalCommits: commits.length
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       authors: Object.entries(byAuthor)
         .map(([name, count]) => ({ name, count }))
         .sort((a, b) => b.count - a.count)
@@ -93,6 +103,7 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, commits: commits.length })
     }
   } catch (e) {
+<<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 <<<<<<< HEAD
@@ -102,11 +113,24 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-};
-=======
+
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+  }
+};
+    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
+    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
+  }
+},
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -8,20 +8,17 @@ interface ShortUrl {
   clicks: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   isActive: boolean
 }
-
-interface UrlShortenerRequest {
-  originalUrl: string;
-  customCode?: string
-}
-
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   isActive: boolean;
 interface UrlShortenerRequest {
   originalUrl: string;
   customCode?: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
@@ -41,9 +38,7 @@ interface UrlShortenerResponse {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // In-memory storage (in production, use a database)
-<<<<<<< HEAD
-const urlStorage = null;
-=======
+
 const urlStorage = new Map<string, ShortUrl>();
 // Generate a random short code
 function generateShortCode(length: number = 6): string {
@@ -88,7 +83,7 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     // Create short URL
-    try {
+    try {;
       const { originalUrl, customCode }: UrlShortenerRequest = req.body;
       if (!originalUrl) {
         return res.status(400).json({
@@ -235,15 +230,24 @@ export default async function handler(
   }
 // Handle redirects for short URLs
 export async function getServerSideProps({
+<<<<<<< HEAD
   params
 }: {
 <<<<<<< HEAD
   params: { shortCode: string }
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
 =======
+<<<<<<< HEAD
   params: { shortCode: string };
 }) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  params,
+}: {;
+  params: { shortCode: string };
+}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
@@ -267,7 +271,7 @@ export async function getServerSideProps({
       permanent: false
     }
   };      destination: shortUrl.originalUrl;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       permanent: false
     }
 }
@@ -276,5 +280,22 @@ export async function getServerSideProps({
       destination: shortUrl.originalUrl,
       permanent: false,
     },
+<<<<<<< HEAD
   };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+  };      destination: shortUrl.originalUrl;
+      permanent: false
+    }
+};
+}
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

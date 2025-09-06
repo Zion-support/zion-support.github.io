@@ -1,18 +1,40 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Entry = any;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }
 ) )
 }</ul> </section> <section>) )
 }</ul> </section> </div>)
+=======
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function ContentMap({ report }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ContentMap({ report }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -40,9 +62,11 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
 );
 }
 =======
+<<<<<<< HEAD
 
 
 };
@@ -50,3 +74,8 @@ export default function ContentMap({ report }: Props) {
 }</ul> </section> <section>) )
 }</ul> </section> </div>)
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

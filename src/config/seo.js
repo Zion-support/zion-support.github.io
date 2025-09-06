@@ -36,19 +36,26 @@ export const defaultSEO = {
     }
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: 'msapplication-TileColor',
       content: '#1e40af',
     };
   ];
 };
 }
-
-export default defaultSEO;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
       name: 'msapplication-TileColor'
       content: '#1e40af'
     }
   ]
 }
+<<<<<<< HEAD
 export default defaultSEO
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+export default defaultSEO;
+;
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

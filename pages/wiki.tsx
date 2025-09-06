@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { generateZionWiki;
@@ -12,6 +14,18 @@ function CopyButton({ text, label }: { text: string, label: string }) {
     <button
       onClick;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+<<<<<<< HEAD
+import React, { useMemo, useState } from 'react',;
+import {
+  generateZionWiki,
+  buildMarkdownFromWiki,
+  buildWikitextFromWiki,
+  operatorPrompt,
+  slugify} from '../utils/data/zionContent',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {
   generateZionWiki
   buildMarkdownFromWiki
@@ -32,6 +46,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
       {copied ? 'Copied' : label}
     </button>
   )
+<<<<<<< HEAD
 }
 =======
 import {
@@ -62,7 +77,54 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), [])
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+=======
+=======
+import React, { useMemo, useState } from 'react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {;
+  generateZionWiki,;
+  buildMarkdownFromWiki,;
+  buildWikitextFromWiki,;
+  operatorPrompt,;
+  slugify} from '../utils/data/zionContent',;
+function CopyButton({ text, label }: { text: string, label: string }) {;
+  const [copied, setCopied] = useState(false);
+  return (;
+    <button;
+      onClick={async () => {;
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </button>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+export default function WikiPage() {
+  const wiki = useMemo(() => generateZionWiki(), []),
+  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
+  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 <<<<<<< HEAD
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
@@ -72,6 +134,7 @@ export default function WikiPage() {
           {wiki.sections.map((s) => (
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
+<<<<<<< HEAD
 =======
     <div className='grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8'>
       <aside className='sticky top-20 self-start hidden lg:block'>
@@ -84,13 +147,39 @@ export default function WikiPage() {
                 className='opacity-80 hover:opacity-100'
               >
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 {s.title}
               </a>
+=======
+                {s.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <li>
 <<<<<<< HEAD
             <a href="#references" className="opacity-80 hover:opacity-100">References</a>
+=======
+            <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </li>
         </ul>
       </aside>
@@ -136,10 +225,34 @@ export default function WikiPage() {
             <h2>{s.title}</h2>
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
+<<<<<<< HEAD
             ))}
           </section>
         ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </section>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
         <h2 id="references">References</h2>
 =======
 
@@ -148,7 +261,11 @@ export default function WikiPage() {
         <ol>
           {wiki.references.map((r, i) => (
             <li key={i}>{r}</li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ol>
 <<<<<<< HEAD
         <div className="not-prose mt-10 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -160,7 +277,19 @@ export default function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
+<<<<<<< HEAD
 {md}
+=======
+{md  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </pre>
         </div>
         <div className="not-prose mt-6 p-4 border rounded bg-white/60 dark:bg-black/20">
@@ -168,8 +297,14 @@ export default function WikiPage() {
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
         </div>
       </article>
+<<<<<<< HEAD
+    </div>;
+  );
+};
+=======
     </div>
   )
+<<<<<<< HEAD
 }
 =======
 
@@ -194,3 +329,15 @@ export default function WikiPage() {
     </div>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

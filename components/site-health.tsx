@@ -1,15 +1,25 @@
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function SiteHealth() {
   return (
-<<<<<<< HEAD
-    <div className;
-              { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map((card) => (
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function SiteHealth() {
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
       <Head>
         <title>Site Health — A11y, Performance, Links</title>
@@ -70,6 +80,7 @@ export default function SiteHealth() {
           <div className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>
             <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
           </div>
+<<<<<<< HEAD
           <h1 className='mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl'>
             <span className='gradient-text'>Site Health</span>
           </h1>
@@ -115,7 +126,7 @@ export default function SiteHealth() {
                 href: '/reports/links'
               }
             ].map(card => (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               <Link key={card.title} href={card.href}>
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30'>
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -200,6 +211,18 @@ export default function SiteHealth() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+=======
+        </nav>
+      </header>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

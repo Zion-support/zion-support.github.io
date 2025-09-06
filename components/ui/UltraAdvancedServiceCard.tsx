@@ -2,11 +2,32 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, ExternalLink, Star, TrendingUp;
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
  } from 'lucide-react';
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import {
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,;
+  Globe,;} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {
   ArrowRight
   ExternalLink
@@ -25,9 +46,14 @@ import {
   Globe;} from 'lucide-react';
 interface UltraAdvancedServiceCardProps {
   service: {import {
+<<<<<<< HEAD
   ArrowRight, ExternalLink, Star, TrendingUp
+=======
+  ArrowRight, ExternalLink, Star, TrendingUp, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 import {
@@ -49,8 +75,12 @@ import {
 } from 'lucide-react';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 interface UltraAdvancedServiceCardProps {
   service: {
+<<<<<<< HEAD
     id: string;
     name: string;
     tagline: string;
@@ -81,13 +111,12 @@ interface UltraAdvancedServiceCardProps {
       mobile: string;
       email: string;
       address: string;
-<<<<<<< HEAD
-      website: string
-    },
 =======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       website: string;
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
@@ -96,6 +125,12 @@ interface UltraAdvancedServiceCardProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+    reviews: number;
+  };
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     reviews: number;
   }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
@@ -113,16 +148,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
     launchDate: string
     customers: number
     rating: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     reviews: number
   }
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-<<<<<<< HEAD
-  const getCategoryIcon = null;
-=======
+
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI') |category.includes('Machine Learning'))
 =======
@@ -167,6 +200,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
       }
     },  }
   const contentVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0, height: 0 }
     visible: {    if (category.includes('AI') |category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
@@ -235,6 +269,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
       }
     }
   }
+=======
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    },
+  };
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -281,13 +324,27 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
           transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
       />
       {/* Main Card */}
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       <div
+=======
+    hidden: { opacity: 0, height: 0 },
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      <div 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
+<<<<<<< HEAD
         <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
           {/* Header */}
           <div className='flex items-start justify-between mb-4'>
@@ -326,8 +383,17 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
               <motion.div
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
 =======
+<<<<<<< HEAD
                 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -335,6 +401,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
               </motion.div>
             )}
           </div>
+<<<<<<< HEAD
           {/* Tagline */}
 <<<<<<< HEAD
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
@@ -362,8 +429,28 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
           </div>
           {/* Quick Stats */}              <span className="text-gray-400 text-sm">({service.reviews})</span>
 =======
+<<<<<<< HEAD
               <span className='text-gray-400 text-sm'>({service.reviews})</span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+          {/* Tagline */}
+          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
+          </p>
+
+          {/* Price */}
+
+            {service.tagline}
+          </p>
+
+          {/* Price */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             </div>
           </div>
           {/* Quick Stats */}
@@ -394,6 +481,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
             </div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
+<<<<<<< HEAD
           {/* Market Data */}
           <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>
             <div className='flex items-center justify-between text-sm'>
@@ -420,6 +508,13 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
             </div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Expandable Content */}
           <AnimatePresence>
             {isExpanded && (
@@ -449,6 +544,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                   </p>
                 </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Features */}
                 <div>
                   <h4 className='text-white font-semibold mb-2'>
@@ -475,10 +578,32 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
                     ))}
                   </div>
                 </div>
+=======
+                        <span className='text-gray-300'>{feature}</span>                      </div>
+
+                      </div>
+
+                    ))}
+                  </div>
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* ROI */}
                 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 {/* Contact Info */}
                 <div className='bg-gray-800/50 rounded-lg p-3'>
@@ -528,6 +653,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
               </motion.div>
             )}
           </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>
             <motion.button
@@ -557,8 +690,18 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
                   ? 'border-gray-600 text-gray-400'
                   : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
 =======
+<<<<<<< HEAD
                   : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'              }`}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -567,6 +710,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
               {isExpanded ? 'Show Less' : 'Details'}
             </motion.button>
           </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Expand/Collapse Indicator */}
           <motion.div
             className='flex justify-center mt-4'
@@ -579,7 +730,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
       </div>
     </motion.div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -598,6 +756,7 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
 export default UltraAdvancedServiceCard;  )
 }
 export default UltraAdvancedServiceCard;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -605,3 +764,29 @@ export default UltraAdvancedServiceCard;
 
 export default UltraAdvancedServiceCard;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+};
+
+export default UltraAdvancedServiceCard;
+<<<<<<< HEAD
+=======
+
+}
+}
+}
+=======
+export default UltraAdvancedServiceCard;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

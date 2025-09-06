@@ -2,19 +2,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-  Home
-  Users
-  Settings
-  DollarSign
-  Phone
+  Home,
+  Users,
+  Settings,
+  DollarSign,
+  Phone,
   Menu
 } from 'lucide-react'
 const Sidebar = () => {
   const navigation = [
-    { name: 'Home', href: '/', icon: Home }
-    { name: 'About', href: '/about', icon: Users }
-    { name: 'Services', href: '/services', icon: Settings }
-    { name: 'Pricing', href: '/pricing', icon: DollarSign }
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone }
   ]
   return (
@@ -39,11 +39,13 @@ const Sidebar = () => {
           ))}
         </nav>
       </div>
+<<<<<<< HEAD
     </aside>
   )
 }
 export default Sidebar
 =======
+<<<<<<< HEAD
 };
 ; const navigationSections = [; {; id: 'services', title: 'Our Services', icon: Settings, items: [
     , { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI solutions' }; { name: 'IT Services', href: '/it-services', icon: Code, description: 'Comprehensive IT solutions' }; { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Scalable SaaS applications' }; { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Advanced security solutions' }; { name: 'Cloud Solutions', href: '/cloud-solutions', icon: Cloud, description: 'Cloud infrastructure & services' },
@@ -199,3 +201,50 @@ export default Sidebar
   );
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    </div>
+  );
+};
+
+export default Sidebar;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React from 'react';
+
+export const Sidebar: React.FC = () => {
+  return (
+    <aside className="w-64 bg-gray-800 text-white min-h-screen">
+      <div className="p-4">
+        <h2 className="text-lg font-semibold mb-4">Navigation</h2>
+        <nav className="space-y-2">
+          <a
+            href="/"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Home
+          </a>
+          <a
+            href="/about"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            About
+          </a>
+          <a
+            href="/services"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Services
+          </a>
+          <a
+            href="/contact"
+            className="block px-3 py-2 rounded-md hover:bg-gray-700"
+          >
+            Contact
+          </a>
+        </nav>
+      </div>
+    </aside>
+  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

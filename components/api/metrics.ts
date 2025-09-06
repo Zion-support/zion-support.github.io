@@ -2,14 +2,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 function rand(min: number, max: number) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 =======
   return Math.floor(Math.random() * (max - min + 1)) + min;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
-
-function generateSeries(n: number, base: number, volatility;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   return Math.floor(Math.random() * (max - min + 1)) + min;
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = [];
@@ -26,8 +27,13 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const now = new Date()
   const labels = Array.from({ length: 14 }, (_, i) => {
+=======
+  const now = new Date(),
+  const labels = Array.from({ length: 14 }, (_, i) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     const d = new Date(now);
     d.setDate(d.getDate() - (13 - i));
     return `${d.getMonth() + 1}/${d.getDate()}`;
@@ -183,12 +189,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(response);        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
+<<<<<<< HEAD
   res.status(200).json(response)
 }
 =======
 
+<<<<<<< HEAD
   res.status(200).json(response);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  res.status(200).json(response)
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

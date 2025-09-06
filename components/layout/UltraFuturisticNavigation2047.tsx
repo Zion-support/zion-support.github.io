@@ -1,12 +1,81 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+import {
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,;
+  MapPin,;
+} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import {
   Menu
   ChevronDown
@@ -71,8 +140,11 @@ interface NavigationItem {
   name: string;
 <<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
+=======
+  href: string;  icon?: React.ReactNode;import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
@@ -80,6 +152,7 @@ interface NavigationItem {
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
+<<<<<<< HEAD
 <<<<<<< HEAD
  } from 'lucide-react';
 interface NavigationItem {
@@ -89,11 +162,14 @@ interface NavigationItem {
   href: string;
   icon?: React.ReactNode;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 } from 'lucide-react';
 interface NavigationItem {
   name: string
   href: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   description?: string;
   children?: NavigationItem[];
   badge?: string;
@@ -101,15 +177,26 @@ interface NavigationItem {
   featured?: boolean;
   category?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   color?: string
 }
+=======
+  color?: string;
+=======
+  color?: string;  color?: string
+}
+=======
+  color?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const navigationItems: NavigationItem[] = [
   {
-<<<<<<< HEAD
-    name: 'Home & Core';
-    href: '/';
-    icon: <Home className;
-=======
+
     name: 'Home & Core'
     href: '/'
     icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information'
@@ -122,6 +209,7 @@ const navigationItems: NavigationItem[] = [
     color: 'from-emerald-500 to-cyan-500'
     children: [
       {
+<<<<<<< HEAD
         name: 'Home'
         href: '/'
         description: 'Main homepage'
@@ -753,10 +841,131 @@ const UltraFuturisticNavigation2047 = () => {
     setActiveDropdown(activeDropdown === name ? null : name);  };    setActiveDropdown(activeDropdown === name ? null : name)
   }
 =======
+<<<<<<< HEAD
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+    description: 'Main pages and core information',
+    category: 'core',
+    color: 'from-emerald-500 to-cyan-500',
+    children: [
+
+    description: 'Advanced AI and technology solutions',
+
+    badge: 'Featured',
+    category: 'services',
+    color: 'from-purple-500 to-pink-500',
+    children: [
+      {
+
+        name: 'All Services',
+        href: '/services',
+        description: 'Complete services overview',
+        icon: <Grid className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-2029',
+        description: 'Next-generation AI consciousness',
+        icon: <Brain className='w-4 h-4' />,
+        color: 'from-purple-500 to-pink-500',
+        featured: true,
+      },
+      {
+        name: 'Quantum Neural Networks',
+        href: '/quantum-neural-network-platform',
+        description: 'Quantum-powered AI neural networks',
+        icon: <Atom className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+        featured: true,
+      },
+      {
+        name: 'Autonomous Business Operations',
+        href: '/autonomous-business-operations-platform',
+        description: 'AI-powered business automation',
+        icon: <Bot className='w-4 h-4' />,
+        color: 'from-emerald-500 to-teal-500',
+      },
+      {
+        name: 'IT Asset Management',
+        href: '/ai-powered-it-asset-management',
+        description: 'AI-powered IT infrastructure management',
+        icon: <Monitor className='w-4 h-4' />,
+        color: 'from-indigo-500 to-purple-500',
+      },
+    ],
+  },
+  {
+    name: 'Advanced Solutions',
+    href: '/solutions',
+    icon: <Rocket className='w-5 h-5' />,    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+      {
+
+    description: 'Cutting-edge technology solutions',
+    category: 'solutions',
+    color: 'from-blue-500 to-cyan-500',
+    children: [
+
+    description: 'Knowledge base and insights',
+    category: 'resources',
+    color: 'from-orange-500 to-red-500',
+    children: [
+
+    description: 'Company information and support',
+    category: 'company',
+    color: 'from-gray-500 to-slate-500',
+    children: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Info className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-500 to-emerald-500',
+      },
+      {
+        name: 'Support',
+        href: '/support',
+        description: 'Get help and support',
+        icon: <MessageCircle className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+      },
+      {
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-500 to-pink-500',
+      },
+    ],
+  },];        icon: <Shield className="w-4 h-4" />,
+        color: 'from-red-500 to-pink-500'
+      }
+    ]
+  }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -776,6 +985,7 @@ const UltraFuturisticNavigation2047 = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+<<<<<<< HEAD
   }, []);
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
@@ -801,8 +1011,18 @@ const UltraFuturisticNavigation2047 = () => {
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
 =======
+<<<<<<< HEAD
               <span className='text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 Zion Tech Group
               </span>
             </Link>
@@ -837,6 +1057,14 @@ const UltraFuturisticNavigation2047 = () => {
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.2 }}
                       className='absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className='space-y-4'>
                         {item.children?.map(child => (
@@ -896,6 +1124,14 @@ const UltraFuturisticNavigation2047 = () => {
                               </p>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </Link>
                         ))}
                       </div>
@@ -905,6 +1141,14 @@ const UltraFuturisticNavigation2047 = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>
             <div className='flex items-center space-x-4 text-sm text-gray-400'>
@@ -920,10 +1164,22 @@ const UltraFuturisticNavigation2047 = () => {
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
+<<<<<<< HEAD
 =======
                 <Phone className='w-4 h-4' />
                 <span>{contactInfo.mobile}</span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+                <span>{contactInfo.mobile}</span>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               </a>
             </div>
             <Link
@@ -935,6 +1191,7 @@ const UltraFuturisticNavigation2047 = () => {
               <ArrowRight className='ml-2 w-4 h-4' />            </Link>
           </div>
           {/* Mobile menu button */}
+<<<<<<< HEAD
           <div className='lg:hidden'>              href="/contact"
               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
             >
@@ -969,10 +1226,27 @@ const UltraFuturisticNavigation2047 = () => {
                 <Menu className='block h-6 w-6' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               )}
+=======
+
+              )}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </button>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -982,6 +1256,14 @@ const UltraFuturisticNavigation2047 = () => {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-slate-800/95 backdrop-blur-md border-t border-slate-700/50'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -1024,6 +1306,14 @@ const UltraFuturisticNavigation2047 = () => {
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.2 }}
                         className='ml-4 mt-2 space-y-1'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         {item.children?.map(child => (
                           <Link
@@ -1040,6 +1330,16 @@ const UltraFuturisticNavigation2047 = () => {
                             className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                             onClick={closeMenu}
+=======
+                            className='block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-slate-700/50 rounded-md transition-colors duration-200'                            onClick={closeMenu}
+
+                            onClick={closeMenu}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           >
                             {child.name}
                           </Link>
@@ -1052,7 +1352,11 @@ const UltraFuturisticNavigation2047 = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               {/* Mobile Contact Info */}
               <div className='pt-4 pb-3 border-t border-slate-700/50'>
                 <div className='px-3 py-2 text-sm text-gray-400'>
@@ -1129,9 +1433,15 @@ const UltraFuturisticNavigation2047 = () => {
   );
 <<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -1139,3 +1449,16 @@ export default UltraFuturisticNavigation2047;
 
 export default UltraFuturisticNavigation2047;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default UltraFuturisticNavigation2047;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default UltraFuturisticNavigation2047;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -18,6 +18,23 @@ import { MatchResult } from '@/lib/ai-matchmaking';
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {AIMatchmaker} from "@/components/AIMatchmaker";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {toast} from "@/hooks/use-toast";
+import {MatchResult} from "@/lib/ai-matchmaking";
+export default function AIMatcherPage() {;
+  const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -25,12 +42,11 @@ import { Footer } from "@/components/Footer",
 import { GradientHeading } from "@/components/GradientHeading",
 import { AIMatchmaker } from "@/components/AIMatchmaker",
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+<<<<<<< HEAD
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const handleMatchSelect = (match: MatchResult) => {
@@ -39,6 +55,22 @@ export default function AIMatcherPage() {
     const category = match.item.category.toLowerCase()
     if (category.includes("talent") |category === "engineering" |
         category === "data science" |category === "development") {
+=======
+import { toast } from "@/hooks/use-toast",
+import { MatchResult } from "@/lib/ai-matchmaking",
+export default function AIMatcherPage() {
+  const navigate = useNavigate(),
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  
+  const handleMatchSelect = (match: MatchResult) => {
+    // Get the item type from the category
+    let itemType = "service",
+    const category = match.item.category.toLowerCase(),
+    
+    if (category.includes("talent") || category === "engineering" || 
+        category === "data science" || category === "development") {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -53,8 +85,13 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })
+<<<<<<< HEAD
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  },
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Header />
@@ -83,6 +120,8 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -94,3 +133,98 @@ export default function AIMatcherPage() {
     </>
   )
 }
+=======
+            
+            <AIMatchmaker 
+=======
+            <AIMatchmaker 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+import { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { AIMatchmaker } from "@/components/AIMatchmaker",;
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
+import { toast } from "@/hooks/use-toast",;
+import { MatchResult } from "@/lib/ai-matchmaking",;
+export default function AIMatcherPage() {;
+  const navigate = useNavigate(),;
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
+  const handleMatchSelect = (match: MatchResult) => {;
+    // Get the item type from the category;
+    let itemType = "service",;
+    const category = match.item.category.toLowerCase(),;
+    if (category.includes("talent") || category === "engineering" ||;
+        category === "data science" || category === "development") {;
+      itemType = "talent";
+    } else if (category.includes("equipment") || category === "hardware") {;
+      itemType = "equipment";
+    }
+;
+    toast({;
+      title: "Match Selected",;
+      description: `You've selected ${match.item.title}`}),;
+    // Navigate to the quote request page with the selected item;
+    navigate("/request-quote", {;
+      state: {;
+        serviceType: itemType;
+        specificItem: match.item;
+      }
+    });
+  };
+  return (;
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue py-12 px-4">;
+        <div className="container mx-auto">;
+          <div className="text-center mb-12">;
+            <GradientHeading>AI Matchmaker</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
+            </p>;
+          </div>;
+          <div className="max-w-4xl mx-auto">;
+            <div className="mb-8">;
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">;
+                I'm looking for:;
+              </label>;
+              <Select value={selectedCategory} onValueChange={setSelectedCategory}>;
+                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
+                  <SelectValue placeholder="All Categories" />;
+                </SelectTrigger>;
+                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
+                  <SelectItem value="all" className="text-white">All Categories</SelectItem>;
+                  <SelectItem value="service" className="text-white">Services</SelectItem>;
+                  <SelectItem value="talent" className="text-white">Talent</SelectItem>;
+                  <SelectItem value="equipment" className="text-white">Equipment</SelectItem>;
+                </SelectContent>;
+              </Select>;
+            </div>;
+            <AIMatchmaker;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              serviceType={selectedCategory === "all" ? "" : selectedCategory}
+              onMatchSelect={handleMatchSelect}
+            />;
+          </div>;
+        </div>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+}
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

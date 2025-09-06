@@ -1,5 +1,23 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Link from 'next/link';
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
+import EnhancedLoading from '../../components/ui/EnhancedLoading';
+import {useEffect, useState} from 'react';
+import InteractiveSearch from '../../components/ui/InteractiveSearch';
+export default function JobsListPage() {;
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(t);
+  }, []);
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link',
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
+<<<<<<< HEAD
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
 import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
@@ -10,9 +28,7 @@ import InteractiveSearch from '../../components/ui/InteractiveSearch';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-  useEffect(() => { const t = null;
-=======
+
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(t);
@@ -31,17 +47,30 @@ export default function JobsListPage() {
       description: 'Design pipelines for training/inference at scale.'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+import EnhancedLoading from '../../components/ui/EnhancedLoading',
+import { useEffect, useState } from 'react',
+import InteractiveSearch from '../../components/ui/InteractiveSearch',
+export default function JobsListPage() {
+  const [loading, setLoading] = useState(true),
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 500), return () => clearTimeout(t) }, []),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const jobs = [
+    { slug: 'senior-ai-engineer', title: 'Senior AI Engineer', subtitle: 'Remote • Contract', description: 'Build and optimize LLM-powered features in production.' },
+    { slug: 'mlops-specialist', title: 'MLOps Specialist', subtitle: 'Remote • Part-time', description: 'Design pipelines for training/inference at scale.' }],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-    <div className='space-y-4'>
-      <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />
+    <div className="space-y-4">
+      <InteractiveSearch placeholder="Search jobs, keywords, or companies..." />
       {loading ? (
         <EnhancedLoading lines={4} />
       ) : (
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          {jobs.map(j => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
+<<<<<<< HEAD
                 <EnhancedMarketplaceCard
                   title={j.title}
                   subtitle={j.subtitle}
@@ -53,13 +82,51 @@ export default function JobsListPage() {
                 />
               </a>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                <EnhancedMarketplaceCard title={j.title} subtitle={j.subtitle} description={j.description} footer={<span className="text-blue-600">View Job →</span>} />
+              </Link>
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             </Link>
+<<<<<<< HEAD
           ))}
         </div>
       )}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+);
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

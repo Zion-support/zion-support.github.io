@@ -1,10 +1,26 @@
-import { Route, Routes } from "react-router-dom",
-import MobileAppPage from "../pages/MobileAppPage",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Route, Routes} from "react-router-dom";
+import MobileAppPage from "../pages/MobileAppPage";
 import MobileLaunchPage from "../pages/MobileLaunchPage";
 import OpenAppRedirect from "../pages/OpenAppRedirect";
-<<<<<<< HEAD
-const MobileAppRoutes = null;
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Route, Routes } from "react-router-dom",
+import MobileAppPage from "../pages/MobileAppPage",
+<<<<<<< HEAD
+import MobileLaunchPage from "../pages/MobileLaunchPage";
+import OpenAppRedirect from "../pages/OpenAppRedirect";
+
+=======
+import MobileLaunchPage from "../pages/MobileLaunchPage",
+import OpenAppRedirect from "../pages/OpenAppRedirect",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const MobileAppRoutes = () => {
   return (
     <Routes>
@@ -16,6 +32,7 @@ const MobileAppRoutes = () => {
     </Routes>
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
 =======
   );
@@ -24,4 +41,34 @@ const MobileAppRoutes = () => {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default MobileAppRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+},
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default MobileAppRoutes,
+import { Route, Routes } from "react-router-dom",;
+import MobileAppPage from "../pages/MobileAppPage",;
+import MobileLaunchPage from "../pages/MobileLaunchPage",;
+import OpenAppRedirect from "../pages/OpenAppRedirect",;
+const MobileAppRoutes = () => {;
+  return (;
+    <Routes>;
+      {/* Mobile App Routes */}
+      <Route path="/download" element={<MobileAppPage />} />;
+      <Route path="/mobile-app" element={<MobileAppPage />} />;
+      <Route path="/mobile-launch" element={<MobileLaunchPage />} />;
+      <Route path="/open-app" element={<OpenAppRedirect />} />;
+    </Routes>;
+  );
+},;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default MobileAppRoutes;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
@@ -10,6 +11,13 @@ export type ToastType = 'success' | 'error' | 'info' | 'warning';
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+export type ToastType = 'success' | 'error' | 'info' | 'warning';
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 }, [toast.id, toast.duration, onRemove]);
 const getIcon = () => {
   switch (toast.type) {
@@ -18,11 +26,18 @@ const getIcon = () => {
 interface ToastProps {
   toast: Toast;
   onRemove: (id: string) => void;
+<<<<<<< HEAD
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
 export interface Toast {
+<<<<<<< HEAD
   id: string
   type: ToastType
   title: string
+=======
+  id: string,
+  type: ToastType,
+  title: string,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   message?: string;
   duration?: number
 }
@@ -31,12 +46,21 @@ interface ToastProps {
   onRemove: (id: string) => void
 }
 =======
+<<<<<<< HEAD
 
 interface ToastProps {
   toast: Toast;
   onRemove: (id: string) => void;
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
@@ -78,7 +102,22 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         return <Info className='w-5 h-5 text-blue-400' />;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        return <Info className='w-5 h-5 text-blue-400' />;    }
+
+    }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
@@ -115,7 +154,11 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 =======
   };
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     >
       <div className='flex items-start space-x-3'>
         <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>
@@ -149,6 +192,16 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
             <p className='mt-1 text-sm text-white/70'>{toast.message}</p>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           )}
+=======
+            <p className='mt-1 text-sm text-white/70'>{toast.message}</p>          )}
+
+          )}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <button
           onClick={() => {
@@ -199,7 +252,13 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
+<<<<<<< HEAD
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );};          }}
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
@@ -222,7 +281,21 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({
       </div>
     </motion.div>
   )
+<<<<<<< HEAD
 }
+=======
+};
+=======
+    </div>
+  );};
+
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
@@ -232,6 +305,7 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
         {toasts.map((toast) => (
+<<<<<<< HEAD
 =======
         {toasts.map(toast => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
@@ -240,6 +314,19 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
       </AnimatePresence>
     </div>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  );};
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+        ))}
+      </AnimatePresence>
+    </div>;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   );  )
 }
 =======
@@ -248,9 +335,13 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 // Hook for managing toasts
+<<<<<<< HEAD
 }
 
 export const useToast = () => {
+=======
+export const useToast = () => {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [toasts, setToasts] = useState<Toast[]>([]);
   const addToast = (toast: Omit<Toast, 'id'>) => {
     const id = Math.random().toString(36).substr(2, 9);
@@ -291,6 +382,7 @@ export const useToast = () => {
     showWarning;
     removeToast}
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
     toasts,
@@ -302,3 +394,6 @@ export const useToast = () => {
   };
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,19 +1,42 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {
   Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle;
   DialogDescription;
+=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Textarea} from "@/components/ui/textarea";
+import {useMessaging} from "@/context/MessagingContext";
+import {TalentProfile} from "@/types/talent";
+import {toast} from "@/components/ui/use-toast";
+import {useNavigate} from "react-router-dom";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 export interface MessageTalentModalProps {
 <<<<<<< HEAD
   talent: TalentProfile;
@@ -21,44 +44,80 @@ export interface MessageTalentModalProps {
   onClose: () => void;
 <<<<<<< HEAD
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import { toast } from "@/components/ui/use-toast",
+import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export interface MessageTalentModalProps {
+
   talent: TalentProfile
   isOpen: boolean
   onClose: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   jobTitle?: string
 }
+<<<<<<< HEAD
 =======
   jobTitle?: string;
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MessageTalentModal({
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export function MessageTalentModal({;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   talent;
   isOpen;
   onClose;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function MessageTalentModal({
+  talent,
+  isOpen,
+  onClose,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   jobTitle
 }: MessageTalentModalProps) {
-  const { createConversation } = useMessaging();
 <<<<<<< HEAD
-  const navigate = null;
-=======
+  const { createConversation } = useMessaging();
+
   const navigate = useNavigate();
+=======
+  const { createConversation } = useMessaging(),
+  const navigate = useNavigate(),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
+<<<<<<< HEAD
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+  ),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before sending."
         variant: "destructive"
-      });
+      }),
       return
     }
     try {
+<<<<<<< HEAD
       setIsSubmitting(true);
       // Create context data for the conversation
       const contextData = {
@@ -66,22 +125,44 @@ export function MessageTalentModal({
         description: talent.bio |talent.professional_title |""
         image_url: talent.profile_picture_url |""
       }
+=======
+      setIsSubmitting(true),
+      
+      // Create context data for the conversation
+      const contextData = {
+        title: jobTitle || `Discussion with ${talent.full_name}`,
+        description: talent.bio || talent.professional_title || "",
+        image_url: talent.profile_picture_url || ""
+      },
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Create conversation with this talent
       await createConversation(
-        talent.user_id;
-        message;
-        jobTitle ? 'job' : 'talent';
-        talent.id;
+        talent.user_id,
+        message,
+        jobTitle ? 'job' : 'talent',
+        talent.id,
         contextData
+<<<<<<< HEAD
       );
       toast({
         title: "Message sent"
         description: `Your message has been sent to ${talent.full_name}.`})
       onClose();
+=======
+      ),
+      
+      toast({
+        title: "Message sent",
+        description: `Your message has been sent to ${talent.full_name}.`}),
+      
+      onClose(),
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
-      console.error("Failed to send message:", error);
+      console.error("Failed to send message:", error),
       toast({
         title: "Message not sent"
         description: "There was an error sending your message. Please try again."
@@ -90,8 +171,12 @@ export function MessageTalentModal({
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">
@@ -100,6 +185,100 @@ export function MessageTalentModal({
             <Avatar className="h-8 w-8 border border-zion-purple/20">
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
               <AvatarFallback className="bg-zion-blue-dark text-white">
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogDescription,;
+  DialogFooter} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Textarea } from "@/components/ui/textarea",;
+import { useMessaging } from "@/context/MessagingContext",;
+import { TalentProfile } from "@/types/talent",;
+import { toast } from "@/components/ui/use-toast",;
+import { useNavigate } from "react-router-dom",;
+export interface MessageTalentModalProps {;
+  talent: TalentProfile,;
+  isOpen: boolean,;
+  onClose: () => void,;
+  jobTitle?: string;
+}
+;
+export function MessageTalentModal({;
+  talent,;
+  isOpen,;
+  onClose,;
+  jobTitle;
+}: MessageTalentModalProps) {;
+  const { createConversation } = useMessaging(),;
+  const navigate = useNavigate(),;
+  const [message, setMessage] = useState(;
+    jobTitle;
+      ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`;
+      : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`;
+  ),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const handleSendMessage = async () => {;
+    if (!message.trim()) {;
+      toast({;
+        title: "Message required",;
+        description: "Please enter a message before sending.",;
+        variant: "destructive";
+      }),;
+      return;
+    }
+;
+    try {;
+      setIsSubmitting(true),;
+      // Create context data for the conversation;
+      const contextData = {;
+        title: jobTitle || `Discussion with ${talent.full_name}`,;
+        description: talent.bio || talent.professional_title || "",;
+        image_url: talent.profile_picture_url || "";
+      },;
+      // Create conversation with this talent;
+      await createConversation(;
+        talent.user_id,;
+        message,;
+        jobTitle ? 'job' : 'talent',;
+        talent.id,;
+        contextData;
+      ),;
+      toast({;
+        title: "Message sent",;
+        description: `Your message has been sent to ${talent.full_name}.`}),;
+      onClose(),;
+      // Navigate to messages inbox;
+      navigate("/messages");
+    } catch (error) {;
+      console.error("Failed to send message:", error),;
+      toast({;
+        title: "Message not sent",;
+        description: "There was an error sending your message. Please try again.";
+        variant: "destructive";
+      });
+    } finally {;
+      setIsSubmitting(false);
+    }
+  };
+  return (;
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-md bg-zion-blue border-zion-purple/20">;
+        <DialogHeader>;
+          <DialogTitle className="text-white flex items-center gap-3">;
+            <Avatar className="h-8 w-8 border border-zion-purple/20">;
+              <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />;
+              <AvatarFallback className="bg-zion-blue-dark text-white">;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -142,9 +321,19 @@ export function MessageTalentModal({
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
+<<<<<<< HEAD
           </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
   )
 }
+=======
+          </Button>;
+        </DialogFooter>;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

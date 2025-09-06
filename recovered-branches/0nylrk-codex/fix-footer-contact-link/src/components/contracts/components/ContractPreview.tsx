@@ -1,13 +1,33 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {TalentProfile} from "@/types/talent";
+import {SmartContractInfo} from "@/types/smart-contracts";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
 import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
+=======
+import { TalentProfile } from "@/types/talent",
+import { SmartContractInfo } from "@/types/smart-contracts",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ContractPreviewProps {
-  contractContent?: string;
+  contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
   status?: 'draft' | 'ready' | 'pending',
+<<<<<<< HEAD
   talent?: TalentProfile;
   onDeploy?: () => void;
   onSign?: () => void;
@@ -23,21 +43,46 @@ interface ContractPreviewProps {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function ContractPreview({
   contractContent;
-<<<<<<< HEAD
-  generatedContract;
-  status;
-=======
+
   generatedContract
   status = 'ready'
   onDeploy
   onSign;
   onClose;
   deployStatus;
+=======
+  talent?: TalentProfile,
+  onDeploy?: () => void,
+  onSign?: () => void,
+  onClose?: () => void,
+  deployStatus?: string,
+  deploymentInfo?: SmartContractInfo | null
+}
+
+<<<<<<< HEAD
+export function ContractPreview({ ;
+  contractContent;
+=======
+export function ContractPreview({ 
+  contractContent,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  generatedContract, 
+  status = 'ready', 
+  onDeploy, 
+  onSign,
+  onClose,
+  deployStatus,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   deploymentInfo
 }: ContractPreviewProps) {
   // Use either contractContent or generatedContract, whichever is provided
+<<<<<<< HEAD
   const displayContent = contractContent |generatedContract |"";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  const displayContent = contractContent || generatedContract || "",
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center mb-4">
@@ -58,6 +103,62 @@ export function ContractPreview({
           </Badge>
         ) : (
           <Badge variant="outline">Draft</Badge>
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { TalentProfile } from "@/types/talent",;
+import { SmartContractInfo } from "@/types/smart-contracts",;
+interface ContractPreviewProps {;
+  contractContent?: string,;
+  generatedContract?: string, // Added to support both naming conventions;
+  status?: 'draft' | 'ready' | 'pending',;
+  talent?: TalentProfile,;
+  onDeploy?: () => void,;
+  onSign?: () => void,;
+  onClose?: () => void,;
+  deployStatus?: string,;
+  deploymentInfo?: SmartContractInfo | null;
+}
+;
+export function ContractPreview({;
+  contractContent,;
+  generatedContract,;
+  status = 'ready',;
+  onDeploy,;
+  onSign,;
+  onClose,;
+  deployStatus;
+  deploymentInfo;
+}: ContractPreviewProps) {;
+  // Use either contractContent or generatedContract, whichever is provided;
+  const displayContent = contractContent || generatedContract || "";
+  return (;
+    <div className="space-y-4">;
+      <div className="flex justify-between items-center mb-4">;
+        <h2 className="text-2xl font-bold">Contract Preview</h2>;
+        {status === 'ready' ? (;
+          <Badge;
+            variant="secondary";
+            className="text-sm bg-green-100 text-green-800";
+          >;
+            Ready to Sign;
+          </Badge>;
+        ) : status === 'pending' ? (;
+          <Badge;
+            variant="outline";
+            className="text-sm bg-yellow-100 text-yellow-800";
+          >;
+            Pending Review;
+          </Badge>;
+        ) : (;
+          <Badge variant="outline">Draft</Badge>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
       {/* Contract content */}
@@ -88,6 +189,10 @@ export function ContractPreview({
             Sign Contract
           </Button>
         )}
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {status === 'ready' && onDeploy && (
           <Button variant="outline" onClick={onDeploy}>
             Deploy on Blockchain

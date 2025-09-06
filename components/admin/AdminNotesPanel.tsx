@@ -1,12 +1,19 @@
 import React, { useEffect, useMemo, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type AdminNotesPanelProps = any;
 =======
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export type AdminNotesPanelProps = {
+=======
+export type AdminNotesPanelProps = {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
 }
@@ -20,9 +27,16 @@ type Note = {
 <<<<<<< HEAD
 }
 export default function AdminNotesPanel({
+<<<<<<< HEAD
   targetType
   targetId
 }: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);}
+=======
+  targetType,
+  targetId,;
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 type Note = {
   id: string
   targetType: string
@@ -30,10 +44,12 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+<<<<<<< HEAD
 }
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
 =======
 };
+<<<<<<< HEAD
 }
 }
 
@@ -42,6 +58,11 @@ export default function AdminNotesPanel({
   targetId,
 }: AdminNotesPanelProps) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -118,20 +139,41 @@ const data = await res.json();
       await fetchNotes();
     } finally {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
       }
       setText('');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+<<<<<<< HEAD
       await fetchNotes()
     } finally {
       setAdding(false)
 =======
+<<<<<<< HEAD
       setAdding(false);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      setAdding(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isAdmin) {
     return (
       <div className='rounded border p-3'>
@@ -215,7 +257,22 @@ const data = await res.json();
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

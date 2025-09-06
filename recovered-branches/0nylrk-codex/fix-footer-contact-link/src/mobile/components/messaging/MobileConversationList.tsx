@@ -1,53 +1,114 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Card} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Search } from "lucide-react",
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 interface Conversation {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  avatar?: string;
-  lastMessage: string;
-  timestamp: string;
-  unreadCount: number;
-=======
+
   id: string
   name: string
   avatar?: string;
   lastMessage: string
   timestamp: string
   unreadCount: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isTyping?: boolean
 }
 interface MobileConversationListProps {
-<<<<<<< HEAD
-  conversations: Conversation[];
-=======
+
   conversations: Conversation[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   activeConversation?: string;
 <<<<<<< HEAD
   onSelectConversation: (id: string) => void
 }
 =======
+<<<<<<< HEAD
   onSelectConversation: (id: string) => void;
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export function MobileConversationList({
+=======
+import { Input } from "@/components/ui/input",
+import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface Conversation {
+  id: string,
+  name: string,
+  avatar?: string,
+  lastMessage: string,
+  timestamp: string,
+  unreadCount: number,
+  isTyping?: boolean
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+interface MobileConversationListProps {
+  conversations: Conversation[],
+  activeConversation?: string;
+  onSelectConversation: (id: string) => void
+}
+
+export function MobileConversationList({;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   conversations;
   activeConversation;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",;
+import { Card } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { cn } from "@/lib/utils",;
+interface Conversation {;
+  id: string,;
+  name: string,;
+  avatar?: string,;
+  lastMessage: string,;
+  timestamp: string,;
+  unreadCount: number,;
+  isTyping?: boolean;
+}
+;
+interface MobileConversationListProps {;
+  conversations: Conversation[],;
+  activeConversation?: string,;
+  onSelectConversation: (id: string) => void;
+}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export function MobileConversationList({
+  conversations,
+  activeConversation,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onSelectConversation
 }: MobileConversationListProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-=======
+
     <div className="space-y-4">
       <div className="px-4 mb-2">
         <div className="relative">
@@ -71,8 +132,12 @@ export function MobileConversationList({
           <div
             key={conversation.id}
             className={cn(
+<<<<<<< HEAD
               "px-4";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+              "px-4",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               activeConversation === conversation.id && "bg-primary/5"
             )}
             onClick={() => onSelectConversation(conversation.id)}
@@ -93,7 +158,11 @@ export function MobileConversationList({
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
+<<<<<<< HEAD
                     {conversation.isTyping
+=======
+                    {conversation.isTyping 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>

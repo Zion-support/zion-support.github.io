@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import SEO from '../components/SEO';
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -20,6 +18,7 @@ export default function LegalPage() {
 			</div>
 		</>
 	)
+<<<<<<< HEAD
 }
 =======
 }
@@ -55,3 +54,14 @@ export default function LegalPage() {
     </>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+};
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,5 +1,45 @@
+<<<<<<< HEAD
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import Stripe from 'stripe';
+import { withErrorLogging } from '../../utils/withErrorLogging.cjs';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2023-10-16',
+});
+
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {
+    const { priceId, quantity = 1 } = req.body || {};
+    
+    if (!priceId) {
+      res.statusCode = 400;
+      res.json({ error: 'Price ID is required' });
+      return;
+    }
+
+    const session = await stripe.checkout.sessions.create({
+      mode: 'subscription',
+      payment_method_types: ['card'],
+      line_items: [
+        {
+=======
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           price: priceId,
           quantity: quantity,
         },
@@ -19,10 +59,33 @@ export default function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
+<<<<<<< HEAD
 }
 }
 
 export default withErrorLogging(handler);
+=======
+
+export default withErrorLogging(handler);
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+export default function handler(req, res) {
+  res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' });
+}
+export default function handler(req, res) {
+  res.status(200).json({ "message": 'Checkout session created' });
+}
+<<<<<<< HEAD
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+=======
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       url: session.url
     })
   } catch (err) {,
@@ -31,8 +94,14 @@ export default withErrorLogging(handler);
     res.json({ error: err.message || 'Checkout session creation failed' })
   };
 };
+<<<<<<< HEAD
 }
 }
 
 export default withErrorLogging(handler),
 ,
+=======
+export default withErrorLogging(handler),
+,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

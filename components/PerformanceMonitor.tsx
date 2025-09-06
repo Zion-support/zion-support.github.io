@@ -99,20 +99,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
 // Only run on client side
     if (typeof window === 'undefined' |typeof window.performance === 'undefined') return;
     const measurePerformance = () => {
-<<<<<<< HEAD
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = window.performance.getEntriesByType('paint');
-      
-      const performanceData = null;
-        // Memory usage (if available)
-        memory: (window.performance as unknown as { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize;
-          total: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize;
-          limit: (window.performance as unknown as { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
-        } : null
-      };
 
-=======
       const navigationEntries = window.performance.getEntriesByType('navigation');
       const navigation = navigationEntries[0] as PerformanceNavigationTiming;
       const paintEntries = window.performance.getEntriesByType('paint');
@@ -127,7 +114,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         // Resource timing
         resourceCount: window.performance.getEntriesByType('resource').length
 // Memory usage (if available)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
           used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize
           total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize
@@ -229,7 +216,9 @@ case 'paint': if (entry.name === 'first-contentful-paint') {'              setMe
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 };
 }
@@ -237,3 +226,19 @@ case 'paint': if (entry.name === 'first-contentful-paint') {'              setMe
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default PerformanceMonitor;
+=======
+export default PerformanceMonitor;
+=======
+};
+export default PerformanceMonitor;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+
+}
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

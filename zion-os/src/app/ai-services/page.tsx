@@ -4,6 +4,15 @@ export const metadata = {title: "AI Services - Zion Tech Group | Artificial Inte
   description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.";
   keywords: "AI services, artificial intelligence, machine learning, autonomous business, business intelligence, content generation, Zion Tech Group"}
 export default function AIServicesPage() {return (;
+=======
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Services - Zion Tech Group | Artificial Intelligence & Machine Learning Solutions",;
+  description: "Transform your business with Zion Tech Group's cutting-edge AI services including autonomous operations, business intelligence, content generation, and research automation.",;
+  keywords: "AI services, artificial intelligence, machine learning, autonomous business, business intelligence, content generation, Zion Tech Group"},;
+export default function AIServicesPage() {;
+  return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen">;
 =======
 import Link from 'next/link';
@@ -30,7 +39,11 @@ export default function AIServicesPage() {
             AI & <span className="gradient-text">Machine Learning</span>;
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
+<<<<<<< HEAD
             Harness the power of artificial intelligence to automate operations;
+=======
+            Harness the power of artificial intelligence to automate operations,;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             enhance decision-making, and create intelligent business processes.;
           </p>;
         </div>;

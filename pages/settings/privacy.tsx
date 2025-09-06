@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 =======
@@ -5,17 +7,26 @@ import React, { useEffect, useState } from 'react';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function PrivacySettingsPage() {
-<<<<<<< HEAD
-  const [userId, setUserId] = useState('');
-  const [optOut, setOptOut] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
-  const load = null;
-=======
+
   const [userId, setUserId] = useState('')
   const [optOut, setOptOut] = useState(false)
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
+=======
+import React, { useEffect, useState } from 'react',
+=======
+import React, { useEffect, useState } from 'react',;
+;
+=======
+import React, { useEffect, useState } from 'react',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function PrivacySettingsPage() {
+  const [userId, setUserId] = useState(''),
+  const [optOut, setOptOut] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [message, setMessage] = useState(''),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const load = async () => {
 <<<<<<< HEAD
     if (!userId) return
@@ -26,8 +37,10 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut)
     else setMessage(json.error |'Failed to load')
     setLoading(false)
+<<<<<<< HEAD
   }
 =======
+<<<<<<< HEAD
     if (!userId) return;
     setLoading(true);
     setMessage('');
@@ -41,6 +54,10 @@ export default function PrivacySettingsPage() {
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const save = async () => {
     if (!userId) return
     setLoading(true)
@@ -54,16 +71,28 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved')
     else setMessage(json.error |'Save failed')
     setLoading(false)
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id')
     if (savedUser) setUserId(savedUser)
+<<<<<<< HEAD
   }, [])
+=======
+  }, []),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId)
     load()
+<<<<<<< HEAD
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -77,9 +106,12 @@ export default function PrivacySettingsPage() {
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
           <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 =======
+<<<<<<< HEAD
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, optOut }),
@@ -145,13 +177,50 @@ export default function PrivacySettingsPage() {
             Reload
           </button>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           {message && <div>{message}</div>}
         </div>
       </div>
     </div>
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+=======
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          {message && <div>{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

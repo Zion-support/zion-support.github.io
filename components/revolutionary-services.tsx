@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import {
+<<<<<<< HEAD
   Check
   Star
   Zap
@@ -69,16 +70,94 @@ import {
   Microscope as MicroscopeIcon
   GraduationCap as GraduationCapIcon
   ShieldCheck as ShieldCheckIcon;
+=======
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
+<<<<<<< HEAD
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories
   getRevolutionaryServicesByCategory
   getPopularRevolutionaryServices
   getRevolutionaryServicesByPriceRange;
+=======
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../data/revolutionary-micro-saas-services';
 <<<<<<< HEAD
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
@@ -87,23 +166,23 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories, getRevolutionaryServicesByCategory, getPopularRevolutionaryServices, getRevolutionaryServicesByPriceRange } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Zap, Star, Calendar } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { motion, AnimatePresence } from 'framer-motion';
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function RevolutionaryServicesPage() {
+=======
+export default function RevolutionaryServicesPage() {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
-<<<<<<< HEAD
-  const [selectedService, setSelectedService] = useState<any>(null),
 
-  const priceRanges = null;
-=======
   const [selectedService, setSelectedService] = useState<any>(null);
   const priceRanges = [
 <<<<<<< HEAD
@@ -217,6 +296,10 @@ export default function RevolutionaryServicesPage() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
 <<<<<<< HEAD
     mobile: '+1 302 464 0950'
@@ -341,6 +424,7 @@ export default function RevolutionaryServicesPage() {
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
+<<<<<<< HEAD
 =======
       ).length,
       color: 'from-yellow-500 to-orange-600',
@@ -348,6 +432,18 @@ export default function RevolutionaryServicesPage() {
   ];
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+  ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -381,9 +477,24 @@ export default function RevolutionaryServicesPage() {
         duration: 0.5,
       },
     },
+<<<<<<< HEAD
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -441,6 +552,7 @@ export default function RevolutionaryServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
+<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Revolutionary
                 </span>
@@ -463,12 +575,22 @@ export default function RevolutionaryServicesPage() {
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 =======
+<<<<<<< HEAD
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
                 Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology
                 and cutting-edge solutions that redefine what's possible.
@@ -484,8 +606,17 @@ export default function RevolutionaryServicesPage() {
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 =======
+<<<<<<< HEAD
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -671,6 +802,14 @@ export default function RevolutionaryServicesPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Popular Services Showcase */}
         <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -680,10 +819,23 @@ export default function RevolutionaryServicesPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
+<<<<<<< HEAD
 =======
               className='text-center mb-12'
               initial={{ opacity: 0, y: 20 }}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -714,7 +866,11 @@ export default function RevolutionaryServicesPage() {
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <motion.div
+=======
+            <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
@@ -734,6 +890,14 @@ export default function RevolutionaryServicesPage() {
                     variant={service.variant as any}
                     size='large'
                     className='h-full cursor-pointer'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     onClick={() => setSelectedService(service)}
                   >
                     <div className='text-center mb-6'>
@@ -776,6 +940,7 @@ export default function RevolutionaryServicesPage() {
                         </div>
                       ))}
                     </div>
+<<<<<<< HEAD
 =======
                           </span>
                         </div>
@@ -783,6 +948,9 @@ export default function RevolutionaryServicesPage() {
                     </div>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     <div className='text-center'>
                       <Button
                         variant='primary'
@@ -825,9 +993,20 @@ export default function RevolutionaryServicesPage() {
             <motion.div
               className="mb-8"
 =======
+<<<<<<< HEAD
               className='mb-8'
               initial={{ opacity: 0, y: 20 }}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -925,8 +1104,16 @@ export default function RevolutionaryServicesPage() {
               variants={containerVariants}
               initial='hidden'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
+=======
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -934,9 +1121,21 @@ export default function RevolutionaryServicesPage() {
               initial="hidden"
               whileInView="visible"
 =======
+<<<<<<< HEAD
               whileInView='visible'
               viewport={{ once: true }}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              whileInView='visible'              viewport={{ once: true }}
+
+              viewport={{ once: true }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1140,6 +1339,7 @@ export default function RevolutionaryServicesPage() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
+<<<<<<< HEAD
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No Services Found
@@ -1165,7 +1365,7 @@ export default function RevolutionaryServicesPage() {
                            onClick={() => {
                              setSearchQuery('');
                              setSelectedCategory('All');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                              setPriceRange('All')
                            }}
                          >
@@ -1185,8 +1385,17 @@ export default function RevolutionaryServicesPage() {
 <<<<<<< HEAD
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 =======
+<<<<<<< HEAD
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -1460,6 +1669,7 @@ export default function RevolutionaryServicesPage() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
               </motion.div>
             </motion.div>
           )}
@@ -1573,6 +1783,13 @@ export default function RevolutionaryServicesPage() {
                   <div className='text-gray-400 text-sm'>Visit our office</div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           </div>
@@ -1584,4 +1801,12 @@ export default function RevolutionaryServicesPage() {
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

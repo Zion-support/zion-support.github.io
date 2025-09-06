@@ -5,6 +5,7 @@ import React from 'react';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 interface ButtonProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   children: React.ReactNode;
 <<<<<<< HEAD
 =======
@@ -13,20 +14,25 @@ interface ButtonProps {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+  children: React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {
+  children: React.ReactNode
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   type?: 'button' | 'submit' | 'reset',
   disabled?: boolean
 }
-
-export default function Button({ 
-  children;
-  variant;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
 export default function Button({
@@ -38,7 +44,7 @@ export default function Button({
   type = 'button'
   disabled = false
 }: ButtonProps) {
-  const baseClasses =
+  const baseClasses =;
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
   const variantClasses = {
     primary:
@@ -63,17 +69,19 @@ export default function Button({
   );
 }  const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform'
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <button
       type={type}
       className={classes}
       onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
       {children}
     </button>
 );
 }
+<<<<<<< HEAD
 =======
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
@@ -111,9 +119,25 @@ export default function Button({
     : 'hover:scale-105 transform';
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
+=======
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
     >
       {children}
     </button>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

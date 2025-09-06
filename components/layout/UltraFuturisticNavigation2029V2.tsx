@@ -1,11 +1,20 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, Search, ChevronDown, ChevronRight;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Menu
   X
   Search
@@ -64,8 +73,68 @@ import {
   Award
   Clock
   CheckCircle;} from 'lucide-react';import {
+=======
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  ChevronRight,
+  Home,
+  Users,
+  Settings,
+  HelpCircle,
+  Mail,
+  Phone,
+  MapPin,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Shield,
+  Globe,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Globe2,
+  Zap,
+  Rocket,
+  Brain,
+  Sparkles,
+  ShieldCheck,
+  Target,
+  Users2,
+  Briefcase,
+  Lightbulb,
+  Award,
+  Clock,;
+  CheckCircle,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Menu, X, Search, ChevronDown, ChevronRight;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
   BookOpen, MessageCircle, Star, TrendingUp;
   Layers, Cpu, Database, Cloud, Lock, Shield;
@@ -75,10 +144,7 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2;
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -611,6 +677,7 @@ const quickLinks = [
   { name: 'Careers', href: '/careers', icon: GraduationCap }
   { name: 'Support', href: '/support', icon: MessageCircle },];  { name: 'Support', href: '/support', icon: MessageCircle }
 ];
+<<<<<<< HEAD
 =======
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
@@ -622,13 +689,23 @@ const quickLinks = [
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function UltraFuturisticNavigation2029V2() {
+=======
+export default function UltraFuturisticNavigation2029V2() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>
       {/* Main Navigation Bar */}
@@ -647,6 +724,14 @@ export default function UltraFuturisticNavigation2029V2() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className='flex-shrink-0'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -696,6 +781,7 @@ export default function UltraFuturisticNavigation2029V2() {
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{
                   duration: 0.5
                   delay: mainNavigation.indexOf(item) * 0.1
@@ -719,6 +805,21 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
           {/* Right side - Contact & Search */}
           <div className='hidden lg:flex items-center space-x-4'>
+=======
+
+              </motion.div>
+
+            ))}
+          </div>
+
+          {/* Right side - Contact & Search */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -742,6 +843,18 @@ export default function UltraFuturisticNavigation2029V2() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               />
             </div>
+=======
+                className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
+
+              />
+
+            </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Contact Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -787,6 +900,14 @@ export default function UltraFuturisticNavigation2029V2() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -796,6 +917,14 @@ export default function UltraFuturisticNavigation2029V2() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='px-4 py-6 space-y-4'>
               {/* Mobile Search */}
@@ -855,9 +984,21 @@ export default function UltraFuturisticNavigation2029V2() {
                     <item.icon className='w-5 h-5' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     <span>{item.name}</span>
+<<<<<<< HEAD
                   </Link>
                 ))}
               </div>
+=======
+
+                  </Link>
+                ))}
+              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Quick Links */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -884,6 +1025,7 @@ export default function UltraFuturisticNavigation2029V2() {
                       key={item.name}
                       href={item.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
                       className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
                     >
                       <item.icon className='w-4 h-4' />
@@ -898,6 +1040,19 @@ export default function UltraFuturisticNavigation2029V2() {
                   ))}
                 </div>
               </div>
+=======
+
+                    </Link>
+
+                  ))}
+                </div>
+              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -907,6 +1062,14 @@ export default function UltraFuturisticNavigation2029V2() {
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </div>
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Mail className='w-4 h-4' />
@@ -933,6 +1096,14 @@ export default function UltraFuturisticNavigation2029V2() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Service Categories Dropdown */}
       <AnimatePresence>
         {activeCategory && (
@@ -942,6 +1113,14 @@ export default function UltraFuturisticNavigation2029V2() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className='absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
               <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
@@ -990,6 +1169,7 @@ export default function UltraFuturisticNavigation2029V2() {
                         <Link
                           key={service.name}
                           href={service.href}
+<<<<<<< HEAD
                           className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
                         >
                           <div className='flex justify-between items-start'>
@@ -1017,6 +1197,15 @@ export default function UltraFuturisticNavigation2029V2() {
                             </span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                           </div>
+=======
+
+                          </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </Link>
                       ))}
                     </div>
@@ -1030,7 +1219,22 @@ export default function UltraFuturisticNavigation2029V2() {
     </nav>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,30 +1,40 @@
 
+<<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Navigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 export interface ProtectedRouteProps {
-<<<<<<< HEAD
-  children: React.ReactNode;
-=======
+
   children: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+import {Navigate} from 'react-router-dom';
+import {useAuth} from '@/hooks/useAuth';
+import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+export interface ProtectedRouteProps {
+  children: React.ReactNode,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
 <<<<<<< HEAD
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
 }
+<<<<<<< HEAD
 =======
   requiredUserType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children;
-<<<<<<< HEAD
-  adminOnly;
-=======
+
   adminOnly = false;
   tenantAdminAllowed = false
   requiredUserType
@@ -33,6 +43,39 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   const { tenant } = useWhitelabel();
   const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
   const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
+=======
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+  children;
+  adminOnly = false;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',
+import { Navigate } from 'react-router-dom',
+import { useAuth } from '@/hooks/useAuth',
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',
+import { useWhitelabel } from '@/context/WhitelabelContext',
+export interface ProtectedRouteProps {
+  children: React.ReactNode,
+  adminOnly?: boolean,
+  tenantAdminAllowed?: boolean,
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
+}
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+  children,
+  adminOnly = false,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  tenantAdminAllowed = false,
+  requiredUserType
+}) => {
+  const { user, isLoading } = useAuth(),
+  const { tenant } = useWhitelabel(),
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),
+  
+  const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -53,8 +96,65 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
+<<<<<<< HEAD
   }
   return <>{children}</>
 }
 export default ProtectedRoute;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+import React from 'react',;
+import { Navigate } from 'react-router-dom',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+export interface ProtectedRouteProps {;
+  children: React.ReactNode,;
+  adminOnly?: boolean,;
+  tenantAdminAllowed?: boolean,;
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
+}
+;
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
+  children,;
+  adminOnly = false,;
+  tenantAdminAllowed = false,;
+  requiredUserType;
+}) => {;
+  const { user, isLoading } = useAuth(),;
+  const { tenant } = useWhitelabel(),;
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),;
+  const isCheckingPermissions = isLoading || isCheckingTenantAdmin,;
+  // Show loading state if auth or tenant admin status is still being checked;
+  if (isCheckingPermissions) {;
+    return <div className="flex h-screen w-full items-center justify-center">;
+      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
+    </div>;
+  }
+;
+  // Redirect to login if not authenticated;
+  if (!user) {;
+    return <Navigate to="/login" />;
+  }
+;
+  // Check for admin access if required;
+  if (adminOnly) {;
+    const hasAdminAccess = user.userType === 'admin' || user.role === 'admin' || (tenantAdminAllowed && isTenantAdmin),;
+    if (!hasAdminAccess) {;
+      return <Navigate to="/unauthorized" />;
+    }
+  }
+;
+  // Check for specific user type if required;
+  if (requiredUserType && user.userType !== requiredUserType) {;
+    return <Navigate to="/unauthorized" />;
+  }
+;
+  return <>{children}</>;
+};
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default ProtectedRoute;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

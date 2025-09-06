@@ -2,8 +2,12 @@ import React from 'react';
 import type { Room } from 'livekit-client';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type Props = any;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 type Props = {
   room: Room | null;
   onLeave: () => void;
@@ -11,6 +15,7 @@ type Props = {
   room: Room | null
   onLeave: () => void
   accent?: 'blue' | 'cyan'
+<<<<<<< HEAD
 =======
 
 type Props = {
@@ -21,7 +26,14 @@ type Props = {
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+=======
+
+export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -65,6 +77,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
     } catch (e) {
       console.warn('Screen share failed', e)
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
       console.warn('Screen share failed', e);
@@ -72,7 +85,15 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
+<<<<<<< HEAD
     <div className='flex items-center gap-3'>
       <button
         onClick={toggleMic}
@@ -102,5 +123,19 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 );
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+    }
+  };
+
+  return (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

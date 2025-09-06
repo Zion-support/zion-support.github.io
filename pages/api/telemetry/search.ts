@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -7,6 +9,14 @@ const memoryStore: { q: string, ts: number }[] = [],
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
+const memoryStore: { q: string, ts: number }[] = [],
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 const memoryStore: { q: string, ts: number }[] = []
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -20,10 +30,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const counts = new Map<string, number>()
     for (const { q } of memoryStore) counts.set(q, (counts.get(q) |0) + 1)
     const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(200).json({ ok: true, top, total: memoryStore.length })
+<<<<<<< HEAD
   }
   return res.status(405).end()
+<<<<<<< HEAD
 }
 =======
 
@@ -50,3 +62,89 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   return res.status(405).end();
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+const memoryStore: { q: string, ts: number }[] = [];
+export default function handler(req, res) {
+  try {
+  if (req.method === 'GET') {
+    const { q } = req.body || {};
+    if (typeof q === 'string' && q.trim()) {;
+      memoryStore.push({ q: q.trim(), ts: Date.now() });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return res.status(204).end();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (req.method === 'GET') {
+    const counts = new Map<string number>();
+    for (const { q } of memoryStore) counts.set(q, (counts.get(q) || 0) + 1);
+    const top = Array.from(counts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10).map(([q, n]) => ({ q, n }));
+    return res.status(200).json({ ok: true, top, total: memoryStore.length });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return res.status(405).end();
+<<<<<<< HEAD
+};
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

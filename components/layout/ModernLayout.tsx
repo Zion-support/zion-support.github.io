@@ -6,11 +6,7 @@ type ModernLayoutProps = {
   description?: string;
   keywords?: string;
   canonical?: string;
-<<<<<<< HEAD
-};
 
-const ModernLayout = null;
-=======
 }
 const ModernLayout = ({
   children;
@@ -18,7 +14,7 @@ const ModernLayout = ({
   description = "Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology.";
   keywords = "AI services, IT solutions, micro SaaS, digital transformation, cloud computing, cybersecurity";
   canonical;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }: ModernLayoutProps) => {
   return (
     <>

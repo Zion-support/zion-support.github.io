@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,6 +16,11 @@ const contactInfo = null;
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   Search
@@ -778,7 +784,7 @@ export default function AdvancedServicesShowcase() {
       </div>
     </motion.div>
   )
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800'>
       <SEO
@@ -974,6 +980,7 @@ export default function AdvancedServicesShowcase() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Category Filters */}
           <div className='mt-6'>
             <div className='flex flex-wrap gap-3'>
@@ -983,6 +990,7 @@ export default function AdvancedServicesShowcase() {
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
 =======
+<<<<<<< HEAD
                   <List className='w-5 h-5' />
                 </button>
               </div>
@@ -995,6 +1003,16 @@ export default function AdvancedServicesShowcase() {
               {categories.map(category => (
                 <button
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                <button
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -1010,6 +1028,14 @@ export default function AdvancedServicesShowcase() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Results Summary */}
         <div className='mb-8'>
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
@@ -1100,15 +1126,35 @@ export default function AdvancedServicesShowcase() {
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
 =======
+<<<<<<< HEAD
                   {filteredServices.map(service => (
                     <ServiceList key={service.id} service={service} />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
+
+                    <ServiceList key={service.id} service={service} />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                   ))}
                 </div>
               )}
             </AnimatePresence>
           )}
         </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Call to Action */}
         <div className='mt-16 text-center'>
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
@@ -1161,6 +1207,7 @@ export default function AdvancedServicesShowcase() {
                 Call Now
               </a>
             </div>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
 =======
@@ -1179,5 +1226,14 @@ export default function AdvancedServicesShowcase() {
   );
 }
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+          </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

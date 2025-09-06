@@ -1,9 +1,13 @@
 import { ApiDocsSpec } from './types';
 <<<<<<< HEAD
-const baseUrl = null;
 =======
+
+const baseUrl = 'https://api.zion.os';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 const baseUrl = 'https://api.zion.os';
 const v1: ApiDocsSpec = {
+<<<<<<< HEAD
   product: 'Zion OS'
   versions: ['v1']
   defaultVersion: 'v1'
@@ -220,12 +224,37 @@ const v1: ApiDocsSpec = {
             { language: 'javascript', code: `await fetch('${baseUrl}/v1/nation/stats', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json()),` }
             { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/nation/stats', headers={'Authorization':'Bearer <token>'}).json()` }]
           versions: ['v1']
+=======
+  openapi: '3.0.0',
+  info: {
+    title: 'Zion OS API',
+    version: '1.0.0',
+    description: 'Zion OS API Documentation'
+  },
+  servers: [{ url: baseUrl }],
+  paths: {
+    '/v1/nation/stats': {
+      get: {
+        summary: 'Get Nation Stats',
+        responses: {
+          '200': {
+            description: 'Success',
+            content: {
+              'application/json': {
+                schema: { type: 'object' }
+              }
+            }
+          }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }
-      ]
+      }
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
   ]
 }
 export default v1;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
             {
@@ -251,3 +280,16 @@ export default v1;
 
 export default v1;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+  ];
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+};
+
+export default v1;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,6 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
+=======
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface WorkExperienceSectionProps {
 <<<<<<< HEAD
   workExperience: WorkExperience[]
@@ -16,9 +22,11 @@ export function WorkExperienceSection({
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   // Sort work experience by date (newest first)
 <<<<<<< HEAD
-  const sortedWorkExperience = null;
-=======
+
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
+=======
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -29,11 +37,45 @@ export function WorkExperienceSection({
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+<<<<<<< HEAD
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { WorkExperience } from '@/types/resume',;
+import { format } from 'date-fns',;
+interface WorkExperienceSectionProps {;
+  workExperience: WorkExperience[];
+}
+;
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {;
+  // Sort work experience by date (newest first);
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+    if (a.is_current && !b.is_current) return -1,;
+    if (!a.is_current && b.is_current) return 1,;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
+    return dateB.getTime() - dateA.getTime();
+  }),;
+  const formatDate = (date: Date | string | undefined) => {;
+    if (!date) return '',;
+    if (typeof date === 'string') {;
+      return format(new Date(date), 'MMM yyyy');
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    }
+    return format(date, 'MMM yyyy')
+  },
+
+  if (sortedWorkExperience.length === 0) return null,
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>

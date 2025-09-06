@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 export type PdfExportButtonProps = any;
   return (
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 html2pdf () .set (opt) .from (element) .save ()
 }
 export default function PdfExportButton({
@@ -39,21 +43,64 @@ export default function PdfExportButton({
     } as any;
     html2pdf().set(opt).from(element).save();
   }
+=======
+html2pdf () .set (opt) .from (element) .save () 
+};
+
+export default function PdfExportButton({
+  targetRef,
+<<<<<<< HEAD
+  fileName = 'resume.pdf',
+}: PdfExportButtonProps) {  const onClick = async () => {
+
+  const onClick = async () => {
+
+=======
+  fileName = 'resume.pdf',;
+}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
+export type PdfExportButtonProps = {
+  targetRef: React.RefObject<HTMLDivElement>,;
+  fileName?: string;
+  theme?: 'light' | 'dark'
+};
+
+export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!targetRef.current) return;
+    const element = targetRef.current;
+
+    const html2pdf = (await import('html2pdf.js')).default;
+
+    const opt = {
+      margin: [10, 10, 10, 10],
+
+      filename: fileName,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    } as any;
+
+    html2pdf().set(opt).from(element).save();
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       >
       Download as PDF
     </button>
   );
 }  return (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
       Download as PDF
     </button>
+<<<<<<< HEAD
 );
 }
 =======
+<<<<<<< HEAD
       margin: [10, 10, 10, 10],
       filename: fileName,
       image: { type: 'jpeg', quality: 0.98 },
@@ -69,3 +116,11 @@ export default function PdfExportButton({
     </button>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

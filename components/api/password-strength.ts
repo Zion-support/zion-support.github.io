@@ -2,7 +2,15 @@
  password.toLowerCase () .includes (pattern) );
 =======
 password.toLowerCase () .includes (pattern) );
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 if (score < 30) strength = 'very-weak';
 else if (score < 50) strength = 'weak';
@@ -30,11 +38,9 @@ interface PasswordStrengthResult {
     hasLowercase: boolean;
     hasNumbers: boolean;
     hasSymbols: boolean;
-<<<<<<< HEAD
-    hasCommonPatterns: boolean;
-=======
+
     hasCommonPatterns: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     entropy: number
   }
   suggestions: string[]
@@ -46,15 +52,17 @@ interface PasswordStrengthResult {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest;
-=======
+
   req: NextApiRequest
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
+<<<<<<< HEAD
   if (req.method !== 'POST') {
 <<<<<<< HEAD
+=======
+  if (req.method !== 'POST') {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
   }
 =======
@@ -65,11 +73,9 @@ export default async function handler(
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   try {
     const { password } = req.body;
-<<<<<<< HEAD
-    if (!password || typeof password !== 'string') {
-=======
+
     if (!password |typeof password !== 'string') {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       return res.status(400).json({ error: 'Password is required' });
 <<<<<<< HEAD
     }
@@ -79,9 +85,7 @@ export default async function handler(
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     // Password analysis
-<<<<<<< HEAD
-    const length = null;
-=======
+
     const length = password.length;
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
@@ -246,10 +250,18 @@ const result: PasswordStrengthResult = {
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     res.status(500).json({ error: 'Internal server error' })
   }
 }
 =======
   }
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

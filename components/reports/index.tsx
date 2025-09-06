@@ -2,6 +2,7 @@ import Link from 'next/link';
 import ContentCategorizer from '../../components/ContentCategorizer';
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
@@ -19,9 +20,23 @@ export default function ReportsIndex() {
 <<<<<<< HEAD
             agents.          </p>export default function ReportsIndex() {
   return (
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function ReportsIndex() {
+  return (
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="container mx-auto px-4 py-12 max-w-7xl">
-        {/* Header */}
+        {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-8">
           <h1 className="text-4xl font-extrabold mb-2 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Autonomous Content Hub
@@ -33,6 +48,7 @@ export default function ReportsIndex() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           </p>
         </div>
+<<<<<<< HEAD
         {/* Content Categorizer Component */}
         <ContentCategorizer />
         {/* Back to Home */}
@@ -42,6 +58,24 @@ export default function ReportsIndex() {
             className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200'
 <<<<<<< HEAD
           >            ← Back to home        <div className="mt-12 text-center">
+=======
+        {/* Content Categorizer Component */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <ContentCategorizer />;
+        {/* Back to Home */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <div className="mt-12 text-center">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
 =======
           >
@@ -50,9 +84,46 @@ export default function ReportsIndex() {
           </Link>
         </div>
       </main>
+<<<<<<< HEAD
     </div>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+=======
+=======
+<<<<<<< HEAD
+    </div>;
+  );
+}
+
+}
+=======
+    </div>
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+        <div className="mt-12 text-center">;
+          <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;
+            ← Back to home;
+          </Link>;
+        </div>;
+      </main>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

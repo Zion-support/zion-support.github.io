@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { useTranslation  } from 'react-i18next';
@@ -34,12 +35,28 @@ import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts'
 import { useCurrency } from '@/hooks/useCurrency';
 import { logErrorToProduction } from '@/utils/productionLogger';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 import { useRouter } from 'next/router'
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { useTranslation } from 'react-i18next',
+import { motion, AnimatePresence } from 'framer-motion',
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -55,10 +72,18 @@ import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Market insights component
 <<<<<<< HEAD
-const MarketplaceInsights = null;
-                      onClick: () => router.push('/cart')}})
+<<<<<<< HEAD
+
+const MarketplaceInsights = ({ stats }: { stats: any },) => (
+=======
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
+=======
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -89,19 +114,43 @@ const MarketplaceInsights = ({ stats }: { stats: any },) => (
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
+<<<<<<< HEAD
 }: any,) => (
+=======
+}: any) => (
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
       <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+=======
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
+<<<<<<< HEAD
       <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+=======
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
@@ -121,8 +170,8 @@ import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { useAuth } from '@/context/auth/AuthProvider'
 import { toast } from '@/hooks/use-toast'
-// Product card
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {
+// Product card;
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {;
   const { formatPrice } = useCurrency();
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -161,7 +210,15 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
         <Button
           size="icon"
           variant="outline"
+<<<<<<< HEAD
           onClick = {onAddToCart,}
+=======
+          onClick={onAddToCart}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           aria-label="Add to cart"
           data-testid="add-to-cart-listing-button"
         >
@@ -176,6 +233,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   )
 }
 // Loading grid
+<<<<<<< HEAD
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number },) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
     {Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
@@ -200,6 +258,36 @@ function MarketplacePageContent() {
       let processedDataset = fullDataset
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory)
+=======
+const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>;
+),;
+// Main component;
+function MarketplacePageContent() {;
+  const router = useRouter(),;
+  const { t } = useTranslation(),;
+  const dispatch = useDispatch<AppDispatch>(),;
+  const { isAuthenticated } = useAuth(),;
+  const [sortBy, setSortBy] = useState('newest'),;
+  const [filterCategory, setFilterCategory] = useState(''),;
+  const [showRecommended, setShowRecommended] = useState(false),;
+  const fetchProducts = useCallback(async (page: number, limit: number) => {;
+    // Simulate API delay;
+    await new Promise(resolve => setTimeout(resolve, 300)),;
+    try {;
+      // Combine initial products with marketplace listings;
+      const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],;
+      // Apply category filtering;
+      let processedDataset = fullDataset,;
+      if (filterCategory) {;
+        processedDataset = processedDataset.filter(p => p.category === filterCategory);
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       // Apply recommended filtering
       if (showRecommended) {
@@ -235,7 +323,12 @@ function MarketplacePageContent() {
       logErrorToProduction('Error in fetchProducts:', { data: error })
       throw new Error('Failed to load marketplace data. Please try again.')
     }
+<<<<<<< HEAD
   }, [sortBy, filterCategory, showRecommended])
+=======
+  }, [sortBy, filterCategory, showRecommended]),
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const {
     items: products
     loading
@@ -258,19 +351,34 @@ function MarketplacePageContent() {
   const marketStats = useMemo((,) => {
     if (products.length === 0) return null
     return {
+<<<<<<< HEAD
       averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
       averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
       totalProducts: products.length
+=======
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
+      totalProducts: products.length,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       availableCount: products.filter(p => p.availability === "Available").length
     }
   }, [products])
   const categories = useMemo((,) => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
+<<<<<<< HEAD
   }, [])
   const [showScrollTop, setShowScrollTop] = useState(false)
   useEffect((,) => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800)
     window.addEventListener('scroll', handleScroll)
+=======
+  }, []),
+
+  const [showScrollTop, setShowScrollTop] = useState(false),
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
+    window.addEventListener('scroll', handleScroll),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Loading state
@@ -280,6 +388,58 @@ function MarketplacePageContent() {
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
+<<<<<<< HEAD
+=======
+  }, [sortBy, filterCategory, showRecommended]),;
+  const {;
+    items: products,;
+    loading,;
+    error,;
+    hasMore,;
+    total,;
+    isFetching,;
+    lastElementRef,;
+    refresh,;
+    scrollToTop,;
+    loadMore;
+  } = useInfiniteScrollPagination(fetchProducts, 12),;
+  // Refresh when filters change;
+  useEffect(() => {;
+    const timeoutId = setTimeout(() => {;
+      refresh();
+    }, 100),;
+    return () => clearTimeout(timeoutId);
+  }, [sortBy, filterCategory, showRecommended, refresh]),;
+  const marketStats = useMemo(() => {;
+    if (products.length === 0) return null,;
+    return {;
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,;
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,;
+      totalProducts: products.length,;
+      availableCount: products.filter(p => p.availability === "Available").length;
+    }
+  }, [products]),;
+  const categories = useMemo(() => {;
+    return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
+  }, []),;
+  const [showScrollTop, setShowScrollTop] = useState(false),;
+  useEffect(() => {;
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
+    window.addEventListener('scroll', handleScroll),;
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []),;
+  // Loading state;
+  if (loading && products.length === 0) {;
+    return (;
+      <>;
+        <NextSeo;
+          title="Marketplace - Zion Tech Marketplace Solutions & Services";
+          description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
       <div className="container py-8">
@@ -341,6 +501,11 @@ function MarketplacePageContent() {
           <MarketplaceInsights stats={marketStats} />
         </motion.div>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         <MarketplaceFilterControls
           sortBy = {sortBy,}
@@ -359,8 +524,41 @@ function MarketplacePageContent() {
             <motion.div
               key = {item.id,}
               ref = {index === products.length - 1 ? lastElementRef : null,}
+<<<<<<< HEAD
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+=======
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+;
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
+        <MarketplaceFilterControls;
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          filterCategory={filterCategory}
+          setFilterCategory={setFilterCategory}
+          categories={categories}
+          showRecommended={showRecommended}
+          setShowRecommended={setShowRecommended}
+          loading={isFetching}
+        />
+      </motion.div>
+
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {products.map((item, index) => (
+            <motion.div
+              key={item.id} 
+              ref={index === products.length - 1 ? lastElementRef : null}
+              initial={{ opacity: 0, scale: 0.9 }} ;
+              animate={{ opacity: 1, scale: 1 }} ;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
@@ -377,6 +575,7 @@ function MarketplacePageContent() {
                   }
                   router.push(`/marketplace/listing/${item.id}`)
                 }}
+<<<<<<< HEAD
                 onAddToCart={() => {
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 }))
                   toast({
@@ -385,14 +584,39 @@ function MarketplacePageContent() {
                     action: {
                       label: 'View Cart'
                       onClick: (,) => router.push('/cart')}})
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+                onAddToCart={() => {;
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
+                  toast({;
+                    title: 'Added to cart',;
+                    description: `${item.title} has been added to your cart`,;
+                    action: {;
+                      label: 'View Cart';
+                      onClick: () => router.push('/cart')}});
+                }}
+              />;
+            </motion.div>;
+          ))}
+        </AnimatePresence>;
+      </motion.div>;
+      {(isFetching || loading) && products.length > 0 && (;
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <MarketplaceLoadingGrid count={4} />;
+        </motion.div>;
+      )}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 }}
               />
             </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
+<<<<<<< HEAD
       {(isFetching |loading) && products.length > 0 && (
+=======
+      {(isFetching || loading) && products.length > 0 && (
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
@@ -404,11 +628,19 @@ function MarketplacePageContent() {
           ) : (
             <Button onClick={loadMore} variant="outline" size="lg">
               Load More Products
+<<<<<<< HEAD
             </Button>          )}
           {total !== undefined && (
             <p className="mt-2 text-sm text-muted-foreground">
               Showing {products.length} of {total} items
             </p>
+=======
+            </Button>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </div>
       )}
@@ -438,11 +670,14 @@ function MarketplacePageContent() {
 <<<<<<< HEAD
   )
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 // Main export
 export default function MarketplacePage() {
   return <MarketplacePageContent />
 }
 =======
+<<<<<<< HEAD
   );
 
 }, [sortBy, filterCategory, showRecommended]);
@@ -621,3 +856,22 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
 }</AnimatePresence> </div> </>) ;
 }// Main export '"
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+;
+// Main export;
+export default function MarketplacePage() {;
+  return <MarketplacePageContent />;
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+// Main export export default function MarketplacePage() {
+  return <MarketplacePageContent />;
+<<<<<<< HEAD
+};
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

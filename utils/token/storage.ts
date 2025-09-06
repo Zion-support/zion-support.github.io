@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 class TokenStore {
   private config: any = {};
 =======
@@ -8,19 +9,15 @@ import path from 'path';
 import { TokenConfig, TokenTransaction, Wallet } from './types';
 import { DEFAULT_TOKEN_CONFIG } from './rules';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
-
-  setConfig(config: any) {
-    this.config = config;
-  }
-
-  getConfig() {
-    return this.config;
-  }
-}
-
-export const tokenStore = new TokenStore();
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
+<<<<<<< HEAD
 export interface TokenConfig {
+=======
+<<<<<<< HEAD
+export interface TokenConfig {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tokenName: string;
   tokenSymbol: string;
   decimals: number;
@@ -40,8 +37,14 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
+<<<<<<< HEAD
   }
 export interface TokenStoreData {
+=======
+  };
+
+export interface TokenStoreData {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -66,6 +69,7 @@ function readFromDisk(): TokenStoreData | null {
   }
 }
 export const tokenStore = new TokenStore();
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 
@@ -131,3 +135,15 @@ export const tokenStore = {
   },
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

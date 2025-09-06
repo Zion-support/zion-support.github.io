@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 <<<<<<< HEAD
 =======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const EnhancedNavigation = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <nav className='bg-white shadow-lg sticky top-0 z-50'>
       <div className='container mx-auto px-4'>
@@ -65,7 +73,7 @@ const EnhancedNavigation = () => {
 <<<<<<< HEAD
             >              Get Startedconst EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -206,14 +214,19 @@ const EnhancedNavigation = () => {
     </nav>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 };
 export default EnhancedNavigation;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 );
 }
 export default EnhancedNavigation;}
 export default EnhancedNavigation;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
   );
@@ -222,3 +235,9 @@ export default EnhancedNavigation;
 
 export default EnhancedNavigation;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

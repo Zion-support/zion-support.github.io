@@ -1,13 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { useEffect, useState } from "react";
+=======
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from "next/head";
-export default function PartnerDashboard() {
+export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
+<<<<<<< HEAD
   const [token, setToken] = useState<string | null>(null),
   const [usage, setUsage] = useState<any>(null),
 =======
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 }
 
 export default function PartnerDashboard() {
@@ -23,6 +36,31 @@ export default function PartnerDashboard() {
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+=======
+
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
+
+  const [token, setToken] = useState<string | null>(null);
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const [usage, setUsage] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+export default function PartnerDashboard() {
+  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
+
+  const [token, setToken] = useState<string | null>(null);
+
+  const [usage, setUsage] = useState<any>(null);
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const saved = localStorage.getItem('zion_partner_token');
     if (saved) setToken(saved);
   }, []);
@@ -80,7 +118,7 @@ export default function PartnerDashboard() {
       method: "POST"
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
 =======
@@ -89,6 +127,7 @@ export default function PartnerDashboard() {
     }
   }
   return (
+<<<<<<< HEAD
     <div className='min-h-screen bg-gray-50 text-gray-900'>
         <title>Zion Partner Dashboard</title>
       </Head>
@@ -179,6 +218,15 @@ export default function PartnerDashboard() {
                       </li>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                     ))}
+=======
+
+                    ))}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </ul>
                 </div>
               </div>
@@ -190,6 +238,7 @@ export default function PartnerDashboard() {
               <p className="text-gray-500 text-sm">No usage yet.</p>
             )}
           </div>
+<<<<<<< HEAD
         </div>
 =======
               <p className='text-gray-500 text-sm'>No usage yet.</p>
@@ -225,9 +274,18 @@ export default function PartnerDashboard() {
 );
 }
 =======
+<<<<<<< HEAD
           </a>
         </div>
       </div>
     </div>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+        </div>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

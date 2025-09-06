@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useMemo } from 'react',
+=======
+import React, { useMemo } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -26,15 +30,23 @@ import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function DynamicServicePage() {
-<<<<<<< HEAD
-  const router = null;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+<<<<<<< HEAD
+export default function DynamicServicePage() {
+=======
+export default function DynamicServicePage() {;
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
@@ -96,6 +108,10 @@ export default function DynamicServicePage() {
     return undefined;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   }, [slug]);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
@@ -227,10 +243,23 @@ const canonicalUrl = `https://ziontechgroup.com/${slug}`;
     </UltraAdvancedFuturisticBackground>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+// Static export support: generate root-level pages for service slugs;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 // Static export support: generate root-level pages for service slugs
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
@@ -264,15 +293,27 @@ function normalizeSlug(value: string): string {
     return null
   } catch {
     return null
+<<<<<<< HEAD
   }
 }
 =======
+<<<<<<< HEAD
     .replace(/(^-|-$)/g, '');
 }
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  };
+}
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export const getStaticPaths: GetStaticPaths = async () => {
+=======
+export const getStaticPaths: GetStaticPaths = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const services = collectAllServices();
   const candidateSlugs = new Set<string>()
   // Gather existing root-level page slugs to avoid conflicts
@@ -293,6 +334,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         }
     }
   } catch {}
+<<<<<<< HEAD
 =======
 
       }
@@ -300,6 +342,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   } catch {}
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
@@ -307,6 +356,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
 <<<<<<< HEAD
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
+=======
+    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
+    fallback: true,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {;
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} };};
+  // Exclude any slug that conflicts with an existing root page file
+  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
+
+  return {
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fallback: true
   }
 }
@@ -322,8 +386,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
+<<<<<<< HEAD
   return { props: {} }
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
@@ -338,3 +404,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: {} };
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+  return { props: {} };
+};
+=======
+
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

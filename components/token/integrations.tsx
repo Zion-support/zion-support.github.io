@@ -1,5 +1,4 @@
-import dynamic from 'next/dynamic',
-import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { useWallet  } from '../../hooks/useWallet';
@@ -9,11 +8,25 @@ const ClientOnlyBridge = null;
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+import dynamic from 'next/dynamic',
+=======
+import dynamic from 'next/dynamic';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import React, { useEffect, useState } from 'react';
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import { useWallet } from '../../hooks/useWallet';
 import {
+<<<<<<< HEAD
   fetchDepinActivities
   calculateRewards
   DepinReward;
+=======
+  fetchDepinActivities,
+  calculateRewards,;
+  DepinReward,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
 const ClientOnlyBridge = dynamic(
@@ -22,6 +35,7 @@ const ClientOnlyBridge = dynamic(
 <<<<<<< HEAD
 );import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
 import { CHAINS } from '../../utils/chains';
+<<<<<<< HEAD
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false })
 =======
 );
@@ -29,6 +43,10 @@ const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'),
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function TokenIntegrationsPage() {
+=======
+const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
+export default function TokenIntegrationsPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { account, connect } = useWallet();
   const [region, setRegion] = useState('');
   const [stake, setStake] = useState('');
@@ -66,9 +84,23 @@ export default function TokenIntegrationsPage() {
       body: JSON.stringify({ region, stakeUsd: stake }),
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
+<<<<<<< HEAD
+<<<<<<< HEAD
     const data = await res.json();
     setSuggestion(data);
   }
+=======
+
+=======
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    const data = await res.json();
+    setSuggestion(data);
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className='space-y-8'>
       <section className='space-y-2'>
@@ -108,9 +140,15 @@ export default function TokenIntegrationsPage() {
                 </span>
 <<<<<<< HEAD
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>    const data = await res.json();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+<<<<<<< HEAD
     setSuggestion(data)
   }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-8">
       <section className="space-y-2">
@@ -137,6 +175,14 @@ export default function TokenIntegrationsPage() {
                 <span className='font-medium'>+{r.points} ZION$</span>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
               </div>
+=======
+              </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
@@ -240,8 +286,23 @@ export default function TokenIntegrationsPage() {
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+;
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

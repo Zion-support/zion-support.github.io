@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
@@ -16,17 +17,19 @@ interface PerformanceMetrics {
   memoryUsage?: number;
   networkLatency?: number
 }
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
-interface PerformanceMonitorProps {
-  showUI?: boolean;
-  autoRefresh?: boolean;
-  refreshInterval?: number
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  showUI;
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+=======
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+=======
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
@@ -51,7 +54,11 @@ if (ms < 1000) return `$ {
 =======
 
 };
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -89,13 +96,21 @@ else score += 25
 if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
+<<<<<<< HEAD
 else score += 25
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
 
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+else score += 25 
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -124,8 +139,21 @@ if (score >= 50) return 'Needs Improvement';
 <<<<<<< HEAD
 }
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

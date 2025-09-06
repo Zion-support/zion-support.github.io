@@ -1,5 +1,4 @@
-import React, { useState } from 'react',
-import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
@@ -11,7 +10,16 @@ import { enhancedMicroSaasServices  } from '../data/enhanced-micro-saas-services
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+import React, { useState } from 'react',
+=======
+import React, { useState } from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Check
   Star
   Zap
@@ -83,6 +91,79 @@ import {
   Crown
   Gem
   Diamond;
+=======
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Crown,
+  Gem,;
+  Diamond,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -91,13 +172,18 @@ import {
 <<<<<<< HEAD
   revolutionaryMicroSaasServices
   revolutionaryServiceCategories;
+=======
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { revolutionaryMicroSaasServices, revolutionaryServiceCategories } from '../data/revolutionary-micro-saas-services';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 =======
   revolutionaryMicroSaasServices,
   revolutionaryServiceCategories,;
@@ -108,15 +194,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ComprehensivePricingPage() {
+=======
+export default function ComprehensivePricingPage() {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
-<<<<<<< HEAD
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  const allServices = null;
-=======
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 <<<<<<< HEAD
   const allServices = [
@@ -250,6 +335,10 @@ export default function ComprehensivePricingPage() {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const contactInfo = {
 <<<<<<< HEAD
     mobile: '+1 302 464 0950'
@@ -371,6 +460,8 @@ export default function ComprehensivePricingPage() {
     },      icon: <Shield className="w-6 h-6" />
     }
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
       metric: '2000%+'
       label: 'Average ROI'
       description: 'Proven business value'
@@ -378,6 +469,7 @@ export default function ComprehensivePricingPage() {
     },      icon: <TrendingUp className="w-6 h-6" />
     }
 =======
+<<<<<<< HEAD
         'Basic service access',
         'Email support',
         'Standard features',
@@ -452,6 +544,25 @@ export default function ComprehensivePricingPage() {
       icon: <TrendingUp className='w-6 h-6' />,
     },
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
+<<<<<<< HEAD
+      icon: <TrendingUp className='w-6 h-6' />,
+    },      icon: <TrendingUp className="w-6 h-6" />
+    }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -486,9 +597,24 @@ export default function ComprehensivePricingPage() {
         duration: 0.5,
       },
     },
+<<<<<<< HEAD
   };
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>
       <div className='min-h-screen'>
@@ -546,6 +672,7 @@ export default function ComprehensivePricingPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
+<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Comprehensive
                 </span>
@@ -568,12 +695,22 @@ export default function ComprehensivePricingPage() {
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
 =======
+<<<<<<< HEAD
                 className='text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.
@@ -586,8 +723,17 @@ export default function ComprehensivePricingPage() {
               <motion.div
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
 =======
+<<<<<<< HEAD
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -605,23 +751,54 @@ export default function ComprehensivePricingPage() {
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
+<<<<<<< HEAD
 =======
                     </div>
                   </div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 ))}
               </motion.div>
+=======
+
+                  </div>
+
+                ))}
+              </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* CTA Buttons */}
               <motion.div
 <<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
+<<<<<<< HEAD
               >              <motion.div
+=======
+              >              <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
 =======
+<<<<<<< HEAD
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -691,12 +868,31 @@ export default function ComprehensivePricingPage() {
 <<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 20 }}        <section id="pricing-tiers" className="py-20">
           <div className="container mx-auto px-4">
+<<<<<<< HEAD
             <motion.div
               className="text-center mb-16"
 =======
+<<<<<<< HEAD
               className='text-center mb-16'
               initial={{ opacity: 0, y: 20 }}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+            <motion.div 
+              className="text-center mb-16"
+<<<<<<< HEAD
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -727,7 +923,11 @@ export default function ComprehensivePricingPage() {
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <motion.div
+=======
+            <motion.div 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -857,6 +1057,14 @@ export default function ComprehensivePricingPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
@@ -869,9 +1077,21 @@ export default function ComprehensivePricingPage() {
             <motion.div
               className="mb-8"
 =======
+<<<<<<< HEAD
               className='mb-8'
               initial={{ opacity: 0, y: 20 }}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}
+
+              initial={{ opacity: 0, y: 20 }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -969,8 +1189,16 @@ export default function ComprehensivePricingPage() {
               variants={containerVariants}
               initial='hidden'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               whileInView='visible'              viewport={{ once: true }}            <motion.div
               className={viewMode === 'grid'
+=======
+              whileInView='visible'              viewport={{ once: true }}            <motion.div 
+              className={viewMode === 'grid' 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
@@ -978,9 +1206,21 @@ export default function ComprehensivePricingPage() {
               initial="hidden"
               whileInView="visible"
 =======
+<<<<<<< HEAD
               whileInView='visible'
               viewport={{ once: true }}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+              whileInView='visible'              viewport={{ once: true }}
+
+              viewport={{ once: true }}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -990,10 +1230,26 @@ export default function ComprehensivePricingPage() {
                 >
                   <UltraFuturisticCard
 <<<<<<< HEAD
+<<<<<<< HEAD
                     variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
 =======
                     variant={(service.variant as any) || 'quantum-advanced'}
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -1037,6 +1293,7 @@ export default function ComprehensivePricingPage() {
                               <span className="text-gray-300">{feature}</span>
                           ))}
                         </div>
+<<<<<<< HEAD
 =======
                               <span className='text-gray-300'>{feature}</span>
                             </div>
@@ -1044,6 +1301,9 @@ export default function ComprehensivePricingPage() {
                         </div>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                         <div className='text-center space-y-2'>
                           <Button
                             variant='primary'
@@ -1223,12 +1483,22 @@ export default function ComprehensivePricingPage() {
               >              <motion.div
                 className="text-center py-16"
 =======
+<<<<<<< HEAD
                 className='text-center py-16'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
+<<<<<<< HEAD
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No Services Found
@@ -1254,7 +1524,7 @@ export default function ComprehensivePricingPage() {
                    onClick={() => {
                      setSearchQuery('');
                      setSelectedCategory('All');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                      setPriceRange('All')
                    }}
                  >
@@ -1376,6 +1646,15 @@ export default function ComprehensivePricingPage() {
                   <div className='text-gray-400 text-sm'>Visit our office</div>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </div>
+=======
+
+                </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           </div>
@@ -1387,4 +1666,12 @@ export default function ComprehensivePricingPage() {
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

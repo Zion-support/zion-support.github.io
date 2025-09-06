@@ -2,13 +2,19 @@ import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type FeedbackWidgetProps = any;
 =======
 export type FeedbackWidgetProps = {
+=======
+
+export type FeedbackWidgetProps = {;
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   responseId?: string;
   aiModel?: string;
 }
 export default function FeedbackWidget({
+<<<<<<< HEAD
   responseId
   aiModel
 }: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
@@ -17,6 +23,7 @@ export default function FeedbackWidget({
 }
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
 =======
+<<<<<<< HEAD
 
 export type FeedbackWidgetProps = {
   responseId?: string;
@@ -29,6 +36,17 @@ export default function FeedbackWidget({
   aiModel,
 }: FeedbackWidgetProps) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  responseId,
+  aiModel,;
+}: FeedbackWidgetProps) {  const [rating, setRating] = useState<null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {;
+  responseId?: string;
+  aiModel?: string
+};
+
+export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
@@ -89,6 +107,7 @@ export default function FeedbackWidget({
     } finally {
 <<<<<<< HEAD
       setSubmitting(false);    }
+<<<<<<< HEAD
   }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -106,7 +125,10 @@ export default function FeedbackWidget({
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
       <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
@@ -183,7 +205,22 @@ export default function FeedbackWidget({
     </div>
 <<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+  );
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+=======
+}
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

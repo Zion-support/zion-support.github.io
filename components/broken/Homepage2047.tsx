@@ -3,9 +3,14 @@ import { motion, AnimatePresence  } from 'framer-motion';
 import Link from 'next/link';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   ArrowRight
   Play
   TrendingUp
@@ -59,17 +64,70 @@ import {
   Star as StarIcon
   Sparkles
   Target as TargetIcon;} from 'lucide-react';import {
+=======
+  ArrowRight,
+  Play,
+  TrendingUp,
+  Brain,
+  Shield,
+  Rocket,
+  Globe,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles as SparklesIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Shield as ShieldIcon,
+  Rocket as RocketIcon,
+  Zap,
+  Eye,
+  Heart,
+  Infinity,
+  ChevronRight,
+  ChevronLeft,
+  ExternalLink,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  DollarSign,
+  BarChart3,
+  Palette,
+  Cloud,
+  Network,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Layers,
+  Globe2,
+  Lock,
+  Code,
+  Server,
+  Phone,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Eye as EyeIcon,
+  ArrowUpRight,
+  Star as StarIcon,
+  Sparkles,;
+  Target as TargetIcon,;} from 'lucide-react';import { ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon
-<<<<<<< HEAD
- } from 'lucide-react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
 // Import our new innovative services
 import { innovative2025AIAutonomousEcosystemV2  } from '../data/2025-innovative-ai-autonomous-ecosystem-v2';
 import { emergingTechBreakthroughs2025V4  } from '../data/2025-emerging-tech-breakthroughs-v4';
@@ -143,11 +201,15 @@ import UltraFuturisticNavigation2047 from './layout/UltraFuturisticNavigation204
 import UltraFuturisticFooter2047 from './layout/UltraFuturisticFooter2047';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Homepage2047: React.FC;
 =======
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const Homepage2047: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
@@ -345,6 +407,45 @@ const Homepage2047: React.FC = () => {
     animate: { opacity: 1, y: 0 }
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
   }
+=======
+      number: `${allInnovativeServices.length}+`,
+      label: 'Innovative Services',
+      icon: Star,
+    },
+    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp },
+    { number: '24/7', label: 'AI Intelligence Available', icon: Brain },
+    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+    { number: "24/7", label: "AI Intelligence Available", icon: Brain },
+    { number: "300+", label: "Countries Served", icon: Globe }
+<<<<<<< HEAD
+
+  ];
+=======
+<<<<<<< HEAD
+=======
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+<<<<<<< HEAD
+    transition: { duration: 0.6 },  };
+
+=======
+<<<<<<< HEAD
+    transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
+=======
+    transition: { duration: 0.6 },  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const staggerContainer = {
     animate: {
       transition: {
@@ -360,6 +461,7 @@ const Homepage2047: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">
       {/* Futuristic Background */}
       <UltraFuturisticBackground2047 />
+<<<<<<< HEAD
 =======
       number: `${allInnovativeServices.length}+`,
       label: 'Innovative Services',
@@ -390,8 +492,21 @@ const Homepage2047: React.FC = () => {
       <UltraFuturisticBackground2047 />
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />
+=======
+
+      {/* Navigation */}
+      <UltraFuturisticNavigation2047 />
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -474,12 +589,28 @@ const Homepage2047: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </p>
               </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='flex flex-col sm:flex-row gap-4'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Link
                   href='/2025-innovative-services-showcase-v2'
@@ -513,6 +644,14 @@ const Homepage2047: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 </Link>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Stats */}
               <motion.div
                 variants={staggerContainer}
@@ -523,8 +662,18 @@ const Homepage2047: React.FC = () => {
                 animate="animate"
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
 =======
+<<<<<<< HEAD
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -547,6 +696,20 @@ const Homepage2047: React.FC = () => {
                 ))}
               </motion.div>
             </motion.div>
+=======
+                    <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>
+
+                  </motion.div>
+
+                ))}
+              </motion.div>
+            </motion.div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Right Content - Featured Service */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -562,12 +725,28 @@ const Homepage2047: React.FC = () => {
               <AnimatePresence mode='wait'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   className='relative'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -643,9 +822,12 @@ const Homepage2047: React.FC = () => {
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                     <Link
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
@@ -654,8 +836,19 @@ const Homepage2047: React.FC = () => {
                       href={featuredServices[currentServiceIndex]?.slug |'#'}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
 =======
+<<<<<<< HEAD
                     >
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                    >
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                       Learn More
                     </Link>
                   </div>
@@ -674,11 +867,27 @@ const Homepage2047: React.FC = () => {
         <div className='max-w-7xl mx-auto'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -698,6 +907,14 @@ const Homepage2047: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Category Cards */}
           <motion.div
             variants={staggerContainer}
@@ -763,6 +980,14 @@ const Homepage2047: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
 <<<<<<< HEAD
@@ -772,11 +997,27 @@ const Homepage2047: React.FC = () => {
         <div className='max-w-7xl mx-auto'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -795,6 +1036,14 @@ const Homepage2047: React.FC = () => {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Services Grid */}
           <motion.div
             variants={staggerContainer}
@@ -844,6 +1093,14 @@ const Homepage2047: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* View All Services CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -851,6 +1108,14 @@ const Homepage2047: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-center mt-16'
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <Link
               href='/2025-innovative-services-showcase-v2'
@@ -881,6 +1146,14 @@ const Homepage2047: React.FC = () => {
         <div className='max-w-4xl mx-auto text-center'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -932,15 +1205,29 @@ const Homepage2047: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
 <<<<<<< HEAD
 }
+=======
+};
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default Homepage2047;  )
 }
 export default Homepage2047;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -948,3 +1235,16 @@ export default Homepage2047;
 
 export default Homepage2047;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+export default Homepage2047;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+export default Homepage2047;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -8,7 +8,10 @@ import {
   User,
   Bell;
 } from 'lucide-react';
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

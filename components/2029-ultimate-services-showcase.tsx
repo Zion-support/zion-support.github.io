@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head',
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 import {
+<<<<<<< HEAD
   Rocket
   Brain
   Atom
@@ -48,7 +58,50 @@ import {
   Gamepad
   Cpu as CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Crown,
+  Star,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle,
+  DollarSign,
+  Users,
+  Clock,
+  Award,
+  Zap as ZapIcon,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Eye,
+  Globe2,
+  Satellite,
+  Dna,
+  Battery,
+  Gamepad,;
+  Cpu as CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -107,6 +160,7 @@ import { practicalBusinessSolutions2028  } from '../data/2028-practical-business
 import { advancedAIAutonomousServices2028  } from '../data/2028-advanced-ai-autonomous-services';
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
@@ -120,6 +174,13 @@ export default function UltimateServicesShowcase2029() {
   const allServices = null;
                   setSelectedPriceRange('all')
 =======
+=======
+export default function UltimateServicesShowcase2029() {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const allServices = [
     ...cuttingEdge2028MicroSaas
     ...practicalBusinessSolutions2028
@@ -486,6 +547,7 @@ export default function UltimateServicesShowcase2029() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
             className='max-w-4xl mx-auto'
           >
             <div className='flex items-center justify-center space-x-2 mb-6'>
@@ -552,8 +614,17 @@ export default function UltimateServicesShowcase2029() {
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg"
 =======
+<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-2xl hover:shadow-cyan-500/25 text-lg'
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
               >
                 Get Started Today
               </Link>
@@ -569,6 +640,14 @@ export default function UltimateServicesShowcase2029() {
                 View Pricing
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mt-16'>
               <div className='text-center'>
@@ -654,6 +733,14 @@ export default function UltimateServicesShowcase2029() {
               {categories.map(category => (
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
                 <button
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -679,6 +766,14 @@ export default function UltimateServicesShowcase2029() {
                 </button>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Price Filter */}
             <div className='flex items-center space-x-2'>
 <<<<<<< HEAD
@@ -707,6 +802,14 @@ export default function UltimateServicesShowcase2029() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
       <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -805,6 +908,29 @@ export default function UltimateServicesShowcase2029() {
                       )}
                     </div>
                   </div>
+=======
+                          className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
+
+                        >
+
+                          {cat}
+                        </span>
+                      ))}
+                      {service.category.length > 3 && (
+                        <span className='px-2 py-1 bg-gray-700/50 text-gray-400 text-xs rounded-lg'>                          +{service.category.length - 3}
+
+                          +{service.category.length - 3}
+
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Features Preview */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white mb-2'>
@@ -844,6 +970,14 @@ export default function UltimateServicesShowcase2029() {
                       )}
                     </ul>
                   </div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Market Info */}
                   <div className='mb-6 space-y-2'>
                     <div className='flex items-center justify-between text-sm'>
@@ -883,6 +1017,7 @@ export default function UltimateServicesShowcase2029() {
 <<<<<<< HEAD
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>
                   </div>
+<<<<<<< HEAD
                   {/* Hover Effect */}
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
                       href={`/services/${service.id}`}
@@ -899,12 +1034,36 @@ export default function UltimateServicesShowcase2029() {
 <<<<<<< HEAD
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 =======
+<<<<<<< HEAD
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+                  {/* Action Button */}
+
+                    </Link>
+                  </div>
+
+                  {/* Hover Effect */}
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 </div>
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* No Results */}
           {filteredServices.length === 0 && (
             <div className='text-center py-20'>
@@ -923,6 +1082,7 @@ export default function UltimateServicesShowcase2029() {
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
+<<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">
               <div className="w-24 h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-12 h-12 text-gray-400" />
@@ -930,9 +1090,20 @@ export default function UltimateServicesShowcase2029() {
               <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
               <p className="text-gray-400 mb-8">Try adjusting your search criteria or browse all services</p>
 =======
+<<<<<<< HEAD
               </p>
               <button
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >
+
+              <button
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
@@ -940,7 +1111,7 @@ export default function UltimateServicesShowcase2029() {
                 }}
 <<<<<<< HEAD
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'                  setSelectedPriceRange('all')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
 =======
@@ -953,6 +1124,14 @@ export default function UltimateServicesShowcase2029() {
           )}
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Contact CTA */}
       <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20'>
 <<<<<<< HEAD
@@ -962,6 +1141,14 @@ export default function UltimateServicesShowcase2029() {
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
           <motion.div
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1026,4 +1213,12 @@ export default function UltimateServicesShowcase2029() {
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

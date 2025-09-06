@@ -1,14 +1,23 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+import {useState} from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 export default function ApplyGrantPage() {
   const router = null;
 =======
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 const categories: GrantCategory[] = [
+<<<<<<< HEAD
   'Ecosystem Tools'
   'Talent Development'
   'Regional Expansion'
@@ -26,6 +35,14 @@ const categories: GrantCategory[] = [
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function ApplyGrantPage() {
+=======
+  'Ecosystem Tools',
+  'Talent Development',
+  'Regional Expansion',
+  'Research Grants',
+];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+export default function ApplyGrantPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -109,8 +126,13 @@ export default function ApplyGrantPage() {
       setLoading(false);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     }
+<<<<<<< HEAD
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+=======
+
+  };
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   return (
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold mb-4'>
@@ -227,6 +249,14 @@ export default function ApplyGrantPage() {
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
           <button
@@ -295,12 +325,22 @@ export default function ApplyGrantPage() {
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
 =======
+<<<<<<< HEAD
           </button>
         </div>
       </div>
     </EnhancedLayout>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

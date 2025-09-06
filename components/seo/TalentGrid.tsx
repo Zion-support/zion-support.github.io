@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
 <<<<<<< HEAD
 type Props = any;
 =======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
@@ -40,7 +45,11 @@ function matchesService(profile: TalentProfile, service?: string) {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
@@ -53,8 +62,13 @@ export default function TalentGrid({ region, service }: Props) {
       ),
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     [region, service]
+=======
+        (p) => matchesRegion(p, region) && matchesService(p, service),
+      ),
+    [region, service],;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (items.length === 0) {
     return (
       <div className="text-sm text-gray-400">
@@ -103,4 +117,9 @@ export default function TalentGrid({ region, service }: Props) {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

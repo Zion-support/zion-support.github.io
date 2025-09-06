@@ -6,10 +6,18 @@ import { AppMetadataValues } from "./MetadataManager",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+<<<<<<< HEAD
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Badge } from "@/components/ui/badge";
 import { X } from 'lucide-react'
 
+=======
+<<<<<<< HEAD
+import { Badge } from '@/components/ui/badge'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -38,10 +46,7 @@ interface MetadataFormProps {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-<<<<<<< HEAD
-  const { control, register, watch, setValue } = form;
-  const keywords = null;
-=======
+
   const { control, register, watch, setValue } = form
   const keywords = watch("keywords")
   const platform = watch("platform")
@@ -52,10 +57,10 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       if (value && !keywords.includes(value)) {
         setValue("keywords", [...keywords, value])
         e.currentTarget.value = ""
-      }
-    }
-  }
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000
+      };
+    };
+  };
+  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
 };  const removeKeyword = (keyword: string,) => {
     setValue(
       "keywords"
@@ -178,7 +183,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
 <<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
   );
@@ -195,3 +202,20 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 };
 '"
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+=======
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from 'lucide-react'
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

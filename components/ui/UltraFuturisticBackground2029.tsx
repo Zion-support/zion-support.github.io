@@ -14,21 +14,16 @@ interface Particle {
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
-<<<<<<< HEAD
-  maxLife: number
-}
 
-=======
   maxLife: number;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface EnergyField {
   x: number;
   y: number;
   radius: number;
   intensity: number;
   color: string;
-<<<<<<< HEAD
-=======
+
   pulse: number;
 <<<<<<< HEAD
 =======
@@ -36,8 +31,13 @@ interface EnergyField {
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 export default function UltraFuturisticBackground2029({
+<<<<<<< HEAD
   children
 }: {
+=======
+  children,
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children: React.ReactNode;
 <<<<<<< HEAD
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -62,17 +62,22 @@ interface EnergyField {
   radius: number
   intensity: number
   color: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   pulse: number
 }
-export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
 <<<<<<< HEAD
-  const canvasRef = null;
-            ease: "easeInOut"
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
+
 =======
+<<<<<<< HEAD
 =======
 }) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -676,9 +681,11 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             opacity: [0.2, 0.6, 0.2]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
             rotate: [-45, 315],
@@ -689,7 +696,25 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
             repeat: Infinity,
             ease: 'easeInOut',
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+=======
+            duration: 10,
+            repeat: Infinity,
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
           }}
+=======
+<<<<<<< HEAD
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -708,4 +733,12 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
 }
 =======
   );
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

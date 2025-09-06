@@ -14,23 +14,12 @@ interface ContentCardProps {
   date?: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   category?: string
 }
-
-const ContentCard: React.FC<ContentCardProps> = ({
-  title;
-  description;
-  href;
-  icon;
-  color;
-  glow;
-  date;
-  category
-}) => {
-  return (
-    <Link
-      href;
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+
   category?: string;
 const ContentCard: React.FC<ContentCardProps> = ({
   title
@@ -73,6 +62,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
         </div>
 <<<<<<< HEAD
         {category && (
+<<<<<<< HEAD
           <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}          <span className="px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20">
 =======
 
@@ -83,6 +73,20 @@ const ContentCard: React.FC<ContentCardProps> = ({
           </span>
         )}
       </div>
+=======
+          <span className='px-3 py-1 bg-white/10 backdrop-blur-xl rounded-full text-xs text-white/60 border border-white/20'>            {category}
+
+            {category}
+
+          </span>
+        )}
+      </div>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Content */}
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>
         {title}
@@ -141,6 +145,7 @@ export default ContentCard;    </Link>
   )
 }
 export default ContentCard;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 };
@@ -148,3 +153,26 @@ export default ContentCard;
 
 export default ContentCard;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+          </span>
+
+        {description}
+      </p>
+
+      {/* Footer */}
+
+        )}
+      </div>
+
+      {/* Hover Effects */}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

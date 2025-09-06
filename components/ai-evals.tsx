@@ -1,5 +1,4 @@
-import React from 'react',
-import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
@@ -33,7 +32,15 @@ import Button from '../components/ui/Button';
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
 
 =======
+import React from 'react',
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+import React from 'react';
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Head from 'next/head';
+
 import {
+<<<<<<< HEAD
   Check
   ShieldCheck
   TrendingUp
@@ -42,9 +49,24 @@ import {
   Mail
   MapPin
   ExternalLink;
+=======
+  Check,
+  ShieldCheck,
+  TrendingUp,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,;
+  ExternalLink,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -52,6 +74,17 @@ export default function AIEvalsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+export default function AIEvalsPage() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',;
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const features = [
     'Golden datasets and synthetic evals'
     'Hallucination and grounding score'
@@ -70,7 +103,6 @@ export default function AIEvalsPage() {
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
       </Head>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-12'>
@@ -204,8 +236,23 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
+<<<<<<< HEAD
 );
+<<<<<<< HEAD
 }
 =======
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+=======
+	);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+=======
+	);
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

@@ -1,9 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface ContentCreationProps {
   // Add props here as needed
 }
 
+=======
+interface ContentCreationProps {
+  // Add props here as needed
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function ContentCreation({ }: ContentCreationProps) {
   return (
     <div>
@@ -11,3 +21,26 @@ export default function ContentCreation({ }: ContentCreationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:src.pages.disabled/ContentCreation.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+:src.pages.disabled/ContentCreation.jsx
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/ContentCreation.jsx
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

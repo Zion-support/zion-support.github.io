@@ -1,6 +1,9 @@
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
+
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 type Props = any;
@@ -12,7 +15,22 @@ type Props = { vendor: Vendor | null };
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function AgencyDashboardPage({ vendor }: Props) {;
+=======
+type Props = { vendor: Vendor | null };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function AgencyDashboardPage({ vendor }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
@@ -50,7 +68,11 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       )
         .split(',')
         .map(s => s.trim())
+<<<<<<< HEAD
         .filter(Boolean)
+=======
+        .filter(Boolean),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only
 <<<<<<< HEAD
@@ -70,10 +92,19 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   }
   function addPackage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (!pkgTitle |!pkgPrice |!activeVendor) return;
 =======
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+    if (!pkgTitle |!pkgPrice |!activeVendor) return;
+=======
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     const packages = [
       ...(activeVendor.packages |[])
       {
@@ -88,6 +119,12 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setPkgDesc('');
     setPkgPrice('');
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className='space-y-8'>
       <div className='flex items-center justify-between'>
@@ -169,6 +206,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>
         </form>
       </section>
+<<<<<<< HEAD
 =======
             </button>
           </div>
@@ -176,6 +214,12 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       </section>
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -249,9 +293,24 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   );
 }
 =======
+<<<<<<< HEAD
   );
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
+          </div>
+        </form>
+      </section>
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -280,6 +339,20 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     });
     fetchItems();
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   useEffect(() => {
     fetchItems();
   }, []);
@@ -326,20 +399,32 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
         </div>
       ))}
+<<<<<<< HEAD
     </div>
   );
 <<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
+=======
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
 };  )
 }
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
+=======
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null, // tie to auth later
   return { props: { vendor } }
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 }
@@ -350,3 +435,15 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return { props: { vendor } };
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+=======
+    </div>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+};
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

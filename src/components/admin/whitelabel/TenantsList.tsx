@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -48,9 +50,113 @@ export function TenantsList() {
   useEffect(() => {
     loadTenants()
   }, []),
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
+        .order('created_at', { ascending: false })
+
+}
+}
 <<<<<<< HEAD
-  const loadTenants = null;
+=======
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React, { useState, useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow;
+} from '@/components/ui/table',;
+import { Button } from '@/components/ui/button',;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',;
+import { Badge } from '@/components/ui/badge',;
+import { toast } from '@/hooks/use-toast',;
+import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant',;
+import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react';
+import { format } from 'date-fns',;
+export function TenantsList() {;
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    loadTenants();
+  }, []),;
+  const loadTenants = async () => {;
+    try {;
+      setIsLoading(true),;
+      const { data, error } = await supabase;
+        .from('whitelabel_tenants');
+        .select('*');
+        .order('created_at', { ascending: false }),;
+      if (error) throw error,;
+      setTenants(data as WhitelabelTenant[]);
+    } catch (error: any) {;
+      logErrorToProduction('Error loading tenants:', { data: error }),;
+      toast({;
+        variant: 'destructive',;
+        title: 'Failed to load tenants',;
+        description: error.message});
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
+    try {;
+      const { error } = await supabase;
+        .from('whitelabel_tenants');
+        .update({ is_active: !(tenant as any).is_active });
+        .eq('id', (tenant as any).id),;
+      if (error) throw error,;
+      // Update local state;
+      setTenants(tenants.map(t =>;
+        (t as any).id === (tenant as any).id ? { ...t, is_active: !(t as any).is_active } : t;
+      )),;
+      toast({;
+        title: `Tenant ${(tenant as any).is_active ? 'deactivated' : 'activated'}`,;
+        description: `${(tenant as any).brand_name} has been ${(tenant as any).is_active ? 'deactivated' : 'activated'} successfully.`});
+    } catch (error: any) {;
+      logErrorToProduction('Error toggling tenant status:', { data: error }),;
+      toast({;
+        variant: 'destructive',;
+        title: 'Failed to update tenant',;
+        description: error.message});
+    }
+  },;
+  const verifyDns = async (tenant: WhitelabelTenant) => {;
+    try {;
+      // In a real implementation, this would verify DNS records;
+      // For now, we'll just mark it as verified;
+      const { error } = await supabase;
+        .from('whitelabel_tenants');
+        .update({ dns_verified: true });
+        .eq('id', (tenant as any).id),;
+      if (error) throw error,;
+      // Update local state;
+      setTenants(tenants.map(t =>;
+        (t as any).id === (tenant as any).id ? { ...t, dns_verified: true } : t;
+      )),;
+      toast({;
+        title: 'DNS verified',;
+        description: `Custom domain for ${(tenant as any).brand_name} has been verified.`});
+    } catch (error: any) {;
+      logErrorToProduction('Error verifying DNS:', { data: error }),;
+      toast({;
+        variant: 'destructive',;
+        title: 'Failed to verify DNS';
+        description: error.message});
+    }
+  },
+
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">
@@ -98,7 +204,7 @@ export function TenantsList() {
                       >
                         {tenant.subdomain}
                         <ExternalLink className="ml-1 h-3 w-3" />
-                      </a>
+                      </Link>
                     </TableCell>
                     <TableCell>
                       {tenant.custom_domain ? (
@@ -111,7 +217,7 @@ export function TenantsList() {
                           >
                             {tenant.custom_domain}
                             <ExternalLink className="ml-1 h-3 w-3" />
-                          </a>
+                          </Link>
                           <Badge 
                             variant={tenant.dns_verified ? "default" : "outline"} 
                           >
@@ -168,17 +274,18 @@ export function TenantsList() {
                                 Enable Tenant
                               </>
                             )}
-                          </DropdownMenuItem>
-                        </DropdownMenuContent>
-                      </DropdownMenu>
-                    </TableCell>
-                  </TableRow>
-                ))
+                          </DropdownMenuItem>;
+                        </DropdownMenuContent>;
+                      </DropdownMenu>;
+                    </TableCell>;
+                  </TableRow>;
+                ));
               )}
-            </TableBody>
-          </Table>
-        </div>
+            </TableBody>;
+          </Table>;
+        </div>;
       )}
+<<<<<<< HEAD
     </div>
 <<<<<<< HEAD
   )
@@ -220,3 +327,14 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 }</div>) ;
 }'"
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+    </div>;
+  );
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

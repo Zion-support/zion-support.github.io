@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -10,6 +11,9 @@ async function loadRequests(): Promise<any[]> {
 =======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
 messages: [ {
@@ -17,8 +21,27 @@ messages: [ {
 <<<<<<< HEAD
 }
 =======
+<<<<<<< HEAD
 };
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+ const response = await client.chat.completions.create ({
+  model: 'gpt-4o-mini';
+messages: [ {
+  role: 'system', content: 'You are a helpful assistant.' 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+// Create utility
+export const Create = () => {
+  // Implementation here
+  return null;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 {
   role: 'user', content: prompt
 }];
@@ -31,6 +54,10 @@ const typeMatch = content.match (/type\s*:\s* (.+) $/im);
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 async function summarizeWithOpenAI(description: string) {
   try {
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' }
@@ -56,7 +83,11 @@ const typeMatch = content.match (/type\s*:\s* (.+) $/im);
         { role: 'user', content: prompt },
       ],
       temperature: 0.3,
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     });
     const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
@@ -77,7 +108,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 <<<<<<< HEAD
   const { name, email, budget, timeline, description, talentSlug } =
@@ -90,7 +121,15 @@ export default async function handler(
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
 }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
@@ -157,7 +196,7 @@ const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   requests.push(record);
   await saveRequests(requests);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // TODO: Integrate notifications (email/webhook) for admin and talent
 <<<<<<< HEAD
 return res.status(200).json({ id, status: 'ok' });
@@ -165,4 +204,9 @@ return res.status(200).json({ id, status: 'ok' });
 =======
 
   return res.status(200).json({ id, status: 'ok' });
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

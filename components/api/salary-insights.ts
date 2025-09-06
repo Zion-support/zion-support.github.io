@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -7,6 +8,10 @@ type RequestBody = any;
   return res.status(200).json(response)
 }
 =======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
@@ -198,7 +203,7 @@ export default async function handler(
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
   const body: RequestBody = req.body;
@@ -305,6 +310,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
   // Tags
   const scarceSkills = [
     'RAG'
@@ -340,6 +350,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   }
 return res.status(200).json(response);  return res.status(200).json(response)
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
     recommendedHourlyUsd: recommendedHourly,
@@ -356,3 +367,25 @@ return res.status(200).json(response);  return res.status(200).json(response)
 
   return res.status(200).json(response);
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+<<<<<<< HEAD
+=======
+
+  // Tags
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+}
+}
+}
+}
+}
+}
+}
+}
+=======
+  // Tags
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

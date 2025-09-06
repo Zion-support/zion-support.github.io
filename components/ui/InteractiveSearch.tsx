@@ -2,15 +2,24 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function InteractiveSearch({ placeholder;
 =======
 =======
 }
 
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
 export default function InteractiveSearch({
+<<<<<<< HEAD
   placeholder = 'Search talent, skills, or jobs...'
 }: {
+=======
+  placeholder = 'Search talent, skills, or jobs...',
+}: {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   placeholder?: string;
 }) {
   const [value, setValue] = useState('');
@@ -29,7 +38,7 @@ export default function InteractiveSearch({
         <button
           onClick={() => setValue('')}
           className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
       <input
@@ -83,8 +92,20 @@ export default function InteractiveSearch() {export default function Interactive
         </button>;
       </div>;
     </form>;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }}
 =======
+<<<<<<< HEAD
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  );
+}}
+
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

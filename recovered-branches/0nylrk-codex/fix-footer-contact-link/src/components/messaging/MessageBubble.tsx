@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { format  } from 'date-fns';
 import { PaperclipIcon  } from 'lucide-react';
@@ -6,11 +7,33 @@ import { cn  } from '@/lib/utils';
 import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   message: Message;
 <<<<<<< HEAD
 =======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+  message: Message,
+  isUserMessage: boolean
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react',;
+import { format } from 'date-fns',;
+import { PaperclipIcon } from 'lucide-react',;
+import { cn } from '@/lib/utils',;
+import { Message } from '@/types/messaging',;
+interface MessageBubbleProps {;
+  message: Message,;
+  isUserMessage: boolean;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   message: Message
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isUserMessage: boolean
 }
 =======
@@ -21,19 +44,29 @@ interface MessageBubbleProps {
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
 <<<<<<< HEAD
-    <div className;
-        isUserMessage 
-          ? "bg-zion-purple text-white" 
+
 =======
-    <div className={cn(
+<<<<<<< HEAD
+    <div className={cn(;
       "flex";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <div className={cn(
+      "flex",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       isUserMessage ? "justify-end" : "justify-start"
     )}>
       <div className={cn(
+<<<<<<< HEAD
         "max-w-[75%] rounded-lg px-4 py-2";
         isUserMessage
           ? "bg-zion-purple text-white"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+=======
+        "max-w-[75%] rounded-lg px-4 py-2",
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>
@@ -45,9 +78,16 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
           >
             <PaperclipIcon className="h-3 w-3 mr-1" />
+<<<<<<< HEAD
             {message.attachment_name |'Attachment'}
           </a>
         )}
+=======
+            {message.attachment_name || 'Attachment'}
+          </Link>
+        )}
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>

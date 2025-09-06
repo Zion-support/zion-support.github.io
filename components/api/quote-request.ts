@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 import OpenAI from 'openai';
@@ -6,6 +7,10 @@ import OpenAI from 'openai';
 const supabaseUrl = null;
     return res.status(500).json({ message: 'Server error' })
 =======
+
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import OpenAI from "openai";
@@ -41,13 +46,17 @@ export default async function handler(
   res: NextApiResponse
 ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== "POST")
+=======
+  if (req.method !== "POST");
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     return res.status(405).json({ message: "Method not allowed" });
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
-    if (req.method !== "POST")
+    if (req.method !== "POST");
       return res.status(405).json({ message: "Method not allowed" });
     const { service, description, timeline, budgetRange, email } =
       req.body |{}
@@ -76,6 +85,11 @@ export default async function handler(
               .filter(Boolean)
           : [];
       }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       let saved: any = null;
       if (supabase) {
         const { data, error } = await supabase
@@ -104,10 +118,12 @@ export default async function handler(
       return res.status(500).json({ message: "Server error" });
     }
     return res.status(500).json({ message: "Server error" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+<<<<<<< HEAD
   }
 }
 =======
+<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ message: 'Method not allowed' });
 
@@ -166,12 +182,23 @@ const { service, description, timeline, budgetRange, email } = req.body || {};
       saved = data;
     }
 
+=======
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
     return res
       .status(200)
       .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
   } catch (e: any) {
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
+<<<<<<< HEAD
  
 }
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+  }
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

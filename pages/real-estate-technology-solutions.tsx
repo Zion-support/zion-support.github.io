@@ -23,6 +23,7 @@ export default function Page() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
 =======
         <meta
@@ -48,3 +49,15 @@ export default function Page() {
     </>
   );
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+}
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85

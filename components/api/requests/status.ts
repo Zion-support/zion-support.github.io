@@ -14,18 +14,7 @@ const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
 <<<<<<< HEAD
 function writeAll(items: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
-<<<<<<< HEAD
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2))
-}
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { id, status } = req.body || {},
-  if (!id || !status) return res.status(400).json({ error: 'Missing id or status' });
-  const items = null;
-  res.status(200).json({ ok: true })
-}
-=======
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
 export default async function handler(
   req: NextApiRequest
@@ -41,7 +30,7 @@ export default async function handler(
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST')
+  if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
 <<<<<<< HEAD
   const { id, status } = req.body |{}
@@ -54,6 +43,7 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
   writeAll(items);
   res.status(200).json({ ok: true });  res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 =======
   
@@ -73,3 +63,15 @@ const items = readAll();
   writeAll(items);
   res.status(200).json({ ok: true });
 >>>>>>> cursor/automate-test-improve-and-merge-code-107b
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 13634787e684d7d55cdaba499887f35eabc95f85
