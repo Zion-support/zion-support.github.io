@@ -1,4 +1,7 @@
 import React from 'react';
+import FeatureCard from '@/components/FeatureCard';
+import PricingTier from '@/components/PricingTier';
+import TestimonialCard from '@/components/TestimonialCard';
 import Link from 'next/link';
 import FeatureCard from '../../components/FeatureCard';
 import PricingTier from '../../components/PricingTier';
