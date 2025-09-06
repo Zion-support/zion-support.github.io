@@ -1,0 +1,1 @@
+ <div> <h1>RecommendationsPage</h1> <p>Component placeholder - needs implementation</p> </div> 

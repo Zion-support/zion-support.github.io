@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from 'next/head';
 
 interface SEOHeadProps {
@@ -8,7 +9,7 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
 }
@@ -23,7 +24,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noindex = false,
-  nofollow = false,
+  nofollow = false
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
@@ -38,17 +39,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     description: 'Leading provider of AI services, IT solutions, and micro SaaS development',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
+      addressCountry: 'US'
     },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-555-123-4567',
-      contactType: 'customer service',
+      contactType: 'customer service'
     },
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-    ],
+      'https://twitter.com/ziontechgroup'
+    ]
   };
 
   const mergedStructuredData = structuredData || defaultStructuredData;
@@ -67,7 +68,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
+
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -110,7 +111,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(mergedStructuredData),
+          __html: JSON.stringify(mergedStructuredData)
         }}
       />
       

@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+import { Link } from \'react-router-dom\'; export default function Page() {; \'"}
+const { Link } from "react-router-dom"; export default function Page() {; ""}"""
+import { Link } from 'react-router-dom'; export default function Page() {; '"}""
+=======
+<<<<<<< HEAD
+=======
+import { Link } from \'react-router-dom\'; export default function Page() {; \'"}
+const { Link } from "react-router-dom"; export default function Page() {; ""}"""
+import { Link } from 'react-router-dom'; export default function Page() {; '"}""
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

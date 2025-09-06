@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+import React from \'react\'; export const \"SkipLink\": React.FC = () => {; return(; <a; href=\"#main-content\";\" className=\"skip-link\"; data-skip-link; >;\" Skip to main content;\";\" </a>;\";\" );\" };\";\";
+const React from "react"; export const SkipLink: React.FC = () => {; return(; <a; href="#main-content";" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" );" };";";'"'"
+import _React from 'react'; export const "SkipLink": _React.FC = () => {; return(; <a; href="#main-content";" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" );" };";";
+=======
+<<<<<<< HEAD
+=======
+import React from \'react\'; export const \"SkipLink\": React.FC = () => {; return(; <a; href=\"#main-content\";\" className=\"skip-link\"; data-skip-link; >;\" Skip to main content;\";\" </a>;\";\" );\" };\";\";
+const React from "react"; export const SkipLink: React.FC = () => {; return(; <a; href="#main-content";" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" );" };";";'"'"
+import _React from 'react'; export const "SkipLink": _React.FC = () => {; return(; <a; href="#main-content";" className="skip-link"; data-skip-link; >;" Skip to main content;";" </a>;";" );" };";";
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de

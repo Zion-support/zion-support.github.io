@@ -1,0 +1,85 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+class HealthChecker {
+  constructor() {
+    this.checks = [],
+    this.results = []
+  }
+
+  async checkBuildFiles() {
+    const buildDir = path.join(process.cwd(), '.next');
+    const exists = fs.existsSync(buildDir);
+    this.results.push({
+      check: 'Build Files',
+      status: exists ? 'PASS' : 'FAIL',
+      message: exists ? 'Build directory exists' : 'Build directory missing'
+    });
+    return exists;
+  }
+
+  async checkDependencies() {
+    const packageJsonPath = path.join(process.cwd(), 'package.json');
+    const nodeModulesPath = path.join(process.cwd(), 'node_modules');
+    
+    const packageExists = fs.existsSync(packageJsonPath);
+    const nodeModulesExists = fs.existsSync(nodeModulesPath);
+    
+    this.results.push({
+      check: 'Dependencies',
+      status: packageExists && nodeModulesExists ? 'PASS' : 'FAIL',
+      message: packageExists && nodeModulesExists ? 'Dependencies installed' : 'Missing dependencies'
+    });
+    
+    return packageExists && nodeModulesExists;
+  }
+
+  async checkEnvironmentVariables() {
+    const envFile = path.join(process.cwd(), '.env.local');
+    const envExists = fs.existsSync(envFile);
+    
+    this.results.push({
+      check: 'Environment Variables',
+      status: envExists ? 'PASS' : 'WARN',
+      message: envExists ? 'Environment file exists' : 'No environment file found'
+    });
+    
+    return envExists;
+  }
+
+  async runAllChecks() {
+    console.log('🏥 Running Health Checks...');
+    
+    await this.checkBuildFiles();
+    await this.checkDependencies();
+    await this.checkEnvironmentVariables();
+    
+    const passed = this.results.filter(r => r.status === 'PASS').length;
+    const failed = this.results.filter(r => r.status === 'FAIL').length;
+    const warnings = this.results.filter(r => r.status === 'WARN').length;
+    
+    console.log('\n📊 Health Check Results: '),
+    this.results.forEach(result => {
+      const icon = result.status === 'PASS' ? '✅' : result.status === 'FAIL' ? '❌' : '⚠️';
+      console.log(`${icon} ${result.check}: ${result.message}`);
+    });
+    
+    console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
+    
+    return {
+      passed,
+      failed,
+      warnings,
+      results: this.results
+    };
+  }
+}
+
+if (require.main === module) {
+    const checker = new HealthChecker(),
+    checker.runAllChecks().catch(console.error)
+  }
+
+module.exports = HealthChecker;

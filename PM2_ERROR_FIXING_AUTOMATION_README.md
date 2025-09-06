@@ -40,11 +40,13 @@ This system provides automated error detection and fixing for TypeScript, JavaSc
 ### Quick Start
 
 1. **Clone or navigate to your project directory**
+
    ```bash
    cd /path/to/your/project
    ```
 
 2. **Run the startup script**
+
    ```bash
    ./start-error-fixing-automation.sh
    ```
@@ -182,6 +184,7 @@ The system generates various reports in JSON format:
 ### Log Files
 
 All processes log to:
+
 - `logs/` - Main log directory
 - `automation/logs/` - Automation-specific logs
 
@@ -223,6 +226,7 @@ The system uses `ecosystem-error-fixing.config.cjs` for PM2 configuration. Key s
 ## 🎯 Error Types Handled
 
 ### TypeScript Errors
+
 - Compilation errors
 - Type annotation issues
 - Interface definition problems
@@ -232,6 +236,7 @@ The system uses `ecosystem-error-fixing.config.cjs` for PM2 configuration. Key s
 - Generic type errors
 
 ### Linting Errors
+
 - ESLint violations
 - Code formatting issues
 - Unused imports/variables
@@ -240,6 +245,7 @@ The system uses `ecosystem-error-fixing.config.cjs` for PM2 configuration. Key s
 - Trailing spaces
 
 ### JSX/TSX Errors
+
 - Syntax errors
 - Attribute issues
 - Closing tag problems
@@ -248,6 +254,7 @@ The system uses `ecosystem-error-fixing.config.cjs` for PM2 configuration. Key s
 - Event handler types
 
 ### Import/Export Errors
+
 - Missing imports
 - Unused imports
 - Import path issues
@@ -256,6 +263,7 @@ The system uses `ecosystem-error-fixing.config.cjs` for PM2 configuration. Key s
 - Import organization
 
 ### Build Errors
+
 - Compilation failures
 - Dependency conflicts
 - Configuration issues
@@ -266,16 +274,19 @@ The system uses `ecosystem-error-fixing.config.cjs` for PM2 configuration. Key s
 ### Common Issues
 
 1. **PM2 not found**
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Permission denied**
+
    ```bash
    chmod +x start-error-fixing-automation.sh
    ```
 
 3. **Process not starting**
+
    ```bash
    pm2 logs --lines 50
    ```

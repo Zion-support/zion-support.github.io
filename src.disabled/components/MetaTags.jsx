@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+"export\": const MetaTags = ({ title,description,keywords = \'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group\',image = \'"https\": \''\'";\",;
+export: const MetaTags = ({ title,description,keywords = "AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group",image = "https: """";",;'"'"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
+=======
+"export": const MetaTags = ({ title,description,keywords = 'AI,artificial intelligence,machine learning,cybersecurity,cloud computing,IT services,enterprise solutions,Zion Tech Group',image = '"https": '''";",;")"}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462

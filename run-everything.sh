@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "🚀 Starting Comprehensive Automation and Git Resolution"
-echo "======================================================"
+echo "====="
 
 # Make scripts executable
 chmod +x *.cjs
@@ -87,7 +87,7 @@ Enhancements: Performance, Security, SEO, Accessibility, Monitoring"
 git push origin main
 
 echo "🎉 Comprehensive Automation and Git Resolution Completed!"
-echo "======================================================"
+echo "====="
 echo "✅ All conflicts resolved"
 echo "✅ All automation scripts run"
 echo "✅ Additional improvements created"

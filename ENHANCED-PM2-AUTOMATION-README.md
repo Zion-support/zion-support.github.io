@@ -7,42 +7,49 @@ This enhanced PM2 automation system provides intelligent, AI-powered automation 
 ## ✨ Key Features
 
 ### 🤖 AI-Powered Health Monitoring
+
 - **Real-time System Monitoring**: Continuous monitoring of CPU, memory, disk, and network usage
 - **Intelligent Analysis**: AI-powered trend analysis and anomaly detection
 - **Predictive Alerts**: Proactive issue prediction and prevention
 - **Auto-Recovery**: Automatic system optimization and process restart
 
 ### 🔀 Intelligent Git Automation
+
 - **Smart Merge Strategy**: Intelligent conflict resolution and merge automation
 - **Quality Gates**: Automated quality checks before merging
 - **Branch Management**: Automatic branch cleanup and protection
 - **Commit Analysis**: Intelligent commit message analysis and auto-actions
 
 ### 🚀 Advanced Deployment Automation
+
 - **Multi-Environment Support**: Development, staging, and production deployments
 - **Rollback Capabilities**: Automatic rollback on deployment failures
 - **Health Checks**: Comprehensive post-deployment verification
 - **Quality Gates**: Automated quality checks during deployment
 
 ### 📊 Real-Time Monitoring Dashboard
+
 - **Live Metrics**: Real-time system and application metrics
 - **WebSocket Updates**: Live updates without page refresh
 - **Alert Management**: Centralized alert monitoring and management
 - **Performance Analytics**: Detailed performance analysis and reporting
 
 ### 🔄 Intelligent CI/CD Pipeline
+
 - **Automated Testing**: Comprehensive test suite execution
 - **Security Scanning**: Automated security vulnerability scanning
 - **Build Optimization**: Intelligent build optimization and caching
 - **Quality Gates**: Automated quality gate enforcement
 
 ### 🔒 Security Automation
+
 - **Dependency Scanning**: Automated dependency vulnerability scanning
 - **Code Security Analysis**: Automated code security analysis
 - **Configuration Security**: Security configuration validation
 - **Auto-Patching**: Automatic security patch application
 
 ### 💾 Backup & Recovery
+
 - **Automated Backups**: Scheduled automated backups
 - **Incremental Backups**: Efficient incremental backup strategy
 - **Disaster Recovery**: Comprehensive disaster recovery procedures
@@ -51,6 +58,7 @@ This enhanced PM2 automation system provides intelligent, AI-powered automation 
 ## 🛠️ Installation & Setup
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 - PM2 (will be installed automatically)
@@ -59,17 +67,20 @@ This enhanced PM2 automation system provides intelligent, AI-powered automation 
 ### Quick Start
 
 1. **Clone the repository** (if not already done):
+
    ```bash
    git clone <your-repository-url>
    cd <repository-name>
    ```
 
 2. **Install dependencies**:
+
    ```bash
    npm install
    ```
 
 3. **Start the enhanced system**:
+
    ```bash
    ./start-enhanced-intelligent-pm2-system.sh
    ```
@@ -80,11 +91,13 @@ This enhanced PM2 automation system provides intelligent, AI-powered automation 
 ### Manual Setup
 
 1. **Install PM2 globally**:
+
    ```bash
    npm install -g pm2
    ```
 
 2. **Start the enhanced ecosystem**:
+
    ```bash
    pm2 start ecosystem.enhanced-intelligent.cjs
    ```
@@ -196,6 +209,7 @@ Access the monitoring dashboard at http://localhost:3001 to view:
 ### WebSocket API
 
 The dashboard uses WebSocket for real-time updates:
+
 - **Endpoint**: ws://localhost:8080
 - **Message Format**: JSON with type and data fields
 - **Update Frequency**: Every 5 seconds
@@ -203,6 +217,7 @@ The dashboard uses WebSocket for real-time updates:
 ### Log Files
 
 All logs are stored in the `logs/` directory:
+
 - **Application Logs**: `web-enhanced.log`
 - **Health Monitor**: `ai-health-monitor-enhanced.log`
 - **Git Automation**: `git-automation-enhanced.log`
@@ -215,6 +230,7 @@ All logs are stored in the `logs/` directory:
 ### Git Automation
 
 The system automatically:
+
 - **Monitors** for new commits and pull requests
 - **Analyzes** code quality and conflicts
 - **Merges** branches when quality gates pass
@@ -225,6 +241,7 @@ The system automatically:
 ### Deployment Automation
 
 The system automatically:
+
 - **Triggers** deployments on new commits
 - **Runs** quality gates and security scans
 - **Deploys** to appropriate environments
@@ -235,6 +252,7 @@ The system automatically:
 ### Health Monitoring
 
 The system automatically:
+
 - **Monitors** system resources continuously
 - **Detects** anomalies and trends
 - **Predicts** potential issues
@@ -401,6 +419,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 The Enhanced Intelligent PM2 Automation System provides a comprehensive solution for modern application development and deployment. With its AI-powered monitoring, intelligent automation, and real-time dashboard, it helps teams maintain high-quality, reliable applications with minimal manual intervention.
 
 The system is designed to be:
+
 - **Intelligent**: AI-powered analysis and decision making
 - **Automated**: Minimal manual intervention required
 - **Reliable**: Self-healing and fault-tolerant

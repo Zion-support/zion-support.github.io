@@ -1,0 +1,20 @@
+{
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "no-explicit-any": "off"
+=======
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "react/no-unescaped-entities": "off"
+>>>>>>> origin/cursor/website-audit-and-enhancement-751f
+  }
+=======
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "no-explicit-any": "off"  }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+}
