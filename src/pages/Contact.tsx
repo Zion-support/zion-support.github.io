@@ -21,7 +21,6 @@ const Contact: React.FC = () => {
     e.preventDefault();
     alert('Message Sent! We will get back to you shortly.');
     console.log('Form submitted:', formData);
-    // Here you would typically send the data to a backend service
   };
 
   return (
@@ -37,7 +36,6 @@ const Contact: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <div className="bg-slate-800 p-8 rounded-lg shadow-lg animate-fade-in">
             <h2 className="text-3xl font-bold mb-6 text-white">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -98,7 +96,7 @@ const Contact: React.FC = () => {
                   className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-slate-700 border-slate-600 text-white"
                   placeholder="Your Message"
                   required
-                ></textarea>
+                />
               </div>
               <Button type="submit" variant="primary" size="large">
                 Send Message
@@ -106,7 +104,6 @@ const Contact: React.FC = () => {
             </form>
           </div>
 
-          {/* Contact Information */}
           <div className="space-y-8 animate-slide-up">
             <Card
               title="General Inquiries"
@@ -136,6 +133,11 @@ const Contact: React.FC = () => {
               title="Address"
               description="123 Tech Innovation Dr, Silicon Valley, CA 94043"
               icon="📍"
+              className="bg-slate-800"
+            />
+            <Card
+              title="Business Hours"
+              description="Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed"
               className="bg-slate-800"
             />
           </div>
