@@ -1,101 +1,32 @@
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
-<<<<<<< HEAD
-<<<<<<< HEAD
   These definitions are **not** a replacement for `@types / react` – they only;
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   present.  They purposefully model just enough surface - area used throughout;
   the code - base.  If you have `@types / react` available in `node_modules`,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   TypeScript will prefer those and ignore this file, because paths declared in;
   `type_roots` are merged with normal type resolution.;
 */;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare module "react" {
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
   export interface ReactElement < P = any, T extends string | React.JSXElementConstructor < any> = any> {
     type: T,
     props: P,
     key: React.Key | null;
-<<<<<<< HEAD
-=======
-
-
-=======
-  the code-base.  If you have `@types/react` available in `node_modules`,;
-
-=======
-  present.  They purposefully model just enough surface - area used throughout;
-  the code - base.  If you have `@types / react` available in `node_modules`,
-  present.  They purposefully model just enough surface-area used throughout;
-  the code-base.  If you have `@types/react` available in `node_modules`,;
-  TypeScript will prefer those and ignore this file, because paths declared in;
-  `type_roots` are merged with normal type resolution.;
-*/;
-
 
   the code-base.  If you have `@types/react` available in `node_modules`,;
-
-  These definitions are **not** a replacement for `@types/react` – they only;
-  exist so that isolated compilation of individual files (e.g., in CI or code;
-  review bots) will not fail when full React type declarations are not;
-  present.  They purposefully model just enough surface-area used throughout;
-  the code-base.  If you have `@types/react` available in `node_modules`;
-  TypeScript will prefer those and ignore this file, because paths declared in;
-  `typeRoots` are merged with normal type resolution.;
-*/;
-declare module "react" {// Basic ReactElement stub (JSX trees ultimately compile into this).;
-  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
-    type: T;
-    props: P;
-    key: React.Key | null;
-  }
-  // Function Component (very trimmed-down).;
-  export interface FC<P = Record<string, unknown>> {(props: P): ReactElement | null;
-  }
-  // Common hooks we rely on.;
-  export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
-  export type Key = string | number;
-  // Default export so `import React from 'react'` keeps working even without;
-  // the real react package being installed.;
-  const React: {useMemo: typeof useMemo;
-  } & Record<string, unknown>;
-  export default React;
-}
-declare namespace React {// Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
-  // errors when `@types/react` is not present.;
-  export interface IntrinsicElements {;
-    [elemName: string]: any;
-  the code-base.  If you have `@types/react` available in `node_modules`,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-  the code-base.  If you have `@types/react` available in `node_modules`,;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
 */;
 declare module "react" {;
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
   export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   // Function Component (very trimmed - down).;
   export interface FC < P = Record < string, unknown>> {
@@ -120,24 +51,6 @@ declare module "react" {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-  }
-  // Function Component (very trimmed - down).;
-  export interface FC < P = Record < string, unknown>> {
-    (props: P): ReactElement | null;
-;
-declare module "react" {;
-  // Basic ReactElement stub (JSX trees ultimately compile into this).;
-   ;
-  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {;
-    type:T;
-    props:P;
-    key:React.Key | null;
-  }
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Function Component (very trimmed-down).;
   export interface FC<P = Record<string, unknown>> {(props: P): ReactElement | null;
   }
@@ -181,7 +94,6 @@ declare module "react" {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types / react` is not present.;
@@ -207,9 +119,6 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
 }declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements" // errors when `@types/react` is not present. export interface IntrinsicElements {
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
   // Function Component (very trimmed-down).;
@@ -236,30 +145,15 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
   }
 }
 ;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare namespace React {;
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
     [elemName: string]: any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -271,7 +165,6 @@ declare namespace React {;
   }
 }
 
-
   }
 }
   TypeScript will prefer those and ignore this file, because paths declared in;
@@ -279,7 +172,3 @@ declare namespace React {;
 */;
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' } export default /**
  * MicroSaaSPage - Function description
  */
@@ -13,25 +11,9 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
  * Plan - Function description
  */
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-=======
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Micro SaaS Solutions | Zion Tech Group',
-  description: 'Comprehensive micro SaaS development services including AI-powered tools, productivity apps, business automation, and revenue-generating solutions. From MVP to enterprise scale.',
-=======
-<<<<<<< HEAD
-export const metadata = { 
-  title: 'Micro SaaS Development | Zion Tech Group',
-  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
-  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
 };
-=======
 import React from 'react';
 import Link from 'next/link';
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 
 interface PricingTierProps {
   name: string;
@@ -45,7 +27,6 @@ interface PricingTierProps {
 
 function PricingTier({ name, price, period, description, features, popular = false, cta }: PricingTierProps) {
   return (
-<<<<<<< HEAD
     <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
@@ -70,97 +51,6 @@ function PricingTier({ name, price, period, description, features, popular = fal
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/fix-website-loading-errors-final
-=======
-
-function ProcessStep({ step, title, description }: { 
-  step: string; 
-  title: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center p-6">
-      <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-        {step}
-      </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function TechStack({ title, technologies }: { 
-  title: string; 
-  technologies: string[]; 
-}) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech) => (
-          <span key={tech} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-            {tech}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function BenefitCard({ title, description, icon }: { 
-  title: string; 
-  description: string; 
-  icon: string; 
-}) {
-  return (
-    <div className="text-center p-6 border border-gray-200 rounded-xl bg-white hover:shadow-lg transition-shadow">
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
-
-function Pricing() {
-  return (
-    <section className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="MVP Sprint" 
-          price="$8k–$20k" 
-          features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics", "Hosting setup"]} 
-          popular={false}
-        />
-        <Plan 
-          name="Growth" 
-          price="$20k–$60k" 
-          features={["6–10 weeks", "SEO + content", "CRM + email", "Observability", "Advanced features"]} 
-          popular={true}
-        />
-        <Plan 
-          name="Scale" 
-          price="$60k+" 
-          features={["Custom roadmap", "SRE + security", "Multi-region", "SLAs", "Dedicated support"]} 
-          popular={false}
-        />
-      </div>
-    </section>
-  );
-}
-
-function Plan({ name, price, features, popular }: { 
-  name: string; 
-  price: string; 
-  features: string[]; 
-  popular: boolean; 
-}) {
-  return (
-    <div className={`border rounded-xl p-8 relative ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'}`}>
-=======
-    <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white'} shadow-lg`}>
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -200,18 +90,7 @@ function Plan({ name, price, features, popular }: {
   );
 }
 
-<<<<<<< HEAD
 function CTASection() {
-=======
-interface ServiceFeatureProps {
-  icon: string;
-  title: string;
-  description: string;
-  benefits: string[];
-}
-
-function ServiceFeature({ icon, title, description, benefits }: ServiceFeatureProps) {
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
       <div className="text-3xl mb-4">{icon}</div>
@@ -228,23 +107,6 @@ function ServiceFeature({ icon, title, description, benefits }: ServiceFeaturePr
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-export const metadata = { title: 'Micro SaaS Development | Zion Tech Group' } export default /**
- * MicroSaaSPage - Function description
- */
-function MicroSaaSPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>Micro SaaS Development</h1> <p style={{margin_top: 8, color: '#374151'}}>We design, build, launch and operate revenue - generating micro SaaS products end - to - end.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Core features" details={["Multi - tenant architecture", "Auth (email, OAuth)", "Billing (Stripe)", "Admin + analytics", "In - app onboarding"]} /> <Item title="Growth stack" details={["SEO - ready marketing site", "Blog + docs", "Email campaigns", "Referral + affiliates"]} /> <Item title="Ops & reliability" details={["CI / CD", "Observability", "Error budgets", "SLOs", "On - call setup"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="MVP Sprint" price="$8k–$20k" features={["2–4 weeks", "MVP scope", "Stripe billing", "Basic analytics"]} /> <Plan name="Growth" price="$20k–$60k" features={["6–10 weeks", "SEO + content", "CRM + email", "Observability"]} /> <Plan name="Scale" price="$60k+" features={["Custom roadmap", "SRE + security", "Multi - region", "SLAs"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
-=======
 
 export default function MicroSaaSPage() {
   return (
@@ -566,5 +428,3 @@ export default function MicroSaaSPage() {
     </div>
   );
 }
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1

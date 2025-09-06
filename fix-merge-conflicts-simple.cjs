@@ -21,7 +21,7 @@ function fixMergeConflicts() {
       try {
         console.log(`Fixing merge conflicts in: ${file}`);
         
-        let content = fs.readFileSync(file, 'utf8');
+        const content = fs.readFileSync(file, 'utf8');
         
         // Remove merge conflict markers and keep the HEAD version
         

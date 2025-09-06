@@ -1,6 +1,4 @@
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
-#!/usr/bin/env node;
+<>#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -11,8 +9,7 @@ console.log('=====')
       "stdio"
 const metricsResult = runCommand('Metrics Generation', 'echo "Generating final metrics...")
   console.log('\n "Recommendations")
-<<<<<<<< HEAD:scripts/master-automation-orchestrator.cjs
-  console.log('\n "Recommendations")
+<  console.log('\n "Recommendations")
   console.log('\n "Recommendations")
 #!/usr/bin/env node
 
@@ -300,4 +297,4 @@ if (require.main === module) {
 }
 
 module.exports = MasterAutomationOrchestrator;
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/scripts/master-automation-orchestrator.cjs
+>

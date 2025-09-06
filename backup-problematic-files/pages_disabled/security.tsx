@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SecurityProps {
   className?: string;
@@ -6,7 +6,7 @@ interface SecurityProps {
 
 const Security: React.FC<SecurityProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Security</h1>
       <p>This component is under development.</p>
     </div>

@@ -14,7 +14,6 @@ function handler() {
   $2
 }
   try {
-<<<<<<< HEAD
     const data = req.body,
     const client = new Web3Storage ({ token: TOKEN }),
     const files = [new File ([JSON.stringify (data, null, 2)], 'profile.json', { type: 'application / json' })],

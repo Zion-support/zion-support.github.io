@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface PartnersProps {
   className?: string;
@@ -6,7 +6,7 @@ interface PartnersProps {
 
 const Partners: React.FC<PartnersProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Partners</h1>
       <p>This component is under development.</p>
     </div>

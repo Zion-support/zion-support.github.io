@@ -217,10 +217,8 @@ class CompleteImprovementSuite {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
-        content.includes('>>>>>>> ')
-      );
+        content.includes('        content.includes('') ||
+        content.includes('      );
         content.includes('') ||
         content.includes('') ||
         content.includes('      );
@@ -234,8 +232,7 @@ class CompleteImprovementSuite {
       const originalContent = content;
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
-        '$1'
+        /        '$1'
       );
       // Clean up any remaining markers
         /\n([\s\S]*?)\n\n([\s\S]*?)\n        '$1'
@@ -248,8 +245,7 @@ class CompleteImprovementSuite {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
           `✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`
-      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-
+      content = content.replace(/
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(

@@ -11,7 +11,7 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App() {
+export default function App(): React.JSX.Element {
   const services = [
     {
       title: 'AI Solutions',
@@ -50,11 +50,6 @@ export default function App() {
       features: ['Process Automation', 'Workflow Optimization', 'Digital Strategy', 'Change Management'],
     },
   ];
-
-<<<<<<< HEAD
-export default function App(): React.JSX.Element {
-=======
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />

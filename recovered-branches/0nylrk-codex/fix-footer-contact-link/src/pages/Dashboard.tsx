@@ -24,17 +24,9 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-=======
   const { user, logout } = useAuth();
   const { toast } = useToast();
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -50,23 +42,9 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
-<<<<<<< HEAD
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import { useToast } from "@/hooks/use-toast",
-import { Link } from "react-router-dom",
-export default function Dashboard() {
-  const { user, logout } = useAuth(),
-  const { toast } = useToast(),
-
-  if (!user) return null,
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleTestNotification = async () => {;
     const result = await createTestNotification(user && user.id);
     if (result && result.success) {;
@@ -78,8 +56,6 @@ export default function Dashboard() {
         title: "Error creating test notification",;
         description: "Something went wrong",;
         variant: "destructive"});
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const handleTestNotification = async () => {
     const result = await createTestNotification(user.id);
@@ -99,45 +75,6 @@ export default function Dashboard() {
   },
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { useAuth } from "@/hooks/useAuth",;
-import { Button } from "@/components/ui/button",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { CommunityDiscussion } from "@/components/CommunityDiscussion",;
-import { Badge } from "@/components/ui/badge",;
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",;
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",;
-import { NotificationCenter } from "@/components/NotificationCenter",;
-import { useToast } from "@/hooks/use-toast",;
-import { Link } from "react-router-dom",;
-;
-export default function Dashboard() {;
-  const { user, logout } = useAuth(),;
-  const { toast } = useToast(),;
-;
-  if (!user) return null,;
-;
-  const handleTestNotification = async () => {;
-    const result = await createTestNotification(user.id),;
-    if (result.success) {;
-      toast({;
-        title:"Test notification created",;
-        description:"Check your notification center"}),;
-    } else {;
-      toast({;
-        title:"Error creating test notification",;
-        description:"Something went wrong",;
-        variant:"destructive"}),;
-    }
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -230,16 +167,7 @@ export default function Dashboard() {;
                       variant="outline"
                       onClick={async () => {
                         await createOnboardingNotification({
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-=======
-                          userId: user.id
-                          missingMilestone: 'profile_completed'
-                          userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'
-                        });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                           userId: user.id,
                           missingMilestone: "profile_completed",
                           userRole:
@@ -270,12 +198,8 @@ export default function Dashboard() {;
                           actionUrl: "/notifications",
                           actionText: "Explore Now",
                         });
-=======
                         }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
                         }),
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         toast({
                           title: "System notification sent",
                           description: "Check your notification center",
@@ -598,8 +522,6 @@ if ( {) {
                 {/* Community Section */}
                 <div>;
                   <h3 className="text - lg font - bold text - white mb - 4">Community</h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
                 ;
                 {/* Community Section */}
                 <div>;
@@ -607,9 +529,6 @@ if ( {) {
                 {/* Community Section */}
                 <div>;
                   <h3 className="text-lg font-bold text-white mb-4">Community</h3>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <CommunityDiscussion />;
                 </div>;
               </div>;
@@ -618,18 +537,10 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     </>);
 }
 
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
     </>;
   ),; export default function Dashboard () {
   const {
@@ -660,6 +571,3 @@ return (<> <Header /> <Badge className="bg-zion-purple text-white mb-4" > > <Use
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

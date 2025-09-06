@@ -1,4 +1,4 @@
-export const metadata = { title: 'AI Marketing Automation | Zion Tech Group' };
+export const metadata = { title: "AI Marketing Automation | Zion Tech Group" };
 
 export default function AIMarketingAutomationPage() {
   return (
@@ -18,36 +18,36 @@ export default function AIMarketingAutomationPage() {
         <FeatureCard
           title="AI-Powered Campaigns"
           features={[
-            'Automated email marketing sequences',
-            'Social media content generation',
-            'Personalized ad targeting',
-            'A/B testing optimization',
-            'Cross-channel campaign orchestration',
-            'Real-time campaign adjustments',
+            "Automated email marketing sequences",
+            "Social media content generation",
+            "Personalized ad targeting",
+            "A/B testing optimization",
+            "Cross-channel campaign orchestration",
+            "Real-time campaign adjustments",
           ]}
           icon="📧"
         />
         <FeatureCard
           title="Customer Segmentation"
           features={[
-            'AI-driven customer profiling',
-            'Behavioral segmentation',
-            'Predictive customer scoring',
-            'Dynamic audience creation',
-            'Lifecycle stage identification',
-            'Churn prediction & prevention',
+            "AI-driven customer profiling",
+            "Behavioral segmentation",
+            "Predictive customer scoring",
+            "Dynamic audience creation",
+            "Lifecycle stage identification",
+            "Churn prediction & prevention",
           ]}
           icon="🎯"
         />
         <FeatureCard
           title="Analytics & Optimization"
           features={[
-            'Real-time performance tracking',
-            'ROI analysis & attribution',
-            'Predictive analytics & forecasting',
-            'Automated optimization recommendations',
-            'Customer journey mapping',
-            'Competitive intelligence',
+            "Real-time performance tracking",
+            "ROI analysis & attribution",
+            "Predictive analytics & forecasting",
+            "Automated optimization recommendations",
+            "Customer journey mapping",
+            "Competitive intelligence",
           ]}
           icon="📊"
         />
@@ -141,12 +141,12 @@ function PricingSection() {
           price="$149/mo"
           duration="Up to 10,000 contacts"
           features={[
-            'Basic email automation',
-            'Simple segmentation',
-            'Standard templates',
-            'Basic analytics',
-            'Email support',
-            'Mobile app access',
+            "Basic email automation",
+            "Simple segmentation",
+            "Standard templates",
+            "Basic analytics",
+            "Email support",
+            "Mobile app access",
           ]}
           popular={false}
         />
@@ -155,13 +155,13 @@ function PricingSection() {
           price="$399/mo"
           duration="Up to 50,000 contacts"
           features={[
-            'Everything in Starter Marketing',
-            'AI-powered personalization',
-            'Advanced automation workflows',
-            'Multi-channel campaigns',
-            'Advanced analytics & reporting',
-            'API access & integrations',
-            'Priority support',
+            "Everything in Starter Marketing",
+            "AI-powered personalization",
+            "Advanced automation workflows",
+            "Multi-channel campaigns",
+            "Advanced analytics & reporting",
+            "API access & integrations",
+            "Priority support",
           ]}
           popular={true}
         />
@@ -170,13 +170,13 @@ function PricingSection() {
           price="$999/mo"
           duration="Unlimited contacts"
           features={[
-            'Everything in Professional Marketing',
-            'Custom AI model development',
-            'Advanced security & compliance',
-            'Dedicated marketing strategist',
-            'Custom integrations',
-            'White-label options',
-            '24/7 phone support',
+            "Everything in Professional Marketing",
+            "Custom AI model development",
+            "Advanced security & compliance",
+            "Dedicated marketing strategist",
+            "Custom integrations",
+            "White-label options",
+            "24/7 phone support",
           ]}
           popular={false}
         />
@@ -200,7 +200,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-yellow-500 shadow-lg' : 'border-gray-200'}`}
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? "border-yellow-500 shadow-lg" : "border-gray-200"}`}
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -224,8 +224,8 @@ function PricingCard({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
-            ? 'bg-yellow-600 text-white hover:bg-yellow-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+            ? "bg-yellow-600 text-white hover:bg-yellow-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
         }`}
       >
         Get Started

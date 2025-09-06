@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  }
+}
 
   if (req.method === 'POST') {
     try {
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -30,19 +18,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
       const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e: any) {
       res
         .status(500)
@@ -51,41 +32,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
-
 res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default /**
  * handler - Function description
  */
@@ -125,9 +84,7 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -149,13 +106,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

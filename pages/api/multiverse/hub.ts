@@ -13,12 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       paused: state.config.paused
 lastSyncedAt: state.lastSyncedAt})
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 import type { NextApiRequest, NextApiResponse } from './next';,
@@ -35,16 +29,7 @@ if ( {) {
     return res.status (200).json ({
       route: "/multiverse / hub",
       instance_id: state.config.instance_id,
-<<<<<<< HEAD
-=======
-=======
-}
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -76,13 +61,6 @@ export default async function handler(req, res) {
     return res.status(200).json({
       route: "/multiverse/hub",
       instanceId: state.config.instanceId,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       peers: state.config.peers,
       scope: state.config.scope,
       opt_in: state.config.opt_in,

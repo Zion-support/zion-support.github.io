@@ -4,8 +4,6 @@ export interface ProfileSkill {
   endorsements?: number;
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   id: string;
   title: string;
@@ -21,34 +19,6 @@ export interface ProfileSkill {
 
 }
 export interface ProfileExperience {
-<<<<<<< HEAD
-=======
-export interface ProfileSkill {
-
-  name: string
-
-  level: number, // 1-5
-  endorsements?: number
-}
-export interface ProfileProject {
-
-export interface ProfileProject {;
-  id: string;
-  title: string;
-  description: string;
-  imageUrl?: string;
-  tags?: string[];
-
-  url?: string
-
-  date: string
-}
-export interface ProfileExperience {
-
-export interface ProfileExperience {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   role: string;
   company: string;
@@ -98,9 +68,6 @@ export interface ProfileData {;
   name: string;
   title: string;
   avatarUrl: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   coverImageUrl?: string;
   bio: string;
   location?: string;
@@ -115,9 +82,6 @@ export interface ProfileData {;
   hourlyRate?: number;
   contactEmail?: string;
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   hourlyRate?: number
 
   contactEmail?: string
@@ -127,8 +91,6 @@ export interface ProfileSkill {;
   level: number, // 1-5;
   endorsements?: number;
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export interface ProfileProject {;
   id: string,;
@@ -177,8 +139,3 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

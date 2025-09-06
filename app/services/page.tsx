@@ -1,8 +1,6 @@
 import Link from "next/link";
 
 export const metadata = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   title: "Services | Zion Tech Group",
   description:;
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
@@ -11,17 +9,8 @@ export default /**
  * ServicesOverviewPage - Function description
  */
 function ServicesOverviewPage() {
-=======
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-<<<<<<< HEAD
-    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
 };
 export default function ServicesOverviewPage() {
->>>>>>> origin/fix-website-loading-errors-final
   return (
     <div className="animate - fade - in">;
       {" "}
@@ -32,13 +21,8 @@ export default function ServicesOverviewPage() {
         </h1>{" "}
         <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
           {" "}
-<<<<<<< HEAD
           Product engineering and AI - first consulting to deliver measurable;
           outcomes for your business.{" "}
-=======
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.{" "}
->>>>>>> origin/fix-website-loading-errors-final
         </p>{" "}
       </div>{" "}
       <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 16">;
@@ -52,7 +36,6 @@ export default function ServicesOverviewPage() {
             "Billing + subscriptions",
             "Growth analytics",
           ]}
-<<<<<<< HEAD
           icon="🚀";
         />{" "}
         <ServiceCard;
@@ -70,63 +53,6 @@ export default function ServicesOverviewPage() {
           icon="⚙️";
         />{" "}
       </div>{" "}
-=======
-=======
-  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
-  description:
-    "Comprehensive technology services including AI solutions, micro SaaS development, FinTech platforms, HealthTech systems, EdTech solutions, and IT infrastructure. Expert solutions for modern enterprises with 500+ successful projects and $2B+ in combined market value.",
-};
-
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your business with cutting-edge technology solutions. From AI-powered micro SaaS to enterprise FinTech platforms, 
-          we deliver measurable outcomes with 99.9% uptime, bank-grade security, and 24/7 expert support.
-        </p>
-      </div>
-
-      {/* Statistics Section */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <StatCard 
-            number="500+" 
-            label="Successful Projects" 
-            description="Delivered worldwide" 
-          />
-          <StatCard 
-            number="$2B+" 
-            label="Combined Market Value" 
-            description="Generated for clients" 
-          />
-          <StatCard 
-            number="99.9%" 
-            label="Uptime Guarantee" 
-            description="Enterprise reliability" 
-          />
-          <StatCard 
-            number="300%" 
-            label="Average ROI" 
-            description="Client return on investment" 
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS Solutions"
-          description="Complete micro SaaS development from MVP to scale with billing, analytics, and growth optimization"
-          bullets={[
-            "15+ specialized micro SaaS tools",
-            "End-to-end development & deployment",
-            "Revenue optimization & scaling"
-          ]}
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
           icon="🚀"
           pricing="From $2,999/month"
         />
@@ -255,7 +181,6 @@ export default function ServicesOverviewPage() {
           pricing="From $2,500/month"
         />
       </div>
-<<<<<<< HEAD
       
       {/* Statistics Section */}
       <section className="py-16 bg-gray-50 rounded-xl mb-16">
@@ -291,22 +216,7 @@ export default function ServicesOverviewPage() {
         </div>
       </section>
       
->>>>>>> origin/fix-website-loading-errors-final
       <CTA />{" "}
-=======
-      <CTA />
-    </div>
-  );
-}
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
-  pricing
-}: {
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
   href: string;
   title: string;
   description: string;
@@ -337,8 +247,6 @@ function ServiceCard({
     </Link>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 /**
  * ServiceCard - Function description
  */
@@ -347,10 +255,6 @@ function ServiceCard() {
     <Link;
       href={href}
         service and create a custom solution for your business needs.{" "}
-=======
-=======
-
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
 function StatCard({ 
   number, 
   label, 
@@ -377,14 +281,8 @@ function CTA() {
       </h3>{" "}
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
         {" "}
-<<<<<<< HEAD
         Join 500+ successful businesses that trust Zion Tech Group for their technology needs. 
         Get a free consultation and discover how our solutions can drive 300% ROI and accelerate your growth.{" "}
->>>>>>> origin/fix-website-loading-errors-final
-=======
-        Talk to our experts about your project. We&apos;ll help you choose the right
-        service and create a custom solution for your business needs.{" "}
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         {" "}

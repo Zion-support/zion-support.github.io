@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
  * ITServicesPage - Function description
  */
@@ -13,23 +11,12 @@ function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap:
  * Plan - Function description
  */
 function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
-=======
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-=======
-<<<<<<< HEAD
-export const metadata = { 
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
   keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
 };
-=======
 import React from 'react';
 import Link from 'next/link';
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
 
 interface ITServiceProps {
   title: string;
@@ -55,7 +42,6 @@ function ITService({ title, description, price, features, benefits, icon, href }
         </div>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
-<<<<<<< HEAD
       <ul className="text-gray-600 space-y-2">
         {solutions.map((solution) => (
           <li key={solution} className="flex items-center">
@@ -104,28 +90,6 @@ function Pricing() {
           features={["24/7 on-call", "SLO mgmt", "Cost optimization", "Reports", "Proactive maintenance"]} 
           popular={false}
         />
-=======
-      <div className="mb-4">
-        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
-        <ul className="space-y-1">
-          {features.map((feature, index) => (
-            <li key={index} className="text-sm text-gray-600 flex items-center">
-              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
-        <div className="flex flex-wrap gap-1">
-          {benefits.map((benefit, index) => (
-            <span key={index} className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
-              {benefit}
-            </span>
-          ))}
-        </div>
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
       </div>
     </Link>
   );
@@ -182,15 +146,6 @@ function PricingTier({ name, price, period, description, features, popular = fal
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/fix-website-loading-errors-final
-=======
-
-<<<<<<< HEAD
-function CTASection() {
-=======
-export default function ITServicesPage() {
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -477,24 +432,5 @@ export default function ITServicesPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-export const metadata = { title: 'IT Services | Zion Tech Group' } export default /**
- * ITServicesPage - Function description
- */
-function ITServicesPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>IT Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Cloud, DevOps, SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Cloud & Infra" details={["AWS / GCP / Azure", "Kubernetes", "Serverless", "IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI / CD", "Observability", "Autoscaling", "Chaos testing"]} /> <Item title="Security" details={["Hardening", "Zero Trust", "Vuln mgmt", "Compliance"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks", "Cloud review", "Security audit", "Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks", "Infra as code", "CI / CD", "Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24 / 7 on - call", "SLO mgmt", "Cost optimization", "Reports"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
->>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
-=======
 }
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1

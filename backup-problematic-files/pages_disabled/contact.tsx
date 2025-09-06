@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ContactProps {
   className?: string;
@@ -6,7 +6,7 @@ interface ContactProps {
 
 const Contact: React.FC<ContactProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Contact</h1>
       <p>This component is under development.</p>
     </div>

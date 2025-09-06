@@ -1,31 +1,11 @@
-<<<<<<< HEAD
 // Contact information
 export interface ContactInfo {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export interface ContactInfo {;
-export interface ContactInfo {
-  phone: string, email: string,
-  address: string, site: string,
-
-
-export interface Service {;
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 // Core Types
 export interface ContactInfo {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
   phone: string;
   email: string;
   address: string;
   site: string;
-<<<<<<< HEAD
 }
 
 // Service interfaces
@@ -92,21 +72,8 @@ export interface ErrorInfo {
 
 // Form interfaces
 export interface ContactForm {
-=======
-}
-export interface Service {
-  features: string[];
-  technologies: string[];
-  delivery_time: string;
-  support: string;
-  image?: string;
-  popular?: boolean;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ServiceCategory {
   title: string;
   description: string;
@@ -116,63 +83,15 @@ export interface ServiceCategory {
   color: string;
 }
 
-<<<<<<< HEAD
 export interface SEOProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
-=======
-
-  title: string;
-  href: string;
-  icon: string;
-  color: string;
-
-}
-export interface ServiceCategory {
-  title: string;
-  description: string;
-  count: number;
-  features: string[];
-  href: string;
-  color: string;
-
-  title: string, description: string,
-  features: string[], href: string,
-  icon: string, color: string,
-
-
-export interface ServiceCategory {;
-}
-
-export interface ServiceCategory {
-  title: string, description: string,
-  count: number, features: string[],
-  href: string, color: string,
-
-
-export interface SEOProps {;
-  title: string, description: string,
-
-  keywords?: string;
-  canonical?: string;
-
-  og_image?: string;
-=======
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   url?: string;
   type?: string;
   noindex?: boolean;
-<<<<<<< HEAD
-
-
 
 export interface LoadingState {;
   isLoading: boolean, error?: string,
-
 
 export interface AnimationState {;
   isLoaded: boolean, hasError: boolean,
@@ -221,39 +140,23 @@ export interface AnimationState {,
   hasError: boolean,
 };
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface LoadingState {
   is_loading: boolean;
   error?: string;
-<<<<<<< HEAD
   progress?: number;
 }
-<<<<<<< HEAD
 export interface AnimationState {
   is_loaded: boolean;
   has_error: boolean;
-=======
-
-export interface AnimationState {
-  isLoaded: boolean;
-  hasError: boolean;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface FormData {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
   name: string;
   email: string;
   company?: string;
   phone?: string;
-<<<<<<< HEAD
   service: string;
   budget?: string;
   message: string;
@@ -277,61 +180,6 @@ export interface FormField {
 
 // Team and company
 export interface TeamMember {
-=======
-  service?: string;
-  message: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  project?: string;
-}
-
-export interface Testimonial {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  position: string;
-  content: string;
-  rating: number;
-  avatar?: string;
-  image?: string;
-  project?: string;
-}
-
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  publishedAt: string;
-  updatedAt: string;
-  tags: string[];
-  category: string;
-  image: string;
-  slug: string;
-  featured?: boolean;
-  readTime: number;
-}
-
-export interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  position: string;
-  bio: string;
-  image: string;
-  skills: string[];
-  social: {
-    linkedin?: string;
-    twitter?: string;
-    github?: string;
-  };
-}
-
-export interface Project {
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
   id: string;
   name: string;
   position: string;
@@ -347,7 +195,6 @@ export interface CompanyInfo {
   name: string;
   tagline: string;
   description: string;
-<<<<<<< HEAD
   address: {
     street: string;
     city: string;
@@ -622,64 +469,8 @@ export interface InputProps {
   required?: boolean;
 }
 
-=======
-  image: string;
-  technologies: string[];
-  liveUrl?: string;
-  githubUrl?: string;
-  featured: boolean;
-  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  startDate: Date;
-  endDate: Date;
-  budget: {
-    allocated: number;
-    spent: number;
-    currency: string;
-  };
-  team: {
-    lead: string;
-    members: string[];
-    external: string[];
-  };
-  client: {
-    name: string;
-    contact: string;
-    industry: string;
-  };
-  deliverables: {
-    name: string;
-    description: string;
-    status: 'pending' | 'in-progress' | 'completed' | 'review';
-    dueDate: Date;
-  }[];
-  risks: {
-    description: string;
-    probability: 'low' | 'medium' | 'high';
-    impact: 'low' | 'medium' | 'high';
-    mitigation: string;
-  }[];
-  dependencies: {
-    project: string;
-    type: 'blocking' | 'influencing';
-    description: string;
-  }[];
-  metrics: {
-    name: string;
-    value: number;
-    unit: string;
-    target: number;
-  }[];
-  lessons: {
-    learned: string;
-    category: 'technical' | 'process' | 'communication' | 'management';
-    impact: 'positive' | 'negative' | 'neutral';
-  }[];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ContactForm {
   name: string;
   email: string;
@@ -688,38 +479,12 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
-<<<<<<< HEAD
   preferredContact: 'email' | 'phone' | 'both';
 }
-<<<<<<< HEAD
 
-=======
-}
-export interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  url?: string;
-  type?: string;
-  noindex?: boolean;
-  image?: string;
-}
-export interface LoadingState {
-  isLoading: boolean;
-  error?: string;
-  progress?: number;
-}
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
 export interface FormData {
   name: string;
@@ -728,7 +493,6 @@ export interface FormData {
   phone?: string;
   service?: string;
   message: string;
-
 
   id: string;
   name: string;
@@ -746,15 +510,12 @@ export interface FormData {
   project?: string;
 }
 export interface BlogPost {
-=======
 
   project?: string;
 }
 
-
 export interface BlogPost {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   excerpt: string;
@@ -765,10 +526,8 @@ export interface BlogPost {;
 
   publishedAt: string;
   updatedAt: string;
-=======
   published_at: string;
   updated_at: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   tags: string[];
   category: string;
   image: string;
@@ -776,20 +535,15 @@ export interface BlogPost {;
   slug: string;
   featured?: boolean;
 
-=======
   read_time: number;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface TeamMember {
-=======
 
 }
-
 
 export interface TeamMember {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   name: string;
 
@@ -800,23 +554,13 @@ export interface TeamMember {;
   image: string;
   skills: string[];
 
-
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   social: {
     linkedin?: string;
     twitter?: string;
     github?: string;
 
-=======
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   linkedin?: string;
   github?: string;
@@ -827,22 +571,12 @@ export interface TeamMember {;
 }
 export interface Project {
 
-
   id: string;
   title: string;
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   name: string;
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
-=======
 ;
   description: string;
   image: string;
@@ -851,18 +585,11 @@ export interface Project {
   github_url?: string;
   featured: boolean;
   status: 'planning' | 'in - progress' | 'completed' | 'on - hold' | 'cancelled';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   priority: 'low' | 'medium' | 'high' | 'critical';
   start_date: Date;
   end_date: Date;
   budget: {
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   id: string, title: string,
   description: string, image: string,
   technologies: string[], liveUrl?: string,
@@ -875,7 +602,6 @@ export interface Project {
   startDate?: Date;
   endDate?: Date;
   budget?: {
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     allocated: number;
     spent: number;
     currency: string;
@@ -913,8 +639,6 @@ export interface Project {
   }
   deliverables: {
 
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
     allocated: number;
     spent: number;
     currency: string;
@@ -930,62 +654,37 @@ export interface Project {
     industry: string;
   }
   deliverables: {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     name: string;
     description: string;
     status: 'pending' | 'in - progress' | 'completed' | 'review';
     due_date: Date;
   }[];
 
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   risks: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     description: string;
     probability: 'low' | 'medium' | 'high';
     impact: 'low' | 'medium' | 'high';
     mitigation: string;
   }[];
 
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   dependencies: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     project: string;
     type: 'blocking' | 'influencing';
     description: string;
   }[];
 
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   metrics: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     name: string;
     value: number;
     unit: string;
     target: number;
   }[];
 
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
   lessons: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     learned: string;
     category: 'technical' | 'process' | 'communication' | 'management';
     impact: 'positive' | 'negative' | 'neutral';
@@ -1002,28 +701,19 @@ export interface Partner {
 }
 
 // Pricing Types
-=======
 export interface FAQ {
-=======
-
 
 export interface FAQ {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   question: string;
   answer: string;
   category?: string;
 }
 
-
-
 export interface PricingPlan {;
 
   id: string;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export interface CaseStudy {
   id: string;
   title: string;
@@ -1042,13 +732,11 @@ export interface JobOpening {
 
 export interface PricingTier {
   id: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   name: string;
   price: number;
   currency: string;
   period: 'month' | 'year' | 'one-time';
   features: string[];
-<<<<<<< HEAD
   popular?: boolean;
   cta: string;
   href: string;
@@ -1061,9 +749,6 @@ export interface FAQ {
 }
 export interface PricingPlan {
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string;
   price: number;
   period: string;
@@ -1072,20 +757,10 @@ export interface PricingPlan {
   cta: string;
 }
   href: string;
-<<<<<<< HEAD
-
 
   name: string;
   href: string;
   children?: NavigationItem[];
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
-  limitations?: string[];
-  popular?: boolean;
-  cta: string;
-  description: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 }
@@ -1113,44 +788,18 @@ export interface UserPreferences {
     marketing: boolean;
   }
 }
-<<<<<<< HEAD
 
 export interface NavigationItem {
   name: string;
   href: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   submenu?: NavigationItem[];
   external?: boolean;
 }
 
-<<<<<<< HEAD
-=======
-
-
-export interface SocialLink {;
-
-
-  name: string;
-  href: string;
-  icon: string;
-
-  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
-  url: string;
-  label: string;
-
-;
-
-=======
-export interface SocialLink {
-  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
-  url: string;
-  label: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 
 export interface CompanyInfo {
   name: string;
-<<<<<<< HEAD
   href: string;
 }
 export interface FooterSection {
@@ -1158,21 +807,6 @@ export interface FooterSection {
   links: FooterLink[];
 }
 export interface HeroSection {
-=======
-
-}
-
-
-}
-
-export interface FooterSection {;
-  title: string;
-  links: FooterLink[];
-}
-
-export interface HeroSection {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   subtitle: string;
   cta: {
@@ -1187,17 +821,13 @@ export interface HeroSection {;
     }
   }
 
-=======
     }
     secondary: {
       text: string;
       href: string;
     }
-=======
-=======
 export interface CompanyInfo {
   name: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   tagline: string;
   description: string;
   address: {
@@ -1211,17 +841,11 @@ export interface CompanyInfo {
     phone: string;
     email: string;
     website: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   certifications: string[];
 }
 
-<<<<<<< HEAD
-
-
 export interface Feature {;
-
 
   title: string;
   description: string;
@@ -1229,10 +853,7 @@ export interface Feature {;
   color: string;
 }
 
-
-
 export interface Stats {;
-
 
   label: string;
   value: string;
@@ -1271,7 +892,6 @@ export interface JobOpening {
   }
 }
 
-
 export interface NewsItem {
   id: string;
   title: string;
@@ -1283,7 +903,6 @@ export interface NewsItem {
   image?: string;
   featured: boolean;
 }
-
 
 export interface Event {
   id: string;
@@ -1298,103 +917,6 @@ export interface Event {
 }
 
 export interface CaseStudy {
-=======
-
-
-export interface CaseStudy {;
-
-
-  id: string;
-  title: string;
-  client: string;
-  industry: string;
-  challenge: string;
-  solution: string;
-  results: string[];
-  image: string;
-  technologies: string[];
-  duration: string;
-  teamSize: number;
-  featured?: boolean;
-}
-
-
-
-export interface JobOpening {;
-
-
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: 'full-time' | 'part-time' | 'contract';
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  salary?: {
-    min: number;
-    max: number;
-    currency: string;
-  }
-}
-
-
-
-export interface NewsItem {;
-
-
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  image?: string;
-  featured: boolean;
-}
-
-
-
-export interface Event {;
-
-
-  id: string;
-  title: string;
-  description: string;
-  date: string;
-  time: string;
-  location: string;
-  type: 'webinar' | 'workshop' | 'conference' | 'meetup';
-  registrationUrl?: string;
-  image?: string;
-}
-
-
-
-export interface Technology {
-  name: string;
-  category: 'frontend' | 'backend' | 'database' | 'cloud' | 'mobile' | 'ai' | 'devops';
-  proficiency: 'beginner' | 'intermediate' | 'advanced' | 'expert';
-  yearsOfExperience: number;
-  projects: number;
-}
-
-
-export interface ContactFormData {
-  name: string;
-  email: string;
-  company?: string;
-  phone?: string;
-  service: string;
-  message: string;
-=======
-=======
-  }
-  certifications: string[];
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface ErrorInfo {
   message: string;
   code?: string;
@@ -1421,7 +943,6 @@ export interface Partner {
   description: string;
   tier: 'platinum' | 'gold' | 'silver' | 'bronze';
 }
-<<<<<<< HEAD
 
 export interface FAQ {
   question: string;
@@ -1535,7 +1056,6 @@ export interface ContactFormData {
   phone?: string;
   service: string;
   message: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   budget?: string;
   timeline?: string;
   source?: string;
@@ -1550,10 +1070,6 @@ export interface NewsletterSubscription {
   subscribedAt: string;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export interface SearchResult {
   id: string;
   title: string;
@@ -1583,10 +1099,7 @@ export interface Pagination {
   itemsPerPage: number;
   hasNext: boolean;
   hasPrev: boolean;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   page?: number;
   limit?: number;
   total?: number;
@@ -1615,7 +1128,6 @@ export interface SuccessResponse<T> {
 }
 
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
-<<<<<<< HEAD
 
 export interface ErrorInfo {
   message: string;
@@ -1640,10 +1152,7 @@ export interface FormField {
     message?: string;
   }
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 // Environment
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
@@ -1651,19 +1160,7 @@ export interface Environment {
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-
-}
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
 // Environment;
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
@@ -1672,7 +1169,6 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Partner {
   name: string;
   logo: string;
@@ -1688,8 +1184,6 @@ export interface Award {
   image?: string;
 }
 export interface Certification {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   name: string;
   issuer: string;
   date: string;
@@ -1765,26 +1259,8 @@ export interface ErrorResponse {
   data: T;
   message?: string;
 }
-<<<<<<< HEAD
 
-
-
-
-=======
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export type Response<T> = SuccessResponse<T> | ErrorResponse;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 export type Response < T> = SuccessResponse < T> | ErrorResponse;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571

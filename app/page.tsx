@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
-
-export default function HomePage() {
-  return (
-    <div className="animate-fade-in">
-      {/* Hero Section */}
-      <section className="text-center py-12 md:py-20">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-          Build and scale with{' '}
-          <span className="text-blue-600">AI</span>,{' '}
-          <span className="text-green-600">Micro SaaS</span>{' '}
-          and{' '}
-          <span className="text-purple-600">Enterprise IT</span>
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
-          automation, cloud infrastructure, and secure micro SaaS products. Trusted by 500+ companies worldwide.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-          <Link
-            href="/services"
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
-=======
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -103,25 +73,16 @@ export default function HomePage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/services"
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <a
             href="https://ziontechgroup.com"
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
-=======
           <a
             href="https://ziontechgroup.com"
-=======
             target="_blank"
             rel="noopener noreferrer"
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -129,11 +90,9 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
@@ -151,11 +110,7 @@ export default function HomePage() {
             href="/services/it-services"
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
             icon="⚙️"
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
           />
-=======
       {/* Featured Services */}
       <section className="py-12">
         <div className="text-center mb-12">
@@ -179,7 +134,6 @@ export default function HomePage() {
             icon="🚀"
           />
           <Card
-=======
           <ServiceCard
             title="AI Services"
             href="/services/ai-services"
@@ -224,8 +178,6 @@ export default function HomePage() {
             description="Business intelligence, predictive analytics and data science solutions."
             icon="📊"
           />
-=======
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
         </div>
       </section>
 
@@ -238,10 +190,6 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
           <FeatureCard
             title="Fast Delivery"
             description="Rapid prototyping and deployment with modern tools and practices."
@@ -257,14 +205,8 @@ export default function HomePage() {
           <FeatureCard
             title="Cost Effective"
             description="Optimized solutions that reduce operational costs and improve efficiency."
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
           />
-=======
           />
-=======
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">⚡</span>
@@ -293,12 +235,10 @@ export default function HomePage() {
             <h3 className="text-lg font-semibold text-gray-900 mb-2">24/7 Support</h3>
             <p className="text-gray-600">Round-the-clock technical support and maintenance</p>
           </div>
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
         </div>
       </section>
 
       {/* Contact CTA */}
-<<<<<<< HEAD
       <section className="py-12">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -325,68 +265,33 @@ export default function HomePage() {
           <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-=======
-      <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Let's discuss your project and find the perfect solution for your business needs.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Get Free Quote
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
         </div>
       </section>
     </div>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
 function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
   return (
     <Link
       href={href}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
         {title}
       </h3>
-=======
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>
   );
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 function FeatureCard({ title, description }: { title: string; description: string }) {
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
-=======
 function FeatureCard({ title, description }: { title: string; description: string }) {
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
@@ -394,10 +299,3 @@ function FeatureCard({ title, description }: { title: string; description: strin
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/fix-website-loading-errors-final
-=======
-=======
-=======
-}
->>>>>>> 85f2cf8c8c24056eae9f08c57d2439681dc591f1

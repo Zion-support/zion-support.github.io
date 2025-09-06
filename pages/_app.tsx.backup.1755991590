@@ -103,7 +103,6 @@ if (typeof window !== 'undefined') {
 import React, { useState, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { AppProps } from 'next/app';
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { Provider } from 'react-redux';
 import { store } from '@/store';
@@ -287,24 +286,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </ProviderWrapper>
   );
 }
-=======
-import React from 'react';
-import { useRouter } from 'next/router';
-import Layout from '../components/layout/Layout';
-import '../styles/globals.css';
-
-export default function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-  const isHome = router.pathname === '/';
-
-  if (isHome) {
-    return <Component {...pageProps} />;
-  }
-
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ca73

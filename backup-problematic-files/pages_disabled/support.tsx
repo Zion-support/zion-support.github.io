@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SupportProps {
   className?: string;
@@ -6,7 +6,7 @@ interface SupportProps {
 
 const Support: React.FC<SupportProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Support</h1>
       <p>This component is under development.</p>
     </div>

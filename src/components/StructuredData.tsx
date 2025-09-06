@@ -1,67 +1,23 @@
-
-import Script from 'next/script';
+import React from 'react';
 
 interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'Service' | 'Article';
-  data: any;
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service';
+  data: Record<string, any>;
 }
 
-export const StructuredData = ({ type, data }: StructuredDataProps) => {
-  const getStructuredData = () => {
-    const baseData = {
-      '@context': 'https://schema.org',
-      '@type': type,
-      ...data,
-    };
-
-    return JSON.stringify(baseData);
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
   };
 
   return (
-    <Script
-      id="structured-data"
+    <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: getStructuredData() }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
     />
   );
 };
 
-export const OrganizationSchema = () => (
-  <StructuredData
-    type="Organization"
-    data={{
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      description: 'Leading technology solutions provider',
-      address: {
-        '@type': 'PostalAddress',
-        'streetAddress': '123 Tech Street',
-        'addressLocality': 'San Francisco',
-        'addressRegion': 'CA',
-        'postalCode': '94105',
-        'addressCountry': 'US',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        'telephone': '+1-555-0123',
-        'contactType': 'customer service',
-      },
-    }}
-  />
-);
-
-export const WebSiteSchema = () => (
-  <StructuredData
-    type="WebSite"
-    data={{
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      potentialAction: {
-        '@type': 'SearchAction',
-        'target': 'https://ziontechgroup.com/search?q={search_term_string}',
-        'query-input': 'required name=search_term_string',
-      },
-    }}
-  />
-);
+export default StructuredData;

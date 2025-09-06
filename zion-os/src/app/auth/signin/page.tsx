@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 "use client",;
 import { useState } from "react",;
 import Link from "next/link",;
@@ -27,9 +21,6 @@ export default function SignInPage() {;
     }
   };
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -46,7 +37,6 @@ export default function SignInPage() {;
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
-<<<<<<< HEAD
 
 "use client",
 import { useState  } from './react';,
@@ -89,13 +79,6 @@ function SignInPage() {
                 <p className="text - red - 400 text - sm">{error}</p>;
               </div>)}
 
-<<<<<<< HEAD
-=======
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 ;
 
 "use client";
@@ -155,9 +138,6 @@ export default function SignInPage() {;
               </div>;
             )}
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div>;
               <label html_for="email" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Email Address;

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { SEO } from \'@/components/SEO\';\''\'; import { Header } from \'@/components/Header\';\''\'; import { Footer } from \'@/components/Footer\';\''\'; import TermsOfService from \'@/legal/TermsOfService\'; export {}; return null} return (); <> <div>Broken JSX</div> />\"; <Header /> <main className=\"min-h-screen bg-zion-blue pt-24 pb-20\"> <div className=\"container mx-auto px-4\"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
 
 const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/Header";"""; import { Footer } from "@/components/Footer";"""; import TermsOfService from "@/legal/TermsOfService"; export {}; return null} return (); <> <div>Broken JSX</div> />"; <Header /> <main className="min-h-screen bg-zion-blue pt-24 pb-20"> <div className="container mx-auto px-4"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };"""
-
-=======
-import { SEO } from \'@/components/SEO\';\''\'; import { Header } from \'@/components/Header\';\''\'; import { Footer } from \'@/components/Footer\';\''\'; import TermsOfService from \'@/legal/TermsOfService\'; export {}; return null} return(); <> <div>Broken JSX</div> />\"; <Header /> <main className=\"min-h-screen bg-zion-blue pt-24 pb-20\"> <div className=\"container mx-auto px-4\"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
-const { SEO } from "@/components/SEO";"""; import { Header } from "@/components/Header";"""; import { Footer } from "@/components/Footer";"""; import TermsOfService from "@/legal/TermsOfService"; export {}; return null} return(); <> <div>Broken JSX</div> />"; <Header /> <main className="min-h-screen bg-zion-blue pt-24 pb-20"> <div className="container mx-auto px-4"> <TermsOfService /> ></div> ></div> <Footer /> </>)} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };"""
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

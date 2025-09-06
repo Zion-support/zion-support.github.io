@@ -1,4 +1,3 @@
-<<<<<<< HEAD:backup-problematic-files/src.broken/components/checkout/CheckoutButton.jsx
 import React from 'react';
 export export export default function CheckoutButton()   {;
   return (;
@@ -9,7 +8,6 @@ export export export default function CheckoutButton()   {;
   );
 }
 ;
-=======
 import React from 'react',
 export export export default function PrivacyPolicy()   {
   return (    <div>
@@ -18,4 +16,3 @@ export export export default function PrivacyPolicy()   {
     </div>
   )
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/src.broken/legal/PrivacyPolicy.jsx

@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 import {useRouter} from 'next/router';
-
 
 import useSWR from 'swr';
 
-
-
-
 export default function EditJobPage() {;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
@@ -25,64 +11,26 @@ const fetcher = (url: string) => fetch(url).then((r) => r.json());
 export default function EditJobPage(req, res) {
   try {
 
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const router = useRouter();
   const { id } = router && router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
 
-=======
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       setTitle(job.title || '');
       setDescription(job.description || '');
       setCategory(job.category || '')
     }
-<<<<<<< HEAD
 
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard')
   }
 
-
-<<<<<<< HEAD
-=======
-  }, [job]);
-
-  const [title, setTitle] = useState(''),
-  const [description, setDescription] = useState(''),
-  const [category, setCategory] = useState(''),
-
-  useEffect(() => {
-    if (job) {
-      setTitle(job.title || ''),
-      setDescription(job.description || ''),
-      setCategory(job.category || '')
-    }
-  }, [job]),
-
-  async function save() {
-    await fetch(`/api/jobs/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({ title, description, category })});
-    router.push('/client/dashboard')
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   useEffect(() => {;
     if (job) {;
       setTitle(job && job.title || '');
@@ -98,23 +46,10 @@ body: JSON.stringify({ title, description, category })});
     });
     router && router.push('/client/dashboard');  }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!job) return <div>Loading…</div>;
-<<<<<<< HEAD
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   return (
           onClick={save}>;
           Save;
@@ -153,16 +88,9 @@ body: JSON.stringify({ title, description, category })});
 
   if (!job) return <div>Loading…</div>;
 
-
-
   return (
 
-
-
-
 import {use_router} from 'next / router';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useRouter  } from 'next/router';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
@@ -172,14 +100,9 @@ const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
 export default function EditJobPage() {;
 
-
 import {useRouter} from 'next/router';
 
-
 import useSWR from 'swr';
-
-
-
 
 export default function EditJobPage() {;
 
@@ -216,7 +139,6 @@ export default function EditJobPage(req, res) {
       body: JSON.stringify({ title, description, category })});
     router.push('/client/dashboard')
   }
-
 
   useEffect(() => {;
     if (job) {;
@@ -255,20 +177,3 @@ export default function EditJobPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-      body: JSON && JSON.stringify({ title, description, category }),;
-    });
-    router && router.push('/client/dashboard');  }
-
-  if (!job) return <div>Loading…</div>;
-
-
-
-  return (
-
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'AI-Powered Tools | Zion Tech Group',
+  title: "AI-Powered Tools | Zion Tech Group",
   description:
-    'Cutting-edge AI-powered micro SAAS tools for content creation, automation, analytics, and business optimization. Leverage artificial intelligence to transform your workflow.',
+    "Cutting-edge AI-powered micro SAAS tools for content creation, automation, analytics, and business optimization. Leverage artificial intelligence to transform your workflow.",
 };
 
 export default function AIPoweredToolsPage() {
@@ -26,12 +26,12 @@ export default function AIPoweredToolsPage() {
             icon="✍️"
             description="AI-powered content creation and optimization tools"
             tools={[
-              'AI Blog Writer Pro',
-              'Social Media Content Generator',
-              'Email Marketing AI',
-              'SEO Content Optimizer',
-              'Video Script Generator',
-              'Product Description AI',
+              "AI Blog Writer Pro",
+              "Social Media Content Generator",
+              "Email Marketing AI",
+              "SEO Content Optimizer",
+              "Video Script Generator",
+              "Product Description AI",
             ]}
           />
           <AIToolCategory
@@ -39,12 +39,12 @@ export default function AIPoweredToolsPage() {
             icon="🤖"
             description="Intelligent automation for business processes"
             tools={[
-              'Smart Document Processor',
-              'AI Customer Support Bot',
-              'Automated Lead Scoring',
-              'Invoice Processing AI',
-              'Meeting Scheduler AI',
-              'Workflow Automation Engine',
+              "Smart Document Processor",
+              "AI Customer Support Bot",
+              "Automated Lead Scoring",
+              "Invoice Processing AI",
+              "Meeting Scheduler AI",
+              "Workflow Automation Engine",
             ]}
           />
           <AIToolCategory
@@ -52,12 +52,12 @@ export default function AIPoweredToolsPage() {
             icon="📈"
             description="AI-driven analytics and business intelligence"
             tools={[
-              'Predictive Analytics Dashboard',
-              'Customer Behavior AI',
-              'Sales Forecasting Tool',
-              'Market Trend Analyzer',
-              'Competitor Intelligence AI',
-              'ROI Optimization Engine',
+              "Predictive Analytics Dashboard",
+              "Customer Behavior AI",
+              "Sales Forecasting Tool",
+              "Market Trend Analyzer",
+              "Competitor Intelligence AI",
+              "ROI Optimization Engine",
             ]}
           />
         </div>
@@ -72,12 +72,12 @@ export default function AIPoweredToolsPage() {
               title="AI Content Studio"
               description="Complete content creation suite with AI writing, editing, and optimization"
               features={[
-                'Multi-format content generation',
-                'Brand voice training',
-                'SEO optimization',
-                'Plagiarism detection',
-                'Content calendar integration',
-                'Performance analytics',
+                "Multi-format content generation",
+                "Brand voice training",
+                "SEO optimization",
+                "Plagiarism detection",
+                "Content calendar integration",
+                "Performance analytics",
               ]}
               price="$29-99/month"
               category="Content Creation"
@@ -88,12 +88,12 @@ export default function AIPoweredToolsPage() {
               title="Smart CRM Assistant"
               description="AI-powered CRM with intelligent lead scoring and automated follow-ups"
               features={[
-                'Predictive lead scoring',
-                'Automated email sequences',
-                'Meeting transcription',
-                'Deal probability analysis',
-                'Customer sentiment tracking',
-                'Sales forecasting',
+                "Predictive lead scoring",
+                "Automated email sequences",
+                "Meeting transcription",
+                "Deal probability analysis",
+                "Customer sentiment tracking",
+                "Sales forecasting",
               ]}
               price="$49-149/month"
               category="Sales & CRM"
@@ -104,12 +104,12 @@ export default function AIPoweredToolsPage() {
               title="AI Analytics Pro"
               description="Advanced business intelligence with natural language queries"
               features={[
-                'Natural language queries',
-                'Automated insights generation',
-                'Anomaly detection',
-                'Custom dashboard creation',
-                'Data visualization',
-                'Mobile app access',
+                "Natural language queries",
+                "Automated insights generation",
+                "Anomaly detection",
+                "Custom dashboard creation",
+                "Data visualization",
+                "Mobile app access",
               ]}
               price="$39-119/month"
               category="Analytics"
@@ -120,12 +120,12 @@ export default function AIPoweredToolsPage() {
               title="Document AI Processor"
               description="Intelligent document processing and data extraction"
               features={[
-                'OCR with 99% accuracy',
-                'Smart data extraction',
-                'Document classification',
-                'Automated workflows',
-                'API integration',
-                'Bulk processing',
+                "OCR with 99% accuracy",
+                "Smart data extraction",
+                "Document classification",
+                "Automated workflows",
+                "API integration",
+                "Bulk processing",
               ]}
               price="$19-79/month"
               category="Document Processing"
@@ -136,12 +136,12 @@ export default function AIPoweredToolsPage() {
               title="AI Email Marketing"
               description="Intelligent email marketing with personalization and optimization"
               features={[
-                'AI subject line optimization',
-                'Send time optimization',
-                'Content personalization',
-                'A/B testing automation',
-                'Unsubscribe prediction',
-                'Revenue attribution',
+                "AI subject line optimization",
+                "Send time optimization",
+                "Content personalization",
+                "A/B testing automation",
+                "Unsubscribe prediction",
+                "Revenue attribution",
               ]}
               price="$25-89/month"
               category="Email Marketing"
@@ -152,12 +152,12 @@ export default function AIPoweredToolsPage() {
               title="Smart Inventory Manager"
               description="AI-powered inventory optimization and demand forecasting"
               features={[
-                'Demand forecasting',
-                'Reorder point optimization',
-                'Price optimization',
-                'Supplier performance analysis',
-                'Seasonal trend analysis',
-                'Multi-location management',
+                "Demand forecasting",
+                "Reorder point optimization",
+                "Price optimization",
+                "Supplier performance analysis",
+                "Seasonal trend analysis",
+                "Multi-location management",
               ]}
               price="$35-129/month"
               category="Inventory Management"
@@ -176,41 +176,41 @@ export default function AIPoweredToolsPage() {
             <AITechnology
               category="Language Models"
               technologies={[
-                'GPT-4',
-                'Claude',
-                'Gemini',
-                'Llama',
-                'Custom Models',
+                "GPT-4",
+                "Claude",
+                "Gemini",
+                "Llama",
+                "Custom Models",
               ]}
             />
             <AITechnology
               category="Machine Learning"
               technologies={[
-                'TensorFlow',
-                'PyTorch',
-                'Scikit-learn',
-                'XGBoost',
-                'AutoML',
+                "TensorFlow",
+                "PyTorch",
+                "Scikit-learn",
+                "XGBoost",
+                "AutoML",
               ]}
             />
             <AITechnology
               category="NLP & Processing"
               technologies={[
-                'spaCy',
-                'NLTK',
-                'Transformers',
-                'BERT',
-                'RoBERTa',
+                "spaCy",
+                "NLTK",
+                "Transformers",
+                "BERT",
+                "RoBERTa",
               ]}
             />
             <AITechnology
               category="Computer Vision"
               technologies={[
-                'OpenCV',
-                'YOLO',
-                'ResNet',
-                'EfficientNet',
-                'Custom CNNs',
+                "OpenCV",
+                "YOLO",
+                "ResNet",
+                "EfficientNet",
+                "Custom CNNs",
               ]}
             />
           </div>
@@ -226,33 +226,33 @@ export default function AIPoweredToolsPage() {
               title="CRM & Sales Tools"
               description="Seamless integration with popular CRM platforms"
               platforms={[
-                'Salesforce',
-                'HubSpot',
-                'Pipedrive',
-                'Zoho',
-                'Custom APIs',
+                "Salesforce",
+                "HubSpot",
+                "Pipedrive",
+                "Zoho",
+                "Custom APIs",
               ]}
             />
             <Integration
               title="Marketing Platforms"
               description="Connect with marketing automation tools"
               platforms={[
-                'Mailchimp',
-                'Constant Contact',
-                'ActiveCampaign',
-                'Marketo',
-                'Pardot',
+                "Mailchimp",
+                "Constant Contact",
+                "ActiveCampaign",
+                "Marketo",
+                "Pardot",
               ]}
             />
             <Integration
               title="Business Applications"
               description="Integrate with essential business software"
               platforms={[
-                'Slack',
-                'Microsoft Teams',
-                'Google Workspace',
-                'Office 365',
-                'Zapier',
+                "Slack",
+                "Microsoft Teams",
+                "Google Workspace",
+                "Office 365",
+                "Zapier",
               ]}
             />
           </div>
@@ -269,12 +269,12 @@ export default function AIPoweredToolsPage() {
               price="$29/month"
               description="Perfect for individuals and small teams"
               features={[
-                '1 AI tool access',
-                'Basic AI features',
-                'Email support',
-                'Standard integrations',
-                'Monthly usage limits',
-                'Basic analytics',
+                "1 AI tool access",
+                "Basic AI features",
+                "Email support",
+                "Standard integrations",
+                "Monthly usage limits",
+                "Basic analytics",
               ]}
               popular={false}
             />
@@ -283,13 +283,13 @@ export default function AIPoweredToolsPage() {
               price="$99/month"
               description="Ideal for growing businesses"
               features={[
-                '3 AI tools access',
-                'Advanced AI features',
-                'Priority support',
-                'All integrations',
-                'Higher usage limits',
-                'Advanced analytics',
-                'Custom workflows',
+                "3 AI tools access",
+                "Advanced AI features",
+                "Priority support",
+                "All integrations",
+                "Higher usage limits",
+                "Advanced analytics",
+                "Custom workflows",
               ]}
               popular={true}
             />
@@ -298,14 +298,14 @@ export default function AIPoweredToolsPage() {
               price="$299/month"
               description="For large organizations"
               features={[
-                'Unlimited AI tools',
-                'Premium AI features',
-                '24/7 dedicated support',
-                'Custom integrations',
-                'Unlimited usage',
-                'Custom analytics',
-                'White-label options',
-                'SLA guarantee',
+                "Unlimited AI tools",
+                "Premium AI features",
+                "24/7 dedicated support",
+                "Custom integrations",
+                "Unlimited usage",
+                "Custom analytics",
+                "White-label options",
+                "SLA guarantee",
               ]}
               popular={false}
             />
@@ -525,7 +525,7 @@ function AIPricingPlan({
 }) {
   return (
     <div
-      className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? 'border-purple-500' : 'border-gray-200'} relative`}
+      className={`bg-white rounded-xl p-8 shadow-lg border-2 ${popular ? "border-purple-500" : "border-gray-200"} relative`}
     >
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -549,8 +549,8 @@ function AIPricingPlan({
         href="tel:+13024640950"
         className={`w-full mt-6 py-3 rounded-lg font-semibold text-center block transition-colors ${
           popular
-            ? 'bg-purple-600 text-white hover:bg-purple-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+            ? "bg-purple-600 text-white hover:bg-purple-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
         }`}
       >
         Get Started

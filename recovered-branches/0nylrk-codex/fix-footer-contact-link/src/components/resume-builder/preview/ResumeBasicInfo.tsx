@@ -1,7 +1,6 @@
 import { ResumeBasicInfo } from "@/types/resume";
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
-<<<<<<< HEAD
 }
 
 export function ResumeBasicInfoSection({
@@ -18,12 +17,6 @@ export function ResumeBasicInfoSection({
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ResumeBasicInfo } from "@/types/resume";
 interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo;
@@ -42,8 +35,3 @@ export function ResumeBasicInfoSection({
   );
 }
 ;
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -5,7 +5,6 @@ interface ReviewsListProps {
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
-<<<<<<< HEAD
 
 export function ReviewsList({
   reviews,
@@ -51,12 +50,6 @@ export function ReviewsList({
     );
   }
 
-=======
-=======
-          ))}
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       </div>
     );
   }
@@ -72,10 +65,6 @@ export function ReviewsList({
     );
   }
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
   // Check condition
@@ -96,24 +85,5 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div className="space-y-4">
-      {reviews.map((review) => (
-        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
-      ))}
-    </div>
-  );
 }
 ;
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

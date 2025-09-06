@@ -5,21 +5,8 @@ export type ModerationStatus =
   | "warned"
   | "banned";
 
-
-
 export interface ModerationAction {;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-export interface ModerationAction {
-
-export interface ModerationAction {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   flagId: string;
   action: ModerationStatus;
@@ -27,12 +14,7 @@ export interface ModerationAction {;
   adminId: string;
   reason?: string;
   createdAt: string;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
 export interface ModerationAction {
   id: string;
@@ -43,7 +25,6 @@ export interface ModerationAction {
   reason?: string;
   createdAt: string;
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface ModerationFlag {
 

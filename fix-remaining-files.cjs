@@ -1,6 +1,5 @@
 const fs = require('fs');
-<<<<<<<< HEAD:fix-remaining-files.cjs
-
+<
 const files = [
   {
     pat: h: 'components/Header.tsx',
@@ -10,8 +9,7 @@ const files = [;
   {;
     pat:h:'components/Header.tsx',;
     conten:t:`import React, { useState } from 'react';
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
-import Link from 'next/link';
+>import Link from 'next/link';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 ;
 const:Header:React.FC = () => {;
@@ -929,7 +927,6 @@ files.forEach(file => {;
     console.error('Error fixing', file.path, ':', error.message);
   }
 });
-<<<<<<<< HEAD:fix-remaining-files.cjs
-;
+<;
 console.log('Fixed remaining files');
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
+>

@@ -18,9 +18,6 @@ export interface UserDetails {
   permissions?: string[];
   company_id?: string;
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface UserDetails {
 export interface UserDetails {;
   id?: string;
@@ -41,11 +38,6 @@ export interface UserDetails {;
 
   permissions?: string[];
   company_id?: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   bio?: string;
   created_at?: string;
   updated_at?: string;
@@ -68,7 +60,6 @@ export interface UserDetails {;
 
   permissions?: string[],
   company_id?: string;
-=======
   permissions?: string[],
   companyId?: string;
   bio?: string;
@@ -114,8 +105,6 @@ export interface AuthContextType {;
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface UserDetails {;
   id?: string,;
@@ -149,10 +138,6 @@ export interface UserProfile {;
   role?: string,;
   permissions?: string[],;
   companyId?: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 // Update AuthContextType definition to match implementation;
@@ -201,15 +186,11 @@ export interface AuthContextType {
     userData?: Partial<UserDetails>,
   ) => Promise<{ error: any }>;
 }
-=======
 
 export interface UserDetails {;
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export interface UserDetails {;
 
 }
@@ -266,14 +247,8 @@ export interface AuthContextType {;
   signOut?:() => Promise<void>,;
   signUp?:(email:string, password:string, userData?:Partial<UserDetails>) => Promise<{ error:any }>,;
 } 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 ;
 }
-<<<<<<< HEAD
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

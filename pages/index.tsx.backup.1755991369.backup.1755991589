@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 
-<<<<<<< HEAD
 export default function Home() {
   return (
     <div className="py-16">
@@ -11,27 +9,10 @@ export default function Home() {
         <div className="mt-8">
           <Link href="/talent"><a className="inline-flex items-center px-5 py-3 rounded-lg bg-gradient-to-r from-blue-500 via-violet-500 to-cyan-500 text-white shadow-lg shadow-blue-500/20 hover:opacity-90 transition">Browse Talent</a></Link>
         </div>
-=======
-<<<<<<< HEAD
-import Link from 'next/link';
-
-export default function HomePage() {
-  return (
-    <div className="space-y-6">
-      <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 text-white rounded-2xl p-6">
-        <h1 className="text-2xl font-semibold">Zion AI Marketplace</h1>
-        <p className="text-white/80">Explore dashboards for admins and talent.</p>
-      </div>
-      <div className="grid sm:grid-cols-2 gap-4">
-        <Link href="/admin/quotes"><a className="block p-5 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900">Admin • Quote Request Manager</a></Link>
-        <Link href="/dashboard/requests"><a className="block p-5 border rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900">Talent • My Requests</a></Link>
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
       </div>
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 export default function HomePage() {
   return (
     <div className="space-y-6">
@@ -44,12 +25,3 @@ export default function HomePage() {
     </div>
   );
 }
->>>>>>> origin/cursor/build-zion-global-expo-platform-712b
-=======
-import React from 'react';
-
-export default function HomePage() {
-  return <div>Welcome to Zion App</div>;
-}
->>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

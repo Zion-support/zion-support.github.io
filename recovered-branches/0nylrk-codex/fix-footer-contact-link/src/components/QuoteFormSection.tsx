@@ -77,47 +77,15 @@ import { useState } from "react",
                   >
                     Name
                   </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
-
-import { Button } from "./ui/button",;
-import { Input } from "./ui/input",;
-import { GradientHeading } from "./GradientHeading",;
-import { useState } from "react",;
-;
-export function QuoteFormSection() {;
-  const [isSubmitted, setIsSubmitted] = useState(false),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-;
-  const handleSubmit = (e:React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsSubmitting(true),;
-    ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
       setIsSubmitted(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
     }, 1000);
   };
 
   return (
-=======
-    }, 1000),;
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <section className="py-20 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="text-center mb-12">;
@@ -126,26 +94,12 @@ export function QuoteFormSection() {;
             Request your instant commercial proposal and discover how Zion can revolutionize your IT operations;
           </p>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">;
           {isSubmitted ? (;
             <div className="text-center py-8">;
               <div className="inline-flex items-center justify-center w-16 h-16 bg-zion-purple/20 rounded-full mb-6">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
-=======
-                <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"></path>;
                 </svg>;
               </div>;
@@ -153,14 +107,7 @@ export function QuoteFormSection() {;
               <p className="text-zion-slate-light mb-6">;
                 Thank you for your interest in Zion's services. Our team will prepare your personalized commercial proposal and contact you shortly.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Button
-=======
-              <Button ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 onClick={() => setIsSubmitted(false)}
                 variant="outline" ;
                 className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
@@ -168,27 +115,13 @@ export function QuoteFormSection() {;
                 Submit Another Request;
               </Button>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
           ) : (;
-=======
-          ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <form onSubmit={handleSubmit}>;
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
                 <div>;
                   <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Name;
                   </label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input
                     id="name"
                     type="text"
@@ -260,7 +193,6 @@ export function QuoteFormSection() {;
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
-<<<<<<< HEAD
                       />
                       <label
                         htmlFor={`interest-${index}`}

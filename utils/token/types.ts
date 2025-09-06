@@ -1,37 +1,11 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type TokenSymbol = "ZION$",
 
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
-export type TokenSymbol = "ZION$";
-export type TokenSymbol = "ZION$",;
-export type TokenSymbol = "ZION$";
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type TokenTransactionType =;
   | "earn";
   | "burn";
   | "issue";
   | "revoke";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  | "redeem";
-export interface TokenTransaction {id: string;
-  userId: string;
-  type: TokenTransactionType;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   | "redeem",;
 export interface TokenTransaction {;
   id: string,;
@@ -44,13 +18,6 @@ export interface TokenTransaction {;
 }
 export interface Wallet {userId: string;
   balance: number, // current token balance;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-export interface TokenConfig {symbol: TokenSymbol;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   | "redeem",
 export interface TokenTransaction {
   id: string,
@@ -60,26 +27,11 @@ export interface TokenTransaction {
   reason: string,
   metadata?: Record < string any>,
   created_at: string, // ISO timestamp;
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export interface Wallet {
   user_id: string,
   balance: number, // current token balance;
-=======
-
-  | "redeem",;
-export interface TokenTransaction {;
-
-
-}
-export interface TokenConfig {
-  symbol: TokenSymbol,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5;
-
-
-
 
 }
 
@@ -89,13 +41,8 @@ export interface WalletSummary {
   transactions: TokenTransaction[];
   config: TokenConfig;
 
-
-
 }
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface Wallet {
   user_id: string,
@@ -103,7 +50,6 @@ export interface Wallet {
 
   | "redeem",;
 export interface TokenTransaction {;
-
 
 }
 export interface TokenConfig {
@@ -159,13 +105,3 @@ export interface WalletSummary {;
   }
 }
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-}
-
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

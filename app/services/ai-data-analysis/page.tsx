@@ -1,74 +1,100 @@
 export const metadata = {
-  title: 'AI Data Analysis Platform | Zion Tech Group',
-  description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.',
+  title: "AI Data Analysis Platform | Zion Tech Group",
+  description:
+    "Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.",
 };
 
 export default function AIDataAnalysisPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Data Analysis Platform</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI Data Analysis Platform
+        </h1>
         <p className="text-xl text-gray-600 mb-8">
-          Build AI-powered data analysis platforms with automated insights, predictive analytics, and intelligent business intelligence tools.
+          Build AI-powered data analysis platforms with automated insights,
+          predictive analytics, and intelligent business intelligence tools.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Item
             title="Automated Insights"
             details={[
-              'Pattern recognition',
-              'Anomaly detection',
-              'Trend analysis',
-              'Correlation discovery',
-              'Automated reporting',
-              'Natural language queries',
-              'Insight recommendations',
+              "Pattern recognition",
+              "Anomaly detection",
+              "Trend analysis",
+              "Correlation discovery",
+              "Automated reporting",
+              "Natural language queries",
+              "Insight recommendations",
             ]}
           />
           <Item
             title="Predictive Analytics"
             details={[
-              'Forecasting models',
-              'Risk assessment',
-              'Customer behavior prediction',
-              'Demand forecasting',
-              'Churn prediction',
-              'Revenue optimization',
-              'Scenario planning',
+              "Forecasting models",
+              "Risk assessment",
+              "Customer behavior prediction",
+              "Demand forecasting",
+              "Churn prediction",
+              "Revenue optimization",
+              "Scenario planning",
             ]}
           />
           <Item
             title="Data Processing"
             details={[
-              'Real-time data ingestion',
-              'Data cleaning automation',
-              'Feature engineering',
-              'Model training',
-              'Data validation',
-              'ETL pipelines',
-              'Data quality monitoring',
+              "Real-time data ingestion",
+              "Data cleaning automation",
+              "Feature engineering",
+              "Model training",
+              "Data validation",
+              "ETL pipelines",
+              "Data quality monitoring",
             ]}
           />
         </div>
 
         <div className="bg-gradient-to-r from-green-50 to-teal-50 border border-green-200 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">AI Data Analysis Features</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            AI Data Analysis Features
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Machine Learning Models</h3>
-              <p className="text-gray-600">Custom ML models for classification, regression, clustering, and deep learning applications.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Machine Learning Models
+              </h3>
+              <p className="text-gray-600">
+                Custom ML models for classification, regression, clustering, and
+                deep learning applications.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Natural Language Queries</h3>
-              <p className="text-gray-600">Ask questions in plain English and get AI-powered insights from your data automatically.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Natural Language Queries
+              </h3>
+              <p className="text-gray-600">
+                Ask questions in plain English and get AI-powered insights from
+                your data automatically.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Real-Time Processing</h3>
-              <p className="text-gray-600">Process streaming data in real-time with sub-second latency for instant insights and alerts.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Real-Time Processing
+              </h3>
+              <p className="text-gray-600">
+                Process streaming data in real-time with sub-second latency for
+                instant insights and alerts.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Visualization & Dashboards</h3>
-              <p className="text-gray-600">Interactive charts, graphs, and dashboards that automatically update with new insights.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Visualization & Dashboards
+              </h3>
+              <p className="text-gray-600">
+                Interactive charts, graphs, and dashboards that automatically
+                update with new insights.
+              </p>
             </div>
           </div>
         </div>
@@ -98,20 +124,22 @@ function Item({ title, details }: { title: string; details: string[] }) {
 function Pricing() {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Data Analysis Pricing</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        AI Data Analysis Pricing
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Plan
           name="Data Insights"
           price="$18k–$35k"
           duration="8–12 weeks"
           features={[
-            'Basic data analysis',
-            'Automated insights',
-            'Simple dashboards',
-            'Data visualization',
-            'Basic ML models',
-            'API access',
-            'Standard support',
+            "Basic data analysis",
+            "Automated insights",
+            "Simple dashboards",
+            "Data visualization",
+            "Basic ML models",
+            "API access",
+            "Standard support",
           ]}
         />
         <Plan
@@ -119,13 +147,13 @@ function Pricing() {
           price="$35k–$70k"
           duration="12–20 weeks"
           features={[
-            'Everything in Insights',
-            'Advanced ML models',
-            'Predictive forecasting',
-            'Real-time processing',
-            'Custom algorithms',
-            'Advanced visualizations',
-            'Priority support',
+            "Everything in Insights",
+            "Advanced ML models",
+            "Predictive forecasting",
+            "Real-time processing",
+            "Custom algorithms",
+            "Advanced visualizations",
+            "Priority support",
           ]}
         />
         <Plan
@@ -133,21 +161,24 @@ function Pricing() {
           price="$70k+"
           duration="16–28 weeks"
           features={[
-            'Everything in Predictive',
-            'Custom AI development',
-            'Advanced security',
-            'Multi-tenant architecture',
-            'Dedicated support',
-            'SLA guarantees',
-            'On-premise deployment',
+            "Everything in Predictive",
+            "Custom AI development",
+            "Advanced security",
+            "Multi-tenant architecture",
+            "Dedicated support",
+            "SLA guarantees",
+            "On-premise deployment",
           ]}
         />
       </div>
 
       <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your AI Data Platform?</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Build Your AI Data Platform?
+        </h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful AI data analysis platform that transforms your data into actionable business insights.
+          Let's create a powerful AI data analysis platform that transforms your
+          data into actionable business insights.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -168,7 +199,12 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: {
+function Plan({
+  name,
+  price,
+  duration,
+  features,
+}: {
   name: string;
   price: string;
   duration: string;

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,10 +20,6 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import DeveloperPortal from "../pages/DeveloperPortal";
@@ -35,22 +27,12 @@ import ApiDocsHub from "../pages/ApiDocsHub";
 import ApiReference from "../pages/ApiReference";
 import ApiGettingStarted from "../pages/ApiGettingStarted";
 import ApiWebhooks from "../pages/ApiWebhooks";
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import ApiSampleCode from "../pages/ApiSampleCode";
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import ApiSampleCode from "../pages/ApiSampleCode";
-
 
 import ApiSampleCode from "../pages/ApiSampleCode";
 import ApiErrorCodes from "../pages/ApiErrorCodes";
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",
 import { Navigate, Route, Routes } from "react-router-dom",
 import DeveloperPortal from "../pages/DeveloperPortal",
@@ -62,10 +44,6 @@ import ApiSampleCode from "../pages/ApiSampleCode";
 import ApiErrorCodes from "../pages/ApiErrorCodes";
 import ApiSampleCode from "../pages/ApiSampleCode",
 import ApiErrorCodes from "../pages/ApiErrorCodes",
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function DeveloperRoutes() {
   return (
     <Routes>

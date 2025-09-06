@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 export interface OperatorSession {
   id: string;
   name: string;
@@ -16,7 +14,6 @@ export interface SupportEvent {
   payload: any;
   timestamp: Date;
 }
-
 
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database

@@ -1,74 +1,98 @@
 export const metadata = {
-  title: 'Email Automation Platform | Zion Tech Group',
-  description: 'Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.',
+  title: "Email Automation Platform | Zion Tech Group",
+  description:
+    "Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.",
 };
 
 export default function EmailAutomationPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Email Automation Platform</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Email Automation Platform
+        </h1>
         <p className="text-xl text-gray-600 mb-8">
-          Build sophisticated email automation platforms with drip campaigns, personalization, and advanced analytics.
+          Build sophisticated email automation platforms with drip campaigns,
+          personalization, and advanced analytics.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Item
             title="Campaign Management"
             details={[
-              'Visual email builder',
-              'Drip campaign sequences',
-              'A/B testing framework',
-              'Send time optimization',
-              'List segmentation',
-              'Template library',
-              'Mobile-responsive design',
+              "Visual email builder",
+              "Drip campaign sequences",
+              "A/B testing framework",
+              "Send time optimization",
+              "List segmentation",
+              "Template library",
+              "Mobile-responsive design",
             ]}
           />
           <Item
             title="Personalization & AI"
             details={[
-              'Dynamic content blocks',
-              'AI-powered subject lines',
-              'Behavioral triggers',
-              'Customer journey mapping',
-              'Predictive analytics',
-              'Smart recommendations',
-              'Real-time personalization',
+              "Dynamic content blocks",
+              "AI-powered subject lines",
+              "Behavioral triggers",
+              "Customer journey mapping",
+              "Predictive analytics",
+              "Smart recommendations",
+              "Real-time personalization",
             ]}
           />
           <Item
             title="Analytics & Insights"
             details={[
-              'Open & click tracking',
-              'Revenue attribution',
-              'Engagement scoring',
-              'Deliverability monitoring',
-              'ROI reporting',
-              'Heatmap analysis',
-              'Custom dashboards',
+              "Open & click tracking",
+              "Revenue attribution",
+              "Engagement scoring",
+              "Deliverability monitoring",
+              "ROI reporting",
+              "Heatmap analysis",
+              "Custom dashboards",
             ]}
           />
         </div>
 
         <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Email Automation Platform?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Why Choose Our Email Automation Platform?
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <h3 className="font-semibold text-gray-900 mb-2">Proven ROI</h3>
-              <p className="text-gray-600">Our clients see average 340% ROI on email marketing campaigns with our automation tools.</p>
+              <p className="text-gray-600">
+                Our clients see average 340% ROI on email marketing campaigns
+                with our automation tools.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Enterprise-Grade</h3>
-              <p className="text-gray-600">Built to handle millions of emails with 99.9% deliverability rates and advanced compliance.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Enterprise-Grade
+              </h3>
+              <p className="text-gray-600">
+                Built to handle millions of emails with 99.9% deliverability
+                rates and advanced compliance.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Easy Integration</h3>
-              <p className="text-gray-600">Seamlessly integrates with CRM, e-commerce, and marketing tools via robust APIs.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Easy Integration
+              </h3>
+              <p className="text-gray-600">
+                Seamlessly integrates with CRM, e-commerce, and marketing tools
+                via robust APIs.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Compliance Ready</h3>
-              <p className="text-gray-600">GDPR, CAN-SPAM, and CASL compliant with built-in unsubscribe management.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Compliance Ready
+              </h3>
+              <p className="text-gray-600">
+                GDPR, CAN-SPAM, and CASL compliant with built-in unsubscribe
+                management.
+              </p>
             </div>
           </div>
         </div>
@@ -98,20 +122,22 @@ function Item({ title, details }: { title: string; details: string[] }) {
 function Pricing() {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Email Automation Pricing</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Email Automation Pricing
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Plan
           name="Starter Platform"
           price="$12k–$25k"
           duration="4–6 weeks"
           features={[
-            'Basic email builder',
-            'Drip campaigns',
-            'List management',
-            'Basic analytics',
-            'Template library',
-            'API integration',
-            'Email testing',
+            "Basic email builder",
+            "Drip campaigns",
+            "List management",
+            "Basic analytics",
+            "Template library",
+            "API integration",
+            "Email testing",
           ]}
         />
         <Plan
@@ -119,13 +145,13 @@ function Pricing() {
           price="$25k–$50k"
           duration="6–10 weeks"
           features={[
-            'Everything in Starter',
-            'Advanced personalization',
-            'A/B testing suite',
-            'Behavioral triggers',
-            'Advanced analytics',
-            'CRM integration',
-            'White-label options',
+            "Everything in Starter",
+            "Advanced personalization",
+            "A/B testing suite",
+            "Behavioral triggers",
+            "Advanced analytics",
+            "CRM integration",
+            "White-label options",
           ]}
         />
         <Plan
@@ -133,21 +159,24 @@ function Pricing() {
           price="$50k+"
           duration="8–12 weeks"
           features={[
-            'Everything in Professional',
-            'AI-powered features',
-            'Advanced segmentation',
-            'Custom integrations',
-            'Dedicated support',
-            'SLA guarantees',
-            'Custom development',
+            "Everything in Professional",
+            "AI-powered features",
+            "Advanced segmentation",
+            "Custom integrations",
+            "Dedicated support",
+            "SLA guarantees",
+            "Custom development",
           ]}
         />
       </div>
 
       <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Email Platform?</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Build Your Email Platform?
+        </h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful email automation platform that drives engagement and revenue for your business.
+          Let's create a powerful email automation platform that drives
+          engagement and revenue for your business.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -168,7 +197,12 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: {
+function Plan({
+  name,
+  price,
+  duration,
+  features,
+}: {
   name: string;
   price: string;
   duration: string;

@@ -22,7 +22,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
   ];
 
-<<<<<<< HEAD
 // Import existing services for comprehensive showcase
 import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 
@@ -124,11 +123,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         staggerChildren: 0.1
       }
     }
-=======
-  const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.icon : Star;
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
   };
 
   const getCategoryColor = (category: string) => {
@@ -139,23 +133,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
   return (
     <Layout>
       <SEO 
-<<<<<<< HEAD
         title="2025 Comprehensive Innovative Services Showcase | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and cutting-edge technology platforms. From quantum computing to healthcare AI, explore the future of business technology."
         keywords={["innovative micro SAAS", "AI services", "quantum computing", "healthcare AI", "cybersecurity", "blockchain", "space technology", "autonomous vehicles", "IoT", "metaverse", "Zion Tech Group"]}
         ogImage="https://ziontechgroup.com/og-innovative-services-2025.jpg"
-=======
-        title="2025 Innovative Services Showcase | Zion Tech Group"
-        description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems."
-        keywords={[
-          'innovative services 2025',
-          'micro SAAS',
-          'quantum computing',
-          'space technology',
-          'AI platforms',
-          'autonomous systems'
-        ]}
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
       />
       
       {/* Hero Section */}
@@ -319,7 +300,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                         {service.price}<span className="text-lg text-gray-400">/{service.period}</span>
                       </div>
                     </div>
-<<<<<<< HEAD
                     <span className="text-gray-300 text-sm">
                       {(service as any).rating || 0} ({(service as any).reviews || 0} reviews)
                     </span>
@@ -353,10 +333,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                       Key Features
                     </h4>
                     <div className="flex flex-wrap gap-2">
-=======
-                    
-                    <div className="space-y-3 mb-6">
->>>>>>> 4e26761e9808218b595a40eae6dfbc7c204b5906
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">
                           <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>

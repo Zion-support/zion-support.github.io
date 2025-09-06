@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
-
 
 console.log('🔍 Debugging Next.js project structure...'),;
 
@@ -20,7 +14,6 @@ console.log ('📁 Components directory exists:', fs.exists_sync ('components'))
 
 if (fs.existsSync('package.json')) {;
 
-
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 
@@ -28,7 +21,6 @@ if (fs.existsSync('package.json')) {;
 // Check pages directory structure;
 
 if (fs.existsSync('pages')) {;
-
 
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
@@ -38,13 +30,6 @@ if (fs.existsSync('pages')) {;
 
 console.log('🔍 Checking for problematic files...'),;
 
-
-<<<<<<< HEAD
-=======
-const fs = require('fs');
-const path = require('path');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 console.log('🔍 Debugging Next.js project structure...');
 // Check if we're in a valid Next.js project;
 console.log('📁 Current directory:', process.cwd());
@@ -79,7 +64,6 @@ const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
 
-
 console.log('🔍 Debugging Next.js project structure...'),;
 // Check if we're in a valid Next.js project;
 console.log('📁 Current directory:', process.cwd()),;
@@ -91,7 +75,6 @@ console.log('📁 Components directory exists:', fs.existsSync('components')),;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),;
   const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8'));
 
-
   console.log('📦 Next.js version:', packageJson.dependencies?.next || 'Not found'),;
   console.log('📦 React version:', packageJson.dependencies?.react || 'Not found');
 
@@ -102,7 +85,6 @@ if (fs.existsSync('pages')) {;
   const pages = fs.readdirSync('pages'),;
   const pages = fs.readdirSync('pages');
 
-
   console.log('📄 Pages found:', pages.length),;
   console.log('📄 Main pages:', pages.filter(p => p.includes('index') || p.includes('_app')));
 
@@ -112,29 +94,11 @@ if (fs.existsSync('pages')) {;
 console.log('🔍 Checking for problematic files...'),;
 const problematicFiles = [],;
 const problematicFiles = [];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
     const content = fs.readFileSync(file, 'utf8'),;
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    if (content.includes('') || content.includes('
-}
-}
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       problematicFiles.push(file);
     }
   } catch (error) {;
@@ -168,7 +132,3 @@ function getAllFiles(dir, extensions) {;
 }
 ;
 console.log('✅ Debug completed'),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

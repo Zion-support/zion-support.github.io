@@ -1,5 +1,3 @@
-
-<<<<<<< HEAD:src/components/jobs/TranslatableJobForm.tsx
 import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -120,7 +118,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
       </div>
     </form>
   )
-=======
 interface TranslatableJobFormProps {;
   onSubmit: (formData: any) => void;
   isSubmitting?: boolean;}
@@ -142,7 +139,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   });
     ar: "";
   });
-
 
     let sourceLanguage: SupportedLanguage = 'en';
     let content = '';
@@ -186,7 +182,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   );
 
 }
-
 
 export function TranslatableJobForm({ onSubmit, isSubmitting;
   return (
@@ -379,12 +374,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting;
             t('jobs.post_job_button')
           )}
 
-
         </Button>;
       </div>;
     </form>;
   );
->>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159:backup-problematic-files/src/components/jobs/TranslatableJobForm.tsx
 }
 ;
-

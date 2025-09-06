@@ -98,10 +98,8 @@ export const ${componentName} = () => {
   isFileCorrupted(content) {
     // Check for common corruption patterns
     const corruptionPatterns = [
-      /<<<<<<< HEAD/,
-      /=======/,
-      />>>>>>> /,
-      /Error: Parsing error/,
+      /      //,
+      /      /Error: Parsing error/,
       /Unexpected token/,
       /Missing semicolon/,
       /Unterminated string literal/,

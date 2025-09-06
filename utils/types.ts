@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-export interface Application {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Application {;
   id: string;
   name: string;
@@ -15,7 +8,6 @@ export interface Application {;
   createdAt: string;
   updatedAt?: string;
 }
-
 
   id: string;
   jobId: string;

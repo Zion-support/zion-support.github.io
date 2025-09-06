@@ -76,11 +76,7 @@ export default function HelpCenter() {
                   searchQuery={searchQuery}
                 />
               )}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -97,8 +93,6 @@ export default function HelpCenter() {
                   />;
                 </>;
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               {selectedArticle && (
                 <>
@@ -109,21 +103,7 @@ export default function HelpCenter() {
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              ;
-              {selectedArticle && (;
-                <>;
-                  <Button;
-                    variant="ghost";
-                    onClick={handleBackToArticles}
-                    className="mb-4";
-                  >;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     ← Back to Articles;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Button>;
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
@@ -136,12 +116,6 @@ export default function HelpCenter() {
                   Frequently Asked Questions
                 </h2>
 
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -224,8 +198,6 @@ export default function HelpCenter() {
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
-<<<<<<< HEAD
-<<<<<<< HEAD
                       </a>
                     </div>
 
@@ -287,25 +259,11 @@ export default function HelpCenter() {
     </AppLayout>
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   );
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   );
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
     </AppLayout>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </AppLayout>;
   );}
  export default function HelpCenter () {
@@ -358,7 +316,3 @@ const handleBackToArticles = () => {
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

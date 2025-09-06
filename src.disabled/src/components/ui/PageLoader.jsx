@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,11 +24,3 @@ import React from \"react\"; import { cn } from \"@/lib/utils\"; export const Pa
 const React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading.",className }) => {}; return (); <div" className={cn( "flex flex-col items-center justify-center min-h-screen",className)}>; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"""
 
 import _React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading...",className }) => {}; return (); <div" className={cn( "flex flex-col items-center justify-center min-h-screen',className)}>; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
-
-=======
-import React from \"react\"; import { cn } from \"@/lib/utils\"; export const PageLoader = ({ text = \"Loading...\",className }) => {}; return (); <div\"; className={cn(; \"flex flex-col items-center justify-center min-h-screen\',className)}; >; <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
-const React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading.",className }) => {}; return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen",className)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;"""
-import _React from "react"; import { cn } from "@/lib/utils"; export const PageLoader = ({ text = "Loading...",className }) => {}; return (); <div"; className={cn(; "flex flex-col items-center justify-center min-h-screen',className)}; >; <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white> <div>Broken JSX</div> ></div> ); export default Component;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

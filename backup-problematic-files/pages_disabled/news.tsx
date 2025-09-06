@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface NewsProps {
   className?: string;
@@ -6,7 +6,7 @@ interface NewsProps {
 
 const News: React.FC<NewsProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>News</h1>
       <p>This component is under development.</p>
     </div>

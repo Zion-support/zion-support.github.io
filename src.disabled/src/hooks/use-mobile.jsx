@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,11 +24,3 @@ import React from \"react\"; import { useState,useEffect } from \"react\" export
 const React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window && window.innerWidth < 768)} checkIsMobile() window && window.addEventListener("resize",checkIsMobile) return () => window ; ); export default Component;""
 
 import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window && window.innerWidth < 768)} checkIsMobile() window && window.addEventListener("resize",checkIsMobile) return () => window ; ); export default Component;
-
-=======
-import React from \"react\"; import { useState,useEffect } from \"react\" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener(\"resize\",checkIsMobile) return () => window.removeEventListener(\"resize\",checkIsMobile)},[]) return isMobile}\"; ); export default Component;
-const React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;""
-import _React from "react"; import { useState,useEffect } from "react" export function useIsMobile() { const [isMobile,setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = () => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener("resize",checkIsMobile) return () => window.removeEventListener("resize",checkIsMobile)},[]) return isMobile}"; ); export default Component;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

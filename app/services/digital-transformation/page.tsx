@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Digital Transformation Services | Zion Tech Group',
+  title: "Digital Transformation Services | Zion Tech Group",
   description:
-    'Complete digital transformation solutions including process automation, legacy modernization, and digital strategy consulting. Transform your business for the digital age.',
+    "Complete digital transformation solutions including process automation, legacy modernization, and digital strategy consulting. Transform your business for the digital age.",
 };
 
 export default function DigitalTransformationPage() {
@@ -27,12 +27,12 @@ export default function DigitalTransformationPage() {
             title="Legacy System Modernization"
             description="Transform outdated systems into modern, scalable, and efficient platforms"
             features={[
-              'System assessment',
-              'Migration planning',
-              'Data transformation',
-              'API integration',
-              'User training',
-              'Performance optimization',
+              "System assessment",
+              "Migration planning",
+              "Data transformation",
+              "API integration",
+              "User training",
+              "Performance optimization",
             ]}
             price="$25k–$100k"
             icon="🔄"
@@ -41,12 +41,12 @@ export default function DigitalTransformationPage() {
             title="Process Automation & Workflow"
             description="Automate business processes with intelligent workflow management"
             features={[
-              'Process mapping',
-              'Automation design',
-              'RPA implementation',
-              'Workflow optimization',
-              'Integration',
-              'Monitoring',
+              "Process mapping",
+              "Automation design",
+              "RPA implementation",
+              "Workflow optimization",
+              "Integration",
+              "Monitoring",
             ]}
             price="$15k–$60k"
             icon="⚡"
@@ -55,12 +55,12 @@ export default function DigitalTransformationPage() {
             title="Digital Strategy Consulting"
             description="Comprehensive digital strategy development and implementation roadmap"
             features={[
-              'Digital assessment',
-              'Strategy development',
-              'Technology roadmap',
-              'Change management',
-              'ROI analysis',
-              'Implementation planning',
+              "Digital assessment",
+              "Strategy development",
+              "Technology roadmap",
+              "Change management",
+              "ROI analysis",
+              "Implementation planning",
             ]}
             price="$20k–$80k"
             icon="📋"
@@ -69,12 +69,12 @@ export default function DigitalTransformationPage() {
             title="Customer Experience Transformation"
             description="Enhance customer experience through digital channels and touchpoints"
             features={[
-              'CX mapping',
-              'Digital channels',
-              'Personalization',
-              'Omnichannel integration',
-              'Analytics',
-              'Feedback systems',
+              "CX mapping",
+              "Digital channels",
+              "Personalization",
+              "Omnichannel integration",
+              "Analytics",
+              "Feedback systems",
             ]}
             price="$18k–$70k"
             icon="👥"
@@ -83,12 +83,12 @@ export default function DigitalTransformationPage() {
             title="Data-Driven Decision Making"
             description="Implement data analytics and business intelligence for informed decisions"
             features={[
-              'Data strategy',
-              'Analytics platform',
-              'Dashboard development',
-              'KPI tracking',
-              'Predictive analytics',
-              'Data governance',
+              "Data strategy",
+              "Analytics platform",
+              "Dashboard development",
+              "KPI tracking",
+              "Predictive analytics",
+              "Data governance",
             ]}
             price="$22k–$85k"
             icon="📊"
@@ -97,12 +97,12 @@ export default function DigitalTransformationPage() {
             title="Cloud-First Architecture"
             description="Design and implement cloud-native solutions for scalability and efficiency"
             features={[
-              'Cloud strategy',
-              'Architecture design',
-              'Migration planning',
-              'Security implementation',
-              'Cost optimization',
-              'Monitoring',
+              "Cloud strategy",
+              "Architecture design",
+              "Migration planning",
+              "Security implementation",
+              "Cost optimization",
+              "Monitoring",
             ]}
             price="$30k–$120k"
             icon="☁️"
@@ -111,12 +111,12 @@ export default function DigitalTransformationPage() {
             title="Mobile-First Solutions"
             description="Develop mobile applications and responsive web solutions"
             features={[
-              'Mobile strategy',
-              'App development',
-              'Responsive design',
-              'Cross-platform',
-              'Performance optimization',
-              'App store deployment',
+              "Mobile strategy",
+              "App development",
+              "Responsive design",
+              "Cross-platform",
+              "Performance optimization",
+              "App store deployment",
             ]}
             price="$20k–$75k"
             icon="📱"
@@ -125,12 +125,12 @@ export default function DigitalTransformationPage() {
             title="Digital Security & Compliance"
             description="Implement comprehensive security and compliance frameworks"
             features={[
-              'Security assessment',
-              'Compliance framework',
-              'Risk management',
-              'Security monitoring',
-              'Training',
-              'Audit support',
+              "Security assessment",
+              "Compliance framework",
+              "Risk management",
+              "Security monitoring",
+              "Training",
+              "Audit support",
             ]}
             price="$25k–$90k"
             icon="🔒"
@@ -139,12 +139,12 @@ export default function DigitalTransformationPage() {
             title="Change Management & Training"
             description="Support organizational change and digital adoption"
             features={[
-              'Change strategy',
-              'Training programs',
-              'User adoption',
-              'Communication',
-              'Support systems',
-              'Success metrics',
+              "Change strategy",
+              "Training programs",
+              "User adoption",
+              "Communication",
+              "Support systems",
+              "Success metrics",
             ]}
             price="$15k–$50k"
             icon="🎓"
@@ -160,34 +160,34 @@ export default function DigitalTransformationPage() {
           <Item
             title="Assessment & Strategy"
             details={[
-              'Current state analysis and digital maturity assessment',
-              'Competitive landscape analysis and market positioning',
-              'Technology stack evaluation and gap analysis',
-              'Digital strategy development and roadmap creation',
-              'Stakeholder alignment and change management planning',
-              'ROI modeling and business case development',
+              "Current state analysis and digital maturity assessment",
+              "Competitive landscape analysis and market positioning",
+              "Technology stack evaluation and gap analysis",
+              "Digital strategy development and roadmap creation",
+              "Stakeholder alignment and change management planning",
+              "ROI modeling and business case development",
             ]}
           />
           <Item
             title="Implementation & Execution"
             details={[
-              'Phased implementation approach with agile methodology',
-              'Technology selection and vendor management',
-              'Custom development and system integration',
-              'Data migration and system modernization',
-              'Testing, quality assurance, and performance optimization',
-              'Deployment and go-live support',
+              "Phased implementation approach with agile methodology",
+              "Technology selection and vendor management",
+              "Custom development and system integration",
+              "Data migration and system modernization",
+              "Testing, quality assurance, and performance optimization",
+              "Deployment and go-live support",
             ]}
           />
           <Item
             title="Optimization & Growth"
             details={[
-              'Performance monitoring and continuous improvement',
-              'User adoption tracking and training optimization',
-              'Business process refinement and automation',
-              'Advanced analytics and AI implementation',
-              'Scalability planning and future roadmap',
-              'Ongoing support and maintenance',
+              "Performance monitoring and continuous improvement",
+              "User adoption tracking and training optimization",
+              "Business process refinement and automation",
+              "Advanced analytics and AI implementation",
+              "Scalability planning and future roadmap",
+              "Ongoing support and maintenance",
             ]}
           />
         </div>
@@ -258,12 +258,12 @@ function Pricing() {
           price="$10k–$25k"
           duration="4–6 weeks"
           features={[
-            'Current state analysis',
-            'Digital maturity assessment',
-            'Technology gap analysis',
-            'Competitive benchmarking',
-            'Strategy recommendations',
-            'Implementation roadmap',
+            "Current state analysis",
+            "Digital maturity assessment",
+            "Technology gap analysis",
+            "Competitive benchmarking",
+            "Strategy recommendations",
+            "Implementation roadmap",
           ]}
         />
         <Plan
@@ -271,12 +271,12 @@ function Pricing() {
           price="$50k–$150k"
           duration="12–20 weeks"
           features={[
-            'Pilot project implementation',
-            'Process automation',
-            'System integration',
-            'User training',
-            'Performance monitoring',
-            'Success metrics tracking',
+            "Pilot project implementation",
+            "Process automation",
+            "System integration",
+            "User training",
+            "Performance monitoring",
+            "Success metrics tracking",
           ]}
         />
         <Plan
@@ -284,12 +284,12 @@ function Pricing() {
           price="$150k+"
           duration="6+ months"
           features={[
-            'Complete digital overhaul',
-            'Legacy system modernization',
-            'Advanced analytics implementation',
-            'Change management',
-            'Ongoing optimization',
-            'Dedicated success manager',
+            "Complete digital overhaul",
+            "Legacy system modernization",
+            "Advanced analytics implementation",
+            "Change management",
+            "Ongoing optimization",
+            "Dedicated success manager",
           ]}
         />
       </div>

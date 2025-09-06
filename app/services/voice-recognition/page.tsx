@@ -1,73 +1,91 @@
 export const metadata = {
-  title: 'Voice Recognition Solutions | Zion Tech Group',
-  description: 'Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.',
+  title: "Voice Recognition Solutions | Zion Tech Group",
+  description:
+    "Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.",
 };
 
 export default function VoiceRecognitionPage() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">Voice Recognition Solutions</h1>
-      <p className="text-xl text-gray-600 mb-12">Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.</p>
+      <h1 className="text-4xl font-bold text-gray-900 mb-6">
+        Voice Recognition Solutions
+      </h1>
+      <p className="text-xl text-gray-600 mb-12">
+        Transform speech into actionable data with advanced voice recognition,
+        speech-to-text, and voice command processing.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         <FeatureCard
           title="Speech-to-Text"
           features={[
-            'Real-time transcription',
-            'Multi-language support',
-            'Noise cancellation',
-            'Speaker identification',
+            "Real-time transcription",
+            "Multi-language support",
+            "Noise cancellation",
+            "Speaker identification",
           ]}
         />
         <FeatureCard
           title="Voice Commands"
           features={[
-            'Voice control systems',
-            'Command processing',
-            'Intent recognition',
-            'Custom wake words',
+            "Voice control systems",
+            "Command processing",
+            "Intent recognition",
+            "Custom wake words",
           ]}
         />
         <FeatureCard
           title="Voice Analytics"
           features={[
-            'Emotion detection',
-            'Speaker verification',
-            'Call analytics',
-            'Quality assessment',
+            "Emotion detection",
+            "Speaker verification",
+            "Call analytics",
+            "Quality assessment",
           ]}
         />
       </div>
 
       <div className="bg-gradient-to-r from-emerald-50 to-green-50 border border-emerald-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Voice Recognition Solutions?</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Why Choose Our Voice Recognition Solutions?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="flex items-start">
             <span className="text-emerald-500 mr-3 text-xl">✓</span>
             <div>
               <h3 className="font-semibold text-gray-900">99%+ Accuracy</h3>
-              <p className="text-gray-600">Industry-leading accuracy even in noisy environments</p>
+              <p className="text-gray-600">
+                Industry-leading accuracy even in noisy environments
+              </p>
             </div>
           </div>
           <div className="flex items-start">
             <span className="text-emerald-500 mr-3 text-xl">✓</span>
             <div>
-              <h3 className="font-semibold text-gray-900">Real-Time Processing</h3>
-              <p className="text-gray-600">Low-latency voice processing for live applications</p>
+              <h3 className="font-semibold text-gray-900">
+                Real-Time Processing
+              </h3>
+              <p className="text-gray-600">
+                Low-latency voice processing for live applications
+              </p>
             </div>
           </div>
           <div className="flex items-start">
             <span className="text-emerald-500 mr-3 text-xl">✓</span>
             <div>
               <h3 className="font-semibold text-gray-900">Custom Training</h3>
-              <p className="text-gray-600">Train models on your specific vocabulary and accent patterns</p>
+              <p className="text-gray-600">
+                Train models on your specific vocabulary and accent patterns
+              </p>
             </div>
           </div>
           <div className="flex items-start">
             <span className="text-emerald-500 mr-3 text-xl">✓</span>
             <div>
               <h3 className="font-semibold text-gray-900">Secure & Private</h3>
-              <p className="text-gray-600">End-to-end encryption with on-premise deployment options</p>
+              <p className="text-gray-600">
+                End-to-end encryption with on-premise deployment options
+              </p>
             </div>
           </div>
         </div>
@@ -76,8 +94,13 @@ export default function VoiceRecognitionPage() {
       <Pricing />
 
       <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Hear the Future?</h2>
-        <p className="text-gray-600 mb-6">Start with a free voice analysis demo and see the power of voice recognition.</p>
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Hear the Future?
+        </h2>
+        <p className="text-gray-600 mb-6">
+          Start with a free voice analysis demo and see the power of voice
+          recognition.
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="tel:+13024640950"
@@ -97,12 +120,18 @@ export default function VoiceRecognitionPage() {
   );
 }
 
-function FeatureCard({ title, features }: { title: string; features: string[] }) {
+function FeatureCard({
+  title,
+  features,
+}: {
+  title: string;
+  features: string[];
+}) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <ul className="space-y-2 text-gray-600">
-        {features.map(f => (
+        {features.map((f) => (
           <li key={f} className="flex items-center">
             <span className="text-emerald-500 mr-2">•</span> {f}
           </li>
@@ -115,27 +144,29 @@ function FeatureCard({ title, features }: { title: string; features: string[] })
 function Pricing() {
   return (
     <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Plan
           name="Starter"
           price="$2,499/mo"
           features={[
-            'Basic speech-to-text',
-            'Up to 100 hours/month',
-            'Standard support',
-            'Cloud deployment',
+            "Basic speech-to-text",
+            "Up to 100 hours/month",
+            "Standard support",
+            "Cloud deployment",
           ]}
         />
         <Plan
           name="Professional"
           price="$6,999/mo"
           features={[
-            'Advanced voice recognition',
-            'Up to 1,000 hours/month',
-            'Custom model training',
-            'Priority support',
-            'API access',
+            "Advanced voice recognition",
+            "Up to 1,000 hours/month",
+            "Custom model training",
+            "Priority support",
+            "API access",
           ]}
           popular={true}
         />
@@ -143,11 +174,11 @@ function Pricing() {
           name="Enterprise"
           price="$17,999/mo"
           features={[
-            'Unlimited processing',
-            'Custom voice models',
-            'On-premise deployment',
-            'Dedicated support',
-            'White-label solution',
+            "Unlimited processing",
+            "Custom voice models",
+            "On-premise deployment",
+            "Dedicated support",
+            "White-label solution",
           ]}
         />
       </div>
@@ -155,9 +186,21 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, features, popular = false }: { name: string; price: string; features: string[]; popular?: boolean }) {
+function Plan({
+  name,
+  price,
+  features,
+  popular = false,
+}: {
+  name: string;
+  price: string;
+  features: string[];
+  popular?: boolean;
+}) {
   return (
-    <div className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-emerald-500 ring-2 ring-emerald-200' : 'border-gray-200'}`}>
+    <div
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-emerald-500 ring-2 ring-emerald-200" : "border-gray-200"}`}
+    >
       {popular && (
         <div className="bg-emerald-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -166,7 +209,7 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-emerald-600 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map(f => (
+        {features.map((f) => (
           <li key={f} className="flex items-center">
             <span className="text-green-500 mr-2">✓</span> {f}
           </li>
@@ -176,8 +219,8 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
           popular
-            ? 'bg-emerald-600 text-white hover:bg-emerald-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+            ? "bg-emerald-600 text-white hover:bg-emerald-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
         }`}
       >
         Get Started

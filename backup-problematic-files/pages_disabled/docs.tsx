@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface DocsProps {
   className?: string;
@@ -6,7 +6,7 @@ interface DocsProps {
 
 const Docs: React.FC<DocsProps> = ({ className }) => {
   return (
-    <div className={className || ''}>
+    <div className={className || ""}>
       <h1>Docs</h1>
       <p>This component is under development.</p>
     </div>

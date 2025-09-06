@@ -16,11 +16,10 @@ function cleanupMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.includes('<<<<<<< HEAD')) {
-        inConflict = true;
+      if (line.includes('        inConflict = true;
         keepLines = true;
         continue;
-      } else if (line.includes('=======')) {
+      } else if (line.includes('')) {
         keepLines = false;
         continue;
       } else if (line.includes('>>>>>>>')) {

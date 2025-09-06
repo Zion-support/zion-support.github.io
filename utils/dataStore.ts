@@ -1,46 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-// Data store utilities
-export const dataStore = {
-  // Add data store functionality here
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  getData: () => []
+getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
 }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null;
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface Project {
   id: string;
   title: string;
@@ -50,7 +23,6 @@ interface Project {
   updatedAt: Date;
 }
 
-<<<<<<< HEAD
 interface Review {
   id: string;
   projectId: string;
@@ -155,24 +127,6 @@ class DataStore {
     return role === "client" ? "talent" : "client";
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-  createProject(data: Partial<Project>): Project {
-    const project: Project = {
-      id: Math.random().toString(36).substr(2, 9),
-      title: data.title || '',
-      description: data.description || '',
-      status: data.status || 'active',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    };
-    this.projects.push(project);
-    return project;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   // Review methods
@@ -237,33 +191,6 @@ class DataStore {
 
 const store = new DataStore();
 
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-export const findProjectById = (id: string) => store && store.findProjectById(id);
-export const createProject = (data: Partial<Project>) => store && store.createProject(data);
-export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store && store.hasExistingReview(projectId, fromRole, fromId);
-export const upsertReview = (data: Partial<Review>) => store && store.upsertReview(data);
-export const getReviewsByProject = (projectId: string) => store && store.getReviewsByProject(projectId);
-export const getAllReviews = () => store && store.getAllReviews();
-export async function readProjects(): Promise<Project[]> {
-  await ensureFilesExist();
-  return fs.readJson(PROJECTS_PATH);
-}
-
-export async function writeProjects(projects: Project[]): Promise<void> {
-  await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2 });
-}
-
-// Data store utilities;
-export const data_store = {
-  // Add data store functionality here;
-  get_data: () => [],
-  set_data: (data: any) => null,
-  update_data: (id: string, data: any) => null,
-  delete_data: (id: string) => null;
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const findProjectById = (id: string) => store.findProjectById(id);
 export const createProject = (data: Partial<Project>) =>
   store.createProject(data);

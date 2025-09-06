@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  return (
+return (
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-semibold">Certifications</h1>
@@ -15,19 +9,16 @@
         <div className="font-medium mb-2">Your Certificates</div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-
           {/* Demo: show a sample preview for one course to illustrate */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
-
           <CertificatePreview courseId="ai-dev-foundations" />
         </div>
       </div>
       <div>
-
 
         </div>;
       </div>;
@@ -39,7 +30,6 @@
             <li key={u && u.userId}>;
               {u && u.name} — {u && u.points} pts;
             </li>          ))}
-
 
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
@@ -55,10 +45,8 @@
     </div>;
   );
 
-
         <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
         <ol className="list-decimal pl-6 space-y-1 text-sm">
-<<<<<<< HEAD
           {leaderboard.map((u) => (
             <li key={u.userId}>{u.name} — {u.points} pts</li>
           ))}
@@ -67,10 +55,6 @@
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import {useEffect, useState} from 'react';
 import CertificatePreview from '../../components / learn / CertificatePreview';
         </div>;
@@ -86,13 +70,6 @@ import CertificatePreview from '../../components / learn / CertificatePreview';
       </div>;
     </div>);
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState  } from 'react';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 export default function Certifications() {
@@ -136,7 +113,6 @@ export default function Certifications() {
       </div>
       <div>
 
-
         </div>;
       </div>;
 
@@ -158,36 +134,8 @@ export default function Certifications() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import {useEffect, useState} from 'react';
-import CertificatePreview from '../../components / learn / CertificatePreview';
-        </div>;
-      </div>;
-      <div>;
-        <div className='font - medium mb - 2'>Leaderboard (Top Learners)</div>;
-        <ol className='list - decimal pl - 6 space - y-1 text - sm'>;
-          {leaderboard.map (u => (
-            <li key={u.user_id}>;
-            </li>          ))}
-        </ol>;
-      </div>;
-    </div>);
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

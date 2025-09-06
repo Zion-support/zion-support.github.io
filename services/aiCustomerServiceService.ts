@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export interface CustomerTicket {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface CustomerTicket {
 export interface CustomerTicket {;
   id: string;
@@ -19,151 +13,73 @@ export interface CustomerTicket {;
   resolvedAt?: Date;
   customerSatisfaction?: number;
   tags: string[];
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   attachments: string[],
   conversation_history: CustomerMessage[];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  attachments: string[],
-  conversation_history: CustomerMessage[];
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface CustomerMessage {
   id: string;
   ticket_id: string;
   sender_id: string;
   sender_type: 'customer' | 'agent' | 'ai';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-  attachments: string[]
-
-  conversationHistory: CustomerMessage[]
-}
-export interface CustomerMessage {
-
-export interface CustomerMessage {;
-  id: string;
-  ticketId: string;
-  senderId: string;
-  senderType: 'customer' | 'agent' | 'ai';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   message: string;
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   intent: string,
   confidence: number;
 
 }
 export interface CustomerProfile {
-=======
-  intent: string,
-  confidence: number;
 }
 export interface CustomerProfile {
-
-  intent: string
-
-  confidence: number
-}
-export interface CustomerProfile {
-
-export interface CustomerProfile {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-export interface CustomerProfile {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   email: string;
   name: string;
   phone?: string;
   company?: string;
   plan: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   total_tickets: number;
   resolved_tickets: number;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   averageResolutionTime: number;
   customer_satisfaction: number;
   last_contact: Date;
   preferences: {
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     communication_channel: 'email' | 'chat' | 'phone';
     language: string,
     timezone: string;
   }
   tags: string[];
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   tags: string[];
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface AIResponse {
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface CustomerServiceMetrics {
   total_tickets: number;
   open_tickets: number;
   resolved_tickets: number;
   averageResolutionTime: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     ticketsResolved: number
     averageResolutionTime: number,
 
     customerSatisfaction: number
   }>
-=======
-=======
-    ticketsResolved: number
-    averageResolutionTime: number,
-    customerSatisfaction: number
-  }>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   customer_satisfaction: number;
   firstResponseTime: number,
   ticketVolumeByCategory: Record < string, number>;
@@ -172,86 +88,22 @@ export interface CustomerServiceMetrics {
     averageResolutionTime: number,
     customer_satisfaction: number;
   }>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface CustomerServiceRequest {
   customer_id: string;
-=======
-}
-export interface CustomerServiceRequest {
-  customer_id: string;
-  totalTickets: number;
-  resolvedTickets: number;
-  averageResolutionTime: number;
-  customerSatisfaction: number;
-  lastContact: Date;
-  preferences: {
-    communicationChannel: 'email' | 'chat' | 'phone';
-
-    language: string
-
-    timezone: string
-  }
-  tags: string[]
-}
-export interface AIResponse {
-
-export interface AIResponse {;
-  id: string;
-  ticketId: string;
-  response: string;
-  confidence: number;
-  suggestedActions: string[];
-  nextSteps: string[];
-
-  requiresHumanReview: boolean
-
-  generatedAt: Date
-}
-export interface CustomerServiceMetrics {
-
-export interface CustomerServiceMetrics {;
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
-  averageResolutionTime: number;
-  customerSatisfaction: number;
-
-  firstResponseTime: number
-  ticketVolumeByCategory: Record<string, number>;
-  agentPerformance: Record<string, {
-    ticketsResolved: number;
-    averageResolutionTime: number
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     customerSatisfaction: number
   }>
 }
 export interface CustomerServiceRequest {
   customerId: string;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  customer_id: string;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
 
-=======
-  attachments?: string[],
-  preferred_channel?: 'email' | 'chat' | 'phone';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   ticketId: string;
 export interface CustomerServiceResponse {
@@ -259,34 +111,11 @@ export interface CustomerServiceResponse {
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-=======
-  attachments?: string[]
-
-  preferredChannel?: 'email' | 'chat' | 'phone'
-}
-export interface CustomerServiceResponse {
-
-export interface CustomerServiceResponse {;
-  ticketId: string;
-  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
-  aiResponse?: AIResponse;
-  estimatedResolutionTime: string;
-
-  nextSteps: string[]
-
-  assignedAgent?: string
-}
-export class AICustomerServiceService {
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export class AICustomerServiceService {;
   private apiKey: string;
 
@@ -294,27 +123,15 @@ export class AICustomerServiceService {;
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
 
-<<<<<<< HEAD
-=======
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
-  }
-  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
-    try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(request)});
-<<<<<<< HEAD
 
       if (!response && response.ok) {
         throw new Error(`Create ticket API error: ${response && response.statusText}`)
@@ -325,95 +142,23 @@ export class AICustomerServiceService {;
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
-=======
-      if (!response && response.ok) {
-        throw new Error(`Create ticket API error: ${response && response.statusText}`)
-      }
-      const data = await response && response.json();
-      return data
-    } catch (error) {
-      console && console.error('Error creating ticket:', error);
-  }
-  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
-    try {
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(request)});
-      if (!response.ok) {
-        throw new Error(`Create ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return data
-    } catch (error) {
-      console.error('Error creating ticket:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-      if (!response && response.ok) {
-        throw new Error(`Get ticket API error: ${response && response.statusText}`)
-      }
-      const data = await response && response.json();
-      return {
-        ...data;
-        createdAt: new Date(data && data.createdAt);
-        updatedAt: new Date(data && data.updatedAt);
-        resolvedAt: data && data.resolvedAt ? new Date(data && data.resolvedAt) : undefined;
-        conversationHistory: data && data.conversationHistory.map((msg: any) => ({
-          ...msg,
-          timestamp: new Date(msg && msg.timestamp)}))}
-    } catch (error) {
-      console && console.error('Error getting ticket:', error);
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Get ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        createdAt: new Date(data.createdAt);
-        updatedAt: new Date(data.updatedAt);
-        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
-        conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}
-    } catch (error) {
-      console.error('Error getting ticket:', error);
-      throw error
-    }
-  }
-  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
-    try {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
         headers: {
-<<<<<<< HEAD
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
-=======
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
-        body: JSON && JSON.stringify(updates)});
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
@@ -427,7 +172,6 @@ export class AICustomerServiceService {;
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
-<<<<<<< HEAD
 
     } catch (error) {
       console && console.error('Error getting ticket:', error);
@@ -459,49 +203,19 @@ export class AICustomerServiceService {;
 
     } catch (error) {
       console && console.error('Error updating ticket:', error);
-=======
     } catch (error) {
       console && console.error('Error updating ticket:', error);
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
-        method: 'PATCH'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(updates)});
-      if (!response.ok) {
-        throw new Error(`Update ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        createdAt: new Date(data.createdAt);
-        updatedAt: new Date(data.updatedAt);
-        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
-        conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}
-    } catch (error) {
-      console.error('Error updating ticket:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error('Error updating ticket:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify(message)});
-<<<<<<< HEAD
 
       if (!response && response.ok) {
         throw new Error(`Add message API error: ${response && response.statusText}`)
@@ -509,54 +223,21 @@ export class AICustomerServiceService {;
 
       const data = await response && response.json();
 
-=======
-      if (!response && response.ok) {
-        throw new Error(`Add message API error: ${response && response.statusText}`)
-      }
-      const data = await response && response.json();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return {
         ...data;
         timestamp: new Date(data && data.timestamp)}
     } catch (error) {
       console && console.error('Error adding message:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(message)});
-      if (!response.ok) {
-        throw new Error(`Add message API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        timestamp: new Date(data.timestamp)}
-    } catch (error) {
-      console.error('Error adding message:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
-<<<<<<< HEAD
 
       if (!response && response.ok) {
         throw new Error(`AI response API error: ${response && response.statusText}`)
@@ -564,45 +245,16 @@ export class AICustomerServiceService {;
 
       const data = await response && response.json();
 
-=======
-      if (!response && response.ok) {
-        throw new Error(`AI response API error: ${response && response.statusText}`)
-      }
-      const data = await response && response.json();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return {
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
     } catch (error) {
       console && console.error('Error generating AI response:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`AI response API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        generatedAt: new Date(data.generatedAt)}
-    } catch (error) {
-      console.error('Error generating AI response:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
 
@@ -614,45 +266,16 @@ export class AICustomerServiceService {;
 
       const data = await response && response.json();
 
-=======
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-      if (!response && response.ok) {
-        throw new Error(`Get customer profile API error: ${response && response.statusText}`)
-      }
-      const data = await response && response.json();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
     } catch (error) {
       console && console.error('Error getting customer profile:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Get customer profile API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        lastContact: new Date(data.lastContact)}
-    } catch (error) {
-      console.error('Error getting customer profile:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
 
@@ -666,36 +289,14 @@ export class AICustomerServiceService {;
 
     } catch (error) {
       console && console.error('Error getting metrics:', error);
-=======
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-      if (!response && response.ok) {
-        throw new Error(`Get metrics API error: ${response && response.statusText}`)
-      }
-      return await response && response.json()
     } catch (error) {
       console && console.error('Error getting metrics:', error);
-      const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Get metrics API error: ${response.statusText}`)
-      }
-      return await response.json()
-    } catch (error) {
-      console.error('Error getting metrics:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error('Error getting metrics:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
       const params = new URLSearchParams({ query, ...filters });
-<<<<<<< HEAD
-<<<<<<< HEAD
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
 
@@ -705,12 +306,6 @@ export class AICustomerServiceService {;
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
 
-=======
-          'Authorization': `Bearer ${this && this.apiKey}`}});
-      if (!response && response.ok) {
-        throw new Error(`Search tickets API error: ${response && response.statusText}`)
-      }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const data = await response && response.json();
       return data && data.tickets.map((ticket: any) => ({
         ...ticket;
@@ -720,50 +315,21 @@ export class AICustomerServiceService {;
         conversationHistory: ticket && ticket.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}))
-<<<<<<< HEAD
 
     } catch (error) {
       console && console.error('Error searching tickets:', error);
-=======
     } catch (error) {
       console && console.error('Error searching tickets:', error);
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Search tickets API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return data.tickets.map((ticket: any) => ({
-        ...ticket;
-        createdAt: new Date(ticket.createdAt);
-        updatedAt: new Date(ticket.updatedAt);
-        resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined;
-        conversationHistory: ticket.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}))
-    } catch (error) {
-      console.error('Error searching tickets:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error('Error searching tickets:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}});
-<<<<<<< HEAD
 
       if (!response && response.ok) {
         throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
@@ -773,44 +339,19 @@ export class AICustomerServiceService {;
 
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
-=======
-      if (!response && response.ok) {
-        throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
-      }
-      return await response && response.json()
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Auto assign tickets API error: ${response.statusText}`)
-      }
-      return await response.json()
-    } catch (error) {
-      console.error('Error auto-assigning tickets:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error('Error auto-assigning tickets:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`};
         body: JSON && JSON.stringify({ timeframe, format })});
-<<<<<<< HEAD
 
       if (!response && response.ok) {
         throw new Error(`Generate report API error: ${response && response.statusText}`)
@@ -821,48 +362,16 @@ export class AICustomerServiceService {;
 
     } catch (error) {
       console && console.error('Error generating report:', error);
-=======
-      if (!response && response.ok) {
-        throw new Error(`Generate report API error: ${response && response.statusText}`)
-      }
-      const data = await response && response.json();
-      return data && data.downloadUrl
     } catch (error) {
       console && console.error('Error generating report:', error);
-      const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify({ timeframe, format })});
-      if (!response.ok) {
-        throw new Error(`Generate report API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return data.downloadUrl
-    } catch (error) {
-      console.error('Error generating report:', error);
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error('Error generating report:', error);
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       throw error
     }
   }
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
-=======
-=======
-export interface CustomerTicket {;
-export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string,;
   customerId: string,;
   subject: string,;
@@ -878,14 +387,10 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
-<<<<<<< HEAD
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
 
 export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   next_steps: string[],
   assigned_agent?: string;
 }
@@ -1125,15 +630,6 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-export interface CustomerTicket {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 export interface CustomerTicket {;
 
@@ -1533,6 +1029,3 @@ export class AICustomerServiceService {;
 }
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

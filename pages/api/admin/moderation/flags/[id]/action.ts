@@ -6,8 +6,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const user = parseUserFromRequest(req),
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req);
   try {
@@ -50,17 +48,12 @@ ban: 'banned'},
   res.setHeader('AllowPOST'),;
   return res.status(405).end('Method Not Allowed');
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
 import { updateFlagStatus } from '../../../../../../utils/moderationDb';
 import type { ModerationStatus } from '../../../../../../types/moderation';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   if (req.method === 'POST') {
     const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string },

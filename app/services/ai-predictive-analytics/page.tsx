@@ -1,18 +1,22 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 export const metadata = {
-  title: 'AI Predictive Analytics | Zion Tech Group',
-  description: 'Advanced predictive analytics platform. Forecast trends, predict outcomes, and make data-driven decisions with AI.',
+  title: "AI Predictive Analytics | Zion Tech Group",
+  description:
+    "Advanced predictive analytics platform. Forecast trends, predict outcomes, and make data-driven decisions with AI.",
 };
 
 export default function AIPredictiveAnalyticsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Predictive Analytics</h1>
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">
+          AI Predictive Analytics
+        </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Advanced predictive analytics platform that forecasts trends, predicts outcomes,
-          and enables data-driven decision making with cutting-edge AI and machine learning.
+          Advanced predictive analytics platform that forecasts trends, predicts
+          outcomes, and enables data-driven decision making with cutting-edge AI
+          and machine learning.
         </p>
       </div>
 
@@ -20,31 +24,31 @@ export default function AIPredictiveAnalyticsPage() {
         <FeatureCard
           title="Forecasting Models"
           details={[
-            'Time series forecasting',
-            'Demand prediction',
-            'Revenue forecasting',
-            'Market trend analysis',
-            'Seasonal pattern detection',
+            "Time series forecasting",
+            "Demand prediction",
+            "Revenue forecasting",
+            "Market trend analysis",
+            "Seasonal pattern detection",
           ]}
         />
         <FeatureCard
           title="Machine Learning"
           details={[
-            'Automated model selection',
-            'Feature engineering',
-            'Model performance optimization',
-            'A/B testing for predictions',
-            'Continuous learning algorithms',
+            "Automated model selection",
+            "Feature engineering",
+            "Model performance optimization",
+            "A/B testing for predictions",
+            "Continuous learning algorithms",
           ]}
         />
         <FeatureCard
           title="Business Intelligence"
           details={[
-            'Interactive dashboards',
-            'Automated insights generation',
-            'Alert systems',
-            'Scenario planning tools',
-            'ROI impact analysis',
+            "Interactive dashboards",
+            "Automated insights generation",
+            "Alert systems",
+            "Scenario planning tools",
+            "ROI impact analysis",
           ]}
         />
       </div>
@@ -52,10 +56,13 @@ export default function AIPredictiveAnalyticsPage() {
       <PricingSection />
 
       <div className="mt-16 bg-gradient-to-r from-rose-50 to-pink-50 border border-rose-200 rounded-xl p-8 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Predict the Future?</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Predict the Future?
+        </h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Harness the power of AI to make accurate predictions and drive business growth.
-          Perfect for finance, retail, manufacturing, and data-driven organizations.
+          Harness the power of AI to make accurate predictions and drive
+          business growth. Perfect for finance, retail, manufacturing, and
+          data-driven organizations.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -94,28 +101,30 @@ function FeatureCard({ title, details }: { title: string; details: string[] }) {
 function PricingSection() {
   return (
     <div className="mb-12">
-      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Pricing Plans</h2>
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
+        Pricing Plans
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <PricingPlan
           name="Starter"
           price="$199/mo"
           features={[
-            'Up to 5 prediction models',
-            'Basic forecasting algorithms',
-            'Monthly model updates',
-            'Email support',
-            'Standard data connectors',
+            "Up to 5 prediction models",
+            "Basic forecasting algorithms",
+            "Monthly model updates",
+            "Email support",
+            "Standard data connectors",
           ]}
         />
         <PricingPlan
           name="Professional"
           price="$599/mo"
           features={[
-            'Up to 20 prediction models',
-            'Advanced ML algorithms',
-            'Real-time model updates',
-            'Priority support',
-            'Custom model development',
+            "Up to 20 prediction models",
+            "Advanced ML algorithms",
+            "Real-time model updates",
+            "Priority support",
+            "Custom model development",
           ]}
           featured={true}
         />
@@ -123,11 +132,11 @@ function PricingSection() {
           name="Enterprise"
           price="$1,999/mo"
           features={[
-            'Unlimited prediction models',
-            'Custom AI model training',
-            'White-label solution',
-            'Dedicated data scientist',
-            'API access & custom integrations',
+            "Unlimited prediction models",
+            "Custom AI model training",
+            "White-label solution",
+            "Dedicated data scientist",
+            "API access & custom integrations",
           ]}
         />
       </div>
@@ -147,11 +156,13 @@ function PricingPlan({
   featured?: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${
-      featured
-        ? 'border-rose-500 bg-rose-50 shadow-lg'
-        : 'border-gray-200 bg-white shadow-sm'
-    }`}>
+    <div
+      className={`border rounded-xl p-6 ${
+        featured
+          ? "border-rose-500 bg-rose-50 shadow-lg"
+          : "border-gray-200 bg-white shadow-sm"
+      }`}
+    >
       <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
       <div className="text-3xl font-bold text-gray-900 mb-4">{price}</div>
       <ul className="space-y-2 text-gray-600 mb-6">
@@ -165,8 +176,8 @@ function PricingPlan({
         href="tel:+13024640950"
         className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
           featured
-            ? 'bg-rose-600 text-white hover:bg-rose-700'
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+            ? "bg-rose-600 text-white hover:bg-rose-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
         }`}
       >
         Get Started

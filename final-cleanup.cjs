@@ -8,12 +8,8 @@ console.log('🧹 Starting Final Cleanup...');
 // Function to clean merge conflict markers
 function cleanMergeConflicts(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/^<<<<<<< [^\n]+$/gm, '')
-    .replace(/^=======$/gm, '')
-    .replace(/^>>>>>>> [^\n]+$/gm, '');
-}
+    .replace(/    .replace(/    .replace(/^    .replace(/^$/gm, '')
+    .replace(/^}
 
 // Function to clean common syntax errors
 function cleanSyntaxErrors(content) {

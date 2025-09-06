@@ -34,8 +34,7 @@ const fixSyntaxPatterns = (content) => {
   fixed = fixed.replace(/}async/g, "}\nasync");
   fixed = fixed.replace(/}function/g, "}\nfunction");
   // Fix merge conflict markers
-  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?  fixed = fixed.replace(/
-  // Fix empty files with just closing braces
+  fixed = fixed.replace(/  // Fix empty files with just closing braces
   if (fixed.trim() === '}' || fixed.trim() === '}\n}') {
     fixed = `import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'API endpoint' });\n}`;
     } catch (error) {

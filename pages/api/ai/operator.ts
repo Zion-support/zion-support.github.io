@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
-
 const ipToRequests: Record<string, { timestamps: number[] }> = {},
 
 function isRateLimited(ip: string): boolean {
@@ -22,15 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -41,16 +31,7 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
-  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -90,10 +71,6 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     const text = completion.choices?.[0]?.message?.content ?? ''
     return res.status(200).json({ text })
   } catch (err: any) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const sys = system || 'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.',
 

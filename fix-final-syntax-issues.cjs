@@ -7,7 +7,7 @@ console.log('🔧 Fixing final syntax issues...');
 function fixFinalSyntaxIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     let changesMade = false;
 
     // Fix specific patterns

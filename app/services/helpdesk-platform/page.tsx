@@ -1,74 +1,100 @@
 export const metadata = {
-  title: 'Helpdesk Platform Development | Zion Tech Group',
-  description: 'Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.',
+  title: "Helpdesk Platform Development | Zion Tech Group",
+  description:
+    "Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.",
 };
 
 export default function HelpdeskPlatformPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <section className="mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Helpdesk Platform Development</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Helpdesk Platform Development
+        </h1>
         <p className="text-xl text-gray-600 mb-8">
-          Build comprehensive helpdesk platforms with ticket management, knowledge base, live chat, and customer support automation.
+          Build comprehensive helpdesk platforms with ticket management,
+          knowledge base, live chat, and customer support automation.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           <Item
             title="Ticket Management"
             details={[
-              'Multi-channel ticket creation',
-              'Priority & status tracking',
-              'Auto-assignment rules',
-              'SLA monitoring',
-              'Ticket routing',
-              'Escalation workflows',
-              'Bulk operations',
+              "Multi-channel ticket creation",
+              "Priority & status tracking",
+              "Auto-assignment rules",
+              "SLA monitoring",
+              "Ticket routing",
+              "Escalation workflows",
+              "Bulk operations",
             ]}
           />
           <Item
             title="Knowledge Base"
             details={[
-              'Article management',
-              'Search functionality',
-              'Category organization',
-              'Version control',
-              'Feedback system',
-              'Analytics tracking',
-              'Multi-language support',
+              "Article management",
+              "Search functionality",
+              "Category organization",
+              "Version control",
+              "Feedback system",
+              "Analytics tracking",
+              "Multi-language support",
             ]}
           />
           <Item
             title="Customer Support"
             details={[
-              'Live chat integration',
-              'Customer portal',
-              'Self-service options',
-              'Satisfaction surveys',
-              'Agent performance tracking',
-              'Reporting & analytics',
-              'Mobile app support',
+              "Live chat integration",
+              "Customer portal",
+              "Self-service options",
+              "Satisfaction surveys",
+              "Agent performance tracking",
+              "Reporting & analytics",
+              "Mobile app support",
             ]}
           />
         </div>
 
         <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Helpdesk Platform Features</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            Helpdesk Platform Features
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Multi-Channel Support</h3>
-              <p className="text-gray-600">Unify support across email, chat, phone, social media, and web forms in one centralized platform.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Multi-Channel Support
+              </h3>
+              <p className="text-gray-600">
+                Unify support across email, chat, phone, social media, and web
+                forms in one centralized platform.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">AI-Powered Automation</h3>
-              <p className="text-gray-600">Automate ticket routing, suggest solutions, and provide instant responses using AI technology.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                AI-Powered Automation
+              </h3>
+              <p className="text-gray-600">
+                Automate ticket routing, suggest solutions, and provide instant
+                responses using AI technology.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Team Collaboration</h3>
-              <p className="text-gray-600">Enable internal notes, team assignments, and collaboration tools for efficient support delivery.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Team Collaboration
+              </h3>
+              <p className="text-gray-600">
+                Enable internal notes, team assignments, and collaboration tools
+                for efficient support delivery.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">Custom Branding</h3>
-              <p className="text-gray-600">White-label the platform with your branding for a seamless customer experience.</p>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Custom Branding
+              </h3>
+              <p className="text-gray-600">
+                White-label the platform with your branding for a seamless
+                customer experience.
+              </p>
             </div>
           </div>
         </div>
@@ -98,20 +124,22 @@ function Item({ title, details }: { title: string; details: string[] }) {
 function Pricing() {
   return (
     <section>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Helpdesk Platform Pricing</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Helpdesk Platform Pricing
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <Plan
           name="Basic Helpdesk"
           price="$14k–$28k"
           duration="6–10 weeks"
           features={[
-            'Basic ticket management',
-            'Email integration',
-            'Simple knowledge base',
-            'Agent dashboard',
-            'Basic reporting',
-            'Mobile responsive',
-            'Standard support',
+            "Basic ticket management",
+            "Email integration",
+            "Simple knowledge base",
+            "Agent dashboard",
+            "Basic reporting",
+            "Mobile responsive",
+            "Standard support",
           ]}
         />
         <Plan
@@ -119,13 +147,13 @@ function Pricing() {
           price="$28k–$55k"
           duration="10–16 weeks"
           features={[
-            'Everything in Basic',
-            'Live chat integration',
-            'Advanced automation',
-            'Customer portal',
-            'Advanced analytics',
-            'API integrations',
-            'Priority support',
+            "Everything in Basic",
+            "Live chat integration",
+            "Advanced automation",
+            "Customer portal",
+            "Advanced analytics",
+            "API integrations",
+            "Priority support",
           ]}
         />
         <Plan
@@ -133,21 +161,24 @@ function Pricing() {
           price="$55k+"
           duration="14–22 weeks"
           features={[
-            'Everything in Professional',
-            'Custom development',
-            'Advanced security',
-            'Multi-tenant architecture',
-            'Dedicated support',
-            'SLA guarantees',
-            'White-label options',
+            "Everything in Professional",
+            "Custom development",
+            "Advanced security",
+            "Multi-tenant architecture",
+            "Dedicated support",
+            "SLA guarantees",
+            "White-label options",
           ]}
         />
       </div>
 
       <div className="mt-12 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Helpdesk?</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          Ready to Build Your Helpdesk?
+        </h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful helpdesk platform that streamlines your customer support and improves satisfaction.
+          Let's create a powerful helpdesk platform that streamlines your
+          customer support and improves satisfaction.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -168,7 +199,12 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: {
+function Plan({
+  name,
+  price,
+  duration,
+  features,
+}: {
   name: string;
   price: string;
   duration: string;
