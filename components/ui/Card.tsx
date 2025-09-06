@@ -1,75 +1,90 @@
-  />));
-CardDescription.display_name = "CardDescription";
-;
-const CardContent = React.forward_ref<;
-  HTMLDivElement,
-  React.HTMLAttributes < HTMLDivElement>;
->(({ class_name, ...props }, ref) => (
-  <div ref={ref} className={cn ("p - 6 pt - 0", class_name)} {...props} />));
-CardContent.display_name = "CardContent";
-;
-const CardFooter = React.forward_ref<;
-  HTMLDivElement,
-  React.HTMLAttributes < HTMLDivElement>;
->(({ class_name, ...props }, ref) => (
-  <div;
-    ref={ref}
-    className={cn ("flex items - center p - 6 pt - 0", class_name)}
-    {...props}
 import React from 'react';
-import React from 'react',;
+
 interface CardProps {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
-
-import React from 'react';
-interface CardProps {
-  children: React.ReactNode
-  className?: string
-  style?: React.CSSProperties
-  onClick?: () => void
-
-  hover?: boolean
-}
-const Card: React.FC<CardProps> = ({
-
-  children
-  className = ''
-  style
-  onClick
-  hover = true}) => {
-  const baseClasses = 'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden'
-  const hoverClasses = hover ? 'hover: border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20' : ''
-  const clickableClasses = onClick ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black' : ''
-  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`
-  />));
-CardFooter.display_name = "CardFooter";
-;
-import React from 'react',
-interface CardProps {
-  children: React.ReactNode,
-  class_name?: string,
-  style?: React.CSSProperties,
-  on_click?: () => void,
   hover?: boolean;
 }
+
+const Card: React.FC<CardProps> = ({
+  children,
+  className = '',
+  style,
+  onClick,
+  hover = true
+}) => {
+  const baseClasses = 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm';
+  const hoverClasses = hover ? 'hover:shadow-md transition-shadow duration-200' : '';
+  const clickableClasses = onClick ? 'cursor-pointer' : '';
+  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
+
   return (
+    <div
       className={classes}
       style={style}
-      on_click={on_click}
-    >;
-      {/* Subtle background pattern */}
-        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
-    </div>);
+      onClick={onClick}
+    >
+      {children}
+    </div>
+  );
+};
 
-},
-export default Card,
-;
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+  <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
+    {children}
+  </div>
+);
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+  <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
+    {children}
+  </h3>
+);
+
+interface CardDescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+  <p className={`text-sm text-muted-foreground ${className}`}>
+    {children}
+  </p>
+);
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+  <div className={`p-6 pt-0 ${className}`}>
+    {children}
+  </div>
+);
+
+interface CardFooterProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const CardFooter: React.FC<CardFooterProps> = ({ children, className = '' }) => (
+  <div className={`flex items-center p-6 pt-0 ${className}`}>
+    {children}
+  </div>
+);
+
+export default Card;
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
-        <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
-    </div>);

@@ -1,353 +1,166 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { Send, Bot, User, Loader2 } from 'lucide-react';
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+interface Message {
+  id: string;
+  text: string;
+  sender: 'user' | 'assistant';
+  timestamp: Date;
+}
 
 const AIAssistant: React.FC = () => {
-import React from 'react',
-import Head from 'next/head';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  const sendMessage = async () => {
+    if (!input.trim()) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: input,
+      sender: 'user',
+      timestamp: new Date()
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/ai-assistant', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: input })
+      });
+
+      const data = await response.json();
+      
+      const assistantMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: data.response || 'Sorry, I could not process your request.',
+        sender: 'assistant',
+        timestamp: new Date()
+      };
+
+      setMessages(prev => [...prev, assistantMessage]);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: 'Sorry, there was an error processing your request.',
+        sender: 'assistant',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
 
   return (
-    <Layout>;
-      <Head>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/ai-assistant' />;
-      </Head>;
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white'>;
-        <div className='max-w-6xl mx-auto space-y-10'>;
-          <header className='text-center'>;
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4'>;
-              AI Assistant;
-            </h1>;
-            <p className='text-gray-300 text-lg'>;
-        <title > AI Assistant | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='AI Assistant that automates research, drafting, scheduling, and customer responses.';
-        />;
-        <link rel='canonical' href='https://ziontechgroup.com / ai - assistant' />;
-      </Head>;
-      <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8 bg - black text - white'>;
-        <div className='max - w-6xl mx - auto space - y-10'>;
-          <header className='text - center'>;
-            <h1 className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 4'>;
-              AI Assistant;
-            </h1>;
-            <p className='text - gray - 300 text - lg'>;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              Automate research, summarization, drafting, scheduling, and inbox;
-              triage.;
-            </p>;
-          </header>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
-          <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
-            {[;
-              'Research and summarize documents and web sources',
-              'Draft emails, posts, briefs, and reports',
-              'Auto - schedule meetings and follow - ups',
-              'Integrations: Gmail, Google Drive, Slack, Calendar',
-              'Team approvals and audit trail',
-              'Starting at $99 / mo',
-            ].map (function => (
-              <div;
-                key={f}
-                className='p - 6 rounded - 2xl bg - black / 40 border border - gray - 700 / 60 text - gray - 200';
-              >;
-                {f}
-              </div>))}
-          </section>;
-          <div className='text - center'>;
-            <Button;
-              href='/contact';
-              className='px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white';
-            >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              Request a Demo;
-            </Button>;
-          </div>;
-        </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-        <div className="bg - blue - 50 rounded - lg p - 8 text - center">;
-          <h2 className="text - 2xl font - bold mb - 4">Ready to Get Started?</h2>;
-          <p className="text - lg text - gray - 700 mb - 6">;
-            Experience the power of AI assistance for your business operations.;
-          </p>;
-          <div className="flex justify - center gap - 4">;
-            <a href="/contact" className="bg - blue - 600 text - white px - 8 py - 4 bg - gradient - to - r from - cyan - 600 to - blue - 700 text - white rounded - lg hover: bg - blue - 700">;
-              Request a Demo;
-            </a>;
-            <a href="/about" className="border border - blue - 600 text - blue - 600 px - 6 py - 3 rounded - lg hover:bg - blue - 50">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-              Learn More;
-            </a>;
-          </div>;
-        </div>;
-      </main>;
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  return (
-    <>
+    <div className="min-h-screen bg-gray-100">
       <Head>
-        <title>AI Assistant | Zion Tech Group</title>
-        <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
+        <title>AI Assistant - Zion Tech Group</title>
+        <meta name="description" content="Intelligent AI assistant powered by advanced language models for business automation and support." />
       </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <header className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
-            <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
-          </header>
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
-              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </section>
-          <div className="text-center">
-            <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
+
+      <div className="max-w-4xl mx-auto h-screen flex flex-col">
+        {/* Header */}
+        <div className="bg-white shadow-sm border-b p-4">
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+              <Bot className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h1 className="text-xl font-semibold text-gray-900">AI Assistant</h1>
+              <p className="text-sm text-gray-500">Powered by Zion Tech Group</p>
+            </div>
           </div>
         </div>
 
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto p-4 space-y-4">
+          {messages.length === 0 && (
+            <div className="text-center text-gray-500 mt-8">
+              <Bot className="h-12 w-12 mx-auto mb-4 text-gray-400" />
+              <p>Start a conversation with our AI assistant</p>
+            </div>
+          )}
+          
+          {messages.map((message) => (
+            <div
+              key={message.id}
+              className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
+              <div
+                className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
+                  message.sender === 'user'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-900 border'
+                }`}
+              >
+                <div className="flex items-start space-x-2">
+                  {message.sender === 'assistant' && (
+                    <Bot className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
+                  )}
+                  {message.sender === 'user' && (
+                    <User className="h-5 w-5 text-white mt-1 flex-shrink-0" />
+                  )}
+                  <div className="flex-1">
+                    <p className="text-sm">{message.text}</p>
+                    <p className="text-xs opacity-70 mt-1">
+                      {message.timestamp.toLocaleTimeString()}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+          
+          {isLoading && (
+            <div className="flex justify-start">
+              <div className="bg-white text-gray-900 border rounded-lg px-4 py-2 flex items-center space-x-2">
+                <Bot className="h-5 w-5 text-blue-600" />
+                <Loader2 className="h-4 w-4 animate-spin" />
+                <span className="text-sm">Thinking...</span>
+              </div>
+            </div>
+          )}
+        </div>
 
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-import Button from '../components/ui/Button';
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import Button from '../components/ui/Button';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-const AIAssistant: React.FC = () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',
-<<<<<<< HEAD
-import Head from 'next/head';
-
-import Layout from '../components/layout/Layout';
-const AIAssistant: React.FC = () => {
-
-=======
-import Head from 'next/head',
-import Button from '../components/ui/Button',
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import Button from '../components/ui/Button';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-export default function AIAssistantPage() {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <>
-      <Head>
-        <title>AI Assistant | Zion Tech Group</title>
-<<<<<<< HEAD
-<meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
-=======
-        <meta name="description" content="AI Assistant that automates research, drafting, scheduling, and customer responses." />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        <link rel="canonical" href="https://ziontechgroup.com/ai-assistant" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto space-y-10">
-          <header className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-<<<<<<< HEAD
-<p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
-          </header>
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
-              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-            ))}
-          </section>
-          <div className="text-center">
-            <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
-          </header>
-          <section className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-            {[
-              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
-              <div key={f} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200&quot;>{f}</div>
-              'Research and summarize documents and web sources', _'Draft emails, _posts, _briefs, _and reports', _'Auto-schedule meetings and follow-ups', _'Integrations: Gmail, _Google Drive, _Slack, _Calendar', _'Team approvals and audit trail', _'Starting at $99/mo'
-            ].map((f) => (
-              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{_f}</div>
-
-            ))}
-          </section>
-          <div className=&quot;text-center&quot;>
-            <Button href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white&quot;>Request a Demo</Button>
-
+        {/* Input */}
+        <div className="bg-white border-t p-4">
+          <div className="flex space-x-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyPress={handleKeyPress}
+              placeholder="Type your message..."
+              className="flex-1 border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              disabled={isLoading}
+            />
+            <button
+              onClick={sendMessage}
+              disabled={!input.trim() || isLoading}
+              className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center"
+            >
+              <Send className="h-4 w-4" />
+            </button>
           </div>
         </div>
       </div>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-    </Layout>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-    </Layout>);
-;
-
-
-
-    </Layout>);
-;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-            <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
-          </header>
-          <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
-              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-            ))}
-          </section>
-          <div className="text-center">
-            <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+export default AIAssistant;
