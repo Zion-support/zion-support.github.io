@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 import React from "react";
 type EnhancedLoadingProps = {;
   lines?: number;
@@ -50,20 +27,5 @@ function EnhancedLoading() {
         <div key={idx} className="skeleton h - 4 rounded" />))}
     </div>);
       ))}
-<<<<<<< HEAD
-    </div>;
-=======
-    </div>
-<<<<<<< HEAD
-  )
 
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

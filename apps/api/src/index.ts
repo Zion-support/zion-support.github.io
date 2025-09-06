@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-await app && app.register(cors, {
-=======
-<<<<<<< HEAD
-import Fastify from 'fastify',
-import cors from '@fastify/cors',
-=======
-import Fastify from 'fastify';
-import cors from '@fastify/cors';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
@@ -16,7 +7,7 @@ dotenv.config();
 
 const app = Fastify({ logger: true });
 await app.register(cors, {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   origin: (
     origin: string | undefined
     cb: (err: Error | null, allow?: boolean) => void
@@ -247,106 +238,7 @@ app.get('/notifications', async (req: any, reply: any) => {
 });
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-<<<<<<< HEAD
-  app.log.error(err);
-  (process as any).exit(1)
-});
-;
-app.get ('/talent / search', async (req: any, reply: any) => {
-  const q = (req.query as any).q as string;
-  const country = (req.query as any).country as string | undefined;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const rows = await with_user (user_id, async client => {    const res = await client.query (  const rows = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, full_name, country, skills, experience_years FROM talent_profile;
-      WHERE ($1::text IS NULL OR country = $1);
-        AND ($2::text IS NULL OR EXISTS (
-              SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%'));
-      ORDER BY created_at DESC;
-      LIMIT 25`,
-      [country || null, q || null]);
-    return res.rows;
-  });
-  return { results: rows }});      [country || null, q || null]);
-    return res.rows;
-  });
-  return { results: rows }
-});
-;
-app.get ('/projects/:name / track', async (req: any, reply: any) => {
-  const name = (req.params as any).name as string;
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const project = await with_user (user_id, async client => {
-    const res = await client.query (
-      `SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`,
-      [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }});  const project = await with_user (user_id, async (client) => {
-    const res = await client.query (`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name]);
-    return res.rows[0];
-  });
-  if (return reply.code (404).send ({ error: 'not found' })) {
-  $2
-}
-  return { project }
-app.get ('/notifications', async (req: any, reply: any) => {
-  const user_id = getUserId (req);
-  if (return reply.code (401).send ({ error: 'unauthorized' })) {
-  $2
-}
-  const items = await with_user (user_id, async client => {    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;
-  });
-  return { items }});  const items = await with_user (user_id, async (client) => {
-    const res = await client.query (
-      `SELECT id, channel, title, body, data, read, created_at FROM notification;
-      WHERE read = false ORDER BY created_at DESC LIMIT 20`);
-    return res.rows;
-  });
-  return { items }    return res.rows;
-  });
-  return { items }
-});
-;
-const port = Number (process.env.API_PORT || 4000);
-app.listen ({ port, host: '0.0.0.0' }).catch ((err: any) => {
-app.log.error (err);
-  (process as any).exit (1);
-});  (process as any).exit (1);
-});
-;
-=======
-<<<<<<< HEAD
-app.log.error(err);
-=======
-<<<<<<< HEAD
-app.log.error(err);
-=======
-  app.log.error(err);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
-
-<<<<<<< HEAD
-=======
-const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-  app.log.error(err);
-  (process as any).exit(1);
-});
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

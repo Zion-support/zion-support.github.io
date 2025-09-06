@@ -357,8 +357,8 @@ throw error}
       execSync('npm ci --dry-run', { "stdio": 'pipe' });
       return { "success": true, "issues": [] }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return { 
-        "success": false, 
+      return {
+        "success": false,
         "issues": [{
           type: 'package-lock',
           "message": 'Package-lock.json integrity issues detected',
@@ -396,8 +396,8 @@ throw error}
       }
       return { "success": duplicates.length === 0, duplicates }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return { 
-        "success": false, 
+      return {
+        "success": false,
         "duplicates": [{
           type: 'dependency-conflict',
           "message": 'Dependency conflicts detected',
@@ -414,7 +414,7 @@ throw error}
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()
       ]);
-      const totalIssues = vulnCheck.count + outdatedCheck.count + 
+      const totalIssues = vulnCheck.count + outdatedCheck.count +
                          (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
       if (totalIssues === 0) {
         this.log('No dependency issues found', 'INFO');
@@ -424,7 +424,7 @@ throw error}
       let resolutionsApplied = 0;
       // Fix vulnerabilities and outdated dependencies
       resolutionsApplied += await this.resolveDependencyIssues(
-        vulnCheck.vulnerabilities, 
+        vulnCheck.vulnerabilities,
         outdatedCheck.outdated
       );
       // Fix package-lock issues
@@ -503,8 +503,4 @@ if (require.main === module) {
     resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
-module.exports = DependencyErrorResolver
-=======
-module.exports = DependencyErrorResolver
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

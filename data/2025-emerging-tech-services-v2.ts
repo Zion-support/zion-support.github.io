@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EmergingTechService {
-<<<<<<< HEAD
-trial_days: number;
-    setup_time: string;
-=======
-=======
-export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -21,7 +11,6 @@ export interface EmergingTechService {;
     trialDays: number;
     setupTime: string;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     enterprise: number;
   }
   features: string[];
@@ -486,46 +475,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
-<<<<<<< HEAD
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
-    id: 'autonomous - vehicle - ai - platform',
-    name: 'Autonomous Vehicle AI Platform',
-    tagline: 'Advanced AI for self - driving vehicles and transportation',
-    description:;
-      'Comprehensive AI platform that powers autonomous vehicles with advanced perception, decision - making, and safety systems for the future of transportation.',
-    category: 'Emerging Tech',
-=======
-<<<<<<< HEAD
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
-    ]
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
-    icon: '🚗'
-    color: 'from-red-500 to-pink-600'
-    popular: true
-    launchDate: '2024-01-25'
-    customers: 180
-    rating: 4.9
-    reviews: 65
-    marketSize: '$35B autonomous vehicle market'
-    growthRate: '75% annually'
-  }
-=======
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
-    ],
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
-    icon: '🚗',
-    color: 'from-red-500 to-pink-600',
-    popular: true,
-    launchDate: '2024-01-25',
-    customers: 180,
-    rating: 4.9,
-    reviews: 65,
-    marketSize: '$35B autonomous vehicle market',
-    growthRate: '75% annually',
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
     ];
@@ -564,7 +514,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     tagline: 'Quantum computing meets biological systems';
     description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',
     category: 'Quantum & Emerging Tech';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     price: {
       monthly: 799,
       yearly: 7990,
@@ -674,25 +624,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     customers: 180;
     rating: 4 && 4.9;
     reviews: 65;
-<<<<<<< HEAD
-    market_size: '$35B autonomous vehicle market',
-    growth_rate: '75% annually';
-  }
-];
-;
-=======
 
-    marketSize: '$35B autonomous vehicle market'
-
-    growthRate: '75% annually'
-<<<<<<< HEAD
-  }
-];
-=======
-export interface EmergingTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -966,11 +898,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65,;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -654,7 +654,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       })}
     return trends}
   analyzeFixSuccessRates(reports) {
-    const fixReports = reports.filter(report => 
+    const fixReports = reports.filter(report =>
       report.fixesApplied !== undefined || report.resolutionsApplied !== undefined
     );
     const successRates = [];
@@ -913,7 +913,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
       const fileDistribution = this.analyzeFileDistribution(reports);
       // Calculate summary statistics
       const totalErrors = Object.values(errorTypes).reduce((sum, count) => sum + count, 0);
-      const avgSuccessRate = fixSuccessRates.length > 0 
+      const avgSuccessRate = fixSuccessRates.length > 0
         ? fixSuccessRates.reduce((sum, rate) => sum + parseFloat(rate.successRate), 0) / fixSuccessRates.length
         : 0;
       const analyticsData = {
@@ -976,8 +976,4 @@ if (require.main === module) {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
-module.exports = ErrorAnalyticsDashboard
-=======
-module.exports = ErrorAnalyticsDashboard
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

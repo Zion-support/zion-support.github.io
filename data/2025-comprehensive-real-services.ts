@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ComprehensiveService {
-<<<<<<< HEAD
-trial_days: number;
-  setup_time: string;
-=======
-=======
-export interface ComprehensiveService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -33,7 +23,7 @@ export interface ComprehensiveService {;
 
   trialDays: number;
   setupTime: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   competitors: string[];
   roi: string;
   launch_date: string;
@@ -941,13 +931,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
-<<<<<<< HEAD
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
-<<<<<<< HEAD
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
     trialDays: 60, setupTime: '4-6 weeks',
@@ -956,25 +940,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9,
     reviews: 520;
   }
-<<<<<<< HEAD
-];
-;
-=======
-=======
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-    trialDays: 60,
-    setupTime: '4-6 weeks',
-    competitors: ['PTC', 'Siemens', 'GE Digital', 'Rockwell Automation'],
-    roi: 'Average customer sees 600% ROI through operational improvements',
-    launchDate: '2024-01-10',
-    customers: 950,
-    rating: 4.9,
-    reviews: 520,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -990,14 +956,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9
 
     reviews: 520
-<<<<<<< HEAD
-  }
-];
-=======
-export interface ComprehensiveService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -1388,11 +1347,6 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     customers: 950,;
     rating: 4.9,;
     reviews: 520;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

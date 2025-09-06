@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface SpaceMetaverseService {
-<<<<<<< HEAD
-trial_days: number;
-    setup_time: string;
-=======
-=======
-export interface SpaceMetaverseService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -21,7 +11,6 @@ export interface SpaceMetaverseService {;
     trialDays: number;
     setupTime: string;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     enterprise: string;
   }
   features: string[];
@@ -451,135 +440,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
     compliance: [
-<<<<<<< HEAD
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
-    id: 'virtual - reality - enterprise - platform',
-    name: 'Virtual Reality Enterprise Platform',
-    tagline: 'Transform business operations with immersive VR solutions',
-    description:;
-      'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',
-    category: 'Enterprise VR & Immersive Technology',
-    price: {
-      monthly: 199,
-      yearly: 1990,
-      currency: 'USD',
-      trial_days: 14,
-      setup_time: '1 - 2 weeks',
-      enterprise: 'Custom pricing',
-    },
-    features: [;
-      'VR training simulations',
-      'Virtual collaboration spaces',
-      '3D visualization tools',
-      'Custom VR applications',
-      'Multi - user VR experiences',
-      'Analytics and reporting',
-      'Mobile VR support',
-      'API for integration',
-      'Content management system',
-      'Enterprise security features',
-    ],
-    benefits: [;
-      'Improve training effectiveness by 300%',
-      'Reduce training costs by 60%',
-      'Enhance collaboration',
-      'Improve decision making',
-      'Increase employee engagement',
-    ],
-    target_audience: [;
-      'Manufacturing companies',
-      'Healthcare organizations',
-      'Educational institutions',
-      'Training companies',
-      'Real estate companies',
-      'Architecture firms',
-    ],
-    market_position:;
-      'Leading enterprise VR platform. Competes with Pico ($299 - 599), Meta Quest Pro ($999), and HTC Vive ($699 - 1399). Our advantage: Enterprise - focused features and comprehensive solutions.',
-    competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
-    tech_stack: ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis'],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.',
-    roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
-    use_cases: [;
-      'Employee training',
-      'Virtual meetings',
-      'Product design review',
-      'Safety training',
-      'Remote collaboration',
-      'Customer presentations',
-    ],
-    integrations: [;
-      'HR systems, Learning management systems, Project management tools, Custom enterprise systems',
-    ],
-    support:;
-      '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
-    compliance: [;
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards',
-    ],
-    link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform',
-    icon: '🥽',
-    color: 'from - orange - 500 to - red - 600',
-    popular: true,
-    launch_date: '2024 - 01 - 20',
-    customers: 1800,
-    rating: 4 && 4.7,
-    reviews: 1400,
-  },
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: string
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number
-}
-];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations';
-=======
-<<<<<<< HEAD
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards'
-    ]
-    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
-    icon: '🥽'
-    color: 'from-orange-500 to-red-600'
-    popular: true
-    launchDate: '2024-01-20'
-    customers: 1800
-    rating: 4.7
-    reviews: 1400
-  }
-=======
-      'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
-    ],
-    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform',
-    icon: '🥽',
-    color: 'from-orange-500 to-red-600',
-    popular: true,
-    launchDate: '2024-01-20',
-    customers: 1800,
-    rating: 4.7,
-    reviews: 1400,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems'];
     support: '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.';
@@ -592,21 +455,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     customers: 1800;
     rating: 4 && 4.7,
     reviews: 1400
-<<<<<<< HEAD
-    rating: 4.7,
-    reviews: 1400;
-  }
-];
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface SpaceMetaverseService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -868,11 +717,6 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     customers: 1800,;
     rating: 4.7,;
     reviews: 1400;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { createClient  } from '@supabase/supabase-js';
-=======
-import {createClient} from '@supabase/supabase-js';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -18,26 +13,7 @@ const {
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
   process.exit(1)
-=======
-import { createClient } from '@supabase/supabase-js',;
-import fs from 'fs/promises',;
-import { createReadStream } from 'fs',;
-import path from 'path',;
-import FormData from 'form-data',;
-import fetch from 'node-fetch',;
-const {;
-  SUPABASE_URL,;
-  SUPABASE_SERVICE_ROLE_KEY,;
-  OPENAI_API_KEY;
-} = process.env,;
-if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
-  console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
-  process.exit(1);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -66,10 +42,7 @@ function stripPii(text) {
 
   return result
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function buildTrainingPairs(records) {
 
   const pairs = []
@@ -80,33 +53,6 @@ function buildTrainingPairs(records) {
       completion: stripPii(job.description)
     })
   }
-<<<<<<< HEAD
-  for (const resume of records.resumes) {
-    pairs.push({
-=======
-;
-  for (const resume of records.resumes) {;
-    pairs.push({;
-      prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`,;
-      completion: stripPii(resume.summary);
-    });
-  }
-;
-  for (const log of records.logs) {;
-    pairs.push({;
-      prompt: stripPii(log.question),;
-      completion: stripPii(log.answer);
-    });
-  }
-;
-  return pairs;
-}
-;
-async function saveJsonl(pairs, filePath) {;
-  const lines = pairs.map(p => JSON.stringify({ prompt: p.prompt, completion: p.completion })).join('\n'),;
-  await fs.writeFile(filePath, lines, 'utf8');
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
       prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`
 
@@ -157,21 +103,7 @@ async function createFineTune(filePath) {
       training_file: uploaded.id
       model: 'gpt-3.5-turbo'
     })
-<<<<<<< HEAD
 
-  })
-  const job = await jobRes.json()
-
-  console.log('Fine-tune job created:', job.id)
-=======
-  }),
-  const job = await jobRes.json(),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  console.log('Fine-tune job created:', job.id)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // // // console.log('Fine-tune job created:', job.id)
 ;
 async function createFineTune(filePath) {;
@@ -201,11 +133,7 @@ async function createFineTune(filePath) {;
   }),;
   const job = await jobRes.json(),;
   // // // console.log('Fine-tune job created:', job.id);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 }
 async function main() {
 
@@ -215,27 +143,3 @@ async function main() {
 
   await createFineTune('training-data.jsonl')
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-
-});
-
-=======
-
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-}),
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-main().catch((err) => {;
-  console.error('Training workflow failed', err);
-});
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

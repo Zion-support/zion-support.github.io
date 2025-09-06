@@ -15,63 +15,7 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-<<<<<<< HEAD
-export default function LazyImage(): any ({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = "",;
-  priority = false,;
-  placeholder = "empty",;
-  blurDataURL,;
-  sizes,;
-  quality = 75,;
-  fill = false,;
-  style,;
-  onLoad,;
-  onError,;
-}: LazyImageProps) {;
-=======
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-export default function LazyImage({
-<<<<<<< HEAD
-  src
-  alt
-  width
-  height
-  className = ""
-  priority = false
-  placeholder = "empty"
-  blurDataURL
-  sizes
-  quality = 75
-  fill = false
-  style
-  onLoad
-  onError
-}: LazyImageProps) {
-=======
-  src,
-  alt,
-  width,
-  height,
-  className = "",
-  priority = false,
-  placeholder = "empty",
-  blurDataURL,
-  sizes,
-  quality = 75,
-  fill = false,
-  style,
-  onLoad,
-  onError,
-}: LazyImageProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);

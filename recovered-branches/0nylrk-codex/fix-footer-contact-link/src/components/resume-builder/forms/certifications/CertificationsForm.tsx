@@ -1,34 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { Button  } from '@/components/ui/button';
-import { Form  } from '@/components/ui/form';
-import { Certification  } from '@/types/resume';
-import { Loader2  } from 'lucide-react';
-import { useResume  } from '@/hooks/useResume';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { format  } from 'date-fns';
-import { CertificationsList  } from './CertificationsList';
-import { CertificationFormFields  } from './CertificationFormFields';
-import { CertificationFormValues, certificationSchema } from './types';
-=======
-import {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {Button} from '@/components/ui/button';
-import {Form} from '@/components/ui/form';
-import {Certification} from '@/types/resume';
-import {Loader2} from 'lucide-react';
-import {useResume} from '@/hooks/useResume';
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {format} from 'date-fns';
-import {CertificationsList} from './CertificationsList';
-import {CertificationFormFields} from './CertificationFormFields';
-import {CertificationFormValues, certificationSchema} from './types';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface CertificationsFormProps {
 
   resumeId: string
@@ -37,12 +8,7 @@ interface CertificationsFormProps {
 
   onBack: () => void
 }
-<<<<<<< HEAD
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
-=======
 
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { addCertification, updateCertification, deleteCertification, isLoading } = useResume();
 
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -77,66 +43,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await updateCertification(editingId, certData)
       } else {
         success = await addCertification(resumeId, certData)
-=======
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { Button } from '@/components/ui/button',;
-import { Form } from '@/components/ui/form',;
-import { Certification } from '@/types/resume',;
-import { Loader2 } from 'lucide-react',;
-import { useResume } from '@/hooks/useResume',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { format } from 'date-fns',;
-import { CertificationsList } from './CertificationsList',;
-import { CertificationFormFields } from './CertificationFormFields',;
-import { CertificationFormValues, certificationSchema } from './types',;
-interface CertificationsFormProps {;
-  resumeId: string,;
-  certifications: Certification[],;
-  onComplete: () => void,;
-  onBack: () => void;
-}
-;
-export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
-  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  const [error, setError] = useState<string | null>(null),;
-  // Helper function to format dates as strings for form inputs;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const form = useForm<CertificationFormValues>({;
-    resolver: zodResolver(certificationSchema),;
-    defaultValues: {;
-      name: '',;
-      issuing_organization: '',;
-      issue_date: '',;
-      expiration_date: '',;
-      credential_id: '',;
-      credential_url: ''}}),;
-  const handleAddOrUpdate = async (data: CertificationFormValues) => {;
-    try {;
-      setError(null),;
-      let success,;
-      const certData: Certification = {;
-        name: data.name,;
-        issuing_organization: data.issuing_organization,;
-        issue_date: data.issue_date || undefined,;
-        expiration_date: data.expiration_date || undefined,;
-        credential_id: data.credential_id,;
-        credential_url: data.credential_url},;
-      if (editingId) {;
-        success = await updateCertification(editingId, certData);
-      } else {;
-        success = await addCertification(resumeId, certData);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       }
       if (success) {
         form.reset({
@@ -151,13 +58,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -169,31 +70,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
     }
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  },;
-  const handleEdit = (cert: Certification) => {;
-    setEditingId(cert.id!),;
-    form.reset({;
-      ...cert,;
-      issue_date: formatDateValue(cert.issue_date),;
-      expiration_date: formatDateValue(cert.expiration_date)});
-  },;
-  const handleDelete = async (id: string) => {;
-    if (confirm('Are you sure you want to delete this certification?')) {;
-      await deleteCertification(id);
-    }
-  },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -254,9 +131,3 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

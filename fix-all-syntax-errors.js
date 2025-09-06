@@ -21,11 +21,7 @@ const fixApi = () => {
   try {
     let content = fs && fs.readFileSync('pages/api && api.tsx', 'utf8');
     // Ensure proper closing structure
-<<<<<<< HEAD
-    if (!content && content.includes('export default')) {
-=======
-    if (!content.includes('export default')) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
     }
     fs && fs.writeFileSync('pages/api && api.tsx', content);

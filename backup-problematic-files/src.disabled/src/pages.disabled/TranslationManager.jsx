@@ -17,24 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface TranslationManagerProps {
-  // Add props here as needed
-export default function TranslationManager({ }: TranslationManagerProps) {
-=======
 
-const TranslationManager = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>TranslationManager</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-};
 
-export default TranslationManager;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

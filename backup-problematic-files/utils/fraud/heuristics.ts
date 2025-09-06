@@ -1,66 +1,5 @@
-<<<<<<< HEAD:utils/fraud/heuristics.ts
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
-const suspiciousLinkHosts = [
-  'paypal.me'
-  'cash.app'
-  'venmo.com'
-  'wa.me'
-  't.me'
-  'telegram.me'
-  'whatsapp.com'
-  'westernunion.com'
-  'moneygram.com'
-];
-const suspiciousPhrases = [
-  'whatsapp me'
-  'telegram me'
-  'contact me on whatsapp'
-  'cashapp only'
-  'crypto only'
-  'send crypto'
-  'wire transfer'
-  'gift card'
-  'western union'
-  'off-platform payment'
-  'outside payment'
-  'pay outside'
-  'pay me directly'
-  'dm me on'
-  'reach me on whatsapp'
-  'skype me'
-  'email me at'
-];
-const vagueScammyJobPhrases = [
-  'easy work'
-  'quick money'
-  'no experience needed'
-  'work from home and earn fast'
-  'daily payouts'
-  'earn $\\d+ per day'
-];
-function containsSuspiciousHost(text: string): boolean {
-  const lower = text.toLowerCase();
-  return suspiciousLinkHosts.some(host => lower.includes(host));
-=======
-<<<<<<< HEAD:backup-problematic-files/utils/fraud/heuristics.ts
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',;
-const suspiciousLinkHosts = [;
-  'paypal.mecash.appvenmo.comwa.met.metelegram.mewhatsapp.comwesternunion.com',;
-  'moneygram.com'],;
-const suspiciousPhrases = [;
-  'whatsapp metelegram mecontact me on whatsappcashapp onlycrypto onlysend cryptowire transfergift card',;
-  'western unionoff-platform paymentoutside paymentpay outsidepay me directlydm me onreach me on whatsappskype me',;
-  'email me at'],;
-const vagueScammyJobPhrases = [;
-  'easy workquick moneyno experience neededwork from home and earn fastdaily payoutsearn $\\d+ per day'],;
-function containsSuspiciousHost(text: string): boolean {;
-  const lower = text.toLowerCase(),;
-  return suspiciousLinkHosts.some((host) => lower.includes(host));
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/heuristics.ts
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 }
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
@@ -78,15 +17,7 @@ function containsVagueJobClaims(text: string): string[] {
 }
 export interface HeuristicDeps {
   countEventsByIp: (
-<<<<<<< HEAD
-    ip: string
-    source: MonitoredSource
-    withinMinutes: number
-=======
-    ip: string,
-    source: MonitoredSource,
-    withinMinutes: number;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   ) => Promise<number>;
 export async function evaluateHeuristics(
   event: FraudEvent
@@ -127,40 +58,3 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-<<<<<<< HEAD:utils/fraud/heuristics.ts
-export function runHeuristics(data: any): HeuristicResult {
-  // Mock implementation - in production, this would run actual fraud detection heuristics;
-  const flags = new Set<string>();
-  // Simple heuristics
-  if (data.email && data.email.includes('test')) flags.add('test_email');
-  if (data.amount && data.amount > 10000) flags.add('high_amount');
-  if (data.frequency && data.frequency > 10) flags.add('high_frequency');
-  const confidence = flags.size > 0 ? 0.8 : 0.1;
-  const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
-  return {
-    flagged: reasons.length > 0
-    reasons
-    severity
-  }
-}
-=======
-;
-  return {;
-    flagged: reasons.length > 0;
-    reasons;
-    severity}
-}
-<<<<<<< HEAD
-=======
->>>>>>> main:utils/fraud/heuristics.ts
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/fraud/heuristics.ts
-=======
-<<<<<<< HEAD:utils/fraud/heuristics.ts
-
-}
-}
-=======
-=======
->>>>>>> main:utils/fraud/heuristics.ts
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/fraud/heuristics.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

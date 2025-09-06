@@ -41,7 +41,7 @@ class InMemoryTokenStore {
 
   constructor() {
     const fromDisk = readFromDisk()
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
     this.data =
       fromDisk ?? {
         wallets: {},

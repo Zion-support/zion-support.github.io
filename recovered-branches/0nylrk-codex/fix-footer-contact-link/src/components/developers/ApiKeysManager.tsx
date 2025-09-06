@@ -1,19 +1,4 @@
 
-<<<<<<< HEAD
-import {useState} from "react";
-import {Check, Clock, Key, MoreVertical, RefreshCw, X} from "lucide-react";
-import {format} from "date-fns";
-import {useApiKeys, type, ApiKeyScope} from "@/hooks/useApiKeys";
-=======
-import { useState } from "react",
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
-import { format } from "date-fns",
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -28,46 +13,20 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const {
-    keys;
 
-    loading
-    newApiKey;
-    fetchApiKeys
-    createApiKey
-    regenerateApiKey
-
-    revokeApiKey;
-    clearNewApiKey
-  } = useApiKeys();
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
-=======
-  const { ;
-    keys;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  const { 
-    keys,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-    loading, 
+    loading,
     newApiKey,
-    fetchApiKeys, 
-    createApiKey, 
-    regenerateApiKey, 
+    fetchApiKeys,
+    createApiKey,
+    regenerateApiKey,
     revokeApiKey,
     clearNewApiKey
   } = useApiKeys(),
-  
+
   const [showCreateDialog, setShowCreateDialog] = useState(false),
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -75,47 +34,15 @@ export function ApiKeysManager() {
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
-<<<<<<< HEAD
-  });
 
-  const handleCreateKey = async () => {
-    if (keyName.trim() === "" |selectedScopes.length === 0) return;
-    await createApiKey(keyName, selectedScopes);
-    setShowCreateDialog(false);
-    setKeyName("");
-    setSelectedScopes([])
-  }
-=======
-  }),
-  
-  const handleCreateKey = async () => {
-    if (keyName.trim() === "" || selectedScopes.length === 0) return,
-    
-    await createApiKey(keyName, selectedScopes),
-    setShowCreateDialog(false),
-    setKeyName(""),
-    setSelectedScopes([])
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId)
     setShowRegenerateConfirm(null)
-<<<<<<< HEAD
-  }
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId)
     setShowDeleteConfirm(null)
-<<<<<<< HEAD
-  }
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   // Scope options
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
     { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }
@@ -130,32 +57,17 @@ export function ApiKeysManager() {
         ? prev.filter(s => s !== scope)
         : [...prev, scope]
     )
-<<<<<<< HEAD
-  }
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\
   -H "Authorization: Bearer ${key}" \\
   -H "Content-Type: application/json"`
-<<<<<<< HEAD
-  }
-=======
-  },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Reset form when dialog closes
   const handleDialogClose = () => {
     setKeyName(""),
     setSelectedScopes([]),
     setShowCreateDialog(false)
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -199,17 +111,7 @@ export function ApiKeysManager() {
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
-<<<<<<< HEAD
-                        <Checkbox
-                          id={scope.value}
-=======
-                        <Checkbox 
-                          id={scope.value} 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
@@ -331,11 +233,7 @@ export function ApiKeysManager() {;
                       <div key={scope.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={scope.value} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -483,14 +381,7 @@ export function ApiKeysManager() {;
           Refresh
         </Button>
       </CardFooter>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}

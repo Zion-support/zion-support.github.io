@@ -8,7 +8,7 @@ class AutomatedTestingSuite {}
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'test-reports');
     this.logFile = path.join(this.reportsDir, 'testing-suite.log');
-    
+
     // Ensure reports directory exists;
     if (!fs.existsSync(this.reportsDir)) {}
       fs.mkdirSync(this.reportsDir, { recursive: true }
@@ -29,7 +29,7 @@ class AutomatedTestingSuite {}
         cwd: this.projectRoot;
       }
 });
-      
+
       this.log('Tests completed successfully');
       return { success: true, result };
     } catch (error) {}
@@ -45,7 +45,7 @@ class AutomatedTestingSuite {}
         cwd: this.projectRoot;
       }
 });
-      
+
       this.log('Build completed successfully');
       return { success: true, result };
     } catch (error) {}
@@ -71,16 +71,13 @@ class AutomatedTestingSuite {}
   };
   async run() {}
     this.log('🚀 Starting Automated Testing Suite...');
-<<<<<<< HEAD
-=======
-    
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     try {}
       const testResults = await this.runTests();
       const buildResults = await this.runBuild();
-      
+
       this.generateReport(testResults, buildResults);
-      
+
       if (testResults.success && buildResults.success) {}
         this.log('✅ Automated Testing Suite completed successfully!');
       } else {}
@@ -98,8 +95,4 @@ if (require.main === module) {}
   const suite = new AutomatedTestingSuite();
   suite.run();
 };
-<<<<<<< HEAD
-module.exports = AutomatedTestingSuite;
-=======
-module.exports = AutomatedTestingSuite;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-export default function Page() {;
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>;
-      <Head>;
-        <title>Pattern — Cloud Intelligence</title>;
-=======
-import Head from 'next/head';
-<<<<<<< HEAD
-export default function Page() {
-  return (
-    <div className='min-h-screen bg-slate-950 text-white'>
-      <Head>
-        <title>Pattern — Cloud Intelligence</title>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         <meta
           name='description'
           content='Actionable architectural pattern synthesized from live site signals.'
@@ -31,17 +17,7 @@ export default function Page() {
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-            __html:
-<<<<<<< HEAD
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',;
-=======
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>'
-=======
-            __html:;
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration; requires disciplined measurement.</p>',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -52,78 +28,9 @@ export default function Page() {
   );export default function Page() {;
 export default function Page() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Pattern — Cloud Intelligence</title>;
-import Head from 'next / head';
-export default /**
- * Page - Function description
- */
-function Page() {
-  return (
-    <div className='min - h-screen bg - slate - 950 text - white'>;
-      <Head>;
-        <title > Pattern — Cloud Intelligence</title>;
-        <meta;
-          name='description';
-          content='Actionable architectural pattern synthesized from live site signals.';
-        />;
-        <meta property='og:title' content='Pattern — Cloud Intelligence' />;
-        <meta;
-          property='og:description';
-          content='Actionable architectural pattern synthesized from live site signals.';
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <main className='container mx - auto px - 6 py - 12 prose prose - invert'>;
-        <h1 className='text - 3xl font - extrabold'>;
-          Pattern — Cloud Intelligence;
-        </h1>;
-        <div;
-          className='mt - 4';
-          dangerouslySetInnerHTML={{
-            __html:;
-              '<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > autonomous systems</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration; requires disciplined measurement.</p>',
-          }}
-        />;
-        <p className='mt - 6 text - white / 60 text - sm'>;
-          Auto - generated by Cloud Deep Research Factory.;
-        </p>;
-      </main>;
-    </div>);export default /**
- * Page - Function description
- */
-function Page() {
-  return (
-    <div className="min - h-screen bg - slate - 950 text - white">;
-      <Head>;
-        <title > Pattern — Cloud Intelligence</title>;
-        <meta name="description" content="Actionable architectural pattern synthesized from live site signals." />;
-        <meta property="og:title" content="Pattern — Cloud Intelligence" />;
-        <meta property="og:description" content="Actionable architectural pattern synthesized from live site signals." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-}
-      <main className="container mx - auto px - 6 py - 12 prose prose - invert">;
-        <h1 className="text - 3xl font - extrabold">Pattern — Cloud Intelligence</h1>;
-        <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<p > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2 > Context</h2><p > Signals indicate recurring needs around <strong > autonomous systems</strong>.</p><h2 > Problem</h2><p > How do we design a robust, observable, and cost - efficient approach?</p><h2 > Forces</h2><ul><li > Latency and throughput trade - offs</li><li > Quality and evaluation</li><li > Security and governance</li></ul><h2 > Solution</h2><p > Define clear boundaries, automate evaluation, and continuously iterate with telemetry - in - the - loop.</p><h2 > Consequences</h2><p > Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />;
-        <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Deep Research Factory.</p>;
-      </main>;
-    </div>);
-}
-=======
-=======
 
-export default function Page() {
-  return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className="min-h-screen bg-slate-950 text-white">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       <Head>
         <title>Pattern — Cloud Intelligence</title>
         <meta name=&quot;description&quot; content=&quot;Actionable architectural pattern synthesized from live site signals.&quot; />
@@ -133,34 +40,7 @@ export default function Page() {
       </Head>
       <main className="container mx-auto px-6 py-12 prose prose-invert">
         <h1 className="text-3xl font-extrabold">Pattern — Cloud Intelligence</h1>
-<<<<<<< HEAD
 
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
-      </main>
-    </div>
-  )
-}
-
-=======
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>autonomous systems</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>" }} />
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
-      </main>
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-  );
-}
-=======
-=======
-<<<<<<< HEAD
-    </div>;
-  );
-}
-
-}
-=======
-    </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import Head from 'next/head';
 export default function Page(req, res) {
@@ -187,9 +67,3 @@ export default function Page(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,30 +1,10 @@
-<<<<<<< HEAD
-"use client",
-export default /**
- * AIAutomationPage - Function description
- */
-function AIAutomationPage() {
-  return (
-    <div className="space - y-8">;
-      <div className="text - center space - y-4">;
-        <h1 className="text - 4xl font - bold">AI Workflow Automation</h1>;
-        <p className="text - xl opacity - 80 max - w-3xl mx - auto">;
-          Transform your business processes with intelligent automation powered by cutting - edge AI technology;
-=======
-<<<<<<< HEAD
-"use client";
-export default function AIAutomationPage() {return (;
-=======
-"use client",;
-export default function AIAutomationPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">AI Workflow Automation</h1>;
         <p className="text-xl opacity-80 max-w-3xl mx-auto">;
           Transform your business processes with intelligent automation powered by cutting-edge AI technology;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         </p>;
       </div>;
       {/* Service Overview */}

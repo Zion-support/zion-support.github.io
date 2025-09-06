@@ -1,39 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 class ContinuousImprovement {
   constructor() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    this.projectRoot = process.cwd();
-  }
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     this.logFile = path.join(__dirname, '..', 'logs', 'continuous-improvement.log');
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class ContinuousImprovement { constructor() { this.ensureLogDir(); } ensureLogDir() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true }); } } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; return false; } } try {" this.log("Checking for dependency updates.");"" execSync("npm outdated", { stdio: "pipe" });" this.log("Dependency check completed"); return true; } catch (error) {"` this.log(`Dependency check failed: ${error.message}`); return false; } } return false; } }}module.exports = ContinuousImprovement;""`"`
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 #!/usr/bin/env node;
 ursor/migrate-github-actions-to-pm2-and-clean-up-f06c;
 cursor/website-audit-and-update-with-deployment-76dc;
@@ -57,12 +33,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   };
   log(message) {}
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
     const logMessage = `[${timestamp}] ${message}\n`;
     );
     fs.appendFileSync(this.logFile, logMessage);
@@ -102,12 +73,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   }
   async runDependencyUpdates() {
     try {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     const logMessage = `[${timestamp}] ${message}\n`;`
 console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
@@ -137,12 +103,7 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     } catch (error) {}
       this.log(`Dependency check "failed": ${error.message}`);
       return false;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
     }
   }
   async runCodeAnalysis() {
@@ -177,33 +138,21 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
       this.log(`Report generation "failed": ${error.message}`);
       return false;
     }
-<<<<<<< HEAD
-=======
-    this.projectRoot = process.cwd();
-  }
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 
   async run() {
     this.log('🔄 Running continuous improvement...');
-    
+
     // Monitor file changes
     this.monitorFileChanges();
-    
+
     // Run quality checks
     this.runQualityChecks();
-    
+
     // Optimize performance
     this.optimizePerformance();
-    
+
     this.log('✅ Continuous improvement completed', 'SUCCESS');
   }
 
@@ -222,30 +171,13 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     // Implementation would go here
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-const improvement = new ContinuousImprovement();
-improvement.run().catch(console.error);
-
-module.exports = ContinuousImprovement;
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 // Run the automation
 if (require.main === module) {
   const automation = new ContinuousImprovement();
   automation.run().catch(console.error);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     };
   };
 cursor/fix-lint-push-and-merge-to-main-f3c1;
@@ -318,27 +250,3 @@ if (require.main === module) {}
 cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 };
-<<<<<<< HEAD
-module.exports = ContinuousImprovement;
-=======
-<<<<<<< HEAD
-module.exports = ContinuousImprovement;
-=======
-<<<<<<< HEAD
-module.exports = ContinuousImprovement;
-=======
-module.exports = ContinuousImprovement;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
-const improvement = new ContinuousImprovement();
-improvement.run().catch(console.error);
-
-module.exports = ContinuousImprovement;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

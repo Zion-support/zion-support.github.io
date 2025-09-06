@@ -17,25 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface HRPlatformProps {
-  // Add props here as needed
-export default function HRPlatform({ }: HRPlatformProps) {
-=======
 
-const HRPlatform = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>HRPlatform</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
-}
-}
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

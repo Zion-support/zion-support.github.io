@@ -23,7 +23,7 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
+
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -33,7 +33,7 @@
   --neon-cyan: #06b6d4;
   --neon-yellow: #eab308;
   --neon-red: #ef4444;
-  
+
   /* Gradient backgrounds */
   --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
@@ -187,31 +187,9 @@ h3 {
   letter-spacing: 0.1em;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Enhanced futuristic effects */
 .neon-glow {
-  text-shadow: 
+  text-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -219,14 +197,14 @@ h3 {
 }
 
 .neon-border {
-  box-shadow: 
+  box-shadow:
     inset 0 0 20px rgba(0, 212, 255, 0.1),
     0 0 20px rgba(0, 212, 255, 0.2),
     0 0 40px rgba(0, 212, 255, 0.1);
 }
 
 .cyber-grid {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -243,10 +221,10 @@ h3 {
 }
 
 .holographic {
-  background: linear-gradient(45deg, 
-    rgba(0, 212, 255, 0.1), 
-    rgba(139, 92, 246, 0.1), 
-    rgba(236, 72, 153, 0.1), 
+  background: linear-gradient(45deg,
+    rgba(0, 212, 255, 0.1),
+    rgba(139, 92, 246, 0.1),
+    rgba(236, 72, 153, 0.1),
     rgba(0, 212, 255, 0.1));
   background-size: 400% 400%;
   animation: holographic 4s ease-in-out infinite;
@@ -262,11 +240,11 @@ h3 {
 }
 
 @keyframes quantumPulse {
-  0%, 100% { 
+  0%, 100% {
     transform: scale(1);
     opacity: 1;
   }
-  50% { 
+  50% {
     transform: scale(1.05);
     opacity: 0.8;
   }
@@ -341,11 +319,11 @@ a:hover {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { 
+  0%, 100% {
     box-shadow: 0 0 20px var(--neon-blue);
     transform: scale(1);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 40px var(--neon-blue), 0 0 60px var(--neon-blue);
     transform: scale(1.05);
   }
@@ -354,8 +332,8 @@ a:hover {
 @keyframes neon-flicker {
   0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
     opacity: 0.99;
-    filter: drop-shadow(0 0 1px var(--neon-blue)) 
-            drop-shadow(0 0 15px var(--neon-blue)) 
+    filter: drop-shadow(0 0 1px var(--neon-blue))
+            drop-shadow(0 0 15px var(--neon-blue))
             drop-shadow(0 0 2px var(--neon-blue));
   }
   20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
@@ -410,7 +388,7 @@ a:hover {
 
 /* Enhanced futuristic backgrounds */
 .futuristic-bg {
-  background: 
+  background:
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
@@ -425,7 +403,7 @@ a:hover {
 
 /* Enhanced cyber grid */
 .cyber-grid {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -439,7 +417,7 @@ a:hover {
 
 /* Enhanced neon text effects */
 .neon-text {
-  text-shadow: 
+  text-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -448,7 +426,7 @@ a:hover {
 
 .neon-text-blue {
   color: var(--neon-blue);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-blue),
     0 0 10px var(--neon-blue),
     0 0 15px var(--neon-blue),
@@ -458,7 +436,7 @@ a:hover {
 
 .neon-text-purple {
   color: var(--neon-purple);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-purple),
     0 0 10px var(--neon-purple),
     0 0 15px var(--neon-purple),
@@ -468,7 +446,7 @@ a:hover {
 
 .neon-text-green {
   color: var(--neon-green);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-green),
     0 0 10px var(--neon-green),
     0 0 15px var(--neon-green),
@@ -478,7 +456,7 @@ a:hover {
 
 .neon-text-pink {
   color: var(--neon-pink);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-pink),
     0 0 10px var(--neon-pink),
     0 0 15px var(--neon-pink),
@@ -514,15 +492,11 @@ a:hover {
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 
+  box-shadow:
     0 0 20px rgba(0, 212, 255, 0.3),
     inset 0 0 20px rgba(0, 212, 255, 0.1);
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .btn-futuristic::before {
   content: '';
 .btn-futuristic::before {  content: '';
@@ -536,7 +510,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
@@ -548,11 +522,11 @@ a:hover {
 
 /* Holographic effect */
 .holographic {
-  background: linear-gradient(45deg, 
-    rgba(59, 130, 246, 0.1) 0%, 
-    rgba(147, 51, 234, 0.1) 25%, 
-    rgba(16, 185, 129, 0.1) 50%, 
-    rgba(239, 68, 68, 0.1) 75%, 
+  background: linear-gradient(45deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    rgba(147, 51, 234, 0.1) 25%,
+    rgba(16, 185, 129, 0.1) 50%,
+    rgba(239, 68, 68, 0.1) 75%,
     rgba(59, 130, 246, 0.1) 100%);
   background-size: 200% 200%;
   animation: holographicShift 8s ease-in-out infinite;
@@ -566,9 +540,9 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, 
-    transparent 0%, 
-    rgba(255, 255, 255, 0.1) 50%, 
+  background: linear-gradient(45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
     transparent 100%);
   animation: holographicScan 4s linear infinite;
 }
@@ -585,7 +559,7 @@ a:hover {
 
 /* Neural network effect */
 .neural-bg {
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 60%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
@@ -596,11 +570,11 @@ a:hover {
 }
 
 @keyframes neuralPulse {
-  0%, 100% { 
+  0%, 100% {
     background-size: 100px 100px, 150px 150px, 200px 200px, 120px 120px, 300px 300px;
     opacity: 0.7;
   }
-  50% { 
+  50% {
     background-size: 120px 120px, 180px 180px, 240px 240px, 140px 140px, 360px 360px;
     opacity: 1;
   }
@@ -627,7 +601,7 @@ a:hover {
 
 /* Cyberpunk neon effect */
 .cyberpunk-neon {
-  box-shadow: 
+  box-shadow:
     0 0 5px currentColor,
     0 0 10px currentColor,
     0 0 15px currentColor,
@@ -637,16 +611,16 @@ a:hover {
 }
 
 @keyframes neonPulse {
-  from { 
-    box-shadow: 
+  from {
+    box-shadow:
       0 0 5px currentColor,
       0 0 10px currentColor,
       0 0 15px currentColor,
       0 0 20px currentColor,
       inset 0 0 5px rgba(255, 255, 255, 0.1);
   }
-  to { 
-    box-shadow: 
+  to {
+    box-shadow:
       0 0 10px currentColor,
       0 0 20px currentColor,
       0 0 30px currentColor,
@@ -681,19 +655,19 @@ a:hover {
 }
 
 @keyframes floatOrb {
-  0%, 100% { 
+  0%, 100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.3;
   }
-  25% { 
+  25% {
     transform: translate(50px, -30px) scale(1.2);
     opacity: 0.6;
   }
-  50% { 
+  50% {
     transform: translate(100px, 0) scale(0.8);
     opacity: 0.3;
   }
-  75% { 
+  75% {
     transform: translate(50px, 30px) scale(1.1);
     opacity: 0.5;
   }
@@ -804,115 +778,27 @@ a:hover {
 .button::before {
 
   content: '';
-<<<<<<< HEAD
 
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-.btn-futuristic::before {
-=======
-.particles-bg::before {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   content: '';
 .btn-futuristic::before {  content: '';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-.btn-futuristic::before {  content: '';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-.btn-futuristic::before {  content: '';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-<<<<<<< HEAD
-
-  transition: left 0.5s ease;
 
 }
   transition: left 0.5s ease;}
-
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
-  transition: left 0.5s ease;
-=======
-  transition: left 0.5s;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1dae
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-}
-  transition: left 0.5s ease;}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  transition: left 0.5s ease;}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  transition: left 0.5s ease;}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 .button:hover::before {
   left: 100%;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 .btn-futuristic:hover {
   transform: translateY(-2px);
-  box-shadow: 
+  box-shadow:
     0 10px 30px rgba(0, 212, 255, 0.4),
     inset 0 0 30px rgba(0, 212, 255, 0.2);
 }
@@ -927,7 +813,7 @@ a:hover {
 
 /* Enhanced hover effects */
 .hover-glow:hover {
-  box-shadow: 
+  box-shadow:
     0 0 20px rgba(0, 212, 255, 0.3),
     0 0 40px rgba(0, 212, 255, 0.2),
     0 0 60px rgba(0, 212, 255, 0.1);
@@ -959,7 +845,7 @@ a:hover {
 
 .card-hover:hover {
   transform: translateY(-5px) scale(1.02);
-  box-shadow: 
+  box-shadow:
     0 20px 40px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(0, 212, 255, 0.2);
 }
@@ -1002,80 +888,9 @@ a:hover {
 /* Responsive design */
 @media (max-width: 768px) {
   .particles {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    display: none;
-
-<<<<<<< HEAD
-=======
-/* Enhanced typography */
-.futuristic-text {
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #06b6d4, #10b981);
-  background-size: 300% 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: textGradient 8s ease infinite;
-}
-
-@keyframes textGradient {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-/* Enhanced scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(31, 41, 55, 0.5);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #2563eb, #7c3aed);
-}
-
-/* Enhanced focus states */
-.focus-ring:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
-}
-
-/* Enhanced transitions */
-.transition-futuristic {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.transition-futuristic:hover {
-  transform: translateY(-2px) scale(1.02);
-}
-
-/* Responsive utilities */
-@media (max-width: 768px) {
-  .card {
-    @apply p-4;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
-  
+
   .button {
     @apply px-4 py-2 text-sm;
   }
@@ -1095,28 +910,10 @@ a:hover {
     animation: none !important;
 
   }
-<<<<<<< HEAD
 
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
     display: none;  }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    display: none;  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    display: none;  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
-  
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   .cyber-grid {
     background-size: 15px 15px;
   }
@@ -1157,7 +954,7 @@ a:hover {
 /* Enhanced focus states */
 .focus-glow:focus {
   outline: none;
-  box-shadow: 
+  box-shadow:
     0 0 0 3px rgba(0, 212, 255, 0.1),
     0 0 20px rgba(0, 212, 255, 0.3);
 }
@@ -1179,7 +976,7 @@ a:hover {
 }
 
 .pattern-lines {
-  background-image: 
+  background-image:
     linear-gradient(45deg, rgba(0, 212, 255, 0.05) 25%, transparent 25%),
     linear-gradient(-45deg, rgba(0, 212, 255, 0.05) 25%, transparent 25%);
   background-size: 40px 40px;

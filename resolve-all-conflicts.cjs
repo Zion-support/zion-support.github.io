@@ -8,7 +8,7 @@ console.log('🔧 Starting comprehensive conflict resolution...');
 function resolveModifyDeleteConflicts() {
   try {
     console.log('📁 Resolving modify/delete conflicts by accepting deletions...');
-    
+
     // Get list of conflicted files
     const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
     const conflictedFiles = gitStatus
@@ -42,7 +42,7 @@ function resolveModifyDeleteConflicts() {
 function resolveContentConflicts() {
   try {
     console.log('📝 Resolving content conflicts by keeping HEAD version...');
-    
+
     const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
     const conflictedFiles = gitStatus
       .split('\n')
@@ -60,24 +60,14 @@ function resolveContentConflicts() {
           const originalContent = content;
 
           // Remove merge conflict markers and keep HEAD version
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-            return headMatch ? headMatch[1].trim() : '';
-          });
-
-          // Handle conflicts without proper closing markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, (match) => {
-            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
-            return headMatch ? headMatch[1].trim() : '';
-          });
-
-          // Remove any remaining conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-          content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+          content = content.replace(/
+            const headMatch = match.match(/
+            const headMatch = match.match(/
+          content = content.replace(/
 
           // Handle incomplete conflicts
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*$/g, (match) => {
-            const headMatch = match.match(/<<<<<<< HEAD([\s\S]*?)=======/);
+          content = content.replace(/[\s\S]*?[\s\S]*$/g, (match) => {
+            const headMatch = match.match(/([\s\S]*?)/);
             return headMatch ? headMatch[1].trim() : '';
           });
 
@@ -106,28 +96,28 @@ function resolveContentConflicts() {
 async function main() {
   try {
     console.log('🚀 Starting conflict resolution process...');
-    
+
     // Resolve modify/delete conflicts
     const modifyDeleteCount = resolveModifyDeleteConflicts();
-    
+
     // Resolve content conflicts
     const contentCount = resolveContentConflicts();
-    
+
     console.log(`\n📊 Resolution Summary:`);
     console.log(`   - Modify/Delete conflicts resolved: ${modifyDeleteCount}`);
     console.log(`   - Content conflicts resolved: ${contentCount}`);
     console.log(`   - Total conflicts resolved: ${modifyDeleteCount + contentCount}`);
-    
+
     // Check if there are any remaining conflicts
     const remainingConflicts = execSync('git status --porcelain | grep -c "UU\\|AA\\|DD"', { encoding: 'utf8' }).trim();
-    
+
     if (remainingConflicts === '0') {
       console.log('\n✅ All conflicts resolved successfully!');
       console.log('📝 Ready to commit changes...');
     } else {
       console.log(`\n⚠️  ${remainingConflicts} conflicts still remain. Manual resolution may be needed.`);
     }
-    
+
   } catch (error) {
     console.log(`❌ Error in main process: ${error.message}`);
   }

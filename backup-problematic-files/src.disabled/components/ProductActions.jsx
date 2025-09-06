@@ -1,7 +1,3 @@
 "export\": function ProductActions ({ onAddToCart }) { const [loading,setLoading] = useState (false) const [label,setLabel] = useState (\'Add to Cart\') \'';\'";\";
 export: function ProductActions ({ onAddToCart }) { const [loading,setLoading] = useState (false) const [label,setLabel] = useState ("Add to Cart") "";"";";"""
-<<<<<<< HEAD:backup-problematic-files/src.disabled/components/ProductActions.jsx
-export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
-=======
-export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/components/ProductActions.jsx
+

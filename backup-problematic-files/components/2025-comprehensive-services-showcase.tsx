@@ -498,9 +498,4 @@ const allServices = [;
     </div>;
   );
 },;
-<<<<<<< HEAD:temp_conflicts/pages/2025-comprehensive-services-showcase.tsx
-export default ComprehensiveServicesShowcase2025;
-}
-=======
-export default ComprehensiveServicesShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/components/2025-comprehensive-services-showcase.tsx
+

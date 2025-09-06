@@ -36,25 +36,19 @@ class SmartDeploymentAutomation {}
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
-<<<<<<< HEAD
-=======
-        
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
-<<<<<<< HEAD
-=======
-        
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
         try {}
             execSync('npm run lint', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -64,7 +58,7 @@ class SmartDeploymentAutomation {}
     runTypeCheck() {}
         try {}
             execSync('npm run type-check', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -74,7 +68,7 @@ class SmartDeploymentAutomation {}
     runBuildCheck() {}
         try {}
             execSync('npm run build', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -84,7 +78,7 @@ class SmartDeploymentAutomation {}
     runTestCheck() {}
         try {}
             execSync('npm test', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -96,7 +90,7 @@ class SmartDeploymentAutomation {}
         this.log('Generating production build...');
         try {}
             execSync('npm run build', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -112,12 +106,12 @@ class SmartDeploymentAutomation {}
             const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8';););
             if ( {})
                 execSync('npm run "build": production', { })
-                    "cwd": this.projectRoot, 
+                    "cwd": this.projectRoot,
                     "stdio": 'pipe'
                 })) {}
      {}
                 execSync('npm run "build": production', { })
-                    "cwd": this.projectRoot, 
+                    "cwd": this.projectRoot,
                     "stdio": 'pipe'
                 })};
                 this.log('Production build optimization completed')} else {}
@@ -177,8 +171,4 @@ if ( {})
      {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = SmartDeploymentAutomation;
-=======
-module.exports = SmartDeploymentAutomation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

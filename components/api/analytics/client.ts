@@ -1,19 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-    const clientId = (req && req.query.clientId as string) || null,
-    const [jobsR, quotesR] = await Promise && Promise.allSettled([
-=======
-import { createServerClient } from '../../../utils/supabase/server';
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {;
-    const supabase = createServerClient();
-    const clientId = (req.query.clientId as string) |null
-    const [jobsR, quotesR] = await Promise.allSettled([
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       supabase
         .from('jobs')
         .select('id, client_id, status, posted_at, hired_at')
@@ -238,32 +224,6 @@ function handler() {
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
         { label: 'Hire', value: 2 }]})
-<<<<<<< HEAD
-  }
-}
-    res.status (200).json ({
-      jobs_posted: 3,
-      quotes_received: 2,
-      timeToHireDays: 3.1,
-      talent_viewed: 12,
-      shortlisted: 5,
-      funnel: [;
-        { label: 'Post', value: 3 },
-        { label: 'Invite', value: 2 },
-        { label: 'Hire', value: 2 },
-      ],
-    });
-  }      jobs_posted: 3;
-      quotes_received: 2;
-      timeToHireDays: 3.1;
-      talent_viewed: 12;
-      shortlisted: 5;
-      funnel: [;
-        { label: 'Post', value: 3 }
-        { label: 'Invite', value: 2 }
-        { label: 'Hire', value: 2 }]});
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }

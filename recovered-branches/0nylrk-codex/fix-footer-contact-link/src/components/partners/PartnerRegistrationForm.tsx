@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -16,42 +12,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
-const partnerFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." })
-  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
-  twitter: z.string().optional()
-  instagram: z.string().optional()
-  youtube: z.string().optional()
-  linkedin: z.string().optional()
-  niche: z.string().min(2, { message: "Please specify your niche." })
-  audience_size: z.string()
-  payout_method: z.string()
-  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)})
-type PartnerFormValues = z.infer<typeof partnerFormSchema>;
-export function PartnerRegistrationForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { user } = useAuth();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from "react",
-import { z } from "zod",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -66,17 +27,6 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
-<<<<<<< HEAD
-export function PartnerRegistrationForm() {;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { user } = useAuth();
-=======
-export function PartnerRegistrationForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
     defaultValues: {
@@ -95,33 +45,7 @@ export function PartnerRegistrationForm() {
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
-<<<<<<< HEAD
-      .single();
-    if (existingPartner) {
-      toast({
-        title: "Already registered"
-        description: "You have already registered as a partner."
-        variant: "destructive"})
-      setIsSubmitting(false);
-      return true
-    }
-    return false
-  }
-=======
-      .single(),
 
-    if (existingPartner) {
-      toast({
-        title: "Already registered",
-        description: "You have already registered as a partner.",
-        variant: "destructive"}),
-      setIsSubmitting(false),
-      return true
-    }
-    return false
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -129,139 +53,13 @@ export function PartnerRegistrationForm() {
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
-<<<<<<< HEAD
-    }
-    setIsSubmitting(true);
-    try {
-      // Check if they already have a partner profile
-      const hasExistingPartner = await checkExistingPartner();
-      if (hasExistingPartner) return;
-      // Insert new partner profile
-      const { data: newPartner, error } = await supabase
-        .from('partner_profiles')
-        .insert([
-          {
-            user_id: user.id
-            name: data.name
-            website: data.website |null
-            social_media: {
-              twitter: data.twitter |null
-              instagram: data.instagram |null
-              youtube: data.youtube |null
-              linkedin: data.linkedin |null}
-            niche: data.niche
-            audience_size: data.audience_size
-            payout_method: data.payout_method
-            bio: data.bio
-            status: 'pending', // Partners need approval
-<<<<<<< HEAD
-          }
-        ])
-        .select();
-      if (error) throw error;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from "react",;
-import { z } from "zod",;
-import { useForm } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Input } from "@/components/ui/input",;
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { Textarea } from "@/components/ui/textarea",;
-import { toast } from "@/hooks/use-toast",;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from "@/integrations/supabase/client",;
-const partnerFormSchema = z.object({;
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),;
-  website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),;
-  twitter: z.string().optional(),;
-  instagram: z.string().optional(),;
-  youtube: z.string().optional(),;
-  linkedin: z.string().optional(),;
-  niche: z.string().min(2, { message: "Please specify your niche." }),;
-  audience_size: z.string(),;
-  payout_method: z.string(),;
-  bio: z.string().min(10, { message: "Bio must be at least 10 characters." }).max(500)}),;
-type PartnerFormValues = z.infer<typeof partnerFormSchema>,;
-export function PartnerRegistrationForm() {;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const { user } = useAuth(),;
-  const form = useForm<PartnerFormValues>({;
-    resolver: zodResolver(partnerFormSchema),;
-    defaultValues: {;
-      name: "",;
-      website: "",;
-      twitter: "",;
-      instagram: "",;
-      youtube: "",;
-      linkedin: "",;
-      niche: "",;
-      audience_size: "",;
-      payout_method: "paypal",;
-      bio: ""}}),;
-  const checkExistingPartner = async () => {;
-    const { data: existingPartner } = await supabase;
-      .from('partner_profiles');
-      .select('id');
-      .eq('user_id', user.id);
-      .single(),;
-    if (existingPartner) {;
-      toast({;
-        title: "Already registered",;
-        description: "You have already registered as a partner.",;
-        variant: "destructive"}),;
-      setIsSubmitting(false),;
-      return true;
-    }
-    return false;
-  },;
-  async function onSubmit(data: PartnerFormValues) {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "You must be logged in to register as a partner.",;
-        variant: "destructive"}),;
-      return;
-    }
-;
-    setIsSubmitting(true),;
-    try {;
-      // Check if they already have a partner profile;
-      const hasExistingPartner = await checkExistingPartner(),;
-      if (hasExistingPartner) return,;
-      // Insert new partner profile;
-      const { data: newPartner, error } = await supabase;
-        .from('partner_profiles');
-        .insert([;
-          {;
-            user_id: user.id,;
-            name: data.name,;
-            website: data.website || null,;
-            social_media: {;
-              twitter: data.twitter || null,;
-              instagram: data.instagram || null,;
-              youtube: data.youtube || null,;
-              linkedin: data.linkedin || null},;
-            niche: data.niche,;
-            audience_size: data.audience_size,;
-            payout_method: data.payout_method,;
-            bio: data.bio,;
-            status: 'pending', // Partners need approval;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           }
         ])
         .select(),
 
       if (error) throw error,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Application submitted!"
         description: "Your partner application has been submitted for review."
@@ -271,12 +69,7 @@ export function PartnerRegistrationForm() {;
         .from('referral_codes')
         .select('code')
         .eq('user_id', user.id)
-<<<<<<< HEAD
-        .single();
-=======
-        .single(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
       }
@@ -312,42 +105,7 @@ export function PartnerRegistrationForm() {;
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD
-                )}
-              />
-              <FormField
-=======
-        ]);
-        .select(),;
-      if (error) throw error,;
-      toast({;
-        title: "Application submitted!",;
-        description: "Your partner application has been submitted for review.",;
-        variant: "default"}),;
-      // Create a referral code if they don't have one already;
-      const { data: existingCode } = await supabase;
-        .from('referral_codes');
-        .select('code');
-        .eq('user_id', user.id);
-        .single(),;
-      if (!existingCode) {;
-        await supabase.rpc('generate_referral_code', { user_id: user.id });
-      }
-;
-    } catch (error: any) {;
-      console.error('Error submitting partner application:', error),;
-      toast({;
-        title: "Submission failed";
-        description: error.message || "There was a problem submitting your application.";
-        variant: "destructive"});
-    } finally {;
-      setIsSubmitting(false);
-    }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                 control={form.control}
                 name="website"
                 render={({ field }) => (
@@ -401,17 +159,7 @@ export function PartnerRegistrationForm() {;
                       <FormMessage />
                     </FormItem>
                   )}
-<<<<<<< HEAD
-                />
-                <FormField
-=======
-                />;
-                <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   control={form.control}
                   name="linkedin"
                   render={({ field }) => (
@@ -511,13 +259,7 @@ export function PartnerRegistrationForm() {;
                 )}
               />
             </div>
-<<<<<<< HEAD
-            <Button
-              type="submit"
-=======
-            <Button 
-              type="submit" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}
             >
@@ -528,12 +270,3 @@ export function PartnerRegistrationForm() {;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-};
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

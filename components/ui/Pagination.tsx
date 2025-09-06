@@ -1,95 +1,16 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import EnhancedButton from './EnhancedButton';
-export type PaginationProps = {
-  on_change: (next_page: number) => void;
-}
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
-  page: number,
-  page_size: number,
-  total: number,
-};
-export default function Pagination(): any ({;
-  page,;
-  pageSize,;
-  total,;
-  onChange,;
-}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
-  page: number,;
-  pageSize: number,;
-  total: number,;
-  onChange: (nextPage: number) => void;
-};
-export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
-  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
-=======
-import React from 'react';
-import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export type PaginationProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 export type PaginationProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
   page: number;
   pageSize: number;
   total: number;
   onChange: (nextPage: number) => void;
 }
 export default function Pagination({
-<<<<<<< HEAD
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
-  page,
-  pageSize,
-  total,
-  onChange,;
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number,
-  pageSize: number,
-  total: number,
-  onChange: (nextPage: number) => void;
-};
 
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {;
@@ -127,22 +48,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
-<<<<<<< HEAD
-      </div>;
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>;
-        Next;
-      </EnhancedButton>;
-    </div>;
-  );
-=======
-      </div>
-      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
-        Next
-      </EnhancedButton>
-    </div>
-<<<<<<< HEAD
-);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -400,20 +306,3 @@ if ( {) {
     </nav>);
 }
 export default Pagination;
-<<<<<<< HEAD
-        Next
-      </EnhancedButton>
-    </div>
-  )
-
-}
-=======
-}
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 
 import React from 'react';
 import Link from 'next/link';
@@ -286,8 +265,8 @@ export default function Services() {
 					<div className='mx-auto max-w-4xl text-center mb-14'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Comprehensive Technology Solutions</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms. 
-							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes. 
+							Zion Tech Group delivers cutting-edge, production-ready services across AI, IT infrastructure, and Micro SaaS platforms.
+							Our solutions are designed for enterprise scalability with transparent pricing and measurable outcomes.
 							Explore our full capabilities at{' '}
 							<a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline font-semibold' target='_blank' rel='noreferrer'>ziontechgroup.com</a>.{' '}
 							Check our latest additions in the{' '}
@@ -324,7 +303,7 @@ export default function Services() {
 							</div>
 						</div>
 						<p className='mt-6 text-sm text-gray-500'>
-							Pricing based on market research from leading technology consultancies and enterprise software vendors. 
+							Pricing based on market research from leading technology consultancies and enterprise software vendors.
 							For custom enterprise solutions and volume discounts, see our{' '}
 							<Link href='/pricing' className='text-blue-600 hover:text-blue-500 underline'>Enterprise Pricing Guide</Link>.
 						</p>
@@ -890,7 +869,7 @@ export default function Services() {
 					<div className='mx-auto max-w-3xl text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Innovative AI & Automation Services</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Cutting-edge AI solutions and automation tools that transform how businesses operate. 
+							Cutting-edge AI solutions and automation tools that transform how businesses operate.
 							Visit <a href='https://ziontechgroup.com' className='text-blue-600 hover:text-blue-500 underline' target='_blank' rel='noreferrer'>ziontechgroup.com</a> for live demos.
 						</p>
 					</div>
@@ -1035,7 +1014,7 @@ export default function Services() {
 					<div className='mx-auto max-w-3xl text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Advanced IT & Infrastructure Services</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Enterprise-grade IT solutions and infrastructure management services. 
+							Enterprise-grade IT solutions and infrastructure management services.
 							Professional implementation with 99.9% uptime guarantee.
 						</p>
 					</div>
@@ -1180,7 +1159,7 @@ export default function Services() {
 					<div className='mx-auto max-w-3xl text-center mb-16'>
 						<h2 className='text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl'>Micro SaaS Solutions</h2>
 						<p className='mt-6 text-lg leading-8 text-gray-600'>
-							Specialized software solutions designed to solve specific business challenges. 
+							Specialized software solutions designed to solve specific business challenges.
 							Ready-to-deploy tools with customizable features and integrations.
 						</p>
 					</div>
@@ -1373,7 +1352,7 @@ export default function Services() {
 							Our pricing reflects the true value of cutting-edge technology solutions, with transparent costs and exceptional ROI.
 						</p>
 					</div>
-					
+
 					{/* Pricing Tiers */}
 					<div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16'>
 						<div className='bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300'>
@@ -1478,7 +1457,7 @@ export default function Services() {
 								We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
 							</p>
 						</div>
-						
+
 						<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
 							<div className='text-center'>
 								<div className='mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4'>
@@ -1546,25 +1525,5 @@ export default function Services() {
 		</PageTransition>
 		</Layout>
 	);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/chore/merge-open-prs
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

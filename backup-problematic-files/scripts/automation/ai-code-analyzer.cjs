@@ -33,7 +33,7 @@ class AICodeAnalyzer {}
         try {}
             // Run ESLint analysis;
             const eslintResult = execSync('npm run lint', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -46,7 +46,7 @@ class AICodeAnalyzer {}
         this.log('Starting TypeScript analysis...');
         try {}
             const typeCheckResult = execSync('npm run type-check', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -59,7 +59,7 @@ class AICodeAnalyzer {}
         this.log('Analyzing dependencies...');
         try {}
             const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -112,8 +112,4 @@ if ( {})
      {}
     const analyzer = new AICodeAnalyzer}(;);
     analyzer.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = AICodeAnalyzer;
-=======
-module.exports = AICodeAnalyzer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

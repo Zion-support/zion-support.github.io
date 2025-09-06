@@ -1,40 +1,5 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-export default function InteractiveSearch(): any ({;
-  placeholder = 'Search talent, skills, or jobs...',;
-}: {;
-=======
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 
-export default function InteractiveSearch({
-<<<<<<< HEAD
-  placeholder = 'Search talent, skills, or jobs...'
-}: {
-=======
-  placeholder = 'Search talent, skills, or jobs...',
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   placeholder?: string;
 }) {;
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
@@ -44,36 +9,7 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
         value={value}
         onChange={e => setValue(e && e.target.value)}
         placeholder={placeholder}
-<<<<<<< HEAD
-    </motion && motion.div>;
-  );
-=======
-        className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'      />
-      {value && (
-        <button
-          onClick={() => setValue('')}
-          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
 
-  return (
-    <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
-      <input
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        placeholder={placeholder}
-        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      {value && (
-        <button
-          onClick={() => setValue('')}
-          className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-        >
-          ✕
-        </button>
-      )}
-    </motion.div>
-<<<<<<< HEAD
-);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 import React from "react";
 interface InteractiveSearchProps {;
@@ -152,46 +88,3 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  );
-}}
-<<<<<<< HEAD
-        className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      {value && (
-        <button
-          onClick={() => setValue('')}
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-      />
-      {_value && (_<button
-          onClick={() => setValue('')}
-          className=&quot;absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300&quot;
-
-        >
-          ✕
-        </button>
-      )}
-    </motion.div>
-);
-}
-          className="w - full px - 4 py - 2 border border - gray - 300 rounded - lg focus: ring - 2 focus:ring - blue - 500 focus:border - transparent"  />";
-        <button type="submit;
-          className="absolute right - 2 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 hover:text - gray - 600">";
-          <svg className="w - 5 h - 5" fill="none" stroke="current_color" view_box="0 0 24 24">",
-            <path stroke_linecap="round" stroke_linejoin="round" stroke_width="{2}" d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z"  />;
-          </svg>;
-        </button>;
-      </div>;
-    </form>);
-}}
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  );
-}}
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

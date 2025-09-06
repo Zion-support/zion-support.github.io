@@ -23,7 +23,7 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
+
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -36,12 +36,7 @@
   --quantum-glow: 0 0 20px rgba(0, 255, 255, 0.5);
   --holographic-glow: 0 0 30px rgba(139, 92, 246, 0.6);
   --cyberpunk-glow: 0 0 25px rgba(236, 73, 153, 0.7);
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
   --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);
@@ -61,48 +56,11 @@
   --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);
 
 }
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
-  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
-  --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);
-=======
-  --neural-pulse: 0 0 40px rgba(16, 185, 129, 0.4);
-  --quantum-entanglement: 0 0 50px rgba(139, 92, 246, 0.3);
-  --space-glow: 0 0 35px rgba(59, 130, 246, 0.5);
-  --biotech-glow: 0 0 30px rgba(16, 185, 129, 0.6);
-  --metaverse-glow: 0 0 40px rgba(139, 92, 246, 0.7);
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
 }
   --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
   --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
   --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
-  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
-  --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  --quantum-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
-  --holographic-shadow: 0 0 50px rgba(139, 92, 246, 0.4);
-  --cyberpunk-shadow: 0 0 45px rgba(236, 73, 153, 0.5);}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 /* Base styles */
 @layer base {
@@ -195,28 +153,6 @@
   }
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Utility styles */
 @layer utilities {
   /* Gradient text */
@@ -244,28 +180,7 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
-<<<<<<< HEAD
 
-  letter-spacing: -0.025em;
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
-  letter-spacing: -0.025em;
-=======
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
-  border-radius: 4px;
-  transition: all 0.3s ease;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -273,26 +188,9 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--quantum-glow);
 
 }
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
 }
   letter-spacing: -0.025em;}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  letter-spacing: -0.025em;}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  letter-spacing: -0.025em;}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 h1 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -326,7 +224,7 @@ h3 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
@@ -335,7 +233,7 @@ h3 {
 
 /* Enhanced cyber grid */
 .cyber-grid {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
   background-size: 30px 30px;
@@ -367,7 +265,7 @@ h3 {
 
 /* Data stream background */
 .data-stream-bg {
-  background-image: 
+  background-image:
     repeating-linear-gradient(
       90deg,
       transparent,
@@ -396,7 +294,7 @@ h3 {
 /* Enhanced neon text effects */
 .neon-text-blue {
   color: var(--neon-blue);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-blue),
     0 0 10px var(--neon-blue),
     0 0 15px var(--neon-blue),
@@ -406,7 +304,7 @@ h3 {
 
 .neon-text-purple {
   color: var(--neon-purple);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-purple),
     0 0 10px var(--neon-purple),
     0 0 15px var(--neon-purple),
@@ -416,7 +314,7 @@ h3 {
 
 .neon-text-cyan {
   color: var(--neon-cyan);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-cyan),
     0 0 10px var(--neon-cyan),
     0 0 15px var(--neon-cyan),
@@ -426,7 +324,7 @@ h3 {
 
 .neon-text-green {
   color: var(--neon-green);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-green),
     0 0 10px var(--neon-green),
     0 0 15px var(--neon-green),
@@ -436,7 +334,7 @@ h3 {
 
 .neon-text-pink {
   color: var(--neon-pink);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-pink),
     0 0 10px var(--neon-pink),
     0 0 15px var(--neon-pink),
@@ -473,7 +371,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     radial-gradient(circle at 30% 70%, rgba(0, 255, 255, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 50% 50%, rgba(236, 73, 153, 0.05) 0%, transparent 60%);
@@ -519,7 +417,7 @@ h3 {
 
 /* Quantum Matrix Grid */
 .quantum-matrix {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -571,24 +469,8 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-<<<<<<< HEAD
+  background:
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
     radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 30%);
   animation: entanglementPulse 15s ease-in-out infinite;
@@ -602,39 +484,13 @@ h3 {
   pointer-events: none;
 }
 
-<<<<<<< HEAD
-radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> main
     radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 30%);
   animation: entanglementPulse 15s ease-in-out infinite;
   pointer-events: none;
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 @keyframes entanglementPulse {
   0%, 100% {
     opacity: 0.3;
@@ -654,7 +510,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     radial-gradient(circle at 30% 70%, rgba(16, 185, 129, 0.15) 0%, transparent 40%),
     radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.15) 0%, transparent 40%);
   animation: neuralFlow 12s ease-in-out infinite;
@@ -750,56 +606,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 /* Enhanced Button Hover Effects */
 .btn-quantum {
   position: relative;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  overflow: hidden;
-
-<<<<<<< HEAD
-=======
-/* Enhanced Text Gradients */
-.text-gradient-cyan {
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-purple {
-  background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-rainbow {
-  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-yellow), var(--neon-green));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: rainbowShift 3s ease-in-out infinite;
-}
-
-@keyframes rainbowShift {
-  0%, 100% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(180deg); }
-}
-
-/* Enhanced Futuristic Effects */
-.quantum-glow {
-  box-shadow: var(--quantum-glow);
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   transition: all 0.3s ease;
 }
 
@@ -833,11 +640,11 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 }
 
 @keyframes neuralPulse {
-  0%, 100% { 
+  0%, 100% {
     box-shadow: var(--neural-pulse);
     transform: scale(1);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 60px rgba(16, 185, 129, 0.8);
     transform: scale(1.02);
   }
@@ -848,19 +655,19 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 }
 
 @keyframes quantumEntanglement {
-  0%, 100% { 
+  0%, 100% {
     box-shadow: var(--quantum-entanglement);
     transform: rotate(0deg);
   }
-  25% { 
+  25% {
     box-shadow: 0 0 70px rgba(139, 92, 246, 0.6);
     transform: rotate(1deg);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 80px rgba(139, 92, 246, 0.8);
     transform: rotate(-1deg);
   }
-  75% { 
+  75% {
     box-shadow: 0 0 60px rgba(139, 92, 246, 0.5);
     transform: rotate(0.5deg);
   }
@@ -879,27 +686,10 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
   cursor: pointer;
 
   transition: all 0.3s ease;
-<<<<<<< HEAD
 
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   transition: all 0.3s ease;
   overflow: hidden;  transition: all 0.3s ease;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  overflow: hidden;  transition: all 0.3s ease;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  overflow: hidden;  transition: all 0.3s ease;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 }
 
 .btn-futuristic::before {
@@ -922,28 +712,6 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
   box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 /* Quantum Card Hover Effects */
 .quantum-card {
   position: relative;
@@ -1001,114 +769,9 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 }
 
 /* Quantum Particle System */
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-.quantum-particles {
-
-<<<<<<< HEAD
-=======
-.card-futuristic:hover {
-  border-color: var(--neon-cyan);
-  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.1);
-  transform: translateY(-5px);
-}
-
-/* Enhanced Input Styles */
-.input-futuristic {
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid rgba(75, 85, 99, 0.3);
-  border-radius: 8px;
-  padding: 12px 16px;
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.input-futuristic:focus {
-  outline: none;
-  border-color: var(--neon-cyan);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-}
-
-/* Enhanced Animation Classes */
-.float-animation {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-.pulse-animation {
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-.spin-slow {
-  animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.bounce-gentle {
-  animation: bounceGentle 3s ease-in-out infinite;
-}
-
-@keyframes bounceGentle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-/* Enhanced Grid Patterns */
-.grid-pattern {
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
-  animation: gridMove 20s linear infinite;
-}
-
-@keyframes gridMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(20px, 20px); }
-}
-
-/* Enhanced Particle Effects */
-.particle-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
-<<<<<<< HEAD
-  position: relative;
-  overflow: hidden;
-}
-
-<<<<<<< HEAD
-.quantum-particles::before {
-=======
-.particle-bg::before {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4aaf
   content: '';
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   position: relative;
   overflow: hidden;
 }
@@ -1125,45 +788,14 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 }
 
 .quantum-particles::before {  content: '';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-<<<<<<< HEAD
+  background-image:
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.3) 0%, transparent 20%),
     radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 20%),
     radial-gradient(circle at 40% 60%, rgba(236, 73, 153, 0.3) 0%, transparent 20%),
@@ -1309,7 +941,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
   .quantum-matrix {
     background-size: 25px 25px;
   }
-  
+
   .holographic-scan::before {
     background: repeating-linear-gradient(
       0deg,
@@ -1317,40 +949,13 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
       transparent 1px,
       rgba(139, 92, 246, 0.1) 1px,
       rgba(139, 92, 246, 0.1) 2px
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-    );
-
-<<<<<<< HEAD
-=======
-@keyframes particleFloat {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-200px); }
-}
-
-/* Enhanced Responsive Design */
-@media (max-width: 768px) {
-  .card-futuristic:hover {
-    transform: none;
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
-  
+
   .btn-futuristic:hover {
     transform: none;
   }
-  
+
   .particle-bg::before {
     background-size: 100px 100px;
   }
@@ -1419,7 +1024,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 /* Enhanced Neon Text */
 .neon-text-cyan {
   color: var(--neon-cyan);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-cyan),
     0 0 10px var(--neon-cyan),
     0 0 15px var(--neon-cyan),
@@ -1428,7 +1033,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 
 .neon-text-purple {
   color: var(--neon-purple);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-purple),
     0 0 10px var(--neon-purple),
     0 0 15px var(--neon-purple),
@@ -1467,7 +1072,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 
 /* Enhanced Neural Network Effects */
 .neural-network {
-  background-image: 
+  background-image:
     radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.3) 0%, transparent 50%);
   animation: neuralFlow 5s ease-in-out infinite;
@@ -1480,7 +1085,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
 
 /* Enhanced Space Effects */
 .space-bg {
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
   animation: spaceFloat 15s ease-in-out infinite;
@@ -1565,7 +1170,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .particle-bg::before {
     background-size: 50px 50px;
   }
@@ -1598,11 +1203,11 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
   .quantum-entanglement {
     box-shadow: none;
   }
-  
+
   .particle-bg::before {
     display: none;
   }
-  
+
   .text-gradient-cyan,
   .text-gradient-purple,
   .text-gradient-rainbow {
@@ -1611,27 +1216,10 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
     -webkit-text-fill-color: black !important;
 
   }
-<<<<<<< HEAD
 
-=======
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
     );  }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-    );  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    );  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 }
 
 /* High Performance Mode */
@@ -1643,7 +1231,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   body::before,
   body::after {
     animation: none;
@@ -1672,7 +1260,7 @@ radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 30%),
   .cyberpunk-glitch {
     display: none;
   }
-  
+
   body::before,
   body::after {
     display: none;

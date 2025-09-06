@@ -17,25 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface FiveGEnterpriseSolutionsProps {
-  // Add props here as needed
-export default function FiveGEnterpriseSolutions({ }: FiveGEnterpriseSolutionsProps) {
-=======
 
-const FiveGEnterpriseSolutions = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>FiveGEnterpriseSolutions</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
-}
-}
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

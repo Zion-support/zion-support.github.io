@@ -23,7 +23,7 @@
   --ring: #3b82f6;
   --radius: 0.75rem;
   --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  
+
   /* Futuristic color palette */
   --neon-blue: #00d4ff;
   --neon-purple: #8b5cf6;
@@ -47,7 +47,7 @@
   --quantum-ripple: 0 0 150px rgba(0, 255, 255, 0.08);
   --holographic-wave: 0 0 200px rgba(139, 92, 246, 0.12);
   --cyberpunk-pulse: 0 0 180px rgba(236, 73, 153, 0.1);
-  
+
   /* Revolutionary new effects */
   --quantum-holographic: 0 0 150px rgba(0, 255, 255, 0.2);
   --neural-quantum: 0 0 120px rgba(16, 185, 129, 0.3);
@@ -213,29 +213,7 @@ h3 {
 
 /* Focus styles */
 :focus {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   outline: 2px solid var(--neon-blue);
   outline-offset: 2px;
 }
@@ -252,11 +230,11 @@ h3 {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { 
+  0%, 100% {
     box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
     transform: scale(1);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 40px rgba(139, 92, 246, 0.8), 0 0 60px rgba(139, 92, 246, 0.6);
     transform: scale(1.05);
   }
@@ -279,22 +257,22 @@ h3 {
 }
 
 @keyframes hologram {
-  0%, 100% { 
+  0%, 100% {
     opacity: 0.8;
     filter: hue-rotate(0deg) brightness(1) contrast(1);
   }
-  50% { 
+  50% {
     opacity: 1;
     filter: hue-rotate(180deg) brightness(1.2) contrast(1.1);
   }
 }
 
 @keyframes cyber-pulse {
-  0%, 100% { 
+  0%, 100% {
     background-position: 0% 50%;
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
-  50% { 
+  50% {
     background-position: 100% 50%;
     box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
   }
@@ -306,19 +284,19 @@ h3 {
 }
 
 @keyframes quantum-float {
-  0%, 100% { 
+  0%, 100% {
     transform: translateY(0px) rotate(0deg);
     filter: hue-rotate(0deg);
   }
-  25% { 
+  25% {
     transform: translateY(-10px) rotate(1deg);
     filter: hue-rotate(90deg);
   }
-  50% { 
+  50% {
     transform: translateY(-20px) rotate(0deg);
     filter: hue-rotate(180deg);
   }
-  75% { 
+  75% {
     transform: translateY(-10px) rotate(-1deg);
     filter: hue-rotate(270deg);
   }
@@ -347,7 +325,7 @@ h3 {
 
 /* Enhanced futuristic backgrounds */
 .futuristic-bg {
-  background: 
+  background:
     radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.2) 0%, transparent 50%);
@@ -356,7 +334,7 @@ h3 {
 
 /* Enhanced cyber grid */
 .cyber-grid {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
   background-size: 30px 30px;
@@ -388,7 +366,7 @@ h3 {
 
 /* Data stream background */
 .data-stream-bg {
-  background-image: 
+  background-image:
     repeating-linear-gradient(
       90deg,
       transparent,
@@ -417,7 +395,7 @@ h3 {
 /* Enhanced neon text effects */
 .neon-text-blue {
   color: var(--neon-blue);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-blue),
     0 0 10px var(--neon-blue),
     0 0 15px var(--neon-blue),
@@ -427,7 +405,7 @@ h3 {
 
 .neon-text-purple {
   color: var(--neon-purple);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-purple),
     0 0 10px var(--neon-purple),
     0 0 15px var(--neon-purple),
@@ -437,7 +415,7 @@ h3 {
 
 .neon-text-cyan {
   color: var(--neon-cyan);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-cyan),
     0 0 10px var(--neon-cyan),
     0 0 15px var(--neon-cyan),
@@ -447,7 +425,7 @@ h3 {
 
 .neon-text-green {
   color: var(--neon-green);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-green),
     0 0 10px var(--neon-green),
     0 0 15px var(--neon-green),
@@ -457,7 +435,7 @@ h3 {
 
 .neon-text-pink {
   color: var(--neon-pink);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-pink),
     0 0 10px var(--neon-pink),
     0 0 15px var(--neon-pink),
@@ -494,7 +472,7 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     radial-gradient(circle at 30% 70%, rgba(0, 255, 255, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
     radial-gradient(circle at 50% 50%, rgba(236, 73, 153, 0.05) 0%, transparent 60%);
@@ -539,157 +517,9 @@ h3 {
 }
 
 /* Quantum Matrix Grid */
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-.quantum-matrix {
-  background-image: 
+  background-image:
 
-<<<<<<< HEAD
-=======
-/* Futuristic Card Effects */
-.futuristic-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.futuristic-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.futuristic-card:hover::before {
-  left: 100%;
-}
-
-.futuristic-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-color: rgba(59, 130, 246, 0.5);
-}
-
-/* Glowing Elements */
-.glow-blue {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.glow-purple {
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-.glow-green {
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-/* Floating Animation */
-.float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.float-delay-1 {
-  animation-delay: 1s;
-}
-
-.float-delay-2 {
-  animation-delay: 2s;
-}
-
-.float-delay-3 {
-  animation-delay: 3s;
-}
-
-/* Shimmer Effect */
-.shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
-
-/* 3D Rotation */
-.rotate-3d {
-  animation: rotate-3d 20s linear infinite;
-}
-
-/* Neon Text Effect */
-.neon-text {
-  animation: neon-pulse 2s ease-in-out infinite;
-}
-
-/* Futuristic Button Styles */
-.futuristic-btn {
-  position: relative;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  border: none;
-  border-radius: 12px;
-  padding: 12px 24px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.futuristic-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.futuristic-btn:hover::before {
-  left: 100%;
-}
-
-.futuristic-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4);
-}
-
-/* Grid Background */
-.grid-bg {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
-  background-image: 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-.quantum-matrix {  background-image: 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  background-image: 
-.quantum-matrix {  background-image: 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -699,7 +529,7 @@ animation: matrixMove 30s linear infinite;
 @keyframes matrixMove {
 
   0% {
-.quantum-matrix {  background-image: 
+.quantum-matrix {  background-image:
 
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
@@ -715,76 +545,22 @@ animation: matrixMove 30s linear infinite;
 }
 
 @keyframes grid-move {
-<<<<<<< HEAD
 
   0% {
+.quantum-matrix {  background-image:
 
-=======
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-  0% {
-.quantum-matrix {  background-image: 
->>>>>>> main
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
-<<<<<<< HEAD
-  animation: matrixMove 30s linear infinite;
-}
 
-<<<<<<< HEAD
-@keyframes matrixMove {
-=======
-  animation: grid-move 20s linear infinite;
-}
-
-@keyframes grid-move {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
   0% {
-=======
-@keyframes matrixMove {  0% {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-@keyframes matrixMove {  0% {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-@keyframes matrixMove {  0% {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     transform: translate(0, 0);
   }
   100% {
     transform: translate(50px, 50px);
   }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Holographic Scan Lines */
@@ -823,7 +599,7 @@ animation: matrixMove 30s linear infinite;
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
+  background:
     radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
     radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.15) 0%, transparent 50%),
@@ -839,20 +615,20 @@ animation: matrixMove 30s linear infinite;
 }
 
 @keyframes backgroundFloat {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg) scale(1); 
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
     opacity: 0.8;
   }
-  25% { 
-    transform: translateY(-20px) rotate(1deg) scale(1.02); 
+  25% {
+    transform: translateY(-20px) rotate(1deg) scale(1.02);
     opacity: 1;
   }
-  50% { 
-    transform: translateY(20px) rotate(-1deg) scale(0.98); 
+  50% {
+    transform: translateY(20px) rotate(-1deg) scale(0.98);
     opacity: 0.9;
   }
-  75% { 
-    transform: translateY(-10px) rotate(0.5deg) scale(1.01); 
+  75% {
+    transform: translateY(-10px) rotate(0.5deg) scale(1.01);
     opacity: 0.95;
   }
 }
@@ -921,11 +697,11 @@ animation: matrixMove 30s linear infinite;
 }
 
 @keyframes neuralPulse {
-  0%, 100% { 
+  0%, 100% {
     box-shadow: var(--neural-pulse);
     transform: scale(1);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 60px rgba(16, 185, 129, 0.8);
     transform: scale(1.02);
   }
@@ -936,19 +712,19 @@ animation: matrixMove 30s linear infinite;
 }
 
 @keyframes quantumEntanglement {
-  0%, 100% { 
+  0%, 100% {
     box-shadow: var(--quantum-entanglement);
     transform: rotate(0deg);
   }
-  25% { 
+  25% {
     box-shadow: 0 0 70px rgba(139, 92, 246, 0.6);
     transform: rotate(1deg);
   }
-  50% { 
+  50% {
     box-shadow: 0 0 80px rgba(139, 92, 246, 0.8);
     transform: rotate(-1deg);
   }
-  75% { 
+  75% {
     box-shadow: 0 0 60px rgba(139, 92, 246, 0.5);
     transform: rotate(0.5deg);
   }
@@ -1058,7 +834,7 @@ animation: matrixMove 30s linear infinite;
 
 /* Enhanced Grid Patterns */
 .grid-pattern {
-  background-image: 
+  background-image:
     linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
@@ -1083,7 +859,7 @@ animation: matrixMove 30s linear infinite;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
+  background-image:
     radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
     radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.8), transparent),
     radial-gradient(1px 1px at 90px 40px, rgba(236, 73, 153, 0.8), transparent),
@@ -1195,11 +971,11 @@ animation: matrixMove 30s linear infinite;
   .card-futuristic:hover {
     transform: none;
   }
-  
+
   .btn-futuristic:hover {
     transform: none;
   }
-  
+
   .particle-bg::before {
     background-size: 100px 100px;
   }
@@ -1268,7 +1044,7 @@ animation: matrixMove 30s linear infinite;
 /* Enhanced Neon Text */
 .neon-text-cyan {
   color: var(--neon-cyan);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-cyan),
     0 0 10px var(--neon-cyan),
     0 0 15px var(--neon-cyan),
@@ -1277,7 +1053,7 @@ animation: matrixMove 30s linear infinite;
 
 .neon-text-purple {
   color: var(--neon-purple);
-  text-shadow: 
+  text-shadow:
     0 0 5px var(--neon-purple),
     0 0 10px var(--neon-purple),
     0 0 15px var(--neon-purple),
@@ -1316,7 +1092,7 @@ animation: matrixMove 30s linear infinite;
 
 /* Enhanced Neural Network Effects */
 .neural-network {
-  background-image: 
+  background-image:
     radial-gradient(circle at 25% 25%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.3) 0%, transparent 50%);
   animation: neuralFlow 5s ease-in-out infinite;
@@ -1329,7 +1105,7 @@ animation: matrixMove 30s linear infinite;
 
 /* Enhanced Space Effects */
 .space-bg {
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);
   animation: spaceFloat 15s ease-in-out infinite;
@@ -1414,7 +1190,7 @@ animation: matrixMove 30s linear infinite;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .particle-bg::before {
     background-size: 50px 50px;
   }
@@ -1431,123 +1207,17 @@ animation: matrixMove 30s linear infinite;
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  *::after {
-
-<<<<<<< HEAD
-=======
-/* Holographic Effect */
-.holographic {
-  background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ee82ee, #ff0080);
-  background-size: 400% 400%;
-  animation: gradient-shift 3s ease infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Futuristic Input Styles */
-.futuristic-input {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 12px 16px;
-  color: white;
-  transition: all 0.3s ease;
-}
-
-.futuristic-input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-  outline: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .futuristic-card:hover {
-    transform: translateY(-5px) scale(1.01);
-  }
-  
-  .particle-bg::before {
-    background-size: 100px 50px;
-  }
-}
-
-/* Dark Mode Enhancements */
-@media (prefers-color-scheme: dark) {
-  .futuristic-card {
-    background: rgba(0, 0, 0, 0.3);
-  }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-  .futuristic-card {
-    border-width: 2px;
-  }
-  
-  .futuristic-btn {
-    border: 2px solid white;
-  }
-}
-
-/* Reduced Motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
-<<<<<<< HEAD
-    animation-duration: 0.01ms !important;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
   *::after {    animation-duration: 0.01ms !important;
-<<<<<<< HEAD
-
-    animation-duration: 0.01ms !important;
 
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 
-=======
->>>>>>> main
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  *::after {    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 
 /* Enhanced Print Styles */
@@ -1590,7 +1260,7 @@ animation: matrixMove 30s linear infinite;
 
 /* Enhanced Background Patterns */
 .futuristic-bg {
-  background-image: 
+  background-image:
     radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
     linear-gradient(45deg, transparent 40%, rgba(59, 130, 246, 0.05) 50%, transparent 60%);
@@ -1598,21 +1268,21 @@ animation: matrixMove 30s linear infinite;
 }
 
 .cyber-grid {
-  background-image: 
+  background-image:
     linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
 .data-stream-bg {
-  background-image: 
+  background-image:
     linear-gradient(90deg, transparent 0%, rgba(59, 130, 246, 0.1) 50%, transparent 100%);
   background-size: 200% 100%;
   animation: data-stream 10s linear infinite;
 }
 
 .matrix-bg {
-  background-image: 
+  background-image:
     linear-gradient(180deg, transparent 0%, rgba(16, 185, 129, 0.1) 50%, transparent 100%);
   background-size: 100% 200%;
   animation: matrix-rain 20s linear infinite;
@@ -1711,7 +1381,7 @@ animation: matrixMove 30s linear infinite;
 
 .text-neon {
   color: #3b82f6;
-  text-shadow: 
+  text-shadow:
     0 0 5px #3b82f6,
     0 0 10px #3b82f6,
     0 0 15px #3b82f6,
@@ -1831,52 +1501,26 @@ animation: matrixMove 30s linear infinite;
 
 /* Enhanced Shadows */
 .shadow-futuristic {
-  box-shadow: 
+  box-shadow:
     0 10px 25px rgba(0, 0, 0, 0.2),
     0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .shadow-glow {
-  box-shadow: 
+  box-shadow:
     0 0 20px rgba(59, 130, 246, 0.3),
     0 0 40px rgba(59, 130, 246, 0.2);
 }
 
 .shadow-neon {
-  box-shadow: 
+  box-shadow:
     0 0 5px rgba(59, 130, 246, 0.5),
     0 0 10px rgba(59, 130, 246, 0.3),
     0 0 15px rgba(59, 130, 246, 0.1);
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7297
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }
 }
 
 }
 
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> main
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -14,7 +14,7 @@ const runCommand = (command, description) => {}
   try {}
     log(`"Starting": ${description}`);
     const output = execSync(command, { })
-      "encoding": 'utf8', 
+      "encoding": 'utf8',
       "stdio": 'pipe',
       "cwd": process.cwd();
     }
@@ -139,8 +139,4 @@ main().catch(error => {})
   log(`Daily Build and Test Process "failed": ${error.message}`);
   process.exit(1);
 }
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

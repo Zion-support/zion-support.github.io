@@ -1,102 +1,11 @@
-<<<<<<< HEAD
+
 import React from 'react';
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-import {;
-  Users,;
-  MapPin,;
-  Clock,;
-  DollarSign,;
-  ArrowRight,;
-  Heart,;
-  Star,;
-  Award,;
-  Coffee,;
-  Zap,;
-  Shield,;
-  Briefcase,;
-  GraduationCap,;
-  Globe,;
-  CheckCircle,;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import {
-<<<<<<< HEAD
-  Users
-  MapPin
-  Clock
-  DollarSign
-  ArrowRight
-  Heart
-  Star
-  Award
-  Coffee
-  Zap
-  Shield
-  Briefcase
-  GraduationCap
-  Globe
-  CheckCircle
-=======
-  Users,
-  MapPin,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  Coffee,
-  Zap,
-  Shield,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 } from "lucide-react";
 const jobOpenings = [;
   {;
@@ -226,20 +135,7 @@ const values = [;
       "We conduct business with honesty, transparency, and ethical practices.",;
   },;
 ];
-<<<<<<< HEAD
-export default function CareersPage() {;
-=======
-<<<<<<< HEAD
-export default function CareersPage() {
-=======
 
-interface CareersProps {
-  className?: string;
-}
-
-const Careers: React.FC<CareersProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -255,15 +151,7 @@ export default function CareersPage() {
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
             <div className="text-center text-white">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -828,78 +716,7 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Don't See Your Dream Job?;
-              </h2>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
-                We're always looking for talented individuals. Send us your;
-                resume and let us know how you'd like to contribute to our team.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
-                >;
-                  Send Resume;
-                </a>;
-                <a;
-                  href="/about";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
-                >;
-                  Learn More About Us;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
-=======
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don't See Your Dream Job?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                We're always looking for talented individuals. Send us your
-                resume and let us know how you'd like to contribute to our team.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                >
-                  Send Resume
-                </a>
-                <a
-                  href="/about"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
-                >
-                  Learn More About Us
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </MainLayout>
-=======
-<<<<<<< HEAD
-    </MainLayout>
-=======
-    </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-    </MainLayout>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   );
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 }

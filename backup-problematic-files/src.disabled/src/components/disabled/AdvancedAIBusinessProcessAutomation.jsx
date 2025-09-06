@@ -1,7 +1,3 @@
 import React,{ useState,useRef } from \'react\'; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from \'lucide-react\'} return null}
 const React,{ useState,useRef } from "react"; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from "lucide-react"} return null}''"
-<<<<<<< HEAD:backup-problematic-files/src.disabled/src/components/disabled/AdvancedAIBusinessProcessAutomation.jsx
-import _React,{ useState,useRef } from 'react'; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from 'lucide-react'} return null}
-=======
-import _React,{ useState,useRef } from 'react'; export function AdvancedAIBusinessProcessAutomation () {; import { GitFork,Brain,Settings,X,Maximize2,Minimize2,Search,CheckCircle,BarChart3,TrendingUp,Target,Activity,Users,FileText,AlertTriangle,Lightbulb,DollarSign,PieChart,MoreVertical,Edit3,Server,Play,Loader } from 'lucide-react'} return null}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:src.disabled/src/components/disabled/AdvancedAIBusinessProcessAutomation.jsx
+

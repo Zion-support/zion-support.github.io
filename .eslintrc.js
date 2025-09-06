@@ -1,47 +1,8 @@
-<<<<<<< HEAD
-/* eslint - env node */;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 /* eslint-env node */
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 module.exports = {
-<<<<<<< HEAD
-=======
-  env: {
-    node: true,
-    es2021: true
-  },
-<<<<<<< HEAD
-  },
-  ignore_patterns: [;
-=======
-  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-/* eslint-env node */
-module.exports = {
-<<<<<<< HEAD
-  extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
-  ],
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-export default {
-  extends: ['next/core-web-vitals', 'next/typescript'],
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -58,15 +19,7 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'react/no-unescaped-entities': 'off',
-    '@typescript-eslint/no-explicit-any': 'warn'
-  },
-  env: {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -142,17 +95,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
     node: true,
     browser: true,
     es2021: true
   },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+
   env: {
     node: true,
     es2021: true
@@ -170,178 +118,7 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'dist/',
-    'build/',
-    'coverage/',
-    '*.config.js',
-    '*.config.cjs',
-    '*.config.mjs',
-    'fix-critical-files.js',
-    'fix-*.js',
-    'fix-*.cjs',
-    '*-fix*.cjs',
-    '*-fix*.js',
-    'advanced-*.cjs',
-    'aggressive-*.cjs',
-    'aggressive-*.js',
-    'app-improvement-*.cjs',
-    'analyze-*.cjs',
-    'code-quality-*.js',
-    'automation/',
-    'automation_backup/',
-    'backup/',
-    'lib_backup/',
-    'data_backup/',
-    'styles_backup/',
-    'api-backup/',
-    'temp_backup/',
-    'corrupted_files_backup_2/',
-    'ai-optimization-backups/',
-    'optimization-reports/',
-    'test-generation-reports/',
-    'test-reports/',
-    'test-results/',
-    'security-reports/',
-    'pages.__backup/',
-    'pages-disabled/',
-    'pages.disabled_auto/',
-    'zion_academy/',
-    'pm2-automation/',
-    'scripts/',
-    '*.report.json',
-    'temp_*/',
-    'test_build/',
-    'tests.disabled/',
-    'pages.disabled/',
-    'src.disabled/',
-    'components.disabled/',
-    'hooks.disabled/',
-    'types.disabled/',
-    'contracts.disabled/',
-    'solutions.disabled/',
-    'zion-os.disabled/',
-    'src_backup_temp/',
-    'temp-backup/',
-    'tests/',
-    'supabase/',
-    '*.test.js',
-    '*.test.ts',
-    '*.test.tsx',
-    '*.spec.js',
-    '*.spec.ts',
-    '*.spec.tsx',
-    'temp_footer_start.tsx',
-    'test-simple.js',
-    'test-utils.js',
-    'ultimate-automation-runner.js',
-    'vite.config-backup.ts',
-    'vite.config.ts',
-    'types/empty.ts',
-    'types/index.ts',
-    'pages_backup_conflicts/',
-    'pages_disabled/',
-    'src.broken/',
-    'src.corrupted/',
-    'src.pages.disabled/',
-    'performance-monitor.js',
-    'performance-optimization.js',
-    'playwright.config.ts',
-    'postcss.config-backup.js',
-    'public/',
-    'resolve-conflicts.js',
-    'resolve-merge-conflicts.js',
-    'run-automation-safely.js',
-    'run-automation.js',
-    'run-complete-automation.js',
-    'security-config.js',
-    'server/',
-    'setupTests.ts',
-    'simple-test.js',
-    'src/components/layout/',
-    'types/',
-    'utils/',
-    'pages_backup/',
-    'pages_backup_before_cleanup/',
-    'services/',
-    'components.disabled_full/',
-    'comprehensive-automation-runner.js',
-    'comprehensive-automation.js',
-    'comprehensive-merge-resolver.js',
-    'corrupted-files-backup/',
-    'cypress.config.ts',
-    'cypress_backup/',
-    'data.disabled/',
-    'database/',
-    'ecosystem.simple.js',
-    'ecosystem.working.js',
-    'execute-automation.js',
-    'fix_all_function_names.js',
-    'fix_corrupted_files.js',
-    'fix_empty_pages.js',
-    'fix_utils_files.js',
-    'fix_variable_names.js',
-    'git-ops.js',
-    'health-endpoint.js',
-    'hooks/',
-    'improve-app.js',
-    'jest.config.ts',
-    'jest.setup.js',
-    'lib.broken/',
-    'lib.disabled/',
-    'lib/',
-    'lint-stub.js',
-    'lint-target/',
-    'maintenance-scheduler.js',
-    'merge-prs.js',
-    'merge-resolver.js',
-    'middleware.security.ts',
-    'middleware/',
-    'monitoring-system.js',
-    'netlify/',
-    'next-env.d.ts',
-    'next.config.analyze.js',
-    'next.config.analyzer.js',
-    'next.config.optimized.js',
-    'next.config.resolved.js',
-    'optimized-build.js',
-    'pages-backup/',
-    'pages._quarantine/',
-    'pages.disabled_full/',
-    'pages.old/',
-    'App.tsx',
-    'advanced-app-improvements.js',
-    'analyze-missing-pages.js',
-    'api-disabled/',
-    'api.disabled/',
-    'api/',
-    'automation-runner.js',
-    'basic-test.js',
-    'broken_files_backup/',
-    'build-verification.js',
-    'check-syntax.js',
-    'clean-conflicts.js',
-    'commit-and-push.js'
-  ]
-<<<<<<< HEAD
-=======
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  extends: ['next/core-web-vitals'],
->>>>>>> origin/automation-improvements-final
+
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -352,9 +129,9 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
   ignorePatterns: [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     "node_modules/",
     ".next/",
     "out/",
@@ -516,90 +293,3 @@ module.exports = {
     "automation - runner.js",
     "basic - test.js",
     "broken_files_backup/",
-<<<<<<< HEAD
-    "build - verification.js",
-    "check - syntax.js",
-    "clean - conflicts.js",
-    "commit - and - push.js",
-  ],
-}
-;
-=======
-    "build-verification.js",
-    "check-syntax.js",
-    "clean-conflicts.js",
-<<<<<<< HEAD
-    "commit-and-push.js"
-  ]
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-    "commit-and-push.js",
-  ],
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-};
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-    "commit-and-push.js"
-  ]
-};
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-};
-;
-;
-/* eslint-env node */;
-/* eslint-disable no-undef */;
-module.exports = {;
-  env: {;
-    node: true,;
-    es2021: true;
-  },;
-  globals: {;
-    module: 'readonly',;
-    require: 'readonly',;
-    exports: 'readonly',;
-    __dirname: 'readonly',;
-    __filename: 'readonly',;
-    global: 'readonly',;
-    Buffer: 'readonly',;
-    console: 'readonly';
-  },;
-  extends: ['next/core-web-vitals'],;
-  rules: {;
-    'react-hooks/rules-of-hooks': 'errorreact-hooks/exhaustive-deps': 'warn@typescript-eslint/no-unused-vars': [;
-      'warn',;
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
-    ],;
-    '@typescript-eslint/no-explicit-any': 'warn@typescript-eslint/no-empty-object-type': 'warn@next/next/no-html-link-for-pages': 'warn';
-  },;
-  ignorePatterns: [;
-    'node_modules/.next/out/build/',;
-    'dist/*.config.js*.config.tsscripts/',;
-    'automation/netlify/src/apps/';
-  ];
-},;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -184,9 +184,9 @@ class ErrorPreventionMonitor {
   triggerAutoFix() {
     this.log('Triggering auto-fix process...');
     try {
-      execSync('bash start-simple-error-prevention.sh', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
+      execSync('bash start-simple-error-prevention.sh', {
+        "cwd": this.projectRoot,
+        "stdio": 'pipe'
       });
       this.log('Auto-fix process completed')} catch (error) {
       this.log(`Auto-fix process "failed": ${error.message}`)}
@@ -194,9 +194,9 @@ class ErrorPreventionMonitor {
   checkBuildStatus() {
     try {
       this.log('Checking build status...');
-      execSync('yarn build', { 
-        "cwd": this.projectRoot, 
-        "stdio": 'pipe' 
+      execSync('yarn build', {
+        "cwd": this.projectRoot,
+        "stdio": 'pipe'
       });
       this.log('Build check passed')} catch (error) {
       this.log(`Build check "failed": ${error.message}`);
@@ -336,7 +336,7 @@ class ErrorPreventionMonitor {
       }
       // Check for multiple CSS frameworks
       const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
-      const foundFrameworks = cssFrameworks.filter(framework => 
+      const foundFrameworks = cssFrameworks.filter(framework =>
         packageJson.dependencies && packageJson.dependencies[framework]
       );
       if (foundFrameworks.length > 1) {
@@ -642,8 +642,4 @@ if (require.main === module) {
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
-<<<<<<< HEAD
-monitor.run();
-=======
-monitor.run();
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InnovativeAIService {
-<<<<<<< HEAD
-trial_days: number;
-    setup_time: string;
-=======
-=======
-export interface InnovativeAIService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -21,7 +11,6 @@ export interface InnovativeAIService {;
     trialDays: number;
     setupTime: string;
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     enterprise: number;
   }
   features: string[];
@@ -478,46 +467,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     support:
       '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
     compliance: [
-<<<<<<< HEAD
-      'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-ethics-governance-platform',
-    id: 'ai - ethics - governance - platform',
-    name: 'AI Ethics & Governance Platform',
-    tagline: 'Ensure responsible and ethical AI development',
-    description:;
-      'Comprehensive platform that helps organizations develop, deploy, and monitor AI systems with built - in ethical considerations, bias detection, and governance controls.',
-    category: 'AI & Consciousness',
-=======
-<<<<<<< HEAD
-      'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'
-    ]
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
-    icon: '⚖️'
-    color: 'from-yellow-500 to-orange-600'
-    popular: true
-    launchDate: '2024-01-15'
-    customers: 950
-    rating: 4.6
-    reviews: 220
-    marketSize: '$15B AI governance market'
-    growthRate: '28% annually'
-  }
-=======
-      'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
-    ],
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
-    icon: '⚖️',
-    color: 'from-yellow-500 to-orange-600',
-    popular: true,
-    launchDate: '2024-01-15',
-    customers: 950,
-    rating: 4.6,
-    reviews: 220,
-    marketSize: '$15B AI governance market',
-    growthRate: '28% annually',
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
 
     ];
@@ -556,7 +506,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     tagline: 'Quantum computing meets artificial intelligence';
     description: 'Groundbreaking platform that combines quantum computing principles with AI to solve complex problems that are impossible for classical computers.';
     category: 'Quantum & AI';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     price: {
       monthly: 179,
       yearly: 1790,
@@ -664,25 +614,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     customers: 950;
     rating: 4 && 4.6;
     reviews: 220;
-<<<<<<< HEAD
-    market_size: '$15B AI governance market',
-    growth_rate: '28% annually';
-  }
-];
-;
-=======
 
-    marketSize: '$15B AI governance market'
-
-    growthRate: '28% annually'
-<<<<<<< HEAD
-  }
-];
-=======
-export interface InnovativeAIService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -956,11 +888,6 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     reviews: 220,;
     marketSize: '$15B AI governance market',;
     growthRate: '28% annually';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

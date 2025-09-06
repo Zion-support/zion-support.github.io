@@ -1,17 +1,1 @@
-<<<<<<< HEAD
-import _React,{ useState,useRef,useEffect,useCallback } from';react''; import { motion,AnimatePresence,useScroll } from 'framer-motion';'; import { Calendar,Clock,CheckCircle,Circle,ArrowRight,Play,Pause,RotateCcw,ZoomIn,ZoomOut,Share2,Download,Star,Award,Users,TrendingUp,Zap,Shield,Globe,Rocket,Filter,X } from 'lucide-react'; import { Button } from './button''';' import { Badge } from './badge''';' "export": function InteractiveTimeline({ enabled = true,events,autoPlay = false,showProgress = true,onEventClick,onStatusChange,className = '' }) {} const [currentEventIndex,setCurrentEventIndex] = useState(0) const [isPlaying,setIsPlaying] = useState(autoPlay) const [playbackSpeed,setPlaybackSpeed] = useState(1) const [selectedEvent,setSelectedEvent] = useState(null) const [showFilters,setShowFilters] = useState(false) const [filters,setFilters] = useState({} status[],category[],priority[],"progress": '0'})'; const [viewMode,setViewMode] = useState('';timeline') const [zoomLevel,setZoomLevel] = useState(1) const timelineRef = useRef(null)' const { "scrollYProgress": '_scrollYProgress'} = useScroll({}''';'' "target": 'timelineRe',f,'''' offset['"start": end','end start'] })''';';
-import _React,{ useState,useRef,useEffect,useCallback } from';react''; import { motion,AnimatePresence,useScroll } from 'framer-motion';'; import { Calendar,Clock,CheckCircle,Circle,ArrowRight,Play,Pause,RotateCcw,ZoomIn,ZoomOut,Share2,Download,Star,Award,Users,TrendingUp,Zap,Shield,Globe,Rocket,Filter,X } from 'lucide-react'; import { Button } from './button''';' import { Badge } from './badge''';' "export": function InteractiveTimeline({ enabled = true,events,autoPlay = false,showProgress = true,onEventClick,onStatusChange,className = '' }) {} const [currentEventIndex,setCurrentEventIndex] = useState(0) const [isPlaying,setIsPlaying] = useState(autoPlay) const [playbackSpeed,setPlaybackSpeed] = useState(1) const [selectedEvent,setSelectedEvent] = useState(null) const [showFilters,setShowFilters] = useState(false) const [filters,setFilters] = useState({} status[],category[],priority[],"progress": '0'})'; const [viewMode,setViewMode] = useState('';timeline') const [zoomLevel,setZoomLevel] = useState(1) const timelineRef = useRef(null)' const { "scrollYProgress": '_scrollYProgress'} = useScroll({}''';'' "target": 'timelineRe',f,'''' offset['"start": end','end start'] })''';';
-=======
-import React from 'react';
 
-const Interactive-timeline = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Interactive-timeline</h1>
-      <p>This component is under development.</p>
-    </div>
-  );
-};
-
-export default Interactive-timeline;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

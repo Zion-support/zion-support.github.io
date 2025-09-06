@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 import React from 'react';
 interface OptimizedImageProps {;
   src: string, alt: string,;
@@ -93,30 +73,8 @@ if ( {) {
       className={class_name}
       priority={priority}
       sizes={sizes}
-<<<<<<< HEAD
-quality={quality}
-      style={style}
-<<<<<<< HEAD
-  );
-}
-;
-export default OptimizedImage;
-<<<<<<< HEAD
-;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      quality={quality}
-      style={style}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 };
 
 export default OptimizedImage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

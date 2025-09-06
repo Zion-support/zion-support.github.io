@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface AiAutonomousService2026 {
-<<<<<<< HEAD
-address: string;
-=======
-=======
-export interface AiAutonomousService2026 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -20,14 +11,7 @@ export interface AiAutonomousService2026 {;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-=======
-export interface AiAutonomousService2026 {;
-=======
-    address: string;
-  };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -43,14 +27,9 @@ export interface AiAutonomousService2026 {;
     address: string;
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     address: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   }
 ;
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [;
@@ -90,19 +69,7 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [;
 }
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
-<<<<<<< HEAD
-    id: "2026-ai-autonomous", name: "2026 AI Autonomous Platform",
-    tagline: "Fully autonomous AI systems", price: "$499/month",
-    description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
-=======
-<<<<<<< HEAD
-    id: '2026-ai-autonomous'
-    name: '2026 AI Autonomous Platform'
-    tagline: 'Fully autonomous AI systems'
-    price: '$499/month'
-    description:
-      'Revolutionary AI autonomous platform that operates independently with minimal human intervention.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     features: [
       "Autonomous operation";
       "Self-learning capabilities";
@@ -118,51 +85,8 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
     }
   }
 ];
-<<<<<<< HEAD
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    }
-  }
-];
-;
-=======
-=======
-    id: "2026-ai-autonomous",
-    name: "2026 AI Autonomous Platform",
-    tagline: "Fully autonomous AI systems",
-    price: "$499/month",
-    description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
-    features: [
-      "Autonomous operation",
-      "Self-learning capabilities",
-      "Independent decision making",
-      "Advanced AI algorithms",
-      "24/7 operation"
-    ],
-    link: "/services/2026-ai-autonomous",
-    category: "AI Autonomous 2026",
-    realImplementation: true,
-    contactInfo: {
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

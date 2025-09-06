@@ -1,68 +1,4 @@
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { account, amount, type, serviceId } = req.body as { account?: string, amount?: number, type?: string, serviceId?: string };
-  if (!account || !amount || amount <= 0 || !type) return res.status(400).json({ error: 'Invalid input' });
-  const redemptions = readJson<any[]>('tokens/redemptions.json', []);
-  const id = `rdm_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-  const record = { id, account, amount, type, serviceId: serviceId ?? null, createdAt: Date.now() };
-  redemptions.push(record);
-  writeJson('tokens/redemptions.json', redemptions);
-  // If premium support: create a support request to prioritize
-  if (type === 'premium_support') {
-    const reqs = readJson<any[]>('support/requests.json', []);
-    const srid = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-    reqs.push({ id: srid, sessionId: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', createdAt: Date.now() });
-    writeJson('support/requests.json', reqs)
-  }
-  return res.status(200).json({ ok: true, id })
-}
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { read_json, write_json } from '../../../utils / fs_db',
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
-}
-  const { account, amount, type, service_id } = req.body as { account?: string, amount?: number, type?: string, service_id?: string },
-  if (return res.status (400).json ({ error: 'Invalid input' }), ) {
-  $2
-}
-  const redemptions = read_json < any[]>('tokens / redemptions.json', []),
-  const id = `rdm_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`,
-  const record = { id, account, amount, type, service_id: service_id ?? null, created_at: Date.now () },
-  redemptions.push (record),
-  write_json ('tokens / redemptions.json', redemptions),
-  // If premium support: create a support request to prioritize;
-  // Check condition
-if ( {) {
-  $2
-}
-    const reqs = read_json < any[]>('support / requests.json', []),
-    const srid = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`,
-    reqs.push ({ id: srid, session_id: account, reason: 'Premium support redemption', tag: 'premium_support', status: 'open', created_at: Date.now () }),
-    write_json ('support / requests.json', reqs);
-  }
-  return res.status (200).json ({ ok: true, id });
-}
-;
-}
 
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-
-import { readJson, writeJson } from '../../../utils/fsDb';
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readJson, writeJson } from '../../../utils/fsDb',;
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { account, amount, type, serviceId } = req.body as { account?: string, amount?: number, type?: string, serviceId?: string }
@@ -80,16 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     writeJson('support/requests.json', reqs)
   }
-<<<<<<< HEAD
-  return res.status(200).json({ ok: true, id })
-=======
-=======
 
-  return res.status(200).json({ ok: true, id });
-};
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -137,11 +64,3 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

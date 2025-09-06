@@ -1,13 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -15,12 +7,7 @@ const { promisify } = require('util');
 const execAsync = promisify(exec);
 class BuildMonitor {
   constructor() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
     this.alertThreshold = 3; // Alert after 3 consecutive failures
@@ -48,8 +35,8 @@ class BuildMonitor {
       this.log('Checking build status...');
       const buildStart = Date.now();
       try {
-        execSync('yarn build', { 
-          stdio: 'pipe', 
+        execSync('yarn build', {
+          stdio: 'pipe',
           timeout: 300000, // 5 minutes timeout
           cwd: process.cwd()
         });
@@ -86,9 +73,9 @@ class BuildMonitor {
       }
       // Check dependencies
       try {
-        const outdated = execSync('yarn outdated --json', { 
-          stdio: 'pipe', 
-          cwd: process.cwd() 
+        const outdated = execSync('yarn outdated --json', {
+          stdio: 'pipe',
+          cwd: process.cwd()
         });
         results.dependencies.status = 'success';
         results.dependencies.outdated = JSON.parse(outdated);
@@ -180,7 +167,7 @@ class BuildMonitor {
       ...results,
       trends: {
         consecutiveFailures: this.consecutiveFailures,
-        improvementSinceLastRun: previousReport ? 
+        improvementSinceLastRun: previousReport ?
           (results.build.status === 'success' && previousReport.build.status === 'failed') : false,
         degradationSinceLastRun: previousReport ?
           (results.build.status === 'failed' && previousReport.build.status === 'success') : false
@@ -480,16 +467,7 @@ if (require.main === module) {
       console.log('Usage: node build-monitor.js [start|stop|status|check|build|stats]');
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const fs = require('fs);
 const path = require('path'),
   const { execSync } = require(child_process');
@@ -523,8 +501,8 @@ class BuildMonitor {
       this.log('Checking build status...');
       const buildStart = Date.now(),
   try {
-        execSync(yarn build', { 
-          stdio: 'pipe, 
+        execSync(yarn build', {
+          stdio: 'pipe,
           timeout: 300000, // 5 minutes timeout
           cwd: process.cwd()
         });
@@ -555,9 +533,9 @@ class BuildMonitor {
   this.log('TypeScript check: ERRORS FOUNDWARN')}
       // Check dependencies
       try {
-        const outdated = execSync(yarn outdated --json', { 
-          stdio: 'pipe, 
-          cwd: process.cwd() 
+        const outdated = execSync(yarn outdated --json', {
+          stdio: 'pipe,
+          cwd: process.cwd()
         });
         results.dependencies.status = 'success';
         results.dependencies.outdated = JSON.parse(outdated),
@@ -619,7 +597,7 @@ class BuildMonitor {
       ...results,
       trends: {
         consecutiveFailures: this.consecutiveFailures,
-        improvementSinceLastRun: previousReport ? 
+        improvementSinceLastRun: previousReport ?
           (results.build.status === success' && previousReport.build.status === 'failed) : false,
         degradationSinceLastRun: previousReport ?
           (results.build.status === 'failed' && previousReport.build.status === success') : false
@@ -673,13 +651,5 @@ class BuildMonitor {
 if (require.main === module) {
   const monitor = new BuildMonitor(),
   monitor.run().catch(console.error)}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 module.exports = BuildMonitor;

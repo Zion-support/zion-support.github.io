@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-=======
-<<<<<<< HEAD
-import React from 'react',
-=======
-import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
@@ -29,13 +9,7 @@ export default function CareersPage() {
 
   const openPositions = [
     {
-<<<<<<< HEAD
-      title: "Senior AI Engineer"
-      department: "AI & Machine Learning"
-=======
-      title: "Senior AI Engineer",
-      department: "AI & Machine Learning",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       location: "San Francisco, CA / Remote";
       type: "Full-time"
       experience: "5+ years"
@@ -50,7 +24,7 @@ export default function CareersPage() {
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
       icon: Brain
       color: "from-purple-500 to-pink-500"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     }
     return this.props.children;
   }
@@ -331,23 +305,7 @@ import React from 'react';
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>;
-        </div>;
-      </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -420,94 +378,14 @@ import React from 'react';
                             {benefit}
                           </span>;
                         ))}
-<<<<<<< HEAD
-                      </div>;
-                    </div>;
-                  </div>;
-                  <div className="lg:flex-shrink-0">;
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-      icon: Rocket,
-      color: "from - orange - 500 to - red - 500";
-    }
-  ];
-;
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <div className="min - h-screen">;
-        <Head>;
-          <title > Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting - edge projects." />;
-        </Head>;
-      <EnhancedNavigation />;
-      {/* Hero Section */}
-      <section className="relative pt - 32 pb - 20 px - 6">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb - 8";
-          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6">;
-              Join Our Team;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed">;
-              Build the future of technology with cutting - edge AI, quantum computing, and cybersecurity solutions;
-            </p>;
-          </motion.div>;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb - 12";
-          >;
-            <p className="text - lg text - white / 70 max - w-2xl mx - auto mb - 8">;
-              Work alongside world - class engineers and researchers to solve the most complex;
-              technological challenges and shape the future of computing.;
-            </p>;
-            <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto">;
-              View Open Positions;
-              <ArrowRight className="w - 5 h - 5" />;
-            </button>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Benefits Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-=======
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lg:flex-shrink-0">
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
-                      Apply Now
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";
@@ -643,51 +521,3 @@ import React from 'react';
     </div>;
   );
 }
-<<<<<<< HEAD
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className="py - 20 px - 6">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-            <h2 className="text - 4xl font - bold text - white mb - 6">;
-              Don't See the Right Role?;
-            </h2>;
-            <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto">;
-              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our mission.;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105">;
-                Send Resume;
-              </button>;
-              <button className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10">;
-                Contact Recruiting;
-              </button>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-;
-      <EnhancedFooter />;
-    </div>);
-}
-=======
-
-      <EnhancedFooter />
-    </div>
-  )
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

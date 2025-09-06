@@ -1,64 +1,28 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
-import {supabase} from "@/integrations/supabase/client";
-import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
-import {toast} from "sonner";
-import {JobApplication} from "@/types/jobs";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",
 import { supabase } from "@/integrations/supabase/client",
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",
-<<<<<<< HEAD
-import { toast } from "sonner";
-import { JobApplication } from "@/types/jobs";
-=======
-import { toast } from "sonner",
-import { JobApplication } from "@/types/jobs",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 interface ApplicationScoreCardProps {
 
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
-  const [isScoring, setIsScoring] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-<<<<<<< HEAD
-  const [isScoring, setIsScoring] = useState(false);
-  // Determine if application has been scored
-=======
-  const [isScoring, setIsScoring] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
-  
+
   // Format the date when the application was scored
-  const scoredDate = application.scored_at 
-    ? new Date(application.scored_at).toLocaleDateString() 
+  const scoredDate = application.scored_at
+    ? new Date(application.scored_at).toLocaleDateString()
     : null,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const hasScore = typeof application.match_score === 'number';
   // Format the date when the application was scored
@@ -75,98 +39,21 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-orange-100 text-orange-800"
       default:
         return "bg-gray-100 text-gray-800"
-<<<<<<< HEAD
-    }
-  }
-  // Trigger the scoring process
-  const handleScore = async () => {
-    try {
-      setIsScoring(true);
-      // Call the trigger_resume_scoring function
-      const { error } = await supabase.rpc(
-        'trigger_resume_scoring';
-        { application_id: application.id }
-      );
-<<<<<<< HEAD
-      if (error) throw error;
-      toast.success("Resume scoring has been initiated");
-      // Poll for results every 3 seconds for up to 30 seconds
-      let attempts = 0;
-      const maxAttempts = 10;
-      const checkScore = async () => {
-        attempts++;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",;
-import { toast } from "sonner",;
-import { JobApplication } from "@/types/jobs",;
-interface ApplicationScoreCardProps {;
-  application: JobApplication,;
-  onScoreUpdated?: (updatedApplication: JobApplication) => void;
-}
-;
-export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
-  const [isScoring, setIsScoring] = useState(false),;
-  // Determine if application has been scored;
-  const hasScore = typeof application.match_score === 'number',;
-  // Format the date when the application was scored;
-  const scoredDate = application.scored_at;
-    ? new Date(application.scored_at).toLocaleDateString();
-    : null,;
-  // Get suggestion color;
-  const getSuggestionColor = (suggestion: string | undefined) => {;
-    switch (suggestion) {;
-      case "Strongly Recommended": return "bg-green-100 text-green-800",;
-      case "Recommended for Review":;
-        return "bg-blue-100 text-blue-800",;
-      case "Low Match":;
-        return "bg-orange-100 text-orange-800",;
-      default:;
-        return "bg-gray-100 text-gray-800";
-    }
-  },;
-  // Trigger the scoring process;
-  const handleScore = async () => {;
-    try {;
-      setIsScoring(true),;
-      // Call the trigger_resume_scoring function;
-      const { error } = await supabase.rpc(;
-        'trigger_resume_scoring',;
-        { application_id: application.id }
-      ),
-      
-      if (error) throw error,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      
+
       toast.success("Resume scoring has been initiated"),
-      
+
       // Poll for results every 3 seconds for up to 30 seconds
       let attempts = 0,
       const maxAttempts = 10,
-      
+
       const checkScore = async () => {
         attempts++,
-        
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
-<<<<<<< HEAD
-          .single();
-=======
-          .single(),
-          
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
         if (error) {
           setIsScoring(false),
           return toast.error("Failed to check scoring status")
@@ -180,67 +67,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
-<<<<<<< HEAD
-          setIsScoring(false);
-          toast.info("Scoring is taking longer than expected. Check back later.")
-        }
-      }
-      setTimeout(checkScore, 3000)
-    } catch (error: any) {
-      setIsScoring(false)
-      toast.error(`Failed to score resume: ${error.message}`)
-    }
-<<<<<<< HEAD
-  }
-=======
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-          setIsScoring(false),
-          toast.info("Scoring is taking longer than expected. Check back later.")
-      ),;
-      if (error) throw error,;
-      toast.success("Resume scoring has been initiated"),;
-      // Poll for results every 3 seconds for up to 30 seconds;
-      let attempts = 0,;
-      const maxAttempts = 10,;
-      const checkScore = async () => {;
-        attempts++,;
-        const { data, error } = await supabase;
-          .from("job_applications");
-          .select("*");
-          .eq("id", application.id);
-          .single(),;
-        if (error) {;
-          setIsScoring(false),;
-          return toast.error("Failed to check scoring status");
-        }
-;
-        if (data.scored_at) {;
-          setIsScoring(false),;
-          toast.success("Resume scoring completed"),;
-          if (onScoreUpdated) onScoreUpdated(data as JobApplication),;
-          return;
-        }
-;
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000);
-        } else {;
-          setIsScoring(false),;
-          toast.info("Scoring is taking longer than expected. Check back later.");
-        }
-      },;
-      setTimeout(checkScore, 3000);
-    } catch (error: any) {;
-      setIsScoring(false);
-      toast.error(`Failed to score resume: ${error.message}`);
-    }
-  },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   // Render the score result or button to score
   return (
@@ -310,20 +136,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         {application.match_breakdown.skills_match.missing && (
                           <p>Missing skills: {application.match_breakdown.skills_match.missing.join(", ")}</p>
                         )}
-<<<<<<< HEAD
-                      </div>
-<<<<<<< HEAD
+
                     )}
-=======
-                      </div>;
-=======
-=======
-                      </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                    )}
-                    
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
@@ -336,19 +151,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
                     )}
-<<<<<<< HEAD
-                  </div>
-                </details>
-              </div>
-=======
-                  </div>;
-                </details>;
-              </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             )}
           </div>
         ) : (
@@ -372,15 +175,3 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
             </Button>
           </div>
         )}
-<<<<<<< HEAD
-      </CardContent>
-    </Card>
-  )
-}
-=======
-      </CardContent>;
-    </Card>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

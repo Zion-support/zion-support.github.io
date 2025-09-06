@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface AdvancedITService {
-<<<<<<< HEAD
-real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-=======
-=======
-export interface AdvancedITService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -47,7 +36,7 @@ export interface AdvancedITService {;
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   customers: number;
   rating: number;
   reviews: number;
@@ -665,168 +654,7 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 123,
   },
   {
-<<<<<<< HEAD
-    id: 'ai - powered - cloud - migration',
-    name: 'AI - Powered Cloud Migration',
-    tagline: 'Intelligent cloud migration and optimization',
-    price: '$5, 999',
-    period: '/month',
-    description:;
-      'Advanced AI - powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.',
-    features: [;
-      'AI migration planning',
-      'Cost optimization',
-      'Performance analysis',
-      'Security assessment',
-      'Compliance tools',
-      'Automated migration',
-      'Real - time monitoring',
-      'Integration APIs',
-      'Migration dashboard',
-      '24 / 7 support',
-    ],
-    popular: true,
-    icon: '☁️',
-    color: 'from - blue - 600 to - indigo - 700',
-    text_color: 'text - blue - 400',
-    link: 'https://ziontechgroup.com / ai - powered - cloud - migration',
-    market_position:;
-      'AI - enhanced cloud migration competing with Accenture and Deloitte',
-    target_audience:;
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Cloud Migration',
-    real_service: true,
-    technology: [;
-      'AI / ML',
-      'Cloud Computing',
-      'Migration Tools',
-      'Performance Analysis',
-      'Cost Optimization',
-    ],
-    integrations: [;
-      'AWS',
-      'Azure',
-      'Google Cloud',
-      'On - premises systems',
-      'Monitoring tools',
-    ],
-    use_cases: [;
-      'Cloud migration',
-      'Cost optimization',
-      'Performance improvement',
-      'Security enhancement',
-    ],
-    roi: '600% ROI within 12 months through cost savings and performance improvements',
-    competitors: [;
-      'Accenture ($50000+/month)',
-      'Deloitte ($40000+/month)',
-      'AWS Migration Hub',
-    ],
-    market_size: '$15B cloud migration market',
-    growth_rate: '200% annual growth',
-    variant: 'ai - migration - futuristic',
-    contact_info: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'AI - powered cloud migration platform with intelligent planning and automated execution capabilities.',
-    launch_date: '2024 - 10 - 01',
-    customers: 89,
-    rating: 4 && 4.8,
-    reviews: 45,
-  },
-=======
-    id: 'ai-powered-cloud-migration'
-    name: 'AI-Powered Cloud Migration'
-    tagline: 'Intelligent cloud migration and optimization'
-    price: '$5,999'
-    period: '/month'
-    description:
-      'Advanced AI-powered cloud migration platform that intelligently analyzes, plans, and executes cloud migrations while optimizing costs and performance.'
-    features: [
-      'AI migration planning'
-      'Cost optimization'
-      'Performance analysis'
-      'Security assessment'
-      'Compliance tools'
-      'Automated migration'
-      'Real-time monitoring'
-      'Integration APIs'
-      'Migration dashboard'
-      '24/7 support'
-    ]
-    popular: true
-    icon: '☁️'
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/ai-powered-cloud-migration'
-    marketPosition:
-      'AI-enhanced cloud migration competing with Accenture and Deloitte'
-    targetAudience:
-      'Enterprises, Government agencies, Financial institutions, Healthcare organizations'
-    trialDays: 30
-    setupTime: '1 month'
-    category: 'Cloud Migration'
-    realService: true
-    technology: [
-      'AI/ML'
-      'Cloud Computing'
-      'Migration Tools'
-      'Performance Analysis'
-      'Cost Optimization'
-    ]
-    integrations: [
-      'AWS'
-      'Azure'
-      'Google Cloud'
-      'On-premises systems'
-      'Monitoring tools'
-    ]
-    useCases: [
-      'Cloud migration'
-      'Cost optimization'
-      'Performance improvement'
-      'Security enhancement'
-    ]
-    roi: '600% ROI within 12 months through cost savings and performance improvements'
-    competitors: [
-      'Accenture ($50000+/month)'
-      'Deloitte ($40000+/month)'
-      'AWS Migration Hub'
-    ]
-    marketSize: '$15B cloud migration market'
-    growthRate: '200% annual growth'
-    variant: 'ai-migration-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-<<<<<<< HEAD
-      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.'
-    launchDate: '2024-10-01'
-    customers: 89
-    rating: 4.8
-    reviews: 45
-  }
-=======
-      'AI-powered cloud migration platform with intelligent planning and automated execution capabilities.',
-    launchDate: '2024-10-01',
-    customers: 89,
-    rating: 4.8,
-    reviews: 45,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -856,27 +684,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4.8
     rating: 4 && 4.8,
     reviews: 45
-<<<<<<< HEAD
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true;
-    implementation_details: 'AI - powered cloud migration platform with intelligent planning and automated execution capabilities.';
-    launch_date: '2024 - 10 - 01';
-    customers: 89;
-    rating: 4.8,
-    reviews: 45;
-  }
-];
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface AdvancedITService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -1304,11 +1112,6 @@ export const advancedITServices: AdvancedITService[] = [;
     customers: 89,;
     rating: 4.8,;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,28 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { Cloud, 
-  Shield, 
-  Zap, 
+import { Cloud,
+  Shield,
+  Zap,
   CheckCircle,
   ArrowRight,
   BarChart3,
@@ -35,17 +23,7 @@ import { Cloud,
   Brain;
 } from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const phases = [;
   {}
     title: 'Assessment & Planning,',
@@ -192,7 +170,7 @@ export default function CloudMigrationPage() {
                 </h1>;
               </div>;
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
-                Seamlessly migrate your infrastructure to the cloud with our comprehensive migration services. 
+                Seamlessly migrate your infrastructure to the cloud with our comprehensive migration services.
                 Reduce costs, improve performance, and enhance security with AWS, Azure, or Google Cloud.,
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
@@ -312,7 +290,7 @@ export default function CloudMigrationPage() {
                 Why Choose Our Cloud Migration?;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our cloud migration services deliver measurable improvements in cost, 
+                Our cloud migration services deliver measurable improvements in cost,
                 performance, and security.,
               </p>;
             </motion.div>;
@@ -342,14 +320,7 @@ export default function CloudMigrationPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Move to the Cloud?;
@@ -371,19 +342,13 @@ export default function CloudMigrationPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Let our cloud migration experts help you seamlessly transition to the cloud 
+                Let our cloud migration experts help you seamlessly transition to the cloud
                 with minimal downtime and maximum security.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

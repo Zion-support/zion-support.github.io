@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
+import React from 'react';
+import Link from 'next/link';';
+import { motion } from 'framer-motion';
+
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -10,32 +10,10 @@ import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-import { ShoppingCart, 
-  Brain, 
-  BarChart3, ;
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { ShoppingCart, Brain, BarChart3, CheckCircle, ArrowRight, Package, Users, CreditCard, Smartphone, Globe, Database } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { ShoppingCart, 
-  Brain, 
-  BarChart3, 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import { ShoppingCart,
+  Brain,
+  BarChart3,
+
 import {
   ShoppingCart,
   Brain,
@@ -49,26 +27,13 @@ import {
   Globe,;
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -137,27 +102,14 @@ const services = [
       'Social commerce integration'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 ;];
 const benefits = [;
   {}
     title: 'Increased Sales,',
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',
     icon: ShoppingCart;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 ];
 const benefits = [
   {
@@ -180,14 +132,7 @@ const benefits = [
     description: 'Advanced analytics provide actionable insights for business growth.,',
     icon: Database;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 ;];
 export default function RetailPage() {
   return (;
@@ -221,7 +166,7 @@ export default function RetailPage() {
                 </h1>;
               </div>;
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">";
-                Revolutionize retail with cutting-edge e-commerce platforms, AI-powered analytics, 
+                Revolutionize retail with cutting-edge e-commerce platforms, AI-powered analytics,
                 and omnichannel solutions that drive sales and customer satisfaction.;
               </p>;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">";
@@ -235,16 +180,10 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 ];
 export default function RetailPage() {
-  
+
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -292,34 +231,21 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Retail Technology Services;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Comprehensive retail technology solutions designed for modern businesses, 
+                Comprehensive retail technology solutions designed for modern businesses,
                 from small boutiques to large retail chains.;
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -337,14 +263,7 @@ export default function RetailPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -356,13 +275,7 @@ export default function RetailPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -380,24 +293,7 @@ export default function RetailPage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
-<<<<<<< HEAD
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
             </div>
           </div>
         </section>
@@ -408,34 +304,21 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Retail Solutions?;
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                Our retail technology solutions deliver measurable improvements in sales, 
+                Our retail technology solutions deliver measurable improvements in sales,
                 customer experience, and operational efficiency.,
               </p>;
             </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -462,24 +345,7 @@ export default function RetailPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>,
-          </div>;
-        </section>;
-=======
-<<<<<<< HEAD
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
             </div>
           </div>
         </section>
@@ -490,14 +356,7 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
@@ -519,13 +378,7 @@ export default function RetailPage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?

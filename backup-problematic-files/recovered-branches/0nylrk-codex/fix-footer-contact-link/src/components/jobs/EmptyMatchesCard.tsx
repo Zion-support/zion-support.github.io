@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-export interface EmptyMatchesCardProps {;
-  onRefresh: () => void;
-  isProcessing: boolean
-}
-export function EmptyMatchesCard(): any ({;
-  onRefresh,;
-  isProcessing,;
-}: EmptyMatchesCardProps) {;
-  return (
-=======
 
-import { Card } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Sparkles, RefreshCcw } from "lucide-react",;
-;
-export interface EmptyMatchesCardProps {;
-  onRefresh:() => void,;
-  isProcessing:boolean;
-}
-;
-export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardProps) {;
-  return (;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -30,25 +7,13 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
       <p className="text-muted-foreground mb-6">;
         Run AI matching to find talents that match this job's requirements.;
       </p>;
-<<<<<<< HEAD
-      <Button onClick={onRefresh} disabled={isProcessing} className="mx-auto">;
-=======
-      <Button ;
-        onClick={onRefresh} ;
-        disabled={isProcessing}
-        className="mx-auto";
-      >;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         {isProcessing ? (;
           <>;
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />;
             Processing...;
           </>;
-<<<<<<< HEAD
-        ) : (;
-=======
-        ) :(;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
           <>;
             <Sparkles className="mr-2 h-4 w-4" />;
             Find AI Matches;
@@ -56,53 +21,4 @@ export function EmptyMatchesCard({ onRefresh, isProcessing } EmptyMatchesCardPro
         )}
       </Button>;
     </Card>;
-<<<<<<< HEAD
-  );
-import { Card  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Sparkles, RefreshCcw  } from './lucide-react';
-export interface EmptyMatchesCardProps {
-  on_refresh: () => void;
-  is_processing: boolean;
-}
-export /**
- * EmptyMatchesCard - Function description
- */
-function EmptyMatchesCard() {
-  return (
-    <Card className="p - 6 text - center border - dashed border - 2 bg - muted / 30">;
-      <div className="mb - 4 flex justify - center">;
-        <Sparkles className="h - 12 w - 12 text - muted - foreground" />;
-      </div>;
-      <h3 className="text - lg font - medium mb - 2">No talent matches yet</h3>;
-      <p className="text - muted - foreground mb - 6">;
-        Run AI matching to find talents that match this job's requirements.;
-      </p>;
-      <Button on_click={on_refresh} disabled={is_processing} className="mx - auto">;
-        {is_processing ? (
-          <>;
-            <RefreshCcw className="mr - 2 h - 4 w - 4 animate - spin" />;
-            Processing...;
-          </>) : (
-          <>;
-            <Sparkles className="mr - 2 h - 4 w - 4" />;
-            Find AI Matches;
-          </>)}
-      </Button>;
-    </Card>);
-}
-=======
-  ),;}
- export interface EmptyMatchesCardProps {
-  onRefresh: () => void;
-isProcessing: boolean 
-}export function EmptyMatchesCard ({
-  onRefresh, isProcessing 
-}: EmptyMatchesCardProps) {
-  return (<Card className="p-6 text-center border-dashed border-2 bg-muted/30" > <div className="mb-4 flex justify-center" > <Sparkles className="h-12 w-12 text-muted-foreground" /> text-lg font-medium mb-2">No talent matches yet</h3> <p className=" text-muted-foreground mb-6"> Run AI matching to find talents that match this job's requirements. </p> <Button onClick= {
-  onRefresh 
-}> {
-  isProcessing ? (<> <RefreshCcw className=" mr-2 h-4 w-4 animate-spin"/> Processing... </>) : (<> <Sparkles className=" mr-2 h-4 w-4" /> Find AI Matches </>) 
-}</Button> </Card>) 
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

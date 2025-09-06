@@ -1,33 +1,6 @@
-<<<<<<< HEAD
-import Link from './next / link';,
-export const metadata = {
-  title: "Documentation - Zion Tech Group | Technical Guides & Resources",
-  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",
-  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"}
-export default /**
- * DocumentationPage - Function description
- */
-function DocumentationPage() {
-  return (
-    <div className="min - h-screen">;
-=======
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Documentation - Zion Tech Group | Technical Guides & Resources";
-  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.";
-  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"}
-export default function DocumentationPage() {return (;
-=======
-import Link from "next/link",;
-export const metadata = {;
-  title: "Documentation - Zion Tech Group | Technical Guides & Resources",;
-  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",;
-  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"};
-export default function DocumentationPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="min-h-screen">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;

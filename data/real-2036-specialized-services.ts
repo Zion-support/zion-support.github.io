@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-export type Real2036SpecializedService = {
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string, price: string,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export type Real2036SpecializedService = {
-=======
-export type Real2036SpecializedService = {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: string;
   price: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   period?: string;
   features: string[], link: string,
   launchDate?: string;
@@ -446,104 +433,15 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
   },
   // Space Tourism Platform;
   {
-<<<<<<< HEAD
-    id: 'space - tourism - platform',
-    name: 'Space Tourism Platform',
-    tagline: 'Comprehensive platform for space tourism operations',
-    description:;
-      'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',    category: 'Space Technology',
-    price: '$6, 999',
-    period: '/month',
-    features: [;
-      'Tourism management system',
-      'Safety protocols',
-      'Training programs',
-      'Flight operations',
-      'Customer management',
-      'Compliance tools',
-      'Custom development',
-      'Expert consultation',
-    ],
-    link: 'https://ziontechgroup.com / services / space - tourism - platform',
-    launch_date: '2036 - 05 - 15',
-    rating: 4.6,
-    market_size: '$1.2B',
-    target_audience: 'Space tourism companies, Aerospace firms, Travel agencies',
-    competitive_advantage:;
-      'Space expertise, Safety focus, Comprehensive management',
-    integration: [;
-      'Spacecraft systems',
-      'Training facilities',
-      'Booking systems',
-      'Safety systems',
-    ],
-    use_cases: [;
-      'Space tourism',
-      'Training programs',
-      'Safety management',
-      'Customer experience',
-    ],
-    technology: [;
-=======
-    id: 'space-tourism-platform'
-    name: 'Space Tourism Platform'
-    tagline: 'Comprehensive platform for space tourism operations'
-    description:
-      'Advanced platform that manages all aspects of space tourism, from booking and training to flight operations and safety management.',    category: 'Space Technology'
-    price: '$6,999'
-    period: '/month'
-    features: [
-      'Tourism management system'
-      'Safety protocols'
-      'Training programs'
-      'Flight operations'
-      'Customer management'
-      'Compliance tools'
-      'Custom development'
-      'Expert consultation'
-    ]
-    link: 'https://ziontechgroup.com/services/space-tourism-platform'
-    launchDate: '2036-05-15'
-    rating: 4.6
-    marketSize: '$1.2B'
-    targetAudience: 'Space tourism companies, Aerospace firms, Travel agencies'
-    competitiveAdvantage:
-      'Space expertise, Safety focus, Comprehensive management'
-    integration: [
-      'Spacecraft systems'
-      'Training facilities'
-      'Booking systems'
-      'Safety systems'
-    ]
-    useCases: [
-      'Space tourism'
-      'Training programs'
-      'Safety management'
-      'Customer experience'
-    ]
-    technology: [
-<<<<<<< HEAD
-      'Space systems'
-      'Safety protocols'
-      'Training technology'
-      'Customer management'
-    ]
-  }
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       'Space systems',
       'Safety protocols',
       'Training technology',
       'Customer management',
     ],
-<<<<<<< HEAD
-  },
-];    id: 'neuromorphic - computing - platform';
-=======
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];    id: 'neuromorphic-computing-platform';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     name: 'Neuromorphic Computing Platform';
     tagline: 'Brain - inspired computing for next - generation AI applications',
     description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra - efficient AI applications and edge computing.';
@@ -1025,34 +923,7 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'];
     useCases: ['Space tourismTraining programsSafety managementCustomer experience']
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
-<<<<<<< HEAD
-  }
-];
-<<<<<<< HEAD
-    price: '$6, 999';
-    period: '/month';
-    features: [;
-      'Tourism management system_safety protocols_training programs_flight operations_customer management_compliance tools_custom development_expert consultation';
-    ];
-    link: 'https://ziontechgroup.com / services / space - tourism - platform';
-    launch_date: '2036 - 05 - 15';
-    rating: 4.6;
-    market_size: '$1.2B',
-    target_audience: 'Space tourism companies, Aerospace firms, Travel agencies';
-    competitive_advantage: 'Space expertise, Safety focus, Comprehensive management';
-    integration: ['Spacecraft systems_training facilities_booking systems_safety systems'];
-    use_cases: ['Space tourism_training programs_safety management_customer experience'],
-    technology: ['Space systems_safety protocols_training technology_customer management'];
-  }
-];
-;
-=======
 
-=======
-export type Real2036SpecializedService = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1291,11 +1162,6 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

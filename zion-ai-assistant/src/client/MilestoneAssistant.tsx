@@ -1,119 +1,4 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from "react";
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
-export interface MilestoneAssistantProps {scopeOfWork: string;
-  startDateIso: string;
-  endDateIso: string;
-  projectType: ProjectType;
-  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
-}
-export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [autoAdd, setAutoAdd] = useState(true);
-  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]);
-  const [expandedIdx, setExpandedIdx] = useState<number | null>(0);
-  const isDisabled = useMemo(() => {;
-    return !props.scopeOfWork |!props.startDateIso |!props.endDateIso |!props.projectType;
-  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]);
-  async function generate() {setLoading(true);
-    setError(null);
-    try {;
-      const payload: MilestoneSuggestionInput = {;
-        scopeOfWork: props.scopeOfWork;
-        startDateIso: props.startDateIso;
-        endDateIso: props.endDateIso;
-        projectType: props.projectType;
-      }
-      const res = await fetch("/api/ai/milestones", {method: "POST";
-        headers: { "Content-Type": "application/json" }
-        body: JSON.stringify(payload);
-      });
-      if (!res.ok) {const t = await res.text();
-        throw new Error(t |"Failed to generate");
-      }
-      const data = await res.json();
-      setItems(Array.isArray(data?.milestones) ? data.milestones : []);
-      setExpandedIdx(0);
-    } catch (e: any) {setError(e?.message |"Unexpected error");
-    } finally {setLoading(false);
-    }
-  }
-  function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
-  }
-  function removeItem(idx: number) {setItems((prev) => prev.filter((_, i) => i !== idx));
-  }
-  function accept() {props.onAccept?.(items, autoAdd);
-  }
-  return (;
-    <div className="milestone-assistant">;
-      <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
-        <button onClick={generate} disabled={loading |isDisabled}>;
-=======
-import React, { useMemo, useState } from "react",;
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
-export interface MilestoneAssistantProps {;
-  scopeOfWork: string,;
-  startDateIso: string,;
-  endDateIso: string,;
-  projectType: ProjectType,;
-  onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
-}
-;
-export function MilestoneAssistant(props: MilestoneAssistantProps) {;
-  const [loading, setLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  const [autoAdd, setAutoAdd] = useState(true),;
-  const [items, setItems] = useState<SuggestedMilestoneItem[]>([]),;
-  const [expandedIdx, setExpandedIdx] = useState<number | null>(0),;
-  const isDisabled = useMemo(() => {;
-    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.projectType;
-  }, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.projectType]),;
-  async function generate() {;
-    setLoading(true),;
-    setError(null),;
-    try {;
-      const payload: MilestoneSuggestionInput = {;
-        scopeOfWork: props.scopeOfWork,;
-        startDateIso: props.startDateIso,;
-        endDateIso: props.endDateIso,;
-        projectType: props.projectType;
-      },;
-      const res = await fetch("/api/ai/milestones", {;
-        method: "POST",;
-        headers: { "Content-Type": "application/json" },;
-        body: JSON.stringify(payload);
-      }),;
-      if (!res.ok) {;
-        const t = await res.text(),;
-        throw new Error(t || "Failed to generate");
-      }
-      const data = await res.json(),;
-      setItems(Array.isArray(data?.milestones) ? data.milestones : []);
-      setExpandedIdx(0);
-    } catch (e: any) {;
-      setError(e?.message || "Unexpected error");
-    } finally {;
-      setLoading(false);
-    }
-  }
-;
-  function updateItem(idx: number, patch: Partial<SuggestedMilestoneItem>) {;
-    setItems((prev) => prev.map((m, i) => (i === idx ? { ...m, ...patch } : m)));
-  }
-;
-  function removeItem(idx: number) {;
-    setItems((prev) => prev.filter((_, i) => i !== idx));
-  }
-;
-  function accept() {;
-    props.onAccept?.(items, autoAdd);
-  }
-;
-  return (;
-    <div className="milestone-assistant">;
-      <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
-        <button onClick={generate} disabled={loading || isDisabled}>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, alignItems: "center" }}>;
@@ -122,10 +7,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
         </label>;
       </div>;
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
@@ -138,11 +20,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
               onClick={() => setExpandedIdx(expandedIdx === idx ? null : idx)}
             >;
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
-<<<<<<< HEAD
-                <span style={{ fontWeight: 600 }}>{item.title |`Milestone ${idx + 1}`}</span>;
-=======
-                <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
                   AI Suggested;
                 </span>;
@@ -184,11 +62,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
                     type="number";
                     min={1}
                     value={item.estimatedEffortHours}
-<<<<<<< HEAD
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value |"0", 10)) })}
-=======
-                    onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
                   />;
                 </div>;
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8 }}>;
@@ -203,8 +77,5 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 export default MilestoneAssistant;

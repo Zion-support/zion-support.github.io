@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InnovativeAIService {
-<<<<<<< HEAD
-trial_days: number;
-    setup_time: string;
-=======
-=======
-export interface InnovativeAIService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -21,7 +11,7 @@ export interface InnovativeAIService {;
     trialDays: number;
 
     setupTime: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   }
   features: string[];
   benefits: string[];
@@ -793,81 +783,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
       'Research collaboration tools'
     ]
     benefits: [
-<<<<<<< HEAD
-      'Improve diagnostic accuracy by 99 && 99.9%',
-    id: 'ai - healthcare - diagnostic',
-    name: 'AI Healthcare Diagnostic Platform',
-    tagline:;
-      'AI - powered medical diagnostics with 99.9% accuracy for early disease detection',
-    description:;
-      'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
-    category: 'Healthcare & Biotechnology',
-=======
-      'Improve diagnostic accuracy by 99.9%'
-      'Reduce diagnostic errors by 95%'
-      'Enable early disease detection'
-      'Improve patient outcomes by 80%'
-      'Reduce healthcare costs by 40%'
-    ]
-    targetAudience: [
-      'Hospitals and clinics'
-      'Medical imaging centers'
-      'Research institutions'
-      'Pharmaceutical companies'
-      'Insurance companies'
-      'Government health agencies'
-    ]
-    marketPosition:
-      'Leading AI healthcare diagnostic platform. Competes with IBM Watson Health, Google Health, and Microsoft Healthcare. Our advantage: Specialized diagnostic accuracy.'
-    competitors: [
-      'IBM Watson Health, Google Health, Microsoft Healthcare, GE Healthcare, Siemens Healthineers'
-    ]
-    techStack: [
-      'AI/ML, Medical Imaging, Python, TensorFlow, Medical Databases, Cloud Infrastructure, Security Protocols'
-    ]
-    realImplementation: true
-    implementationDetails:
-      'Production-ready healthcare platform with FDA approval, comprehensive diagnostic tools, and seamless integration with existing healthcare systems.'
-    roi: 'Healthcare organizations see 600% ROI through improved patient outcomes and reduced costs. Average payback period: 8 months.'
-    useCases: [
-      'Medical imaging analysis'
-      'Disease diagnosis'
-      'Treatment planning'
-      'Patient monitoring'
-      'Drug discovery'
-      'Clinical research'
-    ]
-    integrations: [
-      'EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms'
-    ]
-    support:
-      '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.'
-    compliance: [
-<<<<<<< HEAD
-      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'
-    ]
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic'
-    icon: '🏥'
-    color: 'from-blue-500 to-indigo-600'
-    popular: true
-    launchDate: '2025-02-15'
-    customers: 350
-    rating: 4.9
-    reviews: 189
-  }
-=======
-      'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
-    ],
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic',
-    icon: '🏥',
-    color: 'from-blue-500 to-indigo-600',
-    popular: true,
-    launchDate: '2025-02-15',
-    customers: 350,
-    rating: 4.9,
-    reviews: 189,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 
     ];
@@ -904,7 +820,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     tagline: 'Quantum-powered AI orchestration for enterprise-scale operations';
     description: 'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, optimize resource allocation, and solve previously unsolvable computational problems.',
     category: 'Quantum AI';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     price: {
       monthly: 1599,
       yearly: 15990,
@@ -1012,21 +928,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350;
     rating: 4 && 4.9,
     reviews: 189
-<<<<<<< HEAD
-    rating: 4.9,
-    reviews: 189;
-  }
-];
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface InnovativeAIService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -1502,11 +1404,6 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
     customers: 350,;
     rating: 4.9,;
     reviews: 189;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

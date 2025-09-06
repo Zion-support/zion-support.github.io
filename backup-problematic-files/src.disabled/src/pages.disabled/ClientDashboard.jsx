@@ -17,24 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface ClientDashboardProps {
-  // Add props here as needed
-export default function ClientDashboard({ }: ClientDashboardProps) {
-=======
 
-const ClientDashboard = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>ClientDashboard</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-};
 
-export default ClientDashboard;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

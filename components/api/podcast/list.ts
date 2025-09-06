@@ -8,19 +8,7 @@ const EPISODES_PATH = path && path.join(
   'episodes && episodes.json'
 );
 function ensureStorage() {
-<<<<<<< HEAD
-  const dir = path && path.dirname(EPISODES_PATH);
-  if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-  if (!fs && fs.existsSync(EPISODES_PATH))
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   ensureStorage();
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
 function ensureStorage() {
@@ -113,16 +101,7 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  ensureStorage();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ensureStorage()
-=======
-  ensureStorage(),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map((e) => ({
     id: e.id, title: e.title,
@@ -131,27 +110,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     audio: e.audio || {}}));
   return res.status(200).json({ episodes: simplified })
 }
-<<<<<<< HEAD
-    invitee_name: e.invitee?.name || 'Guest';
-    created_at: e.created_at;
-    summary: e.best_quote || '',
-    audio: e.audio || {}}));
-  return res.status (200).json ({ episodes: simplified });
-
-}
-=======
-<<<<<<< HEAD
-=======
-  ensureStorage();
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-}
-=======
-  ensureStorage();
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

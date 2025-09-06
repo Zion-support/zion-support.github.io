@@ -1,192 +1,20 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Head from 'next / head';
-import Card from '../components / ui / Card';
-import Button from '../components / ui / Button';
-import {
-=======
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-=======
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-  GitBranch
-  Zap
-  Shield
-  BarChart3
-  Check
-  Star
-  GitPullRequest
-  Cpu;
-} from 'lucide-react';
-export default function DevOpsAutomationPage() {
-  const features = [
-    {
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   GitBranch,
   Zap,
   Shield,
   BarChart3,
   Check,
   Star,
-<<<<<<< HEAD
-  GitPullRequest,
-  Cpu,
-} from 'lucide-react';
-export default /**
- * DevOpsAutomationPage - Function description
- */
-function DevOpsAutomationPage() {
-  const features = [;
-    {
-      icon: <GitBranch className='w - 6 h - 6' />, import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
-export default /**
- * DevOpsAutomationPage - Function description
- */
-function DevOpsAutomationPage() {
-  const features = [;
-    {
-      icon: <GitBranch className='w - 6 h - 6' />,      title: 'CI / CD Pipelines',
-      description: 'Automated build, test, and deployment workflows';
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600';
-    }
-    {
-      icon: <Zap className="w - 6 h - 6" />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation';
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600';
-    }
-    {
-      icon: <Shield className="w - 6 h - 6" />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600';
-    }
-    {
-      icon: <BarChart3 className="w - 6 h - 6" />,
-      title: 'Performance Monitoring',
-      description: 'Real - time performance insights and optimization',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-    },
-      title: 'CI / CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
-      color: 'bg - gradient - to - br from - blue - 500 to - cyan - 600',
-    },
-    {
-      icon: <Zap className='w - 6 h - 6' />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
-      color: 'bg - gradient - to - br from - green - 500 to - emerald - 600',
-    },
-    {
-      icon: <Shield className='w - 6 h - 6' />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg - gradient - to - br from - purple - 500 to - indigo - 600',
-    },
-    {
-      icon: <BarChart3 className='w - 6 h - 6' />,
-      title: 'Performance Monitoring',
-      description: 'Real - time performance insights and optimization',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-    },  ];      color: 'bg - gradient - to - br from - orange - 500 to - red - 600';
-    }
-  ];
-;
-  const pricing_plans = [;
 
-export default function DevOpsAutomationPage() {_const _features = [
-    {
-      icon: <GitBranch className=&quot;w-6 h-6&quot; />,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
-    },
-    {
-      icon: <Zap className=&quot;w-6 h-6&quot; />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-    },
-    {
-      icon: <Shield className=&quot;w-6 h-6&quot; />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
-    },
-    {
-      icon: <BarChart3 className=&quot;w-6 h-6&quot; />,
-      title: 'Performance Monitoring',
-      description: 'Real-time performance insights and optimization',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600'
-    }
-  ],
-
-  const pricingPlans = [
-
-    {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
-features: [;
-        'Up to 5 repositories',
-        'Basic CI / CD pipelines',
-        'GitHub integration',
-        'Email notifications',
-        'Basic security scanning',
-        'Community support',
-      ],
-      popular: false,
-      cta: 'Start Free Trial',
-      color: 'border - gray - 600 hover:border - blue - 500',
-    },    {        'Up to 5 repositories_basic CI / CD pipelinesGitHub integration_email notifications_basic security scanning_community support';
-=======
-  GitPullRequest,;
-  Cpu,;
-} from 'lucide-react';
-export default function DevOpsAutomationPage() {
-  const features = [
-<<<<<<< HEAD
-    {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
   const features = [
     {
-<<<<<<< HEAD
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
-=======
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
       description: 'Automated build, test, and deployment workflows';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     }
@@ -231,22 +59,7 @@ export default function DevOpsAutomationPage() {
       color: 'bg-gradient-to-br from-orange-500 to-red-600'
     },  ];      color: 'bg-gradient-to-br from-orange-500 to-red-600'
     }
-=======
-<<<<<<< HEAD
-=======
-    {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      icon: <GitBranch className='w-6 h-6' />,
 
-export default function DevOpsAutomationPage() {
-  const features = [
-    {
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const pricingPlans = [
     {
@@ -266,7 +79,7 @@ export default function DevOpsAutomationPage() {
       cta: 'Start Free Trial'
       color: 'border-gray-600 hover:border-blue-500'
     },    {        'Up to 5 repositoriesBasic CI/CD pipelinesGitHub integrationEmail notificationsBasic security scanningCommunity support'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       ];
       popular: false
       cta: 'Start Free Trial'
@@ -481,61 +294,7 @@ content:;
 ;
   const automation_examples = [;
     {
-<<<<<<< HEAD
-      title: 'Automated Testing',
-      description: 'Run comprehensive test suites on every commit',
-      icon: '🧪',
-key={index}
-                  className={`relative p - 8 ${plan.color} transition - all duration - 300 hover:scale - 105 ${
-                    plan.popular ? 'ring - 2 ring - blue - 500' : '';
-=======
-      title: 'Automated Testing'
-      description: 'Run comprehensive test suites on every commit'
-      icon: '🧪'
-      color: 'from-green-500 to-emerald-600'
-    },    {
-      title: 'Security Scanning'
-      description: 'Automated vulnerability detection and compliance checks'
-      icon: '🔒'
-      color: 'from-red-500 to-pink-600'
-    },    {
-      title: 'Deployment Automation'
-      description: 'Zero-downtime deployments with rollback capabilities'
-      icon: '🚀'
-      color: 'from-blue-500 to-cyan-600'
-    },    {
-      title: 'Infrastructure Management'
-      description: 'Automated scaling and resource optimization'
-      icon: '🏗️'
-      color: 'from-purple-500 to-indigo-600'
-    },  ];      color: 'from-green-500 to-emerald-600'
-    }
-    {
-      title: 'Security Scanning'
-      description: 'Automated vulnerability detection and compliance checks'
-      icon: '🔒'
-      color: 'from-red-500 to-pink-600'
-    },      color: 'from-red-500 to-pink-600'
-    }
-    {
-      title: 'Deployment Automation'
-      description: 'Zero-downtime deployments with rollback capabilities'
-      icon: '🚀'
-      color: 'from-blue-500 to-cyan-600'
-    },      color: 'from-blue-500 to-cyan-600'
-    }
-    {
-      title: 'Infrastructure Management'
-      description: 'Automated scaling and resource optimization'
-      icon: '🏗️'
-      color: 'from-purple-500 to-indigo-600'
-    },      color: 'from-purple-500 to-indigo-600'
-    }
-  ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -594,97 +353,18 @@ key={index}
                 Start Free Trial
               </Button>
               <Button
-<<<<<<< HEAD
-                href='#demo'
-                variant='outline'
-                size='lg'
-                className='border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                href="#demo"
-                variant="outline"
-                size="lg"
-                className="border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white"
-                Watch Demo
-              </Button>
-            </div>
-          </div>
-        </section>
-        {/* Features Section */}
-        <section className='py-24 bg-gray-900'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-20'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-                Complete DevOps Automation Suite
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                Everything you need to automate your development and deployment
-                processes.
-              </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {features.map((feature, index) => (
-                <Card
-                  key={index}
-                  className='text-center group hover:scale-105 transition-transform duration-300'
-                >
-                  <div
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-4'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-400'>{feature.description}</p>                </Card>                Complete DevOps Automation Suite
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Everything you need to automate your development and deployment processes.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <Card
-                  key={index}
-                  className="text-center group hover:scale-105 transition-transform duration-300"
-                >
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 ${feature.color}`}>
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
-                </Card>
-=======
 
-                </Card>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 What You Can Automate
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -705,60 +385,18 @@ key={index}
                   <h3 className='text-xl font-semibold text-white mb-4'>
                     {example.title}
                   </h3>
-<<<<<<< HEAD
-                  <p className='text-gray-400'>{example.description}</p>                </Card>                What You Can Automate
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                See how Zion DevOps can transform your development workflow.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {automationExamples.map((example, index) => (
-                <Card
-                  key={index}
-                  className="text-center group hover:scale-105 transition-transform duration-300"
-                >
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-6 bg-gradient-to-br ${example.color}`}>
-                    {example.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{example.title}</h3>
-                  <p className="text-gray-400">{example.description}</p>
-                </Card>
-=======
-                  <p className='text-gray-400'>{example.description}</p>                </Card>
 
-                </Card>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -778,107 +416,11 @@ key={index}
                   key={index}
                   className={`relative p-8 ${plan.color} transition-all duration-300 hover:scale-105 ${
                     plan.popular ? 'ring-2 ring-blue-500' : ''
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                   }`}
                 >;
                   {plan.popular && (
-<<<<<<< HEAD
-                      href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
-                      variant={plan.popular ? 'primary' : 'outline'}
-                      size="lg"
-                      className={`w-full ${
-                        plan.popular 
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-                    <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                      <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                        Most Popular;
-                      </span>;
-                    </div>)}                    <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                      <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium">;
-                        Most Popular;
-                      </span>;
-                    </div>)}
-                  <div className='text - center'>;
-                    <h3 className='text - 2xl font - bold text - white mb - 2'>;
-                      {plan.name}
-                    </h3>;
-                    <div className='mb - 6'>;
-                      <span className='text - 4xl font - bold text - white'>;
-                        {plan.price}
-                      </span>;
-                      <span className='text - gray - 400'>{plan.period}</span>;
-                    </div>;
-                    <p className='text - gray - 300 mb - 8'>{plan.description}</p>;
-                    <ul className='text - left space - y-3 mb - 8'>;
-                      {plan.features.map ((feature, feature_index) => (
-                        <li;
-                          key={feature_index}
-                          className='flex items - center text - gray - 300';
-                        >;
-                          <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                          {feature}                    </div>;
-                    <p className="text - gray - 300 mb - 8">{plan.description}</p>;
-                    <ul className="text - left space - y-3 mb - 8">;
-                      {plan.features.map ((feature, feature_index) => (
-                        <li key={feature_index} className="flex items - center text - gray - 300">;
-                          <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
-                          {feature}
-                        </li>))}
-                    </ul>;
-                    <Button;
-                      href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
-                      variant={plan.popular ? 'primary' : 'outline'}
-                      size='lg';
-                      className={`w - full ${
-                        plan.popular;
-                          ? 'bg - blue - 600 hover:bg - blue - 700 text - white'                          : 'border - blue - 500 text - blue - 400 hover:bg - blue - 500 hover:text - white'                      size="lg";
-                      className={`w - full ${
-                        plan.popular;
-                          ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
-=======
-                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                      <span className='bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>                        Most Popular
-                      </span>
-                    </div>
-                  )}                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-<<<<<<< HEAD
-                  <div className='text-center'>
-                    <h3 className='text-2xl font-bold text-white mb-2'>
-                      {plan.name}
-                    </h3>
-                    <div className='mb-6'>
-                      <span className='text-4xl font-bold text-white'>
-                        {plan.price}
-                      </span>
-                      <span className='text-gray-400'>{plan.period}</span>
-                    </div>
-                    <p className='text-gray-300 mb-8'>{plan.description}</p>
-                    <ul className='text-left space-y-3 mb-8'>
-                      {plan.features.map((feature, featureIndex) => (
-                        <li
-                          key={featureIndex}
-                          className='flex items-center text-gray-300'
-                        >
-                          <Check className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                          {feature}                    </div>
-                    <p className="text-gray-300 mb-8">{plan.description}</p>
-                    <ul className="text-left space-y-3 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                          {feature}
-=======
 
-                          {feature}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </li>
                       ))}
                     </ul>
@@ -888,107 +430,17 @@ key={index}
                       size='lg'
                       className={`w-full ${
                         plan.popular
-<<<<<<< HEAD
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'                      size="lg"
-                      className={`w-full ${
-<<<<<<< HEAD
-                        plan.popular
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'
-=======
-                        plan.popular 
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
 
-                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       }`}
                     >;
                       {plan.cta}
-<<<<<<< HEAD
-                        plan && plan.popular 
-                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                      }`}>;
-                      {plan && plan.cta}
-                    </Button>;
-                  </div>;
-                </Card>;
-              ))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Market Comparison Section */}
-        <section className='py-24 bg-gray-800'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-            <div className='text-center mb-20'>;
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
-              </h2>;
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-                See why Zion DevOps is the smart choice for automation.;
-              </p>;
-            </div>;
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
-              {marketComparison && marketComparison.map((competitor, index) => (;
-                <Card key={index} className='p-6'>;
-                  <div className='text-center mb-6'>;
-                    <h3 className='text-xl font-bold text-white mb-2'>;
-                      {competitor && competitor.competitor}
-                    </h3>;
-                    <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map((_, i) => (                <Card key={index} className="p-6">;
-                  <div className="text-center mb-6">;
-                    <h3 className="text-xl font-bold text-white mb-2">{competitor && competitor.competitor}</h3>;
-                    <div className="flex items-center justify-center mb-2">;
-        {/* Market Comparison Section */}
-        <section className="py-24 bg-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-                How We Compare to the Competition
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                See why Zion DevOps is the smart choice for automation.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {marketComparison.map((competitor, index) => (
-                <Card key={index} className="p-6">
-=======
-                    </Button>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-                How We Compare to the Competition
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See why Zion DevOps is the smart choice for automation.
@@ -1002,7 +454,7 @@ key={index}
                       {competitor.competitor}
                     </h3>
                     <div className='flex items-center justify-center mb-2'>                      {[...Array(5)].map((_, i) => (                <Card key={index} className="p-6">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                   <div className="text-center mb-6">
                     <h3 className="text-xl font-bold text-white mb-2">{competitor.competitor}</h3>
                     <div className="flex items-center justify-center mb-2">
@@ -1036,27 +488,12 @@ key={index}
                       </ul>
                     </div>
                     <div>
-<<<<<<< HEAD
-                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
-=======
-                      <p className='text-sm font-medium text-red-400 mb-1'>
-                        Cons:
-                      </p>
-                      <ul className='text-sm text-gray-300 space-y-1'>
-                        {competitor.cons.map((con, conIndex) => (
-                          <li key={conIndex} className='flex items-center'>
-                            <span className='w-4 h-4 text-red-400 mr-2 flex-shrink-0'>
-                              ×
-                            </span>                            {con}                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                       <ul className="text-sm text-gray-300 space-y-1">
                         {competitor.cons.map((con, conIndex) => (
                           <li key={conIndex} className="flex items-center">
                             <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
-<<<<<<< HEAD
-                            {con}
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                           </li>
                         ))}
                       </ul>;
@@ -1064,43 +501,13 @@ key={index}
                   </div>;
                 </Card>;
               ))}
-<<<<<<< HEAD
-            </div>;
-          </div>;
-        </section>;
-        {/* Testimonials Section */}
-        <section className="py-24 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-                Trusted by DevOps Teams Worldwide
-              </h2>
-            </div>
-=======
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Testimonials Section */}
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -1125,78 +532,15 @@ key={index}
                     <p className='text-sm text-gray-400'>{testimonial.role}</p>
                     <p className='text-sm text-blue-400'>
                       {testimonial.company}
-<<<<<<< HEAD
-                    </p>                  </div>                Trusted by DevOps Teams Worldwide
-              </h2>
-            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="p-6">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-sm text-gray-400">{testimonial.role}</p>
-                    <p className="text-sm text-blue-400">{testimonial.company}</p>
-                  </div>
-=======
-                    </p>                  </div>
 
-                  </div>
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Card>
               ))}
-<<<<<<< HEAD
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
-          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-              Ready to Automate Your DevOps?
-            </h2>
-            <p className="text-xl text-blue-100 mb-12">
-              Join thousands of teams who trust Zion for their DevOps automation needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                href="#signup"
-=======
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-              Ready to Automate Your DevOps?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation
@@ -1215,224 +559,10 @@ key={index}
                 variant='outline'
                 size='lg'
                 className='border-white text-white hover:bg-white hover:text-blue-600'              >                href="#signup"
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                 variant="secondary"
                 size="lg"
                 className="bg-white text-blue-600 hover:bg-gray-100"
               >
                 Start Free Trial
               </Button>
-<<<<<<< HEAD
-              <Button
-href="/contact"
-                variant="outline"
-                size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600"
-<<<<<<< HEAD
-              >
-                Contact Sales
-                    </Button>;
-                  </div>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Market Comparison Section */}
-        <section className='py - 24 bg - gray - 800'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-            <div className='text - center mb - 20'>;
-              <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-              </h2>;
-              <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-                See why Zion DevOps is the smart choice for automation.;
-              </p>;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-              {market_comparison.map ((competitor, index) => (
-                <Card key={index} className='p - 6'>;
-                  <div className='text - center mb - 6'>;
-                    <h3 className='text - xl font - bold text - white mb - 2'>;
-                      {competitor.competitor}
-                    </h3>;
-                    <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map ((_, i) => (                <Card key={index} className="p - 6">;
-                  <div className="text - center mb - 6">;
-                    <h3 className="text - xl font - bold text - white mb - 2">{competitor.competitor}</h3>;
-                    <div className="flex items - center justify - center mb - 2">;
-                        <Star;
-                          key={i}
-                          className={`w - 5 h - 5 ${
-                            i < Math.floor (parse_float (competitor.rating));
-                              ? 'text - yellow - 400 fill - current';
-                              : 'text - gray - 400';
-                          }`}
-                        />))}
-                    </div>;
-                    <p className='text - sm text - gray - 400'>{competitor.rating}</p>;
-                  </div>;
-                  <div className='mb - 4'>;
-                    <p className='text - lg font - semibold text - white mb - 1'>;
-                      Pricing: {competitor.pricing}
-                    </p>;
-                    <p className='text - sm text - gray - 400'>;
-                      Repositories: {competitor.repositories}
-                    </p>;
-                  </div>;
-                  <div className='space - y-2'>;
-                    <div>;
-                      <p className='text - sm font - medium text - green - 400 mb - 1'>;
-                        Pros:;
-                      </p>;
-                      <ul className='text - sm text - gray - 300 space - y-1'>;
-                        {competitor.pros.map ((pro, pro_index) => (
-                          <li key={pro_index} className='flex items - center'>;
-                            <Check className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                            {pro}                  </div>;
-                  <div className="mb - 4">;
-                    <p className="text - lg font - semibold text - white mb - 1">Pricing: {competitor.pricing}</p>;
-                    <p className="text - sm text - gray - 400">Repositories: {competitor.repositories}</p>;
-                  </div>;
-                  <div className="space - y-2">;
-                    <div>;
-                      <p className="text - sm font - medium text - green - 400 mb - 1">Pros:</p>;
-                      <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.pros.map ((pro, pro_index) => (
-                          <li key={pro_index} className="flex items - center">;
-                            <Check className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
-                            {pro}
-                          </li>))}
-                      </ul>;
-                    </div>;
-                    <div>;
-                      <p className='text - sm font - medium text - red - 400 mb - 1'>;
-                        Cons:;
-                      </p>;
-                      <ul className='text - sm text - gray - 300 space - y-1'>;
-                        {competitor.cons.map ((con, con_index) => (
-                          <li key={con_index} className='flex items - center'>;
-                            <span className='w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0'>;
-                              ×;
-                            </span>                            {con}                      <p className="text - sm font - medium text - red - 400 mb - 1">Cons:</p>;
-                      <ul className="text - sm text - gray - 300 space - y-1">;
-                        {competitor.cons.map ((con, con_index) => (
-                          <li key={con_index} className="flex items - center">;
-                            <span className="w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0">×</span>;
-                          </li>))}
-                      </ul>;
-                    </div>;
-                  </div>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Testimonials Section */}
-        <section className='py - 24 bg - gray - 900'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-            <div className='text - center mb - 20'>;
-              <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-                Trusted by DevOps Teams Worldwide;
-              </h2>;
-            </div>;
-            <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>;
-              {testimonials.map ((testimonial, index) => (
-                <Card key={index} className='p - 6'>;
-                  <div className='flex items - center mb - 4'>;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star;
-                        key={i}
-                        className='w - 5 h - 5 text - yellow - 400 fill - current';
-                      />))}
-                  </div>;
-                  <p className='text - gray - 300 mb - 6 italic'>;
-                    "{testimonial.content}";
-                  </p>;
-                  <div>;
-                    <p className='font - semibold text - white'>;
-                      {testimonial.name}
-                    </p>;
-                    <p className='text - sm text - gray - 400'>{testimonial.role}</p>;
-                    <p className='text - sm text - blue - 400'>;
-                      {testimonial.company}
-                    </p>                  </div>                Trusted by DevOps Teams Worldwide;
-              </h2>;
-            </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              {testimonials.map ((testimonial, index) => (
-                <Card key={index} className="p - 6">;
-                  <div className="flex items - center mb - 4">;
-                    {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />))}
-                  </div>;
-                  <p className="text - gray - 300 mb - 6 italic">"{testimonial.content}"</p>;
-                  <div>;
-                    <p className="font - semibold text - white">{testimonial.name}</p>;
-                    <p className="text - sm text - gray - 400">{testimonial.role}</p>;
-                    <p className="text - sm text - blue - 400">{testimonial.company}</p>;
-                  </div>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className='py - 24 bg - gradient - to - r from - blue - 600 to - cyan - 600'>;
-          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-            </h2>;
-            <p className='text - xl text - blue - 100 mb - 12'>;
-              Join thousands of teams who trust Zion for their DevOps automation;
-              needs.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <Button;
-                href='#signup';
-                variant='secondary';
-                size='lg';
-                className='bg - white text - blue - 600 hover:bg - gray - 100'              >;
-                Start Free Trial;
-              </Button>;
-              <Button;
-                href='/contact';
-                variant='outline';
-                size='lg';
-                className='border - white text - white hover:bg - white hover:text - blue - 600'              >                href="#signup";
-                variant="secondary";
-                size="lg";
-                className="bg - white text - blue - 600 hover:bg - gray - 100";
-                Start Free Trial;
-              </Button>;
-              <Button;
-                href='/contact';
-                variant='outline';
-                size='lg';
-                className='border - white text - white hover:bg - white hover:text - blue - 600'                href="/contact";
-                variant="outline";
-                size="lg";
-                className="border - white text - white hover:bg - white hover:text - blue - 600";
-                Contact Sales;
-              </Button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-}
-    </>);
-}
-=======
-                Contact Sales
-              </Button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-<<<<<<< HEAD
-=======
-              <Button
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
-=======
-              <Button
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

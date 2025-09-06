@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface Service {
-<<<<<<< HEAD
-tags: string[];
-;
-export const emergingTech2027Services: Service[] = [;
-=======
-=======
-export interface Service {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   description: string;
@@ -27,7 +16,7 @@ export interface Service {;
 
   tags: string[];
 export const emergingTech2027Services: Service[] = [
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   {
     id: 'quantum - machine - learning',
     name: 'Quantum Machine Learning Platform',
@@ -465,114 +454,9 @@ export const emergingTech2027Services: Service[] = [
     ],
   },
   {
-<<<<<<< HEAD
-    id: 'quantum - climate - modeling',
-    name: 'Quantum Climate Modeling Platform',
-    description:;
-      'Revolutionary platform that uses quantum computing for ultra - accurate climate modeling, weather prediction, and environmental analysis.',
-    category: 'Environmental Technology',
-    price: '$10, 999 / month',
-    features: [;
-      'Quantum climate simulation',
-      'Weather prediction',
-      'Environmental modeling',
-      'Real - time monitoring',
-      'Predictive analytics',
-      'Data visualization',
-    ],
-    benefits: [;
-      '1000x faster modeling',
-      'Improved accuracy',
-      'Real - time predictions',
-      'Better understanding',
-      'Policy support',
-    ],
-    use_cases: [;
-      'Climate research',
-      'Weather forecasting',
-      'Environmental planning',
-      'Policy development',
-      'Disaster preparedness',
-    ],
-    target_audience: [;
-      'Government agencies',
-      'Research institutions',
-      'Environmental organizations',
-      'Insurance companies',
-      'Energy companies',
-    ],
-  id: string, name: string,
-  description: string, category: string,
-  price: string, features: string[],
-  benefits: string[], useCases: string[],
-  targetAudience: string[], marketSize: string,
-  competitiveAdvantage: string, implementationTime: string,
-  roi: string, link: string,
-  tags: string[]
-}
-=======
-    id: 'quantum-climate-modeling'
-    name: 'Quantum Climate Modeling Platform'
-    description:
-      'Revolutionary platform that uses quantum computing for ultra-accurate climate modeling, weather prediction, and environmental analysis.'
-    category: 'Environmental Technology'
-    price: '$10,999/month'
-    features: [
-      'Quantum climate simulation'
-      'Weather prediction'
-      'Environmental modeling'
-      'Real-time monitoring'
-      'Predictive analytics'
-      'Data visualization'
-    ]
-    benefits: [
-      '1000x faster modeling'
-      'Improved accuracy'
-      'Real-time predictions'
-      'Better understanding'
-      'Policy support'
-    ]
-    useCases: [
-      'Climate research'
-      'Weather forecasting'
-      'Environmental planning'
-      'Policy development'
-      'Disaster preparedness'
-    ]
-    targetAudience: [
-      'Government agencies'
-      'Research institutions'
-      'Environmental organizations'
-      'Insurance companies'
-      'Energy companies'
-    ]
-    marketSize: '$17.6B by 2027'
-    competitiveAdvantage:
-      'Only quantum climate modeling platform with real-time predictions'
-    implementationTime: '7-9 weeks'
-    roi: '800% within 18 months'
-    link: 'https://ziontechgroup.com/services/quantum-climate-modeling'
-    tags: [
-<<<<<<< HEAD
-      'Climate Modeling'
-      'Quantum Computing'
-      'Environmental'
-      'Weather'
-      'Research'
-    ]
-  }
-=======
-      'Climate Modeling',
-      'Quantum Computing',
-      'Environmental',
-      'Weather',
-      'Research',
-    ],
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     ];
     marketSize: '$17 && 17.6B by 2027';
     competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
@@ -580,41 +464,7 @@ export const emergingTech2027Services: Service[] = [
     roi: '800% within 18 months';
     link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-climate-modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
-<<<<<<< HEAD
-    market_size: '$17.6B by 2027',
-    competitive_advantage:;
-      'Only quantum climate modeling platform with real - time predictions',
-    implementation_time: '7 - 9 weeks',
-    roi: '800% within 18 months',
-    link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
-    tags: [;
-      'Climate Modeling',
-      'Quantum Computing',
-      'Environmental',
-      'Weather',
-      'Research',
-    ],
-  },
-];      'Government agencies_research institutions_environmental organizations_insurance companies_energy companies';
-    ];
-    market_size: '$17.6B by 2027';
-    competitive_advantage: 'Only quantum climate modeling platform with real - time predictions';
-    implementation_time: '7 - 9 weeks';
-    roi: '800% within 18 months';
-    link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
-    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
-  }
-];
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface Service {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string,;
   name: string,;
   description: string,;
@@ -882,11 +732,6 @@ export const emergingTech2027Services: Service[] = [;
     roi: '800% within 18 months',;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

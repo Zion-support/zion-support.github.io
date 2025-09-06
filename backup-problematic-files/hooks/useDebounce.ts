@@ -1,16 +1,6 @@
-<<<<<<< HEAD:hooks/useDebounce.ts
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 import { useState, useEffect } from 'react,
-=======
-import { useState, useEffect } from 'react,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue};
 export default useDebounce,
 export const useDebounce = <T>(value: T, delay: number): T => {,
@@ -22,36 +12,7 @@ export const useDebounce = <T>(value: T, delay: number): T => {,
       clearTimeout(handler)}}, [value, delay]),;
   return debouncedValue};
 export default useDebounce,
-<<<<<<< HEAD
-,
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-<<<<<<< HEAD
-,
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useDebounce.ts
 import { useState, useEffect } from 'react
 import { useState,useEffect } from 'react', export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value), useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay), return () => { clearTimeout(handler)}},[value,delay]), return debouncedValue}
 export default useDebounce
@@ -64,27 +25,7 @@ export const useDebounce = <T>(value: T, delay: number): T => {
       clearTimeout(handler)}}, [value, delay])
   return debouncedValue}
 export default useDebounce
-<<<<<<< HEAD:hooks/useDebounce.ts
-      clear_timeout (handler)}}, [value, delay]),
-  return debounced_value}
-export default use_debounce,
-,
-import { useState, useEffect } from 'react';
-export const use_debounce = <T>(value: T, delay: number): T => {
-  const [debounced_value, setDebouncedValue] = useState < T>(value);
-  useEffect (() => {
-    const handler = set_timeout (() => {
-      setDebouncedValue (value)}, delay);
-    return () => {
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 import { useState, useEffect } from 'react';
 export const useDebounce = <T>(value: T, delay: number): T => {;
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
@@ -92,57 +33,15 @@ export const useDebounce = <T>(value: T, delay: number): T => {;
     const handler = setTimeout(() => {
       setDebouncedValue(value)}, delay);
     return () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
       clearTimeout(handler)}}, [value, delay]);
   return debouncedValue}
 export default useDebounce;
 import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: 'T',delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-=======
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-<<<<<<< HEAD
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useDebounce.ts
+
       clearTimeout(handler);
     };
   }, [value, delay]);
   return debouncedValue;
 };
 export default useDebounce;
-<<<<<<< HEAD:hooks/useDebounce.ts
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-      clear_timeout (handler)}}, [value, delay]);
-  return debounced_value}
-export default use_debounce;
-import { useState, useEffect } from 'react'; export const use_debounce = <T>(value: 'T', delay: number): T => { const [debounced_value, setDebouncedValue] = useState < T>(value); useEffect (() => { const handler = set_timeout (() => { setDebouncedValue (value)}, delay); return () => { clear_timeout (handler)}}, [value, delay]); return debounced_value} export default use_debounce;
-import { useState, useEffect } from 'react'; export const use_debounce = <T>(value: T, delay: number): T => { const [debounced_value, setDebouncedValue] = useState < T>(value); useEffect (() => { const handler = set_timeout (() => { setDebouncedValue (value)}, delay); return () => { clear_timeout (handler)}}, [value, delay]); return debounced_value} export default use_debounce;
-;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/hooks/useDebounce.ts

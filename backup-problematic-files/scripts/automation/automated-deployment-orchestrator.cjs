@@ -785,7 +785,7 @@ const main = async () => {}
     throw error};
 };
 const checkDeploymentRequests = async () => {}
-  
+
 } else {log(`Deployment to ${request.environment} "failed": ${result.error}`, "ERROR");
           // Consider automatic rollback;
           if (CONFIG.ROLLBACK_ENABLED && request.environment !== "production") {log(`Initiating automatic rollback for ${request.environment}`);
@@ -848,8 +848,4 @@ module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
-<<<<<<< HEAD
-  main};
-=======
-  main};
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

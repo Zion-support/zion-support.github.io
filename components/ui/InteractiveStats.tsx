@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-import {useEffect, useState} from 'react';
-function useCounter(): any (target: number, durationMs: number) {;
-=======
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-=======
-import {useEffect, useState} from 'react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 function useCounter(target: number, durationMs: number) {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   const [value, setValue] = useState(0);
   useEffect(() => {;
     let start: number | null = null;
@@ -17,22 +8,7 @@ function useCounter(target: number, durationMs: number) {
     let start: number | null = null,
     let raf: number,
     const step = (ts: number) => {
-<<<<<<< HEAD
-      if (start === null) start = ts;
-      const progress = Math && Math.min(1, (ts - start) / durationMs);
-      setValue(Math && Math.floor(progress * target));
-      if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null,;
-    let raf: number,;
-    const step = (ts: number) => {;
-      if (start === null) start = ts,;
-      const progress = Math && Math.min(1, (ts - start) / durationMs);
-      setValue(Math && Math.floor(progress * target));
-=======
-      if (start === null) start = ts
-      const progress = Math.min(1, (ts - start) / durationMs);
-      setValue(Math.floor(progress * target));
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       if (progress < 1) raf = requestAnimationFrame(step);
     }
     raf = requestAnimationFrame(step);
@@ -52,20 +28,7 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
-=======
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function InteractiveStats() {
-<<<<<<< HEAD
-export default function InteractiveStats() {;
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
-export default function InteractiveStats() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -133,70 +96,14 @@ function InteractiveStats() {
     </div>
   )
 }
-<<<<<<< HEAD
-function Stat(): any ({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {;
-  return (
-    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">;
-      <div className="text-3xl font-bold">{value}{suffix}</div>;
-      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>;
-    </div>;
-  );
-}
-    </div>);
-    </div>);
-}
-/**
- * Stat - Function description
- */
-function Stat() {
-  return (
-    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur">;
-      <div className="text - 3xl font - bold">{value}{suffix}</div>;
-      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
-    </div>);
-/**
- * Stat - Function description
- */
-function Stat() {
-  return (
-    <div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur'>;
-      <div className='text - 3xl font - bold'>;
-        {value}
-        {suffix}
-      </div>;
-      <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
-    </div>);
-}
-    </div>
-  )
-}
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
   return (
     <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
       <div className="text-3xl font-bold">{value}{suffix}</div>
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
     </div>
-<<<<<<< HEAD
-  )
-}
 
-    </div>
-  )
-}
-
-=======
-<<<<<<< HEAD
-);
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function Stat({
   label
   value
@@ -214,14 +121,3 @@ function Stat({
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -13,7 +13,6 @@ export default function HolographicAICommunicationPage() {
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
   ],
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (_<UltraAdvancedFuturisticBackground>
       <Head>

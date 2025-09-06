@@ -17,24 +17,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-interface CTASectionProps {
-  // Add props here as needed
-export default function CTASection({ }: CTASectionProps) {
-=======
 
-const CTASection = ({ className }) => {
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <div className={className || ''}>
       <h1>CTASection</h1>
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-};
 
-export default CTASection;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

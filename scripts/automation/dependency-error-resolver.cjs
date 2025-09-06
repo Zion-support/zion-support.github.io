@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class $1 { constructor() {""
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -279,10 +276,7 @@ throw error}
     this.dependencyHistory = []}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-    }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async runDependencyCheck() {
     try {
@@ -365,8 +359,8 @@ throw error}
       execSync('npm ci --dry-run', { "stdio": 'pipe' });
       return { "success": true, "issues": [] }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return { 
-        "success": false, 
+      return {
+        "success": false,
         "issues": [{
           type: 'package-lock',
           "message": 'Package-lock.json integrity issues detected',
@@ -404,8 +398,8 @@ throw error}
       }
       return { "success": duplicates.length === 0, duplicates }} catch (error) {
       const output = error.stdout?.toString() || error.stderr?.toString() || '';
-      return { 
-        "success": false, 
+      return {
+        "success": false,
         "duplicates": [{
           type: 'dependency-conflict',
           "message": 'Dependency conflicts detected',
@@ -422,7 +416,7 @@ throw error}
         this.checkPackageLockIssues(),
         this.checkDuplicateDependencies()
       ]);
-      const totalIssues = vulnCheck.count + outdatedCheck.count + 
+      const totalIssues = vulnCheck.count + outdatedCheck.count +
                          (packageLockCheck.success ? 0 : 1) + duplicateCheck.duplicates.length;
       if (totalIssues === 0) {
         this.log('No dependency issues found', 'INFO');
@@ -432,7 +426,7 @@ throw error}
       let resolutionsApplied = 0;
       // Fix vulnerabilities and outdated dependencies
       resolutionsApplied += await this.resolveDependencyIssues(
-        vulnCheck.vulnerabilities, 
+        vulnCheck.vulnerabilities,
         outdatedCheck.outdated
       );
       // Fix package-lock issues
@@ -511,8 +505,4 @@ if (require.main === module) {
     resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
-<<<<<<< HEAD
-module.exports = DependencyErrorResolver
-=======
-module.exports = DependencyErrorResolver
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+

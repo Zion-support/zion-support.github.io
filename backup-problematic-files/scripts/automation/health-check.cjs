@@ -26,7 +26,7 @@ class HealthChecker {}
         fs.appendFileSync(this.logFile, logMessage)};
     async checkSystemHealth() {}
         this.log('Starting health check...');
-        
+
         const healthReport = {}
             "timestamp": new Date().toISOString(),
             "status": 'healthy',
@@ -116,7 +116,7 @@ class HealthChecker {}
             healthReport.error = error.message};
         // Save report;
         fs.writeFileSync(this.reportFile, JSON.stringify(healthReport, null, 2));
-        
+
         this.log(`Health check completed. "Status": ${healthReport.status}`);
         return healthReport};
     async run() {}
@@ -134,8 +134,4 @@ class HealthChecker {}
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
-<<<<<<< HEAD
-module.exports = HealthChecker;
-=======
-module.exports = HealthChecker;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

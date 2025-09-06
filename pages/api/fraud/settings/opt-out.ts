@@ -1,113 +1,8 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const store = getFraudStore();
-    return res.status(200).json(settings)
-  }
-  if (req.method === 'POST') {
-    const { userId, optOut } = req.body || {};
-    if (!userId || typeof optOut !== 'boolean') return res.status(400).json({ error: 'Missing userId or optOut' });
-    const updated = await store.setPrivacySettings(userId, optOut);
-    return res.status(200).json(updated)
-  }
-  res.status(405).json({ error: "Method not allowed" });
-}
-  if (req && req.method === "GET") {
-    const userId = (req && req.query.userId as string) || "";
-    if (!userId) return res && res.status(400).json({ error: "Missing userId" });
-    const settings = await store && store.getPrivacySettings(userId);
-    return res && res.status(200).json(settings);
-  }
-  if (req && req.method === "POST") {
-    const { userId, optOut } = req && req.body || {};
-    if (!userId || typeof optOut !== "boolean")
-      return res && res.status(400).json({ error: "Missing userId or optOut" });
-    const updated = await store && store.setPrivacySettings(userId, optOut);
-    return res && res.status(200).json(updated);
-  }
-  res && res.status(405).json({ error: "Method not allowed" });
-}
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getFraudStore  } from '../../../../utils / fraud / store';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const store = getFraudStore ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const user_id = (req.query.user_id as string) || "";
-    if (return res.status (400).json ({ error: "Missing user_id" })) {
-  $2
-}
-    const settings = await store.getPrivacySettings (user_id);
-    return res.status (200).json (settings);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const { user_id, opt_out } = req.body || {}
-    if (
-      return res.status (400).json ({ error: "Missing user_id or opt_out" })) {
-  $2
-}
-    const updated = await store.setPrivacySettings (user_id, opt_out);
-    return res.status (200).json (updated);
-  }
-  res.status (405).json ({ error: "Method not allowed" });
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  const store = getFraudStore();
-  if (req.method === "GET") {
-    const userId = (req.query.userId as string) |"";
-    if (!userId) return res.status(400).json({ error: "Missing userId" });
-    const settings = await store.getPrivacySettings(userId);
-    return res.status(200).json(settings);
-  }
-  if (req.method === "POST") {
-    const { userId, optOut } = req.body |{}
-    if (!userId |typeof optOut !== "boolean")
-      return res.status(400).json({ error: "Missing userId or optOut" });
-    const updated = await store.setPrivacySettings(userId, optOut);
-    return res.status(200).json(updated);
 
-  }
-  res.status(405).json({ error: "Method not allowed" });
-=======
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-export default async function handler(req, res) {
-  try {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
@@ -138,14 +33,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-  res.status(405).json({ error: "Method not allowed" });
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   } catch (error) {
     console.error("Error:", error);
@@ -166,11 +54,3 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

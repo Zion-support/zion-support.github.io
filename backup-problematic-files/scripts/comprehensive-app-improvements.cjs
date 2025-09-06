@@ -1,8 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -24,8 +21,8 @@ class ComprehensiveAppImprover {
   async runCommand(command, description) {
     try {
       console.log(`🔍 ${description}...`);
-      const result = execSync(command, { 
-        encoding: 'utf8', 
+      const result = execSync(command, {
+        encoding: 'utf8',
         stdio: 'pipe',
         cwd: path.join(__dirname, '..')
       });
@@ -95,8 +92,8 @@ class ComprehensiveAppImprover {
     maxScore += 100 * 0.1;
     const finalScore = Math.round((totalScore / maxScore) * 100);
     this.results.overall.score = finalScore;
-    this.results.overall.status = finalScore >= 80 ? 'excellent' : 
-                                 finalScore >= 60 ? 'good' : 
+    this.results.overall.status = finalScore >= 80 ? 'excellent' :
+                                 finalScore >= 60 ? 'good' :
                                  finalScore >= 40 ? 'fair' : 'poor';
     return finalScore;
   }
@@ -125,8 +122,4 @@ class ComprehensiveAppImprover {
 }
 // Run the comprehensive app improver
 const improver = new ComprehensiveAppImprover();
-<<<<<<< HEAD
-improver.run().catch(console.error);
-=======
-improver.run().catch(console.error);
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

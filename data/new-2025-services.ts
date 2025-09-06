@@ -27,90 +27,7 @@ const contact = {
 // Additional 2025 real micro - SaaS, AI and IT services;
 export const new2025Services: EnhancedRealMicroSaasService[] = [;
   {
-<<<<<<< HEAD
-    id: 'llm - safety - observability - suite',
-    name: 'LLM Safety & Observability Suite',
-    tagline: 'Detect jailbreaks, PII leaks and drift with real - time dashboards',
-    price: '$129',
-    period: '/month',
-    description:;
-      'Policy checks, toxicity filters, red - team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
-    features: [;
-      'Prompt / output policy engine',
-      'Jailbreak and injection detection',
-      'PII redaction and audit trail',
-      'Hallucination and grounding score',
-      'Dashboards and CI quality gates',
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from - rose - 600 to - red - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / services / llm - safety - observability - suite',
-    market_position:;
-      'Comparable to Lakera / Guardrails AI at a lower entry price with built - in observability.',
-    target_audience: 'Teams shipping AI copilots and assistants',
-    trial_days: 14,
-    setup_time: '30 minutes',
-    category: 'AI & Data',
-    real_service: true,
-    technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry'],
-    integrations: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions'],
-    use_cases: [;
-      'Prevent unsafe outputs',
-      'Compliance readiness',
-      'Model regression detection',
-    ],
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
-    competitors: ['Lakera', 'Guardrails AI', 'Azure AI Content Safety'],
-    market_size: '$3.5B+ AI safety & governance',
-    growth_rate: '200% annual growth',
-    variant: 'holographic - matrix',
-    contact_info: contact,    features: [;
-      'Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates';
-=======
-<<<<<<< HEAD
-    id: 'llm-safety-observability-suite'
-    name: 'LLM Safety & Observability Suite'
-    tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards'
-    price: '$129'
-    period: '/month'
-    description:
-      'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.'
-    features: [
-      'Prompt/output policy engine'
-      'Jailbreak and injection detection'
-      'PII redaction and audit trail'
-      'Hallucination and grounding score'
-      'Dashboards and CI quality gates'
-    ]
-    popular: true
-    icon: '🛡️'
-    color: 'from-rose-600 to-red-700'
-    textColor: 'text-rose-300'
-    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite'
-    marketPosition:
-      'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.'
-    targetAudience: 'Teams shipping AI copilots and assistants'
-    trialDays: 14
-    setupTime: '30 minutes'
-    category: 'AI & Data'
-    realService: true
-    technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry']
-    integrations: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions']
-    useCases: [
-      'Prevent unsafe outputs'
-      'Compliance readiness'
-      'Model regression detection'
-    ]
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks'
-    competitors: ['Lakera', 'Guardrails AI', 'Azure AI Content Safety']
-    marketSize: '$3.5B+ AI safety & governance'
-    growthRate: '200% annual growth'
-    variant: 'holographic-matrix'
-    contactInfo: contact,    features: [
-      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     ];
     popular: true;
     icon: '🛡️';
@@ -2149,118 +2066,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [;
     price: '$129', period: '/month',
     description: 'Central registry of AI assets with ownership, risk, policy mappings and audit trails for compliance.',
     features: [
-<<<<<<< HEAD
-      'Model and dataset registryRisk and policy mappingsPII/PHI tagging and checksChange approvals and trailsReports and exports'
-    ];
-    popular: true, icon: '📚',
-    color: 'from-slate-700 to-gray-700', textColor: 'text-slate-300',
-    link: 'https://ziontechgroup.com/services/ai-governance-registry', marketPosition: 'Practical governance for teams shipping AI quickly.',
-    targetAudience: 'Product, security and compliance',
-    trialDays: 14, setupTime: '2 days',
-    category: 'AI & Data', realService: true,
-    technology: ['TypeScriptPostgreSQL'], integrations: ['GitHubJiraSlack'],
-    useCases: ['Audit readinessAsset ownershipPolicy enforcement'], roi: 'Reduce compliance cycle time by 50%',
-    competitors: ['Model governance suites'], marketSize: '$3B AI governance',
-    growthRate: '30% CAGR', variant: 'ai-futuristic',
-    contactInfo: contact, realImplementation: true,
-    implementationDetails: 'Registry, policies and approval workflows.',
-    launchDate: '2025-03-07', customers: 10,
-    rating: 4.6,
-    reviews: 6
-  }
-];
-;
-=======
-      'Model and dataset registry'
-      'Risk and policy mappings'
-      'PII/PHI tagging and checks'
-      'Change approvals and trails'
-      'Reports and exports'
-    ]
-    popular: true
-    icon: '📚'
-    color: 'from-slate-700 to-gray-700'
-    textColor: 'text-slate-300'
-    link: 'https://ziontechgroup.com/services/ai-governance-registry'
-    marketPosition: 'Practical governance for teams shipping AI quickly.'
-    targetAudience: 'Product, security and compliance'
-    trialDays: 14
-    setupTime: '2 days'
-    category: 'AI & Data'
-    realService: true
-    technology: ['TypeScript', 'PostgreSQL']
-    integrations: ['GitHub', 'Jira', 'Slack']
-    useCases: ['Audit readiness', 'Asset ownership', 'Policy enforcement']
-    roi: 'Reduce compliance cycle time by 50%'
-    competitors: ['Model governance suites']
-    marketSize: '$3B AI governance'
-    growthRate: '30% CAGR'
-    variant: 'ai-futuristic'
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Registry, policies and approval workflows.'
-    launchDate: '2025-03-07'
-    customers: 10
-    rating: 4.6
-reviews: 6
-=======
-    id: 'llm-safety-observability-suite',
-    name: 'LLM Safety & Observability Suite',
-    tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
-    price: '$129',
-    period: '/month',
-    description: 'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
-    features: [
-      'Prompt/output policy engineJailbreak and injection detection',
-      'PII redaction and audit trailHallucination and grounding score',
-      'Dashboards and CI quality gates'
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from-rose-600 to-red-700',
-    textColor: 'text-rose-300',
-    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite',
-    marketPosition: 'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.',
-    targetAudience: 'Teams shipping AI copilots and assistants',
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['TypeScriptOpenAI', 'AnthropicOpenTelemetry'],
-    integrations: ['SlackPagerDuty', 'DatadogGitHub Actions'],
-    useCases: ['Prevent unsafe outputsCompliance readiness', 'Model regression detection'],
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks',
-    competitors: ['LakeraGuardrails AI', 'Azure AI Content Safety'],
-    marketSize: '$3.5B+ AI safety & governance',
-    growthRate: '200% annual growth',
-    variant: 'holographic-matrix',
-<<<<<<< HEAD
-    contactInfo: contact,    features: [
-      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates';
-    ];
-    popular: true;
-    icon: '🛡️';
-    color: 'from-rose-600 to-red-700';
-    textColor: 'text-rose-300';
-    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite';
-    marketPosition: 'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.';
-    targetAudience: 'Teams shipping AI copilots and assistants';
-    trialDays: 14;
-    setupTime: '30 minutes';
-    category: 'AI & Data';
-    realService: true;
-    technology: ['TypeScriptOpenAIAnthropicOpenTelemetry'];
-    integrations: ['SlackPagerDutyDatadogGitHub Actions'];
-    useCases: ['Prevent unsafe outputsCompliance readinessModel regression detection'];
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks';
-    competitors: ['LakeraGuardrails AIAzure AI Content Safety'];
-    marketSize: '$3.5B+ AI safety & governance';
-    growthRate: '200% annual growth';
-    variant: 'holographic-matrix';
-    contactInfo: contact;
-=======
-    contactInfo: contact,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
     realImplementation: true,
     implementationDetails: 'Inline middleware, policy DSL, exporters and dashboards.',
     launchDate: '2025-03-10',
@@ -2929,21 +2735,8 @@ reviews: 6
     launchDate: '2025-03-07',
     customers: 10,
     rating: 4.6,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-reviews: 6,
-  },;
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     reviews: 6
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
   }
 ];
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

@@ -1,23 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' });
-  }
-  const { email, password, code } = req && req.body || {};
-  if (!email || !password || !code) {
-    return res && res.status(400).json({ error: 'Missing credentials' });
-  }
-=======
-import {
-<<<<<<< HEAD
-  createSessionCookie
-  validateCredentials;
-=======
-  createSessionCookie,;
-  validateCredentials,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 } from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
@@ -28,7 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(400).json({ error: 'Missing credentials' });
   }
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const result = validateCredentials(email, password, code);
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
   res.setHeader('Set-Cookie', cookie);
@@ -83,14 +64,3 @@ if ( {) {
   return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true });
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
-
-<<<<<<< HEAD
-}
-=======
-  return res.status(200).json({ ok: true })
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

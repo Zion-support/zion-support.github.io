@@ -1,38 +1,15 @@
-<<<<<<< HEAD
-export default function AnimatedBackground() {;
-  return (
-    <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>;
-=======
-import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       <div
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]'
         style={{
           background:
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
         }}
-<<<<<<< HEAD
-      />;
-      <style jsx global>{`;
-        @keyframes bgflow {;
-          0% {;
-=======
-      />
-      <style jsx global>{`
-        @keyframes bgflow {
-<<<<<<< HEAD
-          0% {;
-=======
-          0% {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -156,39 +133,3 @@ function AnimatedBackground() {
       />;
     </div>;
   );
-<<<<<<< HEAD
-};
-export default AnimatedBackground;
-      />;
-      {/* Grid Pattern */}
-      <div;
-        className="absolute inset - 0 opacity - 10";
-        style={{
-          background_image: `;
-            linear - gradient (rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-            linear - gradient (90deg, rgba (6, 182, 212, 0.1) 1px, transparent 1px);
-          `;
-          background_size: '50px 50px',
-        }}
-      />;
-    </div>);
-}
-;
-export default AnimatedBackground;
-;
-        }
-      `}</style>
-    </div>
-  )
-}
-
-=======
-<<<<<<< HEAD
-}
-export default AnimatedBackground;
-=======
-};
-
-export default AnimatedBackground;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

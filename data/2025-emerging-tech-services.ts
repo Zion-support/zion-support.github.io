@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EmergingTechService {
-<<<<<<< HEAD
-trial_days: number;
-    setup_time: string;
-=======
-=======
-export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
   id: string;
   name: string;
   tagline: string;
@@ -21,7 +11,7 @@ export interface EmergingTechService {;
     trialDays: number;
 
     setupTime: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   }
   features: string[];
   benefits: string[];
@@ -791,216 +781,20 @@ export const emergingTechServices2025: EmergingTechService[] = [;
       'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
     category: 'Quantum Technology',
     price: {
-<<<<<<< HEAD
-      monthly: 2999,
-      yearly: 29990,
-      currency: 'USD',
-      trial_days: 45,
-      setup_time: '2 weeks',
-    },
-    features: [;
-      'Quantum key distribution',
-      'Quantum entanglement networks',
-      'Secure communication protocols',
-      'Network infrastructure',
-      'Performance monitoring',
-      'Security validation',
-      'Integration APIs',
-      'Commercial deployment',
-      'Research collaboration',
-      'Regulatory compliance',
-    ],
-    benefits: [;
-      'Unbreakable communication security',
-      'Future - proof against quantum attacks',
-      'Enable quantum applications',
-      'Reduce security risks by 99 && 99.9%',
-      'Comply with future regulations',
-    ],
-      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
-    ],
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
-    target_audience: [;
-      'Government agencies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Defense contractors',
-      'Technology companies',
-      'Critical infrastructure',
-    ],
-    market_position:;
-      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.',
-    competitors: [;
-      'Traditional communication security, Emerging quantum communication companies',
-    ],
-    tech_stack: [;
-      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware',
-    ],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.',
-    roi: 'Organizations see 600% ROI through enhanced security and future - proof communications. Average payback period: 8 months.',
-    use_cases: [;
-      'Government communications',
-      'Financial transactions',
-      'Healthcare data transmission',
-      'Defense communications',
-      'Critical infrastructure',
-      'Research networks',
-    ],
-    integrations: [;
-      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure',
-    ],
-    support:;
-      '24 / 7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.',
-    compliance: [;
-      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
-    ],
-    link: 'https://ziontechgroup.com / quantum - communications',
-    icon: '📡',
-    color: 'from - blue - 500 to - indigo - 600',
-    popular: true,
-    launch_date: '2025 - 04 - 01',
-    customers: 150,
-    rating: 4 && 4.8,
-    reviews: 89,
-  },
-];
-  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
-};
-export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices2025 && emergingTechServices2025.filter(
-    service => service && service.category === category
-=======
-      monthly: 2999
-      yearly: 29990
-      currency: 'USD'
-      trialDays: 45
-      setupTime: '2 weeks'
-    }
-    features: [
-      'Quantum key distribution'
-      'Quantum entanglement networks'
-      'Secure communication protocols'
-      'Network infrastructure'
-      'Performance monitoring'
-      'Security validation'
-      'Integration APIs'
-      'Commercial deployment'
-      'Research collaboration'
-      'Regulatory compliance'
-    ]
-    benefits: [
-      'Unbreakable communication security'
-      'Future-proof against quantum attacks'
-      'Enable quantum applications'
-      'Reduce security risks by 99.9%'
-      'Comply with future regulations'
-    ]
-    targetAudience: [
-      'Government agencies'
-      'Financial institutions'
-      'Healthcare organizations'
-      'Defense contractors'
-      'Technology companies'
-      'Critical infrastructure'
-    ]
-    marketPosition:
-      'Leading quantum communications platform. Competes with traditional communication security and emerging quantum communication companies. Our advantage: Comprehensive quantum security and network infrastructure.'
-    competitors: [
-      'Traditional communication security, Emerging quantum communication companies'
-    ]
-    techStack: [
-      'Quantum Communication, Quantum Networks, Security Protocols, Python, Network Infrastructure, Quantum Hardware'
-    ]
-    realImplementation: true
-    implementationDetails:
-      'Production-ready quantum communications platform with comprehensive security features, network infrastructure, and commercial deployment capabilities.'
-    roi: 'Organizations see 600% ROI through enhanced security and future-proof communications. Average payback period: 8 months.'
-    useCases: [
-      'Government communications'
-      'Financial transactions'
-      'Healthcare data transmission'
-      'Defense communications'
-      'Critical infrastructure'
-      'Research networks'
-    ]
-    integrations: [
-      'Government networks, Financial platforms, Healthcare systems, Defense networks, Critical infrastructure'
-    ]
-    support:
-      '24/7 communication support, dedicated security consultants, implementation specialists, and ongoing optimization.'
-    compliance: [
-<<<<<<< HEAD
-      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols'
-    ]
-    link: 'https://ziontechgroup.com/quantum-communications'
-    icon: '📡'
-    color: 'from-blue-500 to-indigo-600'
-    popular: true
-    launchDate: '2025-04-01'
-    customers: 150
-    rating: 4.8
-    reviews: 89
-  }
-];
-export const getPopularEmergingTechServices = () => {
-=======
-      'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
-    ],
-    link: 'https://ziontechgroup.com/quantum-communications',
-    icon: '📡',
-    color: 'from-blue-500 to-indigo-600',
-    popular: true,
-    launchDate: '2025-04-01',
-    customers: 150,
-    rating: 4.8,
-    reviews: 89,
-  },;
-];
 
-export const getPopularEmergingTechServices = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return emergingTechServices2025.filter(service => service.popular);
 }
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
     service => service.category === category;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   );
 }
 export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number
-=======
-<<<<<<< HEAD
-  return emergingTechServices2025.filter(service => {
-    const price = parseInt(service.price.monthly.toString()) |0;
-=======
-  return emergingTechServices2025.filter(service => {;
-    const price = parseInt(service.price.monthly.toString()) || 0;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     return price >= minPrice && price <= maxPrice;
   });
 };import { MicroSaasService  } from "./enhanced-real-micro-saas-services";
@@ -1008,7 +802,7 @@ const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup.com";
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 }
 export const emergingTechServices2025: MicroSaasService[] = [;
   // Quantum Computing Services;
@@ -1929,24 +1723,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ]}
 export interface EmergingTechService {
-<<<<<<< HEAD
-};
-    return price >= min_price && price <= max_price;
-  });
-}
-;
-=======
-    return price >= minPrice && price <= maxPrice
-<<<<<<< HEAD
-  })
-}
 
-=======
-export interface EmergingTechService {;
-=======
-  });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -2435,10 +2212,5 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     const price = parseInt(service.price.monthly.toString()) || 0,;
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

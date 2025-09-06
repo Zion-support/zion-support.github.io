@@ -33,13 +33,13 @@ class SmartPerformanceOptimizer {}
         try {}
             // Build the project first;
             execSync('npm run build', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
             // Analyze bundle;
             const bundleAnalysis = execSync('npm run analyze', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -53,7 +53,7 @@ class SmartPerformanceOptimizer {}
         const startTime = Date.now(;);
         try {}
             execSync('npm run build', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "stdio": 'pipe'
             }
 });
@@ -164,8 +164,4 @@ if ( {})
      {}
     const optimizer = new SmartPerformanceOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = SmartPerformanceOptimizer;
-=======
-module.exports = SmartPerformanceOptimizer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

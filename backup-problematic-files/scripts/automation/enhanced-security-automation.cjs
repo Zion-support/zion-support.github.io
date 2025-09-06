@@ -32,7 +32,7 @@ class EnhancedSecurityAutomation {}
         this.log('Running security audit...');
         try {}
             const auditResult = execSync('npm audit --json', { })
-                "cwd": this.projectRoot, 
+                "cwd": this.projectRoot,
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
@@ -216,8 +216,4 @@ if ( {})
      {}
     const automation = new EnhancedSecurityAutomation}(;);
     automation.run().catch(console.error)};
-<<<<<<< HEAD
-module.exports = EnhancedSecurityAutomation;
-=======
-module.exports = EnhancedSecurityAutomation;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

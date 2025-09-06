@@ -22,7 +22,7 @@ class AutomationSuiteRunner {
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    
+
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
   async runCommand(command, description) {
@@ -183,9 +183,9 @@ class AutomationSuiteRunner {
         const lines = content.split('\n');
         qualityMetrics.totalLines += lines.length;
         // Count comments
-        const commentLines = lines.filter(line => 
-          line.trim().startsWith('//') || 
-          line.trim().startsWith('/*') || 
+        const commentLines = lines.filter(line =>
+          line.trim().startsWith('//') ||
+          line.trim().startsWith('/*') ||
           line.trim().startsWith('*')
         ).length;
         totalComments += commentLines;
@@ -290,8 +290,4 @@ if (require.main === module) {
   const runner = new AutomationSuiteRunner();
   runner.run().catch(console.error);
 }
-<<<<<<< HEAD
-module.exports = AutomationSuiteRunner;
-=======
-module.exports = AutomationSuiteRunner;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+

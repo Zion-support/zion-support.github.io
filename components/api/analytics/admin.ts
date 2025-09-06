@@ -1,16 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-=======
-import { createServerClient } from '../../../utils/supabase/server';
 
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const supabase = createServerClient();
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
@@ -88,13 +77,7 @@ export default async function handler(
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
     const referralConversions = referralsData.filter(r => r.converted).length;
-<<<<<<< HEAD
-    const geoCounts: Record<string, number> = {}
-=======
 
-<<<<<<< HEAD
-    const geoCounts: Record<string, number> = {};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     usersData.forEach(u => {
       geoCounts[u.country |'Unknown'] =
         (geoCounts[u.country |'Unknown'] |0) + 1;
@@ -289,26 +272,14 @@ res.status (200).json ({
     usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
     res.status(200).json({
       totals: {
-       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
+       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects
     },
     topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
       referralConversions;
       geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
   } catch (e: any) {
     res.status(200).json({
-<<<<<<< HEAD
-      totals: {
-       totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 
-    },
-    topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
-      referralConversions: 2,
-=======
-      totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 }
-      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
-      referralConversions: 2
 
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }
@@ -335,32 +306,3 @@ res.status (200).json ({
       ],
     });
   }}
-<<<<<<< HEAD
-
-    res.status(200).json({_totals: { totalUsers, _totalTalents, _totalClients, _jobsPosted, _jobsFilled, _quotesSent, _quotesAccepted, _activeProjects},
-      topCategories: Object.entries(categoryCounts).sort(_(a, _b) => b[1] - a[1]).slice(0, 5).map(_([label, _value]) => ({_label, _value})),
-      referralConversions,
-      geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
-  } catch (e: any) {
-    res.status(200).json({
-      totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 },
-      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }],
-      referralConversions: 2,
-      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
-
-  }
-}
-
-=======
-<<<<<<< HEAD
-=======
-    const geoCounts: Record<string, number> = {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-}
-=======
-    const geoCounts: Record<string, number> = {};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
