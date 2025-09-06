@@ -3,7 +3,7 @@ toast.success (
     } catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet');
     }
-  }
+  },
 
   return (
 

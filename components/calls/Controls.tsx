@@ -91,8 +91,6 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {;
       console && console.warn('Screen share failed', e);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
   return (
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;

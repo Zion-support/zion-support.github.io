@@ -1301,7 +1301,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
       impact: 'High';
     }
   ];
-
   const categories = [...new Set(microSaasServices && microSaasServices.map(service => service && service.category))];
 
   const competitiveAdvantages = [;
@@ -1405,7 +1404,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
                 </div>;
               </div>;
             </div>;
-
             <div className="flex flex-col sm:flex-row gap-6 justify-center">;
 
               <Button
@@ -1486,7 +1484,6 @@ import {Zap, Star, Calendar} from 'lucide-react';
                       <strong>Setup Time:</strong> {service && service.setupTime}
                     </div>;
                   </div>;
-
                   <div className="flex flex-col gap-3">;
 
                     <a

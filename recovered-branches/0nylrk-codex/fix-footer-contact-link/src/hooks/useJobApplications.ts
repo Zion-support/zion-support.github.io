@@ -1,71 +1,22 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> main
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const useJobApplications = (jobId?: string) => {
-=======
-export const useJobApplications = (jobId?: string) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 export const useJobApplications = (jobId?: string) => {;
 
 
->>>>>>> main
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-=======
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { JobApplication, ApplicationStatus } from "@/types/jobs",
-import { toast } from "sonner",
-export const useJobApplications = (jobId?: string) => {
-  const { user } = useAuth(),
-  const [applications, setApplications] = useState<JobApplication[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const fetchApplications = async () => {
-    if (!user) {
-      setIsLoading(false),
-      return
-    }
-    try {
-<<<<<<< HEAD
-      setIsLoading(true);
-      let query = supabase
-        .from("job_applications")
-        .select(`
-          *;
-          job: jobs(*)
-          talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
-        `)
-        .order("created_at", { ascending: false });
-=======
-=======
   const fetchApplications = async () => {
     if (!user) {
       setIsLoading(false);
@@ -74,7 +25,6 @@ export const useJobApplications = (jobId?: string) => {
     try {
 
 
->>>>>>> main
       setIsLoading(true),
       
       let query = supabase
@@ -86,19 +36,6 @@ export const useJobApplications = (jobId?: string) => {
         `)
         .order("created_at", { ascending: false }),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Filter by job if jobId is provided
-      if (jobId) {
-        query = query.eq("job_id", jobId)
-      }
-      // For talent users, only fetch their own applications
-      if (user.userType === "jobSeeker" |user.userType === "creator") {
-        query = query.eq("talent_id", user.id)
-      }
-      // For client users, fetch applications for their jobs
-      else if (user.userType === "employer" |user.userType === "buyer") {
-=======
 
 
       // Filter by job if jobId is provided
@@ -113,44 +50,11 @@ export const useJobApplications = (jobId?: string) => {
       // For client users, fetch applications for their jobs
       else if (user && user.userType === "employer" || user && user.userType === "buyer") {
 
->>>>>>> main
         if (!jobId) {
           // Fix: Convert the subquery to a proper array or string
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
-<<<<<<< HEAD
-<<<<<<< HEAD
-            .eq("client_id", user.id);
-=======
-            .eq("client_id", user.id),
-          
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-          if (jobIds && jobIds.length > 0) {
-            const jobIdArray = jobIds.map(job => job.id),
-            query = query.in("job_id", jobIdArray)
-          }
-        }
-      }
-<<<<<<< HEAD
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
-=======
-      
-      const { data, error: fetchError } = await query,
-      
-      if (fetchError) throw fetchError,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Transform the data to match our application types
-      const transformedData = data.map((app: any) => ({
-        ...app,
-        talent_profile: app.talent_profile ? {
-<<<<<<< HEAD
-          ...app.talent_profile;
-          full_name: app.talent_profile.display_name;
-          profile_picture_url: app.talent_profile.avatar_url
-=======
 
             .eq("client_id", user && user.id);
           
@@ -253,18 +157,12 @@ if (throw fetch_error) {
           full_name: app && app.talent_profile.display_name;
           profile_picture_url: app && app.talent_profile.avatar_url,
 
->>>>>>> main
           skills: []
         } : undefined
       }));
       setApplications(transformedData as JobApplication[]);
       setError(null)
     } catch (err: any) {
-<<<<<<< HEAD
-      console.error("Error fetching applications:", err);
-      setError("Failed to fetch applications: " + err.message)
-=======
-=======
 
       console && console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err && err.message),
@@ -300,7 +198,6 @@ if (throw fetch_error) {
         ...app,
         talent_profile: app.talent_profile ? {
 
->>>>>>> main
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -313,26 +210,11 @@ if (throw fetch_error) {
     } catch (err: any) {
       console.error("Error fetching applications:", err),
       setError("Failed to fetch applications: " + err.message),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> main
       toast.error("Failed to fetch applications")
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
-    if (!user) {
-      toast.error("You must be logged in to apply for jobs"),
-=======
 
   },
   
@@ -341,28 +223,14 @@ if (throw fetch_error) {
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast && toast.error("You must be logged in to apply for jobs");
->>>>>>> main
       return false
     }
     try {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
-          job_id: jobId;
-          talent_id: user.id;
-          resume_id: resumeId;
-          cover_letter: coverLetter
-          status: "new"
-        })
-        .select()
-        .single();
-=======
-=======
 
 
->>>>>>> main
           job_id: jobId,
           talent_id: user.id,
           resume_id: resumeId,
@@ -372,22 +240,13 @@ if (throw fetch_error) {
         .select()
         .single(),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> main
       if (error) {
         if (error.code === '23505') { // Unique violation
           toast.error("You have already applied to this job")
         } else {
           throw error
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> main
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -435,77 +294,6 @@ export const useJobApplications = (jobId?: string) => {;
             const jobIdArray = jobIds.map(job => job.id),;
             query = query.in("job_id", jobIdArray);
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        }
-        return false
-      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Add the new application to the local state
-      const newApplication = data as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-      toast.success("Application submitted successfully");
-      return true
-    } catch (err: any) {
-      console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message)
-      return false
-    }
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-      const { data, error: fetchError } = await query,;
-      if (fetchError) throw fetchError,;
-      // Transform the data to match our application types;
-      const transformedData = data.map((app: any) => ({;
-        ...app,;
-        talent_profile: app.talent_profile ? {;
-          ...app.talent_profile,;
-          full_name: app.talent_profile.display_name,;
-          profile_picture_url: app.talent_profile.avatar_url,;
-          skills: [];
-        } : undefined;
-      })),;
-      setApplications(transformedData as JobApplication[]),;
-      setError(null);
-    } catch (err: any) {;
-      console.error("Error fetching applications:", err),;
-      setError("Failed to fetch applications: " + err.message),;
-      toast.error("Failed to fetch applications");
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {;
-    if (!user) {;
-      toast.error("You must be logged in to apply for jobs"),;
-      return false;
-    }
-;
-    try {;
-      const { data, error } = await supabase;
-        .from("job_applications");
-        .insert({;
-          job_id: jobId,;
-          talent_id: user.id,;
-          resume_id: resumeId,;
-          cover_letter: coverLetter,;
-          status: "new";
-        });
-        .select();
-        .single(),;
-      if (error) {;
-        if (error.code === '23505') { // Unique violation;
-          toast.error("You have already applied to this job");
-        } else {;
-=======
 
 
         }
@@ -548,32 +336,10 @@ if ( { // Unique violation) {
           toast.error ("You have already applied to this job");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
->>>>>>> main
           throw error;
         }
         return false;
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      
-      // Add the new application to the local state
-      const newApplication = data as JobApplication,
-      setApplications(prev => [newApplication, ...prev]),
-      
-      toast.success("Application submitted successfully"),
-      return true
-    } catch (err: any) {
-      console.error("Error applying to job:", err),
-      toast.error("Failed to submit application: " + err.message),
-      return false
-    }
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
@@ -594,38 +360,17 @@ if ( { // Unique violation) {
       return false
     }
   }
->>>>>>> main
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
-<<<<<<< HEAD
-<<<<<<< HEAD
-        .eq("id", applicationId);
-      if (error) throw error;
-=======
-=======
 
 
->>>>>>> main
         .eq("id", applicationId),
       
       if (error) throw error,
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Update the local state
-      setApplications(prev =>
-        prev.map(app => app.id === applicationId ? { ...app, status } : app)
-<<<<<<< HEAD
-      );
-      toast.success(`Application status updated to ${status}`);
-      return true
-    } catch (err: any) {
-      console.error("Error updating application status:", err);
-      toast.error("Failed to update application status: " + err.message)
-=======
 
 
       // Update the local state
@@ -640,15 +385,11 @@ if ( { // Unique violation) {
       console && console.error("Error updating application status:", err);
       toast && toast.error("Failed to update application status: " + err && err.message),
 
->>>>>>> main
       return false
     }
   }
 =======
-<<<<<<< HEAD
-=======
 
->>>>>>> main
       ),
       
       toast.success(`Application status updated to ${status}`),
@@ -660,12 +401,8 @@ if ( { // Unique violation) {
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -676,53 +413,6 @@ if ( { // Unique violation) {
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
-<<<<<<< HEAD
-<<<<<<< HEAD
-      if (error) throw error;
-=======
-      
-      if (error) throw error,
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Update the local state
-      setApplications(prev =>
-        prev.map(app => app.id === applicationId ?
-          { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
-        )
-<<<<<<< HEAD
-      );
-=======
-      ),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      return true
-    } catch (err) {
-      console.error("Error marking application as viewed:", err),
-      return false
-<<<<<<< HEAD
-    }
-  }
-  // Fetch applications when component mounts or dependencies change
-  useEffect(() => {
-    if (user) {
-      fetchApplications()
-    }
-  }, [user, jobId]);
-  return {
-    applications;
-    isLoading;
-    error;
-    refetch: fetchApplications;
-    applyToJob;
-    updateApplicationStatus
-    markApplicationAsViewed
-<<<<<<< HEAD
-  }
-}
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
       
@@ -834,7 +524,6 @@ if ( {) {
 =======
 
 
->>>>>>> main
 =======
 ;
       // Add the new application to the local state;
@@ -904,15 +593,6 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
@@ -921,4 +601,3 @@ if ( {) {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

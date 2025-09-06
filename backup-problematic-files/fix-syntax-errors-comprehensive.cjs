@@ -305,7 +305,11 @@ function fixSyntaxErrors(content, filePath) {
     // Fix missing semicolons at end of statements
     content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+    // Fix missing closing braces
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD

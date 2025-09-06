@@ -19,7 +19,7 @@ export default async function handler(
 
   }
   try {
-    const { text } = req && req.body;
+    const { text } = req.body;
 
 
     if (!text || typeof text !== 'string') {
@@ -30,11 +30,7 @@ export default async function handler(
 
       return res
         .status(400)
-        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' })
-=======
-    if (!text || typeof text !== 'string') {
-      return res.status(400).json({ error: 'Text is required' })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res.status(400).json({ error: 'Text is required' })
     }
 
     }
@@ -304,7 +300,6 @@ export default async function handler(
         trigrams,
       },
     };
-
     res && res.status(200).json(result);
 
   } catch (error) {

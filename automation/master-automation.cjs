@@ -86,6 +86,28 @@ class MasterAutomation {}
   }
 
   log(message, type = 'info') {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    console.log(logMessage);
+
+    // Write to log file
+    const logFile = path.join(this.logsDir, 'master-automation.log');
+    fs.appendFileSync(logFile, logMessage + '\n');
+  }
+<<<<<<< HEAD
+  async runCommand(command, options = {}) {
+<<<<<<< HEAD
+=======
+=======
+
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
@@ -572,6 +594,62 @@ class MasterAutomation {}
       this.log("Generating daily report.");
       await this.generateReport();
     }, 24 * 60 * 60 * 1000);
+=======
+    this.log('🎯 Starting Master Automation System...');
+    const report = await this.generateReport();
+    this.log('🏁 Master Automation completed');
+    return report;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+
+  async status() {
+    this.log('📊 Checking automation status...');
+
+    const status = {
+      timestamp: new Date().toISOString(),
+      buildStatus: 'unknown',
+      gitStatus: 'unknown',
+      dependenciesStatus: 'unknown',
+    };
+
+    // Check build status
+    try {
+      const buildResult = await this.runCommand('npm run build', 'Build check');
+      status.buildStatus = buildResult.success ? 'healthy' : 'failed';
+    } catch (_error) {
+      status.buildStatus = 'error';
+    }
+
+    // Check git status
+    try {
+      const gitResult = await this.runCommand(
+        'git status --porcelain',
+        'Git status check'
+      );
+      status.gitStatus = gitResult.success ? 'clean' : 'dirty';
+    } catch (_error) {
+      status.gitStatus = 'error';
+    }
+
+    // Check dependencies
+    try {
+      const depsResult = await this.runCommand(
+        'npm list --depth=0',
+        'Dependencies check'
+      );
+      status.dependenciesStatus = depsResult.success ? 'installed' : 'missing';
+    } catch (_error) {
+      status.dependenciesStatus = 'error';
+    }
+
+    this.log('📊 Status check completed');
+    return status;
+  }
+}
+<<<<<<< HEAD
+// Handle command line arguments
+<<<<<<< HEAD
+=======
 =======
     this.log('🎯 Starting Master Automation System...');
     const report = await this.generateReport();

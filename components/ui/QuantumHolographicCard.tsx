@@ -464,6 +464,21 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({;
 
             )}
           </div>
+<<<<<<< HEAD
+{/* Price and trial */}
+          <div className="flex items-center justify-between mb-4">
+=======
+=======
+<<<<<<< HEAD
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                <span>Popular</span>
+
+              </motion.div>
+            )}
+          </div>
 
           {/* Price and trial */}
           <div className="flex items-center justify-between mb-4">

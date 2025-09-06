@@ -114,7 +114,6 @@ import type { GrantApplication, Milestone } from '../../types/grants';
     );
     const r = await fetch(`/api/grants/${selected && selected.id}`).then(x => x && x.json());
     setSelected(r && r.record);  };
-
   return (
 
 import {useEffect, useMemo, useState} from 'react';

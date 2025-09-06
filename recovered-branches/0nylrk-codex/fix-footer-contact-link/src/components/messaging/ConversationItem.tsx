@@ -1,26 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { format  } from 'date-fns';
-import { cn  } from '@/lib/utils';
-import { Conversation  } from '@/types/messaging';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-interface ConversationItemProps {
-<<<<<<< HEAD
-=======
-  conversation: Conversation,
-  isActive: boolean,
-  onClick: () => void
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
 
->>>>>>> main
 =======
 import React from 'react',;
 import { format } from 'date-fns',;
@@ -31,21 +15,12 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 
   conversation: Conversation
   isActive: boolean
@@ -54,39 +29,12 @@ interface ConversationItemProps {;
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <div
-=======
-    <div 
-<<<<<<< HEAD
-      className={cn(;
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      className={cn(
-<<<<<<< HEAD
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
-
-=======
-        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
-        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
     <div 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -107,22 +55,6 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
-<<<<<<< HEAD
-        {conversation.context_data?.title && (
-          <div className="text-xs mt-1 text-zion-cyan truncate">
-            Re: {conversation.context_data.title}
-          </div>
-        )}
-      </div>
-      {conversation.unread_count > 0 && (
-        <div className="bg-zion-purple text-white rounded-full h-5 min-w-5 flex items-center justify-center text-xs">
-          {conversation.unread_count}
-        </div>
-      )}
-    </div>
-  )
-}
-=======
 =======
 import {format} from 'date - fns';
 import {cn} from '@/lib / utils';
@@ -234,4 +166,3 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

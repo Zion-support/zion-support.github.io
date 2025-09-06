@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-
+<<<<<<< HEAD
 console.log('🔧 Final Syntax Fix');
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {

@@ -8,10 +8,17 @@
 
 
 =======
+  read: (path: string) => null,
+  write: (path: string, data: any) => null,
+  exists: (path: string) => false,
+  delete: (path: string) => null;
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const DATA_DIR = path.join(process.cwd(), 'data');
 
 
 

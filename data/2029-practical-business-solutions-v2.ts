@@ -609,15 +609,16 @@ export const getPopularPracticalBusinessSolutions2029 = () => {
 };
 
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
+  return practicalBusinessSolutions2029.filter(service => service.category === category);
 };
 
 
 
 
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
-    const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
+  return practicalBusinessSolutions2029.filter(service => {;
+    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     return price >= minPrice && price <= maxPrice;
   });
 }

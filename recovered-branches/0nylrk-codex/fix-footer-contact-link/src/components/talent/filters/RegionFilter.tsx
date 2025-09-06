@@ -1,52 +1,14 @@
-<<<<<<< HEAD
-import { ChevronDown, ChevronUp } from "lucide-react",
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
-<<<<<<< HEAD
-  { id: "Africa", label: "Africa" }
-];
-export function RegionFilter({
-  selectedRegions
-  toggleRegion
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: RegionFilterProps) {
-
-import { ChevronDown, ChevronUp } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
-const REGION_OPTIONS = [
-  { id: "North America", label: "North America" },
-  { id: "Europe", label: "Europe" },
-  { id: "Asia", label: "Asia" },
-  { id: "South America", label: "South America" },
-  { id: "Australia", label: "Australia" },
-  { id: "Africa", label: "Africa" },
-];
-
-export function RegionFilter({
-  selectedRegions,
-  toggleRegion,
-  expanded,
-  toggleSection,
-  isMobileFilterOpen,
-}: RegionFilterProps) {
-=======
 =======
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Checkbox} from "@/components/ui/checkbox";
@@ -67,7 +29,6 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
 
 ],
 
->>>>>>> main
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -82,10 +43,6 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-<<<<<<< HEAD
-
-=======
->>>>>>> main
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map((region) => (
@@ -101,21 +58,6 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
 
-<<<<<<< HEAD
-                {region.label}
-              </label>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-
-  );
-}
-}
-;
-
-=======
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
@@ -194,4 +136,3 @@ const REGION_OPTIONS = [;
 
 
 
->>>>>>> main

@@ -311,6 +311,23 @@ class ESLintErrorFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -673,6 +690,23 @@ class ESLintErrorFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -694,6 +728,23 @@ class ESLintErrorFixer {}
     const errors = [];
     const lines = stderr.split('\n');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -808,6 +859,23 @@ class ESLintErrorFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -824,6 +892,23 @@ class ESLintErrorFixer {}
       return};
     this.log('info', `Fixing ESLint errors "in": ${filePath}`);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -961,6 +1046,23 @@ class ESLintErrorFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+        
+        
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+        
+        
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -975,6 +1077,23 @@ class ESLintErrorFixer {}
           continue};
         const fixedLine = await this.fixESLintError(line, error, lines, lineIndex);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        
+        
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+        
+        
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
         
@@ -1509,6 +1628,23 @@ class ESLintErrorFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1687,6 +1823,23 @@ fixer.start().catch(error => {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1718,6 +1871,23 @@ fixer.start().catch(error => {
   startContinuousFixing() {}
     this.log('info', 'Starting continuous ESLint fixing...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     
@@ -1774,6 +1944,23 @@ const fixer = new ESLintErrorFixer();
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1807,6 +1994,23 @@ process.on('SIGINT', () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1821,6 +2025,23 @@ process.on('SIGTERM', () => {}
   process.exit(0)}
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -1872,6 +2093,23 @@ process.on('uncaughtException', (error) => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1887,6 +2125,23 @@ process.on('unhandledRejection', (reason, promise) => {}
   process.exit(1)}
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 

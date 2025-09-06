@@ -112,6 +112,8 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
     </div>;
   );
 }
+<<<<<<< HEAD
+}
 
             className="mt-6"
           />

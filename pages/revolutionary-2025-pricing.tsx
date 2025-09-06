@@ -314,7 +314,16 @@ export default function Revolutionary2025Pricing() {
       return Math.floor(basePrice * 0.8), // 20% discount for yearly
     }
     return basePrice
-  };
+};
+=======
+<<<<<<< HEAD
+    return basePrice;  }
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+=======
+    return basePrice;  };
 
 
 =======
@@ -1162,7 +1171,6 @@ if ( {) {
 }
 
                   <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-
                   {/* Price and Rating */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
@@ -1315,8 +1323,6 @@ if ( {) {
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">

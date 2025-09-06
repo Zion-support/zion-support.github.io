@@ -161,6 +161,10 @@ class FinalAutomationSuite {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
         "cwd": this.projectRoot,
         "encoding": "utf8",
         "timeout": 300000, // 5 minutes timeout
@@ -312,6 +316,10 @@ class AutoDeployment {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -679,6 +687,12 @@ const path = require("path")
 <<<<<<< HEAD
 =======
   }
+    return files}
+    return files}
+=======
+<<<<<<< HEAD
+=======
+  }
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -789,6 +803,10 @@ class DependencyUpdater {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1026,6 +1044,10 @@ class PerformanceMonitor {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
       metrics.nodeModulesSize = nodeModulesSize}
     );
     // Save metrics to file
@@ -1065,6 +1087,12 @@ class PerformanceMonitor {
     
     return size;
   }}
+<<<<<<< HEAD
+=======
+  }
+    return size}
+    return size}
+=======
 <<<<<<< HEAD
 =======
   }
@@ -2041,6 +2069,10 @@ Enhancements: Performance, Security, SEO, Accessibility`;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

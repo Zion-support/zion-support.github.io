@@ -432,8 +432,6 @@ interface Service {
                     <div className="text-xs text-white/40">{service && service.category}</div>;
                   </div>;
                 </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Service Info */}
 
                 <h3 className="text-xl font-bold mb-3 text-white">{service.name}</h3>
@@ -542,8 +540,6 @@ interface Service {
                   <div className="mt-2 text-xs text-white/60">;
                   </div>;
                 </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Action Buttons */}
 
                     </div>                  </div>;

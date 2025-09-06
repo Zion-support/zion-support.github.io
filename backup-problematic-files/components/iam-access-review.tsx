@@ -10,15 +10,7 @@ export default function IAMAccessReviewPage() {
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
-<<<<<<<< HEAD:backup-problematic-files/components/iam-access-review.tsx
     <UltraAdvancedFuturisticBackground>
-========
-<<<<<<< HEAD
-    <UltraFuturisticBackground variant="holographic" intensity="high">
-=======
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
->>>>>>>> main:components/api-observability.tsx.backup.1755991612.backup.1756001149
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />

@@ -5,6 +5,8 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
 }
   // Set top/popular countries
   useEffect(() => {
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 

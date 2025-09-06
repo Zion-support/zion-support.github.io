@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-import { Resume } from "@/types/resume";
-=======
 import { Resume  } from '@/types / resume';
 
 export interface StepProps {
@@ -18,26 +15,10 @@ import { Resume } from "@/types/resume",
 =======
 import {Resume} from "@/types/resume";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> main
 export interface StepProps {
   id: string;
   label: string
 
-<<<<<<< HEAD
-}
-export interface NavigationButtonsProps {
-  onBack?: () => void;
-  onNext?: () => void;
-  isNextDisabled?: boolean;
-  backLabel?: string;
-  nextLabel?: string;
-isLoading?: boolean
-}
-
-export interface ResumeProgressProps {
-  resume: Resume | null;
-  progress: number;
-=======
 
 export interface NavigationButtonsProps {;
 
@@ -73,15 +54,10 @@ export interface EmptyResumeProps {
 export interface ResumeProgressProps {
   resume: Resume | null,
   progress: number
->>>>>>> main
 }
 
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
-<<<<<<< HEAD
-onCancel: () => void,
-  isLoading: boolean
-=======
   onCancel: () => void,
   isLoading: boolean
 =======
@@ -90,7 +66,6 @@ export interface StepProps {
   id: string,
   label: string
 
->>>>>>> main
 import { Resume } from "@/types/resume",;
 export interface StepProps {;
   id: string,;
@@ -105,18 +80,6 @@ export interface NavigationButtonsProps {;
   nextLabel?: string,;
   isLoading?: boolean;
 
-<<<<<<< HEAD
-}
-export interface ResumeProgressProps {
-  resume: Resume | null;
-  progress: number
-}
-
-export interface CreateResumeFormProps {
-  onCreateResume: (title: string) => Promise<void>;
-  onCancel: () => void;
-  isLoading: boolean
-=======
 =======
 }
 ;
@@ -125,23 +88,12 @@ export interface ResumeProgressProps {;
   progress: number;
 }
 
->>>>>>> main
 ;
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
 
-<<<<<<< HEAD
-}
-export interface EmptyResumeProps {
-
-  onCreateClick: () => void;
-}
-}
-;
-
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
@@ -152,4 +104,3 @@ export interface EmptyResumeProps {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

@@ -20,6 +20,30 @@ import {
   TrendingUp,
 
 } from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+export default function AIMLServicesPage() {
+  const services = [
+    {
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Brain,
+  Cpu,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+<<<<<<< HEAD
+  Clock,
+  TrendingUp,
+} from 'lucide-react';
 import EnhancedNavigation from '../../components / EnhancedNavigation';
 import EnhancedFooter from '../../components / EnhancedFooter';
 export default /**

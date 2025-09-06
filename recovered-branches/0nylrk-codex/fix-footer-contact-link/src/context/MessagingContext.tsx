@@ -1,17 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessagingContextType  } from '@/types/messaging';
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
-// Default context used when React type definitions are missing
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> main
 const defaultContext: MessagingContextType = {
   messages: [],
   conversations: [],
@@ -26,11 +15,7 @@ const defaultContext: MessagingContextType = {
   fetchConversations: async () => {},
   loadMessages: async () => {}
 };
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> main
 =======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -51,18 +36,10 @@ const defaultContext: MessagingContextType = {;
   fetchConversations: async () => {},;
   loadMessages: async () => {}
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -83,163 +60,6 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
-<<<<<<< HEAD
-<<<<<<< HEAD
-);
-=======
-),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-// Hook for using the messaging context
-export function useMessaging(): MessagingContextType {
-<<<<<<< HEAD
-  // Cast to avoid type errors when React type definitions are missing;
-  const context = useContext(MessagingContext) as MessagingContextType;
-=======
-  // Cast to avoid type errors when React type definitions are missing
-  const context = useContext(MessagingContext) as MessagingContextType,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  if (context === undefined) {
-    throw new Error('useMessaging must be used within a MessagingProvider')
-  }
-  return context
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-// Provider component
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth();
-  const {
-    messages;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    unreadCount;
-    setUnreadCount;
-    activeConversation;
-    setActiveConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
-    markAsRead;
-    fetchConversations;
-    loadMessages
-  } = useMessagingOperations(user);
-  // Setup real-time subscription
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations);
-  // Calculate unread count from conversations
-  useEffect(() => {
-    if (conversations.length > 0) {
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0);
-      setUnreadCount(count)
-    }
-  }, [conversations, setUnreadCount]);
-  // Fetch conversations when user changes
-  useEffect(() => {
-    if (user) {
-      fetchConversations()
-    } else {
-      setConversations([]);
-      setUnreadCount(0)
-    }
-  }, [user, fetchConversations, setConversations, setUnreadCount]);
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = {
-    messages;
-    activeMessages;
-    conversations;
-    unreadCount;
-    activeConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
-    markAsRead;
-    setActiveConversation;
-    fetchConversations
-    loadMessages
-  }
-
-  return (
-    <MessagingContext.Provider value={contextValue}>
-<<<<<<< HEAD
-      {children}
-    </MessagingContext.Provider>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-// Provider component;
-export function MessagingProvider({ children }: { children: ReactNode }) {;
-  const { user } = useAuth(),;
-  const {;
-    messages,;
-    activeMessages,;
-    setActiveMessages,;
-    conversations,;
-    setConversations,;
-    unreadCount,;
-    setUnreadCount,;
-    activeConversation,;
-    setActiveConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    fetchConversations,;
-    loadMessages;
-  } = useMessagingOperations(user),;
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations),;
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations.length > 0) {;
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0),;
-      setUnreadCount(count);
-    }
-  }, [conversations, setUnreadCount]),;
-  // Fetch conversations when user changes;
-  useEffect(() => {;
-    if (user) {;
-      fetchConversations();
-    } else {;
-      setConversations([]),;
-      setUnreadCount(0);
-    }
-  }, [user, fetchConversations, setConversations, setUnreadCount]),;
-  // Create context value with all the methods and states;
-  const contextValue: MessagingContextType = {;
-    messages,;
-    activeMessages,;
-    conversations,;
-    unreadCount,;
-    activeConversation,;
-    isLoading,;
-    sendMessage,;
-    createConversation,;
-    markAsRead,;
-    setActiveConversation,;
-    fetchConversations;
-    loadMessages;
-  };
-  return (;
-    <MessagingContext.Provider value={contextValue}>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {children}
-    </MessagingContext.Provider>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 import {useAuth} from '@/hooks/useAuth';
 import {MessagingContextType} from '@/types/messaging';
@@ -448,4 +268,3 @@ if ( {) {
     </MessagingContext.Provider>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

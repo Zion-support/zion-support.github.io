@@ -1,32 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-=======
-import React from "react",
-import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import {cn} from "@/lib/utils";
-=======
-import React from "react",
-import { cn } from "@/lib/utils",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  title?: string,
-  children?: React.ReactNode
-}
-export function SidebarSection({
-  className
-  title
-  children
-  ...props
-}: SidebarSectionProps) {
-=======
 
 
 import React from "react",
@@ -56,17 +28,11 @@ export function SidebarSection(): any ({ className, title, children, ...props }:
       {title && (;
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
 =======
->>>>>>> main
   return (
     <div className={cn("py-2", className)} {...props}>
       {title && (
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> main
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
@@ -80,30 +46,6 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
     <div className={cn("py-2", className)} {...props}>;
       {title && (;
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          {title}
-        </h3>
-      )}
-      <div className="space-y-1">{children}</div>
-    </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )
-}
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -137,4 +79,3 @@ function SidebarSection() {
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

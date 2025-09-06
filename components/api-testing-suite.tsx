@@ -1,21 +1,24 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+  const testTypes = [
+    {
+      name: 'Functional Testing',
+      description: 'Verify that your API endpoints work correctly and return expected responses.',
+      tests: ['Request/response validationStatus code verificationData format checkingError handling']
+};
+    {
+      name: 'Performance Testing',
+      description: 'Ensure your APIs can handle expected load and perform under pressure.',
+      tests: ['Load testingStress testingResponse time analysisThroughput measurement']
+};
+    {
+      name: 'Security Testing',
+      description: 'Identify security vulnerabilities and ensure proper authentication and authorization.',
+      tests: ['Authentication testingAuthorization checksInput validationSQL injection testing']
+};
+    {
+      name: 'Integration Testing',
+      description: 'Test how your APIs integrate with other systems and services.',
+      tests: ['End-to-end workflowsThird-party integrationsData flow validationError propagation']
     }
     
     return this.props.children;

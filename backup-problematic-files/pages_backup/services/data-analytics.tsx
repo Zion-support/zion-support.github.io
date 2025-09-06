@@ -301,6 +301,8 @@ export default function DataAnalyticsPage() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
+    </Layout>
   );
 };
 

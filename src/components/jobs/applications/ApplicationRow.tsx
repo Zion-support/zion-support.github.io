@@ -199,13 +199,35 @@ interface ApplicationRowProps {
   onStatusChange: (application_id: string, new_status: ApplicationStatus, ) => Promise < void>,
   onViewScore: (application: JobApplication, ) => void;
 }
-export /**
- * ApplicationRow - Function description
- */
-function ApplicationRow() {
-  const [avatar_error, setAvatarError] = useState (false);
-  const talent_name = application.talent_profile?.full_name || 'Unknown';
-  return (
+import { formatDistanceToNow } from "date-fns",;
+import { Calendar, User, FileText, BarChart } from 'lucide-react';
+import { Button } from "@/components/ui/button",;
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
+import { TableRow, TableCell } from "@/components/ui/table",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { StatusBadge } from "./StatusBadge",;
+import { ScoreBadge } from "./ScoreBadge",;
+import { ApplicationActions } from "./ApplicationActions",;
+import Image from 'next/image', // Import next/image;
+import React, { useState } from 'react', // Import useState;
+interface ApplicationRowProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+}
+;
+export function ApplicationRow({;
+  application,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange,;
+  onViewScore;
+}: ApplicationRowProps) {;
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = application.talent_profile?.full_name || "Unknown";
+  return (;
     <TableRow key={application.id}>;
       <TableCell>;
         <div className='flex items - center gap - 3'>;

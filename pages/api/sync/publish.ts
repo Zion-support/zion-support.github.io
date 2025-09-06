@@ -163,14 +163,19 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
 =======
-
-  const event = payload as SyncEvent & { propagate?: boolean };
-  if (!event || !event && event.type || !event && event.eventId) {
-    return res && res.status(400).json({ error: "Invalid event" })
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
-  if (!isAllowedByScope(event && event.type, state && state.config.scope)) {
-    return res && res.status(403).json({ error: "Event type not allowed by current scope" })
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
   if (event && event.type === "proposal") {

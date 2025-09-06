@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from 'lucide-react'
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { Calendar, ArrowRight } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> main
 export function EnterpriseCTA() {
   return (
     <section id='contact' className='py-20 px-4 md:px-6'>
@@ -76,33 +58,17 @@ export function EnterpriseCTA() {
                       <span className='text-primary text-sm font-medium'>
                         4
                       </span>                    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <li className="flex gap-3">
-                    <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary text-sm font-medium">4</span>
-=======
-=======
 
 import { Calendar } from 'lucide-react';
 
 
 
->>>>>>> main
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Calendar, ArrowRight } from 'lucide-react'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> main
 export function EnterpriseCTA() {
   return (
     <section id="contact" className="py-20 px-4 md: px-6">
@@ -161,27 +127,6 @@ export function EnterpriseCTA() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </section>;
-  );
-};
-}
-=======
-    </section>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",;
-import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from 'lucide-react';
-export function EnterpriseCTA() {;
-  return (;
-=======
 
 
 
@@ -257,7 +202,6 @@ export function EnterpriseCTA() {;
 
 export function EnterpriseCTA() {;
   return (
->>>>>>> main
     <section id="contact" className="py-20 px-4 md: px-6">;
       <div className="container mx-auto max-w-6xl">;
         <div className="rounded-xl bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-purple-light/20 p-1">;
@@ -307,8 +251,6 @@ export function EnterpriseCTA() {;
                       <span className="text-primary text-sm font-medium">4</span>;
                     </div>;
                     <p>Free consultation on implementation</p>;
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Calendar, ArrowRight } from 'lucide-react';
@@ -432,7 +374,6 @@ function EnterpriseCTA() {
                       <span className="text - primary text - sm font - medium">4</span>;
                     </div>;
                     <p > Free consultation on implementation</p>;
->>>>>>> main
                   </li>;
                 </ul>;
               </div>;
@@ -440,21 +381,9 @@ function EnterpriseCTA() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   );
 }
 
     </section>);
 }
->>>>>>> main

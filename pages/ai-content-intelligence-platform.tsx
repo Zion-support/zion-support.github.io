@@ -1156,6 +1156,16 @@ function AIContentIntelligencePlatform() {
                 href="/2025-innovative-new-services-showcase"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200"
               >
+                Start Your Free Trial
+                <ArrowRight className=&quot;w-5 h-5 ml-2&quot; />
+              </Link>
+              <Link
+                href=&quot;/2025-innovative-new-services-showcase&quot;
+                className=&quot;inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200&quot;
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+              >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 View All Services
               </Link>

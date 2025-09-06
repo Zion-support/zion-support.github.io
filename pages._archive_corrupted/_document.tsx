@@ -25,6 +25,8 @@ export default function Document() {
         <link rel="icon" href="/favicon.svg" />
         <link rel=\"icon\" href=\"/favicon.svg\" />
         <link rel="icon" href="/favicon.svg" />
+        <link rel=\"icon\" href=\"/favicon.svg\" />
+        <link rel="icon" href="/favicon.svg" />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </Head>
       <body>

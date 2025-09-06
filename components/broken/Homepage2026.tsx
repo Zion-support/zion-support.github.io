@@ -1380,8 +1380,6 @@ const Homepage2026: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">;
                 Get in touch with our team to discuss how our innovative services can drive your success;
               </p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Contact Information */}
 
               <div className="bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8">

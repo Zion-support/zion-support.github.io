@@ -163,13 +163,10 @@ if ( {) {
       setIsSubmitting (false);
     }
   }
-  const handleKeyDown = (e: React.KeyboardEvent, ) =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      e.stop_propagation ();
-      on_close ();
+  const handleKeyDown = (e: React.KeyboardEvent,) => {
+    if (e.key === 'Escape') {
+      e.stopPropagation()
+      onClose()
   }
 import React from 'react';
 import FocusLock from 'react-focus-lock';

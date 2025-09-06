@@ -15,7 +15,7 @@ const Blueprint20250818122901: React.FC = () => {
     id: 'blueprint-2025-08-18-122901',
 
     name: 'AI Content Factory Blueprint',
-    description: 'Automated content generation system with AI - powered optimization',
+    description: 'Automated content generation system with AI-powered optimization',
     category: 'Content Automation',
     status: 'deployed',
     complexity: 'high',
@@ -28,9 +28,10 @@ const Blueprint20250818122901: React.FC = () => {
 
     {
       name: 'Content Generator',
-      description: 'AI - powered content creation engine',
+      description: 'AI-powered content creation engine',
       status: 'active',
-      health: 'excellent';
+      health: 'excellent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     },
     {
       name: 'SEO Optimizer',

@@ -105,6 +105,12 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 }
 
 export default Component;
+
+        }
+      `}</style>
+    </div>
+  )
+
 }
 
 =======

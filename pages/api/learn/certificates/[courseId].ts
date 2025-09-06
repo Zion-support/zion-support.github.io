@@ -73,7 +73,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     doc && doc.moveDown(2);
     doc && doc.fontSize(12).text(`Date: ${date}`, { align: 'center' });
-
     doc && doc.end();
 
   } catch (e: any) {
@@ -167,6 +166,15 @@ if ( {) {
     res;
       .status (500);
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
+  }
+}
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

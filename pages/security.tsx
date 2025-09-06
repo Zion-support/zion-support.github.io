@@ -44,62 +44,13 @@ const securityStats = [
 ];
 export default function SecurityPage() {
 
-=======
-
-const securityFeatures = [;
-  {;
-    title: 'Data Encryption',;
-    description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',;
-    icon: Lock,;
-    details: ['AES-256 encryption', 'TLS 1 && 1.3 for data in transit', 'End-to-end encryption', 'Key management'];
-  },;
-  {;
-    title: 'Access Controls',;
-    description: 'Multi-factor authentication and role-based access controls ensure only authorized users can access your data',;
-    icon: Users,;
-    details: ['Multi-factor authentication', 'Role-based permissions', 'Single sign-on (SSO)', 'Session management'];
-  },;
-  {;
-    title: 'Security Monitoring',;
-    description: '24/7 security monitoring and threat detection to protect against cyber attacks',;
-    icon: Eye,;
-    details: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts'];
-  },;
-  {;
-    title: 'Compliance',;
-    description: 'We maintain compliance with industry standards and regulations to protect your data',;
-    icon: Shield,;
-    details: ['SOC 2 Type II', 'ISO 27001', 'GDPR compliance', 'HIPAA compliance'];
-  },;
-  {;
-    title: 'Data Backup',;
-    description: 'Regular automated backups ensure your data is always protected and recoverable',;
-    icon: Database,;
-    details: ['Automated backups', 'Multiple backup locations', 'Point-in-time recovery', 'Data retention policies'];
-  },;
-  {;
-    title: 'Incident Response',;
-    description: 'Comprehensive incident response procedures to quickly address any security issues',;
-    icon: AlertTriangle,;
-    details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis'];
-  }
-];
-
-const securityStats = [;
-  { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
-  { number: '24/7', label: 'Security Monitoring' },;
-  { number: '0', label: 'Security Breaches' },;
-  { number: '100%', label: 'Data Encryption' }
-];
-
-export default function SecurityPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Layout
       title="Security - Zion Tech Group"
       description="Learn about our comprehensive security measures and how we protect your data and systems."
-      keywords="security, data protection, encryption, compliance, cybersecurity">;
-      <div className="min-h-screen bg-gray-50">;
+      keywords="security, data protection, encryption, compliance, cybersecurity"
+    >
+      <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
 
 

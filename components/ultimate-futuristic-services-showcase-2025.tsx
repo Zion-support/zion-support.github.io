@@ -1051,8 +1051,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                       <span className="font-semibold text-white">Market Size: </span> {service && service.marketSize}
                   </div>;
                 </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Action Buttons */}
 
                     href={service && service.link}

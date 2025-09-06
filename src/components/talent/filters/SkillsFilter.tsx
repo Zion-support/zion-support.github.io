@@ -188,6 +188,9 @@ const POPULAR_SKILLS = [;
     </div>;
   );
 }
+<<<<<<< HEAD
+}
+}
 
     </div>
   );

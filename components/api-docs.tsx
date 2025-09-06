@@ -36,7 +36,15 @@ export default /**
  * ApiDocsRedirect - Function description
  */
 function ApiDocsRedirect() {
-  return null;
+=======
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+<<<<<<< HEAD
+      destination: '/developers/docs'
+      permanent: true
+    }
+  };      permanent: true}}
 }
 
 =======

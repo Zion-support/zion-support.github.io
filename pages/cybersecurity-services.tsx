@@ -667,8 +667,7 @@ export default function CybersecurityServices() {
                       </span>
                     ))}
                   </div>
-                  
-                  <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                     <Link href={service.link} className="text-red-400 hover:text-red-300 font-medium flex items-center space-x-2 group">
 
 
@@ -853,6 +852,7 @@ export default function CybersecurityServices() {
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">450%</div>
                 <div className="text-gray-300">ROI Improvement</div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>

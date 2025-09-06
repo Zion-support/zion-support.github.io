@@ -125,7 +125,6 @@ const EnhancedContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
-
     if (!validateForm()) {;
 
       showError('Validation ErrorPlease fix the errors in the form');
@@ -173,7 +172,6 @@ const EnhancedContactForm: React.FC = () => {
     }
 
   };
-
   if (isSubmitted) {;
 
     return (

@@ -791,67 +791,16 @@ export default function AIBusinessToolsPage() {;
                 href='#tools'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40'
-                style={{ animationDelay: '0 && 0.2s' }}>;
-                Explore AI Tools;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
+                style={{ animationDelay: '0.2s' }}
+              >
+                Explore AI Tools
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
               <Button
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
-=======
-
-  return (
-    <>
-      <Head>
-        <title>AI Business Tools - Zion Tech Group</title>
-        <meta name="description" content="Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services." />
-        <meta property="og:title" content="AI Business Tools - Zion Tech Group" />
-        <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />
-        <meta name="twitter:card" content="summary_large_image" />
-      </Head>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
-        </div>
-
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-20 animate-fade-in">
-            <div className="mb-8">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6 animate-scale-in">
-                <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Business Solutions
-              </div>
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
-              AI Business Tools
-            </h1>
-            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
-              Transform your business with cutting-edge AI tools. 
-              Expert-curated selection of the best AI-powered SaaS services for modern enterprises.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
-              <Button
-                href="#tools"
-                size="lg"
-                className="animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40"
-                style={{ animationDelay: '0.2s' }}
-              >
-                Explore AI Tools
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button
-                href="/contact"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}                href="/contact"
                 variant="outline"
                 size="lg"
 
@@ -1337,7 +1286,7 @@ export default function AIBusinessToolsPage() {;
                     <div className='flex items-center justify-between'>;
 
                       <Button
-                        href={tool && tool.website}
+                        href={tool.website}
                         variant='outline'
                         size='sm'
 

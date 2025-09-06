@@ -944,7 +944,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 </p>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <button
-                  onClick={() => {;
+                  onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
@@ -1012,7 +1012,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 advantage in the rapidly evolving technology landscape. Let's;
                 discuss how we can help you achieve your goals.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
                 <a

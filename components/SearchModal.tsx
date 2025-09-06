@@ -375,7 +375,6 @@ if ( {) {
     // Navigate to result;
     window && window.location.href = result && result.url;
   };
-
   const handleRecentClick = (search: string) => {;
 
     setQuery(search);

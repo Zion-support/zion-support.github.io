@@ -96,7 +96,6 @@ import EnhancedServiceCard from './ui/EnhancedServiceCard';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import PerformanceMonitor from './PerformanceMonitor';
-
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 
 // Import service data;
@@ -133,9 +132,7 @@ const EnhancedHomepage: React.FC = () => {;
     const performanceTimer = setTimeout(() => {;
       setShowPerformanceMonitor(true);
     }, 5000);
-
     window && window.addEventListener('mousemove', handleMouseMove);
-
     return () => {;
 
       clearInterval(interval);
@@ -399,7 +396,6 @@ if (return allRevolutionaryServices) {
       }
     }
   };
-
   const handleCategoryChange = (categoryId: string) => {;
 
     setSelectedCategory(categoryId);

@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Interview } from "@/types/interview";
-import { format, parseISO } from "date-fns";
-interface InterviewResponseFormProps {
-  interview: Interview;
-  onConfirm: () => Promise<void>;
-  onClose: () => void;
-  isLoading: boolean
-}
-export function InterviewResponseForm({
-  interview
-  onConfirm
-  onClose
-  isLoading
-}: InterviewResponseFormProps) {
-  // Format interview date and time
-
-  const interviewDate = parseISO(interview.scheduled_date);
-=======
 
 
 import React from './react';
@@ -44,7 +21,6 @@ export function InterviewResponseForm(): any ({;
 }: InterviewResponseFormProps) {;
   // Format interview date and time;
   const interviewDate = parseISO(interview && interview.scheduled_date);
->>>>>>> main
   const formattedDate = format(interviewDate, "EEEE, MMMM d");
   const formattedTime = format(interviewDate, "h: mm a");
 =======
@@ -52,25 +28,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Interview } from "@/types/interview";
 import { format, parseISO } from "date-fns";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Interview } from "@/types/interview",
-import { format, parseISO } from "date-fns",
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-
->>>>>>> main
 interface InterviewResponseFormProps {
   interview: Interview,
   onConfirm: () => Promise<void>,
@@ -78,56 +36,12 @@ interface InterviewResponseFormProps {
   isLoading: boolean
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function InterviewResponseForm({
-  interview,
-  onConfirm,
-  onClose,
-  isLoading,
-}: InterviewResponseFormProps) {
-  // Format interview date and time;
-  const interviewDate = parseISO(interview.scheduled_date);
-  const formattedDate = format(interviewDate, "EEEE, MMMM d");
-  const formattedTime = format(interviewDate, "h: mm a");
-=======
-=======
 
->>>>>>> main
 export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
   // Format interview date and time
   const interviewDate = parseISO(interview.scheduled_date),
   const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
   const formattedTime = format(interviewDate, 'h: mm a'),
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  // Calculate when interview ends
-  const endTime = new Date(interviewDate),
-  endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes),
-  const formattedEndTime = format(endTime, 'h: mm a'),
-
-  return (
-    <div className="space-y-4">
-      <div className="p-4 bg-zion-blue-light/20 rounded-md">
-        <h3 className="font-medium text-lg mb-2">{interview.title}</h3>
-        <p className="text-sm text-zion-slate-light mb-4">
-<<<<<<< HEAD
-          Interview requested by {interview.client_name |"Client"}
-        </p>
-=======
-          Interview requested by {interview.client_name || 'Client'}
-        </p>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
@@ -145,7 +59,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
         <div className="grid gap-3">
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>
@@ -153,11 +66,8 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           </div>
           <div className="flex items-center gap-3">
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> main
             <div>{formattedTime} - {formattedEndTime}</div>
           </div>
           <div className="flex items-center gap-3">
@@ -187,14 +97,7 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
-=======
 
->>>>>>> main
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -217,14 +120,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
   const formattedEndTime = format(endTime, 'h: mm a');
   return (;
-<<<<<<< HEAD
-    <div className="space-y-4">;
-      <div className="p-4 bg-zion-blue-light/20 rounded-md">;
-        <h3 className="font-medium text-lg mb-2">{interview.title}</h3>;
-        <p className="text-sm text-zion-slate-light mb-4">;
-          Interview requested by {interview.client_name || 'Client'}
-        </p>;
-=======
 
     <div className="space-y-4">;
       <div className="p-4 bg-zion-blue-light/20 rounded-md">;
@@ -233,7 +128,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           Interview requested by {interview && interview.client_name || "Client"}
         </p>;
 
->>>>>>> main
         <div className="grid gap-3">;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Date:</div>;
@@ -241,28 +135,6 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
           </div>;
           <div className="flex items-center gap-3">;
             <div className="w-24 text-sm text-zion-slate-light">Time:</div>;
-<<<<<<< HEAD
-            <div>{formattedTime} - {formattedEndTime}</div>;
-          </div>;
-          <div className="flex items-center gap-3">;
-            <div className="w-24 text-sm text-zion-slate-light">Duration:</div>;
-            <div>{interview.duration_minutes} minutes</div>;
-          </div>;
-          {interview.meeting_platform && (;
-            <div className="flex items-center gap-3">;
-              <div className="w-24 text-sm text-zion-slate-light">Platform:</div>;
-              <div className="capitalize">{interview.meeting_platform}</div>;
-            </div>;
-          )}
-          {interview.notes && (;
-            <div className="flex gap-3">;
-              <div className="w-24 text-sm text-zion-slate-light">Notes:</div>;
-              <div className="text-sm">{interview.notes}</div>;
-            </div>;
-          )}
-        </div>;
-      </div>;
-=======
             <div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {formattedTime} - {formattedEndTime}
@@ -290,30 +162,17 @@ export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading
         </div>;
       </div>;
 
->>>>>>> main
       <div className="flex justify-end gap-3 pt-4">;
         <Button variant="outline" onClick={onClose} disabled={isLoading}>;
           Cancel;
         </Button>;
         <Button onClick={onConfirm} disabled={isLoading}>;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
           {isLoading ? "Confirming..." : "Confirm Interview"}
         </Button>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   on_confirm: () => Promise < void>;
   on_close: () => void;
@@ -386,4 +245,3 @@ function InterviewResponseForm() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

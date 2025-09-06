@@ -214,6 +214,7 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
 
 
 
+
   // Error state
   if (error && equipment.length === 0) {
     return (

@@ -250,17 +250,17 @@ import React from 'react';
 
 
         {/* New sections with average market prices and references */}
-        <section className='space-y-6'>;
-          <h2 className='text-2xl font-semibold text-white'>;
-            Customer Support & Helpdesk;
-          </h2>;
-          <p className='text-slate-300'>;
-            Ticketing, live chat, knowledge base, and AI assistants to reduce;
-            response times.;
-          </p>;
-          <ul className='list-disc list-inside text-slate-300 space-y-1'>;
-            <li>Typical SMB budget: $20–$200/mo</li>;
-            <li>;
+        <section className='space-y-6'>
+          <h2 className='text-2xl font-semibold text-white'>
+            Customer Support & Helpdesk
+          </h2>
+          <p className='text-slate-300'>
+            Ticketing, live chat, knowledge base, and AI assistants to reduce
+            response times.
+          </p>
+          <ul className='list-disc list-inside text-slate-300 space-y-1'>
+            <li>Typical SMB budget: $20–$200/mo</li>
+            <li>
               References:{' '}
 
               {ext('https://www && www.atlassian.com/software/statuspage/pricing')},{' '}
@@ -656,8 +656,8 @@ import React from 'react';
         <div className='pt-4 text-slate-400 text-sm'>;
 
           See also:{' '}
-          <a className='text-cyan-400 underline' href='/market-pricing'>;
-            Market Pricing;
+          <a className='text-cyan-400 underline' href='/market-pricing'>
+            Market Pricing
           </a>{' '}
 
           for a broader list of benchmarks and links.;
@@ -665,12 +665,13 @@ import React from 'react';
 
 
         {/* Latest Real Additions (concise) */}
-        <section id='latest-real-additions' className='space-y-6'>;
-          <h2 className='text-2xl font-semibold text-white'>;
-            Latest Real Additions;
-          </h2>;
-          <ul className='list-disc list-inside text-slate-300 space-y-2'>;
-            <li>;
+        <section id='latest-real-additions' className='space-y-6'>
+          <h2 className='text-2xl font-semibold text-white'>
+            Latest Real Additions
+          </h2>
+          <ul className='list-disc list-inside text-slate-300 space-y-2'>
+            <li>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <strong className='text-white'>Postgres Index Advisor Pro</strong>{' '}
               — $79/mo. Auto index insights, PR rollouts. Learn:{' '}
               <a
@@ -4850,20 +4851,6 @@ import React from 'react';
             <ul className='list-disc list-inside text-slate-300 space-y-1'>
               <li>Typical SMB budget: $79–$499/mo</li>
               <li>
-=======
-                href='/services/multi-tenant-rate-limiter'>;
-=======
-          <section id='multi - tenant - rate - limiter' className='space - y-2'>;
-            <h3 className='text - xl font - semibold text - white'>;
-              Multi‑tenant Rate Limiter & Quotas;
-            </h3>;
-            <p className='text - slate - 300'>;
-              Tenant‑aware quotas, burst limits, and fairness with headers,
-              dashboards, and alerts.;
-            </p>;
-            <ul className='list - disc list - inside text - slate - 300 space - y-1'>;
-              <li > Typical SMB budget: $39–$299 / mo</li>;
-              <li>;
                 References:{' '}
                 {ext ('https://docs.konghq.com / hub / kong - inc / rate - limiting/')}, {' '}
                 {ext ('https://developers.cloudflare.com / waf / rate - limits/')}

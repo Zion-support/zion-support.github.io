@@ -1,46 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { SeverityIndicator } from "@/components/ui/severity-indicator";
-
-import React from "react",
-import { SeverityIndicator } from "@/components/ui/severity-indicator",
-
-interface SeverityDisplayProps {
-  severity: string
-}
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
-  severity
-}) => {
-  return (
-<SeverityIndicator
-      severity={severity as "safe" | "suspicious" | "dangerous"}
-      showIcon={true}
-      showText={true}
-/>
-  );
-
-}
-    <SeverityIndicator 
-      severity={severity as "safe" | "suspicious" | "dangerous"} 
-import React from "react",;
-import { SeverityIndicator } from "@/components/ui/severity-indicator",;
-interface SeverityDisplayProps {;
-  severity: string;
-}
-;
-export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) => {;
-  return (;
-    <SeverityIndicator;
-      severity={severity as "safe" | "suspicious" | "dangerous"} ;
-      showIcon={true}
-      showText={true}
-    />;
-  );
-
-};
-
-=======
 
 import React from './react';
 import { SeverityIndicator  } from '@/components / ui / severity - indicator';
@@ -80,4 +38,3 @@ interface SeverityDisplayProps {
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

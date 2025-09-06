@@ -44,9 +44,18 @@ interface ServiceLandingTemplateProps {
   description: string;
   benefits: Benefit[];
   features?: string[];
-  stats?: Array<{ label: string; value: string }>;
-  cta_text: string;
-  cta_link: string;
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
 }
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
 

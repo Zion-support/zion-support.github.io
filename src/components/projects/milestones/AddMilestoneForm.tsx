@@ -174,25 +174,25 @@ export function AddMilestoneForm(): any ({;
       const milestone = milestones[0];
       if (milestone) {;
         onSubmit({;
-          title: milestone && milestone.title,;
-          description: milestone && milestone.description,;
-          due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-          amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-        });
+          title: milestone.title,;
+          description: milestone.description,;
+          due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
+          amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
+        }),;
         return;
       }
     }
 
-    // If there are multiple milestones, submit them one by one;
-    milestones && milestones.forEach(milestone => {;
-      onSubmit({;
-        title: milestone && milestone.title,;
-        description: milestone && milestone.description,;
-        due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-        amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      });
-    });
-  };
+    // If there are multiple milestones, submit them one by one
+    milestones.forEach(milestone => {
+      onSubmit({
+        title: milestone.title
+        description: milestone.description
+        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+      })
+    })
+  },
 
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
     onSubmit({;

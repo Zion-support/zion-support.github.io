@@ -1,63 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {AIMatchmaker} from "@/components/AIMatchmaker";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {toast} from "@/hooks/use-toast";
-import {MatchResult} from "@/lib/ai-matchmaking";
-export default function AIMatcherPage() {;
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { AIMatchmaker } from "@/components/AIMatchmaker",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-<<<<<<< HEAD
-import { toast } from "@/hooks/use-toast";
-import { MatchResult } from "@/lib/ai-matchmaking";
-export default function AIMatcherPage() {
-
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service";
-    const category = match.item.category.toLowerCase()
-    if (category.includes("talent") |category === "engineering" |
-        category === "data science" |category === "development") {
-=======
-import { toast } from "@/hooks/use-toast",
-import { MatchResult } from "@/lib/ai-matchmaking",
-export default function AIMatcherPage() {
-  const navigate = useNavigate(),
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
-  const handleMatchSelect = (match: MatchResult) => {
-    // Get the item type from the category
-    let itemType = "service",
-    const category = match.item.category.toLowerCase(),
-    
-    if (category.includes("talent") || category === "engineering" || 
-        category === "data science" || category === "development") {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
->>>>>>> main
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
@@ -72,22 +16,12 @@ export default function AIMatcherPage() {
         specificItem: match.item
       }
     })
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-
-=======
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
   },
   
 
 
->>>>>>> main
   return (
     <>
       <Header />
@@ -116,65 +50,6 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <AIMatchmaker
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
-            />
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
-            
-            <AIMatchmaker 
-=======
-            <AIMatchmaker 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-import { useState } from "react",;
-import { useNavigate } from "react-router-dom",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { AIMatchmaker } from "@/components/AIMatchmaker",;
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
-import { toast } from "@/hooks/use-toast",;
-import { MatchResult } from "@/lib/ai-matchmaking",;
-export default function AIMatcherPage() {;
-  const navigate = useNavigate(),;
-  const [selectedCategory, setSelectedCategory] = useState<string>("all"),;
-  const handleMatchSelect = (match: MatchResult) => {;
-    // Get the item type from the category;
-    let itemType = "service",;
-    const category = match.item.category.toLowerCase(),;
-    if (category.includes("talent") || category === "engineering" ||;
-        category === "data science" || category === "development") {;
-      itemType = "talent";
-    } else if (category.includes("equipment") || category === "hardware") {;
-      itemType = "equipment";
-    }
-;
-    toast({;
-      title: "Match Selected",;
-      description: `You've selected ${match.item.title}`}),;
-    // Navigate to the quote request page with the selected item;
-    navigate("/request-quote", {;
-      state: {;
-        serviceType: itemType;
-        specificItem: match.item;
-      }
-    });
-  };
-  return (;
-=======
 
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
@@ -215,7 +90,6 @@ export default function AIMatcherPage() {;
   };
 
   return (
->>>>>>> main
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -226,10 +100,7 @@ export default function AIMatcherPage() {;
               Describe your needs and our AI will match you with the perfect services, talents, or equipment.;
             </p>;
           </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
           <div className="max-w-4xl mx-auto">;
             <div className="mb-8">;
               <label className="block text-sm font-medium text-zion-slate-light mb-2">;
@@ -247,15 +118,6 @@ export default function AIMatcherPage() {;
                 </SelectContent>;
               </Select>;
             </div>;
-<<<<<<< HEAD
-            <AIMatchmaker;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              serviceType={selectedCategory === "all" ? "" : selectedCategory}
-              onMatchSelect={handleMatchSelect}
-=======
 
             <AIMatchmaker
 =======
@@ -345,26 +207,11 @@ if (|| category === "hardware") {) {
               service_type={selected_category === "all" ? "" : selected_category}
               onMatchSelect={handleMatchSelect}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
             />;
           </div>;
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-}
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
     </>);
 }
@@ -373,4 +220,3 @@ if (|| category === "hardware") {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

@@ -774,13 +774,10 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </AnimatePresence>;
               </div>;
 
-              <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                Pricing;
-              </Link>;
-            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -956,7 +953,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   >;
                     Pricing;
                   </Link>;
-
                   <div className="px-4 py-2 space-y-2">;
 
                     <Link

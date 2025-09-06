@@ -396,10 +396,22 @@ runSecurityCheck('Dependency Security', () => {
 <<<<<<< HEAD
 =======
 =======
+=======
   }
 
   async auditDependencies() {
     this.log('\n🔍 AUDITING DEPENDENCIES');
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    try {
+        if (!fs.existsSync('package.json')) {
+            return {
+                status: 'fail',
+                message: 'package.json not found'
+            };
+        }
+=======
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -481,6 +493,7 @@ runSecurityCheck('Security Headers', () => {
 <<<<<<< HEAD
 =======
 =======
+=======
       }
 
       // Try to fix vulnerabilities
@@ -533,6 +546,7 @@ runSecurityCheck('Environment Security', () => {
                 issues.push(`Weak password detected in ${file}`);
             }
 <<<<<<< HEAD
+=======
 =======
 =======
   }
@@ -1007,6 +1021,8 @@ if (securityReport.status === 'vulnerable') {
 } else {
     process.exit(0);
 <<<<<<< HEAD
+}
+=======
 }
 =======
 }

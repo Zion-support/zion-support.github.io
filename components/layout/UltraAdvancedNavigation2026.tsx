@@ -1285,8 +1285,6 @@ const UltraAdvancedNavigation2026 = () =>: any {
                     <span className="text-sm">{contactInfo && contactInfo.address}</span>;
                   </div>;
                 </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Get Started Button - Mobile */}
 
             className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden'            on_click={() => setIsOpen (false)}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 40 lg:hidden";

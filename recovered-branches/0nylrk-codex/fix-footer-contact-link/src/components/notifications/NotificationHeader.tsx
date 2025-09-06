@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-interface NotificationHeaderProps {
-  unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>
-
-}
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-interface NotificationHeaderProps {
-  unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>;
-
-}
-
-export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
-unreadCount
-=======
 
 
 
@@ -38,7 +18,6 @@ interface NotificationHeaderProps {;
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
   unreadCount
->>>>>>> main
   onMarkAllAsRead
 }) => {
   return (
@@ -48,22 +27,6 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
         <Button
           variant="ghost"
           size="sm"
-<<<<<<< HEAD
-          onClick={onMarkAllAsRead}
-          className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark"
-        >
-          Mark all as read
-        </Button>
-      )}
-</div>
-
-  );
-}
-
-  );
-};
-
-=======
 =======
 import {Button} from '@/components/ui/button';
 interface NotificationHeaderProps {;
@@ -124,4 +87,3 @@ export const NotificationHeader: React.FC < NotificationHeaderProps> = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

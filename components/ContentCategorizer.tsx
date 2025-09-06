@@ -409,8 +409,8 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
               {/* Title and Description */}
 <h3 className=&quot;text - lg font - semibold text - white mb - 2 group - hover:text - cyan - 300 transition - colors duration - 200 & quot;>;
                 {item.title}
-              </h3>;
-              <p className=&quot;text - sm text - white / 75 mb - 4 leading - relaxed & quot;>;
+              </h3>
+              <p className=&quot;text-sm text-white/75 mb-4 leading-relaxed&quot;>
                 {item.desc}
               </p>;
               {/* Tags */}
@@ -438,8 +438,8 @@ className=&quot;px - 4 py - 2 bg - white / 5 border border - white / 10 rounded 
               </div>;
 
               {/* Source and Action */}
-              <div className=&quot;flex items - center justify - between & quot;>;
-                <span className=&quot;text - xs text - white / 40 & quot;>;
+              <div className=&quot;flex items-center justify-between&quot;>
+                <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
 
                 </span>;

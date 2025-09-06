@@ -311,7 +311,6 @@ export default function SearchPage() {;
         <title>Search - Zion Tech Group</title>;
         <meta name="description" content="Search our website for information, guides, services, and more." />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50">;
 
         {/* Hero Section */}

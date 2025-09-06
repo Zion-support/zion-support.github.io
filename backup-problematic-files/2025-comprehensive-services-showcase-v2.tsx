@@ -322,18 +322,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-=======
-      />;
-
-      {/* Hero Section */}
-      <section className='relative py-20 px-4 overflow-hidden'>;
-        <div className='max-w-7xl mx-auto text-center'>;
-          <motion&& motion.h1
-            className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'            initial={{ opacity: 0, y: 30 }}      <section className="relative py-20 px-4 overflow-hidden">;
-        <div className="max-w-7xl mx-auto text-center">;
-          <motion&& motion.h1 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          <motion.h1 
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
 
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>          <motion&& motion.p 
@@ -452,11 +441,38 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion && motion.h2>;
           <motion&& motion.div
             className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion && motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="grid md:grid-cols-3 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </div>
+            <div className='text-center'>
+              <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-white mb-2'>
+                Visit Us
+              </h3>
+              <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
+              <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+<<<<<<< HEAD
+              <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
+          </motion.div>
+        </div>
+      </section>
+      {/* Services by Category */}
+      <section id='services' className='py-20 px-4'>
+        <div className='max-w-7xl mx-auto'>
+          <motion.h2
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section id="services" className="py-20 px-4">
+<<<<<<< HEAD
+=======
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            whileInView={{ opacity: 1, y: 0 }}
     ...emergingTechBreakthroughs2025V2;
   const service_categories = [;
     {
@@ -723,7 +739,6 @@ export default function ComprehensiveServicesShowcase2025V2() {
             transition={{ duration: 0 && 0.6 }}>;
             Our Comprehensive Service Portfolio;
           </motion && motion.h2>;
-
           <motion&& motion.div
 
             className='space-y-20'
@@ -1145,11 +1160,74 @@ export default function ComprehensiveServicesShowcase2025V2() {
           <motion&& motion.div
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}          
           <motion && motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 =======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          >
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-cyan-400 mb-2'>
+                25+
+              </div>
+              <div className='text-white text-lg'>New Services Added</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-blue-400 mb-2'>
+                $150B+
+              </div>
+              <div className='text-white text-lg'>Total Addressable Market</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>
+                40%+
+              </div>
+              <div className='text-white text-lg'>Average Annual Growth</div>
+            </div>
+            <div className='text-center'>
+              <div className='text-4xl md:text-5xl font-bold text-green-400 mb-2'>
+                5
+              </div>
+              <div className='text-white text-lg'>Service Categories</div>            </div>            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">$150B+</div>
+              <div className="text-white text-lg">Total Addressable Market</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">40%+</div>
+              <div className="text-white text-lg">Average Annual Growth</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>
+              <div className="text-white text-lg">Service Categories</div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+<<<<<<< HEAD
+      {/* Call to Action */}
+      <section className='py-20 px-4'>
+        <div className='max-w-4xl mx-auto text-center'>
+          <motion.h2
+            className='text-4xl md:text-5xl font-bold text-white mb-6'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4">
+<<<<<<< HEAD
+=======
+
+      {_/* Call to Action */}
+      <section className="py-20 px-4">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.h2
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+            whileInView={{ opacity: 1, y: 0 }}
                       </p>;
                       <div className="space - y-3 mb - 6">;
                         <div className="flex items - center text - sm text - cyan - 400">;

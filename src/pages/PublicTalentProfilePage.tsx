@@ -83,7 +83,7 @@ export default function ProfilePage() {;
     if (profileId) {;
       fetchProfile();
     }
-  }, [profileId]);
+  }, [profileId]),
 
 
 
@@ -94,6 +94,13 @@ export default function ProfilePage() {;
         <span className="loading loading-ring loading-lg"></span>;
       </div>;
     );
+  }
+  if (isError |!profileData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p className="text-red-500">Failed to load profile.</p>
+      </div>
+    )
   }
 
 
@@ -106,7 +113,7 @@ export default function ProfilePage() {;
     );
   }
   return (
-    <>;
+    <>
       <SEO
 
     return (

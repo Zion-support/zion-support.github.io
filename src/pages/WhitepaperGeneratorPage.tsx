@@ -1315,440 +1315,45 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <Button
                   variant='ghost'
                   size='icon'
-                  onClick={() => removeDistributionItem(item && item.id)}
-                  aria-label='Remove';
-                >;
-                  <Trash2 className='h-4 w-4' />;
-                </Button>              </div>;
-            ))}
-            <Button
-              type='button'
-              onClick={addDistributionItem}
-              variant='outline'
-              className='w-full'>;
-              Add Distribution Item;
-            </Button>;
-            <div>;
-              <label
-                htmlFor='distributionBreakdownDetails'
-                className='block text-sm font-medium'>;
-                Additional Distribution Details (Text):;
-              </label>;
-              <textarea
-                id='distributionBreakdownDetails'
-                value={distributionBreakdown}
-                onChange={e => setDistributionBreakdown(e && e.target.value)}
-                className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
-                rows={2}
+                  onClick={() => removeDistributionItem(item.id)}
+                  aria-label='Remove'
+                >
+                  <Trash2 className='h-4 w-4' />
+                </Button>              </div>
 
-              />            </div>;
-          </div>;
+        <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
+          {/* ... (Input fields remain the same) ... */}
+           <div>
+            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>
+            <Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />
+          </div>
+          <div>
+            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>
+            <Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />
+          </div>
+          <div>
+            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>
+            <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
+          </div>
+          <div>
+            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>
+            <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
+          </div>
 
-          <div>;
-
-            <label
-              htmlFor='governanceLogic'
-              className='block text-sm font-medium'>;
-              Governance Logic:;
-            </label>;
-            <textarea
-              id='governanceLogic'
-              value={governanceLogic}
-              onChange={e => setGovernanceLogic(e && e.target.value)}
-              required;
-              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
-            <label html_for='rewards_logic' className='block text - sm font - medium'>;
-              Rewards Logic:;
-            </label>;
-            <textarea;
-              id='rewards_logic';
-              value={rewards_logic}
-              on_change={e => setRewardsLogic (e.target.value)}
-              required;
-              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
-              rows={3}
-            />;
-          </div>;
           {/* Token Distribution Inputs */}
-          <div className='space - y-3 p - 3 border rounded - md'>;
-            <h2 className='text - lg font - semibold'>Token Distribution</h2>;
-            {distribution_data.map (item => (
-              <div key={item.id} className='flex items - center space - x-2'>;
-                <Input;
-                  type='text';
-                  placeholder='Category';
-                  value={item.name}
-                  on_change={e =>;
-                    handleDistributionChange (item.id, 'name', e.target.value);
-                  }
-                  className='flex - grow';
-                />;
-                <Input;
-                  type='number';
-                  placeholder='%';
-                  value={item.percentage}
-                  on_change={e =>;
-                    handleDistributionChange (
-                      item.id,
-                      'percentage',
-                      e.target.value);
-                  }
-                  className='w - 24';
-                  min='0';
-                  max='100';
-                />;
-                <Button;
-                  variant='ghost';
-                  size='icon';
-                  on_click={() => removeDistributionItem (item.id)}
-                  aria - label='Remove';
-                >;
-                  <Trash2 className='h - 4 w - 4' />;
-                </Button>              </div>))}
-            <Button;
-              type='button';
-              on_click={addDistributionItem}
-              variant='outline';
-              className='w - full';
-            >;
-              Add Distribution Item;
-            </Button>;
-            <div>;
-              <label;
-                html_for='distributionBreakdownDetails';
-                className='block text - sm font - medium';
-              >;
-                Additional Distribution Details (Text):;
-              </label>;
-              <textarea;
-                id='distributionBreakdownDetails';
-                value={distribution_breakdown}
-                on_change={e => setDistributionBreakdown (e.target.value)}
-                className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
-                rows={2}
-              />            </div>;
-          </div>;
-          <div>;
-            <label;
-              html_for='governance_logic';
-              className='block text - sm font - medium';
-            >;
-              Governance Logic:;
-            </label>;
-            <textarea;
-              id='governance_logic';
-              value={governance_logic}
-              on_change={e => setGovernanceLogic (e.target.value)}
-              required;
-              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
-              rows={3}
-            />;
-          </div>;
-          <div>;
-
-
-
+          <div className="space-y-3 p-3 border rounded-md">
+            <h2 className="text-lg font-semibold">Token Distribution</h2>
+            {distributionData.map((item) => (
+              <div key={item.id} className="flex items-center space-x-2">
+                <Input type="text" placeholder="Category" value={item.name} onChange={(e) => handleDistributionChange(item.id, 'name', e.target.value)} className="flex-grow"/>
+                <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>
+                <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>
+              </div>
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
-
-              <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
-              <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
-            </div>
-
-
-          </div>
-          <div>
-
-            <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic:</label>
-            <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-          </div>
-          <div>
-            <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
-            <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-
-          </div>
-          <div>
-            <label
-              htmlFor='legalDisclaimers'
-              className='block text-sm font-medium'>;
-              Legal Disclaimers:;
-            </label>;
-            <textarea
-              id='legalDisclaimers'
-              value={legalDisclaimers}
-              onChange={e => setLegalDisclaimers(e && e.target.value)}
-              required;
-              className='mt-1 block w-full border-gray-300 rounded-md shadow-sm';
-              rows={3}
-            />          </div>;
-          {/* END OF INPUT FIELDS */}
-          <Button
-
-          </Button>;
-
-          {isLoading && (;
-            <p className='text-center text-sm text-blue-600'>;
-              Draft generation in progress...;
-            </p>;
-
-          )}
-          {error &&;
-            !isLoading &&;
-            !isDownloading &&;
-            !isSharing &&;
-            !isSubmittingToCounsel && (;
-              <p className='text-center text-sm text-red-600 p-2 bg-red-50 rounded-md'>;
-                {error}
-              </p>;
-            )}
-
-
-          {shareableLink && !isSharing && currentSharedWhitepaperId && (;
-            <div className='mt-4 p-3 border rounded-md bg-green-50'>;
-              <div className='flex justify-between items-center'>;
-                <label className='block text-sm font-medium text-green-700'>;
-                  Shareable Link:;
-                </label>;
-
-                <Button
-                  onClick={handleTogglePublicStatus}
-                  variant='outline'
-                  size='sm' // smaller button
-                  disabled={isSharing} // Disable while another share operation is in progress
-                  className={
-                    currentSharedWhitepaperIsPublic
-                      ? 'bg-red-100 hover:bg-red-200'
-                      : 'bg-green-100 hover:bg-green-200'
-                  }>;
-            <label;
-              html_for='legal_disclaimers';
-              className='block text - sm font - medium';
-            >;
-              Legal Disclaimers:;
-            </label>;
-            <textarea;
-              id='legal_disclaimers';
-              value={legal_disclaimers}
-              on_change={e => setLegalDisclaimers (e.target.value)}
-              required;
-              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm';
-              rows={3}
-            />          </div>;
-          {/* END OF INPUT FIELDS */}
-          <Button;
-            type='button';
-            on_click={handleGenerateWhitepaper}
-            disabled={
-              is_loading || is_downloading || is_sharing || isSubmittingToCounsel;
-            }
-            size='lg';
-            className='w - full'          >;
-            {is_loading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
-          </Button>;
-          {is_loading && (
-            <p className='text - center text - sm text - blue - 600'>;
-              Draft generation in progress...;
-            </p>)}
-          {error &&;
-            !is_loading &&;
-            !is_downloading &&;
-            !is_sharing &&;
-            !isSubmittingToCounsel && (
-              <p className='text - center text - sm text - red - 600 p - 2 bg - red - 50 rounded - md'>;
-                {error}
-              </p>)}
-          {shareable_link && !is_sharing && currentSharedWhitepaperId && (
-            <div className='mt - 4 p - 3 border rounded - md bg - green - 50'>;
-              <div className='flex justify - between items - center'>;
-                <label className='block text - sm font - medium text - green - 700'>;
-                  Shareable Link:;
-                </label>;
-                <Button;
-                  on_click={handleTogglePublicStatus}
-                  variant='outline';
-                  size='sm' // smaller button;
-                  disabled={is_sharing} // Disable while another share operation is in progress;
-                  className={
-                    currentSharedWhitepaperIsPublic;
-                      ? 'bg - red - 100 hover:bg - red - 200';
-                      : 'bg - green - 100 hover:bg - green - 200';
-                  }                >;
-                  {currentSharedWhitepaperIsPublic;
-                    ? 'Make Private';
-                    : 'Make Public'}
-                </Button>;
-              </div>;
-
-                  onClick={() => {;
-                    navigator && navigator.clipboard.writeText(shareableLink);
-                    toast && toast.success('Link copied to clipboard!');
-
-              <div className='flex items - center space - x-2 mt - 1'>;
-                <Input;
-                  type='text';
-                  value={shareable_link}
-                  read_only;
-                  className='flex - grow bg - white text - xs';
-                />;
-
-            type="button"
-            onClick={handleGenerateWhitepaper}
-            disabled={isLoading || isDownloading || isSharing || isSubmittingToCounsel}
-            size="lg"
-            className="w-full"
-          >
-            {isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
-          </Button>
-
-          {isLoading && <p className="text-center text-sm text-blue-600">Draft generation in progress...</p>}
-          {error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel &&
-            <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>
-          }
-
-
-          {shareableLink && !isSharing && currentSharedWhitepaperId && (
-            <div className="mt-4 p-3 border rounded-md bg-green-50">
-              <div className="flex justify-between items-center">
-                <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
-                <Button
-
-                    onClick={handleTogglePublicStatus}
-                    variant="outline"
-                    size="sm" // smaller button
-                    disabled={isSharing} // Disable while another share operation is in progress
-                    className={currentSharedWhitepaperIsPublic ? "bg-red-100 hover:bg-red-200" : "bg-green-100 hover:bg-green-200"}
-                >
-                    {currentSharedWhitepaperIsPublic ? 'Make Private' : 'Make Public'}
-                </Button>
-              </div>
-              <div className="flex items-center space-x-2 mt-1">
-                <Input type="text" value={shareableLink} readOnly className="flex-grow bg-white text-xs"/>
-                <Button variant="outline" size="sm" onClick={() => {
-                    navigator.clipboard.writeText(shareableLink),
-                    toast.success("Link copied to clipboard!")
-                }}>Copy</Button>
-              </div>
-               {currentSharedWhitepaperIsPublic !== null && (
-                <p className="text-xs mt-1 text-gray-600">
-                    Currently: {currentSharedWhitepaperIsPublic ? "Public" : "Private (Only admins can view)"}
-                </p>
-        }),;
-        if (notifyError) throw new Error(`Failed to notify counsel: ${notifyError.message}`),;
-        if (!notifyResponse) throw new Error('No response received from notify-legal-team function'),;
-        if ((notifyResponse as any).error) throw new Error(`Error from notify-legal-team: ${(notifyResponse as any).error}`),;
-        toast.success("Whitepaper submitted to counsel successfully!");
-    } catch (e: any) {;
-        logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error submitting to counsel' }),;
-        setError("Failed to submit to counsel: " + e.message),;
-        toast.error("Failed to submit to counsel: " + e.message);
-    } finally {;
-        setIsSubmittingToCounsel(false);
-    }
-},;
-  return (;
-    <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">;
-      {/* Left Column: Inputs and Editors */}
-      <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto">;
-        <div className="flex justify-between items-center mb-6">;
-            <h1 className="text-xl font-bold text-center flex-grow">Whitepaper Configuration</h1>;
-            <div className="flex space-x-1">;
-                <Button onClick={handleDownloadMarkdown} disabled={isDownloading || sections.length === 0 || isLoading || isSharing || isSubmittingToCounsel } variant="outline" size="sm" title="Download as Markdown">;
-                    <Download className="h-4 w-4" /> <span className="ml-1 hidden sm:inline">MD</span>;
-                </Button>;
-                <Button onClick={handleDownloadPdf} disabled={isDownloading || sections.length === 0 || isLoading || isSharing || isSubmittingToCounsel} variant="outline" size="sm" title="Download as PDF">;
-                    <Download className="h-4 w-4" /> <span className="ml-1 hidden sm:inline">PDF</span>;
-                </Button>;
-                 <Button onClick={handleGenerateShareableLink} disabled={isSharing || sections.length === 0 || isLoading || isDownloading || isSubmittingToCounsel} variant="outline" size="sm" title="Generate Shareable Link">;
-                    <Share2 className="h-4 w-4" /> <span className="ml-1 hidden sm:inline">Share</span>;
-                </Button>;
-            </div>;
-        </div>;
-        <form onSubmit={(e) => e.preventDefault()} className="space-y-6">;
-          {/* ... (Input fields remain the same) ... */}
-           <div>;
-            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>;
-            <Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />;
-          </div>;
-          <div>;
-            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>;
-            <Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />;
-          </div>;
-          <div>;
-            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>;
-            <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>;
-          </div>;
-          <div>;
-            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>;
-            <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>;
-          </div>;
-          {/* Token Distribution Inputs */}
-          <div className="space-y-3 p-3 border rounded-md">;
-            <h2 className="text-lg font-semibold">Token Distribution</h2>;
-            {distributionData.map((item) => (;
-              <div key={item.id} className="flex items-center space-x-2">;
-                <Input type="text" placeholder="Category" value={item.name} onChange={(e) => handleDistributionChange(item.id, 'name', e.target.value)} className="flex-grow"/>;
-                <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>;
-                <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>;
-              </div>;
-            ))}
-            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>;
-            <div>;
-              <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>;
-              <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>;
-            </div>;
-          </div>;
-          <div>;
-            <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic:</label>;
-            <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>;
-          </div>;
-          <div>;
-            <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>;
-            <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>;
-          </div>;
-          {/* END OF INPUT FIELDS */}
-;
-          <Button;
-            type="button";
-            onClick={handleGenerateWhitepaper}
-            disabled={isLoading || isDownloading || isSharing || isSubmittingToCounsel}
-            size="lg";
-            className="w-full";
-          >;
-            {isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
-          </Button>;
-          {isLoading && <p className="text-center text-sm text-blue-600">Draft generation in progress...</p>}
-          {error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel &&;
-            <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>;
-          }
-;
-          {shareableLink && !isSharing && currentSharedWhitepaperId && (;
-            <div className="mt-4 p-3 border rounded-md bg-green-50">;
-              <div className="flex justify-between items-center">;
-                <label className="block text-sm font-medium text-green-700">Shareable Link:</label>;
-                <Button;
-                  variant='outline';
-                  size='sm';
-                  on_click={() => {
-                    navigator.clipboard.write_text (shareable_link);
-                    toast.success ('Link copied to clipboard!');
-                  }}
-                >;
-                  Copy;
-                </Button>              </div>;
-
-              {currentSharedWhitepaperIsPublic !== null && (
-                <p className='text - xs mt - 1 text - gray - 600'>;
-
-                  Currently:{' '}
-                  {currentSharedWhitepaperIsPublic;
-                    ? 'Public';
-                    : 'Private (Only admins can view)'}
-
-
-
               )}
-            </div>;
+            </div>
           )}
 
 
@@ -1809,23 +1414,21 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             </p>)}
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
-            <Button;
-              type='button';
-              on_click={handleSubmitToCounsel}
-              disabled={
-                isSubmittingToCounsel || is_loading || is_sharing || is_downloading;
-              }
-              variant='default';
-              size='lg';
-              className='w - full mt - 4 bg - indigo - 600 hover:bg - indigo - 700 text - white'            >;
-              <Send className='mr - 2 h - 4 w - 4' />;
-              {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
-            </Button>)}
-          {isSubmittingToCounsel && (
-            <p className='text - center text - sm text - blue - 600'>;
-              Submitting to counsel...;
-            </p>)}
-        </form>;
+            <Button
+                type="button"
+                onClick={handleSubmitToCounsel}
+                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
+                variant="default"
+                size="lg"
+                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
+            >
+                <Send className="mr-2 h-4 w-4" />
+                {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
+            </Button>;
+          )}
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
+
+        </form>
         {/* Section Editors */}
         {sections.length > 0 && (
 

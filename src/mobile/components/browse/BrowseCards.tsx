@@ -258,7 +258,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   >;
 
                     {badge}
-                  </Badge>;
+                  </Badge>
                 ))}
               </div>
 

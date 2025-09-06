@@ -315,10 +315,11 @@ import React from 'react';
             <Button
               href='#pricing'
               size='lg'
-              className='bg-purple-600 hover:bg-purple-700 shadow-2xl shadow-purple-500/25'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
+              className='bg-purple-600 hover:bg-purple-700 shadow-2xl shadow-purple-500/25'
+            >
+              Start Free Trial
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
             <Button
               href='#demo'
               variant='outline'
@@ -745,7 +746,6 @@ import React from 'react';
               Choose the plan that fits your content creation needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {pricingPlans.map((plan, index) => (

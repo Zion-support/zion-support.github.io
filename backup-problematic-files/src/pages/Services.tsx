@@ -1,6 +1,6 @@
-import React from 'react';
-import ServiceCard from '../components/ServiceCard';
-import Card from '../components/Card';
+import React from 'react'
+import ServiceCard from '../components/ServiceCard'
+import Card from '../components/Card'
 
 const Services: React.FC = () => {
   return (
@@ -21,37 +21,31 @@ const Services: React.FC = () => {
             title="AI & Machine Learning"
             description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
             icon="🤖"
-            features={["Machine Learning", "Natural Language Processing", "Computer Vision"]}
           />
           <ServiceCard
             title="Cybersecurity"
             description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
             icon="🔒"
-            features={["Threat Detection", "Data Protection", "Compliance"]}
           />
           <ServiceCard
             title="Cloud Infrastructure"
             description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
             icon="☁️"
-            features={["Scalable Architecture", "High Availability", "Cost Optimization"]}
           />
           <ServiceCard
             title="Digital Transformation"
             description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
             icon="🚀"
-            features={["Process Automation", "Digital Strategy", "Change Management"]}
           />
           <ServiceCard
             title="Data Analytics"
             description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
             icon="📊"
-            features={["Business Intelligence", "Data Visualization", "Predictive Analytics"]}
           />
           <ServiceCard
             title="IoT Solutions"
             description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
             icon="🌐"
-            features={["Device Management", "Real-time Monitoring", "Smart Automation"]}
           />
         </div>
 
@@ -130,7 +124,7 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

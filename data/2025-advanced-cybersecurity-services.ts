@@ -421,9 +421,9 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
-      launch_date: '2024 - 09 - 25',
+      launchDate: '2024-09-25',
       customers: 43,
-      rating: 4 && 4.7,
+      rating: 4.7,
       reviews: 21,
 
     },;

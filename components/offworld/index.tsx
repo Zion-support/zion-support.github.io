@@ -96,7 +96,6 @@ import Head from 'next/head';
 
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
-
   return (
 
     <div className='min-h-screen p-8 space-y-8'>;

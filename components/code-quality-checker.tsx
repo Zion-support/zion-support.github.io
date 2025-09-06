@@ -313,8 +313,6 @@ export default function CodeQualityCheckerPage() {;
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
           test_coverage: '85%',

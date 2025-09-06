@@ -721,7 +721,6 @@ export default function AiToolsPage() {;
                       ))}
 
                     </ul>;
-
                     <div className='flex items-center justify-between'>;
 
                       <Button

@@ -7,14 +7,11 @@
     title: 'Student Information Systems,',
     description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',
   },
-=======
-  },;
   {}
-    icon: Users,;
-    title: 'Student Information Systems,',;
-    description: 'Integrated SIS solutions for managing student data, enrollment, and academic records.',;
-  },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/education.tsx
+    icon: BookOpen,
+    title: 'Digital Content Management,',
+    description: 'Platforms for creating, managing, and delivering educational content and resources.',
+  },
   {}
     icon: BookOpen,;
     title: 'Digital Content Management,',;

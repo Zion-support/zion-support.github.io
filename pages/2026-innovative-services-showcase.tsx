@@ -30,6 +30,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -417,7 +418,6 @@ export default function Innovative2026ServicesShowcase(req, res) {
       />;
 
       <UltraAdvancedNavigation2026 />;
-
       <div className='min-h-screen relative z-10'>;
 
         {/* Hero Section */}

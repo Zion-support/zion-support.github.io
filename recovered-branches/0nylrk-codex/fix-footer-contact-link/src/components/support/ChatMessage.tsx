@@ -1,35 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {cn} from "@/lib/utils";
-import {format} from "date-fns";
-import {useTheme} from "@/hooks/useTheme";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-import { format } from "date-fns";
-import { useTheme } from "@/hooks/useTheme";
-=======
-import { format } from "date-fns",
-import { useTheme } from "@/hooks/useTheme",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface ChatMessageProps {
 
   message: string
@@ -37,30 +10,11 @@ interface ChatMessageProps {
 
   timestamp: Date
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
-  const { theme } = useTheme();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-<<<<<<< HEAD
-  const { theme } = useTheme();
-=======
-  const { theme } = useTheme(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
 
 
->>>>>>> main
   return (
 
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -72,26 +26,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           </>
         ) : (
           <>
-<<<<<<< HEAD
-            <AvatarImage
-              src="https://placehold.co/40x40?text=AI"
-              alt="Zion Support"
-            />
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
-          </>
-        )}
-      </Avatar>
-      <div className={cn(
-<<<<<<< HEAD
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
-        isUser
-          ? "bg-zion-purple text-white"
-=======
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 =======
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -132,47 +66,12 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
           ? "bg-zion-purple text-white" 
 
 
->>>>>>> main
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "text-xs mt-1";
-          isUser
-            ? "text-white/70"
-=======
-          "text-xs mt-1",
-          isUser 
-            ? "text-white/70" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-            : theme === "dark"
-              ? "text-gray-300"
-              : "text-gray-500"
-        )}>
-          {format(timestamp, "h:mm a")}
-        </div>
-      </div>
-    </div>
-  )
-}
-// Function to convert URLs and help links to actual clickable links
-function formatMessageWithLinks(message: string): string {
-  // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g
-  let formattedMessage = message.replace(
-    urlRegex
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-<<<<<<< HEAD
-  );
-=======
-  ),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
       </Avatar>;
 
@@ -213,7 +112,6 @@ function formatMessageWithLinks(message: string): string {
   
 
 
->>>>>>> main
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
@@ -222,19 +120,11 @@ function formatMessageWithLinks(message: string): string {
   )
 
   return formattedMessage
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 =======
 
 
->>>>>>> main
 =======
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -291,30 +181,6 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
   );
 }
 ;
-<<<<<<< HEAD
-// Function to convert URLs and help links to actual clickable links;
-function formatMessageWithLinks(message: string): string {;
-  // Replace URLs;
-  const urlRegex = /(https?:\/\/[^\s]+)/g,;
-  let formattedMessage = message.replace(;
-    urlRegex,;
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  ),;
-  // Replace help center references like [Getting Started];
-  const helpCenterRegex = /\[([^\]]+)\]/g,;
-  formattedMessage = formattedMessage.replace(;
-    helpCenterRegex;
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>';
-  );
-  return formattedMessage;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 // Function to convert URLs and help links to actual clickable links;
 function formatMessageWithLinks(): any (message: string): string {;
@@ -409,4 +275,3 @@ function formatMessageWithLinks (message: string): string {
   return formatted_message;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

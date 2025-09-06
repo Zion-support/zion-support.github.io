@@ -26,9 +26,6 @@ import React, { useState, useMemo } from 'react';
 
 import Head from 'next/head';
 
-=======
-import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
@@ -914,9 +911,9 @@ export default function ServicesShowcase2026() {;
 
                 <a
                   href='/contact'
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
-                  Contact Us Now;
-                </a>;
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'                >
+                  Contact Us Now
+                </a>
                 <a
                   href='/pricing'
 

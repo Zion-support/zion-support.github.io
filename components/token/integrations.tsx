@@ -265,6 +265,38 @@ export default function TokenIntegrationsPage() {;
             <label className="text-xs text-gray-500" htmlFor="input-Region">Region</label>
             <input value={region} onChange={(e) => setRegion(e.target.value)} placeholder="e.g., US, EU, APAC" className="border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
+          <div className='flex flex-col gap-1'>
+            <label className='text-xs text-gray-500'>Stake (USD)</label>
+            <input
+              value={stake}
+              onChange={e => setStake(e.target.value)}
+              placeholder='e.g., 1000'
+              className='border rounded px-3 py-2 bg-white dark:bg-black'
+            />
+          </div>
+          <div className='flex items-end'>
+            <button
+              onClick={runOperator}
+              className='w-full px-4 py-2 rounded bg-indigo-600 text-white'
+            >
+              Suggest Chain
+            </button>
+          </div>
+        </div>
+        {suggestion && (
+          <div className='text-sm mt-2'>
+            <div>
+              <span className='text-gray-500'>Recommendation:</span>{' '}
+              <b>{suggestion.recommendation?.chain?.name}</b>
+            </div>
+            {suggestion.alternatives && (
+              <div className='text-gray-500'>
+                Alternatives:{' '}
+                {suggestion.alternatives
+                  .map((a: any) => a.chain.name)
+                  .join(', ')}
+              </div>            )}          </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <div className="flex flex-col gap-1">
             <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>
             <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />

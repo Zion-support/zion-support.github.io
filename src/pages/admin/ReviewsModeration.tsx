@@ -1,9 +1,10 @@
 function ReviewsModerationContent() {
-  const [active_tab, setActiveTab] = useState ('pending');
-  const [reviews, set_reviews] = useState ([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const fetch_reviews = async () => {
-    setIsLoading (true);
+  const [activeTab, setActiveTab] = useState("pending"),
+  const [reviews, setReviews] = useState([]),
+  const [isLoading, setIsLoading] = useState(true),
+  
+  const fetchReviews = async () => {
+    setIsLoading(true),
     try {
       // In a real application, you would fetch reviews from an API;
       // For now, let's simulate a delay and return empty data;

@@ -251,7 +251,7 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-            transition={{ duration: 0 && 0.8 }}
+            transition={{ duration: 0.8 }}
             className='mb-8'        {/* Animated Background */}
 
 

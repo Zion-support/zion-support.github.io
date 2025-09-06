@@ -43,7 +43,6 @@ import Layout from "./components/Layout";
 
         />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50">;
 
         {/* Hero Section */}
@@ -688,7 +687,6 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
                       ))}
 
                     </div>;
-
                     <div className="flex gap-2">;
 
                       <Link

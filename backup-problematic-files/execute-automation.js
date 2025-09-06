@@ -3,6 +3,14 @@
 
 
 #!/usr/bin/env node  try { const MasterAutomation = require('./master-automation.cjs';); const master = new MasterAutomation;(;); master.run().then(success => { if ( { ) { { }     } else {  } process.exit(success ? 0 : 1)}).catch(error => { console.error('❌ Master automation failed:',error); process.exit(1)})} catch (error) { console.error('❌ Failed to load master automation:',error); process.exit(1)}
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+#!/usr/bin/env node  try { const MasterAutomation = require('./master-automation.cjs';); const master = new MasterAutomation;(;); master.run().then(success => { if ( { ) { { }     } else {  } process.exit(success ? 0 : 1)}).catch(error => { console.error('❌ Master automation failed:',error); process.exit(1)})} catch (error) { console.error('❌ Failed to load master automation:',error); process.exit(1)}
+=======
+<<<<<<< HEAD
+=======
 #!/usr/bin/env node  try { const MasterAutomation = require('./master-automation.cjs';); const master = new MasterAutomation;(;); master.run().then(success => { if ( { ) { { }     } else {  } process.exit(success ? 0 : 1)}).catch(error => { console.error('❌ Master automation failed:',error); process.exit(1)})} catch (error) { console.error('❌ Failed to load master automation:',error); process.exit(1)}
 
 

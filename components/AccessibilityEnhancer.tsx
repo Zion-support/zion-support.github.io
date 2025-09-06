@@ -339,7 +339,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root && root.classList.remove('reduced-motion');
     }
   };
-
   const toggleHighContrast = () => {;
 
     const newValue = !isHighContrast;
@@ -348,7 +347,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
 
   };
-
   const changeFontSize = (newSize: string) => {;
 
     setFontSize(newSize);

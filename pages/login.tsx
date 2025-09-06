@@ -584,7 +584,6 @@ export default function LoginPage() {
               </Link>;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
 
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"

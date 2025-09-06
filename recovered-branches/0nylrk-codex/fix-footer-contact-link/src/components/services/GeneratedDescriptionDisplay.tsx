@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardFooter
-} from "@/components/ui/card";
-
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
-
-=======
 
 
 import {useToast} from "@/hooks/use-toast";
@@ -36,34 +19,11 @@ import { Check, Pencil } from "lucide-react",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
 }
 
-<<<<<<< HEAD
-export function GeneratedDescriptionDisplay({
-  description
-  onSave
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
-
-}: GeneratedDescriptionDisplayProps) {
-  const { toast } = useToast(),
-  const [isEditing, setIsEditing] = useState(false),
-  const [editedDescription, setEditedDescription] = useState(description),
-
-  const handleSave = () => {
-    onSave(editedDescription),
-    setIsEditing(false),
-    toast({
-title: "Description Saved"
-      description: "Your edited description has been saved."
-});
-  }
-=======
 
 interface GeneratedDescriptionDisplayProps {;
   description: string,;
@@ -95,7 +55,6 @@ export function GeneratedDescriptionDisplay({
   },
 
 
->>>>>>> main
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -105,11 +64,8 @@ export function GeneratedDescriptionDisplay({
           <Button
             variant="outline"
             size="sm"
-<<<<<<< HEAD
-=======
 
 =======
->>>>>>> main
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white"
           >
@@ -124,38 +80,6 @@ export function GeneratedDescriptionDisplay({
                 Edit
               </>
 
-<<<<<<< HEAD
-            )}
-          </Button>
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        {isEditing ? (
-          <Textarea
-            value={editedDescription}
-            onChange={(e) => setEditedDescription(e.target.value)}
-            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
-          />
-        ) : (
-          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
-            {editedDescription}
-          </div>
-        )}
-      </CardContent>
-      {isEditing && (
-        <CardFooter>
-          <Button
-            onClick={handleSave}
-            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
-          >
-            Save Changes
-          </Button>
-        </CardFooter>
-      )}
-    </Card>
-  );
-}
-=======
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -310,4 +234,3 @@ function GeneratedDescriptionDisplay() {
     </Card>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

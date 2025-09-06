@@ -246,6 +246,7 @@ const BreadcrumbEllipsis = ({;
 
 
 export {
+<<<<<<< HEAD
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem

@@ -14,7 +14,6 @@ function runNode(relPath, args = []) {
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
-
 exports && exports.config = {
 
   schedule: '*/20 * * * *', // every 20 minutes

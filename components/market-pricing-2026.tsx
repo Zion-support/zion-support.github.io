@@ -1161,7 +1161,7 @@ export default function MarketPricing2026() {;
                 {filteredServices.length} services found matching your criteria
               </p>
             </motion.div>
-
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
               {filteredServices.map((service, index) => (
@@ -1753,7 +1753,6 @@ export default function MarketPricing2026() {;
                   <span className="font-semibold text-sm">{contactInfo && contactInfo.address}</span>;
                 </div>;
               </div>;
-
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <a

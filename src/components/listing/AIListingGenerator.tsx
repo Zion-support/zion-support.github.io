@@ -187,7 +187,7 @@ if ( {) {
         description: "The generated content has been applied to your listing.";
       });
     }
-  }
+  },
 
     }
 

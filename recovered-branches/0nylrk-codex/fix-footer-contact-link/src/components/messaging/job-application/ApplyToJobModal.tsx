@@ -1,15 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {
-Dialog
-  DialogContent
-  DialogDescription
-  DialogHeader
-  DialogTitle
-
-  DialogTitle,
-=======
 
 
 import React from "react";
@@ -21,7 +10,6 @@ import {
   DialogHeader,
 DialogTitle,;
 
->>>>>>> main
 
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
@@ -42,18 +30,6 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
-<<<<<<< HEAD
-<ApplyForm
-          job={job}
-          onClose={onClose}
-          onApplySuccess={onApplySuccess}
-        />
-      </DialogContent>
-</Dialog>
-    </Dialog>;
-
-  );
-=======
 
 import {;
   Dialog,;
@@ -122,5 +98,4 @@ function ApplyToJobModal() {
 =======
     </Dialog>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
 }

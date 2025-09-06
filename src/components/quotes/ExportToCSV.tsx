@@ -363,8 +363,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     >;
       <Download size={16} />;
       Export CSV;
-    </Button>);
-}
-'"},
+    </Button>;
   );
 }

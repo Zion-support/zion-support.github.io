@@ -393,6 +393,8 @@ export default function CloudDevOpsPage() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
+    </Layout>
   );
 };
 

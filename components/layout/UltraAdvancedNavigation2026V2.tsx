@@ -553,8 +553,6 @@ function UltraAdvancedNavigation2026V2() {
                 <div className="text-xs text-gray-400">Innovation 2026</div>;
               </div>;
             </Link>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Desktop Navigation */}
 
             <div className="hidden lg:flex items-center space-x-8">
@@ -862,6 +860,90 @@ function UltraAdvancedNavigation2026V2() {
 
                       <Link
                         href={item && item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: '100%' }}
+            transition={{ duration: 0.3 }}
+            className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
+<<<<<<< HEAD
+=======
+
+          >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <div className='p-6'>
+              <div className='flex items-center justify-between mb-8'>
+                <div className='text-xl font-bold text-white'>Menu</div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className='p-2 text-gray-300 hover:text-white transition-colors'
+                >
+                  <X className='w-6 h-6' />
+                </button>
+              </div>
+              <div className='space-y-6'>
+                {navigationItems.map(item => (
+                  <div key={item.name}>
+                    {item.dropdown ? (
+                      <div>
+                        <button
+                          onClick={() =>
+                            setActiveDropdown(
+                              activeDropdown === item.name ? null : item.name
+                            )
+                          }
+                          className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
+                        >
+                          <div className='flex items-center space-x-3'>
+                            {item.icon}
+                            <span>{item.name}</span>
+                          </div>
+                          <ChevronDown
+                            className={`w-4 h-4 transition-transform duration-200 ${
+                              activeDropdown === item.name ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </button>
+                        {activeDropdown === item.name && (
+                          <div className='ml-6 mt-2 space-y-2'>
+                            {item.dropdown.map(dropdownItem => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.href}
+                                onClick={() => setIsOpen(false)}
+                                className='flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors duration-200 text-gray-400 hover:text-white'
+                              >
+                                {dropdownItem.icon}
+                                <span>{dropdownItem.name}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>                    ) : (
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                      >                    ) : (
+                      <Link
+                        href={item.href}
                         onClick={() => setIsOpen(false)}
 
 =======

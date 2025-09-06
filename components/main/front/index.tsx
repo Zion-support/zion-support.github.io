@@ -1220,7 +1220,6 @@ export default function MainFrontIndex() {
             We run outside GitHub Actions using scheduled cloud functions and;
             orchestrators. Explore the engines below.;
           </p>;
-
           <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>;
 
             <a
@@ -5568,8 +5567,35 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
-=======
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
+
+        {_/* Use Cases */}
+        <motion.section
+          id=&quot;use-cases&quot;
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className=&quot;mx-auto max-w-7xl px-6 pb-14&quot;
+        >
+          <h2 className=&quot;text-center text-2xl font-bold tracking-wide text-white/90&quot;>Use Cases</h2>
+          <div className=&quot;mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3&quot;>
+            {[
+              { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
+              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' },
+              { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' },
+              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
+              { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
+              { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' }].map((u) => (
+              <article key={u.title} className=&quot;group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-fuchsia-400/30&quot;>
+                <div className=&quot;pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100&quot; />
+                <h3 className=&quot;text-lg font-semibold&quot;>{u.title}</h3>
+                <p className=&quot;mt-1 text-sm text-white/75&quot;>{u.desc}</p>
+
+              </article>
+            ))}
+          </div>
+        </motion.section>
+<h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
             Use Cases;
           </h2>;
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>;

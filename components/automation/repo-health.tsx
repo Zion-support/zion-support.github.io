@@ -50,7 +50,6 @@ export default function RepoHealth(): any ({ report }: Props) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!report) return <div>No report yet. Check back soon.</div>;
-
   return (
 
     <div className="space-y-6">;

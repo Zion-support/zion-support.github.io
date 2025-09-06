@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-
-import { HelpCategory } from "./types";
-
-=======
 
 
 
@@ -26,7 +12,6 @@ import { HelpCategory } from "./types",
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface HelpCategoryListProps {
   categories: HelpCategory[];
   onCategorySelect: (categoryId: string) => void;
@@ -36,41 +21,13 @@ export function HelpCategoryList({
   categories
   onCategorySelect
   searchQuery
-<<<<<<< HEAD
-
-import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { HelpCategory } from "./types";
-interface HelpCategoryListProps {
-  categories: HelpCategory[];
-  onCategorySelect: (categoryId: string) => void;
-  searchQuery: string;
-}
-
-export function HelpCategoryList({
-  categories,
-  onCategorySelect,
-  searchQuery,
-
-=======
->>>>>>> main
 }: HelpCategoryListProps) {
   // Filter categories based on search query
 
   const filteredCategories = searchQuery
     ? categories.filter(
         (category) =>
-<<<<<<< HEAD
-category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
-=======
           category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
->>>>>>> main
           category.description
             .toLowerCase()
             .includes(searchQuery.toLowerCase()) |
@@ -79,45 +36,6 @@ category.name.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
               article.content.toLowerCase().includes(searchQuery.toLowerCase())
           )
-<<<<<<< HEAD
-);
-    : categories;
-
-  if (filteredCategories.length === 0) {
-    return (
-      <div className="text-center py-8">
-        <h3 className="text-lg font-medium mb-2">No results found</h3>
-        <p className="text-zion-slate-light">
-          Try adjusting your search query or browse all categories.
-        </p>
-      </div>
-    );
-}
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      {filteredCategories.map((category) => (
-        <Card
-          key={category.id}
-          className="cursor-pointer hover:border-zion-purple/50 transition-colors"
-          onClick={() => onCategorySelect(category.id)}
-        >
-          <CardHeader className="pb-2">
-            <div className="w-10 h-10 rounded-full bg-zion-purple/10 flex items-center justify-center mb-3">
-              {category.icon}
-            </div>
-            <CardTitle>{category.name}</CardTitle>
-            <CardDescription>{category.description}</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-zion-slate-light">
-              {category.articles.length} articles
-            </p>
-          </CardContent>
-        </Card>
-
-  }
-
-=======
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {HelpCategory} from "./types";
@@ -155,7 +73,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
 =======
     );
   }
->>>>>>> main
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
@@ -178,12 +95,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
           </CardContent>
         </Card>
 
-<<<<<<< HEAD
-      ))}
-    </div>
-  );
-}
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { HelpCategory } from "./types",;
@@ -343,4 +254,3 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

@@ -180,6 +180,15 @@ export default function GlobalMapPage() {;
               return (
 
 
+      <main className="py-10 container mx-auto space-y-8">
+        <h1 className="text-3xl font-bold">Global Instances</h1>
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="relative" style={{ width, height }}>
+            <Globe className="w-full h-full text-secondary" />
+            {INSTANCES.map((i) => {
+              const { x, y } = project(i.lat, i.lng),
+              const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
+              return (
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>

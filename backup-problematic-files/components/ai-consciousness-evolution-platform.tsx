@@ -372,18 +372,10 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   )
 },
 
-<<<<<<<< HEAD:backup-problematic-files/components/ai-consciousness-evolution-platform.tsx
 export default AIConsciousnessEvolutionPlatform,
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
-========
-export default AIConsciousnessEvolutionPlatform;
-=======
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
->>>>>>>> main:components/ai-consciousness-evolution-platform.tsx.backup.1755992148
 import { 
   Brain, Atom, Shield, Zap, Sparkles, Star, ArrowRight, 
   CheckCircle, Phone, Mail, MapPin, Globe, TrendingUp,

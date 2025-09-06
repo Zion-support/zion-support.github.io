@@ -498,8 +498,6 @@ function TopContactBar() {
                     </div>;
                   </div>;
                 </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Business Information */}
 
                 <div className="space-y-4">

@@ -890,8 +890,7 @@ function AIAutomationServices() {
                       </span>
                     ))}
                   </div>
-                  
-                  <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                     <Link href={service.link} className="text-emerald-400 hover:text-emerald-300 font-medium flex items-center space-x-2 group">
 
 

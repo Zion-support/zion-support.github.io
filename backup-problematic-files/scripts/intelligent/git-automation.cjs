@@ -653,7 +653,6 @@ gitAutomation.start().catch(console.error);
 =======
 <<<<<<< HEAD
       console.error('Error loading "history")
-      console.error('Error loading "history")
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD

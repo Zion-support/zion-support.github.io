@@ -25,6 +25,12 @@ interface EnhancedSearchInputProps {
 
    */
 
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
+  placeholder?: string,
+  /**
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
@@ -657,6 +663,50 @@ if ( {) {
           input_ref.current?.blur ();
 
         } else {
+          // Prevent empty form submission
+          e.preventDefault()
+        }
+        break
+      case 'Escape':
+        e.preventDefault()
+        setIsFocused(false)
+        setHighlightedIndex(-1)
+        setValueOnFocus(null)
+        inputRef.current?.blur()
+        break
+      default:
+        // For other keys (character input), reset enterHandledPostFocus
+        setEnterHandledPostFocus(false)
+        break
+    }
+  }
+
+    switch(e && e.key) {;
+      case 'ArrowDown':;
+        if (isFocused && filteredSuggestions.length > 0) {;
+          e.preventDefault(),;
+          setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length);
+        }
+        break,;
+      case 'ArrowUp':;
+        if (isFocused && filteredSuggestions.length > 0) {;
+          e.preventDefault(),;
+          setHighlightedIndex(prev => (prev - 1 + filteredSuggestions.length) % filteredSuggestions.length);
+        }
+        break,;
+      case 'Enter':;
+        if (isFocused && highlightedIndex !== -1 && filteredSuggestions[highlightedIndex]) {;
+          e.preventDefault(), // Prevent form submission;
+          handleSelectSuggestion(filteredSuggestions[highlightedIndex]);
+        } else if (value.trim()) {;
+          // Manually trigger search navigation to ensure consistent behavior;
+          e.preventDefault(),;
+          logInfo('EnhancedSearchInput manual submit:', { data: value }),;
+          router.push(`/search?q=${encodeURIComponent(value)}`),;
+          setIsFocused(false),;
+          setHighlightedIndex(-1),;
+          inputRef.current?.blur();
+        } else {;
           // Prevent empty form submission;
           e.prevent_default ();
         }

@@ -504,7 +504,6 @@ if (return) {
           }}
 
         />;
-
         <motion&& motion.div
 
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"

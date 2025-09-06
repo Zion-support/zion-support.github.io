@@ -358,7 +358,11 @@ export default function RoadmapPage (): JSX.Element {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
-                {copied ? 'Copied' : 'Copy'}
+                {copied ? 'Copied' : 'Copy'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </button>
             </div>
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>

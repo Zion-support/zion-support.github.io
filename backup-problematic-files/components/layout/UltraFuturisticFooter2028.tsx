@@ -52,7 +52,6 @@ const serviceCategories = [;
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
     ];
   }
-<<<<<<<< HEAD:backup-problematic-files/components/layout/UltraFuturisticFooter2028.tsx
 ],;
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
@@ -76,52 +75,6 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },;
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
 ],
-========
-];
-
-const companyLinks = [
-  { name: 'About Us', href: '/about', icon: Users },
-  { name: 'Careers', href: '/careers', icon: TrendingUp },
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
-  { name: 'Blog', href: '/blog', icon: BookOpen },
-  { name: 'News', href: '/news', icon: Star },
-  { name: 'Press', href: '/press', icon: MessageCircle }
-];
-
-const resourceLinks = [
-  { name: 'Documentation', href: '/docs', icon: BookOpen },
-  { name: 'API Reference', href: '/api', icon: Cpu },
-  { name: 'Training', href: '/training', icon: GraduationCap },
-  { name: 'Support', href: '/support', icon: ShieldCheck },
-  { name: 'Community', href: '/community', icon: Users },
-  { name: 'Partners', href: '/partners', icon: Handshake }
-];
-
-const legalLinks = [
-  { name: 'Privacy Policy', href: '/privacy' },
-  { name: 'Terms of Service', href: '/terms' },
-  { name: 'Cookie Policy', href: '/cookies' },
-  { name: 'Security', href: '/security' },
-  { name: 'Compliance', href: '/compliance' },
-  { name: 'GDPR', href: '/gdpr' }
-];
-
-const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
-<<<<<<< HEAD
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-600' },
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-500' },
-=======
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-600' },
-  { name: 'Facebook', href: 'https://www.facebook.com/ziontechgroup/', icon: Facebook, color: 'hover:text-blue-500' },
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-e72a
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-500' },
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' },
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
-  { name: 'Discord', href: 'https://discord.gg/ziontechgroup', icon: MessageCircle, color: 'hover:text-indigo-500' },
-  { name: 'Medium', href: 'https://medium.com/@ziontechgroup', icon: BookOpen, color: 'hover:text-gray-600' }
-];
->>>>>>>> main:components/layout/UltraFuturisticFooter2028.tsx.backup.1755991666
 
 export default function UltraFuturisticFooter2028() {
   return (

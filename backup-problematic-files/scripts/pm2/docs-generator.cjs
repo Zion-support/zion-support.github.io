@@ -548,6 +548,23 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -577,6 +594,23 @@ class DocsGenerator {}
       execSync(jsdocCommand, { "stdio": 'pipe' }
 });
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -689,6 +723,23 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -706,6 +757,23 @@ class DocsGenerator {}
       const docsFile = path.join(docsDir, 'components.md');
       fs.writeFileSync(docsFile, componentDocs);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -762,6 +830,23 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -778,6 +863,23 @@ class DocsGenerator {}
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+          
+          
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
           
@@ -816,6 +918,23 @@ class DocsGenerator {}
       };
     };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
 
@@ -1081,6 +1200,23 @@ class DocsGenerator {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -1172,6 +1308,23 @@ class DocsGenerator {}
     readme += "---\n\n";
     readme += `*Last "updated": ${timestamp}*\n\n`;`
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    
+    
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+    
+    
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
     

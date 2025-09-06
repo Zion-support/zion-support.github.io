@@ -160,6 +160,8 @@ export default function PricingPage() {
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             {pricingPlans.map((plan, index) => (
 =======

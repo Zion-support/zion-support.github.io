@@ -49,7 +49,6 @@ export default function TalentDashboard() {;
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
   );
-
   const toggle = (key: StepKey) =>;
 
     setCompleted(c => ({ ...c, [key]: !c[key] }));

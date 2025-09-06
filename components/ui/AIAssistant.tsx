@@ -65,8 +65,7 @@ export type AIAssistantProps = {;
 
 
     } catch {}
-  }, [output]);
-
+}, [output]);
   const onOpen = useCallback(() => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -132,7 +131,6 @@ export type AIAssistantProps = {;
                   className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm";
                 />;
               </div>;
-
               <div className="flex items-center gap-2">;
 
                 <button

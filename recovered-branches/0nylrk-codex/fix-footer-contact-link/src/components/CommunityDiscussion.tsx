@@ -1,15 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { MessageCircle } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Avatar, AvatarFallback } from "@/components/ui/avatar",
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-interface DiscussionPost {
-=======
 import React, { useState } from './react';
 import { MessageCircle  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -20,17 +9,13 @@ import { Card, CardContent  } from '@/components / ui / card';
 import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {
 
->>>>>>> main
   id: number;
   author: string;
   avatar?: string;
   time: string;
   title: string;
-<<<<<<< HEAD
-=======
 =======
 
->>>>>>> main
 
 interface DiscussionPost {
   id: number,
@@ -38,20 +23,6 @@ interface DiscussionPost {
   avatar?: string,
   time: string,
   title: string,
-<<<<<<< HEAD
-
-  body: string
-}
-const initialPosts: DiscussionPost[] = [
-  {
-
-id: 1
-    author: "Anna Zhou"
-    time: "2h ago"
-    title: "What AI trends are you most excited for in 2025?"
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
-  }
-=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   body: string
@@ -66,7 +37,6 @@ const initial_posts: DiscussionPost[] = [;
     body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
   },
 
->>>>>>> main
   {
     id: 2
     author: "David Kim"
@@ -76,23 +46,6 @@ const initial_posts: DiscussionPost[] = [;
   }
 ];
 export const CommunityDiscussion: React.FC = () => {
-<<<<<<< HEAD
-const [posts, setPosts] = useState(initialPosts);
-  const [showNew, setShowNew] = useState(false);
-  const [newTitle, setNewTitle] = useState("");
-  const [newBody, setNewBody] = useState("");
-  const handleAddPost = () => {
-    if (!newTitle.trim() |!newBody.trim()) return;
-    setPosts([
-      {
-        id: Date.now()
-        author: "You"
-        time: "Now"
-        title: newTitle
-        body: newBody
-      }
-      ...posts
-=======
 =======
 
 const initialPosts: DiscussionPost[] = [;
@@ -125,29 +78,11 @@ const initialPosts: DiscussionPost[] = [;
       },;
       ...posts,;
 
->>>>>>> main
     ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
   }
-<<<<<<< HEAD
-
-  const handleAddPost = () => {
-    if (!newTitle.trim() || !newBody.trim()) return,
-    setPosts([
-      {
-        id: Date.now(),
-        author: "You",
-        time: "Now",
-        title: newTitle,
-        body: newBody},
-      ...posts]),
-    setNewTitle(""),
-    setNewBody(""),
-    setShowNew(false)
-  },
-=======
   return (
 =======
 
@@ -165,7 +100,6 @@ const initialPosts: DiscussionPost[] = [;
 
 
 
->>>>>>> main
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
@@ -202,27 +136,6 @@ const initialPosts: DiscussionPost[] = [;
               placeholder="What's on your mind?"
               className="mb-4 bg-zion-blue-light text-white placeholder:text-zion-slate min-h-[70px]"
 
-<<<<<<< HEAD
-              value={newBody}
-              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
-              maxLength={400}
-              rows={3}
-            />
-            <div className="flex gap-3 justify-end">
-              <Button
-                variant="secondary"
-                size="sm"
-                className="bg-zion-blue text-white hover:bg-zion-blue-dark"
-                onClick={() => setShowNew(false)}
-              >
-                Cancel
-              </Button>
-              <Button
-                size="sm"
-                className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
-                onClick={handleAddPost}
-disabled={!newTitle.trim() |!newBody.trim()}
-=======
 import React, { useState } from "react",;
 import { MessageCircle } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -389,63 +302,12 @@ export const CommunityDiscussion: React.FC = () => {
                 disabled={!newTitle.trim() || !newBody.trim()}
 
 
->>>>>>> main
               >
                 Post
               </Button>
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-      )}
-      <div className="flex flex-col gap-6">
-        {posts.map((post) => (
-          <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
-            <CardContent className="py-4 flex gap-4">
-              <Avatar>
-                <AvatarFallback>
-                  {post.author
-                    .split(" ")
-                    .map((s) => s[0])
-                    .join("")
-                    .toUpperCase()
-                    .slice(0, 2)}
-</AvatarFallback>
-              </Avatar>
-              <div>
-                <div className="flex gap-2 items-center">
-                  <span className="font-semibold text-white">
-                    {post.author}
-                  </span>
-                  <span className="text-xs text-zion-slate-light">
-                    {post.time}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-zion-cyan mt-1">
-                  {post.title}
-                </h3>
-                <p className="text-zion-slate-light mt-1 whitespace-pre-line">
-                  {post.body}
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-      <div className="mt-8 text-xs text-zion-slate-dark text-center">
-        🚀 Stay engaged! Top contributors are regularly featured on the
-        homepage.
-      </div>
-    </div>
-
-  );
-}
-
-  );
-
-};
-
-=======
 =======
                 disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
 =======
@@ -556,4 +418,3 @@ export const CommunityDiscussion: React.FC = () => {
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

@@ -65,12 +65,9 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 
         <div>
-          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-            Suggested Price Range
-          </h3>
-          <p className='text-white'>
-            ${content.suggestedPrice.min.toFixed(2)} - $
-            {content.suggestedPrice.max.toFixed(2)}
+          <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
+          <p className="text-white">
+            ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
 

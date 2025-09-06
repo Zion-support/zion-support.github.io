@@ -18,7 +18,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
   const [requests, setRequests] = useState(initialRequests)
   async function resolve(id: string) {
     await fetch('/api/support/resolve', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) })
-
     setRequests((prev: any[]) => prev.map((r) => (r.id === id ? { ...r, status: 'resolved', resolvedAt: Date.now() } : r)))
 
 import { GetServerSideProps } from 'next',

@@ -193,7 +193,6 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
           {/* Service header */}
 
         <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />;
-
         <div className="relative p-6">;
 
           {/* Service header */}

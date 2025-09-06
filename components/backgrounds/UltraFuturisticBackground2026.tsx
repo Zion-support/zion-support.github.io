@@ -93,17 +93,17 @@ import { motion } from 'framer-motion';
           vy = Math.random () * 2 + 1;
 
           break;
-        case 1: // Right;
-          coordinate_x = canvas.width + 10;
-          coordinate_y = Math.random () * canvas.height;
-          vx = -(Math.random () * 2 + 1);
-          vy = (Math.random () - 0.5) * 2;
+        case 1: // Right
+          x = canvas.width + 10;
+          y = Math.random() * canvas.height;
+          vx = -(Math.random() * 2 + 1);
+          vy = (Math.random() - 0.5) * 2;
           break;
-        case 2: // Bottom;
-          coordinate_x = Math.random () * canvas.width;
-          coordinate_y = canvas.height + 10;
-          vx = (Math.random () - 0.5) * 2;
-          vy = -(Math.random () * 2 + 1);
+        case 2: // Bottom
+          x = Math.random() * canvas.width;
+          y = canvas.height + 10;
+          vx = (Math.random() - 0.5) * 2;
+          vy = -(Math.random() * 2 + 1);
           break;
 
 
@@ -121,8 +121,8 @@ import { motion } from 'framer-motion';
     const initParticles = () => {;
 
       particles = [];
-      for (let i = 0; i < 100; i++) {;
-        particles && particles.push(createParticle());      }        x;
+      for (let i = 0; i < 100; i++) {
+        particles.push(createParticle());      }        x;
         y;
         vx;
         vy;

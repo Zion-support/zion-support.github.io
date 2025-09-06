@@ -155,6 +155,11 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
 }
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {categories.map((category, index) => (
+=======
+<<<<<<< HEAD
+            {/* Category Cards */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories.map((category, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
                   key={category  } catch (error) {
     console.error("Error:", error);

@@ -190,7 +190,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
 
       setMetrics(newMetrics);    }        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart;
       };
-
       setMetrics(newMetrics);
 
           }
@@ -790,8 +789,6 @@ if ( { // LCP should be under 2.5s) {
           {showMetrics ? 'Hide' : 'Show'} Metrics;
         </button>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Performance Score */}
 
 =======

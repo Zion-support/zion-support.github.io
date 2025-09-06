@@ -112,6 +112,8 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
     </div>;
   );
 }
+<<<<<<< HEAD
+}
 
             className="mt-6"
           />

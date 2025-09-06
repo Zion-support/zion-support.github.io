@@ -1555,7 +1555,6 @@ if ( {) {
               <p className="text-gray-300 text-sm">Round-the-clock assistance</p>;
             </div>;
           </div>;
-
           <motion&& motion.div
 
             className='text-center'            className="text-center"

@@ -235,6 +235,9 @@ console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 >>>>>>> origin/main
 =======
 =======
+>>>>>>> origin/main
+=======
+=======
 const { execSync } = require('child_process');
 
 class TestFileFixer {

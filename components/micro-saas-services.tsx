@@ -2115,6 +2115,7 @@ export default function MicroSaasServicesPage() {;
           <h2 className="text-responsive-lg font-bold text-white mb-8 text-shadow-lg">
             Ready to Get Started?
           </h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           <p className="text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Choose the micro SaaS service that fits your business needs and start transforming your operations today.
           </p>

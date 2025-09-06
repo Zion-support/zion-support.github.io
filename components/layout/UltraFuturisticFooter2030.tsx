@@ -688,7 +688,6 @@ export default function UltraFuturisticFooter2030() {;
           <div className='absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse'></div>;
         </div>;
       </div>;
-
       <div className='relative z-10'>;
 
         {/* Main Footer Content */}

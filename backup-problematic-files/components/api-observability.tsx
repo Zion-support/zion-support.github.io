@@ -10,15 +10,7 @@ export default function ApiObservabilityPage() {
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
   return (
-<<<<<<<< HEAD:backup-problematic-files/components/api-observability.tsx
     <UltraAdvancedFuturisticBackground>
-========
-<<<<<<< HEAD
-    <UltraFuturisticBackground variant="holographic" intensity="high">
-=======
-    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
->>>>>>>> main:pages/api-observability.tsx.backup.1755991722
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />

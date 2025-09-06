@@ -158,9 +158,20 @@ import React from 'react';
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
 
             <MobileMenu
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <MobileMenu 
               unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
+            />
+          </div>
+        </div>
+              unreadCount={unreadCount} 
+              onClose={() => setMobileMenuOpen(false)}
+              openLoginModal={openLoginModal}
             />;
           </div>;
         </div>;

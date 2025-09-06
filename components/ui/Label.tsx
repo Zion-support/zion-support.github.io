@@ -14,7 +14,6 @@ interface LabelProps {;
   className?: string;
   htmlFor?: string;
 }
-
 const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
 
   return (

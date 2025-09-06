@@ -137,21 +137,165 @@ const BlueprintsIndexPage: React.FC = () => {
   const recentBlueprints = [
 
     {
-      id: 'blueprint - 2025 - 01 - 17 - 130835',
+      category: 'Deployment Patterns',
+      blueprints: [
+<<<<<<< HEAD
+        {
+=======
+<<<<<<< HEAD
+        { 
+=======
+        {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          id: 'zero-downtime-deployment',
+          name: 'Zero-Downtime Deployment',
+          description: 'Blue-green deployment with health checks',
+          status: 'active',
+          complexity: 'medium',
+          lastUpdated: '2025-01-14'
+        },
+<<<<<<< HEAD
+        {
+=======
+<<<<<<< HEAD
+        { 
+=======
+        {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          id: 'canary-deployment',
+          name: 'Canary Deployment',
+          description: 'Gradual rollout with traffic splitting',
+          status: 'active',
+          complexity: 'high',
+          lastUpdated: '2025-01-13'
+        },
+<<<<<<< HEAD
+        {
+=======
+<<<<<<< HEAD
+        { 
+=======
+        {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          id: 'rolling-update',
+          name: 'Rolling Update Strategy',
+          description: 'Sequential instance updates with health monitoring',
+          status: 'active',
+          complexity: 'medium',
+          lastUpdated: '2025-01-12'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      ]
+    },
+    {
+      category: 'Monitoring & Observability',
+      blueprints: [
+<<<<<<< HEAD
+        {
+=======
+<<<<<<< HEAD
+        { 
+=======
+        {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          id: 'health-check-system',
+          name: 'Health Check System',
+          description: 'Comprehensive health monitoring and alerting',
+          status: 'active',
+          complexity: 'medium',
+          lastUpdated: '2025-01-11'
+        },
+<<<<<<< HEAD
+        {
+=======
+<<<<<<< HEAD
+        { 
+=======
+        {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          id: 'performance-monitoring',
+          name: 'Performance Monitoring',
+          description: 'Real-time performance metrics and alerting',
+          status: 'active',
+          complexity: 'medium',
+          lastUpdated: '2025-01-10'
+        },
+<<<<<<< HEAD
+        {
+=======
+<<<<<<< HEAD
+        { 
+=======
+        {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          id: 'logging-aggregation',
+          name: 'Logging Aggregation',
+          description: 'Centralized logging with search and analytics',
+          status: 'active',
+          complexity: 'low',
+          lastUpdated: '2025-01-09'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        }
+      ]
+    }
+  ];
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const recentBlueprints = [
+    {
+      id: 'blueprint-2025-01-17-130835',
       name: 'AI Content Factory Blueprint',
       description: 'Automated content generation system architecture',
-      date: '2025 - 01 - 17',
-      status: 'deployed';
+      date: '2025-01-17',
+      status: 'deployed'
     },
     {
-      id: 'blueprint - 2025 - 01 - 17 - 130857',
+      id: 'blueprint-2025-01-17-130857',
       name: 'Edge Computing Network Blueprint',
       description: 'Distributed computing architecture for global performance',
-      date: '2025 - 01 - 17',
-      status: 'development';
+      date: '2025-01-17',
+      status: 'development'
     },
     {
-      id: 'blueprint - 2025 - 01 - 17 - 130921',
+      id: 'blueprint-2025-01-17-130921',
       name: 'Quantum Integration Blueprint',
       description: 'Quantum computing integration framework',
 

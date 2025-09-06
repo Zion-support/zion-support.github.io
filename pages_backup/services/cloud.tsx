@@ -85,10 +85,6 @@ const cloudServices = [;
 
 
 export default function CloudServicesPage() {
-=======
-export default function CloudServicesPage() {;
-export default function CloudServicesPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/services/cloud.tsx
   const cloudServices = [;
     {}
       title: "Cloud Migration",";

@@ -1,65 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Project, ProjectStatus} from "@/types/projects";
-import {toast} from "sonner";
-export function useProjects() {;
-  const { user } = useAuth();
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-import { Project, ProjectStatus } from "@/types/projects";
-import { toast } from "sonner";
-export function useProjects() {
-  const { user } = useAuth();
-  const [projects, setProjects] = useState<Project[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-=======
-import { Project, ProjectStatus } from "@/types/projects",
-import { toast } from "sonner",
-export function useProjects() {
-  const { user } = useAuth(),
-  const [projects, setProjects] = useState<Project[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [error, setError] = useState<string | null>(null),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
     if (!user) {
-<<<<<<< HEAD
-      setIsLoading(false),
-      return
-    }
-    try {
-<<<<<<< HEAD
-      setIsLoading(true);
-=======
-      setIsLoading(true),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       setIsLoading(false);
       return
     }
@@ -70,24 +17,12 @@ export function useProjects() {
       
 
 
->>>>>>> main
       // Build the query based on user type
       // For clients, get projects they created
       // For talents, get projects they're hired for
       let query = supabase
         .from("projects")
         .select(`
-<<<<<<< HEAD
-<<<<<<< HEAD
-          *;
-          job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
-          client_profile:profiles!client_id(display_name, avatar_url)
-        `)
-        .order("created_at", { ascending: false });
-      if (user.userType === "jobSeeker" |user.userType === "creator") {
-=======
-=======
 
       
       if (user && user.userType === "jobSeeker" || user && user.userType === "creator") {
@@ -100,7 +35,6 @@ export function useProjects() {
       if (fetchError) throw fetchError;
 =======
 
->>>>>>> main
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -109,46 +43,17 @@ export function useProjects() {
         .order("created_at", { ascending: false }),
       
       if (user.userType === "jobSeeker" || user.userType === "creator") {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> main
         query = query.eq("talent_id", user.id)
       } else if (user.userType === "employer" |user.userType === "buyer") {
         query = query.eq("client_id", user.id)
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const { data, error: fetchError } = await query;
-      if (fetchError) throw fetchError;
-=======
-=======
 
->>>>>>> main
       
       const { data, error: fetchError } = await query,
       
       if (fetchError) throw fetchError,
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Transform the data to match our project types
-      const transformedData = data.map((project: any) => ({
-        ...project,
-        talent_profile: project.talent_profile ? {
-          ...project.talent_profile
-          full_name: project.talent_profile.display_name
-        } : undefined
-<<<<<<< HEAD
-      }));
-      setProjects(transformedData as Project[]);
-      setError(null)
-    } catch (err: any) {
-      console.error("Error fetching projects:", err);
-      setError("Failed to fetch projects: " + err.message)
-=======
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Transform the data to match our project types
@@ -252,7 +157,6 @@ if (throw fetch_error) {
           *;
 
 
->>>>>>> main
       })),
       
       setProjects(transformedData as Project[]),
@@ -260,47 +164,21 @@ if (throw fetch_error) {
     } catch (err: any) {
       console.error("Error fetching projects:", err),
       setError("Failed to fetch projects: " + err.message),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> main
       toast.error("Failed to fetch projects")
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
   },
 
 
->>>>>>> main
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase
         .from("projects")
         .select(`
-<<<<<<< HEAD
-<<<<<<< HEAD
-          *;
-          job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url)
-          client_profile:profiles!client_id(display_name, avatar_url)
-        `)
-        .eq("id", projectId)
-        .single();
-      if (error) throw error;
-=======
-=======
 
->>>>>>> main
           *,
           job:jobs(title, description),
           talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url),
@@ -311,34 +189,6 @@ if (throw fetch_error) {
       
       if (error) throw error,
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Transform the data to match our project types
-      const transformedProject = {
-        ...data,
-        talent_profile: data.talent_profile ? {
-          ...data.talent_profile
-          full_name: data.talent_profile.display_name
-        } : undefined
-<<<<<<< HEAD
-      }
-=======
-      },
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      return transformedProject as Project
-    } catch (err: any) {
-      console.error("Error fetching project:", err),
-      toast.error("Failed to fetch project details"),
-      return null
-    }
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
       // Transform the data to match our project types
@@ -385,62 +235,17 @@ if (throw error) {
 
 
 
->>>>>>> main
   const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase
         .from("projects")
         .update({ status })
-<<<<<<< HEAD
-<<<<<<< HEAD
-        .eq("id", projectId);
-      if (error) throw error;
-=======
-=======
 
 
->>>>>>> main
         .eq("id", projectId),
       
       if (error) throw error,
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Update the local state
-      setProjects(prev =>
-        prev.map(project => project.id === projectId ? { ...project, status } : project)
-<<<<<<< HEAD
-      );
-      toast.success(`Project status updated to ${status}`);
-=======
-      ),
-      
-      toast.success(`Project status updated to ${status}`),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      return true
-    } catch (err: any) {
-      console.error("Error updating project status:", err),
-      toast.error("Failed to update project status"),
-      return false
-<<<<<<< HEAD
-    }
-  }
-  // Fetch projects when component mounts or user changes
-  useEffect(() => {
-    if (user) {
-      fetchProjects()
-    }
-  }, [user]);
-  return {
-    projects;
-    isLoading;
-    error;
-    refetch: fetchProjects;
-    getProjectById
-
-    updateProjectStatus
-=======
-=======
 
 
       // Update the local state
@@ -523,7 +328,6 @@ if ( {) {
 
 =======
 
->>>>>>> main
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -640,16 +444,8 @@ export function useProjects() {;
     refetch: fetchProjects;
     getProjectById;
     updateProjectStatus;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   }
 }

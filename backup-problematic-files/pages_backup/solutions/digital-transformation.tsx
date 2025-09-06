@@ -414,6 +414,7 @@ export default function DigitalTransformationPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
   );
 };
 

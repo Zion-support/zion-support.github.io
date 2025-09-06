@@ -87,7 +87,6 @@ type Props = {;
   updatedAt: string | null,;
   items: Experiment[];
 };
-
 export default function CurationPage(): any ({ updatedAt, items }: Props) {;
 
   return (

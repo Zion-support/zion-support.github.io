@@ -183,15 +183,11 @@ if (require.main === module) {
   auditor.runAudit();
   auditor.fixIssues();
   auditor.generateReport();
-=======
-    fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
-    console && console.log('Security report generated');
-  }
 }
-    };
-    fs && fs.writeFileSync('security-report && report.json', JSON && JSON.stringify(report, null, 2));
-    console && console.log('Security report generated');
-  }
+module.exports = SecurityAuditor;
+  auditor.checkPackageJson();
+  auditor.checkNextConfig();
+  auditor.generateReport();
 }
 if (require && require.main === module) {
   const auditor = new SecurityAuditor();

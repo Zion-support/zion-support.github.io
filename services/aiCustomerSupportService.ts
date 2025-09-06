@@ -1,83 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface Attachment {
-=======
-export interface Attachment {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  filename: string;
-  originalName: string;
-  mimeType: string;
-  size: number;
-  url: string;
-
-  uploadedAt: Date
-
-  uploadedBy: string
-}
-<<<<<<< HEAD
-export interface SupportTicket {
-=======
-
-export interface SupportTicket {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   uploaded_at: Date,
   uploaded_by: string;
 
 }
 export interface SupportTicket {
->>>>>>> main
   id: string;
   title: string;
   description: string;
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   priority: 'low' | 'medium' | 'high' | 'critical';
   category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general';
-<<<<<<< HEAD
-  customerId: string;
-=======
   customer_id: string;
->>>>>>> main
   assignedAgentId?: string;
   tags: string[];
   attachments: Attachment[];
   messages: TicketMessage[];
-<<<<<<< HEAD
-  createdAt: Date;
-  updatedAt: Date;
-
-  resolvedAt?: Date
-
-  firstResponseTime?: number, // in minutes
-  resolutionTime?: number, // in hours
-}
-<<<<<<< HEAD
-export interface TicketMessage {
-=======
-
-export interface TicketMessage {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  content: string;
-  senderType: 'customer' | 'agent' | 'system';
-  senderId: string;
-  isInternal: boolean;
-
-  createdAt: Date
-
-  attachments: Attachment[]
-}
-<<<<<<< HEAD
-export interface Customer {
-=======
-
-export interface Customer {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   created_at: Date;
   updated_at: Date;
@@ -98,29 +35,11 @@ export interface TicketMessage {
 
 }
 export interface Customer {
->>>>>>> main
   id: string;
   name: string;
   email: string;
   company?: string;
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
-<<<<<<< HEAD
-  totalTickets: number;
-
-  resolvedTickets: number
-  averageResponseTime: number, // in minutes
-  satisfactionScore: number, // 1-5
-  lastContactDate: Date
-
-  createdAt: Date
-}
-<<<<<<< HEAD
-export interface SupportAgent {
-=======
-
-export interface SupportAgent {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   total_tickets: number;
   resolved_tickets: number,
@@ -131,36 +50,11 @@ export interface SupportAgent {;
 
 }
 export interface SupportAgent {
->>>>>>> main
   id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];
-<<<<<<< HEAD
-  isAvailable: boolean;
-  currentTickets: number;
-
-  maxTickets: number
-
-  performance: AgentPerformance
-<<<<<<< HEAD
-}
-export interface AgentPerformance {
-
-  ticketsResolved: number
-
-  averageResolutionTime: number, // in hours
-  customerSatisfaction: number, // 1-5
-  firstResponseTime: number, // in minutes
-  escalationRate: number, // percentage
-}
-export interface ChatbotSession {
-  id: string;
-  customerId: string;
-  startTime: Date;
-  endTime?: Date;
-=======
 
   is_available: boolean;
   current_tickets: number;
@@ -180,21 +74,14 @@ export interface ChatbotSession {
   customer_id: string;
   start_time: Date;
   end_time?: Date;
->>>>>>> main
   messages: ChatbotMessage[];
   intent: string;
   confidence: number;
   resolved: boolean;
 
-<<<<<<< HEAD
-  escalated: boolean
-
-  satisfaction: number, // 1-5
-=======
   escalated: boolean,
   satisfaction: number, // 1 - 5;
 
->>>>>>> main
 }
 export interface ChatbotMessage {
   id: string;
@@ -202,15 +89,9 @@ export interface ChatbotMessage {
   sender: 'customer' | 'bot';
   timestamp: Date;
 
-<<<<<<< HEAD
-  intent?: string
-
-  confidence?: number
-=======
   intent?: string,
   confidence?: number;
 
->>>>>>> main
 }
 export interface KnowledgeBaseArticle {
   id: string;
@@ -220,26 +101,6 @@ export interface KnowledgeBaseArticle {
   tags: string[];
   views: number;
   helpful: number;
-<<<<<<< HEAD
-  notHelpful: number;
-
-  lastUpdated: Date
-
-  createdBy: string
-}
-export interface SupportAnalytics {
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
-  averageResolutionTime: number;
-  averageFirstResponseTime: number;
-  customerSatisfaction: number;
-
-  chatbotResolutionRate: number
-  topCategories: Array<{ category: string, count: number }>;
-
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
-=======
 
   not_helpful: number;
   last_updated: Date,
@@ -258,7 +119,6 @@ export interface SupportAnalytics {
   top_categories: Array<{ category: string, count: number }>;
   agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>;
 
->>>>>>> main
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
@@ -266,30 +126,14 @@ export interface AIRecommendation {
   description: string;
   impact: 'low' | 'medium' | 'high';
 
-<<<<<<< HEAD
-  confidence: number
-
-  actionItems: string[]
-=======
   confidence: number,
   action_items: string[];
 
->>>>>>> main
 }
 class AICustomerSupportService {
   private tickets: SupportTicket[] = [];
   private customers: Customer[] = [];
   private agents: SupportAgent[] = [];
-<<<<<<< HEAD
-  private chatbotSessions: ChatbotSession[] = [];
-  private knowledgeBase: KnowledgeBaseArticle[] = [];
-  private analytics: SupportAnalytics;
-  constructor() {
-
-    this.initializeSampleData()
-
-    this.updateAnalytics()
-=======
   private chatbot_sessions: ChatbotSession[] = [];
   private knowledge_base: KnowledgeBaseArticle[] = [];
   private analytics: SupportAnalytics;
@@ -297,26 +141,10 @@ class AICustomerSupportService {
     this && this.initializeSampleData(),
     this && this.updateAnalytics()
 
->>>>>>> main
   }
   private initializeSampleData() {
     // Initialize sample customers
 
-<<<<<<< HEAD
-    this.customers = [
-      {
-        id: 'cust_001';
-        name: 'John Doe';
-        email: 'john.doe@company.com';
-        company: 'TechCorp Inc.';
-        plan: 'pro';
-        totalTickets: 5;
-        resolvedTickets: 4;
-        averageResponseTime: 15;
-        satisfactionScore: 4.5;
-        lastContactDate: new Date('2025-01-10')
-        createdAt: new Date('2024-06-01')
-=======
     this && this.customers = [
 
 =======
@@ -348,21 +176,10 @@ class AICustomerSupportService {
         lastContactDate: new Date ('2025 - 01 - 10'),
         created_at: new Date ('2024 - 06 - 01');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
       }
       {
         id: 'cust_002';
         name: 'Jane Smith';
-<<<<<<< HEAD
-        email: 'jane.smith@startup.com';
-        company: 'StartupXYZ';
-        plan: 'basic';
-        totalTickets: 3;
-        resolvedTickets: 3;
-        averageResponseTime: 25;
-        satisfactionScore: 4.0;
-        lastContactDate: new Date('2025-01-08')
-=======
         email: 'jane && jane.smith@startup && startup.com';
         company: 'StartupXYZ';
         plan: 'basic';
@@ -373,29 +190,10 @@ class AICustomerSupportService {
         satisfactionScore: 4 && 4.0;
         lastContactDate: new Date('2025-01-08'),
 
->>>>>>> main
         createdAt: new Date('2024-08-15')
       }
     ];
     // Initialize sample agents
-<<<<<<< HEAD
-    this.agents = [
-      {
-        id: 'agent_001';
-        name: 'Mike Johnson';
-        email: 'mike.johnson@ziontech.com';
-        role: 'tier2';
-        skills: ['Technical SupportAPI IntegrationDatabase Issues'];
-        isAvailable: true;
-        currentTickets: 2;
-        maxTickets: 5;
-        performance: {
-          ticketsResolved: 45;
-          averageResolutionTime: 2.5;
-          customerSatisfaction: 4.6;
-          firstResponseTime: 12
-          escalationRate: 8
-=======
     this && this.agents = [
 =======
         satisfaction_score: 4.0;
@@ -430,25 +228,11 @@ class AICustomerSupportService {
           firstResponseTime: 12,
           escalation_rate: 8;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
         }
       }
       {
         id: 'agent_002';
         name: 'Lisa Chen';
-<<<<<<< HEAD
-        email: 'lisa.chen@ziontech.com';
-        role: 'tier1';
-        skills: ['General SupportBillingAccount Management'];
-        isAvailable: true;
-        currentTickets: 1;
-        maxTickets: 8;
-        performance: {
-          ticketsResolved: 78;
-          averageResolutionTime: 1.8;
-          customerSatisfaction: 4.4;
-          firstResponseTime: 8
-=======
         email: 'lisa && lisa.chen@ziontech && ziontech.com';
         role: 'tier1';
         skills: ['General SupportBillingAccount Management'];
@@ -461,15 +245,11 @@ class AICustomerSupportService {
           customerSatisfaction: 4 && 4.4;
           firstResponseTime: 8,
 
->>>>>>> main
           escalationRate: 15
         }
       }
     ];
     // Initialize sample tickets
-<<<<<<< HEAD
-    this.tickets = [
-=======
     this && this.tickets = [
 =======
           tickets_resolved: 78;
@@ -484,7 +264,6 @@ class AICustomerSupportService {
     // Initialize sample tickets;
     this.tickets = [;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
       {
         id: 'ticket_001';
         title: 'API Integration Issue';
@@ -492,21 +271,6 @@ class AICustomerSupportService {
         status: 'in_progress';
         priority: 'high';
         category: 'technical';
-<<<<<<< HEAD
-        customerId: 'cust_001';
-        assignedAgentId: 'agent_001';
-        tags: ['apiintegrationerror'];
-        attachments: [];
-        messages: [
-          {
-            id: 'msg_001';
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
-            senderType: 'customer';
-            senderId: 'cust_001';
-            isInternal: false;
-            createdAt: new Date('2025-01-10T10:00:00Z')
-            attachments: []
-=======
         customer_id: 'cust_001';
         assignedAgentId: 'agent_001';
         tags: ['apiintegrationerror'];
@@ -522,584 +286,10 @@ class AICustomerSupportService {
             created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
             attachments: [];
 
->>>>>>> main
           }
           {
             id: 'msg_002'
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
-<<<<<<< HEAD
-            senderType: 'agent';
-            senderId: 'agent_001';
-            isInternal: false;
-            createdAt: new Date('2025-01-10T10:15:00Z')
-            attachments: []
-          }
-        ];
-        createdAt: new Date('2025-01-10T10:00:00Z');
-        updatedAt: new Date('2025-01-10T10:15:00Z')
-        firstResponseTime: 15
-      }
-    ];
-    // Initialize knowledge base
-    this.knowledgeBase = [
-      {
-        id: 'kb_001';
-        title: 'Getting Started with API Integration';
-        content: 'Learn how to integrate our API with your existing systems...';
-        category: 'API Documentation';
-        tags: ['apiintegrationgetting-started'];
-        views: 1250;
-        helpful: 89;
-        notHelpful: 12;
-        lastUpdated: new Date('2025-01-05')
-        createdBy: 'agent_001'
-=======
-export interface Attachment {;
-  id: string,;
-  filename: string,;
-  originalName: string,;
-  mimeType: string,;
-  size: number,;
-  url: string,;
-  uploadedAt: Date,;
-  uploadedBy: string;
-}
-;
-export interface SupportTicket {;
-  id: string,;
-  title: string,;
-  description: string,;
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
-  priority: 'low' | 'medium' | 'high' | 'critical',;
-  category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general',;
-  customerId: string,;
-  assignedAgentId?: string,;
-  tags: string[],;
-  attachments: Attachment[],;
-  messages: TicketMessage[],;
-  createdAt: Date,;
-  updatedAt: Date,;
-  resolvedAt?: Date,;
-  firstResponseTime?: number, // in minutes;
-  resolutionTime?: number, // in hours;
-}
-;
-export interface TicketMessage {;
-  id: string,;
-  content: string,;
-  senderType: 'customer' | 'agent' | 'system',;
-  senderId: string,;
-  isInternal: boolean,;
-  createdAt: Date,;
-  attachments: Attachment[];
-}
-;
-export interface Customer {;
-  id: string,;
-  name: string,;
-  email: string,;
-  company?: string,;
-  plan: 'free' | 'basic' | 'pro' | 'enterprise',;
-  totalTickets: number,;
-  resolvedTickets: number,;
-  averageResponseTime: number, // in minutes;
-  satisfactionScore: number, // 1-5;
-  lastContactDate: Date,;
-  createdAt: Date;
-}
-;
-export interface SupportAgent {;
-  id: string,;
-  name: string,;
-  email: string,;
-  role: 'tier1' | 'tier2' | 'tier3' | 'supervisor',;
-  skills: string[],;
-  isAvailable: boolean,;
-  currentTickets: number,;
-  maxTickets: number,;
-  performance: AgentPerformance;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-;
-export interface AgentPerformance {;
-  ticketsResolved: number,;
-  averageResolutionTime: number, // in hours;
-  customerSatisfaction: number, // 1-5;
-  firstResponseTime: number, // in minutes;
-  escalationRate: number, // percentage;
-}
-<<<<<<< HEAD
-=======
-
-export interface ChatbotSession {;
-  id: string;
-  customerId: string;
-  startTime: Date;
-  endTime?: Date;
-  messages: ChatbotMessage[];
-  intent: string;
-  confidence: number;
-  resolved: boolean;
-  escalated: boolean,
-  satisfaction: number, // 1-5
-}
-
-export interface ChatbotMessage {;
-  id: string;
-  content: string;
-  sender: 'customer' | 'bot';
-  timestamp: Date;
-  intent?: string,
-  confidence?: number
-}
-
-export interface KnowledgeBaseArticle {;
-  id: string;
-  title: string;
-  content: string;
-  category: string;
-  tags: string[];
-  views: number;
-  helpful: number;
-  notHelpful: number;
-  lastUpdated: Date,
-  createdBy: string
-}
-
-export interface SupportAnalytics {;
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
-  averageResolutionTime: number;
-  averageFirstResponseTime: number;
-  customerSatisfaction: number;
-  chatbotResolutionRate: number,
-  topCategories: Array<{ category: string, count: number }>;
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
-}
-
-export interface AIRecommendation {;
-  type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
-  title: string;
-  description: string;
-  impact: 'low' | 'medium' | 'high';
-  confidence: number,
-  actionItems: string[]
-}
-
-class AICustomerSupportService {
-  private tickets: SupportTicket[] = [];
-  private customers: Customer[] = [];
-  private agents: SupportAgent[] = [];
-  private chatbotSessions: ChatbotSession[] = [];
-  private knowledgeBase: KnowledgeBaseArticle[] = [];
-  private analytics: SupportAnalytics;
-
-  constructor() {
-    this.initializeSampleData(),
-    this.updateAnalytics()
-  }
-
-  private initializeSampleData() {
-    // Initialize sample customers
-    this.customers = [
-      {
-        id: 'cust_001';
-        name: 'John Doe';
-        email: 'john.doe@company.com';
-        company: 'TechCorp Inc.';
-        plan: 'pro';
-        totalTickets: 5;
-        resolvedTickets: 4;
-        averageResponseTime: 15;
-        satisfactionScore: 4.5;
-        lastContactDate: new Date('2025-01-10'),
-        createdAt: new Date('2024-06-01')
-      };
-      {
-        id: 'cust_002';
-        name: 'Jane Smith';
-        email: 'jane.smith@startup.com';
-        company: 'StartupXYZ';
-        plan: 'basic';
-        totalTickets: 3;
-        resolvedTickets: 3;
-        averageResponseTime: 25;
-        satisfactionScore: 4.0;
-        lastContactDate: new Date('2025-01-08'),
-        createdAt: new Date('2024-08-15')
-      }
-    ];
-
-    // Initialize sample agents
-    this.agents = [
-      {
-        id: 'agent_001';
-        name: 'Mike Johnson';
-        email: 'mike.johnson@ziontech.com';
-        role: 'tier2';
-        skills: ['Technical SupportAPI IntegrationDatabase Issues'];
-        isAvailable: true;
-        currentTickets: 2;
-        maxTickets: 5;
-        performance: {
-          ticketsResolved: 45;
-          averageResolutionTime: 2.5;
-          customerSatisfaction: 4.6;
-          firstResponseTime: 12,
-          escalationRate: 8
-        }
-      };
-      {
-        id: 'agent_002';
-        name: 'Lisa Chen';
-        email: 'lisa.chen@ziontech.com';
-        role: 'tier1';
-        skills: ['General SupportBillingAccount Management'];
-        isAvailable: true;
-        currentTickets: 1;
-        maxTickets: 8;
-        performance: {
-          ticketsResolved: 78;
-          averageResolutionTime: 1.8;
-          customerSatisfaction: 4.4;
-          firstResponseTime: 8,
-          escalationRate: 15
-        }
-      }
-    ];
-
-    // Initialize sample tickets
-    this.tickets = [
-      {
-        id: 'ticket_001';
-        title: 'API Integration Issue';
-        description: 'Getting 500 error when trying to integrate with our CRM system';
-        status: 'in_progress';
-        priority: 'high';
-        category: 'technical';
-        customerId: 'cust_001';
-        assignedAgentId: 'agent_001';
-        tags: ['apiintegrationerror'];
-        attachments: [];
-        messages: [
-          {
-            id: 'msg_001';
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
-            senderType: 'customer';
-            senderId: 'cust_001';
-            isInternal: false;
-            createdAt: new Date('2025-01-10T10:00:00Z'),
-            attachments: []
-          };
-          {
-            id: 'msg_002',
-            content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
-            senderType: 'agent';
-            senderId: 'agent_001';
-            isInternal: false;
-            createdAt: new Date('2025-01-10T10:15:00Z'),
-            attachments: []
-          }
-        ];
-        createdAt: new Date('2025-01-10T10:00:00Z');
-        updatedAt: new Date('2025-01-10T10:15:00Z'),
-        firstResponseTime: 15
-      }
-    ];
-
-    // Initialize knowledge base
-    this.knowledgeBase = [
-      {
-        id: 'kb_001';
-        title: 'Getting Started with API Integration';
-        content: 'Learn how to integrate our API with your existing systems...';
-        category: 'API Documentation';
-        tags: ['apiintegrationgetting-started'];
-        views: 1250;
-        helpful: 89;
-        notHelpful: 12;
-        lastUpdated: new Date('2025-01-05'),
-        createdBy: 'agent_001'
-=======
-  id: string,;
-  filename: string,;
-  originalName: string,;
-  mimeType: string,;
-  size: number,;
-  url: string,;
-  uploadedAt: Date,;
-  uploadedBy: string;
-}
-;
-export interface SupportTicket {;
-  id: string,;
-  title: string,;
-  description: string,;
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
-  priority: 'low' | 'medium' | 'high' | 'critical',;
-  category: 'technical' | 'billing' | 'feature_request' | 'bug_report' | 'general',;
-  customerId: string,;
-  assignedAgentId?: string,;
-  tags: string[],;
-  attachments: Attachment[],;
-  messages: TicketMessage[],;
-  createdAt: Date,;
-  updatedAt: Date,;
-  resolvedAt?: Date,;
-  firstResponseTime?: number, // in minutes;
-  resolutionTime?: number, // in hours;
-}
-;
-export interface TicketMessage {;
-  id: string,;
-  content: string,;
-  senderType: 'customer' | 'agent' | 'system',;
-  senderId: string,;
-  isInternal: boolean,;
-  createdAt: Date,;
-  attachments: Attachment[];
-}
-;
-export interface Customer {;
-  id: string,;
-  name: string,;
-  email: string,;
-  company?: string,;
-  plan: 'free' | 'basic' | 'pro' | 'enterprise',;
-  totalTickets: number,;
-  resolvedTickets: number,;
-  averageResponseTime: number, // in minutes;
-  satisfactionScore: number, // 1-5;
-  lastContactDate: Date,;
-  createdAt: Date;
-}
-;
-export interface SupportAgent {;
-  id: string,;
-  name: string,;
-  email: string,;
-  role: 'tier1' | 'tier2' | 'tier3' | 'supervisor',;
-  skills: string[],;
-  isAvailable: boolean,;
-  currentTickets: number,;
-  maxTickets: number,;
-  performance: AgentPerformance;
-}
-;
-export interface AgentPerformance {;
-  ticketsResolved: number,;
-  averageResolutionTime: number, // in hours;
-  customerSatisfaction: number, // 1-5;
-  firstResponseTime: number, // in minutes;
-  escalationRate: number, // percentage;
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-;
-export interface ChatbotSession {;
-  id: string,;
-  customerId: string,;
-  startTime: Date,;
-  endTime?: Date,;
-  messages: ChatbotMessage[],;
-  intent: string,;
-  confidence: number,;
-  resolved: boolean,;
-  escalated: boolean,;
-  satisfaction: number, // 1-5;
-}
-;
-export interface ChatbotMessage {;
-  id: string,;
-  content: string,;
-  sender: 'customer' | 'bot',;
-  timestamp: Date,;
-  intent?: string,;
-  confidence?: number;
-}
-;
-export interface KnowledgeBaseArticle {;
-  id: string,;
-  title: string,;
-  content: string,;
-  category: string,;
-  tags: string[],;
-  views: number,;
-  helpful: number,;
-  notHelpful: number,;
-  lastUpdated: Date,;
-  createdBy: string;
-}
-;
-export interface SupportAnalytics {;
-  totalTickets: number,;
-  openTickets: number,;
-  resolvedTickets: number,;
-  averageResolutionTime: number,;
-  averageFirstResponseTime: number,;
-  customerSatisfaction: number,;
-  chatbotResolutionRate: number,;
-  topCategories: Array<{ category: string, count: number }>,;
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>;
-}
-;
-export interface AIRecommendation {;
-  type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement',;
-  title: string,;
-  description: string,;
-  impact: 'low' | 'medium' | 'high',;
-  confidence: number,;
-  actionItems: string[];
-}
-;
-class AICustomerSupportService {;
-  private tickets: SupportTicket[] = [],;
-  private customers: Customer[] = [],;
-  private agents: SupportAgent[] = [],;
-  private chatbotSessions: ChatbotSession[] = [],;
-  private knowledgeBase: KnowledgeBaseArticle[] = [],;
-  private analytics: SupportAnalytics,;
-  constructor() {;
-    this.initializeSampleData(),;
-    this.updateAnalytics();
-  }
-;
-  private initializeSampleData() {;
-    // Initialize sample customers;
-    this.customers = [;
-      {;
-        id: 'cust_001',;
-        name: 'John Doe',;
-        email: 'john.doe@company.com',;
-        company: 'TechCorp Inc.',;
-        plan: 'pro',;
-        totalTickets: 5,;
-        resolvedTickets: 4,;
-        averageResponseTime: 15,;
-        satisfactionScore: 4.5,;
-        lastContactDate: new Date('2025-01-10'),;
-        createdAt: new Date('2024-06-01');
-      },;
-      {;
-        id: 'cust_002',;
-        name: 'Jane Smith',;
-        email: 'jane.smith@startup.com',;
-        company: 'StartupXYZ',;
-        plan: 'basic',;
-        totalTickets: 3,;
-        resolvedTickets: 3,;
-        averageResponseTime: 25,;
-        satisfactionScore: 4.0,;
-        lastContactDate: new Date('2025-01-08'),;
-        createdAt: new Date('2024-08-15');
-      }
-    ],;
-    // Initialize sample agents;
-    this.agents = [;
-      {;
-        id: 'agent_001',;
-        name: 'Mike Johnson',;
-        email: 'mike.johnson@ziontech.com',;
-        role: 'tier2',;
-        skills: ['Technical SupportAPI IntegrationDatabase Issues'],;
-        isAvailable: true,;
-        currentTickets: 2,;
-        maxTickets: 5,;
-        performance: {;
-          ticketsResolved: 45,;
-          averageResolutionTime: 2.5,;
-          customerSatisfaction: 4.6,;
-          firstResponseTime: 12,;
-          escalationRate: 8;
-        }
-      },;
-      {;
-        id: 'agent_002',;
-        name: 'Lisa Chen',;
-        email: 'lisa.chen@ziontech.com',;
-        role: 'tier1',;
-        skills: ['General SupportBillingAccount Management'],;
-        isAvailable: true,;
-        currentTickets: 1,;
-        maxTickets: 8,;
-        performance: {;
-          ticketsResolved: 78,;
-          averageResolutionTime: 1.8,;
-          customerSatisfaction: 4.4,;
-          firstResponseTime: 8,;
-          escalationRate: 15;
-        }
-      }
-    ],;
-    // Initialize sample tickets;
-    this.tickets = [;
-      {;
-        id: 'ticket_001',;
-        title: 'API Integration Issue',;
-        description: 'Getting 500 error when trying to integrate with our CRM system',;
-        status: 'in_progress',;
-        priority: 'high',;
-        category: 'technical',;
-        customerId: 'cust_001',;
-        assignedAgentId: 'agent_001',;
-        tags: ['apiintegrationerror'],;
-        attachments: [],;
-        messages: [;
-          {;
-            id: 'msg_001',;
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?',;
-            senderType: 'customer',;
-            senderId: 'cust_001',;
-            isInternal: false,;
-            createdAt: new Date('2025-01-10T10:00:00Z'),;
-            attachments: [];
-          },;
-          {;
-            id: 'msg_002',;
-            content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.',;
-            senderType: 'agent',;
-            senderId: 'agent_001',;
-            isInternal: false,;
-            createdAt: new Date('2025-01-10T10:15:00Z'),;
-            attachments: [];
-          }
-        ],;
-        createdAt: new Date('2025-01-10T10:00:00Z'),;
-        updatedAt: new Date('2025-01-10T10:15:00Z'),;
-        firstResponseTime: 15;
-      }
-    ],;
-    // Initialize knowledge base;
-    this.knowledgeBase = [;
-      {;
-        id: 'kb_001',;
-        title: 'Getting Started with API Integration',;
-        content: 'Learn how to integrate our API with your existing systems...',;
-        category: 'API Documentation',;
-        tags: ['apiintegrationgetting-started'],;
-        views: 1250,;
-        helpful: 89,;
-        notHelpful: 12,;
-        lastUpdated: new Date('2025-01-05'),;
-        createdBy: 'agent_001';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      }
-    ]
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
-    const ticket: SupportTicket = {
-      id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
 
             sender_type: 'agent';
             sender_id: 'agent_001';
@@ -1147,38 +337,12 @@ export interface Attachment {;
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
->>>>>>> main
       ...ticketData;
       status: 'open';
       attachments: [];
       messages: [];
       createdAt: new Date()
       updatedAt: new Date()
-<<<<<<< HEAD
-    }
-    this.tickets.push(ticket);
-    this.updateAnalytics();
-    return ticket
-  }
-  async assignTicket(ticketId: string, agentId: string): Promise<void> {
-    const ticket = this.tickets.find(t => t.id === ticketId);
-    if (ticket) {
-      ticket.assignedAgentId = agentId;
-      ticket.status = 'in_progress';
-      ticket.updatedAt = new Date()
-      this.updateAnalytics()
-    }
-  }
-  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
-    const ticket = this.tickets.find(t => t.id === ticketId);
-    if (ticket) {
-      ticket.status = status;
-      ticket.updatedAt = new Date();
-      if (status === 'resolved') {
-        ticket.resolvedAt = new Date()
-        if (ticket.createdAt && ticket.resolvedAt) {
-          ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
-=======
 
     };
 
@@ -1202,7 +366,6 @@ export interface Attachment {;
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
 
->>>>>>> main
 =======
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
@@ -1239,25 +402,6 @@ export interface Attachment {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        }
-      }
-      this.updateAnalytics()
-    }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
-    const ticket = this.tickets.find(t => t.id === ticketId);
-=======
 
 
 
@@ -1287,25 +431,10 @@ export interface Attachment {;
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
->>>>>>> main
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
     }
     const message: TicketMessage = {
-<<<<<<< HEAD
-      id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      ...messageData;
-      createdAt: new Date()
-    }
-    ticket.messages.push(message);
-    ticket.updatedAt = new Date();
-    // Update first response time if this is the first agent response
-    if (message.senderType === 'agent' && !ticket.firstResponseTime) {
-      const firstResponseTime = (message.createdAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60);
-      ticket.firstResponseTime = firstResponseTime
-    }
-    this.updateAnalytics();
-=======
       id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       createdAt: new Date()
@@ -1325,16 +454,10 @@ export interface Attachment {;
 
     this && this.updateAnalytics();
 
->>>>>>> main
     return message
   }
   async startChatbotSession(customerId: string): Promise<ChatbotSession> {
     const session: ChatbotSession = {
-<<<<<<< HEAD
-      id: `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      customerId;
-      startTime: new Date();
-=======
       id: `chat_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       customerId;
       startTime: new Date();
@@ -1424,21 +547,10 @@ if ( {) {
       customer_id;
       start_time: new Date ();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
       messages: [];
       intent: '';
       confidence: 0;
       resolved: false;
-<<<<<<< HEAD
-      escalated: false
-      satisfaction: 0
-    }
-    this.chatbotSessions.push(session);
-    return session
-  }
-  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
-    const session = this.chatbotSessions.find(s => s.id === sessionId);
-=======
 
     };
 
@@ -1448,19 +560,10 @@ if ( {) {
   }
   async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
->>>>>>> main
     if (!session) {
       throw new Error(`Session ${sessionId} not found`)
     }
     const message: ChatbotMessage = {
-<<<<<<< HEAD
-      id: `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      ...messageData;
-      timestamp: new Date()
-    }
-    session.messages.push(message);
-    // Simulate AI intent detection
-=======
       id: `chat_msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       timestamp: new Date()
@@ -1472,7 +575,6 @@ if ( {) {
 
     // Simulate AI intent detection
 
->>>>>>> main
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
@@ -1535,22 +637,6 @@ if ( {) {
       const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-    return message
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private detectIntent(message: string): { intent: string, confidence: number } {
-    const lowerMessage = message.toLowerCase();
-    if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
-=======
-=======
 
 
 
@@ -1558,60 +644,27 @@ if ( {) {
     return message
   }
 
->>>>>>> main
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> main
 =======
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
     } else if (lowerMessage.includes('api') |lowerMessage.includes('integration')) {
       return { intent: 'technical_support', confidence: 0.8 }
     } else if (lowerMessage.includes('feature') |lowerMessage.includes('request')) {
-<<<<<<< HEAD
-      return { intent: 'feature_request', confidence: 0.75 }
-    } else {
-      return { intent: 'general_inquiry', confidence: 0.6 }
-    }
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
-    const session = this.chatbotSessions.find(s => s.id === sessionId);
-    if (session) {
-      session.endTime = new Date();
-      session.resolved = resolved;
-      session.escalated = escalated;
-      session.satisfaction = satisfaction
-      this.updateAnalytics()
-=======
 =======
       escalated: false,
       satisfaction: 0;
@@ -1698,27 +751,17 @@ if ( {) {
       session && session.satisfaction = satisfaction,
       this && this.updateAnalytics()
 
->>>>>>> main
     }
   }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
     const article: KnowledgeBaseArticle = {
-<<<<<<< HEAD
-      id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
->>>>>>> main
       ...articleData;
       views: 0;
       helpful: 0;
       notHelpful: 0;
       createdBy: 'system'
       lastUpdated: new Date()
-<<<<<<< HEAD
-    }
-    this.knowledgeBase.push(article);
-    return article
-=======
 
     };
 
@@ -1726,7 +769,6 @@ if ( {) {
 
     return article
 
->>>>>>> main
 =======
 ;
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
@@ -1752,35 +794,6 @@ if ( {) {
     },;
     this.knowledgeBase.push(article),;
     return article;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
-    const lowerQuery = query.toLowerCase()
-    return this.knowledgeBase.filter(article =>
-      article.title.toLowerCase().includes(lowerQuery) |
-      article.content.toLowerCase().includes(lowerQuery) |
-      article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-    ).sort((a, b) => b.views - a.views)
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  async getAIRecommendations(): Promise<AIRecommendation[]> {
-    const recommendations: AIRecommendation[] = [];
-    // Ticket prioritization recommendation
-    const highPriorityOpenTickets = this.tickets.filter(t =>
-      t.priority === 'high' && t.status === 'open'
-    ).length;
-    if (highPriorityOpenTickets > 5) {
-      recommendations.push({
-=======
 
 
 
@@ -1860,24 +873,10 @@ if ( {) {
 }
       recommendations.push ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
         type: 'ticket_prioritization';
         title: 'High Priority Ticket Backlog';
         description: 'Too many high priority tickets are waiting for attention';
         impact: 'high';
-<<<<<<< HEAD
-        confidence: 90
-        actionItems: [
-          'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria'
-        ]
-      })
-    }
-    // Agent assignment recommendation
-    const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTickets < a.maxTickets);
-    const unassignedTickets = this.tickets.filter(t => !t.assignedAgentId && t.status === 'open').length;
-    if (availableAgents.length > 0 && unassignedTickets > 0) {
-      recommendations.push({
-=======
 
     const availableAgents = this && this.agents.filter(a => a && a.isAvailable && a && a.currentTickets < a && a.maxTickets);
     const unassignedTickets = this && this.tickets.filter(t => !t && t.assignedAgentId && t && t.status === 'open').length;
@@ -1902,23 +901,10 @@ if ( {) {
 }
       recommendations.push ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
         type: 'agent_assignment';
         title: 'Unassigned Tickets Available';
         description: 'There are unassigned tickets and available agents';
         impact: 'medium';
-<<<<<<< HEAD
-        confidence: 85
-        actionItems: [
-          'Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload'
-        ]
-      })
-    }
-    // Knowledge base recommendation
-    const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10);
-    if (lowViewedArticles.length > 5) {
-      recommendations.push({
-=======
 
         confidence: 85,
         action_items: [;
@@ -1934,20 +920,11 @@ if ( {) {
 }
       recommendations.push ({
 
->>>>>>> main
         type: 'knowledge_base';
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
-<<<<<<< HEAD
-        confidence: 75
-        actionItems: [
-          'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
-        ]
-      })
-=======
 
->>>>>>> main
 =======
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
@@ -1998,65 +975,6 @@ if ( {) {
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-    return recommendations
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  private updateAnalytics(): void {
-    const totalTickets = this.tickets.length;
-    const openTickets = this.tickets.filter(t => ['openin_progresswaiting_customer'].includes(t.status)).length;
-    const resolvedTickets = this.tickets.filter(t => t.status === 'resolved').length;
-    const resolutionTimes = this.tickets
-      .filter(t => t.resolutionTime)
-      .map(t => t.resolutionTime!);
-    const averageResolutionTime = resolutionTimes.length > 0
-      ? resolutionTimes.reduce((sum, time) => sum + time, 0) / resolutionTimes.length
-      : 0;
-    const responseTimes = this.tickets
-      .filter(t => t.firstResponseTime)
-      .map(t => t.firstResponseTime!);
-    const averageFirstResponseTime = responseTimes.length > 0
-      ? responseTimes.reduce((sum, time) => sum + time, 0) / responseTimes.length
-      : 0;
-    const satisfactionScores = this.customers.map(c => c.satisfactionScore);
-    const customerSatisfaction = satisfactionScores.length > 0
-      ? satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores.length
-      : 0;
-    const chatbotResolved = this.chatbotSessions.filter(s => s.resolved && !s.escalated).length;
-    const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length;
-    const chatbotResolutionRate = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 : 0;
-    const categoryCounts = this.tickets.reduce((acc, ticket) => {
-      acc[ticket.category] = (acc[ticket.category] |0) + 1;
-      return acc
-    }, {} as Record<string, number>);
-    const topCategories = Object.entries(categoryCounts)
-      .map(([category, count]) => ({ category, count }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 5);
-    const agentPerformance = this.agents.map(agent => ({
-      agentId: agent.id;
-      ticketsResolved: agent.performance.ticketsResolved
-      satisfaction: agent.performance.customerSatisfaction
-    }));
-    this.analytics = {
-      totalTickets;
-      openTickets;
-      resolvedTickets;
-      averageResolutionTime;
-      averageFirstResponseTime;
-      customerSatisfaction;
-      chatbotResolutionRate;
-=======
 
 
 
@@ -2182,7 +1100,6 @@ if ( {) {
       customer_satisfaction;
       chatbotResolutionRate;
 
->>>>>>> main
       topCategories;
       agentPerformance
 =======
@@ -2233,57 +1150,6 @@ if ( {) {
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-  }
-  async getTicket(ticketId: string): Promise<SupportTicket | null> {
-    return this.tickets.find(t => t.id === ticketId) |null
-  }
-  async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
-    if (status) {
-      return this.tickets.filter(t => t.status === status)
-    }
-    return this.tickets
-  }
-  async getCustomer(customerId: string): Promise<Customer | null> {
-    return this.customers.find(c => c.id === customerId) |null
-  }
-  async getCustomers(): Promise<Customer[]> {
-    return this.customers
-  }
-  async getAgents(): Promise<SupportAgent[]> {
-    return this.agents
-  }
-  async getChatbotSessions(): Promise<ChatbotSession[]> {
-    return this.chatbotSessions
-  }
-  async getKnowledgeBase(): Promise<KnowledgeBaseArticle[]> {
-    return this.knowledgeBase
-  }
-  async getAnalytics(): Promise<SupportAnalytics> {
-    return this.analytics
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const aiCustomerSupportService = new AICustomerSupportService();
-
-=======
-;
-export const aiCustomerSupportService = new AICustomerSupportService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
@@ -2366,4 +1232,3 @@ if ( {) {
 export const aiCustomerSupportService = new AICustomerSupportService ();
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

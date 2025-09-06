@@ -810,7 +810,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
             className="text-4xl md:text-5xl font-bold text-center mb-16">;
@@ -824,7 +824,7 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
 
                 className="group cursor-pointer">;

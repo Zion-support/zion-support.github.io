@@ -36,6 +36,9 @@ interface ResultsHeaderProps {;
         </div>
       ) : (
         <span>
+          {resultCount === 0
+            ? 'No talents found. Try adjusting your filters.'
+            : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
           {resultCount === 0 ? (
 
 

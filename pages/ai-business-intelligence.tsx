@@ -169,17 +169,7 @@ const AIBusinessIntelligence: React.FC = () => {;
     },;
 
 =======
-import Head from 'next / head';
-import {motion} from 'framer-motion';
-import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, } from 'lucide-react';
-import EnhancedNavigation from '../components / EnhancedNavigation';
-import EnhancedFooter from '../components / EnhancedFooter';
-export default /**
- * AIBusinessIntelligencePage - Function description
- */
-function AIBusinessIntelligencePage() {
-  const features = [;
-    {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       icon: Brain,
       title: 'Predictive Analytics',
       description:;

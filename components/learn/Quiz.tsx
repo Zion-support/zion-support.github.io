@@ -55,7 +55,6 @@ import React, { useState } from 'react';
 export default function Quiz({ questions, onComplete }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
-
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

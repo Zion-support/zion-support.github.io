@@ -1,92 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useParams, Link} from "react-router-dom";
-import {Header} from "@/components/header/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {useState, useEffect} from "react";
-import {Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase} from "lucide-react";
-import {MARKETPLACE_LISTINGS} from "@/data/listingData";
-import {useNavigate} from "react-router-dom";
-import {toast} from "@/hooks/use-toast";
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { slug } = useParams() as { slug?: string };
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useParams, Link } from "react-router-dom",
-import { Header } from "@/components/header/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { useState, useEffect } from "react",
-import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
-import { MARKETPLACE_LISTINGS } from "@/data/listingData",
-import { useNavigate } from "react-router-dom",
-<<<<<<< HEAD
-import { toast } from "@/hooks/use-toast";
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
-
-  const { slug } = useParams() as { slug?: string }
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-=======
-import { toast } from "@/hooks/use-toast",
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { slug } = useParams() as { slug?: string },
-  const navigate = useNavigate(),
-  const [isLoading, setIsLoading] = useState(true),
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
     icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-  });
-  // Map of category slugs to their display data
-  const categoryData = {
-    'services': {
-      title: "Services"
-      description: "On-demand IT support, consulting, development, and more";
-      icon: <Briefcase className="w-6 h-6" />
-    }
-    'talents': {
-      title: "Talents"
-      description: "Connect with AI experts, developers, and tech specialists";
-      icon: <Brain className="w-6 h-6" />
-    }
-    'equipment': {
-      title: "Equipment"
-      description: "Rent or buy specialized hardware, servers, and devices";
-      icon: <Code className="w-6 h-6" />
-    }
-=======
-=======
 
 
->>>>>>> main
   }),
 
   // Map of category slugs to their display data
@@ -106,193 +28,101 @@ export default function CategoryDetail() {
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     'business-solutions': {
       title: "Business Solutions"
       description: "Enterprise AI integrations and services"
       icon: <Briefcase className="w-6 h-6" />
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  useEffect(() => {
-    setIsLoading(true);
-=======
-=======
 
 
->>>>>>> main
   },
 
   useEffect(() => {
     setIsLoading(true),
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
     // Find the category data based on slug
     const currentCategory = categoryData[slug as keyof typeof categoryData] |{
       title: slug?.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') |"Category"
       description: "Explore our collection in this category"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    setCategory(currentCategory);
-    // Filter listings by category
-    const categoryTitle = currentCategory.title;
-    const filteredListings = MARKETPLACE_LISTINGS.filter(listing =>
-      listing.category.toLowerCase() === categoryTitle.toLowerCase()
-    );
-=======
-=======
 
 
->>>>>>> main
     },
     
     setCategory(currentCategory),
@@ -303,27 +133,11 @@ export default function CategoryDetail() {
       listing.category.toLowerCase() === categoryTitle.toLowerCase()
     ),
     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    // If we don't have real listings for this category, generate placeholder listings
-    const listingsToShow = filteredListings.length > 0 ? filteredListings :
-      Array(4).fill(null).map((_, index) => ({
-<<<<<<< HEAD
-        id: `${slug}-${index}`
-        title: `${currentCategory.title} Product ${index + 1}`
-        description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`
-        category: currentCategory.title
-        price: Math.floor(Math.random() * 500) + 50
-        currency: "$"
-        tags: [`${slug}`, "ai", "tool"];
-=======
-=======
 
     // If we don't have real listings for this category, generate placeholder listings
     const listingsToShow = filteredListings.length > 0 ? filteredListings :
       Array(4).fill(null).map((_, index) => ({
 
->>>>>>> main
         id: `${slug}-${index}`,
         title: `${currentCategory.title} Product ${index + 1}`,
         description: `A great ${currentCategory.title.toLowerCase()} solution for your needs.`,
@@ -331,29 +145,12 @@ export default function CategoryDetail() {
         price: Math.floor(Math.random() * 500) + 50,
         currency: "$",
         tags: [`${slug}`, "ai", "tool"],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
         author: {
           name: `Provider ${index + 1}`
           id: `author-${index + 1}`
           avatarUrl: undefined
-<<<<<<< HEAD
-<<<<<<< HEAD
-        }
-        images: [`/placeholder.svg`]
-        createdAt: new Date().toISOString()
-        rating: Math.floor(Math.random() * 5) + 1
-        reviewCount: Math.floor(Math.random() * 100)
-      }));
-    setListings(listingsToShow);
-    setIsLoading(false)
-  }, [slug]);
-=======
-=======
 
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
@@ -485,7 +282,6 @@ export default function CategoryDetail() {;
   }, [slug]);
 
 
->>>>>>> main
         },
         images: [`/placeholder.svg`],
         createdAt: new Date().toISOString(),
@@ -497,12 +293,8 @@ export default function CategoryDetail() {;
     setIsLoading(false)
   }, [slug]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId)
@@ -510,21 +302,12 @@ export default function CategoryDetail() {;
       toast({
         title: "Quote Requested"
         description: `Your quote request for ${listing.title} has been sent.`
-<<<<<<< HEAD
-<<<<<<< HEAD
-      });
-=======
-      }),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
       }),
       
 
 
->>>>>>> main
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
         state: {
@@ -534,15 +317,10 @@ export default function CategoryDetail() {;
             title: listing.title
             category: listing.category
             image: listing.images?.[0]
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
 =======
 
->>>>>>> main
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
 import { Footer } from "@/components/Footer",;
@@ -664,21 +442,6 @@ export default function CategoryDetail() {;
     setListings(listingsToShow),;
     setIsLoading(false);
   }, [slug]),;
-<<<<<<< HEAD
-  // Handle requesting a quote;
-  const handleRequestQuote = (listingId: string) => {;
-    const listing = listings.find(item => item.id === listingId),;
-    if (listing) {;
-      toast({;
-        title: "Quote Requested",;
-        description: `Your quote request for ${listing.title} has been sent.`;
-      }),;
-      // Navigate to the quote request page with the listing information;
-      navigate("/request-quote", {;
-        state: {;
-          serviceType: listing.category,;
-          specificItem: {;
-=======
 
   // Handle requesting a quote;
   const handleRequestQuote = (listingId: string) => {;
@@ -850,28 +613,10 @@ if ( {) {
             image: listing.images?.[0];
 
 =======
->>>>>>> main
             id: listing.id,;
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }
-        }
-      })
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -883,67 +628,10 @@ if ( {) {
 
   },
 
->>>>>>> main
 =======
   };
 =======
   },
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-  return (
-    <>
-      <Header />
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-12">
-          <div className="mb-4">
-            <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
-              ← Back to Categories
-            </Link>
-          </div>
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
-                {category.icon}
-              </div>
-            </div>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
-              {category.title}
-            </GradientHeading>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-              {category.description}
-            </p>
-          </div>
-          {isLoading ? (
-            <div className="flex justify-center items-center h-64">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {listings.map((listing) => (
-<<<<<<< HEAD
-                <ProductListingCard
-                  key={listing.id}
-=======
-                <ProductListingCard 
-                  key={listing.id} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                  listing={listing}
-                  onRequestQuote={handleRequestQuote}
-                />
-              ))}
-            </div>
-          )}
-<<<<<<< HEAD
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1024,17 +712,12 @@ if ( {) {
             </div>;
           )}
 
->>>>>>> main
         </div>;
       </div>;
       <Footer />;
     </>;
   );
 }
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
             </p>;
           </div>;
@@ -1060,4 +743,3 @@ if ( {) {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

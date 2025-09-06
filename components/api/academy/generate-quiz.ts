@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 
 
   const fallback = () => {
-    return res && res.status(200).json({
+    return res.status(200).json({
       questions: [
         {
 

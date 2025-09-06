@@ -198,9 +198,8 @@ const service_categories = [;
       "Zion Tech Group's business intelligence platform has transformed our decision - making process. We now have real - time insights that have increased our revenue by 300%.",
 
     rating: 5,
-    avatar: '👨‍💼'
-  };
-  {
+    avatar: '👨‍💼',
+  },  {
     name: 'Sarah Johnson',
     role: 'Marketing Director, DigitalFlow Agency',
     company: 'DigitalFlow Agency',
@@ -209,9 +208,8 @@ const service_categories = [;
       "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
 
     rating: 5,
-    avatar: '👩‍💼'
-  };
-  {
+    avatar: '👩‍💼',
+  },  {
     name: 'David Chen',
     role: 'Sales Manager, TechSales Pro',
     company: 'TechSales Pro',

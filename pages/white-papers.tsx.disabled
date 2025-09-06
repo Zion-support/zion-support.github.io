@@ -315,6 +315,7 @@ const stats = [
   { number: '10K+', label: 'Downloads' },
   { number: '15+', label: 'Industry Experts' },
   { number: '95%', label: 'Reader Satisfaction' }
+<<<<<<< HEAD
 =======
 >>>>>>> main
 import Head from 'next/head';

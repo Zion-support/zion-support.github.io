@@ -669,10 +669,11 @@ export default function CloudMonitoringPage() {;
             <Button
               href="#pricing"
               size="lg"
-              className="bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25">;
-              Start Free Trial;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Button>;
+              className="bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
             <Button
               href="#demo"
               variant="outline"
@@ -1167,7 +1168,6 @@ export default function CloudMonitoringPage() {;
               Choose the plan that fits your monitoring needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {pricingPlans.map((plan, index) => (

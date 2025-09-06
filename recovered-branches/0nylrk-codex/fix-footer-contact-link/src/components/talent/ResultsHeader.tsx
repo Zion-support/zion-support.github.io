@@ -1,17 +1,4 @@
 
-<<<<<<< HEAD
-import { Loader2 } from "lucide-react";
-
-interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number
-
-import { Loader2 } from "lucide-react";
-interface ResultsHeaderProps {
-  isLoading: boolean;
-  resultCount: number;
-
-=======
 
 import { Loader2 } from "lucide-react",
 
@@ -25,7 +12,6 @@ import { Loader2 } from "lucide-react",
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number
->>>>>>> main
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
   return (
@@ -38,21 +24,6 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       ) : (
         <span>
 
-<<<<<<< HEAD
-          {resultCount === 0
-            ? "No talents found. Try adjusting your filters."
-            : `Found ${resultCount} talent${resultCount !== 1 ? "s" : ""}`}
-        </span>
-
-import { Loader2 } from "lucide-react",;
-interface ResultsHeaderProps {;
-  isLoading: boolean;
-  resultCount: number;
-}
-;
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {;
-  return (;
-=======
 import {Loader2} from "lucide-react";
 interface ResultsHeaderProps {;
   isLoading: boolean,;
@@ -61,7 +32,6 @@ interface ResultsHeaderProps {;
 
 export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderProps) {;
   return (
->>>>>>> main
     <div className="flex items-center mb-6 text-zion-slate-light">;
       {isLoading ? (;
         <div className="flex items-center">;
@@ -74,19 +44,6 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
             "No talents found. Try adjusting your filters.";
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
-<<<<<<< HEAD
-
-          )}
-        </span>;
-
-      )}
-    </div>
-);
-}
-}
-;
-
-=======
 =======
 
           {resultCount === 0 ? (
@@ -131,4 +88,3 @@ function ResultsHeader() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

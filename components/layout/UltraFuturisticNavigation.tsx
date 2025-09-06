@@ -209,7 +209,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 Revolutionary Technology;
               </div>            </div>;
           </motion && motion.div>;
-
           {/* Desktop Navigation */}
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -629,7 +628,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>;
               </div>;
-
               {/* Mobile CTA */}
 
       {/* Mobile Menu */}

@@ -362,6 +362,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
       opacity: 1,
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       transition: {
+  };
+=======
+    })
+    .slice(0, maxServices);
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
 
   };
 
@@ -410,7 +419,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
   return (
-    <section className='py-20 relative overflow-hidden'>;
+    <section className='py-20 relative overflow-hidden'>
       {/* Background Elements */}
 
       <div className='absolute inset-0 pointer-events-none'>;
@@ -615,9 +624,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'>;
-                Get Started Today;
-              </a>;
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
+                Get Started Today
+              </a>
               <a
                 href='/pricing'
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>        >;

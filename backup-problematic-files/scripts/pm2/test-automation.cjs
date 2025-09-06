@@ -416,6 +416,23 @@ class TestAutomation {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -510,6 +527,23 @@ class TestAutomation {}
     try {}
       this.log('Checking test coverage...');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      
+      
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
       

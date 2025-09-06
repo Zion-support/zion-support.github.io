@@ -4,18 +4,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+;
+const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
+  service,
+}) => {
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20, scale: 0.95 },
+    visible: {      opacity: 1,    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'ease_out' as const,
+      },
+    },    hover: {        ease: "ease_out" as const;
+      }
     }
     
     return this.props.children;
@@ -620,8 +624,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
           </div>;
         </div>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Hover Effect Border */}
 
 };

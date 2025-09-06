@@ -194,6 +194,7 @@ export default function SMBSolutionsPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
   );
 };
 

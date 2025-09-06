@@ -1,35 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {TalentProfile} from "@/types/talent";
-import {ActiveFilters} from "@/components/talent/ActiveFilters";
-import {ResultsHeader} from "@/components/talent/ResultsHeader";
-import {TalentGrid} from "@/components/talent/TalentGrid";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { TalentProfile } from "@/types/talent",
-import { ActiveFilters } from "@/components/talent/ActiveFilters",
-<<<<<<< HEAD
-import { ResultsHeader } from "@/components/talent/ResultsHeader";
-import { TalentGrid } from "@/components/talent/TalentGrid";
-=======
-import { ResultsHeader } from "@/components/talent/ResultsHeader",
-import { TalentGrid } from "@/components/talent/TalentGrid",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -40,21 +13,6 @@ interface TalentResultsProps {
   handleToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
   activeFiltersProps: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    selectedSkills: string[]
-    toggleSkill: (skill: string) => void
-    selectedAvailability: string[]
-    toggleAvailability: (availability: string) => void
-    selectedRegions: string[]
-    toggleRegion: (region: string) => void
-    priceRange: [number, number];
-
-    setPriceRange: (range: [number, number]) => void;
-    experienceRange: [number, number],
-    setExperienceRange: (range: [number, number]) => void;
-=======
-=======
 
 import React from "react";
 import {TalentProfile} from "@/types/talent";
@@ -63,7 +21,6 @@ import {ResultsHeader} from "@/components/talent/ResultsHeader";
 import {TalentGrid} from "@/components/talent/TalentGrid";
 =======
 
->>>>>>> main
     selectedSkills: string[],
     toggleSkill: (skill: string) => void,
     selectedAvailability: string[],
@@ -74,35 +31,6 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
     setPriceRange: (range: [number, number]) => void,
     experienceRange: [number, number],
     setExperienceRange: (range: [number, number]) => void,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    clearFilters: () => void
-  }
-}
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-export function TalentResults({;
-  filteredTalents;
-  isLoading;
-  viewProfile;
-  handleRequestHire;
-  savedTalents;
-  handleToggleSave;
-  isAuthenticated;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function TalentResults({
-  filteredTalents,
-  isLoading,
-  viewProfile,
-  handleRequestHire,
-  savedTalents,
-  handleToggleSave,
-  isAuthenticated,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 
     clearFilters: () => void
   }
@@ -110,26 +38,17 @@ export function TalentResults({
 
 
 
->>>>>>> main
   activeFiltersProps
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> main
 import React from "react",;
 import { TalentProfile } from "@/types/talent",;
 import { ActiveFilters } from "@/components/talent/ActiveFilters",;
 import { ResultsHeader } from "@/components/talent/ResultsHeader",;
 import { TalentGrid } from "@/components/talent/TalentGrid",;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 interface TalentResultsProps {;
   filteredTalents: TalentProfile[],;
   isLoading: boolean,;
@@ -145,22 +64,6 @@ interface TalentResultsProps {;
     toggleAvailability: (availability: string) => void,;
     selectedRegions: string[],;
     toggleRegion: (region: string) => void,;
-<<<<<<< HEAD
-    priceRange: [number, number],;
-    setPriceRange: (range: [number, number]) => void,;
-    experienceRange: [number, number],;
-    setExperienceRange: (range: [number, number]) => void,;
-    clearFilters: () => void;
-  }
-}
-;
-export function TalentResults({;
-  filteredTalents,;
-  isLoading,;
-  viewProfile,;
-  handleRequestHire,;
-  savedTalents,;
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     priceRange: [number, number];
 
@@ -179,27 +82,10 @@ export function TalentResults(): any ({;
   viewProfile;
   handleRequestHire;
   savedTalents;
->>>>>>> main
   handleToggleSave;
   isAuthenticated;
   activeFiltersProps;
 }: TalentResultsProps) {;
-<<<<<<< HEAD
-  return (;
-    <div className="flex-1">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      {/* Active filters */}
-      <ActiveFilters {...activeFiltersProps} />
-      {/* Results count */}
-      <ResultsHeader
-        isLoading={isLoading}
-        resultCount={filteredTalents.length}
-      />
-=======
   return (
     <div className="flex-1">;
 
@@ -217,27 +103,12 @@ export function TalentResults(): any ({;
       />;
 
 
->>>>>>> main
       {/* Talents grid */}
       <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
-<<<<<<< HEAD
-        handleRequestHire={handleRequestHire}
-        savedTalentIds={savedTalents}
-        onToggleSave={handleToggleSave}
-        isAuthenticated={isAuthenticated}
-        clearFilters={activeFiltersProps.clearFilters}
-<<<<<<< HEAD
-      />
-    </div>
-  )
-}
-<<<<<<< HEAD
-=======
-=======
 =======
 import React from './react';
 import { TalentProfile } from '@/types / talent';
@@ -296,21 +167,10 @@ function TalentResults() {
         clearFilters={activeFiltersProps.clearFilters}
 
 
->>>>>>> main
       />;
     </div>;
   );
 }
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
@@ -327,4 +187,3 @@ function TalentResults() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

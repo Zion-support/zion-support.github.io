@@ -983,7 +983,6 @@ import React from 'react';
                 <h3 className="text-3xl font-bold text-white mb-4">{category && category.category}</h3>;
                 <div className="w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full" />;
               </div>;
-
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
 
                   <Card

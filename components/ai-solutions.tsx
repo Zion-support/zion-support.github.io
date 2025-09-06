@@ -430,7 +430,6 @@ export default function AISolutionsPage() {;
               businesses and drive innovation;
             </p>;
           </section>;
-
           <section className='mx-auto max-w-7xl'>;
 
             {/* AI Solutions Grid */}
@@ -503,7 +502,6 @@ export default function AISolutionsPage() {;
               Cutting-edge artificial intelligence solutions that transform businesses and drive innovation;
             </p>;
           </section>;
-
           <section className="mx-auto max-w-7xl">;
 
             {/* AI Solutions Grid */}

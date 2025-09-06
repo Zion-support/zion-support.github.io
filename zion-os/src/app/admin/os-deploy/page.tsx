@@ -407,7 +407,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Manage community funds with transparency</div>;
                 </div>;
               </label>;
-
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
                 <input
@@ -425,7 +424,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Local + global decision making</div>;
                 </div>;
               </label>;
-
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
                 <input
@@ -443,7 +441,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Automated content and behavior monitoring</div>;
                 </div>;
               </label>;
-
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
                 <input
@@ -544,7 +541,6 @@ ai: 'Advanced AI capabilities and automation',
           </div>;
 
             </button>;
-
             {message && (;
 
               <div

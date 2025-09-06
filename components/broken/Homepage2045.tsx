@@ -946,8 +946,6 @@ if ( {) {
                 Explore our newest revolutionary services that are setting new standards in technology innovation.;
               </p>;
             </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Featured New Services */}
 
                 <motion.div;
@@ -1167,6 +1165,16 @@ if ( {) {
 
 =======
 
+              </Link>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </motion.div>
+          </div>
+        </section>
         {/* Contact CTA Section */}
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

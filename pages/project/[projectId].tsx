@@ -225,6 +225,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </span>
           </div>
+
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Project Summary</h2>
             <div className="text-sm">
@@ -234,6 +235,7 @@ if ( {) {
               <div className="mt-2">{project.summary}</div>
             </div>
           </section>
+
           <section className="rounded border p-4">
             <h2 className="font-medium mb-2">Timeline</h2>
             <ul className="list-disc pl-6 space-y-1 text-sm">

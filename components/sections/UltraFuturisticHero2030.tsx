@@ -213,6 +213,20 @@ import { motion } from 'framer-motion';
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
           >
+            Pioneering the future with{' '}
+            <span className='text-purple-400 font-semibold'>
+              AI Consciousness
+            </span>
+            ,{' '}
+            <span className='text-cyan-400 font-semibold'>
+              Quantum Computing
+            </span>
+            , and{' '}
+            <span className='text-emerald-400 font-semibold'>
+              Space Technology
+            </span>          </motion.p>            className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          >
 
             Pioneering the future with{' '}
             <span className="text-purple-400 font-semibold">AI Consciousness</span>,{' '}
@@ -808,8 +822,6 @@ function UltraFuturisticHero2030() {
           </div>;
         </motion && motion.div>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Floating Elements */}
 
               className='text - center group';

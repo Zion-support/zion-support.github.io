@@ -1,26 +1,24 @@
 import { useState } from 'react',;
 import Head from 'next/head',;
-;
 export default function OffworldDeploy() {;
   const [cid, setCid] = useState<string | null>(null),;
   const [status, setStatus] = useState<string>(''),;
   const [error, setError] = useState<string>(''),;
   const [provider, setProvider] = useState<string>(''),;
-;
   async function handleDeploy() {;
     setStatus('Exporting and deploying to IPFS...'),;
     setError(''),;
     setCid(null),;
     setProvider(''),;
     try {;
-      const res = await fetch('/api/offworld/deploy', { method:'POST' }),;
+      const res = await fetch('/api/offworld/deploy', { method: 'POST' }),;
       const data = await res.json(),;
       if (!res.ok) throw new Error(data?.error || 'Deploy failed'),;
       setCid(data.cid),;
-      setProvider(data.provider || ''),;
-      setStatus('Deployed successfully'),;
-    } catch (e:any) {;
-      setError(e.message),;
+      setProvider(data.provider || '');
+      setStatus('Deployed successfully');
+    } catch (e: any) {;
+      setError(e.message);
       setStatus('');
     }
   }
@@ -35,22 +33,13 @@ export default function OffworldDeploy() {;
       <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>
       {status && <p className="mt-4 text-green-600">{status}</p>}
       {error && <p className="mt-4 text-red-600">{error}</p>}
-<<<<<<<< HEAD:backup-problematic-files/components/deploy/offworld.tsx
       {cid && (
         <div className="mt-6 space-y-2">
           <div>CID: <code className="break-all">{cid}</code></div>
           {provider && <div>Provider: {provider}</div>}
           <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>
         </div>
-========
-      {cid && (;
-        <div className="mt-6 space-y-2">;
-          <div>CID:<code className="break-all">{cid}</code></div>;
-          {provider && <div>Provider:{provider}</div>}
-          <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>;
-        </div>;
->>>>>>>> main:backup-problematic-files/temp_conflicts/pages/deploy/offworld.tsx
       )}
     </div>;
-  ),;
+  );
 }

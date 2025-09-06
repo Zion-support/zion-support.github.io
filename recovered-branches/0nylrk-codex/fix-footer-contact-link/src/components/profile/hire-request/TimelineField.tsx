@@ -1,65 +1,17 @@
 
-<<<<<<< HEAD
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from "@/components/ui/select";
 
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-
-import {
-=======
-
->>>>>>> main
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-<<<<<<< HEAD
-} from "@/components/ui/form";
-=======
 } from '@/components / ui / form';
->>>>>>> main
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-<<<<<<< HEAD
-} from "@/components/ui/select";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-
-interface TimelineFieldProps {
-  form: UseFormReturn<FormValues>;
-}
-export function TimelineField({ form }: TimelineFieldProps) {
-
-  const timelineOptions = [
-{ value: "Less than 1 week", label: "Less than 1 week" }
-    { value: "1-2 weeks", label: "1-2 weeks" }
-    { value: "2-4 weeks", label: "2-4 weeks" }
-    { value: "1-2 months", label: "1-2 months" }
-    { value: "3-6 months", label: "3-6 months" }
-    { value: "6+ months", label: "6+ months" }
-  ];
-
-    { value: "Ongoing", label: "Ongoing" }
-  ],
-=======
 } from '@/components / ui / select';
 import { UseFormReturn  } from './react - hook - form';
 import { FormValues  } from './useHireRequestForm';
@@ -97,7 +49,6 @@ import {FormValues} from "./useHireRequestForm";
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
 
->>>>>>> main
 
   return (
     <FormField
@@ -119,20 +70,6 @@ import {FormValues} from "./useHireRequestForm";
                 {timelineOptions.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
 
-<<<<<<< HEAD
-                    {option.label}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </FormControl>
-          <FormMessage />
-        </FormItem>
-      )}
-    />
-  );
-}
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { UseFormReturn } from "react-hook-form",;
@@ -217,4 +154,3 @@ function TimelineField() {
     />);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

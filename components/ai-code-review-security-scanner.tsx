@@ -1320,7 +1320,6 @@ const AICodeReviewSecurityScanner = () => {;
     </>;
   );
 };
-
 export default AICodeReviewSecurityScanner;  );
 
 };

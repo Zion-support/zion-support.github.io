@@ -1,55 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Link} from "react-router-dom";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
-import {ForumCategory, ForumCategoryInfo} from "@/types/community";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Link } from "react-router-dom",
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
-=======
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
-import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import {
-  MessageSquare;
-  Briefcase;
-  Code;
-  FileText;
-  Megaphone
-} from "@/components/icons",
-<<<<<<< HEAD
-import { ForumCategory, ForumCategoryInfo } from "@/types/community";
-const categories: ForumCategoryInfo[] = [
-  {
-
-    id: "getting-hired"
-    name: "Getting Hired"
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    adminOnly: false
-
-    icon: "Briefcase"
-  }
-=======
-import { ForumCategory, ForumCategoryInfo } from "@/types/community",
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> main
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -58,12 +11,8 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Briefcase"
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   {
 
     id: "project-help"
@@ -72,23 +21,8 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  {
-
-    id: "ai-tools"
-    name: "AI Tools Discussion"
-    description: "Discuss AI tools, frameworks, and best practices.";
-    adminOnly: false
-
-    icon: "Code"
-  }
-=======
-=======
 
 
->>>>>>> main
   },
   {
     id: "ai-tools",
@@ -97,12 +31,8 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Code"
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
   {
 
     id: "feedback"
@@ -111,19 +41,11 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
   },
 
 
->>>>>>> main
   {
 
     id: "announcements"
@@ -132,14 +54,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-];
-=======
-],
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 import {Link} from "react-router-dom";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -152,46 +66,16 @@ import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 ],
 
 
->>>>>>> main
 const iconMap = {
   Briefcase,
   MessageSquare,
   Code,
   FileText,
   Megaphone
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export const ForumCategories = () => {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly |isAdmin
-  );
-=======
-},
-
-<<<<<<< HEAD
-export const ForumCategories = () => {;
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-=======
-export const ForumCategories = () => {
-  const { user } = useAuth(),
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
-  const visibleCategories = categories.filter(
-    category => !category.adminOnly || isAdmin
-  ),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 },
 
 
->>>>>>> main
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
       {visibleCategories.map((category) => {
@@ -211,18 +95,7 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
-<<<<<<< HEAD
-<<<<<<< HEAD
-      })}
-    </div>
-  )
-}
-export default ForumCategories;
 
-=======
-=======
-
->>>>>>> main
 import { Link } from "react-router-dom",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -234,41 +107,21 @@ import {;
   Megaphone;
 } from "@/components/icons",;
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
     name: "Getting Hired",;
-<<<<<<< HEAD
-    description: "Tips, strategies, and questions about getting hired on the platform.",;
-    adminOnly: false,;
-    icon: "Briefcase";
-  },;
-=======
     description: "Tips, strategies, and questions about getting hired on the platform.";
     adminOnly: false,;
     icon: "Briefcase";
   };
->>>>>>> main
   {;
     id: "project-help",;
     name: "Project Help",;
     description: "Get help with your ongoing projects and collaboration.",;
     adminOnly: false,;
     icon: "MessageSquare";
-<<<<<<< HEAD
-  },;
-  {;
-    id: "ai-tools",;
-    name: "AI Tools Discussion",;
-    description: "Discuss AI tools, frameworks, and best practices.",;
-    adminOnly: false,;
-    icon: "Code";
-  },;
-=======
   };
   {;
     id: "ai-tools",;
@@ -277,18 +130,13 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: false,;
     icon: "Code";
   };
->>>>>>> main
   {;
     id: "feedback",;
     name: "Feedback & Feature Requests",;
     description: "Share your feedback and suggest new features.",;
     adminOnly: false,;
     icon: "FileText";
-<<<<<<< HEAD
-  },;
-=======
   };
->>>>>>> main
   {;
     id: "announcements",;
     name: "Announcements",;
@@ -296,28 +144,6 @@ const categories: ForumCategoryInfo[] = [;
     adminOnly: true,;
     icon: "Megaphone";
   }
-<<<<<<< HEAD
-],;
-const iconMap = {;
-  Briefcase,;
-  MessageSquare,;
-  Code,;
-  FileText,;
-  Megaphone;
-},;
-export const ForumCategories = () => {;
-  const { user } = useAuth(),;
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',;
-  const visibleCategories = categories.filter(;
-    category => !category.adminOnly || isAdmin;
-  ),;
-  return (;
-    <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">;
-      {visibleCategories.map((category) => {;
-        const Icon = iconMap[category.icon as keyof typeof iconMap],;
-        return (;
-          <Link key={category.id} to={`/community/category/${category.id}`}>;
-=======
 ];
 
 const iconMap = {;
@@ -392,39 +218,20 @@ export const ForumCategories = () => {;
 
         return (
           <Link key={category && category.id} to={`/community/category/${category && category.id}`}>;
->>>>>>> main
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">;
               <CardHeader className="flex flex-row items-center gap-4">;
                 <div className="p-2 bg-zion-purple/10 rounded-full">;
                   <Icon className="h-6 w-6 text-zion-purple" />;
                 </div>;
-<<<<<<< HEAD
-                <CardTitle className="text-xl">{category.name}</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <CardDescription className="text-base">{category.description}</CardDescription>;
-=======
                 <CardTitle className="text-xl">{category && category.name}</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <CardDescription className="text-base">{category && category.description}</CardDescription>;
->>>>>>> main
               </CardContent>;
             </Card>;
           </Link>;
         );
       })}
-<<<<<<< HEAD
-    </div>;
-  );
-};
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default ForumCategories;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
     </div>;
   );
@@ -469,4 +276,3 @@ export const ForumCategories = () =>: any {
 export default ForumCategories;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

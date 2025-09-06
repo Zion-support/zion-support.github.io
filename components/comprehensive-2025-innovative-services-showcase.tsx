@@ -73,7 +73,7 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
   return (
-    <Layout>;
+    <Layout>
       <SEO
         title='2025 Innovative Services Showcase | Zion Tech Group'
 

@@ -878,7 +878,6 @@ export default function Revolutionary2026ServicesShowcase() {;
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
-
                   <div className="space-y-3 mb-6">
 
                     {service.features.slice(0, 3).map((feature, idx) => (
@@ -1062,7 +1061,6 @@ export default function Revolutionary2026ServicesShowcase() {;
 
             ))}
           </div>;
-
           <div className='text-center mt-8'>;
 
             <Link

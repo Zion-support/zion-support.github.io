@@ -26,9 +26,6 @@ import React from 'react';
 
 import Head from 'next/head';
 
-=======
-import Head from 'next / head';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
 
 
@@ -454,7 +451,8 @@ export default function Revolutionary2030ServicesPage() {
 =======
 
       {/* Services Showcase */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
 

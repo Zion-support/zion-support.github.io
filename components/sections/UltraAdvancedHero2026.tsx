@@ -419,27 +419,6 @@ export default function UltraAdvancedHero2026() {;
               <span className="text-gray-200 font-medium">24/7 Autonomous Operation</span>
             </div>
           </motion.div>
-=======
-            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>;
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>;
-              <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />;
-              <span className='text-gray-200 font-medium'>;
-                First-to-Market Technology;
-              </span>;
-            </div>;
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl'>;
-              <CheckCircle className='w-6 h-6 text-purple-400 flex-shrink-0' />;
-              <span className='text-gray-200 font-medium'>;
-                1000% ROI Guaranteed;
-              </span>;
-            </div>;
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>;
-              <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />;
-              <span className='text-gray-200 font-medium'>;
-                24/7 Autonomous Operation;
-              </span>            </div>;
-          </motion && motion.div>;
-
           {/* Call to Action Buttons */}
 
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 text-white font-bold text-lg rounded-2xl hover:from-purple-700 hover:via-pink-700 hover:to-cyan-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl'>;
@@ -451,7 +430,8 @@ export default function UltraAdvancedHero2026() {;
 
             <Link
               href='/contact'
-              className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
+              className='inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
+            >
               <Zap className='w-6 h-6 mr-3' />              Get Started Today            variants={itemVariants}
 
           <motion.div 
@@ -467,6 +447,7 @@ export default function UltraAdvancedHero2026() {;
               Explore All Services
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
+<<<<<<< HEAD
             <Link
 =======
 
@@ -668,8 +649,6 @@ export default function UltraAdvancedHero2026() {;
           </motion && motion.div>;
         </motion && motion.div>;
       </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Floating Elements */}
 
               </div>;
@@ -932,7 +911,6 @@ export default function UltraAdvancedHero2026() {;
           className='absolute top-20 right-20 text-6xl opacity-20'>;
           🚀;
         </motion && motion.div>;
-
         <motion&& motion.div
 
           animate={{
@@ -958,7 +936,6 @@ export default function UltraAdvancedHero2026() {;
           className='absolute bottom-20 left-20 text-6xl opacity-20'>;
           ⚛️;
         </motion && motion.div>;
-
         <motion&& motion.div
 
           animate={{
@@ -984,7 +961,6 @@ export default function UltraAdvancedHero2026() {;
           className='absolute top-1/3 left-10 text-5xl opacity-20'>;
           🧠;
         </motion && motion.div>;
-
         <motion&& motion.div
 
           animate={{

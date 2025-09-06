@@ -76,6 +76,23 @@ function submitByEmail() {
     auth: { user, pass },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
+    const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
+    if (!id) return res && res.status($1).json({ $2 });
+=======
+<<<<<<< HEAD
+  const from = process.env.EMAIL_FROM |user;
+  if (!host |!user |!pass) throw new Error("Email not configured");
+=======
+  const from = process.env.EMAIL_FROM || user;
+<<<<<<< HEAD
+  if (!host || !user || !pass) throw new Error("Email not configured");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const transporter = nodemailer.createTransport({
+    host
+    port
+    secure: port === 465
+    auth: { user, pass }
+  });
 
   try {
 

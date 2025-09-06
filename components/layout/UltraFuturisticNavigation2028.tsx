@@ -161,7 +161,6 @@ const companyLinks = [
   { name: '🎯 About Us', href: '/about', icon: Users }
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }
   { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-=======
 ];
 
 const companyLinks = [

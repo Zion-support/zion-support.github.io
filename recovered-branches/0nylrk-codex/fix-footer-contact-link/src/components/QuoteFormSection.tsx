@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-import { Button } from "./ui/button",
-import { Input } from "./ui/input",
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
-=======
 
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
@@ -21,22 +13,11 @@ export function QuoteFormSection() {;
     setIsSubmitting(true);
 
 
->>>>>>> main
 
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-<<<<<<< HEAD
-  const handleSubmit = (e: React.FormEvent) => {
-e.preventDefault();
-    setIsSubmitting(true);
-// Simulate form submission
-    setTimeout(() => {
-      (setIsSubmitting(false), setIsSubmitted(true));
-    }, 1000);
-  }
-=======
 
   const handleSubmit = (e: React.FormEvent) => {
 
@@ -51,7 +32,6 @@ e.preventDefault();
   },
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 
   return (
     <section className="py-20 bg-zion-blue">
@@ -108,8 +88,6 @@ e.preventDefault();
                   >
                     Name
                   </label>
-<<<<<<< HEAD
-=======
 =======
 
     // Simulate form submission;
@@ -157,23 +135,11 @@ e.preventDefault();
                     Name;
                   </label>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> main
                   <Input
                     id="name"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
-<<<<<<< HEAD
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-zion-slate-light mb-1"
-                  >
-                    Company
-                  </label>
-=======
 
                   />;
                 </div>;
@@ -182,22 +148,10 @@ e.preventDefault();
                     Company;
                   </label>;
 
->>>>>>> main
                   <Input
                     id="company"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-<<<<<<< HEAD
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-zion-slate-light mb-1"
-                  >
-                    Email
-                  </label>
-=======
 
                   />;
                 </div>;
@@ -206,23 +160,11 @@ e.preventDefault();
                     Email;
                   </label>;
 
->>>>>>> main
                   <Input
                     id="email"
                     type="email"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                     required
-<<<<<<< HEAD
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-zion-slate-light mb-1"
-                  >
-                    Phone
-                  </label>
-=======
 
                   />;
                 </div>;
@@ -231,91 +173,18 @@ e.preventDefault();
                     Phone;
                   </label>;
 
->>>>>>> main
                   <Input
                     id="phone"
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-<<<<<<< HEAD
-                  />
-                </div>
-              </div>
-
-              <div className="mt-6">
-                <label
-                  htmlFor="interest"
-                  className="block text-sm font-medium text-zion-slate-light mb-1"
-                >
-                  I'm interested in (select all that apply)
-                </label>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">
-                  {[
-"AI Products/Services"
-                    "IT Equipment"
-                    "Server Solutions"
-                    "Storage Solutions"
-                    "Networking"
-                    "24/7 Support"
-                    "Recycling Services"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center">
-=======
 
 =======
->>>>>>> main
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
 
-<<<<<<< HEAD
-                      <label
-                        htmlFor={`interest-${index}`}
-                        className="ml-2 text-sm text-zion-slate-light"
-                      >
-                      <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
-
-                        {item}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-6">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-zion-slate-light mb-1"
-                >
-                  Additional Details
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-                ></textarea>
-              </div>
-
-              <div className="mt-6">
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-3"
-                >
-                  {isSubmitting
-                    ? "Sending..."
-                    : "Get Your Free Commercial Proposal"}
-                </Button>
-              </div>
-            </form>
-          )}
-        </div>
-      </div>
-    </section>
-  );
-}
-=======
 
 =======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
@@ -656,4 +525,3 @@ function QuoteFormSection() {
     </section>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

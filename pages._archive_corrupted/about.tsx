@@ -280,6 +280,8 @@ export default function AboutPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             {values.map((value) => (
               <div key={value.title} className=\"text-center\">

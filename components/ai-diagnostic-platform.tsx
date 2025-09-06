@@ -30,6 +30,28 @@ import Layout from '../components/layout/Layout';import {
   Brain, Shield, Zap, Target, Stethoscope, ;
 
 
+=======
+  Brain,
+  Shield,
+  Zap,
+  Target,
+  Stethoscope,
+  BarChart3,
+  Cpu,
+  Globe,
+  Users,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';import {
+  Brain, Shield, Zap, Target, Stethoscope, ;
+
+
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
  } from 'lucide-react';
@@ -102,12 +124,6 @@ const pricingPlans = [
     popular: false
   },];    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrationsTraining included']
     popular: false
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {

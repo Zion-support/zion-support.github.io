@@ -253,6 +253,31 @@ if ( {) {
   const currentQ = questions[currentQuestion],
 
 
+            <div className=&quot;text-center mb-12&quot;>
+              <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Automation Readiness Assessment</h1>
+              <p className=&quot;text-white/80 text-lg&quot;>Evaluate your organization's readiness for AI automation</p>
+              <div className=&quot;mt-4 text-cyan-400&quot;>
+                Question {currentQuestion + 1} of {questions.length}
+              </div>
+            </div>
+
+            <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20&quot;>
+              <h2 className=&quot;text-2xl font-bold mb-6 text-white&quot;>{currentQ.question}</h2>
+              
+              <div className=&quot;space-y-4 mb-8&quot;>
+                {currentQ.options.map((option, index) => (
+                  <label key={index} className=&quot;flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer&quot;>
+                    <input
+                      type=&quot;radio&quot;
+
+=======
+<<<<<<< HEAD
+  const currentQ = questions[currentQuestion]
+
+=======
+}
+  const currentQ = questions[currentQuestion],
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>

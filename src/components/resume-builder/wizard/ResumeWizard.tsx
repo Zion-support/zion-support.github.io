@@ -174,7 +174,7 @@ if ( {) {
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
-              />;
+              />
             )}
 
           </Tabs>;

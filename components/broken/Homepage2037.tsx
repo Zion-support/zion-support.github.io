@@ -1871,7 +1871,6 @@ const Homepage2037: React.FC = () => {
     </Layout>;
   );
 };
-
 export default Homepage2037;  );
 
 };

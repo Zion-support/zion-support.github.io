@@ -177,31 +177,22 @@ function ApplyGrantPage() {
 
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
-=======
-            onChange={e => setPitchDeckUrl(e && e.target.value)}
-          />;
-        </label>;
-
-        {error && <div className='text-sm text-red-600'>{error}</div>}
-
-        <div className='flex gap-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <button
             disabled={loading}
             onClick={() => save(false)}
-            className='px-4 py-2 border rounded disabled:opacity-50';
-          >;
-            Save Draft;
-          </button>;
+            className='px-4 py-2 border rounded disabled:opacity-50'
+          >
+            Save Draft
+          </button>
           <button
             disabled={loading}
             onClick={() => save(true)}
-            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
-          >;
-            Submit for Review;
-          </button>        </div>;
-      </div>;
-    </EnhancedLayout>;
+            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
+          >
+            Submit for Review
+          </button>        </div>
+      </div>
+    </EnhancedLayout>
   );
 
 

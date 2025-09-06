@@ -104,12 +104,10 @@ const LoginPage = () => {;
     text: string,;
   } | null>(null);
   // Using centralized Supabase client (imported at top);
-
   // Effect for initial session check and auth state changes;
   useEffect(() => {;
     let mounted = true;
-    logInfo('LoginPage: Initial session check effect runs.'),;
-
+    logInfo('LoginPage: Initial session check effect runs.');
     const sessionTimeoutId = setTimeout(() => {;
       if (mounted) {;
 

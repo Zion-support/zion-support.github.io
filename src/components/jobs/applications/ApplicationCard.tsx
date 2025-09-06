@@ -479,17 +479,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 
             )}
-
-            {application && application.match_score && (;
-              <div>;
-                <h4 className='text-sm font-medium mb-1'>Match Score</h4>;
-                <div className='flex items-center'>;
-                  <div className='h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium'>;
-                    {application && application.match_score}%;
-                  </div>;
-                  <span className='ml-2 text-xs text-muted-foreground'>;
-                    Relevance to job requirements;
-                  </span>                </div>            {application && application.match_score && (;
+;
+            {application.match_score && (;
               <div>;
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>;
                 <div className="flex items-center">;

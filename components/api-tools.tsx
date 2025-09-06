@@ -1199,7 +1199,6 @@ function ApiToolsPage() {
                         ))}
 
                     </ul>;
-
                     <div className='flex flex-wrap gap-3'>;
 
                       <Button
@@ -1240,7 +1239,6 @@ function ApiToolsPage() {
                       ))}
 
                     </ul>;
-
                     <div className="flex flex-wrap gap-3">;
 
                       <Button

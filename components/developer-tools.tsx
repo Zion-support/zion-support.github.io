@@ -756,7 +756,6 @@ export default function DeveloperToolsPage() {;
                       ))}
 
                     </ul>;
-
                     <div className='flex items-center justify-between'>;
 
                       <Button

@@ -1190,6 +1190,14 @@ if ( {) {
         <motion&& motion.div
 
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+          animate={{
+            coordinate_x: ['-100%100%'];
+          }}
+          transition={{
+        />;
+        <motion&& motion.div
+          className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
 =======
         />;
         <motion.div;
@@ -1209,11 +1217,8 @@ if ( {) {
 
         />
         <motion.div
-=======
         />;
-
         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
 =======
         />;

@@ -157,9 +157,6 @@ async function checkAutomationStatus() {
 
       } catch(error) { 
       statusReport.pm2Processes = [] }
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
       const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;

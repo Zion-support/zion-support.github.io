@@ -1092,10 +1092,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
     if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
     return service && service.pricing.professional;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const popularPlan = getPopularPlan();
-
   return (
 
 
@@ -1220,8 +1217,18 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           {service && service.provider.verified && (;
             <span className="text-blue-600 text-sm">✓ Verified</span>;
         </div>;
+        {/* Pricing */}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+              <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+=======
+            <p className="font-medium text-gray-900">{service.provider.name}</p>
+            <p className="text-sm text-gray-500">{service.provider.location}</p>
+          </div>
+          {service.provider.verified && (
+            <span className="text-blue-600 text-sm">✓ Verified</span>
+          )}
+        </div>;
         {/* Pricing */}
 
 =======
@@ -1360,6 +1367,13 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         {/* Detailed Information */}
         {showDetails && (
           <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="space-y-4">
+              {/* Benefits */}
+              <div>
+<<<<<<< HEAD
+                <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>
+                <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service.benefits.slice(0, 3).map((benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="space-y-4">
               {/* Benefits */}
               <div>

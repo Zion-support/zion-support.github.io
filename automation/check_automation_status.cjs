@@ -190,6 +190,7 @@ async function checkAutomationStatus() {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 =======
+=======
     try {
       const healthCheck = execSync('node automation/health-check.cjs', { encoding: 'utf8' });
       statusReport.systemHealth.healthCheck = 'passed';
@@ -269,6 +270,7 @@ async function checkAutomationStatus() {
     console.error('❌ Error checking automation "status": ', error.message);
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 =======
 =======
     const reportPath = path.join(process.cwd(), 'logs', 'automation-status-report.json');

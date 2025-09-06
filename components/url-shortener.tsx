@@ -253,7 +253,6 @@ function URLShortenerPage() {
     setCustomAlias('');
     setIsShortening(false);
   };
-
   const generateRandomAlias = () => {;
 
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -402,10 +401,11 @@ function URLShortenerPage() {
               <div className='space-y-6'>;
 
                 {/* Long URL Input */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-2'>;
-                    Long URL;
-                  </label>;
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-2'>
+                    Long URL
+                  </label>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   <input
                     type='url'
                     value={longUrl}
@@ -593,11 +593,11 @@ function URLShortenerPage() {
                     <div className="text-3xl font-bold text-orange-400 mb-2">;
 
                       {getTotalUrls()}
-                    </div>;
-                    <div className="text-sm text-gray-400">Total URLs</div>;
-                  </div>;
-                  <div className="text-center p-4 bg-gray-700 rounded-lg">;
-                    <div className="text-3xl font-bold text-red-400 mb-2">;
+                    </div>
+                    <div className="text-sm text-gray-400">Total URLs</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-700 rounded-lg">
+                    <div className="text-3xl font-bold text-red-400 mb-2">
                       {getTotalClicks()}
 
 
@@ -786,7 +786,6 @@ function URLShortenerPage() {
                         >;
                           <Copy className='w-4 h-4 mr-2' />                        </div>;
                       </div>;
-
                       <div className='flex space-x-2'>;
 
                         <Button
@@ -840,7 +839,6 @@ function URLShortenerPage() {
                           Visit;
                         </Button>;
                       </div>;
-
                       <div className='flex space-x-2'>;
 
                         <Button

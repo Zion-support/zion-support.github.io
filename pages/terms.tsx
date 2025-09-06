@@ -369,7 +369,6 @@ export default function Terms() {
         keywords={["terms of service", "user agreement", "legal terms", "conditions of use", "service agreement", "Zion Tech Group"]}
 
       />;
-
       <div className="min-h-screen bg-black text-white">;
 
         {/* Hero Section */}
@@ -1856,7 +1855,6 @@ function Terms() {
                 <h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>;
                 <p className="text-xl text-gray-300">Activities that are not allowed when using our services</p>;
               </motion && motion.div>;
-
               <motion&& motion.div
 
                 initial={{ opacity: 0, y: 20 }}
@@ -1906,7 +1904,6 @@ function Terms() {
                 <h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>;
                 <p className="text-xl text-gray-300">Important information about service availability and warranties</p>;
               </motion && motion.div>;
-
               <motion&& motion.div
 
                 initial={{ opacity: 0, y: 20 }}

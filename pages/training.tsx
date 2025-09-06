@@ -236,49 +236,52 @@ export default function TrainingPage() {
       duration: '10 weeks',
       level: 'Intermediate',
       price: '$2,299',
-    rating: 4.7,
+      rating: 4.7,
       students: '823',
-      icon: <Building className="w-8 h-8" />
-    };
+      icon: <Building className='w-8 h-8' />,
+    },
     {
       id: 14,
       title: 'Cloud-Native AI Development',
-      description: 'Build and deploy AI applications using cloud-native technologies and practices.',
-      category: 'enterprise-it',
+      description:
+        'Build and deploy AI applications using cloud-native technologies and practices.',      category: 'enterprise-it',
       duration: '8 weeks',
       level: 'Intermediate',
       price: '$1,899',
-    rating: 4.6,
+      rating: 4.6,
       students: '1,134',
-    icon: <Server className="w-8 h-8" />
-    };
+      icon: <Server className='w-8 h-8' />,
+    },
     {
       id: 15,
       title: 'DevOps for AI Systems',
-      description: 'Implement DevOps practices specifically for AI and machine learning systems.',
-      category: 'enterprise-it',
+      description:
+        'Implement DevOps practices specifically for AI and machine learning systems.',      category: 'enterprise-it',
       duration: '6 weeks',
       level: 'Intermediate',
       price: '$1,599',
-    rating: 4.8,
+      rating: 4.8,
       students: '756',
-      icon: <Zap className="w-8 h-8" />
-    }
+      icon: <Zap className='w-8 h-8' />,
+    },
   ];
 
-  const filteredPrograms = allPrograms.filter(program => 
-    selectedCategory === 'all' || program.category === selectedCategory
-  );
+  const filteredPrograms = allPrograms.filter(
+    program =>
+      selectedCategory === 'all' || program.category === selectedCategory  );
 
   const getCategoryIcon = (category: string) => {
     const icons = {
-      'ai-consciousness': <Brain className="w-6 h-6" />;
-      'quantum-computing': <Atom className="w-6 h-6" />;
-      'autonomous-ops': <Rocket className="w-6 h-6" />;
-      'enterprise-it': <Building className="w-6 h-6" />
+      'ai-consciousness': <Brain className='w-6 h-6' />,
+      'quantum-computing': <Atom className='w-6 h-6' />,
+      'autonomous-ops': <Rocket className='w-6 h-6' />,
+      'enterprise-it': <Building className='w-6 h-6' />,
     };
-    return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
-  };
+    return (
+      icons[category as keyof typeof icons] || (
+        <GraduationCap className='w-6 h-6' />
+      )
+    );  };
 
   const getCategoryColor = (category: string) => {
     const colors = {
@@ -286,10 +289,9 @@ export default function TrainingPage() {
 
 
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
-    };
+    },
     return colors[category as keyof typeof colors] || 'gray'
-  };
-
+  },
   const toggleProgram = (id: number) => {
     setExpandedProgram(expandedProgram === id ? null : id)
 
@@ -299,11 +301,10 @@ export default function TrainingPage() {
   return (
 
     <Layout>
-      <SEO 
+      <SEO
         title="Training & Certification - Zion Tech Group"
         description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
       />
-      
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="relative py-20 lg:py-32 overflow-hidden">
@@ -345,6 +346,8 @@ export default function TrainingPage() {
 
   )
 
+=======
+<<<<<<< HEAD
 =======
 =======
 

@@ -838,7 +838,14 @@ export default function CuttingEdgePricing2025() {;
                     </div>
 
                     {/* Market Info */}
-                    <div className="flex items-center justify-between text-sm text-white/60 mb-4">
+                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                       <span>Market: {service.marketSize}</span>
 
                       <span className="text-cyan-400">{service.category}</span>
@@ -878,7 +885,6 @@ export default function CuttingEdgePricing2025() {;
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-
                     {/* CTA */}
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -934,7 +940,6 @@ export default function CuttingEdgePricing2025() {;
                 and get you started with our cutting-edge technology solutions.;
                 Contact us today for a personalized consultation.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
                 <a

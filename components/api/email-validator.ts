@@ -103,7 +103,6 @@ export default async function handler(
         isFreeProvider,
       },
     };
-
     res && res.status(200).json(result);
 
   } catch (error) {

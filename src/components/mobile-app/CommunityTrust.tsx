@@ -81,7 +81,7 @@ export const CommunityTrust: React.FC = () => {
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
-  ];
+  ],
 
 
 

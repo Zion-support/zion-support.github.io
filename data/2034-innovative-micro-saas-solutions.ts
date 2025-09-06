@@ -59,7 +59,7 @@
       'Summarize resumes, score against job descriptions, and auto - generate interview question sets.',
 
     category: 'Human Resources',
-    pricing: { starter: '$69 / mo' },
+    pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
 

@@ -99,15 +99,15 @@ const MOCK_SUPPORT_REQUESTS = [;
     category: 'disputes',
   },
   {
-    id: 'SR - 1006',
-    user: 'alex.wong@datacompany.com',
-    user_id: 'user - 890',
-    issue: 'Profile verification pending for over 7 days',
-    status: 'resolved',
-    priority: 'medium',
-    created_at: '2023 - 12 - 08T13:20:00Z',
-    last_updated: '2023 - 12 - 15T08:30:00Z',
-    category: 'verification',
+    id: "SR-1006",
+    user: "alex.wong@datacompany.com",
+    userId: "user-890",
+    issue: "Profile verification pending for over 7 days",
+    status: "resolved",
+    priority: "medium",
+    createdAt: "2023-12-08T13:20:00Z",
+    lastUpdated: "2023-12-15T08:30:00Z",
+    category: "verification"
   },
   {
 

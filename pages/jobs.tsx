@@ -24,8 +24,8 @@
         date_posted={job.date_posted}
 
         description={job.description}
-        employment_type={job.employment_type}
-        hiring_organization={job.hiring_organization}
+        employmentType={job.employmentType}
+        hiringOrganization={job.hiringOrganization}
         jobLocationType={job.jobLocationType}
         title={job.title}
 
@@ -35,7 +35,7 @@
         base_salary={job.base_salary}
       />;
       <main>;
-        <h1 > Jobs</h1>;
+        <h1>Jobs</h1>;
         <p>{job.title}</p>;
         <p>{job.description}</p>;
       </main>;

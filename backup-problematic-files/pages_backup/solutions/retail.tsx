@@ -368,6 +368,8 @@ export default function RetailSolutionsPage() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
+    </Layout>
   );
 };
 

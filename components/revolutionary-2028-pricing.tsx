@@ -521,8 +521,6 @@ export default function Revolutionary2028Pricing() {
           </motion && motion.div>;
         </div>;
       </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Pricing Tiers */}
 
       <section className="py-20 bg-black/50">
@@ -1213,8 +1211,6 @@ export default function Revolutionary2028Pricing() {
 =======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
               Join hundreds of companies already leveraging our futuristic;
               services to gain competitive advantages and drive innovation.;

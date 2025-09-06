@@ -469,6 +469,57 @@ export function MobileChatView(): any ({;
             className={!newMessage.trim() ? 'opacity-50' : ''}
             aria-label='Send message'          >
             <Send className='h-5 w-5' />
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          <Input
+            value={newMessage}
+            onChange={e => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...'
+            className='flex-1'          />
+
+          <Button
+            size='icon'
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
+          </Button>
+        </div>
+      </div>;
+    </div>;
+  );
+};
+}
+}
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          
+          <Input
+            value={newMessage}
+            onChange={(e) => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Type a message..."
+            className="flex-1"
+          />
+          
+          <Button
+            size="icon"
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? "opacity-50" : ""}
+            aria-label="Send message"
+          >
+            <Send className="h-5 w-5" />
           </Button>
         </div>
 

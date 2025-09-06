@@ -123,7 +123,7 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
                 htmlFor={`region-${region.id}`}
 
           ))}
-        </div>;
+        </div>
       )}
 
     </div>;

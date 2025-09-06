@@ -772,8 +772,6 @@ const Homepage2043: React.FC = () => {
                   className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
                 Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.;
               </p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Enhanced CTA Buttons */}
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

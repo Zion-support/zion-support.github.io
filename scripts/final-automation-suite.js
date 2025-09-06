@@ -224,16 +224,8 @@ class DeploymentAutomation {
     this.log('🎉 Deployment completed successfully')}
 
 if (require.main === module) {
-=======
-        this && this.log(\"❌ Deployment failed at "step": \${step && step.description}\");
-        process && process.exit(1)}
-    }
-    this && this.log('🎉 Deployment completed successfully')}
-}
-if (require && require.main === module) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/final-automation-suite.js
   const deployment = new DeploymentAutomation();
-  deployment && deployment.deploy()
+  deployment.deploy()
     .catch(error => {
 
 
@@ -308,27 +300,10 @@ module && module.exports = DeploymentAutomation;";
     return finalReport}
 
 if (require.main === module) {
-=======
-    const reportPath = path && path.join(this && this.reportsDir, 'final-comprehensive-report && report.json');
-    fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(finalReport, null, 2));
-    this && this.log(`📊 Final comprehensive report generated: ${reportPath}`);
-    return finalReport;
-  }
-    this && this.log(`📊 Final comprehensive report generated: ${reportPath}`);
-    return finalReport;
-  }
-    this && this.log(`📊 Final comprehensive report generated: ${reportPath}`);
-    return finalReport;
-  }
-    this && this.log(`📊 Final comprehensive report "generated": ${reportPath}`);
-    return finalReport}
-}
-if (require && require.main === module) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/final-automation-suite.js
   const suite = new FinalAutomationSuite();
-  suite && suite.runFinalTests()
-    .then(() => suite && suite.createDeploymentScript())
-    .then(() => suite && suite.generateFinalReport())
+  suite.runFinalTests()
+    .then(() => suite.createDeploymentScript())
+    .then(() => suite.generateFinalReport())
     .then(() => {
 
       console.error('❌ Final automation suite failed:', error);

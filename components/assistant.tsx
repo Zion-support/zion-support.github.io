@@ -53,7 +53,6 @@ export default function Assistant() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ]);
       return;
-
     }
 
     // Basic fallback;

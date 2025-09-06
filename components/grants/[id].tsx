@@ -78,7 +78,6 @@ export default function GrantDetailPage() {;
         <div>Not found</div>;
       </EnhancedLayout>;
     );
-
   return (
 
 import {useEffect, useState} from 'react';

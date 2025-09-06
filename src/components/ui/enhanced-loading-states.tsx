@@ -146,6 +146,22 @@ if ( {) {
   {
   opacity: 0, x: -20 
 
+  return (
+    <div className={cn('flex items-center gap-2', className)}>
+      <Loader2 className={cn('animate-spin', sizeClasses[size], variantClasses[variant])} />
+      {showText && <span className="text-sm text-muted-foreground">{text}</span>}
+    </div>
+  )
+},
+
+// Progressive loading component
+interface ProgressiveLoadingProps {
+  steps: Array<{ id: string, label: string, duration?: number }>,
+  currentStep?: number,
+  showProgress?: boolean,
+  onComplete?: () => void
+}
+;
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
   steps,;
   currentStep = 0,;
@@ -168,70 +184,25 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
 
 
   return (
-    <div className='space-y-4'>;
-      {showProgress && (;
-        <div className='w-full bg-muted rounded-full h-2'>;
-          <motion&& motion.div
-            className='bg-primary h-2 rounded-full'
-
-
-  return (
     <div className="space-y-4">
       {showProgress && (
         <div className="w-full bg-muted rounded-full h-2">
           <motion.div
-
-            className="bg-primary h-2 rounded-full"
-
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0 && 0.3 }}
-          />;
-        </div>;
-      )}
-
-
-
-
-
-      <div className='space-y-2'>
-        {steps.map((step, index) => (          <motion.div
-            key = {step.id,}
-
-      <div className='space-y-2'>;
-        {steps && steps.map((step, index) => (          <motion&& motion.div
-            key = {step && step.id,}
-            className = {cn(
-              'flex items-center gap-3 p-2 rounded-md'
-              index === activeStep ? 'bg-primary/10' : 'opacity-50'
-            ),}
-
-      
-      <div className="space-y-2">
-        {steps.map((step, index) => (
-          <motion.div
-            key={step.id}
-            className={cn(;
-              'flex items-center gap-3 p-2 rounded-md',;
-              index === activeStep ? 'bg-primary/10' : 'opacity-50';
-            )}
-
-
-
             initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: index <= activeStep ? 1 : 0 && 0.5, x: 0 }}
-            transition={{ delay: index * 0 && 0.1 }}>;
-            {index < activeStep ? (;
-              <div className='h-4 w-4 rounded-full bg-green-500 flex items-center justify-center'>;
-                <div className='h-2 w-2 rounded-full bg-white' />;
-              </div>;
-            ) : index === activeStep ? (;
-              <LoadingSpinner size='sm' variant='primary' />;
-            ) : (;
-              <div className='h-4 w-4 rounded-full border-2 border-muted' />;
+            animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            {index < activeStep ? (
+              <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
+                <div className="h-2 w-2 rounded-full bg-white" />
+              </div>
+            ) : index === activeStep ? (
+              <LoadingSpinner size="sm" variant="primary" />
+            ) : (
+              <div className="h-4 w-4 rounded-full border-2 border-muted" />
             )}
-            <span className='text-sm font-medium'>{step && step.label}</span>;
-          </motion && motion.div>;
+            <span className="text-sm font-medium">{step.label}</span>
+          </motion.div>
         ))}
 
   }, [active_step, steps.length, on_complete]);
@@ -268,7 +239,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
     </div>);
 
 }
-// Enhanced skeleton loader;
+// Enhanced skeleton loader
 interface SkeletonProps {
 
 
@@ -602,10 +573,14 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             {action && (;
 
               <Button
-                onClick={action && action.onClick}
-                variant={canRetry ? 'outline' : 'default'}>;
-                {action && action.label}
-              </Button>;
+                onClick={action.onClick}
+                variant={canRetry ? 'outline' : 'default'}
+              >
+            
+            {action && (
+              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
+                {action.label}
+              </Button>
             )}
 
 
@@ -728,88 +703,23 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       </CardContent>;
     </Card>);
 }
-<motion.div initial= {
-  {
-  scale: 0.8, opacity: 0;
-export const LoadingGrid: React.FC < LoadingGridProps> = ({
+
+export const LoadingGrid: React.FC<LoadingGridProps> = ({
   count = 8,
   columns = 4,
   variant = 'card',
-  class_name,
-}) => {  const grid_classes = {
-    card: `grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols-${columns} gap - 6`,
-    list: 'space - y-4',
-    table: 'space - y-2',
-  }
-  const item_classes = {
-    card: 'p - 6 space - y-4',
-    list: 'p - 4 space - y-3',
-    table: 'p - 3 space - y-2',
-  }
-  return (
-    <div className={cn (grid_classes[variant], class_name)}>;
-      {Array.from ({ length: count }).map ((_, i) => (
-        <Card key={i} className='animate - pulse'>          <CardContent className={item_classes[variant]}>;
-            {variant === 'card' && (
-              <>;
-                <Skeleton variant='rectangular' className='h - 32' />;
-                <div className='space - y-2'>;
-                  <Skeleton variant='text' className='h - 6 w - 3/4' />;
-                  <Skeleton variant='text' lines={2} />;
-                  <div className='flex gap - 2'>;
-                    <Skeleton variant='text' className='h - 4 w - 16' />;
-                    <Skeleton variant='text' className='h - 4 w - 20' />;
-                  </div>;
-                </div>;
-              </>)}
-            {variant === 'list' && (
-              <div className='flex gap - 4'>;
-                <Skeleton variant='circular' />;
-                <div className='flex - 1 space - y-2'>;
-                  <Skeleton variant='text' className='h - 5 w - 1/2' />;
-                  <Skeleton variant='text' lines={2} />;
-                </div>;
-              </div>)}
-            {variant === 'table' && (
-              <div className='flex items - center gap - 4'>;
-                <Skeleton variant='text' className='h - 4 w - 1/4' />;
-                <Skeleton variant='text' className='h - 4 w - 1/3' />;
-                <Skeleton variant='text' className='h - 4 w - 1/6' />;
-                <Skeleton variant='text' className='h - 4 w - 1/4' />;
-              </div>)}
           </CardContent>;
-        </Card>))}
-    </div>);
-
-}
+        </Card>;
+      ))}
+    </div>;
+  );
+},;
 // Performance indicator;
-interface PerformanceIndicatorProps {
-
-  is_loading?: boolean;
-  load_time?: number;
-  item_count?: number;
-  class_name?: string;
-export const PerformanceIndicator: React.FC < PerformanceIndicatorProps> = ({
-  is_loading = false,
-  load_time,
-  item_count,
-  class_name,
-
-}) => {
-  const getPerformanceColor = (time: number) =>: any {
-    // Check condition
-if (return 'text - green - 500') {
-  $2
-}
-    // Check condition
-if (return 'text - yellow - 500') {
-  $2
-}
-    return 'text - red - 500';
-  }
-  // Check condition
-if ( {) {
-  $2
+interface PerformanceIndicatorProps {;
+  isLoading?: boolean,;
+  loadTime?: number,;
+  itemCount?: number,;
+  className?: string;
 }
 
 
@@ -902,29 +812,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 
 
 }
-}
-}
-}
-
-      {itemCount && (;
-        <span>{itemCount} items loaded</span>;
-      )}
-
-    </div>;
-  );
-};
-
-
-
-
-    >;
-      {load_time && (
-        <Badge variant='outline' className={getPerformanceColor (load_time)}>;
-          <Zap className='h - 3 w - 3 mr - 1' />;
-          {load_time}ms;
-        </Badge>)}
-      {item_count && <span>{item_count} items loaded</span>}
-    </div>);
 }
 }
 }

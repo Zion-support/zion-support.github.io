@@ -314,13 +314,22 @@ if (return) {
       action: 'Share Referral Link',;
     },  ];
 
-  const upcomingRewards = [;
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",;
-      description: "Invite friends to join Zion marketplace",;
-      points: "200 pts per referral",;
-      action: "Share Referral Link";
+  const upcomingRewards = [
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
+      icon: <MessageSquare className="h-5 w-5" />,
+      title: "Community Engagement",
+      description: "Post in the community or comment on discussions",
+      points: "25 pts per post",
+      action: "Join Community"
+    },
+    {
+      icon: <Users className="h-5 w-5" />,
+      title: "Refer Friends",
+      description: "Invite friends to join Zion marketplace",
+      points: "200 pts per referral",
+      action: "Share Referral Link"
     }
-
+  ],;
   const upcomingRewards = [;
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },;
     {;

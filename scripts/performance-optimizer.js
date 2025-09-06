@@ -5,26 +5,26 @@ const fs = require('fs');
 const path = require('path');
 class PerformanceOptimizer {
   constructor() {
-    this && this.metrics = {};
+    this.metrics = {};
   }
   async analyzeBundle() {
-    const buildDir = path && path.join(process && process.cwd(), '.next');
-    if (fs && fs.existsSync(buildDir)) {
-      const stats = this && this.getDirectorySize(buildDir);
-      this && this.metrics.bundleSize = stats;
-      console && console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
+    const buildDir = path.join(process.cwd(), '.next');
+    if (fs.existsSync(buildDir)) {
+      const stats = this.getDirectorySize(buildDir);
+      this.metrics.bundleSize = stats;
+      console.log(`Bundle size: ${(stats / 1024 / 1024).toFixed(2)} MB`);
     }
   }
   getDirectorySize(dirPath) {
     let totalSize = 0;
-    const files = fs && fs.readdirSync(dirPath);
-    files && files.forEach(file => {
-      const filePath = path && path.join(dirPath, file);
-      const stats = fs && fs.statSync(filePath);
-      if (stats && stats.isDirectory()) {
-        totalSize += this && this.getDirectorySize(filePath);
+    const files = fs.readdirSync(dirPath);
+    files.forEach(file => {
+      const filePath = path.join(dirPath, file);
+      const stats = fs.statSync(filePath);
+      if (stats.isDirectory()) {
+        totalSize += this.getDirectorySize(filePath);
       } else {
-        totalSize += stats && stats.size;
+        totalSize += stats.size;
       }
     });
     return totalSize;
@@ -32,18 +32,18 @@ class PerformanceOptimizer {
   generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      metrics: this && this.metrics,
-      recommendations: this && this.generateRecommendations()
+      metrics: this.metrics,
+      recommendations: this.generateRecommendations()
     };
-    fs && fs.writeFileSync('performance-report && report.json', JSON && JSON.stringify(report, null, 2));
-    console && console.log('Performance report generated');
+    fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
+    console.log('Performance report generated');
   }
   generateRecommendations() {
     const recommendations = [];
-    if (this && this.metrics.bundleSize > 1000000) { // 1MB
-      recommendations && recommendations.push('Consider implementing code splitting');
-      recommendations && recommendations.push('Use dynamic imports for large components');
-      recommendations && recommendations.push('Optimize images and assets');
+    if (this.metrics.bundleSize > 1000000) { // 1MB
+      recommendations.push('Consider implementing code splitting');
+      recommendations.push('Use dynamic imports for large components');
+      recommendations.push('Optimize images and assets');
     }
     return recommendations;
   }
@@ -462,17 +462,11 @@ export default PerformanceMonitor;";
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
 
-=======
-      fs && fs.mkdirSync(utilsDir, { "recursive": true })}
-    fs && fs.writeFileSync(scriptPath, monitoringScript);
-    this && this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/performance-optimizer.js
 // Run the script
-if (require && require.main === module) {
+if (require.main === module) {
   const optimizer = new PerformanceOptimizer();
-  optimizer && optimizer.optimizePerformance()
-    .then(() => optimizer && optimizer.createPerformanceMonitoringScript())
+  optimizer.optimizePerformance()
+    .then(() => optimizer.createPerformanceMonitoringScript())
     .then(() => {
 
     console && console.log('🎉 Performance optimization completed successfully'),

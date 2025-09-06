@@ -1,27 +1,12 @@
-<<<<<<< HEAD
-import React from "react",
-import { QrCode } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
-
-import React from "react";
-import { QrCode } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
-
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
   const googlePlayUrl = "#"; // Replace with actual Google Play URL
-<<<<<<< HEAD
-
-=======
->>>>>>> main
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -37,17 +22,12 @@ export const QrCodeDownload: React.FC = () => {
                 instantly, or use the buttons below to get it from your app
                 store of choice.
               </p>
-<<<<<<< HEAD
-<AppStoreButtons
-                className="mb-8"
-=======
 
 
               <AppStoreButtons 
                 className="mb-8" 
 
 
->>>>>>> main
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -56,10 +36,6 @@ export const QrCodeDownload: React.FC = () => {
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>
             </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> main
             <div className="flex-shrink-0">
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">
@@ -75,13 +51,6 @@ export const QrCodeDownload: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-);
-
-}
-};
-
-=======
 
 import React from "react";
 import {QrCode} from "lucide-react";
@@ -194,4 +163,3 @@ export default QrCodeDownload;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

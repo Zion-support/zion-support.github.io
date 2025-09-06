@@ -27,6 +27,24 @@ import React, { useEffect, useState } from 'react';
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
+=======
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import TrustBadge from '../components/ui/TrustBadge';
+import TrustRadar from '../components/ui/TrustRadar';
+import RiskIndicator from '../components/ui/RiskIndicator';
+<<<<<<< HEAD
+export default function TrustPage() {
+  const [userId, setUserId] = useState<string>('demo-user'),
+  const [data, setData] = useState<any>(null),
+=======
+export default function TrustPage() {;
+  const [userId, setUserId] = useState<string>('demo-user');
+  const [data, setData] = useState<any>(null);
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [loading, setLoading] = useState<boolean>(true);
+  const [showLogic, setShowLogic] = useState<boolean>(false);
+  useEffect(() => {
 
     const params = new URLSearchParams(window.location.search);
     const u = params.get('user');
@@ -115,8 +133,6 @@ export default function TrustPage() {;
           <div className="flex items-center gap-3">;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
         </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {loading && <div>Loading...</div>}
 
         {!loading && data && (

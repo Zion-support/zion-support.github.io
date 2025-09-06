@@ -832,7 +832,6 @@ if (return) {
           ctx && ctx.stroke();
         }
       }
-
       animationFrameId = requestAnimationFrame(animate);
 
     };

@@ -34,10 +34,6 @@ import {
   Satellite,
 
 
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
- } from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
 =======
 
 class ErrorBoundary extends React.Component {
@@ -200,32 +196,32 @@ const Homepage2035: React.FC = () => {;
               service && service.category.includes('Machine Learning');
 
             );
-          if (activeCategory === 'it');
+          if (activeCategory === 'it')
             return (
 
               service && service.category.includes('IT') ||;
               service && service.category.includes('Enterprise');
 
             );
-          if (activeCategory === 'quantum');
-            return service && service.name.includes('Quantum');
-          if (activeCategory === 'space');
-            return service && service.category.includes('Space');
-          if (activeCategory === 'cyber');
+          if (activeCategory === 'quantum')
+            return service.name.includes('Quantum');
+          if (activeCategory === 'space')
+            return service.category.includes('Space');
+          if (activeCategory === 'cyber')
             return (
 
               service && service.category.includes('Security') ||;
               service && service.category.includes('Cybersecurity');
 
             );
-          if (activeCategory === 'cloud');
+          if (activeCategory === 'cloud')
             return (
 
               service && service.category.includes('Cloud') ||;
               service && service.category.includes('DevOps');
 
             );
-          if (activeCategory === 'fintech');
+          if (activeCategory === 'fintech')
             return (
 
   }, []);
@@ -932,7 +928,19 @@ if ( {) {
             </motion.div>
           </div>
         </section>
-
+{/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+=======
+                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
+              >
+                <span>View All Services</span>
+                <ArrowRight className='w-5 h-5' />                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
+              >
+                <span>View All Services</span>
+                <ArrowRight className="w-5 h-5" />
+            </motion.div>
+          </div>
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">

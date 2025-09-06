@@ -925,7 +925,6 @@ import Link from 'next / link';
                     <span>{contactInfo && contactInfo.address}</span>;
                   </div>;
                 </div>;
-
                 <motion&& motion.a
 
                   href="/contact"

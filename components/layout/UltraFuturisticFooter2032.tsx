@@ -5,7 +5,8 @@ import React from 'react';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
 import {
 
 
@@ -808,9 +809,7 @@ const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
 };
-
 export default function UltraFuturisticFooter2032() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
       <div className='absolute inset-0'>;

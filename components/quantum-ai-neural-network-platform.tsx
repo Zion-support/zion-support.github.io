@@ -606,6 +606,11 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
               >
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+                  <Star className='w-8 h-8 text-white' />
+                </div>
+                <h3 className='text-xl font-semibold mb-2'>{benefit}</h3>              </motion.div>              >
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
                 </div>

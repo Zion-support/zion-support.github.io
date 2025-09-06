@@ -493,16 +493,18 @@ export default function ProposalGenerator() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               onClick={handleGenerate}
-              disabled={isGenerating}>;
+              disabled={isGenerating}
+            >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
+            </button>
             <button
 
 
               onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD);
-            </button>;
+              disabled={!draftMarkdown}
+            >
+              Export (PDF/JSON/MD)
+            </button>
             <button
 
 

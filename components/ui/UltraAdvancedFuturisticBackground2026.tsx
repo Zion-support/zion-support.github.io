@@ -7,7 +7,6 @@ import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackground2026Props {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',
-=======
 interface UltraAdvancedFuturisticBackground2026Props {;
 =======
 import React, { useEffect, useRef } from 'react';

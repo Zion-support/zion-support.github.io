@@ -1,20 +1,4 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import { AppMetadataValues } from "./MetadataManager";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import {
-Form
-  FormControl
-  FormDescription
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-=======
 
 import {;
   Form,;
@@ -37,33 +21,10 @@ import {;
   FormMessage,;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
-<<<<<<< HEAD
-interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues>
-}
-interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues>
-}
-
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
-  const { control, register, watch, setValue } = form;
-  const keywords = watch("keywords");
-  const platform = watch("platform");
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-const { control, register, watch, setValue } = form;
-
-  const keywords = watch("keywords");
-  const platform = watch("platform");
-  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" |e.key === ",") {
-      e.preventDefault();
-      const value = e.currentTarget.value.trim();
-=======
 
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
@@ -101,24 +62,10 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const platform = watch("platform"),
   
 
->>>>>>> main
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
       const value = e.currentTarget.value.trim(),
-<<<<<<< HEAD
-
-      if (value && !keywords.includes(value)) {
-        setValue("keywords", [...keywords, value]),
-        e.currentTarget.value = ""
-      }
-    }
-}
-  const removeKeyword = (keyword: string) => {
-    setValue(
-      "keywords"
-      keywords.filter((k) => k !== keyword)
-=======
       
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -144,14 +91,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       "keywords",;
       keywords && keywords.filter((k) => k !== keyword),;
 
->>>>>>> main
     );
   }
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
   const longDescription = watch("longDescription");
   return (
-<<<<<<< HEAD
-=======
 =======
 
   },
@@ -168,7 +112,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
 
   return (
->>>>>>> main
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle>App Metadata</CardTitle>
@@ -193,11 +136,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     Max {platform === "ios" ? "30" : "50"} characters
                   </FormDescription>
                 </FormItem>
-<<<<<<< HEAD
-)}
-            />
-            <FormField
-=======
 
 import React from "react",;
 import { UseFormReturn } from "react-hook-form",;
@@ -405,7 +343,6 @@ if ( {) {
             />;
             <FormField;
 
->>>>>>> main
 
               control={control}
               name="shortDescription"
@@ -424,32 +361,21 @@ if ( {) {
                   </FormDescription>
                 </FormItem>
               )}
-<<<<<<< HEAD
-/>
-            <FormField
-
-=======
 
             />;
             <FormField;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> main
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
-<Textarea
-
-=======
 
                     <Textarea 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> main
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -463,11 +389,6 @@ if ( {) {
               )}
             />
 
-<<<<<<< HEAD
-            <div>
-              <FormLabel htmlFor="keywords">Keywords</FormLabel>
-              <Input 
-=======
             
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -480,34 +401,10 @@ if ( {) {
               <FormLabel htmlFor="keywords">Keywords</FormLabel>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Input
->>>>>>> main
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
-<<<<<<< HEAD
-              />
-
-              <div className="flex flex-wrap gap-2 mt-2">
-                {keywords.map((keyword, index) => (
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">
-                    {keyword}
-<button
-
-                      type="button"
-                      onClick={() => removeKeyword(keyword)}
-                      className="ml-1 hover:text-red-300"
-                    >
-                      <X className="h-3 w-3" />
-                    </button>
-                  </Badge>
-                ))}
-              </div>
-              <FormDescription className="mt-2">
-                Add keywords to improve discoverability (max 100 characters total)
-              </FormDescription>
-            </div>
-=======
 
 
               
@@ -582,7 +479,6 @@ if ( {) {
 
             
 
->>>>>>> main
 
             <FormField
               control={control}
@@ -591,25 +487,6 @@ if ( {) {
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
-<Input placeholder="e.g., 1.0.0" {...field} />
-                  </FormControl>
-                </FormItem>
-              )}
-            />
-          </div>
-        </Form>
-      </CardContent>
-    </Card>
-
-  );
-}
-
-  );
-
-};
-
-=======
 
 );
 
@@ -650,4 +527,3 @@ if ( {) {
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

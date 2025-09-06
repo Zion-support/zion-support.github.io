@@ -310,27 +310,50 @@ export default function Careers() {;
                   {jobList && jobList.map((job, index) => (;
                     <Card
                       key={index}
-                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'>;
-                      <CardContent className='p-6'>;
-                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>;
-                            <h3 className='text-xl font-bold text-white mb-2'>;
-                              {job && job.title}
-                            </h3>;
-                            <div className='flex flex-wrap gap-2 mb-4'>;
-                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>;
-                                {job && job.location}
-                              </span>;
-                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>;
-                                {job && job.type}
-                              </span>;
-                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>;
-                                {job && job.department}
-                              </span>;
-                            </div>;
-                            <p className='text-zion-slate-light mb-4'>;
-                              {job && job.description}
-                            </p>;
-                          </div>;
+                      className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
+                    >
+                      <CardContent className='p-6'>
+                        <div className='flex flex-col md:flex-row md:items-center md:justify-between'>                          <div>
+                            <h3 className='text-xl font-bold text-white mb-2'>
+                              {job.title}
+                            </h3>
+                            <div className='flex flex-wrap gap-2 mb-4'>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.location}
+                              </span>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.type}
+                              </span>
+                              <span className='text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full'>
+                                {job.department}
+                              </span>
+          
+          <div className="mb-24">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Open Positions</h2>
+            
+            <Tabs defaultValue="engineering" className="w-full">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center">
+                <TabsTrigger value="engineering" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Engineering</TabsTrigger>
+                <TabsTrigger value="product" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Product</TabsTrigger>
+                <TabsTrigger value="marketing" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Marketing</TabsTrigger>
+                <TabsTrigger value="operations" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">Operations</TabsTrigger>
+              </TabsList>
+              
+              {Object.entries(jobs).map(([department, jobList]) => (
+                <TabsContent key={department} value={department} className="space-y-6">
+                  {jobList.map((job, index) => (
+                    <Card key={index} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors">
+                      <CardContent className="p-6">
+                        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                          <div>
+                            <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.location}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
+                              <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
+                            </div>
+                            <p className="text-zion-slate-light mb-4">{job.description}</p>
+                          </div>
                           <Button
                             asChild
                             className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;

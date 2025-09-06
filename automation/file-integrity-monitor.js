@@ -287,9 +287,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
       this.integrityChecks++;
       this.issuesFound += issues.length;
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   ERROR')';;
 ;
   async: createPackageJson() {
@@ -393,6 +390,7 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   vite.config.ts'), ';
       config);
   async: createTsConfig() {

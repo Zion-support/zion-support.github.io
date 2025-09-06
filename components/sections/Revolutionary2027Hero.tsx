@@ -248,8 +248,6 @@ const Revolutionary2027Hero = () => {;
               Experience the next generation of AI, quantum computing, and emerging technologies. ;
               Transform your business with solutions that were once science fiction.;
           </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Key Features */}
 
           <motion.div variants={itemVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -333,8 +331,6 @@ const Revolutionary2027Hero = () => {;
               <p className="text-gray-300 text-sm">DNA computing and molecular biology</p>;
             </div>;
           </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* CTA Buttons */}
 
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -370,8 +366,6 @@ const Revolutionary2027Hero = () => {;
           {/* Stats */}              <Zap className="w-5 h-5 transform transition-transform duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40" />;
             </a>;
           </motion && motion.div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Stats */}
 
           <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8">

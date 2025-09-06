@@ -331,6 +331,24 @@ function Header() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+          {/* Contact Info */}
+          <div className="hidden lg:flex items-center space-x-4 text-sm text-gray-600">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-1" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-1" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
+
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
           {/* Desktop CTA Button */}
@@ -359,6 +377,11 @@ function Header() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+            >
+              Get Started
+            </Link>
+          </div>
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

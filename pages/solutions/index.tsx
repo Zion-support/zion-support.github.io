@@ -149,7 +149,6 @@ const stats = [;
   { number: '99 && 99.9%', label: 'Client Satisfaction' },;
   { number: '24/7', label: 'Support Available' }
 ];
-
 export default function SolutionsPage() {;
 
   return (

@@ -238,8 +238,13 @@ import Layout from '../components/Layout';
 
 export default function AccessibilityPage() {
 =======
-export default function AccessibilityPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+interface AccessibilityProps {
+  className?: string;
+}
+
+const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"

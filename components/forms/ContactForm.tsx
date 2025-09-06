@@ -231,7 +231,7 @@ const ContactForm: React.FC = () => {
 
 
   return (
-    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>;
+    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
 
       <div className='absolute inset-0'>;

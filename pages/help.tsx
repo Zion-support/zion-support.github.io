@@ -333,7 +333,10 @@ const helpCategories = [;
 
 export default function HelpPage() {;
   const [searchTerm, setSearchTerm] = useState("");
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+=======
+<<<<<<< HEAD
+export default function HelpPage() {
+=======
 
   const toggleCategory = (index: number) => {;
 
@@ -402,7 +405,6 @@ export default function HelpPage() {;
 
         />;
       </Head>;
-
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
 
         {/* Hero Section */}

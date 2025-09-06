@@ -572,8 +572,6 @@ if (return) {
           delay: 1;
         }}
       />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Quantum Field Lines */}
 
           opacity: [0.3, 0.8, 0.3];
@@ -896,13 +894,12 @@ if (return) {
               opacity: [0, 1, 0]
 =======
               left: `${(i + 1) * 16.66}%`,
-              top: '-20px';
+              top: '-20px',
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             }}
             animate={{
-              coordinate_y: [0, window.inner_height + 20];
-              opacity: [0, 1, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-            }}
+              y: [0, window.innerHeight + 20]
+              opacity: [0, 1, 0],            }}
             transition={{
 
               duration: 8 + i * 0 && 0.5,
@@ -1066,7 +1063,6 @@ if (return) {
       />
 =======
       />;
-
       {/* AI Consciousness Waves */}
 
           opacity: [0.05, 0.15, 0.05];

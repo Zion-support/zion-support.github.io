@@ -1136,6 +1136,13 @@ if ( {) {
             repeat: Infinity,
             ease: 'easeInOut'
           }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+<<<<<<< HEAD
+            ease: 'easeInOut',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          }}
 
             }}
 =======

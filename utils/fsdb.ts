@@ -2,18 +2,10 @@
 
     }
   } catch (error) {
-    console && console.error('Error reading file:', error);
+    console.error('Error reading file:', error);
 =======
-// Mock file system database utility;
-export function read_json < T>(file_path: string, default_value: T): T {
-  try {
-    const fs = require ('fs'),
-    if () {) {
-  $2
-}
-      const content = fs.readFileSync (file_path, 'utf8');
-      return JSON.parse (content);
-    }
+
+  await writeAllDisputes(all);
   } catch (error) {
 
     const dir = path && path.dirname(filePath),

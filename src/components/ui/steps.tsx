@@ -4,6 +4,14 @@ status;
   className}: StepProps) {;
 
 
+import React from "react",
+import { cn } from "@/lib/utils",
+import { CheckIcon } from 'lucide-react'
+
+interface StepProps {
+  status: "incomplete" | "current" | "complete",
+  label: string,
+  description?: string,
   className?: string
 }
 export function Step({
@@ -32,6 +40,12 @@ export function Step({
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
               status === "current"
+          "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium",
+          {
+            "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
+              status === "incomplete",
+            "bg-zion-blue border-zion-cyan text-white":
+              status === "current",
             "bg-zion-purple border-zion-purple text-white":
               status === "complete",}
         )}>;
@@ -164,6 +178,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 
 
 
+          if (!React.isValidElement(child)) return null,
+          
+          let status: "incomplete" | "current" | "complete" = "incomplete",
+          if (index < currentStep) status = "complete",
+          if (index === currentStep) status = "current",
+          
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}

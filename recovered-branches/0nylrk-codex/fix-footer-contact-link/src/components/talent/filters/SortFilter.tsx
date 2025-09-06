@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-import {
-
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from "@/components/ui/select";
-
-import { SortFilterProps } from "@/types/filters";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-SelectValue} from "@/components/ui/select",
-import { SortFilterProps } from "@/types/filters",
-=======
 
 
 
 
->>>>>>> main
 
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
@@ -42,13 +22,6 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-<<<<<<< HEAD
-);
-}
-}
-;
-
-=======
 
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {SortFilterProps} from "@/types/filters";
@@ -111,4 +84,3 @@ function SortFilter() {
   )
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

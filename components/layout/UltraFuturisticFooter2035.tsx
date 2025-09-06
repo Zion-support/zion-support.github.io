@@ -297,7 +297,6 @@ const UltraFuturisticFooter2035: React.FC = () => {
                   Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. 
                   Transform your business with our revolutionary technology.
                 </p>
-
                 {/* Contact Info */}
 
                 <div className="space-y-3">

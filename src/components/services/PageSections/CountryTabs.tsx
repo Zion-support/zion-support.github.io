@@ -145,7 +145,46 @@ export function CountryTabs({
               country = {country,}
               onSelect = {handleCountrySelect,}
               onQuote = {onQuote,}
-              isPopular = {popularCountries && popularCountries.includes(country && country.country),}
+              isPopular = {popularCountries.includes(country.country),}
+            />
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredCountries
+            .filter((country) => popularCountries.includes(country.country))
+            .map((country) => (
+              <CountryServiceCard
+                key={country.country}
+                country={country}
+                onSelect={handleCountrySelect}
+                onQuote={onQuote}
+                isPopular={true}
+              />;
+            ))}
+        </div>
+      </TabsContent>
+
+      <TabsContent value="all" className="mt-0">
+        <div className="mb-6 max-w-md mx-auto">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+            <Input
+              type="text"
+              placeholder="Search by country..."
+              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {paginatedCountries.map((country) => (
+            <CountryServiceCard
+              key={country.country}
+              country={country}
+              onSelect={handleCountrySelect}
+              onQuote={onQuote}
+              isPopular={popularCountries.includes(country.country)}
             />;
 
 

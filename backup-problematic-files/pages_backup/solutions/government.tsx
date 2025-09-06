@@ -379,6 +379,8 @@ export default function GovernmentSolutionsPage() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
+    </Layout>
   );
 };
 

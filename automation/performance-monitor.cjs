@@ -43,6 +43,9 @@ class PerformanceMonitor {}
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -76,6 +79,8 @@ class PerformanceMonitor {
   };
   log(message) {}
     const timestamp = new Date().toISOString();
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -171,6 +176,9 @@ class PerformanceMonitor {
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127

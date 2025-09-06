@@ -51,11 +51,8 @@ interface Notification {
   message: string;
 }
 
-interface NotificationSystemProps {
-  notifications: Notification[];
-  onDismiss?: (id: string) => void;
-  className?: string;
-}
+export function NotificationProvider({ children }: { children: ReactNode }) {
+  const [toasts, setToasts] = useState<Toast[]>([]),
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications,

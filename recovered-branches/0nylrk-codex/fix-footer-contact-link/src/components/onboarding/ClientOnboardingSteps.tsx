@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-import React from "react",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
-export function ClientOnboardingSteps() {
-
-  const onboardingStatus = useOnboardingStatus();
-=======
 
 
 
->>>>>>> main
 
   const steps: OnboardingStep[] = [
     {
@@ -28,21 +18,6 @@ export function ClientOnboardingSteps() {
       action: "Find Talent"
     }
     {
-<<<<<<< HEAD
-id: "response"
-      label: "Receive your first application"
-      completed: onboardingStatus.responseReceived
-      link: "/client-dashboard"
-      action: "Check Dashboard"
-    }
-  ];
-import React from "react",;
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
-import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",;
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
-export function ClientOnboardingSteps() {;
-  const onboardingStatus = useOnboardingStatus(),;
-=======
 
 import React from "react";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
@@ -52,47 +27,22 @@ import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus();
 
->>>>>>> main
   const steps: OnboardingStep[] = [;
     {;
       id: "post-job",;
       label: "Post your first job",;
-<<<<<<< HEAD
-      completed: onboardingStatus.jobPosted,;
-=======
       completed: onboardingStatus && onboardingStatus.jobPosted,;
->>>>>>> main
       link: "/post-job",;
       action: "Post Job"},;
     {;
       id: "invite",;
       label: "Send invitation to talent",;
-<<<<<<< HEAD
-      completed: onboardingStatus.inviteSent,;
-=======
       completed: onboardingStatus && onboardingStatus.inviteSent,;
->>>>>>> main
       link: "/talent",;
       action: "Find Talent"},;
     {;
       id: "response",;
       label: "Receive your first application",;
-<<<<<<< HEAD
-      completed: onboardingStatus.responseReceived,;
-      link: "/client-dashboard";
-      action: "Check Dashboard"}];
-
-  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
-
-      action: "Check Dashboard",
-    },
-  ];
-
-  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
-
-}
-
-=======
       completed: onboardingStatus && onboardingStatus.responseReceived,;
       link: "/client-dashboard",;
       action: "Check Dashboard"}],;
@@ -154,4 +104,3 @@ function ClientOnboardingSteps() {
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

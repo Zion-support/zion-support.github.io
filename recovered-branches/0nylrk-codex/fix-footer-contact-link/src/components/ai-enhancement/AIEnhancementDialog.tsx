@@ -1,20 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-import { AIEnhancementPanel  } from './AIEnhancementPanel';
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> main
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -29,11 +15,7 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> main
 =======
 import React from 'react',;
 import {;
@@ -51,12 +33,8 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 
   title: string
   isOpen: boolean
@@ -67,32 +45,6 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
-<<<<<<< HEAD
-  title,
-  isOpen,
-  onClose,
-  onApply,
-  defaultOptions,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  initialContent
-}: AIEnhancementDialogProps) {
-
-  const handleApply = (content: string) => {
-    onApply(content)
-    onClose()
-<<<<<<< HEAD
-  }
-=======
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-  return (
-    <Dialog open={isOpen} onOpenChange={() => onClose()}>
-      <DialogContent className="max-w-3xl">
-        <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-        </DialogHeader>
-=======
 =======
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
@@ -133,19 +85,11 @@ export function AIEnhancementDialog(): any ({;
         <DialogHeader>;
           <DialogTitle>{title}</DialogTitle>;
         </DialogHeader>;
->>>>>>> main
         <AIEnhancementPanel
           title={title}
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-<<<<<<< HEAD
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
-=======
 
         />;
       </DialogContent>;
@@ -190,4 +134,3 @@ function AIEnhancementDialog() {
     </Dialog>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

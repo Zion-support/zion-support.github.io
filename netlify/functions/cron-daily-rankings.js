@@ -128,7 +128,6 @@ if ( {) {
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), top }, null, 2),
 
 

@@ -2,7 +2,8 @@
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
 class ErrorBoundary extends React.Component {

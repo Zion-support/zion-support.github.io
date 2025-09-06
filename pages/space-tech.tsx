@@ -54,7 +54,6 @@ return (
 
           </div>;
         </section>;
-
         <section className="text-center">;
 
           <a

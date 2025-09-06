@@ -498,7 +498,6 @@ const InitPage: NextPage = () => {
             </div>;
           </div>;
         </section>;
-
         <div className='flex items-center gap-3'>;
 
           <button

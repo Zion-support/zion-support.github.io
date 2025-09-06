@@ -1,33 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { ReactNode } from "react";
-import {cn} from "@/lib/utils";
-import {slugify} from "@/lib/slugify";
-import {Link} from "react-router-dom";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { ReactNode } from "react",
-import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-import { slugify } from "@/lib/slugify";
-import { Link } from "react-router-dom";
-=======
-import { slugify } from "@/lib/slugify",
-import { Link } from "react-router-dom",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface CategoryCardProps {
 
   title: string
@@ -39,81 +14,43 @@ interface CategoryCardProps {
    * accent colour is used. Previously this prop was ignored which meant
    * callers could not customise the icon colour as intended.
    */
-<<<<<<< HEAD
-=======
 
 import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
 =======
->>>>>>> main
   color?: string,
   count?: number,
   className?: string
 }
 export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Create a URL-friendly slug from the category title;
-  const slug = slugify(title);
-=======
-  // Create a URL-friendly slug from the category title
-<<<<<<< HEAD
-=======
-  const slug = slugify(title),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   // Create a URL-friendly slug from the category title
 
 
->>>>>>> main
 
   const slug = slugify(title);
   return (
     <Link
       to={`/category/${slug}`}
       className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
-=======
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
 
->>>>>>> main
         className
       )}
     >
       <div
         className={cn(
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "mb-4 p-3 bg-zion-blue-dark rounded-full";
 
-          !color && "text-zion-cyan"
-=======
-=======
-
->>>>>>> main
           "mb-4 p-3 bg-zion-blue-dark rounded-full",
           !color && "text-zion-cyan"
 import React, { ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { slugify } from "@/lib/slugify",;
 import { Link } from "react-router-dom",;
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface CategoryCardProps {;
   title: string,;
   description: string,;
@@ -123,45 +60,6 @@ interface CategoryCardProps {;
    * accent colour is used. Previously this prop was ignored which meant;
    * callers could not customise the icon colour as intended.;
    */;
-<<<<<<< HEAD
-  color?: string,;
-  count?: number,;
-  className?: string;
-}
-;
-export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {;
-  // Create a URL-friendly slug from the category title;
-  const slug = slugify(title),;
-  return (;
-    <Link;
-      to={`/category/${slug}`} ;
-      className={cn(;
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group";
-        className;
-      )}
-    >;
-      <div;
-        className={cn(;
-          "mb-4 p-3 bg-zion-blue-dark rounded-full";
-          !color && "text-zion-cyan";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        )}
-        style={color ? { color } : undefined}
-      >
-        {icon}
-      </div>
-      <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
-      <p className="text-zion-slate-light text-center">{description}</p>
-      {count !== undefined && (
-        <div className="mt-3 text-sm text-zion-cyan">{count} listings</div>
-      )}
-    </Link>
-  )
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   color?: string;
   count?: number;
@@ -252,5 +150,4 @@ function CategoryCard() {
         <div className="mt - 3 text - sm text - zion - cyan">{count} listings</div>)}
     </Link>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
 }

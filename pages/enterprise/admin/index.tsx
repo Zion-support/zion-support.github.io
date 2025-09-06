@@ -19,8 +19,8 @@ const COMPANY_ID = 'cmp_acme';
 
 
 
-export default function CompanyAdmin() {;
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(;
+export default function CompanyAdmin() {
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members';
 
 
@@ -234,7 +234,6 @@ function CompanyAdmin() {
   }
 
 }
-
 function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
 
   const [name, setName] = useState(''),

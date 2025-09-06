@@ -1,44 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase  } from '@/components/icons';
-import { formatDistanceToNow  } from 'date-fns';
-import { toast  } from 'sonner';
-import { useAuth  } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-<<<<<<< HEAD
-import { ApplyToJobModal  } from '@/components/messaging/job-application';
-import { SEO  } from '@/components/SEO';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string }
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-=======
-import {ApplyToJobModal} from '@/components/messaging/job-application';
-import {SEO} from '@/components/SEO';
-import {useWhitelabel} from '@/context/WhitelabelContext';
-export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { jobId } = useParams() as { jobId?: string };
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 =======
 
 
@@ -57,7 +17,6 @@ export default function JobDetails() {;
   const { isWhitelabel, brandName } = useWhitelabel();
 
 
->>>>>>> main
 =======
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
@@ -81,70 +40,11 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 
->>>>>>> main
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>
-    )
-  }
-  if (error |!job) {
-    return (
-      <>
-        <Header />
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
-          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
-          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
-        </div>
-        <Footer />
-      </>
-    )
-  }
-  const handleApply = () => {
-    if (!isAuthenticated) {
-      toast.error("Please log in to apply for this job"),
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
-      return
-    }
-    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-      toast.error("Only job seekers can apply for jobs"),
-      return
-    }
-    setIsApplyModalOpen(true)
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success("Application submitted successfully!")
-    setIsApplyModalOpen(false)
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified"
-    return `$${budget.min} - $${budget.max}`
-<<<<<<< HEAD
-  }
-  const isOwnJob = user?.id === job.client_id;
-=======
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
 =======
@@ -200,17 +100,12 @@ export default function JobDetails() {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
 
->>>>>>> main
   },
 
   const isOwnJob = user?.id === job.client_id,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
   return (
     <>
       <SEO
@@ -255,15 +150,10 @@ export default function JobDetails() {
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
 =======
 
->>>>>>> main
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -316,29 +206,6 @@ export default function JobDetails() {;
       return;
     }
 ;
-<<<<<<< HEAD
-    if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
-      toast.error("Only job seekers can apply for jobs"),;
-      return;
-    }
-;
-    setIsApplyModalOpen(true);
-  },;
-  const handleApplySuccess = async (appliedJobId: string) => {;
-    toast.success("Application submitted successfully!"),;
-    setIsApplyModalOpen(false);
-  },;
-  const formatBudget = (budget: any) => {;
-    if (!budget) return "Not specified",;
-    return `$${budget.min} - $${budget.max}`;
-  },;
-  const isOwnJob = user?.id === job.client_id,;
-  return (;
-    <>;
-      <SEO;
-        title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
-        description={job.description.substring(0, 160)}
-=======
 
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {;
       toast && toast.error("Only job seekers can apply for jobs");
@@ -365,44 +232,25 @@ export default function JobDetails() {;
       <SEO
         title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job && job.description.substring(0, 160)}
->>>>>>> main
       />;
       <Header />;
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-6">;
-<<<<<<< HEAD
-          <Button;
-            variant="outline";
-            size="sm";
-=======
           <Button
             variant="outline" 
             size="sm"
->>>>>>> main
             onClick={() => navigate('/jobs')}
           >;
             ← Back to Jobs;
           </Button>;
         </div>;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
           <div className="lg:col-span-2">;
             <Card>;
               <CardHeader>;
                 <div className="flex justify-between items-start">;
                   <div>;
-<<<<<<< HEAD
-                    <CardTitle className="text-2xl mb-2">{job.title}</CardTitle>;
-                    <div className="flex items-center text-muted-foreground">;
-                      <Calendar className="mr-2 h-4 w-4" />;
-                      <span>Posted {formatDistanceToNow(new Date(job.created_at), { addSuffix: true })}</span>;
-                    </div>;
-                  </div>;
-                  <Badge>{job.category}</Badge>;
-=======
                     <CardTitle className="text-2xl mb-2">{job && job.title}</CardTitle>;
                     <div className="flex items-center text-muted-foreground">;
                       <Calendar className="mr-2 h-4 w-4" />;
@@ -410,80 +258,12 @@ export default function JobDetails() {;
                     </div>;
                   </div>;
                   <Badge>{job && job.category}</Badge>;
->>>>>>> main
                 </div>;
               </CardHeader>;
               <CardContent className="space-y-6">;
                 <div>;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
-<<<<<<< HEAD
-                    {job.description}
-                  </div>;
-                </div>;
-                <div>;
-                  <h3 className="font-semibold text-lg mb-3">Required Skills</h3>;
-                  <div className="flex flex-wrap gap-2">;
-                    {job.skills?.map((skill: string, i: number) => (;
-                      <Badge key={i} variant="secondary">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div>
-            <Card>
-              <CardContent className="pt-6 space-y-4">
-                <div className="flex items-start">
-                  <DollarSign className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Budget</p>
-                    <p className="font-medium">{formatBudget(job.budget)}</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Deadline</p>
-                    <p className="font-medium">
-                      {job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
-                  <div className="ml-3">
-                    <p className="text-sm text-muted-foreground">Job Type</p>
-                    <p className="font-medium">Freelance / Remote</p>
-                  </div>
-                </div>
-                {!isOwnJob && (
-<<<<<<< HEAD
-                  <Button
-                    className="w-full mt-4"
-=======
-                  <Button 
-                    className="w-full mt-4" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                    onClick={handleApply}
-                    disabled={isOwnJob}
-                  >
-                    Apply Now
-                  </Button>
-                )}
-<<<<<<< HEAD
-=======
-                
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                     {job && job.description}
                   </div>;
                 </div>;
@@ -556,7 +336,6 @@ export default function JobDetails() {;
                 
 
 
->>>>>>> main
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
@@ -568,27 +347,6 @@ export default function JobDetails() {;
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-      {/* Job application modal */}
-      {job && (
-        <ApplyToJobModal
-          job={{
-            id: job.id
-            title: job.title
-            description: job.description
-            company_name: job.company_name |"Company"
-            budget: job.budget
-
-            client_id: job.client_id
-          }}
-          isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}
-        />
-      )}
-    </>
-  )
-}
-=======
 =======
 
                 {isOwnJob && (;
@@ -815,4 +573,3 @@ if (return "Not specified", ) {
     </>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

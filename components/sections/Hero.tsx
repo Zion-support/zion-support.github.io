@@ -201,7 +201,6 @@ const Hero: React.FC<HeroProps> = ({;
               World&apos,s Most Advanced Autonomous Platform;
             </div>;
           </div>;
-
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">;
 
             {title}

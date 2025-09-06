@@ -377,6 +377,8 @@ export default function FinanceSolutionsPage() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
+    </Layout>
   );
 };
 

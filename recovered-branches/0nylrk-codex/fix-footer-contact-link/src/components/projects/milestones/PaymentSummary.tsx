@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Milestone  } from '@/hooks/useMilestones';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { CreditCard } from 'lucide-react';
-interface PaymentSummaryProps {
-  milestones: Milestone[];
-  paymentTerms: string | null
-
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
-  milestones
-  paymentTerms
-}) => {
-  const totalPayment = milestones
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-  const paidAmount = milestones
-    .filter((m) => m.status === "paid")
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-=======
 
 
 
@@ -36,21 +13,15 @@ interface PaymentSummaryProps {;
 
 
 
->>>>>>> main
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
-<<<<<<< HEAD
-0;
-  ).toFixed(2);
-=======
 
     0
   ).toFixed(2),
 
->>>>>>> main
   
   const paidAmount = milestones
     .filter(m => m.status === 'paid')
@@ -59,33 +30,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       0
     ).toFixed(2),
 
-<<<<<<< HEAD
-import React from "react";
-import { Milestone } from "@/hooks/useMilestones";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreditCard } from "lucide-react";
-interface PaymentSummaryProps {
-  milestones: Milestone[];
-  paymentTerms: string | null;
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
-  milestones,
-  paymentTerms,
-}) => {
-  const totalPayment = milestones
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-
-  const paidAmount = milestones
-    .filter((m) => m.status === "paid")
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-
-=======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -99,28 +45,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>
             <p className="text-2xl font-semibold">${totalPayment}</p>
           </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> main
           <div>
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
             <p className="font-medium capitalize">
               {paymentTerms |"Not specified"}
             </p>
           </div>
-<<<<<<< HEAD
-<div>
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
-
-            <p className="font-medium">${paidAmount}</p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-);
-}
-=======
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
 
@@ -172,18 +102,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
             <p className="font-medium">;
               ${paidAmount}
->>>>>>> main
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-
-};
-
-=======
 =======
 
             <p className="font-medium">
@@ -243,4 +167,3 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

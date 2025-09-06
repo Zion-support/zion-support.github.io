@@ -1232,6 +1232,12 @@ export const SearchResultsPage: React.FC = () => {;
     (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000 ? 1 : 0) +;
     (filters && filters.minRating > 0 ? 1 : 0);
 
+  // Active filters count
+  const activeFiltersCount = filters.types.length + 
+    (filters.category ? 1 : 0) + 
+    (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
+    (filters.minRating > 0 ? 1 : 0),
+
 
 
 

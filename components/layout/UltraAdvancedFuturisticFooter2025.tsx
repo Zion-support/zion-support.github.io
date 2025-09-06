@@ -59,10 +59,7 @@ import { AnimatePresence } from 'framer-motion';
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface FooterLink {
-=======
-
 interface FooterLink {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   label: string;
   href: string;
   description?: string;
@@ -71,17 +68,13 @@ interface FooterLink {;
 ;
 
 interface FooterSection {
-=======
 interface FooterSection {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title: string;
   links: FooterLink[];} from 'lucide-react';
 
 
 import Link from 'next/link';
-=======
 import Link from 'next / link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { AnimatePresence } from 'framer-motion';
 
 
@@ -312,9 +305,6 @@ const footer_sections: FooterSection[] = [;
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
 
 
-const UltraAdvancedFuturisticFooter2025: React.FC = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   };
 
 
@@ -847,7 +837,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent"></div>;
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900"></div>;
       </div>;
-
       <div className="relative z-10">;
 
         {/* Main Footer Content */}

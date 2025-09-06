@@ -111,19 +111,12 @@ type ChangelogEntry = {;
 
 
     });
-  };
-
-  const handleRemoveEntry = (id: string) => {;
-    setEntries(entries && entries.filter(entry => entry && entry.id !== id)),;
-  };
-
-  );
-};  const handleRemoveEntry = (id: string,) => {;
-    setEntries(entries && entries.filter(entry => entry && entry.id !== id));
   },;
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,) => {;
-    const { name, value } = e && e.target,;
+  const handleRemoveEntry = (id: string) => {;
+    setEntries(entries.filter(entry => entry.id !== id));
+  },;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {;
+    const { name, value } = e.target,;
     setNewEntry(prev => ({ ...prev, [name]: value }));
   },;
 

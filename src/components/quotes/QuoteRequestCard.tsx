@@ -222,12 +222,12 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
               <Button
                 variant="ghost"
                 size="sm"
-                onClick = {(,) => onMarkAsResponded(quote && quote.id),}
-                className="flex items-center gap-1";
-              >;
-                <MessageSquare className="h-4 w-4" />;
-                Mark Responded;
-              </Button>;
+                onClick={() => onMarkAsResponded(quote.id)}
+                className="flex items-center gap-1"
+              >
+                <MessageSquare className="h-4 w-4" />
+                Mark Responded
+              </Button>
             )}
 
 

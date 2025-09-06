@@ -52,9 +52,6 @@ if (isLoading) {
             onClick: (,) => setShowAddForm(true);
           } : undefined;
         }
-      />;
-    );
-  }
   return (
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
@@ -82,6 +79,7 @@ if (isLoading) {
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>;
 
             <AddMilestoneForm
+            <AddMilestoneForm 
               onSubmit = {handleSubmit,}
               isSubmitting = {isSubmitting,}
               onCancel = {(,) => setShowAddForm(false),}
@@ -105,7 +103,7 @@ if (isLoading) {
             dueDate = {milestone && milestone.due_date,}
             onApprove = {onApprove,}
             onReject = {onReject,}
-          />;
+          />
         ))}
 
       </div>;

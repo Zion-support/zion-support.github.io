@@ -1,16 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-export interface TalentProfileData {
-=======
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-export interface TalentProfileData {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 
@@ -22,23 +10,10 @@ import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   name: string;
   title: string;
   bio: string;
 
-<<<<<<< HEAD
-  skills: string[]
-
-  location?: string
-}
-<<<<<<< HEAD
-export interface CategorizedSkills {
-=======
-
-export interface CategorizedSkills {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   skills: string[],
   location?: string;
 
@@ -51,34 +26,11 @@ export interface CategorizedSkills {
 export interface CategorizedSkills {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   programming: string[];
   devops: string[];
   platforms: string[];
 
-<<<<<<< HEAD
-  softSkills: string[]
 
-  other: string[]
-}
-<<<<<<< HEAD
-export interface EnhancedProfile {
-
-  summary: string
-
-  categorizedSkills: CategorizedSkills
-}
-export function useTalentProfileEnhancer() {
-  const [isGenerating, setIsGenerating] = useState(false);
-
-  const [error, setError] = useState<string | null>(null);
-  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
-    setIsGenerating(true);
-    setError(null)
-=======
-=======
-
->>>>>>> main
 
 export interface EnhancedProfile {
   summary: string,
@@ -93,18 +45,6 @@ export function useTalentProfileEnhancer() {;
     setIsGenerating(true);
     setError(null),
     
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    try {
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
-        body: { talentData: profileData }
-      });
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
     try {
@@ -116,7 +56,6 @@ export function useTalentProfileEnhancer() {;
 
 
 
->>>>>>> main
       if (error) {
         throw new Error(error.message)
 =======
@@ -156,17 +95,6 @@ export function useTalentProfileEnhancer() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      }
-      return data as EnhancedProfile
-    } catch (err: any) {
-      setError(err.message |'Failed to enhance profile')
-=======
 
 
 
@@ -177,44 +105,21 @@ export function useTalentProfileEnhancer() {;
 
       setError(err && err.message || 'Failed to enhance profile'),
 
->>>>>>> main
       return null
     } finally {
       setIsGenerating(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
-  };
-  
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
   };
   
 
 
->>>>>>> main
   return {
     enhanceProfile;
     isGenerating;
 
     error
-=======
-<<<<<<< HEAD
-  },;
-  return {;
-    enhanceProfile;
-    isGenerating;
-    error;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   soft_skills: string[],
   other: string[];
@@ -263,6 +168,5 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   }
 }

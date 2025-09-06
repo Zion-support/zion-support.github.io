@@ -1,18 +1,8 @@
 export default function Page(){return null}
-<<<<<<<< HEAD:backup-problematic-files/components/contact.tsx
 import React from 'react',
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-========
-=======
-=======
-import React from 'react';
-=======
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
->>>>>>>> main:components/contact.tsx.backup.1755992122
 import { 
   Phone, Mail, MapPin, Globe, Clock, Users, 
   MessageSquare, Send, CheckCircle, Star, 
@@ -300,7 +290,6 @@ export default function ContactPage() {;
                       <p>✓ Service recommendations prepared</p>
                       <p>✓ ROI analysis in progress</p>
                     </div>
-=======
   return (
     <UltraFuturisticBackground2029>
       <Head>

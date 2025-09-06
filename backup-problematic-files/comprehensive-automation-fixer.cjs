@@ -861,6 +861,7 @@ module.exports = ComprehensiveAutomationFixer;
 >>>>>>> origin/main
 =======
 =======
+=======
 // Fix all automation files
 automationFiles.forEach(fixAutomationFile);
 =======

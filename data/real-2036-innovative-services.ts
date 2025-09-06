@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export type Real2036InnovativeService = {
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string, price: string,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
 

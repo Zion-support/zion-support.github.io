@@ -1024,7 +1024,6 @@ function AISeosuitePage() {
               Choose the plan that fits your SEO needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {pricingPlans.map((plan, index) => (

@@ -52,7 +52,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
       return res && res.status(500).json({ error: 'Reflex failure' })
   }
-
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 }

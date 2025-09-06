@@ -1,35 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {MobileConversationList} from "../components/messaging/MobileConversationList";
-import {MobileChatView} from "../components/messaging/MobileChatView";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import { MobileHeader } from "../components/common/MobileHeader",
-import { BottomNavigation } from "../components/common/BottomNavigation",
-<<<<<<< HEAD
-import { MobileConversationList } from "../components/messaging/MobileConversationList";
-import { MobileChatView } from "../components/messaging/MobileChatView";
-=======
-import { MobileConversationList } from "../components/messaging/MobileConversationList",
-import { MobileChatView } from "../components/messaging/MobileChatView",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 // Mock data for demonstration
 
 const mockConversations = [
@@ -86,118 +59,12 @@ const mockMessages: Message[] = [
     isMe: false
     status: "read"}
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: "4"
-    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
-    timestamp: "10:40 AM"
-    isMe: true
-    status: "read"}
-=======
-    id: "4",
-    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",
-    timestamp: "10:40 AM",
-    isMe: true,
-    status: "read"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  {
-<<<<<<< HEAD
-    id: "5"
-    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?"
-    timestamp: "10:45 AM"
-    isMe: false
-    status: "read"}]
-=======
-    id: "5",
-    content: "That works for us. I'll send over a detailed brief later today. Would you be available for a quick call tomorrow to discuss further?",
-    timestamp: "10:45 AM",
-    isMe: false,
-    status: "read"}],
-
-<<<<<<< HEAD
-export function MobileMessages() {;
-  const [activeConversation, setActiveConversation] = useState<string | null>(null);
-  const [messages, setMessages] = useState<Message[]>(mockMessages);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function MobileMessages() {
-<<<<<<< HEAD
-  const [activeConversation, setActiveConversation] = useState<string | null>(null);
-  const [messages, setMessages] = useState<Message[]>(mockMessages);
-  const handleSelectConversation = (id: string) => {
-    setActiveConversation(id)
-  }
-  const handleBack = () => {
-    setActiveConversation(null)
-  }
-  const handleSendMessage = (content: string) => {
-    const newMessage: Message = {
-      id: `${Date.now()}`
-      content;
-      timestamp: "Just now"
-      isMe: true
-      status: "sent"}
-    setMessages([...messages, newMessage])
-  }
-  const currentContact = mockConversations.find(c => c.id === activeConversation);
-=======
-  const [activeConversation, setActiveConversation] = useState<string | null>(null),
-  const [messages, setMessages] = useState<Message[]>(mockMessages),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
-  const handleSelectConversation = (id: string) => {
-    setActiveConversation(id)
-  },
-  
-  const handleBack = () => {
-    setActiveConversation(null)
-  },
-  
-  const handleSendMessage = (content: string) => {
-    const newMessage: Message = {
-      id: `${Date.now()}`,
-      content,
-      timestamp: "Just now",
-      isMe: true,
-      status: "sent"},
-    setMessages([...messages, newMessage])
-  },
-  
-  const currentContact = mockConversations.find(c => c.id === activeConversation),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  return (
-    <div className="min-h-screen flex flex-col">
-      {activeConversation ? (
-        <MobileChatView
-          contact={{
-<<<<<<< HEAD
-            id: currentContact?.id |""
-            name: currentContact?.name |""
-
-            status: "Online"
-=======
-            id: currentContact?.id || "",
-            name: currentContact?.name || "",
-            status: "Online"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { MobileConversationList } from "../components/messaging/MobileConversationList",;
-import { MobileChatView } from "../components/messaging/MobileChatView",;
-=======
 
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
 import {MobileConversationList} from "../components/messaging/MobileConversationList";
 import {MobileChatView} from "../components/messaging/MobileChatView";
->>>>>>> main
 // Mock data for demonstration;
 const mockConversations = [;
   {;
@@ -225,10 +92,7 @@ const mockConversations = [;
     lastMessage: "Your application has been received. We'll review it shortly.",;
     timestamp: "Mon",;
     unreadCount: 0}],;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 // Define the Message type to resolve the type error;
 interface Message {;
   id: string,;
@@ -237,11 +101,7 @@ interface Message {;
   isMe: boolean,;
   status: "read" | "sent" | "delivered";
 }
-<<<<<<< HEAD
-;
-=======
 
->>>>>>> main
 const mockMessages: Message[] = [;
   {;
     id: "1",;
@@ -263,11 +123,7 @@ const mockMessages: Message[] = [;
     status: "read"},;
   {;
     id: "4",;
-<<<<<<< HEAD
-    content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?",;
-=======
     content: "Yes, I'm available for the next few months. My hourly rate is $75 for this kind of project. Can you share more details about the specific requirements?";
->>>>>>> main
     timestamp: "10:40 AM",;
     isMe: true,;
     status: "read"},;
@@ -277,21 +133,6 @@ const mockMessages: Message[] = [;
     timestamp: "10:45 AM",;
     isMe: false,;
     status: "read"}],;
-<<<<<<< HEAD
-export function MobileMessages() {;
-  const [activeConversation, setActiveConversation] = useState<string | null>(null),;
-  const [messages, setMessages] = useState<Message[]>(mockMessages),;
-  const handleSelectConversation = (id: string) => {;
-    setActiveConversation(id);
-  },;
-  const handleBack = () => {;
-    setActiveConversation(null);
-  },;
-  const handleSendMessage = (content: string) => {;
-    const newMessage: Message = {;
-      id: `${Date.now()}`,;
-      content,;
-=======
 
 export function MobileMessages() {;
   const [activeConversation, setActiveConversation] = useState<string | null>(null);
@@ -309,50 +150,10 @@ export function MobileMessages() {;
     const newMessage: Message = {;
       id: `${Date && Date.now()}`,;
       content;
->>>>>>> main
       timestamp: "Just now",;
       isMe: true,;
       status: "sent"},;
     setMessages([...messages, newMessage]);
-<<<<<<< HEAD
-  },;
-  const currentContact = mockConversations.find(c => c.id === activeConversation),;
-  return (;
-    <div className="min-h-screen flex flex-col">;
-      {activeConversation ? (;
-        <MobileChatView;
-          contact={{;
-            id: currentContact?.id || "";
-            name: currentContact?.name || "";
-            status: "Online";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }}
-          messages={messages}
-          onBack={handleBack}
-          onSendMessage={handleSendMessage}
-        />
-      ) : (
-        <>
-          <MobileHeader
-            title="Messages"
-          />
-          <main className="flex-1 overflow-y-auto">
-            <MobileConversationList
-              conversations={mockConversations}
-              onSelectConversation={handleSelectConversation}
-            />
-          </main>
-          <BottomNavigation />
-        </>
-      )}
-    </div>
-  )
-}
-=======
   };
 
   const currentContact = mockConversations && mockConversations.find(c => c && c.id === activeConversation);
@@ -541,4 +342,3 @@ function MobileMessages() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

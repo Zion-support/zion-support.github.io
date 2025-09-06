@@ -216,11 +216,22 @@ const integrations = [
   { name: 'Interactive Brokers', logo: '🏦', category: 'Broker' }
   { name: 'TD Ameritrade', logo: '💼', category: 'Broker' },];
 =======
-      'Basic market analysis and insightsPortfolio tracking and monitoringRisk assessment and managementEmail supportUp to 5 trading strategiesBasic reporting and analytics'
-    ];
-    popular: false,
-    color: 'from-gray-500 to-gray-600'
-  };
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {motion} from 'framer-motion';
+import {Brain, DollarSign, TrendingUp, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, BarChart3, Target, Microscope, Phone, Mail, MapPin, ArrowUpRight, Play, BarChart, PieChart, LineChart, Activity,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+const features = [
   {
     name: 'Professional',
     price: 499,
@@ -1225,7 +1236,6 @@ const NeuralFinanceAI: React.FC = () => {
               Join leading investment firms using Neural Finance AI to gain;
               competitive advantages in today's dynamic financial markets.;
             </p>;
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
               <Link

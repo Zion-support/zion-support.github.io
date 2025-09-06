@@ -45,7 +45,6 @@ type Summary = {;
   transactions: Tx[];
   config: { usdPerToken: number; symbol: string };
 };
-
 function getUserId(): any (): string {;
 
   if (typeof window === 'undefined') return 'demo-user';
@@ -127,7 +126,6 @@ type Summary = {;
   transactions: Tx[],;
   config: { usdPerToken: number, symbol: string }
 };
-
 function getUserId(): any (): string {;
 
   if (typeof window === "undefined") return "demo-user";

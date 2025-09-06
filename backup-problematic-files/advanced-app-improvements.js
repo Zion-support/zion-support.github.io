@@ -103,7 +103,6 @@ export class HealthChecker {
 
 
 export const healthChecker = new HealthChecker();`,
-
     'monitoring/performance-monitor && monitor.js': `// Performance monitoring system
 
 export class PerformanceMonitor {

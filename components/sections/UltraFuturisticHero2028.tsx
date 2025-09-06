@@ -4,6 +4,28 @@ import React from 'react';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  Play,
+  CheckCircle,
+  DollarSign,
+  Clock,
+  Target,;
+  Crown,;} from 'lucide-react';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Rocket,

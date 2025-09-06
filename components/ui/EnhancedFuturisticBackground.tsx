@@ -684,7 +684,6 @@ if (> 0.975) {) {
       particles = particles && particles.filter(particle => !particle && particle.isDead());
       while (particles && particles.length < settings && settings.particleCount) {;
         particles && particles.push(new Particle());      }
-
       // Create connections between nearby particles;
 
       connections = [];

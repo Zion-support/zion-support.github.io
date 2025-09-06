@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-import { Card } from "@/components/ui/card",
-import { Skeleton } from "@/components/ui/skeleton";
-import { Button } from "@/components/ui/button";
-
-import { Card } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Button } from "@/components/ui/button";
-
-=======
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -29,13 +18,6 @@ export function TalentPlaceholder() {
       </Button>
     </div>
 
-<<<<<<< HEAD
-  );
-}
-}
-;
-
-=======
 import {Card} from "@/components/ui/card";
 import {Skeleton} from "@/components/ui/skeleton";
 import {Button} from "@/components/ui/button";
@@ -87,4 +69,3 @@ function TalentPlaceholder() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

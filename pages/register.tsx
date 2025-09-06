@@ -81,7 +81,6 @@ export default function RegisterPage() {;
               Join Zion Tech Group and start your digital transformation journey;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
 
             initial={{ opacity: 0, y: 20 }}
@@ -113,7 +112,6 @@ export default function RegisterPage() {;
                     />;
                   </div>;
                 </div>;
-
                 <div>;
 
                   <label
@@ -134,7 +132,6 @@ export default function RegisterPage() {;
                   />;
                 </div>;
               </div>;
-
               <div>;
 
                 <label
@@ -160,7 +157,6 @@ export default function RegisterPage() {;
                   />;
                 </div>;
               </div>;
-
               <div>;
 
                 <label
@@ -179,7 +175,6 @@ export default function RegisterPage() {;
 
                 />;
               </div>;
-
               <div>;
 
                 <label
@@ -472,7 +467,6 @@ if ( {) {
                   )}
                 </div>;
               </div>;
-
               <div>;
 
                 <label

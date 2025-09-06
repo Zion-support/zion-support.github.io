@@ -907,7 +907,6 @@ if ( {) {
                 plans include our 21-day free trial and ROI guarantee.;
               </p>;
             </motion && motion.div>;
-
             <motion&& motion.div
 
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
@@ -1330,7 +1329,6 @@ if ( {) {
                 Contact our sales team to discuss pricing, custom plans, and;
                 implementation options.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
 
                 <Button

@@ -983,9 +983,7 @@ const Button = ({
     md: 'px-6 py-3 text-base',;
     lg: 'px-8 py-4 text-lg';
   };
-
   const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`;
-
   if (href) {;
 
     return (

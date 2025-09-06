@@ -1,25 +1,9 @@
-<<<<<<<< HEAD:backup-problematic-files/components/quantum-ai-brain-computer-interface.tsx
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
 import Button from '../components/ui/Button'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
-========
-import React from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-import { Brain, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import { Button } from '../components/ui/Button';
-=======
-import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-90c4
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
->>>>>>>> main:pages/quantum-ai-brain-computer-interface.tsx.backup.1755991796
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-brain-computer-interface'))
   if (!service) return null,
@@ -35,17 +19,7 @@ export default function QuantumAIBCIPage() {
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
-<<<<<<<< HEAD:backup-problematic-files/components/quantum-ai-brain-computer-interface.tsx
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Brain className="w-10 h-10" />{service.name}</h1>
-========
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent flex items-center justify-center gap-3">
-              <Brain className="w-10 h-10" />{service.name}
-            </h1>
-=======
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Brain className="w-10 h-10" />{service.name}</h1>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-90c4
->>>>>>>> main:pages/quantum-ai-brain-computer-interface.tsx.backup.1755991796
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
@@ -66,15 +40,7 @@ export default function QuantumAIBCIPage() {
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>
-<<<<<<<< HEAD:backup-problematic-files/components/quantum-ai-brain-computer-interface.tsx
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Book a Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
-========
-<<<<<<< HEAD
-              <Link href="/contact" variant="quantum" size="lg" className="w-full">Request Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
-=======
-              <Button href="/contact" variant="quantum" size="lg" className="w-full">Book a Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-90c4
->>>>>>>> main:pages/quantum-ai-brain-computer-interface.tsx.backup.1755991796
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
@@ -85,16 +51,6 @@ export default function QuantumAIBCIPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<<< HEAD:backup-problematic-files/components/quantum-ai-brain-computer-interface.tsx
   )
 }
 ;
-========
-  );
-<<<<<<< HEAD
-}
-
-=======
-}
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-90c4
->>>>>>>> main:pages/quantum-ai-brain-computer-interface.tsx.backup.1755991796

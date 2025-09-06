@@ -1,9 +1,10 @@
 
 
       'Intent classification + prioritization',
-      'On - brand response drafting',
-      'Automatic polite follow - ups',
-      'Lead / contact enrichment',
+      'On-brand response drafting',
+      'Automatic polite follow-ups',
+      'Lead/contact enrichment',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Analytics and response SLAs',
     ],
     popular: true,

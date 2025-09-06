@@ -58,7 +58,6 @@ const mockPartners: Partner[] = [;
     totalEarnings: 0;
   }
 ];
-
 const AdminPartnersPage: React.FC = () => {;
 
   const [partners, setPartners] = useState<Partner[]>([]);

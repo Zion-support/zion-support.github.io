@@ -442,6 +442,8 @@ const "Products": NextPage = () => {;
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                     {product.title}
                   </h3>

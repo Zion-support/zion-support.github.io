@@ -92,11 +92,29 @@ function handle_report() {
 
 
 =======
-      <section className="grid gap - 4">;
-        {reviews.map ((r) => (<ReviewCard key={r.id} review={r} on_report={handle_report} />))}
-        {!reviews.length && (<div className="enhanced - card">No public reviews yet.</div>)}
-      </section>;
-    </main>);
+      {summary && <ReviewSummary summary={summary} />  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="grid gap-4">
+        {reviews.map((r) => (<ReviewCard key={r.id} review={r} onReport={handleReport} />))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {!reviews.length && (<div className="enhanced-card">No public reviews yet.</div>)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      </section>
+    </main>
+  )
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },

@@ -1,35 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Filter, X, Star} from "lucide-react";
-import {FilterOptions} from "@/types/search";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
-<<<<<<< HEAD
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
-=======
-import { Filter, X, Star } from "lucide-react",
-import { FilterOptions } from "@/types/search",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface FilterSidebarProps {
   filters: {
 
@@ -37,123 +10,33 @@ interface FilterSidebarProps {
     selectedLocations: string[]
     selectedAvailability: string[]
     selectedRating: number | null
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  filterOptions: FilterOptions
-  onFilterChange: (filterType: string, value: string) => void
-  onRatingChange: (rating: number | null) => void
-
-=======
-  },
-  filterOptions: FilterOptions,
-  onFilterChange: (filterType: string, value: string) => void,
-  onRatingChange: (rating: number | null) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  onClearFilters: () => void
-}
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-export function FilterSidebar({;
-  filters;
-  filterOptions;
-  onFilterChange;
-  onRatingChange;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export function FilterSidebar({
-  filters,
-  filterOptions,
-  onFilterChange,
-  onRatingChange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  onClearFilters
-}: FilterSidebarProps) {
-  return (
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-medium text-white flex items-center">
-          <Filter className="mr-2 h-5 w-5" /> Filters
-        </h3>
-<<<<<<< HEAD
-        <Button
-          variant="outline"
-          size="sm"
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-=======
-        <Button 
-          variant="outline" 
-          size="sm"
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Checkbox } from "@/components/ui/checkbox",;
-import { Filter, X, Star } from "lucide-react",;
-import { FilterOptions } from "@/types/search",;
-=======
 
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {Filter, X, Star} from "lucide-react";
 import {FilterOptions} from "@/types/search";
->>>>>>> main
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
     selectedLocations: string[],;
     selectedAvailability: string[],;
     selectedRating: number | null;
-<<<<<<< HEAD
-  },;
-=======
   };
->>>>>>> main
   filterOptions: FilterOptions,;
   onFilterChange: (filterType: string, value: string) => void,;
   onRatingChange: (rating: number | null) => void,;
   onClearFilters: () => void;
 }
-<<<<<<< HEAD
-;
-export function FilterSidebar({;
-  filters,;
-  filterOptions,;
-=======
 
 export function FilterSidebar(): any ({;
 
   filters;
   filterOptions;
->>>>>>> main
   onFilterChange;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
-<<<<<<< HEAD
-  return (;
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
-      <div className="flex items-center justify-between mb-4">;
-        <h3 className="text-lg font-medium text-white flex items-center">;
-          <Filter className="mr-2 h-5 w-5" /> Filters;
-        </h3>;
-        <Button;
-          variant="outline";
-          size="sm";
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   return (
 
 
@@ -184,7 +67,6 @@ export function FilterSidebar(): any ({;
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
 
->>>>>>> main
           onClick={onClearFilters}
         >
           Clear All
@@ -262,15 +144,6 @@ export function FilterSidebar(): any ({;
           ))}
         </div>
       </div>
-<<<<<<< HEAD
-      {/* Rating Filter */}
-      <div className="mb-6">
-        <label className="text-sm font-medium text-zion-slate-light block mb-2">
-          Minimum Rating
-        </label>
-        <div className="flex flex-wrap gap-2">
-          {[null, ...filterOptions.ratingOptions].map((rating) => (
-=======
 =======
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
       <div className="flex items-center justify-between mb-4">;
@@ -366,37 +239,11 @@ export function FilterSidebar(): any ({;
         </label>;
         <div className="flex flex-wrap gap-2">;
           {[null, ...filterOptions && filterOptions.ratingOptions].map((rating) => (;
->>>>>>> main
             <Button
               key={rating === null ? 'any' : rating}
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
-<<<<<<< HEAD
-              className={`${
-                filters.selectedRating === rating
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
-                  : "border-zion-blue-light text-zion-slate-light"
-              }`}
-            >
-              {rating === null ? (
-                "Any"
-              ) : (
-                <div className="flex items-center">
-                  {[...Array(rating)].map((_, i) => (
-                    <Star key={i} className="h-3 w-3 fill-zion-cyan text-zion-cyan" />
-                  ))}
-                  <span className="ml-1">& Up</span>
-                </div>
-              )}
-            </Button>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
 
               className={`${;
                 filters && filters.selectedRating === rating ;
@@ -561,4 +408,3 @@ function FilterSidebar() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

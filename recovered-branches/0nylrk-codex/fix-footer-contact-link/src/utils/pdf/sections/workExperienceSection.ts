@@ -1,14 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { jsPDF  } from 'jspdf';
-import { WorkExperience  } from '@/types/resume';
-import { PdfThemeColors  } from '../themeConfig';
-import { formatDate } from '../formatters';
-export function addWorkExperienceSection(
-=======
-=======
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -17,42 +7,11 @@ export function addWorkExperienceSection (
 
 =======
 
->>>>>>> main
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  doc: jsPDF;
-  workExperience: WorkExperience[];
-  colors: PdfThemeColors;
-  startY: number
-): number {
-
-  if (workExperience.length === 0) return startY;
-  let yPos = startY;
-  // Check if we need to add a new page
-  if (yPos > 250) {
-    doc.addPage()
-    yPos = 20
-  }
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading);
-  doc.text('Professional Experience', 20, yPos);
-  yPos += 8;
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 100, yPos);
-  yPos += 8;
-  // Sort work experience by date (newest first)
-  const sortedWorkExperience = [...workExperience].sort((a, b) => {
-    if (a.is_current && !b.is_current) return -1;
-    if (!a.is_current && b.is_current) return 1;
-    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
-    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date);
-    return dateB.getTime() - dateA.getTime()
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc: jsPDF;
@@ -89,38 +48,10 @@ export function addWorkExperienceSection(;
     const dateB = b && b.start_date instanceof Date ? b && b.start_date : new Date(b && b.start_date);
     return dateB && dateB.getTime() - dateA && dateA.getTime()
 
->>>>>>> main
   });
   for (const work of sortedWorkExperience) {
     // Check if we need to add a new page
     if (yPos > 260) {
-<<<<<<< HEAD
-      doc.addPage();
-      yPos = 20
-    }
-    doc.setFontSize(14);
-    doc.setTextColor(colors.subheading);
-    doc.text(work.role_title, 20, yPos);
-    doc.setFontSize(12);
-    doc.text(work.company_name, 20, yPos + 5);
-    const startDate = formatDate(work.start_date);
-    const endDate = work.is_current ? 'Present' : formatDate(work.end_date);
-    const dateText = `${startDate} - ${endDate}`;
-    doc.setFontSize(10);
-    doc.setTextColor(colors.text);
-    doc.text(dateText, 20, yPos + 10);
-    if (work.location) {
-      doc.text(work.location, 70, yPos + 10)
-    }
-    if (work.description) {
-      doc.setFontSize(10);
-      const descriptionLines = doc.splitTextToSize(work.description, 170);
-      doc.text(descriptionLines, 20, yPos + 16);
-
-      yPos += (descriptionLines.length * 5) + 20
-    } else {
-      yPos += 20
-=======
       doc && doc.addPage();
       yPos = 20
     }
@@ -155,7 +86,6 @@ export function addWorkExperienceSection(;
     } else {
       yPos += 20
 
->>>>>>> main
 =======
 import { jsPDF } from 'jspdf',;
 import { WorkExperience } from '@/types/resume',;
@@ -219,16 +149,6 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-  }
-  return yPos + 5
-=======
 
 
 
@@ -321,5 +241,4 @@ if ( {) {
   }
   return y_pos + 5;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
 }

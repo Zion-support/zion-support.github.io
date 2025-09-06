@@ -1,23 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useMemo  } from 'react';
-import { TalentProfile } from '@/types/talent';
-export function useFilterTalents(talents: TalentProfile[]) {
-=======
-import {useState, useMemo} from 'react';
-import {TalentProfile} from '@/types/talent';
-export function useFilterTalents(talents: TalentProfile[]) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
 
 
->>>>>>> main
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -27,47 +14,29 @@ export function useFilterTalents(talents: TalentProfile[]) {;
   const [experienceRange, setExperienceRange] = useState<[number, number]>([0, 15]);
   const [sortOption, setSortOption] = useState<string>('relevance');
   const toggleSkill = (skill: string) => {
-<<<<<<< HEAD
-    setSelectedSkills(prev =>
-      prev.includes(skill)
-        ? prev.filter(s => s !== skill)
-=======
 
     setSelectedSkills(prev => 
       prev && prev.includes(skill) 
         ? prev && prev.filter(s => s !== skill)
 
->>>>>>> main
         : [...prev, skill]
     )
   }
   const toggleAvailability = (availability: string) => {
-<<<<<<< HEAD
-    setSelectedAvailability(prev =>
-      prev.includes(availability)
-        ? prev.filter(a => a !== availability)
-=======
 
     setSelectedAvailability(prev => 
       prev && prev.includes(availability) 
         ? prev && prev.filter(a => a !== availability)
 
->>>>>>> main
         : [...prev, availability]
     )
   }
   const toggleRegion = (region: string) => {
-<<<<<<< HEAD
-    setSelectedRegions(prev =>
-      prev.includes(region)
-        ? prev.filter(r => r !== region)
-=======
 
     setSelectedRegions(prev => 
       prev && prev.includes(region) 
         ? prev && prev.filter(r => r !== region)
 
->>>>>>> main
         : [...prev, region]
     )
   }
@@ -85,15 +54,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     let result = [...talents];
     // Filter by search term
     if (searchTerm) {
-<<<<<<< HEAD
-      const lowerSearch = searchTerm.toLowerCase();
-      result = result.filter(talent =>
-        talent.full_name.toLowerCase().includes(lowerSearch) |
-        talent.professional_title.toLowerCase().includes(lowerSearch) |
-        talent.bio?.toLowerCase().includes(lowerSearch) |
-        talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch))
-      )
-=======
 
       const lowerSearch = searchTerm && searchTerm.toLowerCase();
       result = result && result.filter(talent => 
@@ -104,7 +64,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
 
       )
 
->>>>>>> main
 =======
 import { useState, useMemo } from 'react',;
 import { TalentProfile } from '@/types/talent',;
@@ -158,20 +117,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         talent.bio?.toLowerCase().includes(lowerSearch) ||;
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch));
       );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-    // Filter by selected skills
-    if (selectedSkills.length > 0) {
-      result = result.filter(talent =>
-        selectedSkills.every(skill =>
-          talent.skills?.some(talentSkill =>
-            talentSkill.toLowerCase().includes(skill.toLowerCase())
-=======
 
 
 
@@ -185,40 +130,11 @@ export function useFilterTalents(talents: TalentProfile[]) {;
           talent && talent.skills?.some(talentSkill => 
             talentSkill && talentSkill.toLowerCase().includes(skill && skill.toLowerCase())
 
->>>>>>> main
           )
         )
       )
     }
     // Filter by availability
-<<<<<<< HEAD
-    if (selectedAvailability.length > 0) {
-      result = result.filter(talent =>
-        selectedAvailability.includes(talent.availability_type |'')
-      )
-    }
-    // Filter by location/region
-    if (selectedRegions.length > 0) {
-      result = result.filter(talent =>
-        selectedRegions.some(region =>
-          talent.location?.includes(region)
-        )
-      )
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    // Filter by price range
-    result = result.filter(talent => {
-      const hourlyRate = talent.hourly_rate |0;
-      return hourlyRate >= priceRange[0] && hourlyRate <= priceRange[1]
-    });
-    // Filter by experience range
-    result = result.filter(talent => {
-      const years = talent.years_experience |0;
-=======
 
     if (selectedAvailability && selectedAvailability.length > 0) {
       result = result && result.filter(talent => 
@@ -253,35 +169,17 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     result = result && result.filter(talent => {
       const years = talent && talent.years_experience || 0;
 
->>>>>>> main
       return years >= experienceRange[0] && years <= experienceRange[1]
     });
     // Sort talents
     switch (sortOption) {
       case 'price-low':
-<<<<<<< HEAD
-<<<<<<< HEAD
-        result.sort((a, b) => (a.hourly_rate |0) - (b.hourly_rate |0));
-        break;
-      case 'price-high':
-        result.sort((a, b) => (b.hourly_rate |0) - (a.hourly_rate |0));
-        break;
-      case 'rating':
-        result.sort((a, b) => (b.average_rating |0) - (a.average_rating |0));
-        break;
-      case 'experience':
-        result.sort((a, b) => (b.years_experience |0) - (a.years_experience |0));
-=======
-        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
         result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
 =======
 
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
 
->>>>>>> main
 =======
 ;
     // Filter by price range;
@@ -309,22 +207,6 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0)),;
         break,;
       default: // Default sorting by relevance (no specific order);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        break;
-      case 'price-high':
-        result.sort((a, b) => (b.hourly_rate || 0) - (a.hourly_rate || 0));
-        break;
-      case 'rating':
-        result.sort((a, b) => (b.average_rating || 0) - (a.average_rating || 0));
-        break;
-      case 'experience':
-        result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
@@ -339,24 +221,15 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       case 'experience':
         result && result.sort((a, b) => (b && b.years_experience || 0) - (a && a.years_experience || 0));
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> main
         break;
       default: // Default sorting by relevance (no specific order)
         break
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
     
 
 
->>>>>>> main
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
   return {
@@ -373,10 +246,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     sortOption;
     setSortOption;
     toggleSkill;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 =======
 ;
     return result;
@@ -395,24 +265,14 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     sortOption,;
     setSortOption,;
     toggleSkill,;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
     toggleAvailability;
     toggleRegion;
 
     clearFilters}
-<<<<<<< HEAD
-=======
 =======
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types / talent';
@@ -552,5 +412,4 @@ if ( {) {
     toggle_region;
     clear_filters}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
 }

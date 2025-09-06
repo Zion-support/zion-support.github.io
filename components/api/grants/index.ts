@@ -166,6 +166,7 @@ if ( {) {
     }
     return;
   }
+<<<<<<< HEAD
   res.set_header ('Allow', 'GET, POST');
   res.status (405).end ('Method Not Allowed');    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' });

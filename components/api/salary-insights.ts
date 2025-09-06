@@ -292,7 +292,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     .slice(0, 8);
   // Tags
 

@@ -93,16 +93,6 @@ export default function JSONFormatterPage() {
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
-=======
-  };
-
-  const minifyJSON = () => {;
-    if (!inputJson && inputJson.trim()) return;
-
-    try {;
-      const parsed = JSON && JSON.parse(inputJson);
-      const minified = JSON && JSON.stringify(parsed);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setFormattedJson(minified);
       setIsValid(true);
 
@@ -464,7 +454,6 @@ export default function JSONFormatterPage() {
                     Compact mode;
                   </label>;
                 </div>;
-
                 <div className='flex items-center space-x-2'>;
 
                   <input
@@ -527,7 +516,6 @@ export default function JSONFormatterPage() {
                   />;
                   <label htmlFor="compactMode" className="text-sm text-gray-300" htmlFor="input-Compact mode">Compact mode</label>;
                 </div>;
-
                 <div className="flex items-center space-x-2">;
 
                   <input
@@ -541,7 +529,6 @@ export default function JSONFormatterPage() {
                   <label htmlFor="showLineNumbers" className="text-sm text-gray-300" htmlFor="input-Line numbers">Line numbers</label>;
                 </div>;
               </div>;
-
               <div className="flex items-center space-x-3">;
 
                 <Button

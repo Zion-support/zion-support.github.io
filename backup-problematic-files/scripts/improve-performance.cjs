@@ -61,6 +61,23 @@ const nextConfig = {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 =======
 =======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+=======
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
@@ -76,6 +93,23 @@ const nextConfig = {}
     "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
   
@@ -124,6 +158,23 @@ const nextConfig = {}
             "chunks": 'all'}}}};
     return confi}g},
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+  
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  
+  
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
 =======
 <<<<<<< HEAD
   

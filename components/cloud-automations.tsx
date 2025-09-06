@@ -36,7 +36,6 @@ export default function CloudAutomationsPage() {
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];
-
   return (
 
 

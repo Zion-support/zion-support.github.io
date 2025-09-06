@@ -1296,8 +1296,6 @@ if ( {) {
 
 
 };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default UltraFuturisticBackground2040;
 
 

@@ -779,6 +779,13 @@ export default UltraFuturisticBackground2030;      </div>;
 
 };
 
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default UltraFuturisticBackground2030;      </div>
+    </div>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  )
+};
 export default UltraFuturisticBackground2030;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

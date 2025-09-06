@@ -1,5 +1,5 @@
 import React from 'react';
-
+<<<<<<< HEAD
 interface DocsProps {
   className?: string;
 }

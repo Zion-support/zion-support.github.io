@@ -4,8 +4,9 @@ import path from 'path';
 
 
 function ensureDir() {
-  if (!fs && fs.existsSync(GRANTS_DIR)) {
-    fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {

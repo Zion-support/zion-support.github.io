@@ -3,8 +3,8 @@
   if (req.method === "GET") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const scope = state.config.scope,
-    const scoped_events = filterEventsByScope (state.events, scope),
-    return res.status (200).json ({
+    const scopedEvents = filterEventsByScope(state.events, scope),
+    return res.status(200).json({
       status: "ok",
       instance_id: state.config.instance_id,
       config: state.config,

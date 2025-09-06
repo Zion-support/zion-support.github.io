@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-=======
-=======
 
->>>>>>> main
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -23,18 +16,11 @@ import {cn} from "@/lib/utils";
 import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState } from 'react',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 =======
 import { useState } from 'react',
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -47,21 +33,6 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ProductListing } from "@/types/listings";
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from "@/integrations/supabase/client";
-=======
-import { ProductListing } from "@/types/listings",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 import { ProductListing } from "@/types/listings",
@@ -70,7 +41,6 @@ import { supabase } from "@/integrations/supabase/client",
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -90,13 +60,6 @@ const TIMELINE_OPTIONS = [
   { label: "6+ months", value: "6+months" }]
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
-<<<<<<< HEAD
-    description: ''
-    email: ''
-    budget: BUDGET_RANGES[0].value
-    timeframe: TIMELINE_OPTIONS[0].value})
-=======
 
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
@@ -140,41 +103,10 @@ export function ServiceQuoteModal(): any ({ open, onOpenChange, service }: Servi
     budget: BUDGET_RANGES[0].value,;
     timeframe: TIMELINE_OPTIONS[0].value}),;
 
->>>>>>> main
   const [startDate, setStartDate] = useState<Date | undefined>(new Date());
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-=======
-    description: '',
-    email: '',
-    budget: BUDGET_RANGES[0].value,
-<<<<<<< HEAD
-    timeframe: TIMELINE_OPTIONS[0].value}),;
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
-  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
-    timeframe: TIMELINE_OPTIONS[0].value}),
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date()),
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),
-  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details'),
-  const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target,
-    setFormData(prev => ({ ...prev, [name]: value }))
-<<<<<<< HEAD
-  }
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true)
-=======
-=======
 
 import {useState} from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components / ui / dialog';
@@ -241,33 +173,12 @@ function ServiceQuoteModal() {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
 
->>>>>>> main
   },
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
     setIsSubmitting(true),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    try {
-      // Call Supabase function to process the quote
-      const { data, error } = await supabase.functions.invoke('process-quote', {
-        body: {
-          service: service ? {
-            id: service.id
-            title: service.title
-            category: service.category} : null
-          quoteDetails: {
-            ...formData
-            startDate: startDate?.toISOString()
-            endDate: endDate?.toISOString()}
-        }
-<<<<<<< HEAD
-      });
-      if (error) throw error;
-=======
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
@@ -302,90 +213,36 @@ function ServiceQuoteModal() {
         }
 
 
->>>>>>> main
       }),
 
       if (error) throw error,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
       // Show success message
       toast({
         title: "Quote Request Submitted!"
         description: "We've sent your request to the service provider. They will contact you soon."})
       // Close the modal and reset form
-<<<<<<< HEAD
-      onOpenChange(false),
-      setFormData({
-<<<<<<< HEAD
-        description: ''
-        email: ''
-        budget: BUDGET_RANGES[0].value
-        timeframe: TIMELINE_OPTIONS[0].value})
-      setStartDate(new Date());
-      setEndDate(undefined);
-=======
-=======
       onOpenChange(false);
       setFormData({
 
 
->>>>>>> main
         description: '',
         email: '',
         budget: BUDGET_RANGES[0].value,
         timeframe: TIMELINE_OPTIONS[0].value}),
       setStartDate(new Date()),
       setEndDate(undefined),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      setCurrentStep('details')
-    } catch (error) {
-      console.error("Error submitting quote:", error),
-=======
 
 
       setCurrentStep('details')
     } catch (error) {
       console.error("Error submitting quote:", error);
->>>>>>> main
       toast({
         title: "Error"
         description: "There was an error submitting your quote request. Please try again."
         variant: "destructive"})
-<<<<<<< HEAD
-    } finally {
-      setIsSubmitting(false)
-    }
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const nextStep = () => {
-    if (currentStep === 'details') setCurrentStep('timeline'),
-    else if (currentStep === 'timeline') setCurrentStep('contact')
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const prevStep = () => {
-    if (currentStep === 'timeline') setCurrentStep('details'),
-    else if (currentStep === 'contact') setCurrentStep('timeline')
-<<<<<<< HEAD
-  }
-=======
-  },
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 =======
             id: service.id,
             title: service.title,
@@ -449,7 +306,6 @@ if (throw error) {
 
 
 
->>>>>>> main
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">
@@ -469,12 +325,9 @@ if (throw error) {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="description" className="text-white">Project Description</Label>
-<<<<<<< HEAD
-=======
 
 
 =======
->>>>>>> main
                 <Textarea
                   id="description"
                   name="description"
@@ -497,12 +350,7 @@ if (throw error) {
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
                     {BUDGET_RANGES.map((range) => (
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> main
 import { useState } from 'react',;
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",;
 import { Button } from "@/components/ui/button",;
@@ -568,40 +416,24 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
         }
       }),;
       if (error) throw error,;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
       // Show success message;
       toast({;
         title: "Quote Request Submitted!",;
         description: "We've sent your request to the service provider. They will contact you soon."}),;
-<<<<<<< HEAD
-      // Close the modal and reset form;
-      onOpenChange(false),;
-=======
 
       // Close the modal and reset form;
       onOpenChange(false);
->>>>>>> main
       setFormData({;
         description: '',;
         email: '',;
         budget: BUDGET_RANGES[0].value,;
         timeframe: TIMELINE_OPTIONS[0].value}),;
-<<<<<<< HEAD
-      setStartDate(new Date()),;
-      setEndDate(undefined),;
-      setCurrentStep('details');
-    } catch (error) {;
-      console.error("Error submitting quote:", error),;
-=======
       setStartDate(new Date());
       setEndDate(undefined);
       setCurrentStep('details');
     } catch (error) {;
       console && console.error("Error submitting quote:", error);
->>>>>>> main
       toast({;
         title: "Error",;
         description: "There was an error submitting your quote request. Please try again.",;
@@ -609,18 +441,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
     } finally {;
       setIsSubmitting(false);
     }
-<<<<<<< HEAD
-  },;
-  const nextStep = () => {;
-    if (currentStep === 'details') setCurrentStep('timeline'),;
-    else if (currentStep === 'timeline') setCurrentStep('contact');
-  },;
-  const prevStep = () => {;
-    if (currentStep === 'timeline') setCurrentStep('details'),;
-    else if (currentStep === 'contact') setCurrentStep('timeline');
-  },;
-  return (;
-=======
   };
 
   const nextStep = () => {;
@@ -634,7 +454,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
   };
 
   return (
->>>>>>> main
     <Dialog open={open} onOpenChange={onOpenChange}>;
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm:max-w-[600px]">;
         <DialogHeader>;
@@ -642,10 +461,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             Request Service Quote;
           </DialogTitle>;
         </DialogHeader>;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
         <form onSubmit={handleSubmit} className="space-y-6">;
           {/* Step 1: Service Details */}
           {currentStep === 'details' && (;
@@ -655,24 +471,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <p className="text-white text-lg">{service?.title || "Custom Service"}</p>;
                 <p className="text-zion-slate-light text-sm mt-1">{service?.category}</p>;
               </div>;
-<<<<<<< HEAD
-              <div className="space-y-2">;
-                <Label htmlFor="description" className="text-white">Project Description</Label>;
-                <Textarea;
-                  id="description";
-                  name="description";
-                  value={formData.description}
-                  onChange={handleInputChange}
-                  placeholder="Describe your project needs in detail...";
-                  className="h-32 bg-zion-blue-dark border-zion-blue-light text-white resize-none";
-                  required;
-                />;
-              </div>;
-              <div className="space-y-2">;
-                <Label htmlFor="budget" className="text-white">Estimated Budget</Label>;
-                <Select;
-                  value={formData.budget} ;
-=======
 
               <div className="space-y-2">;
                 <Label htmlFor="description" className="text-white">Project Description</Label>;
@@ -694,68 +492,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Select
                   value={formData && formData.budget} 
 
->>>>>>> main
                   onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
                 >;
                   <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">;
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
-<<<<<<< HEAD
-                    {BUDGET_RANGES.map((range) => (;
-                      <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                        {range.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-            </div>
-          )}
-          {/* Step 2: Timeline */}
-          {currentStep === 'timeline' && (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label className="text-white">Project Timeline</Label>
-                <Select
-                  value={formData.timeframe}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
-                >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
-                    <SelectValue placeholder="Select your timeline" />
-                  </SelectTrigger>
-                  <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
-                    {TIMELINE_OPTIONS.map((option) => (
-                      <SelectItem key={option.value} value={option.value} className="text-white hover:bg-zion-blue-light">
-                        {option.label}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label className="text-white">Expected Start Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-                          "justify-start text-left font-normal w-full",
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
-=======
 
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
@@ -812,40 +554,12 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       </Button>;
                     </PopoverTrigger>;
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> main
                       <Calendar
                         mode="single"
                         selected={startDate}
                         onSelect={setStartDate}
                         initialFocus
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
-<<<<<<< HEAD
-                      />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-                <div className="space-y-2">
-                  <Label className="text-white">Expected End Date</Label>
-                  <Popover>
-                    <PopoverTrigger asChild>
-                      <Button
-                        variant={"outline"}
-                        className={cn(
-<<<<<<< HEAD
-                          "justify-start text-left font-normal w-full";
-
-=======
-                          "justify-start text-left font-normal w-full",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                          "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" />
-                        {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
-                      </Button>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">
-=======
 
                       />;
                     </PopoverContent>;
@@ -873,28 +587,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       </Button>;
                     </PopoverTrigger>;
                     <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> main
                       <Calendar
                         mode="single"
                         selected={endDate}
                         onSelect={setEndDate}
-<<<<<<< HEAD
-                        disabled={(date) => !startDate |date < startDate}
-                        initialFocus
-                        className="p-3 pointer-events-auto bg-zion-blue-dark text-white"
-                      />
-                    </PopoverContent>
-                  </Popover>
-                </div>
-              </div>
-            </div>
-          )}
-          {/* Step 3: Contact */}
-          {currentStep === 'contact' && (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-white">Contact Email</Label>
-=======
 
                         disabled={(date) => !startDate || date < startDate}
                         initialFocus;
@@ -912,47 +608,16 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
             <div className="space-y-4">;
               <div className="space-y-2">;
                 <Label htmlFor="email" className="text-white">Contact Email</Label>;
->>>>>>> main
                 <Input
                   id="email"
                   name="email"
                   type="email"
-<<<<<<< HEAD
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  placeholder="your@email.com"
-                  className="bg-zion-blue-dark border-zion-blue-light text-white"
-                  required
-                />
-              </div>
-              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">
-                <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Service:</span>
-                    <span className="text-white">{service?.title |"Custom Service"}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Budget:</span>
-                    <span className="text-white">{BUDGET_RANGES.find(b => b.value === formData.budget)?.label}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-zion-slate-light">Timeline:</span>
-                    <span className="text-white">{TIMELINE_OPTIONS.find(t => t.value === formData.timeframe)?.label}</span>
-                  </div>
-                  {startDate && (
-                    <div className="flex justify-between">
-                      <span className="text-zion-slate-light">Start Date:</span>
-                      <span className="text-white">{format(startDate, "PPP")}</span>
-                    </div>
-=======
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email && email.com"
                   className="bg-zion-blue-dark border-zion-blue-light text-white"
                   required
 
->>>>>>> main
                   )}
                   {endDate && (
                     <div className="flex justify-between">
@@ -960,29 +625,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </div>
-              </div>
-            </div>
-<<<<<<< HEAD
-          )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-                </div>;
-              </div>;
-            </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          )}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-          <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">
-            {currentStep !== 'details' && (
-=======
 
 
 
@@ -1032,19 +674,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">;
             {currentStep !== 'details' && (;
 
->>>>>>> main
               <Button
                 type="button"
                 variant="outline"
                 onClick={prevStep}
-<<<<<<< HEAD
-                className="border-zion-blue-light text-white hover:bg-zion-blue-light"
-              >
-                Previous
-              </Button>
-            )}
-            <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
-=======
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light">;
                 Previous;
               </Button>;
@@ -1053,43 +686,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
             <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>;
 
->>>>>>> main
               <Button
                 type="button"
                 variant="outline"
                 onClick={() => onOpenChange(false)}
-<<<<<<< HEAD
-                className="border-zion-blue-light text-white hover:bg-zion-blue-light"
-              >
-                Cancel
-              </Button>
-              {currentStep !== 'contact' ? (
-                <Button
-                  type="button"
-                  onClick={nextStep}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                >
-                  Next
-                </Button>
-              ) : (
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
-                </Button>
-              )}
-<<<<<<< HEAD
-            </div>
-          </DialogFooter>
-        </form>
-      </DialogContent>
-    </Dialog>
-  )
-}
-=======
-=======
 
                 className="border-zion-blue-light text-white hover:bg-zion-blue-light";
               >;
@@ -1336,18 +936,10 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
             </div>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-<<<<<<< HEAD
-    </Dialog>;
-  );
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
     </Dialog>);
 }
@@ -1356,4 +948,3 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

@@ -122,8 +122,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({;
 
 
 
-
-
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400',
     if (score >= 70) return 'text-yellow-400',
@@ -136,13 +134,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({;
     return <AlertTriangle className="w-5 h-5 text-red-400" />
   },
 
-<<<<<<<< HEAD:backup-problematic-files/components/broken/PerformanceMonitor.tsx
-========
-<<<<<<< HEAD
-  // Format time values
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
->>>>>>>> main:components/PerformanceMonitor.tsx.backup.1756000986
   const formatTime = (ms: number): string => {
     if (ms === 0) return 'N/A',
     if (ms < 1000) return `${Math.round(ms)}ms`,

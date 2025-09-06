@@ -29,8 +29,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -86,11 +84,7 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-<<<<<<< HEAD
     return { succes: s: true, results };
-=======
-    return { success: true, results };
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   }
 
   async generateReport() {

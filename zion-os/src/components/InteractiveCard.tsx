@@ -227,11 +227,12 @@ export function TestimonialCard({;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Rating */}
-      <div className=&quot;flex mb - 4&quot;>;
-        {Array.from ({ length: rating }).map ((_, i) => (
-          <svg key={i} className=&quot;w - 5 h - 5 text - yellow - 400 fill - current & quot; view_box=&quot;0 0 20 20 & quot;>;
-            <path d=&quot;M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l - 2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688 - 1.54 1.118l - 2.8 - 2.034a1 1 0 00 - 1.175 0l - 2.8 2.034c-.784.57 - 1.838-.197 - 1.539 - 1.118l1.07 - 3.292a1 1 0 00-.364 - 1.118L2.98 8.72c-.783-.57-.38 - 1.81.588 - 1.81h3.461a1 1 0 00.951-.69l1.07 - 3.292z & quot; />;
-          </svg>))}
+      <div className="flex mb-4">
+        {Array.from({ length: rating }).map((_, i) => (
+          <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
       </div>;
       {/* Quote */}
 
@@ -243,13 +244,21 @@ export function TestimonialCard({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </blockquote>
 =======
-      </blockquote>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
+        "{quote}"
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      </blockquote>
       {/* Author info */}
-      <div className=&quot;border - t border - white / 10 pt - 4&quot;>;
-        <div className=&quot;font - semibold text - white & quot;>{author}</div>;
-        <div className=&quot;text - gray - 400 & quot;>{position}</div>;
-        <div className=&quot;text - purple - 400 text - sm & quot;>{company}</div>;
-      </div>;
-    </div>);
+      <div className="border-t border-white/10 pt-4">
+        <div className="font-semibold text-white">{author}</div>
+        <div className="text-gray-400">{position}</div>
+        <div className="text-purple-400 text-sm">{company}</div>
+      </div>
+    </div>
+  )
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }

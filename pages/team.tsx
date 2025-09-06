@@ -1085,7 +1085,6 @@ export default function TeamPage() {;
       </div>;
     </>;
   );
-
 }
 =======
 import React from 'react';

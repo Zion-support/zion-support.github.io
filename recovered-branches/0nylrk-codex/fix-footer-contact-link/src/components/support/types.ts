@@ -1,20 +1,10 @@
 
-<<<<<<< HEAD
-import { ReactNode } from "react";
-=======
 import { ReactNode  } from './react';
 
->>>>>>> main
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
-<<<<<<< HEAD
-  lastUpdated: string;
-tags: string[]
-}
-export interface HelpCategory {
-=======
 
   last_updated: string;
   tags: string[];
@@ -30,34 +20,15 @@ export interface HelpArticle {;
   content: string;
   lastUpdated: string,
   tags: string[]
->>>>>>> main
 }
 
 export interface HelpCategory {;
 
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
-<<<<<<< HEAD
-articles: HelpArticle[]
-}
-export interface SupportTicket {
-  id: string;
-  userId: string;
-  subject: string;
-  message: string;
-  status: "open" | "in-progress" | "resolved" | "closed";
-  priority: "low" | "medium" | "high";
-  createdAt: string;
-updatedAt: string;
-}
-
-=======
   articles: HelpArticle[]
 }
 
@@ -122,14 +93,10 @@ export interface SupportTicket {;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
   createdAt: string;
->>>>>>> main
   updatedAt: string;
 }
 ;
 
-<<<<<<< HEAD
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

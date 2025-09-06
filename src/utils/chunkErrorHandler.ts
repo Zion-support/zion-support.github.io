@@ -477,15 +477,8 @@ export default chunkErrorHandler
     if () {) {
   $2
 }
-      this.error_stats.set (session_key, {
-        error_count: 0,
-        lastErrorTime: 0,
-        user_agent: navigator.user_agent,
-        url: window.location.href,
-      });
-    }
-    return this.error_stats.get (session_key)!;
-  }
+}
+;
   // Public method to manually trigger recovery;
   public trigger_recovery (): void {
     this.clear_caches ().then (() => {

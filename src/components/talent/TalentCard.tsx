@@ -117,10 +117,15 @@ const TalentCardComponent = ({;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
-  },;
+  },
 
-  // Extract skills - limit to 5 for display;
-  const skills = talent && talent.skills?.slice(0, 5) || [],;
+  const handleRequestHire = (e: React.MouseEvent,) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
+  },
 
   return (
     <Card
@@ -209,7 +214,6 @@ const TalentCardComponent = ({;
             </div>;
           </div>;
         </div>;
-
         {/* Skills */}
         {skills && skills.length > 0 && (;
           <div className="mt-4">;

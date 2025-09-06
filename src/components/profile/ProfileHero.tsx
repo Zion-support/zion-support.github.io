@@ -207,7 +207,7 @@ export function ProfileHero({
                     {reviewCount && (;
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
                     )}
-                  </div>;
+                  </div>
                 )}
 
 

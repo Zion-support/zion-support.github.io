@@ -209,9 +209,7 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
 
 
   }
-
-export function isAdmin(session: AuthSession | null): boolean {
-  return hasRole(session, 'admin');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function isModerator(session: AuthSession | null): boolean {

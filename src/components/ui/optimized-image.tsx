@@ -680,54 +680,19 @@ if ( {) {
       </AnimatePresence>;
     </div>;
   );
-};
-//Container styles ;
-}> <AnimatePresence> {;
-  /* Placeholder */ ;
-}{;
-  (isLoading || !isInView) && !hasError && (<motion && motion.div > {;
-  generatePlaceholder () ;
-}/> </div>) ;
-}</motion && motion.div>) ;
-}{;
-  /* Error state */ ;
-}{;
-  hasError && (<motion&& motion.div) 
-}</motion && motion.div>) ;
-}{;
-  /* Actual image */ ;
-}{;
-  isInView && !hasError && (<motion&& motion.img src= {
-  optimizedSrc 
-}srcSet= {
-  srcSet 
-}alt= {
-  alt 
-}loading= {'
-  priority ? 'eager' : 'lazy' 
-}onLoad= {
-  handleLoad 
-}onError= {
-  handleError 
-}className= {'
-  cn ('w-full h-full transition-opacity duration-300', `object-$ {
-  objectFit 
-}`'
-isLoading ? 'opacity-0' : 'opacity-100') 
-}initial= {
-  {
-  opacity: 0 
-export const ImageGallery: React.FC<ImageGalleryProps> = ({;
-  images,;
-  columns = 3,;
-  aspectRatio = '16/9',;
-  className,;
-  onImageClick,;
-}) => {;
-  const [loadedCount, setLoadedCount] = useState(0);
-  const handleImageLoad = () => {;
-    setLoadedCount(prev => prev + 1);
-  };
+},;
+// Gallery component with optimized loading;
+interface ImageGalleryProps {;
+  images: Array<{;
+    src: string,;
+    alt: string,;
+    caption?: string;
+  }>,;
+  columns?: number,;
+  aspectRatio?: string,;
+  className?: string,;
+  onImageClick?: (index: number) => void;
+}
 
 
 

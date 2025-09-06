@@ -46,11 +46,11 @@ import { motion } from 'framer-motion';
 
   children: React.ReactNode;
 =======
-export default function UltraFuturisticBackground2029(): any ({;
-  children,;
+  children,
 }: {;
-  children: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  children: React.ReactNode;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -1238,7 +1238,6 @@ if ( {) {
           }}
 
         />;
-
         <motion&& motion.div
 
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"

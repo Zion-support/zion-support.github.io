@@ -195,6 +195,28 @@ export function ApplicationsTable(): any ({;
     });
   };
 
+export function ApplicationsTable({ 
+  applications, 
+  processingId, 
+  onViewApplication, 
+  onStatusChange,
+  onViewScore
+}: ApplicationsTableProps) {
+  const [hireModalOpen, setHireModalOpen] = useState(false),
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+  
+  const handleHireClick = (application: JobApplication) => {
+    setSelectedApplication(application),
+    setHireModalOpen(true)
+  },
+  
+  const handleHireConfirmed = () => {
+    toast({
+      title: "Hiring process initiated",
+      description: "Offer has been sent to the talent."
+    })
+  },
+  
   return (
     <>;
 

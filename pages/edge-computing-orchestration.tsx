@@ -89,73 +89,54 @@ export default function EdgeComputingPage() {;
         'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.',;
       color: 'from-blue-500 to-cyan-500',;
     },;
-    {;
-      icon: Network,;
-      title: 'IoT Management',;
-      description:;
-        'Comprehensive management of IoT devices with real-time monitoring and automated control systems.',;
-      color: 'from-purple-500 to-pink-500',;
-    },;
-    {;
-      icon: Zap,;
-      title: 'Real-time Processing',;
-      description:;
-        'Ultra-low latency data processing at the network edge for mission-critical applications.',;
-      color: 'from-green-500 to-emerald-500',;
-    },;
-    {;
-      icon: Shield,;
-      title: 'Edge Security',;
-      description:;
-        'Advanced security protocols designed specifically for distributed edge computing environments.',;
-      color: 'from-red-500 to-orange-500',;
-    },;
-    {;
-      icon: Database,;
-      title: 'Data Synchronization',;
-      description:;
-        'Seamless data synchronization between edge nodes and central systems with conflict resolution.',;
-      color: 'from-indigo-500 to-purple-500',;
-    },;
-    {;
-      icon: Globe,;
-      title: 'Global Distribution',;
-      description:;
-        'Worldwide edge network deployment with intelligent traffic routing and load balancing.',;
-      color: 'from-yellow-500 to-orange-500',;
-    },;
-=======
-    "Reduce latency by 80-90% with edge processing";
-    "Cut bandwidth costs by 60% through local data processing";
-    "Improve reliability with distributed computing architecture";
-    "Scale seamlessly across global edge networks";
-    "Enable real-time AI and machine learning at the edge";
-    "Reduce central server load and improve overall performance"
   ];
 
+=======
+      title: "Global Distribution",
+      description: "Worldwide edge network deployment with intelligent traffic routing and load balancing.",
+      color: "from-yellow-500 to-orange-500"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  const benefits = [
+    "Reduce latency by 80-90% with edge processing",
+    "Cut bandwidth costs by 60% through local data processing",
+    "Improve reliability with distributed computing architecture",
+    "Scale seamlessly across global edge networks",
+    "Enable real-time AI and machine learning at the edge",
+    "Reduce central server load and improve overall performance"
+  ],
   const useCases = [
     {
       industry: "Manufacturing",
-      description: "Real-time quality control, predictive maintenance, and production optimization";
+      description: "Real-time quality control, predictive maintenance, and production optimization",
       results: "30% reduction in downtime, 25% improvement in product quality"
-    };
+    },
     {
       industry: "Healthcare",
-      description: "Patient monitoring, medical device management, and telemedicine support";
+      description: "Patient monitoring, medical device management, and telemedicine support",
       results: "40% faster response times, improved patient outcomes"
-    };
+    },
     {
       industry: "Transportation",
-      description: "Autonomous vehicle support, traffic management, and fleet optimization";
+      description: "Autonomous vehicle support, traffic management, and fleet optimization",
       results: "50% reduction in accidents, 35% improvement in efficiency"
-    };
+    },
     {
       industry: "Retail",
-      description: "Inventory management, customer analytics, and supply chain optimization";
+      description: "Inventory management, customer analytics, and supply chain optimization",
       results: "45% reduction in stockouts, 30% improvement in customer satisfaction"
-    }
-  ];
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const pricing = [
     {
       plan: "Starter",

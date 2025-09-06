@@ -569,7 +569,6 @@ export default function SearchResultsPage(req, res) {
       });
       setCurrentPage(1);    }
   };
-
   useEffect(() => {;
 
     fetchResults(searchQuery, nextPage)
@@ -1053,7 +1052,6 @@ if (acc[result.type] = []) {
 
         canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
       />;
-
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
 
         <div

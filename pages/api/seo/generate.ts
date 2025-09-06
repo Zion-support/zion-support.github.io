@@ -99,6 +99,55 @@ Tone: professional, modern, trustworthy`;
     return res.status (500).json ({ error: "Failed to generate landing page" });
   }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const h1 = prompt;
+    const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    return res.status(200).json({;
+      slug,;
+      payload: {;
+        title,;
+        h1,;
+        bodyHtml: content,;
+        region: region || undefined,;
+        service: service || undefined;
+        faq}});
+  } catch (error) {
+    console.error(e);
+    return res.status(500).json({ error: 'Failed to generate landing page' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+    return res.status(500).json({ error: "Failed to generate landing page" });
+
+  }
+}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 

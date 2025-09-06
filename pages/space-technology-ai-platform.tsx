@@ -676,9 +676,13 @@ function SpaceTechnologyAIPlatform() {
                 Transform every aspect of space operations with AI-powered intelligence
               </p>
             </motion.div>
-
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index) => (
+=======
+<<<<<<< HEAD
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {useCases.map((useCase, index) => (
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 <motion.div
 
                   className="group relative"
@@ -741,8 +745,6 @@ function SpaceTechnologyAIPlatform() {
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
-=======
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -799,7 +801,7 @@ function SpaceTechnologyAIPlatform() {
                   <span>Email Us</span>
                 </motion.a>
               </div>
-
+<<<<<<< HEAD
               <div className="p-6 bg-gradient-to-r from-blue-900/20 via-indigo-900/20 to-purple-900/20 rounded-2xl border border-blue-500/20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
 

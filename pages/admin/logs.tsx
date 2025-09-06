@@ -562,8 +562,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
 
       </div>
-
-      {/* Summary Cards */}
+{/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
 
 

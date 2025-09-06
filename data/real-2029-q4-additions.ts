@@ -1,10 +1,11 @@
 
 
       'Intent classification and priority scoring',
-      'One - click reply drafts with tone controls',
-      'Auto - tagging and routing to teams',
+      'One-click reply drafts with tone controls',
+      'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
-      'SLA - aware escalations and summaries',
+      'SLA-aware escalations and summaries',
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       'Analytics: response time, CSAT impact, volume by topic',
     ],
     popular: true,
@@ -57,8 +58,8 @@
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
-      'Real - time charts and cohort filters',
-      'GDPR / CCPA consent and deletion tools',
+      'Real-time charts and cohort filters',
+      'GDPR/CCPA consent and deletion tools',
     ],
     popular: false,
     icon: '📱',
@@ -69,9 +70,9 @@
     market_position:;
 
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
-    target_audience: 'Growth teams, product managers, agencies',
-    trial_days: 7,
-    setup_time: 'Same day',
+    targetAudience: 'Growth teams, product managers, agencies',
+    trialDays: 7,
+    setupTime: 'Same day',
     category: 'Developer Tools',
 
 

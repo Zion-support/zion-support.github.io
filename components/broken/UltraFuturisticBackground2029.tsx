@@ -26,7 +26,6 @@ import { motion } from 'framer-motion';
 
 
           }
-
         // Draw particle with glow effect;
         ctx && ctx.save();
         ctx && ctx.globalCompositeOperation = 'screen';

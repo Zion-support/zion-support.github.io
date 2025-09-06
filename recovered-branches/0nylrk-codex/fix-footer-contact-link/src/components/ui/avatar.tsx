@@ -1,56 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import * as React from 'react';
-import * as AvatarPrimitive from '@radix-ui/react-avatar';
-<<<<<<< HEAD
-import {cn} from '@/lib/utils';
-=======
-=======
 
 
->>>>>>> main
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 =======
 =======
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> main
 
 import { cn } from "@/lib/utils"
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
-const Avatar = React.forwardRef<
-  React.ElementRef<typeof AvatarPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <AvatarPrimitive.Root
-    ref={ref}
-    className={cn(
-<<<<<<< HEAD
-      'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full'
-=======
-      "relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      className
-    )}
-    {...props}
-  />
-));
-Avatar.displayName = AvatarPrimitive.Root.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Avatar = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>
@@ -82,14 +43,11 @@ const Avatar = React && React.forwardRef<;
 
 
 
->>>>>>> main
 const AvatarImage = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Image>
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive</typeof>.Image>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
-=======
-<<<<<<< HEAD
 =======
 
 import * as AvatarPrimitive from '@radix - ui / react - avatar';
@@ -119,49 +77,29 @@ const AvatarImage = React.forward_ref<;
     className={cn ('aspect - square h - full w - full', class_name)}
     {...props}
 
->>>>>>> main
 const AvatarImage = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Image>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Image;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> main
     ref={ref}
     className={cn('aspect-square h-full w-full', className)}
     {...props}
   />
 ));
 AvatarImage.displayName = AvatarPrimitive.Image.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 const AvatarFallback = React.forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Fallback>
   React.ComponentPropsWithoutRef<typeof AvatarPri</typeof>mitive.Fallback>
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Fallback
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 AvatarImage && AvatarImage.displayName = AvatarPrimitive && AvatarPrimitive.Image.displayName;
 
@@ -171,59 +109,25 @@ const AvatarFallback = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive&& AvatarPrimitive.Fallback
 
->>>>>>> main
     ref={ref}
     className={cn(
       'flex h-full w-full items-center justify-center rounded-full bg-muted'
 =======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> main
 =======
 const AvatarFallback = React.forwardRef<;
   React.ElementRef<typeof AvatarPrimitive.Fallback>,;
   React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Fallback>;
 >(({ className, ...props }, ref) => (;
   <AvatarPrimitive.Fallback;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 
 
->>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ref={ref}
     className={cn(
       "flex h-full w-full items-center justify-center rounded-full bg-muted",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
-      className
-    )}
-    {...props}
-  />
-));
-AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
-<<<<<<< HEAD
-<<<<<<< HEAD
-export { Avatar, AvatarImage, AvatarFallback }
-=======
-export { Avatar, AvatarImage, AvatarFallback }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-export { Avatar, AvatarImage, AvatarFallback };
-=======
-export { Avatar, AvatarImage, AvatarFallback }
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
@@ -262,4 +166,3 @@ AvatarFallback.display_name = AvatarPrimitive.Fallback.display_name;
 export { Avatar, AvatarImage, AvatarFallback }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

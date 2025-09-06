@@ -87,7 +87,6 @@
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
-
   return (
 
                   <button

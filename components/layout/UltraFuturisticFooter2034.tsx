@@ -199,7 +199,6 @@ export default function UltraFuturisticFooter2034() {;
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>;
       </div>;
-
       <div className='relative z-10'>;
 
         {/* Main Footer Content */}
@@ -620,9 +619,10 @@ export default function UltraFuturisticFooter2034() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/privacy'
-                  className='hover:text-cyan-400 transition-colors'>;
-                  Privacy Policy;
-                </Link>;
+                  className='hover:text-cyan-400 transition-colors'
+                >
+                  Privacy Policy
+                </Link>
                 <Link
                   href='/terms'
 

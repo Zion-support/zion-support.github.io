@@ -4,7 +4,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 import {readReviews, writeReviews} from '../../../utils/dataStore';
-const ADMIN_KEY = process && process.env.ADMIN_KEY || 'dev-admin-key';
+const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
 
 

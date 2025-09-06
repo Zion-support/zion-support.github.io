@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
-
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
-
-=======
 
 
 import { GradientHeading } from "@/components/GradientHeading",
@@ -21,7 +13,6 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -39,13 +30,6 @@ export function NewsletterSection() {
       </div>
     </section>
 
-<<<<<<< HEAD
-  );
-}
-}
-;
-
-=======
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {;
@@ -95,4 +79,3 @@ function NewsletterSection() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

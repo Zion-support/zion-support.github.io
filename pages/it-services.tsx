@@ -2303,7 +2303,6 @@ export default function ITServices(req, res) {
     selectedCategory === 'all';
       ? services;
       : services && services.filter(service => service && service.category === selectedCategory);
-
   return (
 
     <>
@@ -2978,12 +2977,48 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               >
                 IT Services
               </h1>
-              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+<<<<<<< HEAD
+              <p
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
                 100+ Comprehensive IT Solutions
               </p>
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 Transform your business with our enterprise-grade IT services. From cloud infrastructure 
-                to quantum computing, we provide cutting-edge technology solutions that scale with your 
+<<<<<<< HEAD
+                to quantum computing, we provide cutting-edge technology solutions that scale with your
+
+  const _filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory),
+
+  return (_<>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.&quot; />
+        <meta name=&quot;keywords&quot; content=&quot;IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure&quot; />
+        <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; />
+        <meta name=&quot;robots&quot; content=&quot;index, follow&quot; />
+        <link rel=&quot;canonical&quot; href={`${contact.site}/it-services`} />
+      </Head>
+      
+      <ErrorBoundary level=&quot;page&quot;>
+        <main className=&quot;min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white&quot;>
+          {/* Hero Section */}
+          <section className=&quot;py-20 px-4 text-center&quot; role=&quot;banner&quot;>
+            <div className=&quot;max-w-4xl mx-auto&quot;>
+              <h1 
+                className={_`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                IT Services
+              </h1>
+              <p className={_`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                100+ Comprehensive IT Solutions
+              </p>
+              <p className={_`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                Transform your business with our enterprise-grade IT services. From cloud infrastructure 
+                to quantum computing, _we provide cutting-edge technology solutions that scale with your 
+
                 business and drive innovation.
               </p>
             </div>
@@ -3849,7 +3884,14 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   </div>
                   <h3 className="text-xl font-bold mb-2">Blockchain</h3>
                   <p className="text-slate-400">Smart contracts and decentralized applications</p>
-                </div>
+                    </div>
+                    
+                    <button className=&quot;w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors&quot;>
+=======
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
               </div>
             </div>
           </section>

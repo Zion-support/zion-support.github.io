@@ -147,6 +147,8 @@ const ScrollToTop: React.FC = () => {
   if (!isVisible) {
     return null;
   }
+<<<<<<< HEAD
+=======
 
 
 
@@ -165,9 +167,10 @@ const ScrollToTop: React.FC = () => {
 
     });  };      behavior: 'smooth'})
   }
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   return (
-    <>;
-      {isVisible && (;
+    <>
+      {isVisible && (
         <button
           onClick={scrollToTop}
 
@@ -177,7 +180,8 @@ const ScrollToTop: React.FC = () => {
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'
-            xmlns='http://www && www.w3.org/2000/svg'>;
+            xmlns='http://www.w3.org/2000/svg'
+          >
             <path
               strokeLinecap='round'
               strokeLinejoin='round'
@@ -194,7 +198,8 @@ const ScrollToTop: React.FC = () => {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www && www.w3.org/2000/svg">;
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"

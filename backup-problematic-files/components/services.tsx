@@ -234,7 +234,6 @@ const serviceCategories: Array<{
     color: 'from-indigo-500 to-purple-600',
     description: 'Quantum-powered data analytics and insights'
   }
-<<<<<<<< HEAD:backup-problematic-files/components/services.tsx
 ],;
 import { realVerifiedServices } from '../data/real-verified-services',;
 export default function ServicesPage() {;
@@ -283,63 +282,6 @@ export default function ServicesPage() {;
                              (Array.isArray(service.category) ?;
                                service.category.includes(selectedCategory) :;
                                service.category === selectedCategory),;
-========
-];
-=======
-import { realVerifiedServices } from '../data/real-verified-services';
-
-export default function ServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [sortBy, setSortBy] = useState('name');
-
-  // Combine all services
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
-    ...innovativeAIServices2029,
-    ...quantumSpaceInnovations2029,
-    ...enterpriseITInnovations2029,
-    ...innovativeMicroSaas2029
-=======
-    ...additionalEnhancedServices,
-    ...newRealServices,
-    ...industryRealServices,
-    ...professionalServices,
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-    ...marketValidatedServices,
-    ...emergingTechnologyServices,
-    ...comprehensiveITSolutions,
-    ...curatedMarketServices,
-    ...realMarketServices,
-    ...new2025Services,
-    ...newRealInnovations,
-    ...serviceExpansions2025,
-    ...realVerifiedServices
-  ];
-
-  // Get unique services by ID
-  const uniqueServices = allServices.filter((service, index, self) => 
-    index === self.findIndex(s => s.id === service.id)
-  );
-
-  // Get all categories
-  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
-    Array.isArray(s.category) ? s.category[0] : s.category
-  )))];
-
-  // Filter and sort services
-  const filteredServices = uniqueServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'All' || 
-                             (Array.isArray(service.category) ? 
-                               service.category.includes(selectedCategory) : 
-                               service.category === selectedCategory);
->>>>>>>> main:components/services.tsx.backup.1755992146
       return matchesSearch && matchesCategory;
     });
     .sort((a, b) => {;

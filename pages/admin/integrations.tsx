@@ -380,9 +380,9 @@ export default function AdminIntegrationsPage() {
             <li>;
 
               New Zion Job Posted → GET{' '}
-              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>;
-            </li>;
-            <li>;
+              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
+            </li>
+            <li>
               Talent Matched → GET{' '}
 
 

@@ -381,6 +381,8 @@ export default function EducationSolutionsPage() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
+    </Layout>
   );
 };
 

@@ -99,7 +99,6 @@ export default function LazyImage({
     setHasError(true);
     onError?.();
   };
-
   if (hasError) {;
 
     return (

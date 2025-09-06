@@ -858,7 +858,6 @@ if ( {) {
                 , and;
 
                 Solutions;
-
               <motion&& motion.div
 
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'                initial={{ opacity: 0, y: 30 }}

@@ -816,7 +816,6 @@ if ( {) {
                   <div className="text-gray-400">Average ROI</div>;
                 </div>;
               </motion && motion.div>;
-
               {/* CTA Buttons */}
 
               <motion.div 
@@ -831,12 +830,14 @@ if ( {) {
                   onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   Explore Services
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className='ml-2 w-5 h-5' />
                 </Button>
-                <Button 
-                  variant="futuristic" 
-                  size="lg"
-                  onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
+                <Button
+                  variant='futuristic'
+                  size='lg'
+                  onClick={() =>
+                    window.open('https://ziontechgroup.com/contact', '_blank')
+                  }
                 >
                   Get Started
                   <Rocket className="ml-2 w-5 h-5" />
@@ -990,7 +991,6 @@ if ( {) {
                 that are transforming industries worldwide.;
               </p>;
             </motion && motion.div>;
-
             <motion&& motion.div
 
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'

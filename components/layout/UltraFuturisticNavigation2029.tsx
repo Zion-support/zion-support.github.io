@@ -458,7 +458,6 @@ function UltraFuturisticNavigation2029() {
                   2029 Innovation Hub;
                 </span>              </div>;
             </motion && motion.div>;
-
             {/* Desktop Navigation */}
 
             <div className="hidden lg:flex items-center space-x-8">

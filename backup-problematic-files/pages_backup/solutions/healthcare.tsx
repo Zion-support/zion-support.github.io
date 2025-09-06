@@ -377,6 +377,8 @@ export default function HealthcareSolutionsPage() {
     </Layout>
     </>
     </>
+<<<<<<< HEAD
+    </Layout>
   );
 };
 

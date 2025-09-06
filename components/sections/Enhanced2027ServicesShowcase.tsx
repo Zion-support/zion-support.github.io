@@ -722,7 +722,6 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             <span className="text-cyan-400 font-semibold">{all2027Services.length}</span> services
           </p>
         </motion.div>
-
         {/* Services Grid/List */}
 
         >        <motion.div;

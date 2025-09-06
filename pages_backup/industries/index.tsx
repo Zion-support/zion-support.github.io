@@ -668,52 +668,13 @@ export default function Industries() {;
                       </div>,;
                     </div>;
                     <Link
-                      href={industry && industry.href}
-                      className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
-                      <span>Learn More</span>;
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
-                    </Link>;
-                  </motion && motion.div>;
-                ),;
-              })}
-            </div>;
-          </div>;
-        </section>;
-
-                      </div>,;
-                    </div>;
-
-                    <Link
-                      href={industry && industry.href}
-                    <div className="mb-6">;
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>;
-                      <div className="flex flex-wrap gap-2">;
-                        {industry && industry.features.map((feature, idx) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/industries/index.tsx
-                          <span
-                            key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">;
-                    <div className="mb-6">";
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
-                      <div className="flex flex-wrap gap-2">";
-                        {industry && industry.features.map((feature, idx) => (,;
-                          <span}),
-                            key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"">;
-                            {feature}
-                          </span>;
-                        ))}
-                      </div>;
-                    </div>;
-                      </div>,;
-                    </div>;
-                    <Link
-                      href={industry && industry.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors">;
-                      <span>Learn More</span>;
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />;
-                    </Link>;
-                  </motion && motion.div>;
+                      href={industry.href}
+                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </motion.div>
                 );
               })}
 

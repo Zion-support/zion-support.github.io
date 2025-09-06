@@ -739,7 +739,6 @@ if ( {) {
           transition={{
 
         />;
-
         <motion&& motion.div
 
           className='absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent'

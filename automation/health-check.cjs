@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process');
-
 console.log('🏥 Running Health Check...');
-
 const checks = [
   { name: 'Build Status', command: 'npm run build' },
   { name: 'Test Status', command: 'npm run test:smoke' },
@@ -17,4 +15,6 @@ checks.forEach(check => {
   } catch (error) {
     console.log(`❌ ${check.name}: FAILED`);
   }
+});
+=======
 });

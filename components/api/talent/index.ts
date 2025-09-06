@@ -106,8 +106,6 @@ return res
     .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         reviews_count: 0,
         created_at: new Date ().toISOString (),
         summary: payload.summary || '',

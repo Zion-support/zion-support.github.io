@@ -2,9 +2,9 @@
 
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
+  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
 
 } from 'lucide-react',;

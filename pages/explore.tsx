@@ -33,26 +33,26 @@ import React, { useState } from 'react';
 
   const featuredServices = [;
     {;
-      id: 'ai-consciousness-evolution',;
-      title: 'AI Consciousness Evolution',;
-      category: 'ai',;
-      description:;
-        'Revolutionary AI consciousness platform with emotional intelligence',;
+      id: 'ai-consciousness-evolution';
+      title: 'AI Consciousness Evolution';
+      category: 'ai';
+      description: 'Revolutionary AI consciousness platform with emotional intelligence';
       status: 'beta',;
       price: '$1,999/month',;
       icon: Brain,;
-      color: 'from-purple-500 to-pink-500',;
-    },    {;
+      color: 'from-purple-500 to-pink-500';
+    },;
+    {;
       id: 'quantum-neural-networks',;
       title: 'Quantum Neural Networks',;
       category: 'quantum',;
-      description:;
-        'Quantum-powered AI with advanced consciousness capabilities',;
+      description: 'Quantum-powered AI with advanced consciousness capabilities',;
       status: 'beta',;
       price: '$1,299/month',;
       icon: Atom,;
-      color: 'from-blue-500 to-cyan-500',;
-    },    {;
+      color: 'from-blue-500 to-cyan-500';
+    },;
+    {;
       id: 'quantum-cybersecurity',;
       title: 'Quantum Cybersecurity',;
       category: 'cybersecurity',;
@@ -60,8 +60,9 @@ import React, { useState } from 'react';
       status: 'active',;
       price: '$799/month',;
       icon: Shield,;
-      color: 'from-red-500 to-orange-500',;
-    },    {;
+      color: 'from-red-500 to-orange-500';
+    },;
+    {;
       id: 'space-technology',;
       title: 'Space Technology Innovation',;
       category: 'space',;
@@ -69,31 +70,41 @@ import React, { useState } from 'react';
       status: 'beta',;
       price: '$2,499/month',;
       icon: Rocket,;
-      color: 'from-indigo-500 to-purple-500',;
-    },  ];
-
+      color: 'from-indigo-500 to-purple-500';
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
   // Filter categories based on search;
-  const filteredCategories = categories && categories.filter(category => {;
-    const matchesSearch =;
-      category && category.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-      category && category.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-    const matchesFilter =;
-      selectedCategory === 'all' || category && category.id === selectedCategory;
-    return matchesSearch && matchesFilter;  });
-
+  const filteredCategories = categories.filter(category => {;
+    const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
+    return matchesSearch && matchesFilter;
+  });
   // Sort categories;
   const sortedCategories = [...filteredCategories].sort((a, b) => {;
     switch (sortBy) {;
       case 'popularity':;
-        return b && b.serviceCount - a && a.serviceCount;
+        return b.serviceCount - a.serviceCount,;
       case 'name':;
-        return a && a.name.localeCompare(b && b.name);
+        return a.name.localeCompare(b.name);
       case 'featured':;
-        return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
-      default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        return 0;    }
-  });
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),;
+      default: return 0;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }),
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 
         />;
@@ -413,7 +424,6 @@ import React, { useState } from 'react';
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 mb-4 flex items-center justify-center`}>;
                     <service && service.icon className='w-8 h-8 text-white' />;
                   </div>;
-
                   <div className='flex items-center justify-between mb-3'>;
 
                     <span

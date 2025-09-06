@@ -342,47 +342,49 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [visible, setVisible] = useState(false);
-  useEffect(() => {;
+  useEffect(() => {
     if (typeof window === 'undefined') return;
-    const dismissed = localStorage && localStorage.getItem('smartBannerDismissed') === '1';
+    const dismissed = localStorage.getItem('smartBannerDismissed') === '1';
     if (dismissed) return;
 
 
     if (isMobile) setVisible(true);
   }, []);
   if (!visible) return null;
-  const isIOS =;
-    typeof navigator !== 'undefined' &&;
-    /iPhone|iPad|iPod/i && i.test(navigator && navigator.userAgent);
+  const isIOS =
+    typeof navigator !== 'undefined' &&
+    /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;
   return (
-    <div className='fixed inset-x-0 top-0 z-50'>;
-      <div className='mx-auto max-w-5xl'>;
-        <div className='m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3'>;
-          <div className='h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500' />;
-          <div className='flex-1'>;
-            <div className='text-sm font-semibold'>Zion App</div>;
-            <div className='text-xs opacity-70'>;
-              Hire from anywhere. AI-match instantly.;
-            </div>;
-          </div>;
-          <div className='flex items-center gap-2'>;
+    <div className='fixed inset-x-0 top-0 z-50'>
+      <div className='mx-auto max-w-5xl'>
+        <div className='m-2 rounded-xl bg-white/95 dark:bg-black/80 border border-gray-200 dark:border-gray-800 shadow flex items-center gap-3 px-4 py-3'>
+          <div className='h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500' />
+          <div className='flex-1'>
+            <div className='text-sm font-semibold'>Zion App</div>
+            <div className='text-xs opacity-70'>
+              Hire from anywhere. AI-match instantly.
+            </div>
+          </div>
+          <div className='flex items-center gap-2'>
             <a
               href={deepLink}
-              className='text-xs px-3 py-1 && 1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500'>;
-              Open;
-            </a>;
+              className='text-xs px-3 py-1.5 rounded-md bg-indigo-600 text-white hover:bg-indigo-500'
+            >
+              Open
+            </a>
             <a
               href={storeUrl}
               target='_blank'
               rel='noopener noreferrer'
-              className='text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700'>;
-              Install;
-            </a>;
+              className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700'
+            >
+              Install
+            </a>
             <button
               aria-label='Dismiss'
-              onClick={() => {;
-                localStorage && localStorage.setItem('smartBannerDismissed', '1');
+              onClick={() => {
+                localStorage.setItem('smartBannerDismissed', '1');
                 setVisible(false);
               }}
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);

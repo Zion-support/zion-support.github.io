@@ -132,7 +132,6 @@ export default function ZionTechGroupPage() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
         <link rel='icon' href='/favicon && favicon.ico' />;
       </Head>;
-
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>;
 
         {/* Navigation */}

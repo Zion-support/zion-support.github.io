@@ -20,6 +20,30 @@ import {
   TrendingUp,
 
 } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function PartnersPage() {
+  const partners = [
+    {
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Handshake,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  ArrowRight,
+  ExternalLink,
+  Star,
+  Users,
+<<<<<<< HEAD
+  Clock,
+  TrendingUp,
+} from 'lucide-react';
 import EnhancedNavigation from '../components / EnhancedNavigation';
 import EnhancedFooter from '../components / EnhancedFooter';
 export default /**
@@ -539,8 +563,6 @@ import { motion } from 'framer-motion';
       {/* Become a Partner CTA */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-=======
-
       {/* Become a Partner CTA */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">

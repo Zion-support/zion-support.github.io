@@ -74,7 +74,6 @@ export default function UltraAdvancedFuturisticBackground({
 
     canvas && canvas.width = window && window.innerWidth;
     canvas && canvas.height = window && window.innerHeight;
-
     const particles: Array<{;
 
       x: number;

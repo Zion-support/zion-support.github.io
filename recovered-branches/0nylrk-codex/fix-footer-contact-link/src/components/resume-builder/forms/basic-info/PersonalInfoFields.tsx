@@ -1,32 +1,10 @@
 
-<<<<<<< HEAD
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-
-import {
-=======
-
->>>>>>> main
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-<<<<<<< HEAD
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-=======
 } from '@/components / ui / form';
 import { Input  } from '@/components / ui / input';
 import { Control  } from './react - hook - form';
@@ -52,7 +30,6 @@ import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
 
 
->>>>>>> main
 
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
@@ -72,56 +49,6 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
             <FormMessage />
           </FormItem>
 
-<<<<<<< HEAD
-        )}
-      />
-      <FormField
-        control={control}
-        name="title"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Professional Title</FormLabel>
-            <FormControl>
-              <Input placeholder="Senior Software Engineer" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={control}
-        name="email"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Email</FormLabel>
-            <FormControl>
-              <Input type="email" placeholder="john@example.com" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-      <FormField
-        control={control}
-        name="phone"
-        render={({ field }) => (
-          <FormItem>
-            <FormLabel>Phone</FormLabel>
-            <FormControl>
-              <Input placeholder="+1 234 567 8900" {...field} />
-            </FormControl>
-            <FormMessage />
-          </FormItem>
-        )}
-      />
-    </div>
-
-  );
-}
-}
-;
-
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
@@ -264,4 +191,3 @@ function PersonalInfoFields() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

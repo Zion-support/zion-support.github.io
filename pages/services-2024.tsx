@@ -26,7 +26,7 @@ class ErrorBoundary extends React.Component {
 =======
 
 import React, { useState, useMemo } from 'react';
-import Head from 'next / head';
+import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 
@@ -42,8 +42,8 @@ import Link from 'next/link';
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<;
-    'name' | 'price' | 'rating' | 'customers';
+  const [sortBy, setSortBy] = useState<
+    'name' | 'price' | 'rating' | 'customers'
   >('name');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
@@ -91,17 +91,17 @@ import Link from 'next/link';
           bValue = parseFloat(b && b.price.replace(/[^0-9.]/g, ''));
 
           break;
-        case 'rating':;
-          aValue = a && a.rating;
-          bValue = b && b.rating;
+        case 'rating':
+          aValue = a.rating;
+          bValue = b.rating;
           break;
-        case 'customers':;
-          aValue = parseInt(a && a.customers.replace(/[^0-9]/g, ''));
-          bValue = parseInt(b && b.customers.replace(/[^0-9]/g, ''));
+        case 'customers':
+          aValue = parseInt(a.customers.replace(/[^0-9]/g, ''));
+          bValue = parseInt(b.customers.replace(/[^0-9]/g, ''));
           break;
-        default:;
-          aValue = a && a.name.toLowerCase();
-          bValue = b && b.name.toLowerCase();
+        default:
+          aValue = a.name.toLowerCase();
+          bValue = b.name.toLowerCase();
       }
 
           break;
@@ -248,85 +248,110 @@ const Services2024Page: React.FC = () => {;
   };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+const Services2024Page: React.FC = () => {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
+  // Combine all services;
+  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
+  // Filter and sort services;
+  const filteredServices = useMemo(() => {;
+    const filtered = allServices.filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                           service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' ||;
+                             (selectedCategory === 'ai' && service.variant.includes('ai')) ||;
+                             (selectedCategory === 'quantum' && service.variant.includes('security')) ||;
+                             (selectedCategory === 'it' && service.variant.includes('it')) ||;
+                             (selectedCategory === 'api' && service.variant.includes('api')) ||;
+                             (selectedCategory === 'cloud' && service.variant.includes('cloud')) ||;
+                             (selectedCategory === 'marketing' && service.variant.includes('marketing')) ||;
+                             (selectedCategory === 'project' && service.variant.includes('project')) ||;
+                             (selectedCategory === 'customer' && service.variant.includes('customer'));
+      return matchesSearch && matchesCategory;
+    });
+    // Sort services;
+    filtered.sort((a, b) => {;
+      let aValue: any, bValue: any,;
+      switch (sortBy) {;
+        case 'price':;
+          aValue = parseFloat(a.price.replace(/[^0-9.]/g, '')),;
+          bValue = parseFloat(b.price.replace(/[^0-9.]/g, '')),;
+          break,;
+        case 'rating':;
+          aValue = a.rating;
+          bValue = b.rating;
+          break,;
+        case 'customers':;
+          aValue = parseInt(a.customers.replace(/[^0-9]/g, '')),;
+          bValue = parseInt(b.customers.replace(/[^0-9]/g, '')),;
+          break,;
+        default: aValue = a.name.toLowerCase();
+          bValue = b.name.toLowerCase();
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      if (sortOrder === 'asc') {;
+        return aValue > bValue ? 1 : -1;
+      } else {;
+        return aValue < bValue ? 1 : -1;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    });
+    return filtered;
+  }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),;
   const categories = [;
-    {;
-      id: 'all',;
-      name: 'All Services',;
-      icon: Sparkles,;
-      count: allServices && allServices.length,;
-    },;
-    {;
-      id: 'ai',;
-      name: 'AI & ML',;
-      icon: Brain,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('ai')).length,;
-    },;
-    {;
-      id: 'quantum',;
-      name: 'Quantum & Security',;
-      icon: Shield,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('security')).length,;
-    },;
-    {;
-      id: 'it',;
-      name: 'Enterprise IT',;
-      icon: Cpu,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('it')).length,;
-    },;
-    {;
-      id: 'api',;
-      name: 'API & Development',;
-      icon: Database,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('api')).length,;
-    },;
-    {;
-      id: 'cloud',;
-      name: 'Cloud & DevOps',;
-      icon: Cloud,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('cloud')).length,;
-    },;
-    {;
-      id: 'marketing',;
-      name: 'Marketing & SEO',;
-      icon: TrendingUp,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('marketing')).length,;
-    },;
-    {;
-      id: 'project',;
-      name: 'Project Management',;
-      icon: Users,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('project')).length,;
-    },;
-    {;
-      id: 'customer',;
-      name: 'Customer Success',;
-      icon: CheckCircle,;
-      count: allServices && allServices.filter(s => s && s.variant.includes('customer')).length,;
-    },  ];
-
-  const getVariantIcon = (variant: string) => {;
-    if (variant && variant.includes('ai')) return Brain;
-    if (variant && variant.includes('security')) return Shield;
-    if (variant && variant.includes('it')) return Cpu;
-    if (variant && variant.includes('api')) return Database;
-    if (variant && variant.includes('cloud')) return Cloud;
-    if (variant && variant.includes('marketing')) return TrendingUp;
-    if (variant && variant.includes('project')) return Users;
-    if (variant && variant.includes('customer')) return CheckCircle;
-    return Sparkles;  };
-
-  const getVariantColor = (variant: string) => {;
-    if (variant && variant.includes('ai')) return 'from-blue-500 to-cyan-500';
-    if (variant && variant.includes('security')) return 'from-red-500 to-pink-500';
-    if (variant && variant.includes('it')) return 'from-green-500 to-emerald-500';
-    if (variant && variant.includes('api')) return 'from-purple-500 to-violet-500';
-    if (variant && variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
-    if (variant && variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
-    if (variant && variant.includes('project')) return 'from-teal-500 to-cyan-500';
-    if (variant && variant.includes('customer')) return 'from-pink-500 to-rose-500';
-    return 'from-gray-500 to-slate-500';  };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },;
+    { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },;
+    { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },;
+    { id: 'it', name: 'Enterprise IT', icon: Cpu, count: allServices.filter(s => s.variant.includes('it')).length },;
+    { id: 'api', name: 'API & Development', icon: Database, count: allServices.filter(s => s.variant.includes('api')).length },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.variant.includes('cloud')).length },;
+    { id: 'marketing', name: 'Marketing & SEO', icon: TrendingUp, count: allServices.filter(s => s.variant.includes('marketing')).length },;
+    { id: 'project', name: 'Project Management', icon: Users, count: allServices.filter(s => s.variant.includes('project')).length },;
+    { id: 'customer', name: 'Customer Success', icon: CheckCircle, count: allServices.filter(s => s.variant.includes('customer')).length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const getVariantIcon = (variant: string) => {
+    if (variant.includes('ai')) return Brain,
+    if (variant.includes('security')) return Shield,
+    if (variant.includes('it')) return Cpu,
+    if (variant.includes('api')) return Database,
+    if (variant.includes('cloud')) return Cloud,
+    if (variant.includes('marketing')) return TrendingUp,
+    if (variant.includes('project')) return Users,
+    if (variant.includes('customer')) return CheckCircle,
+    return Sparkles
+  },
+  const getVariantColor = (variant: string) => {
+    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500',
+    if (variant.includes('security')) return 'from-red-500 to-pink-500',
+    if (variant.includes('it')) return 'from-green-500 to-emerald-500',
+    if (variant.includes('api')) return 'from-purple-500 to-violet-500',
+    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500',
+    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
+    if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
+    if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
+    return 'from-gray-500 to-slate-500'
+  },
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
 
         />;
@@ -1226,6 +1251,14 @@ if ( {) {
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href=&quot;/pricing-2033&quot; className=&quot;flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold&quot;>
+                  <span>View Pricing Plans</span>
+                  <ArrowRight className=&quot;w-4 h-4&quot; />
+
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>

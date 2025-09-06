@@ -483,7 +483,6 @@ pricingAnalysis: {
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on MAUs and features.</div>;
             </div>;
           </div>;
-
           <motion&& motion.div
 
             initial={{ opacity: 0, y: 20 }}
@@ -906,7 +905,6 @@ pricingAnalysis: {
             ))}
 
           </div>;
-
           <motion&& motion.div
 
             initial={{ opacity: 0, y: 20 }}
@@ -983,7 +981,6 @@ pricingAnalysis: {
 
               </ul>;
             </motion && motion.div>;
-
             <motion&& motion.div
 
               initial={{ opacity: 0, x: 20 }}

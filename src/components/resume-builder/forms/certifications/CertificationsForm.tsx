@@ -68,6 +68,15 @@ return (
                       credential_id: '',
 
 
+                    setEditingId(null),
+                    setEditingId(null),
+                    form.reset({
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+                      credential_url: ''})
                   } else {
                     onBack()
 

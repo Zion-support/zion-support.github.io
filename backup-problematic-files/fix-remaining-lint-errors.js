@@ -30,6 +30,16 @@ function main() {}; if (content ! = = originalContent) {}; fs.writeFileSync(file
 ;    try {};
         // Skip node_modules, .git, and other common directories};
         if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
+          files = files.concat(findFiles(fullPath, extensions));
+        };
+      } else if (extensions.some(ext => item.endsWith(ext))) {};
+        files.push(fullPath);
+      };
+;
+    } catch (error) {,;
+;    try {};
+        // Skip node_modules, .git, and other common directories};
+        if (!['node_modules.gitdistbuild.next'].includes(item)) {'};
           files = files.concat(findFiles(fullPath, extensions))
         };
       } else if (extensions.some(ext => item.endsWith(ext))) {};

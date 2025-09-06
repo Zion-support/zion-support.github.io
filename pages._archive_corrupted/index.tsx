@@ -399,6 +399,8 @@ const Home = memo(() => {;
                 <ul className="space-y-2 mb-6">
                 <ul className=\"space-y-2 mb-6\">
                 <ul className="space-y-2 mb-6">
+                <ul className=\"space-y-2 mb-6\">
+                <ul className="space-y-2 mb-6">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center gap-x-2\">

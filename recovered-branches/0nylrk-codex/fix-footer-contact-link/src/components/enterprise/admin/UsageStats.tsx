@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from "react",
-import { Slider } from "@/components/ui/slider",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { toast } from "@/hooks/use-toast";
-import {
-Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-
-  CardTitle,
-=======
 
 
 import React from "react";
@@ -33,7 +16,6 @@ import {
   CardHeader,
 CardTitle,;
 
->>>>>>> main
 
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
@@ -41,67 +23,6 @@ import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
-<<<<<<< HEAD
-title: "Limits updated"
-      description: "The new usage limits have been saved successfully."
-    });
-  }
-
-import React from "react",
-import { Slider } from "@/components/ui/slider",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { toast } from "@/hooks/use-toast",
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from "@/components/ui/card",
-import { Sparkles } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
-export function UsageStats() {
-  const handleSaveChanges = () => {
-    toast({
-      title: "Limits updated",
-      description: "The new usage limits have been saved successfully."})
-  },
-
-        </p>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Job Postings</CardTitle>
-            <CardDescription>
-              Set monthly limits for job postings across your organization
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <div className="text-sm font-medium">Monthly job posting limit</div>
-                <Badge variant="outline">25 / 50</Badge>
-              </div>
-              <Progress value={50} className="h-2" />
-            </div>
-            <div className="grid gap-4">
-              <div className="grid grid-cols-3 items-center gap-4">
-                <div className="text-sm">New limit:</div>
-                <div className="col-span-2">
-                  <Input type="number" min="1" defaultValue="50" />
-                </div>
-              </div>
-            </div>
-          </CardContent>
-          <CardFooter>
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
-          </CardFooter>
-        </Card>
-
-=======
 
 import {;
   Card,;
@@ -135,7 +56,6 @@ export function UsageStats() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -146,13 +66,9 @@ export function UsageStats() {;
           <CardContent className="space-y-4">
             <div>
               <div className="flex items-center justify-between mb-2">
-<<<<<<< HEAD
-                <div className="text-sm font-medium">Monthly contact credits</div>
-=======
                 <div className="text-sm font-medium">
                   Monthly contact credits
                 </div>
->>>>>>> main
                 <Badge variant="outline">178 / 500</Badge>
               </div>
               <Progress value={35.6} className="h-2" />
@@ -167,12 +83,6 @@ export function UsageStats() {;
             </div>
           </CardContent>
           <CardFooter>
-<<<<<<< HEAD
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
-          </CardFooter>
-        </Card>
-
-=======
             <Button size="sm" onClick={handleSaveChanges}>
               Save Changes
             </Button>
@@ -184,7 +94,6 @@ export function UsageStats() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -210,12 +119,6 @@ export function UsageStats() {;
             </div>
           </CardContent>
           <CardFooter>
-<<<<<<< HEAD
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
-          </CardFooter>
-        </Card>
-
-=======
             <Button size="sm" onClick={handleSaveChanges}>
               Save Changes
             </Button>
@@ -227,7 +130,6 @@ export function UsageStats() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -264,25 +166,18 @@ export function UsageStats() {;
             </div>
           </CardContent>
           <CardFooter>
-<<<<<<< HEAD
-            <Button size="sm" onClick={handleSaveChanges}>Save Changes</Button>
-=======
             <Button size="sm" onClick={handleSaveChanges}>
               Save Changes
             </Button>
->>>>>>> main
           </CardFooter>
         </Card>
       </div>
 
-<<<<<<< HEAD
-=======
 
       
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -291,26 +186,14 @@ export function UsageStats() {;
           <div>
             <h3 className="font-medium">Need higher limits?</h3>
             <p className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-              Contact your account manager to discuss custom limits for your enterprise.
-=======
               Contact your account manager to discuss custom limits for your
               enterprise.
->>>>>>> main
             </p>
           </div>
         </div>
         <Button>Contact Us</Button>
       </div>
     </div>
-<<<<<<< HEAD
-);
-}
-  );
-}
-;
-
-=======
 
 =======
 
@@ -574,4 +457,3 @@ function UsageStats() {
     </div>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> main

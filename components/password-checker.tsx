@@ -1,22 +1,41 @@
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+export default function PasswordCheckerPage() {
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  Lock,
+  Shield,
+  Eye,
+  EyeOff,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
+<<<<<<< HEAD
+  AlertTriangle,
+  ArrowRight,
+} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+export default /**
+ * PasswordCheckerPage - Function description
+ */
+function PasswordCheckerPage() {
+  const [password, set_password] = useState ('');
+  const [show_password, setShowPassword] = useState (false);
+  const [strength, set_strength] = useState (0);
+  const [strength_text, setStrengthText] = useState ('');
+  const [strength_color, setStrengthColor] = useState ('');
+  const [checks, set_checks] = useState ({
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    numbers: false,
+    symbols: false,
+
+  useEffect(() => {
+    if (password) {
+      analyzePassword(password)
+    } else {
+      resetAnalysis()
     }
     
     return this.props.children;
@@ -46,14 +65,8 @@ export default function PasswordCheckerPage() {;
 
 
       analyzePassword(password);
-    } else {;
-      resetAnalysis();    }      analyzePassword(password);
-    } else {;
-      resetAnalysis();
-=======
-  useEffect(() => {
-    if (password) {
-      analyzePassword(password)
+    } else {
+      resetAnalysis();    }      analyzePassword(password)
     } else {
       resetAnalysis()
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -376,15 +389,13 @@ if (
 
   };
 
-  const getCheckIcon = (passed: boolean) => {;
-    return passed ? (;
-      <CheckCircle className='w-5 h-5 text-green-400' />;
-    ) : (;
-      <XCircle className='w-5 h-5 text-red-400' />;
-    );      <CheckCircle className="w-5 h-5 text-green-400" />;
-    ) : (;
-      <XCircle className="w-5 h-5 text-red-400" />;
-    );
+  return (_<>
+      <Head>
+        <title>Password Strength Checker - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Password Strength Checker - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
+      </Head>
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -504,18 +515,18 @@ if (
               <div className='space-y-6'>;
 
                 {/* Password Input */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-2'>;
-                    Enter Password;
-                  </label>;
-                  <div className='relative'>;
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-2'>
+                    Enter Password
+                  </label>
+                  <div className='relative'>
                     <input
                       type={showPassword ? 'text' : 'password'}
                       value={password}
-                      onChange={e => setPassword(e && e.target.value)}
-                      placeholder='Type your password here...';
-                      className='w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent';
-                    />;
+                      onChange={e => setPassword(e.target.value)}
+                      placeholder='Type your password here...'
+                      className='w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
+                    />
                     <button
                       type='button'
                       onClick={() => setShowPassword(!showPassword)}

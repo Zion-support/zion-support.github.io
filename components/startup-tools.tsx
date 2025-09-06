@@ -252,7 +252,8 @@ function StartupToolsPage() {
       icon: <Globe className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Social media schedulingAnalytics & reportingTeam collaborationContent calendarMultiple platformsFree tier available'
+        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem';
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       ];
       website: 'https://buffer.com',
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',

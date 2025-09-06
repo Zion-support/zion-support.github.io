@@ -14,11 +14,6 @@
 
 
 =======
-            onChange={e => setTheme(e && e.target.value as 'light' | 'dark')}
-            className='border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black';
-          >;
-            <option value='light'>Light</option>;
-            <option value='dark'>Dark</option>          </select>;
 
           {versions && versions.length > 0 && (;
             <>;
@@ -46,8 +41,7 @@ import { createServerClient } from '../../utils/supabase/server';
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
   versions?: Array<{ id: string, label: string, data: ResumeData }>
-};
-
+},
 export default function ResumePreviewPage({ initialData, versions = [] }: ResumePreviewPageProps) {
 
   const activeData = useMemo(() => {

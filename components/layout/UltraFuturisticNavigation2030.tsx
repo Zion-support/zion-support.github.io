@@ -124,7 +124,7 @@ import {
 
 
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
-    ];
+    ]
   }
 
 

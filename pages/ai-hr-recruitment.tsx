@@ -248,6 +248,11 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 export default function AIHRRecruitmentPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'));
   if (!service) return null;
+=======
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-hr-recruitment');
+  );  if (!service) return null;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 

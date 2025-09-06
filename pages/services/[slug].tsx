@@ -71,7 +71,6 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
   return {;
     props: { service },;
   };
-
 export default function ServiceDetailPage(): any ({ service }: { service: Service }) {;
 
   return (

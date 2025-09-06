@@ -1,19 +1,4 @@
 
-<<<<<<< HEAD
-import { Education } from '@/types/resume';
-export interface EducationFormProps {
-  resumeId: string;
-  educationEntries: Education[];
-  onComplete: () => void;
-onBack: () => void
-}
-export interface EducationItemProps {
-  education: Education;
-  onEdit: (education: Education) => void;
-onDelete: (id: string) => void
-}
-export interface EducationFormFieldsProps {
-=======
 
 import {Education} from '@/types/resume';
 export interface EducationFormProps {;
@@ -40,15 +25,12 @@ export interface EducationItemProps {;
 export interface EducationFormFieldsProps {;
 
 
->>>>>>> main
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;
 
   onCancel: () => void;
 }
 
-<<<<<<< HEAD
-=======
 
 import { Education  } from '@/types / resume';
 export interface EducationFormProps {
@@ -59,30 +41,12 @@ export interface EducationFormProps {
 =======
 
 =======
->>>>>>> main
 import { Education } from '@/types/resume',;
 export interface EducationFormProps {;
   resumeId: string,;
   educationEntries: Education[],;
   onComplete: () => void,;
   onBack: () => void;
-<<<<<<< HEAD
-}
-;
-export interface EducationItemProps {;
-  education: Education,;
-  onEdit: (education: Education) => void,;
-  onDelete: (id: string) => void;
-}
-;
-export interface EducationFormFieldsProps {;
-  isEditing: boolean;
-  onSubmit: (data: any) => Promise<void>;
-  onCancel: () => void;
-}
-;
-
-=======
 
 }
 export interface EducationItemProps {
@@ -101,4 +65,3 @@ export interface EducationFormFieldsProps {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

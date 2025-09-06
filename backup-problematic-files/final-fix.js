@@ -124,12 +124,8 @@ function processDirectory(dirPath) {
 =======
   fixedCount += processDirectory(fullPath)} else if (file.endsWith(".tsx") |file.endsWith(".ts") |file.endsWith(".jsx") |file.endsWith(".js")) {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-  const fullPath = path && path.join(dirPath, file);
-    const stat = fs && fs.statSync(fullPath);
-    if (stat && stat.isDirectory()) {
-  fixedCount += processDirectory(fullPath)} else if (file && file.endsWith(".tsx") || file && file.endsWith(".ts") || file && file.endsWith(".jsx") || file && file.endsWith(".js")) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (fixFile(fullPath)) {
   fixedCount++}
     }

@@ -71,29 +71,11 @@ const navigationItems: NavigationItem[] = [
     description: 'Browse by category',
     badge: 'New',
     children: [
-<<<<<<<< HEAD:backup-problematic-files/components/layout/UltraFuturisticNavigation2035.tsx
-========
-<<<<<<< HEAD
-      { name: 'AI & Data', href: '/services#ai', description: 'AI, data, ML services' },
-      { name: 'Developer Tools', href: '/services#developer-tools', description: 'Dev productivity & tooling' },
-      { name: 'Cloud & FinOps', href: '/services#cloud', description: 'Cloud, cost, platform' },
-      { name: 'Observability', href: '/services#observability', description: 'Monitoring & telemetry' },
-      { name: 'Quality & Monitoring', href: '/services#quality', description: 'QA, testing, reliability' },
-      { name: 'AI Evaluation Orchestrator', href: '/ai-evaluation-orchestrator', description: 'Automated LLM evals' },
-      { name: 'SEO Automation Suite', href: '/seo-automation-suite', description: 'Technical SEO automation' },
-      { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
-      { name: 'Managed Postgres HA', href: '/managed-postgres-ha', description: 'HA Postgres ops' }
-=======
->>>>>>>> main:components/layout/UltraFuturisticNavigation2035.tsx.backup.1756001719
       { name: 'AI & Data', href: '/services?filter=ai-consciousness', description: 'AI, data, ML services' },
       { name: 'Enterprise IT', href: '/services?filter=enterprise-it', description: 'Infra, security, platforms' },
       { name: 'Quantum & Emerging', href: '/services?filter=quantum-emerging', description: 'Quantum, space, frontier' },
       { name: 'Micro SAAS', href: '/services?filter=micro-saas', description: 'Business accelerators' },
       { name: 'Creative & Media', href: '/services?filter=creative-media', description: 'Content, media, design' }
-<<<<<<<< HEAD:backup-problematic-files/components/layout/UltraFuturisticNavigation2035.tsx
-========
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
->>>>>>>> main:components/layout/UltraFuturisticNavigation2035.tsx.backup.1756001719
     ]
   },
   {

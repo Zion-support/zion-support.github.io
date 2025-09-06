@@ -86,8 +86,8 @@ export function OnboardingWizard(): any ({;
   className,;
 }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
-  const router = useRouter(); // Changed from useNavigate to useRouter;
-  const { user } = useAuth();
+  const router = useRouter(); // Changed from useNavigate to useRouter
+  const { user } = useAuth()
 
 
           </div>;

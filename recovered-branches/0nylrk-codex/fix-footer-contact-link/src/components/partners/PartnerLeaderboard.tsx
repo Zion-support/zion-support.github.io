@@ -1,49 +1,18 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Crown, Medal, Trophy} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge";
-import { Crown, Medal, Trophy } from "lucide-react";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { Badge } from '@/components / ui / badge';
 import { Crown, Medal, Trophy } from './lucide-react';
 
->>>>>>> main
 interface LeaderboardEntry {
 
   id: string
   rank: number
   name: string
   avatar?: string;
-<<<<<<< HEAD
-  referrals: number
-  earnings: number
-
-=======
-import { Badge } from "@/components/ui/badge",
-import { Crown, Medal, Trophy } from "lucide-react",
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
->>>>>>> main
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -51,12 +20,8 @@ interface LeaderboardEntry {
   avatar?: string,
   referrals: number,
   earnings: number,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -68,30 +33,6 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
-<<<<<<< HEAD
-<<<<<<< HEAD
-      referrals: 178
-      earnings: 4500
-
-=======
-      referrals: 178,
-      earnings: 4500,
-<<<<<<< HEAD
-      badges: ["gold", "trending"];
-    };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      badges: ["gold", "trending"]
-<<<<<<< HEAD
-    }
-=======
-    },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
       referrals: 178,
@@ -99,7 +40,6 @@ export function PartnerLeaderboard() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
     {
 
       id: "2"
@@ -110,19 +50,11 @@ export function PartnerLeaderboard() {
       earnings: 3625
 
       badges: ["silver"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     {
 
       id: "3"
@@ -133,19 +65,11 @@ export function PartnerLeaderboard() {
       earnings: 3100
 
       badges: ["bronze"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
     },
 
 
->>>>>>> main
     {
 
       id: "4"
@@ -156,77 +80,6 @@ export function PartnerLeaderboard() {
       earnings: 2450
 
       badges: []
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    {
-
-      id: "5"
-      rank: 5
-      name: "Deep Learning Daily"
-      avatar: ""
-      referrals: 87
-      earnings: 2175
-
-      badges: ["newcomer"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-  ];
-  // Function to render rank badge
-
-  const renderRankBadge = (rank: number) => {
-    switch(rank) {
-      case 1:
-        return <Trophy className="h-5 w-5 text-yellow-500" />;
-      case 2:
-        return <Medal className="h-5 w-5 text-gray-400" />;
-      case 3:
-        return <Medal className="h-5 w-5 text-amber-700" />
-      default:
-        return <span className="text-sm font-semibold">{rank}</span>
-    }
-  }
-
-  return (
-    <div className="space-y-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Crown className="h-5 w-5 text-yellow-500" />
-            Top Partners
-          </CardTitle>
-          <CardDescription>This month's top-performing partners</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {leaderboard.length > 0 ? (
-              leaderboard.map(entry => (
-                <div
-                  key={entry.id}
-                  className={`flex items-center justify-between p-3 rounded-md ${
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-=======
-<<<<<<< HEAD
-    },
-    {
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { Crown, Medal, Trophy } from "lucide-react",;
-=======
 
 
 
@@ -237,25 +90,16 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Badge} from "@/components/ui/badge";
 import {Crown, Medal, Trophy} from "lucide-react";
 
->>>>>>> main
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
   name: string,;
-<<<<<<< HEAD
-  avatar?: string,;
-=======
   avatar?: string;
->>>>>>> main
   referrals: number,;
   earnings: number,;
   badges: string[];
 }
-<<<<<<< HEAD
-;
-=======
 
->>>>>>> main
 export function PartnerLeaderboard() {;
   // Placeholder data - would come from API in real implementation;
   const leaderboard: LeaderboardEntry[] = [;
@@ -267,11 +111,7 @@ export function PartnerLeaderboard() {;
       referrals: 178,;
       earnings: 4500,;
       badges: ["gold", "trending"];
-<<<<<<< HEAD
-    },;
-=======
     };
->>>>>>> main
     {;
       id: "2",;
       rank: 2,;
@@ -280,11 +120,7 @@ export function PartnerLeaderboard() {;
       referrals: 145,;
       earnings: 3625,;
       badges: ["silver"];
-<<<<<<< HEAD
-    },;
-=======
     };
->>>>>>> main
     {;
       id: "3",;
       rank: 3,;
@@ -293,11 +129,7 @@ export function PartnerLeaderboard() {;
       referrals: 124,;
       earnings: 3100,;
       badges: ["bronze"];
-<<<<<<< HEAD
-    },;
-=======
     };
->>>>>>> main
     {;
       id: "4",;
       rank: 4,;
@@ -306,11 +138,7 @@ export function PartnerLeaderboard() {;
       referrals: 98,;
       earnings: 2450,;
       badges: [];
-<<<<<<< HEAD
-    },;
-=======
     };
->>>>>>> main
     {;
       id: "5",;
       rank: 5,;
@@ -320,51 +148,12 @@ export function PartnerLeaderboard() {;
       earnings: 2175,;
       badges: ["newcomer"];
     }
-<<<<<<< HEAD
-  ],;
-=======
   ];
 
->>>>>>> main
   // Function to render rank badge;
   const renderRankBadge = (rank: number) => {;
     switch(rank) {;
       case 1:;
-<<<<<<< HEAD
-        return <Trophy className="h-5 w-5 text-yellow-500" />,;
-      case 2:;
-        return <Medal className="h-5 w-5 text-gray-400" />,;
-      case 3:;
-        return <Medal className="h-5 w-5 text-amber-700" />;
-      default:;
-        return <span className="text-sm font-semibold">{rank}</span>;
-    }
-  };
-  return (;
-    <div className="space-y-6">;
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle className="flex items-center gap-2">;
-            <Crown className="h-5 w-5 text-yellow-500" />;
-            Top Partners;
-          </CardTitle>;
-          <CardDescription>This month's top-performing partners</CardDescription>;
-        </CardHeader>;
-        <CardContent>;
-          <div className="space-y-4">;
-            {leaderboard.length > 0 ? (;
-              leaderboard.map(entry => (;
-                <div;
-                  key={entry.id} ;
-                  className={`flex items-center justify-between p-3 rounded-md ${;
-                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
-                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:;
@@ -457,7 +246,6 @@ function PartnerLeaderboard() {
             {leaderboard.length > 0 ? (
 
 
->>>>>>> main
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -485,8 +273,6 @@ function PartnerLeaderboard() {
                         <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
                           Elite
                         </Badge>
-<<<<<<< HEAD
-=======
 
       case 3:;
         return <Medal className="h-5 w-5 text-amber-700" />,;
@@ -548,32 +334,14 @@ function PartnerLeaderboard() {
                         </Badge>;
                       )}
 =======
->>>>>>> main
                       )}
                       {entry.badges.includes("trending") && (
                         <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
                           Trending
                         </Badge>
                       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
-                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>
-                <p className="text-xs text-zion-slate-light">
-                  Start referring to earn your spot on the leaderboard
-                </p>
-              </div>
-=======
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
                     </div>;
                   </div>;
                 </div>;
@@ -586,76 +354,6 @@ function PartnerLeaderboard() {
                   Start referring to earn your spot on the leaderboard;
                 </p>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            )}
-          </div>
-        </CardContent>
-      </Card>
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle>Your Ranking</CardTitle>
-          <CardDescription>How you compare to other partners</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-            <p className="text-zion-slate-light mb-4">
-              Start referring to appear on the leaderboard
-            </p>
-            <Badge variant="outline" className="bg-zion-purple/20 border-zion-purple text-zion-purple">
-              New Partner
-            </Badge>
-          </div>
-        </CardContent>
-      </Card>
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle>Rewards Program</CardTitle>
-          <CardDescription>Exclusive perks for top partners</CardDescription>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2">
-              <Badge variant="outline" className="bg-yellow-500/20 border-yellow-500 text-yellow-400">
-                Elite Partner
-              </Badge>
-              <span className="text-xs text-zion-slate-light">(Top 3)</span>
-            </div>
-            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">
-              <li>Increased commission rate (35%)</li>
-              <li>Featured on Zion AI home page</li>
-              <li>Early access to new Zion AI features</li>
-              <li>Monthly strategy call with Zion AI team</li>
-            </ul>
-          </div>
-          <div className="p-4 bg-zion-blue rounded-md">
-            <div className="flex items-center gap-2 mb-2">
-              <Badge variant="outline" className="bg-gray-400/20 border-gray-400 text-gray-300">
-                Premier Partner
-              </Badge>
-              <span className="text-xs text-zion-slate-light">(Top 10)</span>
-            </div>
-            <ul className="list-disc list-inside text-sm text-zion-slate-light space-y-1">
-              <li>Increased commission rate (30%)</li>
-              <li>Custom landing page for your referrals</li>
-              <li>Co-marketing opportunities</li>
-            </ul>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-<<<<<<< HEAD
-}
-=======
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
@@ -792,4 +490,3 @@ function PartnerLeaderboard() {
 ;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main

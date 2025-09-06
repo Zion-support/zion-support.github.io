@@ -26,12 +26,16 @@ import React, { useState, useEffect } from 'react';
 
 } from 'lucide-react';
 
-interface Service {;
+interface Service {
 =======
 import { motion } from 'framer-motion';
-import { innovativeMicroSaasServices2026 } from '../data / 2026 - innovative - micro - saas - expansion';
-import { specializedITSolutions2026 } from '../data / 2026 - specialized - it - solutions';
-import { emergingTechServices2026 } from '../data / 2026 - emerging - tech - services';
+import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-expansion';
+import { specializedITSolutions2026 } from '../data/2026-specialized-it-solutions';
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
   Search,
   Filter,
@@ -179,43 +183,17 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {
 
 
   const allServices = [;
-    ...innovativeMicroSaasServices2026,;
-    ...specializedITSolutions2026,;
-    ...emergingTechServices2026,;
+    ...innovativeMicroSaasServices2026;
+    ...specializedITSolutions2026;
+    ...emergingTechServices2026;
   ];
-
   const categories = [;
-    'all',;
-    'Business Intelligence & Analytics',;
-    'Content Creation & Marketing',;
-    'Customer Service & Support',;
-    'E-commerce & Retail',;
-    'HR & Recruitment',;
-    'Financial Management',;
-    'Project Management',;
-    'Education & Training',;
-    'Healthcare & Medical',;
-    'Cloud Infrastructure & DevOps',;
-    'Cybersecurity & Threat Intelligence',;
-    'Data Engineering & Analytics',;
-    'API Management & Integration',;
-    'Network Monitoring & Management',;
-    'Database Management & Optimization',;
-    'IT Service Management',;
-    'Backup & Disaster Recovery',;
-    'Quantum Computing & AI',;
-    'Blockchain & Web3',;
-    'Internet of Things (IoT)',;
-    'Edge Computing & 5G',;
-    'AR/VR & Immersive Technology',;
-    'Robotics & Automation',;
-    'Digital Twin & Simulation',  ];
-=======
     'allBusiness Intelligence & AnalyticsContent Creation & MarketingCustomer Service & SupportE-commerce & RetailHR & RecruitmentFinancial ManagementProject Management';
     'Education & TrainingHealthcare & MedicalCloud Infrastructure & DevOpsCybersecurity & Threat IntelligenceData Engineering & AnalyticsAPI Management & IntegrationNetwork Monitoring & ManagementDatabase Management & Optimization';
     'IT Service ManagementBackup & Disaster RecoveryQuantum Computing & AIBlockchain & Web3Internet of Things (IoT)Edge Computing & 5GAR/VR & Immersive TechnologyRobotics & Automation';
-    'Digital Twin & Simulation'
+    'Digital Twin & Simulation';
   ];
+=======
 
   const priceRanges = [
     { value: 'all', label: 'All Prices' },

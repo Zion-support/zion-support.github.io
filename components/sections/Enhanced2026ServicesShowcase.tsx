@@ -380,7 +380,6 @@ const Enhanced2026ServicesShowcase = () => {;
       {/* Background Effects */}
 
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>;
-
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ];
 
   const categories = [;

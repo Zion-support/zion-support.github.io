@@ -72,7 +72,7 @@ const AVAILABILITY_OPTIONS = [;
   { id: "project", label: "Project-based" }
 ]
 
-export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
+export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
@@ -104,6 +104,8 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
@@ -111,7 +113,7 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
 
           ))}
-        </div>;
+        </div>
       )}
 
     </div>;

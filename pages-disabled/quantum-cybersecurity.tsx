@@ -404,20 +404,7 @@ function QuantumCybersecurityPage() {
             {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
-=======
-            transition={{ duration: 0 && 0.6 }}
-            className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Advanced Security Features</h2>;
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">;
-              Comprehensive protection against current and future cyber threats.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {features && features.map((feature, index) => (;
-              <motion&& motion.div
-                key={feature && feature.title}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -561,20 +548,7 @@ function QuantumCybersecurityPage() {
             {threats.map((threat, index) => (
               <motion.div
                 key={threat.type}
-=======
-            transition={{ duration: 0 && 0.6 }}
-            className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Emerging Threat Landscape</h2>;
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">;
-              Understanding the threats is the first step in defending against them.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {threats && threats.map((threat, index) => (;
-              <motion&& motion.div
-                key={threat && threat.type}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -764,20 +738,7 @@ function QuantumCybersecurityPage() {
             {pricing.map((plan, index) => (
               <motion.div
                 key={plan.plan}
-=======
-            transition={{ duration: 0 && 0.6 }}
-            className="text-center mb-16">;
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Security Plans</h2>;
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">;
-              Choose the security level that matches your organization's needs and risk profile.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            {pricing && pricing.map((plan, index) => (;
-              <motion&& motion.div
-                key={plan && plan.plan}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}

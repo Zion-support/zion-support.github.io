@@ -250,10 +250,22 @@ export default function HelpCenter() {;
                   <Button
                     variant='ghost'
                     onClick={handleBackToArticles}
-                    className='mb-4'>;
-                    ← Back to Articles;
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
+                    className='mb-4'                  >
+              
+              {selectedCategory && !selectedArticle && (
+                <>
+                  <Button
+                    variant="ghost"
+                    onClick={handleBackToCategories}
+                    className="mb-4"
+                  >
+                    ← All Categories
+                  </Button>
+                  <HelpArticleList 
+                    categoryId={selectedCategory}
+                    onArticleSelect={handleArticleSelect}
+                    searchQuery={searchQuery}
+                  />;
                 </>;
               )}
 

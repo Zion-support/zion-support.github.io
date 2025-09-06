@@ -20,6 +20,30 @@ import {
   TrendingUp,
 
 } from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+export default function AnalyticsServicesPage() {
+  const services = [
+    {
+
+
+=======
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  BarChart3,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  Cpu,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+<<<<<<< HEAD
+  Clock,
+  TrendingUp,
+} from 'lucide-react';
 import EnhancedNavigation from '../../components / EnhancedNavigation';
 import EnhancedFooter from '../../components / EnhancedFooter';
 export default /**
@@ -358,8 +382,6 @@ import { motion } from 'framer-motion';
       {/* CTA Section */}
       <section className='py-20 px-6'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
-=======
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">

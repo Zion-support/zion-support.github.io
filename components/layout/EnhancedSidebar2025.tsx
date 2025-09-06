@@ -1455,7 +1455,6 @@ import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, Ma
 } from 'lucide-react.ts;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SidebarItem {name: string;
-
   href: string;
 
   icon: React && React.ReactNode;

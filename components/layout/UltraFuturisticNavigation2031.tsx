@@ -471,6 +471,17 @@ export default function UltraFuturisticNavigation2031() {;
 =======
                   
                   {/* Hover effect */}
+<<<<<<< HEAD
+                  <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
+                  <Link
+                    href={item.href}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </Link>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+                  {/* Hover effect */}
 
 =======
 

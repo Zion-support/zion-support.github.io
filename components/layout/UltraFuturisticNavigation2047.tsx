@@ -576,19 +576,12 @@ const navigation_items: NavigationItem[] = [;
                                   </span>;
 
                                 )}
-                              </div>;
-                              <p className='text-sm text-gray-400 mt-1'>;
-                                {child && child.description}
-                              </p>                            </div>                    >;
-                      <div className="space-y-4">;
-                        {item && item.children?.map((child) => (;
-=======
-                      transition={{ duration: 0.2 }}
-                      className="absolute top-full left-0 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-6 z-50"
-                    >
+                              </div>
+                              <p className='text-sm text-gray-400 mt-1'>
+                                {child.description}
+                              </p>                            </div>                    >
                       <div className="space-y-4">
                         {item.children?.map((child) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           <Link
                             key={child && child.name}
                             href={child && child.href}

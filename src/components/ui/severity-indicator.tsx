@@ -26,10 +26,10 @@ export function SeverityIndicator({
 ;
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
-  show_icon?: boolean;
-  show_text?: boolean;
-  size?: "sm" | "md" | "lg";
-  class_name?: string;
+  showIcon?: boolean,
+  showText?: boolean,
+  size?: "sm" | "md" | "lg",
+  className?: string
 }
 export function SeverityIndicator ({
   severity,

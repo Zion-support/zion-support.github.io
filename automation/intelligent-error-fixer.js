@@ -91,6 +91,11 @@ class IntelligentErrorFixer {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -112,6 +117,11 @@ class IntelligentErrorFixer {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -132,6 +142,11 @@ class IntelligentErrorFixer {
   }
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -162,6 +177,11 @@ class IntelligentErrorFixer {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
       
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -185,6 +205,11 @@ class IntelligentErrorFixer {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -194,6 +219,11 @@ class IntelligentErrorFixer {
       let modified = false;
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -214,6 +244,11 @@ class IntelligentErrorFixer {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -224,6 +259,11 @@ class IntelligentErrorFixer {
       }
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -260,6 +300,11 @@ class IntelligentErrorFixer {
 
 
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
         
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -270,6 +315,11 @@ class IntelligentErrorFixer {
       }
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -322,6 +372,11 @@ class IntelligentErrorFixer {
           const relativePath = path.relative(pagesDir, path.join(dir, baseName));
 
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

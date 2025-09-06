@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import { useState } from "react";
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardDescription
-  CardFooter
-=======
-<<<<<<< HEAD
-import { useState } from "react";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardFooter,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 import {;
@@ -32,7 +8,6 @@ import {;
   CardDescription,;
   CardFooter,;
 
->>>>>>> main
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -40,44 +15,12 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react";
 
 import { format } from "date-fns";
 import { JobMatch } from "@/types/jobs";
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface JobMatchCardProps {
-=======
 interface JobMatchCardProps {;
->>>>>>> main
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-export function JobMatchesCard({
-  match
-  onApply
-  onDecline
-  showApplied = false
-}: JobMatchCardProps) {
-  const job = match.job;
-  if (!job) return null;
-
-=======
-import { useState } from "react",
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { DollarSign, Calendar, CheckCircle, XCircle } from "lucide-react",
-import { format } from "date-fns",
-import { JobMatch } from "@/types/jobs",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 export function JobMatchesCard(): any ({;
@@ -93,7 +36,6 @@ export function JobMatchesCard(): any ({;
 
 =======
 
->>>>>>> main
 interface JobMatchCardProps {
   match: JobMatch,
   onApply: (matchId: string, jobId: string) => void,
@@ -101,74 +43,12 @@ interface JobMatchCardProps {
   showApplied?: boolean
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function JobMatchesCard({
-  match,
-  onApply,
-  onDecline,
-  showApplied = false,
-}: JobMatchCardProps) {;
-  const job = match.job;
 
-  if (!job) return null;
-
-=======
-=======
-
->>>>>>> main
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <Card className="overflow-hidden border-l-4 border-l-blue-500">
-      <CardHeader className="p-4 pb-2">
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-lg">{job.title}</CardTitle>
-            <CardDescription>
-              Posted {format(new Date(job.created_at), "MMM d")}
-              {match.status === 'viewed' && match.viewed_at && (
-                <span className="ml-2 text-xs text-muted-foreground">
-                  (Viewed {format(new Date(match.viewed_at), "MMM d")})
-                </span>
-              )}
-            </CardDescription>
-          </div>
-          <Badge variant="outline" className="flex items-center">
-            {match.match_score}% Match
-          </Badge>
-        </div>
-      </CardHeader>
-      <CardContent className="p-4 pt-0">
-        <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
-          {job.description}
-        </p>
-<<<<<<< HEAD
-=======
-        
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {match.matched_skills?.length > 0 && (
-          <div className="mb-3">
-            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>
-            <div className="flex flex-wrap gap-1">
-              {match.matched_skills.slice(0, 5).map((skill, i) => (
-                <Badge key={i} variant="secondary" className="text-xs">
-<<<<<<< HEAD
-=======
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -202,7 +82,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
 =======
 
->>>>>>> main
 import { useState } from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -233,54 +112,16 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
                   (Viewed {format(new Date(match.viewed_at), "MMM d")});
                 </span>;
               )}
-<<<<<<< HEAD
-            </CardDescription>;
-          </div>;
-          <Badge variant="outline" className="flex items-center">;
-            {match.match_score}% Match;
-=======
 
             </CardDescription>;
           </div>;
           <Badge variant="outline" className="flex items-center">;
             {match && match.match_score}% Match;
->>>>>>> main
           </Badge>;
         </div>;
       </CardHeader>;
       <CardContent className="p-4 pt-0">;
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
-<<<<<<< HEAD
-          {job.description}
-        </p>;
-        {match.matched_skills?.length > 0 && (;
-          <div className="mb-3">;
-            <p className="text-xs text-muted-foreground mb-1">Matched skills:</p>;
-            <div className="flex flex-wrap gap-1">;
-              {match.matched_skills.slice(0, 5).map((skill, i) => (;
-                <Badge key={i} variant="secondary" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  {skill}
-                </Badge>
-              ))}
-              {match.matched_skills.length > 5 && (
-                <Badge variant="secondary" className="text-xs">
-                  +{match.matched_skills.length - 5}
-                </Badge>
-              )}
-            </div>
-          </div>
-        )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           {job && job.description}
         </p>;
 
@@ -312,33 +153,21 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
 
 
->>>>>>> main
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 =======
         
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -347,36 +176,22 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {match.status === "applied" |showApplied ? (
-=======
-        {match.status === 'applied' || showApplied ? (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
         {match.status === 'applied' || showApplied ? (
 
 
->>>>>>> main
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
             Applied
           </div>
-<<<<<<< HEAD
-        ) : match.status === 'declined' ? (
-=======
         ) : match.status === "declined" ? (
->>>>>>> main
           <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
             <XCircle className="h-4 w-4 mr-2" />
             Declined
           </div>
         ) : (
           <div className="flex gap-2 w-full">
-<<<<<<< HEAD
-=======
 
 
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">;
@@ -413,45 +228,12 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <Button
               variant="outline"
 =======
->>>>>>> main
             <Button 
               className="flex-1" 
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Button
-              variant="outline"
-=======
-            <Button 
-              variant="outline" 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              className="flex-1"
-              onClick={() => onDecline(match.id)}
-            >
-              Decline
-            </Button>
-          </div>
-        )}
-<<<<<<< HEAD
-      </CardFooter>
-    </Card>
-=======
-      </CardFooter>;
-    </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  );
-=======
 
             <Button 
               variant="outline" 
@@ -582,5 +364,4 @@ if (return null) {
       </CardFooter>;
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
 }

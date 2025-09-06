@@ -33,11 +33,8 @@ export function PageHero() {
 
 
           </div>
-          <h3 className='text-xl font-bold text-white mb-2'>Rapid Response</h3>
-          <p className='text-zion-slate-light'>
-            Guaranteed 4-hour response time for critical issues in most major
-            cities
-          </p>
+          <h3 className="text-xl font-bold text-white mb-2">Rapid Response</h3>
+          <p className="text-zion-slate-light">Guaranteed 4-hour response time for critical issues in most major cities</p>
         </div>
 
 
@@ -136,10 +133,11 @@ export function PageHero() {;
       </div>;
     </div>;
   );
-}
-          <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>;
-          <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>;
-
+};
+    </div>
+  )
+import { GradientHeading } from "@/components/GradientHeading";
+import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
   return (
     <div className="text-center mb-12">;

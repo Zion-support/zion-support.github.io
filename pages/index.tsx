@@ -272,49 +272,9 @@ export default function Home() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import Head from 'next/head';
-
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Zion Tech Group - Advanced IT Solutions & AI Services</title>
-        <meta name="description" content="Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div className="text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="gradient-text">Zion Tech Group</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Pioneering the future with advanced IT solutions, AI services, and cutting-edge technology
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/services" className="btn-primary">
-                  Explore Our Services
-                </Link>
-                <Link href="/contact" className="btn-secondary">
-                  Get Started Today
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 bg-slate-900/50">
-=======
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect, Suspense  } from 'react';
-import { ContactInfo, AnimationState  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary',
+import { useState, useEffect, Suspense } from 'react';
+import { ContactInfo, AnimationState } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 import PerformanceMonitor from '../components/PerformanceMonitor';
@@ -1207,6 +1167,56 @@ function HomePage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
+                >;
+                  <div className="bg - blue - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
+                    <item.icon className="w - 8 h - 8 text - blue - 600" />;
+                  </div>;
+                  <h3 className="text - xl font - semibold mb - 2 text - gray - 900">{item.title}</h3>;
+<p className="text - gray - 600">{item.description}</p>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className="py - 16 bg - blue - 600 text - white">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text - xl text - blue - 100 mb - 8 max - w-2xl mx - auto">;
+                Let's discuss how our technology solutions can drive your success;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Link;
+                  href="/contact";
+                  className="bg - yellow - 500 text - blue - 900 px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - yellow - 400 transition - colors flex items - center justify - center";
+                >;
+                  Get Free Consultation;
+                  <ArrowRight className="w - 5 h - 5 ml - 2" />;
+                </Link>;
+                <Link;
+                  href="tel:+13024640950";
+                  className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - white hover:text - blue - 600 transition - colors flex items - center justify - center";
+                >;
+                  <Phone className="w - 5 h - 5 mr - 2" />;
+                  Call Now;
+</Link>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>);
+}
+</main>;
+    </>;
+=======
                 >
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-8 h-8 text-blue-600" />

@@ -98,6 +98,13 @@ class ErrorBoundary extends Component<Props, State> {;
     return { hasError: true, error }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+    return { hasError: true, error };
+    return { hasError: true, error }
+  }
 
 
 =======
@@ -179,6 +186,7 @@ class ErrorBoundary extends Component<Props, State> {;
     }
 
 >>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 
 
@@ -222,6 +230,33 @@ class ErrorBoundary extends Component<Props, State> {;
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 =======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
   } catch (error) {
     console.error("Error:", error);
@@ -251,11 +286,23 @@ class ErrorBoundary extends Component<Props, State> {
 
 
               <button
-                onClick={() => window && window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors";
-              >;
-                Refresh Page;
-              </button>;
+                onClick={() => typeof window !== 'undefined' && window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Reload Page
+              </button>
               <button
 
 =======
@@ -625,7 +672,6 @@ class ErrorBoundary extends Component<Props, State> {;
       if (this && this.props.fallback) {;
         return this && this.props.fallback;
 }
-
       return (
 
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;

@@ -759,7 +759,6 @@ if ( {) {
         }}
 
       />;
-
       <motion&& motion.div
 
         className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20 blur-xl"
@@ -829,7 +828,6 @@ if ( {) {
         style={{ zIndex: 1 }}
 
       />;
-
       {/* Content Layer */}
 
           }}
@@ -884,8 +882,20 @@ export default UltraAdvancedQuantumBackground;
         />;
       </div>;
     </div>);
+=======
+<<<<<<< HEAD
 }
-;
+export default UltraAdvancedQuantumBackground;            ease: "linear"
+=======
+};
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 export default UltraAdvancedQuantumBackground;            ease: "linear",
             delay: 2;
           }}

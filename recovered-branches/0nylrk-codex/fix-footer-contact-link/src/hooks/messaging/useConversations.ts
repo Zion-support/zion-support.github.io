@@ -1,64 +1,17 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { supabase  } from '@/integrations/supabase/client';
-import { Conversation, ConversationContextData  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
-=======
-=======
 
->>>>>>> main
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> main
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook to handle conversation operations
  */
-<<<<<<< HEAD
-export function useConversations(;
-  user: UserWithProfile;
-  setConversations: (conversations: Conversation[]) => void;
-  setUnreadCount: (count: number) => void;
-  setIsLoading: (loading: boolean) => void
-) {
-  /**
-   * Fetch conversations for the current user
-   */
-  const fetchConversations = async () => {
-    if (!user) return;
-    setIsLoading(true)
-    try {
-      // Fetch conversations from the database
-      const { data, error } = await supabase
-        .from('conversations')
-        .select('*')
-        .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`);
-      if (error) throw error;
-      // Format conversations
-      const formattedConversations: Conversation[] = data.map(conv => {
-        const isUserOne = conv.user_one_id === user.id;
-        const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id;
-        return {
-          id: conv.id;
-          user_id: otherUserId;
-          other_user: {
-            id: otherUserId;
-            name: isUserOne ? conv.user_two_name : conv.user_one_name;
-            avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar
-            user_type: isUserOne ? conv.user_two_type : conv.user_one_type
-=======
 export function useConversations(
 =======
 import {UserProfile, UserDetails} from '@/types / auth';
@@ -125,28 +78,18 @@ if (throw error) {
             avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
             user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
 
->>>>>>> main
           }
           name: isUserOne ? conv.user_two_name : conv.user_one_name;
           avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
           last_message: conv.last_message ? {
-<<<<<<< HEAD
-            content: conv.last_message
-            created_at: conv.last_message_time
-=======
 
             content: conv.last_message,
             created_at: conv.last_message_time;
 
->>>>>>> main
           } : undefined;
           updated_at: conv.updated_at |conv.created_at;
           unread_count: conv.unread_count |0;
           context_type: conv.context_type;
-<<<<<<< HEAD
-          context_id: conv.context_id
-          context_data: conv.context_data
-=======
 
             name: isUserOne ? conv && conv.user_two_name : conv && conv.user_one_name;
             avatar_url: isUserOne ? conv && conv.user_two_avatar : conv && conv.user_one_avatar,
@@ -164,42 +107,18 @@ if (throw error) {
           context_id: conv && conv.context_id,
           context_data: conv && conv.context_data
 
->>>>>>> main
         }
       });
       setConversations(formattedConversations);
       // Calculate total unread count
-<<<<<<< HEAD
-      const totalUnread = formattedConversations.reduce(
-        (total, conv) => total + (conv.unread_count |0)
-=======
 
       const totalUnread = formattedConversations && formattedConversations.reduce(
         (total, conv) => total + (conv && conv.unread_count || 0), 
 
->>>>>>> main
         0
       );
       setUnreadCount(totalUnread)
     } catch (error) {
-<<<<<<< HEAD
-      console.error('Error fetching conversations:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  /**
-   * Create a new conversation and send initial message
-   */
-  const createConversation = async (
-    recipientId: string
-    initialMessage: string;
-    contextType: 'job' | 'talent' | 'general' = 'general';
-    contextId?: string;
-    contextData?: ConversationContextData
-  ) => {
-    if (!user |!initialMessage.trim()) return
-=======
       console && console.error('Error fetching conversations:', error)
 =======
           context_id: conv.context_id,
@@ -225,20 +144,15 @@ if (throw error) {
     if (!user || !initialMessage && initialMessage.trim()) return,
     
 
->>>>>>> main
     try {
       // Check if conversation already exists
       const { data: existingConversations, error: fetchError } = await supabase
         .from('conversations')
         .select('id')
-<<<<<<< HEAD
-        .or(`and(user_one_id.eq.${user.id},user_two_id.eq.${recipientId}),and(user_one_id.eq.${recipientId},user_two_id.eq.${user.id})`);
-=======
 
         .or(`and(user_one_id && user_one_id.eq.${user && user.id},user_two_id && user_two_id.eq.${recipientId}),and(user_one_id && user_one_id.eq.${recipientId},user_two_id && user_two_id.eq.${user && user.id})`);
         
 
->>>>>>> main
       if (fetchError) throw fetchError;
       let conversationId;
       if (existingConversations && existingConversations.length > 0) {
@@ -268,19 +182,12 @@ if (throw error) {
         const { data: newConversation, error: createError } = await supabase
           .from('conversations')
           .insert({
-<<<<<<< HEAD
-            user_one_id: user.id;
-            user_one_name: user.displayName |user.email;
-            user_one_avatar: user.avatarUrl |('avatar_url' in user ? user.avatar_url : undefined);
-            user_one_type: user.userType;
-=======
 
             user_one_id: user && user.id;
             user_one_name: user && user.displayName || user && user.email;
             user_one_avatar: user && user.avatarUrl || ('avatar_url' in user ? user && user.avatar_url : undefined);
             user_one_type: user && user.userType;
 
->>>>>>> main
             user_two_id: recipientId;
             user_two_name: recipientData?.display_name |'User';
             user_two_avatar: recipientData?.avatar_url;
@@ -296,13 +203,6 @@ if (throw error) {
           .select('id')
           .single();
         if (createError) throw createError;
-<<<<<<< HEAD
-        conversationId = newConversation.id
-<<<<<<< HEAD
-      }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
         
         conversationId = newConversation && newConversation.id
@@ -311,7 +211,6 @@ if (throw error) {
 =======
 
 
->>>>>>> main
 =======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -446,42 +345,19 @@ export function useConversations(;
           .single(),;
         if (createError) throw createError,;
         conversationId = newConversation.id;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 
 
->>>>>>> main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
       // Send the initial message
       await supabase
         .from('messages')
         .insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
-          conversation_id: conversationId;
-          sender_id: user.id;
-          recipient_id: recipientId;
-          content: initialMessage;
-          created_at: new Date().toISOString()
-          read: false
-        });
-      // Update conversations list
-      await fetchConversations();
-=======
-=======
 
 
->>>>>>> main
           conversation_id: conversationId,
           sender_id: user.id,
           recipient_id: recipientId,
@@ -493,23 +369,6 @@ export function useConversations(;
       // Update conversations list
       await fetchConversations(),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      // Return the conversation ID
-      return conversationId
-    } catch (error) {
-      console.error('Error creating conversation:', error),
-      toast({
-<<<<<<< HEAD
-        title: "Failed to create conversation";
-        description: "Please try again later"
-        variant: "destructive"
-      })
-    }
-  }
-  return {
-=======
-=======
 
 
       // Return the conversation ID
@@ -519,56 +378,10 @@ export function useConversations(;
       toast({
 
 
->>>>>>> main
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
       })
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
-
-  return {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-;
-      // Send the initial message;
-      await supabase;
-        .from('messages');
-        .insert({;
-          conversation_id: conversationId,;
-          sender_id: user.id,;
-          recipient_id: recipientId,;
-          content: initialMessage,;
-          created_at: new Date().toISOString(),;
-          read: false;
-        }),;
-      // Update conversations list;
-      await fetchConversations(),;
-      // Return the conversation ID;
-      return conversationId;
-    } catch (error) {;
-      console.error('Error creating conversation:', error),;
-      toast({;
-        title: "Failed to create conversation",;
-        description: "Please try again later",;
-        variant: "destructive";
-      });
-    }
-  };
-  return {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    fetchConversations;
-
-    createConversation}
-=======
 
 
     fetchConversations;
@@ -695,5 +508,4 @@ if (throw create_error) {
     fetch_conversations;
     create_conversation}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main
 }

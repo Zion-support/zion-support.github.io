@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -28,7 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
->>>>>>> main
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -37,47 +31,6 @@ import {SearchSuggestion} from "@/types/search";
 import {useAISearch} from "@/hooks/useAISearch";
 import {AppLayout} from "@/layout/AppLayout";
 export default function SearchPage() {;
-<<<<<<< HEAD
-  const [params] = useSearchParams();
-  const navigate = useNavigate();
-  const initial = params.get("q") || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useEffect, useState } from "react",
-import { useNavigate, useSearchParams } from "react-router-dom",
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-<<<<<<< HEAD
-import { useAISearch } from "@/hooks/useAISearch";
-import { AppLayout } from "@/layout/AppLayout";
-export default function SearchPage() {
-  const [params] = useSearchParams();
-
-  const navigate = useNavigate();
-  const initial = params.get("q") |"";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions()
-=======
-import { useAISearch } from "@/hooks/useAISearch",
-import { AppLayout } from "@/layout/AppLayout",
-export default function SearchPage() {
-  const [params] = useSearchParams(),
-  const navigate = useNavigate(),
-  const initial = params.get("q") || "",
-  const [query, setQuery] = useState(initial),
-  const { results, loading, search } = useAISearch(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
   const [params] = useSearchParams();
 
@@ -89,21 +42,10 @@ export default function SearchPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   useEffect(() => {
     if (initial) {
       search(initial)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }, [initial]);
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query)
-  }
-=======
-=======
 
   const initial = params && params.get("q") || "";
   const [query, setQuery] = useState(initial);
@@ -124,7 +66,6 @@ export default function SearchPage() {
 
 =======
 
->>>>>>> main
   }, [initial]),
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -132,14 +73,6 @@ export default function SearchPage() {
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-  return (
-    <AppLayout>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -147,19 +80,11 @@ export default function SearchPage() {
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
         <form onSubmit={handleSubmit} className="mb-6">;
->>>>>>> main
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
             searchSuggestions={suggestions}
             placeholder="Search talent, jobs, and projects..."
-<<<<<<< HEAD
-          />
-        </form>
-<<<<<<< HEAD
-=======
-
-=======
 
           />;
         </form>;
@@ -168,7 +93,6 @@ export default function SearchPage() {
 =======
 
 
->>>>>>> main
 import { useEffect, useState } from "react",;
 import { useNavigate, useSearchParams } from "react-router-dom",;
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
@@ -204,37 +128,6 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects...";
           />;
         </form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        {loading && <p className="text-zion-slate-light">Searching...</p>}
-        {!loading && results.length === 0 && (
-          <p className="text-zion-slate-light">No results found.</p>
-        )}
-        {!loading && results.length > 0 && (
-          <div className="space-y-4">
-            {results.map((r) => (
-              <div
-                key={`${r.type}-${r.id}`}
-                className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
-              >
-                <p className="text-xs uppercase text-zion-slate-light mb-1">
-                  {r.type}
-                </p>
-                <h3 className="text-lg font-bold text-white">{r.title}</h3>
-                <p className="text-zion-slate-light">{r.description}</p>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </AppLayout>
-  )
-}
-=======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -328,4 +221,3 @@ if ( {) {
     </AppLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

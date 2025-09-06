@@ -74,7 +74,6 @@ type InsightResponse = {
   regionalComparison: { region: string, medianHourlyUsd: number }[],;
   tags: string[],;
   gptRecommendation?: string;
-
 export default function SalaryInsightsPage() {;
 
 =======
@@ -602,7 +601,6 @@ if (return [] as { label: string, value: number }[], ) {
                   <option value="full-time">Full-time</option>;
               </div>;
             </div>;
-
             <div className='flex items-center gap-2 mt-3'>;
 
               <input

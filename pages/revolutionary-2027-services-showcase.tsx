@@ -682,8 +682,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
                         {/* Description */}
                         <p className='text-gray-300 text-sm mb-4 line-clamp-3'>                          {service && service.description}
                         </p>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         {/* Features */}
 
                         <div className="mb-4">
@@ -930,11 +928,6 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Start Your Transformation
-              </a>
-              <a href="/services" className="border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300">
-                <Globe className="w-5 h-5 mr-2" />
-                Explore All Services
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </a>
             </div>
           </motion.div>

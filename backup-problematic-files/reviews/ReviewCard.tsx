@@ -2,8 +2,9 @@
 
 }</div> </div>) };
 
-const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/reviews/ReviewCard.tsx
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45:backup-problematic-files/reviews/ReviewCard.tsx
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -16,14 +17,11 @@ type Props = {
   review: PublicReview,
   onReport?: (id: string) => void
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
 import {Star} from 'lucide-react';
 
 type Props = {;
   review: PublicReview,;
   onReport?: (id: string) => void;
-
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
@@ -104,7 +102,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
 
 };
-
 export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
           <span className="pill pill-success">Would work again</span>;
         )}

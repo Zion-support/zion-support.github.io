@@ -1,7 +1,6 @@
 
 
     { name: 'Contact', href: '/contact', icon: Phone }
-
   ];
 
   const service_categories = [;

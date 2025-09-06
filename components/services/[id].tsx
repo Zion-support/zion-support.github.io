@@ -90,6 +90,7 @@ export default function ServiceDetailPage() {;
 
 
   }
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
 
           content={`${service && service.name} | Zion Tech Group`}
@@ -101,18 +102,19 @@ export default function ServiceDetailPage() {;
       <div className='min-h-screen bg-black'>;
 
         {/* Navigation */}
-        <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-            <div className='flex items-center justify-between h-16'>;
+        <nav className='border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='flex items-center justify-between h-16'>
               <Button
                 href='/services'
                 variant='ghost'
                 size='sm'
-                className='text-gray-400 hover:text-white'>;
-                <ArrowLeft className='w-4 h-4 mr-2' />                Back to Services;
-              </Button>;
+                className='text-gray-400 hover:text-white'
+              >
+                <ArrowLeft className='w-4 h-4 mr-2' />                Back to Services
+              </Button>
               <Button
-                href={service && service.website}
+                href={service.website}
                 variant='primary'
                 size='sm'
 
@@ -122,9 +124,9 @@ export default function ServiceDetailPage() {;
       <div className="min-h-screen bg-black">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Navigation */}
-        <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="flex items-center justify-between h-16">;
+        <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
               <Button
                 href="/services"
                 variant="ghost"

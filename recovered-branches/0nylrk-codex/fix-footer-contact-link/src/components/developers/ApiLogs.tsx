@@ -1,47 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {format} from "date-fns";
-import {List, RefreshCw} from "lucide-react";
-import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
-
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Badge} from "@/components/ui/badge";
-<<<<<<< HEAD
-
-export function ApiLogs() {
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
-  const [pageSize, setPageSize] = useState(25);
-  const [currentPage, setCurrentPage] = useState(0);
-  // Load logs on mount and when pagination changes
-  useEffect(() => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
-  }, [pageSize, currentPage]);
-
-  const handleRefresh = () => {
-    fetchApiLogs(pageSize, currentPage * pageSize)
-  }
-  // Helper to format the timestamp
-  const formatTimestamp = (timestamp: string) => {
-    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
-  }
-=======
-=======
 
 
->>>>>>> main
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
   const [currentPage, setCurrentPage] = useState(0);
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> main
 =======
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -56,11 +20,7 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
-<<<<<<< HEAD
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 
->>>>>>> main
   
   // Load logs on mount and when pagination changes
   useEffect(() => {
@@ -77,10 +37,7 @@ export function ApiLogs() {
   },
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -92,15 +49,6 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-  // Calculate pagination info
-  const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
-=======
-=======
 
 export function ApiLogs() {;
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
@@ -141,7 +89,6 @@ export function ApiLogs() {;
   const hasPrevPage = currentPage > 0;
 =======
 
->>>>>>> main
   },
   
   // Calculate pagination info
@@ -149,31 +96,6 @@ export function ApiLogs() {;
   const hasNextPage = currentPage < totalPages - 1,
   const hasPrevPage = currentPage > 0,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
-      <CardHeader>
-        <CardTitle className="text-xl flex items-center">
-          <List className="mr-2" size={20} /> API Request Logs
-        </CardTitle>
-        <CardDescription className="text-zinc-400">
-          View logs of requests made using your API keys.
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="flex justify-between items-center mb-6">
-          <div className="flex items-center space-x-2">
-            <span className="text-sm text-zinc-400">Show</span>
-            <Select
-<<<<<<< HEAD
-              value={pageSize.toString()}
-              onValueChange={(value) => {
-                setPageSize(Number(value));
-
-                setCurrentPage(0), // Reset to first page when changing page size
-=======
-=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -181,7 +103,6 @@ export function ApiLogs() {;
 =======
             <Select
 
->>>>>>> main
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { List, RefreshCw } from "lucide-react",;
@@ -222,10 +143,7 @@ export function ApiLogs() {;
   const hasNextPage = currentPage < totalPages - 1,;
   const hasPrevPage = currentPage > 0;
   return (;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;
@@ -235,26 +153,11 @@ export function ApiLogs() {;
           View logs of requests made using your API keys.;
         </CardDescription>;
       </CardHeader>;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;
           <div className="flex items-center space-x-2">;
             <span className="text-sm text-zinc-400">Show</span>;
-<<<<<<< HEAD
-            <Select;
-              value={pageSize.toString()}
-              onValueChange={(value) => {;
-                setPageSize(Number(value));
-                setCurrentPage(0), // Reset to first page when changing page size;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Select
               value={pageSize && pageSize.toString()}
@@ -265,7 +168,6 @@ export function ApiLogs() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
@@ -329,40 +231,6 @@ export function ApiLogs() {;
                           log.method === 'GET'
                             ? "border-green-500 text-green-400"
                             : log.method === 'POST'
-<<<<<<< HEAD
-                            ? "border-blue-500 text-blue-400"
-                            : log.method === 'PUT'
-                            ? "border-yellow-500 text-yellow-400"
-                            : "border-red-500 text-red-400"
-                        }
-                      >
-                        {log.method}
-                      </Badge>
-                    </td>
-                    <td className="px-4 py-3 font-mono text-sm text-zinc-400">{log.endpoint}</td>
-                    <td className="px-4 py-3">
-                      <div className="flex items-center">
-                        <span className="font-mono mr-2">{log.status_code}</span>
-                        {getStatusBadge(log.status_code)}
-                      </div>
-                    </td>
-                    <td className="px-4 py-3 text-sm">
-                      {log.response_time_ms ? `${log.response_time_ms}ms` : '-'}
-                    </td>
-                    <td className="px-4 py-3 text-sm">{log.ip_address |'-'}</td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
-        {logs.length > 0 && (
-          <div className="mt-4 flex justify-between items-center">
-            <div className="text-sm text-zinc-500">
-              Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize, totalLogs)} of {totalLogs} logs
-            </div>
-            <div className="flex space-x-2">
-=======
 =======
                 setCurrentPage(0), // Reset to first page when changing page size;
               }}
@@ -465,40 +333,19 @@ export function ApiLogs() {;
             </div>;
             <div className="flex space-x-2">;
 
->>>>>>> main
               <Button
                 variant="outline"
                 size="sm"
                 disabled={!hasPrevPage}
                 onClick={() => setCurrentPage(currentPage - 1)}
-<<<<<<< HEAD
-              >
-                Previous
-              </Button>
-=======
               >;
                 Previous;
               </Button>;
->>>>>>> main
               <Button
                 variant="outline"
                 size="sm"
                 disabled={!hasNextPage}
                 onClick={() => setCurrentPage(currentPage + 1)}
-<<<<<<< HEAD
-              >
-                Next
-              </Button>
-            </div>
-          </div>
-        )}
-<<<<<<< HEAD
-      </CardContent>
-    </Card>
-  )
-}
-=======
-=======
               >;
                 Next;
               </Button>;
@@ -506,15 +353,10 @@ export function ApiLogs() {;
           </div>;
         )}
 
->>>>>>> main
       </CardContent>;
     </Card>;
   );
 }
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 import { useState, useEffect } from './react';
@@ -525,4 +367,3 @@ import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
 
 
 
->>>>>>> main

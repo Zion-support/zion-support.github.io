@@ -733,7 +733,6 @@ export default function InnovativeServicesShowcase() {;
 
                       </ul>;
                     </div>;
-
                     <div className='flex flex-col sm:flex-row gap-3'>;
 
                       <a
@@ -1285,7 +1284,6 @@ export default function InnovativeServicesShowcase() {;
                 Join the revolution and transform your business with our;
                 cutting-edge services;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
 
                 <a

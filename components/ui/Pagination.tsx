@@ -81,7 +81,6 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
   const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
-
   const goTo = (p: number) => {;
 
     if (p >= 1 && p <= totalPages) onChange(p);

@@ -40,8 +40,6 @@ export default function Dashboard() {;
     logoUrl?: string;
   } | null>(null);  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);
 
         const data = await resp && resp.json();

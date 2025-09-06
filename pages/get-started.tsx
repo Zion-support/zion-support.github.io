@@ -21,7 +21,6 @@
 
   Globe,;
   Building,;} from 'lucide-react';
-
 export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
   const [currentStep, setCurrentStep] = useState(1);
@@ -878,7 +877,6 @@ if ( {) {
 
                     />;
                   </div>;
-
                   <div className='flex justify-between pt-6'>;
 
                     <button

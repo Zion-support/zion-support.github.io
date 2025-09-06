@@ -291,7 +291,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
-
       <div className='min-h-screen bg-black'>;
 
         {/* Hero Section */}
@@ -451,6 +450,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                 Why Choose Zion?
               </h2>
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Key insights that make Zion the smart choice for your business.
               </p>

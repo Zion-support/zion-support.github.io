@@ -1,44 +1,24 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
 
 
->>>>>>> main
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 =======
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -58,35 +38,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "New"
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Award
-      text: "Top Rated"
-      colors: "bg-purple-500/20 text-purple-400"}}
-  const { icon: Icon, text, colors } = badgeConfig[type];
-  return (
-    <div className={cn(
-      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
-      colors;
-
-=======
-      icon: Award,
-      text: "Top Rated",
-      colors: "bg-purple-500/20 text-purple-400"}},
-<<<<<<< HEAD
-;
-  const { icon: Icon, text, colors } = badgeConfig[type];
-=======
-
-  const { icon: Icon, text, colors } = badgeConfig[type],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
-  return (
-    <div className={cn(
-      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
-      colors,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 =======
@@ -95,43 +46,26 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
 
->>>>>>> main
       className
     )}>
       <Icon className="w-3 h-3" />
       <span>{text}</span>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> main
 =======
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',;
-<<<<<<< HEAD
-=======
 
->>>>>>> main
 interface ProfileBadgeProps {;
   type: BadgeType,;
   className?: string;
 }
-<<<<<<< HEAD
-;
-export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
-=======
 
 export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
->>>>>>> main
   const badgeConfig = {;
     verified: {;
       icon: BadgeCheck,;
@@ -149,14 +83,6 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       icon: Award,;
       text: "Top Rated",;
       colors: "bg-purple-500/20 text-purple-400"}},;
-<<<<<<< HEAD
-  const { icon: Icon, text, colors } = badgeConfig[type],;
-  return (;
-    <div className={cn(;
-      "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
-      colors;
-      className;
-=======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { icon: Icon, text, colors } = badgeConfig[type];
@@ -166,21 +92,11 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium"
       colors
       className
->>>>>>> main
     )}>;
       <Icon className="w-3 h-3" />;
       <span>{text}</span>;
     </div>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -227,4 +143,3 @@ function ProfileBadge() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

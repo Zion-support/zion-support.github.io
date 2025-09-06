@@ -627,7 +627,14 @@ function CaseStudiesPage() {
 
   );
 }
+<<<<<<< HEAD
+import Head from 'next/head';
+export default function CaseStudiesPage() {;
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 import Head from 'next/head';
 

@@ -173,17 +173,16 @@ export function ClientDashboard() {
 
 
         <Card>
-          <CardContent className='p-4 space-y-4'>
-            <div className='flex gap-3 items-start'>
-              <div className='bg-primary/10 p-2 rounded-full'>
-                <Bell className='h-5 w-5 text-primary' />
+          <CardContent className="p-4 space-y-4">
+            <div className="flex gap-3 items-start">
+              <div className="bg-primary/10 p-2 rounded-full">
+                <Bell className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <p className='text-sm'>
-                  <strong>Website Redesign:</strong> Sarah submitted Milestone 2
-                  for review
+                <p className="text-sm">
+                  <strong>Website Redesign: </strong> Sarah submitted Milestone 2 for review
                 </p>
-                <p className='text-xs text-muted-foreground'>2 hours ago</p>
+                <p className="text-xs text-muted-foreground">2 hours ago</p>
               </div>
             </div>
 

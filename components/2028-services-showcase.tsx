@@ -415,7 +415,8 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 =======
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+      <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
@@ -427,7 +428,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
 
@@ -435,8 +436,8 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
-              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
-                Transform;
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                Transform
               </span>{' '}
 
               Your Business?;
@@ -451,10 +452,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 
               <Link
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'>;
-                <span>Start Your Journey</span>;
-                <ArrowRight className='w-5 h-5' />;
-              </Link>;
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'
+              >
+                <span>Start Your Journey</span>
+                <ArrowRight className='w-5 h-5' />
+              </Link>
               <Link
                 href='/case-studies'
 
@@ -462,8 +464,6 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 =======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
               Understand the market dynamics and growth potential of our futuristic services.;

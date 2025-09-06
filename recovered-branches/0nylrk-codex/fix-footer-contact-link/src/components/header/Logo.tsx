@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-import { Link  } from 'react-router-dom';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-interface LogoProps {
-  customLogo?: string;
-  customColor?: string
-}
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
-  // Use the white-label logo if available and no specific customLogo is provided
-
-  const logoToUse = customLogo |(isWhitelabel ? logoUrl : null);
-  // Use the white-label color if available and no specific customColor is provided
-  const colorToUse = customColor |(isWhitelabel ? primaryColor : undefined);
-
-=======
-=======
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -41,42 +21,12 @@ export function Logo(): any ({ customLogo, customColor }: LogoProps) {;
   if (logoToUse) {;
 =======
 
->>>>>>> main
 import React from "react";
 import { Link } from "react-router-dom";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 interface LogoProps {
   customLogo?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  customColor?: string;
-}
 
-export function Logo({ customLogo, customColor }: LogoProps) {;
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  customColor?: string;
-}
-
-import React from 'react',;
-import { Link } from 'react-router-dom',;
-import { useWhitelabel } from '@/context/WhitelabelContext',;
-interface LogoProps {;
-  customLogo?: string,;
-  customColor?: string;
-}
-
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
-  
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-
->>>>>>> main
   // Use the white-label logo if available and no specific customLogo is provided
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
   // Use the white-label color if available and no specific customColor is provided
@@ -84,18 +34,6 @@ export function Logo({ customLogo, customColor }: LogoProps) {
   
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (logoToUse) {
-<<<<<<< HEAD
-    return (
-      <Link to="/" className="flex items-center">
-        <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />
-      </Link>
-    )
-  }
-<<<<<<< HEAD
-=======
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Link to="/" className="flex items-center">;
@@ -114,29 +52,12 @@ interface LogoProps {
 
   
 
->>>>>>> main
   return (
     <Link to="/" className="flex items-center">
       <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
       </div>
     </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-<<<<<<< HEAD
-=======
-=======
-  )
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-=======
-  )
-}
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 =======
   )
@@ -179,4 +100,3 @@ if ( {) {
     </Link>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> main

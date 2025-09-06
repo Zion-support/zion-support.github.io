@@ -1,24 +1,9 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { format  } from 'date-fns';
-import { PaperclipIcon  } from 'lucide-react';
-import { cn  } from '@/lib/utils';
-import { Message } from '@/types/messaging';
-interface MessageBubbleProps {
-<<<<<<< HEAD
-=======
-  message: Message,
-  isUserMessage: boolean
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
   message: Message,
   isUserMessage: boolean
 
->>>>>>> main
 =======
 import React from 'react',;
 import { format } from 'date-fns',;
@@ -28,21 +13,12 @@ import { Message } from '@/types/messaging',;
 interface MessageBubbleProps {;
   message: Message,;
   isUserMessage: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> main
 
   message: Message
 
@@ -50,32 +26,6 @@ interface MessageBubbleProps {;
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-    <div className={cn(;
-      "flex";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    <div className={cn(
-      "flex",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      isUserMessage ? "justify-end" : "justify-start"
-    )}>
-      <div className={cn(
-<<<<<<< HEAD
-        "max-w-[75%] rounded-lg px-4 py-2";
-        isUserMessage
-          ? "bg-zion-purple text-white"
-
-=======
-        "max-w-[75%] rounded-lg px-4 py-2",
-        isUserMessage 
-          ? "bg-zion-purple text-white" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
@@ -88,7 +38,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
           ? "bg-zion-purple text-white" 
 
 
->>>>>>> main
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>
@@ -100,35 +49,20 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
           >
             <PaperclipIcon className="h-3 w-3 mr-1" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {message.attachment_name |'Attachment'}
-          </a>
-        )}
-=======
-=======
 
 
->>>>>>> main
             {message.attachment_name || 'Attachment'}
           </Link>
         )}
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> main
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
 }
 =======
 import {format} from 'date-fns';
@@ -213,4 +147,3 @@ function MessageBubble() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> main

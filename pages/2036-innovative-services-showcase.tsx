@@ -678,8 +678,6 @@ export default function InnovativeServicesShowcase2036() {
                       {service.rating && (
 
                     </div>;
-=======
-
                     {/* Market Size */}
 
                     {/* Market Size */}

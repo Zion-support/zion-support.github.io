@@ -49,6 +49,13 @@ interface ActiveFiltersProps {
   
   if (!hasActiveFilters) return null,
 
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">
       <span className="text-zion-slate-light text-sm">Active filters:</span>
@@ -156,10 +163,14 @@ export function ActiveFilters(): any ({;
 
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => setPriceRange([50, 200])}        >;
-          ${priceRange[0]}-${priceRange[1]}/hr;
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;
+          onClick={() => setPriceRange([50, 200])}        >
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => setPriceRange([50, 200])}
+        >
+          ${priceRange[0]}-${priceRange[1]}/hr
+          <X className="h-3 w-3" />
+        </ClickableBadge>
       )}
 
 
@@ -167,10 +178,14 @@ export function ActiveFilters(): any ({;
 
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
-          onClick={() => setExperienceRange([0, 15])}        >;
-          {experienceRange[0]}-{experienceRange[1]} years;
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;
+          onClick={() => setExperienceRange([0, 15])}        >
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={() => setExperienceRange([0, 15])}
+        >
+          {experienceRange[0]}-{experienceRange[1]} years
+          <X className="h-3 w-3" />
+        </ClickableBadge>
       )}
           <X className="h-3 w-3" />
 

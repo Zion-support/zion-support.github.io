@@ -65,6 +65,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   type = 'website'
   image = '/og-image.jpg'
   url
+<<<<<<< HEAD
+=======
 
 
 
