@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive merge conflict resolution...');
+console.log('🔧 Starting improved merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
@@ -24,58 +24,16 @@ function resolveMergeConflicts(filePath) {
 
     console.log(`🔧 Resolving conflicts in: ${filePath}`);
 
-    // Strategy 1: Keep our changes (HEAD) for most files
+    // Simple strategy: keep our changes (HEAD) for all files
     let resolvedContent = content;
     
-    // For specific file types, use different strategies
-    if (filePath.includes('package.json') || filePath.includes('package-lock.json')) {
-      // For package files, prefer the newer version
-      resolvedContent = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-        const parts = match.split('=======');
-        if (parts.length === 2) {
-          const headPart = parts[0].replace('<<<<<<< HEAD', '').trim();
-          const incomingPart = parts[1].replace(/>>>>>>> [^\n]+/, '').trim();
-          
-          // For package.json, prefer the version with more dependencies
-          if (filePath.includes('package.json')) {
-            const headDeps = (headPart.match(/"dependencies"/g) || []).length;
-            const incomingDeps = (incomingPart.match(/"dependencies"/g) || []).length;
-            return headDeps >= incomingDeps ? headPart : incomingPart;
-          }
-          
-          return headPart; // Default to HEAD
-        }
-        return headPart;
-      });
-    } else if (filePath.includes('.tsx') || filePath.includes('.ts') || filePath.includes('.jsx') || filePath.includes('.js')) {
-      // For code files, prefer our enhanced version
-      resolvedContent = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-        const parts = match.split('=======');
-        if (parts.length === 2) {
-          const headPart = parts[0].replace('<<<<<<< HEAD', '').trim();
-          const incomingPart = parts[1].replace(/>>>>>>> [^\n]+/, '').trim();
-          
-          // Prefer the version with more content (our enhanced version)
-          return headPart.length >= incomingPart.length ? headPart : incomingPart;
-        }
-        return headPart;
-      });
-    } else {
-      // For other files, use a simple strategy
-      resolvedContent = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-        const parts = match.split('=======');
-        if (parts.length === 2) {
-          const headPart = parts[0].replace('<<<<<<< HEAD', '').trim();
-          return headPart;
-        }
-        return match;
-      });
-    }
-
+    // Replace all conflict markers with HEAD content
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
     resolvedContent = resolvedContent.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======/g, '');
 
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
