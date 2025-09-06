@@ -1,81 +1,41 @@
 {
-  "timestamp": "2025-09-06T18:58:17.722Z",
-  "summary": {
-    "totalScripts": 8,
-    "successful": 4,
-    "failed": 4,
-    "filesProcessed": 6678,
-    "newScriptsCreated": 8,
-    "enhancements": [
-      "Performance Optimization",
-      "Security Enhancement",
-      "SEO Optimization",
-      "Accessibility Enhancement",
-      "Conflict Resolution",
-      "Syntax Fixing",
-      "File Cleanup",
-      "Configuration Fixes"
+  "timestamp": "2025-09-06T19:00:34.213Z",
+  "duration": "38s",
+  "results": {
+    "tests": {
+      "passed": 0,
+      "failed": 2,
+      "errors": [
+        "spawnSync /bin/sh ENOBUFS",
+        "spawnSync /bin/sh ETIMEDOUT"
+      ]
+    },
+    "builds": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Conflicting app and page files were found, please remove the conflicting files to continue:\n ⨯   \"pages/about.tsx\" - \"app/about/page.tsx\"\n ⨯   \"pages/contact.tsx\" - \"app/contact/page.tsx\"\n ⨯   \"pages/index.tsx\" - \"app/page.tsx\"\n ⨯   \"pages/services/cybersecurity.tsx\" - \"app/services/cybersecurity/page.tsx\"\n ⨯   \"pages/services/index.tsx\" - \"app/services/page.tsx\"\n"
+      ]
+    },
+    "linting": {
+      "success": false,
+      "errors": [
+        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1757185109655:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async dynamicImportConfig (/workspace/node_modules/eslint/lib/config/config-loader.js:186:17)\n    at async loadConfigFile (/workspace/node_modules/eslint/lib/config/config-loader.js:276:9)\n    at async ConfigLoader.calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:589:23)\n    at async #calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:743:23)\n    at async directoryFilter (/workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:308:5)\n    at async NodeHfs.<anonymous> (file:///workspace/node_modules/@humanfs/core/src/hfs.js:586:29)\n    at async NodeHfs.walk (file:///workspace/node_modules/@humanfs/core/src/hfs.js:614:3)\n"
+      ]
+    },
+    "security": {
+      "issues": [],
+      "fixed": 0
+    },
+    "improvements": [
+      "Created performance monitoring script"
     ]
   },
-  "nextSteps": [
-    "Review and test all automation scripts",
-    "Set up monitoring dashboards",
-    "Configure deployment pipelines",
-    "Implement automated testing",
-    "Set up performance monitoring",
-    "Configure security scanning",
-    "Set up backup procedures"
-  ],
-  "scripts": [
-    "run-automation-suite.cjs",
-    "resolve-all-conflicts.cjs",
-    "comprehensive-syntax-fixer.cjs",
-    "jsx-syntax-fixer.cjs",
-    "fix-minified-files.cjs",
-    "cleanup-services-directory.cjs",
-    "cleanup-all-corrupted-files.cjs",
-    "scripts/performance-optimizer.cjs",
-    "scripts/security-enhancer.cjs",
-    "scripts/seo-optimizer.cjs",
-    "scripts/accessibility-enhancer.cjs"
-  ],
-  "improvements": [
-    "Resolved 6,678+ files with merge conflicts",
-    "Fixed syntax issues in JSX and TypeScript files",
-    "Created comprehensive automation scripts",
-    "Enhanced performance optimization",
-    "Improved security configurations",
-    "Added SEO optimization features",
-    "Enhanced accessibility support",
-    "Fixed PostCSS and ESLint configurations"
-  ],
-  "errors": [
-    {
-      "action": "Fixing linting issues",
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1757185034373:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async dynamicImportConfig (/workspace/node_modules/eslint/lib/config/config-loader.js:186:17)\n    at async loadConfigFile (/workspace/node_modules/eslint/lib/config/config-loader.js:276:9)\n    at async ConfigLoader.calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:589:23)\n    at async #calculateConfigArray (/workspace/node_modules/eslint/lib/config/config-loader.js:743:23)\n    at async directoryFilter (/workspace/node_modules/eslint/lib/eslint/eslint-helpers.js:308:5)\n    at async NodeHfs.<anonymous> (file:///workspace/node_modules/@humanfs/core/src/hfs.js:586:29)\n    at async NodeHfs.walk (file:///workspace/node_modules/@humanfs/core/src/hfs.js:614:3)\n"
-    },
-    {
-      "action": "Type checking",
-      "error": "spawnSync /bin/sh ENOBUFS"
-    },
-    {
-      "action": "Running smoke tests",
-      "error": "Command failed: npm run test:smoke\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ Mismatching @next/swc version, detected: 15.5.2 while Next.js is on 14.2.32. Please ensure these match\n[napi-postinstall@0.3.3] Trying to install package \"@unrs/resolver-binding-linux-x64-gnu\" using npm\nFAIL ./App.smoke.test.tsx\n  ● Test suite failed to run\n\n      \u001b[31mx\u001b[0m Expression expected\n       ,-[\u001b[36;1;4m/workspace/App.smoke.test.tsx\u001b[0m:1:1]\n     \u001b[2m1\u001b[0m |   });\n       : \u001b[35;1m  ^\u001b[0m\n     \u001b[2m2\u001b[0m | });\n       `----\n\n\n    Caused by:\n        Syntax Error\n\n      at Object.transformSync (node_modules/next/src/build/swc/index.ts:1433:25)\n      at transformSync (node_modules/next/src/build/swc/index.ts:1550:19)\n      at Object.process (node_modules/next/src/build/swc/jest-transformer.ts:104:25)\n      at ScriptTransformer.transformSource (node_modules/@jest/transform/build/index.js:422:31)\n      at ScriptTransformer._transformAndBuildScript (node_modules/@jest/transform/build/index.js:519:40)\n      at ScriptTransformer.transform (node_modules/@jest/transform/build/index.js:558:19)\n\nTest Suites: 1 failed, 1 total\nTests:       0 total\nSnapshots:   0 total\nTime:        0.45 s\nRan all test suites.\n"
-    },
-    {
-      "action": "Building Next.js project",
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Conflicting app and page files were found, please remove the conflicting files to continue:\n ⨯   \"pages/about.tsx\" - \"app/about/page.tsx\"\n ⨯   \"pages/contact.tsx\" - \"app/contact/page.tsx\"\n ⨯   \"pages/index.tsx\" - \"app/page.tsx\"\n ⨯   \"pages/services/cybersecurity.tsx\" - \"app/services/cybersecurity/page.tsx\"\n ⨯   \"pages/services/index.tsx\" - \"app/services/page.tsx\"\n"
-    },
-    {
-      "action": "Pushing to main branch",
-      "error": "Command failed: git push origin main\nTo https://github.com/Zion-Holdings/zion.app\n ! [rejected]                main -> main (fetch first)\nerror: failed to push some refs to 'https://github.com/Zion-Holdings/zion.app'\nhint: Updates were rejected because the remote contains work that you do not\nhint: have locally. This is usually caused by another repository pushing to\nhint: the same ref. If you want to integrate the remote changes, use\nhint: 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
-    }
-  ],
-  "recommendations": [
-    "Continue monitoring build process",
-    "Regularly run automation scripts",
-    "Keep dependencies updated",
-    "Monitor performance metrics",
-    "Regular security audits"
-  ]
+  "summary": {
+    "testsPassed": 0,
+    "testsFailed": 2,
+    "buildSuccess": false,
+    "lintingSuccess": false,
+    "securityIssuesFixed": 0,
+    "improvementsCreated": 1
+  }
 }
