@@ -50,13 +50,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Productivity Tools"
               description="Task management, time tracking, and workflow optimization tools"
-              features={[}
+              features={[
                 "Task management systems",
                 "Time tracking & reporting",
                 "Team collaboration tools",
                 "Project management dashboards",
                 "Automation workflows",
-                "Integration APIs"}
+                "Integration APIs"
               ]}
               pricing="From $2,999/month"
               icon="⚡"
@@ -67,13 +67,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Marketing Tools"
               description="Email marketing, social media management, and campaign optimization"
-              features={[}
+              features={[
                 "Email marketing automation",
                 "Social media scheduling",
                 "Campaign analytics",
                 "Lead generation tools",
                 "A/B testing platforms",
-                "ROI tracking"}
+                "ROI tracking"
               ]}
               pricing="From $3,500/month"
               icon="📢"
@@ -84,13 +84,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Analytics Tools"
               description="Business intelligence, data visualization, and reporting solutions"
-              features={[}
+              features={[
                 "Custom dashboards",
                 "Data visualization",
                 "Real-time reporting",
                 "Predictive analytics",
                 "Custom metrics",
-                "Export capabilities"}
+                "Export capabilities"
               ]}
               pricing="From $2,200/month"
               icon="📊"
@@ -101,13 +101,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Communication Tools"
               description="Team chat, video conferencing, and collaboration platforms"
-              features={[}
+              features={[
                 "Team messaging",
                 "Video conferencing",
                 "File sharing",
                 "Screen sharing",
                 "Mobile apps",
-                "Integration hub"}
+                "Integration hub"
               ]}
               pricing="From $1,800/month"
               icon="💬"
@@ -118,13 +118,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Financial Tools"
               description="Invoicing, expense tracking, and financial management solutions"
-              features={[}
+              features={[
                 "Automated invoicing",
                 "Expense tracking",
                 "Financial reporting",
                 "Tax preparation",
                 "Payment processing",
-                "Budget management"}
+                "Budget management"
               ]}
               pricing="From $2,500/month"
               icon="💰"
@@ -135,13 +135,13 @@ export default function MicroSaaSPage() {
             <MicroSaaSCard
               title="Customer Support Tools"
               description="Helpdesk, ticketing, and customer service automation"
-              features={[}
+              features={[
                 "Ticket management",
                 "Knowledge base",
                 "Live chat integration",
                 "Customer feedback",
                 "Performance metrics",
-                "Multi-channel support"}
+                "Multi-channel support"
               ]}
               pricing="From $1,600/month"
               icon="🎧"
@@ -276,12 +276,12 @@ export default function MicroSaaSPage() {
               price="$2,999"
               period="month"
               description="Perfect for MVPs and early-stage startups"
-              features={[}
+              features={[
                 "Basic SaaS features",
                 "Up to 1,000 users",
                 "Email support",
                 "Basic analytics",
-                "Standard hosting"}
+                "Standard hosting"
               ]}
               popular={false}
             />
@@ -290,13 +290,13 @@ export default function MicroSaaSPage() {
               price="$4,999"
               period="month"
               description="Ideal for growing businesses"
-              features={[}
+              features={[
                 "Advanced features",
                 "Up to 10,000 users",
                 "Priority support",
                 "Advanced analytics",
                 "Premium hosting",
-                "API access"}
+                "API access"
               ]}
               popular={true}
             />
@@ -305,13 +305,13 @@ export default function MicroSaaSPage() {
               price="Custom"
               period=""
               description="For large-scale operations"
-              features={[}
+              features={[
                 "Custom features",
                 "Unlimited users",
                 "24/7 support",
                 "Custom analytics",
                 "Dedicated hosting",
-                "White-label options"}
+                "White-label options"
               ]}
               popular={false}
             />

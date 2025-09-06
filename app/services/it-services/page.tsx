@@ -50,13 +50,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Cloud Services"
               description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP"
-              features={[}
+              features={[
                 "Cloud migration planning",
                 "Multi-cloud architecture",
                 "Cost optimization",
                 "Auto-scaling setup",
                 "Disaster recovery",
-                "Cloud security"}
+                "Cloud security"
               ]}
               pricing="From $3,500/month"
               icon="☁️"
@@ -67,13 +67,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="DevOps & CI/CD"
               description="Automated deployment pipelines, infrastructure as code, and continuous integration"
-              features={[}
+              features={[
                 "CI/CD pipeline setup",
                 "Infrastructure as Code",
                 "Container orchestration",
                 "Monitoring & alerting",
                 "Automated testing",
-                "Deployment automation"}
+                "Deployment automation"
               ]}
               pricing="From $4,200/month"
               icon="🔄"
@@ -84,13 +84,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Cybersecurity"
               description="Comprehensive security solutions and compliance management"
-              features={[}
+              features={[
                 "Security assessment",
                 "Penetration testing",
                 "Threat detection",
                 "Compliance management",
                 "Security training",
-                "Incident response"}
+                "Incident response"
               ]}
               pricing="From $5,000/month"
               icon="🔒"
@@ -101,13 +101,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Network Management"
               description="Network design, implementation, and ongoing management"
-              features={[}
+              features={[
                 "Network design & planning",
                 "Router & switch configuration",
                 "VPN setup",
                 "Network monitoring",
                 "Performance optimization",
-                "Troubleshooting"}
+                "Troubleshooting"
               ]}
               pricing="From $2,800/month"
               icon="🌐"
@@ -118,13 +118,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="System Administration"
               description="Server management, maintenance, and optimization"
-              features={[}
+              features={[
                 "Server setup & configuration",
                 "User account management",
                 "Backup & recovery",
                 "Performance monitoring",
                 "Security updates",
-                "System maintenance"}
+                "System maintenance"
               ]}
               pricing="From $3,200/month"
               icon="🖥️"
@@ -135,13 +135,13 @@ export default function ITServicesPage() {
             <ITServiceCard
               title="Database Management"
               description="Database design, optimization, and maintenance"
-              features={[}
+              features={[
                 "Database design",
                 "Performance optimization",
                 "Backup & recovery",
                 "Security hardening",
                 "Query optimization",
-                "Monitoring & tuning"}
+                "Monitoring & tuning"
               ]}
               pricing="From $2,500/month"
               icon="🗄️"
@@ -285,12 +285,12 @@ export default function ITServicesPage() {
               price="$3,000"
               period="month"
               description="Essential IT support for small businesses"
-              features={[}
+              features={[
                 "5 hours/month support",
                 "Email & phone support",
                 "Basic monitoring",
                 "Security updates",
-                "Backup management"}
+                "Backup management"
               ]}
               popular={false}
             />
@@ -299,13 +299,13 @@ export default function ITServicesPage() {
               price="$5,000"
               period="month"
               description="Comprehensive IT management for growing businesses"
-              features={[}
+              features={[
                 "15 hours/month support",
                 "24/7 monitoring",
                 "Priority support",
                 "Advanced security",
                 "Cloud management",
-                "Monthly reporting"}
+                "Monthly reporting"
               ]}
               popular={true}
             />
@@ -314,13 +314,13 @@ export default function ITServicesPage() {
               price="Custom"
               period=""
               description="Full IT management for large organizations"
-              features={[}
+              features={[
                 "Unlimited support",
                 "Dedicated team",
                 "Custom solutions",
                 "Enterprise security",
                 "Multi-cloud management",
-                "Quarterly reviews"}
+                "Quarterly reviews"
               ]}
               popular={false}
             />

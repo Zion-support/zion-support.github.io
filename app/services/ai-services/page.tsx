@@ -67,13 +67,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="Computer Vision"
               description="Image and video analysis solutions for object detection, recognition, and processing"
-              features={[}
+              features={[
                 "Object detection & recognition",
                 "Facial recognition systems",
                 "Image classification",
                 "Video analysis",
                 "OCR & document processing",
-                "Medical image analysis"}
+                "Medical image analysis"
               ]}
               pricing="From $4,200/month"
               icon="👁️"
@@ -84,13 +84,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="Machine Learning Models"
               description="Custom ML models for predictive analytics, recommendation systems, and data insights"
-              features={[}
+              features={[
                 "Predictive modeling",
                 "Recommendation engines",
                 "Anomaly detection",
                 "Time series forecasting",
                 "Clustering algorithms",
-                "Model optimization"}
+                "Model optimization"
               ]}
               pricing="From $2,800/month"
               icon="🧠"
@@ -101,13 +101,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="AI Chatbots & Assistants"
               description="Intelligent conversational AI for customer support, sales, and internal operations"
-              features={[}
+              features={[
                 "Multi-channel chatbots",
                 "Voice assistants",
                 "Intent recognition",
                 "Context management",
                 "Integration APIs",
-                "Analytics dashboard"}
+                "Analytics dashboard"
               ]}
               pricing="From $1,500/month"
               icon="💬"
@@ -118,13 +118,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="RAG Systems"
               description="Retrieval-Augmented Generation systems for intelligent document processing and Q&A"
-              features={[}
+              features={[
                 "Document indexing",
                 "Semantic search",
                 "Knowledge base integration",
                 "Context-aware responses",
                 "Source citation",
-                "Real-time updates"}
+                "Real-time updates"
               ]}
               pricing="From $5,000/month"
               icon="📚"
@@ -135,13 +135,13 @@ export default function AIServicesPage() {
             <AIServiceCard
               title="Predictive Analytics"
               description="Advanced analytics and forecasting for business intelligence and decision making"
-              features={[}
+              features={[
                 "Demand forecasting",
                 "Risk assessment",
                 "Customer behavior prediction",
                 "Market trend analysis",
                 "Real-time dashboards",
-                "Automated reporting"}
+                "Automated reporting"
               ]}
               pricing="From $3,800/month"
               icon="📊"
