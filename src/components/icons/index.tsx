@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const Home = LucideHome;
 export const Bot = LucideBot;
 export const Sparkles = LucideSparkles;
@@ -301,7 +300,6 @@ export const Zap = LucideZap;
 export const ZoomIn = LucideZoomIn;
 export const ZoomOut = LucideZoomOut;
 
-<<<<<<< HEAD
   return <LucideIconComponent size={size} className={className} {...props} />
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     required_error: "Start date is required"}),
   end_date: z.date().optional(),
   is_current: z.boolean().default(false),
@@ -7,6 +6,5 @@
 
 type FormValues = z.infer<typeof formSchema>;
 
-<<<<<<< HEAD
       location: initialData?.location || ""}}),
   

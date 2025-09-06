@@ -32,22 +32,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const filePath = path.join(dir, safeName);
       await fsPromisesWrite(filePath, buffer);
       dispute.attachments.push({
-        id: `${Date.now()}-${safeName}`;
-        fileName: safeName;
-        fileSize: buffer.length;
-        mimeType: f.mimeType || 'application/octet-stream';
-        path: filePath;
-        uploadedAt: now;
-        uploadedByUserId: user.id})
+        id: `${Date.now()}-${safeName}`,
+        fileName: safeName,
+        fileSize: buffer.length,
+        mimeType: f.mimeType || 'application/octet-stream',
+        path: filePath,
+        uploadedAt: now,
+        uploadedByUserId: user.id
+      });
     }
 
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-    return res.status(201).json({ dispute })
+    return res.status(201).json({ dispute });
   }
 
-  res.setHeader('AllowPOST');
-  return res.status(405).end('Method Not Allowed')
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
 }
 
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {

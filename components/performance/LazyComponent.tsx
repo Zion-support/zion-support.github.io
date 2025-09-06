@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 
 interface LazyComponentProps {

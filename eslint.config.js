@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       react,
       'react-hooks': reactHooks
     },

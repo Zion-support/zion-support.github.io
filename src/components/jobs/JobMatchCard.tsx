@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   talentId, 
   name, 
   title, 

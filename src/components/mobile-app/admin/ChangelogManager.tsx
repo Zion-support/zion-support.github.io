@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   platform: AppPlatform;
 }
 
@@ -9,11 +8,8 @@ type ChangelogEntry = {
   changes: string;
 };
 
-<<<<<<< HEAD
   
-<<<<<<< HEAD
   
-<<<<<<< HEAD
     });
   };
   
@@ -21,6 +17,5 @@ type ChangelogEntry = {
     setEntries(entries.filter(entry => entry.id !== id));
   };
   
-<<<<<<< HEAD
   );
 };

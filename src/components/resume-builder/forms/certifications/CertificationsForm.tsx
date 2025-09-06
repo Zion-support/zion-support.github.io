@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
@@ -8,5 +7,4 @@
       expiration_date: formatDateValue(cert.expiration_date)})
   };
 
-<<<<<<< HEAD
 

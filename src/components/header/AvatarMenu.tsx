@@ -1,3 +1,2 @@
-<<<<<<< HEAD
 
 export default AvatarMenu;

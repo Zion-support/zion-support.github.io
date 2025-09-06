@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Image from 'next/image';
 import { Star, Heart, ShoppingCart } from 'lucide-react';

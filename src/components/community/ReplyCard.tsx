@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   reply;
   onMarkAnswer, 
   canMarkAnswer = false;

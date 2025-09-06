@@ -1,3 +1,2 @@
-<<<<<<< HEAD
   milestoneId, 
   variant = "outline", 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable;
   const buttonTitle = !isWalletSystemAvailable

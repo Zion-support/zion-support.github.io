@@ -1,2 +1,1 @@
-<<<<<<< HEAD
 export default CodeBlock;

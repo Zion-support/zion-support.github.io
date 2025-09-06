@@ -20,11 +20,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const iface = new Interface(abi);
     const data = iface.encodeDeploy(constructorArgs);
     const tx = {
-      data: bytecode + data.slice(2);
+      data: bytecode + data.slice(2)
       // gas and value are intentionally left for client to estimate via MetaMask
     };
-    return res.status(200).json({ abi, tx })
+    return res.status(200).json({ abi, tx });
   } catch (e: any) {
-    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
+    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' });
   }
 }

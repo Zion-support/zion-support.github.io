@@ -1,12 +1,9 @@
-<<<<<<< HEAD
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
-<<<<<<< HEAD
   const params = router.query as { slug?: string };
   const slug = slugProp ?? params.slug;
 
-<<<<<<< HEAD
       icon: <Briefcase className="w-6 h-6" />
     };
     'talents': {
@@ -59,19 +56,14 @@
       description: "AI-powered coding assistance and automation",
       icon: <Code className="w-6 h-6" />
     };
-<<<<<<< HEAD
           icon: <Bot className="w-6 h-6" />},
 
         setCategory(currentCategory);
         innovationCounterRef.current = 0;
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
       
-<<<<<<< HEAD
       
-<<<<<<< HEAD
     : 'Category | Zion Marketplace';
   const seoDescription =
     category.description || 'Explore listings in this category.';

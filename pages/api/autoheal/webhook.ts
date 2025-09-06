@@ -32,18 +32,19 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({
-        owner;
-        repo;
-        workflow_id: 'autoheal.yml';
-        ref: 'dev';
-        inputs: { issue_number: String(issue.data.number) }} as any)
+        owner,
+        repo,
+        workflow_id: 'autoheal.yml',
+        ref: 'dev',
+        inputs: { issue_number: String(issue.data.number) }
+      } as any);
     } catch (e) {
       // ignore if missing
     }
 
-    return res.status(200).json({ ok: true, issue: issue.data.number })
+    return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (e) {
     console.error(e);
-    return res.status(500).json({ error: 'Failed to process webhook' })
+    return res.status(500).json({ error: 'Failed to process webhook' });
   }
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   env: { ...defaultEnv };
   versions: {};
   platform: 'browser';
@@ -6,9 +5,7 @@
   version: '18.0.0';
   browser: true});
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
   NODE_ENV: 'production';
   NEXT_PUBLIC_APP_URL: '';

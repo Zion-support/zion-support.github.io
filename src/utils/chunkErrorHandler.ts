@@ -1,29 +1,21 @@
-<<<<<<< HEAD
   private readonly CACHE_CLEAR_THRESHOLD = 2;
 
-<<<<<<< HEAD
     const errorName = error.name || '';
     
     const chunkErrorPatterns = [
       'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to importchunk-vendors-'
     ];
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
         
       case 2:
         // Second attempt: Clear caches and retry
-<<<<<<< HEAD
         
       case 3:
         // Third attempt: Hard refresh with cache bypass
-<<<<<<< HEAD
           cacheNames.map(cacheName => caches.delete(cacheName))
         );
-<<<<<<< HEAD
         <button onclick="window.location.reload()" style="
           background: #0070f3;
           color: white;

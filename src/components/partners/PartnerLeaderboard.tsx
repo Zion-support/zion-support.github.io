@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       case 1:
         return <Trophy className="h-5 w-5 text-yellow-500" />;
       case 2:

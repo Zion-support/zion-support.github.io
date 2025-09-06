@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   init: noop;
   captureException: noop;
   captureMessage: noop;
@@ -28,15 +27,10 @@
   onLoad: noop;
   wrap: (fn: (...args: any[]) => any) => fn;
   
-<<<<<<< HEAD
   
-<<<<<<< HEAD
   
-<<<<<<< HEAD
   
-<<<<<<< HEAD
   
-<<<<<<< HEAD
   setName: noop;
   setTag: noop;
   setData: noop;
@@ -65,7 +59,6 @@ const mockHub = {
   withScope: (callback: (...args: any[]) => any) => callback(mockScope);
   startTransaction: () => mockTransaction};
 
-<<<<<<< HEAD
 export const init = mockSentry.init;
 export const captureException = mockSentry.captureException;
 export const captureMessage = mockSentry.captureMessage;

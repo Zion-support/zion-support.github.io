@@ -1,17 +1,12 @@
-<<<<<<< HEAD
     ar: ""
   });
-<<<<<<< HEAD
     ar: ""
   });
   
-<<<<<<< HEAD
     
-<<<<<<< HEAD
     let sourceLanguage: SupportedLanguage = 'en';
     let content = '';
     
-<<<<<<< HEAD
         content = title[lang];
         sourceLanguage = lang;
         break;
@@ -23,17 +18,14 @@
         content = requirements[lang];
         sourceLanguage = lang;
         break;
-<<<<<<< HEAD
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
         variant: "destructive"
       });
       return;
-<<<<<<< HEAD
           variant: "destructive"
       });
       return;
-<<<<<<< HEAD
         title: t('translation.translation_success'),
         description: t('translation.content_translated')
       });

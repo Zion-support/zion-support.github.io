@@ -12,8 +12,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { operatorPrompt, inputs, metrics } = req.body || {};
 
   const seed = [
-    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & MetricsBusiness ModelGo-To-MarketTeamRoadmap';
-    'Token StrategyAsk & Call to Action'];
+    'Problem & OpportunitySolution & ProductMarket Size (TAM/SAM/SOM)Traction & MetricsBusiness ModelGo-To-MarketTeamRoadmap',
+    'Token StrategyAsk & Call to Action'
+  ];
 
   try {
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
@@ -30,21 +31,23 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
     let content = '';
     try {
       const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
-          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' };
-          { role: 'user', content: prompt }];
-        temperature: 0.5});
-      content = chat.choices?.[0]?.message?.content || ''
+          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
+          { role: 'user', content: prompt }
+        ],
+        temperature: 0.5
+      });
+      content = chat.choices?.[0]?.message?.content || '';
     } catch (err) {
-      content = ''
+      content = '';
     }
 
     const slides = seed.map((title, idx) => ({ id: `${idx + 1}`, title, content: extractSection(content, title) }));
     const version = `v${new Date().toISOString()}`;
-    res.status(200).json({ slides, version })
+    res.status(200).json({ slides, version });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Generation failed' })
+    res.status(500).json({ error: e?.message || 'Generation failed' });
   }
 }
 

@@ -18,8 +18,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const browser = await puppeteer.launch({
-    headless: true;
-    args: ['--no-sandbox--disable-setuid-sandbox']});
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
 
   try {
     const page = await browser.newPage();
@@ -27,11 +28,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true });
     await browser.close();
 
-    res.setHeader('Content-Typeapplication/pdf');
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
-    res.status(200).send(pdfBuffer)
+    res.setHeader('Content-Type', 'application/pdf');
+    res.setHeader('Content-Disposition', 'attachment, filename="zion-os-book.pdf"');
+    res.status(200).send(pdfBuffer);
   } catch (e: any) {
     try { await browser.close() } catch {}
-    res.status(500).json({ error: e?.message || 'Failed to render PDF' })
+    res.status(500).json({ error: e?.message || 'Failed to render PDF' });
   }
 }

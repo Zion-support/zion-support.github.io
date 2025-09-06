@@ -1,3 +1,2 @@
-<<<<<<< HEAD
   quotes;
   isArchived = false;

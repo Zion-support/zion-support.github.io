@@ -1,3 +1,2 @@
-<<<<<<< HEAD
       setLoadingState(prev => ({
         ...prev;
