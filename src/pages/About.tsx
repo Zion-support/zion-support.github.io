@@ -1,20 +1,14 @@
-<<<<<<< HEAD
+import React from 'react'
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-import React from 'react';
+const About: React.FC = () => {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl font-bold mb-6">About Us</h1>
+      <p className="text-lg text-gray-600">
+        Zion Tech Group is a leading technology company specializing in AI-powered solutions.
+      </p>
+    </div>
+  )
+}
 
-
-
-
-=======
-  );
-};
-
-<<<<<<< HEAD
-export default About;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-export default About;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+export default About

@@ -17,6 +17,15 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets')
     }
   },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [
+      /src\/components\/video\//,
+      /src\/components\/DynamicListingPage\.tsx$/,
+    ],
+  },
+
   build: {
     target: 'esnext',
     minify: 'terser',
