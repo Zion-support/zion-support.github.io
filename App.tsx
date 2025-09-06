@@ -156,11 +156,6 @@ export default function App(): JSX.Element {
   }
 
   return (
-<<<<<<< HEAD
-    <main>
-      <h1>Hello App</h1>
-    </main>
-=======
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
@@ -392,11 +387,8 @@ export default function App(): JSX.Element {
         <PerformanceMonitor />
       </div>
     </AccessibilityProvider>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   );
 }
-import React, { JSX, useState, useEffect } from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 

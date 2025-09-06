@@ -32,8 +32,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Simple AML check
   const aml = getAmlProvider();
   const amlResult = profile.role === 'enterprise'
-    ? await aml.checkBusiness({ businessName: profile.businessName || ''; country: profile.country })
-    : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth }),
+    ? await aml.checkBusiness({ businessName: profile.businessName || '', country: profile.country })
+    : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth });
   profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
   // Flags and risk scoring
   const flags = new Set<string>(profile.flags || []);
@@ -50,7 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   // Compute simple risk score
-  let riskScore = 10, // base low risk
+  let riskScore = 10; // base low risk
   if (flags.has('aml_alert')) riskScore += 50;
   if (flags.has('fraud_risk')) riskScore += 20;
   if (flags.has('duplicate_ip')) riskScore += 15;
