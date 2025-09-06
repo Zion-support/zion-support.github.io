@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -11,6 +12,7 @@ export default async function handler(
     return !superToken || token === superToken;
   }
 
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -23,6 +25,14 @@ export default async function handler(
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
 
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { appendLog, optimizePrompt } from '@/utils/zionBrain';
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = null;
+    return res.status(500).json({ error: 'Optimization failure' })
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   }
   export default async function handler(
     req: NextApiRequest
@@ -49,6 +59,7 @@ function handler() {
     const super_token = process.env.SUPERADMIN_TOKEN;
     return !super_token || token === super_token;
   }
+<<<<<<< HEAD
   export default async /**
  * handler - Function description
  */
@@ -100,4 +111,6 @@ function handler() {
       payload: { error: e?.message || "unknown" },
     });
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 }

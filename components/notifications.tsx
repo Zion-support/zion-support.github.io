@@ -1,5 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,11 +32,40 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+
+  return <NotificationCenter />;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import dynamic from 'next / dynamic';
+;
+const NotificationCenter = dynamic (
+  () => import ('../components / notifications / NotificationCenter'),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+import dynamic from 'next/dynamic';
+const NotificationCenter = null;
+const NotificationCenter = dynamic(
+  () => import('../components/notifications/NotificationCenter')
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   {
     ssr: false
   }
 );
+<<<<<<< HEAD
+=======
+export default function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false})
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function NotificationsPage() {
 const NotificationCenter = dynamic(;
   () => import('../components/notifications/NotificationCenter'),;
@@ -40,5 +78,28 @@ export default function NotificationsPage() {;
   ssr: false}),;
 export default function NotificationsPage() {;
   return <NotificationCenter />;
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {
+  ssr: false}),
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  return <NotificationCenter />;
 }
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

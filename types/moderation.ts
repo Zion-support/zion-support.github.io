@@ -4,7 +4,8 @@ export interface ModerationResult {
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;
   moderatedBy?: string;
-  moderatedAt: Date;;
+  moderatedAt: Date;
+;
 export interface ModerationAction {
   id: string;
   type: "approve" | "remove" | "warn" | "ban";
@@ -12,7 +13,8 @@ export interface ModerationAction {
   targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
-  createdAt: string;}
+  createdAt: string;
+}
 }
 export interface ModerationFlag {
 
@@ -27,6 +29,10 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+}
+
+}
+export interface ModerationFlag {
 }
 
 export interface ModerationRule {

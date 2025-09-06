@@ -1,3 +1,9 @@
 const ContactForm = dynamic(() => import("./ContactForm"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ContactForm' ,'
-</p>'</p>'
+</p>'
+</p>'
+</p>'
+
+
+</p>'
+</p>'
 </p>'

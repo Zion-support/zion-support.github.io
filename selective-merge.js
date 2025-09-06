@@ -1,9 +1,19 @@
+
 import { execSync } from "child_process";
 
 console.log("🔧 Performing selective merge of main source files...");
 
 // List of main source directories to merge
-const mainSourceDirs = [  'pages/',
+const mainSourceDirs = [
+#!/usr / bin / env node;
+import {exec_sync} from 'child_process';
+;
+console.log ('🔧 Performing selective merge of main source files...');
+;
+// List of main source directories to merge;
+const mainSourceDirs = [;
+
+  'pages/',
   'components/',
   'utils/',
   'types/',
@@ -79,7 +89,7 @@ const mergeSpecificFiles = () =>: any {
 
     return true;
   } catch (error) {
-    console.error("Error in selective merge:", error.message);    } catch (error) {
+    } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }
   } else {

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
+<<<<<<< HEAD
 
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
@@ -32,10 +33,44 @@ function write_section() {
 ) {;
   const editionParam = (req.query.edition as string) || 'full';
 
+=======
+import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
+function writeSection(doc: PDFDocument, title: string, content: string) {
+  doc.addPage();
+  doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
+  doc.moveDown();
+  doc.fontSize(11).fillColor('#222222').text(content, {
+    width: 480,
+align: 'left',
+  });
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const editionParam = (req.query.edition as string) || 'full';
+  const edition =
+    editionParam === 'investor' || editionParam === 'developer'
+      ? editionParam
+      : 'full';
+
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(
+    'Content-Disposition',
+    `attachment; filename="zion-protocol-${edition}.pdf"`
+  );
+
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const editionParam = (req.query.edition as string) |'full';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const editionParam = (req.query.edition as string) || 'full';
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full';
@@ -44,10 +79,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);
+=======
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(
+    'Content-Disposition'
+    `attachment; filename="zion-protocol-${edition}.pdf"`
+  );
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const editionParam = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
+<<<<<<< HEAD
   doc
     .fontSize(26)
     .fillColor('#000000')
@@ -61,6 +106,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
   const sections = getWhitepaperSections(edition as any);
+=======
+  // Cover page
+  doc.addPage();
+doc
+    .fontSize(26)
+    .fillColor('#000000')
+    .text('Zion Protocol Whitepaper', { align: 'left' });
+  doc.moveDown();
+  doc
+    .fontSize(14)
+    .fillColor('#444444')
+    .text(`Edition: ${edition.toUpperCase()}`);
+  doc.moveDown();
+  doc
+    .fontSize(10)
+    .fillColor('#666666')
+    .text('Operator Prompt (for maintenance):');
+  doc.moveDown(0.5);
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
+  const sections = getWhitepaperSections(edition as any);
+sections.forEach(s => writeSection(doc, s.title, s.contentMd));
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   // End
   doc && doc.addPage();
   doc
@@ -69,6 +137,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     .text(
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
     );
+<<<<<<< HEAD
 
   doc && doc.end();
   // End
@@ -156,3 +225,8 @@ function handler() {
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
 
   const sections = getWhitepaperSections(edition as any);
+=======
+  doc.end();
+  doc.end()
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

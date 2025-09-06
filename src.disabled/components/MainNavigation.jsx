@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface MainNavigationProps {
   // Add props here as needed
 
+
 }
 
-=======export default function MainNavigation({ }: MainNavigationProps) {
+export default function MainNavigation({ }: MainNavigationProps) {
   return (
     <div>
       <h1>MainNavigation</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/MainNavigation.jsx
+}
+}

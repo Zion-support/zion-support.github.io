@@ -1,5 +1,7 @@
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
+
+
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
 :src.disabled/components/MobileNavigation.jsx
@@ -11,4 +13,4 @@ const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onTogg
 :temp_exclude/src.disabled/components/MobileNavigation.jsx
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
-=======import React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';''}
+import React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';''}

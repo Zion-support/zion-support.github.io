@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 
+
+
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 interface LazySectionProps {
@@ -9,6 +14,7 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
+<<<<<<< HEAD
 export const LazySection: React.FC<LazySectionProps> = ({
   children
   className = ''
@@ -34,11 +40,31 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
+=======
+
+export const LazySection: React.FC<LazySectionProps> = ({
+  children;
+  className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
+<<<<<<< HEAD
+=======
+return { opacity: 1, y: 0 };
+      case 'down':
+        return { opacity: 1, y: 0 }
+      case 'left':
+        return { opacity: 1, x: 0 }
+      case 'right':
+        return { opacity: 1, x: 0 }
+      default:
+        return { opacity: 1, y: 0 }
+    }
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     >
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -96,3 +122,9 @@ export const LazySection: React.FC<LazySectionProps> = ({;
       {children}
     </motion && motion.div>;
   );
+<<<<<<< HEAD
+=======
+};
+
+export default LazySection;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

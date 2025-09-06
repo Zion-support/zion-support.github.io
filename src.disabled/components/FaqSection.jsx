@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface FaqSectionProps {
   // Add props here as needed
 
+
 }
 
-=======export default function FaqSection({ }: FaqSectionProps) {
+export default function FaqSection({ }: FaqSectionProps) {
   return (
     <div>
       <h1>FaqSection</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/FaqSection.jsx
+}
+}

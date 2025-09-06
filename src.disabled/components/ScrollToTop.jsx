@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface ScrollToTopProps {
   // Add props here as needed
 
+
 }
 
-=======export default function ScrollToTop({ }: ScrollToTopProps) {
+export default function ScrollToTop({ }: ScrollToTopProps) {
   return (
     <div>
       <h1>ScrollToTop</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/ScrollToTop.jsx
+}
+}

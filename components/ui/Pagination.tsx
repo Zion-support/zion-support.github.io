@@ -1,11 +1,30 @@
+<<<<<<< HEAD
 
 
+=======
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+export type PaginationProps = any;
+export type PaginationProps = {
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+}
+export default function Pagination({
+  page,
+  pageSize,
+  total,
+  onChange,
+}: PaginationProps) {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
-    if (p >= 1 && p <= totalPages) onChange(p);
-  }
+if (p >= 1 && p <= totalPages) onChange(p);
+  };
+
   return (
     <div className='flex items-center justify-between gap-2 mt-4'>;
       <EnhancedButton
@@ -24,11 +43,20 @@
         size='md'
         onClick={() => goTo(page + 1)}
         disabled={!canNext}
+<<<<<<< HEAD
       >        Next;
       </EnhancedButton>;
     </div>;
   );
 
+=======
+      >
+        Next
+      </EnhancedButton>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
       <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page - 1)} disabled={!canPrev}>;
@@ -100,6 +128,7 @@ interface PaginationProps {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
       for (let index = 1; i <= total_pages; i++) {
         pages.push (i);
 }
@@ -203,3 +232,7 @@ if ( {) {
 
   );
 
+=======
+export default Pagination;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

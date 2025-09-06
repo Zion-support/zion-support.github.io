@@ -4,6 +4,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Link from 'next/link';
 export default function ResourcesPage() {
   return (
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -108,3 +109,14 @@ export default ResourcesPage;
 ;
 export default ResourcesPage;
 ;
+=======
+              <div className='mt-3 text-cyan-300'>Open →</div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </UltraFuturisticBackground>
+);
+
+export default ResourcesPage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

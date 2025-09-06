@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface EmptyFraudStateProps {
   hasFilters: boolean
   onResetFilters: () => void
@@ -6,6 +7,15 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react'
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
+  hasFilters,
+  onResetFilters 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 },) => {
   return (
     <div className="text-center py-12">
@@ -26,11 +36,18 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from 'lucide-react'
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface EmptyFraudStateProps {
 
   hasFilters: boolean
@@ -51,14 +68,44 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
+<<<<<<< HEAD
+=======
 
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react'
+
+interface EmptyFraudStateProps {
+  hasFilters: boolean,
+
+  onResetFilters: () => void
+interface EmptyFraudStateProps {;
+  hasFilters: boolean,;
+  onResetFilters: () => void;
+}
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
+  hasFilters
+  onResetFilters
+
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
+  hasFilters,;
+  onResetFilters ;
+},) => {;
+
+  return (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <div className="text-center py-12">;
       <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
       <h3 className="text-lg font-medium">No fraud flags found</h3>;
@@ -110,6 +157,8 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
 };
 '";
 
+
+
   return (
 
     </div>;
@@ -128,4 +177,20 @@ export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
       {has_filters && (
         <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
     </div>);
+<<<<<<< HEAD
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+interface EmptyFraudStateProps {
+  hasFilters: boolean;
+  onResetFilters: () => void
+}
 
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
+  hasFilters;
+  onResetFilters 
+}) => {
+  return (
+    <div className;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

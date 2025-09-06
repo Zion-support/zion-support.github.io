@@ -1,5 +1,7 @@
-import { GetServerSideProps } from 'next'
-};      permanent: true}}
+import { GetServerSideProps } from 'next';
+<<<<<<< HEAD
+
+  };      permanent: true}}
 
 export default function ApiDocsRedirect() {;
   return null;
@@ -15,5 +17,12 @@ export default /**
  */
 function ApiDocsRedirect() {
 
+
 }
 ;
+=======
+export const getServerSideProps: GetServerSideProps;
+export default function ApiDocsRedirect() {
+  return null;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

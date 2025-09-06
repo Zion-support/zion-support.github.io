@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface HomePageSkeletonProps {
   // Add props here as needed
 
+
 }
 
-=======export default function HomePageSkeleton({ }: HomePageSkeletonProps) {
+export default function HomePageSkeleton({ }: HomePageSkeletonProps) {
   return (
     <div>
       <h1>HomePageSkeleton</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/home/HomePageSkeleton.jsx
+}
+}

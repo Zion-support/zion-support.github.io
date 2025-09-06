@@ -12,6 +12,7 @@ declare module "react" {
     props: P,
     key: React.Key | null;
 
+
   the code-base.  If you have `@types/react` available in `node_modules`,;
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
@@ -127,6 +128,7 @@ declare namespace React {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
   }
 }

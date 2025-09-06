@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface AppStoreBannerProps {
   // Add props here as needed
 
+
 }
 
-=======export default function AppStoreBanner({ }: AppStoreBannerProps) {
+export default function AppStoreBanner({ }: AppStoreBannerProps) {
   return (
     <div>
       <h1>AppStoreBanner</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/mobile-app/AppStoreBanner.jsx
+}
+}

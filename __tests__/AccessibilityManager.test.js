@@ -1,3 +1,4 @@
+import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
 import AccessibilityManager from '../components/AccessibilityManager';';
@@ -18,7 +19,8 @@ describe('AccessibilityManager', () => {'}
   });,
   test('applies correct styling', () => {'}
     render(<AccessibilityManager />);,
-  });import _React from 'react'
+  });
+import _React from 'react'
 ''
 import '@testing-library/jest-dom';'
 import AccessibilityManager from '../components/AccessibilityManager';'
@@ -38,7 +40,11 @@ describe('AccessibilityManager', () => {
     render(<AccessibilityManager />);
     expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument();
   });
-});'
+});
+});
+});
+import _React from 'react'
+'
 import '@testing-library/jest-dom';
 import AccessibilityManager from '../components/AccessibilityManager';
 describe('AccessibilityManager', () => {'
@@ -47,4 +53,3 @@ describe('AccessibilityManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

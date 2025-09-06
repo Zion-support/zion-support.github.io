@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface QuickAccessProps {
   // Add props here as needed
 
+
 }
 
-=======export default function QuickAccess({ }: QuickAccessProps) {
+export default function QuickAccess({ }: QuickAccessProps) {
   return (
     <div>
       <h1>QuickAccess</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/home/QuickAccess.jsx
+}
+}

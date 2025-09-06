@@ -87,4 +87,3 @@ function resolve_conflicts() {
     console.error ('Error getting git status:', error.message);
   }
 }
-main ().catch (console.error);

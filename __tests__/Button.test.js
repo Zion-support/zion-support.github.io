@@ -1,3 +1,4 @@
+import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
 import Button from '../components/Button';';
@@ -18,7 +19,8 @@ describe('Button', () => {'}
   });,
   test('applies correct styling', () => {'}
     render(<Button />);,
-  });import _React from 'react'
+  });
+import _React from 'react'
 ''
 import '@testing-library/jest-dom';'
 import Button from '../components/Button';'
@@ -38,7 +40,11 @@ describe('Button', () => {
     render(<Button />);
     expect(screen.getByTestId('button')).toBeInTheDocument();
   });
-});'
+});
+});
+});
+import _React from 'react'
+'
 import '@testing-library/jest-dom';
 import Button from '../components/Button';
 describe('Button', () => {'
@@ -47,4 +53,3 @@ describe('Button', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

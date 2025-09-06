@@ -12,7 +12,16 @@ export function RatingStars({ value;
             />
           )
         }
+<<<<<<< HEAD
+=======
 
+
+        if (i === filled && half) {;
+          return (;
+            <StarHalf;
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               key={i}
               className="h-4 w-4 fill-zion-cyan text-zion-cyan"
             />
@@ -22,4 +31,51 @@ export function RatingStars({ value;
       })}
       {typeof count === 'number' && (
         <span className="text-xs ml-1">({count})</span>
+<<<<<<< HEAD
+      )}
+    </div>
+<<<<<<< HEAD
+  )
+}
+=======
 
+
+              className="h-4 w-4 fill-zion-cyan text-zion-cyan";
+            />;
+          );
+        }
+        return <Star key={i} className="h-4 w-4 text-zion-slate" />;
+      })}
+      {typeof count === 'number' && (;
+        <span className="text-xs ml-1">({count})</span>;
+
+
+      )}
+    </div>
+  )
+  const half = value - filled >= 0 && 0.5;
+  const total = 5;
+}
+}
+
+}
+
+
+  const half = value - filled >= 0.5;
+  const total = 5;
+}
+}
+
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+
+}) ;
+}{";
+  typeof count === 'number' && (<span className="text-xs ml-1" > ({;
+  count ;
+}) </span> ;
+}</div>) ;
+}'"
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

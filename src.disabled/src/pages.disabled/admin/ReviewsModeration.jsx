@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface ReviewsModerationProps {
   // Add props here as needed
 
+
 }
 
-=======export default function ReviewsModeration({ }: ReviewsModerationProps) {
+export default function ReviewsModeration({ }: ReviewsModerationProps) {
   return (
     <div>
       <h1>ReviewsModeration</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/src/pages.disabled/admin/ReviewsModeration.jsx
+}
+}

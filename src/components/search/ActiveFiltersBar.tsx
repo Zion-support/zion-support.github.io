@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,6 +25,8 @@ interface SearchFilters {;
   maxPrice: number,;
   minRating: number,;
   sort: string;
+
+
 
 }
 ;
@@ -189,12 +192,16 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   }
   return (
 
+
         <Badge 
           key = {filter.key,}
 
+      
       {activeFilters.map(filter => (
         <Badge 
           key={filter.key} 
+
+
 
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
@@ -218,7 +225,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
 
+
             onClick={() => removeFilter(filter.key)}
+
 
             aria-label={`Remove ${filter.label} filter`}
           >
@@ -230,7 +239,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         variant="ghost"
         size="sm"
 
+
         onClick={onClearAll}
+
 
         className="text-xs h-6 px-2"
       >
@@ -396,6 +407,7 @@ if ( {) {
       </Button>;
     </div>);
 
+
 },
 export default ActiveFiltersBar,
 
@@ -422,4 +434,43 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >
         Clear all
+<<<<<<< HEAD
+      </button>
+    </div>
+  )}
+'"
 
+  filters: Filter[];
+  onRemoveFilter: key: string void;
+  onClearAll: : unknown void}
+        className="text - sm text - zion - slate - light hover: text - zion - cyan transition - colors underline";
+      >;
+        Clear all;
+      </button>;
+    </div>)}
+'";
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+import React from 'react';
+
+export default ActiveFiltersBar; import React from 'react'
+import { X } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+interface SearchFilters {
+  types: string[];
+  category: string;
+  minPrice: number;
+  maxPrice: number;
+  minRating: number;
+  sort: string
+}
+interface ActiveFiltersBarProps {
+  filters: SearchFilters;
+  onFiltersChange: (filters: SearchFilters) => void;
+  onClearAll: () => void;
+  className?: string
+}
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

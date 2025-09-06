@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
   return <NextSeo {...props} />;
+<<<<<<< HEAD
 }
 
 }
@@ -34,3 +35,5 @@ import { NextSeoProps } from 'next - seo';
 ;
 export type SeoProps = NextSeoProps;
   return <NextSeo {...props} />;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

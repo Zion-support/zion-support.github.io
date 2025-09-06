@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 
 
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
+=======
+id: 'quantum-cloud-infrastructure-platform',
+    name: 'Quantum Cloud Infrastructure Platform',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     description:
       'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.'
       'Quantum-enhanced security protocols'
@@ -416,24 +427,115 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
+<<<<<<< HEAD
       'DevOps Best Practices'
       'Security Standards'
       'Quality Assurance Protocols'
     ]
   }
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const cuttingEdgeITServices2025 = [
   {
 
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
+    features: [
+      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
+      'Quantum-enhanced data processingAutomated infrastructure management'
+    market_size: '$25.6B',
+    target_audience:;
+      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
+    competitive_advantage:;
+      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
+    use_cases: [;
+      'Software development automation',
+      'Continuous deployment pipelines',
+      'Performance monitoring and optimization',
+      'Incident response automation',
+      'Quality assurance automation',
+    ],
+    integrations: [;
+      'GitHub',
+      'GitLab',
+      'Jenkins',
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'Azure',
+      'Google Cloud',
+    ],
+    compliance: [;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+      'DevOps Best Practices',
+      'Security Standards',
+      'Quality Assurance Protocols',
+    ],
+<<<<<<< HEAD
+
+  },;
+
+
+];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
+<<<<<<< HEAD
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+=======
+<<<<<<< HEAD
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+=======
+=======
+];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    ];
+    integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
+
+<<<<<<< HEAD
+=======
+=======
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
 
+
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
-    name: 'Quantum Cloud Infrastructure Platform',,
-  description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',;
+    name: 'Quantum Cloud Infrastructure Platform',;
+    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',;
     features: [;
       'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring',;
       'Quantum-enhanced data processingAutomated infrastructure management';
@@ -473,8 +575,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'edge-computing-orchestration-platform',;
-    name: 'Edge Computing Orchestration Platform',,
-  description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.',;
+    name: 'Edge Computing Orchestration Platform',;
+    description: 'Advanced platform for managing and orchestrating edge computing resources across distributed networks, enabling real-time processing and low-latency applications.',;
     features: [;
       'Distributed edge node managementReal-time resource orchestrationIntelligent workload distributionEdge AI model deploymentDynamic scaling and optimizationEdge security and complianceReal-time monitoring and analyticsAutomated edge deployment',;
       'Edge-to-cloud synchronizationPerformance optimization algorithms';
@@ -514,8 +616,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'zero-trust-security-platform',;
-    name: 'Zero Trust Security Platform',,
-  description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.',;
+    name: 'Zero Trust Security Platform',;
+    description: 'Comprehensive zero-trust security platform that implements advanced authentication, authorization, and monitoring across all network resources and applications.',;
     features: [;
       'Multi-factor authentication (MFA)Identity and access management (IAM)Continuous security monitoringBehavioral analyticsThreat detection and responseSecure access service edge (SASE)Micro-segmentationReal-time risk assessment',;
       'Automated security responsesComprehensive audit logging';
@@ -555,8 +657,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'blockchain-enterprise-platform',;
-    name: 'Blockchain Enterprise Platform',,
-  description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.',;
+    name: 'Blockchain Enterprise Platform',;
+    description: 'Enterprise-grade blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.',;
     features: [;
       'Enterprise blockchain networksSmart contract developmentConsensus mechanism managementBlockchain analytics and monitoringIntegration with legacy systemsScalable blockchain architectureSecurity and compliance toolsReal-time transaction processing',;
       'Multi-party workflow automationComprehensive reporting and analytics';
@@ -596,8 +698,8 @@ export const cuttingEdgeITServices2025 = [;
   },;
   {;
     id: 'ai-powered-devops-platform',;
-    name: 'AI-Powered DevOps Platform',,
-  description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.',;
+    name: 'AI-Powered DevOps Platform',;
+    description: 'Intelligent DevOps platform that leverages artificial intelligence to automate development, testing, deployment, and monitoring processes for faster and more reliable software delivery.',;
     features: [;
       'AI-powered code analysisAutomated testing and quality assuranceIntelligent deployment strategiesPredictive performance monitoringAutomated incident responseContinuous integration/continuous deployment (CI/CD)Infrastructure as code (IaC)Real-time performance optimization',;
       'Automated security scanningComprehensive analytics and reporting';
@@ -634,6 +736,10 @@ export const cuttingEdgeITServices2025 = [;
     ],;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 ];
   },
@@ -643,4 +749,19 @@ export const cuttingEdgeITServices2025 = [;
   }
 ];
 ;
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
 ];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  },
+];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

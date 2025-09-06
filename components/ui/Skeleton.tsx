@@ -4,6 +4,7 @@ export type SkeletonProps = {
 export type SkeletonProps = {;
 
             transform: translateX(100%);
+<<<<<<< HEAD
           }        }
       `}</style>;
     </div>;
@@ -38,6 +39,7 @@ class ErrorBoundary extends React.Component {
 export type SkeletonProps = {;
   className?: string;
 }
+
 
 export const Skeleton: React.FC<SkeletonProps> = ({ ",;
   className = ",;
@@ -86,3 +88,12 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 
       `}</style>
 
+
+=======
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

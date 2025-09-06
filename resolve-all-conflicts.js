@@ -19,7 +19,7 @@ function resolveMergeConflicts(filePath) {
         // Remove merge conflict markers and keep the HEAD version
         content = content.replace(/        
         // Remove any remaining conflict markers
-        content = content.replace(/        content = content.replace(/=======\n/g, '');
+        content = content.replace(/        content = content.replace(/\n/g, '');
         content = content.replace(/        
         // Clean up any duplicate content
         content = content.replace(/\n\n\n+/g, '\n\n');

@@ -1,4 +1,25 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Search, Calendar } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Calendar } from 'lucide-react';
 
+
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle>Quick Actions</CardTitle>;
+        <CardDescription>Fast access to common tasks</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
+          {actions && actions.map(action => (;
+            <Button
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       id: 'post - job',
       label: 'Post New Job',
@@ -50,6 +71,15 @@
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
 
+=======
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FileText, Plus, Search, Calendar } from 'lucide-react'
+export function QuickActions() {
+  const actions = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card>
       <CardHeader>
@@ -57,14 +87,21 @@
         <CardDescription>Fast access to common tasks</CardDescription>
       </CardHeader>
       <CardContent>
+<<<<<<< HEAD
+
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+=======
+<div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           {actions.map(action => (
 
             <Button 
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
+
 
             >
               <div className="flex flex-col items-start text-left">
@@ -124,6 +161,7 @@ export function QuickActions() {;
           {actions.map(action => (;
             <Button;
 
+
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -155,6 +193,7 @@ export function QuickActions() {;
               </div>;
             </Button>;
 
+
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
                   {action.icon}
@@ -162,12 +201,17 @@ export function QuickActions() {;
                 </div>
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
+<<<<<<< HEAD
                 </span>              </div>
 
+=======
+                </span>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
 
             </Button>
           ))}
+<<<<<<< HEAD
         </div>;
       </CardContent>;
     </Card>;
@@ -197,4 +241,15 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

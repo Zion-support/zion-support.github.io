@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface FeaturesSectionProps {
   // Add props here as needed
 
+
 }
 
-=======export default function FeaturesSection({ }: FeaturesSectionProps) {
+export default function FeaturesSection({ }: FeaturesSectionProps) {
   return (
     <div>
       <h1>FeaturesSection</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/unused/FeaturesSection.jsx
+}
+}

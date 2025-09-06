@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface DisputeDashboardProps {
   // Add props here as needed
 
+
 }
 
-=======export default function DisputeDashboard({ }: DisputeDashboardProps) {
+export default function DisputeDashboard({ }: DisputeDashboardProps) {
   return (
     <div>
       <h1>DisputeDashboard</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/components/DisputeDashboard.jsx
+}
+}

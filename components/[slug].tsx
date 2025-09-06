@@ -24,6 +24,7 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
+<<<<<<< HEAD
 
 export default function DynamicServicePage() {
 
@@ -140,11 +141,15 @@ export default function DynamicServicePage() {;
         return url && url.pathname.replace(/^\/+|\/+$/g, '') === slug && slug.replace(/^\/+|\/+$/g, '');
       } catch {;
         return false;        return false;
+=======
+  const router = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.id === slug);
     if (byId) return byId;
+<<<<<<< HEAD
   }, [slug]);
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
@@ -154,11 +159,46 @@ export default function DynamicServicePage() {;
         </div>
       </UltraAdvancedFuturisticBackground>
     )
+=======
+return undefined;
+  }, [slug]);
+  if (!service) {
+    return (
+      <UltraAdvancedFuturisticBackground>
+<div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-3xl mx-auto text-center'>
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
+              Service not found
+            </h1>
+            <p className='text-gray-300 mb-8'>
+              We couldn't find the service you were looking for. Explore all
+              services below.
+            </p>
+            <Button href='/services' variant='quantum' size='lg'>
+              Browse Services
+            </Button>
+          </div>
+        </div>
+      </UltraAdvancedFuturisticBackground>
+    );
+  }
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
+<<<<<<< HEAD
+=======
+<meta name='description' content={service.description} />
+        <link rel='canonical' href={canonicalUrl} />
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-10'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
+              <span className='text-5xl' aria-hidden>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
                 {service.icon}
               </span>;
               {service.name}
@@ -199,6 +239,7 @@ export default function DynamicServicePage() {;
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
                 className='w-full'>;
                 Start Free Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -293,6 +334,33 @@ export default function DynamicServicePage() {;
 
 // Static export support: generate root-level pages for service slugs;
 
+=======
+                className='w-full'
+              >
+                Start Free Trial
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{service.contactInfo.address}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 // Static export support: generate root-level pages for service slugs
 
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
@@ -317,6 +385,7 @@ function normalizeSlug(value: string): string {
   return value
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
+<<<<<<< HEAD
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
   try {
@@ -331,6 +400,10 @@ function normalizeSlug(value: string): string {
 }
   };
 }
+=======
+    .replace(/(^-|-$)/g, '');
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {;
 
@@ -367,6 +440,7 @@ function normalizeSlug(): any (value: string): string {;
 }
   const services = collectAllServices();
   const staticSlugs = new Set<string>();
+<<<<<<< HEAD
   try {;
     const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true });
           }
@@ -438,6 +512,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
         }
 
   // Exclude any slug that conflicts with an existing root page file
+=======
+  try {
+const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+      }
+    }
+  } catch {}
+
+// Exclude any slug that conflicts with an existing root page file
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
@@ -447,6 +530,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 };
 
+<<<<<<< HEAD
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} }
@@ -535,3 +619,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 };
 ;
+=======
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} };
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

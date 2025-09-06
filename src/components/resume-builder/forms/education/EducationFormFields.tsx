@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {
@@ -16,12 +17,25 @@ import { Textarea } from '@/components / ui / textarea';
 import { Input } from '@/components / ui / input';
 import { Checkbox } from '@/components / ui / checkbox';
 import { Alert, AlertDescription } from '@/components / ui / alert';
+=======
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
+<<<<<<< HEAD
   FormMessage,
 } from '@/components / ui / form';
 import { useState } from 'react';
@@ -68,6 +82,40 @@ function EducationFormFields() {
     }
   }
 
+
+
+
+
+
+=======
+  FormMessage,;
+} from '@/components/ui/form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
+
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { format  } from 'date-fns';
+import { Loader2 } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
+// Define schema for form validation
+const educationSchema = null;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Form {...form}>;
 
@@ -92,6 +140,7 @@ function EducationFormFields() {
             name="institution"
             render={({ field }: { field: any }) => (
               <FormItem>
+
 
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
@@ -119,6 +168,7 @@ function EducationFormFields() {
             name="degree"
             render={({ field }: { field: any }) => (
               <FormItem>
+
 
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
@@ -149,6 +199,7 @@ function EducationFormFields() {
           render={({ field }: { field: any }) => (
             <FormItem>
 
+
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
@@ -159,10 +210,13 @@ function EducationFormFields() {
 
         />;
 
+
+
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
           <FormField
 
             control={form.control}
+
 
             render={({ field }: { field: any }) => (
               <FormItem>
@@ -190,15 +244,42 @@ function EducationFormFields() {
                 <FormMessage />;
               </FormItem>;
 
+
+
             )}
+<<<<<<< HEAD
+          />;
+=======
+          />
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
           <div className='space-y-4'>;
             <FormField
 
               control={form.control}
 
-                    <Checkbox
 
+
+                    <Checkbox
+<<<<<<< HEAD
+                      checked = {field && field.value,}
+                      onCheckedChange = {field && field.onChange,}
+                    />;
+                  </FormControl>;
+                  <div className='space-y-1 leading-none'>;
+                    <FormLabel>I am currently studying here</FormLabel>;
+                  </div>;
+                </FormItem>;
+=======
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>I am currently studying here</FormLabel>
+                  </div>
+                </FormItem>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
 
             />;
@@ -209,16 +290,19 @@ function EducationFormFields() {
                 control={form && form.control}
                 name='end_date'
 
+
             />;
             {!form.watch('is_current') && (;
               <FormField;
                 control={form.control}
                 name="end_date"
 
+
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
+
 
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
@@ -228,6 +312,8 @@ function EducationFormFields() {
                         value={field.value || ''} 
                       />
                     </FormControl>
+
+
 
                     <FormMessage />
                   </FormItem>
@@ -241,6 +327,8 @@ function EducationFormFields() {
                 )}
               />
             )}
+
+
 
           </div>;
         </div>;
@@ -299,8 +387,13 @@ function EducationFormFields() {
 
         />;
 
-        <FormField
 
+        <FormField
+<<<<<<< HEAD
+          control={form && form.control}
+=======
+          control={form.control}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Description (Optional)</FormLabel>
@@ -348,11 +441,18 @@ function EducationFormFields() {
               </FormControl>;
               <FormMessage />;
 
+
+
+
+
+
+
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>
       </form>
     </Form>
+<<<<<<< HEAD
   )
 
         />;
@@ -396,3 +496,6 @@ function EducationFormFields() {
 }
 
 }
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

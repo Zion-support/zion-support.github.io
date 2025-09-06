@@ -1,5 +1,6 @@
 export type ProjectStatus = 'InProgress' | 'Completed';
-export type Project = {  id: string;
+export type Project = {
+  id: string;
   userId: string;
   serviceId: string;
   rating: number;
@@ -18,7 +19,7 @@ export type ReviewCategoryScores = {
   talentSlug: string, // slug from TALENT_PROFILES;
   title: string;
   status: ProjectStatus,;
-  completedAt?: string, // ISO string
+  completedAt?: string, // ISO string;
 };
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
@@ -30,6 +31,9 @@ export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
+
+
+
 
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
@@ -44,6 +48,7 @@ export type Review = {
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
+
 
 export type ReviewsSummary = {
   averageRating: number;

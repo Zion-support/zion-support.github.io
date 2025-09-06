@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  
@@ -40,6 +41,12 @@ export default function SiteValidator(): any ({ report }: Props) {
 export default function SiteValidator({ report }: Props) {
 export default function SiteValidator({ report }: Props) {;
   if (!report) return <div>No validation report yet.</div>;
+=======
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Broken = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;
@@ -112,5 +119,8 @@ if (return <div > No validation report yet.</div>) {
     </div>
 );
 }
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

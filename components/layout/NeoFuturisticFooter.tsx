@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {;
   Phone,;
@@ -18,6 +19,13 @@ export default function NeoFuturisticFooter() {;
 };
 
 export default function NeoFuturisticFooter() {;
+=======
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+const contactInfo = null;
+export default function NeoFuturisticFooter() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
               Productized AI, IT and micro SaaS solutions with transparent;
               pricing and fast onboarding. Built for outcomes, delivered with;
@@ -48,6 +56,7 @@ export default function NeoFuturisticFooter() {;
               </a>;
               <a
                 aria-label='LinkedIn'
+<<<<<<< HEAD
           </div>
         </div>
           <div className="space-y-2 text-sm">
@@ -183,3 +192,32 @@ export default function NeoFuturisticFooter() {;
 
 export default function NeoFuturisticFooter() {
   return (
+=======
+                href='https://www.linkedin.com/company/zion-tech-group/'
+                className='text-slate-400 hover:text-white'
+              >
+                <Linkedin className='w-5 h-5' />
+              </a>
+            </div>
+          </div>
+        </div>
+
+<div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>
+          <div className='text-xs text-slate-500'>
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </div>
+          <div className='text-xs text-slate-500 flex gap-4'>
+            <a href='/privacy' className='hover:text-slate-300'>
+              Privacy
+            </a>
+            <a href='/terms' className='hover:text-slate-300'>
+              Terms
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

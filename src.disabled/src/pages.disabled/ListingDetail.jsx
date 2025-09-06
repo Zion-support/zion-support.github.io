@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface ListingDetailProps {
   // Add props here as needed
 
+
 }
 
-=======export default function ListingDetail({ }: ListingDetailProps) {
+export default function ListingDetail({ }: ListingDetailProps) {
   return (
     <div>
       <h1>ListingDetail</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/src/pages.disabled/ListingDetail.jsx
+}
+}

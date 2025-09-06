@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
 export default function HolographicAICommunicationPage() {
 
   const contactInfo = {
@@ -53,6 +54,14 @@ export default function HolographicAICommunicationPage() {;
       <Head>;
         <title>Holographic AI Communication Platform - Zion Tech Group</title>;
         <meta
+=======
+  const contactInfo = null;
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Holographic AI Communication Platform - Zion Tech Group</title>
+<meta
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
           name='description'
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.'
         />;
@@ -98,6 +107,7 @@ export default function HolographicAICommunicationPage() {;
                 href='/contact'
                 variant='quantum'
                 size='lg'
+<<<<<<< HEAD
                 className='w-full mt-4'>;
                 Start Free Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -162,12 +172,33 @@ export default function HolographicAICommunicationPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
+=======
+                className='w-full mt-4'
+              >
+                Start Free Trial
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>
+                <div className='flex items-center space-x-2'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-xs'>{contactInfo.address}</span>
+                </div>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 }
 
 import Head from 'next / head';
@@ -185,3 +216,8 @@ function HolographicAICommunicationPage() {
   }
 ;
 }
+=======
+  );
+}
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

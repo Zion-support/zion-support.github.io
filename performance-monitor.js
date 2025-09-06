@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -31,12 +32,18 @@ class PerformanceMonitor {
 
   generateReport() {
     const report = {
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
       timestamp: this.metrics.timestamp,
       bundleSize: this.metrics.bundleSize,
       memoryUsage: this.metrics.memoryUsage,
       recommendations: []
     };
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push('Consider code splitting to reduce bundle size');
     }
@@ -54,4 +61,8 @@ monitor.measureMemoryUsage();
 const report = monitor.generateReport();
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
 console.log('Performance report generated:', reportPath);
+=======
+console.log("Performance report generated:", reportPath);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

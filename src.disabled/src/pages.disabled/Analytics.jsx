@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface AnalyticsProps {
   // Add props here as needed
 
+
 }
 
-=======export default function Analytics({ }: AnalyticsProps) {
+export default function Analytics({ }: AnalyticsProps) {
   return (
     <div>
       <h1>Analytics</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/src/pages.disabled/Analytics.jsx
+}
+}

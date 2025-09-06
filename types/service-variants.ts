@@ -10,7 +10,8 @@ export default function Servicevariants({ }: ServicevariantsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-export type ServiceVariant =  | 'default'
+export type ServiceVariant =
+  | 'default'
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'

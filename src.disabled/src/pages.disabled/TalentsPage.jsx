@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,13 +25,18 @@ import React from 'react';
 interface TalentsPageProps {
   // Add props here as needed
 
+
 }
 
-=======export default function TalentsPage({ }: TalentsPageProps) {
+export default function TalentsPage({ }: TalentsPageProps) {
   return (
     <div>
       <h1>TalentsPage</h1>
       <p>This component is currently under development.</p>
     </div>
-  );}
-=======
+  );
+
+}
+:src.disabled/src/pages.disabled/TalentsPage.jsx
+}
+}

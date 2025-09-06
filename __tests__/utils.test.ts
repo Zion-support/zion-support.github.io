@@ -3,10 +3,9 @@ describe('Utils', () => {
   it('should work correctly', () => {
     expect(true).toBe(true);
   });
-});module.exports = {};
-module.exports = {};
-describe('Utils', () => {
-  it('should work correctly', () => {
-    expect(true).toBe(true);
-  });
 });
+
+export {};
+
+module.exports = {};
+module.exports = {};

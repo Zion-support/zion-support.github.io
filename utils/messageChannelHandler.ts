@@ -1,39 +1,34 @@
-}
-};
-}
-};
-;
-,;
-,
-ursor/integrate-build-improve-and-re-verify-8f7d
-}}}};
-;
-;
-
-}
-}
-}
-},
-
 export const messageChannelHandler = {
+<<<<<<< HEAD
+<<<<<<< HEAD
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
-type MessageHandler = {
-  sendMessage: (message: unknown) => void;
-  receiveMessage: (callback: (message: unknown) => void) => void
 };
+<<<<<<< HEAD
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
     // No-op: placeholder for message channel integration
   },
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
+=======
+  sendMessage: (message: string) => {
+    // Implementation for sending messages
+    // eslint-disable-next-line no-console
+    console.log('Sending message: ', message);
+  }, receiveMessage: (_callback: (message: string) => void) => {
+    // Implementation for receiving messages
+    // eslint-disable-next-line no-console
+    console.log('Setting up message receiver');
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   }
-}
 };
-}
+};
+};
 };
 ,
 // Message channel handler for real-time communication
@@ -82,9 +77,14 @@ if ( {) {
 }
 export default MessageChannelHandler;
 
+
+
+
 }}}};
 ;
 
 },;
 ,;
 ;
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

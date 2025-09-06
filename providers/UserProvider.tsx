@@ -1,17 +1,48 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
+=======
+import React, {;
+  createContext,;
+  useContext,;
+  useEffect,;
+  useMemo,;
+  useState,;} from 'react';} from 'react';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+useState,;
+} from 'react';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 export type UserRole = 'client' | 'talent';
 
 export type User = {
-  id: string;
+id: string;
   name: string;
   email: string;
   role: UserRole;
   avatar?: string;
   createdAt: string;
-  updatedAt: string
+  updatedAt: string;
 };
 
 export interface UserContextType {
@@ -19,6 +50,7 @@ export interface UserContextType {
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+<<<<<<< HEAD
   updateUser: (userData: Partial<User>) => Promise<void>;
 }
 
@@ -29,7 +61,7 @@ export const useUser = () => {
   if (context === undefined) {
     throw new Error('useUser must be used within a UserProvider');
   }
-  return context
+  return context;
 };
 
 interface UserProviderProps {
@@ -39,6 +71,21 @@ interface UserProviderProps {
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+=======
+  completeOnboarding: () => void;
+};
+
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {
+id: 'u_001',
+  name: 'Jordan Lee',
+  role: 'client',
+  onboardingCompleted: false,
+};
+
+export function UserProvider({ children }: { children: React.ReactNode }) {
+  const [user, setUser] = useState<User | null>(null);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
   useEffect(() => {
     // Check for existing user session
@@ -57,6 +104,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
+<<<<<<< HEAD
       // Mock login logic - replace with actual authentication
       const mockUser: User = {
         id: '1',
@@ -79,8 +127,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
   const logout = (): void => {
     setUser(null);
-    localStorage.removeItem('user')
-};
+    localStorage.removeItem('user');
+  };
 
   const updateUser = async (userData: Partial<User>): Promise<void> => {
     if (!user) return;
@@ -92,8 +140,8 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     };
     
     setUser(updatedUser);
-    localStorage.setItem('user', JSON.stringify(updatedUser))
-};
+    localStorage.setItem('user', JSON.stringify(updatedUser));
+  };
 
   const contextValue = useMemo(
     () => ({
@@ -106,7 +154,37 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     [user, loading]
   );
 
-  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };
 
 export default UserProvider;
+export default UserProvider;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+if (user) localStorage.setItem('zion.user', JSON.stringify(user));
+      else localStorage.removeItem('zion.user');
+    } catch {}
+  }, [user]);
+
+  const value = useMemo<UserContextValue>(
+    () => ({
+      user
+      setUser
+      logout: () => setUser(null)
+      completeOnboarding: () =>
+setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
+    }),
+    [user]
+  );
+
+return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
+export function useUser() {
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793

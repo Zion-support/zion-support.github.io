@@ -1,10 +1,31 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 
+<<<<<<< HEAD
+=======
+export default function Page() {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Cloud Improving Implementation</title>;
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Head from 'next/head';
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Guide — Cloud Improving Implementation</title>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <meta
           name='description'
           content='Step-by-step guidance derived from live research signals.'
@@ -27,7 +48,16 @@
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com</a></p>',;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }}
         />;
         <p className='mt-6 text-white/60 text-sm'>;
@@ -36,11 +66,24 @@
       </main>;
     </div>;
   );export default function Page() {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+=======
+=======
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
+            __html:;
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export default function Page() {
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
-
+<<<<<<< HEAD
+=======
+  return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
         <title>Guide — Cloud Improving Implementation</title>;
@@ -56,7 +99,21 @@ export default function Page() {
       </main>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+}
+
+=======
+=======
+export default function Page() {
+  return (
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -115,6 +172,17 @@ function Page() {
       </main>;
     </div>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             __html:;
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry; iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>',
@@ -125,8 +193,43 @@ function Page() {
         </p>
       </main>
     </div>
+<<<<<<< HEAD
   );export default function Page() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+export default function Page() {
+  return (
+<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Cloud Improving Implementation</title>
+        <meta name="description" content="Step-by-step guidance derived from live research signals." />
+        <meta property="og:title" content="Guide — Cloud Improving Implementation" />
+        <meta property="og:description" content="Step-by-step guidance derived from live research signals." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Cloud Improving Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/landing\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
 
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -142,6 +245,27 @@ function Page() {
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
       </main>
 
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-slate-950 text-white">
+      <Head>
+        <title>Guide — Cloud Improving Implementation</title>
+        <meta name=&quot;description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Guide — Cloud Improving Implementation&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Step-by-step guidance derived from live research signals.&quot; />
+        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />
+      </Head>
+      <main className="container mx-auto px-6 py-12 prose prose-invert">
+        <h1 className="text-3xl font-extrabold">Guide — Cloud Improving Implementation</h1>
+        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<p>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/landing\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloud, improving, continuously, autonomous, systems, live.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map data, models, evaluation, and deployment workflow.</li><li>Automate checks for security, cost, and reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com</a></p>" }} />
+        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Deep Research Factory.</p>
+      </main>
+    </div>
+  );
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 }
@@ -173,3 +297,14 @@ export default function Page(req, res) {
 }
 ;
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

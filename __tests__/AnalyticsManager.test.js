@@ -1,3 +1,4 @@
+import _React from 'react';,
 ';
 import '@testing-library/jest-dom';';
 import AnalyticsManager from '../components/AnalyticsManager';';
@@ -18,7 +19,8 @@ describe('AnalyticsManager', () => {'}
   });,
   test('applies correct styling', () => {'}
     render(<AnalyticsManager />);,
-  });import _React from 'react'
+  });
+import _React from 'react'
 ''
 import '@testing-library/jest-dom';'
 import AnalyticsManager from '../components/AnalyticsManager';'
@@ -38,7 +40,11 @@ describe('AnalyticsManager', () => {
     render(<AnalyticsManager />);
     expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
   });
-});'
+});
+});
+});
+import _React from 'react'
+'
 import '@testing-library/jest-dom';
 import AnalyticsManager from '../components/AnalyticsManager';
 describe('AnalyticsManager', () => {'
@@ -47,4 +53,3 @@ describe('AnalyticsManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

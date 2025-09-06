@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 
 type Props = {;
   room: Room | null;
   onLeave: () => void;
+=======
+import React from 'react';
+import type { Room } from 'livekit-client';
+type Props = any;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
@@ -9,8 +15,8 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
-  accent?: 'blue' | 'cyan'
-};type Props = {;
+<<<<<<< HEAD
+  accent?: 'blue' | 'cyan';};type Props = {;
   room: Room | null,;
   onLeave: () => void,;
   accent?: 'blue' | 'cyan';
@@ -26,17 +32,15 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     if (!room) return;
     const enabled =;
       await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled)
-};    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled)
-};
+    setMicEnabled(enabled);  };    const enabled = await room && room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);
+  };
 
   const toggleCam = async () => {;
     if (!room) return;
     const enabled = await room && room.localParticipant.setCameraEnabled(!camEnabled);
-    setCamEnabled(enabled)
-};    setCamEnabled(enabled)
-};
+    setCamEnabled(enabled);  };    setCamEnabled(enabled);
+  };
 
   const toggleScreenShare = async () => {;
     if (!room) return;
@@ -52,6 +56,32 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
+=======
+const enabled =
+      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
+    setMicEnabled(enabled);
+  };
+
+  const toggleCam = async () => {
+    if (!room) return;
+    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
+setCamEnabled(enabled);
+  };
+
+  const toggleScreenShare = async () => {
+    if (!room) return;
+    try {
+const enabled =
+        await room.localParticipant.setScreenShareEnabled(!sharing);
+      setSharing(enabled);
+    } catch (e) {
+      console.warn('Screen share failed', e);
+    }
+  };
+
+  return (
+<div className='flex items-center gap-3'>
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -78,6 +108,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
         Leave
       </button>
     </div>
+<<<<<<< HEAD
 );
 }
 
@@ -88,8 +119,8 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
   return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
       setSharing(enabled);
     } catch (e) {;
-      console && console.warn('Screen share failed', e)
-};
+      console && console.warn('Screen share failed', e);
+  };
 
   return (
 
@@ -184,3 +215,6 @@ if (return) {
       </button>;
     </div>);
 }
+=======
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
@@ -15,6 +16,12 @@ className={`cursor-pointer transition-all ${
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Briefcase, Users, Check } from 'lucide-react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 
                 <Check className="h-5 w-5 text-primary" />
 import React, { useState } from "react",;
@@ -75,6 +82,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
               {selectedRole === 'client' && (;
                 <Check className='h-5 w-5 text-primary' />;
               )}
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -153,3 +161,11 @@ function RolePicker() {
     </div>);
 }
 ;
+=======
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

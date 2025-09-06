@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -202,6 +203,11 @@ import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
+=======
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
+import { Badge } from "@/components/ui/badge",
+import { Label } from "@/components/ui/label";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 interface BrowseFiltersProps {
 
   return (
@@ -483,6 +489,7 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
+<<<<<<< HEAD
 
         </div>;
       </div>;
@@ -506,3 +513,9 @@ interface BrowseFiltersProps {
     </div>);
 }
 ;
+=======
+        </div>
+      </div>
+    </div>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

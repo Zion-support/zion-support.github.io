@@ -1,30 +1,34 @@
 #!/usr/bin/env node
 const { execSync } = require('child_process');
+const fs = require('fs');
 
 class DeploymentAutomation {
-  async deploy() {
-    console.log('🚀 Starting Deployment Automation...');
-    
-    const steps = [
-      { name: 'Build Application', command: 'npm run build' },
-      { name: 'Run Tests', command: 'npm test -- --passWithNoTests' },
-      { name: 'Git Add', command: 'git add .' },
-      { name: 'Git Commit', command: 'git commit -m "feat: Automated deployment improvements"' },
-      { name: 'Git Push', command: 'git push origin HEAD' },
-    ];
+  constructor() {
+    this.projectRoot = process.cwd();
+  }
 
-    for (const step of steps) {
-      try {
-        console.log(`Executing: ${step.name}`);
-        execSync(step.command, { stdio: 'inherit' });
-        console.log(`✅ ${step.name} completed`);
-      } catch (error) {
-        console.log(`❌ ${step.name} failed: ${error.message}`);
-        break;
-      }
-    }
+  async build() {
+    console.log('🔨 Building application...');
+    execSync('npm run build', { stdio: 'inherit' });
+  }
+
+  async test() {
+    console.log('🧪 Running tests...');
+    execSync('npm test -- --passWithNoTests', { stdio: 'inherit' });
+  }
+
+  async deploy() {
+    console.log('🚀 Deploying application...');
+    // Add deployment logic here
+  }
+
+  async run() {
+    await this.build();
+    await this.test();
+    await this.deploy();
+    console.log('✅ Deployment completed');
   }
 }
 
 const deployment = new DeploymentAutomation();
-deployment.deploy().catch(console.error);
+deployment.run().catch(console.error);
