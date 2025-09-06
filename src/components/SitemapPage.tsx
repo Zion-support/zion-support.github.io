@@ -180,7 +180,7 @@ export const SitemapPage: React.FC = () => {
         { name: 'Careers', url: '/careers' },
       ];
 },
-    {;
+{;
       title: 'Services',
       links: [{ name: 'AI Services', url: '/services / ai' },
         { name: 'IT Services', url: '/services / it' },

@@ -3,7 +3,6 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
@@ -186,4 +185,4 @@ export default function ContentReviewPage() {
         />
       )}
     </EnhancedLayout>
-  );
+);

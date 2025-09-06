@@ -54,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { email, programTrack } = req.body || {};
   if (!email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'email required' });
   const talents = (await fs.pathExists(TALENTS_FILE))
     ? await fs.readJSON(TALENTS_FILE)

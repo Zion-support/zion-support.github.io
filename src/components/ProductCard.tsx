@@ -1,3 +1,4 @@
+
   const stockStatus =
     product.stock === undefined
       : 'In stock';
@@ -19,3 +20,4 @@
 }
   )
 }
+;

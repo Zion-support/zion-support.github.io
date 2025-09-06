@@ -435,7 +435,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
         </div>
       )}
     </div>
-  );
+);
 };
 },
 },

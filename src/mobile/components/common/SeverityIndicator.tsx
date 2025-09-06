@@ -1,4 +1,5 @@
 
+
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
   showIcon?: boolean;
@@ -27,3 +28,4 @@ export function SeverityIndicator({
     </div>
   );
 }
+;

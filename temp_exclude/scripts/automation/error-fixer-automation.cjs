@@ -1,72 +1,5 @@
-<<<<<<< HEAD
-=======
-#!/""usr/bin/env"" node;
-/**;
- * Error Fixer Automation;
- * Automatically detects and fixes common project errors;
- */;
-#!/usr/bin/env node
-/**;
- * Error Fixer Automation;
- * Automatically detects and fixes common project errors;
- */;
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
-const glob = require("glob");
-class $1 {
-  constructor() {
-  this.projectRoot = process.cwd();
-    this.reportsDir = path.join(this.projectRoot, "error-reports");
-    this.fixesApplied = [];
-    this.errorsFound = [];
-    this.startTime = Date.now()}
-;
-  async run() {
-    try {
-  // Create reports directory;
-      this.ensureReportsDirectory();
-      // Run all error fixing operations;
-      await this.fixMergeConflicts();
-      await this.fixSyntaxErrors();
-      await this.fixUnusedImports();
-      await this.fixTypeScriptErrors();
-      await this.fixLintingErrors();
-      await this.fixDuplicateDeclarations();
-      await this.fixMissingExports();
-      await this.fixImportErrors();
-      await this.fixUndefinedVariables();
-      await this.fixConsoleStatements();
-      // Generate report;
-      this.generateReport();
-      } catch (error) {
-  console.error("❌ Error Fixer Automation "failed": ", error);
-      this.logError("Error Fixer Automation failed", error)}
-;
-      // Generate report;
-      this.generateReport();
-      } catch (error) {
-  console.error("❌ Error Fixer Automation "failed": ", error);
-      this.logError("Error Fixer Automation failed", error)}
-  }
-;
-  ensureReportsDirectory() {
-  if (!fs.existsSync(this.reportsDir)) {
-  fs.mkdirSync(this.reportsDir, { "recursive": true })}
-  }
-;
-  async fixMergeConflicts() {
-    const files = glob.sync("**/*.{js,jsx,ts,tsx}", {
-  "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]});
-    for (const file of files) {
-  try {
-  const content = fs.readFileSync(file, "utf8");
-        if (;
-          content.includes("") ||;
-          content.includes(">>>>>>>");
         if (;
           content.includes(") ||;
-          content.includes(">>>>>>>");
         ) {
           // Remove merge conflict markers and keep the first version;
           let fixedContent = content;
@@ -462,7 +395,6 @@ if (require.main === module) {
 ;
 module.exports = ErrorFixerAutomation
 #!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node;"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"const glob = require("glob");class $1 { constructor() { this.projectRoot = process.cwd();" this.reportsDir = path.join(this.projectRoot, "error-reports"); this.fixesApplied = []; this.errorsFound = []; this.startTime = Date.now()}; async run() {" console.log("" Starting Error Fixer Automation."); try { / Create reports directory; this.ensureReportsDirectory(); / Run all error fixing operations; await this.fixMergeConflicts(); await this.fixSyntaxErrors(); await this.fixUnusedImports(); await this.fixTypeScriptErrors(); await this.fixLintingErrors(); await this.fixDuplicateDeclarations(); await this.fixMissingExports(); await this.fixImportErrors(); await this.fixUndefinedVariables(); await this.fixConsoleStatements(); / Generate report; this.generateReport();" console.log("" Error Fixer Automation completed successfully!");" console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues"")} catch (error) {" console.error(" Error Fixer Automation failed: ", error);" this.logError("Error Fixer Automation failed", error)}; / Generate report; this.generateReport();" console.log("" Error Fixer Automation completed successfully!");" console.log(" Error Fixer Automation completed successfully!`);"` console.log( Fixed ${this.fixesApplied.length} issues);console.log( Found ${this.errorsFound.length} remaining issues`")} catch (error) {" console.error(" Error Fixer Automation failed: ", error);" this.logError("Error Fixer Automation failed", error)} }; ensureReportsDirectory() { if (!fs.existsSync(this.reportsDir)) {" fs.mkdirSync(this.reportsDir, { recursive: true })} }; async fixMergeConflicts() {" console.log("" Fixing merge conflicts.");" const files = glob.sync("***.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules*.{js,jsx,ts,tsx}", {" ignore: ["node_modules/**", "dist/**", "build/**", ".git/**"]}); for (const file of files) { try {" let content = fs.readFileSync(file, "utf8"); let originalContent = content; / Comment out console statements in production;" if (process.env.NODE_ENV === "production") { content = content.replace(;" /console\.(log|warn|error|info|debug)\s*\(/g,/ console.$1("; / Comment out console statements in production;" if (process.env.NODE_ENV === "production") { content = content.replace(;" /console\.(log|warn|error|info|debug)\s*\(/g,/ console.$1("; )}; if (content !== originalContent) { fs.writeFileSync(file, content); this.fixesApplied.push({" type: "console_statement", file," description: "Fixed console statements"})}" } catch (error) { this.logError(Error fixing console statements in ${file }, error")} } }; generateReport() { const endTime = Date.now(); const duration = endTime - this.startTime; const report = {"` timestamp: new Date().toISOString(),duration: "${duration}ms`," fixesApplied: this.fixesApplied," errorsFound: this.errorsFound," summary: { totalFixes: this.fixesApplied.length," totalErrors: this.errorsFound.length," successRate: this.fixesApplied.length > 0; ? Math.round(; (this.fixesApplied.length /; (this.fixesApplied.length + this.errorsFound.length)) *; 100; ); : 0}} const reportFile = path.join(;` this.reportsDir,error-fixer-report-${Date.now()}.json`; const report = {"` timestamp: new Date().toISOString(),duration: `${duration}ms"," fixesApplied: this.fixesApplied," errorsFound: this.errorsFound," summary: { totalFixes: this.fixesApplied.length," totalErrors: this.errorsFound.length," successRate: this.fixesApplied.length > 0; ? Math.round(; (this.fixesApplied.length /; (this.fixesApplied.length + this.errorsFound.length)) *; 100; ); : 0}}; const reportFile = path.join(; this.reportsDir,error-fixer-report-${Date.now()}.json"; ); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));"` console.log(` Report saved to: ${reportFile}")}; logError(message, error) { this.errorsFound.push({ message," error: error.message,"` stack: error.stack});console.error(" ${message}:`, error.message)}};/ Run the automation;if (require.main === module) { const automation = new ErrorFixerAutomation(); automation.run() .then(report => {" console.log("Automation completed successfully!"); process.exit(0)}) .catch(error => {"" console.error("Automation failed: ", error); process.exit(1)})};module.exports = ErrorFixerAutomation""`"`
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -485,9 +417,7 @@ const glob = require("glob")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   const content = fs.readFileSync(file, "utf8")
           content.includes("")
-          content.includes(">>>>>>>")
           content.includes(")
-          content.includes(">>>>>>>")
               /\n([\s\S]*?)\n              "$1"
               /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"
@@ -646,8 +576,4 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
-<<<<<<< HEAD
       console.error('Automation "failed")
-=======
-      console.error('Automation "failed")
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

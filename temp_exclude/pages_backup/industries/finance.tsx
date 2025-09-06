@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -20,22 +12,9 @@ import { DollarSign,
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -47,10 +26,6 @@ import { DollarSign,
   Brain, 
   Shield, 
   BarChart3, 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import {
   DollarSign,
   Brain,
@@ -65,41 +40,11 @@ import {
   FileText,
   Users;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'Blockchain Solutions,',
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -168,43 +113,13 @@ const services = [
       'Compliance dashboards'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ;];
 const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
     icon: Shield;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
     icon: Shield,
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ];
 const benefits = [
   {
@@ -227,21 +142,6 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to financial regulations.,',
     icon: FileText,
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ;];
 export default function FinancePage() {
   return (;
@@ -286,21 +186,6 @@ export default function FinancePage() {
             </motion.div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ];
 export default function FinancePage() {
   return (
@@ -355,21 +240,6 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Financial Technology Services,
@@ -382,21 +252,6 @@ export default function FinancePage() {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -414,21 +269,6 @@ export default function FinancePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">";
@@ -440,21 +280,6 @@ export default function FinancePage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
@@ -472,38 +297,15 @@ export default function FinancePage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
             </div>,
           </div>;
         </section>;
-=======
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-<<<<<<< HEAD
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
@@ -514,21 +316,6 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Fintech Solutions?,
@@ -541,21 +328,6 @@ export default function FinancePage() {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -582,38 +354,15 @@ export default function FinancePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
             </div>,
           </div>;
         </section>;
-=======
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-<<<<<<< HEAD
-=======
             </div>,
           </div>;
         </section>;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
-            </div>,
-          </div>;
-        </section>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
@@ -624,21 +373,6 @@ export default function FinancePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Financial Services?,
               </h2>;
@@ -657,21 +391,6 @@ export default function FinancePage() {
         </section>;
       </div>;
     </Layout>;
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/industries/finance.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/finance.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             >
               <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 Ready to Transform Financial Services?

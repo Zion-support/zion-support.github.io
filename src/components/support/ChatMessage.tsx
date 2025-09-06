@@ -111,3 +111,4 @@ function formatMessageWithLinks(message: string): string {
 
   return formattedMessage;  return formattedMessage
 }
+;

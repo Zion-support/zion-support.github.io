@@ -17,7 +17,7 @@ const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
           }`}
         />
       ))}
-    </div>
+    </div>;
   );
 };
 

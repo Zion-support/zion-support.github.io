@@ -142,5 +142,5 @@ export default function OffworldConsole() {
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
-  );
+);
 }

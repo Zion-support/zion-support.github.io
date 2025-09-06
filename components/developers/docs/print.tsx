@@ -1,4 +1,4 @@
- export const getStaticProps: GetStaticProps<PageProps> = async () => {
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent,
@@ -66,5 +66,5 @@ export default function PrintDocs({ docs }: PageProps) {
         ))}
       </div>
     </div>
-  );
+);
 }

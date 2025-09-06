@@ -567,5 +567,5 @@ export default function ServicesShowcase2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }

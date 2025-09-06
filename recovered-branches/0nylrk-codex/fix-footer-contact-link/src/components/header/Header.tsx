@@ -77,3 +77,4 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     </header>
   )
 }
+;

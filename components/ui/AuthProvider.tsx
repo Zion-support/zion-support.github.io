@@ -51,5 +51,5 @@ export function useAuth() {
 }
 
 export function useAuth() {
-  return useContext(AuthContext);
+return useContext(AuthContext);
 }

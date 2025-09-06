@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:data_backup/2025-quantum-breakthrough-services.ts
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/data_backup/2025-quantum-breakthrough-services.ts
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 export const quantumBreakthroughServices2025 = [{
     id:,
   quantum-internet-security-platform',

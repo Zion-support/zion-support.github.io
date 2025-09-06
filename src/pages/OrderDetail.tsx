@@ -154,3 +154,4 @@ toast.success ('Order summary copied to clipboard') ;
 }'"
 }
 }
+;

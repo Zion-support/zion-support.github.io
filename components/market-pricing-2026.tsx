@@ -786,5 +786,5 @@ export default function MarketPricing2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);
 }

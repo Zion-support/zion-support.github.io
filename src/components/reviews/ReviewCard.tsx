@@ -11,7 +11,7 @@ import {  Dialog,  Dialog,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,;
+DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Textarea } from '@/components/ui/textarea';
 interface ReviewCardProps {
@@ -297,7 +297,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         </Dialog>
       </div>
     </div>
-  );
+);
 
 }</div>) ;
 };";

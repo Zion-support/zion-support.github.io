@@ -56,7 +56,7 @@ export default function Badges({ balance }: { balance: number }) {
         </span>
       )}
     </div>
-  );        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
+);        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
       )}
     </div>
   );

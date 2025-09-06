@@ -24,7 +24,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
@@ -284,7 +284,7 @@ export function LoginForm() {
         </p>
       </form>
     </Form>
-  );
+);
 
 }else {;
   fireEvent ('login', {';

@@ -37,7 +37,7 @@ import {
   Moon,
   Wind,
   Droplets,
-  Code,;} from 'lucide-react';import { 
+  Code,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Shield, Users, Briefcase, BookOpen, MessageCircle, 
   Star, TrendingUp, Target, Layers, Cpu, Database, 
@@ -535,5 +535,5 @@ export default function UltraFuturisticFooter2028() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>
       </div>
     </footer>
-  );
+);
 }

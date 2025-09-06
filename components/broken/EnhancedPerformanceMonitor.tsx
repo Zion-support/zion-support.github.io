@@ -1,4 +1,4 @@
- //FCP recommendations if (metrics.fcp > 2000) {
+//FCP recommendations if (metrics.fcp > 2000) {
   recs.push ({
   
 }return recs;

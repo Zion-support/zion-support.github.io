@@ -181,7 +181,7 @@ export function TemplateList({
         </AlertDialogContent>
       </AlertDialog>
     </div>
-  );
+);
 
 };
 const handleSetDefault = async (templateId: string) => {;

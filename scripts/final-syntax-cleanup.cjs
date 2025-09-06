@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"console.log(" Starting ultimate syntax error fixing.");/ Fix specific issues in multiple filesconst fixes = [/ api-quick-start.tsx fixes {" file: "pages/docs/api-quick-start.tsx"," search: " }"\n}"}"," replace: " }\n}"}" }, {"" file: "pages/docs/api-quick-start.tsx","" search: "display: "alignItems", "center" gap: 12,","" replace: "display: "flex", alignItems: "center", gap: 12," }, {"" file: "pages/docs/api-quick-start.tsx","" search: "background: "borderRadius", 8","" replace: "background: "#1e293b", borderRadius: 8" }, / sdk.tsx fixes {"" file: "pages/docs/sdk.tsx","" search: "background: "borderRadius", 8,","" replace: "background: "#1e293b", borderRadius: 8," }, / enterprise.tsx fixes {"" file: "pages/enterprise.tsx"," search: " </div>{}\"<div className=\"bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16\">\"<h2 className=\"text-3xl font-bold text-white text-center mb-8\">Industries We Serve</h2>\"<div className=\"grid md: grid-cols-2 lg:grid-cols-3 gap-6\">{industries.map((industry, index) => (\"<div key={index} className=\"bg-white/10 rounded-lg p-6 border border-white/20\">\"<h3 className=\"text-lg font-semibold text-white mb-2\">{industry.name}</h3>\"<div className=\"text-blue-400 font-medium mb-2\">{industry.clients} Clients</div>\"<div className=\"text-gray-300 text-sm\">{industry.solutions}</div></div>;"," replace: " </div>\n \n {}\n <div className=\"bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16\">\n <h2 className=\"text-3xl font-bold text-white text-center mb-8\">Industries We Serve</h2>\n <div className=\"grid md: grid-cols-2 lg:grid-cols-3 gap-6\">\n {industries.map((industry, index) => (\n <div key={index} className=\"bg-white/10 rounded-lg p-6 border border-white/20\">\n <h3 className=\"text-lg font-semibold text-white mb-2\">{industry.name}</h3>\n <div className=\"text-blue-400 font-medium mb-2\">{industry.clients} Clients</div>\n <div className=\"text-gray-300 text-sm\">{industry.solutions}</div>\n </div>\n ))}\n </div>\n </div>" }, / marketplace.tsx fixes {"" file: "pages/marketplace.tsx"," search: " }>"," replace: " }>" }, / security.tsx fixes {"" file: "pages/security.tsx"," search: " title: \"Data Encryption\"\n description:"," replace: " title: \"Data Encryption\",\n description: " }];let fixedCount = 0;let errorCount = 0;/ Apply fixesfixes.forEach(({ file, search, replace }) => { try { const filePath = path.join(process.cwd(), file); if (!fs.existsSync(filePath)) {" console.log(" File not found: ${file}"); return} " let content = fs.readFileSync(filePath, "utf8"); if (content.includes(search)) { content = content.replace(search, replace);" fs.writeFileSync(filePath, content, "utf8");" console.log(" Fixed issue in ${file}"); fixedCount++} } catch (error) {" console.error(" Error fixing ${file}:", error.message); errorCount++}});"console.log("\n Ultimate syntax error fixing complete!");"console.log(" Files fixed: ${fixedCount}");"console.log(" Errors: ${errorCount}");""console.log("\n Run "npm run build" to test the fixes.`);'"`'"`
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 #!/usr/bin/env node
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/automation-fixes
 const fs = require('fs');
-<<<<<<< HEAD:temp_exclude/scripts/ultimate-syntax-fix.cjs
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d:scripts/final-syntax-cleanup.cjs
 
-<<<<<<< HEAD
 console.log('🔧 Final Syntax Cleanup');
 console.log('=');
 
-=======
-console.log('🔧 Ultimate Syntax Fix');
-console.log('=');
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {
   return content
@@ -36,14 +20,6 @@ function fixAllSyntax(content) {
     // Fix malformed meta tags
     .replace(/<meta([^>]+) \/ \/>/gm, '<meta$1 />')
     .replace(/<meta([^>]+) \/>/gm, '<meta$1 />')
-<<<<<<< HEAD:temp_exclude/scripts/ultimate-syntax-fix.cjs
-=======
-    
-    // Fix malformed function declarations
-    .replace(/export default function \w+\(\) \{\}/gm, 'export default function AIServicesPage() {')
-    .replace(/return \(\)/gm, 'return (')
-    
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d:scripts/final-syntax-cleanup.cjs
     // Fix object literal syntax
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
@@ -86,28 +62,9 @@ const filesToFix = [
   'components/layout/MainLayout.tsx'
 ];
 let totalFixed = 0;
-<<<<<<< HEAD:temp_exclude/scripts/ultimate-syntax-fix.cjs
 console.log('🔍 Fixing syntax errors in all files...');
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d:scripts/final-syntax-cleanup.cjs
 for (const file of filesToFix) {
   try {
-<<<<<<< HEAD
-=======
-    const filePath = path.join(process.cwd(), file);
-    if (!fs.existsSync(filePath)) {
-      return}
-    let content = fs.readFileSync(filePath, 'utf8');
-    if (content.includes(search)) {
-      content = content.replace(search, replace);
-      fs.writeFileSync(filePath, content, 'utf8');
-      fixedCount++}
-  } catch (error) {
-    console.error("❌ Error fixing ${file}:", error.message);
-    errorCount++}
-});
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     if (!fs.existsSync(file)) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
@@ -125,7 +82,6 @@ for (const file of filesToFix) {
   }
 }
 console.log(`\n✅ Fixed ${totalFixed} files`);
-<<<<<<< HEAD:temp_exclude/scripts/ultimate-syntax-fix.cjs
 // Try to build
 console.log('\n🔨 Testing build...');
 try {
@@ -156,15 +112,9 @@ try {
 } catch (error) {
   console.log('⚠️  Failed to push syntax fixes:', error.message);
 }
-<<<<<<< HEAD
 
 console.log('\n🎉 Ultimate syntax fix completed!');
-=======
-console.log('\n🎉 Ultimate syntax fix completed!');
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 console.log('🎉 Final syntax cleanup completed!');
-=======
 class FinalSyntaxCleanup {
   constructor() {
     this.projectRoot = process.cwd();
@@ -318,4 +268,3 @@ if (require.main === module) {
 }
 
 module.exports = FinalSyntaxCleanup;
->>>>>>> origin/automation-fixes

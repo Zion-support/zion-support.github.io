@@ -1,6 +1,5 @@
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-
 export type PaginationProps = {
   page: number;
   pageSize: number;
@@ -65,7 +64,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
         Next
       </EnhancedButton>
     </div>
-  );
+);
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {

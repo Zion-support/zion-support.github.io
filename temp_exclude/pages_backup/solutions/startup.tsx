@@ -1,59 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/startup.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/startup.tsx
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
 import {motion} from 'framer-motion';
 import {Rocket,, Zap,, DollarSign,, Users,, ArrowRight,, CheckCircle,, Clock,, Target,, TrendingUp} from 'lucide-react';
 import Layout from "../../components/Layout";";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions/startup.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const features = [;
   {}
     title: 'Rapid Prototyping,',
@@ -171,12 +125,7 @@ export default function StartupSolutionsPage() {
                 We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/startup.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
-=======
-
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
@@ -222,12 +171,7 @@ export default function StartupSolutionsPage() {
                 Comprehensive startup services designed to help you build, launch, and scale your business,
               </p>;
             </motion.div>;
-<<<<<<< HEAD:pages_backup/solutions/startup.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-=======
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}

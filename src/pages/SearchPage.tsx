@@ -1,4 +1,4 @@
-  const pageKey = `search-${routeKey}-${router.asPath}`;
+const pageKey = `search-${routeKey}-${router.asPath}`;
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
@@ -11,6 +11,7 @@ import {
   TabsList;
   TabsTrigger} from "@/components/ui/tabs";
 import { Loader2 } from 'lucide-react'
+
 interface SearchResult {
   id: string,
   type: "product" | "service" | "talent" | "blog" | "doc",
@@ -374,3 +375,4 @@ router.push (`/search?q=$ {;
     </>;
   );
 }
+;

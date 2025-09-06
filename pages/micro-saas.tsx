@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -123,11 +121,6 @@ export default function MicroSaasPage() {
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
                 </Link>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -178,7 +171,6 @@ import {
   Home;
 } from 'lucide-react';
 import Layout from '../components/Layout';
-
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -447,7 +439,6 @@ export default function MicroSaas() {
                     {category.name} ({category.count})
                   </button>
                 ))}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
               </div>
             </div>
           </section>
@@ -747,13 +738,8 @@ export default function MicroSaas() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
-=======
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-                Ready to Deploy Your Micro SaaS?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               </h2>
               <p className="text-xl mb-8 max-w-3xl mx-auto">
                 Discover how our micro SaaS solutions can solve your specific business challenges
@@ -772,27 +758,11 @@ export default function MicroSaas() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-
-=======
-            </div>
-=======
-            </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

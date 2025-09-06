@@ -1,4 +1,3 @@
-  
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
@@ -240,7 +239,7 @@ export function SignUpForm() {
         </Link>
       </p>
     </div>
-  );
+);
 
 }else {;
   const {;

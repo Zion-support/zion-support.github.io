@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-console.log('🔧 Starting merge conflict resolution...');
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflicts
-        conflictType = 'incoming',
-    continue
-  }
-      
-      if (line.includes('>>>>>>>')) {
         inConflict = false;
         conflictType = '';
         continue;
@@ -60,4 +39,3 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -221,7 +221,6 @@ class EnhancedAppOptimizer {
     this.log('📊 Generating optimization report...');
 
     const report = {
-<<<<<<< HEAD
       timestamp: new Date().toISOString(),
       bundleOptimization: await this.optimizeBundleSize(),
       imageOptimization: await this.optimizeImages(),
@@ -231,14 +230,8 @@ class EnhancedAppOptimizer {
         totalOptimizations: 4,
         successfulOptimizations: 0,
         failedOptimizations: 0,
-<<<<<<< HEAD
       },    };
-=======
-      },
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
 
     // Calculate summary
     Object.values(report).forEach(optimization => {
@@ -254,15 +247,9 @@ class EnhancedAppOptimizer {
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${this.reportFile}`);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved to: ${reportPath}`);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-=======
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     return report;
   }
 
@@ -270,8 +257,6 @@ class EnhancedAppOptimizer {
     try {
       this.log('🎯 Starting enhanced app optimization...');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       this.log('🏁 Enhanced App Optimizer completed');
       this.log(
         `✅ Successful optimizations: ${report.summary.successfulOptimizations}`
@@ -279,11 +264,7 @@ class EnhancedAppOptimizer {
       this.log(
         `❌ Failed optimizations: ${report.summary.failedOptimizations}`
       );
-=======
-      this.log('🏁 Enhanced App Optimizer completed');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       return report;
-=======
       const report = await this.generateOptimizationReport();
 
       this.log(`🎉 Enhanced app optimization completed!`);
@@ -292,7 +273,6 @@ class EnhancedAppOptimizer {
       if (report.summary.failedOptimizations > 0) {
         this.log(`⚠️ Failed optimizations: ${report.summary.failedOptimizations}`);
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
     } catch (error) {
       this.log(`❌ Enhanced app optimization failed: ${error.message}`);
       process.exit(1);
@@ -300,7 +280,6 @@ class EnhancedAppOptimizer {
   }
 }
 
-<<<<<<< HEAD
 // Run if called directly
 if (require.main === module) {
     const optimizer = new EnhancedAppOptimizer(),
@@ -308,8 +287,3 @@ if (require.main === module) {
   }
 
 module.exports = EnhancedAppOptimizer;
-=======
-// Run the optimizer
-const optimizer = new EnhancedAppOptimizer();
-optimizer.run().catch(console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943

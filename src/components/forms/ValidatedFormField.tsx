@@ -344,7 +344,7 @@ export const commonValidations = {
       if (value && !validationPatterns.phone.test(value)) {
         return 'Please enter a valid phone number';
       }
-      return null;
+return null;
     },
   },
 };

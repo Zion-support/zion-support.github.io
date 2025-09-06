@@ -151,5 +151,5 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
-  );
+);
 }

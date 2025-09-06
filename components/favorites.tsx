@@ -123,5 +123,5 @@ export default function FavoritesPage() {
         </div>
       )}
     </div>
-  );
+);
 }

@@ -1,6 +1,7 @@
 
 
 
+
     allServices = [...allServices, ...newServices];    
     let filteredServices = allServices;
     
@@ -55,3 +56,4 @@ const ServicesPage: React.FC = () => {;
 };
 export default ServicesPage;
 }
+;

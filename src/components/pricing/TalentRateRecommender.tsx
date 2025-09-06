@@ -1,5 +1,4 @@
 
-
 interface TalentRateRecommenderProps {
   skills: string[],
   yearsExperience: number,

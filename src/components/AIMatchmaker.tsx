@@ -7,7 +7,6 @@ import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
 import { Textarea } from '@/components/ui/textarea';
 import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 interface AIMatchmakerProps {
   serviceType?: string;
 onMatchSelect?: (match: any) => void;
@@ -145,5 +144,5 @@ export function AIMatchmaker({
         </div>
       </CardContent>
     </Card>
-  );
+);
 }

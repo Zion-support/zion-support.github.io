@@ -102,7 +102,6 @@ import {
   getInnovativeServicesByPriceRange,
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-
 export default function InnovativeServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -785,5 +784,5 @@ export default function InnovativeServicesPage() {
         </div>
       </QuantumHolographicBackground>
     </>
-  );
+);
 }

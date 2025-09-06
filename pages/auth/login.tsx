@@ -512,5 +512,5 @@ const LoginPage = () => {
         </Card>
       </div>
     </>
-  );
+);
 };export default LoginPage;

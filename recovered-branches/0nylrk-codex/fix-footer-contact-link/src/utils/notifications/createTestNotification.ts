@@ -35,3 +35,4 @@ export async function createTestNotification(userId: string) {
     actionText: actions[randomType].text
   })
 }
+;

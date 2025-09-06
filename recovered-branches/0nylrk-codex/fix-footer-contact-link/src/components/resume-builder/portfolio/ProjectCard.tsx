@@ -106,3 +106,4 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
   )
 }
+;

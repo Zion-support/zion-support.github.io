@@ -169,3 +169,4 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
     </div>
   )
 }
+;

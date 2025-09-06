@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
-
 export default function AccountSettingsPage() {
   const [user, setUser] = useState<{
     address: string;
@@ -237,4 +236,4 @@ export default function AccountSettingsPage() {
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>
-  );
+);

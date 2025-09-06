@@ -5,7 +5,6 @@ import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessag
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
-
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,

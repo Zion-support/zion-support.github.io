@@ -5,7 +5,7 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,;
+AccordionTrigger,;
 } from '@/components/ui/accordion';
 import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
@@ -188,3 +188,4 @@ export function AIMilestoneGenerator({
     </div>
   );
 }
+;

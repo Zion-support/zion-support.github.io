@@ -16,6 +16,7 @@ import { Badge } from '@/components/ui/badge';
 import * as Sentry from '@sentry/nextjs';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
+
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -656,4 +657,4 @@ export default GlobalErrorBoundary;
   return WrappedComponent;
 }
 
-export default GlobalErrorBoundary 
+export default GlobalErrorBoundary

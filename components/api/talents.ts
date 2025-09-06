@@ -51,7 +51,7 @@ export default async function handler(
     programTrack: programTrack || null,
     certificationStatus: certificationStatus || 'pending',
     partnerId: auth.partner.id,
-    createdAt: now,
+createdAt: now,
   };
   records.push(record);
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });

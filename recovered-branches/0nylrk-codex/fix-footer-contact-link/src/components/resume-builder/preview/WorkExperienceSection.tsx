@@ -53,3 +53,4 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     </div>
   )
 }
+;

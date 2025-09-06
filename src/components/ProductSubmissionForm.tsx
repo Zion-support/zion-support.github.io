@@ -8,7 +8,6 @@ import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 import {
   Form,
   FormControl,
@@ -16,7 +15,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -522,7 +521,7 @@ export function ProductSubmissionForm() {
         />
       </TabsContent>
     </Tabs>
-  );
+);
 
   const file = e.target.files?.[0];
 if (file) {;

@@ -1,5 +1,4 @@
 };
-
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string,) => void,

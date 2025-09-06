@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -103,64 +102,9 @@ function processFile(filePath) {
   
   searchDirectory('/workspace');
   return files;
-=======
-#!/usr/bin/env node;
-const fs = require("fs")
-const path = require("fs")
-const { execSync } = require("child_process")
-class ComprehensiveMergeResolver {
-  constructor() {
-    this.projectRoot = process.cwd()
-    this.resolvedFiles = []
-    this.errors = [],,
-}
-  log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),,
-}
-  resolveMergeConflicts() {
-    this.log("🔧 Starting comprehensive merge conflict resolution...")
-    try {
-      // Get list of conflicted files;
-      const conflictedFiles = execSync("git diff --name-only --diff-filter=U", {
-        cwd: this.projectRoot,
-        encoding: "utf8",,
-}).trim().split("\n").filter(file => file)
-      this.log(`Found ${conflictedFiles.length} conflicted files`)
-      for (const file of conflictedFiles) {
-        this.resolveFileConflicts(file),,
-}
-      // Clean up build artifacts and cache files;
-      this.cleanupBuildArtifacts()
-      this.log(`🎉 Merge conflict resolution completed. Resolved ${this.resolvedFiles.length} files.`)
-      if (this.errors.length > 0) {
-        this.log(`❌ ${this.errors.length} errors encountered:`)
-        this.errors.forEach(err => {
-          this.log(`   - ${err.file}: ${err.error}`),,
-}),,
-}
-      return {
-        resolvedFiles: this.resolvedFiles,
-        errors: this.errors,,
-}
-    } catch (error) {
-      this.log(`❌ Error during merge conflict resolution: ${error.message}`)
-      return { resolvedFiles: [], errors: [{ file: "general", error: error.message }] }
-    }
-  }
-  resolveFileConflicts(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`⚠️ File not found: ${filePath}`)
-        return,,
-}
-      let content = fs.readFileSync(filePath, "utf8")
-      let originalContent = content;
-      // Remove merge conflict markers and keep main branch version;
-      content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, "$1")
       // Remove any remaining conflict markers;
       content = content.replace(/\n/g, "")
       content = content.replace(/\n/g, "")
-      content = content.replace(/>>>>>>> [^\n]+\n/g, "")
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, "utf8")
         this.resolvedFiles.push(filePath)
@@ -188,7 +132,6 @@ class ComprehensiveMergeResolver {
 }
       } catch (error) {
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
->>>>>>> origin/automation-fixes
 }
 
 // Main execution
@@ -247,14 +190,5 @@ async function main() {
     process.exit(1);
   }
 }
-<<<<<<< HEAD
 
 main();
-=======
-// Run the resolver;
-if (require.main === module) {
-  const resolver = new ComprehensiveMergeResolver()
-  resolver.resolveMergeConflicts(),,
-}
-module.exports = ComprehensiveMergeResolver
->>>>>>> origin/automation-fixes

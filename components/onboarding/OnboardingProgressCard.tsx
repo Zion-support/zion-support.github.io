@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import {CheckCircle2, Circle, PartyPopper} from 'lucide-react';
-
 export type OnboardingStep = {
   id: string;
   label: string;
@@ -131,5 +130,5 @@ export default function OnboardingProgressCard({ title, steps, highlightColorCla
         </div>
       ) : null}
     </div>
-  );
+);
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import EnhancedButton from "./EnhancedButton";
-
 export type EmptyStateProps = {
   title: string;
   description?: string;

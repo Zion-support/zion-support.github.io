@@ -402,4 +402,4 @@ export default function Innovations2034Page() {
 
       <UltraFuturisticFooter2034 />
     </>
-  );
+);

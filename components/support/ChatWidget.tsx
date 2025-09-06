@@ -1,4 +1,4 @@
- useEffect ( () => {
+useEffect ( () => {
   if (!isOpen && messages.length === 0) {
   //Seed greeting setMessages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
@@ -337,5 +337,5 @@ export default function ChatWidget() {
         </div>
       )}
     </div>
-  );
+);
 }

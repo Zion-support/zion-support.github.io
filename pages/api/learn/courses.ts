@@ -15,7 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (level && c.level !== level) return false;
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
-<<<<<<< HEAD
         if (c.isFree !== freeVal) return false;
       }
       return true;
@@ -25,3 +24,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
+

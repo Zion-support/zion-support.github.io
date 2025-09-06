@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 export default function UNBridge() {
   const [form, setForm] = useState({
     title: 'Zion DAO x Digital Labor Initiative',
@@ -267,4 +266,4 @@ export default function UNBridge() {
         </div>
       </div>
     </div>
-  );
+);

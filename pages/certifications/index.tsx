@@ -13,4 +13,4 @@ import CertificatePreview from '../../components/learn/CertificatePreview';
         </ol>
       </div>
     </div>
-  );
+);

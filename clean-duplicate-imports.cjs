@@ -5,16 +5,9 @@
  */;
 ;
 const fs = require('fs');
-<<<<<<< HEAD
 
 class ImportCleaner {
   constructor() {
-=======
-const path = require('path');
-;
-class ImportCleaner {;
-  constructor() {;
->>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
     this.cleanedFiles = [];
   }
 ;

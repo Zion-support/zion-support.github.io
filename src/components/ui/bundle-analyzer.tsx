@@ -261,5 +261,5 @@ export function BundleAnalyzer() {
         </CardContent>
       </Card>
     </div>
-  );
-} 
+);
+}

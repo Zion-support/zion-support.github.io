@@ -8,7 +8,7 @@ import {
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious,;
+PaginationPrevious,;
 } from '@/components/ui/pagination';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
@@ -147,3 +147,4 @@ export function CountryTabs({
 }
   )
 }
+;

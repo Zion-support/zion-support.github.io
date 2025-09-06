@@ -18,7 +18,6 @@ import { formatDate } from "@/utils/referralUtils";
 import { BadgeDollarSign, Badge } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
 interface RewardsCardProps {
   rewards: ReferralReward[],
   isLoading: boolean

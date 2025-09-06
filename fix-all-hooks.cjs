@@ -47,7 +47,6 @@ export default ${hookName};`;
     }
     
     // Check for other common syntax issues
-    if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Fixing merge conflicts in: ${filename}`);
       
       // Remove merge conflict markers

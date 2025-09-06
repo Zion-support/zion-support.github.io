@@ -18,7 +18,7 @@ import {
   Globe,;} from 'lucide-react';
 
 interface UltraAdvancedServiceCardProps {
-  service: {import { 
+  service: {import {
   ArrowRight, ExternalLink, Star, TrendingUp, 
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe

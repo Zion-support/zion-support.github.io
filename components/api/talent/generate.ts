@@ -60,5 +60,5 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'OpenAI error' })
-  };
+};
 }

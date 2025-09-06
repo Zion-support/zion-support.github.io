@@ -21,7 +21,7 @@ export default async function handler(
     return res.status(201).json({ ok: true });
   }
 
-  return res
+return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');    return res.status(201).json({ ok: true })

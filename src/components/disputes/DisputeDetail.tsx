@@ -32,6 +32,7 @@ import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
 
+
 export function DisputeDetail() {
   const router = useRouter();
   const { disputeId } = router.query as { disputeId?: string };
@@ -814,3 +815,4 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
 }'"  )
 }
+;

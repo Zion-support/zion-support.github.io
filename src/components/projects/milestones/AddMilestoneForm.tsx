@@ -227,7 +227,7 @@ export function AddMilestoneForm({
         </form>
       </Form>
     </div>
-  );
+);
 
 }//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {;
   projectScope ;

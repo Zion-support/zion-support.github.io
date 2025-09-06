@@ -21,7 +21,7 @@ import {
   Linkedin,
   Instagram,
   Youtube,
-  Github,;} from 'lucide-react';import { 
+  Github,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
@@ -588,5 +588,5 @@ export default function UltraFuturisticFooter2026() {
         </motion.div>
       </div>
     </footer>
-  );
+);
 }

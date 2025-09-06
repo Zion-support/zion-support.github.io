@@ -7,7 +7,6 @@ import {Button} from "@/components/ui/button";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {FraudFlag, FraudStats} from "@/types/fraud";
-
 // Import refactored components
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
 
@@ -226,3 +225,4 @@ export default function FraudDetection() {
     </AppLayout>
   )
 }
+;

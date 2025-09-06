@@ -3,6 +3,7 @@ import { ResumeOption } from '../resume-selector/types';
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 
+
 interface SelectResumeSectionProps {
   resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;

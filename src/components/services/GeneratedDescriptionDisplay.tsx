@@ -10,7 +10,6 @@ import {
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Check, Pencil } from 'lucide-react';
-
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {
@@ -95,3 +94,4 @@ export function GeneratedDescriptionDisplay({
 }</Card>) ;
 }'";
 }
+;

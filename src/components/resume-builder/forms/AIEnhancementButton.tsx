@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 
+
 interface AIEnhancementButtonProps {
   currentContent: string;
   enhancementType:
@@ -71,3 +72,4 @@ export function AIEnhancementButton({
     </Button>
   );
 }
+;

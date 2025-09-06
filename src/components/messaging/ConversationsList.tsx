@@ -3,7 +3,6 @@ import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
-
 interface ConversationsListProps {
   conversations: Conversation[];
   activeConversation: Conversation | null;
@@ -66,3 +65,4 @@ export function ConversationsList({
     </div>
   );
 }
+;

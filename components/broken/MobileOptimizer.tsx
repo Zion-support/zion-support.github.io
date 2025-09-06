@@ -1,4 +1,4 @@
- setIsMobile (isMobileDevice);
+setIsMobile (isMobileDevice);
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();

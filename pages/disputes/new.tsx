@@ -174,7 +174,7 @@ export default function NewDisputePage() {
   );
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
+const reader = new FileReader();
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
     reader.readAsDataURL(file);

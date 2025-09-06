@@ -1,7 +1,7 @@
- resizeCanvas ();
+resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 type ParticleType = 'quantum' | 'neural' | 'holographic';
-// Particle system 
+// Particle system
 
 const UltraFuturisticBackground2034: React.FC<
   UltraFuturisticBackground2034Props

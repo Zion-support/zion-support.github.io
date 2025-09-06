@@ -210,7 +210,7 @@ export function TalentOnboardingForm() {
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
 
-  return null;
+return null;
 
   //Step 1: Basic Info basicInfo: z.object ({;
   ) .optional () .default ([]);

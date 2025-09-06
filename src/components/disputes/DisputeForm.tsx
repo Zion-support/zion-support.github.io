@@ -10,14 +10,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,;
+SelectValue,;
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { disputeReasonLabels } from '@/types/disputes';
@@ -225,7 +225,7 @@ export function DisputeForm({
         </form>
       </Form>
     </div>
-  );
+);
 
 };
 const removeFile = (index: number) => {;

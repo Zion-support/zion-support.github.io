@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 type Props = {
   onSubmit: (payload: {
     title: string;
@@ -153,5 +152,5 @@ export default function MilestoneForm({ onSubmit }: Props) {
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-  );
+);
 }

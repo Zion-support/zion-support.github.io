@@ -11,7 +11,6 @@ import {
   MessageSquare,
   Smartphone,;
 } from 'lucide-react';
-
 interface QuickAccessProps {
   className?: string;
   style?: React.CSSProperties;
@@ -286,4 +285,5 @@ export default function Page() {;";
 export default QuickAccess;}
 
 export default QuickAccess;
+
 

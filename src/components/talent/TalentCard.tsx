@@ -1,4 +1,3 @@
-
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';import React from 'react';
 import { useRouter } from 'next/router';
@@ -170,6 +169,5 @@ const TalentCardComponent = ({
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
-
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';

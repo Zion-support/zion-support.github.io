@@ -1,4 +1,4 @@
-      let fullMessage = message;
+let fullMessage = message;
       
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
@@ -170,7 +170,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         </Button>
       </div>
     </>
-  );
+);
   if (!message.trim () ) {;
   toast ({;
   return;

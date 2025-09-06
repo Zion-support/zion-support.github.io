@@ -20,7 +20,6 @@ await app.register(cors, {
 });
 
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
-
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
@@ -95,7 +94,6 @@ app.get('/notifications', async (req, reply) => {
   });
   return { items }
 });
-
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err);

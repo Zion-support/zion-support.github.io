@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 const fs = require('fs');
-<<<<<<< HEAD
-<<<<<<< HEAD
 const path = require('path');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 const path = require('path');
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 // Create basic component templates for corrupted files
 const componentTemplates = {
@@ -20,7 +9,6 @@ const componentTemplates = {
 interface AccessibilityContextType {
   announceToScreenReade: r: (messag: e: string) => void;
   setFocu: s: (elementI: d: string) => void;
-=======
 #!/usr/bin/env node;
 const fs = require("fs");
 const path = require("path");
@@ -186,18 +174,12 @@ function findFiles(dir, extensions = [".tsx", ".jsx", ".ts", ".js"]) {;
 }
       } else if (extensions.some(ext => item.endsWith(ext))) {;
   files.push(fullPath);,
->>>>>>> origin/automation-fixes
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 interface AccessibilityProviderProps {
   childre: n: ReactNode;
-<<<<<<< HEAD
-=======
-
-    }
-<<<<<<< HEAD
   };
 ;
   return (;
@@ -242,10 +224,8 @@ const:Header:React.FC = () => {;
           <div className="flex flex-col: md:flex-row justify-between items-center text-sm">
             <div className="flex items-center space-x-6 mb-2: md:mb-0">
 
-<<<<<<< HEAD
   announceToScreenReade: r: (messag: e: string) => void, setFocu: s: (elementI: d: string) => void,
 
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }
 
 export const: AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
@@ -312,19 +292,9 @@ const: Header: React.FC = () => {
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
           <div className="flex flex-col: md:flex-row justify-between items-center text-sm">
-<<<<<<< HEAD
             <div className="flex items-center space-x-6 mb-2: md:mb-0">              <div className="flex items-center">
-=======
-            <div className="flex items-center space-x-6 mb-2: md:mb-0">
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
               <div className="flex items-center">
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 <Phone className="w-4 h-4 mr-2" />
                 <a href="te: l:+13024640950" className="hove: r:text-blue-300">+1 302 464 0950</a>
               </div>
@@ -347,22 +317,10 @@ const: Header: React.FC = () => {
       </div>
 
       {/* Main Navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-=======
-      <nav className="container mx-auto px-4">;
-        <div className="flex justify-between items-center py-4">;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <span className="text-2xl font-bold text-blue-900">Zion Tech Group</span>
@@ -403,70 +361,40 @@ const: Header: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default Header;`;
   'components/Layout.tsx': `import React, { ReactNode } from 'react';
 
 interface LayoutProps {
   childre: n: ReactNode;}
-=======
-  childre: n: ReactNode;
-
-}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const: Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">
       {children}
     </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ),
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default Layout;`;
   'components/LoadingSpinner.tsx': `import React from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-<<<<<<< HEAD
-<<<<<<< HEAD
   className?: string;}
 
 const: LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   className?: string;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   className?: string,
 }
 
 const: LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {
   const sizeClasses = {
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     s: m: 'w-4 h-4',
     m: d: 'w-8 h-8',
     l: g: 'w-12 h-12'
@@ -476,35 +404,15 @@ const: LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className
     <div className={\`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 \${sizeClasses[size]} \${className}\`}>
       <span className="sr-only">Loading...</span>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ),
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default LoadingSpinner;`;
   'components/PerformanceMonitor.tsx': `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   loadTim: e: number;
   renderTim: e: number;
   memoryUsag: e: number;
@@ -518,22 +426,14 @@ const: PerformanceMonitor: React.FC = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const navigationEntry = entries.find(entry => entry.entryType === 'navigation') as PerformanceNavigationTiming;
-<<<<<<< HEAD
-<<<<<<< HEAD
         
         if (navigationEntry) {
           setMetrics({            loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-=======
-<<<<<<< HEAD
         
         if (navigationEntry) {
           setMetrics({
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
             loadTim: e: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
             renderTim: e: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
             memoryUsag: e: (performance as any).memory?.usedJSHeapSize || 0
           });
@@ -542,24 +442,13 @@ const: PerformanceMonitor: React.FC = () => {
 
       observer.observe({ entryType: s: ['navigation'] });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       return () => observer.disconnect();
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       return () => observer.disconnect();
-=======
-      return () => observer.disconnect(),
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     }
   }, []);
 
   if (!metrics) return null;
 
-<<<<<<< HEAD
   return (
     <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
       <div>Loa: d: {metrics.loadTime.toFixed(2)}ms</div>
@@ -572,12 +461,6 @@ const: PerformanceMonitor: React.FC = () => {
 export default PerformanceMonitor;`;
   'components/SEOHead.tsx': `import React from 'react';
 import Head from 'next/head';
-=======
-  url = 'http: s://ziontechgroup.com'
-<<<<<<< HEAD
-=======
-      return () => observer.disconnect(),
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 interface SEOHeadProps {
   title?: string;
@@ -586,25 +469,17 @@ interface SEOHeadProps {
   ogImage?: string;
   url?: string;
 }
-=======
     }
   }, []);
 ;
   if (!metrics) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
-<<<<<<< HEAD
 const: SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI-Powered Technology Solutions',
   description = 'Leading provider of AI-powered technology solutions, web development, mobile apps, and digital transformation services.',
   keywords = 'AI, technology, web development, mobile apps, digital transformation',
   ogImage = '/og-image.jpg',
   url = 'http: s://ziontechgroup.com'}) => {
-=======
-  url = 'http: s://ziontechgroup.com'
-
-}) => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   return (
     <Head>
       <title>{title}</title>
@@ -621,42 +496,20 @@ const: SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitte: r:image" content={ogImage} />
       <link rel="canonical" href={url} />
     </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ),
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default SEOHead;`;
   'components/SearchBar.tsx': `import React, { useState } from 'react';
 import { Search, X } from 'lucide-react';
 
 interface SearchBarProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   onSearch?: (quer: y: string) => void;
   placeholder?: string;
   className?: string;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 const: SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
@@ -677,11 +530,6 @@ const: SearchBar: React.FC<SearchBarProps> = ({
     setQuery('');
     setIsOpen(false);
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   return (
     <div className={`relative ${className}`}>
@@ -689,7 +537,6 @@ const: SearchBar: React.FC<SearchBarProps> = ({
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
           <input
-<<<<<<< HEAD
             type="text"            value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setIsOpen(true)}
@@ -698,39 +545,6 @@ const: SearchBar: React.FC<SearchBarProps> = ({
           {query && (
             <button
               type="button"
-=======
-            type="text"
-=======
-
-  onSearch?: (quer: y: string) => void, placeholder?: string,
-  className?: string,
-
-}
-;
-const: SearchBar:React.FC<SearchBarProps> = ({,
-  onSearch,;
-  placeholder = 'Search...',;
-  className = '';
-}) => {;
-  const [query, setQuery] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
-
-;
-  const handleSubmit = (e: React.FormEvent) => {, e.preventDefault(),
-    if (onSearch && query.trim()) {;
-      onSearch(query.trim());
-
-    }
-  };
-;
-  const handleClear = () => {;
-    setQuery('');
-    setIsOpen(false),
-  };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 ;
   return (;
     <div className={`relative ${className}`}>;
@@ -750,10 +564,6 @@ const: SearchBar:React.FC<SearchBarProps> = ({,
           {query && (
             <button
               type="button"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400: hover:text-gray-600"
             >
@@ -765,13 +575,6 @@ const: SearchBar:React.FC<SearchBarProps> = ({,
     </div>
   );
 };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default SearchBar;`;
   'components/Sidebar.tsx': `import React from 'react';
@@ -783,30 +586,7 @@ interface SidebarProps {
   onClos: e: () => void;
 }
 
-<<<<<<< HEAD
 const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-=======
-          className="fixed inset-0 bg-black bg-opacity-50 z-40: md:hidden"
-
-          onClick={onClose}
-        />;
-      )}
-;
-      {/* Sidebar */}
-      <div;
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${;
-          isOpen ? 'translate-x-0' :'-translate-x-full';
-        }`}
-      >;
-        <div className="p-4">;
-          <div className="flex items-center justify-between mb-8">;
-            <h2 className="text-xl font-bold text-gray-800">Menu</h2>;
-            <button;
-              onClick={onClose}
-
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"
-
-<<<<<<< HEAD
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400: hover:text-gray-600", >,
               <X className="w-4 h-4" />;
@@ -827,33 +607,9 @@ import { Home, Settings, User, LogOut } from 'lucide-react';
 
   isOpe: n: boolean, onClos: e: () => void,
 
-=======
-  } catch (error) {;
-  console.error(`Error reading directory ${dir}:`, error.message);,
-}
-
-  return files;,
-}
-
-// Main function;
-function $1() {;
-  const srcDir = path.join(__dirname, "src");
-  if (!fs.existsSync(srcDir)) {;
-  console.error("src directory not found");
-    return;,
-}
-
-  const files = findFiles(srcDir);
-  console.log(`Found ${files.length} files to check`);
-  let fixedCount = 0;
-  files.forEach(file => {;
-  if (fixFile(file)) {;
-  fixedCount++;,
->>>>>>> origin/automation-fixes
 }
 ;
 const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const menuItems = [
     { hre: f: '/dashboard', labe: l: 'Dashboard', ico: n: Home },
     { hre: f: '/profile', labe: l: 'Profile', ico: n: User },
@@ -887,7 +643,6 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             </button>
           </div>
 
-<<<<<<< HEAD
           <nav className="space-y-2">
             {menuItems.map((item) => {
               const Icon = item.icon;
@@ -896,118 +651,57 @@ const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   key={item.href}
                   href={item.href}
                   className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"                  onClick={onClose}
-=======
-                  className="flex items-center space-x-3 px-3 py-2 rounded-md text-gray-700: hover:bg-gray-100: hover:text-blue-600"
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
                   onClick={onClose}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
                 >
                   <Icon className="w-5 h-5" />
                   <span>{item.label}</span>
                 </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
               );            })}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
               );
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
               ),
             })}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           </nav>
         </div>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );};
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   ),
 };
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export default Sidebar;`;
   'components/SimpleLayout.tsx': `import React, { ReactNode } from 'react';
 
 interface SimpleLayoutProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
   childre: n: ReactNode;
   title?: string;}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   childre: n: ReactNode;
   title?: string;
-=======
-
-  childre: n: ReactNode, title?: string,
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   childre: n: ReactNode;
   title?: string;
 
 }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">        {title && (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8 py-8">
 
         {title && (
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>
         )}
         {children}
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
-=======
-  ),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default SimpleLayout;`;
   'components/layout/Footer.tsx': `import React from 'react';
@@ -1158,16 +852,9 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   quality?: number;
-<<<<<<< HEAD
   sizes?: string;
 }
 
-=======
-  sizes?: string,
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -1179,146 +866,7 @@ const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   sizes = '100vw'
 }) => {
   return (
-<<<<<<< HEAD
     <Image      src={src}
-=======
-    <Image
-=======
-  ),
-
-};
-;
-export default SimpleLayout;`,;
-;
-  'components/layout/Footer.tsx':`import React from 'react';import Link from 'next/link';
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
-;
-const: Footer:React.FC = () => {, return (,
-    <footer className="bg-gray-900 text-white">;
-      <div className="max-w-7xl mx-auto px-4: sm:px-6:lg:px-8 py-12">, <div className="grid grid-cols-1:md:grid-cols-4 gap-8">,
-          {/* Company Info */}
-          <div className="col-span-1: md:col-span-2">, <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>,
-            <p className="text-gray-300 mb-4">;
-              Leading provider of AI-powered technology solutions and digital transformation services.;
-            </p>;
-            <div className="flex space-x-4">;
-              <a href="#" className="text-gray-400: hover:text-white">, <Facebook className="w-5 h-5" />,
-              </a>;
-              <a href="#" className="text-gray-400: hover:text-white">, <Twitter className="w-5 h-5" />,
-              </a>;
-              <a href="#" className="text-gray-400: hover:text-white">, <Linkedin className="w-5 h-5" />,
-              </a>;
-              <a href="#" className="text-gray-400: hover:text-white">, <Instagram className="w-5 h-5" />,
-              </a>;
-            </div>;
-          </div>;
-;
-          {/* Quick Links */}
-          <div>;
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>;
-            <ul className="space-y-2">;
-              <li><Link href="/" className="text-gray-300: hover:text-white">Home</Link></li>, <li><Link href="/services" className="text-gray-300:hover:text-white">Services</Link></li>,
-              <li><Link href="/about" className="text-gray-300: hover:text-white">About</Link></li>, <li><Link href="/contact" className="text-gray-300:hover:text-white">Contact</Link></li>,
-            </ul>;
-          </div>;
-;
-          {/* Contact Info */}
-
-          <div>;
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>;
-            <div className="space-y-2">;
-              <div className="flex items-center">;
-                <Phone className="w-4 h-4 mr-2" />;
-                <span className="text-gray-300">+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center">;
-                <Mail className="w-4 h-4 mr-2" />;
-                <span className="text-gray-300">kleber@ziontechgroup.com</span>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-;
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">;
-          <p className="text-gray-400">;
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.;
-          </p>;
-        </div>;
-      </div>;
-    </footer>;
-  );
-
-};
-;
-export default Footer;`,;
-;
-  'components/layout/Layout.tsx':`import React, { ReactNode } from 'react';import Header from '../Header';
-import Footer from './Footer';
-
-  childre: n: ReactNode,
-}
-;
-const:Layout:React.FC<LayoutProps> = ({ children }) => {;
-  return (;
-    <div className="min-h-screen flex flex-col">;
-      <Header />;
-      <main className="flex-1">;
-        {children}
-
-      </main>, <Footer />, </div>);
-
-};
-;
-export default Layout;`,;
-;
-  'components/layout/MainLayout.tsx':`import React, { ReactNode } from 'react';import Header from '../Header';
-import Footer from './Footer';
-import SEOHead from '../SEOHead';
-
-  childre: n: ReactNode, title?: string,
-  description?: string,
-
-}
-;
-const:MainLayout:React.FC<MainLayoutProps> = ({ children, title, description }) => {;
-  return (;
-    <>;
-      <SEOHead title={title} description={description} />;
-      <div className="min-h-screen flex flex-col">;
-        <Header />;
-        <main className="flex-1">;
-          {children}
-
-  childre: n: ReactNode, fallback?: ReactNode,
-
-}
-;
-const: LazyComponent:React.FC<LazyComponentProps> = ({ ,
-  children, ;
-  fallback = <LoadingSpinner /> ;
-}) => {;
-  return (;
-    <Suspense fallback={fallback}>;
-      {children}
-
-  sr: c: string, al: t: string,
-  widt: h: number, heigh: t: number,
-
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  sizes?: string,
-
-}
-;
-const: OptimizedImage:React.FC<OptimizedImageProps> = ({,
-=======
-}
-;
-const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   src,;
   alt,;
   width,;
@@ -1331,7 +879,6 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
   return (;
     <Image;
       src={src}
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       alt={alt}
       width={width}
       height={height}
@@ -1339,22 +886,12 @@ const:OptimizedImage:React.FC<OptimizedImageProps> = ({;
       priority={priority}
       quality={quality}
       sizes={sizes}
-<<<<<<< HEAD
-<<<<<<< HEAD
     />
   );
 };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     />
   );
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 export default OptimizedImage;`;
   'components/ui/EnhancedMarketplaceCard.tsx': `import React from 'react';
@@ -1367,22 +904,10 @@ interface MarketplaceCardProps {
   ratin: g: number;
   imag: e: string;
   onAddToCart?: () => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
   onFavorite?: () => void;}
-=======
-<<<<<<< HEAD
   onFavorite?: () => void;
-=======
-
-  titl: e: string, descriptio: n: string,
-  pric: e: number, ratin: g: number,
-  imag: e: string, onAddToCart?: () => void,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   onFavorite?: () => void,
 }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
@@ -1394,17 +919,6 @@ const: EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   onFavorite
 }) => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
       <div className="relative">
         <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -1447,7 +961,6 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface NavItem {
   labe: l: string;
-<<<<<<< HEAD
   hre: f: string;  children?: NavItem[];
 }
 
@@ -1462,32 +975,11 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = (labe: l: string) => {
-<<<<<<< HEAD
     setActiveDropdown(activeDropdown === label ? nul: l: label);  };
 
   return (
     <nav className={`bg-white shadow-lg ${className}`}>
-=======
-    setActiveDropdown(activeDropdown === label ? nul: l: label);
-<<<<<<< HEAD
-=======
-  item: s: NavItem[], className?: string,
 
-}
-;
-const:InteractiveNavigation:React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {;
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-;
-  const toggleMenu = () => setIsOpen(!isOpen);
-
-  const toggleDropdown = (labe: l: string) => {
-    setActiveDropdown(activeDropdown === label ? nul: l: label),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
   hre: f: string;
 
     <div className="bg-white rounded-lg shadow-md overflow-hidden: hover:shadow-lg transition-shadow">
@@ -1538,20 +1030,10 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 
 interface InteractiveNavigationProps {
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   };
 
   return (
     <nav className={`bg-white shadow-lg ${className}`}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -1662,7 +1144,6 @@ interface Notification {
   i: d: string;
   typ: e: 'success' | 'error' | 'warning' | 'info';
   titl: e: string;
-<<<<<<< HEAD
   messag: e: string;  duration?: number;
 }
 
@@ -1724,64 +1205,8 @@ const: NotificationContainer: React.FC = () => {
 
 const: NotificationItem: React.FC<{
   notificatio: n: Notification;
-<<<<<<< HEAD
   onRemov: e: (i: d: string) => void;}> = ({ notification, onRemove }) => {
-=======
-  onRemov: e: (i: d: string) => void;
-<<<<<<< HEAD
-=======
-  notification: s: Notification[],
-  addNotificatio: n: (notificatio: n: Omit<Notification, 'id'>) => void;
-  removeNotificatio: n: (i: d: string) => void,
-}
-;
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 
-  childre: n: ReactNode,
-}
-;
-export const:NotificationProvider:React.FC<NotificationProviderProps> = ({ children }) => {;
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-;
-  const addNotification = (notificatio:n:Omit<Notification, 'id'>) => {;
-    const id = Math.random().toString(36).substr(2, 9);
-    const newNotification = { ...notification, id };
-    ;
-    setNotifications(prev => [...prev, newNotification]);
-
-  const removeNotification = (i: d: string) => {
-
-  };
-;
-  return (;
-    <NotificationContext.Provider value={{ notifications, addNotification, removeNotification }}>;
-      {children}
-
-      <NotificationContainer />;
-    </NotificationContext.Provider>;
-  );
-
-};
-;
-const: NotificationContainer:React.FC = () => {,
-  const { notifications, removeNotification } = useNotifications();
-;
-  return (;
-    <div className="fixed top-4 right-4 z-50 space-y-2">;
-      {notifications.map((notification) => (;
-        <NotificationItem, key={notification.id}
-          notification={notification}
-          onRemove={removeNotification}
-        />))}
-
-const: NotificationItem: React.FC<{
-  notificatio: n: Notification, onRemov: e: (i: d: string) => void,
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
   messag: e: string;
 
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">
@@ -1884,24 +1309,14 @@ const: NotificationItem: React.FC<{
 
 interface NotificationContextType {
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 }> = ({ notification, onRemove }) => {
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const icons = {
     succes: s: CheckCircle,
     erro: r: AlertCircle,
     warnin: g: AlertTriangle,
     inf: o: Info,
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const colors = {
     succes: s: 'bg-green-500',
@@ -1922,15 +1337,7 @@ interface NotificationContextType {
         </div>
         <button
           onClick={() => onRemove(notification.id)}
-<<<<<<< HEAD
           className="ml-3 flex-shrink-0: hover:opacity-75"        >
-=======
-
-          className="ml-3 flex-shrink-0: hover:opacity-75"
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
   };
 ;
@@ -1957,25 +1364,12 @@ interface NotificationContextType {
           className="ml-3 flex-shrink-0: hover:opacity-75"
 
         >
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           <X className="w-4 h-4" />
         </button>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  ),
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
 
 export const useNotifications = () => {
@@ -2015,105 +1409,41 @@ export function useApi<T>(
     } catch (err) {
       setError(err instanceof Error ? err.messag: e: 'An error occurred');
     } finally {
-<<<<<<< HEAD
-<<<<<<< HEAD
       setLoading(false);    }
-=======
-<<<<<<< HEAD
       setLoading(false);
-=======
-  ),
-
-};
-;
-export const useNotifications = () => {;
-  const context = useContext(NotificationContext);
-
-  if (context === undefined) {;
-    throw new Error('useNotifications must be used within a NotificationProvider');
-
-  }
-
-  return context;
-
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-;
-  const fetchData = async () => {;
-    setLoading(true);
-    setError(null);
-    ;
-    try {;
-      const result = await apiCall();
-
-      setError(err instanceof Error ? err.messag: e: 'An error occurred'),
-    } finally {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       setLoading(false),
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   };
 
   useEffect(() => {
     if (options.immediate !== false) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       fetchData();    }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       fetchData();
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       fetchData(),
     }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   }, []);
 
   return {
     data,
     loading,
     error,
-<<<<<<< HEAD
-<<<<<<< HEAD
     refetc: h: fetchData,
   };
 }`;  'hooks/useLocalStorage.ts': `import { useState, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     refetc: h: fetchData,
   };
 }`;
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     refetc: h: fetchData,
   };
 }`;
 
   'hooks/useLocalStorage.ts': `import { useState, useEffect } from 'react';
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
     
     try {
@@ -2124,13 +1454,7 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
       return initialValue;
     }
   });
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   const setValue = (valu: e: T | ((va: l: T) => T)) => {
     try {
       const valueToStore = value instanceof Function ? value(storedValue) : value;
@@ -2143,91 +1467,40 @@ export function useLocalStorage<T>(ke: y: string, initialValu: e: T) {
       console.error(\`Error setting localStorage key "\${key}":\`, error);
     }
   };
-<<<<<<< HEAD
-=======
-
-=======
-
-    }
-    ;
-    try {;
-      const item = window.localStorage.getItem(key);
-
-      return item ? JSON.parse(item) :initialValue;
-    } catch (error) {;
-
-      console.error(\`Error reading localStorage key "\${key}":\`, error);
-      return initialValue,
-    }
-  });
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   return [storedValue, setValue] as const;
 }`;
   'hooks/usePerformanceMonitor.ts': `import { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   loadTim: e: number;
   renderTim: e: number;
   memoryUsag: e: number;
-<<<<<<< HEAD
   fp: s: number;}
-=======
-  fp: s: number;
-<<<<<<< HEAD
-=======
-  loadTim: e: number, renderTim: e: number,
-  memoryUsag: e: number, fp: s: number,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 export function usePerformanceMonitor(): PerformanceMetrics | null {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
     }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
     }
-=======
-      return,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const memory = (performance as any).memory;
-<<<<<<< HEAD
       
       if (navigation) {
         setMetrics({          loadTim: e: navigation.loadEventEnd - navigation.loadEventStart,
           renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           memoryUsag: e: memory?.usedJSHeapSize || 0,
           fp: s: 60, // This would need to be calculated with requestAnimationFrame
-=======
-<<<<<<< HEAD
       
       if (navigation) {
         setMetrics({
-=======
-      return,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
     }
 ;
@@ -2239,10 +1512,6 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
           renderTim: e: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
           memoryUsag: e: memory?.usedJSHeapSize || 0,
           fp: s: 60, // This would need to be calculated with requestAnimationFrame
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         });
       }
     };
@@ -2258,66 +1527,31 @@ export function usePerformanceMonitor(): PerformanceMetrics | null {
       window.removeEventListener('load', updateMetrics);
     };
   }, []);
-<<<<<<< HEAD
-=======
-
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
       }
     };
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
       }
     };
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   return metrics;
 }`;
   'hooks/useResponsive.ts': `import { useState, useEffect } from 'react';
 
 interface Breakpoints {
-<<<<<<< HEAD
   s: m: number;
   m: d: number;
   l: g: number;
-<<<<<<< HEAD
   x: l: number;}
-=======
-  x: l: number;
-<<<<<<< HEAD
-=======
-  s: m: number, m: d: number,
-  l: g: number, x: l: number,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 }
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const: defaultBreakpoints: Breakpoints = {
   s: m: 640,
   m: d: 768,
   l: g: 1024,
   x: l: 1280,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 };
 
 export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
@@ -2341,71 +1575,22 @@ export function useResponsive(breakpoint: s: Breakpoints = defaultBreakpoints) {
     updateScreenSize();
     window.addEventListener('resize', updateScreenSize);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     return () => {
       window.removeEventListener('resize', updateScreenSize);
     };
   }, [breakpoints]);
 
   return {
-<<<<<<< HEAD
     screenSize,    isMobil: e: screenSize === 'sm',
-=======
-    screenSize,
-=======
-
-};
-;
-export function useResponsive(breakpoint: s:Breakpoints = defaultBreakpoints) {,
-  const [screenSize, setScreenSize] = useState<'sm' | 'md' | 'lg' | 'xl'>('lg');
-;
-  useEffect(() => {;
-    const updateScreenSize = () => {;
-      const width = window.innerWidth;
-
-      ;
-      if (width >= breakpoints.xl) {;
-        setScreenSize('xl');
-      } else if (width >= breakpoints.lg) {;
-        setScreenSize('lg');
-      } else if (width >= breakpoints.md) {;
-        setScreenSize('md');
-      } else {;
-        setScreenSize('sm');
-
-      }
-    };
-;
-    updateScreenSize();
-    window.addEventListener('resize', updateScreenSize);
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     isMobil: e: screenSize === 'sm',
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     isTable: t: screenSize === 'md',
     isDeskto: p: screenSize === 'lg' || screenSize === 'xl',
     isLarg: e: screenSize === 'xl',
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 }`
 };
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 }`
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Write all the fixed files
 Object.entries(componentTemplates).forEach(([filePath, content]) => {
@@ -2416,13 +1601,7 @@ Object.entries(componentTemplates).forEach(([filePath, content]) => {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 });
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 
 }`
 
@@ -2441,14 +1620,8 @@ Object.entries(componentTemplates).forEach(([filePath, content]) => {;
   }
 });
 ;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 ;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 console.log('Fixed all corrupted files');
-=======
   console.log(`Fixed ${fixedCount} corrupted files`);,
 }
 
@@ -2457,7 +1630,4 @@ if (require.main === module) {;
 }
 
 module.exports = { fixFile, isCorrupted, createPageTemplate, createUtilityTemplate })
->>>>>>> origin/automation-fixes
-=======
 console.log('Fixed all corrupted files');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

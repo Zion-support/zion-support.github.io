@@ -451,7 +451,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
           'Developed a deep learning system for detecting abnormalities in chest X-rays with 97% sensitivity, reducing radiologist workload by 35% and improving early detection rates.',
       },
       {
-        title: 'Cancer Treatment Response Prediction',
+title: 'Cancer Treatment Response Prediction',
         description:
           'Created ML models that predict patient response to specific cancer treatments based on medical imaging data, improving treatment selection and patient outcomes.',
       },

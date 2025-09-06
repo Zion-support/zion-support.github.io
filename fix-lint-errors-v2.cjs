@@ -36,12 +36,8 @@ function fixLinkTags(content) {
         "import React from 'react';\nimport Link from 'next/link';"
       );
     } else {
-<<<<<<< HEAD
       content = "import Link from 'next/link';\n" + content;
     }  }
-=======
-  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   
   // Replace <a> tags with Link components for internal links
   content = content.replace(

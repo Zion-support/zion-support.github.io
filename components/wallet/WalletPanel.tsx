@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
-
 type Tx = {
   id: string;
   type: 'earn' | 'burn' | 'issue' | 'revoke' | 'redeem';
@@ -277,5 +276,5 @@ export default function WalletPanel() {
         )}
       </div>
     </div>
-  );
+);
 }

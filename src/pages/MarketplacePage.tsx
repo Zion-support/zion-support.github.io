@@ -1,5 +1,3 @@
-
-
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -425,3 +423,4 @@ function MarketplacePageContent() {
 export default function MarketplacePage() {
   return <MarketplacePageContent />;
 }
+;

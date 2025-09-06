@@ -1,4 +1,4 @@
-    onboardingStatus.responseReceived;
+onboardingStatus.responseReceived;
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -129,7 +129,7 @@ export default function ClientDashboard() {
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-  );
+);
 
 }, [jobs, selectedJobId]);
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className= {;

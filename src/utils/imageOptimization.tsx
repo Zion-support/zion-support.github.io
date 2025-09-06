@@ -1,4 +1,4 @@
- const observer = new IntersectionObserver ( ([entry]) => {;
+const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
   return () => observer.disconnect () ;
 }, [lazy, priority, isInView]);
@@ -173,4 +173,4 @@ export function getImageDimensions(
     img.onerror = reject;
     img.src = src
   })
-} 
+}

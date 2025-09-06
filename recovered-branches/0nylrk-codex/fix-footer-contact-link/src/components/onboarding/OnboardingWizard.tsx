@@ -187,3 +187,4 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     </Card>
   )
 }
+;

@@ -9,7 +9,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,;
+DialogTitle,;
 } from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
 import { isProdDomain } from '@/utils/getStripe';
@@ -133,3 +133,4 @@ export default function GuestCheckoutModal({
   );
 }
 }
+;

@@ -12,7 +12,6 @@ import {format} from 'date-fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
 import {CertificationFormValues, certificationSchema} from './types';
-
 interface CertificationsFormProps {
   resumeId: string,
   certifications: Certification[],
@@ -157,3 +156,4 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     </div>
   )
 }
+;

@@ -1,14 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -249,18 +241,6 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation"
     }
   ];
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -308,11 +288,6 @@ const services = [
 ];
 
 export default function ServicesIndex() {
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -553,16 +528,6 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation"
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
-=======
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -610,7 +575,6 @@ const services = [
 ];
 
 export default function ServicesIndex() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   return (
     <>
       <Head>
@@ -618,14 +582,6 @@ export default function ServicesIndex() {
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -829,18 +785,6 @@ export default function ServicesIndex() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -891,11 +835,6 @@ export default function ServicesIndex() {
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
                     Learn More
                   </Link>
                 </div>
@@ -917,24 +856,11 @@ export default function ServicesIndex() {
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       </main>
     </div>
   );
 };
-<<<<<<< HEAD
 export default ServicesIndex;
-=======
-export default ServicesIndex;
-=======
-<<<<<<< HEAD:pages_backup/services/index.tsx
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -1138,12 +1064,6 @@ export default ServicesIndex;
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -1194,7 +1114,6 @@ export default ServicesIndex;
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                     Learn More
                   </Link>
                 </div>
@@ -1215,42 +1134,20 @@ export default ServicesIndex;
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
       </div>
     </>
   );
 }
-<<<<<<< HEAD:pages_backup/services/index.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/index.tsx
       </div>
     </>
   );
 }
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       </main>
     </div>
   ),
 };
 export default ServicesIndex;
 export default ServicesIndex;
-<<<<<<< HEAD
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
       </div>
     </>
   );

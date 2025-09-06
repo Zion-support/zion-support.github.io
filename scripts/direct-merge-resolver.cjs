@@ -1,5 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
     log("4. Continue with your workflow", "blue"),}
 }
 ;
@@ -40,7 +39,6 @@ function log(message, color = "reset")
     let content = fs.readFileSync(filePath, "utf8")
     // Strategy "1"
       content.includes("      content.includes("")
-      content.includes(">>>>>>>")
       content = content.replace(/[\s\S]*/g, "")
     // Strategy "2"
       /import\s+[^]*?from\s+[""][^"]*["]
@@ -74,7 +72,6 @@ function log(message, color = "reset")
   log("\n Resolution Summary":", "cyan");log("Total conflicted ""files": ${conflictedFiles.length}", "blue");log("Successfully resolved": ${resolvedCount}", "green");log("Errors ""encountered": ${errorCount}", "red");";  if (resolvedCount > 0) {    log("\n Next steps":", "cyan");    log("1. Review the resolved files", "blue");    log("2. ""Run": git add .", "blue");    log("3. Run": git commit -m "Resolve merge conflicts, "blue");    log("4. Continue with your workflow", "blue")}"
         resolvedCount++;log(` "Resolved": ${filePath}`, "green");"} else {log(`⚠  No changes needed": ${filePath}`, "yellow");"}"} catch (error) {";      errorCount++;log(" Error processing ${filePath}: ${error.message}", "red");"}"}"
   log("\n Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"
-=======
 const fs = require("fs")
 const path = require("fs")
 const { execSync } = require("child_process")
@@ -116,7 +113,6 @@ function resolveMergeConflict(filePath) {
     // Strategy 1: Remove all variations of merge conflict markers;
     if (
       content.includes("      content.includes("") ||;
-      content.includes(">>>>>>>")) {
       // Remove everything between;
       // Remove everything between  and       content = content.replace(/[\s\S]*?;
       // Remove any remaining       content = content.replace(/;
@@ -209,7 +205,6 @@ function resolveMergeConflict(filePath) {
       return false}
     let content = fs.readFileSync(filePath, "utf8")    let originalContent = content;    let fixed = false;
     // Strategy "1: Remove all variations of merge conflict markers;
-    if()      content.includes("      content.includes("") ||";      content.includes(">>>>>>>")") {";      // Remove everything between ;
       // Remove everything between  and       content = content.replace(/[\s\S]*?)      // Remove any remaining       content = content.replace(/)      // Remove any remaining  sections;
       content = content.replace(/[\s\S]*/g, "")"";      // Remove any remaining       content = content.replace(/)      fixed = true,,,
 }
@@ -267,4 +262,3 @@ if (require.main === module) {
 if (require.main === module) {
   main()}
 module.exports = { resolveMergeConflict, findConflictedFiles }
->>>>>>> origin/automation-fixes

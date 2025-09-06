@@ -1,4 +1,4 @@
- useEffect ( () => {
+useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
   return () => observer.disconnect () 

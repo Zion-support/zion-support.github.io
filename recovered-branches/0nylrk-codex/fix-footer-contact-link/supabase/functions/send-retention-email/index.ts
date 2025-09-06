@@ -360,3 +360,4 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       </div>
     `}
 }
+;

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Head from 'next/head';
-
 export default function Partners() {
   const [form, setForm] = useState({
     name: '',
@@ -201,5 +200,5 @@ export default function Partners() {
         )}
       </div>
     </div>
-  );
+);
 }

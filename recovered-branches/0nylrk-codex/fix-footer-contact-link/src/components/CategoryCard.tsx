@@ -44,4 +44,4 @@ export function CategoryCard({ title, description, icon, color, count, className
       )}
     </Link>
   )
-}
+};

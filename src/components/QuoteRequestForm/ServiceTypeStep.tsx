@@ -1,3 +1,4 @@
+
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -12,3 +13,4 @@ const listingSchema = z.object({
 }
   );
 }
+;

@@ -56,7 +56,7 @@ import {
   Play as PlayIcon,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import { 
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, 
   CheckCircle, ArrowRight, Search, Filter;
@@ -739,5 +739,5 @@ export default function UltimateFuturisticServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  );
+);
 }

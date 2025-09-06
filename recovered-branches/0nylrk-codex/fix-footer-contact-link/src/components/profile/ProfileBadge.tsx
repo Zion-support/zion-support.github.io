@@ -41,3 +41,4 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     </div>
   )
 }
+;

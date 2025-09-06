@@ -32,7 +32,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,;
+DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';
 import { toast } from '@/hooks/use-toast';
@@ -238,7 +238,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
         onConfirm = {handleHireConfirmed,}
       />
     </>
-  );
+);
 
   //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
   setShowNotes (false);

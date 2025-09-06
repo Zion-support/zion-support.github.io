@@ -8,7 +8,6 @@ interface Speaker {
   linkedin?: string;
   linkedin?: string
 }
-
 interface Speaker {
   name: string,
   title: string,
@@ -92,3 +91,4 @@ export function SpeakersSection() {
     </section>
   );
 }
+;

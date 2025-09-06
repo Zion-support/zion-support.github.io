@@ -483,7 +483,7 @@ export default function ListingDetail() {
         </DialogContent>
       </Dialog>
     </>
-  );
+);
 
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;

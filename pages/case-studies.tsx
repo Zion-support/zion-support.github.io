@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -82,7 +81,6 @@ const stats = [
   { number: "99.9%", label: "Success Rate" },
   { number: "24/7", label: "Support Available" }
 ];
-
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -289,10 +287,6 @@ export default function CaseStudiesPage() {
     </MainLayout>
   );
 }
-=======
-import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import Layout from '../components/Layout';
 
@@ -319,13 +313,6 @@ export default function CaseStudiesPage() {
   );
 
  </Head> </section> </Layout> 
-=======
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {
-=======
-import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<Layout>
 			<Head>
@@ -340,8 +327,3 @@ export default function CaseStudiesPage() {
 		</Layout>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45

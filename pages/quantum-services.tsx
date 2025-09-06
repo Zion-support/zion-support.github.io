@@ -3,7 +3,6 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
-
 export default function QuantumServicesPage() {
   const features = [
     'Quantum-inspired optimization & annealing strategies',
@@ -109,4 +108,4 @@ export default function QuantumServicesPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+);

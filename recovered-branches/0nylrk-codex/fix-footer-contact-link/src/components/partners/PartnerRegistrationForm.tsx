@@ -327,4 +327,4 @@ export function PartnerRegistrationForm() {
       </CardContent>
     </Card>
   )
-}
+};

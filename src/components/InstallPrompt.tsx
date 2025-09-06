@@ -1,4 +1,3 @@
-
 export default InstallPrompt;import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 import { Button } from '@/components/ui/button';
@@ -123,3 +122,4 @@ export const InstallPrompt: React.FC = () => {
 },
 
 export default InstallPrompt,
+;

@@ -8,7 +8,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from '@/types/jobs';
-
 interface ApplicationActionsProps {
   application: JobApplication;
   processingId: string | null;

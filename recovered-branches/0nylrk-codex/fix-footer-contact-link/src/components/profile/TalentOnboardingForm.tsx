@@ -136,4 +136,4 @@ export function TalentOnboardingForm() {
   // [Previous implementation continues...]
 
   return null
-}
+};

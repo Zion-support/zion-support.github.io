@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -1636,14 +1634,8 @@ export default function Services(): React.JSX.Element {
     </main>
   );
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
-
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -2109,20 +2101,5 @@ export default function Services() {
       <Footer />
     </>
   );
-<<<<<<< HEAD
-=======
-            </div>
-          </section>
-        </main>
-      </ErrorBoundary>
-    </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

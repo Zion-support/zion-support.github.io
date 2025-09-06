@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
-
 type Props = {
   milestone: Milestone;
   projectId: string;
@@ -196,5 +195,5 @@ export default function MilestoneCard({ milestone, projectId, role, onAction }: 
         )}
       </div>
     </div>
-  );
+);
 }

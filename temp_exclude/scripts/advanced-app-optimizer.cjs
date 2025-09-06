@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * Advanced App Optimizer;
@@ -29,5 +28,3 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')
       this.log(` Total "optimizations"`)
       this.log(` Advanced App Optimization "failed"`)
     console.error('Advanced App Optimization "failed")
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

@@ -31,11 +31,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       `attachment; filename="${courseId}-certificate.pdf"`
     );
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
-=======
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 }),
->>>>>>> cursor/fix-lint-push-and-merge-to-main-6efb
     // Pipe to response
     // @ts-ignore
     doc.pipe(res);

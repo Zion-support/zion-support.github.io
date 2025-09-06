@@ -77,3 +77,4 @@ export function useTranslationService() {
     getTranslation
   }
 }
+;

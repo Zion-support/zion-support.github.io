@@ -1,7 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
-
 export default function ApiPerformanceTestingPage() {
   const features = [
     'k6/Gatling-compatible test runner',
@@ -129,7 +128,7 @@ export default function ApiPerformanceTestingPage() {
             </p>
           </div>
 
-          <div className='mt-14 flex flex-wrap items-center gap-4'>
+<div className='mt-14 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
               className='px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold'

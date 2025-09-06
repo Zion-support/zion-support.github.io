@@ -57,7 +57,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         </main>
         <Footer />
       </div>
-    </>
+</>
 
   );
 

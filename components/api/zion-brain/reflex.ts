@@ -9,7 +9,6 @@ function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken;import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
-
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
@@ -59,7 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(500).json({ error: 'Reflex failure' });    }
   }
 
-  return res.status(405).json({ error: 'Method not allowed' });
+return res.status(405).json({ error: 'Method not allowed' });
 }      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
       return res.status(200).json({ triggers })
     } catch (e: any) {

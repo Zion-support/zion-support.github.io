@@ -2,7 +2,6 @@ import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>
       <SEO

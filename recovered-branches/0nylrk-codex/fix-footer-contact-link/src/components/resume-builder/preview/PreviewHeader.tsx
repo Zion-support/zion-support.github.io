@@ -82,3 +82,4 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
     </div>
   )
 }
+;

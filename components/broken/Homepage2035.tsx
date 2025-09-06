@@ -26,7 +26,7 @@ import {
   Atom,
   Satellite,
   Gamepad2,
-  Palette,;} from 'lucide-react';import { 
+  Palette,;} from 'lucide-react';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
@@ -35,7 +35,6 @@ import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035'
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 import { innovative2025ITEnterpriseBatch } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
-
 // Loading fallback component
 const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
@@ -615,7 +614,7 @@ const Homepage2035: React.FC = () => {
   );
 };
 
-  animate: {
+animate: {
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
 

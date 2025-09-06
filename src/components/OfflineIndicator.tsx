@@ -55,5 +55,5 @@ export const OfflineIndicator = () => {
         </div>
       </Alert>
     </div>
-  );
+);
 };};

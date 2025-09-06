@@ -1,8 +1,7 @@
- 
 };
 ) ) 
 }</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
+}</ul> </section> </div>)
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
@@ -35,5 +34,5 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
+);
 }

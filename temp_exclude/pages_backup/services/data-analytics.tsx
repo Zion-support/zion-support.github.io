@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from "../../components/Layout";";
 import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -125,35 +115,12 @@ export default function DataAnalyticsPage() {
 import Layout from '../../components/Layout';
 import {BarChart3,, Database,, TrendingUp,, Brain,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {BarChart3,, TrendingUp,, Database,, Brain,, CheckCircle,, ArrowRight} from 'lucide-react';
 
 const analyticsServices = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   {
     icon: BarChart3,
     title: 'Business Intelligence',
@@ -206,9 +173,6 @@ export default function DataAnalyticsPage() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
@@ -327,10 +291,6 @@ export default function DataAnalyticsPage() {
 import Layout from '../../components/Layout';
 import { BarChart3, Database, TrendingUp, Brain, CheckCircle, ArrowRight } from 'lucide-react';
 const features = [
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   {
     icon: BarChart3,
     title: 'Business Intelligence',
@@ -362,13 +322,8 @@ const features = [
     description: 'Interactive charts, graphs, and visual data representations'
   }
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 export default function DataAnalyticsPage() {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const benefits = [
   'Data-driven decision making',
   'Improved business performance',
@@ -378,10 +333,6 @@ const benefits = [
   'Automated reporting and analytics'
 ];
 export default function DataAnalyticsServices() {
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   return (
     <Layout
       title="Data Analytics Services - Zion Tech Group"
@@ -390,7 +341,6 @@ export default function DataAnalyticsServices() {
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         <section className="bg-gradient-to-r from-purple-600 to-pink-700 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -412,14 +362,6 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -437,18 +379,6 @@ export default function DataAnalyticsServices() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -464,11 +394,6 @@ export default function DataAnalyticsServices() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -486,16 +411,6 @@ export default function DataAnalyticsServices() {
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-purple-600" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
-=======
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -511,7 +426,6 @@ export default function DataAnalyticsServices() {
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
@@ -524,16 +438,6 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -570,13 +474,7 @@ export default function DataAnalyticsServices() {
           </div>
         </section>
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -612,11 +510,6 @@ export default function DataAnalyticsServices() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -638,35 +531,13 @@ export default function DataAnalyticsServices() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     </Layout>
     </Layout>
     </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup/services/data-analytics.tsx
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/data-analytics.tsx
     </>
-=======
     </Layout>
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
-=======
     </>
   ),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }

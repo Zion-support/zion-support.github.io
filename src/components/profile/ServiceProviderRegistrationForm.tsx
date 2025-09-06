@@ -17,7 +17,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,;
+FormMessage,;
 } from '@/components/ui/form';
 import {
   Card,
@@ -42,7 +42,6 @@ import { toast } from '@/components/ui/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
-
 // Define form schema
 const serviceProfileSchema = z.object({
   name: z.string().min(2, 'Full Name must be at least 2 characters long'),
@@ -834,7 +833,7 @@ export function ServiceProviderRegistrationForm() {
         </Form>
       </Card>
     </div>
-  );
+);
 
 };
 //Handle removing service tags const handleRemoveService = (service: string) => {;

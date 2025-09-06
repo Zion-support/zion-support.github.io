@@ -1,8 +1,6 @@
- 
-
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' 
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
 
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -312,5 +310,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     gptRecommendation,
   };
 
-  return res.status(200).json(response);  return res.status(200).json(response)
+return res.status(200).json(response);  return res.status(200).json(response)
 }

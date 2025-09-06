@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -24,7 +23,6 @@
 
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
-    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
   }
 
   // Check if file has syntax errors
@@ -178,7 +176,6 @@
           this.log(`Removed corrupted directory: ${dir}`);
         } catch (error) {
           this.log(`Failed to remove directory ${dir}: ${error.message}`);
-=======
 #!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
@@ -215,8 +212,6 @@ class ComprehensiveSyntaxFixer {
         
         // Fix merge conflict markers
         { pattern: /^<<<<<<< .*$/gm, replacement: '' },
-        { pattern: /^=======.*$/gm, replacement: '' },
-        { pattern: /^>>>>>>> .*$/gm, replacement: '' },
         
         // Fix malformed object literals
         { pattern: /{\s*;\s*name:/g, replacement: '{ name:' },
@@ -361,12 +356,10 @@ class ComprehensiveSyntaxFixer {
         const ext = path.extname(file)
         if (extensions.includes(ext)) {
           this.fixFile(filePath)
->>>>>>> origin/automation-fixes
         }
       }
     }
   }
-<<<<<<< HEAD
 
   // Run TypeScript compiler to check for errors
   async runTypeCheck() {
@@ -660,24 +653,4 @@ if (require.main === module) {}
   }
 });
 };
-=======
-}
-
-// Run the fixer
-if (require.main === module) {
-  const fixer = new ComprehensiveSyntaxFixer()
-  fixer.fixAllScripts()
-    .then(result => {
-      console.log('\n📊 Summary:')
-      console.log(`Fixed files: ${result.fixedFiles.length}`)
-      console.log(`Errors: ${result.errors.length}`)
-      process.exit(result.errors.length > 0 ? 1 : 0)
-    })
-    .catch(error => {
-      console.error('❌ Fatal error:', error)
-      process.exit(1)
-    })
-}
-
->>>>>>> origin/automation-fixes
 module.exports = ComprehensiveSyntaxFixer;

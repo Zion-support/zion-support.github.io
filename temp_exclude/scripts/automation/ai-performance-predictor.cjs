@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Performance Predictor;
@@ -27,5 +26,3 @@ const { execSync } = require('child_process')
         const memoryOps = execSync(`grep -r "JSON\\.parse\\|JSON\\.stringify"`)
           const result = execSync(`grep -r "${pattern}"`)
           const result = execSync(`grep -r "${pattern}"`)
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

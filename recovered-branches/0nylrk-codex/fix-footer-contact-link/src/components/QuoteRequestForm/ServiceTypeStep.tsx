@@ -133,4 +133,4 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       )}
     </div>
   )
-}
+};

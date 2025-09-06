@@ -28,11 +28,8 @@ class ESLintErrorFixer {}
       level,
       message,
       data,
-<<<<<<< HEAD
       "service": 'eslint-error-fixer'
     };
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "service": 'eslint-error-fixer'
     };
 
@@ -58,11 +55,7 @@ class ESLintErrorFixer {}
       this.setupSignalHandlers();
       
       this.log('info', 'ESLint Error Fixer Service started successfully');
-<<<<<<< HEAD
             
-=======
-      
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       setInterval(async () => {}
         await this.performESLintFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start ESLint Error Fixer Service', error);
@@ -175,11 +168,7 @@ class ESLintErrorFixer {}
       const content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
       let hasChanges = false;
-<<<<<<< HEAD
             
-=======
-      
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       // Process errors in reverse order to maintain line numbers;
       const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       
@@ -249,11 +238,7 @@ class ESLintErrorFixer {}
     if (!varMatch) return line;
     
     const varName = varMatch[1];
-<<<<<<< HEAD
         
-=======
-    
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
       return line.replace(new RegExp(`\\b${varName}\\b`, 'g'), `_${varName}`)};
@@ -409,8 +394,4 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });});
-=======
-});
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

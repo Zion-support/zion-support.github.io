@@ -14,7 +14,7 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem,;
+SelectItem,;
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import Skeleton from 'react-loading-skeleton';
@@ -593,3 +593,4 @@ setSelectedRating (null);
 }</div> </div> </div> </div>) ;
 }'"  )
 }
+;

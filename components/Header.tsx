@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Database, 
-  Shield, 
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Code,
+  Smartphone,
+  Cloud,
+  Database,
+  Shield,
   Zap,
   Building,
   ShoppingCart,
@@ -18,8 +18,8 @@ import {
   GraduationCap,
   Factory,
   Truck,
-  CreditCard
-} from 'lucide-react';
+  CreditCard,
+} from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,101 +35,101 @@ export default function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const servicesDropdown = [
     {
-      title: 'Web Development',
-      description: 'Custom websites and web applications',
-      href: '/services/web-development',
-      icon: Code
+      title: "Web Development",
+      description: "Custom websites and web applications",
+      href: "/services/web-development",
+      icon: Code,
     },
     {
-      title: 'Mobile Development',
-      description: 'iOS and Android applications',
-      href: '/services/mobile-development',
-      icon: Smartphone
+      title: "Mobile Development",
+      description: "iOS and Android applications",
+      href: "/services/mobile-development",
+      icon: Smartphone,
     },
     {
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure',
-      href: '/services/cloud-solutions',
-      icon: Cloud
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure",
+      href: "/services/cloud-solutions",
+      icon: Cloud,
     },
     {
-      title: 'Database Management',
-      description: 'Database design and optimization',
-      href: '/services/database-management',
-      icon: Database
+      title: "Database Management",
+      description: "Database design and optimization",
+      href: "/services/database-management",
+      icon: Database,
     },
     {
-      title: 'Security Services',
-      description: 'Cybersecurity and data protection',
-      href: '/services/security',
-      icon: Shield
+      title: "Security Services",
+      description: "Cybersecurity and data protection",
+      href: "/services/security",
+      icon: Shield,
     },
     {
-      title: 'Performance Optimization',
-      description: 'Speed and efficiency improvements',
-      href: '/services/performance',
-      icon: Zap
-    }
+title: "Performance Optimization",
+      description: "Speed and efficiency improvements",
+      href: "/services/performance",
+      icon: Zap,
+    },
   ];
 
   const solutionsDropdown = [
     {
-      title: 'Enterprise Solutions',
-      description: 'Comprehensive business technology solutions',
-      href: '/solutions/enterprise',
-      icon: Building
+      title: "Enterprise Solutions",
+      description: "Comprehensive business technology solutions",
+      href: "/solutions/enterprise",
+      icon: Building,
     },
     {
-      title: 'E-commerce Platforms',
-      description: 'Online store development and management',
-      href: '/solutions/ecommerce',
-      icon: ShoppingCart
+      title: "E-commerce Platforms",
+      description: "Online store development and management",
+      href: "/solutions/ecommerce",
+      icon: ShoppingCart,
     },
     {
-      title: 'Healthcare Technology',
-      description: 'Specialized healthcare IT solutions',
-      href: '/solutions/healthcare',
-      icon: Heart
+      title: "Healthcare Technology",
+      description: "Specialized healthcare IT solutions",
+      href: "/solutions/healthcare",
+      icon: Heart,
     },
     {
-      title: 'Educational Platforms',
-      description: 'Learning management systems',
-      href: '/solutions/education',
-      icon: GraduationCap
-    }
+title: "Educational Platforms",
+      description: "Learning management systems",
+      href: "/solutions/education",
+      icon: GraduationCap,
+    },
   ];
 
   const industriesDropdown = [
-    { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory },
-    { name: 'Logistics', href: '/industries/logistics', icon: Truck },
-    { name: 'Finance', href: '/industries/finance', icon: CreditCard },
-    { name: 'Healthcare', href: '/industries/healthcare', icon: Heart },
-    { name: 'Education', href: '/industries/education', icon: GraduationCap },
-    { name: 'Retail', href: '/industries/retail', icon: ShoppingCart }
+    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
+    { name: "Logistics", href: "/industries/logistics", icon: Truck },
+    { name: "Finance", href: "/industries/finance", icon: CreditCard },
+    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },
+    { name: "Education", href: "/industries/education", icon: GraduationCap },
+    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },
   ];
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services',
+    { name: "Home", href: "/" },
+    {
+      name: "Services",
+      href: "/services",
       submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain },
-        { name: 'IT Services', href: '/it-services', icon: Network },
-        { name: 'Micro SAAS', href: '/micro-saas', icon: Cloud }
-      ]
+        { name: "AI Services", href: "/ai-services", icon: Brain },
+        { name: "IT Services", href: "/it-services", icon: Network },
+        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },
+      ],
     },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Industries', href: '/industries' },
-    { name: 'Contact', href: '/contact' },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Industries", href: "/industries" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const handleServiceClick = (href: string) => {
@@ -176,7 +176,11 @@ export default function Header() {
             onClick={toggleMenu}
             className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
@@ -185,7 +189,7 @@ export default function Header() {
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white shadow-lg"
             >
