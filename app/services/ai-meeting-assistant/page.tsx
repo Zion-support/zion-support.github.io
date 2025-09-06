@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Meeting Assistant | Zion Tech Group",
-  description: "Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.",
+  description:
+    "Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.",
 };
 
 export default function AIMeetingAssistantPage() {
@@ -13,14 +14,17 @@ export default function AIMeetingAssistantPage() {
           AI Meeting Assistant
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your meetings with AI-powered transcription, action items, and intelligent insights. 
-          Never miss important details and make every meeting more productive.
+          Transform your meetings with AI-powered transcription, action items,
+          and intelligent insights. Never miss important details and make every
+          meeting more productive.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🎤"
@@ -68,7 +72,7 @@ export default function AIMeetingAssistantPage() {
                 "Basic transcription",
                 "Action item extraction",
                 "Meeting summaries",
-                "Email support"
+                "Email support",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function AIMeetingAssistantPage() {
                 "Meeting analytics",
                 "Custom integrations",
                 "Priority support",
-                "Team collaboration"
+                "Team collaboration",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function AIMeetingAssistantPage() {
                 "Advanced analytics",
                 "24/7 support",
                 "Custom integrations",
-                "Compliance features"
+                "Compliance features",
               ]}
               popular={false}
             />
@@ -107,28 +111,47 @@ export default function AIMeetingAssistantPage() {
       </div>
 
       <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Transform Your Meeting Culture</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Transform Your Meeting Culture
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl mb-4">⏰</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Save 2+ Hours Weekly</h3>
-            <p className="text-gray-600">Reduce meeting prep and follow-up time by 60% with automated summaries and action items</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              Save 2+ Hours Weekly
+            </h3>
+            <p className="text-gray-600">
+              Reduce meeting prep and follow-up time by 60% with automated
+              summaries and action items
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">95% Action Item Accuracy</h3>
-            <p className="text-gray-600">Never miss important tasks with AI-powered action item detection and assignment</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              95% Action Item Accuracy
+            </h3>
+            <p className="text-gray-600">
+              Never miss important tasks with AI-powered action item detection
+              and assignment
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">40% More Productive</h3>
-            <p className="text-gray-600">Teams report 40% increase in meeting productivity and follow-through</p>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              40% More Productive
+            </h3>
+            <p className="text-gray-600">
+              Teams report 40% increase in meeting productivity and
+              follow-through
+            </p>
           </div>
         </div>
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Supported Platforms</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Supported Platforms
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <PlatformCard name="Zoom" icon="📹" />
           <PlatformCard name="Microsoft Teams" icon="💼" />
@@ -142,7 +165,9 @@ export default function AIMeetingAssistantPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Use Cases</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Use Cases
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <UseCaseCard
             icon="💼"
@@ -182,7 +207,15 @@ export default function AIMeetingAssistantPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -194,7 +227,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ title, price, period, description, features, popular }: {
+function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   title: string;
   price: string;
   period: string;
@@ -203,7 +243,9 @@ function PricingCard({ title, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-green-500 bg-green-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-green-500 bg-green-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="bg-green-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -223,11 +265,13 @@ function PricingCard({ title, price, period, description, features, popular }: {
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-green-600 text-white hover:bg-green-700' 
-          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-      }`}>
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? "bg-green-600 text-white hover:bg-green-700"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
+      >
         Start Free Trial
       </button>
     </div>
@@ -243,7 +287,15 @@ function PlatformCard({ name, icon }: { name: string; icon: string }) {
   );
 }
 
-function UseCaseCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function UseCaseCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-green-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -260,8 +312,9 @@ function CTA() {
         Ready to Transform Your Meetings?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and experience the power of AI-driven meeting intelligence. 
-        No setup required - works with your existing tools.
+        Start your free trial today and experience the power of AI-driven
+        meeting intelligence. No setup required - works with your existing
+        tools.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Data Analytics | Zion Tech Group",
-  description: "Advanced AI-powered data analytics platform with predictive modeling, real-time insights, and automated reporting.",
+  description:
+    "Advanced AI-powered data analytics platform with predictive modeling, real-time insights, and automated reporting.",
 };
 
 export default function AIDataAnalyticsPage() {
@@ -13,14 +14,17 @@ export default function AIDataAnalyticsPage() {
           AI Data Analytics
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your data into actionable insights with our AI-powered analytics platform. 
-          Get predictive modeling, real-time dashboards, and automated business intelligence.
+          Transform your data into actionable insights with our AI-powered
+          analytics platform. Get predictive modeling, real-time dashboards, and
+          automated business intelligence.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Analytics Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Analytics Capabilities
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🧠"
@@ -56,7 +60,9 @@ export default function AIDataAnalyticsPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing Plans
+          </h2>
           <div className="space-y-6">
             <PricingCard
               name="Starter"
@@ -68,7 +74,7 @@ export default function AIDataAnalyticsPage() {
                 "Basic dashboards",
                 "Standard reports",
                 "Email support",
-                "Monthly insights"
+                "Monthly insights",
               ]}
               popular={false}
             />
@@ -83,7 +89,7 @@ export default function AIDataAnalyticsPage() {
                 "Predictive analytics",
                 "Priority support",
                 "Real-time monitoring",
-                "Custom models"
+                "Custom models",
               ]}
               popular={true}
             />
@@ -98,7 +104,7 @@ export default function AIDataAnalyticsPage() {
                 "Advanced AI models",
                 "Dedicated support",
                 "White-label solution",
-                "API access"
+                "API access",
               ]}
               popular={false}
             />
@@ -107,30 +113,50 @@ export default function AIDataAnalyticsPage() {
       </div>
 
       <div className="bg-gradient-to-r from-teal-50 to-cyan-50 border border-teal-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Analytics Use Cases</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Analytics Use Cases
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center">
             <div className="text-4xl mb-4">💰</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Revenue Optimization</h3>
-            <p className="text-gray-600">Identify revenue opportunities and optimize pricing strategies with predictive analytics</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Revenue Optimization
+            </h3>
+            <p className="text-gray-600">
+              Identify revenue opportunities and optimize pricing strategies
+              with predictive analytics
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">👥</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Customer Insights</h3>
-            <p className="text-gray-600">Understand customer behavior and preferences to improve retention and satisfaction</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Customer Insights
+            </h3>
+            <p className="text-gray-600">
+              Understand customer behavior and preferences to improve retention
+              and satisfaction
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">Operational Efficiency</h3>
-            <p className="text-gray-600">Optimize operations and reduce costs with data-driven process improvements</p>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
+              Operational Efficiency
+            </h3>
+            <p className="text-gray-600">
+              Optimize operations and reduce costs with data-driven process
+              improvements
+            </p>
           </div>
         </div>
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Unlock Your Data's Potential</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Unlock Your Data's Potential
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Join 800+ businesses using our AI Data Analytics platform to make smarter, data-driven decisions.
+          Join 800+ businesses using our AI Data Analytics platform to make
+          smarter, data-driven decisions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -155,7 +181,11 @@ export default function AIDataAnalyticsPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
   icon: string;
   title: string;
   description: string;
@@ -171,7 +201,14 @@ function FeatureItem({ icon, title, description }: {
   );
 }
 
-function PricingCard({ name, price, period, description, features, popular }: {
+function PricingCard({
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   name: string;
   price: string;
   period: string;
@@ -180,7 +217,9 @@ function PricingCard({ name, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-teal-500 bg-teal-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-teal-500 bg-teal-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="text-center mb-4">
           <span className="bg-teal-500 text-white px-3 py-1 rounded-full text-sm font-semibold">

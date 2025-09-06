@@ -1,6 +1,7 @@
-export const metadata = { 
-  title: 'Automation Solutions | Zion Tech Group',
-  description: 'Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.'
+export const metadata = {
+  title: "Automation Solutions | Zion Tech Group",
+  description:
+    "Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.",
 };
 
 export default function AutomationSolutionsPage() {
@@ -11,53 +12,92 @@ export default function AutomationSolutionsPage() {
           Automation Solutions
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-          Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. 
-          Streamline your operations and boost productivity.
+          Intelligent automation solutions including RPA, workflow automation,
+          AI-powered automation, and business process optimization. Streamline
+          your operations and boost productivity.
         </p>
       </section>
 
       <section className="py-12">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Automation Solutions</h2>
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          Our Automation Solutions
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AutomationServiceCard
             title="Robotic Process Automation (RPA)"
             description="Automate repetitive tasks and business processes with intelligent bots"
-            features={["Process discovery & analysis", "Bot development & deployment", "Exception handling", "Monitoring & reporting", "Scalable automation"]}
+            features={[
+              "Process discovery & analysis",
+              "Bot development & deployment",
+              "Exception handling",
+              "Monitoring & reporting",
+              "Scalable automation",
+            ]}
             price="$15k–$50k"
             icon="🤖"
           />
           <AutomationServiceCard
             title="Workflow Automation"
             description="End-to-end workflow automation with intelligent decision making"
-            features={["Workflow design", "Integration management", "Approval processes", "Notification systems", "Performance analytics"]}
+            features={[
+              "Workflow design",
+              "Integration management",
+              "Approval processes",
+              "Notification systems",
+              "Performance analytics",
+            ]}
             price="$10k–$35k"
             icon="⚡"
           />
           <AutomationServiceCard
             title="AI-Powered Automation"
             description="Intelligent automation using AI and machine learning for complex tasks"
-            features={["AI decision making", "Natural language processing", "Predictive automation", "Learning algorithms", "Cognitive automation"]}
+            features={[
+              "AI decision making",
+              "Natural language processing",
+              "Predictive automation",
+              "Learning algorithms",
+              "Cognitive automation",
+            ]}
             price="$25k–$80k"
             icon="🧠"
           />
           <AutomationServiceCard
             title="Document Processing Automation"
             description="Automated document handling, extraction, and processing"
-            features={["OCR & text extraction", "Document classification", "Data validation", "Workflow routing", "Compliance checking"]}
+            features={[
+              "OCR & text extraction",
+              "Document classification",
+              "Data validation",
+              "Workflow routing",
+              "Compliance checking",
+            ]}
             price="$12k–$40k"
             icon="📄"
           />
           <AutomationServiceCard
             title="Customer Service Automation"
             description="Automated customer support with chatbots and intelligent routing"
-            features={["Chatbot development", "Ticket routing", "Response automation", "Sentiment analysis", "Escalation management"]}
+            features={[
+              "Chatbot development",
+              "Ticket routing",
+              "Response automation",
+              "Sentiment analysis",
+              "Escalation management",
+            ]}
             price="$18k–$60k"
             icon="💬"
           />
           <AutomationServiceCard
             title="Financial Process Automation"
             description="Automated financial processes including invoicing, payments, and reporting"
-            features={["Invoice processing", "Payment automation", "Financial reporting", "Reconciliation", "Compliance automation"]}
+            features={[
+              "Invoice processing",
+              "Payment automation",
+              "Financial reporting",
+              "Reconciliation",
+              "Compliance automation",
+            ]}
             price="$20k–$70k"
             icon="💰"
           />
@@ -65,40 +105,42 @@ export default function AutomationSolutionsPage() {
       </section>
 
       <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Automation Technology Stack</h2>
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          Automation Technology Stack
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item 
-            title="RPA & Process Automation" 
+          <Item
+            title="RPA & Process Automation"
             details={[
               "UiPath, Automation Anywhere, Blue Prism",
               "Process mining and discovery tools",
               "Screen scraping and data extraction",
               "API integration and orchestration",
               "Exception handling and error recovery",
-              "Performance monitoring and analytics"
-            ]} 
+              "Performance monitoring and analytics",
+            ]}
           />
-          <Item 
-            title="AI & Machine Learning" 
+          <Item
+            title="AI & Machine Learning"
             details={[
               "Natural language processing (NLP)",
               "Computer vision and image recognition",
               "Predictive analytics and forecasting",
               "Decision trees and rule engines",
               "Machine learning model integration",
-              "Cognitive automation platforms"
-            ]} 
+              "Cognitive automation platforms",
+            ]}
           />
-          <Item 
-            title="Integration & Orchestration" 
+          <Item
+            title="Integration & Orchestration"
             details={[
               "API management and integration",
               "Workflow orchestration engines",
               "Event-driven automation",
               "Microservices architecture",
               "Cloud-native automation",
-              "Real-time monitoring and alerting"
-            ]} 
+              "Real-time monitoring and alerting",
+            ]}
           />
         </div>
       </section>
@@ -109,12 +151,18 @@ export default function AutomationSolutionsPage() {
   );
 }
 
-function AutomationServiceCard({ title, description, features, price, icon }: { 
-  title: string; 
-  description: string; 
-  features: string[]; 
-  price: string; 
-  icon: string; 
+function AutomationServiceCard({
+  title,
+  description,
+  features,
+  price,
+  icon,
+}: {
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  icon: string;
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
@@ -153,11 +201,13 @@ function Item({ title, details }: { title: string; details: string[] }) {
 function Pricing() {
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Automation Packages</h2>
+      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+        Automation Packages
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Process Assessment" 
-          price="$5k–$15k" 
+        <Plan
+          name="Process Assessment"
+          price="$5k–$15k"
           duration="2–4 weeks"
           features={[
             "Process discovery and analysis",
@@ -165,12 +215,12 @@ function Pricing() {
             "ROI calculation and business case",
             "Technology recommendations",
             "Implementation roadmap",
-            "Pilot process selection"
-          ]} 
+            "Pilot process selection",
+          ]}
         />
-        <Plan 
-          name="Automation Implementation" 
-          price="$20k–$80k" 
+        <Plan
+          name="Automation Implementation"
+          price="$20k–$80k"
           duration="8–16 weeks"
           features={[
             "End-to-end automation development",
@@ -178,12 +228,12 @@ function Pricing() {
             "Testing and quality assurance",
             "User training and documentation",
             "Deployment and go-live support",
-            "Performance monitoring setup"
-          ]} 
+            "Performance monitoring setup",
+          ]}
         />
-        <Plan 
-          name="Managed Automation" 
-          price="$3k+/mo" 
+        <Plan
+          name="Managed Automation"
+          price="$3k+/mo"
           duration="Ongoing"
           features={[
             "24/7 monitoring and maintenance",
@@ -191,19 +241,24 @@ function Pricing() {
             "Exception handling and support",
             "Performance reporting",
             "Process improvements",
-            "Scalability management"
-          ]} 
+            "Scalability management",
+          ]}
         />
       </div>
     </section>
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({
+  name,
+  price,
+  duration,
+  features,
+}: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
@@ -218,8 +273,8 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
-        href="tel:+13024640950" 
+      <a
+        href="tel:+13024640950"
         className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
       >
         Get Started
@@ -236,8 +291,9 @@ function ContactSection() {
           Ready to Automate Your Business?
         </h3>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Let's identify automation opportunities and implement solutions that save time and reduce costs. 
-          Our automation experts have delivered 150+ successful automation projects.
+          Let's identify automation opportunities and implement solutions that
+          save time and reduce costs. Our automation experts have delivered 150+
+          successful automation projects.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

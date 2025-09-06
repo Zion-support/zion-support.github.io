@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Real-time Data Processing | Zion Tech Group",
-  description: "High-performance real-time data processing with stream analytics, event processing, and instant insights for data-driven decision making.",
+  description:
+    "High-performance real-time data processing with stream analytics, event processing, and instant insights for data-driven decision making.",
 };
 
 export default function RealTimeDataProcessingPage() {
@@ -13,13 +14,17 @@ export default function RealTimeDataProcessingPage() {
           Real-time Data Processing
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          High-performance real-time data processing with stream analytics, event processing, and instant insights for data-driven decision making.
+          High-performance real-time data processing with stream analytics,
+          event processing, and instant insights for data-driven decision
+          making.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Features & Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Features & Capabilities
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               title="Stream Processing Engine"
@@ -49,7 +54,9 @@ export default function RealTimeDataProcessingPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing & Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing & Plans
+          </h2>
           <div className="space-y-4">
             <PricingCard
               plan="Starter"
@@ -60,7 +67,7 @@ export default function RealTimeDataProcessingPage() {
                 "Basic stream processing",
                 "Email support",
                 "Standard dashboards",
-                "5 data sources"
+                "5 data sources",
               ]}
             />
             <PricingCard
@@ -73,7 +80,7 @@ export default function RealTimeDataProcessingPage() {
                 "Priority support",
                 "Custom dashboards",
                 "Unlimited data sources",
-                "ML integration"
+                "ML integration",
               ]}
             />
             <PricingCard
@@ -87,7 +94,7 @@ export default function RealTimeDataProcessingPage() {
                 "On-premise deployment",
                 "Custom integrations",
                 "SLA guarantees",
-                "Advanced ML features"
+                "Advanced ML features",
               ]}
             />
           </div>
@@ -95,7 +102,9 @@ export default function RealTimeDataProcessingPage() {
       </div>
 
       <div className="bg-gradient-to-r from-cyan-50 to-blue-50 border border-cyan-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Real-time Data Processing?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Why Choose Our Real-time Data Processing?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <BenefitCard
             title="Sub-millisecond Latency"
@@ -113,9 +122,12 @@ export default function RealTimeDataProcessingPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Process Data in Real-time?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Process Data in Real-time?
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Transform your data into real-time insights with our high-performance stream processing platform that scales with your needs.
+          Transform your data into real-time insights with our high-performance
+          stream processing platform that scales with your needs.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -140,12 +152,26 @@ export default function RealTimeDataProcessingPage() {
   );
 }
 
-function FeatureItem({ title, description }: { title: string; description: string }) {
+function FeatureItem({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mt-1">
-        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+        <svg
+          className="w-4 h-4 text-white"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
         </svg>
       </div>
       <div>
@@ -156,7 +182,12 @@ function FeatureItem({ title, description }: { title: string; description: strin
   );
 }
 
-function PricingCard({ plan, price, description, features }: {
+function PricingCard({
+  plan,
+  price,
+  description,
+  features,
+}: {
   plan: string;
   price: string;
   description: string;
@@ -178,7 +209,13 @@ function PricingCard({ plan, price, description, features }: {
   );
 }
 
-function BenefitCard({ title, description }: { title: string; description: string }) {
+function BenefitCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

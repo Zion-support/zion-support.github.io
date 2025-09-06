@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Team Collaboration Hub | Zion Tech Group",
-  description: "AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.",
+  description:
+    "AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.",
 };
 
 export default function TeamCollaborationHubPage() {
@@ -13,13 +14,17 @@ export default function TeamCollaborationHubPage() {
           Team Collaboration Hub
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.
+          AI-powered team collaboration platform with intelligent project
+          management, communication tools, and productivity analytics for remote
+          and hybrid teams.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Features & Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Features & Capabilities
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               title="AI-Powered Project Management"
@@ -49,7 +54,9 @@ export default function TeamCollaborationHubPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing & Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing & Plans
+          </h2>
           <div className="space-y-4">
             <PricingCard
               plan="Starter"
@@ -60,7 +67,7 @@ export default function TeamCollaborationHubPage() {
                 "Basic project management",
                 "Email support",
                 "Standard integrations",
-                "5GB storage"
+                "5GB storage",
               ]}
             />
             <PricingCard
@@ -73,7 +80,7 @@ export default function TeamCollaborationHubPage() {
                 "Priority support",
                 "All integrations",
                 "100GB storage",
-                "Advanced analytics"
+                "Advanced analytics",
               ]}
             />
             <PricingCard
@@ -87,7 +94,7 @@ export default function TeamCollaborationHubPage() {
                 "On-premise deployment",
                 "Unlimited storage",
                 "Custom integrations",
-                "SLA guarantees"
+                "SLA guarantees",
               ]}
             />
           </div>
@@ -95,7 +102,9 @@ export default function TeamCollaborationHubPage() {
       </div>
 
       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Team Collaboration Hub?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Why Choose Our Team Collaboration Hub?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <BenefitCard
             title="40% Productivity Boost"
@@ -113,9 +122,12 @@ export default function TeamCollaborationHubPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Team Collaboration?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Transform Team Collaboration?
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Empower your team with AI-powered collaboration tools that enhance productivity, improve communication, and drive better results.
+          Empower your team with AI-powered collaboration tools that enhance
+          productivity, improve communication, and drive better results.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -140,12 +152,26 @@ export default function TeamCollaborationHubPage() {
   );
 }
 
-function FeatureItem({ title, description }: { title: string; description: string }) {
+function FeatureItem({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 w-6 h-6 bg-indigo-500 rounded-full flex items-center justify-center mt-1">
-        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+        <svg
+          className="w-4 h-4 text-white"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
         </svg>
       </div>
       <div>
@@ -156,7 +182,12 @@ function FeatureItem({ title, description }: { title: string; description: strin
   );
 }
 
-function PricingCard({ plan, price, description, features }: {
+function PricingCard({
+  plan,
+  price,
+  description,
+  features,
+}: {
   plan: string;
   price: string;
   description: string;
@@ -178,7 +209,13 @@ function PricingCard({ plan, price, description, features }: {
   );
 }
 
-function BenefitCard({ title, description }: { title: string; description: string }) {
+function BenefitCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

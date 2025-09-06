@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "Customer Support Automation | Zion Tech Group",
-  description: "AI-powered customer support automation with intelligent chatbots, ticket routing, and sentiment analysis for exceptional customer experience.",
+  description:
+    "AI-powered customer support automation with intelligent chatbots, ticket routing, and sentiment analysis for exceptional customer experience.",
 };
 
 export default function CustomerSupportAutomationPage() {
@@ -13,13 +14,17 @@ export default function CustomerSupportAutomationPage() {
           Customer Support Automation
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          AI-powered customer support automation with intelligent chatbots, ticket routing, and sentiment analysis for exceptional customer experience.
+          AI-powered customer support automation with intelligent chatbots,
+          ticket routing, and sentiment analysis for exceptional customer
+          experience.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Features & Capabilities</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Features & Capabilities
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               title="Intelligent Chatbots"
@@ -49,7 +54,9 @@ export default function CustomerSupportAutomationPage() {
         </div>
 
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Pricing & Plans</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Pricing & Plans
+          </h2>
           <div className="space-y-4">
             <PricingCard
               plan="Starter"
@@ -60,7 +67,7 @@ export default function CustomerSupportAutomationPage() {
                 "Basic chatbot functionality",
                 "Email support",
                 "Standard integrations",
-                "Basic analytics"
+                "Basic analytics",
               ]}
             />
             <PricingCard
@@ -73,7 +80,7 @@ export default function CustomerSupportAutomationPage() {
                 "Priority support",
                 "All integrations",
                 "Advanced analytics",
-                "Custom workflows"
+                "Custom workflows",
               ]}
             />
             <PricingCard
@@ -87,7 +94,7 @@ export default function CustomerSupportAutomationPage() {
                 "On-premise deployment",
                 "Custom integrations",
                 "SLA guarantees",
-                "Advanced security"
+                "Advanced security",
               ]}
             />
           </div>
@@ -95,7 +102,9 @@ export default function CustomerSupportAutomationPage() {
       </div>
 
       <div className="bg-gradient-to-r from-pink-50 to-rose-50 border border-pink-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Why Choose Our Customer Support Automation?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Why Choose Our Customer Support Automation?
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <BenefitCard
             title="80% Faster Resolution"
@@ -113,9 +122,12 @@ export default function CustomerSupportAutomationPage() {
       </div>
 
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Customer Support?</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Transform Your Customer Support?
+        </h2>
         <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Elevate your customer experience with AI-powered support automation that provides instant, accurate, and personalized assistance.
+          Elevate your customer experience with AI-powered support automation
+          that provides instant, accurate, and personalized assistance.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -140,12 +152,26 @@ export default function CustomerSupportAutomationPage() {
   );
 }
 
-function FeatureItem({ title, description }: { title: string; description: string }) {
+function FeatureItem({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="flex-shrink-0 w-6 h-6 bg-pink-500 rounded-full flex items-center justify-center mt-1">
-        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+        <svg
+          className="w-4 h-4 text-white"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+        >
+          <path
+            fillRule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clipRule="evenodd"
+          />
         </svg>
       </div>
       <div>
@@ -156,7 +182,12 @@ function FeatureItem({ title, description }: { title: string; description: strin
   );
 }
 
-function PricingCard({ plan, price, description, features }: {
+function PricingCard({
+  plan,
+  price,
+  description,
+  features,
+}: {
   plan: string;
   price: string;
   description: string;
@@ -178,7 +209,13 @@ function PricingCard({ plan, price, description, features }: {
   );
 }
 
-function BenefitCard({ title, description }: { title: string; description: string }) {
+function BenefitCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
