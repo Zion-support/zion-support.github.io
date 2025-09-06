@@ -345,7 +345,6 @@ export default function EnhancedSidebar2025() {
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
 
             {/* Navigation Items */}
             <div className="flex-1 overflow-y-auto">
@@ -425,11 +424,3 @@ export default function EnhancedSidebar2025() {
     </>
   );
 }
-=======
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-9531

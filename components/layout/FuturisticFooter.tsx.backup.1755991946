@@ -26,7 +26,6 @@ export default function FuturisticFooter() {
 
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const footerSections = [
     {
       title: 'Services',
@@ -72,17 +71,6 @@ export default function FuturisticFooter() {
         { name: 'Support Center', href: '/support' }
       ]
     }
-=======
-  const serviceCategories = [
-    { name: 'AI & Machine Learning', href: '/services#ai', count: 25 },
-    { name: 'Quantum Computing', href: '/services#quantum', count: 12 },
-    { name: 'Cybersecurity', href: '/services#security', count: 18 },
-    { name: 'Cloud & Infrastructure', href: '/services#cloud', count: 15 },
-    { name: 'Data Analytics & BI', href: '/services#analytics', count: 12 },
-    { name: 'Blockchain & Web3', href: '/services#blockchain', count: 8 },
-    { name: 'AR/VR & Metaverse', href: '/services#metaverse', count: 6 },
-    { name: 'Edge Computing & 5G', href: '/services#edge', count: 4 }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
   ];
 
   const socialLinks = [
@@ -190,8 +178,6 @@ export default function FuturisticFooter() {
                   </ul>
                 </div>
               ))}
-<<<<<<< HEAD
-=======
             </ul>
           </div>
 
@@ -262,7 +248,6 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
             </div>
           </div>
         </div>

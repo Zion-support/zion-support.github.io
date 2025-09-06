@@ -110,7 +110,6 @@ export default function MicroSaasPage() {
   };
 
   return (
-<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>35+ Micro SaaS Services | Zion Tech Group - AI-Powered Business Solutions</title>
@@ -132,21 +131,6 @@ export default function MicroSaasPage() {
         <meta name="twitter:description" content="Discover 35+ real micro SaaS services that solve actual business problems with AI-powered intelligence." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
-=======
-    <EnhancedFuturisticBackground variant="holographic-advanced" intensity="medium">
-      <div className="min-h-screen">
-        <Head>
-          <title>75+ Micro SaaS Services | Zion Tech Group - AI, Cloud, Security Solutions</title>
-          <meta name="description" content="Explore 75+ real micro SaaS services from Zion Tech Group. AI-powered solutions, cloud infrastructure, cybersecurity, IoT, blockchain, and emerging technologies. Start your free trial today." />
-          <meta name="keywords" content="micro SaaS services, AI solutions, cloud services, cybersecurity, data analytics, IoT platform, blockchain analytics, quantum computing, AR/VR development" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta property="og:title" content="75+ Micro SaaS Services | Zion Tech Group" />
-          <meta property="og:description" content="Comprehensive micro SaaS platform with AI, cloud, security, and emerging technology solutions." />
-          <meta property="og:url" content="https://ziontechgroup.com/micro-saas" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/micro-saas" />
-        </Head>
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-695e
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 py-20">

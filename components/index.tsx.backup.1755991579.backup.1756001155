@@ -283,7 +283,6 @@ export default function HomePage() {
   );
 
   return (
-<<<<<<< HEAD
     <EnhancedFuturisticBackground variant="neural-quantum" intensity="high">
       <div className="min-h-screen">
         <Head>
@@ -297,87 +296,6 @@ export default function HomePage() {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com" />
         </Head>
-=======
-    <UltraFuturisticMatrixBackground>
-      <Head>
-        <title>Zion Tech Group - Revolutionary AI & Quantum Computing Solutions</title>
-        <meta name="description" content="Transform your business with 200+ revolutionary micro SaaS services. Quantum AI, autonomous systems, and cutting-edge technology solutions with 800%+ average ROI." />
-        <meta name="keywords" content="AI, quantum computing, micro SaaS, autonomous systems, space technology, cybersecurity, manufacturing AI" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Zion Tech Group - Revolutionary AI & Quantum Computing Solutions" />
-        <meta property="og:description" content="Transform your business with 200+ revolutionary micro SaaS services. Quantum AI, autonomous systems, and cutting-edge technology solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
-        <link rel="canonical" href="https://ziontechgroup.com" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Revolutionary AI & Quantum Computing Solutions" />
-        <meta name="twitter:description" content="Transform your business with 200+ revolutionary micro SaaS services." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
-      </Head>
-      {/* Reusable Service Ads Strip */}
-      <ServiceAds
-        heading="Featured Micro SaaS & AI Services"
-        subheading="Transparent pricing, real capabilities, fast onboarding."
-        items={serviceHighlights.slice(0, 12).map((h) => ({
-          title: h.title,
-          description: h.description,
-          price: h.price,
-          features: h.features,
-          link: h.link,
-          contactInfo: h.contactInfo || contactInfo,
-          marketData: (h as any).marketData,
-          competitors: (h as any).competitors,
-          savings: (h as any).savings
-        }))}
-      />
-
-      {/* IT Services & Platform Engineering Ads Strip */}
-      <ServiceAds
-        heading="Enterprise IT & Platform Engineering"
-        subheading="Cloud landing zones, SSO, databases, observability — ready in days."
-        items={[
-          {
-            title: '☁️ Cloud Landing Zone Builder',
-            description: 'Secure multi-account AWS/Azure/GCP foundations with guardrails, IAM, networking, and FinOps via GitOps.',
-            price: 'Starting at $349/month',
-            features: ['Org setup & SCPs', 'VPC & network baselines', 'Audit logging', 'Budgets & anomaly alerts', 'GitOps workflows', 'Multi-env blueprints'],
-            link: 'https://ziontechgroup.com/cloud-landing-zone',
-            contactInfo
-          },
-          {
-            title: '🔐 SSO-in-a-Box',
-            description: 'Enterprise SSO rollout with SAML/OIDC, SCIM provisioning, MFA policies, and audit trails.',
-            price: 'Starting at $159/month',
-            features: ['SAML/OIDC', 'SCIM provisioning', 'MFA & risk policies', 'App catalog', 'Audit logs', 'Just-in-time user sync'],
-            link: 'https://ziontechgroup.com/sso-in-a-box',
-            contactInfo
-          },
-          {
-            title: '🗄️ Managed Postgres HA',
-            description: 'Hands-on Postgres performance tuning, high availability, and disaster recovery playbooks.',
-            price: 'Starting at $199/month',
-            features: ['Patroni/PGPool patterns', 'Index & vacuum guidance', 'Query tracing', 'HA/DR runbooks', 'Backups & PITR', 'Capacity planning'],
-            link: 'https://ziontechgroup.com/managed-postgres-ha',
-            contactInfo
-          },
-          {
-            title: '📊 API Observability Starter (OTel)',
-            description: 'OpenTelemetry-based traces, metrics, and logs with dashboards, alerts, and SLOs.',
-            price: 'Starting at $129/month',
-            features: ['OTel collectors', 'Service maps', 'SLO alerting', 'Latency budgets', 'Drill-down traces', 'Error analytics'],
-            link: 'https://ziontechgroup.com/api-observability-starter',
-            contactInfo
-          }
-        ]}
-      />
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2ac3
 
       <ServiceAds
         heading="Security & Compliance Automation"

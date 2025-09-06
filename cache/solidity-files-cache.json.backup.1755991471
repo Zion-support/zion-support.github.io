@@ -1,22 +1,6 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "/workspace/contracts/ZionGovernor.sol": {
       "lastModificationDate": 1754702703638,
       "contentHash": "c24f231bae64c8a2917b543da0d052c6",
@@ -28,42 +12,10 @@
             "enabled": true,
             "runs": 200
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           "evmVersion": "paris",
-=======
-    "/workspace/contracts/SemaphoreVerifier.sol": {
-      "lastModificationDate": 1754694378585,
-      "contentHash": "7a19a155a1e7aab498adb0fa6a054075",
-      "sourceName": "contracts/SemaphoreVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
           "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -80,22 +32,6 @@
         }
       },
       "imports": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "@openzeppelin/contracts/governance/Governor.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol",
         "@openzeppelin/contracts/governance/extensions/GovernorCountingSimple.sol",
@@ -121,51 +57,10 @@
             "enabled": true,
             "runs": 200
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           "evmVersion": "paris",
-=======
-        "@semaphore-protocol/contracts/base/SemaphoreVerifier.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.23"
-      ],
-      "artifacts": [
-        "SemaphoreVerifier"
-      ]
-    },
-    "/workspace/node_modules/@semaphore-protocol/contracts/base/SemaphoreVerifier.sol": {
-      "lastModificationDate": 1754694231453,
-      "contentHash": "e28f1bec80e826fb56317b9c755f1b1e",
-      "sourceName": "@semaphore-protocol/contracts/base/SemaphoreVerifier.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
           "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -182,22 +77,6 @@
         }
       },
       "imports": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "../token/ERC721/IERC721Receiver.sol",
         "../token/ERC1155/IERC1155Receiver.sol",
         "../utils/cryptography/ECDSA.sol",
@@ -422,52 +301,10 @@
             "enabled": true,
             "runs": 200
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           "evmVersion": "paris",
-=======
-        "./Constants.sol",
-        "./SemaphoreVerifierKeyPts.sol"
-      ],
-      "versionPragmas": [
-        ">=0.8.23 <0.9.0"
-      ],
-      "artifacts": [
-        "SemaphoreVerifier"
-      ]
-    },
-    "/workspace/node_modules/@semaphore-protocol/contracts/base/Constants.sol": {
-      "lastModificationDate": 1754694231453,
-      "contentHash": "40b7091f14ee398362f76c1bc4dc20c1",
-      "sourceName": "@semaphore-protocol/contracts/base/Constants.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
           "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -485,22 +322,6 @@
       },
       "imports": [],
       "versionPragmas": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.1"
       ],
       "artifacts": [
@@ -1150,46 +971,10 @@
             "enabled": true,
             "runs": 200
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           "evmVersion": "paris",
-=======
-        ">=0.8.23 <0.9.0"
-      ],
-      "artifacts": []
-    },
-    "/workspace/node_modules/@semaphore-protocol/contracts/base/SemaphoreVerifierKeyPts.sol": {
-      "lastModificationDate": 1754694231453,
-      "contentHash": "145e711af26eaa853eaaa2e5579ddb0a",
-      "sourceName": "@semaphore-protocol/contracts/base/SemaphoreVerifierKeyPts.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
           "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -1207,22 +992,6 @@
       },
       "imports": [],
       "versionPragmas": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.0"
       ],
       "artifacts": [
@@ -1279,48 +1048,10 @@
             "enabled": true,
             "runs": 200
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           "evmVersion": "paris",
-=======
-        ">=0.8.23 <0.9.0"
-      ],
-      "artifacts": [
-        "SemaphoreVerifierKeyPts"
-      ]
-    },
-    "/workspace/contracts/ZkBallot.sol": {
-      "lastModificationDate": 1754694363941,
-      "contentHash": "872f767c360a0ed81d6f843132c59555",
-      "sourceName": "contracts/ZkBallot.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
           "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -1338,22 +1069,6 @@
       },
       "imports": [],
       "versionPragmas": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.0"
       ],
       "artifacts": [
@@ -1490,49 +1205,10 @@
             "enabled": true,
             "runs": 200
           },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
           "evmVersion": "paris",
-=======
-        "^0.8.21"
-      ],
-      "artifacts": [
-        "ISemaphoreVerifier",
-        "ZkBallot"
-      ]
-    },
-    "/workspace/contracts/ZkTreasury.sol": {
-      "lastModificationDate": 1754694389961,
-      "contentHash": "b1fdda289e144db116f738f269b4ceee",
-      "sourceName": "contracts/ZkTreasury.sol",
-      "solcConfig": {
-        "version": "0.8.23",
-        "settings": {
-          "evmVersion": "paris",
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           "outputSelection": {
           "evmVersion": "paris",          "outputSelection": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
           "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-          "evmVersion": "paris",          "outputSelection": {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             "*": {
               "*": [
                 "abi",
@@ -1550,22 +1226,6 @@
       },
       "imports": [],
       "versionPragmas": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "^0.8.0"
       ],
       "artifacts": [
@@ -1993,35 +1653,10 @@
         "^0.8.20"
       ],
       "artifacts": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
         "ZionToken"
-=======
-        "^0.8.21"
-      ],
-      "artifacts": [
-        "IZkBallotView",
-        "ZkTreasury"
->>>>>>> origin/cursor/deploy-anonymous-zk-voting-for-dao-e4d6
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ]
         "ZionToken"      ]
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         "ZionToken"      ]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "ZionToken"      ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   }
 }

@@ -16,7 +16,7 @@ function resolveMergeConflicts(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
 
@@ -25,14 +25,11 @@ function resolveMergeConflicts(filePath) {
     // Strategy: Keep the current branch changes (HEAD) and remove conflict markers
     let resolvedContent = content
       // Remove conflict markers and keep HEAD version
-      .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1')
-      // Handle cases where there might be multiple conflict sections
-      .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
-      // Clean up any remaining conflict markers
+      .replace(/\n([\s\S]*?)\n([\s\S]*?)      // Handle cases where there might be multiple conflict sections
+      .replace(/\n([\s\S]*?)\n([\s\S]*?)      // Clean up any remaining conflict markers
       .replace(/<<<<<<< [^\n]+\n?/g, '')
-      .replace(/=======\n?/g, '')
-      .replace(/>>>>>>> [^\n]+\n?/g, '')
-      // Remove extra empty lines
+      .replace(/\n?/g, '')
+      .replace(/      // Remove extra empty lines
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       .trim();
 

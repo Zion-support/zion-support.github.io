@@ -241,8 +241,7 @@ export default function CookiesPage() {
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD:pages/cookies.tsx
-=======
+:pages/cookies.tsx
             </div>
           </div>
         </section>
@@ -282,7 +281,6 @@ export default function CookiesPage() {
                   </button>
                 </div>
               </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de:pages/cookies.tsx.backup
             </div>
           </div>
         </div>

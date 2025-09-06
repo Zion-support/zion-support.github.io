@@ -1,13 +1,9 @@
 export default function Page(){return null}
-=======
-=======
 import React from 'react';
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import React from 'react';
 import SEO from '../components/SEO';
-=======
 import { 
   Mail, Phone, MapPin, Send, Clock, Globe, MessageSquare, CheckCircle, 
   ArrowRight, Star, Users, Shield, Zap, Brain, Factory, FlaskConical, 
@@ -93,7 +89,6 @@ export default function ContactPage() {
     }, 3000);
   };
 
-<<<<<<< HEAD
   const stats = [
     { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
     { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' },
@@ -101,69 +96,6 @@ export default function ContactPage() {
     { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' },
     { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' },
     { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' }
-=======
-  const contactMethods = [
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Phone Support',
-      value: '+1 302 464 0950',
-      description: 'Available 24/7 for urgent matters',
-      color: 'from-blue-500 to-blue-600',
-      bgColor: 'from-blue-500/10 to-blue-600/10'
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Email Support',
-      value: 'kleber@ziontechgroup.com',
-      description: 'Response within 2 hours during business hours',
-      color: 'from-green-500 to-green-600',
-      bgColor: 'from-green-500/10 to-green-600/10'
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: 'Office Address',
-      value: '364 E Main St STE 1008',
-      description: 'Middletown DE 19709, United States',
-      color: 'from-purple-500 to-purple-600',
-      bgColor: 'from-purple-500/10 to-purple-600/10'
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Business Hours',
-      value: 'Monday - Friday',
-      description: '9:00 AM - 6:00 PM EST',
-      color: 'from-orange-500 to-orange-600',
-      bgColor: 'from-orange-500/10 to-orange-600/10'
-    }
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: <Star className="w-5 h-5" />,
-      title: 'Expert Team',
-      description: 'Certified professionals with 10+ years of experience in cutting-edge technologies'
-    },
-    {
-      icon: <Zap className="w-5 h-5" />,
-      title: 'Fast Response',
-      description: 'Average response time under 2 hours with 24/7 availability'
-    },
-    {
-      icon: <Shield className="w-5 h-5" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.99% uptime guarantee'
-    },
-    {
-      icon: <Users className="w-5 h-5" />,
-      title: '500+ Services',
-      description: 'Access to revolutionary micro SaaS services with up to 5000% ROI'
-    },
-    {
-      icon: <Users className="w-5 h-5" />,
-      title: 'Dedicated Support',
-      description: 'Personal account manager for enterprise clients'
-    }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
   ];
 
   return (
@@ -617,7 +549,6 @@ export default function ContactPage() {
           <a href="mailto:kleber@ziontechgroup.com" className="block hover:text-purple-400">kleber@ziontechgroup.com</a>
         </div>
       </div>
-=======
       <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div

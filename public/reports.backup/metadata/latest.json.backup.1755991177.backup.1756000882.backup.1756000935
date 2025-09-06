@@ -1,35 +1,11 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
   "generatedAt": "2025-08-14T09:38:10.923Z",
   "pagesScanned": 2974,
-=======
-  "generatedAt": "2025-08-19T03:44:19.065Z",
-  "pagesScanned": 7808,
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   "items": [
   "generatedAt": "2025-08-14T09:38:10.923Z",
   "pagesScanned": 2974,  "items": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
   "generatedAt": "2025-08-14T09:38:10.923Z",
   "pagesScanned": 2974,  "items": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  "generatedAt": "2025-08-14T09:38:10.923Z",
-  "pagesScanned": 2974,  "items": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     {
       "route": "/404",
       "missing": [
@@ -131,400 +107,10 @@
     {
       "route": "/reports/ai-lab",
       "missing": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
         "description",
-=======
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Development Tools",
-        "description": "Development Tools — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542884860-1fiqgn",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Analytics Engine",
-        "description": "Analytics Engine — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542886935-4uauhq",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Integration Hub",
-        "description": "Integration Hub — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542888917-v6zijc",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Analytics Engine",
-        "description": "Analytics Engine — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542890951-hl2ja7",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Automation Suite",
-        "description": "Automation Suite — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542893113-gwllh1",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Monitoring System",
-        "description": "Monitoring System — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542895071-uif021",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Collaboration Platform",
-        "description": "Collaboration Platform — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542899644-ys6z9w",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Automation Suite",
-        "description": "Automation Suite — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755542902116-mscl8g",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Monitoring System",
-        "description": "Monitoring System — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574809927-42pnyc",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Integration Hub",
-        "description": "Integration Hub — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574817270-dx7dde",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Smart Dashboard",
-        "description": "Smart Dashboard — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574826211-bs2pta",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Monitoring System",
-        "description": "Monitoring System — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574829643-aq5izm",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Data Platform",
-        "description": "Data Platform — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574861837-4jxifl",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Security Framework",
-        "description": "Security Framework — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574865448-cx3yvo",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Data Platform",
-        "description": "Data Platform — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574893567-wd92ar",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Smart Dashboard",
-        "description": "Smart Dashboard — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574897544-vlp030",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Security Framework",
-        "description": "Security Framework — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574922426-hvxexp",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Security Framework",
-        "description": "Security Framework — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574928624-65jy39",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Analytics Engine",
-        "description": "Analytics Engine — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574954467-t7xva4",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Monitoring System",
-        "description": "Monitoring System — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574958082-s6efi1",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Development Tools",
-        "description": "Development Tools — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574977553-tz1vsm",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Performance Optimizer",
-        "description": "Performance Optimizer — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574981028-97wvfw",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Monitoring System",
-        "description": "Monitoring System — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755574983994-zt33lh",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Automation Suite",
-        "description": "Automation Suite — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575002202-8qazr7",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Collaboration Platform",
-        "description": "Collaboration Platform — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575005191-bk7ldw",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Analytics Engine",
-        "description": "Analytics Engine — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575028579-wrj78j",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Automation Suite",
-        "description": "Automation Suite — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575032169-dc2y0r",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Collaboration Platform",
-        "description": "Collaboration Platform — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575040758-1trb8x",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Integration Hub",
-        "description": "Integration Hub — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575044295-lnlwkj",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Integration Hub",
-        "description": "Integration Hub — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575044941-8wh13k",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Development Tools",
-        "description": "Development Tools — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575045603-1koh11",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Security Framework",
-        "description": "Security Framework — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575046166-8pnjac",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Smart Dashboard",
-        "description": "Smart Dashboard — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575046672-xm5iaz",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Monitoring System",
-        "description": "Monitoring System — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575047216-1xzrx4",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Monitoring System",
-        "description": "Monitoring System — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575047706-qdanfg",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Data Platform",
-        "description": "Data Platform — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575048172-jglmkf",
-      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Development Tools",
-        "description": "Development Tools — auto-suggested description"
-      }
-    },
-    {
-      "route": "/products/rapid-1755575055897-zt1vmm",
-      "missing": [
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:title",
         "description",        "og:title",
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         "description",        "og:title",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "description",        "og:title",
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:description",
         "og:image",
         "twitter:card"
@@ -535,31 +121,10 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/ai-trends",
-=======
-      "route": "/products/rapid-1755575057376-lf2k5g",
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
       "route": "/reports/ai-trends",      "missing": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       "route": "/reports/ai-trends",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "route": "/reports/ai-trends",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
@@ -2085,23 +1650,6 @@
       "suggestion": {
         "title": "Reference Architecture — Autonomous Content Mesh",
         "description": "Reference Architecture — Autonomous Content Mesh — auto-suggested description"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
     },
     {
@@ -21551,22 +21099,6 @@
       "suggestion": {
         "title": "Guide — Cloud Improving Implementation",
         "description": "Guide — Cloud Improving Implementation — auto-suggested description"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
     },
     {
@@ -21810,31 +21342,10 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/blueprints/blueprint-2025-08-14-083015",
-=======
-      "route": "/reports/guides/guide-2025-08-19-034110",
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
       "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "route": "/reports/blueprints/blueprint-2025-08-14-083015",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
@@ -26526,23 +26037,6 @@
       "route": "/reports/guides/guide-2025-08-14-093752",
       "missing": [
         "og:image"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ],
       "suggestion": {
         "title": "Ultra-Fast Guide: Real-time collaboration tools",
@@ -26846,22 +26340,6 @@
         "og:description",
         "og:image",
         "twitter:card"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ],
       "suggestion": {
         "title": "Guide — Techcrunch Pebble Implementation",
@@ -26869,44 +26347,17 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/guides/guide-2025-08-14-093804",
-=======
-      "route": "/reports/guides/ultra-1755575056351-5e3sob",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
-<<<<<<< HEAD
-=======
-=======
-      "route": "/reports/guides/guide-2025-08-14-093804",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
       "missing": [
       "route": "/reports/guides/guide-2025-08-14-093804",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
-<<<<<<< HEAD
         "title": "Guide — Techcrunch Pebble Implementation",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"
-=======
         "title": "Ultra-Fast Guide: Lightning deployment pipelines",
         "description": "Ultra-Fast Guide: Lightning deployment pipelines — auto-suggested description"
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
       "route": "/reports/guides/guide-2025-08-14-093804",      "missing": [
         "og:image"
@@ -26914,17 +26365,7 @@
       "suggestion": {
         "title": "Guide — Techcrunch Pebble Implementation",
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "description": "Guide — Techcrunch Pebble Implementation — auto-suggested description"      }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
     {
       "route": "/reports/",
@@ -26957,31 +26398,10 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/innovations/insight-2025-08-13-2021",
-=======
-      "route": "/reports/innovations/innovation-2025-08-18-1231",
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
       "route": "/reports/innovations/insight-2025-08-13-2021",      "missing": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       "route": "/reports/innovations/insight-2025-08-13-2021",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "route": "/reports/innovations/insight-2025-08-13-2021",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
@@ -31430,31 +30850,10 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/patterns/pattern-2025-08-14-093258",
-=======
-      "route": "/reports/innovations/insight-2025-08-19-0340",
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
       "route": "/reports/patterns/pattern-2025-08-14-093258",      "missing": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       "route": "/reports/patterns/pattern-2025-08-14-093258",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "route": "/reports/patterns/pattern-2025-08-14-093258",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
@@ -31658,36 +31057,13 @@
         "og:image"
       ],
       "suggestion": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
-=======
-        "title": "Ultra-Fast Lightning deployment pipelines Insight",
-        "description": "Ultra-Fast Lightning deployment pipelines Insight — auto-suggested description"
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "title": "Playbook — Autonomous Delivery",
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
     {
       "route": "/reports/playbooks/playbook-2025-08-13-223717",
@@ -33193,23 +32569,6 @@
       "route": "/reports/playbooks/playbook-2025-08-14-035020",
       "missing": [
         "og:image"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ],
       "suggestion": {
         "title": "Pattern: Real-time collaboration tools Architecture",
@@ -33543,22 +32902,6 @@
         "og:description",
         "og:image",
         "twitter:card"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ],
       "suggestion": {
         "title": "Playbook — Autonomous Delivery",
@@ -33566,19 +32909,7 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/playbooks/playbook-2025-08-14-040018",
-=======
-      "route": "/reports/patterns/ultra-1755575056353-tvpuna",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
         "og:image"
       ],
@@ -33587,41 +32918,12 @@
         "og:image"
       ],
       "suggestion": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      "route": "/reports/playbooks/playbook-2025-08-14-040018",      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       "route": "/reports/playbooks/playbook-2025-08-14-041113",
-=======
-        "title": "Pattern: Instant feedback loops Architecture",
-        "description": "Pattern: Instant feedback loops Architecture — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/patterns/ultra-1755575057171-teli90",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
         "og:image"
       ],
@@ -33630,19 +32932,6 @@
         "og:image"
       ],
       "suggestion": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      "route": "/reports/playbooks/playbook-2025-08-14-041113",      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "title": "Playbook — Autonomous Delivery",
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
       }
@@ -33664,32 +32953,10 @@
       ],
       "suggestion": {
         "title": "Playbook — Autonomous Delivery",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
         "description": "Playbook — Autonomous Delivery — auto-suggested description"
-=======
-        "title": "Pattern: Lightning deployment pipelines Architecture",
-        "description": "Pattern: Lightning deployment pipelines Architecture — auto-suggested description"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "description": "Playbook — Autonomous Delivery — auto-suggested description"      }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
     {
       "route": "/reports/playbooks/playbook-2025-08-14-043123",
@@ -38862,31 +38129,10 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-0544",
-=======
-      "route": "/reports/playbooks/playbook-2025-08-19-034110",
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
       "route": "/reports/updates/update-2025-08-13-0544",      "missing": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       "route": "/reports/updates/update-2025-08-13-0544",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "route": "/reports/updates/update-2025-08-13-0544",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
@@ -43588,23 +42834,6 @@
       "route": "/reports/updates/update-2025-08-13-1945",
       "missing": [
         "og:image"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ],
       "suggestion": {
         "title": "Rapid Technology Advancement",
@@ -43928,22 +43157,6 @@
         "og:description",
         "og:image",
         "twitter:card"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       ],
       "suggestion": {
         "title": "Autonomous Update — 2025-08-13 19:45",
@@ -43951,19 +43164,7 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-1946",
-=======
-      "route": "/reports/updates/ultra-1755575056349-zlaxtt",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
         "og:image"
       ],
@@ -43972,67 +43173,22 @@
         "og:image"
       ],
       "suggestion": {
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      "route": "/reports/updates/update-2025-08-13-1946",      "missing": [
-        "og:image"
-      ],
-      "suggestion": {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "title": "Autonomous Update — 2025-08-13 19:46",
         "description": "Autonomous Update — 2025-08-13 19:46 — auto-suggested description"
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-13-1947",
-=======
-        "title": "Real-Time Innovation Hub",
-        "description": "Real-Time Innovation Hub — auto-suggested description"
-      }
-    },
-    {
-      "route": "/reports/updates/ultra-1755575057167-q5tp5b",
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
       "missing": [
-<<<<<<< HEAD
-=======
-=======
-      "route": "/reports/updates/update-2025-08-13-1947",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
       "missing": [
       "route": "/reports/updates/update-2025-08-13-1947",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
-<<<<<<< HEAD
         "title": "Autonomous Update — 2025-08-13 19:47",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"
-=======
         "title": "Lightning Innovation Cycle",
         "description": "Lightning Innovation Cycle — auto-suggested description"
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
       "route": "/reports/updates/update-2025-08-13-1947",      "missing": [
         "og:image"
@@ -44040,17 +43196,7 @@
       "suggestion": {
         "title": "Autonomous Update — 2025-08-13 19:47",
         "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "description": "Autonomous Update — 2025-08-13 19:47 — auto-suggested description"      }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
     {
       "route": "/reports/updates/update-2025-08-13-1948",
@@ -50983,31 +50129,10 @@
       }
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
       "route": "/reports/updates/update-2025-08-14T09-30",
-=======
-      "route": "/reports/updates/update-2025-08-19-0040",
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       "missing": [
       "route": "/reports/updates/update-2025-08-14T09-30",      "missing": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       "route": "/reports/updates/update-2025-08-14T09-30",      "missing": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      "route": "/reports/updates/update-2025-08-14T09-30",      "missing": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "og:image"
       ],
       "suggestion": {
@@ -51078,22 +50203,6 @@
     {
       "route": "/services/",
       "missing": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         "description",
         "og:title",
         "og:description",
@@ -51102,34 +50211,10 @@
       ],
       "suggestion": {
         "title": "Services",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
         "description": "Services — auto-suggested description"
-=======
-        "og:image"
-      ],
-      "suggestion": {
-        "title": "Mobile App Development",
-        "description": "Mobile App Development — auto-suggested description"
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       }
         "description": "Services — auto-suggested description"      }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
         "description": "Services — auto-suggested description"      }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-        "description": "Services — auto-suggested description"      }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
     {
       "route": "/site-health",
@@ -51140,23 +50225,6 @@
         "title": "Site Health",
         "description": "Site Health — auto-suggested description"
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     },
     {
       "route": "/sitemap",
@@ -53890,22 +52958,6 @@
         "title": "User Management",
         "description": "User Management — auto-suggested description"
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-fix-and-push-changes-8412
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     }
   ]
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -253,24 +252,17 @@ export default function Home() {
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-=======
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network, Calendar
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import SEOHead from '../components/SEOHead';
 import { ToastContainer, useToast } from '../components/ui/Toast';
 import { Service, Feature, Stat, UpdateItem } from '../types';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 
 export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -280,50 +272,7 @@ export default function HomePage() {
     setIsVisible(true);
   }, []);
 
-<<<<<<< HEAD
   const services = [
-=======
-  const features: Feature[] = [
-    {
-      icon: Brain,
-      title: "AI Autonomous Ecosystem",
-      description: "Revolutionary autonomous AI solutions that adapt and evolve",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Atom,
-      title: "Quantum AI Neural Networks",
-      description: "Quantum-powered AI with advanced consciousness capabilities",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Shield,
-      title: "Quantum Cybersecurity",
-      description: "Quantum-resistant security with AI-powered threat detection",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      icon: Rocket,
-      title: "Space Resource Intelligence",
-      description: "AI-powered space resource discovery and optimization",
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: Cpu,
-      title: "Autonomous DevOps",
-      description: "AI-powered DevOps optimization and automation",
-      color: "from-emerald-500 to-teal-500"
-    },
-    {
-      icon: Database,
-      title: "Edge Computing Orchestration",
-      description: "Advanced edge computing optimization platform",
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
-
-  const services: Service[] = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
     {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with AI-powered analytics",
@@ -353,7 +302,6 @@ export default function HomePage() {
     }
   ];
 
-<<<<<<< HEAD
   const microSaasServices = [
     {
       category: "Business Intelligence & Analytics",
@@ -607,13 +555,6 @@ export default function HomePage() {
       content: "The cybersecurity solutions provided by Zion Tech Group helped us achieve SOC 2 compliance in record time.",
       rating: 5
     }
-=======
-  const stats: Stat[] = [
-    { number: "500+", label: "Projects Delivered", icon: CheckCircle },
-    { number: "50+", label: "Enterprise Clients", icon: Users },
-    { number: "99.9%", label: "Uptime Guarantee", icon: Shield },
-    { number: "24/7", label: "Support Available", icon: Clock }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
   ];
 
   const updates: UpdateItem[] = [
@@ -638,7 +579,6 @@ export default function HomePage() {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Head>
         <title>Zion Tech Group - Leading AI, IT & Micro SAAS Solutions Provider</title>
@@ -651,16 +591,6 @@ export default function HomePage() {
         <meta name="keywords" content="AI solutions, IT services, micro SAAS, cloud computing, cybersecurity, business intelligence, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com" />
       </Head>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
-      <SEOHead
-        title="Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform"
-        description="Zion Tech Group delivers cutting-edge AI, quantum computing, cybersecurity, and digital transformation solutions. Leading the future of autonomous innovation."
-        keywords="AI, quantum computing, cybersecurity, digital transformation, autonomous systems, technology solutions"
-        url="https://ziontechgroup.com"
-        type="website"
-      />
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
 
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white">
         {/* Header */}
@@ -768,7 +698,6 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           {/* Content Categories Overview */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-xl">
@@ -885,27 +814,6 @@ export default function HomePage() {
                 View Report <span aria-hidden>→</span>
               </div>
             </a>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {updates.map((update, index) => (
-              <motion.a
-                key={update.href}
-                href={update.href}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
-                <h3 className="text-lg font-semibold text-white">{update.title}</h3>
-                <p className="mt-1 text-sm text-white/75">{update.description}</p>
-                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300">
-                  Open <span aria-hidden>→</span>
-                </div>
-              </motion.a>
-            ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
           </div>
 
           {/* View All Content CTA */}
@@ -1202,7 +1110,6 @@ export default function HomePage() {
           </div>
         </footer>
       </div>
-=======
     <QuantumHolographicMatrixBackground>
       <div className="min-h-screen bg-black text-white relative overflow-hidden">
         <Head>
@@ -1423,7 +1330,6 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1504,15 +1410,7 @@ export default function HomePage() {
       {/* Footer */}
       <UltraFuturisticFooter2029 />
     </>
-=======
-      <EnhancedFooter />
-
-      {/* Toast Container */}
-      <ToastContainer toasts={toasts} onRemove={removeToast} />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
   );
-=======
 import Layout from '../components/layout/Layout';
 import Homepage2025 from '../components/Homepage2025';
 

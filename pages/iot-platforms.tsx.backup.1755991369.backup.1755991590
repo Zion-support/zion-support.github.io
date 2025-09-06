@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function IoTPlatforms() {
   return <div className="py-10">IoT Platforms</div>;
 }
-=======
-export default function IoTPlatforms(){return <div className="prose dark:prose-invert"><h1>IoT Platforms</h1><p>Coming soon.</p></div>}
->>>>>>> origin/cursor/build-zion-global-expo-platform-712b
-=======
 export default function IoTPlatformsPage() {
   return (
     <div className="py-8">
@@ -15,11 +9,8 @@ export default function IoTPlatformsPage() {
     </div>
   );
 }
-=======
 import React from 'react';
 
 export default function IoTPlatformsPage() {
   return <div>IoT Platforms</div>;
 }
->>>>>>> origin/cursor/deploy-ai-podcast-host-with-ziongpt-9517
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3

@@ -522,22 +522,6 @@
     ]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/about",
     "vector": [
       0,
@@ -798,17 +782,7 @@
       1
     ]
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
   {
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "route": "/comprehensive-2025-services-showcase",
     "vector": [
       2,
@@ -836,29 +810,13 @@
       0,
       0,
   {    "vector": [
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
   {    "vector": [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-  {    "vector": [
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       1,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       1,
       0,
       1,
@@ -1088,31 +1046,14 @@
     ]
   },
   {
-<<<<<<< HEAD
     "route": "/contact",
-=======
-    "route": "/comprehensive-2026-services-showcase",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     "vector": [
       0,
       0,
       0,
       1,
-<<<<<<< HEAD
-<<<<<<< HEAD
       0,
       0,
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       3,
       0,
       1,
@@ -1121,18 +1062,7 @@
       0,
       2,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
-=======
-      1,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       1,
       0,
@@ -1141,19 +1071,6 @@
       1,
       0,
       0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      1,
-      1,
-      0,
-      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       1,
@@ -1183,23 +1100,12 @@
       1,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       3,
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       1,
       1,
       2,
       0,
-<<<<<<< HEAD
       0,
       3,
       3,
@@ -1227,38 +1133,17 @@
       3,
       1,
       0,
-=======
       0,
-      0,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-      0,
-<<<<<<< HEAD
-=======
-=======
       3,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      3,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       4,
       0,
       0,
-<<<<<<< HEAD
       0,
       5,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       1,
-=======
       3,
       1,
       1,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       3,      0,
       4,
@@ -1267,39 +1152,13 @@
       0,
       5,
       1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       4,
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -1355,50 +1214,14 @@
       0,
       3,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       1,
-=======
-      1,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       4,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       5,
       3,
@@ -1409,50 +1232,15 @@
       0,
       1,
       3,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       1,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       3,
       0,
       1,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       6,
       0,
@@ -1461,39 +1249,7 @@
       1,
       2,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
-=======
-      6,
-      0,
-      1,
-      0,
-      1,
-      1,
-      0,
-      2,
-      1,
-      0,
-      2,
-      3,
-      3,
-      0,
-      0,
-      1,
-      1,
-      0,
-      2,
-      0,
-      0,
-      5,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -1502,19 +1258,6 @@
       0,
       0,
       1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      0,
-      0,
-      0,
-      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       3,
       1,
       0,
@@ -1527,42 +1270,10 @@
       0,
       1,
       1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       0,
       2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       1,
       1,
@@ -1575,51 +1286,16 @@
       0,
       1,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       1,
-=======
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       3,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       12,
       0,
@@ -1657,45 +1333,12 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       2,
-=======
-      0,
-      1,
-      0,
-      2,
-      0,
-      0,
-      2,
-      12,
-      2,
-=======
       2,      1,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      2,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      2,      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       2,
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       2,
       4,
       0,
@@ -1714,30 +1357,8 @@
       0,
       2,
       0,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
-      1,
-      2,
-      0,
-      0,
-      0,
-    ]
       0,
       0    ]
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,
-      0    ]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,
-      0    ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   },
   {
     "route": "/",
@@ -2262,61 +1883,20 @@
     ]
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
     "route": "/resources",
     "vector": [
       1,
-=======
-    "route": "/services-advertising-2026",
-    "vector": [
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
     "route": "/resources",
     "vector": [
       1,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
     "route": "/resources",
     "vector": [
       1,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-    "route": "/resources",
-    "vector": [
-      1,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       1,
       1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       0,
@@ -2341,43 +1921,11 @@
       2,
       2,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       2,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       1,
       0,
@@ -2753,66 +2301,7 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
-=======
-      1,
-      5,
-      4,
-      1,
-      1,
-      4,
-      0,
-      3,
-      0,
-      3,
-      3,
-      0,
-      1,
-      2,
-      0,
-      4,
-      1,
-      1,
-      9,
-      4,
-      3,
-      1,
-      5,
-      0,
-      3,
-      0,
-      0,
-      1,
-      1,
-      1,
-      4,
-      0,
-      0,
-      1,
-      0,
-      0,
-      0,
-      2,
-      1,
-      1,
-      2,
-      0,
-      4,
-      0,
-      0,
-      2,
-      0,
-      2,
-      2,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -2821,39 +2310,10 @@
       0,
       0,
       1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      0,
-      0,
-      0,
-      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       2,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       4,
       0,
       0,
@@ -2861,22 +2321,6 @@
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -3118,103 +2562,30 @@
       0,
       3,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       6,
-=======
-      1,
-      5,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       6,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       6,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      6,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       11,
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       4,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
-=======
-      8,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,      1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       0,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      1,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       2,
       0,
@@ -3250,49 +2621,15 @@
       0,
       3,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,      0,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       0,      0,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0,      0,
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       5,
       0,
       0,
       0,
       1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
@@ -3305,34 +2642,7 @@
       0,
       0,
       7,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
-=======
-      3,
-      1,
-      0,
-      0,
-      0,
-      3,
-      3,
-      0,
-      0,
-      0,
-      3,
-      4,
-      0,
-      2,
-      3,
-      2,
-      2,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       2,
@@ -3341,43 +2651,13 @@
       0,
       2,
       1,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-      0,      0,
-      0,
-      2,
-      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
       0,
       1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0,
-=======
-      1,
-      3,
-<<<<<<< HEAD
-=======
-=======
-      0,      1,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       3,
       0,
@@ -3387,11 +2667,6 @@
       0,
       0,
       2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       11,
       2,
       1,
@@ -3406,8 +2681,6 @@
       4,
       4,
       1,
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       1,
       0,
       3,
@@ -3417,35 +2690,10 @@
       3,
       0,
       2,
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       0,
       0,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       8,
       1,
       0,
@@ -3489,46 +2737,9 @@
       1,
       0,
       0,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
       0
-=======
-      0,
-      0,
-      2,
-      0,
-      0,
-      4,
-      3,
-      1,
-      2,
-      2,
-      1,
-      1,
-      2,
-      8,
-      1,
-      1,
-      1
->>>>>>> origin/cursor/expand-services-and-deploy-updates-4816
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     ]
       0    ]
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
       0    ]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-      0    ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
   }
 ]
