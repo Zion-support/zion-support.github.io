@@ -2,169 +2,169 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+import {execSync} from 'child_process';
+import {fileURLToPath} from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import && import.meta.url);
+const __dirname = path && path.dirname(__filename);
 
 class ComprehensiveErrorPrevention {
   constructor() {
-    this.logFile = path.join(process.cwd(), 'logs', 'error-prevention.log');
-    this.fixedCount = 0;
-    this.errorCount = 0;
-    this.lastRun = null;
+    this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'error-prevention && prevention.log');
+    this && this.fixedCount = 0;
+    this && this.errorCount = 0;
+    this && this.lastRun = null;
   }
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
     
-    console.log(logMessage.trim());
+    console && console.log(logMessage && logMessage.trim());
     
     try {
-      fs.appendFileSync(this.logFile, logMessage);
+      fs && fs.appendFileSync(this && this.logFile, logMessage);
     } catch (error) {
-      console.error('Failed to write to log file:', error.message);
+      console && console.error('Failed to write to log file:', error && error.message);
     }
   }
 
   async cleanCorruptedFiles() {
     try {
-      this.log('Cleaning corrupted files...');
+      this && this.log('Cleaning corrupted files...');
       
       const corruptedDirs = [
-        'pages.disabled',
-        'pages.disabled_auto',
+        'pages && pages.disabled',
+        'pages && pages.disabled_auto',
         'pages_backup',
         'backup-pages',
-        'src.disabled',
-        'src.corrupted',
-        'src.broken',
-        'solutions.disabled',
-        'scripts.disabled',
+        'src && src.disabled',
+        'src && src.corrupted',
+        'src && src.broken',
+        'solutions && solutions.disabled',
+        'scripts && scripts.disabled',
         'automation_backup',
         'data_backup'
       ];
 
       for (const dir of corruptedDirs) {
-        const dirPath = path.join(process.cwd(), dir);
-        if (fs.existsSync(dirPath)) {
-          fs.rmSync(dirPath, { recursive: true, force: true });
-          this.log(`Removed corrupted directory: ${dir}`);
+        const dirPath = path && path.join(process && process.cwd(), dir);
+        if (fs && fs.existsSync(dirPath)) {
+          fs && fs.rmSync(dirPath, { recursive: true, force: true });
+          this && this.log(`Removed corrupted directory: ${dir}`);
         }
       }
 
-      this.fixedCount++;
-      this.log('Corrupted files cleanup completed.');
+      this && this.fixedCount++;
+      this && this.log('Corrupted files cleanup completed.');
       
     } catch (error) {
-      this.errorCount++;
-      this.log(`Error cleaning corrupted files: ${error.message}`, 'ERROR');
+      this && this.errorCount++;
+      this && this.log(`Error cleaning corrupted files: ${error && error.message}`, 'ERROR');
     }
   }
 
   async runLintFix() {
     try {
-      this.log('Running lint fix...');
+      this && this.log('Running lint fix...');
       
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
-        cwd: process.cwd(),
+        cwd: process && process.cwd(),
         stdio: 'pipe'
       });
       
-      this.fixedCount++;
-      this.log('Lint fix completed successfully.');
+      this && this.fixedCount++;
+      this && this.log('Lint fix completed successfully.');
       
     } catch (error) {
-      this.errorCount++;
-      this.log(`Lint fix failed: ${error.message}`, 'ERROR');
+      this && this.errorCount++;
+      this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
     }
   }
 
   async runBuild() {
     try {
-      this.log('Running build...');
+      this && this.log('Running build...');
       
       const result = execSync('npm run build', { 
         encoding: 'utf8', 
-        cwd: process.cwd(),
+        cwd: process && process.cwd(),
         stdio: 'pipe'
       });
       
-      this.fixedCount++;
-      this.log('Build completed successfully.');
+      this && this.fixedCount++;
+      this && this.log('Build completed successfully.');
       
     } catch (error) {
-      this.errorCount++;
-      this.log(`Build failed: ${error.message}`, 'ERROR');
+      this && this.errorCount++;
+      this && this.log(`Build failed: ${error && error.message}`, 'ERROR');
     }
   }
 
   async checkTypeScript() {
     try {
-      this.log('Checking TypeScript...');
+      this && this.log('Checking TypeScript...');
       
       const result = execSync('npx tsc --noEmit', { 
         encoding: 'utf8', 
-        cwd: process.cwd(),
+        cwd: process && process.cwd(),
         stdio: 'pipe'
       });
       
-      this.fixedCount++;
-      this.log('TypeScript check passed.');
+      this && this.fixedCount++;
+      this && this.log('TypeScript check passed.');
       
     } catch (error) {
-      this.errorCount++;
-      this.log(`TypeScript check failed: ${error.message}`, 'ERROR');
+      this && this.errorCount++;
+      this && this.log(`TypeScript check failed: ${error && error.message}`, 'ERROR');
     }
   }
 
   async runComprehensiveCheck() {
     try {
-      this.log('Starting comprehensive error prevention...');
+      this && this.log('Starting comprehensive error prevention...');
       
       // Clean corrupted files
-      await this.cleanCorruptedFiles();
+      await this && this.cleanCorruptedFiles();
       
       // Run lint fix
-      await this.runLintFix();
+      await this && this.runLintFix();
       
       // Check TypeScript
-      await this.checkTypeScript();
+      await this && this.checkTypeScript();
       
       // Run build
-      await this.runBuild();
+      await this && this.runBuild();
       
-      this.lastRun = new Date();
-      this.log(`Comprehensive check completed. Fixed ${this.fixedCount} issues, found ${this.errorCount} errors.`);
+      this && this.lastRun = new Date();
+      this && this.log(`Comprehensive check completed. Fixed ${this && this.fixedCount} issues, found ${this && this.errorCount} errors.`);
       
     } catch (error) {
-      this.errorCount++;
-      this.log(`Comprehensive check failed: ${error.message}`, 'ERROR');
+      this && this.errorCount++;
+      this && this.log(`Comprehensive check failed: ${error && error.message}`, 'ERROR');
     }
   }
 
   async run() {
-    this.log('Starting Comprehensive Error Prevention System...');
+    this && this.log('Starting Comprehensive Error Prevention System...');
     
     // Create logs directory if it doesn't exist
-    const logsDir = path.join(process.cwd(), 'logs');
-    if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursive: true });
+    const logsDir = path && path.join(process && process.cwd(), 'logs');
+    if (!fs && fs.existsSync(logsDir)) {
+      fs && fs.mkdirSync(logsDir, { recursive: true });
     }
     
     // Run initial comprehensive check
-    await this.runComprehensiveCheck();
+    await this && this.runComprehensiveCheck();
     
     // Set up interval for continuous error prevention
     setInterval(async () => {
-      await this.runComprehensiveCheck();
+      await this && this.runComprehensiveCheck();
     }, 900000); // Run every 15 minutes
   }
 }
 
 // Run the system
 const system = new ComprehensiveErrorPrevention();
-system.run().catch(console.error);
+system && system.run().catch(console && console.error);

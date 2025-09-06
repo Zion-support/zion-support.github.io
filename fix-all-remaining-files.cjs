@@ -11,8 +11,7 @@ import Link from 'next/link';
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
-}
+  onClose: () => void;}
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const menuItems = [
@@ -55,8 +54,7 @@ import Header from './Header';
 import Footer from './layout/Footer';
 
 interface SimpleLayoutProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode;}
 
 const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children }) => {
   return (
@@ -80,7 +78,6 @@ interface SkeletonLoaderProps {
   className?: string;
   lines?: number;
 }
-
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
   className = '', 
   lines = 3 
@@ -102,13 +99,11 @@ export default SkeletonLoader;`
   },
   {
     path: 'components/layout/EnhancedFooter.tsx',
-    content: `import React from 'react';
-import { Building, Mail, Phone, MapPin } from 'lucide-react';
+    content: `import React from 'react';import { Building, Mail, Phone, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
 const EnhancedFooter: React.FC = () => {
-  return (
-    <footer className="bg-gray-900 text-white">
+  return (    <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
@@ -155,7 +150,6 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
-
 export default EnhancedFooter;`
   },
   {
@@ -174,14 +168,12 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
 export default Footer;`
   },
   {
     path: 'components/layout/Header.tsx',
     content: `import React from 'react';
 import Link from 'next/link';
-
 const Header: React.FC = () => {
   return (
     <header className="bg-white shadow">
@@ -210,8 +202,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode;}
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
@@ -234,8 +225,7 @@ import Header from '../Header';
 import Footer from './Footer';
 
 interface MainLayoutProps {
-  children: React.ReactNode;
-}
+  children: React.ReactNode;}
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
@@ -283,8 +273,7 @@ import Image from 'next/image';
 
 interface OptimizedImageProps {
   src: string;
-  alt: string;
-  width?: number;
+  alt: string;  width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
@@ -322,8 +311,7 @@ export default OptimizedImage;`
   {
     path: 'components/ui/EnhancedMarketplaceCard.tsx',
     content: `import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image';import Link from 'next/link';
 import { Star, Users, Calendar } from 'lucide-react';
 
 interface EnhancedMarketplaceCardProps {
@@ -334,8 +322,7 @@ interface EnhancedMarketplaceCardProps {
   rating: number;
   users: number;
   category: string;
-  href: string;
-}
+  href: string;}
 
 const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   title,
@@ -400,14 +387,12 @@ import { ChevronDown, ChevronRight } from 'lucide-react';
 
 interface NavigationItem {
   label: string;
-  href?: string;
-  children?: NavigationItem[];
+  href?: string;  children?: NavigationItem[];
 }
 
 interface InteractiveNavigationProps {
   items: NavigationItem[];
-  className?: string;
-}
+  className?: string;}
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ 
   items, 
@@ -481,14 +466,12 @@ interface Notification {
   id: string;
   type: 'success' | 'error' | 'warning' | 'info';
   title: string;
-  message: string;
-  duration?: number;
+  message: string;  duration?: number;
 }
 
 interface NotificationSystemProps {
   notifications: Notification[];
-  onRemove: (id: string) => void;
-}
+  onRemove: (id: string) => void;}
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({ 
   notifications, 

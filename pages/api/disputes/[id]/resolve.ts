@@ -1,32 +1,39 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query,
-  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' }),
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  const { id } = req && req.query;
+  if (typeof id !== "string")
+    return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
-  if (req.method === 'POST') {
+
+  if (req && req.method === "POST") {
     try {
-      ensureAdmin(user)
+      ensureAdmin(user);
     } catch (e: any) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
-    const dispute = await getDisputeById(id),
-    if (!dispute) return res.status(404).json({ error: 'Not found' }),
-    const { resolutionSummary, status } = req.body || {};
+    const dispute = await getDisputeById(id);
+    if (!dispute) return res && res.status($1).json({ $2 });
+    const { resolutionSummary, status } = req && req.body || {};
     const now = new Date().toISOString();
-    if (status && !['ResolvedUnder ReviewOpen'].includes(status)) {
-      return res.status(400).json({ error: 'Invalid status' })
+
+    if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
+      return res && res.status(400).json({ error: "Invalid status" });
     }
 
-    dispute.status = status || 'Resolved',
-    dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
-    dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
-    dispute.updatedAt = now;
+    ((dispute && dispute.status = status || "Resolved"),
+      (dispute && dispute.resolvedAt = dispute && dispute.status === "Resolved" ? now : undefined));
+    dispute && dispute.resolutionSummary = resolutionSummary || dispute && dispute.resolutionSummary;
+    dispute && dispute.updatedAt = now;
     await upsertDispute(dispute);
-    return res.status(200).json({ dispute })
+    return res && res.status(200).json({ dispute });
   }
 
-  res.setHeader('AllowPOST');
-  return res.status(405).end('Method Not Allowed')
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
 }

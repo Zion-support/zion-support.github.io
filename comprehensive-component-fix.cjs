@@ -22,15 +22,13 @@ function fixComponentSyntax(filePath) {
     content = content.replace(/isLoade:\s*d:\s*false/g, 'isLoaded: false');
     content = content.replace(/hasErro:\s*r:\s*false/g, 'hasError: false');
     content = content.replace(/addres:\s*s:\s*string/g, 'address: string');
-    
-    // Fix const declarations with colons
+        // Fix const declarations with colons
     content = content.replace(/const:\s*(\w+)/g, 'const $1');
     
     // Fix more general patterns
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
     content = content.replace(/(\w+):\s*(\w+):\s*(\w+)/g, '$1: $2');
-    
-    // Clean up extra whitespace
+        // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     if (content !== originalContent) {
@@ -41,6 +39,8 @@ function fixComponentSyntax(filePath) {
     
     return false;
   } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
     console.error(`Error processing ${filePath} `, error.message);
     return false;
   }

@@ -1,70 +1,86 @@
 import { ServiceVariant } from '../types/service-variants';
+
 export interface ComprehensiveService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: ServiceVariant,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number
-}
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+
+export const comprehensiveServicesExpansion: ComprehensiveService[] = [
+  {  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'
+};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
     id: 'ai-powered-code-review-assistant',
     name: 'AI-Powered Code Review Assistant',
-    tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
+    tagline:
+      'Automated code quality analysis, security scanning, and best practice recommendations',
     price: '$199',
     period: '/month',
-    description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
+    description:
+      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
     features: [
-      'Automated security vulnerability detectionCode quality scoring and metricsBest practice recommendationsIntegration with GitHub/GitLabCustom rule configurationTeam performance analyticsAutomated PR commentsCompliance checking (SOC2, HIPAA)',
-      'Performance impact analysis'
+      'Automated security vulnerability detection',
+      'Code quality scoring and metrics',
+      'Best practice recommendations',
+      'Integration with GitHub/GitLab',
+      'Custom rule configuration',
+      'Team performance analytics',
+      'Automated PR comments',
+      'Compliance checking (SOC2, HIPAA)',
+      'Performance impact analysis',
     ],
     popular: true,
     icon: '🔍',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-code-review-assistant',
-    marketPosition: 'Competes with SonarQube, CodeClimate, adds AI-powered insights and security focus.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-code-review-assistant',
+    marketPosition:
+      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, CTOs',
     trialDays: 14,
     setupTime: '2 hours',
@@ -72,7 +88,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
-    useCases: ['Code quality improvement, Security compliance, Team productivity'],
+    useCases: [
+      'Code quality improvement, Security compliance, Team productivity',
+    ],
     roi: 'Reduce code review time by 40-60% and improve code quality by 25%.',
     competitors: ['SonarQube, CodeClimate, Snyk'],
     marketSize: '$8B code quality tools',
@@ -80,29 +98,40 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered analysis engine with custom rule sets and integration APIs.',
+    implementationDetails:
+      'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15',
     customers: 156,
-    rating: 4.8,
-    reviews: 89
+    rating: 4 && 4.8,
+    reviews: 89,
   },
   {
     id: 'intelligent-incident-response-platform',
     name: 'Intelligent Incident Response Platform',
-    tagline: 'AI-driven incident detection, automated response, and post-mortem analysis',
+    tagline:
+      'AI-driven incident detection, automated response, and post-mortem analysis',
     price: '$349',
     period: '/month',
-    description: 'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',
+    description:
+      'Comprehensive incident management platform that uses AI to detect anomalies, automate initial response actions, coordinate team communication, and generate detailed post-mortem reports.',
     features: [
-      'AI-powered anomaly detectionAutomated incident classificationSmart escalation routingReal-time team coordinationAutomated response playbooksPost-mortem report generationIncident timeline trackingPerformance metrics and analytics',
-      'Integration with monitoring tools'
+      'AI-powered anomaly detection',
+      'Automated incident classification',
+      'Smart escalation routing',
+      'Real-time team coordination',
+      'Automated response playbooks',
+      'Post-mortem report generation',
+      'Incident timeline tracking',
+      'Performance metrics and analytics',
+      'Integration with monitoring tools',
     ],
     popular: true,
     icon: '🚨',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/intelligent-incident-response',
-    marketPosition: 'Advanced alternative to PagerDuty, Opsgenie with AI capabilities.',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-incident-response',
+    marketPosition:
+      'Advanced alternative to PagerDuty, Opsgenie with AI capabilities.',
     targetAudience: 'SRE teams, DevOps engineers, IT operations',
     trialDays: 14,
     setupTime: '1 day',
@@ -118,11 +147,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI incident detection engine with automated response workflows and team coordination.',
+    implementationDetails:
+      'AI incident detection engine with automated response workflows and team coordination.',
     launchDate: '2025-02-01',
     customers: 89,
-    rating: 4.7,
-    reviews: 67
+    rating: 4 && 4.7,
+    reviews: 67,
   },
   {
     id: 'quantum-resistant-cryptography-suite',
@@ -130,17 +160,26 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     tagline: 'Future-proof encryption for post-quantum computing era',
     price: '$599',
     period: '/month',
-    description: 'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',
+    description:
+      'Advanced cryptographic solutions designed to withstand quantum computing attacks, including post-quantum algorithms, quantum key distribution, and hybrid encryption systems.',
     features: [
-      'Post-quantum cryptographic algorithmsQuantum key distribution (QKD)Hybrid encryption systemsQuantum-resistant digital signaturesSecure key managementCompliance with NIST standardsPerformance optimizationIntegration APIs',
-      'Migration tools from classical crypto'
+      'Post-quantum cryptographic algorithms',
+      'Quantum key distribution (QKD)',
+      'Hybrid encryption systems',
+      'Quantum-resistant digital signatures',
+      'Secure key management',
+      'Compliance with NIST standards',
+      'Performance optimization',
+      'Integration APIs',
+      'Migration tools from classical crypto',
     ],
     popular: false,
     icon: '🔐',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography',
-    marketPosition: 'Early mover in post-quantum cryptography, specialized security solution.',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-resistant-cryptography',
+    marketPosition:
+      'Early mover in post-quantum cryptography; specialized security solution.',
     targetAudience: 'Financial institutions, government agencies, healthcare',
     trialDays: 30,
     setupTime: '1-2 weeks',
@@ -149,36 +188,47 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     technology: ['Post-Quantum Cryptography, QKD, Hybrid Systems'],
     integrations: ['PKI systems, Cloud platforms, IoT devices'],
     useCases: ['Data protection, Secure communications, Compliance'],
-    roi: 'Future-proof security investment, avoid costly migrations later.',
+    roi: 'Future-proof security investment; avoid costly migrations later.',
     competitors: ['ISARA, PQShield, Quantum Xchange'],
     marketSize: '$2B quantum security',
     growthRate: '45% YoY',
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Post-quantum algorithm implementations with hybrid encryption and key management.',
+    implementationDetails:
+      'Post-quantum algorithm implementations with hybrid encryption and key management.',
     launchDate: '2025-01-20',
     customers: 23,
-    rating: 4.9,
-    reviews: 18
+    rating: 4 && 4.9,
+    reviews: 18,
   },
   {
     id: 'autonomous-devops-orchestrator',
     name: 'Autonomous DevOps Orchestrator',
-    tagline: 'Self-healing infrastructure with intelligent automation and optimization',
+    tagline:
+      'Self-healing infrastructure with intelligent automation and optimization',
     price: '$449',
     period: '/month',
-    description: 'AI-powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
+    description:
+      'AI-powered DevOps platform that autonomously manages infrastructure, optimizes performance, handles deployments, and resolves issues without human intervention.',
     features: [
-      'Autonomous infrastructure managementSelf-healing systemsIntelligent deployment strategiesPerformance auto-optimizationPredictive scalingAutomated troubleshootingCost optimizationSecurity compliance monitoring',
-      'Real-time analytics dashboard'
+      'Autonomous infrastructure management',
+      'Self-healing systems',
+      'Intelligent deployment strategies',
+      'Performance auto-optimization',
+      'Predictive scaling',
+      'Automated troubleshooting',
+      'Cost optimization',
+      'Security compliance monitoring',
+      'Real-time analytics dashboard',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/autonomous-devops-orchestrator',
-    marketPosition: 'Next-generation DevOps automation, competes with traditional CI/CD tools.',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops-orchestrator',
+    marketPosition:
+      'Next-generation DevOps automation; competes with traditional CI/CD tools.',
     targetAudience: 'DevOps teams, Platform engineers, SREs',
     trialDays: 21,
     setupTime: '3-5 days',
@@ -186,7 +236,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realService: true,
     technology: ['AI/ML, Kubernetes, Terraform, Ansible'],
     integrations: ['AWS, GCP, Azure, GitHub, GitLab, Jenkins'],
-    useCases: ['Infrastructure automation, Deployment optimization, Cost management'],
+    useCases: [
+      'Infrastructure automation, Deployment optimization, Cost management',
+    ],
     roi: 'Reduce operational overhead by 60-80% and improve system reliability.',
     competitors: ['GitLab CI/CD, Jenkins, CircleCI'],
     marketSize: '$20B DevOps tools',
@@ -194,29 +246,40 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'ai-autonomous',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',
+    implementationDetails:
+      'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',
     launchDate: '2025-02-10',
     customers: 134,
-    rating: 4.8,
-    reviews: 92
+    rating: 4 && 4.8,
+    reviews: 92,
   },
   {
     id: 'edge-ai-inference-platform',
     name: 'Edge AI Inference Platform',
-    tagline: 'Deploy and manage AI models at the edge for real-time performance',
+    tagline:
+      'Deploy and manage AI models at the edge for real-time performance',
     price: '$299',
     period: '/month',
-    description: 'Platform for deploying, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',
+    description:
+      'Platform for deploying, managing, and optimizing AI models at the edge, enabling real-time inference with minimal latency and bandwidth usage.',
     features: [
-      'Edge model deploymentReal-time inference optimizationModel versioning and updatesEdge device managementPerformance monitoringBandwidth optimizationOffline capabilitySecurity and privacy controls',
-      'Scalable edge infrastructure'
+      'Edge model deployment',
+      'Real-time inference optimization',
+      'Model versioning and updates',
+      'Edge device management',
+      'Performance monitoring',
+      'Bandwidth optimization',
+      'Offline capability',
+      'Security and privacy controls',
+      'Scalable edge infrastructure',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/edge-ai-inference-platform',
-    marketPosition: 'Specialized edge AI platform, complements cloud AI services.',
+    link: 'https://ziontechgroup && ziontechgroup.com/edge-ai-inference-platform',
+    marketPosition:
+      'Specialized edge AI platform; complements cloud AI services.',
     targetAudience: 'IoT developers, Edge computing teams, AI engineers',
     trialDays: 14,
     setupTime: '2-3 days',
@@ -232,29 +295,40 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'edge-computing-enterprise',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Edge deployment framework with model optimization and device management capabilities.',
+    implementationDetails:
+      'Edge deployment framework with model optimization and device management capabilities.',
     launchDate: '2025-01-25',
     customers: 67,
-    rating: 4.6,
-    reviews: 41
+    rating: 4 && 4.6,
+    reviews: 41,
   },
   {
     id: 'blockchain-governance-automation',
     name: 'Blockchain Governance Automation',
-    tagline: 'Automated governance, compliance, and risk management for blockchain networks',
+    tagline:
+      'Automated governance, compliance, and risk management for blockchain networks',
     price: '$399',
     period: '/month',
-    description: 'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
+    description:
+      'Comprehensive governance platform for blockchain networks, automating compliance checks, risk assessments, and regulatory reporting for DeFi and enterprise blockchain applications.',
     features: [
-      'Automated compliance monitoringRisk assessment and scoringRegulatory reporting automationSmart contract auditingGovernance proposal managementStakeholder voting systemsAudit trail and transparencyMulti-chain support',
-      'Integration with DeFi protocols'
+      'Automated compliance monitoring',
+      'Risk assessment and scoring',
+      'Regulatory reporting automation',
+      'Smart contract auditing',
+      'Governance proposal management',
+      'Stakeholder voting systems',
+      'Audit trail and transparency',
+      'Multi-chain support',
+      'Integration with DeFi protocols',
     ],
     popular: false,
     icon: '⛓️',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/blockchain-governance-automation',
-    marketPosition: 'Specialized blockchain governance, addresses regulatory compliance needs.',
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-governance-automation',
+    marketPosition:
+      'Specialized blockchain governance; addresses regulatory compliance needs.',
     targetAudience: 'DeFi protocols, Enterprise blockchain, Regulatory teams',
     trialDays: 21,
     setupTime: '1 week',
@@ -270,29 +344,40 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'blockchain-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-chain governance engine with automated compliance and risk management.',
+    implementationDetails:
+      'Multi-chain governance engine with automated compliance and risk management.',
     launchDate: '2025-02-05',
     customers: 45,
-    rating: 4.7,
-    reviews: 33
+    rating: 4 && 4.7,
+    reviews: 33,
   },
   {
     id: 'ai-powered-customer-success-platform',
     name: 'AI-Powered Customer Success Platform',
-    tagline: 'Predictive customer health scoring and proactive retention strategies',
+    tagline:
+      'Predictive customer health scoring and proactive retention strategies',
     price: '$249',
     period: '/month',
-    description: 'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
+    description:
+      'Intelligent customer success platform that predicts churn risk, identifies upsell opportunities, and automates customer engagement to improve retention and lifetime value.',
     features: [
-      'Predictive churn risk scoringCustomer health monitoringAutomated engagement workflowsUpsell opportunity identificationCustomer journey mappingSuccess metric trackingIntegration with CRM systemsReal-time alerts and notifications',
-      'Performance analytics dashboard'
+      'Predictive churn risk scoring',
+      'Customer health monitoring',
+      'Automated engagement workflows',
+      'Upsell opportunity identification',
+      'Customer journey mapping',
+      'Success metric tracking',
+      'Integration with CRM systems',
+      'Real-time alerts and notifications',
+      'Performance analytics dashboard',
     ],
     popular: true,
     icon: '🎯',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-customer-success-platform',
-    marketPosition: 'AI-enhanced customer success, competes with Gainsight, Totango.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-success-platform',
+    marketPosition:
+      'AI-enhanced customer success; competes with Gainsight, Totango.',
     targetAudience: 'Customer success teams, Account managers, Growth teams',
     trialDays: 14,
     setupTime: '1 week',
@@ -308,30 +393,42 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered predictive analytics engine with automated engagement workflows.',
+    implementationDetails:
+      'AI-powered predictive analytics engine with automated engagement workflows.',
     launchDate: '2025-01-30',
     customers: 178,
-    rating: 4.8,
-    reviews: 124
+    rating: 4 && 4.8,
+    reviews: 124,
   },
   {
     id: 'quantum-machine-learning-platform',
     name: 'Quantum Machine Learning Platform',
-    tagline: 'Quantum computing-powered ML for complex optimization and simulation',
+    tagline:
+      'Quantum computing-powered ML for complex optimization and simulation',
     price: '$799',
     period: '/month',
-    description: 'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
+    description:
+      'Advanced quantum machine learning platform that leverages quantum computing for complex optimization problems, drug discovery, financial modeling, and scientific simulations.',
     features: [
-      'Quantum algorithm implementationsHybrid quantum-classical MLOptimization problem solvingDrug discovery simulationsFinancial risk modelingScientific computing toolsQuantum circuit designPerformance benchmarking',
-      'Integration with classical ML frameworks'
+      'Quantum algorithm implementations',
+      'Hybrid quantum-classical ML',
+      'Optimization problem solving',
+      'Drug discovery simulations',
+      'Financial risk modeling',
+      'Scientific computing tools',
+      'Quantum circuit design',
+      'Performance benchmarking',
+      'Integration with classical ML frameworks',
     ],
     popular: false,
     icon: '⚛️',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
-    marketPosition: 'Cutting-edge quantum ML, specialized for complex computational problems.',
-    targetAudience: 'Research institutions, Pharmaceutical companies, Financial services',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning-platform',
+    marketPosition:
+      'Cutting-edge quantum ML; specialized for complex computational problems.',
+    targetAudience:
+      'Research institutions, Pharmaceutical companies, Financial services',
     trialDays: 30,
     setupTime: '2-3 weeks',
     category: 'Quantum Computing & AI',
@@ -339,18 +436,19 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     technology: ['Quantum Computing, Machine Learning, Optimization'],
     integrations: ['IBM Quantum, Google Quantum, AWS Braket'],
     useCases: ['Drug discovery, Financial modeling, Scientific research'],
-    roi: 'Solve previously intractable problems, accelerate research and development.',
+    roi: 'Solve previously intractable problems; accelerate research and development.',
     competitors: ['IBM Quantum, Google Quantum, Rigetti'],
     marketSize: '$3B quantum computing',
     growthRate: '55% YoY',
     variant: 'quantum-ai-enterprise',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',
+    implementationDetails:
+      'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',
     launchDate: '2025-02-15',
     customers: 28,
-    rating: 4.9,
-    reviews: 22
+    rating: 4 && 4.9,
+    reviews: 22,
   },
   {
     id: 'intelligent-supply-chain-optimizer',
@@ -358,17 +456,26 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     tagline: 'AI-driven supply chain optimization and risk management',
     price: '$549',
     period: '/month',
-    description: 'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
+    description:
+      'Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, manage risks, and improve operational efficiency across the entire supply chain.',
     features: [
-      'Demand forecasting and planningInventory optimizationRisk assessment and mitigationSupplier performance monitoringRoute optimizationCost analysis and optimizationReal-time visibility and trackingCompliance monitoring',
-      'Performance analytics and reporting'
+      'Demand forecasting and planning',
+      'Inventory optimization',
+      'Risk assessment and mitigation',
+      'Supplier performance monitoring',
+      'Route optimization',
+      'Cost analysis and optimization',
+      'Real-time visibility and tracking',
+      'Compliance monitoring',
+      'Performance analytics and reporting',
     ],
     popular: true,
     icon: '📦',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer',
-    marketPosition: 'AI-powered supply chain, competes with SAP, Oracle, Blue Yonder.',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-supply-chain-optimizer',
+    marketPosition:
+      'AI-powered supply chain; competes with SAP, Oracle, Blue Yonder.',
     targetAudience: 'Manufacturing, Retail, Logistics companies',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -384,11 +491,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered optimization engine with real-time monitoring and predictive analytics.',
+    implementationDetails:
+      'AI-powered optimization engine with real-time monitoring and predictive analytics.',
     launchDate: '2025-02-20',
     customers: 89,
-    rating: 4.7,
-    reviews: 67
+    rating: 4 && 4.7,
+    reviews: 67,
   },
   {
     id: 'cybersecurity-threat-intelligence-hub',
@@ -396,17 +504,26 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     tagline: 'Real-time threat detection, analysis, and automated response',
     price: '$399',
     period: '/month',
-    description: 'Advanced cybersecurity platform that provides real-time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
+    description:
+      'Advanced cybersecurity platform that provides real-time threat intelligence, automated threat detection, and intelligent response capabilities to protect against evolving cyber threats.',
     features: [
-      'Real-time threat detectionThreat intelligence sharingAutomated incident responseVulnerability assessmentSecurity analytics and reportingThreat hunting toolsIntegration with security toolsCompliance reporting',
-      '24/7 security monitoring'
+      'Real-time threat detection',
+      'Threat intelligence sharing',
+      'Automated incident response',
+      'Vulnerability assessment',
+      'Security analytics and reporting',
+      'Threat hunting tools',
+      'Integration with security tools',
+      'Compliance reporting',
+      '24/7 security monitoring',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence',
-    marketPosition: 'Comprehensive threat intelligence, competes with CrowdStrike, Palo Alto Networks.',
+    link: 'https://ziontechgroup && ziontechgroup.com/cybersecurity-threat-intelligence',
+    marketPosition:
+      'Comprehensive threat intelligence; competes with CrowdStrike, Palo Alto Networks.',
     targetAudience: 'Security teams, CISOs, IT security professionals',
     trialDays: 14,
     setupTime: '1 week',
@@ -422,29 +539,40 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered threat detection engine with automated response and intelligence sharing.',
+    implementationDetails:
+      'AI-powered threat detection engine with automated response and intelligence sharing.',
     launchDate: '2025-02-25',
     customers: 156,
-    rating: 4.8,
-    reviews: 118
+    rating: 4 && 4.8,
+    reviews: 118,
   },
   {
     id: 'ai-powered-content-creation-suite',
     name: 'AI-Powered Content Creation Suite',
-    tagline: 'Automated content generation, optimization, and multi-channel distribution',
+    tagline:
+      'Automated content generation, optimization, and multi-channel distribution',
     price: '$179',
     period: '/month',
-    description: 'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
+    description:
+      'Comprehensive content creation platform that uses AI to generate, optimize, and distribute content across multiple channels, improving engagement and conversion rates.',
     features: [
-      'AI content generationMulti-channel content optimizationSEO optimization toolsContent performance analyticsAutomated distributionBrand voice consistencyContent calendar managementCollaboration tools',
-      'Integration with marketing platforms'
+      'AI content generation',
+      'Multi-channel content optimization',
+      'SEO optimization tools',
+      'Content performance analytics',
+      'Automated distribution',
+      'Brand voice consistency',
+      'Content calendar management',
+      'Collaboration tools',
+      'Integration with marketing platforms',
     ],
     popular: true,
     icon: '✍️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-content-creation-suite',
-    marketPosition: 'AI-powered content creation, competes with Jasper, Copy.ai, Grammarly.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-content-creation-suite',
+    marketPosition:
+      'AI-powered content creation; competes with Jasper, Copy && Copy.ai, Grammarly.',
     targetAudience: 'Marketing teams, Content creators, Small businesses',
     trialDays: 7,
     setupTime: '1 day',
@@ -454,17 +582,18 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     integrations: ['WordPress, HubSpot, Mailchimp, Social media platforms'],
     useCases: ['Content marketing, SEO optimization, Social media management'],
     roi: 'Increase content production by 300-500% and improve engagement by 25-40%.',
-    competitors: ['Jasper, Copy.ai, Grammarly, Writesonic'],
+    competitors: ['Jasper, Copy && Copy.ai, Grammarly, Writesonic'],
     marketSize: '$12B content creation tools',
     growthRate: '35% YoY',
     variant: 'ai-creative',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI content generation engine with optimization and distribution capabilities.',
+    implementationDetails:
+      'AI content generation engine with optimization and distribution capabilities.',
     launchDate: '2025-03-01',
     customers: 234,
-    rating: 4.7,
-    reviews: 167
+    rating: 4 && 4.7,
+    reviews: 167,
   },
   {
     id: 'intelligent-data-governance-platform',
@@ -472,17 +601,26 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     tagline: 'Automated data quality, compliance, and lifecycle management',
     price: '$499',
     period: '/month',
-    description: 'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
+    description:
+      'Comprehensive data governance platform that automates data quality monitoring, compliance checking, and lifecycle management to ensure data integrity and regulatory compliance.',
     features: [
-      'Automated data quality monitoringCompliance and governance rulesData lineage trackingPrivacy and security controlsData catalog and discoveryPolicy enforcementAudit and reportingIntegration with data platforms',
-      'Real-time monitoring and alerts'
+      'Automated data quality monitoring',
+      'Compliance and governance rules',
+      'Data lineage tracking',
+      'Privacy and security controls',
+      'Data catalog and discovery',
+      'Policy enforcement',
+      'Audit and reporting',
+      'Integration with data platforms',
+      'Real-time monitoring and alerts',
     ],
     popular: false,
     icon: '📊',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/intelligent-data-governance',
-    marketPosition: 'AI-powered data governance, competes with Collibra, Alation, Informatica.',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-data-governance',
+    marketPosition:
+      'AI-powered data governance; competes with Collibra, Alation, Informatica.',
     targetAudience: 'Data teams, Compliance officers, Data stewards',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -498,29 +636,40 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered data quality engine with automated compliance and governance workflows.',
+    implementationDetails:
+      'AI-powered data quality engine with automated compliance and governance workflows.',
     launchDate: '2025-03-05',
     customers: 78,
-    rating: 4.6,
-    reviews: 56
+    rating: 4 && 4.6,
+    reviews: 56,
   },
   {
     id: 'quantum-financial-trading-engine',
     name: 'Quantum Financial Trading Engine',
-    tagline: 'Quantum computing-powered algorithmic trading and risk management',
+    tagline:
+      'Quantum computing-powered algorithmic trading and risk management',
     price: '$1,299',
     period: '/month',
-    description: 'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
+    description:
+      'Advanced quantum computing platform for financial trading, portfolio optimization, risk assessment, and market analysis, leveraging quantum algorithms for superior performance.',
     features: [
-      'Quantum portfolio optimizationRisk assessment algorithmsMarket analysis toolsAlgorithmic trading strategiesReal-time market data processingBacktesting and simulationCompliance monitoringPerformance analytics',
-      'Integration with trading platforms'
+      'Quantum portfolio optimization',
+      'Risk assessment algorithms',
+      'Market analysis tools',
+      'Algorithmic trading strategies',
+      'Real-time market data processing',
+      'Backtesting and simulation',
+      'Compliance monitoring',
+      'Performance analytics',
+      'Integration with trading platforms',
     ],
     popular: false,
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-financial-trading-engine',
-    marketPosition: 'Cutting-edge quantum trading, specialized for institutional investors.',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-trading-engine',
+    marketPosition:
+      'Cutting-edge quantum trading; specialized for institutional investors.',
     targetAudience: 'Hedge funds, Investment banks, Institutional investors',
     trialDays: 45,
     setupTime: '1 month',
@@ -536,29 +685,40 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'quantum-financial',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum algorithm implementations for financial optimization and risk management.',
+    implementationDetails:
+      'Quantum algorithm implementations for financial optimization and risk management.',
     launchDate: '2025-03-10',
     customers: 34,
-    rating: 4.9,
-    reviews: 28
+    rating: 4 && 4.9,
+    reviews: 28,
   },
   {
     id: 'ai-powered-hr-automation-suite',
     name: 'AI-Powered HR Automation Suite',
-    tagline: 'Intelligent recruitment, employee management, and performance optimization',
+    tagline:
+      'Intelligent recruitment, employee management, and performance optimization',
     price: '$299',
     period: '/month',
-    description: 'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
+    description:
+      'Comprehensive HR automation platform that uses AI to streamline recruitment, employee onboarding, performance management, and workforce optimization.',
     features: [
-      'AI-powered candidate screeningAutomated interview schedulingEmployee onboarding workflowsPerformance tracking and analyticsSkills gap analysisEmployee engagement monitoringCompliance and reportingIntegration with HR systems',
-      'Predictive analytics dashboard'
+      'AI-powered candidate screening',
+      'Automated interview scheduling',
+      'Employee onboarding workflows',
+      'Performance tracking and analytics',
+      'Skills gap analysis',
+      'Employee engagement monitoring',
+      'Compliance and reporting',
+      'Integration with HR systems',
+      'Predictive analytics dashboard',
     ],
     popular: true,
     icon: '👥',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-hr-automation-suite',
-    marketPosition: 'AI-enhanced HR automation, competes with Workday, BambooHR, Greenhouse.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-automation-suite',
+    marketPosition:
+      'AI-enhanced HR automation; competes with Workday, BambooHR, Greenhouse.',
     targetAudience: 'HR teams, Recruiters, People operations',
     trialDays: 14,
     setupTime: '1-2 weeks',
@@ -566,7 +726,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realService: true,
     technology: ['AI/ML, HR Automation, Analytics'],
     integrations: ['Workday, BambooHR, Greenhouse, Slack, Teams'],
-    useCases: ['Recruitment automation, Performance management, Employee engagement'],
+    useCases: [
+      'Recruitment automation, Performance management, Employee engagement',
+    ],
     roi: 'Reduce hiring time by 40-60% and improve employee retention by 20-30%.',
     competitors: ['Workday, BambooHR, Greenhouse, Lever'],
     marketSize: '$22B HR software',
@@ -574,11 +736,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered HR automation engine with intelligent workflows and analytics.',
+    implementationDetails:
+      'AI-powered HR automation engine with intelligent workflows and analytics.',
     launchDate: '2025-03-15',
     customers: 189,
-    rating: 4.7,
-    reviews: 134
+    rating: 4 && 4.7,
+    reviews: 134,
   },
   {
     id: 'intelligent-iot-platform',
@@ -586,17 +749,26 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     tagline: 'AI-powered IoT device management, analytics, and automation',
     price: '$399',
     period: '/month',
-    description: 'Comprehensive IoT platform that provides intelligent device management, real-time analytics, predictive maintenance, and automated workflows for connected devices.',
+    description:
+      'Comprehensive IoT platform that provides intelligent device management, real-time analytics, predictive maintenance, and automated workflows for connected devices.',
     features: [
-      'IoT device managementReal-time data analyticsPredictive maintenanceAutomated workflowsDevice security and monitoringEdge computing capabilitiesIntegration with cloud platformsCustom dashboard creation',
-      'API and webhook support'
+      'IoT device management',
+      'Real-time data analytics',
+      'Predictive maintenance',
+      'Automated workflows',
+      'Device security and monitoring',
+      'Edge computing capabilities',
+      'Integration with cloud platforms',
+      'Custom dashboard creation',
+      'API and webhook support',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/intelligent-iot-platform',
-    marketPosition: 'AI-powered IoT platform, competes with AWS IoT, Azure IoT, Google Cloud IoT.',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-iot-platform',
+    marketPosition:
+      'AI-powered IoT platform; competes with AWS IoT, Azure IoT, Google Cloud IoT.',
     targetAudience: 'IoT developers, Manufacturing, Smart cities',
     trialDays: 21,
     setupTime: '2-3 weeks',
@@ -612,11 +784,12 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'iot-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'IoT device management platform with AI-powered analytics and automation.',
+    implementationDetails:
+      'IoT device management platform with AI-powered analytics and automation.',
     launchDate: '2025-03-20',
     customers: 67,
-    rating: 4.6,
-    reviews: 45
+    rating: 4 && 4.6,
+    reviews: 45,
   },
   {
     id: 'quantum-cybersecurity-platform',
@@ -624,18 +797,28 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     tagline: 'Quantum-resistant security and post-quantum cryptography',
     price: '$699',
     period: '/month',
-    description: 'Advanced cybersecurity platform that implements quantum-resistant algorithms, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',
+    description:
+      'Advanced cybersecurity platform that implements quantum-resistant algorithms, post-quantum cryptography, and quantum key distribution to protect against future quantum attacks.',
     features: [
-      'Quantum-resistant algorithmsPost-quantum cryptographyQuantum key distributionHybrid encryption systemsSecurity assessment toolsCompliance monitoringPerformance optimizationIntegration with security tools',
-      'Migration assistance'
+      'Quantum-resistant algorithms',
+      'Post-quantum cryptography',
+      'Quantum key distribution',
+      'Hybrid encryption systems',
+      'Security assessment tools',
+      'Compliance monitoring',
+      'Performance optimization',
+      'Integration with security tools',
+      'Migration assistance',
     ],
     popular: false,
     icon: '🔒',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',
-    marketPosition: 'Future-proof quantum security, specialized for high-security environments.',
-    targetAudience: 'Government agencies, Financial institutions, Healthcare organizations',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity-platform',
+    marketPosition:
+      'Future-proof quantum security; specialized for high-security environments.',
+    targetAudience:
+      'Government agencies, Financial institutions, Healthcare organizations',
     trialDays: 30,
     setupTime: '1 month',
     category: 'Quantum Computing & Security',
@@ -643,36 +826,47 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     technology: ['Quantum Computing, Post-Quantum Cryptography, QKD'],
     integrations: ['PKI systems, Security tools, Cloud platforms'],
     useCases: ['Data protection, Secure communications, Compliance'],
-    roi: 'Future-proof security investment, avoid costly migrations later.',
+    roi: 'Future-proof security investment; avoid costly migrations later.',
     competitors: ['ISARA, PQShield, Quantum Xchange, ID Quantique'],
     marketSize: '$4B quantum security',
     growthRate: '52% YoY',
     variant: 'quantum-security',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quantum-resistant cryptographic implementations with hybrid security systems.',
+    implementationDetails:
+      'Quantum-resistant cryptographic implementations with hybrid security systems.',
     launchDate: '2025-03-25',
     customers: 19,
-    rating: 4.9,
-    reviews: 15
+    rating: 4 && 4.9,
+    reviews: 15,
   },
   {
     id: 'ai-powered-sales-intelligence-platform',
     name: 'AI-Powered Sales Intelligence Platform',
-    tagline: 'Predictive sales analytics, lead scoring, and revenue optimization',
+    tagline:
+      'Predictive sales analytics, lead scoring, and revenue optimization',
     price: '$349',
     period: '/month',
-    description: 'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',
+    description:
+      'Intelligent sales platform that uses AI to predict customer behavior, score leads, optimize sales processes, and increase revenue through data-driven insights.',
     features: [
-      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking',
-      'Real-time insights dashboard'
+      'Predictive lead scoring',
+      'Customer behavior analysis',
+      'Sales process optimization',
+      'Revenue forecasting',
+      'Pipeline analytics',
+      'Automated follow-ups',
+      'Integration with CRM systems',
+      'Performance tracking',
+      'Real-time insights dashboard',
     ],
     popular: true,
     icon: '📈',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
-    marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',
+    marketPosition:
+      'AI-enhanced sales intelligence; competes with Salesforce Einstein, HubSpot, Pipedrive.',
     targetAudience: 'Sales teams, Sales managers, Revenue operations',
     trialDays: 14,
     setupTime: '1 week',
@@ -688,10 +882,41 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'AI-powered sales analytics engine with predictive insights and automation.',
+    implementationDetails:
+      'AI-powered sales analytics engine with predictive insights and automation.',
     launchDate: '2025-04-01',
     customers: 234,
-    rating: 4.8,
+    rating: 4 && 4.8,
+    reviews: 178,
+  },
+];      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
+      'Real-time insights dashboard'
+    ];
+    popular: true;
+    icon: '📈';
+    color: 'from-blue-600 to-indigo-700';
+    textColor: 'text-blue-400';
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',
+    marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
+    targetAudience: 'Sales teams, Sales managers, Revenue operations';
+    trialDays: 14;
+    setupTime: '1 week';
+    category: 'Sales & Revenue';
+    realService: true,
+    technology: ['AI/ML, Predictive Analytics, Sales Automation'];
+    integrations: ['Salesforce, HubSpot, Pipedrive, Slack, Teams'];
+    useCases: ['Lead scoring, Sales optimization, Revenue forecasting'];
+    roi: 'Increase sales conversion rates by 20-35% and improve revenue by 25-40%.',
+    competitors: ['Salesforce Einstein, HubSpot, Pipedrive, Gong'];
+    marketSize: '$18B sales intelligence';
+    growthRate: '28% YoY';
+    variant: 'ai-futuristic';
+    contactInfo: contact;
+    realImplementation: true;
+    implementationDetails: 'AI-powered sales analytics engine with predictive insights and automation.';
+    launchDate: '2025-04-01';
+    customers: 234;
+    rating: 4 && 4.8,
     reviews: 178
   }
-],
+];

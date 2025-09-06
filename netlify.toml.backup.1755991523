@@ -79,8 +79,37 @@
   schedule = "*/1 * * * *" # every minute
 
 [[scheduled.functions]]
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
   name = "autonomous-meta-orchestrator"
   schedule = "*/2 * * * *" # every 2 minutes
+=======
+  name = "agent-swarm-orchestrator"
+  schedule = "*/1 * * * *" # every minute
+>>>>>>> origin/cursor/develop-autonomous-cloud-agents-for-automation-orchestration-d83c
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+  name = "autonomous-meta-orchestrator"
+  schedule = "*/2 * * * *" # every 2 minutes
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+  name = "autonomous-meta-orchestrator"
+  schedule = "*/2 * * * *" # every 2 minutes
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+  name = "autonomous-meta-orchestrator"
+  schedule = "*/2 * * * *" # every 2 minutes
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 [[scheduled.functions]]
   name = "trigger-all-and-commit"
   schedule = "*/1 * * * *" # every minute

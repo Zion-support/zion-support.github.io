@@ -76,8 +76,7 @@ class SyntaxFixer {
         if (newContent !== fixedContent) {
           fixedContent = newContent;
           hasChanges = true;
-        }
-      }
+        }      }
 
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent);
@@ -144,8 +143,7 @@ class SyntaxFixer {
     console.log(`❌ Errors in ${this.errors.length} files`);
     
     if (this.errors.length > 0) {
-      console.log('\n⚠️ Files with errors:');
-      this.errors.forEach(({ file, error }) => {
+      console.log('\n⚠️ Files with errors:');      this.errors.forEach(({ file, error }) => {
         console.log(`  - ${file}: ${error}`);
       });
     }

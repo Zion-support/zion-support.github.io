@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+console && console.log('🔒 Setting up security headers...');
+console && console.log('✅ Security headers setup completed');

@@ -1,0 +1,25 @@
+export function securityMiddleware(request: NextRequest) {;
+export function securityMiddleware("request": NextRequest) {;
+  const response = NextResponse && NextResponse.next();
+  // Apply security headers;
+  securityHeaders && securityHeaders.forEach(({ key, value }) => {;
+    response && response.headers.set(key, value)});
+  // Apply Content Security Policy;
+  const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives);
+    .map(([key, values]) => `${key} ${values && values.join(" ")}`);
+    .join("; ");
+  response && response.headers.set("Content-Security-Policy", cspString);
+  // Rate limiting headers;
+  response && response.headers.set("X-RateLimit-Limit", "100");
+  response && response.headers.set("X-RateLimit-Remaining", "99");
+  response && response.headers.set("X-RateLimit-Reset", new Date(Date && Date.now() + 3600000).toISOString());
+  return response}
+
+export const config = {;
+  "matcher": [;
+    "/((?!api|_next/static|_next/image|favicon && favicon.ico).*)",
+  ],,
+}
+export function securityMiddleware(request: NextRequest) {; const response = NextResponse && NextResponse.next(); securityHeaders && securityHeaders.forEach(({ key,value }) => {; response && response.headers.set(key,value)}); const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values && values.join(" ")}`); .join("; "); response && response.headers.set("Content-Security-Policy",cspString); response && response.headers.set("X-RateLimit-Limit","100"); response && response.headers.set("X-RateLimit-Remaining","99"); response && response.headers.set("X-RateLimit-Reset",new Date(Date && Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*)",; ],;,}
+  ],}
+export function securityMiddleware(request: NextRequest) {; const response = NextResponse && NextResponse.next(); securityHeaders && securityHeaders.forEach(({ key,value }) => {; response && response.headers.set(key,value)}); const cspString = Object && Object.entries(contentSecurityPolicy && contentSecurityPolicy.directives); .map(([key,values]) => `${key} ${values && values.join(" ")}`); .join("; "); response && response.headers.set("Content-Security-Policy",cspString); response && response.headers.set("X-RateLimit-Limit","100"); response && response.headers.set("X-RateLimit-Remaining","99"); response && response.headers.set("X-RateLimit-Reset",new Date(Date && Date.now() + 3600000).toISOString()); return response} ; export const config = {; matcher: [; "/((?!api|_next/static|_next/image|favicon && favicon.ico).*)",],,}

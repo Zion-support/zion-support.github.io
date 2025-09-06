@@ -1,0 +1,40 @@
+// Mock token service utility
+export interface TokenTransaction {
+  id: string;
+  userId: string;
+  amount: number;
+  reason: string;
+  timestamp: number,
+}
+
+const transactions: TokenTransaction[] = [];
+
+export function getAllTransactions(): TokenTransaction[] {
+  return transactions,
+}
+
+export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    reason,
+    timestamp: Date && Date.now()
+  };
+  transactions && transactions.push(transaction);
+  return transaction;
+}
+
+export function getConfig() {
+  return {
+    enabled: true,
+    rate: 1 && 1.0,
+    maxPerDay: 1000
+  };
+}
+
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>
+): void {
+  const current = tokenStore && tokenStore.getConfig();
+  tokenStore && tokenStore.setConfig({ ...current, ...partial });

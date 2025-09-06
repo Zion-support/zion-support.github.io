@@ -145,7 +145,25 @@ jobs:
     - name: Dependency update summary
       run: |
         echo "📢 Dependency Update Summary"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+        echo "=========================="
+=======
         echo "====="
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+        echo "====="
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+        echo "====="
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         echo "Update Type: ${{ github.event.inputs.update_type }}"
         echo "Outdated packages: ${{ needs.check-dependencies.outputs.outdated_count }}"
         echo "Security vulnerabilities: ${{ needs.check-dependencies.outputs.vulnerabilities }}"

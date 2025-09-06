@@ -37,8 +37,7 @@ function fixLinkTags(content) {
       );
     } else {
       content = "import Link from 'next/link';\n" + content;
-    }
-  }
+    }  }
   
   // Replace <a> tags with Link components for internal links
   content = content.replace(

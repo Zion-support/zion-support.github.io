@@ -24,9 +24,7 @@ testFiles.forEach(file => {
       
       // Fix common syntax issues in test files
       content = content.replace(/,\s*$/gm, ''); // Remove trailing commas
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+\n/g, ''); // Remove conflict markers
-      content = content.replace(/=======\n[\s\S]*?>>>>>>> [^\n]+\n/g, ''); // Remove more conflict markers
-      content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove extra blank lines
+      content = content.replace(/[\s\S]*?      content = content.replace(/\n[\s\S]*?      content = content.replace(/\n\s*\n\s*\n/g, '\n\n'); // Remove extra blank lines
       content = content.replace(/,\s*\)/g, ')'); // Fix trailing commas in function calls
       content = content.replace(/,\s*}/g, '}'); // Fix trailing commas in objects
       content = content.replace(/,\s*]/g, ']'); // Fix trailing commas in arrays
@@ -67,7 +65,8 @@ problematicFiles.forEach(file => {
   }
 });
 
-console.log(`\n📊 Final Cleanup Summary:`);
+console.log(`\n📊 Final Cleanup Summary: `),
+console.log(`\n📊 Final Cleanup Summary: `),
 console.log(`✅ Fixed: ${fixedCount} test files`);
 console.log(`🗑️ Removed: ${problematicFiles.length} problematic files`);
 console.log('🎉 Final test cleanup completed!');

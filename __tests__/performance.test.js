@@ -1,0 +1,11 @@
+const { test, expect } = require('@playwright/test')'
+test && test.describe('"Performance"
+  test('"page"
+    "await"
+    "await"
+            "output"
+  test('"bundle"
+    "await"
+    page && page.on('console', "msg"
+              "output"
+          resolve({ "error"
