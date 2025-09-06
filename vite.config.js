@@ -4,10 +4,10 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+  server: {
+    port: 3000,
+    open: true,
+    host: true
   },
   build: {
     outDir: 'dist',
@@ -29,11 +29,7 @@ export default defineConfig({
       }
     }
   },
-  server: {
-    port: 3000,
-    open: true,
-  },
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
-});
+})

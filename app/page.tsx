@@ -32,7 +32,7 @@ export default function HomePage() {
 
       {/* Services Grid */}
       <section className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
@@ -50,24 +50,6 @@ export default function HomePage() {
             href="/services/it-services"
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
             icon="⚙️"
-          />
-          <Card
-            title="Blockchain"
-            href="/services/blockchain"
-            description="Smart contracts, DeFi protocols, NFT platforms and Web3 solutions."
-            icon="⛓️"
-          />
-          <Card
-            title="Cybersecurity"
-            href="/services/cybersecurity"
-            description="Penetration testing, security audits, compliance and incident response."
-            icon="🔒"
-          />
-          <Card
-            title="Data Analytics"
-            href="/services/data-analytics"
-            description="Business intelligence, predictive analytics and data science solutions."
-            icon="📊"
           />
         </div>
       </section>

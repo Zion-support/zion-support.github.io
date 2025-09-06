@@ -2,41 +2,38 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">About Zion Tech Group</h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Leading the future of technology with innovative AI, micro SaaS, and enterprise solutions
+    <div className="min-h-screen bg-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">About Zion Tech Group</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We are a technology company focused on delivering innovative solutions that drive business growth.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
+            <p className="text-gray-600 mb-6">
+              To empower businesses with cutting-edge technology solutions that scale and perform.
+            </p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
+            <p className="text-gray-600">
+              To be the leading provider of AI-powered, scalable technology solutions.
             </p>
           </div>
-        </div>
-      </div>
-
-      {/* Mission Section */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                At Zion Tech Group, we're dedicated to transforming businesses through cutting-edge technology solutions. 
-                Our mission is to democratize access to advanced AI, blockchain, and cloud technologies, making them 
-                accessible to businesses of all sizes.
-              </p>
-              <p className="text-lg text-gray-600">
-                We believe that every company deserves access to enterprise-grade technology solutions that can 
-                accelerate growth, improve efficiency, and drive innovation.
-              </p>
-            </div>
-            <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-lg">
-                To be the world's leading provider of AI-powered technology solutions, enabling businesses 
-                to thrive in the digital age through innovation, reliability, and exceptional service.
-              </p>
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
+            <div className="space-y-4">
+              <div>
+                <strong>Phone:</strong> +1 302 464 0950
+              </div>
+              <div>
+                <strong>Email:</strong> kleber@ziontechgroup.com
+              </div>
+              <div>
+                <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
+              </div>
             </div>
           </div>
         </div>

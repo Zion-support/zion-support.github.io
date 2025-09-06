@@ -1,171 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
-const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      dropdown: [
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'AI Services', href: '/services/ai-services' },
-        { name: 'IT Services', href: '/services/it-services' },
-        { name: 'Blockchain', href: '/services/blockchain' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Cloud Migration', href: '/services/cloud-migration' },
-        { name: 'DevOps & SRE', href: '/services/devops' },
-        { name: 'Mobile Development', href: '/services/mobile-development' },
-      ]
-    },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
-  };
-
+export default function Header() {
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>Delaware, USA</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
+    <header className="bg-white shadow-sm border-b">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
-                <div className="text-xs text-gray-600">Technology Solutions</div>
-              </div>
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative">
-                <Link
-                  to={item.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium flex items-center"
-                  onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  {item.name}
-                  {item.dropdown && <ChevronDown className="w-4 h-4 ml-1" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    {item.dropdown.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="text-xl font-bold text-blue-600">
+            Zion Tech Group
+          </Link>
+          <nav className="flex space-x-4">
+            <Link to="/" className="text-gray-600 hover:text-blue-600">Home</Link>
+            <Link to="/about" className="text-gray-600 hover:text-blue-600">About</Link>
+            <Link to="/services" className="text-gray-600 hover:text-blue-600">Services</Link>
+            <Link to="/pricing" className="text-gray-600 hover:text-blue-600">Pricing</Link>
+            <Link to="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
           </nav>
-
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              Get Started
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden mt-4 border-t border-gray-200 pt-4 pb-4">
-            {navigation.map((item) => (
-              <div key={item.name} className="mb-2">
-                <Link
-                  to={item.href}
-                  className="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-                {item.dropdown && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {item.dropdown.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <Link
-                to="/contact"
-                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
     </header>
   );
-};
-
-export default Header;
+}
