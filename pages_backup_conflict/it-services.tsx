@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -1330,3 +1331,5 @@ export default function ITServices() {;
                   </div>;
                 </div>;
               ))}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

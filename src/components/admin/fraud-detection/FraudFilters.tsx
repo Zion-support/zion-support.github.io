@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -10,6 +11,15 @@ interface FraudFiltersProps {
   resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
+=======
+resetFilters: () => void
+}
+export const FraudFilters: React.FC<FraudFiltersProps> = ({
+
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   searchQuery
   setSearchQuery
   statusFilter
@@ -18,6 +28,50 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter
   contentTypeFilter
   setContentTypeFilter
+<<<<<<< HEAD
+=======
+import React from 'react';
+};
+
+interface FraudFiltersProps {;
+  searchQuery: string,;
+  setSearchQuery: (value: string,) => void,;
+  statusFilter: string | null,;
+  setStatusFilter: (value: string | null,) => void,;
+  severityFilter: string | null,;
+  setSeverityFilter: (value: string | null,) => void,;
+  contentTypeFilter: string | null,;
+  setContentTypeFilter: (value: string | null,) => void,;
+  resetFilters: () => void;
+}
+
+export const FraudFilters: React.FC<FraudFiltersProps> = ({;
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  severityFilter;
+  setSeverityFilter;
+  contentTypeFilter;
+  setContentTypeFilter;
+  resetFilters}) => {  return (
+
+    <div className="flex flex-col md: flex-row gap-4 mb-6">
+  searchQuery,
+  setSearchQuery,
+  statusFilter,
+  setStatusFilter,
+  severityFilter,
+  setSeverityFilter,
+  contentTypeFilter,
+  setContentTypeFilter,
+  resetFilters}) => {
+  return (
+    <div className="flex flex-col md:flex-row gap-4 mb-6">
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
@@ -27,12 +81,16 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
       
+<<<<<<< HEAD
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="pl-10"
         />
       </div>
       
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
@@ -49,7 +107,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
       
-      
+
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
@@ -65,7 +123,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
       
-      
+
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
@@ -81,6 +139,12 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Select>
 
 
+<<<<<<< HEAD
+=======
+      
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
         <Filter className="h-4 w-4 mr-2" /> Reset Filters
       </Button>
@@ -106,6 +170,14 @@ interface FraudFiltersProps {;
   contentTypeFilter: string | null,;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
+<<<<<<< HEAD
+=======
+
+}
+'"},
+;
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   searchQuery,;
   setSearchQuery,;
@@ -127,6 +199,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           className="pl-10";
         />;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -139,6 +215,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Severity" />;
@@ -150,6 +230,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>;
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Content Type" />;
@@ -163,12 +247,15 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="review">Reviews</SelectItem>;
         </SelectContent>;
       </Select>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">;
         <Filter className="h-4 w-4 mr-2" /> Reset Filters;
       </Button>;
     </div>;
   );
-'"},;
 };
 
 
@@ -245,6 +332,10 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
     </div>);
 }
 '"},
+<<<<<<< HEAD
 }
 '"},
 ;
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

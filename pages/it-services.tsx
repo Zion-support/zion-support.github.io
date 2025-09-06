@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -1914,8 +1921,27 @@ export default function ITServices() {
     selectedCategory === 'all'
       ? services
       : services.filter(service => service.category === selectedCategory);
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
+const Page = () => {
   return (
+<<<<<<< HEAD
+    <MainLayout
+      title="IT Services - Zion Tech Group"
+      description="Comprehensive IT services from Zion Tech Group"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">IT Services</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -3454,3 +3480,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

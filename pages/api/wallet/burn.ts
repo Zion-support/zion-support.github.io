@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
   try {
@@ -69,3 +70,11 @@ export default function handler(req, res) {
     return res.status(400).json({ error: err.message })
 
 
+=======
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { burnTokens, burnForFeature } from "../../../utils/token/service"
+;
+    return res.status(400).json({ error: err.message })
+  }
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

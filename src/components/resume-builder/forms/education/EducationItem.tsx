@@ -19,6 +19,7 @@ import { EducationItemProps } from './types';
 
 
   return (
+<<<<<<< HEAD
     <Card className='bg-muted/40'>;
       <CardContent className='pt-6'>;
         <div className='flex justify-between'>;
@@ -179,3 +180,5 @@ function EducationItem() {
 }
 }
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

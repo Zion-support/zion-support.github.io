@@ -152,7 +152,7 @@ export default async function handler(req, res) {
 
 
     const { action, reviewId, updates } = req.body as {
-      action: Action, reviewId: string,
+      action: Action, reviewId: string
       updates?: { rating?: number, text?: string }
     };
     const reviews = await readReviews();

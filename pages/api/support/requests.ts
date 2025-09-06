@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb'
+>>>>>>> main
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
@@ -32,6 +43,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
 
 }
 
@@ -57,3 +69,6 @@ if ( {) {
 }
 
 
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

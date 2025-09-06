@@ -1,7 +1,5 @@
-
-
-
 import React, { useState } from "react";
+<<<<<<< HEAD
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -26,16 +24,24 @@ import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
 import { AppLayout } from "@/layout/AppLayout",
 import { Search } from "lucide-react",
+=======
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { HelpCategoryList } from "./HelpCategoryList";
+import { HelpArticleList } from "./HelpArticleList";
+import { HelpArticleView } from "./HelpArticleView";
+import { HELP_CATEGORIES } from "./help-content";
+import { AppLayout } from "@/layout/AppLayout";
+import { Search } from "lucide-react";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
-  const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  
   const handleCategorySelect = (categoryId: string) => {
+<<<<<<< HEAD
     setSelectedCategory(categoryId),
     setSelectedArticle(null)
   },
@@ -53,6 +59,24 @@ export default function HelpCenter() {
     setSelectedArticle(null)
   },
   
+=======
+    (setSelectedCategory(categoryId), setSelectedArticle(null));
+  };
+
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId);
+  };
+
+  const handleBackToCategories = () => {
+    setSelectedCategory(null);
+    setSelectedArticle(null);
+  };
+
+  const handleBackToArticles = () => {
+    setSelectedArticle(null);
+  };
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -64,6 +88,7 @@ export default function HelpCenter() {
             Find answers to common questions or get in touch with our support
             team.
           </p>
+
           <div className="relative mb-8">
             <Input
               placeholder="Search for help articles..."
@@ -73,12 +98,14 @@ export default function HelpCenter() {
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
+
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -136,6 +163,8 @@ export default function HelpCenter() {;
             </TabsList>;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
@@ -145,6 +174,23 @@ export default function HelpCenter() {;
                   searchQuery={searchQuery}
                 />
               )}
+<<<<<<< HEAD
+=======
+
+            <TabsContent value="articles">
+              {!selectedCategory && !selectedArticle && (
+                <HelpCategoryList
+                  categories={HELP_CATEGORIES}
+                  onCategorySelect={handleCategorySelect}
+                  searchQuery={searchQuery}
+                />
+              )}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -154,12 +200,19 @@ export default function HelpCenter() {;
                   >
                     ← All Categories
                   </Button>
+<<<<<<< HEAD
+=======
+                  <HelpArticleList
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
                 </>;
               )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
               {selectedArticle && (
                 <>
 
@@ -169,10 +222,42 @@ export default function HelpCenter() {;
                     variant="ghost"
                     onClick={handleBackToArticles}
                     className="mb-4">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              ;
+              {selectedArticle && (;
+                <>;
+                  <Button;
+                    variant="ghost";
+                    onClick={handleBackToArticles}
+                    className="mb-4";
+                  >;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                    ← Back to Articles;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   </Button>;
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
               )}
+<<<<<<< HEAD
+=======
+            </TabsContent>
+
+            <TabsContent value="faq">
+              <div className="bg-zion-blue-light/20 rounded-lg p-6">
+                <h2 className="text-xl font-semibold mb-4">
+                  Frequently Asked Questions
+                </h2>
+
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -181,10 +266,15 @@ export default function HelpCenter() {;
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and
                       preferences to match you with the most compatible talent
+<<<<<<< HEAD
+=======
+                      or services. The process takes into account skills,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                       experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I hire someone on Zion?
@@ -196,6 +286,7 @@ export default function HelpCenter() {;
                       protects both parties throughout the engagement.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       What are the payment terms?
@@ -207,6 +298,7 @@ export default function HelpCenter() {;
                       approved, ensuring security for both clients and talent.
                     </p>
                   </div>
+
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       How do I contact support?
@@ -221,6 +313,7 @@ export default function HelpCenter() {;
                 </div>
               </div>
             </TabsContent>
+
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -231,6 +324,7 @@ export default function HelpCenter() {;
                     Our support team is available 24/7 to assist you with any
                     questions or issues.
                   </p>
+
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
@@ -249,8 +343,15 @@ export default function HelpCenter() {;
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
+<<<<<<< HEAD
                       </Link>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      </a>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     </div>
+
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg
@@ -267,10 +368,12 @@ export default function HelpCenter() {;
                       </span>
                     </div>
                   </div>
+
                   <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">
                     Open Live Chat
                   </Button>
                 </div>
+
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
                     Feedback & Suggestions
@@ -279,6 +382,7 @@ export default function HelpCenter() {;
                     We value your input and are constantly looking to improve
                     our platform.
                   </p>
+
                   <form className="space-y-4">
                     <div>
                       <Input placeholder="Your email" />
@@ -292,6 +396,7 @@ export default function HelpCenter() {;
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
+
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -304,9 +409,32 @@ export default function HelpCenter() {;
       </div>
     </AppLayout>
   );
+<<<<<<< HEAD
 }
     </AppLayout>);
 }
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+  );
+>>>>>>> main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+    </AppLayout>);
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </AppLayout>;
   );}
  export default function HelpCenter () {
@@ -359,3 +487,10 @@ const handleBackToArticles = () => {
 
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -23,7 +23,7 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({
   showCloseButton = true,
   showMaximizeButton = false,
   className = '',
-  overlayClassName = ''
+  overlayClassName = '',
 }) => {
   const [isMaximized, setIsMaximized] = React.useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
@@ -94,15 +94,15 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({
           <motion.div
             ref={modalRef}
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ 
-              opacity: 1, 
-              scale: isMaximized ? 1 : 0.95, 
+            animate={{
+              opacity: 1,
+              scale: isMaximized ? 1 : 0.95,
               y: 0,
               width: isMaximized ? '100vw' : 'auto',
-              height: isMaximized ? '100vh' : 'auto'
+              height: isMaximized ? '100vh' : 'auto',
             }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className={`relative bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl w-full ${getSizeClasses()} ${className}`}
           >
             {/* Header */}
@@ -113,7 +113,7 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({
                     <h2 className="text-xl font-semibold text-white">{title}</h2>
                   )}
                 </div>
-                
+
                 <div className="flex items-center space-x-2">
                   {showMaximizeButton && (
                     <button
@@ -128,7 +128,7 @@ const AdvancedModal: React.FC<AdvancedModalProps> = ({
                       )}
                     </button>
                   )}
-                  
+
                   {showCloseButton && (
                     <button
                       onClick={onClose}

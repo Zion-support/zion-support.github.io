@@ -394,7 +394,6 @@ const EnhancedHomepage: React.FC = () => {
             </motion.p>
 
                     </div>;
-
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
                       <motion&& motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -405,7 +404,6 @@ const EnhancedHomepage: React.FC = () => {
                       </motion && motion.button>;
                     </Link>;
                   </div>;
-
                   <div className="relative">;
                     <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">;
                       <div className="text-center">;

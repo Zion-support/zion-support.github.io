@@ -5,6 +5,7 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
 
@@ -16,7 +17,14 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import { nextVersionFor } from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> main
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -31,12 +39,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${subjectId}:${period |"global"}:${category}`
   const version = nextVersionFor(state, entityKey)
   const event = {
+<<<<<<< HEAD
     eventId: uuidv4(),
     type: "leaderboard_entry" as const,
     payload: { id: entityKey, subjectId, score, category, period, rank },
     originInstanceId: state.config.instanceId,
     version,
     timestamp: Date.now()},
+=======
+    eventId: uuidv4()
+    type: "leaderboard_entry" as const
+    payload: { id: entityKey, subjectId, score, category, period, rank }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   upsertEvent(state, event);
@@ -50,7 +67,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
+<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+<<<<<<< HEAD
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
@@ -87,23 +106,18 @@ export default async function handler(req, res) {
       .map(async (peer) => {
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+=======
+=======
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString()
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        } catch {}
       })
+<<<<<<< HEAD
   ),
+<<<<<<< HEAD
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -197,3 +211,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+=======
+  )
+>>>>>>> main
+
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

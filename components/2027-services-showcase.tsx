@@ -353,7 +353,6 @@ export default function ServicesShowcase2027() {;
 
                       </div>;
                     </div>;
-=======
                     <div className="mb-6 text-center">
                       <div className="text-green-400 font-semibold text-lg">ROI: {service.roi}</div>
                       <div className="text-gray-400 text-xs">Return on Investment</div>

@@ -5,6 +5,7 @@ interface ReviewsListProps {
   isLoading: boolean;
   onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
 }
+<<<<<<< HEAD
 
 export function ReviewsList({
   reviews,
@@ -12,6 +13,7 @@ export function ReviewsList({
   onReportReview,
 }: ReviewsListProps) {
   if (isLoading) {
+<<<<<<< HEAD
     return (
       <div className="space - y-4">;
         {Array (3);
@@ -19,6 +21,8 @@ export function ReviewsList({
           .map ((_, i) => (
             <div;
               key={i}
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return (
       <div className="space-y-4">
         {Array(3)
@@ -26,6 +30,7 @@ export function ReviewsList({
           .map((_, i) => (
             <div
               key={i}
+<<<<<<< HEAD
 
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
@@ -47,6 +52,8 @@ interface ReviewsListProps {;
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -62,16 +69,7 @@ interface ReviewsListProps {;
                 <div className="h-6 w-16 bg-muted rounded"></div>
               </div>
             </div>
-
-            <div className="h-20 bg-muted rounded mb-3"></div>
-            <div className="flex gap-2">
-              <div className="h-6 w-16 bg-muted rounded"></div>
-              <div className="h-6 w-16 bg-muted rounded"></div>
-            </div>
-          </div>
-
-
-        ))}
+          ))}
       </div>
     );
   }
@@ -87,6 +85,31 @@ interface ReviewsListProps {;
     );
   }
 
+=======
+=======
+          ))}
+>>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      </div>
+    );
+  }
+
+  if (reviews.length === 0) {
+    return (
+      <div className="text-center py-8 border rounded-lg bg-muted/20">
+        <h3 className="text-lg font-medium mb-1">No Reviews Yet</h3>
+        <p className="text-muted-foreground">
+          Once reviews are submitted and approved, they will appear here.
+        </p>
+      </div>
+    );
+  }
+
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
 
   // Check condition
@@ -107,6 +130,27 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    <div className="space-y-4">
+      {reviews.map((review) => (
+        <ReviewCard key={review.id} review={review} onReport={onReportReview} />
+      ))}
+    </div>
+  );
+}
+;
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 }
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

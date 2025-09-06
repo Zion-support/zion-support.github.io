@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
@@ -27,6 +28,23 @@ import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builde
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
   
+=======
+import { useState } from "react";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ResumeWizard } from "@/components/resume-builder/ResumeWizard";
+import {
+  PortfolioBuilder,
+  as,
+  PortfolioSection,
+} from "@/components/resume-builder/portfolio/PortfolioBuilder";
+function PortfolioBuilderContent() {
+  const [activeTab, setActiveTab] = useState("resume");
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <>
       <SEO
@@ -36,14 +54,31 @@ function PortfolioBuilderContent() {
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-8">Resume & Portfolio Builder</h1>
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
+
+        <Tabs
+          value={activeTab}
+          onValueChange={setActiveTab}
+          className="space-y-6"
+        >
           <TabsList className="bg-muted/60 p-0">
-            <TabsTrigger value="resume" className="data-[state=active]:bg-background">Resume</TabsTrigger>
-            <TabsTrigger value="portfolio" className="data-[state=active]:bg-background">Portfolio</TabsTrigger>
+            <TabsTrigger
+              value="resume"
+              className="data-[state=active]:bg-background"
+            >
+              Resume
+            </TabsTrigger>
+            <TabsTrigger
+              value="portfolio"
+              className="data-[state=active]:bg-background"
+            >
+              Portfolio
+            </TabsTrigger>
           </TabsList>
+
           <TabsContent value="resume" className="space-y-6">
             <ResumeWizard />
           </TabsContent>
+
           <TabsContent value="portfolio" className="space-y-6">
             <PortfolioSection />
           </TabsContent>
@@ -51,8 +86,38 @@ function PortfolioBuilderContent() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+import {useState} from 'react';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
+import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+function PortfolioBuilderContent() {;
+  const [activeTab, setActiveTab] = useState('resume');
+
+  return (
+    <ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>
+  );
+}
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
 
 export default function PortfolioBuilder() {;
@@ -62,8 +127,22 @@ export default function PortfolioBuilder() {;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {AppHeader} from '@/layout / AppHeader';
 import {Footer} from '@/components / Footer';
@@ -112,3 +191,32 @@ function PortfolioBuilder() {
       <PortfolioBuilderContent />;
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  ),;
+}
+export default function PortfolioBuilder() {
+  return (
+    <ProtectedRoute>
+      <PortfolioBuilderContent />
+    </ProtectedRoute>
+  )
+}
+;
+export default function PortfolioBuilder() {;
+  return (;
+    <ProtectedRoute>;
+      <PortfolioBuilderContent />;
+    </ProtectedRoute>;
+  );
+}
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,20 +1,24 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import globals from 'globals';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+<<<<<<< HEAD
 import react from 'eslint-plugin-react';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
+import reactHooks from 'eslint-plugin-react-hooks';
+import typescript from '@typescript-eslint/eslint-plugin';
+import tsparser from '@typescript-eslint/parser';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
   {
+<<<<<<< HEAD
     files: ['**/*.{js,jsx,ts,tsx}'],
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
+<<<<<<< HEAD
       '.next/**',
       'out/**',
       'dist/**',
@@ -22,36 +26,75 @@ export default [
       'temp_exclude/**',
       'src.disabled/**',
       'src.pages.disabled/**',
+=======
+      'coverage/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'backup-problematic-files/**',
-      'zion-os.disabled/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'pages.disabled/**',
       'zion-os/**',
       'zion-website/**',
       'zion_academy/**',
-      'zion-ai-assistant/**',
-      'utils/**',
-      'vite.config.js',
-      'vite.config.ts',
-      'src_backup_temp/**',
-      'temp_backup/**',
-      'temp_broken_files/**',
-      'temp_components/**',
-      'temp_conflicts/**',
-      'temp_exclude/**',
-      'temp_working/**',
+      'api/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'corrupted-files-backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
       'test_build/**',
       'tests/**',
+      '__tests__/**',
       'types/**',
       '*.cjs',
-      '*.js',
       '*.mjs',
       'supabase/**',
-      'start-dev.js',
-      'structural-fix.js',
-      'system-monitor.cjs',
-      'tailwind.config.js',
-      'test-next.js',
-      'ultimate-*.cjs'
+      'ultimate-*.cjs',
+      'advanced-*.js',
+      'comprehensive-*.js',
+      'enhanced-*.js',
+      'fix-*.js',
+      'merge-*.js',
+      'run-*.js',
+      'test-*.js',
+      '*.test.js',
+      '*.spec.js',
+      'aggressive-*.js',
+      'batch-*.js',
+      'clean-*.js',
+      'critical-*.js',
+      'execute-*.js',
+      'final-*.js',
+      'health-*.js',
+      'improve-*.js',
+      'maintenance-*.js',
+      'monitoring-*.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'seo-*.js',
+      'simple-*.js',
+      'structural-*.js',
+      'system-*.js',
+      'ultimate-*.js',
+      '*.js'
     ],
+  },
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -65,12 +108,37 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
+<<<<<<< HEAD
+=======
+        afterAll: 'readonly',
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       },
       parser: tsparser,
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import nextPlugin from '@next/eslint-plugin-next';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+
+export default [
+  ...compat.extends('next/core-web-vitals'),
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+>>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
+<<<<<<< HEAD
           jsx: true
         }
       }
@@ -93,6 +161,22 @@ export default [
         'warn',
         { allowConstantExport: true }
       ],
+=======
+          jsx: true,
+        },
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+<<<<<<< HEAD
+      'react': react,
+      'react-hooks': reactHooks,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/display-name': 'off',
@@ -103,6 +187,7 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
+<<<<<<< HEAD
       'no-trailing-spaces': 'error',
       'indent': 'off',
       'linebreak-style': ['error', 'unix'],
@@ -222,6 +307,8 @@ export default [
       'jsx-a11y/heading-has-content': 'warn',
       'jsx-a11y/img-redundant-alt': 'warn',
       'jsx-a11y/no-access-key': 'warn',
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     },
     settings: {
       react: {
@@ -229,4 +316,41 @@ export default [
       },
     },
   },
+<<<<<<< HEAD
+=======
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly',
+      },
+    },
+    rules: {
+      'no-console': 'off',
+    },
+  },
+=======
+      react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin,
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+    },
+  },
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ];

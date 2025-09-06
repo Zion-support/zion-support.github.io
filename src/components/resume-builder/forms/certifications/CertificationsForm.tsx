@@ -116,7 +116,7 @@ return (
                     onBack();
                   }
                 }}
-              >;
+              >
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>

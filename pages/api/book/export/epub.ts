@@ -9,8 +9,13 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
+<<<<<<< HEAD
       sizeLimit: "10mb",
     },
+=======
+      sizeLimit: "10mb"
+    }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   },;
 };
 
@@ -46,8 +51,13 @@ export default async function handler(
     } catch {}
   }
 }
+<<<<<<< HEAD
     title: project.meta.title, author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
+=======
+    title: project.meta.title, author: project.meta.author
+    publisher: project.meta.publisher || 'Zion'
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -78,17 +88,17 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const tmpPath = `/tmp/${randomUUID()}.epub`,
+  const tmpPath = `/tmp/${randomUUID()}.epub`
   const options = {
-    title: project.meta.title,
-    author: project.meta.author,
-    publisher: project.meta.publisher || 'Zion',
-    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))},
+    title: project.meta.title
+    author: project.meta.author
+    publisher: project.meta.publisher || 'Zion'
+    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))}
   try {
-    await new Epub(options, tmpPath).promise,
-    const buf = await fs.readFile(tmpPath),
-    res.setHeader('Content-Typeapplication/epub+zip'),
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"'),
+    await new Epub(options, tmpPath).promise
+    const buf = await fs.readFile(tmpPath)
+    res.setHeader('Content-Typeapplication/epub+zip')
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.epub"')
     res.status(200).send(buf)
 
 
@@ -145,9 +155,9 @@ import { Epub  } from './epub - gen';
 export const config = {
   api: {
     body_parser: {
-      size_limit: "10mb",
-    },
-  },
+      size_limit: "10mb"
+    }
+  }
 }
 ;
 function escape_html (string: string): string {
@@ -169,13 +179,13 @@ function escape_html (string: string): string {
   }
   const tmp_path = `/tmp/${randomUUID ()}.epub`;
   const options = {
-    title: project.meta.title,
-    author: project.meta.author,
-    publisher: project.meta.publisher || "Zion",
+    title: project.meta.title
+    author: project.meta.author
+    publisher: project.meta.publisher || "Zion"
     content: project.chapters.map ((ch: any) => ({
-      title: ch.title,
-      data: chapterToHtml (ch.content),
-    })),
+      title: ch.title
+      data: chapterToHtml (ch.content)
+    }))
   }
 ;
   try {
@@ -183,6 +193,6 @@ function escape_html (string: string): string {
     const buf = await fs.read_file (tmp_path);
     res.set_header ("Content - Type", "application / epub + zip");
     res.set_header (
-      "Content - Disposition",
-      'attachment; filename="zion - os - book.epub"',
+      "Content - Disposition"
+      'attachment; filename="zion - os - book.epub"'
     );

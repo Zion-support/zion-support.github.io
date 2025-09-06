@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface TalentCardProps {
   talent: TalentProfile;
   onViewProfile: (id: string) => void;
@@ -135,6 +136,8 @@ import React, { useState } from 'react', // Import React and useState
 
 
 
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface TalentCardProps {
   talent: TalentProfile
   onViewProfile: (id: string) => void
@@ -142,6 +145,7 @@ export interface TalentCardProps {
   isSaved: boolean
   onToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
+<<<<<<< HEAD
 
   talent: TalentProfile,
   onViewProfile: (id: string,) => void,
@@ -302,3 +306,5 @@ export interface TalentCardProps {
 
 
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

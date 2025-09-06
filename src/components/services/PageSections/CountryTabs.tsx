@@ -1,6 +1,11 @@
 import { Search } from 'lucide-react';
+<<<<<<< HEAD
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+=======
+import { Input } from '@/components/ui/input',;
+import { Button } from '@/components/ui/button',;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {;
   Pagination,;
   PaginationContent,;
@@ -112,12 +117,12 @@ export function CountryTabs({
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
 
             .map(country => (              <CountryServiceCard
-                key = {country && country.country,}
+                key = {country.country,}
                 country = {country,}
                 onSelect = {handleCountrySelect,}
                 onQuote = {onQuote,}
                 isPopular = {true,}
-              />;
+              />
             ))}
 
         </div>;
@@ -244,6 +249,7 @@ export function CountryTabs({
                     }}
                   />;
                 </PaginationItem>;
+<<<<<<< HEAD
                 {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
                   page => (;
                     <PaginationItem key={page}>;
@@ -265,13 +271,14 @@ export function CountryTabs({
                       setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
                   />;
                 </PaginationItem>;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </PaginationContent>;
             </Pagination>;
           </div>;
         )}
       </TabsContent>;
     </Tabs>;
-  );
   );
 }
   );

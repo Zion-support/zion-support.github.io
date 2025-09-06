@@ -1,9 +1,10 @@
 import { useIsMobile } from "@/hooks/use-mobile";
-interface SmartAppBannerProps {;
+interface SmartAppBannerProps {
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
+<<<<<<< HEAD
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 }
@@ -241,3 +242,10 @@ if ( {) {
       </div>;
     </div>);
 }
+=======
+
+
+
+}
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

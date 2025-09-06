@@ -5,6 +5,7 @@ import { signPayload } from "../../../utils/sync/signature",;
 import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
 
 
@@ -16,7 +17,13 @@ import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
+<<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> main
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -29,12 +36,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes)
   const version = (state.latestVersionByEntityId[proposalId] |0) + 1
   const event = {
+<<<<<<< HEAD
     eventId: uuidv4(),
     type: "proposal" as const,
     payload: { id: proposalId, proposalId, title, votes },
     originInstanceId: state.config.instanceId,
     version,
     timestamp: Date.now(),
+=======
+    eventId: uuidv4()
+    type: "proposal" as const
+    payload: { id: proposalId, proposalId, title, votes }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     merkleRoot};
 
   upsertEvent(state, event);
@@ -50,16 +66,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Global vote processed' });
-import type { NextApiRequest, NextApiResponse } from "next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",
-import { signPayload } from "../../../utils/sync/signature",
-import axios from "axios",
-import { v4 as uuidv4 } from "uuid",
+import type { NextApiRequest, NextApiResponse } from "next"
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage"
+import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle"
+import { signPayload } from "../../../utils/sync/signature"
+import axios from "axios"
+import { v4 as uuidv4 } from "uuid"
 export default async function handler(req, res) {
   try {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
-  const state = readState(),
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
+  const state = readState()
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
     } catch (error) {
@@ -75,7 +91,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const { proposalId, title, votes } = req.body as { proposalId: string, title: string, votes: { voterId: string, weight: number, choice: string }[] },
+  const { proposalId, title, votes } = req.body as { proposalId: string, title: string, votes: { voterId: string, weight: number, choice: string }[] }
   if (!proposalId || !title || !Array.isArray(votes)) {
     return res.status(400).json({ error: "proposalId, title, votes[] required" })
     } catch (error) {
@@ -91,22 +107,22 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const merkleRoot = computeMerkleRootFromVotes(votes),
-  const version = (state.latestVersionByEntityId[proposalId] || 0) + 1,
+  const merkleRoot = computeMerkleRootFromVotes(votes)
+  const version = (state.latestVersionByEntityId[proposalId] || 0) + 1
   const event = {
-    eventId: uuidv4(),
-    type: "proposal" as const,
-    payload: { id: proposalId, proposalId, title, votes },
-    originInstanceId: state.config.instanceId,
-    version,
-    timestamp: Date.now(),
-    merkleRoot},
-  upsertEvent(state, event),
-  writeState(state),
-  const body = { ...event, propagate: false },
-  const headers: Record<string, string> = {},
-  const sig = signPayload(body),
-  if (sig) headers["x-zion-signature"] = sig,
+    eventId: uuidv4()
+    type: "proposal" as const
+    payload: { id: proposalId, proposalId, title, votes }
+    originInstanceId: state.config.instanceId
+    version
+    timestamp: Date.now()
+    merkleRoot}
+  upsertEvent(state, event)
+  writeState(state)
+  const body = { ...event, propagate: false }
+  const headers: Record<string, string> = {}
+  const sig = signPayload(body)
+  if (sig) headers["x-zion-signature"] = sig
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -130,8 +146,9 @@ export default async function handler(req, res) {
   }
 }
       })
-  ),
+  )
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
@@ -225,3 +242,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

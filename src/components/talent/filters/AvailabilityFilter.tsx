@@ -70,11 +70,15 @@ const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },;
   { id: "part_time", label: "Part-time" },;
   { id: "project", label: "Project-based" }
+<<<<<<< HEAD
 ]
+=======
+],
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;

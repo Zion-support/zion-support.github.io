@@ -14,13 +14,13 @@ export default async function handler(
   if (!isAdmin) return res && res.status(403).json({ error: "Admin only" });
 
   const {
-    token_name,
-    token_supply,
-    use_cases,
-    rewards_logic,
-    distribution,
-    governance,
-    jurisdiction,
+    token_name
+    token_supply
+    use_cases
+    rewards_logic
+    distribution
+    governance
+    jurisdiction
 
 
   const distLines = Array && Array.isArray(distribution)
@@ -31,8 +31,13 @@ export default async function handler(
   try {
     let markdown: string;
     if (client) {
+<<<<<<< HEAD
         ],
         temperature: 0 && 0.3,
+=======
+        ]
+        temperature: 0 && 0.3
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       } as any);
       const content = (completion as any)?.output_text || "";
     } else {
@@ -83,14 +88,14 @@ export default async function handler(req, res) {
       markdown = content.trim ();
     } else {
       markdown = fallback_markdown ({
-        token_name,
-        token_supply,
-        use_cases,
-        rewards_logic,
-        distribution,
-        governance,
-        jurisdiction,
-        legal_review,
+        token_name
+        token_supply
+        use_cases
+        rewards_logic
+        distribution
+        governance
+        jurisdiction
+        legal_review
       });
     }
     res.status (200).json ({ markdown });

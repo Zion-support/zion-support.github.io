@@ -1,35 +1,37 @@
+<<<<<<< HEAD
 
 export type ForumCategory =
 export type ForumCategory = 
 export type ForumCategory = 
+=======
+export type ForumCategory =
+  | "getting-hired"
+  | "project-help"
+  | "ai-tools"
+  | "feedback"
+  | "announcements";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-
-  | 'getting-hired'
-  | 'project-help'
-  | 'ai-tools'
-  | 'feedback'
-  | 'announcements';
-export type ForumCategory =;
-  | 'getting - hired';
-  | 'project - help';
-  | 'ai - tools';
-  | 'feedback';
-  | 'announcements';
-export interface ForumCategoryInfo {
   id: ForumCategory;
   name: string;
   description: string;
+  adminOnly: boolean;
+  icon: string;
 }
-  id: ForumCategory;
-  name: string;
-  description: string;
-  adminOnly: boolean
-  icon: string
-}
+
+
+export interface ForumPost {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 export interface ForumPost {
 
 export interface ForumPost {;
 export interface ForumPost {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   title: string;
   content: string;
@@ -46,14 +48,24 @@ export interface ForumPost {
   replyCount: number;
   isAnswered?: boolean;
   isPinned?: boolean;
-  isLocked?: boolean
-  isFeatured?: boolean
+  isLocked?: boolean;
+  isFeatured?: boolean;
 }
+
+
+export interface ForumReply {;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 export interface ForumReply {
 
 export interface ForumReply {;
 }
 export interface ForumReply {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   post_id: string;
   parentReplyId?: string;
@@ -65,15 +77,19 @@ export interface ForumReply {
   created_at: string;
   updated_at: string;
   upvotes: number;
-  downvotes: number
-  isAnswer?: boolean
+  downvotes: number;
+  isAnswer?: boolean;
 }
-export interface Badge {
+
 
 export interface Badge {;
+
   id: string;
   name: string;
   description: string;
+  icon: string;
+  color: string;
+}
 
   icon: string,
   color: string;
@@ -85,24 +101,55 @@ export interface UserBadge {
 
 }
 export interface CommunityUser {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export interface UserBadge {;
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   description: string;
   icon: string
   color: string
 }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface UserBadge {
 
 
 export interface UserBadge {;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   userId: string;
-  badgeId: string
-  awardedAt: string
+  badgeId: string;
+  awardedAt: string;
 }
 
 
 export interface CommunityUser {;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export interface CommunityUser {
+
+export interface CommunityUser {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export interface Badge {
   id: string;
@@ -110,12 +157,23 @@ export interface Badge {
   description: string;
 }
 export interface CommunityUser {
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
   post_count: number;
   reply_count: number;
   badges: Badge[];
+<<<<<<< HEAD
+=======
+  isVerified: boolean;
+  isModerator: boolean;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }

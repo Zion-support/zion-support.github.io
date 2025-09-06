@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {
   {
     metric: 'Patents Filed'
@@ -41,24 +42,61 @@ import {
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our research spans the cutting edge of AI and technology, driving innovation
             and advancing the state of the art.
+=======
+import React from 'react';
+
+const researchAreas = [
+  {
+    title: 'Artificial Intelligence',
+    description: 'Advancing the frontiers of AI through cutting-edge research',
+    focus: ['Machine Learning', 'Deep Learning', 'Neural Networks', 'Natural Language Processing']
+  },
+  {
+    title: 'Quantum Computing',
+    description: 'Pioneering quantum algorithms and quantum machine learning',
+    focus: ['Quantum Algorithms', 'Quantum Machine Learning', 'Quantum Cryptography', 'Quantum Simulation']
+  },
+  {
+    title: 'Autonomous Systems',
+    description: 'Developing self-managing and adaptive systems',
+    focus: ['Autonomous Agents', 'Self-Healing Systems', 'Adaptive Learning', 'Distributed Intelligence']
+  },
+  {
+    title: 'Human-AI Collaboration',
+    description: 'Enhancing human capabilities through AI partnership',
+    focus: ['Augmented Intelligence', 'Human-AI Interfaces', 'Collaborative AI', 'Ethical AI']
+  }
+];
+
+export default function ResearchPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Research & Development
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Pushing the boundaries of technology through innovative research and development initiatives.
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </p>
         </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2&quot;>
-            {researchAreas.map((area) => (
-              <div key={area.name} className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                <div className=&quot;flex items-center gap-x-3 mb-4&quot;>
-                  <area.icon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  <h3 className=&quot;text-xl font-semibold text-white&quot;>{area.name}</h3>
-                </div>
-                <p className=&quot;text-gray-300 mb-6&quot;>{area.description}</p>
-                <div className=&quot;space-y-2&quot;>
-                  {area.topics.map((topic) => (
-                    <div key={topic} className=&quot;flex items-center gap-2&quot;>
-                      <div className=&quot;h-1.5 w-1.5 bg-blue-400 rounded-full&quot;></div>
-                      <span className=&quot;text-sm text-gray-400&quot;>{topic}</span>
-                    </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          {researchAreas.map((area, index) => (
+            <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h3>
+              <p className="text-gray-600 mb-6">{area.description}</p>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">Research Focus:</h4>
+                <ul className="space-y-2">
+                  {area.focus.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-center">
+                      <span className="text-blue-600 mr-3">•</span>
+                      {item}
+                    </li>
                   ))}
+<<<<<<< HEAD
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -313,10 +351,30 @@ import {
               Research Careers <span aria-hidden="true">→</span>
             </Link>
           </div>
+=======
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="bg-gray-50 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Join Our Research Team</h2>
+          <p className="text-lg text-gray-600 mb-6">
+            We're always looking for talented researchers and engineers to join our mission of advancing technology.
+          </p>
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            View Open Positions
+          </button>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default Page;
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

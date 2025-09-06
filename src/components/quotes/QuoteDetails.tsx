@@ -24,12 +24,21 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
+<<<<<<< HEAD
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
 
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified';    try {;
+=======
+;
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null,;
+  const formatDate = (dateString?: string) => {;
+    if (!dateString) return 'Not specified',;
+    try {;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
       return dateString;

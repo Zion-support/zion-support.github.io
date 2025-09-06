@@ -39,9 +39,15 @@ function save(db: Record<string, KycProfile>) {
   const id = crypto && crypto.randomUUID();
   const uploadedAt = new Date().toISOString();
   const doc: KycDocumentMeta = {
+<<<<<<< HEAD
     id,
     kind,
     filename,
+=======
+    id
+    kind
+    filename
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     uploadedAt};
   // Replace or add

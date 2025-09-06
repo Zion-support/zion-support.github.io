@@ -1,10 +1,22 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> main
 import fs from 'fs',;
 import path from 'path',;
+<<<<<<< HEAD
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
 
 
+=======
+const usersPath = path.join(process.cwd(), 'datalearnusers.json')
+const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -16,12 +28,13 @@ function writeJson(p: string, data: any) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-res.setHeader('AllowPOST')
+    res.setHeader('AllowPOST')
     return res.status(405).end('Method Not Allowed')
   }
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
+<<<<<<< HEAD
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -108,6 +121,13 @@ import fs from 'fs',
 import path from 'path',
 const users_path = path.join (process.cwd (), 'datalearnusers.json'),
 const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+const users_path = path.join (process.cwd (), 'datalearnusers.json')
+const courses_path = path.join (process.cwd (), 'datalearncourses.json')
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 /**
  * read_json - Function description
  */
@@ -129,6 +149,7 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   }
 
 
@@ -142,3 +163,9 @@ if ( {) {
 
 }
 
+=======
+res.set_header ('AllowPOST')
+    return res.status (405).end ('Method Not Allowed');
+  }
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

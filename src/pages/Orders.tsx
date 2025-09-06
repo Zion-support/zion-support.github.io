@@ -1,4 +1,9 @@
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
+
+import Link from 'next / link'; // Changed from react-router-dom;
+import { use_auth } from '@/hooks / use_auth';
+import { useGetOrdersQuery } from '@/hooks / use_orders';
+
 import {
 
   Table
@@ -6,12 +11,18 @@ import {
   TableCell
   TableHead
   TableHeader
+<<<<<<< HEAD
 import {
   Table,
   TableBody,
   TableCell,
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
+=======
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export default function OrdersPage() {;
 
@@ -19,6 +30,7 @@ export default function OrdersPage() {;
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString();
+<<<<<<< HEAD
         return (
           <Badge variant='warning' className='flex items-center gap-1'>;
             <Clock className='h-3 w-3' /> In Escrow;
@@ -74,11 +86,14 @@ import { EmptyState } from '@/components/ui/empty-state',
 export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   const getStatusBadge = (status: string,) => {;
     switch (status) {;
       case 'in_escrow':;
 
+<<<<<<< HEAD
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -165,3 +180,30 @@ export default function OrdersPage() {
   );
 }
 ;
+=======
+        return (
+          <Badge variant='warning' className='flex items-center gap-1'>;
+            <Clock className='h-3 w-3' /> In Escrow;
+          </Badge>;
+        );
+      case 'released':;
+      case 'completed':;
+        return (
+          <Badge variant='success' className='flex items-center gap-1'>;
+            <CheckCircle2 className='h-3 w-3' /> Released;
+          </Badge>;
+        );
+      case 'disputed':;
+        return (
+
+        )
+
+      default:
+          <Badge variant='destructive' className='flex items-center gap-1'>;
+            <ShieldAlert className='h-3 w-3' /> Disputed;
+          </Badge>;
+        ),;
+      default:;
+        return status;
+    }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

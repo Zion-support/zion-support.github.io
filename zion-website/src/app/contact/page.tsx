@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   {
     name: 'Email'
     description: 'Get in touch with our team'
@@ -37,22 +38,45 @@
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
+=======
+import React from 'react';
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function ContactPage() {
   return (
-    <div className="bg-black">
-      {/* Hero section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Get in{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Touch
-              </span>
-            </h1>
-              technology can accelerate your growth and innovation.
-            </p>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to transform your business with cutting-edge technology? Get in touch with our team.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-600">info@ziontechgroup.com</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-600">+1 (555) 123-4567</p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3>
+                <p className="text-gray-600">
+                  123 Technology Drive<br />
+                  Innovation City, IC 12345
+                </p>
+              </div>
+            </div>
           </div>
+<<<<<<< HEAD
         </div>
       </div>
       {/* Contact methods */}
@@ -92,66 +116,41 @@ export default function ContactPage() {
         <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
           <form className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+=======
+          
+          <div className="bg-gray-50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+            <form className="space-y-6">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <div>
-                <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-white">
-                  First name
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  Name
                 </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
               </div>
               <div>
-                <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-white">
-                  Last name
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="last-name"
-                    id="last-name"
-                    autoComplete="family-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="email" className="block text-sm font-semibold leading-6 text-white">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email
                 </label>
-                <div className="mt-2.5">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    autoComplete="email"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
               </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="company" className="block text-sm font-semibold leading-6 text-white">
-                  Company
-                </label>
-                <div className="mt-2.5">
-                  <input
-                    type="text"
-                    name="company"
-                    id="company"
-                    autoComplete="organization"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="sm:col-span-2">
-                <label htmlFor="message" className="block text-sm font-semibold leading-6 text-white">
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
+<<<<<<< HEAD
                 <div className="mt-2.5">
                   <textarea
                     name="message"
@@ -263,11 +262,32 @@ export default function ContactPage() {
             <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Learn More <span aria-hidden="true">→</span>
             </Link>
+=======
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default Page;
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

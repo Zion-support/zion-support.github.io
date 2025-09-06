@@ -47,8 +47,32 @@ import {;
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 import React from 'react';
+<<<<<<< HEAD
+import MainLayout from '../../components/layout/MainLayout';
+
+<<<<<<< HEAD
+=======
+const Page = () => {
+  return (
+    <MainLayout
+      title="Footer - Zion Tech Group"
+      description="Footer component"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Footer</h1>
+          <p className="text-xl text-gray-600">Footer component page</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
+=======
 import Link from 'next/link';
 
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const footerLinks = {
     services: [
       { name: "AI Services", href: "/ai-services" }
@@ -306,3 +330,4 @@ origin/automation-improvements-final
       </div>;
     </footer>;
   );
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

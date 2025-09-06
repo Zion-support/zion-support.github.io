@@ -264,7 +264,6 @@ if ( {) {
             scale: [1.3, 1, 1.3];
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-
             duration: 9
             repeat: Infinity
             ease: 'easeInOut'
@@ -606,7 +605,6 @@ if ( {) {
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }}
 };
 

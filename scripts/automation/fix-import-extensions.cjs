@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
+
 class ImportExtensionFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -10,23 +11,31 @@ class ImportExtensionFixer {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   async fixImportExtensions() {}
     this.log('Fixing import extensions...');
+    
     // Find all TypeScript and JavaScript files;
     const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', { "cwd": this.projectRoot }
 });
+    
     for (const file of files) {}
       const filePath = path.join(this.projectRoot, file);
       let content = fs.readFileSync(filePath, 'utf8');
       let modified = false;
+
       // Fix .ts extensions in import statements;
       const originalContent = content;
+      
       // Fix imports like 'react.ts' -> 'react'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+      
       // Fix imports like 'react-router-dom.ts' -> 'react-router-dom'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+      
       // Fix imports like 'framer-motion.ts' -> 'framer-motion'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+      
       // Fix imports like 'lucide-react.ts' -> 'lucide-react'
       content = content.replace(/from\s+['"]([^'"]+)\.ts['"]/g, "from '$1'");
+
       if (content !== originalContent) {}
         fs.writeFileSync(filePath, content);
         modified = true;
@@ -37,8 +46,10 @@ class ImportExtensionFixer {}
   };
   async run() {}
     this.log('Starting Import Extension Fixer...');
+    
     try {}
       await this.fixImportExtensions();
+      
       this.log("Import Extension Fixer completed successfully!");
       this.log(`Fixed ${this.fixesApplied} files`)} catch (error) {`}
       this.log(`Error in Import Extension "Fixer": ${error.message}`);
@@ -56,3 +67,11 @@ if (require.main === module) {}
     .catch(error => {})
       console.error('Import Extension Fixer "failed": ', error);
       process.exit(1)})};
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = ImportExtensionFixer;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = ImportExtensionFixer;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

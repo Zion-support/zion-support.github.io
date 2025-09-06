@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const { spawn, exec } = require("child_process");
+
 class $1 {}
   constructor() {}
   this.projectRoot = "/workspace";
@@ -31,6 +32,7 @@ class $1 {}
     console.log("message);
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\\n");
+    
     const logFile = path.join(this.logDir, "error-monitor.log");
     fs.appendFileSync(logFile, message + "\n")};
 ;
@@ -278,6 +280,7 @@ class $1 {}
 ;
   shutdown() {}
   this.log("info", "Error Monitor shutting down...`);
+
   shutdown() {}
   this.log("info", "Error Monitor shutting down...");
     this.isRunning = false;
@@ -292,3 +295,11 @@ const monitor = new ErrorMonitor();
 monitor.start().catch(error => {})
   console.error("Failed to start Error "Monitor": ", error);
   process.exit(1)}
+<<<<<<< HEAD
+<<<<<<< HEAD
+});
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+});
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

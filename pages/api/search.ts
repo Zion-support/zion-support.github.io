@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -35,7 +40,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
     const keywords = Array && Array.from(
-      new Set([...(parsed && parsed.skills || []), ...(parsed && parsed.keywords || [])]),
+      new Set([...(parsed && parsed.skills || []), ...(parsed && parsed.keywords || [])])
     );
     const didYouMean = results && results.all.length === 0 ? suggestDidYouMean(q) : null;
     res && res.status(200).json({
@@ -54,14 +59,52 @@ function handler() {
       "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
+<<<<<<< HEAD
       ok: true,
       query: q,
       parsed,
       keywords,
       didYouMean,
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      ok: true
+      query: q
+      parsed
+      keywords
+      didYouMean
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       counts: {
+    });
+
+  } catch (e: any) {
+=======
+        all: results.all.length
+        talent: results.talent.length
+        jobs: results.jobs.length
+        projects: results.projects.length
+      }
+      results
+    });
+  } catch (e: any) {
 
 
+  }
+}
+=======
+    res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
@@ -70,6 +113,22 @@ function handler() {
 
   }
 }
+<<<<<<< HEAD
     res.status(500).json({ ok: false, error: e?.message || "Search failed" });
   }
 }
+=======
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    res.status(500).json({ ok: false, error: e?.message || "Search failed" });
+  }
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

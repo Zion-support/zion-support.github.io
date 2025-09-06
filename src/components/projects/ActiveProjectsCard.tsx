@@ -190,6 +190,7 @@ export function ActiveProjectsCard() {;
 
 
   return (
+<<<<<<< HEAD
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -202,12 +203,26 @@ export function ActiveProjectsCard() {;
           <div key={project && project.id} className='border rounded-md p-3'>;
             <div className='flex justify-between items-start mb-2'>;
               <h3 className='font-medium text-sm'>{project && project.job?.title}</h3>;
+=======
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BriefcaseIcon className="h-5 w-5 text-primary" />
+        </CardTitle>
+        <CardDescription>Your ongoing work</CardDescription>
+      </CardHeader>
+      <CardContent className='space-y-4'>
+        {activeProjects.map(project => (
+          <div key={project.id} className='border rounded-md p-3'>
+            <div className='flex justify-between items-start mb-2'>
+              <h3 className='font-medium text-sm'>{project.job?.title}</h3>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               <Badge
                 variant={
-                  project && project.status === 'in_progress' ? 'default' : 'outline'
+                  project.status === 'in_progress' ? 'default' : 'outline'
                 }
                 className={
-                  project && project.status === 'in_progress'
+                  project.status === 'in_progress'
                     ? 'bg-blue-100 text-blue-800 hover:bg-blue-100'
                     : ''
 

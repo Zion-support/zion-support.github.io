@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0], values[1]]);
   };
@@ -39,6 +40,25 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
 
 
+=======
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { ExperienceFilterProps } from "@/types/filters";
+export function ExperienceFilter({
+  experienceRange,
+  setExperienceRange,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setExperienceRange([values[0], values[1]]);
+  };
+
+
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
@@ -50,18 +70,45 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+<<<<<<< HEAD
       {expanded && (;
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
             <span>{experienceRange[0]} years</span>;
             <span>{experienceRange[1]} years</span>;
           </div>;
+=======
+      </button>
+
+      {expanded && (
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+            <span>{experienceRange[0]} years</span>
+            <span>{experienceRange[1]} years</span>
+          </div>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <Slider
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            className="mt-6"
+          />;
+        </div>;
+      )}
+    </div>
+  );
+}
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { ExperienceFilterProps  } from '@/types / filters';

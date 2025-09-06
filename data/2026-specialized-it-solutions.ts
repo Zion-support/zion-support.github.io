@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   tagline: string;
@@ -46,10 +50,19 @@
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const specializedITSolutions2026: SpecializedITSolution2026[] = [
   // Cloud Infrastructure & DevOps
   {
@@ -77,6 +90,15 @@ export const getPopularSpecializedITSolutions2026 = () => {
 export const getPopularSpecializedITSolutions2026 = () => {;
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export const specializedITSolutions2026: SpecializedITSolution2026[] = [
+  // Cloud Infrastructure & DevOps
+  {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 ];
@@ -89,12 +111,33 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
+    const price = parseInt(solution && solution.price.replace('$', ''));
+=======
+  return specializedITSolutions2026.filter(solution => {;
+    const price = parseInt(solution.price.replace('$', ''));
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -308,8 +351,25 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     launchDate: '2024-05-25', customers: 67,
     rating: 4.4,
     reviews: 33
+<<<<<<< HEAD
     website: string;
   }
+<<<<<<< HEAD
+=======
+=======
+  }
+];
+export const getSpecializedITSolutions2026ByCategory = (category: string) => {
+  return specializedITSolutions2026.filter(solution => solution.category === category)
+};
+export const getPopularSpecializedITSolutions2026 = () => {
+  return specializedITSolutions2026.filter(solution => solution.popular)
+};
+export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxPrice: number) => {
+  return specializedITSolutions2026.filter(solution => {
+    const price = parseInt(solution.price.replace('$', ''));
+    return price >= minPrice && price <= maxPrice
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   })
 };
@@ -318,6 +378,39 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>: an
   return specializedITSolutions2026.filter (
     solution => solution.category === category);
 }
+<<<<<<< HEAD
+=======
+;
+export const getPopularSpecializedITSolutions2026 = () =>: any {
+  return specializedITSolutions2026.filter (solution => solution.popular);
+}
+;
+export const getSpecializedITSolutions2026ByPriceRange = (
+  min_price: number,
+  max_price: number) =>: any {
+  return specializedITSolutions2026.filter (solution => {
+    const price = parse_int (solution.price.replace ('$', ''));
+    return price >= min_price && price <= max_price;
+  });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface SpecializedITSolution2026 {;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+  })
+};
+<<<<<<< HEAD
+;
+export const getSpecializedITSolutions2026ByCategory = (category: string) =>: any {
+  return specializedITSolutions2026.filter (
+    solution => solution.category === category);
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 export interface SpecializedITSolution2026 {;
   id: string,;
@@ -378,3 +471,10 @@ export const getSpecializedITSolutions2026ByPriceRange = (
 export interface SpecializedITSolution2026 {;
 
 };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,17 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import fs from 'fs',;
+import path from 'path',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+type EventRow = {
+  name: string,
+  page?: string,
+  userType?: string,
+  properties?: Record<string, any>,
+  at: string
+},
+
+const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl'),
+
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return [],
+    const raw = fs.readFileSync(LOG_FILE, 'utf8'),
+    const lines = raw.split('\n').filter(Boolean),
+    const start = startIso ? new Date(startIso) : null,
+    const end = endIso ? new Date(endIso) : null,
+    const rows: EventRow[] = [],
+    for (const line of lines) {
+      try {
+        const obj = JSON.parse(line),
+        if (!obj.at) continue,
+        const t = new Date(obj.at),
+        if (start && t < start) continue,
+        if (end && t > end) continue,
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
+<<<<<<< HEAD
 
 type EventRow = {
 
+=======
+type EventRow = {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   name: string
   page?: string
   userType?: string
   properties?: Record<string, any>
   at: string
 }
+
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl')
+
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return []
@@ -27,60 +67,58 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         const t = new Date(obj.at)
         if (start && t < start) continue
         if (end && t > end) continue
+>>>>>>> main
         rows.push(obj)
       } catch {}
-
-  name: string;
-  page?: string;
-  userType?: string;
-  properties?: Record<string, any>;
-  at: string;
-};
-
-const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');
-
-function parseLines(startIso?: string, endIso?: string): EventRow[] {
-  try {
-    if (!fs.existsSync(LOG_FILE)) return [];
-    const raw = fs.readFileSync(LOG_FILE, 'utf8');
     }
+<<<<<<< HEAD
     return rows;
 
 
+=======
+    return rows
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch {
-    return [];
+    return []
   }
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
-.sort((a, b) => b.value - a.value)
+    .sort((a, b) => b.value - a.value)
+
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     .sort((a, b) => b.value - a.value),
 
+  const days = Object.keys(byDay).sort(),
+  const line = days.map((d) => ({ date: d, value: byDay[d] })),
 
+<<<<<<< HEAD
+=======
+  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
+  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 })),
+=======
+    .sort((a, b) => b.value - a.value)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-    .sort((a, b) => b.value - a.value);
+  const days = Object.keys(byDay).sort()
+  const line = days.map((d) => ({ date: d, value: byDay[d] }))
 
-
-    .sort((a, b) => b.value - a.value),
-
-
-  const days = Object.keys(byDay).sort();
-  const line = days.map((d) => ({ date: d, value: byDay[d] }));
-
-  const funnelStages = [
-    'Visit',
-    'AI Prompt Used',
-    'Post Created',
-    'Message Sent',
-  ];
-  const funnel = funnelStages.map((stage) => ({ 
-    label: stage, 
-    value: byEvent[stage] || 0 
-  }));
+  const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
+  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
+>>>>>>> main
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
+<<<<<<< HEAD
 
 
 function featureFromPath (page?: string): string {
@@ -152,3 +190,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

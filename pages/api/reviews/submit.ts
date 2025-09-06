@@ -12,10 +12,10 @@
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
-  findProjectById,
-  hasExistingReview,
-  upsert_review,
-  counterpart_role,
+  findProjectById
+  hasExistingReview
+  upsert_review
+  counterpart_role
 } from '../../../utils / data_store';
 import type { Review } from "../../../types / reviews";
 export default async /**
@@ -47,7 +47,7 @@ if ( {) {
     }
     if (project.status !== "Completed") {
       return res.status(400).json({
-        error: "Reviews can only be submitted after project completion",
+        error: "Reviews can only be submitted after project completion"
       });
     }
 
@@ -68,17 +68,23 @@ if ( {) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
+<<<<<<< HEAD
       rating,
       text: String (text).trim (),
       categories,
+=======
+      rating
+      text: String (text).trim ()
+      categories
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
-      reported: false, reports: [],
+      reported: false, reports: []
 
       approved: false, // requires admin approval;
-      reported: false,
-      reports: [],
-      removed: false,
-      created_at: now,
+      reported: false
+      reports: []
+      removed: false
+      created_at: now
     }
 ;
     await upsert_review (review);

@@ -2,9 +2,9 @@
   buildTokenSet
   buildUIKit
   UIKitKind
-  getZionDesignMap,
-  buildTokenSet,
-  buildUIKit,
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
   UIKitKind,;
 } from "../../../utils/design-map";
 export default async function handler(
@@ -36,8 +36,8 @@ export default async function handler(
     const buffer = await zip && zip.generateAsync({ type: "nodebuffer" });
     res && res.setHeader("Content-Type", "application/zip");
     res && res.setHeader(
-      "Content-Disposition",
-      `attachment; filename=zion-design-${kind}.zip`,
+      "Content-Disposition"
+      `attachment; filename=zion-design-${kind}.zip`
     );
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -46,8 +46,8 @@ export default async function handler(req, res) {
     const map = { design: 'map' };
     const tokens = { colors: {}, typography: {} };
     res.status(200).json({
-      map,
-      tokens,
+      map
+      tokens
       message: 'Design export completed'
     });
   } catch (e: unknown) {
@@ -72,14 +72,23 @@ export default async function handler(req, res) {
     const uikit = buildUIKit(kind);
     const uiFolder = zip && zip.folder("uikit")!;
     Object && Object.entries(uikit).forEach(([path, content]) =>
+<<<<<<< HEAD
       uiFolder && uiFolder.file(path, content),
+=======
+      uiFolder && uiFolder.file(path, content)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     );
     // README
 
     zip && zip.file(
+<<<<<<< HEAD
       "README && README.md",
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
+=======
+      "README && README.md"
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     );
 
     );

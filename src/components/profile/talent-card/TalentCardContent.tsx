@@ -2,6 +2,7 @@ summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
+<<<<<<< HEAD
 
 
 export function TalentCardContent(): any ({;
@@ -103,3 +104,5 @@ function TalentCardContent() {
       <TalentCardSkills skills={skills} />;
     </div>);
 }
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,25 +1,36 @@
+<<<<<<< HEAD
 import Image from 'next / image';
 ;
+=======
+import React from 'react';
+import Image from 'next/image';
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface OptimizedImageProps {
-  width?: number;
-  height?: number;
-  class_name?: string;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className?: string;
   priority?: boolean;
-  sizes?: string;
   quality?: number;
-  fill?: boolean;
-  style?: React && React.CSSProperties;
+  sizes?: string;
 }
+<<<<<<< HEAD
+=======
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   src,
   alt,
   width,
   height,
+  className = '',
   priority = false,
-  sizes = '(max - width: 768px) 100vw, (max - width: 1200px) 50vw, 33vw',
-  quality = 85,
-  fill = false,
-  style;
+  quality = 75,
+  sizes = '100vw'
 }) => {
+<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -34,20 +45,17 @@ if ( {) {
         sizes={sizes}
         quality={quality}
         style={style}
+=======
+  return (
+    <Image
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       src={src}
       alt={alt}
-      width={width |800}
-      height={height |600}
+      width={width}
+      height={height}
       className={className}
-      />);
-  }
-    <Image;
-      src={src}
-      alt={alt}
-      width={width || 800}
-      height={height || 600}
-      className={class_name}
       priority={priority}
+<<<<<<< HEAD
       sizes={sizes}
   );
 }
@@ -59,3 +67,12 @@ quality={quality}
       style={style}
   );
 }
+=======
+      quality={quality}
+      sizes={sizes}
+    />
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

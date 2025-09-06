@@ -95,9 +95,10 @@ export function HireRequestForm(): any ({;
             type='button'
             variant='outline'
             onClick={onClose}
-            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}>;
-            Cancel;
-          </Button>;
+            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'            disabled={isSubmitting}
+          >
+            Cancel
+          </Button>
           <Button
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'            disabled={isSubmitting}>;
@@ -175,9 +176,10 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled = {isSubmitting,}>;
-            Cancel;
-          </Button>;
+            disabled = {isSubmitting,}
+          >
+            Cancel
+          </Button>
           <Button
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button

@@ -1,9 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+"use client",;
+import { useTheme } from "@/components/theme-provider",;
+import { Moon, Sun, Monitor } from "lucide-react",;
+export function ThemeToggle() {;
+  const { theme, setTheme } = useTheme();
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
     <div className="flex items-center gap-2">;
       <span className="sr-only">Theme</span>;
       <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
         <button;
           onClick={() => setTheme("light")}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+          className={`rounded px-2 py-1 text-sm transition-colors ${;
+            theme === "light";
+
+              ? "bg-zion-blue text-white";
+              : "text-zinc-400 hover:text-zinc-100";
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
 import { Moon, Sun, Monitor  } from './lucide-react';,
@@ -22,6 +48,37 @@ function ThemeToggle() {
             theme === "light";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+"use client";
+import { useTheme } from "@/components/theme-provider";
+import { Moon, Sun, Monitor } from "lucide-react";
+export function ThemeToggle() {const { theme, setTheme } = useTheme();
+=======
+"use client",;
+import { useTheme } from "@/components/theme-provider",;
+import { Moon, Sun, Monitor } from "lucide-react",;
+export function ThemeToggle() {;
+  const { theme, setTheme } = useTheme();
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (;
+    <div className="flex items-center gap-2">;
+      <span className="sr-only">Theme</span>;
+      <div className="flex rounded-lg border border-white/10 bg-zinc-900/50 p-1">;
+        <button;
+          onClick={() => setTheme("light")}
+<<<<<<< HEAD
+          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";
+=======
+          className={`rounded px-2 py-1 text-sm transition-colors ${;
+            theme === "light";
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              ? "bg-zion-blue text-white";
+              : "text-zinc-400 hover:text-zinc-100";
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           }`}
           aria - label="Switch to light theme";
           aria - pressed={theme === "light"}
@@ -29,6 +86,19 @@ function ThemeToggle() {
           <Sun className="h - 4 w - 4" />;
         </button>;
         <button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+          on_click={() => set_theme ("system")}
+          className={`rounded px - 2 py - 1 text - sm transition - colors ${
+            theme === "system";
+              ? "bg - zion - blue text - white";
+              : "text - zinc - 400 hover:text - zinc - 100";
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }`}
           aria - label="Switch to system theme";
           aria - pressed={theme === "system"}
@@ -36,6 +106,19 @@ function ThemeToggle() {
           <Monitor className="h - 4 w - 4" />;
         </button>;
         <button;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+          on_click={() => set_theme ("dark")}
+          className={`rounded px - 2 py - 1 text - sm transition - colors ${
+            theme === "dark";
+              ? "bg - zion - blue text - white";
+              : "text - zinc - 400 hover:text - zinc - 100";
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           }`}
           aria - label="Switch to dark theme";
           aria - pressed={theme === "dark"}

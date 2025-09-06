@@ -3,9 +3,11 @@
  * Smart Deployment Automation;
  * Handles intelligent deployment processes;
  */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+
 class SmartDeploymentAutomation {}
     constructor() {}
         this.projectRoot = process.cwd();
@@ -30,17 +32,27 @@ class SmartDeploymentAutomation {}
         console.log(message)};
     preDeploymentChecks() {}
         this.log('Running pre-deployment checks...');
+        
         const checks = {}
             "lint": this.runLintCheck(),
             "typeCheck": this.runTypeCheck(),
             "build": this.runBuildCheck(),
             "test": this.runTestCheck();
        };
+        
         // Health check after each instance
         const healthCheck = await this.performHealthCheck(environment);
         if (!healthCheck.healthy) {
           throw new Error(`Health check failed after deploying instance ${i}`);
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+        
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+        
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         this.log(`Pre-deployment checks ${allPassed ? 'passed' : 'failed'}`);
         return { checks, allPassed }};
     runLintCheck() {}
@@ -86,12 +98,14 @@ class SmartDeploymentAutomation {}
     };
     generateBuild() {}
         this.log('Generating production build...');
+        
         try {}
             execSync('npm run build', { })
                 "cwd": this.projectRoot, 
                 "stdio": 'pipe'
             }
 });
+            
             this.log('Production build generated successfully');
             return { "status": 'success', "message": 'Build completed' }} catch (error) {}
             this.log(`Build "failed": ${error.message}`);
@@ -99,9 +113,11 @@ class SmartDeploymentAutomation {}
     };
     optimizeBuild() {}
         this.log('Optimizing build...');
+        
         try {}
             // Check if build optimization is available;
             const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8';););
+            
             if ( {})
                 execSync('npm run "build": production', { })
                     "cwd": this.projectRoot, 
@@ -120,17 +136,21 @@ class SmartDeploymentAutomation {}
     };
     checkDeploymentReadiness() {}
         this.log('Checking deployment readiness...');
+        
         const readiness = {}
             "buildExists": fs.existsSync(path.join(this.projectRoot, '.next')),
             "packageJsonExists": fs.existsSync(path.join(this.projectRoot, 'package.json')),
             "nodeModulesExists": fs.existsSync(path.join(this.projectRoot, 'node_modules')),
             "logsDirectoryExists": fs.existsSync(path.join(this.projectRoot, 'logs'));
        };
+        
         const isReady = Object.values(readiness).every(Boolean;);
+        
         this.log(`Deployment "readiness": ${isReady ? 'ready' : 'not ready'}`);
         return { ...readiness, isReady }};
     generateDeploymentReport() {}
         this.log('Generating deployment automation report...');
+        
         const report = {}
             "timestamp": new Date().toISOString(),
             "project": this.projectRoot,
@@ -140,8 +160,10 @@ class SmartDeploymentAutomation {}
             "readiness": this.checkDeploymentReadiness(),
             "recommendations": this.generateDeploymentRecommendations();
        };
+
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
         this.log(`Deployment report saved to ${this.reportFile}`);
+        
         return report};
     generateDeploymentRecommendations() {}
         return [;]
@@ -155,6 +177,7 @@ class SmartDeploymentAutomation {}
         ]};
     async run() {}
         this.log('Smart Deployment Automation started');
+        
         try {}
             const report = this.generateDeploymentReport(;);
             this.log('Smart Deployment Automation completed successfully');
@@ -169,3 +192,11 @@ if ( {})
      {}
     const automation = new SmartDeploymentAutomation}(;);
     automation.run().catch(console.error)};
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = SmartDeploymentAutomation;
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+module.exports = SmartDeploymentAutomation;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

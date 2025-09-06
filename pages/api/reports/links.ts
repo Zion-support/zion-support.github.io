@@ -1,5 +1,66 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  res.status(200).json({ message: 'Links report endpoint' });
+  return;
+}
+=======
+<<<<<<< HEAD
+
+    }
+
+
+  if (req && req.method === 'POST') {
+    try {
+      const { broken, external, internal } = req && req.body;
+      
+
+      const report = {
+        broken: broken |[]
+        external: external |[]
+        internal: internal |[]
+        generatedAt: new Date().toISOString()
+
+      };
+
+      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
+      return res && res.status(201).json(report);
+
+    } catch (error) {
+      return res && res.status(500).json({ error: 'Failed to update links report' });
+    }
+  }
+
+
+  res && res.setHeader('Allow', 'GET, POST');
+  res && res.status(405).end('Method Not Allowed');
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+;
+      const report = {
+        broken: broken || [],
+        external: external || [],
+        internal: internal || [],
+        generated_at: new Date ().toISOString ();
+      }
+;
+      fs.writeFileSync (p, JSON.stringify (report, null, 2));
+      return res.status (201).json (report);
+=======
+import fs from 'fs';
+import path from 'path';
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const p = path.join(
   process.cwd()
   'data'
@@ -12,6 +73,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const data = fs.readFileSync(p, 'utf8');
       const links = JSON.parse(data);
       return res.status(200).json(links);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
       return res.status(500).json({ error: 'Failed to read links report' });
     }
@@ -39,10 +102,18 @@ if (req.method === 'POST') {
       return res && res.status(500).json({ error: 'Failed to update links report' });
     }
   }
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
 
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     } catch (error) {
     console.error("Error:", error);
@@ -52,5 +123,23 @@ if (req.method === 'POST') {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 
 
+=======
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

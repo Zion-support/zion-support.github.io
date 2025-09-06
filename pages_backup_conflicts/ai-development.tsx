@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default function Aidevelopment({ }: AidevelopmentProps) {
 
 class ErrorBoundary extends React.Component {
@@ -28,9 +29,22 @@ interface AidevelopmentProps {;
   // Add props here as needed;
 }
 export default function Aidevelopment(): any ({ }: AidevelopmentProps) {;
+=======
+import * as React from 'react';
+
+interface AidevelopmentProps {
+  // Add props here as needed
+}
+
+export default function Aidevelopment({ }: AidevelopmentProps) {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
-    <div>;
-      <h1>Aidevelopment</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Aidevelopment</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

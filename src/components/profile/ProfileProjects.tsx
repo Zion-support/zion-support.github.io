@@ -141,12 +141,20 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                     </Badge>
 ;
             <CardContent className="p-4">;
+<<<<<<< HEAD
               <h4 className="text-white font-medium mb-2">{project && project.title}</h4>;
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project && project.description}</p>;
 
               {project && project.tags && project && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
                   {project && project.tags.map((tag, i) => (;
+=======
+              <h4 className="text-white font-medium mb-2">{project.title}</h4>;
+              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>;
+              {project.tags && project.tags.length > 0 && (;
+                <div className="flex flex-wrap gap-1 mb-2">;
+                  {project.tags.map((tag, i) => (;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
                       {tag}
                     </Badge>;
@@ -155,7 +163,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 
 
                   ))}
+<<<<<<< HEAD
                 </div>;
+=======
+                </div>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               )}
 
               

@@ -28,7 +28,11 @@ Key Features:
     });
     let description = "";
 
+<<<<<<< HEAD
       model: 'gpt-4o-mini', input: prompt,
+=======
+      model: 'gpt-4o-mini', input: prompt
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       temperature: 0.7
       });
 

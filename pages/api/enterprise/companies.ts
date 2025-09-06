@@ -16,11 +16,29 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     return res.status(201).json(created);
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status (201).json (created);
   }
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     const companies = store.listCompanies();
@@ -115,6 +133,7 @@ export default function handler(req, res) {
   }
 }
 }
+=======
 
 
 }
@@ -125,3 +144,7 @@ export default function handler(req, res) {
 }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

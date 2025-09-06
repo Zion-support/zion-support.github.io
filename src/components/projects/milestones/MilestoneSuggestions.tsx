@@ -1,10 +1,19 @@
 interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
   project_name: string;
   scope_summary: string;
   start_date: Date; import React, { useState } from 'react';
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks / useMilestoneGenerator';
 import { Loader2, Sparkles, Check } from 'lucide-react';
 import { Badge } from '@/components / ui / badge';
+=======
+  projectName: string;
+  scopeSummary: string;
+  startDate: Date; import React, { useState } from 'react'
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator'
+import { Loader2, Sparkles, Check } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MilestoneSuggestionsProps {
 
 
@@ -92,7 +101,11 @@ export function MilestoneSuggestions(): any ({;
       return format (parseISO (date_string), 'MMM dd, yyyy');
       return date_string;
     }
+<<<<<<< HEAD
   }
+=======
+  },
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
 
@@ -187,7 +200,7 @@ export function MilestoneSuggestions({
 
 
           )}
-        </Button>;
+        </Button>
       )}
 
           <CardHeader className="pb-3">

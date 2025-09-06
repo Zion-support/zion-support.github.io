@@ -10,6 +10,7 @@ class $1 {}
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
+
 class BuildHealthMonitor {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -22,6 +23,7 @@ class BuildHealthMonitor {}
 ;
   async run() {}
   this.log("Starting build health monitoring...");
+
     try {}
   await this.monitorBuildHealth();
       this.log("Build health monitoring completed.")} catch (error) {}
@@ -31,6 +33,7 @@ class BuildHealthMonitor {}
 ;
   async monitorBuildHealth() {}
   this.log("Monitoring build health...");
+
     const report = {}
   "timestamp": new Date().toISOString(),
       "buildStatus": {},
@@ -40,10 +43,12 @@ class BuildHealthMonitor {}
     try {}
   // Check build performance;
       const startTime = Date.now();
+
       try {}
   execSync("npm run build", { "stdio": "pipe" }
 });
         const buildTime = Date.now() - startTime;
+
         report.buildStatus = {}
   "status": "success",
           "buildTime": buildTime,
@@ -88,11 +93,13 @@ class BuildHealthMonitor {}
 ;
       // Generate recommendations;
       report.recommendations = this.generateRecommendations(report);
+
       // Save report;
       const timestamp = Date.now();
       const reportPath = path.join(;)
         this.projectRoot,error-reports", `build-health-report-${timestamp}.json`;`
       );
+
       const dir = path.dirname(reportPath);
       if (!fs.existsSync(dir)) {}
   fs.mkdirSync(dir, { "recursive": true })};
@@ -114,3 +121,11 @@ class BuildHealthMonitor {}
 };
 ;
 const monitor = new BuildHealthMonitor();
+<<<<<<< HEAD
+<<<<<<< HEAD
+monitor.run().catch(console.error);
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+monitor.run().catch(console.error);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

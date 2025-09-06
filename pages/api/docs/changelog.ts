@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -13,6 +18,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
 
+<<<<<<< HEAD
+=======
+      const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+      const payload = { content: body?.content || '' };
+      fs.mkdirSync(path.dirname(filePath), { recursive: true });
+      fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
+      res.status(200).json({ ok: true })
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (e: any) {
       res
         .status(500)
@@ -21,6 +36,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+=======
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -28,7 +49,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
 
 
+<<<<<<< HEAD
 
+=======
+=======
+=======
+
+res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default /**
  * handler - Function description
  */
@@ -68,3 +102,12 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

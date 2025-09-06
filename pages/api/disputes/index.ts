@@ -7,8 +7,13 @@ import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
 
 
+<<<<<<< HEAD
   req: NextApiRequest,
   res: NextApiResponse,
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ) {;
 
   const user = parseUserFromRequest(req);
@@ -19,7 +24,7 @@ export default async function handler(
     let filtered = all;
     if (user && user.role !== "admin") {
       filtered = all && all.filter(
-        (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
+        (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id
 
       );
     }
@@ -36,13 +41,13 @@ export default async function handler(
   if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
-      projectId,
-      entityType,
-      entityId,
-      clientUserId,
-      talentUserId,
-      reason,
-      reasonDetails,
+      projectId
+      entityType
+      entityId
+      clientUserId
+      talentUserId
+      reason
+      reasonDetails
 
     if (
       !projectId |
@@ -60,6 +65,7 @@ export default async function handler(
 
     }
     const id = generateCaseId();
+<<<<<<< HEAD
       id,
       projectId: String(projectId),
       entityType,
@@ -74,6 +80,22 @@ export default async function handler(
       description,
       attachments: [],
       messages: [],
+=======
+      id
+      projectId: String(projectId)
+      entityType
+      entityId
+      clientUserId: String(clientUserId)
+      talentUserId: String(talentUserId)
+      createdAt: now
+      updatedAt: now
+      status: "Open"
+      reason: reason as DisputeReason
+      reasonDetails
+      description
+      attachments: []
+      messages: []
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     };
 
 

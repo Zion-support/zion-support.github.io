@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+className
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
@@ -7,6 +11,7 @@
         <div className="flex-1">;
           <div className="flex items-center">;
             <span className="font-medium">;
+<<<<<<< HEAD
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -52,6 +57,32 @@ export const ReplyCard = ({
             {timeAgo}
 
 
+=======
+              {reply && reply.authorName}
+            </span>;
+            {reply && reply.authorRole && (;
+              <Badge variant="outline" className="ml-2 text-xs">;
+
+
+
+                {reply.authorRole}
+              </Badge>
+            )}
+            {reply && reply.isAnswer && (;
+              <Badge className="ml-2 bg-green-500 text-white">;
+                <CheckCircle className="h-3 w-3 mr-1" />;
+                Answer;
+              </Badge>;
+            )}
+          </div>;
+          <div className="text-xs text-muted-foreground">;
+            {timeAgo}
+
+
+      
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <CardFooter className="flex justify-between">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="sm" className="px-2">
@@ -97,6 +128,24 @@ export const ReplyCard = ({
           </Button>;
         )}
       </CardFooter>;
+    </Card>;
+  );
+};
+
+
+
+
+      </CardFooter>;
+      </CardFooter>
+
+    </Card>;
+  );
+};
+
+
+
+      "transition-shadow";
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
 import { formatDistanceToNow  } from './date - fns';
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'import { Card, CardContent, CardFooter, CardHeader  } from '@/components / ui / card';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
@@ -169,3 +218,7 @@ export const ReplyCard = ({
       </CardFooter>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+export default ReplyCard;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

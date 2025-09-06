@@ -35,11 +35,8 @@ interface ReferralStatsProps {
   stats: ReferralStatsType,
   is_loading: boolean;
 }
-export /**
- * ReferralStats - Function description
- */
-function ReferralStats() {
-  const stat_cards = [;
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+  const statCards = [
     {
 
 interface ReferralStatsProps {;

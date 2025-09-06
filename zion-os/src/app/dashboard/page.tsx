@@ -1,27 +1,165 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+"use client",;
+import { useAuth } from "@/contexts/AuthContext",;
+import { useRouter } from "next/navigation",;
+import { useEffect } from "react",;
+import Link from "next/link",;
+export default function DashboardPage() {;
+  const { user, isAuthenticated, isLoading } = useAuth(),;
+  const router = useRouter();
+  useEffect(() => {;
+    if (!isLoading && !isAuthenticated) {;
+      router.push("/auth/signin");
+    }
+  }, [isAuthenticated, isLoading, router]);
+  if (isLoading) {;
+    return (;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+"use client",
+import { use_auth  } from '@/contexts / AuthContext';,
+import { use_router  } from './next / navigation';,
+import { useEffect  } from './react';,
+import Link from './next / link';,
+export default /**
+ * DashboardPage - Function description
+ */
+function DashboardPage() {
+  const { user, is_authenticated, is_loading } = use_auth (),
+  const router = use_router ();
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      router.push ("/auth / signin");
+    }
+  }, [is_authenticated, is_loading, router]);
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div className="min - h-screen flex items - center justify - center">;
+        <div className="text - center">;
+          <div className="animate - spin rounded - full h - 12 w - 12 border - b-2 border - blue - 500 mx - auto mb - 4"></div>;
+          <p className="text - zinc - 400">Loading...</p>;
+=======
+<<<<<<< HEAD
+"use client";
+import { useAuth } from "@/contexts/AuthContext";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import Link from "next/link";
+export default function DashboardPage() {const { user, isAuthenticated, isLoading } = useAuth();
+  const router = useRouter();
+  useEffect(() => {if (!isLoading && !isAuthenticated) {;
+      router.push("/auth/signin");
+    }
+  }, [isAuthenticated, isLoading, router]);
+  if (isLoading) {return (;
+=======
+"use client",;
+import { useAuth } from "@/contexts/AuthContext",;
+import { useRouter } from "next/navigation",;
+import { useEffect } from "react",;
+import Link from "next/link",;
+export default function DashboardPage() {;
+  const { user, isAuthenticated, isLoading } = useAuth(),;
+  const router = useRouter();
+  useEffect(() => {;
+    if (!isLoading && !isAuthenticated) {;
+      router.push("/auth/signin");
+    }
+  }, [isAuthenticated, isLoading, router]);
+  if (isLoading) {;
+    return (;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
           <p className="text-zinc-400">Loading...</p>;
+<<<<<<< HEAD
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </div>;
       </div>;
     );
   }
+<<<<<<< HEAD
   if (!isAuthenticated) {return null;
   }
+=======
+<<<<<<< HEAD
+  if (!isAuthenticated) {return null;
+  }
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 ;
   if (!isAuthenticated) {;
     return null;
   }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (;
     <div className="space-y-8">;
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
         <h1 className="text-3xl font-bold text-white mb-2">;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+  // Check condition
+if ( {) {
+  $2
+}
+    return null;
+  }
+  return (
+    <div className="space - y-8">;
+      {/* Welcome Header */}
+      <div className="bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 8 border border - blue - 500 / 20">;
+        <h1 className="text - 3xl font - bold text - white mb - 2">;
+          Welcome back, {user?.name || "User"}! 👋;
+
+=======
+
+          Welcome back, {user?.name || "User"}! 👋;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -93,6 +231,22 @@
         <h2 className="text - xl font - semibold text - white mb - 4">Account Information</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+            <label className="block text - sm font - medium text - zinc - 400 mb - 1">Name</label>;
+            <p className="text - white">{user?.name || "Not provided"}</p>;
+
+=======
+            <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
+
+            <p className="text-white">{user?.name || "Not provided"}</p>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

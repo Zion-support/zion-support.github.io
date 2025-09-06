@@ -1,4 +1,32 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+import {MilestonesList} from '../MilestonesList';
+import {PaymentSummary} from '../PaymentSummary';
+
+
+<<<<<<< HEAD
+=======
+=======
+
+import React from 'react';
+import { MilestonesList  } from '../MilestonesList';
+import { PaymentSummary  } from '../PaymentSummary';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { toast } from "sonner";
+interface MilestoneManagerProps {
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectId: string
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
@@ -14,11 +42,32 @@
 
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
+import {toast} from "sonner";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -34,6 +83,20 @@ interface MilestoneManagerProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
   refetch: () => Promise<void>
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+export function MilestoneManager({;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   projectId;
   milestones;
   activities;
@@ -59,11 +122,33 @@ export function MilestoneManager({
   onUpdateStatus,
   onDeleteMilestone,
   onUploadDeliverable,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  refetch;
+}: MilestoneManagerProps) {;
+  const handleMilestoneApproved = async (milestoneId: string) => {;
+    try {;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);
       toast && toast.success("Milestone approved");
       await refetch();
@@ -129,6 +214,16 @@ function MilestoneManager() {
     <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
       <div className="lg:col - span - 2">;
         <MilestonesList;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
       toast.success("Milestone approved"),
       await refetch()
@@ -136,6 +231,25 @@ function MilestoneManager() {
       console.error("Error approving milestone:", error),
       toast.error("Failed to approve milestone")
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  },
+  
+
+=======
+  },
+  
+
+  }
+  },
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   const handleMilestoneRejected = async (milestoneId: string) => {
     try {
       await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
@@ -145,10 +259,38 @@ function MilestoneManager() {
       console.error("Error rejecting milestone:", error),
       toast.error("Failed to reject milestone")
     }
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  },
+
+<<<<<<< HEAD
+=======
+  }
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2">
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        <MilestonesList 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        <MilestonesList
+        <MilestonesList 
+=======
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
@@ -210,14 +352,109 @@ export function MilestoneManager({;
       <div className="lg:col-span-2">;
         <MilestonesList;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+} MilestoneManagerProps) {;
+  const handleMilestoneApproved = async (milestoneId:string) => {;
+    try {;
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),;
+      toast.success("Milestone approved"),;
+      await refetch(),;
+    } catch (error) {;
+      console.error("Error approving milestone:", error),;
+      toast.error("Failed to approve milestone"),;
+    }
+  },;
+  ;
+  const handleMilestoneRejected = async (milestoneId:string) => {;
+    try {;
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),;
+      toast.success("Milestone rejected"),;
+      await refetch(),;
+    } catch (error) {;
+      console.error("Error rejecting milestone:", error),;
+      toast.error("Failed to reject milestone"),;
+    }
+  },;
+;
+  return (;
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+      <div className="lg:col-span-2">;
+        <MilestonesList ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           milestones={milestones}
           activities={activities}
           is_loading={is_loading}
           is_client={is_client}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          milestones={milestones}
+          activities={activities}
+          isLoading={isLoading}
+          isClient={isClient}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
           onUploadDeliverable={onUploadDeliverable}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+
+=======
+          isSubmitting={isSubmitting}
+          onApprove={isClient ? handleMilestoneApproved : undefined}
+          onReject={isClient ? handleMilestoneRejected : undefined}
+        />
+      </div>
+      <div>
+        <PaymentSummary
+          milestones={milestones}
+          paymentTerms={paymentTerms}
+
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        />;
+      </div>;
+      <div>;
+        <PaymentSummary
+          milestones={milestones} 
+<<<<<<< HEAD
+=======
+          isSubmitting={isSubmitting}
+          onApprove={isClient ? handleMilestoneApproved :undefined}
+          onReject={isClient ? handleMilestoneRejected :undefined}
+        />;
+      </div>;
+      <div>;
+        <PaymentSummary ;
+          milestones={milestones} ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          paymentTerms={paymentTerms}
+        />;
+      </div>;
+    </div>;
+<<<<<<< HEAD
+  );
+}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           is_submitting={is_submitting}
           on_approve={is_client ? handleMilestoneApproved : undefined}
           on_reject={is_client ? handleMilestoneRejected : undefined}
@@ -230,6 +467,17 @@ export function MilestoneManager({;
         />;
       </div>;
     </div>);
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; interface MilestoneManagerProps {
   projectId: string;
 milestones: Milestone[];
@@ -250,3 +498,57 @@ refetch: () => Promise<void>
   try {
   
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+
+};
+const handleMilestoneRejected = async (milestoneId: string) => {
+  try {
+  
+}
+};
+grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className=" lg:col-span-2" > <MilestonesList milestones= {
+  milestones 
+}activities= {
+  activities 
+}isLoading= {
+  isLoading 
+}isClient= {
+  isClient 
+}onCreateMilestone= {
+  onCreateMilestone 
+}onUpdateStatus= {
+  onUpdateStatus 
+}onDeleteMilestone= {
+  onDeleteMilestone 
+}onUploadDeliverable= {
+  onUploadDeliverable 
+}isSubmitting= {
+  isSubmitting 
+}onApprove= {
+  isClient ? handleMilestoneApproved : undefined 
+}onReject= {
+  isClient ? handleMilestoneRejected : undefined 
+}/> </div> <div> <PaymentSummary milestones= {
+  milestones 
+}paymentTerms= {
+  paymentTerms 
+}/> </div> </div>) 
+}
+        />
+      </div>
+    </div>
+  )
+}
+        />;
+      </div>;
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

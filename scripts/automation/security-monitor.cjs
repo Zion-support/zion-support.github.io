@@ -3,6 +3,7 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -45,6 +46,7 @@ class $1 {}
           for (const ["packageName", "vuln"] of Object.entries(auditData.vulnerabilities)) {this.errorsFound.push(`Security vulnerability in ${packageName}: ${vuln.title} (${vuln.severity})`)};
         } else {}
   this.log("No security vulnerabilities found", "success");
+
   async runCommand(command, options = {}) {}
   try {}
   const result = execSync(command, {})
@@ -94,6 +96,7 @@ class $1 {}
 ;
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
+
   async checkLicenseCompliance() {}
   this.log("Checking license compliance...");
     const result = await this.runCommand("npm ls --json");
@@ -221,5 +224,14 @@ class $1 {}
   };
 };
 ;
+
 // Run the security monitor;
 const monitor = new SecurityMonitor();
+<<<<<<< HEAD
+<<<<<<< HEAD
+monitor.run().catch(console.error);
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+monitor.run().catch(console.error);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next',;
-import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',;
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth'
+>>>>>>> main
 ;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
@@ -8,6 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(401).json({ error: 'Unauthorized' })
     return
   }
+<<<<<<< HEAD
   res.status(200).json({ message: 'OK' });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -30,3 +39,7 @@ export default function handler(req, res) {
 
 
 
+=======
+  res.status(200).json({ message: 'OK' })
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

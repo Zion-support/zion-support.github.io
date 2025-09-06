@@ -303,8 +303,8 @@ export function MobileChatView(): any ({;
 
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
-              )}>;
-              <p>{message && message.content}</p>;
+              )}            >
+              <p>{message.content}</p>
               <div
                 className={cn(
 
@@ -313,12 +313,6 @@ export function MobileChatView(): any ({;
 
                     ? 'text-primary-foreground/80'
                     : 'text-muted-foreground'
-                )}>;
-                {message && message.timestamp}
-                {message && message.isMe && message && message.status && (;
-                  <span className='ml-1'>;
-                    {message && message.status === 'read' ? '✓✓' : '✓'}
-                  </span>;
                 )}
 
       <div className='flex - 1 overflow - y-auto p - 4 space - y-4'>;

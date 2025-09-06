@@ -6,8 +6,13 @@
   }
     });
     return res && res.status(200).json({
+<<<<<<< HEAD
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
+=======
+      ok: true
+      override: updated && updated.overrides.find((o) => o && o.jobId === jobId)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -46,9 +51,9 @@ if ( {) {
     const updated = write_state ((state) => {
       const idx = state.overrides.find_index ((o) => o.job_id === job_id);
       const entry = {
-        job_id,
-        disableCrmSync: !!disableCrmSync,
-        disableAtsSync: !!disableAtsSync,
+        job_id
+        disableCrmSync: !!disableCrmSync
+        disableAtsSync: !!disableAtsSync
       }
       // Check condition
 if (state.overrides[idx] = entry) {
@@ -57,8 +62,8 @@ if (state.overrides[idx] = entry) {
       else state.overrides.push (entry);
     });
     return res.status (200).json ({
-      ok: true,
-      override: updated.overrides.find ((o) => o.job_id === job_id),
+      ok: true
+      override: updated.overrides.find ((o) => o.job_id === job_id)
     });
   }
   return res.status (405).json ({ error: "Method not allowed" });

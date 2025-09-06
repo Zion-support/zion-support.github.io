@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*;
   Minimal React type declarations.;
   ---------------------------------------------------------------------------;
@@ -137,3 +138,12 @@ declare namespace React {;
 */;
   }
 }
+=======
+import 'react';
+
+declare module 'react' {
+  interface CSSProperties {
+    [key: `--${string}`]: string | number;
+  }
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

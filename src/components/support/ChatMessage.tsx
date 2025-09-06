@@ -1,5 +1,9 @@
 import { useTheme } from "@/hooks/useTheme";
+<<<<<<< HEAD
 interface ChatMessageProps {;
+=======
+interface ChatMessageProps {
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   message: string;
   isUser: boolean;
 
@@ -49,6 +53,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
       <div
         className={cn(
+<<<<<<< HEAD
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
@@ -355,3 +360,5 @@ function formatMessageWithLinks (message: string): string {
   return formatted_message; return formatted_message;
 }
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

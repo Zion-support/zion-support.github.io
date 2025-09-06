@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -16,6 +28,8 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     
     return this.props.children;
   }
@@ -25,6 +39,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -35,10 +51,41 @@ const SAMPLE_QUERIES = [
   "Mobile app developers iOS/Android"
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  "React developers under $50/hr"
+  "Part-time DevOps jobs in LATAM"
+  "AI/ML engineers for startup"
+  "Blockchain developers remote"
+  "UI/UX designers available now"
+  "Full-stack developers with Next && Next.js"
+import type { NextApiRequest, NextApiResponse } from './next';
+const SAMPLE_QUERIES = [;
+  "React developers under $50 / hr"
+  "Part - time DevOps jobs in LATAM"
+  "AI / ML engineers for startup"
+  "Blockchain developers remote"
+  "UI / UX designers available now"
+  "Full - stack developers with Next.js"
+  "Data scientists with Python"
+  "Mobile app developers iOS / Android"
+  "Cloud architects AWS / Azure"
+  "DevOps engineers with Kubernetes"
+];
+
+
+  if (req.method !== "GET") {;
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
   }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { q = "" } = req.query;
 
   if (req && req.method !== "GET") {
@@ -50,8 +97,47 @@ const SAMPLE_QUERIES = [
 
 
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
-    s && s.toLowerCase().includes(query),
+    s && s.toLowerCase().includes(query)
   ).slice(0, 5);
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+=======
+    res.set_header ("Allow", "GET");
+    return res.status (405).json ({ error: "Method not allowed" });
+  }
+  const { q = "" } = req.query;
+  const query = String (q).toLowerCase ();
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json ({ suggestions: SAMPLE_QUERIES.slice (0, 5) });
+  }
+  const suggestions = SAMPLE_QUERIES.filter ((s) =>;
+    s.toLowerCase ().includes (query)
+  ).slice (0, 5);
+;
+  return res.status (200).json ({ suggestions });
+
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -95,3 +181,8 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

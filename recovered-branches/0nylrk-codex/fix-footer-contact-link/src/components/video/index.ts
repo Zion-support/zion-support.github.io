@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export * from './VideoCallRoom';
 ;
@@ -8,3 +9,6 @@ export const Index = () => {
   return null;
 };
 
+=======
+export * from "./VideoCallRoom";
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

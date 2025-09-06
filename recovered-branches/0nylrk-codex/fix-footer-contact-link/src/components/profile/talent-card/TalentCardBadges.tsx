@@ -5,6 +5,12 @@ interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
 
+<<<<<<< HEAD
+=======
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
+  if (!featured) return null;
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <div className="absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10">
       <Badge className="bg-transparent border-0 flex items-center gap-1 text-white px-0">
@@ -12,12 +18,16 @@ interface TalentCardBadgesProps {
         <span>Featured</span>
       </Badge>
     </div>
+<<<<<<< HEAD
 }
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
 interface TalentCardBadgesProps {;
   featured: boolean | undefined;
+=======
+  );
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
@@ -55,9 +65,25 @@ if (return null) {
       </Badge>;
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   )
   )
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
@@ -65,3 +91,11 @@ interface TalentCardBadgesProps {;
   featured: boolean | undefined;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

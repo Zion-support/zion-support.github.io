@@ -55,6 +55,7 @@ const observer = new IntersectionObserver ( ([entry]) => {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   return () => observer.disconnect ();
 }, [lazy, priority, isInView]);
 //Generate WebP - compatible src const getOptimizedSrc = (original_src: string) =>: any {
@@ -67,6 +68,30 @@ if ( {) {
 }`;
 }
   const img_ref = useRef < HTMLDivElement>(null);
+=======
+;
+export function OptimizedImage({;
+  src,;
+  alt,;
+  width,;
+  height,;
+  className,;
+  priority = false,;
+  placeholder = 'empty',;
+  blurDataURL,;
+  quality = 75,;
+  sizes,;
+  onLoad,;
+  onError,;
+  fallbackSrc,;
+  lazy = true,;
+  ...props;
+}: OptimizedImageProps) {;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [hasError, setHasError] = useState(false),;
+  const [isInView, setIsInView] = useState(!lazy || priority),;
+  const imgRef = useRef<HTMLDivElement>(null),;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   // Intersection Observer for lazy loading;
 
     return () => observer.disconnect ();
@@ -237,7 +262,7 @@ if (return blurDataURL) {
           height={height}
           priority={priority}
           blurDataURL={
-            placeholder === 'blur' ? generateBlurDataURL () : undefined;
+            placeholder === 'blur' ? generateBlurDataURL() : undefined
           }
 
           className={cn(            'transition-opacity duration-300'
@@ -256,7 +281,7 @@ if (return blurDataURL) {
 
 
           {...props}
-        />;
+        />
       )}
       {/* Loading placeholder */}
 
@@ -267,9 +292,15 @@ if (return blurDataURL) {
 
       )}
       {/* Error fallback */}
+<<<<<<< HEAD
       {hasError && (;
         <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
           {fallbackSrc ? (;
+=======
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+          {fallbackSrc ? (
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <img
               src={fallbackSrc}
               alt={alt}
@@ -281,7 +312,8 @@ if (return blurDataURL) {
               <svg
                 className='w-8 h-8 mx-auto mb-2'
                 fill='currentColor'
-                viewBox='0 0 20 20'>;
+                viewBox='0 0 20 20'
+              >
                 <path
                   fillRule='evenodd'
                   d='M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z'
@@ -311,7 +343,7 @@ if (return blurDataURL) {
 
             </div>
           )}
-        </div>;
+        </div>
       )}
       {/* Lazy loading placeholder */}
 

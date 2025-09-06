@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
@@ -9,6 +10,8 @@ import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricin
 import { CountrySelector } from "./CountrySelector",
 import { PaymentSection } from "./PaymentSection",
 import { ServiceDetails } from "./ServiceDetails",
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {
   onsiteServicePricing,
   CountryPricing,
@@ -29,6 +32,32 @@ export function CountryServiceSelector({
     <div className="space-y-6">
       <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
         <CountrySelector
+<<<<<<< HEAD
+=======
+          onCountryChange={onCountryChange || (() => {})}
+          selectedCountry={initialCountry || null}
+        />
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+      {initialCountry && <ServiceDetails country={initialCountry.country} />}
+    </div>
+  );
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+
+        {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
+      </div>
+
+>>>>>>> main
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
   );
@@ -92,3 +121,10 @@ selectedCountry?: CountryPricing | null
   )
 }
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

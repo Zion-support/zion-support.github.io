@@ -1,6 +1,45 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
+
+<<<<<<< HEAD
+
+    );
+    fs && fs.copyFileSync(file && file.filepath, targetPath);
+    appendAuditLog({
+
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+
+
+=======
+import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
+export const config = { api: { bodyParser: false } }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import formidable from 'formidable';
+import fs from 'fs';
+import path from 'path';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
@@ -25,7 +64,16 @@ import path from 'path';
     );
     fs && fs.copyFileSync(file && file.filepath, targetPath);
     appendAuditLog({
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     res.status(200).json({ ok: true })
       type: 'file_upload',
       section,
@@ -34,7 +82,28 @@ import path from 'path';
     res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) });
     res && res.status(200).json({ ok: true })
+<<<<<<< HEAD
   })
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  })
+
+}
+
+}
+
+=======
+=======
+  })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';
 ;
 export const config = { api: { body_parser: false } }
@@ -78,3 +147,19 @@ function handler() {
     res.status (200).json ({ ok: true });
   });
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

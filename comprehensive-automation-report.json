@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   "timestamp": "2025-09-06T17:31:43.872Z",
   "duration": "46s",
   "results": {
@@ -39,5 +43,105 @@
     "buildSuccess": true,
     "testsPassed": 0,
     "totalErrors": 5
+=======
+<<<<<<< HEAD
+  "timestamp": "2025-09-06T10:42:27.266Z",
+  "totalDuration": 60241,
+=======
+  "timestamp": "2025-09-06T10:44:46.097Z",
+  "totalDuration": 76866,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+  "successfulTasks": 6,
+  "totalTasks": 8,
+  "results": {
+    "dependencyFix": {
+      "success": true,
+<<<<<<< HEAD
+      "duration": 7037,
+=======
+      "duration": 22421,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
+      "warnings": []
+    },
+    "codeQuality": {
+      "success": false,
+<<<<<<< HEAD
+      "duration": 27333,
+=======
+      "duration": 27631,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
+      "warnings": []
+    },
+    "securityAudit": {
+      "success": true,
+<<<<<<< HEAD
+      "duration": 1719,
+=======
+      "duration": 1683,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
+      "warnings": []
+    },
+    "buildOptimization": {
+      "success": true,
+<<<<<<< HEAD
+      "duration": 6250,
+=======
+      "duration": 6198,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
+      "warnings": []
+    },
+    "seoOptimization": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "success": false,
+      "duration": 39,
+"errors": [],
+=======
+      "success": true,
+      "duration": 43,
+      "errors": [],
+>>>>>>> cursor/automate-test-improve-and-merge-code-88cd
+=======
+      "success": true,
+      "duration": 46,
+      "errors": [],
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "warnings": []
+    },
+    "accessibilityImprovement": {
+      "success": false,
+<<<<<<< HEAD
+      "duration": 9508,
+=======
+      "duration": 9692,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
+      "warnings": []
+    },
+    "performanceOptimization": {
+      "success": true,
+<<<<<<< HEAD
+      "duration": 6736,
+=======
+      "duration": 7154,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
+      "warnings": []
+    },
+    "deployment": {
+      "success": true,
+<<<<<<< HEAD
+      "duration": 1612,
+=======
+      "duration": 2037,
+>>>>>>> cursor/automate-test-improve-and-merge-code-e883
+      "errors": [],
+      "warnings": []
+    }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 }

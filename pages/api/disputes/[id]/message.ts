@@ -5,25 +5,25 @@ import {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
-  parseUserFromRequest,
+  parseUserFromRequest
   ensureInvolvedOrAdmin,;
 } from "../../../../utils/auth";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
 
-  parseUserFromRequest,
+  parseUserFromRequest
   ensureInvolvedOrAdmin,;
 
 } from "../../../../utils/auth";
 export default async function handler(
 
-  req: NextApiRequest,
-  res: NextApiResponse,
+  req: NextApiRequest
+  res: NextApiResponse
 ) {;
   const { id } = req.query;
 
@@ -44,8 +44,8 @@ export default async function handler(
       return res && res.status(400).json({ error: "Message body required" });
     const now = new Date().toISOString();
     dispute && dispute.messages.push({
-      id: `${Date && Date.now()}`,
-      authorUserId: user && user.id,
+      id: `${Date && Date.now()}`
+      authorUserId: user && user.id
 
       authorRole:
         user && user.role === "admin"

@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 // Security Configuration;
 export const security_config = {
   // Content Security Policy;
+=======
+<<<<<<< HEAD
+// Security Configuration;
+export const security_config = {
+  // Content Security Policy;
+=======
+// Security Configuration
+export const securityConfig = {
+  // Content Security Policy
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   csp: {
     directives: {
 
@@ -14,6 +26,33 @@ export const security_config = {
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+      upgradeInsecureRequests: [],
+    },
+  },
+
+  // Security Headers
+  headers: {
+    "X-Frame-Options": "DENY",
+    "X-Content-Type-Options": "nosniff",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+  },
+
+  // Rate Limiting
+  rateLimit: {
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+  },
+};
+
+export default securityConfig;
+<<<<<<< HEAD
+=======
+=======
 
       upgradeInsecureRequests: []
     }
@@ -54,5 +93,12 @@ export const security_config = {
     window_ms: 15 * 60 * 1000, // 15 minutes;
     max: 100 // limit each IP to 100 requests per window_ms;
   }
+<<<<<<< HEAD
 }
 export default security_config;
+=======
+};
+export default securityConfig;
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

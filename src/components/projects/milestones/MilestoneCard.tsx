@@ -52,9 +52,15 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 import { Check, ArrowDown, X } from 'lucide-react';
+<<<<<<< HEAD
 import { useDisputeCheck } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+=======
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface MilestoneCardProps {;
   id: string,;
   projectId: string,;
@@ -63,11 +69,19 @@ interface MilestoneCardProps {;
   amount: number,;
   status: string,;
   dueDate?: string,;
+<<<<<<< HEAD
   onApprove?: (id: string,) => Promise<void>,;
   onReject?: (id: string,) => Promise<void>;
 }
 
 export function MilestoneCard(): any ({;
+=======
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+;
+export function MilestoneCard({;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id,;
   projectId,;
   title,;
@@ -76,7 +90,11 @@ export function MilestoneCard(): any ({;
   status,;
   dueDate,;
   onApprove,;
+<<<<<<< HEAD
   onReject,;
+=======
+  onReject;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
 
@@ -84,7 +102,11 @@ export function MilestoneCard(): any ({;
 
         return 'bg-green-500';
       case 'in_progress':;
+<<<<<<< HEAD
         return 'bg-blue-500';
+=======
+        return 'bg-blue-500',;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       case 'pending':;
         return 'bg-yellow-500';
       case 'rejected':;
@@ -286,6 +308,7 @@ interface MilestoneCardProps {
           {isUnderDispute && (
 
         </div>;
+<<<<<<< HEAD
 
         <div className='flex gap-2'>;
           {status === 'pending' && onReject && !isUnderDispute && (;
@@ -300,6 +323,43 @@ interface MilestoneCardProps {
 
           {isUnderDispute && (;
             <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>;
+=======
+      </CardHeader>;
+      <CardContent className="pb-2">;
+        {description && (;
+          <p className="text-muted-foreground">{description}</p>;
+        )}
+        <div className="mt-4">;
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>;
+        </div>;
+      </CardContent>;
+      <CardFooter className="pt-2 flex justify-between">;
+        <div>;
+          {status !== 'completed' && status !== 'rejected' && (;
+            <RaiseDisputeButton;
+              projectId={projectId} ;
+              milestoneId={id} ;
+              variant="ghost";
+              size="sm";
+            />;
+          )}
+        </div>;
+        <div className="flex gap-2">;
+          {status === 'pending' && onReject && !isUnderDispute && (;
+            <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
+              <X className="h-4 w-4 mr-1" /> Reject;
+            </Button>;
+          )}
+;
+          {status === 'pending' && onApprove && !isUnderDispute && (;
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
+              <Check className="h-4 w-4 mr-1" /> Approve;
+            </Button>;
+          )}
+;
+          {isUnderDispute && (;
+            <Button variant="outline" size="sm" disabled>;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               Actions frozen due to dispute;
             </Button>;
           )}

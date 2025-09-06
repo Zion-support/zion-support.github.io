@@ -1,5 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
+  res.status(200).json({ message: 'Uptime report endpoint' });
+  return;
+}
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const p = path.join(
   process.cwd()
   'data'
@@ -26,6 +36,21 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: e?.message || 'Failed to read uptime' });
   }
 if (req.method === 'POST') {
+<<<<<<< HEAD
+=======
+=======
+
+    try {
+      const data = fs.readFileSync (p, 'utf8');
+      const uptime = JSON.parse (data);
+      return res.status (200).json (uptime);
+    } catch (error) {
+      return res.status (500).json ({ error: 'Failed to read uptime report' });
+    }
+
+  if (req && req.method === 'POST') {
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     try {
       const { uptime, downtime, incidents } = req && req.body;
       
@@ -35,10 +60,25 @@ if (req.method === 'POST') {
         downtime: downtime |0
         incidents: incidents |[]
         generatedAt: new Date().toISOString()
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+      };
+      fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
+      return res && res.status(201).json(report);
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
       return res && res.status(500).json({ error: 'Failed to update uptime report' });
     }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -52,11 +92,20 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(arr);
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read uptime log' });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -67,3 +116,16 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 }
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+>>>>>>> f59a91e3dcdcf25af5f37ca0b88c2f62d1c3a94b
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+}
+
+  return res && res.status(405).json({ error: "method_not_allowed" });
+}
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 import type { EnterpriseRole } from "../../../../../utils / types / enterprise";
@@ -92,13 +105,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   $2
 }
     const r: EnterpriseRole = role || "viewer";
+=======
     const member = store.add_member (company_id, name, email, r);
     return res.status (201).json (member);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ members: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -165,8 +188,13 @@ if ( {) {
       .status (ok ? 200 : 404);
       .json (ok ? { success: true } : { error: "member_not_found" });
   }
+=======
   return res.status (405).json ({ error: "method_not_allowed" });
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
     const member = store.addMember(companyId, name, email, r);
@@ -184,6 +212,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
   if (req.method === 'GET') {
     const { memberId, role } = req.body || {};
@@ -236,3 +266,13 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

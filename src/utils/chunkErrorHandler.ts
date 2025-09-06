@@ -191,7 +191,7 @@ if ( {) {
         context: 'chunkErrorRecovery',
 
         } catch (e) {
-          // Ignore local_storage errors;
+          // Ignore localStorage errors
         }
 
     window && window.location.replace(window && window.location.href);
@@ -229,22 +229,20 @@ if ( {) {
 
 
       });
-      logErrorToProduction ('Caches cleared successfully', undefined, {
-        context: 'chunkErrorRecovery',
-        action: 'cache - clear',
-      });
-    } catch (error) {
-      logErrorToProduction ('Failed to clear caches', error as Error, {
-        context: 'chunkErrorRecovery',
-        action: 'cache - clear - failed',
+    } catch (error) {;
+      logErrorToProduction('Failed to clear caches', error as Error, {;
+        context: 'chunkErrorRecovery',;
+        action: 'cache-clear-failed';
       });
     }
   }
-  private reload_page (): void {
+;
+  private reloadPage(): void {;
     // Use replace to avoid adding to history;
-    window.location.replace (window.location.href);
+    window.location.replace(window.location.href);
   }
-  private hard_refresh (): void {
+;
+  private hardRefresh(): void {;
     // Force a hard refresh bypassing all caches;
 
     window.location.href = window.location.href + '?_t=' + Date.now();
@@ -452,6 +450,7 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
         </button>;
+<<<<<<< HEAD
         <button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
@@ -505,10 +504,51 @@ export default chunkErrorHandler;
         </button>;
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
 }
 }
+<<<<<<< HEAD
+=======
+;
+  // Public method to manually trigger recovery;
+  public triggerRecovery(): void {;
+    this.clearCaches().then(() => {;
+      this.reloadPage();
+    });
+  }
+;
+  // Public method to check if we're in a chunk error state;
+  public isInErrorState(): boolean {;
+    const sessionKey = this.getSessionKey(),;
+    const stats = this.errorStats.get(sessionKey),;
+    return stats ? stats.errorCount > 0 : false;
+  }
+;
+  // Public method to reset error state;
+  public resetErrorState(): void {;
+    const sessionKey = this.getSessionKey(),;
+    this.errorStats.delete(sessionKey);
+  }
+}
+;
+// Create and export singleton instance;
+export const chunkErrorHandler = new ChunkErrorHandler();
+// Export for manual usage;
+export default chunkErrorHandler;
+export default chunkErrorHandler;
+        ">;
+          Try Again;
+        </button>;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+        <button onclick="window.location.href='/'" style=";
+export default chunkErrorHandler;
+}
+}
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 ;
   // Public method to manually trigger recovery;

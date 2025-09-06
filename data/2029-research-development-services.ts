@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   name: string;
   description: string;
@@ -254,6 +258,11 @@
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
 
 
+=======
+
+
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
   ];    features: [;
       'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
@@ -359,6 +368,13 @@
     category: ['BiotechnologyResearchHealthcareDrug DiscoveryClinical Trials'],
     price: '$6, 999 / month',    features: [;
       'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     ];
     benefits: [
       'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs'
@@ -366,6 +382,22 @@
     useCases: [
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech'
     ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+    marketSize: '$22 && 22.8B by 2029', competitors: ['BenchlingLabVantageSciNoteLabArchives'],
+    technology: ['AI/MLBiotechnologyData ScienceResearch Tools'], integration: ['Lab equipmentResearch databasesClinical systems'],
+    support: ['24/7 biotech supportBiotech expertsResearch team'], compliance: ['FDAHIPAAGCPResearch ethics'],
+    scalability: 'Biotech-grade, multi-institution support',
+    market_size: '$22.8B by 2029', competitors: ['BenchlingLabVantageSciNoteLabArchives'],
+    technology: ['AI / MLBiotechnologyData ScienceResearch Tools'], integration: ['Lab equipment_research databases_clinical systems'],
+    support: ['24 / 7 biotech support_biotech experts_research team'], compliance: ['FDAHIPAAGCPResearch ethics'],
+    scalability: 'Biotech - grade, multi - institution support',
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     roi: '500% within 20 months',
     deployment: 'Cloud - based, biotech infrastructure',
     maintenance: 'Continuous updates, biotech optimization',
@@ -383,11 +415,43 @@
     funding: 'Series B funding, $120M valuation',
     exit: 'IPO or biotech acquisition',
     contact: {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
+
+    }
+  }
+
+=======
+
+export interface ResearchDevelopmentService2029 {;
+
+    }
+  }
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+=======
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     }
   }
 ];
+=======
 export interface ResearchDevelopmentService2029 {;
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -616,12 +680,24 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
 ];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
 ;
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

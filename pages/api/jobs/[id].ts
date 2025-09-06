@@ -1,17 +1,37 @@
 
 
+=======
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
+<<<<<<< HEAD
+=======
+
+
+const FILE = "jobs && jobs.json";
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+const FILE = "jobs.json";
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (idx === -1) {
     res && res.status(404).json({ error: "Job not found" });
     return;
@@ -25,7 +45,6 @@ import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
   }
 
   if (req && req.method === "PATCH") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const userEmail = getRequestUserEmail(req);
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job && job.clientEmail;
@@ -36,6 +55,74 @@ import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
     }
     const {
 
+<<<<<<< HEAD
+=======
+      title
+      description
+      category
+      required_skills
+      budgetMinUsd
+      budgetMaxUsd
+      deliveryDeadlineIso
+      status
+      res.status(403).json({ error: 'Forbidden' });
+      return
+    }
+
+    const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {};
+
+    if (typeof title === 'string') job.title = title;
+    if (typeof description === 'string') job.description = description;
+    if (typeof category === 'string') job.category = category;
+    if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map(String);
+    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined;
+    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
+    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
+    if (typeof status === 'string') job.status = status as Job['status'];
+    } = req.body || {}
+    // Check condition
+if (job.title = title) {
+  $2
+}
+    // Check condition
+if (job.description = description) {
+  $2
+}
+    // Check condition
+if (job.category = category) {
+  $2
+}
+    if ()) {
+  $2
+}
+      job.required_skills = required_skills.map (String);
+    // Check condition
+if (
+      job.budgetMinUsd = budgetMinUsd ?? undefined) {
+  $2
+}
+    // Check condition
+if (
+      job.budgetMaxUsd = budgetMaxUsd ?? undefined) {
+  $2
+}
+    // Check condition
+if (
+      job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined) {
+  $2
+}
+    // Check condition
+if (job.status = status as Job["status"]) {
+  $2
+}
+    job.updatedAtIso = new Date ().toISOString ();
+    jobs[idx] = job;
+    writeJsonFile < Job[]>(FILE, jobs);
+;
+    res.status (200).json ({ job });
+    return;
+  }
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -109,6 +196,7 @@ export default function handler(req, res) {
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
+<<<<<<< HEAD
       title,
       description,
       category,
@@ -117,6 +205,16 @@ export default function handler(req, res) {
       budgetMaxUsd,
       deliveryDeadlineIso,
       status,
+=======
+      title
+      description
+      category
+      required_skills
+      budgetMinUsd
+      budgetMaxUsd
+      deliveryDeadlineIso
+      status
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
       res.status(403).json({ error: 'Forbidden' });
       return
@@ -132,6 +230,11 @@ export default function handler(req, res) {
     if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
     if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
     if (typeof status === 'string') job.status = status as Job['status'];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     job.updatedAtIso = new Date().toISOString();
     jobs[idx] = job,;
     writeJsonFile<Job[]>(FILE, jobs),;
@@ -159,6 +262,13 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
 }
   } catch (error) {
@@ -166,16 +276,29 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+=======
+}
+
+  if (req.method === "PATCH") {
+    const userEmail = getRequestUserEmail(req);
+    const job = jobs[idx];
+    const isOwner = userEmail && userEmail === job.clientEmail;
+    if (!isOwner && !isAdminEmail(userEmail)) {
+      res.status(403).json({ error: "Forbidden" });
+      return;
+    }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     const {
-      title,
-      description,
-      category,
-      requiredSkills,
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
-      status,
+      title
+      description
+      category
+      requiredSkills
+      budgetMinUsd
+      budgetMaxUsd
+      deliveryDeadlineIso
+      status
     } = req.body || {};
     if (typeof title === "string") job.title = title;
     if (typeof description === "string") job.description = description;
@@ -202,3 +325,9 @@ res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

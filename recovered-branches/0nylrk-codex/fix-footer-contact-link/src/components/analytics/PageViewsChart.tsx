@@ -10,6 +10,10 @@ import {
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {;
   Card,;
   CardContent,;
@@ -25,12 +29,77 @@ import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 }
 
 
+<<<<<<< HEAD
+=======
+import React from "react";
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface PageViewsChartProps {
+  data: Array<{ date: string, views: number }>;
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void
+}
+export function PageViewsChart({
+  data
+  timeRange
+  onTimeRangeChange
+}: PageViewsChartProps) {
+
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 interface PageViewsChartProps {
   data: Array<{ date: string, views: number }>,
   timeRange: string,
   onTimeRangeChange: (range: string) => void
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+} from "@/components/ui/card";
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+interface PageViewsChartProps {;
+  data: Array<{ date: string; views: number }>;
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export function PageViewsChart(): any ({;
+  data,;
+  timeRange,;
+  onTimeRangeChange,;
+}: PageViewsChartProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -42,6 +111,28 @@ interface PageViewsChartProps {
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart
           title=""
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+=======
+=======
+export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>
+        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>
+      </CardHeader>
+      <CardContent className="p-0 pb-4">
+        <AnalyticsChart 
+          title=""
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           data={data |[]}
           dataKeys={["views"]}
           timeRange={timeRange}
@@ -49,6 +140,13 @@ interface PageViewsChartProps {
         />
       </CardContent>
     </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
@@ -68,8 +166,48 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
       <CardContent className="p-0 pb-4">;
         <AnalyticsChart;
           title="";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           data={data || []}
           dataKeys={["views"]}
+<<<<<<< HEAD
+=======
+
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+;
+interface PageViewsChartProps {;
+  data:Array<{ date:string, views:number }>,;
+  timeRange:string,;
+  onTimeRangeChange:(range:string) => void;
+}
+;
+export function PageViewsChart({ data, timeRange, onTimeRangeChange } PageViewsChartProps) {;
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+      <CardHeader className="pb-2">;
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;
+        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>;
+      </CardHeader>;
+      <CardContent className="p-0 pb-4">;
+        <AnalyticsChart ;
+          title="";
+          data={data || []}
+          dataKeys={['views']}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          data={data || []}
+          dataKeys={["views"]}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
@@ -77,6 +215,13 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
     </Card>;
   );
     </Card>;
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 import React from './react';
 import {
@@ -115,3 +260,43 @@ function PageViewsChart() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+}
+  ),;}
+ interface PageViewsChartProps {
+  data: Array< {
+  date: string, views: number 
+}>;
+timeRange: string;
+onTimeRangeChange: (range: string) => void 
+}export function PageViewsChart ({
+  data, timeRange, onTimeRangeChange 
+}: PageViewsChartProps) {
+  return (<Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-2" > <CardTitle className="text-white text-lg" >Page Views Trend</CardTitle> <CardDescription className="text-zion-slate-light" >Daily page view statistics</CardDescription> p-0 pb-4"> <AnalyticsChart title="" data= {
+  data || [] 
+}dataKeys= {
+  ['views'] 
+}timeRange= {
+  timeRange 
+}onTimeRangeChange= {
+  onTimeRangeChange 
+}/> </CardContent> </Card>) 
+}
+          data={data || []}
+          dataKeys={["views"]}
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+      </CardContent>
+        />;
+      </CardContent>;
+    </Card>;
+  );
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

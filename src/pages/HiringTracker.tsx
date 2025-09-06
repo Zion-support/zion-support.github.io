@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+=======
+return (
+    <>;
+      <SEO
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title='Hiring Tracker | Zion AI Marketplace'
         description='Manage your candidate pipeline in the Zion AI Marketplace.'
 
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useRouter } from "next/router",
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
@@ -23,16 +30,34 @@ import { Briefcase } from 'lucide-react'
               <Briefcase className="mr-2 h-6 w-6 text-primary" />
               Hiring Pipeline
             </h1>
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <p className="text-muted-foreground mt-1">
+              Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
 
 
+<<<<<<< HEAD
+=======
+
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TabsList>
-            <TabsTrigger value='kanban'>Kanban Board</TabsTrigger>
-            <TabsTrigger value='analytics'>Analytics</TabsTrigger>
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
+=======
+
+
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+          <TabsList>
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>
           </TabsList>
@@ -40,11 +65,22 @@ import { Briefcase } from 'lucide-react'
             <KanbanBoard jobId={jobId} />
           </TabsContent>
 
+<<<<<<< HEAD
+=======
+          
+          <TabsContent value="kanban" className="mt-6">
+            <KanbanBoard jobId={jobId} />
+          </TabsContent>
+          
+
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <TabsContent value="analytics" className="mt-6">
+            <HiringAnalytics jobId={jobId} />
           </TabsContent>
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
       <HiringTrackerContent />
     </ProtectedRoute>
 
@@ -107,3 +143,13 @@ function HiringTrackerContent() {;
     </ProtectedRoute>;
   );
 }
+=======
+
+  );
+}
+
+
+export default function HiringTracker() {
+  return (
+    <ProtectedRoute>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

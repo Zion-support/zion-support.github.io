@@ -333,10 +333,18 @@ function TalentDashboard() {
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Update Resume</span>;
           </Button>;
+<<<<<<< HEAD
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
             aria-label="View Portfolio">;
+=======
+          <Button;
+            variant="outline";
+            className="h-auto py-4 flex flex-col gap-1";
+            aria-label="View Portfolio";
+          >;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Portfolio</span>;
           </Button>;
@@ -406,33 +414,15 @@ function TalentDashboard() {
           </Button>;
         </div>;
       </section>;
-
-      <section>;
-        <div className='flex items-center justify-between mb-4'>;
-          <h2 className='text-lg font-medium'>Learning Hub</h2>;
-          <Button variant='ghost' size='sm' className='h-8'>            View all;
-          </Button>;
-        </div>;
-        <Card>      ;
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">Learning Hub</h2>;
           <Button variant="ghost" size="sm" className="h-8">;
+            View all;
           </Button>;
         </div>;
         <Card>;
-          <CardContent className='p-4'>;
-            <div className='flex items-center gap-3'>;
-              <div
-                className='bg-primary/10 p-3 rounded-full'
-                aria-hidden='true'>;
-                <BookOpen className='h-6 w-6 text-primary' />;
-              </div>;
-              <div>;
-                <h3 className='font-medium'>Improve your profile visibility</h3>;
-                <p className='text-sm text-muted-foreground'>;
-                  5 tips for getting noticed by clients;
-                </p>              </div>          <CardContent className="p-4">;
+          <CardContent className="p-4">;
             <div className="flex items-center gap-3">;
               <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">;
                 <BookOpen className="h-6 w-6 text-primary" />;

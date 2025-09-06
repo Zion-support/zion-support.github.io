@@ -1,3 +1,40 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+  salary_range: z && z.string().optional(),
+  description: z && z.string().min(10, {
+    message: "Description must be at least 10 characters."});
+  responsibilities: z && z.string().optional();
+  qualifications: z && z.string().optional();
+  benefits: z && z.string().optional();
+  application_instructions: z && z.string().optional(),
+  contact_email: z && z.string().email({
+    message: "Please enter a valid email address."}).optional();
+  published_date: z && z.string().optional();
+  expiry_date: z && z.string().optional();
+  is_remote: z && z.boolean().default(false).optional();
+  category: z && z.string().optional();
+  status: z && z.string().optional(),
+  external_apply_link: z && z.string().url({
+    message: "Please enter a valid URL."}).optional()});
+<<<<<<< HEAD
+
+export type JobSchemaType = z && z.infer<typeof jobSchema>;
+
+=======
+=======
+
+export type JobSchemaType = z && z.infer<typeof jobSchema>;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { z } from './zod';
 export const job_schema = z.object ({
   title: z.string ().min (3, {
@@ -27,14 +64,51 @@ export const job_schema = z.object ({
 ;
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
 import {z} from "zod";
 import { z } from "zod",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import {z} from "zod";
 export const jobSchema = z.object({
   title: z.string().min(3, {;
     message: "Title must be at least 3 characters."});
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { z } from "zod",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { z } from "zod",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export const jobSchema = z.object({
+  title: z.string().min(3, {
+    message: "Title must be at least 3 characters."}),
+
+import { z } from "zod",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
@@ -43,6 +117,30 @@ export const jobSchema = z.object({
   location: z.string().min(3, {
     message: "Location must be at least 3 characters."}),
   job_type: z.string().min(3, {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    message: "Job type must be at least 3 characters."});
+  salary_range: z.string().optional()
+  description: z.string().min(10, {
+    message: "Description must be at least 10 characters."});
+  responsibilities: z.string().optional();
+  qualifications: z.string().optional();
+  benefits: z.string().optional();
+  application_instructions: z.string().optional()
+  contact_email: z.string().email({
+    message: "Please enter a valid email address."}).optional();
+  published_date: z.string().optional();
+  expiry_date: z.string().optional();
+  is_remote: z.boolean().default(false).optional();
+  category: z.string().optional();
+  status: z.string().optional()
+  external_apply_link: z.string().url({
+    message: "Please enter a valid URL."}).optional()});
+export type JobSchemaType = z.infer<typeof jobSchema>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     message: "Job type must be at least 3 characters."}),
   salary_range: z.string().optional(),
@@ -62,6 +160,18 @@ export const jobSchema = z.object({
   external_apply_link: z.string().url({
     message: "Please enter a valid URL."}).optional()}),
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+export type JobSchemaType = z.infer<typeof jobSchema>;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export type JobSchemaType = z.infer<typeof jobSchema>,
 import { z } from "zod",;
 export const jobSchema = z.object({;
@@ -90,3 +200,12 @@ export const jobSchema = z.object({;
   external_apply_link: z.string().url({;
     message: "Please enter a valid URL."}).optional()});
 export type JobSchemaType = z.infer<typeof jobSchema>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type JobSchemaType = z.infer<typeof jobSchema>;
+export type JobSchemaType = z.infer<typeof jobSchema>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

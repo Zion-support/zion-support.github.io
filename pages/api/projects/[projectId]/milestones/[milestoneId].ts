@@ -2,10 +2,17 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
+<<<<<<< HEAD
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
+=======
+  getProject
+  updateMilestone
+  assertParticipantOrAdmin
+  isClient
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   isTalent,;
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";

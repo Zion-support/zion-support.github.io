@@ -15,6 +15,36 @@ export /**
  */
 function BillingHeader() {
   return (
+<<<<<<< HEAD
+    <div className="space - y-2">;
+      <div className="flex items - center justify - between">;
+        <h1 className="text - 3xl font - bold tracking - tight">;
+          Billing & Invoices;
+        </h1>;
+        <div className="flex gap - 2">;
+          <Button variant="outline" size="sm" className="gap - 1">;
+            <Download className="h - 4 w - 4" />;
+            Export;
+          </Button>;
+          <Button variant="outline" size="sm" className="gap - 1">;
+            <Mail className="h - 4 w - 4" />;
+            Contact Billing Support;
+          </Button>;
+          <Button variant="outline" size="sm" className="gap - 1" as_child>;
+            <Link to="/dashboard / client / analytics">;
+              <BarChart3 className="h - 4 w - 4" />;
+
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Download, FileText, Mail, BarChart3 } from "lucide-react",;
+import { Link } from "react-router-dom",;
+;
+export function BillingHeader() {;
+  return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-2">;
       <div className="flex items-center justify-between">;
         <h1 className="text-3xl font-bold tracking-tight">;
@@ -29,11 +59,52 @@ function BillingHeader() {
             <Mail className="h-4 w-4" />;
             Contact Billing Support;
           </Button>;
+<<<<<<< HEAD
+          <Button variant="outline" size="sm" className="gap-1" asChild>;
+            <Link to="/dashboard/client/analytics">;
+              <BarChart3 className="h-4 w-4" />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Analytics;
             </Link>;
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      <p className="text - muted - foreground">;
+        Manage your subscription, view invoice history, and update payment;
+        methods.;
+      </p>;
+    </div>);
+
+}
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Download, FileText, Mail, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Download, FileText, Mail, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Download, FileText, Mail, BarChart3 } from "lucide-react",
+import { Link } from "react-router-dom",
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -59,6 +130,21 @@ export function BillingHeader() {
       <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    </div>
+  );
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     </div>;
   );
 }
@@ -97,6 +183,13 @@ export function BillingHeader() {;
   );
 }
 ;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

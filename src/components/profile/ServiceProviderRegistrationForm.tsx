@@ -25,12 +25,9 @@ if ( {) {
     }
     setIsSubmitting (true);
     try {
-      // For actual implementation with Supabase;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error ('User not authenticated');
+      // For actual implementation with Supabase
+      if (!user?.id) {
+        throw new Error('User not authenticated')
       }
 
       // Enhance profile if not already done;
@@ -268,7 +265,7 @@ if ( {) {
   $2
 }
         try {
-          await supabase.functions.invoke ('send - email', {
+          await supabase.functions.invoke('send-email', {
             body: {
 
 
@@ -832,19 +829,26 @@ export function ServiceProviderRegistrationForm() {;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
               {/* Basic Information */}
+<<<<<<< HEAD
               <div className='space-y-4'>;
                 <h3 className='text-lg font-medium text-white'>;
                   Basic Information;
                 </h3>;
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>;
                   <div className='col-span-1'>;
+=======
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium text-white">Basic Information</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="col-span-1">
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                     <FormField
                       control={form.control}
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
                   control={form.control}
-                  name='enhanced_profile';
+                  name="enhancedProfile"
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
                       <div className='space - y-0.5'>;
@@ -868,10 +872,10 @@ export function ServiceProviderRegistrationForm() {;
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
                       onClick={generateEnhancedProfile}
-                      disabled={isGenerating}>;
-                      <Sparkles className='mr-2 h-4 w-4' />;
-                      {isGenerating;
-                        ? 'Generating...';
+                      disabled={isGenerating}                    >
+                      <Sparkles className='mr-2 h-4 w-4' />
+                      {isGenerating
+                        ? 'Generating...'
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
@@ -959,12 +963,13 @@ export function ServiceProviderRegistrationForm() {;
 
                                   <Badge
                                     key={index}
-                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'>;
+                                    className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'
+                                  >
                                     {service}
-                                  </Badge>;
-                                );
+                                  </Badge>
+                                )
                               )}
-                            </div>                          </div>;
+                            </div>                          </div>
                         )}
 
                       
@@ -1019,9 +1024,15 @@ export function ServiceProviderRegistrationForm() {;
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a service...'
                               {...field}
+<<<<<<< HEAD
                               onKeyDown = {handleServiceKeyPress,}
                             />;
                           </FormControl>;
+=======
+                              onKeyDown={handleServiceKeyPress}
+                            />
+                          </FormControl>
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                           <Button
 
                   />;
@@ -1053,10 +1064,10 @@ export function ServiceProviderRegistrationForm() {;
 
 
                 {/* Pricing and Availability Section */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-medium text-white'>;
-                    Pricing & Availability;
-                  </h3>;
+                <div className='space-y-4'>
+                  <h3 className='text-lg font-medium text-white'>
+                    Pricing & Availability
+                  </h3>
                   <FormField
                     control={form && form.control}
                     name='hourlyRate'
@@ -1247,22 +1258,22 @@ export function ServiceProviderRegistrationForm() {;
 
 
                   <FormField
-                    control={form && form.control}
+                    control={form.control}
                     name='availability'
-                    render={({ field }: { field: any }) => (;
-                      <FormItem className='space-y-4'>;
-                        <FormLabel className='text-zion-slate-light'>;
-                          Current Status;
-                        </FormLabel>                        <FormControl>;
-                          <div className='space-y-2'>;
-                            <div className='flex items-center space-x-2'>;
+                    render={({ field }: { field: any }) => (
+                      <FormItem className='space-y-4'>
+                        <FormLabel className='text-zion-slate-light'>
+                          Current Status
+                        </FormLabel>                        <FormControl>
+                          <div className='space-y-2'>
+                            <div className='flex items-center space-x-2'>
                               <input
                                 type='radio'
                                 id='available'
                                 value='available'
-                                checked={field && field.value === 'available'}
-                                onChange={() => field && field.onChange('available')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />;
+                                checked={field.value === 'available'}
+                                onChange={() => field.onChange('available')}
+                                className='text-zion-purple focus:ring-zion-purple'                              />
                               <label
                                 htmlFor='available'
 
@@ -1278,9 +1289,9 @@ export function ServiceProviderRegistrationForm() {;
                                 type='radio'
                                 id='limited'
                                 value='limited'
-                                checked={field && field.value === 'limited'}
-                                onChange={() => field && field.onChange('limited')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />;
+                                checked={field.value === 'limited'}
+                                onChange={() => field.onChange('limited')}
+                                className='text-zion-purple focus:ring-zion-purple'                              />
                               <label
                                 htmlFor='limited'
 
@@ -1296,9 +1307,9 @@ export function ServiceProviderRegistrationForm() {;
                                 type='radio'
                                 id='unavailable'
                                 value='unavailable'
-                                checked={field && field.value === 'unavailable'}
-                                onChange={() => field && field.onChange('unavailable')}
-                                className='text-zion-purple focus:ring-zion-purple'                              />;
+                                checked={field.value === 'unavailable'}
+                                onChange={() => field.onChange('unavailable')}
+                                className='text-zion-purple focus:ring-zion-purple'                              />
                               <label
                                 htmlFor='unavailable'
                                 className='text-white flex items-center gap-2'>;
@@ -1438,6 +1449,7 @@ export function ServiceProviderRegistrationForm() {;
   setServiceTags (service_tags.filter ( (s) => s !== service) );
 
 }
+<<<<<<< HEAD
 //Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {
 }
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
@@ -1447,6 +1459,12 @@ if ( {) {
   $2
 }
   const reader = new FileReader ();
+=======
+//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const file = e.target.files?.[0]
+if (file) {
+  const reader = new FileReader ()
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 reader.onloadend = () => {
 
   setUploadedAvatar (reader.result as string);
@@ -1467,7 +1485,7 @@ reader.readAsDataURL (file);
   //Fallback for mock / development mode log_warn ('Mock AI response - using fallback content');
 
 setGeneratedContent ({
-}catch (error: any) {';
+}catch (error: any) {'
   logErrorToProduction ('Error generating enhanced profile:', {
 
   data: error;
@@ -1477,36 +1495,28 @@ toast ({
   setIsGenerating (false);
 
 }
-//Apply generated content to form const applyGeneratedContent = () =>: any {
-  // Check condition
-if ( {') {
-  $2
+//Apply generated content to form const applyGeneratedContent = () => {
+  if (generatedContent) {'
+  const newServices = generatedContent.services.filter (service => typeof service === 'string' && service && !serviceTags.includes (service) )
+if (newServices.length > 0) {
 }
-  const new_services = generated_content.services.filter (service => typeof service === 'string' && service && !service_tags.includes (service) );
-// Check condition
-if ( {) {
-  $2
-}
-}
-//Handle form submission const on_submit = async (values: ServiceFormValues) => {
-  // Check condition
-if ( {) {
-  $2
-}
+//Handle form submission const onSubmit = async (values: ServiceFormValues) => {
+  if (serviceTags.length === 0) {
   toast ({
   return;
+<<<<<<< HEAD
 }setIsSubmitting (true);
+=======
+}setIsSubmitting (true)
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 try {
-  //For actual implementation with Supabase // Check condition
-if ( {) {
-  $2
-}
-}//Enhance profile if not already done let final_summary = values.bio;
-let final_services = service_tags;
+  //For actual implementation with Supabase if (!user?.id) {
+}//Enhance profile if not already done let finalSummary = values.bio
+let finalServices = serviceTags
 try {
   const {
-  data: ai_data ';
-}= await supabase.functions.invoke ('service - profile - enhancer', {
+  data: aiData '
+}= await supabase.functions.invoke ('service-profile-enhancer', {
   body: {
 
 

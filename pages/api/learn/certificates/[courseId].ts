@@ -90,21 +90,22 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string },
+  const { courseId, userId = 'demo-user' } = req.query as { courseId: string, userId?: string }
   try {
-    const users = readJson(usersPath),
-    const courses = readJson(coursesPath),
-    const course = courses.find((c: any) => c.id === courseId),
-    const user = users[userId],
-    if (!course) return res.status(404).json({ error: 'Course not found' }),
-    if (!user) return res.status(404).json({ error: 'User not found' }),
-    res.setHeader('Content-Typeapplication/pdf'),
-    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`),
-    const doc = new PDFDocument({ size: 'A4', margin: 50 }),
+    const users = readJson(usersPath)
+    const courses = readJson(coursesPath)
+    const course = courses.find((c: any) => c.id === courseId)
+    const user = users[userId]
+    if (!course) return res.status(404).json({ error: 'Course not found' })
+    if (!user) return res.status(404).json({ error: 'User not found' })
+    res.setHeader('Content-Typeapplication/pdf')
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`)
+    const doc = new PDFDocument({ size: 'A4', margin: 50 })
     // Pipe to response
     // @ts-ignore
-    doc.pipe(res),
+    doc.pipe(res)
     // Zion certificate template (simple)
+<<<<<<< HEAD
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a'),
     doc.fill('#ffffff'),
     doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false }),
@@ -123,6 +124,26 @@ export default function handler(req, res) {
     const date = new Date().toLocaleDateString(),
     doc.moveDown(2),
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
+=======
+    doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a')
+    doc.fill('#ffffff')
+    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false })
+    doc.moveDown(0.5)
+    doc.fontSize(18).text('Certificate of Completion', { align: 'center' })
+    doc.moveDown(1.5)
+    doc.fontSize(14).text(`This certifies that`, { align: 'center' })
+    doc.moveDown(0.5)
+    doc.fontSize(22).text(user.name || user.userId, { align: 'center' })
+    doc.moveDown(0.5)
+    doc.fontSize(14).text(`has successfully completed`, { align: 'center' })
+    doc.moveDown(0.5)
+    doc.fontSize(20).text(course.title, { align: 'center' })
+    doc.moveDown(0.5)
+    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' })
+    const date = new Date().toLocaleDateString()
+    doc.moveDown(2)
+    doc.fontSize(12).text(`Date: ${date}`, { align: 'center' })
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     doc.end()
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
@@ -149,12 +170,12 @@ export default function handler(req, res) {
 }
     res.set_header ('Content - Type', 'application / pdf');
     res.set_header (
-      'Content - Disposition',
+      'Content - Disposition'
       `attachment; filename="${course_id}-certificate.pdf"`);
     const doc = new PDFDocument ({ size: 'A4', margin: 50 });
     res.set_header ('Content - Typeapplication / pdf');
     res.set_header ('Content - Disposition', `attachment, filename="${course_id}-certificate.pdf"`);
-    const doc = new PDFDocument ({ size: 'A4', margin: 50 }),
+    const doc = new PDFDocument ({ size: 'A4', margin: 50 })
     // Pipe to response;
     // @ts - ignore;
     doc.pipe (res);

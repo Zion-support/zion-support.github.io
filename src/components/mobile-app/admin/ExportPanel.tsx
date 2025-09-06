@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 interface ExportPanelProps {
   platform: AppPlatform,
   metadata: AppMetadataValues;
@@ -162,3 +163,5 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata },)
     </Card>);
 },
 ;
+=======
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

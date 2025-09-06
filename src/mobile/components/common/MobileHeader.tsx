@@ -100,7 +100,7 @@ export function MobileHeader(): any ({;
               <span className="sr-only">Back</span>;
             </Button>;
           )}
-          <h1 className="text-lg font-medium leading-none truncate">;
+          <h1 className="text-lg font-medium leading-none truncate">
             {title}
 
           </h1>;

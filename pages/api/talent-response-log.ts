@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST'),
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST')
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   const { talentId, action } = req.body |{}
@@ -10,6 +26,7 @@
   const payload = { talentId, action, at: new Date().toISOString() }
 
   return res.status(200).json({ ok: true, data: payload })
+<<<<<<< HEAD
   const payload = { talentId, action, at: new Date().toISOString() },
   return res.status(200).json({ ok: true, data: payload });
 };
@@ -54,3 +71,6 @@ if ( {) {
   // Placeholder for persistence, echo the response for now;
 
 
+=======
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

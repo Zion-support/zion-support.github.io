@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function randomString(length: number): string {
@@ -10,18 +11,37 @@ function randomString(length: number): string {
 }
 
 
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next',
+;
+function randomString(length: number) {
+  const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+  let res = '',
+  const cryptoObj = require('crypto'),
+  const bytes: Buffer = cryptoObj.randomBytes(length),
+  for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length],
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 function randomString(length: number) {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   let res = ''
   const cryptoObj = require('crypto')
   const bytes: Buffer = cryptoObj.randomBytes(length)
   for (let i = 0, i < length, i++) res += charset[bytes[i] % charset.length]
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return res
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 /**
@@ -46,3 +66,7 @@ function handler() {
 ;
 
 
+=======
+  res.status(200).json({ nonce })
+};
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

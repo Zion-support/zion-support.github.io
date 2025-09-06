@@ -18,8 +18,12 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 type EmptyStateCardProps = {;
   type: 'active' | 'archived';
+<<<<<<< HEAD
 };
 
+=======
+},;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
   const isActive = type === 'active';  ;
 
@@ -68,11 +72,11 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 
         </h3>;
         <p className="text-zion-slate-light max-w-md mx-auto">;
-          {isActive ;
+          {isActive;
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
           }
-        </p>;
+        </p>
       </CardContent>;
     </Card>;
   );

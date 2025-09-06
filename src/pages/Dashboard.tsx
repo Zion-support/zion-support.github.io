@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Lazy load heavy components to prevent router abort
 const CommunityDiscussion = dynamic(
   () =>
@@ -656,3 +657,19 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
     </>;
   );
 }
+=======
+import React from 'react';
+
+const Dashboard: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4 text-center">
+        <h1 className="text-5xl font-bold text-gray-900 mb-6">Dashboard</h1>
+        <p className="text-xl text-gray-600">Welcome to your dashboard.</p>
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
+>>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
