@@ -32,17 +32,6 @@ jest.mock("next/image", () => {
 });
 
 // Mock Next.js Link component
-<<<<<<< HEAD
-jest.mock("next/link", () => {
-  return function MockedLink({ children, href, ...props }) {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    );
-  };
-});
-=======
 jest.mock('next/link', () => ({
   _esModule: true,
   default: ({ children, href, ...props }) => {
@@ -86,4 +75,3 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
->>>>>>> cursor/automate-test-improve-and-merge-code-88cd
