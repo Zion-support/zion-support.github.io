@@ -3,6 +3,7 @@
 
 
 
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -132,11 +133,13 @@ const Pricing = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
 
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
             Pricing Plans
           </h1>
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up">
             Choose the perfect plan for your business needs. All plans include our core services with flexible pricing options.
           </p>
@@ -176,10 +179,12 @@ const Pricing = () => {
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center">
                     <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+
                     <span className="text-gray-300">{feature}</span>
                   </li>
                 ))}
               </ul>
+
 
               <Link
                 to="/contact"
@@ -191,9 +196,11 @@ const Pricing = () => {
               >
                 Get Started
               </Link>
+
             </div>
           ))}
         </div>
+
 
         {/* Service Pricing */}
         <div className="mb-20">
@@ -443,6 +450,7 @@ const Pricing = () => {
 
 
 
+
     </div>
   );
 };
@@ -451,5 +459,7 @@ const Pricing = () => {
 
 
 
+
 export default Pricing;
+
 

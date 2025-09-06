@@ -6,6 +6,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
+
 import Footer from './src/components/Footer';
 
 
@@ -14,10 +15,12 @@ import Footer from './src/components/Footer';
 import HomePage from './src/pages/Home';
 
 
+
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
+
 
 
 
@@ -33,11 +36,15 @@ export default function App() {
 
 
 
+
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Header />
-          <main className="p-6">
+
+          <Sidebar />
+          <main className="flex-1 lg:ml-80">
+
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -52,6 +59,8 @@ export default function App() {
     </ErrorBoundary>
   );
 
+
 }
+
 
 

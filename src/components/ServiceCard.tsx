@@ -4,6 +4,7 @@ interface ServiceCardProps {
   title: string;
   description: string;
   icon: string;
+
   features: string[];
   className?: string;
 }
@@ -28,6 +29,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           </li>
         ))}
       </ul>
+
     </div>
   );
 };

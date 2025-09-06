@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { motion } from 'framer-motion';
 
 
@@ -146,16 +147,19 @@ const About: React.FC = () => {
             >
               Call Us
             </a>
+
           </div>
         </div>
       </div>
     </div>
   );
 
+
 };
 
 
 export default About;
+
 
 
 

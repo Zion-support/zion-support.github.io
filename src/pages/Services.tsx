@@ -232,19 +232,54 @@ const Services = () => {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Talk to our experts about your project. We'll help you choose the right service and create a custom solution for your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              Call +1 302 464 0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-            >
-              Email Us
-            </a>
+
+        </div>
+
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with comprehensive security solutions including threat detection, vulnerability assessment, and compliance."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions including migration, optimization, and managed services."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="Blockchain & Web3"
+            description="Leverage blockchain technology for secure, transparent, and decentralized business solutions."
+            icon="⛓️"
+          />
+          <ServiceCard
+            title="IoT & Edge Computing"
+            description="Connect and manage devices with intelligent edge computing solutions for real-time data processing."
+            icon="🌐"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, visualization, and business intelligence tools."
+            icon="📊"
+          />
+        </div>
+
+        {/* Industry Solutions */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <Card title="Healthcare" description="AI-powered medical solutions" />
+            <Card title="Finance" description="Secure fintech innovations" />
+            <Card title="Manufacturing" description="Smart factory automation" />
+            <Card title="Retail" description="E-commerce optimization" />
+            <Card title="Education" description="Digital learning platforms" />
+            <Card title="Government" description="Public sector modernization" />
+
           </div>
         </div>
 
