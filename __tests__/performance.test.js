@@ -24,7 +24,7 @@ test.describe('Performance Tests', () => {
         }
       });
     });
-
+    
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;

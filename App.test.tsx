@@ -11,7 +11,7 @@ describe('App', () => {
 
   it('displays correct content', () => {
     render(<App />);
-    expect(screen.getByText('Hello App')).toBeInTheDocument();
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
 
   it('handles user interactions', () => {

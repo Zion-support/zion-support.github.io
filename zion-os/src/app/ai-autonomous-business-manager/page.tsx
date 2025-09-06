@@ -1,4 +1,6 @@
- export default function AIBusinessManagerPage () {
+import Link from 'next/link';
+
+export default function AIBusinessManagerPage() {
   return (<div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto"> {
   /* Hero Section */ 
 }<div className="text-center mb-16"> <h1 className="text-5xl md:text-6xl font-bold mb-6"> AI Autonomous <span className="gradient-text">Business Manager</span> </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"> Intelligent business management that operates autonomously, making strategic decisions and optimizing operations 24/7 without human intervention. </p> </div> {

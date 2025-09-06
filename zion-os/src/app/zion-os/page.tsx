@@ -1,4 +1,6 @@
- export default function ZionOSPage () {
+import Link from 'next/link';
+
+export default function ZionOSPage() {
   return (<div className="min-h-screen"> {
   /* Hero Section */ 
 }<section className="relative py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-7xl mx-auto text-center"> <h1 className="text-5xl md:text-6xl font-bold mb-6"> <span className="gradient-text">Zion OS</span> </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"> Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"> <Link href="/multiverse/launch" className="btn-primary text-lg px-8 py-4"> Launch Your Economy </Link> <Link href="/docs" className="btn-secondary text-lg px-8 py-4"> View Documentation </Link> </div> </div> {
