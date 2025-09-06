@@ -23,6 +23,7 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 ## 📦 Services Covered
 
 ### AI & Machine Learning
+
 - Machine Learning Models
 - AI Chatbots & Virtual Assistants
 - Predictive Analytics
@@ -30,6 +31,7 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 - Natural Language Processing
 
 ### IT Infrastructure
+
 - Cloud Migration & Strategy
 - DevOps Implementation
 - Infrastructure as Code
@@ -37,6 +39,7 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 - Disaster Recovery
 
 ### Micro SaaS Development
+
 - Custom Web Applications
 - API Development & Integration
 - Database Design & Optimization
@@ -44,6 +47,7 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 - Payment Processing
 
 ### Additional Services
+
 - Cybersecurity Solutions
 - Data Analytics & BI
 - Digital Transformation
@@ -55,23 +59,26 @@ A modern, responsive website built with Next.js showcasing comprehensive technol
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Zion-Holdings/zion.app.git
 cd zion.app
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```

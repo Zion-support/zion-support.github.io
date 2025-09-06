@@ -16,14 +16,14 @@ module.exports = {
         NODE_ENV: 'production',
         PORT: 3000,
         ENABLE_METRICS: 'true',
-        ENABLE_AI_FEATURES: 'true'
+        ENABLE_AI_FEATURES: 'true',
       },
       env_development: {
         NODE_ENV: 'development',
         PORT: 3000,
         DEBUG: 'true',
         ENABLE_METRICS: 'true',
-        ENABLE_AI_FEATURES: 'true'
+        ENABLE_AI_FEATURES: 'true',
       },
       log_file: './logs/web.log',
       out_file: './logs/web-out.log',
@@ -33,7 +33,7 @@ module.exports = {
       time: true,
       kill_timeout: 5000,
       wait_ready: true,
-      listen_timeout: 10000
-    }
-  ]
+      listen_timeout: 10000,
+    },
+  ],
 };

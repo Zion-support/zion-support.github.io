@@ -34,8 +34,8 @@ function fixAdvancedSyntax(content, filePath) {
   fixed = fixed.replace(/import\s+([^,]+),\s*import/gm, 'import $1;\nimport');
   
   // Fix object syntax
-  fixed = fixed.replace(/"([^"]+)":\s*([^,}]+),;/g, '"$1": $2,');
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
+  fixed = fixed.replace(/"([^"]+)":\s*([^,}]+);/g, '"$1": $2,');
+  fixed = fixed.replace(/(\w+):\s*([^,}]+);/g, '$1: $2,');
   
   // Fix array syntax
   fixed = fixed.replace(/\[([^\]]+),\]/g, '[$1]');
@@ -47,7 +47,7 @@ function fixAdvancedSyntax(content, filePath) {
   fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
   
   // Fix semicolons after commas
-  fixed = fixed.replace(/,;/g, ',');
+  fixed = fixed.replace(/;/g, ',');
   
   // Fix double commas
   fixed = fixed.replace(/,+/g, ',');

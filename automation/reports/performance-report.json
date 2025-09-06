@@ -1,18 +1,9 @@
 {
-<<<<<<< HEAD
-  "buildTime": 5200,
-  "bundleSize": 31907362,
-  "memoryUsage": 4.470428466796875,
-  "cpuUsage": 0.009982,
-  "lastUpdated": "2025-09-05T21:49:20.812Z",
-  "recommendations": [
-    "Consider code splitting - bundle size is large"
-=======
-  "timestamp": "2025-09-05T21:44:02.888Z",
+  "timestamp": "2025-09-05T22:15:31.132Z",
   "optimizations": [
     "Bundle analysis completed",
     "Found 3 images",
-    "Analyzed 107 dependencies"
+    "Analyzed 111 dependencies"
   ],
   "recommendations": [
     "Consider implementing code splitting",
@@ -20,6 +11,5 @@
     "Remove unused dependencies",
     "Enable gzip compression",
     "Use React.memo for expensive components"
->>>>>>> dee69f7abb748a793666f5594a9924708a24cc59
   ]
 }

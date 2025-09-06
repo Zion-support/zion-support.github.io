@@ -7,142 +7,174 @@ const { execSync } = require('child_process');
 class EnhancedAppOptimizer {
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'enhanced-optimizer.log');
-    this.reportsDir = path.join(__dirname, 'reports');
-    this.ensureDirectories();
+    this.ensureLogDir(),
   }
 
-  ensureDirectories() {
-    const dirs = [path.dirname(this.logFile), this.reportsDir];
-    dirs.forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true }),
+    }
   }
 
   log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
-  async runCommand(command, description) {
+  async optimizeBundle() {
+    this.log('📦 Starting bundle optimization...');
     try {
-      this.log(`Running: ${description}`);
-      const result = execSync(command, { 
-        stdio: 'pipe', 
-        cwd: process.cwd(),
-        timeout: 300000
-      });
-      this.log(`✓ ${description} completed successfully`);
-      return { success: true, output: result.toString() };
+      // Analyze bundle size
+      execSync('npm run analyze', { stdio: 'pipe' }),
+      this.log('✅ Bundle analysis completed');
+      
+      // Optimize images
+      execSync('npm run optimize:images', { stdio: 'pipe' }),
+      this.log('✅ Image optimization completed');
+      
+      return true,
     } catch (error) {
-      this.log(`✗ ${description} failed: ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async optimizeImages() {
-    this.log('🖼️ Optimizing images...');
-    
-    const imageOptimizations = [
-      { cmd: 'npm run optimize:images', desc: 'Image optimization' },
-      { cmd: 'npm run build:analyze', desc: 'Bundle analysis' }
-    ];
-
-    for (const opt of imageOptimizations) {
-      await this.runCommand(opt.cmd, opt.desc);
+      this.log(`❌ Bundle optimization failed: ${error.message}`),
+      return false,
     }
   }
 
   async optimizePerformance() {
-    this.log('⚡ Optimizing performance...');
-    
-    const perfOptimizations = [
-      { cmd: 'npm run perf:monitor', desc: 'Performance monitoring' },
-      { cmd: 'npm run perf:audit', desc: 'Performance audit' }
-    ];
-
-    for (const opt of perfOptimizations) {
-      await this.runCommand(opt.cmd, opt.desc);
+    this.log('⚡ Starting performance optimization...');
+    try {
+      // Run performance audit
+      execSync('npm run perf:audit', { stdio: 'pipe' }),
+      this.log('✅ Performance audit completed');
+      
+      // Run lighthouse
+      execSync('npm run perf:lighthouse', { stdio: 'pipe' }),
+      this.log('✅ Lighthouse audit completed');
+      
+      return true,
+    } catch (error) {
+      this.log(`❌ Performance optimization failed: ${error.message}`),
+      return false,
     }
   }
 
   async optimizeSEO() {
-    this.log('🔍 Optimizing SEO...');
-    
-    const seoOptimizations = [
-      { cmd: 'npm run sitemap:generate', desc: 'Generate sitemap' },
-      { cmd: 'npm run search:index', desc: 'Generate search index' }
-    ];
-
-    for (const opt of seoOptimizations) {
-      await this.runCommand(opt.cmd, opt.desc);
+    this.log('🔍 Starting SEO optimization...');
+    try {
+      // Generate sitemap
+      execSync('npm run sitemap:generate', { stdio: 'pipe' }),
+      this.log('✅ Sitemap generation completed');
+      
+      // Generate search index
+      execSync('npm run search:index', { stdio: 'pipe' }),
+      this.log('✅ Search index generation completed');
+      
+      return true,
+    } catch (error) {
+      this.log(`❌ SEO optimization failed: ${error.message}`),
+      return false,
     }
   }
 
   async optimizeAccessibility() {
-    this.log('♿ Optimizing accessibility...');
-    
-    const a11yOptimizations = [
-      { cmd: 'npm run automation:accessibility', desc: 'Accessibility check' },
-      { cmd: 'npm run test:accessibility', desc: 'Accessibility tests' }
-    ];
-
-    for (const opt of a11yOptimizations) {
-      await this.runCommand(opt.cmd, opt.desc);
+    this.log('♿ Starting accessibility optimization...');
+    try {
+      // Run accessibility tests
+      execSync('npm run test:accessibility', { stdio: 'pipe' }),
+      this.log('✅ Accessibility tests completed');
+      
+      // Run accessibility checker
+      execSync('npm run automation:accessibility', { stdio: 'pipe' }),
+      this.log('✅ Accessibility checker completed');
+      
+      return true,
+    } catch (error) {
+      this.log(`❌ Accessibility optimization failed: ${error.message}`),
+      return false,
     }
   }
 
-  async generateOptimizationReport() {
+  async optimizeSecurity() {
+    this.log('🔒 Starting security optimization...');
+    try {
+      // Run security audit
+      execSync('npm run security:audit', { stdio: 'pipe' }),
+      this.log('✅ Security audit completed');
+      
+      // Run security scanner
+      execSync('npm run automation:security-audit', { stdio: 'pipe' }),
+      this.log('✅ Security scanner completed');
+      
+      return true,
+    } catch (error) {
+      this.log(`❌ Security optimization failed: ${error.message}`),
+      return false,
+    }
+  }
+
+  async generateReport() {
     this.log('📊 Generating optimization report...');
-    
     const report = {
       timestamp: new Date().toISOString(),
       optimizations: {
-        images: 'completed',
-        performance: 'completed',
-        seo: 'completed',
-        accessibility: 'completed'
+        bundle: await this.optimizeBundle(),
+        performance: await this.optimizePerformance(),
+        seo: await this.optimizeSEO(),
+        accessibility: await this.optimizeAccessibility(),
+        security: await this.optimizeSecurity()
       },
-      recommendations: [
-        'Consider implementing lazy loading for images',
-        'Enable gzip compression for static assets',
-        'Implement service worker for caching',
-        'Add structured data markup for better SEO'
-      ],
-      nextSteps: [
-        'Monitor Core Web Vitals',
-        'Set up automated performance testing',
-        'Implement A/B testing for key pages',
-        'Regular accessibility audits'
-      ]
-    };
+      summary: {
+        totalOptimizations: 5,
+        successfulOptimizations: 0,
+        failedOptimizations: 0
+      }
+    },
 
-    const reportPath = path.join(this.reportsDir, 'enhanced-optimization-report.json');
+    // Calculate summary
+    Object.values(report.optimizations).forEach(success => {
+      if (success) {
+        report.summary.successfulOptimizations++,
+      } else {
+        report.summary.failedOptimizations++,
+      }
+    });
+
+    const reportPath = path.join(__dirname, 'reports', 'enhanced-optimization-report.json');
+    const reportDir = path.dirname(reportPath);
+    if (!fs.existsSync(reportDir)) {
+      fs.mkdirSync(reportDir, { recursive: true }),
+    }
+    
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
+    this.log(`📄 Report saved to: ${reportPath}`),
+    
+    return report,
   }
 
   async run() {
+    this.log('🚀 Starting Enhanced App Optimizer...');
+    
     try {
-      this.log('🚀 Starting Enhanced App Optimizer...');
+      const report = await this.generateReport();
       
-      await this.optimizeImages();
-      await this.optimizePerformance();
-      await this.optimizeSEO();
-      await this.optimizeAccessibility();
-      await this.generateOptimizationReport();
+      this.log('🏁 Enhanced App Optimizer completed');
+      this.log(`✅ Successful optimizations: ${report.summary.successfulOptimizations}`),
+      this.log(`❌ Failed optimizations: ${report.summary.failedOptimizations}`),
       
-      this.log('🎉 Enhanced App Optimization completed successfully!');
+      return report,
     } catch (error) {
-      this.log(`❌ Enhanced App Optimization failed: ${error.message}`);
-      process.exit(1);
+      this.log(`💥 Enhanced App Optimizer failed: ${error.message}`),
+      throw error,
     }
   }
 }
 
-// Run the optimizer
-const optimizer = new EnhancedAppOptimizer();
-optimizer.run().catch(console.error);
+// Run if called directly
+if (require.main === module) {
+  const optimizer = new EnhancedAppOptimizer();
+  optimizer.run().catch(console.error),
+}
+
+module.exports = EnhancedAppOptimizer;

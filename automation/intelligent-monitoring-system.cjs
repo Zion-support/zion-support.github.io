@@ -1,218 +1,238 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class IntelligentMonitoringSystem {
   constructor() {
-    this.logFile = path.join(__dirname, 'logs', 'intelligent-monitoring.log');
-    this.reportsDir = path.join(__dirname, 'reports');
-    this.metricsFile = path.join(this.reportsDir, 'monitoring-metrics.json');
-    this.ensureDirectories();
+    this.logsDir = path.join(__dirname, '../logs');
+    this.ensureLogsDir();
+    this.metrics = {
+      performance: [],
+      errors: [],
+      warnings: [],
+      successes: [],
+    },
   }
 
-  ensureDirectories() {
-    const dirs = [path.dirname(this.logFile), this.reportsDir];
-    dirs.forEach(dir => {
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-    });
+  ensureLogsDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true }),
+    }
   }
 
-  log(message) {
+  log(message, type = 'info') {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
+    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+
+    const logFile = path.join(this.logsDir, 'intelligent-monitoring.log');
+    fs.appendFileSync(logFile, logMessage + '\n'),
   }
 
   async runCommand(command, description) {
+    const startTime = Date.now();
     try {
-      this.log(`Running: ${description}`);
-      const result = execSync(command, { 
-        stdio: 'pipe', 
-        cwd: process.cwd(),
-        timeout: 300000
+      this.log(`Running: ${description}`),
+      const output = execSync(command, {
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe',
       });
-      this.log(`✓ ${description} completed successfully`);
-      return { success: true, output: result.toString() };
+      const duration = Date.now() - startTime;
+      this.log(`✅ ${description} completed successfully in ${duration}ms`);
+
+      this.metrics.successes.push({
+        command: description,
+        duration,
+        timestamp: new Date().toISOString(),
+      });
+
+      return { success: true, output, duration },
     } catch (error) {
-      this.log(`✗ ${description} failed: ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
+      const duration = Date.now() - startTime;
+      this.log(`❌ ${description} failed: ${error.message}`, 'error');
 
-  async checkSystemHealth() {
-    this.log('🏥 Checking system health...');
-    
-    const healthChecks = [
-      { cmd: 'npm run system:health', desc: 'System health check' },
-      { cmd: 'npm run monitor:health', desc: 'Health monitoring' },
-      { cmd: 'pm2 status', desc: 'PM2 process status' }
-    ];
+      this.metrics.errors.push({
+        command: description,
+        error: error.message,
+        duration,
+        timestamp: new Date().toISOString(),
+      });
 
-    const results = {};
-    for (const check of healthChecks) {
-      results[check.desc] = await this.runCommand(check.cmd, check.desc);
+      return { success: false, error: error.message, duration },
     }
-    
-    return results;
   }
 
   async monitorPerformance() {
-    this.log('📈 Monitoring performance...');
-    
-    const perfChecks = [
-      { cmd: 'npm run perf:monitor', desc: 'Performance monitoring' },
-      { cmd: 'npm run monitor:continuous', desc: 'Continuous monitoring' }
+    this.log('⚡ Monitoring performance...');
+
+    const performanceChecks = [
+      { command: 'npm run build', description: 'Build performance' },
+      { command: 'npm run test:smoke', description: 'Test performance' },
     ];
 
-    const results = {};
-    for (const check of perfChecks) {
-      results[check.desc] = await this.runCommand(check.cmd, check.desc);
+    const results = [];
+    for (const check of performanceChecks) {
+      const result = await this.runCommand(check.command, check.description);
+      results.push({ ...check, result });
+
+      if (result.success) {
+        this.metrics.performance.push({
+          check: check.description,
+          duration: result.duration,
+          timestamp: new Date().toISOString(),
+        }),
+      }
     }
-    
-    return results;
+
+    return { success: true, results },
   }
 
-  async checkSecurity() {
-    this.log('🔒 Checking security...');
-    
+  async monitorHealth() {
+    this.log('🏥 Monitoring health...');
+
+    const healthChecks = [
+      { command: 'npm run lint', description: 'Code health' },
+      { command: 'npm run type-check', description: 'Type health' },
+    ];
+
+    const results = [];
+    for (const check of healthChecks) {
+      const result = await this.runCommand(check.command, check.description);
+      results.push({ ...check, result });
+
+      if (!result.success) {
+        this.metrics.warnings.push({
+          check: check.description,
+          warning: result.error,
+          timestamp: new Date().toISOString(),
+        }),
+      }
+    }
+
+    return { success: true, results },
+  }
+
+  async monitorSecurity() {
+    this.log('🔒 Monitoring security...');
+
     const securityChecks = [
-      { cmd: 'npm audit', desc: 'Security audit' },
-      { cmd: 'npm run automation:security', desc: 'Security automation' }
+      { command: 'npm audit', description: 'Security audit' },
+      { command: 'npm run security:scan', description: 'Security scan' },
     ];
 
-    const results = {};
+    const results = [];
     for (const check of securityChecks) {
-      results[check.desc] = await this.runCommand(check.cmd, check.desc);
+      const result = await this.runCommand(check.command, check.description);
+      results.push({ ...check, result }),
     }
-    
-    return results;
+
+    return { success: true, results },
   }
 
-  async checkCodeQuality() {
-    this.log('🔍 Checking code quality...');
-    
-    const qualityChecks = [
-      { cmd: 'npm run lint', desc: 'Linting check' },
-      { cmd: 'npm run type-check', desc: 'TypeScript check' },
-      { cmd: 'npm run test:smoke', desc: 'Smoke tests' }
-    ];
+  async generateIntelligentReport() {
+    this.log('📊 Generating intelligent monitoring report...');
 
-    const results = {};
-    for (const check of qualityChecks) {
-      results[check.desc] = await this.runCommand(check.cmd, check.desc);
-    }
-    
-    return results;
-  }
-
-  async generateMonitoringReport(healthResults, perfResults, securityResults, qualityResults) {
-    this.log('📊 Generating monitoring report...');
-    
     const report = {
       timestamp: new Date().toISOString(),
-      systemHealth: healthResults,
-      performance: perfResults,
-      security: securityResults,
-      codeQuality: qualityResults,
-      overallStatus: this.calculateOverallStatus(healthResults, perfResults, securityResults, qualityResults),
-      recommendations: this.generateRecommendations(healthResults, perfResults, securityResults, qualityResults),
-      alerts: this.generateAlerts(healthResults, perfResults, securityResults, qualityResults)
+      metrics: this.metrics,
+      analysis: {
+        totalChecks: this.metrics.successes.length + this.metrics.errors.length,
+        successRate:
+          (this.metrics.successes.length /
+            (this.metrics.successes.length + this.metrics.errors.length)) *
+          100,
+        averagePerformance:
+          this.metrics.performance.length > 0
+            ? this.metrics.performance.reduce((sum, p) => sum + p.duration, 0) /
+              this.metrics.performance.length
+            : 0,
+        errorCount: this.metrics.errors.length,
+        warningCount: this.metrics.warnings.length,
+      },
+      recommendations: this.generateRecommendations(),
     };
 
-    fs.writeFileSync(this.metricsFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Monitoring report saved to: ${this.metricsFile}`);
+    // Save report
+    const reportFile = path.join(
+      this.logsDir,
+      `intelligent-monitoring-report-${Date.now()}.json`
+    );
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+
+    this.log(`📄 Report saved to: ${reportFile}`),
+    return report,
   }
 
-  calculateOverallStatus(health, perf, security, quality) {
-    const allResults = [...Object.values(health), ...Object.values(perf), ...Object.values(security), ...Object.values(quality)];
-    const successCount = allResults.filter(r => r.success).length;
-    const totalCount = allResults.length;
-    const successRate = (successCount / totalCount) * 100;
-    
-    if (successRate >= 90) return 'excellent';
-    if (successRate >= 75) return 'good';
-    if (successRate >= 50) return 'fair';
-    return 'poor';
-  }
-
-  generateRecommendations(health, perf, security, quality) {
+  generateRecommendations() {
     const recommendations = [];
-    
-    // Health recommendations
-    Object.entries(health).forEach(([check, result]) => {
-      if (!result.success) {
-        recommendations.push(`Fix health issue: ${check}`);
+
+    if (this.metrics.errors.length > 0) {
+      recommendations.push('Fix failing commands to improve system stability'),
+    }
+
+    if (this.metrics.warnings.length > 0) {
+      recommendations.push('Address warnings to improve code quality'),
+    }
+
+    if (this.metrics.performance.length > 0) {
+      const avgPerf =
+        this.metrics.performance.reduce((sum, p) => sum + p.duration, 0) /
+        this.metrics.performance.length;
+      if (avgPerf > 10000) {
+        recommendations.push('Consider optimizing slow operations'),
       }
-    });
-    
-    // Performance recommendations
-    Object.entries(perf).forEach(([check, result]) => {
-      if (!result.success) {
-        recommendations.push(`Optimize performance: ${check}`);
-      }
-    });
-    
-    // Security recommendations
-    Object.entries(security).forEach(([check, result]) => {
-      if (!result.success) {
-        recommendations.push(`Address security: ${check}`);
-      }
-    });
-    
-    // Quality recommendations
-    Object.entries(quality).forEach(([check, result]) => {
-      if (!result.success) {
-        recommendations.push(`Improve code quality: ${check}`);
-      }
-    });
-    
-    return recommendations;
+    }
+
+    if (this.metrics.successes.length === 0) {
+      recommendations.push(
+        'No successful operations detected - check system configuration'
+      ),
+    }
+
+    return recommendations,
   }
 
-  generateAlerts(health, perf, security, quality) {
-    const alerts = [];
-    
-    // Critical alerts
-    Object.entries(security).forEach(([check, result]) => {
-      if (!result.success) {
-        alerts.push({ level: 'critical', message: `Security issue: ${check}`, timestamp: new Date().toISOString() });
-      }
-    });
-    
-    // Warning alerts
-    Object.entries(health).forEach(([check, result]) => {
-      if (!result.success) {
-        alerts.push({ level: 'warning', message: `Health issue: ${check}`, timestamp: new Date().toISOString() });
-      }
-    });
-    
-    return alerts;
-  }
+  async start() {
+    this.log('🎯 Starting Intelligent Monitoring System...');
 
-  async run() {
     try {
-      this.log('🚀 Starting Intelligent Monitoring System...');
-      
-      const healthResults = await this.checkSystemHealth();
-      const perfResults = await this.monitorPerformance();
-      const securityResults = await this.checkSecurity();
-      const qualityResults = await this.checkCodeQuality();
-      
-      await this.generateMonitoringReport(healthResults, perfResults, securityResults, qualityResults);
-      
-      this.log('🎉 Intelligent Monitoring System completed successfully!');
+      await this.monitorPerformance();
+      await this.monitorHealth();
+      await this.monitorSecurity();
+
+      const report = await this.generateIntelligentReport();
+
+      this.log('🏁 Intelligent Monitoring System completed');
+      this.log(`📊 Success rate: ${report.analysis.successRate.toFixed(2)}%`),
+      this.log(`📊 Total checks: ${report.analysis.totalChecks}`),
+      this.log(`📊 Errors: ${report.analysis.errorCount}`),
+      this.log(`📊 Warnings: ${report.analysis.warningCount}`),
+
+      return report,
     } catch (error) {
-      this.log(`❌ Intelligent Monitoring System failed: ${error.message}`);
-      process.exit(1);
+      this.log(
+        `❌ Intelligent Monitoring System failed: ${error.message}`,
+        'error'
+      );
+      throw error,
     }
   }
 }
 
-// Run the monitoring system
-const monitoringSystem = new IntelligentMonitoringSystem();
-monitoringSystem.run().catch(console.error);
+// CLI interface
+if (require.main === module) {
+  const monitor = new IntelligentMonitoringSystem();
+  monitor
+    .start()
+    .then(report => {
+      console.log('Intelligent monitoring completed:', report.analysis);
+      process.exit(0),
+    })
+    .catch(error => {
+      console.error('Intelligent monitoring failed:', error);
+      process.exit(1),
+    }),
+}
+
+module.exports = IntelligentMonitoringSystem;

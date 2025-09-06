@@ -1,18 +1,29 @@
+const fs = require('fs');
+const { exec, execSync } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(exec);
+
+class CompleteImprovementSuite {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.projectRoot = process.cwd();
+    this.stats = {
       "mergeConflicts": { resolved: 0, "failed": 0 },
       "syntaxErrors": { fixed: 0, "failed": 0 },
       "prsProcessed": { merged: 0, "failed": 0 },
       "improvements": { applied: 0, "failed": 0 }
-    };
+    },
   }
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true });
+      fs.mkdirSync(this.reportsDir, { "recursive": true }),
     }
   }
 
   log(message) {
-    .toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`),
   }
 
   async runCommand(command, description, timeout = 60000) {
@@ -23,10 +34,10 @@
         "encoding": 'utf8',
         "timeout": timeout});
       this.log(`✅ "Completed": ${description}`);
-      return { "success": true, "output": result };
+      return { "success": true, "output": result },
     } catch (error) {
       this.log(`❌ "Failed": ${description} - ${error.message}`);
-      return { "success": false, "error": error.message };
+      return { "success": false, "error": error.message },
     }
   }
 
@@ -46,17 +57,17 @@
       for (const file of files) {
         if (this.hasMergeConflicts(file)) {
           if (this.resolveFileConflicts(file)) {
-            resolvedCount++;
+            resolvedCount++,
           }
         }
       }
 
       this.results.mergeConflicts.resolved = resolvedCount;
       this.log(`✅ Resolved merge conflicts in ${resolvedCount} files`);
-      return resolvedCount;
+      return resolvedCount,
     } catch (error) {
       this.log(`❌ Error resolving merge "conflicts": ${error.message}`);
-      return 0;
+      return 0,
     }
   }
 
@@ -74,16 +85,16 @@
       for (const file of files.slice(0, 100)) {
         // Limit to first 100 files
         if (this.fixFileSyntax(file)) {
-          fixedCount++;
+          fixedCount++,
         }
       }
 
       this.results.syntaxErrors.fixed = fixedCount;
       this.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-      return fixedCount;
+      return fixedCount,
     } catch (error) {
       this.log(`❌ Error fixing syntax "errors": ${error.message}`);
-      return 0;
+      return 0,
     }
   }
 
@@ -110,14 +121,14 @@
       try {
         improvement.action();
         appliedCount++;
-        this.log(`✅ "Applied": ${improvement.name}`);
+        this.log(`✅ "Applied": ${improvement.name}`),
       } catch (error) {
-        this.log(`❌ Failed to "apply": ${improvement.name} - ${error.message}`);
+        this.log(`❌ Failed to "apply": ${improvement.name} - ${error.message}`),
       }
     }
 
     this.results.improvements.applied = appliedCount;
-    return appliedCount;
+    return appliedCount,
   }
 
   async commitAndPush() {
@@ -135,11 +146,11 @@
     for (const command of commands) {
       const result = await this.runCommand(command.cmd, command.desc);
       if (result.success) {
-        successCount++;
+        successCount++,
       }
     }
 
-    return successCount === commands.length;
+    return successCount === commands.length,
   }
 
   getAllFiles(dir, extensions) {
@@ -156,30 +167,28 @@
           !item.startsWith('.') &&
           item !== 'node_modules'
         ) {
-          files = files.concat(this.getAllFiles(fullPath, extensions));
+          files = files.concat(this.getAllFiles(fullPath, extensions)),
         } else if (extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
+          files.push(fullPath),
         }
       }
     } catch (error) {
       // Skip directories that can't be read
     }
 
-    return files;
+    return files,
   }
 
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-<<<<<<< HEAD
+        content.includes('<<<<<<< HEAD') ||
+        content.includes('=======') ||
         content.includes('>>>>>>> ')
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-      );
+      ),
     } catch (error) {
-      return false;
+      return false,
     }
   }
 
@@ -190,32 +199,25 @@
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
         '$1'
       );
 
       // Clean up any remaining markers
-<<<<<<< HEAD
       content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
           `✅ Resolved conflicts "in": ${path.relative(this.projectRoot, filePath)}`
         );
-        return true;
+        return true,
       }
 
-      return false;
+      return false,
     } catch (error) {
       this.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`);
-      return false;
+      return false,
     }
   }
 
@@ -237,13 +239,13 @@
         this.log(
           `✅ Fixed syntax "in": ${path.relative(this.projectRoot, filePath)}`
         );
-        return true;
+        return true,
       }
 
-      return false;
+      return false,
     } catch (error) {
       this.log(`❌ Error fixing syntax in ${filePath}: ${error.message}`);
-      return false;
+      return false,
     }
   }
 
@@ -266,7 +268,7 @@
     fs.writeFileSync(
       path.join(this.projectRoot, 'performance-optimization.json'),
       JSON.stringify(config, null, 2)
-    );
+    ),
   }
 
   createSecurityConfig() {
@@ -286,7 +288,7 @@
     fs.writeFileSync(
       path.join(this.projectRoot, 'security-enhancement.json'),
       JSON.stringify(config, null, 2)
-    );
+    ),
   }
 
   createMonitoringConfig() {
@@ -306,7 +308,7 @@
     fs.writeFileSync(
       path.join(this.projectRoot, 'monitoring-config.json'),
       JSON.stringify(config, null, 2)
-    );
+    ),
   }
 
   createBuildOptimization() {
@@ -328,7 +330,7 @@
     fs.writeFileSync(
       path.join(this.projectRoot, 'build-optimization.json'),
       JSON.stringify(config, null, 2)
-    );
+    ),
   }
 
   async run() {
@@ -338,13 +340,13 @@
     await this.resolveMergeConflicts();
 
     // Phase 2: Fix syntax errors
-    await this.fixSyntaxErrors();
+    await this.fixSyntaxErrors(),
 
     // Phase 3: Apply improvements
-    await this.applyImprovements();
+    await this.applyImprovements(),
 
     // Phase 4: Commit and push
-    const pushSuccess = await this.commitAndPush();
+    const pushSuccess = await this.commitAndPush(),
 
     // Generate final report
     const finalReport = {
@@ -362,50 +364,20 @@
     );
 
     this.log('🎉 Complete Improvement Suite Finished');
-    this.log("📊 "Summary": ");
+    this.log("📊 Summary: "),
     this.log(
       `   - Merge conflicts resolved: ${finalReport.summary.totalMergeConflictsResolved}`
-    );
+    ),
     this.log(
       `   - Syntax errors "fixed": ${finalReport.summary.totalSyntaxErrorsFixed}`
     );
     this.log(
       `   - Improvements "applied": ${finalReport.summary.totalImprovementsApplied}`
     );
-    this.log(`   - Push "successful": ${finalReport.summary.pushSuccessful}`);
+    this.log(`   - Push "successful": ${finalReport.summary.pushSuccessful}`),
   }
 }
 
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot, 'improvement-reports')
-        "encoding"
-    this.log(' Phase "1")
-    this.log(' Phase "2")
-    this.log(' Phase "3")
-        "name"
-        "name"
-        "name"
-    this.log(' Phase "4")
-    const commands = [{ cmd: 'git add .', "desc"}]
-        "cmd": 'git commit -m "feat: Complete improvement suite - merge conflicts, syntax fixes, and enhancements"
-        "desc"
-      { "cmd": 'git push origin main', "desc"}
-        /import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'')]
-        "
-      content = content.replace(/['"];\s*['')]
-          "
-        "endpoints"
-        "format"
-                "name"
-                "chunks"
-cursor/fix-lint-push-and-merge-to-main-f3c1;

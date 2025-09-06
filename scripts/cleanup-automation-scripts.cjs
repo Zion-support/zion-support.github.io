@@ -8,7 +8,7 @@ console.log('🧹 Cleaning up automation scripts...');
 // List of problematic files to remove or fix
 const filesToRemove = [
   'automation/intelligent-orchestrator.js',
-  'automation/lint-automation-manager.js', 
+  'automation/lint-automation-manager.js',
   'automation/lint-error-fixer.js',
   'automation/lint-monitor.js',
   'automation/linting-automation.js',
@@ -110,7 +110,7 @@ const filesToRemove = [
   'simple-automation-suite.cjs',
   'simple-catch-fixer.cjs',
   'targeted-fix.cjs',
-  'working-automation-suite.cjs'
+  'working-automation-suite.cjs',
 ];
 
 let removedCount = 0;
@@ -122,11 +122,11 @@ filesToRemove.forEach(file => {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
       removedCount++;
-      console.log(`✅ Removed: ${file}`);
+      console.log(`✅ Removed: ${file}`),
     }
   } catch (error) {
     errorCount++;
-    console.log(`❌ Error removing ${file}: ${error.message}`);
+    console.log(`❌ Error removing ${file}: ${error.message}`),
   }
 });
 
@@ -139,7 +139,7 @@ const dirsToCheck = [
   'pages.disabled.full',
   'pages.disabled_full',
   'pages-quarantine',
-  'src.pages.disabled'
+  'src.pages.disabled',
 ];
 
 dirsToCheck.forEach(dir => {
@@ -149,11 +149,11 @@ dirsToCheck.forEach(dir => {
       const files = fs.readdirSync(dirPath);
       if (files.length === 0) {
         fs.rmdirSync(dirPath);
-        console.log(`✅ Removed empty directory: ${dir}`);
+        console.log(`✅ Removed empty directory: ${dir}`),
       }
     }
   } catch (error) {
-    console.log(`⚠️  Could not check/remove ${dir}: ${error.message}`);
+    console.log(`⚠️  Could not check/remove ${dir}: ${error.message}`),
   }
 });
 

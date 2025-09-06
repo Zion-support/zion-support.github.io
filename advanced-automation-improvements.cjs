@@ -12,38 +12,46 @@ class AdvancedAutomationImprovements {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
-    this.improvements = [];
+    this.improvements = [],
   }
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
+    const prefix =
+      type === 'ERROR'
+        ? '❌'
+        : type === 'SUCCESS'
+          ? '✅'
+          : type === 'WARNING'
+            ? '⚠️'
+            : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`),
   }
 
   async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`);
+    this.log(`Running: ${description}`),
     try {
-      const result = execSync(command, { 
-        cwd: this.projectRoot, 
+      const result = execSync(command, {
+        cwd: this.projectRoot,
         stdio: 'pipe',
         encoding: 'utf8',
-        ...options
+        ...options,
       });
       this.log(`✅ ${description} completed successfully`);
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
+      return {
+        success: false,
+        error: error.message,
+        output: error.stdout || error.stderr,
+      },
     }
   }
 
-  createIntelligentErrorDetector() {
-    const script = `#!/usr/bin/env node
+  createIntelligentErrorDetector() { const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs'), const path = require('path'), const { execSync  } = require('child_process');
 
 class IntelligentErrorDetector {
   constructor() {
@@ -54,15 +62,15 @@ class IntelligentErrorDetector {
       import: /Cannot resolve module|Import error/gi,
       build: /Build failed|Compilation error/gi,
       runtime: /Runtime error|Uncaught exception/gi
-    };
+    },
     this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -70,7 +78,7 @@ class IntelligentErrorDetector {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
-    fs.appendFileSync(this.logFile, logMessage);
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
   async detectErrors() {
@@ -83,17 +91,17 @@ class IntelligentErrorDetector {
       import: await this.detectImportErrors(),
       build: await this.detectBuildErrors(),
       runtime: await this.detectRuntimeErrors()
-    };
+    },
 
     const totalErrors = Object.values(errors).reduce((sum, arr) => sum + arr.length, 0);
     this.log(\`Found \${totalErrors} total errors across all categories\`);
 
     if (totalErrors > 0) {
       await this.generateErrorReport(errors);
-      await this.suggestFixes(errors);
+      await this.suggestFixes(errors),
     }
 
-    return errors;
+    return errors,
   }
 
   async detectSyntaxErrors() {
@@ -101,13 +109,13 @@ class IntelligentErrorDetector {
       const result = execSync('npx eslint . --format json', { 
         stdio: 'pipe', 
         cwd: process.cwd() 
-      });
+      }),
       const eslintOutput = JSON.parse(result);
       return eslintOutput.filter(issue => 
         issue.messages.some(msg => this.errorPatterns.syntax.test(msg.message))
-      );
+      ),
     } catch (error) {
-      return [];
+      return [],
     }
   }
 
@@ -116,11 +124,11 @@ class IntelligentErrorDetector {
       const result = execSync('npx tsc --noEmit --skipLibCheck', { 
         stdio: 'pipe', 
         cwd: process.cwd() 
-      });
-      return [];
+      }),
+      return [],
     } catch (error) {
       const lines = error.stdout.split('\\n');
-      return lines.filter(line => this.errorPatterns.type.test(line));
+      return lines.filter(line => this.errorPatterns.type.test(line)),
     }
   }
 
@@ -129,11 +137,11 @@ class IntelligentErrorDetector {
       const result = execSync('npm run build', { 
         stdio: 'pipe', 
         cwd: process.cwd() 
-      });
-      return [];
+      }),
+      return [],
     } catch (error) {
       const lines = (error.stdout || error.stderr || '').split('\\n');
-      return lines.filter(line => this.errorPatterns.module.test(line));
+      return lines.filter(line => this.errorPatterns.module.test(line)),
     }
   }
 
@@ -142,11 +150,11 @@ class IntelligentErrorDetector {
       const result = execSync('npx eslint . --rule "import/no-unresolved: error"', { 
         stdio: 'pipe', 
         cwd: process.cwd() 
-      });
-      return [];
+      }),
+      return [],
     } catch (error) {
       const lines = (error.stdout || error.stderr || '').split('\\n');
-      return lines.filter(line => this.errorPatterns.import.test(line));
+      return lines.filter(line => this.errorPatterns.import.test(line)),
     }
   }
 
@@ -155,11 +163,11 @@ class IntelligentErrorDetector {
       const result = execSync('npm run build', { 
         stdio: 'pipe', 
         cwd: process.cwd() 
-      });
-      return [];
+      }),
+      return [],
     } catch (error) {
       const lines = (error.stdout || error.stderr || '').split('\\n');
-      return lines.filter(line => this.errorPatterns.build.test(line));
+      return lines.filter(line => this.errorPatterns.build.test(line)),
     }
   }
 
@@ -178,14 +186,14 @@ class IntelligentErrorDetector {
             line: content.split('\\n').findIndex(line => 
               this.errorPatterns.runtime.test(line)
             ) + 1
-          });
+          }),
         }
       } catch (error) {
         // Skip files that can't be read
       }
     });
 
-    return runtimeErrors;
+    return runtimeErrors,
   }
 
   getSourceFiles() {
@@ -198,18 +206,18 @@ class IntelligentErrorDetector {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-            walkDir(fullPath);
+            walkDir(fullPath),
           } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
-            files.push(fullPath);
+            files.push(fullPath),
           }
-        });
+        }),
       } catch (error) {
         // Skip directories that can't be read
       }
     };
     
     walkDir(process.cwd());
-    return files;
+    return files,
   }
 
   async generateErrorReport(errors) {
@@ -218,49 +226,49 @@ class IntelligentErrorDetector {
       totalErrors: Object.values(errors).reduce((sum, arr) => sum + arr.length, 0),
       errorsByCategory: Object.entries(errors).reduce((acc, [category, errorList]) => {
         acc[category] = errorList.length;
-        return acc;
+        return acc,
       }, {}),
       details: errors
-    };
+    },
 
     const reportFile = path.join(__dirname, 'reports', 'error-detection-report.json');
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true }),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(\`Error report generated: \${reportFile}\`);
+    this.log(\`Error report generated: \${reportFile}\`),
   }
 
   async suggestFixes(errors) {
     const suggestions = [];
     
     if (errors.syntax.length > 0) {
-      suggestions.push('Run ESLint with --fix to automatically fix syntax errors');
+      suggestions.push('Run ESLint with --fix to automatically fix syntax errors'),
     }
     
     if (errors.type.length > 0) {
-      suggestions.push('Review TypeScript configuration and type definitions');
+      suggestions.push('Review TypeScript configuration and type definitions'),
     }
     
     if (errors.module.length > 0) {
-      suggestions.push('Check module imports and dependencies');
+      suggestions.push('Check module imports and dependencies'),
     }
     
     if (errors.import.length > 0) {
-      suggestions.push('Verify import paths and module resolution');
+      suggestions.push('Verify import paths and module resolution'),
     }
     
     if (errors.build.length > 0) {
-      suggestions.push('Review build configuration and dependencies');
+      suggestions.push('Review build configuration and dependencies'),
     }
     
     if (errors.runtime.length > 0) {
-      suggestions.push('Add proper error handling and validation');
+      suggestions.push('Add proper error handling and validation'),
     }
 
     if (suggestions.length > 0) {
-      this.log('💡 Suggested fixes:');
+      this.log('💡 Suggested fixes: '),
       suggestions.forEach((suggestion, index) => {
-        this.log(\`   \${index + 1}. \${suggestion}\`);
+        this.log(\`   \${index + 1}. \${suggestion}\`),
       });
     }
   }
@@ -269,23 +277,24 @@ class IntelligentErrorDetector {
 // Run if called directly
 if (require.main === module) {
   const detector = new IntelligentErrorDetector();
-  detector.detectErrors().catch(console.error);
+  detector.detectErrors().catch(console.error),
 }
 
 module.exports = IntelligentErrorDetector;`;
 
-    const scriptPath = path.join(this.projectRoot, 'automation', 'intelligent-error-detector.cjs');
+    const scriptPath = path.join(
+      this.projectRoot,
+      'automation',
+      'intelligent-error-detector.cjs'
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created intelligent error detector');
-    this.log('✅ Created intelligent error detector');
+    this.log('✅ Created intelligent error detector'),
   }
 
-  createPerformanceMonitor() {
-    const script = `#!/usr/bin/env node
+  createPerformanceMonitor() { const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs'), const path = require('path'), const { execSync  } = require('child_process');
 
 class PerformanceMonitor {
   constructor() {
@@ -295,15 +304,15 @@ class PerformanceMonitor {
       memoryUsage: 0,
       cpuUsage: 0,
       lastUpdated: new Date().toISOString()
-    };
+    },
     this.logFile = path.join(__dirname, 'logs', 'performance-monitor.log');
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -311,7 +320,7 @@ class PerformanceMonitor {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
-    fs.appendFileSync(this.logFile, logMessage);
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
   async monitorPerformance() {
@@ -340,18 +349,18 @@ class PerformanceMonitor {
       await this.generatePerformanceReport();
       
       this.log('Performance monitoring completed');
-      return this.metrics;
+      return this.metrics,
     } catch (error) {
       this.log(\`Performance monitoring failed: \${error.message}\`, 'ERROR');
-      return null;
+      return null,
     }
   }
 
   async measureBuildTime() {
     const startTime = Date.now();
     try {
-      execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() });
-      return Date.now() - startTime;
+      execSync('npm run build', { stdio: 'pipe', cwd: process.cwd() }),
+      return Date.now() - startTime,
     } catch (error) {
       return -1; // Build failed
     }
@@ -361,7 +370,7 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       if (!fs.existsSync(buildDir)) {
-        return 0;
+        return 0,
       }
       
       const getDirSize = (dir) => {
@@ -373,91 +382,92 @@ class PerformanceMonitor {
           const stat = fs.statSync(filePath);
           
           if (stat.isDirectory()) {
-            size += getDirSize(filePath);
+            size += getDirSize(filePath),
           } else {
-            size += stat.size;
+            size += stat.size,
           }
         });
         
-        return size;
+        return size,
       };
       
-      return getDirSize(buildDir);
+      return getDirSize(buildDir),
     } catch (error) {
-      return 0;
+      return 0,
     }
   }
 
   async saveMetrics() {
     const metricsFile = path.join(__dirname, 'reports', 'performance-metrics.json');
-    fs.mkdirSync(path.dirname(metricsFile), { recursive: true });
-    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2));
+    fs.mkdirSync(path.dirname(metricsFile), { recursive: true }),
+    fs.writeFileSync(metricsFile, JSON.stringify(this.metrics, null, 2)),
   }
 
   async generatePerformanceReport() {
     const report = {
       ...this.metrics,
       recommendations: this.generateRecommendations()
-    };
+    },
 
     const reportFile = path.join(__dirname, 'reports', 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(\`Performance report generated: \${reportFile}\`);
+    this.log(\`Performance report generated: \${reportFile}\`),
   }
 
   generateRecommendations() {
     const recommendations = [];
     
     if (this.metrics.buildTime > 60000) { // 1 minute
-      recommendations.push('Consider optimizing build process - build time is high');
+      recommendations.push('Consider optimizing build process - build time is high'),
     }
     
     if (this.metrics.bundleSize > 5000000) { // 5MB
-      recommendations.push('Consider code splitting - bundle size is large');
+      recommendations.push('Consider code splitting - bundle size is large'),
     }
     
     if (this.metrics.memoryUsage > 100) { // 100MB
-      recommendations.push('Consider memory optimization - high memory usage detected');
+      recommendations.push('Consider memory optimization - high memory usage detected'),
     }
     
-    return recommendations;
+    return recommendations,
   }
 }
 
 // Run if called directly
 if (require.main === module) {
   const monitor = new PerformanceMonitor();
-  monitor.monitorPerformance().catch(console.error);
+  monitor.monitorPerformance().catch(console.error),
 }
 
 module.exports = PerformanceMonitor;`;
 
-    const scriptPath = path.join(this.projectRoot, 'automation', 'performance-monitor.cjs');
+    const scriptPath = path.join(
+      this.projectRoot,
+      'automation',
+      'performance-monitor.cjs'
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created performance monitor');
-    this.log('✅ Created performance monitor');
+    this.log('✅ Created performance monitor'),
   }
 
-  createSecurityScanner() {
-    const script = `#!/usr/bin/env node
+  createSecurityScanner() { const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require('fs'), const path = require('path'), const { execSync  } = require('child_process');
 
 class SecurityScanner {
   constructor() {
     this.vulnerabilities = [];
     this.securityIssues = [];
     this.logFile = path.join(__dirname, 'logs', 'security-scanner.log');
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -465,7 +475,7 @@ class SecurityScanner {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
-    fs.appendFileSync(this.logFile, logMessage);
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
   async scanSecurity() {
@@ -488,10 +498,10 @@ class SecurityScanner {
       return {
         vulnerabilities: this.vulnerabilities,
         securityIssues: this.securityIssues
-      };
+      },
     } catch (error) {
       this.log(\`Security scan failed: \${error.message}\`, 'ERROR');
-      return null;
+      return null,
     }
   }
 
@@ -500,7 +510,7 @@ class SecurityScanner {
       const result = execSync('npm audit --json', { 
         stdio: 'pipe', 
         cwd: process.cwd() 
-      });
+      }),
       const auditData = JSON.parse(result);
       
       if (auditData.vulnerabilities) {
@@ -510,11 +520,11 @@ class SecurityScanner {
             severity: vuln.severity,
             description: vuln.description,
             recommendation: vuln.recommendation
-          });
-        });
+          }),
+        }),
       }
     } catch (error) {
-      this.log('Could not scan vulnerabilities', 'WARNING');
+      this.log('Could not scan vulnerabilities', 'WARNING'),
     }
   }
 
@@ -525,7 +535,7 @@ class SecurityScanner {
       evalUsage: /eval\\s*\\(/gi,
       innerHTML: /innerHTML\\s*=/gi,
       dangerousFunctions: /(document\\.write|setTimeout|setInterval)\\s*\\(/gi
-    };
+    },
 
     files.forEach(file => {
       try {
@@ -539,13 +549,13 @@ class SecurityScanner {
               type: patternName,
               matches: matches.length,
               description: \`Potential \${patternName} found\`
-            });
+            }),
           }
-        });
+        }),
       } catch (error) {
         // Skip files that can't be read
       }
-    });
+    }),
   }
 
   async scanSensitiveData() {
@@ -553,7 +563,7 @@ class SecurityScanner {
       apiKeys: /(api[_-]?key|apikey)\\s*[:=]\\s*['"][^'"]+['"]/gi,
       passwords: /(password|pwd)\\s*[:=]\\s*['"][^'"]+['"]/gi,
       tokens: /(token|access[_-]?token)\\s*[:=]\\s*['"][^'"]+['"]/gi
-    };
+    },
 
     const files = this.getSourceFiles();
     
@@ -570,13 +580,13 @@ class SecurityScanner {
               pattern: patternName,
               matches: matches.length,
               description: \`Potential \${patternName} found - review for sensitive data\`
-            });
+            }),
           }
-        });
+        }),
       } catch (error) {
         // Skip files that can't be read
       }
-    });
+    }),
   }
 
   getSourceFiles() {
@@ -589,18 +599,18 @@ class SecurityScanner {
           const stat = fs.statSync(fullPath);
           
           if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-            walkDir(fullPath);
+            walkDir(fullPath),
           } else if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
-            files.push(fullPath);
+            files.push(fullPath),
           }
-        });
+        }),
       } catch (error) {
         // Skip directories that can't be read
       }
     };
     
     walkDir(process.cwd());
-    return files;
+    return files,
   }
 
   async generateSecurityReport() {
@@ -613,28 +623,32 @@ class SecurityScanner {
         totalSecurityIssues: this.securityIssues.length,
         criticalIssues: this.vulnerabilities.filter(v => v.severity === 'critical').length
       }
-    };
+    },
 
     const reportFile = path.join(__dirname, 'reports', 'security-report.json');
-    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true }),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    this.log(\`Security report generated: \${reportFile}\`);
+    this.log(\`Security report generated: \${reportFile}\`),
   }
 }
 
 // Run if called directly
 if (require.main === module) {
   const scanner = new SecurityScanner();
-  scanner.scanSecurity().catch(console.error);
+  scanner.scanSecurity().catch(console.error),
 }
 
 module.exports = SecurityScanner;`;
 
-    const scriptPath = path.join(this.projectRoot, 'automation', 'security-scanner.cjs');
+    const scriptPath = path.join(
+      this.projectRoot,
+      'automation',
+      'security-scanner.cjs'
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created security scanner');
-    this.log('✅ Created security scanner');
+    this.log('✅ Created security scanner'),
   }
 
   createGitWorkflowAutomator() {
@@ -648,13 +662,13 @@ class GitWorkflowAutomator {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
-    this.ensureLogDirectory();
+    this.ensureLogDirectory(),
   }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+      fs.mkdirSync(logDir, { recursive: true }),
     }
   }
 
@@ -662,22 +676,22 @@ class GitWorkflowAutomator {
     const timestamp = new Date().toISOString();
     const logMessage = \`[\${timestamp}] [\${level}] \${message}\\n\`;
     console.log(\`[\${level}] \${message}\`);
-    fs.appendFileSync(this.logFile, logMessage);
+    fs.appendFileSync(this.logFile, logMessage),
   }
 
   async runCommand(command, description) {
-    this.log(\`Running: \${description}\`);
+    this.log(\`Running: \${description}\`),
     try {
       const result = execSync(command, { 
         cwd: this.projectRoot, 
         stdio: 'pipe',
         encoding: 'utf8'
-      });
+      }),
       this.log(\`✅ \${description} completed successfully\`);
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
       this.log(\`❌ \${description} failed: \${error.message}\`, 'ERROR');
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
+      return { success: false, error: error.message, output: error.stdout || error.stderr },
     }
   }
 
@@ -687,7 +701,7 @@ class GitWorkflowAutomator {
     try {
       // Check current branch
       const currentBranch = await this.getCurrentBranch();
-      this.log(\`Current branch: \${currentBranch}\`);
+      this.log(\`Current branch: \${currentBranch}\`),
       
       // Add all changes
       await this.runCommand('git add .', 'Add all changes');
@@ -696,11 +710,11 @@ class GitWorkflowAutomator {
       const statusResult = await this.runCommand('git status --porcelain', 'Check git status');
       if (!statusResult.success || !statusResult.output.trim()) {
         this.log('No changes to commit');
-        return;
+        return,
       }
       
       // Commit changes
-      const commitMessage = \`feat: Automated improvements and fixes - \${new Date().toISOString()}\`;
+      const commitMessage = \`feat: Automated improvements and fixes - \${new Date().toISOString()}\`,
       await this.runCommand(\`git commit -m "\${commitMessage}"\`, 'Commit changes');
       
       // Push changes
@@ -708,12 +722,12 @@ class GitWorkflowAutomator {
       
       // If on a feature branch, create PR
       if (currentBranch !== 'main' && currentBranch !== 'master') {
-        await this.createPullRequest(currentBranch);
+        await this.createPullRequest(currentBranch),
       }
       
-      this.log('Git workflow automation completed');
+      this.log('Git workflow automation completed'),
     } catch (error) {
-      this.log(\`Git workflow automation failed: \${error.message}\`, 'ERROR');
+      this.log(\`Git workflow automation failed: \${error.message}\`, 'ERROR'),
     }
   }
 
@@ -723,20 +737,20 @@ class GitWorkflowAutomator {
         cwd: this.projectRoot, 
         stdio: 'pipe',
         encoding: 'utf8'
-      });
-      return result.trim();
+      }),
+      return result.trim(),
     } catch (error) {
-      return 'unknown';
+      return 'unknown',
     }
   }
 
   async createPullRequest(branchName) {
     try {
       // This would typically use GitHub CLI or API
-      this.log(\`Would create PR for branch: \${branchName}\`);
+      this.log(\`Would create PR for branch: \${branchName}\`),
       // For now, just log the intention
     } catch (error) {
-      this.log(\`Could not create PR: \${error.message}\`, 'WARNING');
+      this.log(\`Could not create PR: \${error.message}\`, 'WARNING'),
     }
   }
 
@@ -753,15 +767,15 @@ class GitWorkflowAutomator {
       // Merge current branch
       const currentBranch = await this.getCurrentBranch();
       if (currentBranch !== 'main') {
-        await this.runCommand(\`git merge \${currentBranch}\`, \`Merge \${currentBranch} into main\`);
+        await this.runCommand(\`git merge \${currentBranch}\`, \`Merge \${currentBranch} into main\`),
       }
       
       // Push to main
       await this.runCommand('git push origin main', 'Push to main');
       
-      this.log('Merge to main completed');
+      this.log('Merge to main completed'),
     } catch (error) {
-      this.log(\`Merge to main failed: \${error.message}\`, 'ERROR');
+      this.log(\`Merge to main failed: \${error.message}\`, 'ERROR'),
     }
   }
 }
@@ -772,18 +786,22 @@ if (require.main === module) {
   const command = process.argv[2];
   
   if (command === 'merge') {
-    automator.mergeToMain().catch(console.error);
+    automator.mergeToMain().catch(console.error),
   } else {
-    automator.automateGitWorkflow().catch(console.error);
+    automator.automateGitWorkflow().catch(console.error),
   }
 }
 
 module.exports = GitWorkflowAutomator;`;
 
-    const scriptPath = path.join(this.projectRoot, 'automation', 'git-workflow-automator.cjs');
+    const scriptPath = path.join(
+      this.projectRoot,
+      'automation',
+      'git-workflow-automator.cjs'
+    );
     fs.writeFileSync(scriptPath, script);
     this.improvements.push('Created Git workflow automator');
-    this.log('✅ Created Git workflow automator');
+    this.log('✅ Created Git workflow automator'),
   }
 
   async run() {
@@ -796,21 +814,32 @@ module.exports = GitWorkflowAutomator;`;
       this.createPerformanceMonitor();
       this.createSecurityScanner();
       this.createGitWorkflowAutomator();
-      
+
       // Run the new scripts
-      await this.runCommand('node automation/intelligent-error-detector.cjs', 'Run error detector');
-      await this.runCommand('node automation/performance-monitor.cjs', 'Run performance monitor');
-      await this.runCommand('node automation/security-scanner.cjs', 'Run security scanner');
-      
+      await this.runCommand(
+        'node automation/intelligent-error-detector.cjs',
+        'Run error detector'
+      );
+      await this.runCommand(
+        'node automation/performance-monitor.cjs',
+        'Run performance monitor'
+      );
+      await this.runCommand(
+        'node automation/security-scanner.cjs',
+        'Run security scanner'
+      );
+
       this.log('\\n📊 ADVANCED AUTOMATION IMPROVEMENTS COMPLETED');
       this.log('='.repeat(60));
-      this.log(`Total improvements: ${this.improvements.length}`);
+      this.log(`Total improvements: ${this.improvements.length}`),
       this.improvements.forEach((improvement, index) => {
-        this.log(`${index + 1}. ${improvement}`);
-      });
-      
+        this.log(`${index + 1}. ${improvement}`),
+      }),
     } catch (error) {
-      this.log(`Advanced automation improvements failed: ${error.message}`, 'ERROR');
+      this.log(
+        `Advanced automation improvements failed: ${error.message}`,
+        'ERROR'
+      ),
     }
   }
 }
@@ -818,7 +847,7 @@ module.exports = GitWorkflowAutomator;`;
 // Run the advanced automation improvements
 if (require.main === module) {
   const improvements = new AdvancedAutomationImprovements();
-  improvements.run().catch(console.error);
+  improvements.run().catch(console.error),
 }
 
 module.exports = AdvancedAutomationImprovements;
