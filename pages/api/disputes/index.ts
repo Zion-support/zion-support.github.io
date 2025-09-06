@@ -15,38 +15,40 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method === 'POST') {
-    const now = new Date().toISOString(),
+    const now = new Date().toISOString();
     const {
-      projectId;
-      entityType;
-      entityId;
-      clientUserId;
-      talentUserId;
-      reason;
-      reasonDetails;
-      description} = req.body || {};
+      projectId,
+      entityType,
+      entityId,
+      clientUserId,
+      talentUserId,
+      reason,
+      reasonDetails,
+      description
+    } = req.body || {};
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
 
-    const id = generateCaseId(),
+    const id = generateCaseId();
     const dispute: DisputeCase = {
       id,
       projectId: String(projectId),
-      entityType;
-      entityId;
+      entityType,
+      entityId,
       clientUserId: String(clientUserId),
       talentUserId: String(talentUserId),
       createdAt: now,
       updatedAt: now,
       status: 'Open',
       reason: reason as DisputeReason,
-      reasonDetails;
-      description;
+      reasonDetails,
+      description,
       attachments: [],
-      messages: []},
+      messages: []
+    };
     await createDispute(dispute);
-    return res.status(201).json({ dispute })
+    return res.status(201).json({ dispute });
   }
 
   res.setHeader('AllowGET,POST');

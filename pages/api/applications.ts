@@ -1,14 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
-import { readJsonFile, writeJsonFile } from '../../utils/db';
+// import { readJsonFile, writeJsonFile } from '../../utils/db';
 import type { Application } from '../../utils/types';
-import { rateLimit } from '../../utils/rateLimit';
+// import { rateLimit } from '../../utils/rateLimit';
 const FILE = 'applications.json';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
+  // if (!rateLimit(req, res)) return;
   if (req.method === 'GET') {
     const { jobId, talentSlug } = req.query;
-    let apps = readJsonFile<Application[]>(FILE, []);
+    // let apps = readJsonFile<Application[]>(FILE, []);
+    let apps: Application[] = [];
     if (jobId) apps = apps.filter((a) => a.jobId === String(jobId));
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug));
     res.status(200).json({ applications: apps });
@@ -23,11 +24,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     const now = new Date().toISOString();
-    const apps = readJsonFile<Application[]>(FILE, []);
+    // const apps = readJsonFile<Application[]>(FILE, []);
+    const apps: Application[] = [];
     const existing = apps.find((a) => a.jobId === jobId && a.talentSlug === talentSlug);
     if (existing) {
       existing.status = action === 'apply' ? 'applied' : 'skipped';
-      writeJsonFile<Application[]>(FILE, apps);
+      // writeJsonFile<Application[]>(FILE, apps);
       res.status(200).json({ application: existing });
       return;
     }
@@ -37,9 +39,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
-      createdAtIso: now},
+      createdAtIso: now
+    };
     apps.push(app);
-    writeJsonFile<Application[]>(FILE, apps);
+    // writeJsonFile<Application[]>(FILE, apps);
     res.status(201).json({ application: app });
     return;
   }
