@@ -4,57 +4,57 @@ const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const plans = [
     {
-      name: "Starter"
-      description: "Perfect for small businesses getting started"
-      monthlyPrice: 99
-      annualPrice: 79
+      name: "Starter",
+      description: "Perfect for small businesses getting started",
+      monthlyPrice: 99,
+      annualPrice: 79,
       features: [
-        "Up to 5 team members"
-        "Basic AI features"
-        "Email support"
-        "5GB storage"
-        "Basic analytics"
+        "Up to 5 team members",
+        "Basic AI features",
+        "Email support",
+        "5GB storage",
+        "Basic analytics",
         "Standard security"
-      ]
-      color: "from-gray-500 to-gray-600"
+      ],
+      color: "from-gray-500 to-gray-600",
       popular: false
-    }
+    },
     {
-      name: "Professional"
-      description: "Ideal for growing businesses"
-      monthlyPrice: 299
-      annualPrice: 239
+      name: "Professional",
+      description: "Ideal for growing businesses",
+      monthlyPrice: 299,
+      annualPrice: 239,
       features: [
-        "Up to 25 team members"
-        "Advanced AI features"
-        "Priority support"
-        "100GB storage"
-        "Advanced analytics"
-        "Enhanced security"
-        "API access"
+        "Up to 25 team members",
+        "Advanced AI features",
+        "Priority support",
+        "100GB storage",
+        "Advanced analytics",
+        "Enhanced security",
+        "API access",
         "Custom integrations"
-      ]
-      color: "from-blue-500 to-purple-600"
+      ],
+      color: "from-blue-500 to-purple-600",
       popular: true
-    }
+    },
     {
-      name: "Enterprise"
-      description: "For large organizations with complex needs"
-      monthlyPrice: 799
-      annualPrice: 639
+      name: "Enterprise",
+      description: "For large organizations with complex needs",
+      monthlyPrice: 799,
+      annualPrice: 639,
       features: [
-        "Unlimited team members"
-        "Full AI suite"
-        "24/7 dedicated support"
-        "Unlimited storage"
-        "Custom analytics"
-        "Enterprise security"
-        "Full API access"
-        "Custom integrations"
-        "Dedicated account manager"
+        "Unlimited team members",
+        "Full AI suite",
+        "24/7 dedicated support",
+        "Unlimited storage",
+        "Custom analytics",
+        "Enterprise security",
+        "Full API access",
+        "Custom integrations",
+        "Dedicated account manager",
         "SLA guarantee"
-      ]
-      color: "from-purple-500 to-pink-600"
+      ],
+      color: "from-purple-500 to-pink-600",
       popular: false
     }
   ];
