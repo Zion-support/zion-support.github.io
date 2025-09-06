@@ -81,8 +81,8 @@ export default function HomePage() {
           Zion Tech Group
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Enterprise AI solutions, micro SaaS development, and comprehensive IT services
-          that drive business transformation and growth.
+          Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services. 
+          Empowering businesses with cutting-edge technology that drives innovation and transforms operations.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
@@ -265,16 +265,28 @@ export default function HomePage() {
         </h2>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
           Let&apos;s discuss your project and create a custom solution that drives
-          real business value. Our team has delivered 1000+ successful
+          real business value. Our team has delivered 500+ successful
           projects across various industries.
         </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          aria-label="Contact us to get started with your project"
-        >
-          Get Started Today
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            aria-label="Call us at +1 302 464 0950"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="inline-block border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            aria-label="Email us at kleber@ziontechgroup.com"
+          >
+            Email Us
+          </a>
+        </div>
+        <p className="text-sm text-gray-500 mt-4">
+          📍 364 E Main St STE 1008, Middletown DE 19709
+        </p>
       </section>
     </div>
   );
