@@ -1,8 +1,0 @@
-  trackingId?: string;
-  enableHeatmap?: boolean;
-  enableSessionRecording?: boolean;
-  enableAITracking?: boolean;
-  showDebugPanel?: boolean;
-};
-
-export default EnhancedAnalytics;

@@ -1,4 +1,0 @@
-            <EnhancedNewsletterForm />;
-          </div>;
-        </div>;
-      </div>;

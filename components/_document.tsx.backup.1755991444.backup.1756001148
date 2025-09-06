@@ -1,6 +1,0 @@
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
