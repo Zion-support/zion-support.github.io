@@ -18,7 +18,7 @@ export default defineConfig({
     }
   },
   css: {
-    postcss: false
+    postcss: './postcss.config.cjs'
   },
   esbuild: {
     loader: 'tsx',
