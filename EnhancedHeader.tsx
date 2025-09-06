@@ -1,21 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-
-const EnhancedHeader: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services', dropdown: [
       { name: 'AI Development', href: '/services/ai-development' },
@@ -26,87 +8,91 @@ const EnhancedHeader: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
-
+    { icon: 'Phone', text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: 'Mail', text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: 'MapPin', text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
+  ];
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold text-gray-800">
-            Zion Tech Group
-          </Link>
-
-          <nav className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative">
-                <Link
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 transition-colors"
-                  onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                  {item.name}
-                </Link>
-                {item.dropdown && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2">
-                    {item.dropdown.map((dropdownItem) => (
-                      <Link
-                        key={dropdownItem.name}
-                        href={dropdownItem.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        {dropdownItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-
-          <div className="flex items-center space-x-4">
-            <div className="hidden md:block">
-              <input
-                type="text"
-                placeholder="Search..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
-              Get Started
-            </button>
-            <button
-              className="md:hidden"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {isOpen && (
-          <div className="md:hidden bg-white border-t">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-blue-600"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    </header>
-  );
-};
-
-export default EnhancedHeader;
+    <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+      is_scrolled ? 'bg - white / 95 backdrop - blur - md shadow - lg' : 'bg - transparent';
+    }`}>;
+      <div className="container mx - auto px - 4">;
+        <div className="flex items - center justify - between h - 16">;
+          {/* Logo */}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items - center space - x-8">;
+            {navigation_items.map ((item) => (
+              <div key={item.name} className="relative">;
+                {item.dropdown ? (
+                  <button;
+                    on_click={() => toggle_dropdown (item.name)}
+                    className="flex items - center space - x-1 text - gray - 700 hover:text - blue - 600 transition - colors";
+                  >;
+                    <span>{item.name}</span>;
+                    <ChevronDown className="w - 4 h - 4" />;
+                  </button>) : (
+                  <Link href={item.href} className="text - gray - 700 hover:text - blue - 600 transition - colors">;
+                    {item.name}
+        {/* Mobile Menu */}
+        <AnimatePresence>;
+          {is_open && (
+            <motion.div;
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg - white border - t border - gray - 200";
+            >;
+              <div className="px - 4 py - 4 space - y-4">;
+                {/* Mobile Search */}
+                {/* Mobile Navigation */}
+                {navigation_items.map ((item) => (
+                  <div key={item.name}>;
+                    {item.dropdown ? (
+                      <div>;
+                        <button;
+                          on_click={() => toggle_dropdown (item.name)}
+                          className="flex items - center justify - between w - full text - left text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
+                        >;
+                          <span>{item.name}</span>;
+                          <ChevronDown className="w - 4 h - 4" />;
+                        </button>;
+                        {active_dropdown === item.name && (
+                          <div className="ml - 4 space - y-2">;
+                            {item.dropdown.map ((dropdown_item) => (
+                              <Link;
+                                key={dropdown_item.name}
+                                href={dropdown_item.href}
+                                on_click={closeMobileMenu}
+                                className="block text - gray - 600 hover:text - blue - 600 transition - colors py - 1";
+                              >;
+                                {dropdown_item.name}
+                              </Link>))}
+                          </div>)}
+                      </div>) : (
+                      <Link;
+                        href={item.href}
+                        on_click={closeMobileMenu}
+                        className="block text - gray - 700 hover:text - blue - 600 transition - colors py - 2";
+                      >;
+                        {item.name}
+                      </Link>)}
+                  </div>))}
+                {/* Contact Info */}
+                <div className="pt - 4 border - t border - gray - 200">;
+                  <div className="space - y-2">;
+                    {contact_info.map ((info, index) => (
+                      <div key={index} className="flex items - center space - x-2 text - sm text - gray - 600">;
+                        {info.icon === 'Phone' && <Phone className="w - 4 h - 4" />}
+                        {info.icon === 'Mail' && <Mail className="w - 4 h - 4" />}
+                        {info.icon === 'MapPin' && <MapPin className="w - 4 h - 4" />}
+                        <span>{info.text}</span>;
+                      </div>))}
+                  </div>;
+                </div>;
+              </div>;
+            </motion.div>)}
+        </AnimatePresence>;
+      </div>;
+    </header>);
+}
+;

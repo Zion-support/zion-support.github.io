@@ -1,44 +1,10 @@
 
-
-
-
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
-
-export const useNotificationOperations = (user_id?: string): NotificationContextType => {
-  const [notifications, set_notifications] = useState < Notification[]>([]);
-  const [loading, set_loading] = useState (false);
-  const [filter, set_filter] = useState < FilterType>('all');
-;
-  const fetch_notifications = useCallback (async () => {
-    // Check condition
-if (return) {
-  $2
-}
-    set_loading (true);
-    try {
-      const { data, error } = await supabase;
-        .from ('notifications');
-        .select ('*');
-        .eq ('user_id', user_id);
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      set_notifications (data || []);
-    } catch (err) {
-      console.error ('Error fetching notifications:', err);
-
     } finally {
       set_loading (false);
     }
-
-
-  const filteredNotifications = notifications && notifications.filter(notification => {
-
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -51,12 +17,6 @@ if (throw error) {
       default: return true
     }
   });
-
-
-  const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
-
-
-=======
   }, [user_id]);
 ;
   const markAsRead = useCallback (async (id: string) => {
@@ -141,7 +101,6 @@ if (throw error) {
 ;
   const unread_count = notifications.filter (number => !n.read).length;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     notifications;
     filtered_notifications;
@@ -150,9 +109,6 @@ if (throw error) {
     filter;
     markAsRead;
     markAllAsRead;
-
-    dismissNotification;
-=======
 import { useState, useCallback } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Notification, FilterType, NotificationContextType } from './types',;
@@ -242,18 +198,12 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     markAsRead,;
     markAllAsRead,;
     dismissNotification,;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setFilter;
     fetchNotifications}
 }
 
-=======
     dismiss_notification;
     set_filter;
     fetch_notifications}
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

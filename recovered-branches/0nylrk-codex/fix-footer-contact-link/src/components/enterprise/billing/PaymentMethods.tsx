@@ -1,34 +1,37 @@
-
-
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardFooter,;
-  CardHeader,;
-  CardTitle,;
-
-=======
-
-import React from "react";
-import {
-
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-
-
-
-=======
+      id: "pm-1"
+      type: "credit_card"
+      brand: "Visa"
+      last4: "4242"
+      expMonth: 12
+      expYear: 2025
+      isDefault: true
+    }
+    {
+      id: "pm-2"
+      type: "credit_card"
+      brand: "Mastercard"
+      last4: "8888"
+      expMonth: 4
+      expYear: 2026
+      isDefault: false
+    }
+  ];
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
@@ -38,15 +41,10 @@ import { CreditCard, Plus, Trash } from "lucide-react";
       isDefault: true,
     },
 
-=======
-
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
-
-
-
 
     {
       id: "pm-2",
@@ -55,11 +53,6 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-
-      isDefault: false}
-  ],
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <Card>
@@ -111,15 +104,11 @@ import { CreditCard, Plus, Trash } from "lucide-react",
         </Button>
       </CardFooter>
     </Card>
-
-
-=======
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PaymentMethods() {;
   // Mock payment methods;
   const paymentMethods = [;
@@ -141,8 +130,6 @@ export function PaymentMethods() {;
       expYear: 2026,;
       isDefault: false,;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import {
   Card,
@@ -178,26 +165,16 @@ function PaymentMethods() {
       exp_year: 2026,
       is_default: false,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
     <Card>;
       <CardHeader>;
-
-        <CardTitle > Payment Methods</CardTitle>;
-
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
-=======
       <CardContent className="space - y-4">;
         {payment_methods.map ((method) => (
           <div;
@@ -240,6 +217,5 @@ function PaymentMethods() {
           Add Payment Method;
         </Button>;
       </CardFooter>;
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
 }

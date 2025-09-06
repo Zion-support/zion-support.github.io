@@ -9,8 +9,8 @@ import { useCurrency, SupportedCurrency } from '@/context/CurrencyContext',
 import { DollarSign } from 'lucide-react',
 const SUPPORTED: { code: SupportedCurrency, symbol: string }[] = [
   { code: 'USD', symbol: '$' },
-  { code: 'EUR', symbol: '€' },
-  { code: 'GBP', symbol: '£' }],
+  { code: 'EUR', symbol: '' },
+  { code: 'GBP', symbol: '' }],
 
 export function CurrencySelector() {
   const { currency, setCurrency } = useCurrency(),

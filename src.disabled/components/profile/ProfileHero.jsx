@@ -24,9 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface ProfileHeroProps {
   // Add props here as needed
-
-
-
 export default function ProfileHero({ }: ProfileHeroProps) {
   return (
     <div>
@@ -34,11 +31,4 @@ export default function ProfileHero({ }: ProfileHeroProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/profile/ProfileHero.jsx

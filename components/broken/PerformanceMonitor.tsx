@@ -1,30 +1,21 @@
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
 
-}) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
-if (newMetrics.loadTime > 3000) {
-  const formatTime = (ms: number) : string => {
+if (newMetrics && newMetrics.loadTime > 3000) {;
+  const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
-
-
-
-};
-
-
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -34,15 +25,8 @@ default: return Laptop;
 const getPerformanceScore = () => {
   let score = 0;
 let totalMetrics = 0;
-//FCP scoring (0-100) if (metrics.fcp !== null) {
+//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
-
-
-else score += 25 
-
-};
-
-
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -64,37 +48,16 @@ else score += 25
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
-
-=======
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, Zap, Clock, TrendingUp, TrendingDown, 
-  AlertTriangle, CheckCircle, X, Settings, RefreshCw;
-  BarChart3, Gauge, HardDrive, Wifi, Cpu
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  loadTime: number,
-  firstContentfulPaint: number,
-  largestContentfulPaint: number,
-  cumulativeLayoutShift: number,
-  firstInputDelay: number,
-  timeToInteractive: number,
-  memoryUsage?: number;
-  networkLatency?: number
-
+  if (score >= 90) return 'Excellent';
+if (score >= 70) return 'Good';
+if (score >= 50) return 'Needs Improvement';
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default PerformanceMonitor;
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
+  return new Promise ( (resolve) => {
+  // Check condition
+if ( {) {
+  $2
 }
   //Wait for page to be fully loaded // Check condition
 if ( {) {
@@ -237,4 +200,3 @@ if (return 'Needs Improvement') {
 ;
 export default PerformanceMonitor;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

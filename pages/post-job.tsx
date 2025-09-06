@@ -1,5 +1,3 @@
-
-
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -13,13 +11,6 @@ export default function PostJobPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
-
-    e.preventDefault();
-    setError(null);
-
-    if (!title || !description || !category || !clientEmail) {
-      setError('Please fill in all required fields.');
-
       return
     }
     try {
@@ -28,20 +19,10 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-
-
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
-
-      setIsSubmitting(false),
-
-    }
-
-
-
-=======
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {
@@ -66,52 +47,16 @@ export default function PostJobPage(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
-
   }
-}
-;
-    try {
-      setIsSubmitting(true);
-      const res = await fetch('/api/jobs', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON.stringify({;
-          title,;
-          description,;
-          category,;
-          requiredSkills: skills;
-            .split();
-            .map((s) => s.trim());
-            .filter(Boolean);
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,;
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,;
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined,;
-          clientEmail})}),;
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to post job');
-      router.push(`/client/dashboard`);
-    } catch (error) {
-      setError(err.message || 'Something went wrong');
-    } finally {;
-      setIsSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {error && <p className="text-red-600 mb-3">{error}</p>}
+      {error && <p className="text-red-600 mb-3">{error}</p>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -154,18 +99,12 @@ export default function PostJobPage(req, res) {
   );
 };
 
-=======
             {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
-
-=======
-}
-
-=======
 import { useState } from 'react',
 import { use_router } from 'next / router',
 export default /**
@@ -276,8 +215,3 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,4 @@
 
-
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
@@ -8,6 +7,15 @@ import {SystemNotificationParams} from './types';
  * Creates a system notification for a user
  */
 export async function createSystemNotification({
+
+import { createNotification  } from './createNotification';
+import { SystemNotificationParams } from './types';
+import {createNotification} from './createNotification';
+import {SystemNotificationParams} from './types';
+/**
+ * Creates a system notification for a user
+ */
+export async function createSystemNotification({;
   userId;
   title;
   message;
@@ -30,10 +38,8 @@ export async function createSystemNotification({
 
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
-=======
 
 
-=======
 import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
 
@@ -59,5 +65,3 @@ function createSystemNotification() {
 
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,3 +1,35 @@
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+export default function ContentMap({ report }: Props) {
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function ContentMap({ report }: Props) {;
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+export default function ContentMap({ report }: Props) {
+  if (!report) return <div>No content map yet. Check back later.</div>;
+  const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
+
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
 
 
 export default function ContentMap({ report }: Props) {
@@ -19,8 +51,6 @@ export default function ContentMap({ report }: Props) {
         <ul className="text-sm space-y-1">
           {sections.map(([sec, n]) => (
             <li key={sec} className="flex justify-between"><span>{sec |'root'}</span><span className="text-gray-500">{n}</span></li>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
@@ -43,24 +73,15 @@ export default function ContentMap(): any ({ report }: Props) {;
         <ul className="text-sm space-y-1">;
           {sections && sections.map(([sec, n]) => (;
             <li key={sec} className="flex justify-between"><span>{sec || 'root'}</span><span className="text-gray-500">{n}</span></li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           ))}
-        </ul>;
-      </section>;
-      <section>;
-        <h2 className="font-semibold mb-2">All Pages</h2>;
-        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
-          {report && report.pages.map((p, i) => (;
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.route}</span><span className="text-gray-500 truncate">{p && p.file}</span></li>;
+        </ul>
+      </section>
+      <section>
+        <h2 className="font-semibold mb-2">All Pages</h2>
+        <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+          {report.pages.map((p, i) => (
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p.route}</span><span className="text-gray-500 truncate">{p.file}</span></li>
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
-  );
-}
-
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -99,11 +120,3 @@ if (return <div > No content map yet. Check back later.</div>) {
         </ul>;
       </section>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,20 +1,15 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-
-
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
   StoredFraudRecord,;
-
-
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -32,30 +27,6 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" });
     return;
 
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
-import { classifyWithGPT } from '../../../utils/fraud/gpt';
-import { getFraudStore, newEvent } from '../../../utils/fraud/store';
-import { extractClientIp } from '../../../utils/ip';
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
-import { sendWarningEmail } from '../../../utils/email';
-const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return
-
-  }
-  try {
-
-
-    const body = req && req.body || {};
-    const source = body && body.source as MonitoredSource;
-    if (!allowedSources && allowedSources.includes(source)) {
-      res && res.status(400).json({ error: "Invalid source" });
       return;
     }
 
@@ -65,7 +36,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
-=======
       res.status(400).json({ error: 'Invalid source' });
       return
     }
@@ -73,14 +43,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const userId = typeof body.userId === 'string' ? body.userId : null;
     const content = typeof body.content === 'string' ? body.content : null;
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const ip = extractClientIp(req);
     const store = getFraudStore();
 
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
@@ -139,7 +106,6 @@ if ( {) {
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
@@ -199,7 +165,6 @@ if ( {) {
       autoHidden: saved && saved.autoHidden,
       createdAt: saved && saved.createdAt,
 
-=======
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -246,20 +211,42 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
 
   } catch (e: any) {
+      .json({ error: "Internal error", details: e?.message |String(e) });
+      .json({ error: "Internal error", details: e?.message || String(e) });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Fraud ingest endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
+import { classifyWithGPT } from '../../../utils/fraud/gpt';
+import { getFraudStore, newEvent } from '../../../utils/fraud/store';
+import { extractClientIp } from '../../../utils/ip';
+import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import { sendWarningEmail } from '../../../utils/email';
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
 
       .json({ error: "Internal error", details: e?.message || String(e) });
 
 
-=======
-      .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
-=======
+    res
+      .status(500)
       status: 'PENDING'};
 
     const saved = await store.saveEvent(stored);
@@ -281,71 +268,16 @@ if ( {) {
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+}
+  }
+}
+  }
+}
   }
 }
 
-    res;
-      .status (500);
-      .json ({ error: "Internal error", details: e?.message || String (e) });
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    res.status(200).json({;
-      id: saved.id,;
-      flagged: combinedLabel !== 'SAFE',;
-      label: combinedLabel,;
-      heuristic,;
-      gpt;
-      autoHidden: saved.autoHidden;
-      createdAt: saved.createdAt});
-  } catch (error) {
-    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

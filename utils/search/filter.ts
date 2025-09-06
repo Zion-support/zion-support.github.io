@@ -3,9 +3,6 @@ export const filter_results = (results: any[], filters: any) =>: any {
   // Add search filtering functionality here;
   return results;
 }
-
-
-
   all: SearchResult[];
   talent: SearchResult[];
   jobs: SearchResult[];
@@ -166,11 +163,8 @@ export function suggestDidYouMean(query: string): string[] {
   }
   
   return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
 export const sort_results = (results: any[], sort_by: string) =>: any {
   // Add search sorting functionality here;
   return results;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

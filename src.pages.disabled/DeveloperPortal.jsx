@@ -24,9 +24,6 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface DeveloperPortalProps {
   // Add props here as needed
-
-
-
 export default function DeveloperPortal({ }: DeveloperPortalProps) {
   return (
     <div>
@@ -34,11 +31,22 @@ export default function DeveloperPortal({ }: DeveloperPortalProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
+:src.pages.disabled/DeveloperPortal.jsx
+}
+}
+}
+}
+}
 }
 
-=======
 
 
+
+
+
+:src.pages.disabled/DeveloperPortal.jsx
+}
+}
+}
+}
+}

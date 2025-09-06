@@ -6,9 +6,6 @@ import productReviewsHandler from '@/pages/api/reviews/[productId]'
 import { supabase } from '@/integrations/supabase/client'
 } from '@supabase/supabase-js'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-
-
-
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
@@ -61,8 +58,6 @@ describe('/api/reviews API Endpoint'
           "where"
         "method"
         "method"
-
-
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {
   const mockPrismaClient = {
@@ -416,8 +411,4 @@ describe('/api/reviews API Endpoint', () => {
     })
   })
 })
-
-=======
         "error"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

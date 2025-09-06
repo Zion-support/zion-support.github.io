@@ -1,3 +1,7 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
 
 
     const completion = await client.chat.completions.create({
@@ -8,11 +12,8 @@
     drafted.push({ title: ch.title, content: text })
   }
   res.status(200).json({ chapters: drafted })
-
-=======
 }
 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
 export default async /**
@@ -31,11 +32,9 @@ if ( {) {
   // Check condition
 if ( {) {
   $2
-=======
 
 
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     // Fallback: return structured placeholders;
     const drafted = chapters.map ((c) => ({
@@ -60,13 +59,16 @@ if ( {) {
   }
   res.status (200).json ({ chapters: drafted });
 }
-
 ;
   res.status(200).json({ chapters: drafted });
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+  res.status(200).json({ chapters: drafted });
+};
+}
 
 
 

@@ -1,23 +1,12 @@
 
+export type Course = {
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
   category: string;
-
-
-
-export default function CourseCard(): any ({ course }: { course: Course }) {;
-  return (
-
-
-=======
   certification_badge: string,
   description?: string;
 export default /**
@@ -33,7 +22,6 @@ function CourseCard() {
         </span>;
       </div>;
       <div className='text - xs text - gray - 500 mt - 1'>;
-        {course.category} • {course.level} •{' '}
         {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
         </span>;
       </div>;
@@ -57,11 +45,6 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

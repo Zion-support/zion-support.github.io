@@ -3,8 +3,7 @@
     if (error) return res.status(500).json({ error: error.message });
 
     return res.status(200).json({ ok: true });
-
-=======
+};
     const supabase = getServerSupabase (),
     const updates: any = {},
     // Check condition
@@ -22,22 +21,26 @@ if (updates.commission_rate = commission_rate, ) {
     return res.status (200).json ({ ok: true });
 
   } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status (500).json ({ error: e?.message });
   }
 
-}
-
-=======
+  const usingPlaceholder = 
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+  try {
+    if (usingPlaceholder) {
+      return res.status(200).json({ ok: true, mock: true });
+    }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-  }
-}
 
+      const updates: any = {};
+      if (status) updates.status = status;
+      if (typeof commission_rate === 'number') updates.commission_rate = commission_rate;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

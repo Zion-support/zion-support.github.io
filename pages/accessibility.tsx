@@ -22,30 +22,30 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import Link from 'next/link';
-import MainLayout from '../components/layout/MainLayout';
-=======
-import Link from 'next / link';
-import MainLayout from '../components / layout / MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-import { motion } from 'framer-motion';
+  Eye
+  Ear
+  Hand
+  Brain
+  CheckCircle
+  AlertTriangle
+  Globe
+  Users
+  Shield
+  Zap
+  FileText
+  Settings
 
   Eye,
   Ear,
   Hand,
   Brain,
   CheckCircle,
-=======
 
   Eye, 
   Ear, 
   Hand, 
   Brain, 
   CheckCircle, 
-
   AlertTriangle,
   Globe,
   Users,
@@ -53,9 +53,6 @@ import { motion } from 'framer-motion';
   Zap,
   FileText,
   Settings;
-
-
-
 } from 'lucide-react';
 const accessibility_features = [;
   {
@@ -125,126 +122,14 @@ const accessibilityFeatures = [;
   }
 ];
 
-const standardsCompliance = [;
-  {;
-    standard: "WCAG 2 && 2.1 AA",;
-    description: "Web Content Accessibility Guidelines 2 && 2.1 Level AA compliance",;
-    status: "Compliant",;
-    coverage: "95%",;
-    icon: Shield;
-  },;
-  {;
-    standard: "Section 508",;
-    description: "U && U.S. federal accessibility requirements",;
-    status: "Compliant",;
-    coverage: "100%",;
-    icon: FileText;
-  },;
-  {;
-    standard: "ADA",;
-    description: "Americans with Disabilities Act compliance",;
-    status: "Compliant",;
-    coverage: "100%",;
-    icon: Users;
-  },;
-  {;
-    standard: "EN 301 549",;
-    description: "European accessibility standard for ICT products",;
-    status: "Compliant",;
-    coverage: "90%",;
-    icon: Globe;
-  }
-];
-
-const accessibilityTools = [;
-  {;
-    name: "Screen Reader Testing",;
-    description: "Regular testing with popular screen readers including NVDA, JAWS, and VoiceOver",;
-    frequency: "Monthly";
-  },;
-  {;
-    name: "Keyboard Navigation",;
-    description: "Comprehensive keyboard navigation testing for all interactive elements",;
-    frequency: "Weekly";
-  },;
-  {;
-    name: "Color Contrast Analysis",;
-    description: "Automated and manual color contrast testing to ensure readability",;
-    frequency: "With each design update";
-  },;
-  {;
-    name: "User Testing",;
-    description: "Regular testing with users who have disabilities to identify barriers",;
-    frequency: "Quarterly";
-  }
-];
-
-const accessibilityGuidelines = [;
-  {;
-    category: "Content",;
-    guidelines: [;
-      "Use clear and simple language",;
-      "Provide alternative text for images",;
-      "Use proper heading structure",;
-      "Ensure sufficient color contrast",;
-      "Provide captions for videos";
-    ];
-  },;
-  {;
-    category: "Navigation",;
-    guidelines: [;
-      "Logical tab order",;
-      "Skip links for main content",;
-      "Consistent navigation patterns",;
-      "Breadcrumb navigation",;
-      "Search functionality";
-    ];
-  },;
-  {;
-    category: "Forms",;
-    guidelines: [;
-      "Clear labels and instructions",;
-      "Error messages and validation",;
-      "Required field indicators",;
-      "Logical grouping of related fields",;
-      "Multiple input methods";
-    ];
-  },;
-  {;
-    category: "Interactive Elements",;
-    guidelines: [;
-      "Keyboard accessible",;
-      "Focus indicators",;
-      "Adequate target sizes",;
-      "No seizure-inducing content",;
-      "Customizable timing";
-    ];
-
-  }
-];
-
-=======
-import Head from 'next/head';
-import Layout from '../components/Layout';
-
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-
 
 
 export default function AccessibilityPage() {
-=======
 interface AccessibilityProps {
   className?: string;
 }
 
 const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -255,16 +140,12 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </motion.div>
           </div>
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -281,7 +162,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -430,21 +310,6 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-                Get Started Today;
-              </h2>;
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">;
-                Ready to make your digital products accessible to everyone? Contact us for a free accessibility audit.;
-              </p>;
-            </motion && motion.div>;
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-              {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
-                <motion&& motion.div
-
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -464,20 +329,8 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
                   </ul>;
                 </motion && motion.div>;
               ))}
-
-            </div>
-          </div>
-        </section>
-
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </MainLayout>
-=======
             </div>;
           </div>;
         </section>;
@@ -516,30 +369,8 @@ const Accessibility: React.FC<AccessibilityProps> = ({ className }) => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}>;
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-                Have Questions About Accessibility?;
-              </h2>;
-              <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">;
-                We're here to help. Contact our accessibility team for support, feedback, or questions about our accessibility features.;
-              </p>;
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
-                <a href="mailto:accessibility@ziontechgroup && ziontechgroup.com" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">;
-                  Contact Accessibility Team;
-                </a>;
-                <a href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">;
-                  General Contact;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-=======
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
@@ -958,4 +789,3 @@ function AccessibilityPage() {
       </div>;
     </MainLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

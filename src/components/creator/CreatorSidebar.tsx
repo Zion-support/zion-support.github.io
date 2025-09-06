@@ -1,17 +1,29 @@
 } from 'lucide-react'; import {
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
 
-} from "@/components/ui/sidebar";
-
-
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed
+} from '@/components/ui/sidebar'
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
+  Sidebar
+  SidebarContent
+  SidebarGroup
+  SidebarMenuItem
+  // SidebarMenu, // Removed
+  // SidebarMenuButton, // Removed
+  // SidebarGroupLabel, // Not needed
+  // SidebarGroupContent, // Not needed
+} from "@/components/ui/sidebar"
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-
-        <SidebarGroup title="Dashboard">
-          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
-            <span>Home</span>
-
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -127,9 +139,6 @@ export function AppSidebar() {;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
-
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
-
     </Sidebar>;
   );
 }
@@ -212,4 +221,3 @@ function AppSidebar() {
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-}

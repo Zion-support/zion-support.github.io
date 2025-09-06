@@ -1,4 +1,10 @@
-
+import React from 'react';
+interface TeamProps {
+  // Add props here as needed
+}
+import React from 'react';
+interface TeamProps {
+  // Add props here as needed
 
 export default function Team({ }: TeamProps) {
   return (
@@ -8,9 +14,3 @@ export default function Team({ }: TeamProps) {
     </div>
   );
 
-}
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

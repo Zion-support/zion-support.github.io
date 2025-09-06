@@ -1,4 +1,7 @@
 
+const AIAssistant: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
 
   return (
     <Layout>;
@@ -14,7 +17,6 @@
               AI Assistant;
             </h1>;
             <p className='text-gray-300 text-lg'>;
-=======
         <title > AI Assistant | Zion Tech Group</title>;
         <meta;
           name='description';
@@ -36,7 +38,6 @@
           </header>;
 
               className='px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white'>;
-=======
           <section className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
             {[;
               'Research and summarize documents and web sources',
@@ -82,10 +83,8 @@
       </main>;
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
@@ -101,7 +100,6 @@
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
@@ -110,7 +108,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
@@ -120,8 +117,6 @@
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
@@ -135,8 +130,7 @@ export default function AIAssistantPage() {
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">AI Assistant</h1>
-<<<<<<< HEAD
-<p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
+            <p className="text-gray-300 text-lg">Automate research, summarization, drafting, scheduling, and inbox triage.</p>
           </header>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -147,21 +141,6 @@ export default function AIAssistantPage() {
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
-          </header>
-          <section className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
-            {[
-              'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
-            ].map((f) => (
-              <div key={f} className=&quot;p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200&quot;>{f}</div>
-              'Research and summarize documents and web sources', _'Draft emails, _posts, _briefs, _and reports', _'Auto-schedule meetings and follow-ups', _'Integrations: Gmail, _Google Drive, _Slack, _Calendar', _'Team approvals and audit trail', _'Starting at $99/mo'
-            ].map((f) => (
-              <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{_f}</div>
-
-            ))}
-          </section>
-          <div className=&quot;text-center&quot;>
-            <Button href=&quot;/contact&quot; className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white&quot;>Request a Demo</Button>
-
           </div>
         </div>
       </div>
@@ -169,12 +148,6 @@ export default function AIAssistantPage() {
   )
 }
 
-    </Layout>);
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

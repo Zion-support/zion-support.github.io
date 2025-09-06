@@ -1,3 +1,7 @@
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+import OpenAI from 'openai',;
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
 
 
   try {
@@ -9,21 +13,14 @@ Title: ${slide.title}\nContent:\n${slide.content}`
       const chat = await client.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     } catch (err) {
       // keep original if AI fails;
     }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+    res.status(500).json({ error: e?.message || 'Rewrite failed' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
   }
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

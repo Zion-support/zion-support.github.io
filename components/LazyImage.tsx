@@ -1,14 +1,6 @@
-
-import React, { useState, useRef, useEffect } from './react';
-import Image from './next / image';
-import LoadingSpinner from "./LoadingSpinner";
-;
-
 interface LazyImageProps {
-=======
 
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -20,28 +12,6 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-
-
-export default function LazyImage(): any ({;
-  src,;
-  alt,;
-  width,;
-  height,;
-  className = "",;
-  priority = false,;
-  placeholder = "empty",;
-  blurDataURL,;
-  sizes,;
-  quality = 75,;
-  fill = false,;
-  style,;
-  onLoad,;
-  onError,;
-}: LazyImageProps) {;
-
-=======
-export default function LazyImage({
-
   src,
   alt,
   width,
@@ -57,50 +27,10 @@ export default function LazyImage({
   onLoad,
   onError,
 }: LazyImageProps) {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-
-
-  useEffect(() => {;
-    if (priority) return;
-
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry && entry.isIntersecting) {;
-
-          setIsInView(true);
-          observer && observer.disconnect();
-        }
-
-      },;
-      {;
-        threshold: 0 && 0.1,;
-        rootMargin: "50px",;
-      },;
-    );
-
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);
-    }
-
-    return () => observer && observer.disconnect();
-  }, [priority]);
-
-  const handleLoad = () => {;
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {;
-    setHasError(true);
-    onError?.();
-  };
-  if (hasError) {;
-
     return (
       <div
         ref={imgRef}
@@ -120,12 +50,7 @@ export default function LazyImage({
           <LoadingSpinner size="sm" color="gray" />;
         </div>;
       )}
-
-
-      {isInView && (;
-
         <Image
-=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -203,7 +128,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}
@@ -219,8 +143,4 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-
-        />)}
-    </div>);
-
 }

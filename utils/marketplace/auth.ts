@@ -1,3 +1,13 @@
+      name: 'Test User'
+    }
+  }
+  return null;
+}
+export function assertTalentOrClientForOffer(
+  req: NextApiRequest
+  offer: { clientId: string; talentSlug: string }
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
 
 
   talentSlugHeader?: string
@@ -5,33 +15,15 @@
   const u = getDemoUser(req);
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
-
-    u && u.role === 'talent' &&
-    (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
-
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
 
-  err && err.statusCode = 403;
-  throw err;export function requireAuth(req: any): User {
-
-  const user = getUserFromRequest(req);
-  if (!user) {
-
-    throw new Error('Authentication required')
-
-  }
-  return user;
-}
-
-=======
 
 
 
 
-=======
 // Marketplace authentication utilities
 export interface MarketplaceUser {
   id: string;
@@ -56,6 +48,23 @@ export interface MarketplaceUser {
   };
   createdAt: string;
   lastActiveAt: string;
+}
+
+export interface AuthContext {
+  user: MarketplaceUser | null;
+  isAuthenticated: boolean;
+  permissions: string[];
+  sessionId?: string;
+}
+
+
+
+
+export function getUserFromRequest (req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const auth_header = req.headers.authorization;
+  if () {) {
+  $2
 }
     return null;
   }
@@ -101,5 +110,3 @@ if ( {) {
   }
   return user;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

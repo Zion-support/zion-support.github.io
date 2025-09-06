@@ -1,20 +1,3 @@
-
-
-
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-
-import React, { useState } from './react';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-
-import {
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   BookOpen,
   Brain,
   Building,
@@ -49,53 +32,6 @@ import {
   Star,
   Target,
   TrendingUp,
-
-import {;
-  ArrowRight,;
-  Award,;
-  BarChart3,;
-  BookOpen,;
-  Brain,;
-  Building,;
-  Calculator,;
-  Calendar,;
-  Camera,;
-  CheckCircle,;
-  ChevronDown,;
-  Clock,;
-  Cloud,;
-  Code,;
-  CreditCard,;
-  DollarSign,;
-  Eye,;
-  FileText,;
-  Gamepad2,;
-  Globe,;
-  Heart,;
-  Home,;
-  Lock,;
-  Mail,;
-  MapPin,;
-  Menu,;
-  MessageSquare,;
-  Music,;
-  Network,;
-  Phone,;
-  Rocket,;
-  Settings,;
-  Shield,;
-  ShoppingCart,;
-  Star,;
-  Target,;
-  TrendingUp,;
-  Truck,;
-  Users,;
-  X,;
-  Zap,;
-
-} from "lucide-react";
-=======
-
   Clock,
   DollarSign,
   Cpu,
@@ -134,20 +70,14 @@ import {;
   Clock as Time,
   DollarSign as Money;
 
-} from 'lucide-react';
->>>>>>> origin/automation-improvements-final
 
-
-=======
 
 
 } from 'lucide-react';
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ArrowRight
   Award
   BarChart3
@@ -189,12 +119,6 @@ import {;
   Users
   X
   Zap
-} from "lucide-react";
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const navigationItems = [
   {
     title: "Services"
@@ -222,7 +146,6 @@ const navigationItems = [
         description: "40+ innovative micro SaaS solutions"
         popular: true
       }
-=======
 } from './lucide-react';
 ;
 const navigation_items = [;
@@ -252,7 +175,6 @@ const navigation_items = [;
         description: "40+ innovative micro SaaS solutions",
         popular: true,
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         title: "Cybersecurity"
         href: "/cybersecurity"
@@ -261,13 +183,6 @@ const navigation_items = [;
         popular: false
       }
       {
-
-        title: "Cloud Solutions",
-        href: "/cloud - solutions",
-        icon: Cloud,
-        description: "Scalable cloud infrastructure",
-        popular: false,
-      },
       {
         title: "Data Analytics",
         href: "/data - analytics",
@@ -352,11 +267,6 @@ const navigation_items = [;
     ],
   },
   {
-    title: "Resources",
-    href: "/resources",
-    icon: FileText,
-    submenu: [;
-
       {
         title: "Blog"
         href: "/blog"
@@ -364,12 +274,6 @@ const navigation_items = [;
         description: "Latest insights and trends"
       }
       {
-
-        title: "Case Studies",
-        href: "/case - studies",
-        icon: BarChart3,
-        description: "Success stories and results",
-      },
       {
         title: "White Papers",
         href: "/white - papers",
@@ -377,12 +281,6 @@ const navigation_items = [;
         description: "In - depth research reports",
       },
       {
-        title: "Tutorials",
-        href: "/tutorials",
-        icon: BookOpen,
-        description: "Step - by - step guides",
-      },
-
       {
         title: "FileTextation"
         href: "/docs"
@@ -392,12 +290,6 @@ const navigation_items = [;
     ]
   }
   {
-
-    title: "Company",
-    href: "/about",
-    icon: Building,
-    submenu: [;
-
       {
         title: "About Us"
         href: "/about"
@@ -437,227 +329,8 @@ const navigation_items = [;
     ]
   }
 ];
-
-const navigationItems = [;
-  {;
-    title: "Services",;
-    href: "/services",;
-    icon: Settings,;
-    submenu: [;
-      {;
-        title: "AI Services",;
-        href: "/ai-services",;
-        icon: Brain,;
-        description: "30+ cutting-edge AI solutions",;
-        popular: true,;
-      },;
-      {;
-        title: "IT Services",;
-        href: "/it-services",;
-        icon: Network,;
-        description: "25+ comprehensive IT services",;
-        popular: true,;
-      },;
-      {;
-        title: "Micro SaaS",;
-        href: "/micro-saas",;
-        icon: Cloud,;
-        description: "40+ innovative micro SaaS solutions",;
-        popular: true,;
-      },;
-      {;
-        title: "Cybersecurity",;
-        href: "/cybersecurity",;
-        icon: Shield,;
-        description: "Enterprise security solutions",;
-        popular: false,;
-      },;
-      {;
-        title: "Cloud Solutions",;
-        href: "/cloud-solutions",;
-        icon: Cloud,;
-        description: "Scalable cloud infrastructure",;
-        popular: false,;
-      },;
-      {;
-        title: "Data Analytics",;
-        href: "/data-analytics",;
-        icon: BarChart3,;
-        description: "Advanced analytics platform",;
-        popular: false,;
-      },;
-    ],;
-  },;
-  {;
-    title: "Solutions",;
-    href: "/solutions",;
-    icon: Target,;
-    submenu: [;
-      {;
-        title: "Enterprise Solutions",;
-        href: "/solutions/enterprise",;
-        icon: Building,;
-        description: "Comprehensive enterprise solutions",;
-      },;
-      {;
-        title: "Startup Solutions",;
-        href: "/solutions/startup",;
-        icon: Rocket,;
-        description: "Rapid deployment for startups",;
-      },;
-      {;
-        title: "Industry Solutions",;
-        href: "/solutions/industry",;
-        icon: BarChart3,;
-        description: "Industry-specific solutions",;
-      },;
-      {;
-        title: "Custom Solutions",;
-        href: "/solutions/custom",;
-        icon: Settings,;
-        description: "Tailored custom solutions",;
-      },;
-    ],;
-  },;
-  {;
-    title: "Industries",;
-    href: "/industries",;
-    icon: Building,;
-    submenu: [;
-      {;
-        title: "Healthcare",;
-        href: "/industries/healthcare",;
-        icon: Heart,;
-        description: "Medical AI and health tech",;
-      },;
-      {;
-        title: "Finance",;
-        href: "/industries/finance",;
-        icon: DollarSign,;
-        description: "Fintech and financial services",;
-      },;
-      {;
-        title: "Manufacturing",;
-        href: "/industries/manufacturing",;
-        icon: Settings,;
-        description: "Industrial automation",;
-      },;
-      {;
-        title: "Retail",;
-        href: "/industries/retail",;
-        icon: ShoppingCart,;
-        description: "E-commerce and retail tech",;
-      },;
-      {;
-        title: "Education",;
-        href: "/industries/education",;
-        icon: BookOpen,;
-        description: "EdTech solutions",;
-      },;
-      {;
-        title: "Real Estate",;
-        href: "/industries/real-estate",;
-        icon: Home,;
-        description: "PropTech innovations",;
-      },;
-    ],;
-  },;
-  {;
-    title: "Resources",;
-    href: "/resources",;
-    icon: FileText,;
-    submenu: [;
-      {;
-        title: "Blog",;
-        href: "/blog",;
-        icon: FileText,;
-        description: "Latest insights and trends",;
-      },;
-      {;
-        title: "Case Studies",;
-        href: "/case-studies",;
-        icon: BarChart3,;
-        description: "Success stories and results",;
-      },;
-      {;
-        title: "White Papers",;
-        href: "/white-papers",;
-        icon: FileText,;
-        description: "In-depth research reports",;
-      },;
-      {;
-        title: "Tutorials",;
-        href: "/tutorials",;
-        icon: BookOpen,;
-        description: "Step-by-step guides",;
-      },;
-      {;
-        title: "FileTextation",;
-        href: "/docs",;
-        icon: FileText,;
-        description: "Technical documentation",;
-      },;
-    ],;
-  },;
-  {;
-    title: "Company",;
-    href: "/about",;
-    icon: Building,;
-    submenu: [;
-      {;
-        title: "About Us",;
-        href: "/about",;
-        icon: Building,;
-        description: "Our story and mission",;
-      },;
-      {;
-        title: "Team",;
-        href: "/team",;
-        icon: Users,;
-        description: "Meet our experts",;
-      },;
-      {;
-        title: "Careers",;
-        href: "/careers",;
-        icon: Users,;
-        description: "Join our team",;
-      },;
-      {;
-        title: "Partners",;
-        href: "/partners",;
-        icon: Globe,;
-        description: "Our partnerships",;
-      },;
-      {;
-        title: "News",;
-        href: "/news",;
-        icon: FileText,;
-        description: "Company updates",;
-      },;
-      {;
-        title: "Press",;
-        href: "/press",;
-        icon: FileText,;
-        description: "Press releases and media",;
-      },;
-    ],;
-  },;
-];
-
-const quickLinks = [;
-  { title: "Pricing", href: "/pricing", icon: DollarSign },;
-  { title: "Contact", href: "/contact", icon: Phone },;
-  { title: "Support", href: "/support", icon: MessageSquare },;
-  { title: "Status", href: "/status", icon: BarChart3 },;
-  { title: "Quote", href: "/quote", icon: FileText },;
-  { title: "API Docs", href: "/api-docs", icon: Code },;
-];
-
-export default function Navigation() {;
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-=======
 
 
 export default function Navigation() {;
@@ -667,8 +340,6 @@ export default function Navigation() {;
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
@@ -693,98 +364,20 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>;
               <Link
                 href="/pricing"
-
-                className="hover:text-blue-200 transition-colors">;
-=======
-;
-const quick_links = [;
-  { title: "Pricing", href: "/pricing", icon: DollarSign },
-  { title: "Contact", href: "/contact", icon: Phone },
-  { title: "Support", href: "/support", icon: MessageSquare },
-  { title: "Status", href: "/status", icon: BarChart3 },
-  { title: "Quote", href: "/quote", icon: FileText },
-  { title: "API Docs", href: "/api - docs", icon: Code },
-];
-;
-export default /**
- * Navigation - Function description
- */
-function Navigation() {
-  const [is_open, setIsOpen] = useState (false);
-  const [active_submenu, setActiveSubmenu] = useState < string | null>(null);
-;
-  return (
-    <nav className="bg - white shadow - lg sticky top - 0 z - 50">;
-      {/* Top Bar */}
-      <div className="bg - blue - 600 text - white py - 2">;
-        <div className="container mx - auto px - 4">;
-          <div className="flex justify - between items - center text - sm">;
-            <div className="flex items - center space - x-6">;
-              <div className="flex items - center">;
-                <Phone className="w - 4 h - 4 mr - 2" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items - center">;
-                <Mail className="w - 4 h - 4 mr - 2" />;
-                <span > kleber@ziontechgroup.com</span>;
-              </div>;
-            </div>;
-            <div className="flex items - center space - x-4">;
-              <Link;
-                href="/contact";
-                className="hover:text - blue - 200 transition - colors";
-              >;
-                Get Free Consultation;
-              </Link>;
-              <Link;
-                href="/pricing";
-                className="hover:text - blue - 200 transition - colors";
-              >;
-
                 View Pricing;
               </Link>;
             </div>;
           </div>;
         </div>;
       </div>;
-
-          <Link href="/" className="flex items-center space-x-2">;
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">;
-              <span className="text-white font-bold text-xl">Z</span>;
-            </div>;
-            <div>;
-              <div className="text-xl font-bold text-gray-900">;
-                Zion Tech Group;
-              </div>;
-              <div className="text-sm text-gray-500">;
-=======
       {/* Main Navigation */}
       <div className="container mx - auto px - 4">;
         <div className="flex justify - between items - center py - 4">;
           {/* Logo */}
-          <Link href="/" className="flex items - center space - x-2">;
-            <div className="w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center">;
-              <span className="text - white font - bold text - xl">Z</span>;
-            </div>;
-            <div>;
-              <div className="text - xl font - bold text - gray - 900">;
-                Zion Tech Group;
-              </div>;
-              <div className="text - sm text - gray - 500">;
-
                 AI & Technology Solutions;
               </div>;
             </div>;
           </Link>;
-
-                  href={item && item.href}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors py-2">;
-                  <item && item.icon className="w-5 h-5" />;
-                  <span>{item && item.title}</span>;
-                  <ChevronDown className="w-4 h-4" />;
-                </Link>;
-
-
                 {/* Submenu */}
                 {activeSubmenu === item && item.title && (;
                   <motion&& motion.div
@@ -833,22 +426,12 @@ function Navigation() {
                   <span>{link && link.title}</span>;
                 </Link>;
               ))}
-
-            </div>;
-          </div>;
-
-
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-
-          </button>;
-        </div>;
-
-
         {/* Mobile Navigation */}
         {isOpen && (;
           <motion&& motion.div
@@ -909,7 +492,6 @@ function Navigation() {
       </div>;
     </nav>;
   );
-=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items - center space - x-8">;
             {navigation_items.map ((item) => (
@@ -1038,5 +620,4 @@ function Navigation() {
           </motion.div>)}
       </div>;
     </nav>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,12 +20,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
+
+export default function BrowserAutomationCloudPage() {
+  const features = [
+    'Parallel Playwright/Puppeteer execution',
+    'Queued jobs with retries and rate limits',
+    'Artifacts: HAR, traces, screenshots, videos',
+    'Rotating proxies and geo targeting',
+    'Webhook callbacks and REST API',;
+  ];
 
 
 
@@ -88,7 +94,6 @@ import {Check, ExternalLink} from 'lucide-react';
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
-=======
 export default /**
  * BrowserAutomationCloudPage - Function description
  */
@@ -154,16 +159,10 @@ function BrowserAutomationCloudPage() {
               className='inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300';
             >;
               <ExternalLink className='w - 4 h - 4' /> Puppeteer;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </a>;
           </div>;
         </section>;
       </main>;
-
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);	return (
   <>;
   <SEO title="Browser Automation Cloud" description="Parallel Playwright / Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -192,10 +191,3 @@ function BrowserAutomationCloudPage() {
   </main>;
   </>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-	),
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

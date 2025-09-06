@@ -1,6 +1,3 @@
-}
-}
-
 ;
 
 import React, { useState } from 'react',;
@@ -105,17 +102,14 @@ export default function ProjectRoom() {;
         </p>
       </div>
     </>
-
-
-
-
-
-
+  );
 }
-
 }
-
-
+}
+}
+}
+;
+}
 }
 
 ;
@@ -123,4 +117,3 @@ export default function ProjectRoom() {;
 }
   )
 }
-;

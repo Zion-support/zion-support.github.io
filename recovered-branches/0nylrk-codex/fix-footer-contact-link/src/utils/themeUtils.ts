@@ -1,5 +1,4 @@
 
-
 export interface ThemeColors {;
 
 
@@ -12,20 +11,9 @@ export interface ThemeColors {;
 }
 // Define theme presets
 export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-=======
-export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-;
-export interface ThemeColors {
-  primary_color: string;
-  background_color: string;
-  text_color: string;
-  accent_color: string;
-  button_color: string,
-  card_background: string;
-}
+  switch (preset) {
 // Define theme presets;
 export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   switch (preset) {
     case 'dark':;
       return {
@@ -56,10 +44,8 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   // Set background and text colors on body
   document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
   document && document.body.style && style.color = colors && colors.textColor
-=======
 
 
-=======
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -68,10 +54,9 @@ export interface ThemeColors {;
   accentColor: string,;
   buttonColor: string,;
   cardBackground: string;
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+  switch (preset) {
+    case 'dark':;
+      return {
         primary_color;
         background_color: '#0f172a';
         text_color: '#e2e8f0';
@@ -125,14 +110,16 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
-
-
-
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export /**
+ * applyThemeColors - Function description
+ */
+function applyThemeColors() {
+  const root = document.document_element,
+  root.style.set_property ('--primary - color', colors.primary_color);
+  root.style.set_property ('--background - color', colors.background_color);
+  root.style.set_property ('--text - color', colors.text_color);
+  root.style.set_property ('--accent - color', colors.accent_color);
+  root.style.set_property ('--button - color', colors.button_color);
+  root.style.set_property ('--card - background', colors.card_background);
 ;
-  // Set background and text colors on body;
-  document.body.style.background_color = colors.background_color;
-  document.body.style.color = colors.text_color;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

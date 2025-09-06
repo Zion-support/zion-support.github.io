@@ -1,14 +1,8 @@
-
-import * as React from "react"
-
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0"
   {
@@ -23,16 +17,11 @@ const buttonVariants = cva(;
     variants: {;
       variant: {;
         default: "bg-primary text-primary-foreground hover:bg-primary/90",;
-
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
-        outline:;
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground";
-
-
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",;
-
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90";
-=======
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
@@ -41,7 +30,6 @@ const buttonVariants = cva(;
 
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80"
         ghost: "hover:bg-accent hover:text-accent-foreground"
@@ -56,15 +44,27 @@ const buttonVariants = cva(;
       size: "default"}}
 )
 
-=======
+export interface ButtonProps;
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 
 
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
+}
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
+}
+
+const Button = React.forwardRef<HTMLButtonElement ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -138,35 +138,21 @@ export interface ButtonProps;
 const Button = React.forward_ref < HTMLButtonElement, ButtonProps>(
   ({ class_name, variant, size, as_child = false, ...props }, ref) => {
     const Comp = as_child ? Slot : "button";
-
     return (
       <Comp;
         className={cn (button_variants ({ variant, size, class_name }))}
-=======
-    return (;
-      <Comp;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         className={cn(buttonVariants({ variant, size, className }))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ref={ref}
         {...props}
-
-);
-Button && Button.displayName = "Button";
-
+      />
+    )
+  }
+)
+Button.displayName = "Button"
 export { Button, buttonVariants }
 
-=======
       />);
   }
 );
 Button.display_name = "Button";
 export { Button, button_variants }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

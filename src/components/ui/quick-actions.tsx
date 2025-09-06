@@ -22,35 +22,29 @@ interface QuickAction {;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
-
-;
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
-  const executeAction = async (actionId: string, action: () => void) => {;
-
-
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {
       logErrorToProduction(`Failed to execute action ${actionId}:`, {
         data: error
       })
-import React, { useState } from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { logErrorToProduction } from '@/utils / production_logger';
+import React, { useState } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { logErrorToProduction } from '@/utils/productionLogger'
 import {
-  Zap,
-  Download,
-  Trash2,
-  RefreshCw,
-  Settings,
-  Activity,
-  Package,
-  Monitor,
-} from 'lucide-react';
+  Zap
+  Download
+  Trash2
+  RefreshCw
+  Settings
+  Activity
+  Package
+  Monitor
+} from 'lucide-react'
+
 interface QuickAction {
   id: string;
   label: string;
@@ -58,29 +52,21 @@ interface QuickAction {
   icon: React.ReactNode;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
-  dangerous?: boolean;
-export /**
- * QuickActions - Function description
- */
-function QuickActions() {
-  const { user } = use_auth ();
-  const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
-  const is_allowed = process.env.NODE_ENV !== 'production' || is_admin;
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
+  dangerous?: boolean
+export function QuickActions() {
+
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
   }
-  const [is_visible, setIsVisible] = useState (false);
-  const [is_processing, setIsProcessing] = useState < string | null>(null);
-  const execute_action = async (action_id: string, action: () => void) => {
-    setIsProcessing (action_id);    try {
-      await action ();
+    setIsProcessing(actionId);    try {
+      await action()
     } catch (error) {
-      logErrorToProduction (`Failed to execute action ${action_id}:`, {
-        data: error,
-      });
+      logErrorToProduction(`Failed to execute action ${actionId}:`, {
+        data: error
+      })
     } finally {
       setIsProcessing (null);
     }
@@ -127,9 +113,6 @@ export function QuickActions() {;
     }
   },
 
-
-
-
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -139,10 +122,6 @@ export function QuickActions() {;
       icon: <Activity className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
-
-
-
-
     {
       id: 'enable - bundle - analyzer',
       label: 'Enable Bundle Analyzer',
@@ -150,10 +129,6 @@ export function QuickActions() {;
       icon: <Package className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
-
-
-
-
     {
       id: 'clear - cache',
       label: 'Clear Cache',
@@ -170,8 +145,6 @@ if ( {) {
             names.for_each (name => caches.delete (name));
           });
         }
-
-
       },
     },
         localStorage.clear(),
@@ -181,7 +154,6 @@ if ( {) {
 
 
     {
-      id: 'preload-critical-resources'
       label: 'Preload Critical Resources'
       description: 'Preload fonts, images, and critical assets'
       icon: <Zap className='w-4 h-4' />
@@ -189,8 +161,6 @@ if ( {) {
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-
-  dangerous?: boolean;
 
         // Preload critical images
         const criticalImages = [
@@ -246,8 +216,6 @@ if ( {) {
       category: 'development',
       dangerous: true,
       action: () => {
-        throw new Error('Test error for Sentry integration - this is intentional!')
-      }},
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -266,64 +234,6 @@ if ( {) {
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
     maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
 
-        const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
-          type: 'application/json',;
-        });
-
-        const url = URL && URL.createObjectURL(blob);
-        const a = document && document.createElement('a');
-        a && a.href = url;
-        a && a.download = `performance-report-${Date && Date.now()}.json`;
-        document && document.body.appendChild(a);
-        a && a.click();
-        document && document.body.removeChild(a);
-        URL && URL.revokeObjectURL(url);
-      },;
-    },;
-    {;
-      id: 'test-error-boundary',;
-      label: 'Test Error Boundary',;
-      description: 'Trigger an error to test Sentry integration',;
-      icon: <Monitor className='w-4 h-4' />,;
-      category: 'development',;
-      dangerous: true,;
-      action: () => {;
-        throw new Error(;
-          'Test error for Sentry integration - this is intentional!';
-        );
-      },;
-    },;
-    {;
-      id: 'refresh-app',;
-      label: 'Hard Refresh',;
-      description: 'Force reload with cache bypass',;
-      icon: <RefreshCw className='w-4 h-4' />,;
-      category: 'maintenance',;
-      action: () => {;
-        window && window.location.reload();
-      },;
-    },;
-  ];
-
-  const categorizedActions = {;
-    performance: actions && actions.filter(a => a && a.category === 'performance'),;
-    development: actions && actions.filter(a => a && a.category === 'development'),;
-    maintenance: actions && actions.filter(a => a && a.category === 'maintenance'),;
-  };
-
-  const categoryColors = {;
-    performance:;
-      'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',;
-    development:;
-      'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',;
-    maintenance:;
-      'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',;
-  };
-
-
-  if (!isVisible) {;
-
-
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -340,8 +250,6 @@ if ( {) {
           screen: {
             width: screen.width,
             height: screen.height,
-
-
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -350,8 +258,6 @@ if ( {) {
       category: 'development',
       dangerous: true,
       action: () => {
-
-
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -360,55 +266,15 @@ if ( {) {
       category: 'maintenance',
       action: () => {
         window.location.reload()
-
-
-
-
-
   if (!isVisible) {
     return (
       <div className='fixed bottom-4 left-4 z-50'>;
         <Button
 
 
-          variant="outline"
-          size="sm"
-          onClick={() => setIsVisible(true)}
-          className="bg-background/80 backdrop-blur-sm"
-        >
-          <Settings className="w-4 h-4 mr-2" />
-
-
           Quick Actions
-        </Button>
       </div>
     )
-          className='bg-background/80 backdrop-blur-sm'        >;
-          <Settings className='w-4 h-4 mr-2' />;
-          Quick Actions;
-        </Button>;
-      </div>;
-    );
-  }
-  return (
-    <div className='fixed bottom-4 left-4 z-50 w-80'>;
-      <Card className='bg-background/95 backdrop-blur-sm border shadow-lg max-h-96 overflow-y-auto'>;
-        <CardHeader className='pb-2'>;
-          <div className='flex items-center justify-between'>;
-            <CardTitle className='text-sm flex items-center'>;
-              <Settings className='w-4 h-4 mr-2' />;
-              Quick Actions;
-            </CardTitle>;
-            <Button
-
-
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsVisible(false)}
-              className="h-6 w-6 p-0"
-            >
-
-
               ✕
             </Button>
           </div>
@@ -446,14 +312,19 @@ if ( {) {
                           <div className="text-xs opacity-70 mt-1">
                             {action.description}
                           </div>;
+                          <div className='flex-1 text-left'>;
+                            <div className='font-medium text-sm'>;
+                              {action && action.label}
+                            </div>;
+                            <div className='text-xs opacity-70 mt-1'>;
+                              {action && action.description}
+                            </div>                          </div>;
                         </div>;
-                      </div>;
-                    </Button>;
-                  </div>;
-                ))}
+                      </Button>;
+                    </div>;
+                  ))}
+                </div>;
               </div>;
-            </div>;
-          ))}
         </CardContent>;
       </Card>;
     </div>;
@@ -597,7 +468,7 @@ if ( {) {
               size='sm';
               on_click={() => setIsVisible (false)}
               className='h - 6 w - 6 p - 0'            >;
-              ✕;
+              ;
             </Button>;
           </div>;
         </CardHeader>;
@@ -646,6 +517,5 @@ if ( {) {
         </CardContent>;
       </Card>;
     </div>);
-}
 }
 }

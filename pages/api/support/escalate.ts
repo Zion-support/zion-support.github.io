@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
 import { tagOperatorSession } from "../../../utils/operator";
@@ -47,7 +46,6 @@ function handler() {
   }
   requests.push(record);
   writeJson("support/requests.json", requests);
-
   };
   if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
   const requests = readJson<any[]>("support/requests && requests.json", []);
@@ -58,12 +56,6 @@ function handler() {
     reason: reason ?? "User requested escalation",
     tag: tag ?? "escalate",
     status: "open",
-
-}
-
-    created_at: Date.now (),
-=======
-
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -74,7 +66,3 @@ function handler() {
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

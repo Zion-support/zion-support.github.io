@@ -1,27 +1,66 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+import { ensureAdminFromApi } from '../../../../utils/auth';
 
+type EventRow = {
 
+  name: string
+  page?: string
+  userType?: string
+  properties?: Record<string, any>
+  at: string
+}
+const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl')
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return []
+    const raw = fs.readFileSync(LOG_FILE, 'utf8')
+    const lines = raw.split('\n').filter(Boolean)
+    const start = startIso ? new Date(startIso) : null
+    const end = endIso ? new Date(endIso) : null
+    const rows: EventRow[] = []
+    for (const line of lines) {
+      try {
+        const obj = JSON.parse(line)
+        if (!obj.at) continue
+        const t = new Date(obj.at)
+        if (start && t < start) continue
+        if (end && t > end) continue
+        rows.push(obj)
       } catch {}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+  name: string;
+  page?: string;
+  userType?: string;
+  properties?: Record<string, any>;
+  at: string;
+};
+
+const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');
+
+function parseLines(startIso?: string, endIso?: string): EventRow[] {
+  try {
+    if (!fs.existsSync(LOG_FILE)) return [];
+    const raw = fs.readFileSync(LOG_FILE, 'utf8');
     }
     return rows;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     return [];
   }
 }
-
-
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
+    .sort((a, b) => b.value - a.value),
+
+
 
     .sort((a, b) => b.value - a.value);
-=======
 
 
     .sort((a, b) => b.value - a.value),
@@ -44,7 +83,6 @@
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 
 
-=======
 function featureFromPath (page?: string): string {
 // Check condition
 if (return 'other', ) {
@@ -95,12 +133,7 @@ function handler() {
   res.status (200).json ({ pagesMostUsed, events, line, funnel });
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 };
-
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -119,7 +152,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

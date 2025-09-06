@@ -10,15 +10,29 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
+import { Button } from "@/components/ui/button",
+interface Contract {
+  id: string,
+  title: string,
+  client: string,
+  talent: string,
+  date: string,
+  isSmartContract: boolean
+import { Button } from "@/components/ui/button",;
+interface Contract {;
+  id: string,;
+  title: string,;
+  client: string,;
+  talent: string,;
+  date: string,;
+  isSmartContract: boolean;
+}
+;
+interface RecentContractsTableProps {;
 
 
 interface RecentContractsTableProps {;
 
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
@@ -26,8 +40,6 @@ interface RecentContractsTableProps {;
 
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-
-
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -95,8 +107,8 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                   <Button
                     variant="ghost"
                     size="sm"
+    </>
                     onClick={() => onViewContract(contract && contract.id)}
-=======
 interface RecentContractsTableProps {
   contracts: Contract[];
   onViewContract: (contract_id: string) => void;
@@ -176,16 +188,10 @@ function RecentContractsTable() {
                     variant="ghost";
                     size="sm";
                     on_click={() => onViewContract (contract.id)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     View;
                   </Button>;
                 </td>;
-
-
-
-=======
-
           </tbody>;
         </table>;
       </div>;
@@ -195,11 +201,9 @@ function RecentContractsTable() {
 
 
   );
-=======
               </tr>))}
           </tbody>;
         </table>;
       </div>;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

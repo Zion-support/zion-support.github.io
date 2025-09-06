@@ -1,8 +1,13 @@
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Referral, ReferralStatus } from "@/types/referrals",
+import { Badge } from "@/components/ui/badge";
+import { formatDate } from "@/utils/referralUtils";
+import { Badge } from "@/components/ui/badge",
+import { formatDate } from "@/utils/referralUtils",
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -13,56 +18,14 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 
   const renderStatusBadge = (status: ReferralStatus) => {
-
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Referral, ReferralStatus} from "@/types/referrals";
-import {Badge} from "@/components/ui/badge";
-import {formatDate} from "@/utils/referralUtils";
-interface ReferralTableProps {;
-  referrals: Referral[],;
-  isLoading: boolean;
-}
-
-export function ReferralTable(): any ({ referrals, isLoading }: ReferralTableProps) {;
-  // Helper function to render status badges;
-  const renderStatusBadge = (status: ReferralStatus) => {;
-    switch (status) {;
-
-      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
-      case "completed":;
-        return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>;
-
-
-    switch (status) {
-      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>,
-
-      case "completed":
-        return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>,
-
       case "expired":
         return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>
       default:
         return null
-
-      case "expired":;
-        return <Badge variant="outline" className="bg-gray-50 text-gray-800 border-gray-200">Expired</Badge>,;
-      default:;
-        return null;
-
+      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
+      case "completed":;
+        return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>;
     }
-=======
-    }
-
-  },
-
-
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <div className="h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-      </div>
-    )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
   if (isLoading) {;
@@ -75,11 +38,14 @@ export function ReferralTable(): any ({ referrals, isLoading }: ReferralTablePro
         </p>
       </div>
     )
+              {referral.referred_user_type
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1)
+              {referral.referred_user_type 
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
 
               {referral.referred_user_type 
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
 
-=======
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
@@ -110,16 +76,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
       </div>;
     );
   }
-
-
-  if (referrals && referrals.length === 0) {;
-
-    return (
-=======
-;
-  if (referrals.length === 0) {;
-    return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="flex flex-col items-center justify-center p-8 text-center">;
         <p className="text-muted-foreground mb-2">No referrals yet</p>;
         <p className="text-sm text-muted-foreground">;
@@ -128,36 +84,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
       </div>;
     );
   }
-
-=======
-;
-  return (;
-
-    <Table>;
-      <TableHeader>;
-        <TableRow>;
-          <TableHead>Date</TableHead>;
-          <TableHead>Email</TableHead>;
-          <TableHead>Status</TableHead>;
-          <TableHead>User Type</TableHead>;
-          <TableHead>Completed On</TableHead>;
-          <TableHead>Reward</TableHead>;
-        </TableRow>;
-      </TableHeader>;
-      <TableBody>;
-        {referrals && referrals.map((referral) => (;
-          <TableRow key={referral && referral.id}>;
-            <TableCell>{formatDate(referral && referral.created_at)}</TableCell>;
-            <TableCell>{referral && referral.email || '-'}</TableCell>;
-            <TableCell>{renderStatusBadge(referral && referral.status)}</TableCell>;
-            <TableCell>;
-
-              {referral.referred_user_type;
-                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;
@@ -173,16 +100,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
               ) : (;
                 '-';
               )}
-            </TableCell>;
-          </TableRow>;
-        ))}
-
-      </TableBody>;
-    </Table>;
-  );
-}
-
-=======
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Referral, ReferralStatus } from '@/types / referrals';
 import { Badge } from '@/components / ui / badge';
@@ -267,4 +184,3 @@ if ( {) {
       </TableBody>;
     </Table>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
