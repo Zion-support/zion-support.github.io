@@ -1,0 +1,10 @@
+export default function MarketplaceEnrichmentPage() {
+  return (
+    <div className=&quot;py-10&quot;>
+      <h1 className=&quot;text-2xl font-semibold text-white&quot;>Marketplace Enrichment</h1>
+      <p className=&quot;text-white/80 mt-2&quot;>AI-generated summaries, tags, and tiers are stored in <code className=&quot;text-white/90&quot;>data/services/enriched.json</code>.</p>
+      <p className=&quot;text-white/70 mt-2&quot;>This runs on a 6-hour schedule and auto-PRs updates.</p>
+    </div>
+  )
+}
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
-=======
+
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
 import { 
   Cloud, 
   Zap, 
@@ -1045,7 +1045,7 @@ const benefits = [{
     title: 'High Quality',
     description: 'Production-ready code and infrastructure',
     stat: '99.9%'
-=======
+
     features: ['AI Task Assignment', 'Deadline Prediction', 'Resource Optimization', 'Risk Assessment', 'Progress Tracking', 'Team Collaboration'],
     pricing: '$39 - $249/month',
     category: 'AI Project Management',
@@ -1690,7 +1690,7 @@ const benefits = [{
   {
     title: 'Real-time Data Streaming',
     description: 'High-performance real-time data streaming platform with event processing and analytics capabilities.',
-=======
+
     title: "Workflow Automation",
     description: "Streamline business processes with intelligent automation tools",
     icon: Zap,
@@ -3211,7 +3211,7 @@ export default function MicroSaas() {
                     </div>
                     {service.popular && (
                       <span className="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded-full">
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
                         Popular
                       </span>
                     )}
@@ -3222,7 +3222,7 @@ export default function MicroSaas() {
                         <li key={idx} className="flex items-center">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
-=======
+
     <Layout
       title="Micro SaaS Solutions - Zion Tech Group"
       description="Innovative micro SaaS solutions for modern businesses. Custom automation tools, data processing, and API integrations to accelerate your growth."
@@ -3322,7 +3322,7 @@ export default function MicroSaas() {
                       ))}
                     </ul>
                   </div>
-=======
+
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="space-y-2 mb-4">
@@ -3350,14 +3350,13 @@ export default function MicroSaas() {
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>
                   </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-            
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -3390,7 +3389,7 @@ export default function MicroSaas() {
                 View All Pricing
               </Link>
             </div>
-=======
+
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -3421,7 +3420,7 @@ export default function MicroSaas() {
                 </Link>
               </div>
             </motion.div>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
           </div>
         </section>
       </div>
@@ -3540,7 +3539,6 @@ export default function MicroSaas() {
         </div>
       </section>
     </Layout>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+
   );
 }

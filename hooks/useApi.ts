@@ -1,4 +1,10 @@
-import { useState, useEffect } from 'react';
+      setLoading(false)};
+;
+  return { data, loading, error, execute }};
+};
+};
+};
+};import { useState, useEffect } from 'react';
 
 interface ApiState<T> {
   data: T | null;
@@ -6,42 +12,37 @@ interface ApiState<T> {
   error: string | null;
 }
 
-interface UseApiOptions {
-  immediate?: boolean;
-}
-
-export function useApi<T>(
-  apiCall: () => Promise<T>,
-  options: UseApiOptions = {}
-): ApiState<T> & { refetch: () => void } {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  const fetchData = async () => {
-    setLoading(true);
-    setError(null);
-    
-    try {
-      const result = await apiCall();
-      setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  };
+export function useApi<T>(url: string, options?: RequestInit) {
+  const [state, setState] = useState<ApiState<T>>({
+    data: null,
+    loading: true,
+    error: null,
+  });
 
   useEffect(() => {
-    if (options.immediate !== false) {
-      fetchData();
-    }
-  }, []);
+    const fetchData = async () => {
+      try {
+        setState(prev => ({ ...prev, loading: true, error: null }));
+        const response = await fetch(url, options);
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        setState({ data, loading: false, error: null });
+      } catch (error) {
+        setState({
+          data: null,
+          loading: false,
+          error: error instanceof Error ? error.message : 'An error occurred',
+        });
+      }
+    };
 
-  return {
-    data,
-    loading,
-    error,
-    refetch: fetchData,
-  };
+    fetchData();
+  }, [url, JSON.stringify(options)]);
+
+  return state;
 }
+};

@@ -1,0 +1,60 @@
+import React, { useEffect, useState } from 'react',
+import Head from 'next/head'
+export default function AdminWeb3Page() {
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
+
+  useEffect(() => {
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
+    setUsers(raw ? JSON.parse(raw) : [])
+  }, []),
+
+  const save = (list: any) => {
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list)),
+    setUsers(list)
+  },
+
+  const metrics = {
+    total: users.length,
+    evm: users.filter(u => u.chain === 'evm').length,
+    sol: users.filter(u => u.chain === 'sol').length,
+    enabled: users.filter(u => u.enabled).length,
+    disabled: users.filter(u => !u.enabled).length},
+
+export default function AdminWeb3Page() {_const [users, _setUsers] = useState<{ id: string; enabled: boolean; chain?: string}[]>([]);
+
+  useEffect__(() => {_const _raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null;
+    setUsers(raw ? JSON.parse(raw) : []);}, []);
+
+  const _save = (_list: unknown) => {_if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', _JSON.stringify(list));
+    setUsers(list);};
+
+  const _metrics = {_total: users.length, _evm: users.filter(u => u.chain === 'evm').length, _sol: users.filter(u => u.chain === 'sol').length, _enabled: users.filter(u => u.enabled).length, _disabled: users.filter(u => !u.enabled).length};
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+
+  return (_<>
+      <Head><title>Admin — Web3</title></Head>
+      <div className=&quot;max-w-3xl mx-auto space-y-6&quot;>
+        <h1 className=&quot;text-xl font-semibold&quot;>Web3 Admin</h1>
+        <div className=&quot;rounded-md border p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Usage Metrics</div>
+          <div className=&quot;text-sm text-gray-600&quot;>Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol} · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}</div>
+        </div>
+        <div className=&quot;rounded-md border p-4&quot;>
+          <div className=&quot;font-medium mb-2&quot;>Users</div>
+          {users.length === 0 && <div className=&quot;text-sm text-gray-500&quot;>No data yet</div>}
+          <ul className=&quot;space-y-2&quot;>
+            {users.map((u, i) => (
+              <li key={i} className=&quot;flex items-center justify-between&quot;>
+                <div className=&quot;text-sm&quot;>{u.id}</div>
+                <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
+                  <span>Web3</span>
+                  }} />
+                </label>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
+  )
+}

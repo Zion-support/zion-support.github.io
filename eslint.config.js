@@ -8,46 +8,51 @@ import next from '@next/eslint-plugin-next';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-merge-conflicts/**',
+      '**/*.backup.*',
+      '**/*.old.*',
+      '**/*.disabled.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.test.*',
+      '**/*.spec.*',
+      'backup-problematic-files/**',
+      'temp_conflicts/**',
+      'temp_broken_files/**',
+      'temp_backup/**',
+      'zion-os/**',
+      'zion-ai-assistant/**',
+      'test-*.js',
+      'test-*.cjs',
+      'ultimate-*.js',
+      'ultimate-*.cjs',
+      'tools/**',
+      'tests/**'
+    ],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
       globals: {
         // Browser globals
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        fetch: 'readonly',
-        process: 'readonly',
-        // DOM types
-        Element: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        HTMLDivElement: 'readonly',
-        MouseEvent: 'readonly',
-        KeyboardEvent: 'readonly',
-        Node: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEventTiming: 'readonly',
-        LayoutShift: 'readonly',
-        performance: 'readonly',
-        IntersectionObserver: 'readonly',
-        IntersectionObserverEntry: 'readonly',
         // React
         React: 'readonly',
         // Jest/Testing globals
@@ -59,14 +64,22 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-        jest: 'readonly'
+        jest: 'readonly',
+        // Node.js globals
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly'
       }
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
-      '@next/next': next
+      '@next/next': next,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -84,9 +97,9 @@ export default [
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     files: ['**/*.cjs'],
@@ -108,9 +121,9 @@ export default [
         setInterval: 'readonly',
         clearInterval: 'readonly',
         setImmediate: 'readonly',
-        clearImmediate: 'readonly'
-      }
-    }
+        clearImmediate: 'readonly',
+      },
+    },
   },
   {
     ignores: [

@@ -1,59 +1,83 @@
 import React, { useState } from 'react';
-import LoadingSpinner from './LoadingSpinner';
-
-interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+interface ContactFormData {
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string
 }
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<ContactFormData>({
+import React, { useState } from 'react';
+import LoadingSpinner from './LoadingSpinner';
+,
+interface FormData {,
+  name: string,
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string
+},
+,
+const ContactForm: React.FC = () => {;
+  const [formData, setFormData] = useState<FormData>({,
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: '',
-  });
+    message: ''
+  }),
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
-      [name]: value,
-    }));
-  };
+      [name]: value
+    }))
+  },
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(),
+    // Handle form submission here
+    console.log('Form submitted:', formData)
+  }),
+,
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target,
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  },
+,
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-
+    e.preventDefault(),
+    setIsSubmitting(true),
+    setSubmitStatus('idle'),
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
+      // Simulate form submission,
+      await new Promise(resolve => setTimeout(resolve, 2000)),
+      setSubmitStatus('success'),
+      setFormData({,
         name: '',
         email: '',
         company: '',
         phone: '',
         service: '',
-        message: '',
-      });
-    } catch {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
+        message: ''
+      })
+    } catch {,
+      setSubmitStatus('error')
+    } finally {,
+      setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
@@ -87,7 +111,7 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
@@ -148,31 +172,32 @@ const ContactForm: React.FC = () => {
           onChange={handleInputChange}
           required
           rows={4}
-          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Tell us about your project requirements..."
         />
       </div>
 
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
-      >
-        {isSubmitting ? <LoadingSpinner /> : 'Send Message'}
-      </button>
+      <div className="flex items-center justify-between">
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+        >
+          {isSubmitting && <LoadingSpinner />}
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
 
-      {submitStatus === 'success' && (
-        <div className="text-green-600 text-center">
-          Thank you! Your message has been sent successfully.
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="text-red-600 text-center">
-          Sorry, there was an error sending your message. Please try again.
-        </div>
-      )}
+        {submitStatus === 'success' && (
+          <p className="text-green-600 text-sm">Message sent successfully!</p>
+        )}
+        {submitStatus === 'error' && (
+          <p className="text-red-600 text-sm">Failed to send message. Please try again.</p>
+        )}
+      </div>
     </form>
-  );
-};
+  )
+},
 
+export default ContactForm;
+,
 export default ContactForm;

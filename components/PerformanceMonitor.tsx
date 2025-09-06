@@ -1,44 +1,52 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react',
 
-interface PerformanceMetrics {
+interface PerformanceData {
   loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+  domContentLoaded: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  firstInputDelay?: number;
+  cumulativeLayoutShift?: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: any) => void
+}
 
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const navigationEntry = entries.find(entry => entry.entryType === 'navigation');
+    const measurePerformance = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const paint = performance.getEntriesByType('paint')
         
-        if (navigationEntry) {
-          setMetrics({
-            loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
-            memoryUsage: (window.performance as any).memory?.usedJSHeapSize || 0
-          });
+        const performanceData = {
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
+          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+          totalTime: navigation.loadEventEnd - navigation.fetchStart
+        },
+        
+        if (onPerformanceData) {
+          onPerformanceData(performanceData)
         }
-      });
-
-      observer.observe({ entryTypes: ['navigation'] });
-
-      return () => observer.disconnect();
+      }
+    },
+    
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
     }
-  }, []);
 
-  if (!metrics) return null;
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [onPerformanceData]),
+  return null
+},
 
-  return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs">
-      <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
-      <div>Render: {metrics.renderTime.toFixed(2)}ms</div>
-      <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
-    </div>
-  );
-};
-
-export default PerformanceMonitor;
+export { PerformanceMonitor },
+export default PerformanceMonitor
