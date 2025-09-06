@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");""
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -164,7 +167,10 @@ class ErrorAnalyticsDashboard {
     }}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log("[${timestamp}] [${level}] ${message}")}
   async collectErrorReports() {
     try {
@@ -983,4 +989,8 @@ if (require.main === module) {
     dashboard.log(`Failed to start "dashboard": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
+<<<<<<< HEAD
 module.exports = ErrorAnalyticsDashboard
+=======
+module.exports = ErrorAnalyticsDashboard
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

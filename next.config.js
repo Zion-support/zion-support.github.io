@@ -1,12 +1,20 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
-  output: 'export',
+  generateEtags: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   trailingSlash: true,
+<<<<<<< HEAD
   
 <<<<<<< HEAD
   // Performance optimizations
@@ -19,11 +27,19 @@ const nextConfig = {
 =======
 >>>>>>> origin/resolved-all-conflicts-clean
   // Image optimization
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   images: {
-    unoptimized: true,
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    domains: [
+      'localhost',
+      'ziontechgroup.com',
+      'images.unsplash.com',
+      'via.placeholder.com',
+    ],
     formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 <<<<<<< HEAD
     minimumCacheTTL: 31536000, // 1 year
@@ -36,12 +52,16 @@ const nextConfig = {
 =======
     minimumCacheTTL: 31536000,
 >>>>>>> origin/resolved-all-conflicts-clean
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
-  
-  // Webpack configuration to exclude problematic directories
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
-      // Exclude problematic directories from file watching
       config.watchOptions = {
         ignored: [
           '**/node_modules/**',
@@ -75,69 +95,25 @@ const nextConfig = {
           '**/performance-*.sh',
           '**/performance-*.html',
           '**/performance-*.md',
-          '**/performance-*.txt'
+          '**/performance-*.txt',
         ],
         poll: 1000,
         aggregateTimeout: 300,
       };
     }
+    if (!dev && !isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
     return config;
-  },
-  
-  // Headers for security and performance
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-      {
-        source: '/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: '/api/:path*',
-      },
-    ];
   },
 };
 

@@ -1,9 +1,13 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
 // eslint-disable-next-line @typescript-eslint/no-require-imports
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
@@ -11,6 +15,7 @@ module.exports = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+<<<<<<< HEAD
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -52,3 +57,10 @@ module.exports = {
     require('@tailwindcss/aspect-ratio'),
   ],
 };
+=======
+      },
+    },
+  },
+  plugins: [],
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

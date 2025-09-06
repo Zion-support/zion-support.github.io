@@ -1,19 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { ReactNode } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Header from '../Header';
-import Footer from '../Footer';
 
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 interface LayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
+  children: ReactNode,
 }
 
+<<<<<<< HEAD
 export default function Layout({
   children,
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions",
@@ -25,13 +28,19 @@ export default function Layout({
   ogImage,
   noIndex = false
 }: LayoutProps) {
+=======
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen flex flex-col">
       <Header />
-      <main>
+      <main className="flex-1">
         {children}
       </main>
       <Footer />
     </div>
   );
-}
+};
+
+export default Layout;
+

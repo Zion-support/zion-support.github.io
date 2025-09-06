@@ -87,7 +87,7 @@ import {
   UserCog2,
   UserEdit2,
   UserSearch2,
-  UserVoice2
+  UserVoice2;
 } from 'lucide-react';
 
 export default function IoTEdgeComputing() {
@@ -434,4 +434,3 @@ export default function IoTEdgeComputing() {
       </section>
     </div>
   );
-}

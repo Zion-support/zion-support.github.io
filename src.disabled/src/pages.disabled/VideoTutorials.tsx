@@ -82,7 +82,7 @@ import {
   CloudFogRainWind,
   CloudDrizzleRainWind,
   CloudHailRainWind,
-  CloudSleetRainWind
+  CloudSleetRainWind;
 } from 'lucide-react';
 
 export default function VideoTutorials() {
@@ -545,4 +545,3 @@ export default function VideoTutorials() {
       </section>
     </div>
   );
-}

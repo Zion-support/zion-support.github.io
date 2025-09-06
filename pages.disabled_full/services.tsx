@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> main
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 import React from 'react';
 import Link from 'next/link';
@@ -38,7 +41,7 @@ import {
   Activity,
   Terminal,
   CreditCard,
-  Smartphone
+  Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -1527,5 +1530,8 @@ export default function Services() {
 		</PageTransition>
 		</Layout>
 	);
+<<<<<<< HEAD
 }
 >>>>>>> origin/chore/merge-open-prs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

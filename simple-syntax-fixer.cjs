@@ -1,100 +1,186 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-// Function to fix syntax errors
-function fixSyntaxErrors(content) {
-  // Fix shebang
-  content = content.replace(/#!\/usr\/bin\/env node;/g, '#!/usr/bin/env node');
-  // Fix comments
-  content = content.replace(/\/\*\*;/g, '/**');
-  content = content.replace(/\*\/;/g, '*/');
-  content = content.replace(/\/\/\s*;/g, '//');
-  // Fix array syntax
-  content = content.replace(/\[\s*;/g, '[');
-  content = content.replace(/,\s*\]/g, ']');
-  // Fix object syntax
-  content = content.replace(/;\s*,/g, ';');
-  content = content.replace(/,\s*;/g, ';');
-  // Fix trailing semicolons
-  content = content.replace(/;\s*\]/g, ']');
-  content = content.replace(/;\s*\}/g, '}');
-  // Fix missing semicolons after console.log
-  content = content.replace(/console\.log\([^)]+\)(?![])/g, (match) => {
-    if () {
-      return match + ) {
-    ) {
-      return match + }';'}
-    return match});
-  // Fix missing semicolons after variable declarations
-  content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^]+(?![])/g, (match) => {
-    if () {
-      return match + ) {
-    ) {
-      return match + }';'}
-    return match});
-  // Fix try-catch syntax
-  content = content.replace(/catch\(\)/g, 'catch(error)');
-  content = content.replace(/console\.log\('❌[^']+',\s*,\s*error\.message\)/g, '');
-  return content}
-// Function to process a file
-function processFile(filePath) {
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+
+console.log('🚀 Starting Simple Syntax Fixer');
+
+// Fix specific syntax issues
+function fixSimpleSyntaxIssues(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8';);
-    const fixedContent = fixSyntaxErrors(conten;t;);
-    if ( {
-      fs.writeFileSync(filePath, fixedContent, 'utf8')) {
-     {
-      fs.writeFileSync(filePath, fixedContent, 'utf8')}
-      return true}
-    return false} catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false}
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+
+    // Fix HTML entity issues
+    content = content.replace(/&amp;apos;/g, "'");
+    content = content.replace(/&amp;quot;/g, '"');
+    content = content.replace(/&amp;lt;/g, '<');
+    content = content.replace(/&amp;gt;/g, '>');
+    content = content.replace(/&apos;/g, "'");
+    content = content.replace(/&quot;/g, '"');
+    content = content.replace(/&lt;/g, '<');
+    content = content.replace(/&gt;/g, '>');
+
+    // Fix import statements
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import React from "react",/g,
+      'import React from "react";'
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
+
+    // Fix export statements
+    content = content.replace(
+      /export default function (\w+)\(\): JSX\.Element \{/g,
+      'export default function $1(): JSX.Element {'
+    );
+    content = content.replace(
+      /export interface (\w+) \{;/g,
+      'export interface $1 {'
+    );
+    content = content.replace(
+      /export const (\w+): (\w+)\[\] = \[;/g,
+      'export const $1: $2[] = [];'
+    );
+
+    // Fix JSX syntax
+    content = content.replace(/&lt;main&gt;/g, '<main>');
+    content = content.replace(/&lt;\/main&gt;/g, '</main>');
+    content = content.replace(/&lt;div&gt;/g, '<div>');
+    content = content.replace(/&lt;\/div&gt;/g, '</div>');
+
+    // Fix object syntax issues
+    content = content.replace(/\{\s*,/g, '{');
+    content = content.replace(/,\s*\}/g, '}');
+    content = content.replace(/,\s*,/g, ',');
+
+    // Fix array syntax issues
+    content = content.replace(/\[\s*,/g, '[');
+    content = content.replace(/,\s*\]/g, ']');
+
+    // Fix function parameter issues
+    content = content.replace(/\(\s*,/g, '(');
+    content = content.replace(/,\s*\)/g, ')');
+
+    // Fix semicolon issues
+    content = content.replace(/;\s*,/g, ';');
+    content = content.replace(/,\s*;/g, ';');
+
+    // Fix React component syntax
+    content = content.replace(
+      /const (\w+) = \(\) => \{/g,
+      'const $1 = () => {'
+    );
+    content = content.replace(/export default (\w+),/g, 'export default $1;');
+
+    // Fix TypeScript interface syntax
+    content = content.replace(/interface (\w+) \{;/g, 'interface $1 {');
+    content = content.replace(/type (\w+) = \{;/g, 'type $1 = {');
+
+    // Fix JSX syntax
+    content = content.replace(/<(\w+)\s*,/g, '<$1');
+    content = content.replace(/,\s*>/g, '>');
+
+    // Fix performance API issues
+    if (content.includes('performance.')) {
+      content = content.replace(/performance\./g, 'window.performance.');
+    }
+
+    // Fix React hooks issues
+    content = content.replace(/useEffect\(\(\) => \{/g, 'useEffect(() => {');
+
+    // Fix console statements
+    content = content.replace(/console\.log\(/g, '// console.log(');
+
+    // Fix specific parsing errors
+    content = content.replace(
+      /import React from 'react',/g,
+      "import React from 'react';"
+    );
+    content = content.replace(
+      /import { JSX } from 'react',/g,
+      "import { JSX } from 'react';"
+    );
+    content = content.replace(
+      /export default function App\(\): JSX\.Element \{/g,
+      'export default function App(): JSX.Element {'
+    );
+
+    // Fix vite config issues - handle the specific problematic line
+    if (filePath.includes('vite.config.ts')) {
+      // Split the problematic line and fix it
+      const lines = content.split('\n');
+      for (let i = 0; i < lines.length; i++) {
+        if (
+          lines[i].includes(
+            "import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs/plugin-react', import path from 'node: path', export default defineConfig({"
+          )
+        ) {
+          lines[i] =
+            `import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node: path', export default defineConfig({`,
+        }
+      }
+      content = lines.join('\n');
+    }
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
 }
-// Function to find files
-function findFiles(dir, extensions) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir;);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item;);
-      const stat = fs.statSync(fullPath;);
-      if () {
-        traverse(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath)}
-    }
-  }
-  traverse(dir)) {
+
+// Get all TypeScript/JavaScript files
+function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  const items = fs.readdirSync(dir);
+
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+
+    if (
+      stat.isDirectory() &&
+      !item.startsWith('.') &&
+      item !== 'node_modules'
     ) {
-        traverse(fullPath)} else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath)}
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
   }
-  traverse(dir)}
-  return files}
+
+  return files;
+}
+
 // Main execution
-const extensions = ['.js', '.ts', '.cjs'];
-const files = findFiles('.', extension;s;);
-let fixedCount = ;0;
-for (const file of files) {
-  if () {
-    fixedCount++}
+try {
+  const files = getAllFiles('/workspace');
+  let fixedCount = 0;
+
+  console.log(`Found ${files.length} files to check`);
+
+  for (const file of files) {
+    if (fixSimpleSyntaxIssues(file)) {
+      fixedCount++;
+      console.log(`✅ Fixed: ${file}`);
+    }
+  }
+
+  console.log(`\n🎯 Fixed ${fixedCount} files`);
+} catch (error) {
+  console.error('Error:', error.message);
+  process.exit(1);
 }
-) {
-    ) {
-    fixedCount++}
-}
-}
-  content = content.replace(/#!\/usr\/bin\/env node;/g, '#!/usr/bin/env node')
-  content = content.replace(/\/\*\*;/g, '/**')
-  content = content.replace(/\*\/;/g, '*/')
-  content = content.replace(/\/\/\s*;/g, '//')
-  content = content.replace(/\[\s*;/g, '[')]
-  content = content.replace(/,\s*\]/g, ']')
-  content = content.replace(/;\s*,/g, ';')
-  content = content.replace(/,\s*;/g, ';')
-  content = content.replace(/;\s*\]/g, ']')
-  content = content.replace(/;\s*\}/g, '}')
-      return match + }';'
-      return match + }';'
-  content = content.replace(/catch\(\)/g, 'catch(error)'
-  content = content.replace(/console\.log\('[^']+',\s*,\s*error\.message\)/g, 'console.log(\' Package.json is "invalid")

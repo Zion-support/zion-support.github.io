@@ -2,47 +2,91 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
-  ArrowRight,
-  Award,
-  BarChart3,
-  BookOpen,
-  Brain,
-  Building,
-  Calculator,
-  Calendar,
-  Camera,
-  CheckCircle,
-  ChevronDown,
-  Clock,
-  Cloud,
-  Code,
-  CreditCard,
-  DollarSign,
-  Eye,
-  FileText,
-  Gamepad2,
-  Globe,
-  Heart,
-  Home,
-  Lock,
-  Mail,
+  Menu, 
+  X, 
+  ChevronDown, 
+  Brain, 
+  Network, 
+  Cloud, 
+  Phone, 
+  Mail, 
   MapPin,
-  Menu,
-  MessageSquare,
-  Music,
-  Network,
-  Phone,
-  Rocket,
-  Settings,
-  Shield,
-  ShoppingCart,
+  ArrowRight,
+  CheckCircle,
   Star,
+  Award,
+  Users,
+  Settings,
+  BarChart3,
+<<<<<<< HEAD
+=======
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  BookOpen,
+  Camera,
+  Music,
+  Gamepad2,
+  Heart,
+  Truck,
+  Calculator,
+  CreditCard,
+  Lock,
+  Eye,
   Target,
   TrendingUp,
+<<<<<<< HEAD
   Truck,
   Users,
   X,
   Zap
+=======
+  Clock,
+  DollarSign,
+  Cpu,
+  Rocket,
+  Car,
+  Sprout,
+  Wifi,
+  GraduationCap,
+  Award as Recognition,
+  Star as Rating,
+  Users as People,
+  Settings as Config,
+  BarChart3 as Analytics,
+  Shield as Security,
+  Code as Programming,
+  Zap as Lightning,
+  Globe as World,
+  Home as House,
+  Building as Office,
+  FileText as Document,
+  MessageSquare as Chat,
+  Calendar as Schedule,
+  ShoppingCart as Cart,
+  BookOpen as Book,
+  Camera as Photo,
+  Music as Audio,
+  Gamepad2 as Gaming,
+  Heart as Love,
+  Truck as Delivery,
+  Calculator as Math,
+  CreditCard as Payment,
+  Lock as Secure,
+  Eye as View,
+  Target as Goal,
+  TrendingUp as Growth,
+  Clock as Time,
+  DollarSign as Money;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 } from 'lucide-react';
 
 const navigationItems = [
@@ -55,42 +99,56 @@ const navigationItems = [
         title: 'AI Services',
         href: '/ai-services',
         icon: Brain,
-        description: '30+ cutting-edge AI solutions',
+        description: '100+ cutting-edge AI solutions',
         popular: true
       },
       {
         title: 'IT Services',
         href: '/it-services',
         icon: Network,
-        description: '25+ comprehensive IT services',
+        description: '85+ comprehensive IT services',
         popular: true
       },
       {
         title: 'Micro SaaS',
         href: '/micro-saas',
         icon: Cloud,
-        description: '40+ innovative micro SaaS solutions',
+        description: '120+ innovative micro SaaS solutions',
         popular: true
       },
       {
-        title: 'Cybersecurity',
-        href: '/cybersecurity',
-        icon: Shield,
-        description: 'Enterprise security solutions',
+        title: 'Quantum Computing',
+        href: '/quantum-computing',
+        icon: Cpu,
+        description: 'Quantum solutions & infrastructure',
         popular: false
       },
       {
-        title: 'Cloud Solutions',
-        href: '/cloud-solutions',
-        icon: Cloud,
-        description: 'Scalable cloud infrastructure',
+        title: 'Blockchain',
+        href: '/blockchain',
+        icon: Lock,
+        description: 'Blockchain & DeFi solutions',
         popular: false
       },
       {
-        title: 'Data Analytics',
-        href: '/data-analytics',
-        icon: BarChart3,
-        description: 'Advanced analytics platform',
+        title: 'IoT Solutions',
+        href: '/iot',
+        icon: Wifi,
+        description: 'Internet of Things platforms',
+        popular: false
+      },
+      {
+        title: 'AR/VR Solutions',
+        href: '/ar-vr',
+        icon: Eye,
+        description: 'Augmented & Virtual Reality',
+        popular: false
+      },
+      {
+        title: 'Space Technology',
+        href: '/space-tech',
+        icon: Rocket,
+        description: 'Space & satellite solutions',
         popular: false
       }
     ]
@@ -102,27 +160,59 @@ const navigationItems = [
     submenu: [
       {
         title: 'Enterprise Solutions',
-        href: '/solutions/enterprise',
+        href: '/enterprise',
         icon: Building,
-        description: 'Comprehensive enterprise solutions'
+        description: 'Large-scale business solutions',
+        popular: true
       },
       {
         title: 'Startup Solutions',
-        href: '/solutions/startup',
+        href: '/startup',
         icon: Rocket,
-        description: 'Rapid deployment for startups'
+        description: 'Scalable startup platforms',
+        popular: true
       },
       {
-        title: 'Industry Solutions',
-        href: '/solutions/industry',
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud,
+        description: 'Scalable cloud infrastructure',
+        popular: true
+      },
+      {
+        title: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: Shield,
+        description: 'Enterprise security solutions',
+        popular: true
+      },
+      {
+        title: 'Data Analytics',
+        href: '/data-analytics',
         icon: BarChart3,
-        description: 'Industry-specific solutions'
+        description: 'Advanced analytics platform',
+        popular: false
       },
       {
-        title: 'Custom Solutions',
-        href: '/solutions/custom',
-        icon: Settings,
-        description: 'Tailored custom solutions'
+        title: 'Automation',
+        href: '/automation',
+        icon: Zap,
+        description: 'Intelligent process automation',
+        popular: false
+      },
+      {
+        title: 'Digital Transformation',
+        href: '/digital-transformation',
+        icon: TrendingUp,
+        description: 'Complete digital overhaul',
+        popular: false
+      },
+      {
+        title: 'Custom Development',
+        href: '/custom-development',
+        icon: Code,
+        description: 'Tailored software solutions',
+        popular: false
       }
     ]
   },
@@ -135,37 +225,71 @@ const navigationItems = [
         title: 'Healthcare',
         href: '/industries/healthcare',
         icon: Heart,
-        description: 'Medical AI and health tech'
+        description: 'Medical AI and health tech',
+        popular: true
       },
       {
         title: 'Finance',
         href: '/industries/finance',
         icon: DollarSign,
-        description: 'Fintech and financial services'
+        description: 'Fintech and financial services',
+        popular: true
       },
       {
         title: 'Manufacturing',
         href: '/industries/manufacturing',
         icon: Settings,
-        description: 'Industrial automation'
+        description: 'Industrial automation',
+        popular: true
       },
       {
         title: 'Retail',
         href: '/industries/retail',
         icon: ShoppingCart,
-        description: 'E-commerce and retail tech'
+        description: 'E-commerce and retail tech',
+        popular: true
       },
       {
         title: 'Education',
         href: '/industries/education',
         icon: BookOpen,
-        description: 'EdTech solutions'
+        description: 'EdTech solutions',
+        popular: false
       },
       {
         title: 'Real Estate',
         href: '/industries/real-estate',
         icon: Home,
-        description: 'PropTech innovations'
+        description: 'PropTech innovations',
+        popular: false
+      },
+      {
+        title: 'Agriculture',
+        href: '/industries/agriculture',
+        icon: Sprout,
+        description: 'AgTech and smart farming',
+        popular: false
+      },
+      {
+        title: 'Energy',
+        href: '/industries/energy',
+        icon: Zap,
+        description: 'Energy and utilities tech',
+        popular: false
+      },
+      {
+        title: 'Transportation',
+        href: '/industries/transportation',
+        icon: Car,
+        description: 'Logistics and mobility',
+        popular: false
+      },
+      {
+        title: 'Government',
+        href: '/industries/government',
+        icon: Building,
+        description: 'Public sector solutions',
+        popular: false
       }
     ]
   },
@@ -178,31 +302,57 @@ const navigationItems = [
         title: 'Blog',
         href: '/blog',
         icon: FileText,
-        description: 'Latest insights and trends'
+        description: 'Latest insights and trends',
+        popular: true
       },
       {
         title: 'Case Studies',
         href: '/case-studies',
         icon: BarChart3,
-        description: 'Success stories and results'
+        description: 'Success stories and results',
+        popular: true
       },
       {
         title: 'White Papers',
         href: '/white-papers',
-        icon: FileText,
-        description: 'In-depth research reports'
+        icon: Document,
+        description: 'In-depth research reports',
+        popular: false
+      },
+      {
+        title: 'Webinars',
+        href: '/webinars',
+        icon: Calendar,
+        description: 'Educational sessions',
+        popular: false
       },
       {
         title: 'Tutorials',
         href: '/tutorials',
         icon: BookOpen,
-        description: 'Step-by-step guides'
+        description: 'Step-by-step guides',
+        popular: false
       },
       {
-        title: 'FileTextation',
-        href: '/docs',
-        icon: FileText,
-        description: 'Technical documentation'
+        title: 'API Documentation',
+        href: '/api-docs',
+        icon: Code,
+        description: 'Developer resources',
+        popular: false
+      },
+      {
+        title: 'Training',
+        href: '/training',
+        icon: GraduationCap,
+        description: 'Professional development',
+        popular: false
+      },
+      {
+        title: 'FAQ',
+        href: '/faq',
+        icon: MessageSquare,
+        description: 'Frequently asked questions',
+        popular: false
       }
     ]
   },
@@ -215,37 +365,57 @@ const navigationItems = [
         title: 'About Us',
         href: '/about',
         icon: Building,
-        description: 'Our story and mission'
+        description: 'Our story and mission',
+        popular: true
       },
       {
         title: 'Team',
         href: '/team',
         icon: Users,
-        description: 'Meet our experts'
+        description: 'Meet our experts',
+        popular: true
       },
       {
         title: 'Careers',
         href: '/careers',
         icon: Users,
-        description: 'Join our team'
+        description: 'Join our team',
+        popular: true
       },
       {
         title: 'Partners',
         href: '/partners',
         icon: Globe,
-        description: 'Our partnerships'
+        description: 'Our partnerships',
+        popular: false
       },
       {
         title: 'News',
         href: '/news',
         icon: FileText,
-        description: 'Company updates'
+        description: 'Company updates',
+        popular: false
       },
       {
-        title: 'Press',
-        href: '/press',
+        title: 'Contact',
+        href: '/contact',
+        icon: Phone,
+        description: 'Get in touch with us',
+        popular: true
+      },
+      {
+        title: 'Privacy Policy',
+        href: '/privacy',
+        icon: Lock,
+        description: 'Privacy and data protection',
+        popular: false
+      },
+      {
+        title: 'Terms of Service',
+        href: '/terms',
         icon: FileText,
-        description: 'Press releases and media'
+        description: 'Terms and conditions',
+        popular: false
       }
     ]
   }
@@ -256,8 +426,8 @@ const quickLinks = [
   { title: 'Contact', href: '/contact', icon: Phone },
   { title: 'Support', href: '/support', icon: MessageSquare },
   { title: 'Status', href: '/status', icon: BarChart3 },
-  { title: 'Quote', href: '/quote', icon: FileText },
-  { title: 'API Docs', href: '/api-docs', icon: Code }
+  { title: 'Free Consultation', href: '/consultation', icon: Calendar },
+  { title: 'Get Quote', href: '/quote', icon: FileText }
 ];
 
 export default function Navigation() {
@@ -446,4 +616,3 @@ export default function Navigation() {
       </div>
     </nav>
   );
-}

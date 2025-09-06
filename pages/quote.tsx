@@ -11,7 +11,7 @@ import {
   Clock,
   DollarSign,
   Users,
-  Zap
+  Zap;
 } from 'lucide-react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { useState } from 'react';
@@ -58,15 +58,10 @@ export default function QuotePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', { selectedServices, selectedSize, formData });
+    // console.log('Form submitted:', { selectedServices, selectedSize, formData });
   };
 
-  return (
-    <MainLayout
-      title="Get a Quote - Zion Tech Group"
-      description="Get a personalized quote for your technology project. Our experts will provide detailed pricing and timeline estimates."
-      keywords="quote, pricing, project estimate, technology consulting, custom development"
-      canonical="https://ziontechgroup.com/quote"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -359,4 +354,3 @@ export default function QuotePage() {
       </div>
     </MainLayout>
   );
-}

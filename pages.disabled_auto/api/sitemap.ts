@@ -1,14 +1,14 @@
-import { NextApiRequest, NextApiResponse } from';next'';;
-export: default function handler(req: NextApiReques,t, res: NextApiResponse) {
-  const baseUrl ,=
-  https: //ziontechgroup.com'';;
-  const staticPages = [',';
 import React from 'react';
 <<<<<<< HEAD
 
 interface SitemapProps {
   // Add props here as needed
-}
+
+interface SitemapProps {
+  // Add props here as needed
+
+interface SitemapProps {
+  // Add props here as needed
 
 =======
 interface SitemapProps {
@@ -25,7 +25,14 @@ export default function Sitemap({ }: SitemapProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

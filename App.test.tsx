@@ -14,7 +14,7 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
-import App from './src/App';
+import App from './App';
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -26,8 +26,9 @@ import React from 'react';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByText('Hello App')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -62,3 +63,6 @@ describe('App', () => {
 });
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

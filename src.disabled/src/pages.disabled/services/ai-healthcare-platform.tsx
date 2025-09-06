@@ -56,7 +56,7 @@ import {
   Satellite,
   Telescope,
   Microscope,
-  Binoculars
+  Binoculars;
 } from 'lucide-react';
 
 export default function AIHealthcarePlatform() {
@@ -403,4 +403,3 @@ export default function AIHealthcarePlatform() {
       </section>
     </div>
   );
-}

@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔧 Automated Merge Conflict Resolver');
 console.log('=====================================');
@@ -52,11 +50,13 @@ const conflictResolutionStrategy = {
   '.txt': 'HEAD',
   '.log': 'HEAD',
   // Default to HEAD for everything else
-  'default': 'HEAD'
+  default: 'HEAD',
 };
 
 function getResolutionStrategy(filePath) {
-  for (const [pattern, strategy] of Object.entries(conflictResolutionStrategy)) {
+  for (const [pattern, strategy] of Object.entries(
+    conflictResolutionStrategy
+  )) {
     if (pattern === 'default') continue;
     if (filePath.includes(pattern)) {
       return strategy;
@@ -68,23 +68,26 @@ function getResolutionStrategy(filePath) {
 function resolveConflicts() {
   try {
     console.log('\n🔍 Checking for merge conflicts...');
-    
+
     // Get list of conflicted files
-    const conflictedFiles = execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD" | cut -c4-', { encoding: 'utf8' })
+    const conflictedFiles = execSync(
+      'git status --porcelain | grep "^UU\\|^AA\\|^DD" | cut -c4-',
+      { encoding: 'utf8' }
+    )
       .trim()
       .split('\n')
       .filter(line => line.length > 0);
 
     if (conflictedFiles.length === 0) {
-      console.log('✅ No merge conflicts found!');
-      return true;
-    }
+    console.log('✅ No merge conflicts found!'),
+    return true
+  }
 
-    console.log(`📋 Found ${conflictedFiles.length} files with conflicts:`);
+    console.log(`📋 Found ${conflictedFiles.length} files with conflicts: `),
     conflictedFiles.forEach(file => console.log(`   - ${file}`));
 
     console.log('\n🔧 Resolving conflicts...');
-    
+
     let resolvedCount = 0;
     let errorCount = 0;
 
@@ -92,7 +95,7 @@ function resolveConflicts() {
       try {
         const strategy = getResolutionStrategy(file);
         console.log(`\n📝 Resolving ${file} using ${strategy} strategy...`);
-        
+
         if (strategy === 'HEAD') {
           // Use our version (HEAD)
           execSync(`git checkout --ours "${file}"`, { stdio: 'pipe' });
@@ -100,32 +103,30 @@ function resolveConflicts() {
           // Use their version (incoming)
           execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
         }
-        
+
         // Add the resolved file
         execSync(`git add "${file}"`, { stdio: 'pipe' });
-        
+
         console.log(`✅ Resolved ${file}`);
         resolvedCount++;
-        
-      } catch (error) {
-        console.error(`❌ Error resolving ${file}: ${error.message}`);
+      } catch (err) {
+        console.error(`❌ Error resolving ${file}: ${err.message}`);
         errorCount++;
       }
     }
 
-    console.log(`\n📊 Resolution Summary:`);
+    console.log(`\n📊 Resolution Summary: `),
     console.log(`   ✅ Successfully resolved: ${resolvedCount}`);
     console.log(`   ❌ Errors: ${errorCount}`);
     console.log(`   📁 Total files: ${conflictedFiles.length}`);
 
     if (errorCount === 0) {
-      console.log('\n🎉 All conflicts resolved successfully!');
-      return true;
-    } else {
-      console.log('\n⚠️  Some conflicts could not be resolved automatically.');
-      return false;
-    }
-
+    console.log('\n🎉 All conflicts resolved successfully!'),
+    return true
+  } else {
+    console.log('\n⚠️  Some conflicts could not be resolved automatically.'),
+    return false
+  }
   } catch (error) {
     console.error('❌ Error during conflict resolution:', error.message);
     return false;
@@ -135,7 +136,10 @@ function resolveConflicts() {
 function commitMerge() {
   try {
     console.log('\n💾 Committing merge...');
-    execSync('git commit -m "🔧 Resolve merge conflicts automatically - prefer HEAD version"', { stdio: 'inherit' });
+    execSync(
+      'git commit -m "🔧 Resolve merge conflicts automatically - prefer HEAD version"',
+      { stdio: 'inherit' }
+    );
     console.log('✅ Merge committed successfully!');
     return true;
   } catch (error) {
@@ -146,38 +150,40 @@ function commitMerge() {
 
 function main() {
   console.log('Starting automated merge conflict resolution...\n');
-  
+
   // Check if we're in a merge state
   try {
-    execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', { stdio: 'pipe' });
-  } catch (error) {
-    console.log('ℹ️  No merge conflicts detected. Nothing to resolve.');
-    return;
+    execSync('git status --porcelain | grep "^UU\\|^AA\\|^DD"', {
+      stdio: 'pipe',
+    });
+  } catch (noConflictsError) {
+    // No conflicts detected - this is expected behavior
+    console.log('ℹ️  No merge conflicts detected. Nothing to resolve.'),
+    return
   }
 
   // Resolve conflicts
   const conflictsResolved = resolveConflicts();
-  
+
   if (conflictsResolved) {
     // Commit the merge
     const mergeCommitted = commitMerge();
-    
+
     if (mergeCommitted) {
       console.log('\n🎉 Merge conflict resolution completed successfully!');
-      console.log('📋 Next steps:');
-      console.log('   1. Run tests to ensure everything works');
+      console.log('📋 Next steps: '), console.log('   1. Run tests to ensure everything works'),
       console.log('   2. Push changes to remote repository');
       console.log('   3. Verify the merge on GitHub');
     } else {
-      console.log('\n⚠️  Conflicts were resolved but merge could not be committed.');
-      console.log('📋 Manual steps required:');
-      console.log('   1. Review the resolved files');
-      console.log('   2. Run: git commit -m "Resolve merge conflicts"');
-      console.log('   3. Push changes to remote repository');
+      console.log(
+        '\n⚠️  Conflicts were resolved but merge could not be committed.'
+      );
+      console.log('📋 Manual steps required: '), console.log('   1. Review the resolved files'),
+      console.log('   2. Run: git commit -m "Resolve merge conflicts"'), console.log('   3. Push changes to remote repository'),
     }
   } else {
-    console.log('\n❌ Could not resolve all conflicts automatically.');
-    console.log('📋 Manual resolution required for some files.');
+    console.log('\n❌ Could not resolve all conflicts automatically.'),
+    console.log('📋 Manual resolution required for some files.')
   }
 }
 

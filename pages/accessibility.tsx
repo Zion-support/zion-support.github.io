@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -163,30 +164,25 @@ const accessibilityGuidelines = [
     ]
   }
 ];
+=======
+import Head from 'next/head';
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 export default function AccessibilityPage() {
-  return (
-    <MainLayout
-      title="Accessibility - Zion Tech Group"
-      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
+  
     >
       <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+            <div className="text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Web Accessibility
-                </span>
+                Accessibility Statement
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Ensuring digital inclusion for everyone
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                We are committed to ensuring our website is accessible to all users.
               </p>
+<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
@@ -367,7 +363,11 @@ export default function AccessibilityPage() {
             </motion.div>
           </div>
         </section>
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>
-    </MainLayout>
+    </Layout>
   );
-}

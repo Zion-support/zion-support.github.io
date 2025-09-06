@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Security Enhancer
@@ -343,3 +344,22 @@ if (require.main === module) {
 }
 
 module.exports = SecurityEnhancer;
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+    this.reportFile = path.join(__dirname, '../logs/security-enhancement-report.json')
+    console.log('� Enhancing security...')
+    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx')]
+        const content = fs.readFileSync(file, 'utf8')
+    if (content.includes('eval(')
+      issues.push('Use of eval() - potential security risk'
+    if (content.includes('innerHTML')
+      issues.push('Use of innerHTML - consider using textContent for security')
+    if (content.includes('document.write')
+      issues.push('Use of document.write - potential XSS risk')
+    if (content.includes('localStorage.setItem')
+      issues.push('Use of localStorage - ensure sensitive data is not stored')
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+      // Skip directories that can'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

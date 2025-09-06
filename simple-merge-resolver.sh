@@ -23,13 +23,13 @@ if git status --porcelain | grep -E "(UU|AA|DD)"; then
         cp "$file" "${file}.backup.$(date +%s)"
         
         # Remove merge conflict markers and keep HEAD version
-        sed -i '//,/>>>>>>> /c\
+        sed -i '//,/
 # Resolved merge conflict - kept HEAD version' "$file"
         
         # Clean up any remaining markers
         sed -i '//d' "$file"
         sed -i '//d' "$file"
-        sed -i '/>>>>>>> /d' "$file"
+        sed -i '/
     done
     
     # Add resolved files
@@ -68,13 +68,13 @@ git branch -r | grep -E "(pull/|pr/)" | while read branch; do
                 echo "Resolving conflicts in: $file"
                 
                 # Keep HEAD version
-                sed -i '//,/>>>>>>> /c\
+                sed -i '//,/
 # Resolved merge conflict - kept HEAD version' "$file"
                 
                 # Clean up markers
                 sed -i '//d' "$file"
                 sed -i '//d' "$file"
-                sed -i '/>>>>>>> /d' "$file"
+                sed -i '/
             done
             
             git add .

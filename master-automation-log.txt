@@ -76,6 +76,7 @@
 [2025-09-05T14:29:59.640Z] 📊 Phase 2: Running Performance Monitor...
 [2025-09-05T14:29:59.640Z] 🚀 Running: Performance Monitor
 [2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 <<<<<<< HEAD
 ^^
@@ -275,3 +276,6 @@ Node.js v22.16.0
 [2025-09-05T14:30:32.816Z] Running ESLint...
 [2025-09-05T14:30:33.348Z] ⚠️ ESLint found issues, but continuing...
 [2025-09-05T14:30:33.348Z] Running TypeScript check...
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,22 +1,41 @@
+<<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs")"const path = require("path")"const { execSync } = require("child_process");"console.log(" Merge Conflict Resolver");"console.log("=====");/ Function to resolve merge conflicts in a filefunction resolveMergeConflicts(filePath) { if (true) { return false) { ) { return false}} console.log(` Resolving conflicts in ${filePath}.`); try {" let content = fs.readFileSync(filePath, "utf8";); let modified = fal;s;e; / Remove conflict markers and keep the newer version (incoming changes)"`"`
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   if () {
     return false) {
     ) {
     return false}}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 console.log('🔧 Starting merge conflict resolution...');
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     // Remove conflict markers and keep the newer version (incoming changes)
     // Check if file has merge conflicts
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+=======
+    
+    // Check if file has merge conflicts
+<<<<<<< HEAD
+=======
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       return false;
     }
     console.log(`📝 Resolving conflicts in: ${filePath}`);
@@ -32,7 +51,13 @@ function resolveMergeConflicts(filePath) {
         conflictType = 'head';
         continue;
       }
+<<<<<<< HEAD
       if (line.includes('')) {
+=======
+      
+      if (line.includes('=======')) {
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         conflictType = 'incoming';
         continue;
       }
@@ -71,7 +96,13 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+<<<<<<< HEAD
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
+=======
+<<<<<<< HEAD
+=======
+          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
             conflictedFiles.push(fullPath);
           }
         } catch (error) {
@@ -110,4 +141,9 @@ try {
 } catch (error) {
   console.error('❌ Error during merge conflict resolution:', error.message);
   process.exit(1);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

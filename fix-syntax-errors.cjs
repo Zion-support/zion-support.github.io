@@ -1,100 +1,192 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Function to fix syntax errors in a filefunction fixSyntaxErrors(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); let originalContent = content; / Fix import statements with extra semicolons and quotes" content = content.replace(/import\s+([^;]+);";";/g, "import $1;");" content = content.replace(/import\s+([^;]+);";/g, "import $1;");" content = content.replace(/from\s+[""]([^""]+)[""];";";/g, "from "$1";");"" content = content.replace(/from\s+[""]([^""]+)[""];";/g, "from "$1";"); / Fix function declarations" content = content.replace(/export\s+default\s+function\s+(\w+)\s*export\s*{\s*\w+\s*}\s*\(/g, "export default function $1("); / Fix variable declarations with extra semicolons" content = content.replace(/const\s+([^=]+)=([^;]+);";";/g, "const $1=$2;");" content = content.replace(/const\s+([^=]+)=([^;]+);";/g, "const $1=$2;");" content = content.replace(/let\s+([^=]+)=([^;]+);";";/g, "let $1=$2;");" content = content.replace(/let\s+([^=]+)=([^;]+);";/g, "let $1=$2;");" content = content.replace(/var\s+([^=]+)=([^;]+);";";/g, "var $1=$2;");" content = content.replace(/var\s+([^=]+)=([^;]+);";/g, "var $1=$2;"); / Fix useEffect and other hooks" content = content.replace(/useEffect\s*\(\s*\(\s*\)\s*=>\s*\{";/g, "useEffect(() => {");" content = content.replace(/useState\s*\(\s*([^)]+)\s*\);";";/g, "useState($1);");" content = content.replace(/useState\s*\(\s*([^)]+)\s*\);";/g, "useState($1);"); / Fix object method calls" content = content.replace(/\.([a-zA-Z_][a-zA-Z0-9_]*)\s*\(\s*\);";";/g, ".$1();");" content = content.replace(/\.([a-zA-Z_][a-zA-Z0-9_]*)\s*\(\s*\);";/g, ".$1();"); / Fix array and object syntax" content = content.replace(/\[\s*";";/g, "[");" content = content.replace(/\[\s*";/g, "[");" content = content.replace(/\]\s*";";/g, "]");" content = content.replace(/\]\s*";/g, "]");" content = content.replace(/\{\s*";";/g, "{");" content = content.replace(/\{\s*";/g, "{");" content = content.replace(/\}\s*";";/g, "}");" content = content.replace(/\}\s*";/g, "}"); / Fix string literals"" content = content.replace(/"\s*";";/g, """);"" content = content.replace(/"\s*";/g, """);"" content = content.replace(/"\s*";";";/g, """);"" content = content.replace(/"\s*";";/g, """); / Fix template literals"" content = content.replace(/"\s*";";/g, """);"" content = content.replace(/"\s*";/g, """); / Fix return statements" content = content.replace(/return\s+([^;]+);";";/g, "return $1;");" content = content.replace(/return\s+([^;]+);";/g, "return $1;"); / Fix conditional statements" content = content.replace(/if\s*\(\s*([^)]+)\s*\)\s*\{";/g, "if ($1) {");" content = content.replace(/else\s*\{";/g, "else {");" content = content.replace(/switch\s*\(\s*([^)]+)\s*\)\s*\{";/g, "switch ($1) {");"" content = content.replace(/case\s+([^:]+):";/g, "case $1: ");"" content = content.replace(/default:";/g, "default: "); / Fix try-catch blocks" content = content.replace(/try\s*\{";/g, "try {");" content = content.replace(/catch\s*\(\s*([^)]+)\s*\)\s*\{";/g, "catch ($1) {");" content = content.replace(/finally\s*\{";/g, "finally {"); / Fix arrow functions" content = content.replace(/\(\s*\)\s*=>\s*\{";/g, "() => {");" content = content.replace(/\(\s*([^)]+)\s*\)\s*=>\s*\{";/g, "($1) => {"); / Fix class definitions" content = content.replace(/class\s+(\w+)\s*\{";/g, "class $1 {");" content = content.replace(/extends\s+(\w+)\s*\{";/g, "extends $1 {"); / Fix interface definitions" content = content.replace(/interface\s+(\w+)\s*\{";/g, "interface $1 {");" content = content.replace(/type\s+(\w+)\s*=\s*\{";/g, "type $1 = {"); / Fix JSX" content = content.replace(/<\s*(\w+)\s*([^>]*)\s*>\s*";/g, "<$1$2>");" content = content.replace(/<\s*\/\s*(\w+)\s*>\s*";/g, "</$1>"); / Remove standalone semicolons and quotes" content = content.replace(/^";";?\s*$/gm, "");" content = content.replace(/^";\s*$/gm, ""); / Fix multiple consecutive semicolons" content = content.replace(/;+;+/g, ";"); / Fix multiple consecutive quotes"" content = content.replace(/[""]+[""]+/g, """); / Write the fixed content back if (content !== originalContent) {" fs.writeFileSync(filePath, content, "utf8");" console.log(`Fixed syntax errors in: ${filePath}`); return true; } return false; } catch (error) {` console.error(`Error fixing ${filePath}:`, error.message); return false; }}/ Function to recursively find and fix filesfunction fixFilesInDirectory(dirPath) { const files = fs.readdirSync(dirPath); let fixedCount = 0; for (const file of files) { const filePath = path.join(dirPath, file); const stat = fs.statSync(filePath); if (stat.isDirectory()) { fixedCount += fixFilesInDirectory(filePath);" } else if (file.endsWith(".js") | file.endsWith(".jsx") | file.endsWith(".ts") | file.endsWith(".tsx")) { if (fixSyntaxErrors(filePath)) { fixedCount++; } } } return fixedCount;}/ Main execution"console.log("Starting syntax error fixing.");"const fixedCount = fixFilesInDirectory("./src");`console.log(`Fixed ${fixedCount} files with syntax errors.`);""`"`
-const fs = require('fs');
-const path = require('path');
-// Function to fix syntax errors in a file
+// Function to fix corrupted syntax in files
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    // Fix unterminated string constants (remove extra quotes)
-    content = content.replace(/from 'react';''/g, "from 'react';");
-    content = content.replace(/from 'next\/link';''/g, "from 'next/link';");
-    content = content.replace(/from 'next\/head';''/g, "from 'next/head';");
-    content = content.replace(/from 'framer-motion';'/g, "from 'framer-motion';");
-    content = content.replace(/from 'lucide-react';'/g, "from 'lucide-react';");
-    // Fix malformed import blocks
-    content = content.replace(/import \{\s*\/\/ TODO: Implement\s*\}\s*([^}]+)\s*\} from 'lucide-react';'/g, (match, imports) => {
-      const cleanImports = imports
-        .split(',')
-        .map(imp => imp.trim())
-        .filter(imp => imp && !imp.includes('//'))
-        .join(',\n  ');
-      return `import {\n  ${cleanImports}\n} from 'lucide-react';`;
+    
+    // Fix common syntax issues
+    content = content
+      // Remove trailing commas before semicolons
+      .replace(/,;/g, ';')
+      // Remove standalone commas at end of lines
+      .replace(/,(\s*)$/gm, '$1')
+      // Fix JSX attributes with trailing commas
+      .replace(/,(\s*[}>])/g, '$1')
+      // Fix object properties with trailing commas
+      .replace(/,(\s*[}\]])/g, '$1')
+      // Fix function parameters with trailing commas
+      .replace(/,(\s*\))/g, '$1')
+      // Fix array elements with trailing commas
+      .replace(/,(\s*\])/g, '$1')
+      // Remove multiple consecutive commas
+      .replace(/,+/g, ',')
+      // Fix spacing around operators
+      .replace(/\s*:\s*/g, ': ')
+      .replace(/\s*=\s*/g, ' = ')
+      // Fix JSX closing tags
+      .replace(/>\s*,/g, '>')
+      // Remove empty lines with just commas
+      .replace(/^\s*,\s*$/gm, '')
+      // Fix missing spaces in JSX
+      .replace(/(\w)>\s*</g, '$1> <')
+      // Fix className spacing
+      .replace(/className="([^"]*)\s*"/g, 'className="$1"')
+      // Fix hover: spacing
+      .replace(/hover:\s*/g, 'hover:')
+      // Fix group-hover: spacing
+      .replace(/group-hover:\s*/g, 'group-hover:')
+      // Fix md: spacing
+      .replace(/md:\s*/g, 'md:')
+      // Fix lg: spacing
+      .replace(/lg:\s*/g, 'lg:')
+      // Fix sm: spacing
+      .replace(/sm:\s*/g, 'sm:')
+      // Fix xl: spacing
+      .replace(/xl:\s*/g, 'xl:')
+      // Fix 2xl: spacing
+      .replace(/2xl:\s*/g, '2xl:')
+      // Fix last: spacing
+      .replace(/last:\s*/g, 'last:')
+      // Fix first: spacing
+      .replace(/first:\s*/g, 'first:')
+      // Fix not-sr-only spacing
+      .replace(/not-sr-only:\s*/g, 'not-sr-only:')
+      // Fix focus: spacing
+      .replace(/focus:\s*/g, 'focus:')
+      // Fix using-mouse spacing
+      .replace(/using-mouse\s*\*/g, 'using-mouse *')
+      // Fix focus-visible spacing
+      .replace(/focus-visible:\s*/g, 'focus-visible:')
+      // Fix sr-only spacing
+      .replace(/sr-only\./g, 'sr-only.')
+      // Fix not-sr-only spacing
+      .replace(/not-sr-only\./g, 'not-sr-only.')
+      // Fix multiple spaces
+      .replace(/\s{2,}/g, ' ')
+      // Fix missing semicolons at end of statements
+      .replace(/([^;}])\s*$/gm, '$1;')
+      // Remove semicolons from JSX
+      .replace(/;\s*>/g, '>')
+      .replace(/;\s*}/g, '}')
+      // Fix import statements
+      .replace(/import\s+([^,]+),\s*{([^}]+)}\s+from\s+['"]([^'"]+)['"]\s*,/g, 'import $1, { $2 } from "$3";')
+      // Fix export statements
+      .replace(/export\s+default\s+([^,;]+)\s*,/g, 'export default $1;')
+      // Fix interface definitions
+      .replace(/interface\s+(\w+)\s*{\s*([^}]+)\s*}\s*,/g, 'interface $1 {\n  $2\n}')
+      // Fix type definitions
+      .replace(/type\s+(\w+)\s*=\s*([^;]+)\s*,/g, 'type $1 = $2;')
+      // Fix function declarations
+      .replace(/const\s+(\w+)\s*:\s*([^=]+)\s*=\s*([^;]+)\s*,/g, 'const $1: $2 = $3;')
+      // Fix arrow functions
+      .replace(/=>\s*{\s*([^}]+)\s*}\s*,/g, ' => {\n  $1\n};')
+      // Fix JSX return statements
+      .replace(/return\s*\(\s*([^)]+)\s*\)\s*,/g, 'return (\n  $1\n);')
+      // Clean up extra whitespace
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .trim();
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+// Common syntax fixes
+const fixes = [
+  // Fix interface properties - add semicolons
+  {
+    pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2;$3'
+  },
+  // Fix object properties - add semicolons
+  {
+    pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1: $2;$3'
+  },
+  // Fix function parameters - add commas
+  {
+    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2,$3'
+  },
+  // Fix missing semicolons after return statements
+  {
+    pattern: /return\s+([^;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: 'return $1;$2'
+  },
+  // Fix missing semicolons after variable declarations
+  {
+    pattern: /(\w+)\s*=\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
+    replacement: '$1 = $2;$3'
+  }
+];
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Apply fixes
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+    content = newContent,
+    modified = true
+  }
     }
-});
-    // Fix object syntax errors (remove extra quotes and semicolons)
-    content = content.replace(/"([^"]+)",""/g, '"$1"');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*"([^"]+)",\s*"/g, '$1: "$2",');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+);/g, '$1: $2,');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+),\]/g, '$1: $2]');
-    // Fix array syntax errors
-    content = content.replace(/\[\s*"([^"]+)",""/g, '["$1"');
-    content = content.replace(/"([^"]+)",""/g, '"$1"');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*),\]/g, '$1]');
-    // Fix JSX syntax errors
-    content = content.replace(/<([A-Z][a-zA-Z0-9]*);/g, '<$1');
-    content = content.replace(/<\/[A-Z][a-zA-Z0-9]*>"/g, '</$1>');
-    content = content.replace(/className="([^"]+)""/g, 'className="$1"');
-    content = content.replace(/href="([^"]+)""/g, 'href="$1"');
-    content = content.replace(/title="([^"]+)""/g, 'title="$1"');
-    content = content.replace(/description="([^"]+)""/g, 'description="$1"');
-    // Fix closing tags
-    content = content.replace(/<\/MainLayout>"/g, '</MainLayout>');
-    content = content.replace(/<\/motion\.div>"/g, '</motion.div>');
-    content = content.replace(/<\/div>"/g, '</div>');
-    content = content.replace(/<\/section>"/g, '</section>');
-    content = content.replace(/<\/h1>"/g, '</h1>');
-    content = content.replace(/<\/h2>"/g, '</h2>');
-    content = content.replace(/<\/h3>"/g, '</h3>');
-    content = content.replace(/<\/p>"/g, '</p>');
-    content = content.replace(/<\/span>"/g, '</span>');
-    content = content.replace(/<\/a>"/g, '</a>');
-    content = content.replace(/<\/Link>"/g, '</Link>');
-    // Fix function syntax
-    content = content.replace(/export default function ([A-Z][a-zA-Z0-9]*)\(\) \{"/g, 'export default function $1() {');
-    content = content.replace(/return \("/g, 'return (');
-    // Fix template literals
-    content = content.replace(/\$\{([^}]+)\}\`/g, '${$1}');
-    // Fix conditional expressions
-    content = content.replace(/\?\s*'([^']+)'\s*:/g, '? "$1" :');
-    content = content.replace(/\?\s*"([^"]+)"\s*:/g, '? "$1" :');
-    // Write the fixed content back
-    if (content !== originalContent) {
+    
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed: ${filePath}`);
-    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
-// Get all TypeScript/JavaScript files in pages directory
-function getAllPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      files.push(...getAllPageFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
+
+// Function to recursively find and fix files
+function fixAllFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += fixAllFiles(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
     }
   }
-  return files;
+  
+  return fixedCount;
 }
+
 // Main execution
-const fixedCount = fixFilesInDirectory('./src');
-const pagesDir = '/workspace/pages';
-const pageFiles = getAllPageFiles(pagesDir);
-console.log(`Found ${pageFiles.length} page files to check...`);
+console.log('Starting syntax error fixes...');
+const fixedCount = fixAllFiles('/workspace');
+console.log(`Fixed ${fixedCount} files`);
+// Find all TypeScript/JavaScript files
+const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', {
+  cwd: process.cwd(),
+  ignore: ['node_modules/**', 'dist/**', 'build/**', 'out/**']
+});
+
+console.log(`Found ${files.length} files to check...`);
+
 let fixedCount = 0;
-for (const file of pageFiles) {
-  if (fixSyntaxErrors(file)) {
+for (const file of files) {
+  if (fixFile(file)) {
     fixedCount++;
   }
 }
-console.log(`Fixed ${fixedCount} files out of ${pageFiles.length} total files.`);
+
+console.log(`Fixed ${fixedCount} files`);

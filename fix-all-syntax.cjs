@@ -1,222 +1,169 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
+<<<<<<< HEAD
 const path = require('path');
 
-// Function to fix all syntax errors
-function fixAllSyntax(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
     
-    // Fix malformed arrow functions with (} instead of (
-    content = content.replace(/\.map\([^)]*\) => \(\)/g, (match) => {
-      return match.replace(/\(\)/g, '');
-    }
-});
+    // Fix common syntax errors
+    const fixes = [
+      // Fix unterminated strings
+      { pattern: /import.*from\s+['"][^'"]*$/gm, replacement: (match) => match + "'" },
+      { pattern: /import.*from\s+['"][^'"]*$/gm, replacement: (match) => match + '"' },
+      
+      // Fix missing semicolons
+      { pattern: /import.*from\s+['"][^'"]*['"]\s*$/gm, replacement: (match) => match + ';' },
+      { pattern: /export.*from\s+['"][^'"]*['"]\s*$/gm, replacement: (match) => match + ';' },
+      
+      // Fix return outside function
+      { pattern: /^return\s+[^;]*$/gm, replacement: '' },
+      
+      // Fix stray closing braces
+      { pattern: /^}\s*$/gm, replacement: '' },
+      
+      // Fix malformed type definitions
+      { pattern: /kind:\s*\|\s*['"][^'"]*['"]/g, replacement: 'kind: "document"' },
+      
+      // Fix malformed function calls
+      { pattern: /for\s*\(\s*const\s+\w+\s+of\s+\w+\s*\)\s*\{[^}]*\}/g, replacement: '' },
+      
+      // Fix malformed JSX
+      { pattern: /return\s*\(\s*<[^>]*$/gm, replacement: '' },
+      
+      // Fix malformed imports
+      { pattern: /import\s+[^;]*$/gm, replacement: (match) => match.endsWith(';') ? match : match + ';' },
+    ];
     
-    // Fix malformed JSX elements with } instead of >
-    content = content.replace(/<motion\.article\}/g, '<motion.article');
-    content = content.replace(/<motion\.div\}/g, '<motion.div');
-    content = content.replace(/<div\}/g, '<div');
-    content = content.replace(/<section\}/g, '<section');
-    content = content.replace(/<h1\}/g, '<h1');
-    content = content.replace(/<h2\}/g, '<h2');
-    content = content.replace(/<h3\}/g, '<h3');
-    content = content.replace(/<p\}/g, '<p');
-    content = content.replace(/<span\}/g, '<span');
-    content = content.replace(/<a\}/g, '<a');
-    content = content.replace(/<Link\}/g, '<Link');
-    content = content.replace(/<button\}/g, '<button');
-    content = content.replace(/<input\}/g, '<input');
-    content = content.replace(/<table\}/g, '<table');
-    content = content.replace(/<thead\}/g, '<thead');
-    content = content.replace(/<tbody\}/g, '<tbody');
-    content = content.replace(/<tr\}/g, '<tr');
-    content = content.replace(/<th\}/g, '<th');
-    content = content.replace(/<td\}/g, '<td');
-    content = content.replace(/<ul\}/g, '<ul');
-    content = content.replace(/<li\}/g, '<li');
-    content = content.replace(/<form\}/g, '<form');
-    content = content.replace(/<label\}/g, '<label');
-    content = content.replace(/<select\}/g, '<select');
-    content = content.replace(/<option\}/g, '<option');
-    content = content.replace(/<textarea\}/g, '<textarea');
-    content = content.replace(/<img\}/g, '<img');
-    content = content.replace(/<video\}/g, '<video');
-    content = content.replace(/<audio\}/g, '<audio');
-    content = content.replace(/<iframe\}/g, '<iframe');
-    content = content.replace(/<canvas\}/g, '<canvas');
-    content = content.replace(/<svg\}/g, '<svg');
-    content = content.replace(/<path\}/g, '<path');
-    content = content.replace(/<circle\}/g, '<circle');
-    content = content.replace(/<rect\}/g, '<rect');
-    content = content.replace(/<line\}/g, '<line');
-    content = content.replace(/<polygon\}/g, '<polygon');
-    content = content.replace(/<g\}/g, '<g');
-    content = content.replace(/<defs\}/g, '<defs');
-    content = content.replace(/<clipPath\}/g, '<clipPath');
-    content = content.replace(/<mask\}/g, '<mask');
-    content = content.replace(/<pattern\}/g, '<pattern');
-    content = content.replace(/<linearGradient\}/g, '<linearGradient');
-    content = content.replace(/<radialGradient\}/g, '<radialGradient');
-    content = content.replace(/<stop\}/g, '<stop');
-    content = content.replace(/<text\}/g, '<text');
-    content = content.replace(/<tspan\}/g, '<tspan');
-    content = content.replace(/<foreignObject\}/g, '<foreignObject');
-    
-    // Fix malformed template literals
-    content = content.replace(/`([^`]*)\s*$/gm, (match, content) => {
-      if (content.includes('${') && !content.endsWith('`')) {
-        return match + '`';
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        fixed = true;
       }
-      return match;
-    }
-});
-    
-    // Fix malformed JSX expressions
-    content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
-      if (content.includes('map') && !content.includes('}')) {
-        return match + '}';
-      }
-      return match;
-    }
-});
-    
-    // Fix missing closing braces in function components
-    if (content.includes('export default function') && !content.trim().endsWith('}')) {
-      content = content.trim() + '\n}';
     }
     
-    // Fix missing closing braces in arrow functions
-    if (content.includes('const') && content.includes('=>') && !content.trim().endsWith('}')) {
-      content = content.trim() + '\n}';
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-    
-    // Fix unterminated string constants
-    content = content.replace(/from 'react';''/g, "from 'react';");
-    content = content.replace(/from 'next\/link';''/g, "from 'next/link';");
-    content = content.replace(/from 'next\/head';''/g, "from 'next/head';");
-    content = content.replace(/from 'framer-motion';'/g, "from 'framer-motion';");
-    content = content.replace(/from 'lucide-react';'/g, "from 'lucide-react';");
-    
-    // Fix malformed import blocks
-    content = content.replace(/import \{\s*\/\/ TODO: Implement\s*\}\s*([^}]+)\s*\} from 'lucide-react';'/g, (match, imports) => {
-      const cleanImports = imports
-        .split(',')
-        .map(imp => imp.trim())
-        .filter(imp => imp && !imp.includes('//'))
-        .join(',\n  ');
-      return `import {\n  ${cleanImports}\n} from 'lucide-react';`;
-    }
-});
-    
-    // Fix object syntax errors
-    content = content.replace(/"([^"]+)",""/g, '"$1"');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*"([^"]+)",\s*"/g, '$1: "$2",');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+);/g, '$1: $2,');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*):\s*([^,}]+),\]/g, '$1: $2]');
-    
-    // Fix array syntax errors
-    content = content.replace(/\[\s*"([^"]+)",""/g, '["$1"');
-    content = content.replace(/"([^"]+)",""/g, '"$1"');
-    content = content.replace(/([a-zA-Z_][a-zA-Z0-9_]*),\]/g, '$1]');
-    
-    // Fix JSX syntax errors
-    content = content.replace(/<([A-Z][a-zA-Z0-9]*);/g, '<$1');
-    content = content.replace(/<\/[A-Z][a-zA-Z0-9]*>"/g, '</$1>');
-    content = content.replace(/className="([^"]+)""/g, 'className="$1"');
-    content = content.replace(/href="([^"]+)""/g, 'href="$1"');
-    content = content.replace(/title="([^"]+)""/g, 'title="$1"');
-    content = content.replace(/description="([^"]+)""/g, 'description="$1"');
-    
-    // Fix closing tags
-    content = content.replace(/<\/MainLayout>"/g, '</MainLayout>');
-    content = content.replace(/<\/motion\.div>"/g, '</motion.div>');
-    content = content.replace(/<\/div>"/g, '</div>');
-    content = content.replace(/<\/section>"/g, '</section>');
-    content = content.replace(/<\/h1>"/g, '</h1>');
-    content = content.replace(/<\/h2>"/g, '</h2>');
-    content = content.replace(/<\/h3>"/g, '</h3>');
-    content = content.replace(/<\/p>"/g, '</p>');
-    content = content.replace(/<\/span>"/g, '</span>');
-    content = content.replace(/<\/a>"/g, '</a>');
-    content = content.replace(/<\/Link>"/g, '</Link>');
-    
-    // Fix function syntax
-    content = content.replace(/export default function ([A-Z][a-zA-Z0-9]*)\(\) \{"/g, 'export default function $1() {');
-    content = content.replace(/return \("/g, 'return (');
-    
-    // Fix template literals
-    content = content.replace(/\$\{([^}]+)\}\`/g, '${$1}');
-    
-    // Fix conditional expressions
-    content = content.replace(/\?\s*'([^']+)'\s*:/g, '? "$1" :');
-    content = content.replace(/\?\s*"([^"]+)"\s*:/g, '? "$1" :');
-    
-    // Fix extra closing parentheses and braces at the end
-    content = content.replace(/\s*\),\s*\}\s*$/, '');
-    content = content.replace(/\s*\}\s*$/, '');
-    
-    // Fix malformed template literals
-    content = content.replace(/toLowerCase\(\)\.replace\(/g, 'toLowerCase().replace(');
-    content = content.replace(/replace\(/g, 'replace(');
-    
-    // Fix missing closing quotes in template literals
-    content = content.replace(/`([^`]*)\s*$/gm, (match, content) => {
-      if (content.includes('${') && !content.endsWith('`')) {
-        return match + '`';
-      }
-      return match;
-    }
-});
-    
-    // Fix malformed JSX expressions
-    content = content.replace(/\{([^}]*)\s*$/gm, (match, content) => {
-      if (content.includes('map') && !content.includes('}')) {
-        return match + '}';
-      }
-      return match;
-    }
-});
-    
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed all syntax in: ${filePath}`);
-    return true;
+    return false;
   } catch (error) {
-    console.error(`Error fixing all syntax in ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Get all TypeScript/JavaScript files in pages directory
-function getAllPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+function findAndFixFiles(dir) {
+  const files = fs.readdirSync(dir, { withFileTypes: true });
+  let fixedCount = 0;
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+  for (const file of files) {
+    const filePath = path.join(dir, file.name);
     
-    if (stat.isDirectory()) {
-      files.push(...getAllPageFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
+    if (file.isDirectory() && !file.name.startsWith('.') && !file.name.includes('node_modules')) {
+      fixedCount += findAndFixFiles(filePath);
+    } else if (file.name.endsWith('.ts') || file.name.endsWith('.tsx') || file.name.endsWith('.js') || file.name.endsWith('.jsx')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
     }
   }
   
-  return files;
+  return fixedCount;
 }
 
-// Main execution
-const pagesDir = '/workspace/pages';
-const pageFiles = getAllPageFiles(pagesDir);
+console.log('🔧 Fixing all syntax errors...');
+const fixedCount = findAndFixFiles('.');
+console.log(`✅ Fixed ${fixedCount} files with syntax errors`);
+=======
 
-console.log(`Found ${pageFiles.length} page files to check for all syntax errors...`);
+// Read the file
+let content = fs.readFileSync('enhanced-automation-suite.cjs', 'utf8');
 
-let fixedCount = 0;
-for (const file of pageFiles) {
-  if (fixAllSyntax(file)) {
-    fixedCount++;
-  }
-}
+// Fix all syntax errors with a comprehensive regex
+const fixes = [
+  // Fix all colon syntax errors
+  { from: /(\w+):\s*(\w+):/g, to: '$1$2:' },
+  // Fix specific common patterns
+  { from: /succes:\s*s:/g, to: 'success:' },
+  { from: /duratio:\s*n:/g, to: 'duration:' },
+  { from: /error:\s*s:/g, to: 'errors:' },
+  { from: /warning:\s*s:/g, to: 'warnings:' },
+  { from: /cw:\s*d:/g, to: 'cwd:' },
+  { from: /stdi:\s*o:/g, to: 'stdio:' },
+  { from: /encodin:\s*g:/g, to: 'encoding:' },
+  { from: /outpu:\s*t:/g, to: 'output:' },
+  { from: /erro:\s*r:/g, to: 'error:' },
+  { from: /Runnin:\s*g:/g, to: 'Running:' },
+  { from: /faile:\s*d:/g, to: 'failed:' },
+  { from: /prefer-cons:\s*t:/g, to: 'prefer-const:' },
+  { from: /no-va:\s*r:/g, to: 'no-var:' },
+  { from: /timestam:\s*p:/g, to: 'timestamp:' },
+  { from: /statu:\s*s:/g, to: 'status:' },
+  { from: /script:\s*s:/g, to: 'scripts:' },
+  { from: /summar:\s*y:/g, to: 'summary:' },
+  { from: /complet:\s*ed:/g, to: 'completed:' },
+  { from: /fail:\s*ed:/g, to: 'failed:' },
+  { from: /runnin:\s*g:/g, to: 'running:' },
+  { from: /buildin:\s*g:/g, to: 'building:' },
+  { from: /testin:\s*g:/g, to: 'testing:' },
+  { from: /deployin:\s*g:/g, to: 'deploying:' },
+  { from: /result:\s*s:/g, to: 'results:' },
+  { from: /messag:\s*e:/g, to: 'message:' },
+  { from: /typ:\s*e:/g, to: 'type:' },
+  { from: /valu:\s*e:/g, to: 'value:' },
+  { from: /nam:\s*e:/g, to: 'name:' },
+  { from: /fil:\s*e:/g, to: 'file:' },
+  { from: /lin:\s*e:/g, to: 'line:' },
+  { from: /cod:\s*e:/g, to: 'code:' },
+  { from: /rul:\s*e:/g, to: 'rule:' },
+  { from: /optio:\s*n:/g, to: 'option:' },
+  { from: /recommendatio:\s*n:/g, to: 'recommendation:' },
+  { from: /suggestio:\s*n:/g, to: 'suggestion:' },
+  { from: /modificatio:\s*n:/g, to: 'modification:' },
+  { from: /verificatio:\s*n:/g, to: 'verification:' },
+  { from: /validatio:\s*n:/g, to: 'validation:' },
+  { from: /generatio:\s*n:/g, to: 'generation:' },
+  { from: /transformatio:\s*n:/g, to: 'transformation:' },
+  { from: /migratio:\s*n:/g, to: 'migration:' },
+  { from: /integratio:\s*n:/g, to: 'integration:' },
+  { from: /configuratio:\s*n:/g, to: 'configuration:' },
+  { from: /implementatio:\s*n:/g, to: 'implementation:' },
+  { from: /optimizatio:\s*n:/g, to: 'optimization:' },
+  { from: /applicatio:\s*n:/g, to: 'application:' },
+  { from: /operatio:\s*n:/g, to: 'operation:' },
+  { from: /informatio:\s*n:/g, to: 'information:' },
+  { from: /actio:\s*n:/g, to: 'action:' },
+  { from: /functio:\s*n:/g, to: 'function:' },
+  { from: /solutio:\s*n:/g, to: 'solution:' },
+  { from: /locatio:\s*n:/g, to: 'location:' },
+  { from: /directio:\s*n:/g, to: 'direction:' },
+  { from: /connectio:\s*n:/g, to: 'connection:' },
+  { from: /collectio:\s*n:/g, to: 'collection:' },
+  { from: /inspectio:\s*n:/g, to: 'inspection:' },
+  { from: /correctio:\s*n:/g, to: 'correction:' },
+  { from: /detectio:\s*n:/g, to: 'detection:' },
+  { from: /protectio:\s*n:/g, to: 'protection:' },
+  { from: /productio:\s*n:/g, to: 'production:' },
+  { from: /reductio:\s*n:/g, to: 'reduction:' },
+  { from: /constructio:\s*n:/g, to: 'construction:' },
+  { from: /destructio:\s*n:/g, to: 'destruction:' },
+  { from: /instructio:\s*n:/g, to: 'instruction:' },
+  { from: /introductio:\s*n:/g, to: 'introduction:' },
+];
 
-console.log(`Fixed all syntax in ${fixedCount} files out of ${pageFiles.length} total files.`);
+// Apply fixes
+fixes.forEach(fix => {
+  content = content.replace(fix.from, fix.to);
+});
+
+// Write the fixed content back
+fs.writeFileSync('enhanced-automation-suite.cjs', content);
+
+console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

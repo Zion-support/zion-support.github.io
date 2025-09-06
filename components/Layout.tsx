@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -84,6 +85,19 @@ const Layout: React.FC<LayoutProps> = ({
       </main>
       <Footer />
     </div>
+=======
+import React, { ReactNode } from "react";
+
+interface LayoutProps {
+  children: ReactNode,
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   );
 };
 

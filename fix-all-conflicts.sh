@@ -5,7 +5,7 @@ find pages/ components/ -name "*.tsx" -exec grep -l ">>>>>>>" {} \; | while read
     echo "Fixing merge conflicts in $file"
     
     # Remove all merge conflict markers
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^/,/^/d' "$file"
     sed -i '/^>>>>>>>/d' "$file"
     
     # Clean up any remaining empty lines

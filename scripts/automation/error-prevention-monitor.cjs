@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");const { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");"console.log(" Starting error prevention monitor.");class ErrorPreventionMonitor { constructor() { this.projectRoot = process.cwd();"""
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -7,9 +10,12 @@ const { execSync } = require("child_process");
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 class ErrorPreventionMonitor {
   constructor() {
     this.projectRoot = process.cwd();
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 console.log('🛡️ Starting error prevention monitor...');
 class ErrorPreventionMonitor {
   constructor() {
@@ -219,7 +225,10 @@ class ErrorPreventionMonitor {
     this.riskFactors = new Map()}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
     }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async checkFileSizeIssues() {
     this.log('Checking for file size issues...', 'INFO');
@@ -647,4 +656,8 @@ if (require.main === module) {
 }
 // Start the monitor
 const monitor = new ErrorPreventionMonitor();
+<<<<<<< HEAD
 monitor.run();
+=======
+monitor.run();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

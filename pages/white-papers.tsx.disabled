@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,20 +78,30 @@ const whitePapers = [;
 import { FileText, Download, Calendar, Eye } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
 =======
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
+=======
 <<<<<<< HEAD
 =======
+
+
+import React from 'react';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 ========
 import React, { useState } from 'react';
 import Head from 'next/head';
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import MainLayout from '../components/layout/MainLayout';
 import {
   FileText,
   Download,
@@ -103,123 +114,18 @@ import {
   BookOpen,
   Star,
   Clock,
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
   Tag
 } from 'lucide-react';
 <<<<<<< HEAD
 import Layout from '../components/Layout';
-
-const whitePaperCategories = [
-  { name: 'AI & Machine Learning', count: 8, color: 'bg-blue-100 text-blue-800' },
-  { name: 'Cybersecurity', count: 6, color: 'bg-red-100 text-red-800' },
-  { name: 'Cloud Computing', count: 5, color: 'bg-green-100 text-green-800' },
-  { name: 'Data Analytics', count: 7, color: 'bg-purple-100 text-purple-800' },
-  { name: 'Digital Transformation', count: 4, color: 'bg-yellow-100 text-yellow-800' },
-  { name: 'Industry Insights', count: 9, color: 'bg-indigo-100 text-indigo-800' }
-];
-
-const featuredPapers = [
-  {
-    id: 1,
-    title: 'The Future of AI in Enterprise: A Comprehensive Guide to Implementation',
-    excerpt: 'Explore how artificial intelligence is transforming enterprise operations and learn best practices for successful AI implementation.',
-    category: 'AI & Machine Learning',
-    author: 'Dr. Sarah Chen',
-    date: '2025-01-15',
-    readTime: '25 min read',
-    pages: 45,
-    downloads: 1250,
-    featured: true,
-    tags: ['AI', 'Enterprise', 'Implementation', 'Future Tech'],
-    downloadUrl: '/whitepapers/ai-enterprise-guide.pdf'
-  },
-  {
-    id: 2,
-    title: 'Cybersecurity in the Age of Quantum Computing: Preparing for the Future',
-    excerpt: 'Understand the implications of quantum computing on cybersecurity and learn how to prepare your organization for the quantum era.',
-    category: 'Cybersecurity',
-    author: 'Michael Rodriguez',
-    date: '2025-01-10',
-    readTime: '30 min read',
-    pages: 52,
-    downloads: 980,
-    featured: true,
-    tags: ['Cybersecurity', 'Quantum Computing', 'Future Security'],
-    downloadUrl: '/whitepapers/quantum-cybersecurity.pdf'
-  },
-  {
-    id: 3,
-    title: 'Cloud Migration Strategies: A Step-by-Step Guide for Enterprise',
-    excerpt: 'Comprehensive guide to planning and executing successful cloud migration projects with real-world case studies.',
-    category: 'Cloud Computing',
-    author: 'Lisa Wang',
-    date: '2025-01-05',
-    readTime: '35 min read',
-    pages: 60,
-    downloads: 2100,
-    featured: true,
-    tags: ['Cloud Migration', 'Enterprise', 'Strategy'],
-    downloadUrl: '/whitepapers/cloud-migration-guide.pdf'
-  }
-];
-
-const recentPapers = [
-  {
-    id: 4,
-    title: 'Data Analytics for Healthcare: Improving Patient Outcomes',
-    excerpt: 'How healthcare organizations can leverage data analytics to improve patient care and operational efficiency.',
-    category: 'Data Analytics',
-    author: 'Dr. James Wilson',
-    date: '2025-01-03',
-    readTime: '20 min read',
-    pages: 32,
-    downloads: 750,
-    tags: ['Healthcare', 'Data Analytics', 'Patient Care']
-  },
-  {
-    id: 5,
-    title: 'Digital Transformation in Manufacturing: Industry 4.0 Implementation',
-    excerpt: 'A comprehensive look at how manufacturers can embrace Industry 4.0 technologies for competitive advantage.',
-    category: 'Digital Transformation',
-    author: 'Maria Garcia',
-    date: '2024-12-28',
-    readTime: '28 min read',
-    pages: 48,
-    downloads: 890,
-    tags: ['Manufacturing', 'Industry 4.0', 'Digital Transformation']
-  },
-  {
-    id: 6,
-    title: 'The State of FinTech: Trends and Opportunities in 2025',
-    excerpt: 'Analysis of current FinTech trends and emerging opportunities in the financial technology sector.',
-    category: 'Industry Insights',
-    author: 'David Kim',
-    date: '2024-12-20',
-    readTime: '22 min read',
-    pages: 38,
-    downloads: 1100,
-    tags: ['FinTech', 'Trends', 'Financial Technology']
-  },
-  {
-    id: 7,
-    title: 'IoT Security Best Practices: Protecting Connected Devices',
-    excerpt: 'Essential security measures for protecting Internet of Things devices and networks.',
-    category: 'Cybersecurity',
-    author: 'Emily Johnson',
-    date: '2024-12-15',
-    readTime: '18 min read',
-    pages: 28,
-    downloads: 650,
-    tags: ['IoT', 'Security', 'Connected Devices']
-  }
-];
-
-const stats = [
-  { number: '25+', label: 'White Papers' },
-  { number: '10K+', label: 'Downloads' },
-  { number: '15+', label: 'Industry Experts' },
-  { number: '95%', label: 'Reader Satisfaction' }
 =======
+  Tag
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -230,17 +136,23 @@ import {
   User, 
   ArrowRight, 
   Tag, 
+<<<<<<< HEAD
 ========
   Tag,
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   ExternalLink 
 } from 'lucide-react';
->>>>>>> main
 
 const whitePapers = [
   {
     id: 1,
     title: "The Future of AI in Enterprise: A Comprehensive Guide",
+<<<<<<< HEAD:pages/white-papers.tsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
     author: "Dr. Sarah Chen",
     date: "2024-01-15",
     category: "Artificial Intelligence",
@@ -257,17 +169,7 @@ const whitePapers = [
     downloadCount: 980
   },
   {
-<<<<<<< HEAD
-    title: 'Cybersecurity Best Practices 2024',
-    description: 'Latest cybersecurity trends and protection strategies for modern businesses.',
-    category: 'Cybersecurity',
-    downloadCount: 1500,
-    publishDate: '2024-01-05',
-    downloadLink: '/downloads/cybersecurity-best-practices.pdf'
-  }
-;];
-
-=======
+<<<<<<< HEAD:pages/white-papers.tsx
     id: 3,
     title: "Cybersecurity in the Digital Age: Protecting Your Assets",
     author: "Emily Johnson",
@@ -285,149 +187,42 @@ const whitePapers = [
     description: "Discover how to leverage data analytics to drive business decisions and growth.",
     downloadCount: 750
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
 ];
+<<<<<<< HEAD
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+=======
+
+    id: 3,
+    title: "Cybersecurity in the Digital Age: Protecting Your Assets",
+    author: "Emily Johnson",
+    date: "2024-01-05",
+    category: "Cybersecurity",
+    description: "Comprehensive guide to modern cybersecurity threats and how to protect your organization.",
+    downloadCount: 1500
+  },
+  {
+    id: 4,
+    title: "Data Analytics: Turning Information into Insights",
+    author: "David Kim",
+    date: "2023-12-20",
+    category: "Data Analytics",
+    description: "Discover how to leverage data analytics to drive business decisions and growth.",
+    downloadCount: 750
+  }
+
+];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
 export default function WhitePapersPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'All White Papers' },
-    { id: 'ai', name: 'AI & Machine Learning' },
-    { id: 'cloud', name: 'Cloud Solutions' },
-    { id: 'security', name: 'Cybersecurity' },
-    { id: 'development', name: 'Development' },
-    { id: 'business', name: 'Business Strategy' }
-  ];
-
-  const whitePapers = [
-    {
-      id: 1,
-      title: 'The Future of Artificial Intelligence in Business',
-      description: 'A comprehensive analysis of how AI is transforming business operations, including case studies, implementation strategies, and ROI calculations.',
-      category: 'ai',
-      author: 'Dr. Sarah Johnson',
-      authorTitle: 'AI Research Director',
-      publishDate: '2024-01-10',
-      readTime: '15 min read',
-      downloads: 2450,
-      views: 8900,
-      rating: 4.8,
-      tags: ['AI', 'Machine Learning', 'Business Transformation', 'ROI'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Strategies for Enterprise',
-      description: 'Best practices and proven methodologies for migrating enterprise applications to the cloud while ensuring security and performance.',
-      category: 'cloud',
-      author: 'Mike Chen',
-      authorTitle: 'Cloud Solutions Architect',
-      publishDate: '2024-01-05',
-      readTime: '12 min read',
-      downloads: 1890,
-      views: 7200,
-      rating: 4.7,
-      tags: ['Cloud Computing', 'Migration', 'Enterprise', 'Security'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity in the Age of Remote Work',
-      description: 'An in-depth look at the security challenges and solutions for organizations transitioning to remote and hybrid work models.',
-      category: 'security',
-      author: 'Alex Rodriguez',
-      authorTitle: 'Chief Security Officer',
-      publishDate: '2023-12-28',
-      readTime: '18 min read',
-      downloads: 3200,
-      views: 12500,
-      rating: 4.9,
-      tags: ['Cybersecurity', 'Remote Work', 'Zero Trust', 'Compliance'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    },
-    {
-      id: 4,
-      title: 'Building Scalable Web Applications',
-      description: 'Technical guide covering architecture patterns, performance optimization, and scalability best practices for modern web applications.',
-      category: 'development',
-      author: 'Emily Watson',
-      authorTitle: 'Senior Full-Stack Developer',
-      publishDate: '2023-12-20',
-      readTime: '20 min read',
-      downloads: 1650,
-      views: 6800,
-      rating: 4.6,
-      tags: ['Web Development', 'Scalability', 'Architecture', 'Performance'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation Roadmap',
-      description: 'A strategic framework for organizations looking to embark on digital transformation initiatives, with practical implementation guidelines.',
-      category: 'business',
-      author: 'David Kim',
-      authorTitle: 'Digital Transformation Consultant',
-      publishDate: '2023-12-15',
-      readTime: '14 min read',
-      downloads: 2100,
-      views: 9500,
-      rating: 4.8,
-      tags: ['Digital Transformation', 'Strategy', 'Change Management', 'Technology'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: true
-    },
-    {
-      id: 6,
-      title: 'Machine Learning Model Deployment Best Practices',
-      description: 'Comprehensive guide to deploying ML models in production environments, covering MLOps, monitoring, and maintenance strategies.',
-      category: 'ai',
-      author: 'Dr. Sarah Johnson',
-      authorTitle: 'AI Research Director',
-      publishDate: '2023-12-10',
-      readTime: '16 min read',
-      downloads: 1780,
-      views: 7600,
-      rating: 4.7,
-      tags: ['Machine Learning', 'MLOps', 'Deployment', 'Production'],
-      image: '/api/placeholder/400/250',
-      pdfUrl: '#',
-      isFeatured: false
-    }
-  ];
-
-  const filteredWhitePapers = whitePapers.filter(paper => {
-    const matchesSearch = paper.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         paper.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         paper.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const featuredPapers = whitePapers.filter(paper => paper.isFeatured);
-
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <Layout
-=======
+
     <MainLayout
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+
       title="White Papers - Zion Tech Group"
       description="Access our comprehensive collection of white papers covering AI, cloud solutions, cybersecurity, and more. Download free technical resources and insights."
       keywords="white papers, technical papers, AI research, cloud solutions, cybersecurity, business strategy, free downloads"
@@ -454,9 +249,15 @@ export default function WhitePapersPage() {
                 </span>
               </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 In-depth research and insights on the latest technology trends and industry developments
 =======
+=======
+
+  return (
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     <>
       <Head>
         <title>White Papers - Zion Tech Group</title>
@@ -476,6 +277,7 @@ export default function WhitePapersPage() {
               <h1 className="text-4xl md:text-6xl font-bold mb-6">White Papers</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Download our comprehensive white papers on technology trends and best practices.
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 >>>>>>> cursor/expand-services-advertise-and-build-project-9473
 >>>>>>> main
@@ -483,19 +285,52 @@ export default function WhitePapersPage() {
 ========
               </p>
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Access our comprehensive collection of technical white papers and research documents. 
                 Free downloads covering AI, cloud solutions, cybersecurity, and more.
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
               </p>
+              
+              <div className="mb-4">
+                <div className="flex items-center text-sm text-gray-600 mb-2">
+                  <User className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Author:</span>
+                  <span className="ml-2">{paper.author}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600 mb-2">
+                  <Clock className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Read Time:</span>
+                  <span className="ml-2">{paper.readTime}</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600 mb-4">
+                  <Eye className="h-4 w-4 mr-2" />
+                  <span className="font-semibold">Downloads:</span>
+                  <span className="ml-2">{paper.downloadCount}</span>
+                </div>
+              </div>
+              
+              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center">
+                <Download className="h-4 w-4 mr-2" />
+                Download PDF
+              </button>
             </motion.div>
+
           </div>
         </section>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages/white-papers.tsx
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -510,7 +345,8 @@ export default function WhitePapersPage() {
                 >
                   <div className="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
-=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
         {/* White Papers List */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -560,7 +396,10 @@ export default function WhitePapersPage() {
                     <Download className="w-4 h-4 mr-2" />
                     Download PDF
                   </button>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
+<<<<<<< HEAD:pages/white-papers.tsx
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
                 </motion.div>
               ))}
             </div>
@@ -568,29 +407,10 @@ export default function WhitePapersPage() {
         </section>
 
         {/* Categories */}
-<<<<<<< HEAD
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Research Categories</h2>
-              <p className="text-lg text-gray-600">Browse white papers by topic</p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {whitePaperCategories.map((category, index) => (
-                <motion.div
-                  key={index}
-                  className="text-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <div className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-2 ${category.color}`}>
-                    {category.name}
-                  </div>
-                  <div className="text-2xl font-bold text-gray-900">{category.count}</div>
-                  <div className="text-sm text-gray-500">papers</div>
+<<<<<<< HEAD:pages/white-papers.tsx
 =======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
             <motion.div
@@ -615,8 +435,11 @@ export default function WhitePapersPage() {
                 >
                   <Tag className="w-6 h-6 text-blue-600 mx-auto mb-2" />
                   <span className="text-sm font-medium">{category}</span>
->>>>>>> cursor/expand-services-advertise-and-build-project-9473
->>>>>>> main
+<<<<<<< HEAD:pages/white-papers.tsx
+                </motion.div>
+              ))}
+=======
+
                 </motion.div>
               ))}
             </div>
@@ -624,11 +447,14 @@ export default function WhitePapersPage() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
               </Link>
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         {/* Featured White Papers */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -835,11 +661,40 @@ export default function WhitePapersPage() {
                   </motion.div>
                 ))}
               </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD:pages/white-papers.tsx
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Need Custom Research?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Contact us for custom research and analysis tailored to your specific needs.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+                <Link
+                  href="/research"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View All Research
+=======
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">
             <motion.div
@@ -868,6 +723,7 @@ export default function WhitePapersPage() {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold"
                 >
                   Read Our Blog
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
                 </Link>
               </div>
             </motion.div>
@@ -875,8 +731,14 @@ export default function WhitePapersPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Layout>
 =======
+<<<<<<< HEAD:pages/white-papers.tsx
+    </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
         {/* CTA Section */}
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 text-center">
@@ -906,11 +768,12 @@ export default function WhitePapersPage() {
                   View All Research
                 </Link>
               </div>
->>>>>>> main
+
             </motion.div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<<< HEAD:pages/white-papers.tsx.backup
 <<<<<<< HEAD
 =======
@@ -920,7 +783,15 @@ export default function WhitePapersPage() {
 =======
 ========
 >>>>>>>> 0eb4a5f03614d84a501057cf86b77ef6d66d29ce:pages/white-papers.tsx.disabled
+=======
+
+    </>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </MainLayout>
->>>>>>> e7e8983740868b7305b21501d9fc4e7727e1186f
+
+    </>
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5:pages/white-papers.tsx.disabled
   );
 }

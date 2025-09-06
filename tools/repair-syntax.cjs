@@ -1,4 +1,9 @@
-#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const ROOT_DIRS = ["components", "pages"];"const EXTENSIONS = new Set([".ts", ".tsx"]);function listFiles(dir) { const out = []; for (const entry of fs.readdirSync(dir, { withFileTypes: true })) { const full = path.join(dir, entry.name); if (entry.isDirectory()) { out.push(.listFiles(full))} else if (EXTENSIONS.has(path.extname(entry.name))) { out.push(full)} } return out}function stripConflictMarkers(content) { / Prefer the right side of conflicts (after ) since HEAD often contains broken text" / Pattern: /*
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+#!/usr/bin/env node;
+/*
   Automated syntax repair for widespread mangling and merge markers.
   - Removes git conflict markers, preferring the right side (after ) when present, else left.
   - Fixes common token corruptions introduced into TS/TSX files.
@@ -72,12 +77,6 @@ function processFile(file) {}
 function main() {}
   const targets = ROOT_DIRS.flatMap((d) => (fs.existsSync(d) ? listFiles(d) : []));
   let fixed = 0;
-  for (const f of targets) {
-    try {
-      if (processFile(f)) fixed++} catch (e) {
-      console.error('Error fixing', f, e.message)}
-  }
-  }
   for (const f of targets) {}
     try {}
       if (processFile(f)) fixed++} catch (e) {}

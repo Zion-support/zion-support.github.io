@@ -1,142 +1,132 @@
-'use client';
+import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
 
-import { useEffect } from 'react';
-
-export default function PerformanceMonitor() {
-  useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
-
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // Track LCP (Largest Contentful Paint)
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        console.log('LCP:', lastEntry.startTime);
-        
-        // Send to analytics service
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'LCP',
-            value: Math.round(lastEntry.startTime),
-            event_category: 'Web Vitals',
-          });
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Track FID (First Input Delay)
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-              event_category: 'Web Vitals',
-            });
-          }
-        });
-      }).observe({ entryTypes: ['first-input'] });
-
-      // Track CLS (Cumulative Layout Shift)
-      let clsValue = 0;
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-          }
-        });
-        console.log('CLS:', clsValue);
-        
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(clsValue * 1000),
-            event_category: 'Web Vitals',
-          });
-        }
-      }).observe({ entryTypes: ['layout-shift'] });
-
-      // Track FCP (First Contentful Paint)
-      new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          console.log('FCP:', entry.startTime);
-          
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              name: 'FCP',
-              value: Math.round(entry.startTime),
-              event_category: 'Web Vitals',
-            });
-          }
-        });
-      }).observe({ entryTypes: ['paint'] });
-    };
-
-    // Track page load performance
-    const trackPageLoad = () => {
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navigation) {
-          const metrics = {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-          };
-
-          console.log('Page Load Metrics:', metrics);
-          
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'page_load', {
-              dom_content_loaded: Math.round(metrics.domContentLoaded),
-              load_complete: Math.round(metrics.loadComplete),
-              total_load_time: Math.round(metrics.totalLoadTime),
-              event_category: 'Performance',
-            });
-          }
-        }
-      });
-    };
-
-    trackWebVitals();
-    trackPageLoad();
-
-    // Track resource loading performance
-    const trackResourcePerformance = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'resource') {
-            const resource = entry as PerformanceResourceTiming;
-            if (resource.duration > 1000) { // Log slow resources (>1s)
-              console.warn('Slow resource:', {
-                name: resource.name,
-                duration: resource.duration,
-                size: resource.transferSize,
-              });
-            }
-          }
-        });
-      });
-      
-      observer.observe({ entryTypes: ['resource'] });
-    };
-
-    trackResourcePerformance();
-  }, []);
-
-  return null; // This component doesn't render anything
+interface PerformanceData {
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
+  memory: {
+    used: number,
+    total: number,
+    limit: number,
+  } | null;
 }
 
-// Extend Window interface for gtag
+interface PerformanceMonitorProps {
+  onPerformanceData?: (data: PerformanceData) => void,
+}
+
+// Extend the Window interface to include performance
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+
+    performance: Performance,
+  }
+  
+  interface Performance {
+    getEntriesByType(type: string): PerformanceEntry[],
+    memory?: {
+      usedJSHeapSize: number, totalJSHeapSize: number,
+      jsHeapSizeLimit: number,
+    };
+  }
+  
+  interface PerformanceEntry {
+    name: string, startTime: number,
+    duration: number,
+  }
+  
+  interface PerformanceNavigationTiming extends PerformanceEntry {
+    domContentLoadedEventStart: number, domContentLoadedEventEnd: number,
+    loadEventStart: number, loadEventEnd: number,
+    fetchStart: number,
   }
 }
+
+// Define Performance types if not available
+interface PerformanceEntry {
+  name: string,
+  entryType: string,
+  startTime: number,
+  duration: number,
+}
+
+interface Performance {
+  getEntriesByType(type: string): PerformanceEntry[],
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  loadEventEnd: number,
+  loadEventStart: number,
+  domContentLoadedEventEnd: number,
+  domContentLoadedEventStart: number,
+  responseEnd: number,
+  responseStart: number,
+  requestStart: number,
+  navigationStart: number,
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  useEffect(() => {
+    // Only run on client side
+
+    if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
+
+    const measurePerformance = () => {
+      const navigationEntries = window.performance.getEntriesByType('navigation');
+      const navigation = navigationEntries[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
+
+      
+      const performanceData = {
+        // Navigation timing
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+        // Paint timing
+
+        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        
+
+        // Resource timing
+        resourceCount: window.performance.getEntriesByType('resource').length,
+        // Memory usage (if available)
+
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+
+        } : null
+      },
+      if (onPerformanceData) {
+        onPerformanceData(performanceData);
+      }
+
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+        // eslint-disable-next-line no-console
+        console.log('Performance Metrics:', performanceData);
+      }
+    };
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
+
+  return null;
+};
+
+export default PerformanceMonitor;

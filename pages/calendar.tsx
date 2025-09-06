@@ -13,7 +13,7 @@ import {
   MapPin,
   Video,
   MessageSquare,
-  Building
+  Building;
 } from 'lucide-react';
 
 const timeSlots = [
@@ -381,4 +381,3 @@ export default function CalendarPage() {
       </section>
     </div>
   );
-}

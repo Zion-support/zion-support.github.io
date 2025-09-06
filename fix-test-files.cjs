@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
   try {
@@ -46,6 +47,9 @@ files.forEach(file => {
   }
 });
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -134,4 +138,8 @@ files.forEach(file => {})
 }
 });
 console.log(`Fixed ${fixedCount} malformed test files`);
+<<<<<<< HEAD
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+=======
+console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

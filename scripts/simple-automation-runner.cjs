@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Simple Automation Runner
@@ -134,6 +135,17 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
+=======
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
   log(message) {
     const timestamp = new Date().toISOString();
@@ -221,6 +233,7 @@ async function runSimpleAutomation() {
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
+<<<<<<< HEAD
       this.generateReport();
       this.log('✅ Automation completed successfully');
     } catch (error) {
@@ -228,6 +241,10 @@ async function runSimpleAutomation() {
       this.results.status = 'failed';
     }
   }
+=======
+      
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       return size}}
     totalSize = getDirectorySize(buildDir);
     const recommendations = [];
@@ -254,7 +271,11 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+<<<<<<< HEAD
 module.exports = SimpleAutomationRunner;
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -280,4 +301,8 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
+<<<<<<< HEAD
         "status"
+=======
+        "status"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
