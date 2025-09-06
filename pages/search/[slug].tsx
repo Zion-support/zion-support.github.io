@@ -12,9 +12,6 @@ import { useAuth } from '@/context/auth/AuthProvider';
   description?: string;
   slug: string;
   image?: string;
-  author?: {;
-    name: string;
-
     avatar?: string;
   }
   tags?: string[];
@@ -31,12 +28,10 @@ interface ProductSearchResult extends BaseSearchResult {
 ;
 
 interface TalentSearchResult extends BaseSearchResult {
-
 interface ProductSearchResult extends BaseSearchResult {;
   type: 'product' | 'equipment';
   price?: number;
   rating?: number;
-
 interface TalentSearchResult extends BaseSearchResult {;
   type: 'talent';
   rating?: number;
@@ -47,7 +42,6 @@ interface BlogSearchResult extends BaseSearchResult {
 ;
 
 interface CategorySearchResult extends BaseSearchResult {
-
 interface CategorySearchResult extends BaseSearchResult {;
   type: 'category';
 
@@ -83,7 +77,7 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react'
+import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -96,58 +90,10 @@ import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
-
-interface BaseSearchResult {
-  id: string,
-  title: string,
-  description?: string;
-  slug: string,
-  image?: string;
-  author?: {
-    name: string,
-    avatar?: string
-  };
-  tags?: string[];
-  category?: string;
-  date?: string
-}
-
-interface ProductSearchResult extends BaseSearchResult {
-  type: 'product' | 'equipment',
-  price?: number;
-  rating?: number
-}
-
-interface TalentSearchResult extends BaseSearchResult {
-  type: 'talent',
-  rating?: number
-}
-
-interface BlogSearchResult extends BaseSearchResult {
-  type: 'blog'
-}
-
-interface CategorySearchResult extends BaseSearchResult {
-  type: 'category'
-}
-
-type SearchResult = ProductSearchResult | TalentSearchResult | BlogSearchResult | CategorySearchResult;
-
-// Type guard functions
-const hasPrice = (result: SearchResult): result is ProductSearchResult => 
-  result.type === 'product' || result.type === 'equipment';
-
-const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
-  result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
-
-interface SearchResultsPageProps {
-  initialResults: SearchResult[],
-  query: string,
-  slug: string,
-  totalCount: number
-}
-
+  initialResults: SearchResult[];
+  query: string;
+  slug: string;
+  totalCount: number;
 interface OfflineFilters {
 
   sortBy?: string;
@@ -355,475 +301,6 @@ function offlineSearch(;
         break;
       case 'rating':
         all.sort((a, b) => {
-          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
-          const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
-          return bRating - aRating
-        });
-        break;
-      default: break
-    }
-  } else {
-    all.sort((a, b) => a.title.localeCompare(b.title))
-
-  }
-  const start = (page - 1) * limit;
-
-
-  const paginated = all && all.slice(start, start + limit);
-  return { results: paginated, totalCount: all && all.length };
-
-  return { results: paginated, totalCount: all.length };
-
-export default function SearchResultsPage(): any ({;
-  initialResults,;
-  query,;
-  slug,;
-  totalCount,;
-
-
-}: SearchResultsPageProps) {  const router = useRouter();
-  initialResults;
-  query;
-  slug;
-  totalCount}: SearchResultsPageProps) {
-  const router = useRouter();
-
-}: SearchResultsPageProps) {  const router = useRouter();
-  return { results: paginated, totalCount: all.length   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default function SearchResultsPage(req, res) {
-  try {
-  const router = useRouter();
-
-
-  const { isAuthenticated } = useAuth();
-  const [results, setResults] = useState<SearchResult[]>(initialResults);
-  const [loading, setLoading] = useState(false);
-  const [searchQuery, setSearchQuery] = useState(query);
-  const debouncedQuery = useDebounce(searchQuery, 300);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [sortBy, setSortBy] = useState('relevance');
-  const [categoryFilter, setCategoryFilter] = useState('all');
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
-  const [minRating, setMinRating] = useState('');
-  const [totalResults, setTotalResults] = useState(totalCount);
-
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`),
-      const params = new URLSearchParams({
-        query: searchTerm,
-        page: String(page),
-        limit: '12',
-        sort: sortBy}),
-      if (categoryFilter !== 'all') params.append('category', categoryFilter);
-
-
-  // Fetch search results;
-  const fetchResults = async (searchTerm: string, page = 1) => {;
-    try {
-      setLoading(true);
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
-      const params = new URLSearchParams({;
-        query: searchTerm;
-        page: String(page);
-        limit: '12';
-        sort: sortBy});
-      if (categoryFilter !== 'all') params.append('category', categoryFilter);
-
-      if (minPrice) params.append('minPrice', minPrice);
-      if (maxPrice) params.append('maxPrice', maxPrice);
-      if (minRating) params.append('minRating', minRating);
-      const response = await fetch(`/api/search?${params.toString()}`);
-
-
-  // Fetch search results;
-  const fetchResults = async (searchTerm: string, page = 1) => {;
-    try {;
-      setLoading(true);
-      logInfo(`Fetching search results for: ${searchTerm}, page: ${page}`);
-      const params = new URLSearchParams({;
-        query: searchTerm,;
-        page: String(page),;
-        limit: '12',;
-        sort: sortBy,;
-      });      if (categoryFilter !== 'all') params && params.append('category', categoryFilter);
-      if (minPrice) params && params.append('minPrice', minPrice);
-      if (maxPrice) params && params.append('maxPrice', maxPrice);
-      if (minRating) params && params.append('minRating', minRating);
-
-      const response = await fetch(`/api/search?${params && params.toString()}`);
-
-      if (!response && response.ok) {;
-        throw new Error(`Search API error: ${response && response.status}`);
-      }
-
-      const data = await response && response.json();
-      logInfo('Search results received:', { data: data });
-      setTotalResults(data && data.totalCount || data && data.results?.length || 0);
-
-      if (page === 1) {;
-        setResults(data && data.results || []);
-      } else {;
-        setResults(prev => [...prev, ...(data && data.results || [])]);
-
-      }
-    } catch (error) {;
-      logErrorToProduction('Error fetching search results:', { data: error });
-
-
-      if (!response.ok) {;
-        throw new Error(`Search API error: ${response.status}`);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-      const data = await response.json();
-      logInfo('Search results received:', { data: data });
-      setTotalResults(data.totalCount || data.results?.length || 0);
-      if (page === 1) {;
-        setResults(data.results || []);
-      } else {;
-        setResults((prev) => [...prev, ...(data.results || [])]);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-      logErrorToProduction('Error fetching search results:', { data: error });
-
-      const offline = offlineSearch(searchTerm, page, 12, {;
-        sortBy,;
-        category: categoryFilter !== 'all' ? categoryFilter : undefined,;
-        minPrice: minPrice ? Number(minPrice) : undefined,;
-        maxPrice: maxPrice ? Number(maxPrice) : undefined,;
-
-
-
-        minRating: minRating ? Number(minRating) : undefined}),;
-
-      setTotalResults(offline.totalCount);
-      if (page === 1) {;
-        setResults(offline.results);
-
-      } else {;
-        setResults((prev) => [...prev, ...offline.results]);
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } finally {;
-      setLoading(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  },;
-  // Handle search input change;
-  const handleSearch = (newQuery: string) => {;
-    setSearchQuery(newQuery),;
-    if (newQuery && newQuery.trim()) {;
-      router && router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {;
-        shallow: true,;
-      });
-      setCurrentPage(1);    }
-  };
-
-  useEffect(() => {;
-
-    fetchResults(searchQuery, nextPage)
-  };
-
-  const categories = Array.from(
-    new Set(results.map((r) => r.category).filter(Boolean));
-  );
-
-  const filteredResults = results.filter((r) => {
-    if (
-
-      categoryFilter !== 'all' &&
-      categoryFilter &&
-      r.category !== categoryFilter
-    ) {
-
-
-    if (debouncedQuery.trim()) {;
-
-      fetchResults(debouncedQuery, 1);
-    } else {;
-      setResults([]);
-
-      setTotalResults(0);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [debouncedQuery]),;
-
-  // Load more results;
-  const loadMore = () => {;
-    const nextPage = currentPage + 1;
-    setCurrentPage(nextPage);
-    fetchResults(searchQuery, nextPage);
-  };
-
-  const categories = Array && Array.from(;
-    new Set(results && results.map(r => r && r.category).filter(Boolean));
-  );
-
-  const filteredResults = results && results.filter(r => {    if (;
-      categoryFilter !== 'all' &&;
-      categoryFilter &&;
-      r && r.category !== categoryFilter;
-    ) {;
-      return false;
-
-    if (minRating && (r && r.type === 'product' || r && r.type === 'talent')) {;
-      if ((r && r.rating ?? 0) < Number(minRating)) {;
-
-    date: b.published_date,
-  }));
-  let all = [...product_results, ...talent_results, ...blog_results];
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => r.category === filters.category);  }
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
-}
-        return (r.price ?? 0) >= filters.min_price!;
-      }
-      return true;
-    });  }
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
-}
-        return (r.price ?? 0) <= filters.max_price!;
-      }
-      return true;
-    });  }
-  // Check condition
-if ( {) {
-  $2
-}
-    all = all.filter (r => {
-      // Check condition
-if ( {) {
-  $2
-}
-        return (r.rating ?? 0) >= filters.min_rating!;
-      }
-      return true;
-    });  }
-  // Check condition
-if ( {) {
-  $2
-}
-    switch (filters.sort_by) {
-      case 'price_asc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
-          const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
-          return a_price - b_price;        });
-        break;
-      case 'price_desc':;
-        all.sort ((a, b) => {
-          const a_price = a.type === 'product' ? (a.price ?? 0) : 0;
-          const b_price = b.type === 'product' ? (b.price ?? 0) : 0;
-          return b_price - a_price;        });
-        break;
-      case 'rating':;
-        all.sort ((a, b) => {
-          const a_rating =;
-            a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
-          const b_rating =;
-            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
-          return b_rating - a_rating;
-        });
-        break;
-      default:;
-        break;
-    }
-  } else {
-    all.sort ((a, b) => a.title.locale_compare (b.title));
-  }
-  const start = (page - 1) * limit;
-  const paginated = all.slice (start, start + limit);
-  return { results: paginated, total_count: all.length }
-;
-export default /**
- * SearchResultsPage - Function description
- */
-function SearchResultsPage() {  const router = use_router ();
-  const { is_authenticated } = use_auth ();
-  const [results, set_results] = useState < SearchResult[]>(initial_results);
-  const [loading, set_loading] = useState (false);
-  const [search_query, setSearchQuery] = useState (query);
-  const debounced_query = use_debounce (search_query, 300);
-  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [current_page, setCurrentPage] = useState (1);
-  const [sort_by, setSortBy] = useState ('relevance');
-  const [category_filter, setCategoryFilter] = useState ('all');
-  const [min_price, setMinPrice] = useState ('');
-  const [max_price, setMaxPrice] = useState ('');
-  const [min_rating, setMinRating] = useState ('');
-  const [total_results, setTotalResults] = useState (total_count);
-;
-  // Fetch search results;
-  const fetch_results = async (search_term: string, page = 1) => {
-    try {
-      set_loading (true);
-      log_info (`Fetching search results for: ${search_term}, page: ${page}`);
-      const params = new URLSearchParams ({
-        query: search_term,
-        page: String (page),
-        limit: '12',
-        sort: sort_by,
-      });      if (params.append ('category', category_filter)) {
-  $2
-}
-      if (params.append ('min_price', min_price)) {
-  $2
-}
-      if (params.append ('max_price', max_price)) {
-  $2
-}
-      if (params.append ('min_rating', min_rating)) {
-  $2
-}
-      const response = await fetch (`/api / search?${params.to_string ()}`);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (`Search API error: ${response.status}`);
-      }
-      const data = await response.json ();
-      log_info ('Search results received:', { data: data });
-      setTotalResults (data.total_count || data.results?.length || 0);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        set_results (data.results || []);
-      } else {
-        set_results (prev => [...prev, ...(data.results || [])]);
-      }
-    } catch (error) {
-      logErrorToProduction ('Error fetching search results:', { data: error });
-      const offline = offline_search (search_term, page, 12, {
-        sort_by,
-        category: category_filter !== 'all' ? category_filter : undefined,
-        min_price: min_price ? Number (min_price) : undefined,
-        max_price: max_price ? Number (max_price) : undefined,
-        min_rating: min_rating ? Number (min_rating) : undefined,
-      });
-      setTotalResults (offline.total_count);
-      // Check condition
-if ( {) {
-  $2
-}
-        set_results (offline.results);
-      } else {
-        set_results (prev => [...prev, ...offline.results]);
-      }
-    } finally {
-      set_loading (false);    }
-  }
-;
-  // Handle search input change;
-  const handle_search = (new_query: string) =>: any {
-    setSearchQuery (new_query),
-    if () {) {
-  $2
-}
-      router.push (`/search?q=${encodeURIComponent (new_query)}`, undefined, {
-        shallow: true,
-      });
-      setCurrentPage (1);    }
-  }
-;
-  useEffect (() => {
-    if () {) {
-  $2
-}
-      fetch_results (debounced_query, 1);
-    } else {
-      set_results ([]);
-      setTotalResults (0);    }
-  }, [debounced_query]);
-;
-  // Load more results;
-  const load_more = () =>: any {
-    const next_page = current_page + 1;
-    setCurrentPage (next_page);
-    fetch_results (search_query, next_page);
-  }
-;
-  const categories = Array.from (
-    new Set (results.map (r => r.category).filter (Boolean)));
-;
-  const filtered_results = results.filter (r => {    // Check condition
-if ( {) {
-  $2
-}
-      return false;
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      if (< Number (min_price)) {) {
-  $2
-}
-        return false;      }
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      if (> Number (max_price)) {) {
-  $2
-}
-        return false;      }
-    }
-    if () {) {
-  $2
-}
-      if (< Number (min_rating)) {) {
-  $2
-}
         return false;
       }
     }
@@ -857,7 +334,6 @@ if ( {) {
       return acc;
     },;
     {} as Record<string, SearchResult[]>  );
-
   const renderResultCard = (result: SearchResult) => {;
     switch (result && result.type) {;
       case 'product':;
@@ -992,52 +468,15 @@ if (acc[result.type] = []) {
             </p>;
           </div>;
         );    }
-  }
-
-}
-  },
-
-
-
-  return (
-    <>;
-      <SEO
-        title={`Search Results for "${query}" - Zion Marketplace`}
-        description={`Find ${query} and more in the Zion marketplace. Discover products, talent, and services.`}
-        keywords={`${query}, search, marketplace, products, talent, services`}
-
-        canonical={`https://app && app.ziontechgroup.com/search/${slug}`}
-      />;
-
-      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>;
-
-        <div
-          className='container mx-auto px-4 py-8'
-          data-testid='search-results'>;
-          {/* Search Header */}
-          <div className='mb-8'>;
-            <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>;
-              <div className='flex-1'>;
-                <h1 className='text-3xl font-bold text-gray-900 dark:text-white mb-2'>;
-                  Search Results;
-                </h1>;
-                <p
-                  className='text-gray-600 dark:text-gray-200'
-                  data-testid='results-count'>;
-                  {filteredResults && filteredResults.length > 0;
-                    ? `Found ${filteredResults && filteredResults.length} results for "${query}"`;
-
-
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-
-
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
         >
-          {/* Search Header */}
+          {/* Search Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -1063,6 +502,25 @@ if (acc[result.type] = []) {
                   type="text"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
+                    : `No results found for "${query}"`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </p>
+              </div>
+                <Input
+                  type="text"
+                  value={searchQuery  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => handleSearch(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   placeholder="Search marketplace..."
                   className="pl-10"
                 />
@@ -1096,7 +554,6 @@ if (acc[result.type] = []) {
                   data-testid='filter-button'>;
                   <Filter className='h-4 w-4' />                  Filters;
                 </Button>;
-
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -1234,14 +691,42 @@ if (acc[result.type] = []) {
                     placeholder="Min $"
                     value={minPrice}
                     onChange={(e) => setMinPrice(e.target.value)}
+                <div className='flex items-center gap-1'>
+                  <option value="all">All Categories</option>
+                  {categories.map((c) => (
+                    <option key={c} value={c}>
+                      {c  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </option>;
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </select>
+                <div className="flex items-center gap-1">
+                  <input
+                    type="number"
+                    placeholder="Min $"
+                    value={minPrice  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setMinPrice(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                   <span>-</span>
                   <input
                     type="number"
                     placeholder="Max $"
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
                     className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
                   />
                 </div>
@@ -1252,6 +737,16 @@ if (acc[result.type] = []) {
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'                  />;
                 </div>;
                   onChange={(e) => setMinRating(e.target.value)}
+                  value={minRating  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setMinRating(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
                   <option value="">All Ratings</option>
@@ -1419,7 +914,32 @@ if (acc[result.type] = []) {
                 <div key={type}>;
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
                   </h2>;
-
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  size="sm"
+                  onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  data-testid="view-mode-grid"
+                  className={viewMode === 'grid' ? 'active' : ''  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <Grid className="h-4 w-4" />
+                </Button>
+                <Button
+          {!loading && filteredResults.length === 0 && (
+            <div data-testid="search-empty-state">
+              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
+            </div>
                   <div
                     className={
                       viewMode === 'grid'
@@ -1434,7 +954,7 @@ if (acc[result.type] = []) {
 
 
                     )}
-                  </Button>;
+</Button>;
                 </div>;
               )}
             </div>;
@@ -1543,7 +1063,6 @@ if ( {) {
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
       results = offline && offline.results;
       totalCount = offline && offline.totalCount;    }
-
     return {;
       props: {;
         initialResults: results,;
@@ -1555,7 +1074,6 @@ if ( {) {
   } catch (error) {;
     logErrorToProduction('Error fetching search results:', { data: error });
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-
     return {;
       props: {;
         initialResults: offline && offline.results,;
@@ -1567,7 +1085,6 @@ if ( {) {
     };  }
 
 }
-
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`)
@@ -1577,7 +1094,6 @@ if ( {) {
       results = offline.results;
       totalCount = offline.totalCount
     }
-
     return {
       props: {
         initialResults: results,

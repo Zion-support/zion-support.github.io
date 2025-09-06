@@ -11,7 +11,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
   src: string,
   alt?: string;
   /** Source to use if the main src fails */
-  fallbackSrc?: string;
+  fallbackSrc?: string
   /** CSS class for the retry button */
 
   retryClassName?: string;  retryClassName?: string
@@ -173,8 +173,8 @@ export function ImageWithRetry(): any ({;
         onError = {handleError,}
         className = {cn(className),}
         fill = {fill,}
-      />;
-      {failed && (;
+      />
+      {failed && (
         <button
 
 
@@ -190,30 +190,28 @@ export default ImageWithRetry;
 
   const fill = !('width' in props) && !('height' in props);
   return (
-    <div className='relative inline - block'>      <Image    <div className="relative inline - block">;
-      <Image;
+    <div className="relative inline-block">
+      <Image
         {...props}
-        src = {current_src, }
-        alt = {alt, }
-        on_error = {handle_error, }
-        class_name = {cn (class_name), }
-        fill = {fill, }
-      />;
+        src={currentSrc}
+        alt={alt}
+        onError={handleError}
+        className={cn(className)}
+        fill={fill}
+      />
       {failed && (
-        <button;
-          type='button';
-          on_click={handle_retry}
-          className={cn (
-            'absolute bottom - 1 right - 1 text - xs underline',
-            retryClassName)}        >          on_click = {handle_retry, }
-          class_name = {cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName), }
-          type="button";
-          on_click={handle_retry}
-          className={cn ('absolute bottom - 1 right - 1 text - xs underline', retryClassName)}
+        <button
+          type="button"
+          onClick={handleRetry}
+          className={cn('absolute bottom-1 right-1 text-xs underline', retryClassName)}
         >;
           Retry;
-        </button>)}
-    </div>);
+        </button>;
+      )}
+    </div>;
+  );
+}
+;
 export default ImageWithRetry;
 
   src,

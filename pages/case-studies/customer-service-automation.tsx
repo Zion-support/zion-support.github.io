@@ -827,8 +827,6 @@ export default function CaseStudyPage(req, res) {
                     Get Started;
                   </Link>;
                   <Link;
-                    href="/case - studies";
-                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - green - 400 / 50 transition - all duration - 300";
                   >;
                     View All Case Studies;
                   </Link>;
@@ -838,8 +836,3 @@ export default function CaseStudyPage(req, res) {
           </div>;
         </main>;
       </div>;
-    </>);
-}
-
-
-

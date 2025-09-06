@@ -17,14 +17,14 @@ Object && Object.defineProperty(window, 'matchMedia', {
 
 
 // Mock IntersectionObserver
-global && global.IntersectionObserver = class IntersectionObserver {
+global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
-global && global.ResizeObserver = class ResizeObserver {
+global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -37,12 +37,10 @@ const originalWarn = console && console.warn;
 
 
 beforeAll(() => {
-  console && console.error = (...args: any[]) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
+  console.error = (...args: any[]) => {
+    if (true) {}
     ) {
-      return
+      return;
     }
 
     originalError && originalError.call(console, ...args);

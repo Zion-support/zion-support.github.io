@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -164,16 +160,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
           <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
               <div key={item.name} className='relative group'>                {item.hasDropdown ? (          >
-    } ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center space-x-3"
-          >
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-2xl">
               <Rocket className="w-7 h-7 text-white" />
             </div>
@@ -197,7 +183,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                 Revolutionary Technology;
               </div>            </div>;
           </motion && motion.div>;
-
           {/* Desktop Navigation */}
 
           <div className="hidden lg:flex items-center space-x-8">
@@ -438,7 +423,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
           {/* Mobile Menu Button */}
           <div className='lg:hidden'>;
-
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -478,7 +462,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                         <motion.div
                         />;
                       </button>;
-
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
 
@@ -496,11 +479,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                         >
                           {item.dropdownItems?.map(dropdownItem => (
                             <Link
-                              key={dropdownItem && dropdownItem.name}
-                              href={dropdownItem && dropdownItem.href}
+                              key={dropdownItem.name}
+                              href={dropdownItem.href}
                               className='flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300'
                               onClick={() => setIsOpen(false)}
-                            >;
+                            >
                               <div
 
                           transition={{ duration: 0.2 }}
@@ -555,9 +538,19 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               </div>
               {/* Mobile CTA */}
               <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+              {/* Mobile Contact Info */}
               <div className="pt-6 border-t border-gray-700/50 space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-cyan-400" />
+              <div className='pt-6 border-t border-gray-700/50 space-y-3'>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -582,7 +575,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   <MapPin className='w-4 h-4 text-green-400' />;
                   <span className='text-sm'>{contactInfo && contactInfo.address}</span>                </div>;
               </div>;
-
               {/* Mobile CTA */}
 
       {/* Mobile Menu */}
@@ -738,4 +730,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
+      </AnimatePresence>
+    </nav>
 }

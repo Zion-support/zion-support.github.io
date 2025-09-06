@@ -24,9 +24,7 @@ console.log('🚀 Starting merge process for all open PRs...');
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
-
 console && console.log('🚀 Starting merge process for all open PRs...');
-
 try {
     // Check if we're in a git repository
     execSync('git rev-parse --git-dir', { stdio: 'pipe' });
@@ -102,7 +100,6 @@ try {
     } catch (error) {
 
         console && console.log('⚠️  Merge conflicts detected. Resolving...');
-        
         // Find files with merge conflicts
         const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
         if (conflictFiles && conflictFiles.trim()) {
@@ -142,10 +139,8 @@ try {
     const branchList = branches && branches.split('\n')
         .map(branch => branch && branch.trim())
         .filter(branch => branch && !branch && branch.includes('origin/main') && !branch && branch.includes('origin/HEAD'));
-
     console && console.log(`Found ${branchList && branchList.length} branches to merge:`);
     branchList && branchList.forEach(branch => console && console.log(`  - ${branch}`));
-
     // Merge each branch
     for (const branch of branchList) {
         try {

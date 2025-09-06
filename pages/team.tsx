@@ -322,7 +322,6 @@ import {;
   Shield,;
 } from "lucide-react";
 import Layout from "../components/Layout";
-
 const teamMembers = [;
   {;
     id: 1,;
@@ -665,12 +664,20 @@ export default /**
  */
 function TeamPage() {
   return (
-    <Layout;
+<Layout;
       title="Our Team - Zion Tech Group";
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results.";
       keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals";
       canonical="https://ziontechgroup.com / team";
     >;
+
+    <Layout
+      title="Our Team - Zion Tech Group"
+      description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
+      keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
+      canonical="https://ziontechgroup.com/team"
+    >
+
       {/* Hero Section */}
       <section className="bg - gradient - to - br from - purple - 900 via - blue - 900 to - indigo - 900 text - white py - 20">;
         <div className="container mx - auto px - 4">;
@@ -883,7 +890,7 @@ function TeamPage() {
         </div>;
       </section>;
       {/* Join Our Team CTA */}
-      <section className="py - 16 bg - purple - 600 text - white">;
+<section className="py - 16 bg - purple - 600 text - white">;
         <div className="container mx - auto px - 4 text - center">;
           <h2 className="text - 3xl font - bold mb - 4">Join Our Growing Team</h2>;
           <p className="text - xl mb - 8 text - purple - 100 max - w-3xl mx - auto">;
@@ -928,7 +935,6 @@ function TeamPage() {
               Get Free Consultation;
             </Link>;
           </div>;
-
           {/* Contact Information */}
           <div className="grid md:grid-cols-3 gap-8 mt-12">;
             <div className="flex items-center justify-center">;
@@ -1012,8 +1018,49 @@ const teamMembers = [;
     description:;
       "Leading our development teams with agile methodologies and client-focused delivery.",;
   },;
-];
 
+    </Layout>;
+
+  );
+}
+import Head from "next/head";
+import { motion } from "framer-motion";
+import { Brain, Cloud, Shield, Users } from "lucide-react";
+const teamMembers = [
+  {
+    name: "Dr. Sarah Johnson"
+    role: "Chief Technology Officer"
+    expertise: "AI & Machine Learning"
+    icon: Brain
+    description:
+      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
+  }
+  {
+    name: "Michael Chen"
+    role: "Cloud Solutions Architect"
+    expertise: "Cloud Infrastructure"
+    icon: Cloud
+    description:
+      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
+  }
+  {
+    name: "Emily Rodriguez"
+    role: "Security Specialist"
+    expertise: "Cybersecurity"
+    icon: Shield
+    description:
+      "Ensuring enterprise-grade security with expertise in threat detection and prevention."
+  }
+  {
+    name: "David Thompson"
+    role: "Team Lead"
+    expertise: "Project Management"
+    icon: Users
+    description:
+      "Leading our development teams with agile methodologies and client-focused delivery."
+  }
+
+];
 export default function TeamPage() {;
 
   return (
@@ -1038,6 +1085,9 @@ export default function TeamPage() {;
 
 
     </>;
+
+    </>;
+
   );
   return (
     <>;
@@ -1060,17 +1110,17 @@ import React from 'react';
 import SEO from '../components/SEO';
 export default function TeamPage() {
 	return (
+
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
 				<h1 className="text-4xl font-bold mb-4">Our Team</h1>
-				<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
+<p className="text-gray-300 mb-8">Profiles coming soon. For inquiries, contact us.</p>
 			</div>
 		</>
 	)
 
 }
-    </Layout>);
 }
 import Head from './next / head';
 import { motion  } from './framer-motion';
@@ -1130,6 +1180,7 @@ function TeamPage() {
       </div>;
     </>);
   return (
+
     <>;
       <SEO;
         title="Our Team | Zion Tech Group";

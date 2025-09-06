@@ -428,25 +428,6 @@ export const innovativeMicroSaasSolutions2025 = [
     id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
     description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
     features: [
-      'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
-      'Multi-language supportAPI access for custom integrations'
-
-    market_size: '$22.1B',
-    target_audience:;
-      'E - commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
-    competitive_advantage:;
-      'AI - powered personalization, optimal send time prediction, and comprehensive automation capabilities',
-    use_cases: [;
-      'Email campaign automation',
-      'Customer segmentation and personalization',
-      'Conversion rate optimization',
-      'Subscriber engagement improvement',
-      'Marketing ROI optimization',
-    ],
-    integrations: [;
-
-      'CRM systems',
-      'E - commerce platforms',
       'Analytics tools',
       'Social media platforms',
       'Marketing tools',

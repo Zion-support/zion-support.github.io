@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -72,14 +68,11 @@ import { ;
   Mail,;
   ExternalLink;
 } from 'lucide-react';
-
 interface SidebarProps {;
   isOpen: boolean, onClose: () => void,;
 }
-
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
   const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-
   const handleDropdownToggle = (title: string) => {;
     setOpenDropdowns(prev =>;
       prev && prev.includes(title);
@@ -110,7 +103,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       { name: 'Education', href: '/industries/education', icon: GraduationCap },;
     ],;
   };
-
   const quickLinks = [;
     { name: 'About Us', href: '/about' },;
     { name: 'Our Team', href: '/team' },;
@@ -135,7 +127,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             onClick={onClose}
 
           />;
-
           <motion&& motion.div
 
             initial={{ x: -300 }}
@@ -172,7 +163,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                       onClick={() => handleDropdownToggle(title)}
 
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors";
-
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>;
                 <div className="space-y-2">;
@@ -365,13 +355,34 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
           </motion.div>;
         </>)}
     </AnimatePresence>);
+              <div className="mt-8 pt-8 border-t border-gray-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Phone className="w-4 h-4" />
+                    <span>+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center space-x-3 text-gray-600">
+                    <Mail className="w-4 h-4" />
+                    <span>kleber@ziontechgroup.com</span>
+                  </div>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                    onClick={onClose}
+                  >
+                    <span>Get Started</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+              </div>
+            </div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  );
 }
 ;
 export default Sidebar;
-;
-
-
-};
-
-export default Sidebar;
-

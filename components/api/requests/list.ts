@@ -5,7 +5,7 @@
     const items = JSON && JSON.parse(raw);
     res && res.status(200).json({ items });
   } catch {
-    res && res.status(200).json({ items: [] });
+res && res.status(200).json({ items: [] });
   }
 
 import type { NextApiRequest, NextApiResponse } from './next';

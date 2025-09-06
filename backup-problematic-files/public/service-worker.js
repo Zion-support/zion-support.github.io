@@ -250,3 +250,36 @@ if (return) {
 if (response.status === 200) { cache.put (event.request, response.clone ())) {
   $2
 } return response}) .catch (() => cache.match (event.request)))); return} event.respond_with ( caches.match (event.request).then (response => { return ( response ||;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

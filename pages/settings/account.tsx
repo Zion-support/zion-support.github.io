@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -65,7 +61,6 @@ export default function AccountSettingsPage(req, res) {
     setDisplayWeb3(val),;
     if (typeof window !== 'undefined');
       window && window.localStorage.setItem('zion-web3-display', String(val));  };
-
   const linkDID = async () => {;
 
 
@@ -251,7 +246,6 @@ if (return) {
     } catch (e: any) {;
       setStatus(e?.message || 'Backup failed');    }
   };
-
   const doRestore = async () => {;
     setStatus(null);
     try {;
@@ -287,7 +281,6 @@ if (return) {
             </label>;
           </div>;
         </section>;
-
         <section className='rounded-xl border p-5'>;
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>;
           <div className='grid grid-cols-1 gap-3'>;
@@ -325,7 +318,6 @@ if (return) {
             </button>;
           </div>;
         </section>;
-
         <section className='rounded-xl border p-5'>;
           <h2 className='font-semibold mb-2'>Decentralized Backup</h2>;
           <p className='text-sm text-gray-500 mb-3'>;
@@ -494,6 +486,15 @@ if ( {) {
         </section>;
 
 
+    } catch (error) {
+      setStatus(e?.message || 'Restore failed');
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+  return (
     <>
       <Head>
         <title>Account Settings — Zion</title>
@@ -515,8 +516,6 @@ if ( {) {
             </label>
           </div>
         </section>
-
-        <section className="rounded-xl border p-5">
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>
           <div className="grid grid-cols-1 gap-3">
             <input value={ens} onChange={(e) => setEns(e.target.value)} placeholder="ENS (e.g. vitalik.eth)" className="w-full rounded-md border px-3 py-2" />
@@ -526,7 +525,6 @@ if ( {) {
             <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
           </div>
         </section>
-
         <section className="rounded-xl border p-5">
           <h2 className="font-semibold mb-2">Decentralized Backup</h2>
           <p className="text-sm text-gray-500 mb-3">Back up talent profiles, resume, and project reviews to IPFS/Arweave (via Web3.Storage). Opt-in only.</p>

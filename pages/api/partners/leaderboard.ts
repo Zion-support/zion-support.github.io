@@ -43,7 +43,6 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       map && map.set(key, (map && map.get(key) || 0) + 1);
 
     }
-
     const leaders = Array && Array.from(map && map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)

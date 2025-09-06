@@ -100,96 +100,27 @@ export default function VerifyStatus(req, res) {
     setIsResending(true)
     setError('')
     setMessage('')
-    try {
-      const response = await fetch('/api/resend-verification-email', {
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.');
-        setLastSentTime(new Date());
-
-        setCountdown(60), // 60 second cooldown
-      } else {
-        setError(data.message |'Failed to resend verification email')
-import { useState, useEffect } from 'react',
-import { use_router } from 'next / router',
-import { Input } from '@/components / ui / input',
-import { Button } from '@/components / ui / button',
-import { Alert, AlertDescription } from '@/components / ui / alert',
-import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
-import { AuthLayout } from '@/layout',
-import { supabase } from '@/integrations / supabase / client', // Import Supabase client;
-import { use_auth } from '@/hooks / use_auth', // Import use_auth to access user state;
-import { log_warn, logErrorToProduction } from '@/utils / production_logger',
-;
-export default /**
- * VerifyStatus - Function description
- */
-function VerifyStatus() {
-  const router = use_router (),
-  const { user: auth_user, is_loading: auth_loading } = use_auth (), // Get user from AuthContext;
-  const { email: email_param } = router.query,
-  const [email, set_email] = useState (''),
-  const [message, set_message] = useState (''),
-  const [error, set_error] = useState (''),
-  const [is_resending, setIsResending] = useState (false),
-  const [isCheckingStatus, setIsCheckingStatus] = useState (false),
-  const [lastSentTime, setLastSentTime] = useState < Date | null>(null),
-  const [countdown, set_countdown] = useState (0),
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_email (email_param);
     }
-  }, [email_param]),
-  // Countdown timer for resend button;
-  useEffect (() => {
-    let interval: NodeJS.Timeout,
-    // Check condition
-if ( {) {
-  $2
-}
-      interval = set_interval (() => {
-        set_countdown (prev => prev - 1);
-      }, 1000);
-    }
-    return () => clear_interval (interval);
+    return () => clearInterval(interval)
   }, [countdown]),
+
   const handleResendEmail = async () => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('Please enter your email address'),
-      return;
+    if (!email) {
+      setError('Please enter your email address'),
+      return
     }
-    setIsResending (true),
-    set_error (''),
-    set_message (''),
-    try {
-      const response = await fetch ('/api / resend - verification - email', {
-        method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ email });
-      }),
-      const data = await response.json (),
-      // Check condition
-if ( {) {
-  $2
-}
-        set_message ('Verification email sent successfully! Please check your inbox.'),
-        setLastSentTime (new Date ()),
-        set_countdown (60), // 60 second cooldown;
-      } else {
-        set_error (data.message || 'Failed to resend verification email');
+
+    setIsResending(true),
+    setError(''),
+    setMessage(''),
+
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
+import { AuthLayout } from '@/layout';
       }
     } catch (err) {
       set_error ('Network error. Please try again.');

@@ -13,4 +13,3 @@ const Platform-engineering: React.FC<Platform-engineeringProps> = ({ className }
       <p>This component is under development.</p>
     </div>
   );
-}

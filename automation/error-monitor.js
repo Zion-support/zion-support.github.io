@@ -163,7 +163,6 @@ class ErrorMonitor {
 
             timestamp: new Date().toISOString(),
           });
-
     );
         }
       }

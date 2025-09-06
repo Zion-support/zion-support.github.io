@@ -83,7 +83,6 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
   }
-  
   if (!profile && profile.country) {
     missing && missing.push('country');
   }
@@ -129,52 +128,30 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 }
 
 
-export function generateKycDocumentId(): string {
-  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+export interface KycDocumentMeta {;
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
+  url: string;
+  uploadedAt: string;
+  status: 'pending' | 'approved' | 'rejected';
 }
-
-export function isKycProfileComplete(profile: KycProfile): boolean {
-  return profile.status === 'approved' && 
-         profile.documents.length > 0 && 
-         profile.fullLegalName.length > 0;
+  userId: string;
+  role: KycRole;
+  fullLegalName?: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  country?: string;
+  dateOfBirth?: string;
+  documents: KycDocumentMeta[];
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
+  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
+  flags?: string[];
+  riskScore?: number;
+  createdAt: string;
+  lastUpdatedAt: string;
+  auditTrail: Array<{
+    at: string;
+    by: string;
+    action: string;
+    details?: any
+  }>;
 }
-
-export function isKycProfileExpired(profile: KycProfile): boolean {
-  if (!profile.expiresAt) return false;
-  return new Date(profile.expiresAt) < new Date();
-}
-
-export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = [];
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('name');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('country');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('dateOfBirth');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    missing.push ('businessRegistrationNumber');
-  }
-  return {
-    ok: missing.length === 0,
-    missing;
-  }
-}
-
-

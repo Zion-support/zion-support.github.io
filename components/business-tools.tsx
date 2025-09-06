@@ -722,13 +722,11 @@ import React from 'react';
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]' />;
         <div className='absolute inset-0 bg-grid opacity-10' />;
-
         <div className='relative z-10 container-cursor text-center'>;
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>;
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />;
@@ -741,13 +739,11 @@ import React from 'react';
             Discover the most powerful business tools that successful companies;
             use to manage projects, communicate effectively, market their;
             products, and grow their operations. Real pricing and features.          </p>      </Head>;
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0 && 0.08),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0 && 0.06),transparent_50%)]" />;
         <div className="absolute inset-0 bg-grid opacity-10" />;
-
         <div className="relative z-10 container-cursor text-center">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">;
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />;
@@ -761,7 +757,6 @@ import React from 'react';
           </p>;
         </div>;
       </section>;
-
       {/* Business Insights */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -888,7 +883,6 @@ import React from 'react';
               Stay ahead of the curve with our analysis of the business tools landscape and emerging opportunities.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {businessInsights && businessInsights.map((insight, index) => (;
               <Card
@@ -931,7 +925,6 @@ import React from 'react';
           </div>;
         </div>;
       </section>;
-
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -944,7 +937,6 @@ import React from 'react';
               organization. Each tool has been evaluated for features, pricing,;
               and business impact.            </p>;
           </div>;
-
           {businessTools && businessTools.map((category, categoryIndex) => (      <section className="section-padding bg-gradient-cursor">;
         <div className="container-cursor">;
           <div className="text-center mb-20">;
@@ -955,7 +947,6 @@ import React from 'react';
               Hand-picked business tools that deliver real value for your organization. Each tool has been evaluated ;
               for features, pricing, and business impact.;
           </div>;
-
           {businessTools && businessTools.map((category, categoryIndex) => (;
             <div key={categoryIndex} className='mb-20'>;
               <div className='text-center mb-12'>;
@@ -964,7 +955,6 @@ import React from 'react';
                 </h3>;
                 <div className='w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full' />;
               </div>;
-
               <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>                {category && category.tools.map((tool, toolIndex) => (;
                   <Card
                     key={toolIndex}
@@ -973,7 +963,6 @@ import React from 'react';
                 <h3 className="text-3xl font-bold text-white mb-4">{category && category.category}</h3>;
                 <div className="w-24 h-1 bg-gradient-to-r from-cursor-blue to-purple-500 mx-auto rounded-full" />;
               </div>;
-
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
 
                   <Card
@@ -1106,8 +1095,7 @@ import React from 'react';
                         </div>
                       </div>
                     )}
-
-                    <div className="text-center mb-6">
+<div className="text-center mb-6">
                       <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                         {tool.icon}
 
@@ -1138,7 +1126,6 @@ import React from 'react';
                         </div>;
                       </div>;
                     )}
-
                     <div className='text-center mb-6'>;
                       <div
                         className={`w-16 h-16 rounded-2xl flex items-center justify-center text-white mx-auto mb-4 ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
@@ -1151,7 +1138,6 @@ import React from 'react';
                         {tool && tool.description}
                       </p>;
                     </div>;
-
                     <div className='mb-6'>;
                       <div className='text-center mb-4'>;
                         <span className='text-2xl font-bold text-cursor-blue'>;
@@ -1168,7 +1154,6 @@ import React from 'react';
                       <h4 className="text-xl font-bold text-white mb-2">{tool && tool.name}</h4>;
                       <p className="text-gray-400 text-sm leading-relaxed">{tool && tool.description}</p>;
                     </div>;
-
                     <div className="mb-6">;
                       <div className="text-center mb-4">;
                         <span className="text-2xl font-bold text-cursor-blue">{tool && tool.pricing}</span>;
@@ -1218,7 +1203,6 @@ import React from 'react';
             {productivityTips.map((tip, index) => (
         </div>;
       </section>;
-
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -1299,7 +1283,6 @@ import React from 'react';
               Maximize the value of your business tools with these proven strategies and best practices.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {productivityTips.map((tip, index) => (
               <Card
@@ -1308,6 +1291,33 @@ import React from 'react';
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex justify-center mb-4">
+        </div>
+      </section>
+      {/* Productivity Tips */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-16'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Maximize the value of your business tools with these proven
+              strategies and best practices.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            {productivityTips.map((tip, index) => (
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue text-center'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='flex justify-center mb-4'>{tip.icon}</div>
+                <h3 className='text-xl font-bold text-white mb-3'>
+                  {tip.title}
+                </h3>
+                <p className='text-gray-400 text-sm leading-relaxed'>
+                  {tip.description}
+                </p>              </Card>                <div className="flex justify-center mb-4">
                   {tip.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
@@ -1376,16 +1386,22 @@ import React from 'react';
             Start with the essentials and build your tech stack strategically.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
-            <Button
+<Button
               href="/micro-saas"
               variant="secondary"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
+            <Button
+              href=&quot;/micro-saas&quot;
+              variant=&quot;secondary&quot;
+              size=&quot;lg&quot;
+              className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl&quot;
+
             >
               Explore Micro SaaS
             </Button>
             <Button
-              href="/contact"
+href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"

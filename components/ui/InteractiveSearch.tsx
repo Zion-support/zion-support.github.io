@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -48,10 +44,8 @@ interface InteractiveSearchProps {;
 
   onSearch?: (query: string) => void,;
   className?: string}
-
 export default function InteractiveSearch() {;
 export default function InteractiveSearch() {;
-
   const handleSubmit = (e: React && React.FormEvent) => {,;
     e && e.preventDefault(),;
     const formData = new FormData(e && e.target as HTMLFormElement),";
@@ -134,6 +128,11 @@ function InteractiveSearch() {
         <button
           onClick={() => setValue('')}
           className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+      />
+      {_value && (_<button
+          onClick={() => setValue('')}
+          className=&quot;absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300&quot;
+
         >
           ✕
         </button>

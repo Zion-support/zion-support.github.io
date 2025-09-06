@@ -70,9 +70,3 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status (200).json ({ job_description: text });
-}
-
-}
-
-
-

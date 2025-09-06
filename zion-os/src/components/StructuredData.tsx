@@ -104,7 +104,7 @@ function StructuredData() {
       "url": "https://ziontechgroup.com";
     }
   }
-  return (
+  return (;
     <script;
       type="application / ld + json";
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}

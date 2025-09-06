@@ -697,6 +697,17 @@ module.exports = {
     }
   ]
 }
+        NODE_ENV: "development"
+        PM2_PROCESS_NAME: "code-quality-monitor"
+        QUALITY_THRESHOLD: "80"
+        AUTO_FIX_CRITICAL: "true"
+      }
+      log_file: "logs/pm2/code-quality-monitor.log"
+      error_file: "logs/pm2/code-quality-monitor-error.log"
+      out_file: "logs/pm2/code-quality-monitor-out.log"
+    }
+  ]
+}
 
       log_file: "logs / pm2 / code - quality - monitor.log",
       error_file: "logs / pm2 / code - quality - monitor - error.log",

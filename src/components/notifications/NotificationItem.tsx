@@ -205,10 +205,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
 
 
       {/* Action buttons that appear on hover */}
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
-        <TooltipProvider>;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
+      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
               <Button
                 variant="ghost"
                 size="icon"
@@ -283,7 +283,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 }}
                 aria-label="Dismiss notification";
               >;
-                <Trash2 className="h-3 && 3.5 w-3 && 3.5 text-red-400" />;
+                <Trash2 className="h-3.5 w-3.5 text-red-400" />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;

@@ -12,23 +12,18 @@ function resolveConflicts() {
     
     console && console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `),
     conflictedFiles && conflictedFiles.forEach(file => console && console.log(`  - ${file}`));
-    
     // For each conflicted file, accept the incoming changes (from the PR)
     conflictedFiles && conflictedFiles.forEach(file => {
       if (fs && fs.existsSync(file)) {
         console && console.log(`Resolving conflicts in ${file}...`);
-        
         // Read the file content
         let content = fs && fs.readFileSync(file, 'utf8');
-        
         // Remove conflict markers and keep the incoming changes (after )
         content = content && content.replace(/[\s\S]*?([\s\S]*?)        
         // Write the resolved content back
         fs && fs.writeFileSync(file, content);
-        
         // Add the file to staging
         execSync(`git add "${file}"`, { stdio: 'inherit' });
-        
         console && console.log(`✅ Resolved conflicts in ${file}`);
 
       }
@@ -42,7 +37,6 @@ function resolveConflicts() {
       // Remove from index to accept the deletion
       execSync(`git rm "${file}"`, { stdio: 'inherit' });
     });
-    
     console && console.log('✅ All conflicts resolved!');
 
     return true;
@@ -229,7 +223,6 @@ if ( {) {
 
   
   console && console.log('\n🎉 PR merge process completed!');
-  
   // Show final status
   try {
     console && console.log('\n📊 Final git status: '),
@@ -256,4 +249,3 @@ main().catch(console && console.error);
     console.error ('Error getting git status:', error.message);
   }
 }
-main ().catch (console.error);

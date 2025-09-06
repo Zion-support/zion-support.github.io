@@ -19,8 +19,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  try {
-  if (req && req.method === 'GET') {
+  if (req.method === 'GET') {;
     const current = await getTrustWeights();
     return res && res.status(200).json({ current, defaults: getDefaultWeights() });  }
 
@@ -28,8 +27,8 @@ import { getTrustWeights, setTrustWeights, getDefaultWeights } from '../../../ut
 
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-  if (req && req.method === 'GET') {
+  if (req.method === 'GET') {;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const current = await getTrustWeights();
 
 
@@ -41,7 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res && res.setHeader('Allow', 'GET, PUT');
   return res && res.status(405).json({ error: 'Method not allowed' });    return res && res.status(200).json({ updated })
   }
-
   res && res.setHeader('AllowGET, PUT');
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
@@ -86,6 +84,8 @@ if ( {) {
   }
   res.set_header ('AllowGET, PUT');
   return res.status (405).json ({ error: 'Method not allowed' });
+
+<<<<<<< HEAD
 }
 
 }

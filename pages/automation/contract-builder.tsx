@@ -40,7 +40,6 @@ export default function ContractBuilderPage() {
       !!endDate &&
       (paymentType === 'hourly' ? hourlyRate > 0 : fixedAmount > 0)
     )
-  }, [talentName, projectName, scopeSummary, startDate, endDate, paymentType, hourlyRate, fixedAmount])
   async function submitForm(event: React.FormEvent) {
     event.preventDefault()
     if (!canSubmit) return

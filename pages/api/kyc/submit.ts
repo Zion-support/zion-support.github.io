@@ -11,15 +11,6 @@ function load(): Record<string, KycProfile> {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
-  fs && fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
-}
-
-
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
-  if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
-
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -41,7 +32,6 @@ function save(db: Record<string, KycProfile>) {
   ).toLowerCase();
   if (name && name.includes('test') || name && name.includes('demo') || name && name.includes('fake'))
     flags && flags.add('fraud_risk');
-
   const ip = (
     (req && req.headers['x-forwarded-for'] as string) ||
     req && req.socket.remoteAddress ||
@@ -58,30 +48,6 @@ function save(db: Record<string, KycProfile>) {
         a => a && a.action === 'kyc_submitted' && (a && a.details as any)?.ip === ip
       )
     ).length;
-    if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
-
-
-
-
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
-
-
-  // Compute simple risk score
-  let riskScore = 10; // base low risk
-  if (flags && flags.has('aml_alert')) riskScore += 50;
-  if (flags && flags.has('fraud_risk')) riskScore += 20;
-  if (flags && flags.has('duplicate_ip')) riskScore += 15;
-  riskScore = Math && Math.min(100, riskScore);
-  profile && profile.flags = Array && Array.from(flags);
-  profile && profile.riskScore = riskScore;
-  profile && profile.status = 'submitted';
-  const now = new Date().toISOString();
-
-
-}
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';

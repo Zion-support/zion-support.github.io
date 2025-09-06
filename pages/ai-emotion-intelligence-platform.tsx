@@ -342,17 +342,17 @@ const use_cases = [;
   {
     title: 'Sales Enhancement',
     description: 'Identify customer emotions during sales calls to optimize conversion rates',
-    icon: TrendingUp;
+icon: TrendingUp;
   },
   {
     title: 'Product Feedback Analysis',
     description: 'Analyze user emotions when interacting with products to improve user experience',
-    icon: MessageCircle;
+icon: MessageCircle;
   },
   {
     title: 'Employee Wellbeing',
     description: 'Monitor employee emotional states to support mental health and productivity',
-    icon: Heart;
+icon: Heart;
   }
 ],
 const pricing = [;
@@ -361,7 +361,7 @@ const pricing = [;
     price: '$299',
     period: '/month',
     description: 'Perfect for small teams getting started with emotion AI',
-    features: [;
+features: [;
       'Up to 1, 000 emotion analyses per month_basic emotion detection (7 core emotions)Email support_standard API access_basic analytics dashboard';
     ],
     popular: false,
@@ -383,7 +383,7 @@ const pricing = [;
     price: 'Custom',
     period: '',
     description: 'Custom solutions for large organizations',
-    features: [;
+features: [;
       'Unlimited emotion analyses_custom emotion models_dedicated support team_white - label solutions_advanced integrations_custom reportingSLA guarantees_on - premise deployment';
     ],
     popular: false,

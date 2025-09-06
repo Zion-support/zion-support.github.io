@@ -17,7 +17,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     userId
     status: status as any
     label: label as any})
-
   res.status(200).json({ items })
 
 }

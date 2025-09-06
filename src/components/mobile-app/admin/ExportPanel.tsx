@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react'
 import { AppPlatform, AppMetadataValues } from "./MetadataManager",
+<<<<<<< HEAD
 import { toast } from "sonner";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
@@ -24,19 +25,19 @@ if ( {) {
         file_name = `zion - app - metadata-${platform}-${metadata.version}.json`;
 
       } else {
-        // Convert object to CSV format;
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
-        const values = [;
-          metadata.app_title;
-          metadata.short_description;
-          metadata.long_description;
-          metadata.version;
-          metadata.platform;
+        // Convert object to CSV format
+        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform']
+        const values = [
+          metadata.appTitle
+          metadata.shortDescription
+          metadata.longDescription
+          metadata.version
+          metadata.platform
         ];
-        content = headers.join () + '\n' + values.map (value => `"${String (value).replace (/"/g, '""')}"`).join ();
+        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
         // Add keywords as additional rows;
-        content += '\n\n_keywords:\n' + metadata.keywords.join ();
-}        file_name = `zion - app - metadata-${platform}-${metadata.version}.csv`;
+        content += '\n\nKeywords:\n' + metadata.keywords.join();
+};        fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
 
 interface ExportPanelProps {;

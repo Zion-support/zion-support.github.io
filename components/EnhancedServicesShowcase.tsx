@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -25,7 +21,6 @@ import React, { useState } from 'react';
 
 
 } from 'lucide-react';
-
 interface Service {;
 
   Brain,
@@ -71,7 +66,6 @@ interface Service {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]' />;
       </div>;
-
       <div className='max-w-7xl mx-auto relative z-10'>;
         {/* Header */}
         <div className='text-center mb-16'>;
@@ -84,13 +78,11 @@ interface Service {
             Cutting-edge technology solutions designed to transform your;
             business and accelerate innovation          </p>;
         </div>;
-
         {/* Filters */}
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>    };
     return iconMap[category] || Brain;
 
   };
-
   return (
     <section id="services" className="py-24 px-6 relative overflow-hidden">;
       {/* Background */}
@@ -99,7 +91,6 @@ interface Service {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0 && 0.1),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0 && 0.1),transparent_50%)]" />;
       </div>;
-
       <div className="max-w-7xl mx-auto relative z-10">;
         {/* Header */}
         <div className="text-center mb-16">;
@@ -131,7 +122,7 @@ interface Service {
 
 
                   {category === 'all' ? 'All Categories' : category}
-                </option>;
+                </option>
               ))}
 
 
@@ -362,6 +353,21 @@ interface Service {
                 </div>)}
               {/* Service Content */}
               <div className='p - 8'>;
+              {/* Service Content */}
+              <div className='p-8'>
+        </div>
+
+        {/* Services Grid */}
+
+                    Popular
+
+                  </div>
+                </div>
+              )}
+
+              {/* Service Content */}
+              <div className='p-8'>
+
                 {/* Icon and Category */}
                 <div className='flex items - center justify - between mb - 4'>;
                   <div;
@@ -404,7 +410,6 @@ interface Service {
                       {service && service.category}
                     </div>                  </div>;
                 </div>;
-
                 {/* Service Info */}                {/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
@@ -415,12 +420,10 @@ interface Service {
                     <div className="text-xs text-white/40">{service && service.category}</div>;
                   </div>;
                 </div>;
-
                 {/* Service Info */}
 
                 <h3 className="text-xl font-bold mb-3 text-white">{service.name}</h3>
                 <p className="text-white/70 text-sm mb-4 leading-relaxed">{service.tagline}</p>
-
                 {/* Pricing */}
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2 mb-2">
@@ -439,7 +442,6 @@ interface Service {
                     </span>
                   </div>
                 </div>
-                <div className='mb-6'>;
                   <div className='flex items-baseline gap-2 mb-2'>;
                     <span className='text-3xl font-bold text-white'>;
                       {service && service.price}
@@ -458,7 +460,6 @@ interface Service {
                     </span>;
                   </div>;
                 </div>;
-
                 {/* Key Features */}
 
                 <div className="mb-6">
@@ -500,7 +501,6 @@ interface Service {
                 </div>
                   </div>;
                 </div>;
-
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>;
                   <div className='text-xs text-white/60 mb-2'>;
@@ -515,7 +515,6 @@ interface Service {
                   <div className="mt-2 text-xs text-white/60">;
                   </div>;
                 </div>;
-
                 {/* Action Buttons */}
 
                     </div>                  </div>;
@@ -751,10 +750,8 @@ interface Service {
 
 
 };
-
 export default EnhancedServicesShowcase;  );
 };
-
 export default EnhancedServicesShowcase;
 
 

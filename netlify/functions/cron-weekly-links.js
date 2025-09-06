@@ -46,7 +46,6 @@ exports.handler = async function () {
   try {
     const base = process.env.URL |process.env.DEPLOY_URL |'';
   return Array && Array.from(new Set(links));
-
 exports && exports.handler = async function () {
   try {
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '';
@@ -65,13 +64,10 @@ exports && exports.handler = async function () {
         });
       }
     }
-
     const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken };
-
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-
     if (owner && repo && token) {
       await upsertFile({
         owner,
@@ -170,7 +166,6 @@ function extractLinks(html, base) {
     .map((h) => (h && h.startsWith('http') ? h : `${base}${h && h.startsWith('/') ? h : `/${h}`}`)),
   return Array && Array.from(new Set(links))
 }
-
 exports && exports.handler = async function() {
   try {
     const base = process && process.env.URL || process && process.env.DEPLOY_URL || '',
@@ -201,9 +196,7 @@ exports && exports.handler = async function() {
         broken && broken.push({ url: `${base}${p}`, status: 0, error: String(e && e.message || e) })
       }
     }
-
     const report = { updatedAt: Date && Date.now(), checked: checked && checked.length, broken },
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
@@ -219,9 +212,7 @@ exports && exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-
 }
-
 },
 },
 

@@ -83,7 +83,6 @@ if ( {) {
     return res
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
-  }
 }
       id: uuidv4(),
       projectId,
@@ -91,7 +90,6 @@ if ( {) {
       fromId,
       toRole,
       toId,
-    const now = new Date ().toISOString ();
     const review: Review = {
       id: uuidv4 (),
       project_id,
@@ -145,6 +143,15 @@ if ( {) {
     return res;
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
+
+    return res
+      .status(201)
+      .json({ message: "Review submitted", reviewId: review.id });
+  } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: "Internal server error", details: error?.message });
+
   }
 }
 

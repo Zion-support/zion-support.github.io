@@ -1,23 +1,18 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -526,7 +521,6 @@ const values = [;
   "Continuous learning",;
   "Work-life balance",;
   "Diversity and inclusion",;
-
   "Client success focus";
 ];
 export default function TalentPage() {;
@@ -660,7 +654,6 @@ export default function TalentPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
-                
                   >
                     <div className="text-blue-600 mb-4 mx-auto w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center">
                       <IconComponent className="w-8 h-8" />
@@ -989,4 +982,3 @@ export default function TalentPage() {;
       </div>;
     </MainLayout>;
   ),;
-}

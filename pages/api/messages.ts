@@ -140,6 +140,23 @@ if ( {) {
   }
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
+    res.status(201).json({ message: msg }),
+    return
+  }
+
+  if (req.method === 'GET') {
+    const { conversationId } = req.query
+    const conversations = readJsonFile<Conversation[]>(FILE, []),
+    const conv = conversations.find((c) => c.id === String(conversationId))
+    if (!conv) {
+      res.status(404).json({ error: 'Conversation not found' }),
+      return
+    }
+    res.status(200).json({ conversation: conv }),
+    return
+  res.setHeader('AllowGET, POST'),
+  res.status(405).end('Method Not Allowed')
+
 }
 
 

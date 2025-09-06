@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -182,7 +178,6 @@ import React, { useMemo, useState } from 'react';
             </thead>
             <tbody>
               {flags.map((f: any) => (
-                <tr key={f.id} className="border-t hover:bg-gray-50/50">
                   <td className="px-3 py-2 font-mono text-xs">{f.id}</td>
                   <td className="px-3 py-2">{f.contentType}</td>
                   <td className="px-3 py-2">{f.userEmail}</td>
@@ -194,26 +189,6 @@ import React, { useMemo, useState } from 'react';
                     <button onClick={() => setSelected(f)} className="px-2 py-1 rounded border">Review</button>
                   </td>
                 </tr>
-              ))}
-              {flags.length === 0 && (
-
-
-
-
-}
-
-                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
-              )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            </tbody>;
-          </table>;
-        </div>;
-      </div>;
-
-      {selected && (;
         <ModerationModal
           flag={selected}
           onClose={() => setSelected(null)}
@@ -270,22 +245,14 @@ import React, { useMemo, useState } from 'react';
                     No results;
                   </td>;
                 </tr>              )}
-            </tbody>;
-          </table>;
-        </div>;
-      </div>;
-      {selected && (
-        <ModerationModal;
-          flag={selected}
-          on_close={() => set_selected (null)}
-          on_action={handle_action}
-        />)}
-    </EnhancedLayout>);
-;
-  } catch (error) {
+);
+                <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
+              )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
+            </tbody>;
+          </table>;
+        </div>;
+      </div>;

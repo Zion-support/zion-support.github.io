@@ -18,12 +18,10 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
 
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
-
   const state = readState();
   if (!state && state.config.optIn || state && state.config.paused) {
     return res && res.status(403).json({ error: "Sync disabled for this instance" });
   }
-
   const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string;
     title: string;
@@ -35,7 +33,6 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
-
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" });
 
@@ -162,6 +159,50 @@ if (headers["x - zion - signature"] = sig) {
   return res;
     .status (200);
     .json ({ status: "created", version, event_id: event.event_id });
+
+  const version = nextVersionFor(state, milestoneId),
+  const event = {
+    eventId: uuidv4(),
+    type: &quot;leaderboard_entry&quot; as const, // reuse as a generic announcement carrier with category
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+import type {_NextApiRequest, _NextApiResponse} from "next";
+import axios from "axios";
+
+export default async function handler(_req: NextApiRequest, _res: NextApiResponse) {_if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed"});
+
+  const _state = readState();
+  if (!state.config.optIn || state.config.paused) {_return res.status(403).json({ error: "Sync disabled for this instance"});
+  }
+
+  const {_milestoneId, _title, _timestamp} = req.body as {_milestoneId: string; title: string; timestamp?: number};
+  if (!milestoneId || !title) return res.status(400).json({_error: "milestoneId, _title required"});
+
+  const _version = nextVersionFor(state, milestoneId);
+  const _event = {_eventId: uuidv4(), _type: "leaderboard_entry" as const, _// reuse as a generic announcement carrier with category
+    payload: { id: milestoneId, _subjectId: milestoneId, _score: 0, _category: `milestone:${title}`, period: undefined, rank: undefined },
+
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now()},
+
+  upsertEvent(state, event),
+  writeState(state),
+
+  const body = { ...event, propagate: false },
+  const headers: Record<string, string> = {},
+  const sig = signPayload(body)
+  if (sig) headers["x-zion-signature"] = sig,
+  const _body = {_...event, _propagate: false};
+  const headers: Record<string, string> = {};
+  const _sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+
+  await Promise.all(_state.config.peers
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+      })
+  ),
+
 }
 
   } catch (error) {

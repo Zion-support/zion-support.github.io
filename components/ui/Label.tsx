@@ -14,7 +14,6 @@ interface LabelProps {;
   className?: string;
   htmlFor?: string;
 }
-
 const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
 
   return (
@@ -37,4 +36,3 @@ const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) 
 }
 ;
 export { Label }
-;

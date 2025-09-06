@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -55,7 +51,8 @@ export default function GitHubRedirect() {
 		if (typeof window !== 'undefined') {
 			window.location.replace('https: //github.com/Zion-Holdings')
 		}
-	}, []);
+}, []);
+
 	return (
 		<>
 			<Head>
@@ -66,7 +63,7 @@ export default function GitHubRedirect() {
 			</Head>
 			<div className="min-h-screen bg-black text-white flex items-center justify-center p-8">
 				<a href="https: //github.com/Zion-Holdings" className="text-cyan-400 underline">
-					Continue to GitHub
+Continue to GitHub
 				</a>
 			</div>
 		</>

@@ -45,7 +45,6 @@ class ErrorMonitor {
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-
     // Initial health check
     await this.performHealthCheck();
 
@@ -168,14 +167,6 @@ class ErrorMonitor {
       'src/App.tsx',
       'src/pages/index.tsx',
     ];
-
-    for (const file of criticalFiles) {
-      const filePath = path.join(this.projectRoot, file);
-      if (!fs.existsSync(filePath)) {
-        this.monitoringReport.errorsDetected.push({
-          type: 'missing_critical_file',
-          file: file,
-          message: `Critical file ${file} is missing`,
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -186,42 +177,12 @@ class ErrorMonitor {
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-
-    for (const line of lines) {
-      if (line.includes('error TS')) {
-        const match = line.match(
-          /(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/
-        );
-        if (match) {
-          errors.push({
-            type: 'typescript_error',
-            file: match[1].trim(),
-            line: parseInt(match[2]),
-            column: parseInt(match[3]),
-            message: match[4].trim(),
-            timestamp: new Date().toISOString()
-            timestamp: new Date().toISOString(),
-          });
-        }
-      }
-    }
-
     return errors;
   }
 
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
-
-    for (const line of lines) {
-      const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
-      if (match) {
-        errors.push({
-          type: 'eslint_error',
-          file: match[1].trim(),
-          line: parseInt(match[2]),
-          column: parseInt(match[3]),
-          message: match[4].trim(),
           timestamp: new Date().toISOString()
         });
       }
@@ -230,7 +191,6 @@ class ErrorMonitor {
         });
       }
     }
-
     return errors;
   }
 
@@ -277,8 +237,6 @@ class ErrorMonitor {
       const automation = new ErrorFixerAutomation();
       await automation.run();
       console.log('✅ Error fixer completed');
-
-      console.log('✅ Error fixer completed');
     } catch (error) {
       console.error('❌ Error fixer failed:', error);
       this.monitoringReport.errorsDetected.push({
@@ -314,7 +272,6 @@ class ErrorMonitor {
     if (!fs.existsSync(reportDir)) {
       fs.mkdirSync(reportDir, { recursive: true });
     }
-
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
 
@@ -360,12 +317,7 @@ class ErrorMonitor {
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
-}
-
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
-}
-
-module.exports = ErrorMonitor;

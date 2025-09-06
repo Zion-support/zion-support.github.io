@@ -1,55 +1,14 @@
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-
-  AlertTriangle,;
-  ArrowRight,;
-} from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-
-import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
-
-
-export default function PasswordCheckerPage() {;
-
-
-
-  const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
-  const [strength, setStrength] = useState(0);
-  const [strengthText, setStrengthText] = useState('');
-  const [strengthColor, setStrengthColor] = useState('');
-
-
-      analyzePassword(password);
-    } else {;
-      resetAnalysis();    }      analyzePassword(password);
-    } else {;
-      resetAnalysis();
-  useEffect(() => {
-    if (password) {
-      analyzePassword(password)
+export default function PasswordCheckerPage() {
+  Lock,
+  Shield,
+  Eye,
+  EyeOff,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
     } else {
       resetAnalysis()
     }
@@ -94,9 +53,7 @@ export default function PasswordCheckerPage() {;
       noCommon: !isCommonPassword(pass),;
       noSequential: !hasSequentialChars(pass);
     };
-
     setChecks(newChecks);
-
     // Calculate strength score;
     let score = 0;
     score += newChecks && newChecks.length ? 15 : 0;
@@ -106,13 +63,10 @@ export default function PasswordCheckerPage() {;
     score += newChecks && newChecks.symbols ? 20 : 0;
     score += newChecks && newChecks.noCommon ? 10 : 0;
     score += newChecks && newChecks.noSequential ? 10 : 0;
-
     // Bonus for length;
     if (pass && pass.length >= 12) score += 10;
     if (pass && pass.length >= 16) score += 5;
-
     setStrength(score);
-
     // Set strength text and color;
     if (score >= 90) {;
       setStrengthText('Very Strong');
@@ -120,13 +74,13 @@ export default function PasswordCheckerPage() {;
 
       setStrengthText('Strong');
       setStrengthColor('text-green-400');
-    } else if (score >= 50) {;
+    } else if (score >= 50) {
       setStrengthText('Moderate');
       setStrengthColor('text-yellow-400');
-    } else if (score >= 30) {;
+    } else if (score >= 30) {
       setStrengthText('Weak');
       setStrengthColor('text-orange-400');
-    } else {;
+    } else {
       setStrengthText('Very Weak');
       setStrengthColor('text-red-400');
     }
@@ -270,6 +224,13 @@ if (
 
       no_common: false,
       no_sequential: false,
+      length: false
+      uppercase: false
+      lowercase: false
+      numbers: false
+      symbols: false
+      noCommon: false
+      noSequential: false
     });
     set_suggestions ([]);  }
 ;
@@ -300,61 +261,6 @@ if (
     for (let i = 4, i < length, i++) {
       result += charset[Math.floor(Math.random() * charset.length)]
     }
-    // Shuffle the password
-    result = result.split('').sort(() => Math.random() - 0.5).join('');
-    setGeneratedPassword(result);
-    setPassword(result)
-  }
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)
-
-
-    // Ensure at least one of each required character type;
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math && Math.floor(Math && Math.random() * 26)]; // Uppercase;
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math && Math.floor(Math && Math.random() * 26)]; // Lowercase;
-    result += '0123456789'[Math && Math.floor(Math && Math.random() * 10)]; // Number;
-    result += '!@#$%^&*'[Math && Math.floor(Math && Math.random() * 8)]; // Symbol;
-
-    // Fill the rest randomly;
-    for (let i = 4; i < length; i++) {;
-      result += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)];
-    }
-
-    // Shuffle the password;
-    result = result;
-      .split('');
-      .sort(() => Math && Math.random() - 0 && 0.5);
-      .join('');
-    setGeneratedPassword(result);
-    setPassword(result);
-
-  };
-
-  const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text);  };    let result = '';
-
-    // Ensure at least one of each required character type;
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math && Math.floor(Math && Math.random() * 26)], // Uppercase;
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math && Math.floor(Math && Math.random() * 26)], // Lowercase;
-    result += '0123456789'[Math && Math.floor(Math && Math.random() * 10)], // Number;
-    result += '!@#$%^&*'[Math && Math.floor(Math && Math.random() * 8)], // Symbol;
-
-    // Fill the rest randomly;
-    for (let i = 4, i < length, i++) {;
-      result += charset[Math && Math.floor(Math && Math.random() * charset && charset.length)];
-    }
-
-    // Shuffle the password;
-    result = result && result.split('').sort(() => Math && Math.random() - 0 && 0.5).join('');
-    setGeneratedPassword(result);
-    setPassword(result);
-  };
-
-  const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text);
-  };
-
-  const getStrengthBarColor = () => {;
     if (strength >= 90) return 'bg-green-500';
     if (strength >= 70) return 'bg-green-400';
     if (strength >= 50) return 'bg-yellow-400';
@@ -363,15 +269,13 @@ if (
 
   };
 
-  const getCheckIcon = (passed: boolean) => {;
-    return passed ? (;
-      <CheckCircle className='w-5 h-5 text-green-400' />;
-    ) : (;
-      <XCircle className='w-5 h-5 text-red-400' />;
-    );      <CheckCircle className="w-5 h-5 text-green-400" />;
-    ) : (;
-      <XCircle className="w-5 h-5 text-red-400" />;
-    );
+  return (_<>
+      <Head>
+        <title>Password Strength Checker - Zion Tech Group</title>
+        <meta name=&quot;description&quot; content=&quot;Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.&quot; />
+        <meta property=&quot;og:title&quot; content=&quot;Password Strength Checker - Zion Tech Group&quot; />
+        <meta property=&quot;og:description&quot; content=&quot;Advanced password strength analyzer with security recommendations." />
+      </Head>
 
   return (
 
@@ -395,14 +299,6 @@ if (
             Analyze your password security with our advanced strength checker.
             Get detailed feedback, suggestions, and generate strong passwords to
             protect your accounts and data.          </p>      </Head>
-    <>
-      <Head>
-        <title>Password Strength Checker - Zion Tech Group</title>
-        <meta name="description" content="Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords." />
-        <meta property="og: title" content="Password Strength Checker - Zion Tech Group" />
-        <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />
-      </Head>
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -487,18 +383,18 @@ if (
               <div className='space-y-6'>;
 
                 {/* Password Input */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-2'>;
-                    Enter Password;
-                  </label>;
-                  <div className='relative'>;
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-2'>
+                    Enter Password
+                  </label>
+                  <div className='relative'>
                     <input
                       type={showPassword ? 'text' : 'password'}
                       value={password}
-                      onChange={e => setPassword(e && e.target.value)}
-                      placeholder='Type your password here...';
-                      className='w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent';
-                    />;
+                      onChange={e => setPassword(e.target.value)}
+                      placeholder='Type your password here...'
+                      className='w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
+                    />
                     <button
                       type='button'
                       onClick={() => setShowPassword(!showPassword)}
@@ -514,240 +410,7 @@ if (
               Our advanced security analyzer evaluates multiple factors to determine password strength and security.
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Input Form */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-6 h-6 mr-3 text-indigo-400" />
-                Password Analysis
-              </h3>
-              <div className="space-y-6">
-                      className='absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white';
-                    >;
-                      {showPassword ? (;
-                        <EyeOff className='w-5 h-5' />;
-                      ) : (;
-                        <Eye className='w-5 h-5' />;
-                      )}                    </button>              Check Your Password Strength;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-              Our advanced security analyzer evaluates multiple factors to determine password strength and security.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-            {/* Input Form */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">;
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">;
-                <Lock className="w-6 h-6 mr-3 text-indigo-400" />;
-                Password Analysis;
-              </h3>;
-
-              <div className="space-y-6">;
-                {/* Password Input */}
-                <div>;
-                  <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
-                    Enter Password
-;
-    // Ensure at least one of each required character type;
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)]; // Uppercase;
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26)]; // Lowercase;
-    result += '0123456789'[Math.floor (Math.random () * 10)]; // Number;
-    result += '!@#$%^&*'[Math.floor (Math.random () * 8)]; // Symbol;
-    // Fill the rest randomly;
-    for (let index = 4; i < length; i++) {
-      result += charset[Math.floor (Math.random () * charset.length)];
-    }
-    // Shuffle the password;
-    result = result;
-      .split ('');
-      .sort (() => Math.random () - 0.5);
-      .join ('');
-    setGeneratedPassword (result);
-    set_password (result);
-  }
-;
-  const copyToClipboard = (text: string) =>: any {
-    navigator.clipboard.write_text (text);  }    let result = '';
-;
-    // Ensure at least one of each required character type;
-    result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26)], // Uppercase;
-    result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26)], // Lowercase;
-    result += '0123456789'[Math.floor (Math.random () * 10)], // Number;
-    result += '!@#$%^&*'[Math.floor (Math.random () * 8)], // Symbol;
-    // Fill the rest randomly;
-    for (let index = 4, i < length, i++) {
-      result += charset[Math.floor (Math.random () * charset.length)];
-    }
-    // Shuffle the password;
-    result = result.split ('').sort (() => Math.random () - 0.5).join ('');
-    setGeneratedPassword (result);
-    set_password (result);
-  }
-;
-  const copyToClipboard = (text: string) =>: any {
-    navigator.clipboard.write_text (text);
-  }
-;
-  const getStrengthBarColor = () =>: any {
-    // Check condition
-if (return 'bg - green - 500') {
-  $2
-}
-    // Check condition
-if (return 'bg - green - 400') {
-  $2
-}
-    // Check condition
-if (return 'bg - yellow - 400') {
-  $2
-}
-    // Check condition
-if (return 'bg - orange - 400') {
-  $2
-}
-    return 'bg - red - 400';  }
-;
-  const getCheckIcon = (passed: boolean) =>: any {
-    return passed ? (
-      <CheckCircle className='w - 5 h - 5 text - green - 400' />) : (
-      <XCircle className='w - 5 h - 5 text - red - 400' />);  }    return 'bg - red - 400';
-  }
-;
-  const getCheckIcon = (passed: boolean) =>: any {
-    return passed ? (
-      <CheckCircle className='w - 5 h - 5 text - green - 400' />) : (
-      <XCircle className='w - 5 h - 5 text - red - 400' />);      <CheckCircle className="w - 5 h - 5 text - green - 400" />) : (
-      <XCircle className="w - 5 h - 5 text - red - 400" />);
-  return (
-    <>;
-      <Head>;
-        <title > Password Strength Checker - Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords.';
-        />;
-        <meta;
-          property='og:title';
-          content='Password Strength Checker - Zion Tech Group';
-        />;
-        <meta;
-          property='og:description';
-          content='Advanced password strength analyzer with security recommendations.';
-        />;
-      </Head>;
-      {/* Hero Section */}
-      <section className='pt - 32 pb - 20 bg - gradient - to - br from - indigo - 900 via - purple - 900 to - pink - 900'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-          <div className='mb - 8'>;
-            <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - indigo - 500 / 20 border border - indigo - 400 / 30 text - indigo - 300 text - sm font - medium mb - 6'>;
-              <Lock className='w - 4 h - 4 mr - 2' />;
-              Password Security & Analysis;
-            </div>;
-          </div>;
-          <h1 className='text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight'>;
-            Password Strength Checker;
-          </h1>;
-          <p className='text - xl text - indigo - 200 max - w-4xl mx - auto leading - relaxed'>;
-            Analyze your password security with our advanced strength checker.;
-            Get detailed feedback, suggestions, and generate strong passwords to;
-            protect your accounts and data.          </p>      </Head>;
-      {/* Hero Section */}
-      <section className="pt - 32 pb - 20 bg - gradient - to - br from - indigo - 900 via - purple - 900 to - pink - 900">;
-        <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 text - center">;
-          <div className="mb - 8">;
-            <div className="inline - flex items - center px - 4 py - 2 rounded - full bg - indigo - 500 / 20 border border - indigo - 400 / 30 text - indigo - 300 text - sm font - medium mb - 6">;
-              <Lock className="w - 4 h - 4 mr - 2" />;
-              Password Security & Analysis;
-            </div>;
-          </div>;
-          <h1 className="text - 4xl sm:text - 5xl lg:text - 6xl font - bold text - white mb - 8 leading - tight">;
-            Password Strength Checker;
-          </h1>;
-          <p className="text - xl text - indigo - 200 max - w-4xl mx - auto leading - relaxed">;
-            Analyze your password security with our advanced strength checker. Get detailed feedback,
-            suggestions, and generate strong passwords to protect your accounts and data.;
-          </p>;
-        </div>;
-      </section>;
-      {/* Password Checker Tool */}
-      <section className='py - 20 bg - gray - 900'>;
-        <div className='max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='text - center mb - 16'>;
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 6'>;
-              Check Your Password Strength;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-              Our advanced security analyzer evaluates multiple factors to;
-              determine password strength and security.;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-            {/* Input Form */}
-            <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
-              <h3 className='text - 2xl font - bold text - white mb - 6 flex items - center'>;
-                <Lock className='w - 6 h - 6 mr - 3 text - indigo - 400' />;
-                Password Analysis;
-              </h3>;
-              <div className='space - y-6'>;
-                {/* Password Input */}
-                <div>;
-                  <label className='block text - sm font - medium text - gray - 300 mb - 2'>;
-                    Enter Password;
-                  </label>;
-                  <div className='relative'>;
-                    <input;
-                      type={show_password ? 'text' : 'password'}
-                      value={password}
-                      on_change={e => set_password (e.target.value)}
-                      placeholder='Type your password here...';
-                      className='w - full px - 4 py - 3 pr - 12 bg - gray - 700 border border - gray - 600 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - indigo - 500 focus:border - transparent';
-                    />;
-                    <button;
-                      type='button';
-                      on_click={() => setShowPassword (!show_password)}
-                      className='absolute inset - y-0 right - 0 pr - 3 flex items - center text - gray - 400 hover:text - white';
-                    >;
-                      {show_password ? (
-                        <EyeOff className='w - 5 h - 5' />) : (
-                        <Eye className='w - 5 h - 5' />)}                    </button>              Check Your Password Strength;
-            </h2>;
-            <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-              Our advanced security analyzer evaluates multiple factors to determine password strength and security.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-            {/* Input Form */}
-            <Card className="p - 8 bg - gray - 800 border border - gray - 700">;
-              <h3 className="text - 2xl font - bold text - white mb - 6 flex items - center">;
-                <Lock className="w - 6 h - 6 mr - 3 text - indigo - 400" />;
-                Password Analysis;
-              </h3>;
-              <div className="space - y-6">;
-                {/* Password Input */}
-                <div>;
-                  <label className="block text - sm font - medium text - gray - 300 mb - 2" html_for="input-;
-                    Enter Password;
-                  ">;
-                    Enter Password;
-                  </label>;
-                  <div className="relative">;
-
-
-
-
-
-                {/* Generate Password */}
-                <div>;
-                  <Button
-                    onClick={generateStrongPassword}
-
-
-
-
-
                 {/* Generated Password Display */}
-
                 {generatedPassword && (
                   <div className="p-4 bg-gray-700 rounded-lg border border-gray-600">
                     <div className="flex items-center justify-between">
@@ -814,19 +477,16 @@ if (return 'bg - orange - 400') {
                 </div>;
               </div>;
             </Card>;
-
             {/* Strength Analysis */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>;
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>;
                 <Shield className='w-6 h-6 mr-3 text-purple-400' />                Security Analysis;
               </h3>;
-
               {password ? (            <Card className="p-8 bg-gray-800 border border-gray-700">;
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">;
                 <Shield className="w-6 h-6 mr-3 text-purple-400" />;
                 Security Analysis;
               </h3>;
-
               {password ? (;
                 <div className='space-y-6'>;
 
@@ -1091,7 +751,6 @@ if (return 'bg - orange - 400') {
               security recommendations.;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🔍</div>;
@@ -1103,7 +762,6 @@ if (return 'bg - orange - 400') {
                 advanced security algorithms.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>📊</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1114,7 +772,6 @@ if (return 'bg - orange - 400') {
                 password detection.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>💡</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1125,7 +782,6 @@ if (return 'bg - orange - 400') {
                 and strength.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🔐</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1136,7 +792,6 @@ if (return 'bg - orange - 400') {
                 security requirements.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🛡️</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1147,7 +802,6 @@ if (return 'bg - orange - 400') {
                 maximum protection.;
               </p>;
             </Card>;
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
               <div className='text-4xl mb-4'>🔒</div>;
               <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1164,7 +818,6 @@ if (return 'bg - orange - 400') {
           </div>;
         </div>;
       </section>;
-
       {/* Security Tips */}
       <section className='py-20 bg-gray-900'>;
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;

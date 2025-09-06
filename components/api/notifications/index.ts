@@ -11,6 +11,17 @@ function getUserId(req: NextApiRequest): string {
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
+import { supabase } from '../../../utils/supabase/client';
+import {
+} from '../../../utils/notifications';
+function getUserId(req: NextApiRequest): string {
+
+  const cookie = req.headers.cookie |'';
+  const match = cookie
+    .split(';')
+    .map(c => c.trim())
+    .find(c => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
   return 'demo-user-1';
 export default async function handler(
   req: NextApiRequest
@@ -49,29 +60,6 @@ function handler() {
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const userId = getUserId(req);
-
-
-
-    // If countOnly, return unread count quickly
-    if (countOnly === 'true') {
-      const { data, error } = await supabase
-        .from('notifications')
-        .select('id', { count: 'exact', head: true })
-        .eq('user_id', userId)
-        .eq('read_status', false);
-      if (error) {
-        // Fallback to 0 on error (e && e.g., table missing)
-        return res && res.status(200).json({ count: 0 });
-      }
-
-
-
-      // Prefer count from response (not available via head: true in some envs), do another call without head if needed
-      if (!count) {
-        const { count: exactCount } = await supabase
-          .from('notifications')
           .select('id', { count: 'exact' })
           .eq('user_id', userId)
           .eq('read_status', false);
@@ -113,7 +101,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
     const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
-
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
@@ -156,18 +143,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           related_action: '/status'}];
       return res.status(200).json({ notifications: fallback })
     }
-
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
-    return res.status(500).json({ error: 'Unexpected error' })
-  };
-}
-      return res.status (200).json ({ notifications: fallback });
-    }
-    return res.status (200).json ({ notifications: data as NotificationItem[] });
-  } catch (e) {
-return res.status (500).json ({ error: 'Unexpected error' });
-  }    return res.status (500).json ({ error: 'Unexpected error' });
   }
 }
 

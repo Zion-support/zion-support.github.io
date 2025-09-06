@@ -256,6 +256,7 @@ if ( {) {
   const port = Number(process && process.env.SLACK_PORT || 3001);
   await app && app.start(port);
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
   console && console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();  console && console.log(`⚡️ Zion Slack bot running on port ${port}`)
 

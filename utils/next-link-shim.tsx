@@ -81,15 +81,16 @@ interface HTMLAnchorElement extends HTMLElement {;
 };
 }
 function resolveHref(href: Href): string {
-
-type Href = string | { pathname?: string; href?: string };
-
-type LinkProps = React && React.AnchorHTMLAttributes<HTMLAnchorElement> & {;
-  href: Href;
-  children: React && React.ReactNode;
 };
-
-function resolveHref(): any (href: Href): string {;
+};
+  return (;
+    <a href={resolved} className={className} {...rest}>;
+      {children};
+};
+};
+};
+}
+function resolveHref(href: Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname |(href as { href?: string })?.href |'#';
 }
@@ -134,19 +135,6 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       "href": resolved,
       "className": mergedClassName,
       ...rest});
-
-export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
-  const resolved = resolveHref(href);
-
-  if (React && React.isValidElement(children)) {;
-    const existingClass = (children && children.props as { className?: string })?.className || '';
-    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
-
-    return React && React.cloneElement(children as React && React.ReactElement<{ href?: string; className?: string }>, {;
-      href: resolved,;
-      className: mergedClassName,;
-      ...rest,;
-    });
   }
 
 
@@ -156,9 +144,9 @@ export default function Link(): any ({ href, children, className, ...rest }: Lin
 
 
   return (
-    <a href={resolved} className={className} {...rest}>;
+    <a href={resolved} className={className} {...rest}>
       {children}
-    </a>;
+    </a>
   );
 
 
@@ -172,14 +160,6 @@ export default function Link(): any ({ href, children, className, ...rest }: Lin
 
 }
 
-;
-// Define HTMLAnchorElement if not available;
-interface HTMLElement {
-  class_name: string;
-  id: string;
-  innerHTML: string;
-  text_content: string | null;
-  style: { [key: string]: string }
 }
 interface HTMLAnchorElement extends HTMLElement {
   tag_name: 'A';

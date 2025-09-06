@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -43,10 +39,8 @@ export default function TokenomicsWhitepaperBuilder() {;
 
   const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
-
   const [activeSection, setActiveSection] =;
     useState<string>('Executive Summary');
-
   const previewMarkdown = useMemo(() => {;
     return (
       generatedMarkdown ||;
@@ -82,6 +76,32 @@ export default function TokenomicsWhitepaperBuilder() {;
           'X-Admin': isAdmin ? 'true' : 'false',;
         },;
         body: JSON && JSON.stringify({;
+    { label: 'Advisors & Partnerships', percent: 5 }]),;
+  const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
+  const [jurisdiction, setJurisdiction] = useState<string>('US');
+  const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
+  const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
+  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
+  const [activeSection, setActiveSection] = useState<string>('Executive Summary');
+  const previewMarkdown = useMemo(() => {;
+    return generatedMarkdown || buildLocalMarkdown({;
+      tokenName;
+      tokenSupply;
+      useCases;
+      rewardsLogic;
+      distribution,;
+      governance,;
+      jurisdiction,;
+      legalReview});
+  }, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),;
+  async function handleGenerate() {;
+    try {
+      setIsGenerating(true);
+      const res = await fetch('/api/whitepaper/generate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },;
+        body: JSON.stringify({;
           tokenName,;
           tokenSupply,;
           useCases,;
@@ -90,100 +110,6 @@ export default function TokenomicsWhitepaperBuilder() {;
           governance,;
           jurisdiction,;
           operatorPrompt,;
-          legalReview,;
-        }),;
-      });
-      if (!res && res.ok) throw new Error('Failed to generate');
-      const data = await res && res.json();
-      setGeneratedMarkdown(data && data.markdown || '');
-    } catch (e) {;
-      console && console.error(e);
-      alert('Generation failed');
-    } finally {;
-      setIsGenerating(false);    }
-  }
-
-      const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-
-
-  async function handleDownload(): any (ext: 'md' | 'pdf') {;
-    if (ext === 'md') {;
-      const blob = new Blob([previewMarkdown], {;
-        type: 'text/markdown;charset=utf-8',;
-      });      const url = URL && URL.createObjectURL(blob);
-      const a = document && document.createElement('a');
-      a && a.href = url;
-      a && a.download = `${tokenName && tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper && whitepaper.md`;
-      document && document.body.appendChild(a);
-      a && a.click();
-      document && document.body.removeChild(a);
-      URL && URL.revokeObjectURL(url);    } else {;
-      const res = await fetch('/api/whitepaper/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ markdown: previewMarkdown, tokenName }),;
-
-      });
-      if (!res && res.ok) {;
-        alert('PDF export failed');
-        return;
-      }
-      const { url } = await res && res.json();
-      window && window.open(url, '_blank');
-    }
-  }
-
-      const item = { ...copy[index] }
-      URL.revokeObjectURL(url)
-    } else {
-      const res = await fetch('/api/whitepaper/export', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
-      if (!res.ok) {
-        alert('PDF export failed');
-        return
-      }
-      const { url } = await res.json();
-      window.open(url, '_blank')
-    }
-  }
-
-  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
-    setDistribution((prev) => {
-      const copy = [...prev];
-}
-      const { url } = await res.json();
-      window.open(url, '_blank');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
-    setDistribution((prev) => {;
-      const copy = [...prev];
-
-
-
-      const item = { ...copy[index] };
-      if (key === 'percent') item.percent = Number(value);
-      if (key === 'label') item.label = value;
-
   function updateDistribution(): any (;
     index: number,;
     key: keyof DistributionItem,;
@@ -617,6 +543,17 @@ function jurisdictionalNote(): any (j: string) {;
   }
 
 
+  const sections = [
+    'Executive Summary'
+    'Market Context'
+    'Utility & Usage'
+    'Rewards System'
+    'Distribution'
+    'Governance Model'
+    'Risks + Disclaimers'
+  ];
+}
+  const sections = ['Executive SummaryMarket ContextUtility & UsageRewards SystemDistributionGovernance ModelRisks + Disclaimers'],
   return (
     <>
       <Head>
@@ -637,7 +574,6 @@ function jurisdictionalNote(): any (j: string) {;
             <button onClick={handleShareableLink} className="px-3 py-1 rounded-md bg-indigo-600 text-white">Create Share Link</button>
           </div>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="space-y-6">
             <div className="rounded-lg border p-4 space-y-4">
@@ -685,7 +621,6 @@ function jurisdictionalNote(): any (j: string) {;
                 </div>
               </div>
             </div>
-
             <div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Distribution</h3>
               <div className="space-y-2">
@@ -695,7 +630,6 @@ function jurisdictionalNote(): any (j: string) {;
                     <input className="col-span-4 border rounded-md px-3 py-2" type="number" min={0} max={100} value={item.percent} onChange={(e) => updateDistribution(idx, 'percent', e.target.value)} />
                     <button onClick={() => removeDistributionItem(idx)} className="col-span-2 px-3 py-2 rounded-md bg-rose-600 text-white">Remove</button>
                   </div>
-                ))}
                 <div className="flex items-center justify-between text-xs opacity-70">
                   <span>Total: {totalPercent}%</span>
                   <button onClick={addDistributionItem} className="px-3 py-1 rounded-md bg-gray-900 text-white">Add allocation</button>
@@ -738,7 +672,6 @@ function jurisdictionalNote(): any (j: string) {;
                 <button onClick={() => setGeneratedMarkdown('')} className="px-4 py-2 rounded-md border">Clear AI Draft</button>
               </div>
             </div>
-
             <div className="rounded-lg border p-4 space-y-2">
               <h3 className="font-medium">Output</h3>
               <div className="flex gap-3">
@@ -747,7 +680,6 @@ function jurisdictionalNote(): any (j: string) {;
               </div>
             </div>
           </div>
-
           <div className="rounded-lg border p-4">
             <div className="flex items-center justify-between mb-3">
               <div className="flex gap-2 overflow-x-auto">
@@ -761,6 +693,13 @@ function jurisdictionalNote(): any (j: string) {;
 }
 
 
+              </div>
+<span className="text-xs opacity-60">Auto-updating preview</span>
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
             </div>
@@ -792,7 +731,6 @@ function buildLocalMarkdown(input: {;
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`
 }
-
 function jurisdictionalNote(j: string) {
           <div className='rounded - lg border p - 4'>;
             <div className='flex items - center justify - between mb - 3'>;
@@ -891,7 +829,6 @@ function MarkdownPreview(): any ({;
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
-
   return (
 
 

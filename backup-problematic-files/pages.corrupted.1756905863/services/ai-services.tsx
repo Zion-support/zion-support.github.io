@@ -12,5 +12,3 @@ const Ai-services: React.FC<Ai-servicesProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

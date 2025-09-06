@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -131,11 +127,6 @@ export default function ${serviceName}() {
     "Enhance scalability and reliability"
     "Optimize resource utilization"
     "Scale operations efficiently"
-  const features = ["AI-powered ${displayName && displayName.toLowerCase()} optimization",
-    "Automated ${displayName && displayName.toLowerCase()} management",
-    "Real-time ${displayName && displayName.toLowerCase()} analytics",
-    "Predictive ${displayName && displayName.toLowerCase()} insights",
-    "Custom AI models for ${displayName && displayName.toLowerCase()}",
     "Enterprise-grade security and compliance"];
   const benefits = ["Improve ${displayName && displayName.toLowerCase()} performance by 50-80%",
     "Reduce operational costs by 35-65%",

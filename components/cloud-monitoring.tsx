@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -443,7 +439,6 @@ export default function CloudMonitoringPage() {;
       gradient: 'from-teal-400 to-blue-500',;
     },;
   ];
-
   const monitoringCapabilities = [;
     {;
       category: 'Infrastructure',;
@@ -492,7 +487,6 @@ export default function CloudMonitoringPage() {;
       metrics: ['Threat DetectionAccess LogsVulnerability ScansCompliance StatusAudit Trails'];
     }
   ];
-
   const pricingPlans = [;
     {;
       name: 'Starter',;
@@ -562,7 +556,6 @@ export default function CloudMonitoringPage() {;
       color: 'border-purple-600',;
       buttonColor: 'bg-purple-600 hover:bg-purple-700';
     }
-
   const integrations = [;
     { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },;
     { name: 'Azure', icon: '🔷', description: 'Monitor integration' },;
@@ -658,10 +651,11 @@ export default function CloudMonitoringPage() {;
             <Button
               href="#pricing"
               size="lg"
-              className="bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25">;
-              Start Free Trial;
-              <ArrowRight className="w-5 h-5 ml-2" />;
-            </Button>;
+              className="bg-green-600 hover:bg-green-700 shadow-2xl shadow-green-500/25"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
             <Button
               href="#demo"
               variant="outline"
@@ -702,7 +696,6 @@ export default function CloudMonitoringPage() {;
               Everything you need to monitor and optimize your infrastructure
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -926,7 +919,6 @@ export default function CloudMonitoringPage() {;
           </div>;
         </div>;
       </section>;
-
       {/* Monitoring Capabilities */}
       <section className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -957,6 +949,32 @@ export default function CloudMonitoringPage() {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+                style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
+              >
+                <div className="relative">
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
+                    {feature.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {feature.description}
+
+                  {feature.description}
+
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Monitoring Capabilities */}
+      <section className='py-24 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Comprehensive Monitoring
 
             </h2>
@@ -973,7 +991,6 @@ export default function CloudMonitoringPage() {;
               Monitor every aspect of your infrastructure with detailed metrics and insights;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {monitoringCapabilities && monitoringCapabilities.map((capability, index) => (;
               <Card
@@ -1011,7 +1028,6 @@ export default function CloudMonitoringPage() {;
           </div>;
         </div>;
       </section>;
-
       {/* Use Cases Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -1086,6 +1102,14 @@ export default function CloudMonitoringPage() {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
+          </div>
+        </div>
+      </section>
+      {/* Use Cases Section */}
+      <section className='py-24 bg-gray-900 relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
               Use Cases
 
             </h2>
@@ -1102,7 +1126,6 @@ export default function CloudMonitoringPage() {;
               Trusted by teams across industries for reliable infrastructure monitoring;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
             {useCases && useCases.map((useCase, index) => (;
               <Card
@@ -1136,14 +1159,12 @@ export default function CloudMonitoringPage() {;
               Choose the plan that fits your monitoring needs
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
             {pricingPlans.map((plan, index) => (
           </div>;
         </div>;
       </section>;
-
       {/* Pricing Section */}
       <section id='pricing' className='py-24 bg-black relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -1154,7 +1175,6 @@ export default function CloudMonitoringPage() {;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Choose the plan that fits your monitoring needs;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans && pricingPlans.map((plan, index) => (      <section id="pricing" className="py-24 bg-black relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -1164,7 +1184,6 @@ export default function CloudMonitoringPage() {;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricingPlans && pricingPlans.map((plan, index) => (;
               <Card
@@ -1297,7 +1316,6 @@ export default function CloudMonitoringPage() {;
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
-
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
@@ -1306,7 +1324,6 @@ export default function CloudMonitoringPage() {;
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
                   <p className="text-gray-400">{plan && plan.description}</p>;
                 </div>;
-
                 <ul className="space-y-4 mb-8">;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className="flex items-center text-gray-300">;
@@ -1372,7 +1389,6 @@ export default function CloudMonitoringPage() {;
           </div>;
         </div>;
       </section>;
-
       {/* Integrations Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>;
@@ -1383,7 +1399,6 @@ export default function CloudMonitoringPage() {;
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Connect with your favorite tools and platforms;
             </p>;
           </div>;
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>      <section className="py-24 bg-gray-900 relative overflow-hidden">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">;
           <div className="text-center mb-20">;
@@ -1393,7 +1408,6 @@ export default function CloudMonitoringPage() {;
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
             </p>;
           </div>;
-
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>;
             {integrations && integrations.map((integration, index) => (;
 
@@ -1422,7 +1436,6 @@ export default function CloudMonitoringPage() {;
               Connect with your favorite tools and platforms
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
               <Card
@@ -1470,10 +1483,11 @@ export default function CloudMonitoringPage() {;
               href='/contact'
               variant='secondary'
               size='lg'
-              className='bg-white text-green-600 hover:bg-gray-100 shadow-2xl'>;
-              Start Free Trial;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
+              className='bg-white text-green-600 hover:bg-gray-100 shadow-2xl'
+            >
+              Start Free Trial
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
             <Button
               href='#demo'
               variant='outline'
@@ -1519,7 +1533,4 @@ export default function CloudMonitoringPage() {;
 
 
 }
-  );
-}
-    </>);
 }

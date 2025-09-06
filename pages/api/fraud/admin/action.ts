@@ -32,9 +32,7 @@ export default async function handler(
     adminId,
     timestamp: new Date().toISOString(),
   };
-
-  store && store.addAdminAction(adminAction);
-
+store && store.addAdminAction(adminAction);
   return res && res.status(200).json({ success: true, action: adminAction });
 
 }

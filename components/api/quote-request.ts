@@ -37,8 +37,8 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req && req.method !== "POST")
-    return res && res.status(405).json({ message: "Method not allowed" });
+  if (req.method !== "POST");
+    return res.status(405).json({ message: "Method not allowed" });
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
@@ -80,7 +80,6 @@ export default async function handler(
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
-
   const { service, description, timeline, budgetRange, email } = req.body || {};
   if (!service || !description || !email) {
     return res.status(400).json({ message: 'Missing required fields' });
@@ -191,6 +190,7 @@ if (throw error) {
       return res.status (500).json ({ message: "Server error" });
     }
     return res.status (500).json ({ message: "Server error" });
+
   }
 }
 

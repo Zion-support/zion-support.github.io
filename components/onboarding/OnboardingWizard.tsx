@@ -3,6 +3,7 @@
 export default function OnboardingWizard() {
 
 export default function OnboardingWizard() {;
+export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -31,7 +32,6 @@ export default function OnboardingWizard() {;
         content: (
           <div className='space-y-3'>
   const isClient = user?.role === 'client';
-
   const steps = useMemo(() => {;
     if (isClient) {;
       return [;
@@ -220,7 +220,6 @@ export default function OnboardingWizard() {;
         </div>;
       ) }];
   }, [isClient, setUser]);
-
   if (!user || user && user.onboardingCompleted) return null;
 
 

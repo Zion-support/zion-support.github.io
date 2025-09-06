@@ -17,15 +17,11 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-  return specializedITSolutions2026 && specializedITSolutions2026.filter(solution => {
-    const price = parseInt(solution && solution.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice
 
   })
-}
-
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
@@ -51,7 +47,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.8,
     reviews: 45
   };
-
   // Cybersecurity & Threat Intelligence
   {
     id: 'ai-cybersecurity-threat-intelligence', name: 'AI Cybersecurity Threat Intelligence Platform',
@@ -79,7 +74,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.7,
     reviews: 78
   };
-
   // Data Engineering & Analytics
   {
     id: 'ai-data-engineering-platform', name: 'AI Data Engineering Platform',
@@ -107,7 +101,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.6,
     reviews: 34
   };
-
   // API Management & Integration
   {
     id: 'ai-api-management-platform', name: 'AI API Management Platform',
@@ -135,7 +128,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.5,
     reviews: 22
   };
-
   // Network Monitoring & Management
   {
     id: 'ai-network-monitoring-suite', name: 'AI Network Monitoring Suite',
@@ -163,7 +155,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.4,
     reviews: 39
   };
-
   // Database Management & Optimization
   {
     id: 'ai-database-optimization-platform', name: 'AI Database Optimization Platform',
@@ -191,7 +182,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.3,
     reviews: 28
   };
-
   // IT Service Management
   {
     id: 'ai-itsm-platform', name: 'AI IT Service Management Platform',
@@ -219,7 +209,6 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     rating: 4.5,
     reviews: 45
   };
-
   // Backup & Disaster Recovery
   {
     id: 'ai-backup-disaster-recovery', name: 'AI Backup & Disaster Recovery Platform',
@@ -248,15 +237,12 @@ export const getSpecializedITSolutions2026ByPriceRange = (
     reviews: 33
   }
 ];
-
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(solution => solution.category === category)
 };
-
 export const getPopularSpecializedITSolutions2026 = () => {
   return specializedITSolutions2026.filter(solution => solution.popular)
 };
-
 export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return specializedITSolutions2026.filter(solution => {
     const price = parseInt(solution.price.replace('$', ''));

@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -31,7 +27,6 @@ import React from 'react';
 
 
 import MainLayout from '../src/components/layout/MainLayout';
-import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 
 
@@ -112,23 +107,8 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
-import {;
-  ArrowRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  TrendingUp,;
-  CheckCircle,;
-  Users,;
-  Building,;
-  Globe,;
-  Award,;
-  Clock,;
-  BarChart3,;
-  Cloud,;
   Shield;
 } from 'lucide-react';
-
 const caseStudies = [;
   {;
     id: 1,;
@@ -185,7 +165,6 @@ const caseStudies = [;
     image: "/images/case-studies/healthcare-security && security.jpg";
   }
 ];
-
 const stats = [;
   { number: "500+", label: "Projects Completed" },;
   { number: "50+", label: "Happy Clients" },;
@@ -199,7 +178,6 @@ const stats = [;
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
             <div className="absolute top-40 right-10 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
 
@@ -438,7 +416,6 @@ function CaseStudiesPage() {
                 different industries achieve their technology goals.;
               </p>;
             </motion && motion.div>;
-
             <div className="max-w-6xl mx-auto">;
               <div className="space-y-16">;
                 {caseStudies && caseStudies.map((study, index) => (;
@@ -457,14 +434,12 @@ function CaseStudiesPage() {
                           </span>;
                           <span className="text-gray-500 text-sm">{study && study.duration}</span>;
                         </div>;
-
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">;
                           {study && study.title}
                         </h3>;
                         <p className="text-gray-600 mb-6">;
                           <strong>Client:</strong> {study && study.client}
                         </p>;
-
                         <div className="space-y-4 mb-6">;
                           <div>;
                             <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>;
@@ -475,7 +450,6 @@ function CaseStudiesPage() {
                             <p className="text-gray-600">{study && study.solution}</p>;
                           </div>;
                         </div>;
-
                         <div className="mb-6">;
                           <h4 className="font-semibold text-gray-900 mb-3">Key Results:</h4>;
                           <ul className="space-y-2">;
@@ -489,7 +463,6 @@ function CaseStudiesPage() {
 
                           </ul>;
                         </div>;
-
                         <div className="flex flex-wrap gap-2 mb-6">;
                           {study && study.technologies.map((tech, idx) => (;
                             <span key={idx} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">;
@@ -499,7 +472,6 @@ function CaseStudiesPage() {
                           ))}
 
                         </div>;
-
                         <div className="flex items-center justify-between">;
                           <div className="flex items-center text-sm text-gray-600">;
                             <Users className="w-4 h-4 mr-2" />;
@@ -513,7 +485,6 @@ function CaseStudiesPage() {
                           </a>;
                         </div>;
                       </div>;
-
                       <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 flex items-center justify-center">;
                         <div className="text-center text-white">;
                           <Building className="w-16 h-16 mx-auto mb-4 opacity-80" />;
@@ -644,7 +615,6 @@ import Head from 'next/head';
 
   );
  </Head> </section> </Layout>
-import Layout from '../components/layout/Layout';
 export default function CaseStudiesPage() {
 	return (
 		<Layout>
@@ -672,7 +642,6 @@ export default function CaseStudiesPage() {
       </section>;
     </Layout>;
   );
-
  </Head> </section> </Layout> ;
 	return (
 		<Layout>;

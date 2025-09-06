@@ -57,6 +57,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps ErrorBoundarySta
         <div className="p-6 text-center">;
           <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
   </Suspense>),
+  </Suspense>;
 // Error boundary for better error handling;
 interface ErrorBoundaryState {
   has_error: boolean,
@@ -77,14 +78,8 @@ export class ErrorBoundary extends Component < ErrorBoundaryProps ErrorBoundaryS
   componentDidCatch (error: Error, error_info: React.ErrorInfo) {
     console.error ("Error caught by boundary:", error, error_info);
   }
-  render () {
-    // Check condition
-if ( {) {
-  $2
-}
-      return this.props.fallback || (
-        <div className="p - 6 text - center">;
-          <div className="text-[var (--error)] text - lg mb - 2">Something went wrong</div>;
+        <div className="p-6 text-center">;
+          <div className="text-[var(--error)] text-lg mb-2">Something went wrong</div>;
           <button;
             on_click={() => this.set_state ({ has_error: false })}
             className="btn - primary";
@@ -140,15 +135,34 @@ function LoadingSpinner() {
   },
   return (
     <div className={`animate - spin rounded - full border - 2 border-[var (--border)] border - t-[var (--accent)] ${size_classes[size]} ${class_name}`} />);
+export function LoadingSpinner({ size = "md", className = "" }: {size?: "sm" | "md" | "lg";
+  className?: string;
+}) {const sizeClasses = {;
+    sm: "w-4 h-4";
+    md: "w-6 h-6";
+    lg: "w-8 h-8";
+  }
+;
+    return this.props.children;
+  }
 }
-// Skeleton loading component;
-export /**
- * Skeleton - Function description
- */
-function Skeleton() {
-  return (
-    <div className={`animate - pulse ${class_name}`}>;
-      {Array.from ({ length: lines }).map ((_, i) => (
+;
+// Loading spinner component;
+export function LoadingSpinner({ size = "md", className = "" }: {;
+  size?: "sm" | "md" | "lg",;
+  className?: string;
+}) {;
+  const sizeClasses = {;
+    sm: "w-4 h-4",;
+    md: "w-6 h-6",;
+    lg: "w-8 h-8";
+  },;
+  return (;
+    <div className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`} />;
+  );
+}
+    <div className={`animate-pulse ${className}`}>;
+      {Array.from({ length: lines }).map((_, i) => (;
         <div;
           key={i}
           className="h - 4 bg-[var (--border)] rounded mb - 2 last:mb - 0";
@@ -199,6 +213,7 @@ if ( {) {
 }
         // Could send to analytics service here;
         console.warn (`${component_name} took ${duration.to_fixed (2)}ms to render`);
+        console.warn(`${componentName} took ${duration.toFixed(2)}ms to render`);
       }
     }
   }

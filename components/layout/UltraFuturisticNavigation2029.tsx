@@ -288,7 +288,6 @@ export default function UltraFuturisticNavigation2029() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setScrolled(window && window.scrollY > 50);
@@ -298,7 +297,6 @@ export default function UltraFuturisticNavigation2029() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -308,6 +306,29 @@ export default function UltraFuturisticNavigation2029() {;
 
 
               <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white text-sm py-2 px-4'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <a
+              href={`tel:${contactInfo.mobile}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className='flex items-center space-x-2'>              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>              <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
             <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
@@ -330,7 +351,6 @@ export default function UltraFuturisticNavigation2029() {;
           </div>
         </div>
       </div>
-              href={contactInfo && contactInfo.website}
               className='hover:text-cyan-300 transition-colors'>              {contactInfo && contactInfo.website.replace('https://', '')}          <div className="flex items-center space-x-4">;
             <a href={contactInfo && contactInfo.website} className="hover:text-cyan-300 transition-colors">;
               {contactInfo && contactInfo.website.replace('https://', '')}
@@ -446,21 +466,28 @@ function UltraFuturisticNavigation2029() {
                   2029 Innovation Hub;
                 </span>              </div>;
             </motion && motion.div>;
-
             {/* Desktop Navigation */}
 
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavItems.map((item) => (
+            <div className='hidden lg:flex items-center space-x-8'>
+              {mainNavItems.map(item => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="group relative text-gray-300 hover:text-white transition-colors duration-200"
+className="group relative text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   <div className="flex items-center space-x-2">
                     <item.icon size={16} className="group-hover:text-cyan-400 transition-colors" />
                     <span>{item.name}</span>
                   </div>
                   <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 transition-all duration-300 group-hover:w-full"></div>
+
+              </div>
+            </motion.div>
+
+            {/* Desktop Navigation */}
+
                 </Link>
 
               ))}
@@ -569,7 +596,6 @@ function UltraFuturisticNavigation2029() {
                   <span>All Services</span>
                   <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-200" />
                 </button>
-                
                 {/* Mega Menu */}
                 <div className="absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-cyan-500/30 rounded-lg shadow-2xl shadow-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
                   <div className="p-6 grid grid-cols-2 lg:grid-cols-3 gap-6">
@@ -718,56 +744,8 @@ function UltraFuturisticNavigation2029() {
                             <h3 className="font - semibold text - white group - hover:text - cyan - 300 transition - colors">;
 
                               {category.title}
-                            </h3>;
-                          </div>;
-                          <p className="text - sm text - gray - 400 mb - 4">{category.description}</p>;
-                          <div className="space - y-2">;
-                            {category.services.slice (0, 3).map ((service) => (
-                              <Link;
-                                key={service.name}
-                                href={service.href}
-                                className="block p - 2 rounded bg - black / 30 hover:bg - cyan - 500 / 20 transition - all duration - 200 group";
-                              >;
-                                <div className="flex items - center justify - between">;
-                                  <span className="text - sm text - gray - 300 group - hover:text - white transition - colors">;
-                                    {service.name}
-                                  </span>;
-                                  <span className="text - xs text - cyan - 400 font - mono">;
-                                    {service.price}
-
-
-
-
-
-                            ))}
-                          </div>;
-                        </div>;
-                      </motion && motion.div>;
-                    ))}
-
-
-
-
-
-              {/* CTA Button */}
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
-
-
-                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
-
-
-              >
-                Get Started
-              </motion.button>
-            </div>
-                  </div>;
                 </div>;
               </div>;
-
               {/* CTA Button */}
               <motion&& motion.button
                 whileHover={{ scale: 1 && 1.05 }}
@@ -777,7 +755,6 @@ function UltraFuturisticNavigation2029() {
                 Get Started;
               </motion && motion.button>;
             </div>;
-
             {/* Mobile Menu Button */}
 
             <div className="lg:hidden">
@@ -846,18 +823,18 @@ function UltraFuturisticNavigation2029() {
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-sm'
               onClick={closeMenu}
-            />;
-            <div className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto'>;
-              <div className='p-6'>;
-                <div className='flex items-center justify-between mb-8'>;
-                  <div className='flex items-center space-x-3'>;
-                    <div className='w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>;
-                      <Rocket className='w-5 h-5 text-white' />;
-                    </div>;
-                    <span className='text-lg font-bold text-white'>;
-                      Zion Tech;
-                    </span>;
-                  </div>;
+            />
+            <div className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/30 overflow-y-auto'>
+              <div className='p-6'>
+                <div className='flex items-center justify-between mb-8'>
+                  <div className='flex items-center space-x-3'>
+                    <div className='w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center'>
+                      <Rocket className='w-5 h-5 text-white' />
+                    </div>
+                    <span className='text-lg font-bold text-white'>
+                      Zion Tech
+                    </span>
+                  </div>
                   <button
                     onClick={closeMenu}
 
@@ -893,7 +870,6 @@ function UltraFuturisticNavigation2029() {
                     <X size={24} />;
                   </button>;
                 </div>;
-
                 {/* Mobile Navigation Items */}
 
                 <div className="space-y-4">
@@ -972,7 +948,6 @@ function UltraFuturisticNavigation2029() {
 
     </>
       </AnimatePresence>;
-
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;

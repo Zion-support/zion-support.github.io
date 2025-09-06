@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -316,7 +312,6 @@ const Footer: React.FC = () => {
                   <Link
 
                     href={service && service.href}
-
                     className="text-gray-400 hover:text-white transition-colors">;
                     {service && service.name}
                   </Link>;
@@ -346,19 +341,16 @@ const Footer: React.FC = () => {
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
             <ul className="space-y-2 mb-6">;
-
               {company && company.map((item) => (;
                 <li key={item && item.name}>;
                   <Link
                     href={item && item.href}
-
                     className="text-gray-400 hover:text-white transition-colors">;
                     {item && item.name}
                   </Link>;
                 </li>;
               ))}
             </ul>;
-
             <h3 className="text-lg font-semibold mb-4">Support</h3>;
             <ul className="space-y-2">;
               {support && support.map((item) => (;
@@ -372,25 +364,8 @@ const Footer: React.FC = () => {
               ))}
             </ul>;
           </div>;
-
         </div>;
-
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">;
-          <div className="flex flex-col md:flex-row justify-between items-center">;
-            <p className="text-gray-400 text-sm">;
-              © {currentYear} Zion Tech Group. All rights reserved.;
-            </p>;
-            <div className="flex space-x-6 mt-4 md: mt-0">;
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">;
-                Privacy Policy;
-              </Link>;
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">;
-                Terms of Service;
-              </Link>;
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">;
-                Cookie Policy;
-
           {/* Services */}
           <div>;
             <h3 className="text - lg font - semibold mb - 4">Services</h3>;

@@ -1,7 +1,7 @@
 
 
       }
-      return browser_client;
+      return browserClient;
     }
 
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
@@ -43,6 +43,9 @@ export function getSupabaseClient(): ZionSupabase {;
     return create_client (SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {
     return undefined;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

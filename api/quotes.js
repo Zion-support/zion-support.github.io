@@ -19,7 +19,6 @@ const { withErrorLogging } = require(
 
 
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
-
 async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -27,10 +26,8 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   try {
     const { name, email, phone, details } = req.body || {};
-    
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
       res.json({ "error": 'Missing: required fields})';

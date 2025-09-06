@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   {
-    id: "revolutionary-ai-platform", name: "Revolutionary AI Platform",
-    tagline: "Next-generation AI capabilities", price: "$199/month",
-    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
     features: [
       "Advanced AI models";
       "Revolutionary algorithms";
@@ -41,3 +37,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

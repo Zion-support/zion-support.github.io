@@ -16,62 +16,34 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
       description: 'Distributes traffic across multiple instances',
       status: 'active',
       instances: 3,
-      health: 'excellent';
     },
     {
       name: 'Application Layer',
       description: 'Multiple application instances with health checks',
       status: 'active',
       instances: 6,
-      health: 'excellent';
     },
     {
       name: 'Database Layer',
       description: 'Primary and replica databases with failover',
       status: 'active',
       instances: 4,
-      health: 'excellent';
     },
     {
       name: 'Cache Layer',
       description: 'Distributed caching with redundancy',
       status: 'active',
       instances: 4,
-      health: 'excellent';
-    },
-    {
-      name: 'Storage Layer',
-      description: 'Multi - region storage with replication',
-      status: 'active',
-      instances: 3,
-
-      health: 'excellent'
-
-  const redundancyFeatures = [
-
-    {
-      feature: 'Geographic Distribution',
-      description: 'Instances distributed across multiple regions',
-      benefit: 'Disaster recovery and low latency',
-      status: 'implemented';
-    },
-    {
-      feature: 'Auto - scaling',
-      description: 'Automatic scaling based on load',
-      benefit: 'Cost optimization and performance',
-      status: 'implemented';
     },
     {
       feature: 'Health Monitoring',
       description: 'Continuous health checks and alerting',
       benefit: 'Proactive issue detection',
-      status: 'implemented';
     },
     {
       feature: 'Automated Failover',
       description: 'Automatic failover on component failure',
       benefit: 'Zero downtime during failures',
-      status: 'implemented';
     },
     {
       feature: 'Backup & Recovery',

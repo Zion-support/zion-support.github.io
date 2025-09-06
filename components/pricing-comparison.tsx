@@ -257,20 +257,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -290,7 +286,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
-
       <div className='min-h-screen bg-black'>;
 
         {/* Hero Section */}
@@ -338,7 +333,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
         <meta property="og:description" content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20">
@@ -366,7 +360,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 View Comparison
               </Button>
               <Button
-                href="/pricing"
+href="/pricing"
                 variant="outline"
                 size="lg"
                 className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white"
@@ -487,254 +481,6 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
-                  </div>;
-                  <p className={`text - lg font - semibold ${insight.color}`}>;
-
-
-                    {insight.icon}
-
-
-                  </div>
-                  <p className={`text-lg font-semibold ${insight.color}`}>
-                    {insight.insight}
-
-
-
-
-
-        {/* Detailed Comparison */}
-
-        <section id="comparison" className="py-24 bg-gray-800">
-
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
-                Detailed Service Comparison
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                See exactly how each service compares in features, pricing, and value.
-
-              </p>
-
-            </div>
-            {serviceComparisons.map((service, serviceIndex) => (
-
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Detailed Comparison */}
-        <section id='comparison' className='py-24 bg-gray-800'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-            <div className='text-center mb-20'>;
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>;
-                Detailed Service Comparison;
-              </h2>;
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-                See exactly how each service compares in features, pricing, and;
-                value.              </p>;
-            </div>;
-
-            {serviceComparisons && serviceComparisons.map((service, serviceIndex) => (        <section id="comparison" className="py-24 bg-gray-800">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <div className="text-center mb-20">;
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">;
-                Detailed Service Comparison;
-              </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-                See exactly how each service compares in features, pricing, and value.;
-            </div>;
-
-            {serviceComparisons && serviceComparisons.map((service, serviceIndex) => (;
-              <div key={serviceIndex} className='mb-24'>;
-                <div className='text-center mb-16'>;
-
-                  <div
-                    className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>;
-                    {service && service.icon}
-                  </div>;
-                  <h3 className='text-3xl font-bold text-white mb-4'>;
-                    {service && service.service}
-                  </h3>;
-                  <div className='flex flex-wrap justify-center gap-4 text-lg text-gray-300'>;
-                    <span>;
-                      Starter:{' '}
-                      <span className='text-green-400 font-semibold'>;
-                        {service && service.zionPricing.starter}
-                  </p>;
-                </Card>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* Detailed Comparison */}
-        <section id='comparison' className='py - 24 bg - gray - 800'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-            <div className='text - center mb - 20'>;
-              <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
-                Detailed Service Comparison;
-              </h2>;
-              <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-                See exactly how each service compares in features, pricing, and;
-                value.              </p>;
-            </div>;
-            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg - gray - 800">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <div className="text - center mb - 20">;
-              <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 8">;
-                Detailed Service Comparison;
-              </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
-                See exactly how each service compares in features, pricing, and value.;
-            </div>;
-            {service_comparisons.map ((service, service_index) => (
-              <div key={service_index} className='mb - 24'>;
-                <div className='text - center mb - 16'>;
-                  <div;
-                    className={`w - 20 h - 20 rounded - 3xl bg - gradient - to - br ${service.color} flex items - center justify - center text - 4xl mx - auto mb - 6`}
-                  >;
-                    {service.icon}
-                  </div>;
-                  <h3 className='text - 3xl font - bold text - white mb - 4'>;
-                    {service.service}
-                  </h3>;
-                  <div className='flex flex - wrap justify - center gap - 4 text - lg text - gray - 300'>;
-                    <span>;
-                      Starter:{' '}
-                      <span className='text - green - 400 font - semibold'>;
-                        {service.zion_pricing.starter}
-                      </span>;
-                    </span>;
-                    <span>;
-                      Professional:{' '}
-
-                      <span className='text - blue - 400 font - semibold'>;
-                        {service.zion_pricing.professional}
-
-                      </span>;
-                    </span>;
-                    <span>;
-                      Enterprise:{' '}
-
-                      <span className='text-purple-400 font-semibold'>;
-                        {service && service.zionPricing.enterprise}
-                      <span className='text - purple - 400 font - semibold'>;
-                        {service.zion_pricing.enterprise}
-
-                      </span>;
-                    </span>;
-                  </div>;
-                </div>;
-
-              <div key={serviceIndex} className="mb-24">
-                <div className="text-center mb-16">
-                  <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>
-                    {service.icon}
-
-                  </div>
-                  <h3 className="text-3xl font-bold text-white mb-4">{service.service}</h3>
-                  <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300">
-                    <span>Starter: <span className="text-green-400 font-semibold">{service.zionPricing.starter}</span></span>
-                    <span>Professional: <span className="text-blue-400 font-semibold">{service.zionPricing.professional}</span></span>
-                    <span>Enterprise: <span className="text-purple-400 font-semibold">{service.zionPricing.enterprise}</span></span>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                        </div>;
-                        <div className='text-center'>;
-                          <p className='text-green-400 font-semibold mb-2'>;
-                            Starting at;
-                          </p>;
-                          <p className='text-2xl font-bold text-white'>;
-                            {service && service.zionPricing.starter}
-                          </p>                        </div>                    {service && service.icon}
-                  </div>;
-                  <h3 className="text-3xl font-bold text-white mb-4">{service && service.service}</h3>;
-                  <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300">;
-                    <span>Starter: <span className="text-green-400 font-semibold">{service && service.zionPricing.starter}</span></span>;
-                    <span>Professional: <span className="text-blue-400 font-semibold">{service && service.zionPricing.professional}</span></span>;
-                    <span>Enterprise: <span className="text-purple-400 font-semibold">{service && service.zionPricing.enterprise}</span></span>;
-                  </div>;
-                </div>;
-
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">;
-                  {/* Zion Service */}
-                  <div className="lg:col-span-1">;
-                    <Card className="h-full border-2 border-green-500 bg-green-500/5">;
-                      <div className="text-center p-6">;
-                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-medium mb-4">;
-                          Zion {service && service.service}
-                        </div>;
-                        <h4 className="text-xl font-bold text-white mb-4">Best Value</h4>;
-                        <div className="space-y-3 mb-6">;
-                          {service && service.features.map((feature, featureIndex) => (;
-                            <div key={featureIndex} className="flex items-center text-gray-300">;
-                              <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-                              <span className="text-sm">{feature}</span>;
-                            </div>;
-                          ))}
-
-
-                        </div>;
-                      </div>;
-                    </Card>;
-                  </div>;
-
-
-                  {/* Competitors */}
-                  {service.competitors.map((competitor, compIndex) => (
-
-                    <div key={compIndex} className='lg:col-span-1'>
-                      <Card className='h-full border border-gray-700'>
-                        <div className='text-center p-6'>
-                          <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
-                            {competitor.name}
-                          </div>
-
-                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (
-
-                            {[...Array(5)].map((_, i) => (
-
-
-                              <Star
-                                key={i}
-                                className={`w-4 h-4 ${
-                                  i < Math && Math.floor(parseFloat(competitor && competitor.rating))
-                                    ? 'text-yellow-400 fill-current'
-                                    : 'text-gray-400'
-                                }`}
-                              />;
-                            ))}
-
-
-                          </div>
-                          <div className='mb-4'>
-                            <p className='text-lg font-semibold text-white'>
-                              {competitor.pricing}
-                            </p>
-                          </div>
-                          <div className='space-y-2 mb-4 text-xs'>
-                            <div>
-                              <p className='text-green-400 font-medium mb-1'>
-                                Pros:
-                              </p>
-                              <ul className='text-gray-300 space-y-1'>
-                                {competitor.pros.map((pro, proIndex) => (
-                                  <li
-                                    key={proIndex}
-                                    className='flex items-center'>;
-                                    <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />                                    {pro}                          </div>;
-                          <div className="mb-4">;
-                            <p className="text-lg font-semibold text-white">{competitor && competitor.pricing}</p>;
-                          </div>;
-                          <div className="space-y-2 mb-4 text-xs">;
-                            <div>;
-                              <p className="text-green-400 font-medium mb-1">Pros:</p>;
-                              <ul className="text-gray-300 space-y-1">;
-                                {competitor && competitor.pros.map((pro, proIndex) => (;
-                                  <li key={proIndex} className="flex items-center">;
-                                    <Check className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />;
-
-                            <span className="text-sm text-gray-400 ml-2">{competitor.rating}</span>
                           </div>
                           <div className="mb-4">
                             <p className="text-lg font-semibold text-white">{competitor.pricing}</p>
@@ -773,7 +519,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                     </div>
 
                   ))}
-                </div>;
+</div>;
               </div>;
             ))}
 
@@ -835,7 +581,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 Try AI Content Generator
               </Button>
               <Button
-                href="/cloud-monitoring"
+href="/cloud-monitoring"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
@@ -843,7 +589,7 @@ import {Check, X, Star, TrendingUp, DollarSign, Zap} from 'lucide-react';
                 Try Cloud Monitoring
               </Button>
               <Button
-                href="/devops-automation"
+href="/devops-automation"
                 variant="secondary"
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"

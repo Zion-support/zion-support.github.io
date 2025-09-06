@@ -29,7 +29,6 @@ export default async function handler(
 
 
   const user = parseUserFromRequest(req);
-
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
 

@@ -105,7 +105,6 @@ module.exports = { checkAutomationStatus };,
 // Run if called directly;
 if (require.main === module) {}
   checkAutomationStatus();
-
 module.exports = { checkAutomationStatus };,
 ;
 ;
@@ -134,7 +133,6 @@ async function checkAutomationStatus() {
 
       } catch(error) { 
       statusReport.pm2Processes = [] }
-
       const pm2List = execSync('pm2 list --json', { "encoding": 'ut,f8'};);
       const pm2Data = JSON.parse(pm2List;);
       statusReport.pm2Processes = pm2Data;

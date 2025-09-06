@@ -213,15 +213,6 @@ class IntelligentErrorFixer {
         content = `import React from 'react';\n${content}`;
         modified = true;
       }
-
-
-
-      if (modified) {
-        // Create backup
-        const backupPath = `${filePath}.backup.${Date.now()}`;
-        fs.copyFileSync(filePath, backupPath);
-
-
         
         // Write fixed content
         fs.writeFileSync(filePath, content);
@@ -287,6 +278,8 @@ class IntelligentErrorFixer {
     }
 
 
+    scanDirectory(pagesDir);
+    // Remove duplicate .js files if .tsx exists
     scanDirectory(pagesDir);
     // Remove duplicate .js files if .tsx exists
     for (const duplicate of duplicates) {

@@ -684,6 +684,7 @@
       'Revolutionary platform that enables secure quantum communication networks with quantum key distribution, quantum entanglement, and unbreakable data transmission capabilities.',
     category: 'Quantum Technology',
     price: {
+<<<<<<< HEAD
       monthly: 2999,
       yearly: 29990,
       currency: 'USD',
@@ -767,8 +768,9 @@
 
 
 export const getEmergingTechServicesByCategory = (category: string) => {
-  return emergingTechServices2025 && emergingTechServices2025.filter(
-    service => service && service.category === category
+  return emergingTechServices2025.filter(
+    service => service.category === category;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   );
 }
 export const getEmergingTechServicesByPriceRange = (
@@ -781,11 +783,9 @@ export const getEmergingTechServicesByPriceRange = (
   tagline: string, description: string,
   category: string,
   price: {
-      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string
-  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,

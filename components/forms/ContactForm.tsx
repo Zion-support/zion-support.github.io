@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -26,7 +22,6 @@ class ErrorBoundary extends React.Component {
 
 
 'use client';
-
 'use client';
 'use client';
 ;
@@ -41,112 +36,48 @@ import {;
   Send,;
   CheckCircle,;
   AlertCircle,;
+'use client';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
   Mail,
   Phone,
   MapPin,
   Send,
-  CheckCircle,
-  AlertCircle,
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
-const ContactForm: React.FC = () => {;
-  const [formData, setFormData] = useState({;
-    name: '',;
-    email: '',;
-    company: '',;
-    phone: '',;
-    service: '',;
-    message: '',;
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<;
-    'idle' | 'success' | 'error';
-  >('idle');
-
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
 const ContactForm: React.FC = () => {
-  const [form_data, setFormData] = useState ({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
+  const [formData, setFormData] = useState({
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    service: ''
     message: ''
   });
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
+    setFormData({
+      ...formData
+      [e.target.name]: e.target.value
     });  };  });
-
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-
-    // Simulate API call
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-
-;
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [submit_status, setSubmitStatus] = useState<;
-    'idle' | 'success' | 'error';
-  >('idle');
-;
-  const handle_change = (
-    e: React.ChangeEvent<;
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
-    >) =>: any {
-    setFormData ({
-      ...form_data,
-      [e.target.name]: e.target.value,
-    });  }  });
-;
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const [submit_status, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-;
-  const handle_change = (e: React.ChangeEvent < HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>: any {
-    setFormData ({
-      ...form_data;
-      [e.target.name]: e.target.value;
-    });
-  }
-;
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default ();
-    setIsSubmitting (true);
-;
-    // Simulate API call;
-    try {
-      await new Promise (resolve => set_timeout (resolve, 2000));
-      setSubmitStatus ('success');
-      setFormData ({
-
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-
-
-  const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
-    setFormData({;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
       ...formData;
       [e && e.target.name]: e && e.target.value;
     });
   };
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setIsSubmitting(true);
-
     // Simulate API call;
     try {;
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -175,7 +106,6 @@ const ContactForm: React.FC = () => {
 ;
 
   const services = [    } catch (error) {
-      setSubmitStatus ('error');
     } finally {
 
   };
@@ -222,7 +152,7 @@ const ContactForm: React.FC = () => {
 
 
   return (
-    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>;
+    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
       {/* Background Elements */}
 
       <div className='absolute inset-0'>;
@@ -279,7 +209,6 @@ const ContactForm: React.FC = () => {
               Conversation;
             </span>;
           </h2>;
-
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
       href: 'mailto:contact@ziontechgroup.com',
     },    {
@@ -399,7 +328,7 @@ const ContactForm: React.FC = () => {
 
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
 
@@ -448,6 +377,17 @@ const ContactForm: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-12"
               >
+                <CheckCircle className='w-20 h-20 text-green-400 mx-auto mb-6' />
+                <h3 className='text-2xl font-bold text-white mb-4'>
+                  Message Sent Successfully!
+                </h3>
+                <p className='text-gray-300 mb-6'>
+                  Thank you for reaching out. Our team will get back to you
+                  within 24 hours.
+                </p>
+                <button
+                  onClick={() => setSubmitStatus('idle')}
+                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >              >
                 <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
                 <p className="text-gray-300 mb-6">
@@ -491,7 +431,6 @@ const ContactForm: React.FC = () => {
                       placeholder='Enter your email'                    />;
                   </div>;
                 </div>;
-
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors";
 
             {/* Contact Details */}
@@ -754,7 +693,6 @@ const ContactForm: React.FC = () => {
                   <motion.div
                   />;
                 </div>;
-
                 {submitStatus === 'error' && (;
                   <motion&& motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -780,16 +718,14 @@ const ContactForm: React.FC = () => {
                     </>
 
                   )}
-                </button>;
+</button>;
               </form>;
             )}
 
 
 };
-
 export default ContactForm;  );
 };
-
 export default ContactForm;
 
 

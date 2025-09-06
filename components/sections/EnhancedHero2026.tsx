@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -46,6 +42,10 @@ interface EnhancedHero2026Props {;
 } from 'lucide-react';
 interface EnhancedHero2026Props {
   contact_info: {
+} from 'lucide-react';
+
+interface EnhancedHero2026Props {
+  contactInfo: {
     mobile: string;
     email: string;
     address: string;
@@ -94,6 +94,18 @@ interface EnhancedHero2026Props {
 ;
   const stats_variants = {
     hidden: { scale: 0.8, opacity: 0 },
+    },  };        staggerChildren: 0.2
+      }
+    }
+  }
+        staggerChildren: 0.2,
+      },
+    },  };
+
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 }
     visible: {
       y: 0
       opacity: 1
@@ -129,7 +141,6 @@ export default function EnhancedHero2026(): any ({;
       }
     }
   };
-
   const statsVariants = {;
     hidden: { scale: 0 && 0.8, opacity: 0 },;
     visible: {;
@@ -141,7 +152,6 @@ export default function EnhancedHero2026(): any ({;
       },;
     },;
   };
-
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
       {/* Enhanced Background Elements */}
@@ -268,7 +278,6 @@ export default function EnhancedHero2026(): any ({;
         ))}
 
       </div>;
-
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
 
           variants={containerVariants}
@@ -286,7 +295,6 @@ export default function EnhancedHero2026(): any ({;
               </span>;
               <TrendingUp className='w-5 h-5 text-green-400' />;
             </div>;
-
             <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold leading-tight'>;
               <span className='bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent'>;
                 Future-Ready;
@@ -296,7 +304,6 @@ export default function EnhancedHero2026(): any ({;
                 Solutions;
               </span>;
             </h1>;
-
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
               Transform your business with our revolutionary AI, Quantum, and IT;
               infrastructure services.;
@@ -361,14 +368,12 @@ export default function EnhancedHero2026(): any ({;
 
               delivering unprecedented ROI.            </p>;
           </motion && motion.div>;
-
           {/* Enhanced Stats Grid */}
           <motion&& motion.div            
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. ;
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.;
           </motion && motion.div>;
-
           {/* Enhanced Stats Grid */}
           <motion&& motion.div
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'>;
@@ -470,7 +475,6 @@ export default function EnhancedHero2026(): any ({;
                 </span>;
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />;
               </Button>;
-
               <Button
                 href="/contact" 
                 variant="secondary"

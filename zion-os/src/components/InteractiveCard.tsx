@@ -172,13 +172,6 @@ export function FeatureCard({;
       className={class_name}
 >;
       {stats && (
-        <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
-          <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
-            {stats.map ((stat, index) => (
-              <div key={index} className=&quot;text - center & quot;>;
-                <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
-                <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
-              </div>))}
           </div>;
         </div>)}
     </InteractiveCard>);
@@ -215,11 +208,12 @@ export function TestimonialCard({;
       {/* Quote icon */}
 
       {/* Rating */}
-      <div className=&quot;flex mb - 4&quot;>;
-        {Array.from ({ length: rating }).map ((_, i) => (
-          <svg key={i} className=&quot;w - 5 h - 5 text - yellow - 400 fill - current & quot; view_box=&quot;0 0 20 20 & quot;>;
-            <path d=&quot;M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l - 2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688 - 1.54 1.118l - 2.8 - 2.034a1 1 0 00 - 1.175 0l - 2.8 2.034c-.784.57 - 1.838-.197 - 1.539 - 1.118l1.07 - 3.292a1 1 0 00-.364 - 1.118L2.98 8.72c-.783-.57-.38 - 1.81.588 - 1.81h3.461a1 1 0 00.951-.69l1.07 - 3.292z & quot; />;
-          </svg>))}
+      <div className="flex mb-4">
+        {Array.from({ length: rating }).map((_, i) => (
+          <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
       </div>;
       {/* Quote */}
 
@@ -229,12 +223,13 @@ export function TestimonialCard({;
 
 
       </blockquote>
-      </blockquote>;
+      </blockquote>
       {/* Author info */}
-      <div className=&quot;border - t border - white / 10 pt - 4&quot;>;
-        <div className=&quot;font - semibold text - white & quot;>{author}</div>;
-        <div className=&quot;text - gray - 400 & quot;>{position}</div>;
-        <div className=&quot;text - purple - 400 text - sm & quot;>{company}</div>;
-      </div>;
-    </div>);
+      <div className="border-t border-white/10 pt-4">
+        <div className="font-semibold text-white">{author}</div>
+        <div className="text-gray-400">{position}</div>
+        <div className="text-purple-400 text-sm">{company}</div>
+      </div>
+    </div>
+  )
 }

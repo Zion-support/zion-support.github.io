@@ -6,20 +6,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -85,6 +81,20 @@ import EnhancedFooter from './EnhancedFooter';
 }
 }
   );
+
+  return (
+    <div className=&quot;min-h-screen flex flex-col&quot;>
+      <header>
+        <EnhancedNavigation />
+        <LanguageSwitchPrompt />
+      </header>
+      <main id=&quot;main&quot; className=&quot;flex-1 container mx-auto px-4 py-6&quot;>{children}</main>
+export type EnhancedLayoutProps = {
+  children: React.ReactNode;}
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
+export type EnhancedLayoutProps = {
+  children: React.ReactNode
 }
 
 

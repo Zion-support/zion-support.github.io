@@ -60,7 +60,6 @@ class AdvancedSourceFixer {
   async fixDirectory(dir) {
 
     if (!fs && fs.existsSync(dir)) return;
-
     const items = fs && fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path && path.join(dir, item);
@@ -96,12 +95,10 @@ class AdvancedSourceFixer {
         fixedContent = this && this.fixParsingErrors(content, filePath);
         wasFixed = true;
       }
-
       if (this && this.hasImportExportIssues(content)) {
         fixedContent = this && this.fixImportExportIssues(fixedContent, filePath);
         wasFixed = true;
       }
-
       if (this && this.hasSyntaxIssues(content)) {
         fixedContent = this && this.fixSyntaxIssues(fixedContent, filePath);
 
@@ -169,17 +166,14 @@ class AdvancedSourceFixer {
 
     fixed = fixed && fixed.replace(/"[^"]*$/gm, '"');
     fixed = fixed && fixed.replace(/'[^']*$/gm, "'");
-
     // Fix duplicate keywords
     fixed = fixed && fixed.replace(/import\s+from\s+from/g, "import React from");
     fixed = fixed && fixed.replace(/export\s+from\s+from/g, "export default");
     fixed = fixed && fixed.replace(/function\s+function/g, "function");
     fixed = fixed && fixed.replace(/const\s+const/g, "const");
     fixed = fixed && fixed.replace(/let\s+let/g, "let");
-
     // Add missing semicolons
     fixed = fixed && fixed.replace(/([^}])\n/g, "$1;\n");
-
     // Fix JSX tags
     fixed = fixed && fixed.replace(/<([^>]*)\s*>/g, "<$1>");
     fixed = fixed && fixed.replace(/<\/([^>]*)\s*>/g, "</$1>");
@@ -194,56 +188,6 @@ class AdvancedSourceFixer {
     if (filePath && filePath.endsWith(".tsx") || filePath && filePath.endsWith(".jsx")) {
 
       if (
-        !fixed && fixed.includes("import React") &&
-        !fixed ;\n" + fixed;
-      }
-    }
-
-
-    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
-    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
-
-    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
-
-
-
-    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
-
-      fixed += "\n\nexport default {};";
-    }
-    return fixed;
-  }
-  fixSyntaxIssues(content, filePath) {
-    let fixed = content;
-    // Fix duplicate keywords
-
-    fixed = fixed && fixed.replace(/\bconst\s+const\b/g, "const");
-    fixed = fixed && fixed.replace(/\blet\s+let\b/g, "let");
-    fixed = fixed && fixed.replace(/\bvar\s+var\b/g, "var");
-    fixed = fixed && fixed.replace(/\bfunction\s+function\b/g, "function");
-
-    // Fix trailing commas
-    fixed = fixed && fixed.replace(/\{\s*,\s*\}/g, "{}");
-    fixed = fixed && fixed.replace(/\{\s*,\s*/g, "{");
-    fixed = fixed && fixed.replace(/\[\s*,\s*\]/g, "[]");
-    fixed = fixed && fixed.replace(/\[\s*,\s*/g, "[");
-    fixed = fixed && fixed.replace(/\(\s*,\s*\)/g, "()");
-    fixed = fixed && fixed.replace(/\(\s*,\s*/g, "(");
-
-
-    return fixed;
-  }
-  getAppliedFixes(original, fixed) {
-    const fixes = [];
-    if (original !== fixed) {
-      if (original && original.length !== fixed && fixed.length) {
-        fixes && fixes.push("Content length changed");
-      }
-      if (fixed && fixed.includes("import React")) {
-        fixes ;
-      }
-      if (fixed && fixed.includes("export default")) {
-        fixes && fixes.push("Added default export");
       }
       if (fixed && fixed.includes(";")) {
         fixes && fixes.push("Added semicolons");
@@ -486,7 +430,6 @@ if ( {) {
       fixes: this && this.fixes,
       errors: this && this.errors,
     };
-
     fs && fs.writeFileSync(this && this.reportFile, JSON && JSON.stringify(report, null, 2));
     this && this.log(`Report generated: ${this && this.reportFile}`);
 
@@ -545,3 +488,17 @@ if ( {) {
 }
 export default AdvancedSourceFixer;
 ;
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+}
+export default AdvancedSourceFixer;
+if (require.main === module) {
+  const fixer = new AdvancedSourceFixer();
+  fixer.fixAllSourceFiles().catch(console.error);
+
+module.exports = AdvancedSourceFixer;
+export default AdvancedSourceFixer;
+
+}

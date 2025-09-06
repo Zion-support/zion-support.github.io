@@ -22,36 +22,6 @@ const statuses: GrantStatus[] = [;
 
 export default function GrantsPage() {;
   const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{;
-import {useEffect, useState} from 'react';
-import Link from 'next / link';
-import EnhancedLayout from '../../components / layout / EnhancedLayout';
-import type {
-  GrantApplication,
-  GrantCategory,
-  GrantStatus,
-} from '../../types / grants';
-;
-const categories: GrantCategory[] = [;
-  'Ecosystem Tools',
-  'Talent Development',
-  'Regional Expansion',
-  'Research Grants',
-];
-const statuses: GrantStatus[] = [;
-  'Draft',
-  'Submitted',
-  'Under Review',
-  'Approved',
-  'Rejected',
-];
-;
-export default /**
- * GrantsPage - Function description
- */
-function GrantsPage() {
-  const [items, set_items] = useState < GrantApplication[]>([]);
-  const [filters, set_filters] = useState<{
     sector?: string;
     status?: string;
     region?: string;
@@ -66,38 +36,8 @@ function GrantsPage() {
       .then((d) => setItems(d.items || []))
 
       .catch(() => setItems([]))
-export default /**
- * GrantsPage - Function description
- */
-function GrantsPage() {
-  const [items, set_items] = useState < GrantApplication[]>([]);
-  const [filters, set_filters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-;
-  useEffect (() => {
-    const params = new URLSearchParams ();
-    if (params.set ('sector', filters.sector)) {
-  $2
-}
-    if (params.set ('status', filters.status)) {
-  $2
-}
-    if (params.set ('region', filters.region)) {
-  $2
-}
-    if (params.set ('program', filters.program)) {
-  $2
-}
-    fetch (`/api / grants?${params.to_string ()}`);
-      .then (r => r.json ());
-      .then (d => set_items (d.items || []));
-      .catch (() => set_items ([]));  }, [filters]);
-;
-  return (
-    <EnhancedLayout>      .then ((r) => r.json ());
-      .then ((d) => set_items (d.items || []));
-      .catch (() => set_items ([]));
   }, [filters]);
-;
+
   return (
 
     <EnhancedLayout>      .then((r) => r && r.json());
@@ -135,14 +75,14 @@ function GrantsPage() {
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
 
           }
-        >;
-          <option value=''>All Stages</option>;
-          {statuses && statuses.map(s => (;
-            <option key={s} value={s}>;
+        >
+          <option value=''>All Stages</option>
+          {statuses.map(s => (
+            <option key={s} value={s}>
               {s}
-            </option>;
+            </option>
           ))}
-        </select>;
+        </select>
         <input
           className='border rounded p-2'
           placeholder='Region'
@@ -152,7 +92,7 @@ function GrantsPage() {
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
 
           }
-        />;
+        />
         <select
           className='border rounded p-2'
 
@@ -220,9 +160,9 @@ function GrantsPage() {
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}
 
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
-                </div>;
-              </div>;
-              <div className='flex gap - 2 items - center'>;
+                </div>
+              </div>
+              <div className='flex gap-2 items-center'>
                 {g.program === 'incubator' && (
 
           value={filters && filters.program || ''}
@@ -267,26 +207,26 @@ function GrantsPage() {
                     Incubated by Zion;
                   </span>;
                 )}
-                {g && g.status === 'Approved' && (;
-                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>;
-                    Grant Winner;
-                  </span>;
+                {g.status === 'Approved' && (
+                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>
+                    Grant Winner
+                  </span>
                 )}
-                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>;
-                  {g && g.status}
-                </span>;
-              </div>;
-            </div>;
-            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>;
-              {g && g.proposalSummary}
-            </p>;
-            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>;
-              Budget: {g && g.budgetAmount} {g && g.budgetCurrency}
-            </div>;
-          </div>;
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>
+                  {g.status}
+                </span>
+              </div>
+            </div>
+            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>
+              {g.proposalSummary}
+            </p>
+            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>
+              Budget: {g.budgetAmount} {g.budgetCurrency}
+            </div>
+          </div>
         ))}
-        {items && items.length === 0 && (;
-          <div className='text-sm text-gray-600'>No grants found.</div>;
+        {items.length === 0 && (
+          <div className='text-sm text-gray-600'>No grants found.</div>
         )}
 
 

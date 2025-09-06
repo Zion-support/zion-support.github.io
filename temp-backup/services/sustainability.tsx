@@ -38,10 +38,10 @@ interface SustainabilityProps {;
 export default function Sustainability(): any ({ }: SustainabilityProps) {;
 
   return (
-    <div>;
-      <h1>Sustainability</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Sustainability</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 

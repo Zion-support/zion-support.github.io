@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -139,7 +135,6 @@ import React, { ReactNode } from "react";
         <meta property="og:image" content={ogImage} />;
         <meta property="og:url" content={canonical} />;
         <meta property="og:type" content="website" />;
-
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />;
         <meta name="twitter:title" content={ogTitle || title} />;
@@ -148,25 +143,13 @@ import React, { ReactNode } from "react";
           content={ogDescription || description}
         />;
         <meta name="twitter:image" content={ogImage} />;
-
         {/* JSON-LD */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
-        />;
-      </Head>;
-
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>;
-  );
-};
 
 interface LayoutProps {
   children: ReactNode,
 }
-
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <main className="min-h-screen">

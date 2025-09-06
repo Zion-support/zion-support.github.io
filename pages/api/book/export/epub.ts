@@ -129,7 +129,6 @@ export default async function handler(req, res) {
     try { await fs.unlink(tmpPath) } catch {}
   }
 }
-
 function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
@@ -137,7 +136,6 @@ function chapterToHtml(text: string): string {
     .map((p) => `<p>${escapeHtml(p)}</p>`)
     .join('\n')
 }
-
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, '&amp,')
@@ -157,6 +155,14 @@ export const config = {
       size_limit: "10mb",
     },
   },
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
 ;
 function escape_html (string: string): string {
@@ -167,25 +173,6 @@ function escape_html (string: string): string {
     .replace (/"/g, "&quot;");
     .replace (/'/g, "&#039;");
 }
-function chapterToHtml (text: string): string {
-  // Check condition
-if (return "") {
-  $2
-}
-  return text;
-    .split (/\n\n+/);
-    .map ((p) => `<p>${escape_html (p)}</p>`);
-    .join ("\n");
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.status (405).json ({ error: "Method not allowed" });
     return;
   }
   const { project } = req.body as { project: any }
@@ -214,15 +201,6 @@ if ( {) {
       "Content - Disposition",
       'attachment; filename="zion - os - book.epub"',
     );
-    res.status (200).send (buf);
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || "Failed to build EPUB" });
   } finally {
-    try {
-      await fs.unlink (tmp_path);
-    } catch {}
-  }
-}
-
-
-

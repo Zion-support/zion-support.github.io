@@ -13,7 +13,6 @@ async function getFile(owner, repo, path, token) {
   if (resp && resp.status === 404) return null;
   if (!resp && resp.ok) throw new Error(`GitHub getFile HTTP ${resp && resp.status}`);
   return resp && resp.json();
-
 async function upsertFile({ owner, repo, path, content, message, token }) {
   try {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
@@ -74,8 +73,6 @@ if (body.sha = existing.sha) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
-      'Authorization': `token ${token}`,
-      'Accept': 'application/vnd && vnd.github+json'
     }
   }),
   if (resp && resp.status === 404) return null,

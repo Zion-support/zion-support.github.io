@@ -318,7 +318,6 @@ export default function ApiToolsPage() {;
       responseTime: '<20ms',
     },
   ]
-
   const categories = [
   Terminal;
 export default /**
@@ -817,13 +816,11 @@ function ApiToolsPage() {
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-
       {/* Hero Section */}
 
       <section className='relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0 && 0.15),transparent_50%)]' />;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0 && 0.1),transparent_50%)]' />;
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>;
             <Terminal className='w-4 h-4 mr-2' />;
@@ -837,15 +834,12 @@ function ApiToolsPage() {
             collection of developer APIs. Each tool is designed for performance,;
             reliability, and ease of integration.;
           </p>;
-
           <div className='flex flex-wrap justify-center gap-4 mb-8'>;
             {categories && categories.map(category => (              <button      </Head>;
-
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0 && 0.15),transparent_50%)]" />;
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0 && 0.1),transparent_50%)]" />;
-
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">;
             <Terminal className="w-4 h-4 mr-2" />;
@@ -857,7 +851,6 @@ function ApiToolsPage() {
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">;
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.;
           </p>;
-
           <div className="flex flex-wrap justify-center gap-4 mb-8">;
             {categories && categories.map((category) => (;
 
@@ -902,16 +895,6 @@ function ApiToolsPage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
-            </h2>;
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-              {filteredTools && filteredTools.length} APIs available. Each tool is;
-              production-ready with comprehensive documentation, SDKs, and;
-              support.;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            {filteredTools && filteredTools.map((tool, index) => (;
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'
@@ -1043,7 +1026,6 @@ function ApiToolsPage() {
               {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredTools.map((tool, index) => (
               <Card
@@ -1058,7 +1040,6 @@ function ApiToolsPage() {
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
-                  
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300">
@@ -1069,160 +1050,19 @@ function ApiToolsPage() {
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
-                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
-
-                          {tool.status}
-                        </span>
-                      </div>
-                    </div>
-
-                          </span>;
-                        </div>;
-                        <span className='px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full font - medium'>                          {tool.status}
-                        </span>;
-                      </div>;
-                    </div>;
-                    <p className='text - gray - 400 leading - relaxed mb - 6'>                        <span className="px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full font - medium">;
-                          {tool.status}
-                        </span>;
-                      </div>;
-                    </div>;
-                    <p className='text - gray - 400 leading - relaxed mb - 6'>;
-                      {tool.description}
-                    </p>;
-                    <div className='grid grid - cols - 3 gap - 4 mb - 6'>;
-                      <div className='text - center p - 3 bg - gray - 800 / 50 rounded - lg'>;
-                        <div className='text - lg font - bold text - indigo - 400'>;
-
-                          {tool.users}
-                        </div>;
-                        <div className='text - xs text - gray - 500'>Users</div>;
-                      </div>;
-                      <div className='text - center p - 3 bg - gray - 800 / 50 rounded - lg'>;
-                        <div className='text - lg font - bold text - green - 400'>;
-                          {tool.response_time}
-                        </div>;
-                        <div className='text - xs text - gray - 500'>Response</div>;
-                      </div>;
-                      <div className='text - center p - 3 bg - gray - 800 / 50 rounded - lg'>;
-                        <div className='text - sm font - medium text - gray - 300'>;
-                          Starting at;
-                        </div>;
-                        <div className='text - lg font - bold text - green - 400'>;
-                          {tool.pricing.free}
-
-                      className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool && tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
-                    />;
-                  </div>;
-                  <div className='flex-1'>;
-                    <div className='flex items-center justify-between mb-3'>;
-                      <h3 className='text-2xl font-bold text-white group-hover:text-indigo-400 transition-colors duration-300'>;
-                        {tool && tool.title}
-                      </h3>;
-                      <div className='flex items-center space-x-2'>;
-                        <div className='flex items-center text-yellow-400'>;
-                          <Star className='w-4 h-4 fill-current' />;
-                          <span className='ml-1 text-sm font-medium'>;
-                            {tool && tool.rating}
-                          </span>;
-                        </div>;
-                        <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>                          {tool && tool.status}
-                        </span>;
-                      </div>;
-                    </div>;
-
-                    <p className='text-gray-400 leading-relaxed mb-6'>                        <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">;
-                          {tool && tool.status}
-                        </span>;
-                      </div>;
-                    </div>;
-
-                    <p className='text-gray-400 leading-relaxed mb-6'>;
-                      {tool && tool.description}
-                    </p>;
-
-                    <div className='grid grid-cols-3 gap-4 mb-6'>;
-                      <div className='text-center p-3 bg-gray-800/50 rounded-lg'>;
-                        <div className='text-lg font-bold text-indigo-400'>;
-                          {tool && tool.users}
-                        </div>;
-                        <div className='text-xs text-gray-500'>Users</div>;
-                      </div>;
-                      <div className='text-center p-3 bg-gray-800/50 rounded-lg'>;
-                        <div className='text-lg font-bold text-green-400'>;
-                          {tool && tool.responseTime}
-                        </div>;
-                        <div className='text-xs text-gray-500'>Response</div>;
-                      </div>;
-                      <div className='text-center p-3 bg-gray-800/50 rounded-lg'>;
-                        <div className='text-sm font-medium text-gray-300'>;
-                          Starting at;
-                        </div>;
-                        <div className='text-lg font-bold text-green-400'>;
-                          {tool && tool.pricing.free}
-                        </div>;
-                      </div>;
-                    </div>;
-
-                    <ul className='space-y-2 mb-6'>;
-                      {tool && tool.features;
-                        .slice(0, 3);
-                        .map((feature, featureIndex) => (;
-
-                          <li
-                            key={featureIndex}
-                            className='flex items-center text-gray-300 text-sm'>;
-                            <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />;
-                            {feature}
-                          </li>;
-                        ))}
-
-                    </ul>;
-
-                    <div className='flex flex-wrap gap-3'>;
-
-                      <Button
-                        href={tool && tool.website}
-                        variant='primary'
-                        size='sm'
-                        className='bg-indigo-600 hover:bg-indigo-700'>;
-                        <ExternalLink className='w-4 h-4 mr-2' />                        Visit API;
-                      </Button>;
-                      <Button
-
-
-                        href={tool && tool.docs}                      {tool && tool.description}
-                    </p>;
-
-                    <div className="grid grid-cols-3 gap-4 mb-6">;
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
-                        <div className="text-lg font-bold text-indigo-400">{tool && tool.users}</div>;
-                        <div className="text-xs text-gray-500">Users</div>;
-                      </div>;
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
-                        <div className="text-lg font-bold text-green-400">{tool && tool.responseTime}</div>;
-                        <div className="text-xs text-gray-500">Response</div>;
-                      </div>;
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">;
-                        <div className="text-sm font-medium text-gray-300">Starting at</div>;
-                        <div className="text-lg font-bold text-green-400">{tool && tool.pricing.free}</div>;
-                      </div>;
-                    </div>;
-
-                    <ul className="space-y-2 mb-6">;
-                      {tool && tool.features.slice(0, 3).map((feature, featureIndex) => (;
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">;
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
                           {feature}
                         </li>;
                       ))}
 
                     </ul>;
-
                     <div className="flex flex-wrap gap-3">;
 
                       <Button
                         href={tool && tool.website}
+                    </ul>
+                    <div className="flex flex-wrap gap-3">
+                      <Button
+                        href={tool.website}
                         variant="primary"
                         size="sm"
 
@@ -1240,7 +1080,7 @@ function ApiToolsPage() {
                       </Button>
                       <Button
                         href={tool.github}
-                        variant="ghost"
+variant="ghost"
                         size="sm"
                         className="text-gray-400 hover:text-indigo-400"
                       >
@@ -1369,10 +1209,8 @@ function ApiToolsPage() {
           </div>
         </div>
       </section>
-          </div>;
         </div>;
       </section>;
-
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;

@@ -33,7 +33,12 @@ export default function TestPage() {;
   );
 }
 
-export default function TestPage() {;
+    </Layout>;
+  );
+}
+import React from 'react'
+import Head from 'next/head'
+export default function TestPage() {
   return (
 
 
@@ -52,6 +57,10 @@ export default function TestPage() {;
 
   );
     </>;
+);
+  );
+    </>;
+);
 );
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>

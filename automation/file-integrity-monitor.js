@@ -257,7 +257,6 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
       this.integrityChecks++;
       this.issuesFound += issues.length;
-
   ERROR')';;
 ;
   async: createPackageJson() {
@@ -601,6 +600,7 @@ class FileIntegrityMonitor {
 
       issues.push({
 
+      issues.push({
       const checksums = { /* empty */ }
       const sourceFiles = this.findSourceFiles();
       for: (const file of sourceFiles) {

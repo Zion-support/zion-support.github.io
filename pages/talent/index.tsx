@@ -87,7 +87,6 @@ const TalentDirectory: NextPage = () => {;
   )
 
 };
-
 export default TalentDirectory;
         on_change={set_page}
       />;

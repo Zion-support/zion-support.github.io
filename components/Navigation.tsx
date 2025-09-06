@@ -284,7 +284,6 @@ function Navigation() {
       icon: Shield,;
     },;
   ];
-
   const solutions = [;
     {;
       name: "Enterprise Solutions",;
@@ -323,7 +322,6 @@ function Navigation() {
       icon: Users,;
     },;
   ];
-
   const industries = [;
     {;
       name: "Healthcare",;
@@ -361,7 +359,6 @@ function Navigation() {
       description: "Property technology",;
     },;
   ];
-
   const resources = [;
     { name: "Blog", href: "/blog", description: "Latest insights and updates" },;
     {;
@@ -391,7 +388,6 @@ function Navigation() {
     },;
     { name: "News", href: "/news", description: "Industry news and updates" },;
   ];
-
   const quickLinks = [;
     { name: "About Us", href: "/about" },;
     { name: "Our Team", href: "/team" },;
@@ -759,12 +755,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 </AnimatePresence>;
               </div>;
 
-              <Link
-                href="/pricing"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                Pricing;
-              </Link>;
-            </div>;
 
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
@@ -806,7 +796,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Call Now;
               </a>;
             </div>;
-
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden p-2"
@@ -933,7 +922,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                   >;
                     Pricing;
                   </Link>;
-
                   <div className="px-4 py-2 space-y-2">;
 
                     <Link

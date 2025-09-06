@@ -29,8 +29,6 @@ export function formatDate(date: Date | string | number): string {
   }).format(amount);
 }
 }
-}
-
 import { type ClassValue, clsx  } from './clsx';
 import { tw_merge  } from './tailwind - merge';
 ;

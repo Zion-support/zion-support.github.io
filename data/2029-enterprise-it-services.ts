@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const enterpriseITServices2029: EnterpriseItService2029[] = [
   {
-    id: "2029-enterprise-it", name: "2029 Enterprise IT Service Platform",
-    tagline: "Enterprise IT services for 2029", price: "$599/month",
-    description: "Advanced enterprise IT service platform designed for large organizations in 2029.",
     features: [
       "Enterprise IT services";
       "Scalable solutions";
@@ -41,3 +37,7 @@ export const enterpriseITServices2029: EnterpriseItService2029[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

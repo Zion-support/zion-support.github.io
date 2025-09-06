@@ -30,11 +30,9 @@ export default function LearnMarketplace(req, res) {
 
 
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {;
     async function load() {;
       setLoading(true);
-
       const params = new URLSearchParams();
 
 
@@ -84,6 +82,9 @@ function load() {
     }
     load()
   }, [filters]);
+import CourseCard, { Course } from '../../components/learn/CourseCard';
+import FilterBar from '../../components/learn/FilterBar';
+export default function LearnMarketplace() {
 
       setCourses(data.courses |[]);
       setLoading(false);
@@ -118,9 +119,7 @@ function load() {
             Courses • Certifications • Career Boost;
           </div>        </div>;
       </div>;
-
       <FilterBar {...filters} onChange={setFilters} />;
-
       {loading ? (;
         <div>Loading...</div>;
       ) : (;

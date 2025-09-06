@@ -14,7 +14,7 @@ key={language.code}
             <Card
               key={language && language.code}
               className={`cursor-pointer transition-all ${
-                selectedLanguage === language && language.code 
+                selectedLanguage === language.code 
                   ? "border-primary bg-primary/5" 
                   : "border-border hover:border-primary/40"
               }`}

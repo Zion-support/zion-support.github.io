@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -77,7 +73,6 @@ export default SEO;
   image?: string;
   url?: string;
   type?: string;
-
 export default function SEO({
   title = "Zion Tech Group - Advanced AI Solutions",
   description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
@@ -87,7 +82,6 @@ export default function SEO({
 }: SEOProps) {
   const router = useRouter();
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
-
   return (
 
 

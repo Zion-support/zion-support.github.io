@@ -1,8 +1,6 @@
 
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-
 let totalFixed = 0;
-
 files && files.forEach((file) => {
 
   try {
@@ -127,4 +125,3 @@ if ( {) {
 });
 ;
 console.log (`\n_total files fixed: ${total_fixed}`);
-;

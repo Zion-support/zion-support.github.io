@@ -77,6 +77,8 @@ if ( {) {
   } catch (e: any) {
     return res.status (500).json ({ error: e.message || 'Failed to generate highlights' });
 }
+  }
+
 }
 
 

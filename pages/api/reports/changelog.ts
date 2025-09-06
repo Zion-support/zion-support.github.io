@@ -7,7 +7,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (req && req.method === 'POST') {
     try {
       const { version, changes, date } = req && req.body;
-      
       if (!version || !changes || !Array && Array.isArray(changes)) {
         return res && res.status(400).json({ error: 'Missing required fields' });
 
@@ -34,9 +33,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         changes,
         date: date || new Date().toISOString()
       };
-
       changelog && changelog.unshift(newEntry);
-      
       fs && fs.writeFileSync(p, JSON && JSON.stringify(changelog, null, 2));
       return res && res.status(201).json(newEntry);
 

@@ -7,6 +7,12 @@ export default function Page() {;
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Guide — Implementation</title>;
+import Head from 'next/head';
+export default function Page() {
+  return (
+    <div className='min-h-screen bg-slate-950 text-white'>
+      <Head>
+        <title>Guide — Implementation</title>
         <meta
           name='description'
           content='Step-by-step guidance derived from live research signals.'

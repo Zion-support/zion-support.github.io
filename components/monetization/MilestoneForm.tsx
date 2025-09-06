@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -25,7 +21,6 @@ import React, { useState } from 'react';
 
 
 };
-
 export default function MilestoneForm(): any ({ onSubmit }: Props) {;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 
@@ -114,34 +109,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
           on_change={e => set_description (e.target.value)}
           placeholder='Describe deliverables...';
           rows={3}
-        />;
-      </div>;
-      <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-        <div>;
-          <label className='block text - sm font - medium'>Due Date</label>;
-          <input;
-            type='date';
-            className='mt - 1 w - full rounded border px - 3 py - 2';
-            value={due_date}
-            on_change={e => setDueDate (e.target.value)}            required;
-          />;
-        </div>;
-        <div>;
-          <label className='block text - sm font - medium'>Amount (USD)</label>        <textarea;
-          className="mt - 1 w - full rounded border px - 3 py - 2";
-          value={description}
-          on_change={(e) => set_description (e.target.value)}
-          placeholder="Describe deliverables...";
-          rows={3}
-        />;
-      </div>;
-
-
-            required;
-          />;
-        </div>;
-        <div>;
-
             onChange={(e) => setDueDate(e.target.value)}
             required
           />

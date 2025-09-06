@@ -225,5 +225,6 @@ export /**
 function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
+    "data-walkthrough-target": id;
     id}
 }

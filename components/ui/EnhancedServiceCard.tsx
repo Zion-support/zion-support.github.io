@@ -4,18 +4,22 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+;
+const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
+  service,
+}) => {
+  const card_variants = {
+    hidden: { opacity: 0, coordinate_y: 20, scale: 0.95 },
+    visible: {      opacity: 1,    visible: {
+      opacity: 1,
+      coordinate_y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: 'ease_out' as const,
+      },
+    },    hover: {        ease: "ease_out" as const;
+      }
     }
     
     return this.props.children;
@@ -54,19 +58,19 @@ interface EnhancedServiceCardProps {;
     color: string;
     text_color: string;
     link: string;
-    market_position: string;
-    target_audience: string;
-    trial_days: number;
-    setup_time: string;
+    marketPosition: string;
+    targetAudience: string;
+    trialDays: number;
+    setupTime: string;
     category: string;
-    real_service: boolean;
+    realService: boolean;
     technology: string[];
     integrations: string[];
-    use_cases: string[];
+    useCases: string[];
     roi: string;
     competitors: string[];
-    market_size: string;
-    growth_rate: string;
+    marketSize: string;
+    growthRate: string;
     variant: string;
 
     contact_info: {
@@ -129,46 +133,22 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
       }
     }
     hover: {
-      coordinate_y: -8,
+
+      y: -8,
       scale: 1.02,
       transition: {
         duration: 0.3,
 
         ease: 'ease_out' as const,
       },
-    },  }
-;
-  const icon_variants = {
+    },  };
+
+  const iconVariants = {
     hidden: { rotate: -180, scale: 0 },
     visible: {      rotate: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: 'back_out' as const,
-      },
-    },    hover: {        ease: "ease_out" as const;
-
-      }
-    }
-  }
-;
-  const icon_variants = {
-    hidden: { rotate: -180, scale: 0 },
-
-    visible: {    visible: {
-
-      rotate: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-
-        ease: 'back_out' as const,
-      },
-    },        ease: "back_out" as const;
-
-      }
-    }
-    hover: {
       rotate: 360,
       scale: 1.1,
       transition: {
@@ -197,6 +177,12 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
       whileInView="visible"
       whileHover="hover"
       viewport={{ once: true }}
+        ease: 'easeInOut' as const,
+      },
+    },
+
+  };
+
     >
       {/* Background Glow */}
       <div 
@@ -210,110 +196,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
       {service.popular && (
         <div className="absolute top-4 right-4 z-10">
           <motion.div
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-          >
-            <Star className="w-3 h-3 fill-current" />
-            POPULAR
-          </motion.div>
-        </div>
-
-      )}
-
-
-
-
-      {/* Card Content */}
-      <div className='relative p-6'>
-
-      {/* Card Content */}
-      <div className='relative p-6'>
-
-        {/* Header */}
-
-
-
-        <div className='flex items-start justify-between mb-4'>
-          <motion.div
-            className={`text-4xl ${service.textColor}`}
-            variants={iconVariants}
-            initial='hidden'
-            animate='visible'
-
-      <div className="relative p-6">
-        {/* Header */}
-        <div className="flex items-start justify-between mb-4">
-          <motion.div
-            className={`text-4xl ${service.textColor}`}
-            variants={iconVariants}
-            initial="hidden"
-            animate="visible"
-            whileHover="hover"
-          >
-            {service.icon}
-          </motion.div>
-          
-          <div className="text-right">
-            <div className="text-2xl font-bold text-white">{service.price}</div>
-            <div className="text-sm text-gray-400">{service.period}</div>
-          </div>
-
-        </div>
-        {/* Title & Tagline */}
-
-
-        {/* Key Metrics */}          
-
-
-          <div className="text-right">
-            <div className="text-2xl font-bold text-white">{service.price}</div>
-            <div className="text-sm text-gray-400">{service.period}</div>
-        </div>
-        {/* Title & Tagline */}
-
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-          {service.name}
-        </h3>
-        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-          {service.tagline}
-
-        </p>
-        {/* Description */}
-
-        <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">
-
-          {service.description}
-        </p>
-        {/* Key Metrics */}
-
-
-
-          {service.tagline}
-        </p>
-
-        {/* Description */}
-
-          {service.description}
-        </p>
-
-        {/* Key Metrics */}
-
-
-
-          </div>
-          <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
-            <div className='text-purple-400 text-lg font-bold'>
-              {service.rating}
-            </div>
-            <div className='text-xs text-gray-400'>Rating</div>          </div>
-        </div>
-        {/* Features Preview */}
-        <div className='mb-6'>
-          <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
-            <Zap className='w-4 h-4 text-yellow-400' />        <div className="grid grid-cols-2 gap-4 mb-6">
-        <div className="grid grid-cols-2 gap-4 mb-6">
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
             <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
             <div className="text-xs text-gray-400">Customers</div>
@@ -328,29 +210,24 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             whileHover='hover'>;
             {service && service.icon}
           </motion && motion.div>;
-
           <div className='text-right'>;
             <div className='text-2xl font-bold text-white'>{service && service.price}</div>;
             <div className='text-sm text-gray-400'>{service && service.period}</div>          </div>;
         </div>;
-
         {/* Title & Tagline */}
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
           {service && service.name}
         </h3>;
         <p className='text-gray-300 text-sm mb-4 leading-relaxed'>          {service && service.tagline}
         </p>;
-
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service && service.description}
         </p>;
-
         {/* Key Metrics */}          ;
           <div className="text-right">;
             <div className="text-2xl font-bold text-white">{service && service.price}</div>;
             <div className="text-sm text-gray-400">{service && service.period}</div>;
         </div>;
-
         {/* Title & Tagline */}
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>;
           {service && service.name}
@@ -360,12 +237,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         </h3>;
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
         </p>;
-
         {/* Description */}
         <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>        <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">;
           {service && service.description}
         </p>;
-
         {/* Key Metrics */}
         <div className='grid grid-cols-2 gap-4 mb-6'>;
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>;
@@ -380,7 +255,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             </div>;
             <div className='text-xs text-gray-400'>Rating</div>          </div>;
         </div>;
-
         {/* Features Preview */}
 
         <div className="mb-6">
@@ -431,11 +305,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             <span className='text-xs text-yellow-400'>{service.roi}</span>          </div>
         </div>
         {/* Trial & Setup Info */}          </div>
-        <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-semibold text-white">Market Size</span>
-            <span className="text-xs text-cyan-400">{service.marketSize}</span>
-          </div>
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-white">Growth Rate</span>
             <span className="text-xs text-green-400">{service.growthRate}</span>
@@ -462,7 +331,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
         </div>
           </div>;
         </div>;
-
         {/* Market Info */}
         <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>;
           <div className='flex items-center justify-between mb-2'>;
@@ -481,7 +349,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             <span className='text-xs font-semibold text-white'>ROI</span>;
             <span className='text-xs text-yellow-400'>{service && service.roi}</span>          </div>;
         </div>;
-
         {/* Trial & Setup Info */}          </div>;
           <div className="flex items-center justify-between mb-2">;
             <span className="text-xs font-semibold text-white">Growth Rate</span>;
@@ -492,7 +359,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             <span className="text-xs text-yellow-400">{service && service.roi}</span>;
           </div>;
         </div>;
-
         {/* Trial & Setup Info */}
         <div className='flex items-center justify-between mb-6 text-sm'>;
           <div className='flex items-center gap-2 text-gray-400'>;
@@ -509,7 +375,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             <Shield className="w-4 h-4" />;
           </div>;
         </div>;
-
         {/* Action Buttons */}
 
 
@@ -565,12 +430,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
           </div>
         </div>
       </div>
-            whileHover={{ scale: 1 && 1.05 }}
             whileTap={{ scale: 0 && 0.95 }}>;
             <ExternalLink className="w-4 h-4" />;
             Learn More;
           </motion && motion.a>;
-
           <motion&& motion.a
             href={`mailto:${service && service.contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
@@ -579,7 +442,6 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
             <ArrowRight className="w-4 h-4" />;
           </motion && motion.a>;
         </div>;
-
         {/* Contact Info */}
         <div className='mt-4 pt-4 border-t border-white/10'>;
           <div className='text-xs text-gray-500 text-center'>        <div className="mt-4 pt-4 border-t border-white/10">;
@@ -588,16 +450,13 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({;
           </div>;
         </div>;
       </div>;
-
       {/* Hover Effect Border */}
 
 };
-
 export default EnhancedServiceCard;    </motion && motion.div>;
   );
 
 };
-
 export default EnhancedServiceCard;
         ease: 'easeInOut' as const,
       },

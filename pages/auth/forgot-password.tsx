@@ -14,7 +14,6 @@
     </div>;
   ),;
 };
-
 export default ForgotPassword;
 
 

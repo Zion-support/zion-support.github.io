@@ -21,7 +21,6 @@ function list(dir: string, baseDir: string) {
         title: entry.name
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
     : []
-
   return { props: { sections }, revalidate: 600 }
 
 

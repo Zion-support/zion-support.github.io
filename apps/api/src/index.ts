@@ -123,7 +123,6 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
 
 
 });
-
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -143,6 +142,7 @@ app.get('/notifications', async (req: any, reply: any) => {
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+<<<<<<< HEAD
   app.log.error(err);
   (process as any).exit(1)
 });

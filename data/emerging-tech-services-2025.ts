@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const emergingTechServices2025: EmergingTechService2025[] = [
   {
-    id: "metaverse-platform", name: "Metaverse Development Platform",
-    tagline: "Create immersive virtual experiences", price: "$249/month",
-    description: "Advanced metaverse development platform for building virtual worlds and experiences.",
     features: [
       "3D world building";
       "Avatar customization";
@@ -41,3 +37,7 @@ export const emergingTechServices2025: EmergingTechService2025[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

@@ -15,7 +15,6 @@ export type UseAutoTranslateResult = {
   loading: boolean,
   error?: string
 };
-
 export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
 
   const [translations, setTranslations] = useState<Record<string, string>>({});
@@ -24,7 +23,6 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
 
 
   const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
-
   useEffect(() => {
     if (!text || targets && targets.length === 0) {
 

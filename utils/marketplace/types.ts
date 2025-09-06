@@ -7,8 +7,8 @@ export interface Offer {;
 
   id: string;
   createdAtIso: string;
-  client_id: string;
-  talent_slug: string;
+  clientId: string;
+  talentSlug: string;
   startDateIso: string;
 
   scopeSummary: string;
@@ -20,8 +20,8 @@ export interface Offer {;
   id: string;
   title: string;
   summary: string;
-  client_id: string;
-  talent_slug: string;
+  clientId: string;
+  talentSlug: string;
   startDateIso: string;
 
 

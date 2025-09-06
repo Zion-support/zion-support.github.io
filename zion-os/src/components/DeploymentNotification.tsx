@@ -213,14 +213,9 @@ if ( {) {
 }
       on_action (update_id, action);
     }
-  },
-  // Check condition
-if (return null, ) {
-  $2
-}
-  return (
-    <div className="fixed top - 4 right - 4 z - 50 space - y-3 max - w-md">;
-      {updates.map ((update) => (
+  return (;
+    <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
+      {updates.map((update) => (;
         <div;
           key={update.id}
           className={`group relative backdrop - blur - sm rounded - xl border p - 4 transition - all duration - 300 hover:shadow - lg ${getUpdateColor (update.type)}`}
@@ -318,6 +313,7 @@ if (return null, ) {
                   className={`flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 text - xs font - medium rounded - lg transition - all duration - 200 ${
                     action.action === 'deploy' || action.action === 'retry';
                       ? 'bg - blue - 600 hover:bg - blue - 700 text - white';
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white';
                       : action.action === 'view';
                       ? 'bg - green - 600 hover:bg - green - 700 text - white';
                       : 'bg - white / 20 hover:bg - white / 30 text - white / 80';

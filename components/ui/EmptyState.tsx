@@ -1,7 +1,7 @@
 
 
 import EnhancedButton from "./EnhancedButton";
-export type EmptyStateProps = {
+export type EmptyStateProps = {;
   title: string;
   description?: string;
   icon?: React.ReactNode;
@@ -39,6 +39,7 @@ export type EmptyStateProps = {;
   primaryAction?: { label: string; href: string };
   secondaryAction?: { label: string; href: string };
 };
+import React from 'react';
 
 export default function EmptyState(): any ({;
   title,;
@@ -117,6 +118,8 @@ function EmptyState() {
 }
 
 export default function EmptyState(): any ({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {;
+
+export default function EmptyState({ title, description, icon, primaryAction, secondaryAction }: EmptyStateProps) {
   return (
     <div className="w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">;
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
@@ -132,7 +135,7 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
               </a>
             </Link>
           )}
-          {secondaryAction && (;
+{secondaryAction && (;
             <Link href={secondaryAction && secondaryAction.href}>;
               <a>;
                 <EnhancedButton variant='secondary' size='md'>;

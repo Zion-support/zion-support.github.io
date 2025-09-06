@@ -5,7 +5,6 @@ import { ReactNode } from './react';
 
 type ModernLayoutProps = {
   children: ReactNode
-
 type ModernLayoutProps = {;
   children: ReactNode,;
   title?: string;

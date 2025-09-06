@@ -759,7 +759,6 @@ const PrivacyPage: React.FC = () => {
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-                
                 <h3 className="text-xl font-semibold mb-4">Personal Information</h3>
 
 
@@ -890,6 +889,20 @@ import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
+
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+Shield
+  Lock
+  Eye
+  Database
+  Mail
+  Phone
+  MapPin
+  Users
   Shield,
   Lock,
   Eye,
@@ -897,7 +910,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  Users,
+Users,
 } from './lucide-react';
 import MainLayout from "../components / layout / MainLayout";
 ;
@@ -1027,7 +1040,6 @@ export default PrivacyPage;
 
   )
 };
-
 export default PrivacyPage;
 
  

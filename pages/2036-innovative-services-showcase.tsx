@@ -30,8 +30,8 @@ import { motion } from 'framer-motion';
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<;
-    'name' | 'price' | 'rating' | 'marketSize';
+  const [sortBy, setSortBy] = useState<
+    'name' | 'price' | 'rating' | 'marketSize'
   >('name');
 
 
@@ -136,7 +136,7 @@ import { motion } from 'framer-motion';
             <motion.div;
 
               key={i}
-              className='absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full';
+              className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
               style={{
 
 
@@ -363,6 +363,7 @@ export default function InnovativeServicesShowcase2036() {
           <motion&& motion.div
             className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
 
+          >
             <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
               <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
               <h3 className="text-lg font-semibold mb-2">Phone</h3>
@@ -406,7 +407,16 @@ export default function InnovativeServicesShowcase2036() {
               AI platforms, and cutting-edge technology solutions designed for the future.
             </p>
           </motion.div>
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Revolutionary Services
+            </h2>
 
+          </motion.div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative micro SAAS services,
+              AI platforms, and cutting-edge technology solutions designed for the future.
+            </p>
           </motion.div>
           {/* Filters and Controls */}
 
@@ -423,6 +433,72 @@ export default function InnovativeServicesShowcase2036() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
+            <div className='flex flex-col lg:flex-row gap-4 justify-between items-center'>
+              <div className='relative flex-1 max-w-md'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+          {/* Filters and Controls */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <motion.div
+            className="mb-12 space-y-6"
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >;
+            {/* Search and View Controls */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
+                />
+              </div>
+                <select
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value as any)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                 >
                   <option value="name">Sort by Name</option>
@@ -450,8 +526,16 @@ export default function InnovativeServicesShowcase2036() {
                     <Grid className="w-5 h-5" />
                   </button>
                   <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
+                    onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >
                     <List className="w-5 h-5" />
                   </button>
@@ -625,12 +709,122 @@ export default function InnovativeServicesShowcase2036() {
 
                 <div className="flex-1">
                   {/* Service Header */}
+            {/* Category Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-wrap gap-3 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onClick={() => setSelectedCategory(category)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
+                    selectedCategory === category;
+                      ? 'bg-cyan-500 text-black border-cyan-500';
+                      : 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400';
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  {categoryIcons[category] || <Star className="w-4 h-4" />  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  {category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                </button>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </motion.div>;
+          {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <motion.div;
+            variants={containerVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >;
+            {sortedServices.map((service, index) => (;
+              <motion.div;
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variants={itemVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${;
+                  viewMode === 'list' ? 'flex gap-6' : '';
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >
+                {viewMode === 'list' && (
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl">
+                      {categoryIcons[service.category] || <Star className="w-8 h-8" />  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </div>
+                  </div>
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                <div className="flex-1">
+                  {/* Service Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div className="mb-4">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <div className="flex items-center gap-2">
                         <span className="text-cyan-400 font-semibold">{service.price}</span>
-                        {service.period && <span className="text-gray-400 text-sm">{service.period}</span>}
                       </div>
                     </div>
                     <p className="text-cyan-400 font-medium mb-2">{service.tagline}</p>
@@ -656,7 +850,6 @@ export default function InnovativeServicesShowcase2036() {
                       {service.rating && (
 
                     </div>;
-
                     {/* Market Size */}
 
                     {/* Market Size */}
@@ -859,34 +1052,15 @@ export default function InnovativeServicesShowcase2036() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join the future of technology with our innovative services. 
               Contact us today to discuss how we can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={`mailto:${contactInfo.email}`}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
               >
                 Get Started Today
-              </a>
+              </Link>
               <a
-                href={`tel:${contactInfo.mobile}`}
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-              >
-                Call Us Now
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </Layout>
-
-
-),
-
-};
-
-
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0
@@ -896,81 +1070,15 @@ visible: {
   duration: 0.5
 }
 }%`;
-top: `$ {
-  Math.random () * 100
-}%`
-}animate= {
-  {
-  y: [0, -100, 0], opacity: [0.3, 1, 0.3]
-}transition= {
-  {
-  duration: 3 + Math.random () * 2, repeat: Infinity, delay: Math.random () * 2
-}/>) )
-}</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion.h1 > 2036 Innovative Services </motion.h1> <motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
-AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion.p> <motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion.div> </div> </section> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services
-AI platforms, and cutting-edge technology solutions designed for the future. </p> </motion.div> {
-  /* Filters and Controls */
-}<motion.div /> </div> <div className="flex gap-4 items-center" > <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="rating" >Sort by Rating</option> <option value="marketSize" >Sort by Market Size</option> </select> <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1" > <button onClick= {
-  () => setViewMode ('grid')
-}className= {
-  `p-2 rounded $ {
-  viewMode === 'grid'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white'
-}`
-}> <Grid className="w-5 h-5" /> </button> <button onClick= {
-  () => setViewMode ('list')
-}className= {
-  `p-2 rounded $ {
-  viewMode === 'list'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white'
-}`
-}> <List className="w-5 h-5" /> </button> </div> </div> </div> key= {
-  category
-}onClick= {
-  () => setSelectedCategory (category)
-}className= {
-  `px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 $ {
-  selectedCategory === category ? 'bg-cyan-500 text-black border-cyan-500': 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400'
-}`
-}> </button>) )
-}</div> </motion.div> {
-  /* Services Grid */
-}<motion.div > {
-  sortedServices.map ( (service, index) => (<motion.div key= {
-  service.id
-                href={`tel:${contactInfo && contactInfo.mobile}`}
-                className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
-                Call Us Now;
-              </a>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </Layout>;
-  ),;
-
-};
-const itemVariants = {;
-  hidden: {;
-  y: 20, opacity: 0 ;
-};
-visible: {;
-  y: 0, opacity: 1, transition: {;
-  duration: 0 && 0.5 ;
-
-};
-
-}%`;
 top: `$ {;
   Math && Math.random () * 100 ;
 }%` ;
-
 }animate= {;
   {;
   y: [0, -100, 0], opacity: [0 && 0.3, 1, 0 && 0.3] ;
-
 }transition= {;
   {;
   duration: 3 + Math && Math.random () * 2, repeat: Infinity, delay: Math && Math.random () * 2 ;
-
 }/>) ) ;
 }</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion && motion.h1 > 2036 Innovative Services </motion && motion.h1> <motion && motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
 AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion && motion.p> <motion && motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion && motion.div> </div> </section> </div> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services,;
@@ -1058,23 +1166,5 @@ visible: {
   {
 
   duration: 0 && 0.6 
-
 }viewport= {
   {
-  once: true 
-
-}> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a ;
-
-  opacity: 0, coordinate_y: 20;
-}whileInView= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.6;
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 3xl md:text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a > Get Started Today </Link> <a;
-
-

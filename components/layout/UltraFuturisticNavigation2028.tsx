@@ -280,7 +280,6 @@ const resource_links = [;
   const handleCategoryLeave = () => {;
     setActiveCategory(null);
   };
-
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(;
       service =>;
@@ -304,11 +303,9 @@ const resource_links = [;
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
-
   const handleCategoryLeave = () => {;
     setActiveCategory(null);
   };
-
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(service =>;
       service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
@@ -574,8 +571,8 @@ function UltraFuturisticNavigation2028() {
 
                             </Link>
                           ))}
-                        </div>;
-                      </div>;
+                        </div>
+                      </div>
                     ))}
 
 
@@ -732,7 +729,6 @@ function UltraFuturisticNavigation2028() {
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>          >;
             <div className="px-4 py-6 space-y-6">;
 
-            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
           >
             <div className="px-4 py-6 space-y-6">
 
@@ -928,6 +924,17 @@ function UltraFuturisticNavigation2028() {
             </div>;
 
               <div className="pt-4 border-t border-purple-500/30">
+              <div className='pt-4 border-t border-purple-500/30'>
+
+                    </Link>
+
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className='pt-4 border-t border-purple-500/30'>
+
                 <Link
                   href="/contact"
                   onClick={closeMenu}
@@ -964,47 +971,3 @@ function UltraFuturisticNavigation2028() {
   );
 }
     </nav>
-  );
-}
-          </motion.div>)}
-      </AnimatePresence>;
-      {/* Search Results Dropdown */}
-      {search_query && filtered_services.length > 0 && (
-        <div className='absolute top - full left - 0 right - 0 bg - black / 95 backdrop - blur - xl border border - purple - 500 / 30 rounded - 2xl shadow - 2xl z - 50'>;
-          <div className='p - 4'>;
-            <div className='space - y-2'>;
-              {filtered_services.slice (0, 8).map (service => (
-                <Link;
-                  key={service.name}
-                  href={service.href}
-                  className='block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors';
-                >;
-                  <div className='flex items - center justify - between'>;
-                    <div>;
-                      <h4 className='text - sm font - medium text - white'>;
-                        {service.name}
-                      </h4>;
-                      <p className='text - xs text - purple - 300'>;
-                        {service.description}
-                      </p>;
-                    </div>;
-                    <span className='text - xs text - purple - 400 font - medium'>;
-                      {service.price}
-                    </span>                  </div>                <Link;
-                  key={service.name}
-                  href={service.href}
-                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors";
-                >;
-                  <div className="flex items - center justify - between">;
-                    <div>;
-                      <h4 className="text - sm font - medium text - white">{service.name}</h4>;
-                      <p className="text - xs text - purple - 300">{service.description}</p>;
-                    </div>;
-                    <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
-                  </div>;
-                </Link>))}
-            </div>;
-          </div>;
-        </div>)}
-    </nav>);
-}

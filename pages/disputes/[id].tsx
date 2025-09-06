@@ -200,161 +200,6 @@ export default function DisputeDetailPage() {;
             <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>
             <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>
           </div>
-
-          <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div className="p-3 border rounded">
-              <div className="font-medium text-gray-500">Project</div>
-              <div className="mt-1">{dispute.projectId}</div>
-
-
-
-            </div>
-            <div className="p-3 border rounded">
-              <div className="font-medium text-gray-500">Client</div>
-              <div className="mt-1">{dispute.clientUserId}</div>
-            </div>
-            <div className="p-3 border rounded">
-              <div className="font-medium text-gray-500">Talent</div>
-              <div className="mt-1">{dispute.talentUserId}</div>
-            </div>
-          </div>
-
-          <div className="border-b mb-4 flex gap-4 text-sm">
-            {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (
-              <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>
-
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-          </div>
-
-          {activeTab === 'Overview' && (
-            <div className="space-y-6">
-              <div className="p-4 border rounded">
-                <div className="font-medium mb-2">Reason</div>
-                <div className="text-sm">{dispute.reason}{dispute.reasonDetails ? ` — ${dispute.reasonDetails}` : ''}</div>
-              </div>
-              <div className="p-4 border rounded">
-                <div className="font-medium mb-2">Description</div>
-                <div className="text-sm whitespace-pre-wrap">{dispute.description}</div>
-              </div>
-              <div className="p-4 border rounded">
-                <div className="font-medium mb-3">Timeline</div>
-                <ol className="relative border-l ml-2">
-                  <li className="mb-6 ml-4">
-                    <div className="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 border border-white" />
-                    <time className="text-xs text-gray-500">Created at {new Date(dispute.createdAt).toLocaleString()}</time>
-                    <div className="text-sm">Case opened</div>
-                  </li>
-                  {dispute.messages.map((m: any) => (
-                    <li key={m.id} className="mb-6 ml-4">
-                      <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-1.5 border border-white" />
-                      <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>
-                      <div className="text-sm">{m.authorRole} messaged</div>
-                    </li>
-                  ))}
-                  {dispute.resolvedAt && (
-
-
-
-
-
-                    <li className="mb-6 ml-4">
-                      <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
-                      <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>
-                      <div className="text-sm">Case resolved</div>
-                    </li>
-
-;
-  return (;
-    <EnhancedLayout>;
-      {!dispute ? (;
-        <div>Loading...</div>;
-      ) : (;
-        <div className="max-w-4xl mx-auto">;
-          <div className="flex items-center justify-between mb-4">;
-            <h1 className="text-2xl font-semibold">Case {dispute.id}</h1>;
-            <span className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}</span>;
-          </div>;
-          <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">;
-            <div className="p-3 border rounded">;
-              <div className="font-medium text-gray-500">Project</div>;
-              <div className="mt-1">{dispute.projectId}</div>;
-            </div>;
-            <div className="p-3 border rounded">;
-              <div className="font-medium text-gray-500">Client</div>;
-              <div className="mt-1">{dispute.clientUserId}</div>;
-            </div>;
-            <div className="p-3 border rounded">;
-              <div className="font-medium text-gray-500">Talent</div>;
-              <div className="mt-1">{dispute.talentUserId}</div>;
-            </div>;
-          </div>;
-          <div className="border-b mb-4 flex gap-4 text-sm">;
-            {(['OverviewMessagesAttachmentsAdmin Notes'] as const).map(t => (;
-              <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}</button>;
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-          {activeTab === 'Overview' && (;
-            <div className="space-y-6">;
-              <div className="p-4 border rounded">;
-                <div className="font-medium mb-2">Reason</div>;
-                <div className="text-sm">{dispute.reason}{dispute.reasonDetails ? ` — ${dispute.reasonDetails}` : ''}</div>;
-              </div>;
-              <div className="p-4 border rounded">;
-                <div className="font-medium mb-2">Description</div>;
-                <div className="text-sm whitespace-pre-wrap">{dispute.description}</div>;
-              </div>;
-              <div className="p-4 border rounded">;
-                <div className="font-medium mb-3">Timeline</div>;
-                <ol className="relative border-l ml-2">;
-                  <li className="mb-6 ml-4">;
-                    <div className="absolute w-3 h-3 bg-blue-600 rounded-full -left-1.5 border border-white" />;
-                    <time className="text-xs text-gray-500">Created at {new Date(dispute.createdAt).toLocaleString()}</time>;
-                    <div className="text-sm">Case opened</div>;
-                  </li>;
-                  {dispute.messages.map((m: any) => (;
-                    <li key={m.id} className="mb-6 ml-4">;
-                      <div className="absolute w-3 h-3 bg-gray-400 rounded-full -left-1.5 border border-white" />;
-                      <time className="text-xs text-gray-500">{new Date(m.createdAt).toLocaleString()}</time>;
-                      <div className="text-sm">{m.authorRole} messaged</div>;
-                    </li>;
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  {dispute.resolvedAt && (;
-                    <li className="mb-6 ml-4">;
-                      <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />;
-                      <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>;
-                      <div className="text-sm">Case resolved</div>;
-                    </li>;
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </ol>;
-              </div>;
-            </div>;
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-          {activeTab === 'Messages' && (
             <div className="space-y-4">
               <div className="max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900">
                 {dispute.messages.length === 0 ? (
@@ -375,6 +220,23 @@ export default function DisputeDetailPage() {;
                   </ul>;
                 )}
 
+              </div>
+              {user.role !== 'guest' && (
+                      <li key={m.id} className="text-sm">
+                        <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
+                        <div className="whitespace-pre-wrap">{m.body}</div>
+                      </li>
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </ul>;
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>
               {user.role !== 'guest' && (
                 <div className="flex gap-2">

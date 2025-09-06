@@ -21,7 +21,6 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
 export default function ApiObservabilityPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;

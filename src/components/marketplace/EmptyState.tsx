@@ -51,8 +51,9 @@ export interface EmptyStateProps {;
     label: string,;
 
     onClick: () => void;
-  };
-  icon?: React && React.ReactNode;
+  },;
+  icon?: React.ReactNode;
+}
 
 
 
@@ -101,7 +102,7 @@ const defaultContent = {
 
       
       {type === 'error' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
@@ -111,7 +112,7 @@ const defaultContent = {
 
 
       {type === 'network' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
+        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           <p>
 
   title?: string;
@@ -219,10 +220,10 @@ export function ProductsEmptyState ({
   is_authenticated = false,
 
 }: {
-  on_retry?: () => void;
-  onAddProduct?: () => void;
-  is_authenticated?: boolean }) {
-  const action = onAddProduct;
+  onRetry?: () => void
+  onAddProduct?: () => void
+  isAuthenticated?: boolean }) {
+  const action = onAddProduct
     ? {
 
 
@@ -281,16 +282,18 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       )}
     </div>;
   );
-
+}
+;
 // Specific empty state variants for quick use;
-export function ProductsEmptyState(): any ({;
+export function ProductsEmptyState({;
   onRetry,;
   onAddProduct,;
-  isAuthenticated = false,;
+  isAuthenticated = false;
 }: {;
-  onRetry?: () => void;
-  onAddProduct?: () => void;
-  isAuthenticated?: boolean;}) {;
+  onRetry?: () => void,;
+  onAddProduct?: () => void,;
+  isAuthenticated?: boolean;
+}) {;
   const action = onAddProduct;
     ? {;
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',;
@@ -316,29 +319,50 @@ export function ProductsEmptyState(): any ({;
 
       />;
   );
+}
 
-export function CategoriesEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="talent"
+      action={onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined}
+    />;
   );
+}
 
-export function TalentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="equipment"
+      action={onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined}
+    />;
   );
+}
 
-export function EquipmentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="search"
+      action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
+    />;
   );
+}
 
-export function SearchEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="network"
+      action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
+    />;
   );
+}
 
-export function NetworkErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function ServerErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
+export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
+  return (
+    <EmptyState
+      type="error"
+      action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
+    />;
   );
 } ;
 

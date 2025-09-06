@@ -102,16 +102,6 @@ class FileWatcher {
         issues.push('React used without import');
       }
 
-
-
-      return issues;
-    } catch (error) {
-      return [`File read error: ${error.message}`];
-    }
-  }
-
-
-
   async quickTypeCheck(filePath) {
     if (!filePath.endsWith('.ts') && !filePath.endsWith('.tsx')) {
       return [];

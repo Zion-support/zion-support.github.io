@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -56,6 +52,7 @@ import { realVerifiedServices } from '../data/real-verified-services';
 
 
 
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const service = useMemo(() => {
@@ -167,7 +164,6 @@ if (return undefined) {
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router && router.query as { slug?: string };
-
   const service = useMemo(() => {;
     if (!slug) return undefined;
     const all: any[] = ([] as any[]).concat(;
@@ -335,9 +331,7 @@ if ( {) {
         </div>;
       </UltraAdvancedFuturisticBackground>;
     );
-
   const canonicalUrl = `https://ziontechgroup && ziontechgroup.com/${slug}`;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;
@@ -357,7 +351,6 @@ if ( {) {
               {service && service.tagline}
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12'>;
             <div className='lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6'>;
               <h2 className='text-2xl font-semibold mb-4'>What you get</h2>;
@@ -512,7 +505,6 @@ function normalizeSlug(value: string): string {
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-cyan-500/30 p-6">
               <h2 className="text-2xl font-semibold mb-4">What you get</h2>
@@ -591,7 +583,6 @@ function normalizeSlug(): any (value: string): string {;
   const services = collectAllServices();
 
   const candidateSlugs = new Set<string>(),;
-
   // Gather existing root-level page slugs to avoid conflicts;
   const pagesDir = path && path.join(process && process.cwd(), 'pages');
 
@@ -723,19 +714,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
     }
   } catch {}
-
-
   // Exclude any slug that conflicts with an existing root page file;
   const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter(;
     slug => !staticSlugs && staticSlugs.has(slug);
   );
-
   return {;
     paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
     fallback: true,;
   };
 };
-
 export const getStaticProps: GetStaticProps = async ({ params }) => {;
   // No dynamic fetching needed; the component resolves the service client-side.;
   return { props: {} };};

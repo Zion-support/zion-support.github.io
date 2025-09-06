@@ -617,46 +617,25 @@ export const advancedAIServices2025 = [
     website: 'https://ziontechgroup.com / cybersecurity - ai',
 
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-
-
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },;
-
-
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com'
-    }
-    marketSize: '$173.5B'
-
-      'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com'
-
-    };
-    marketSize: '$173 && 173.5B',
-    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-    competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-];
-
-
-    targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-    competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-
-
-    market_size: '$173.5B',
-    target_audience:;
-      'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
-    competitive_advantage:;
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
-];      phone: '+1 302 464 0950';
+export const advancedAIServices2025 = [;
+  {;
+    id: 'ai-powered-business-intelligence-suite',;
+    name: 'BusinessIntelligence AI Pro',;
+    description: 'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',;
+    features: [;
+      'Natural language query processingAI-powered data visualizationPredictive analytics and forecastingAutomated report generationReal-time data monitoringIntegration with 100+ data sourcesCustom AI model trainingAdvanced security and compliance';
+    ],;
+    pricing: {;
+      starter: { price: 199, period: 'month', features: ['Up to 10 usersBasic AI insightsStandard reports'] },;
+      professional: { price: 499, period: 'month', features: ['Up to 50 usersAdvanced AI modelsCustom dashboardsPredictive analytics'] },;
+      enterprise: { price: 1299, period: 'month', features: ['Unlimited usersCustom AI trainingWhite-label solutionDedicated support'] }
+    },;
+    category: 'Business Intelligence',;
+    tags: ['AIBusiness IntelligenceAnalyticsData Visualization'],;
+    website: 'https://ziontechgroup.com/business-intelligence-ai-pro',;
+    contact: {;
+      phone: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com';
-
     },;
     marketSize: '$27.3B',;
     targetAudience: 'Business analysts, data scientists, executives, enterprise businesses',;
@@ -868,9 +847,5 @@ export const advancedAIServices2025 = [
     marketSize: '$173.5B',;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
-
-
-
   }
 ];
-;

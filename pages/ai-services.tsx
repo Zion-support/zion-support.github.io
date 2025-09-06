@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -46,6 +42,7 @@ import Head from 'next/head';
 import { useState, useEffect  } from 'react';
 import { ContactInfo  } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
+
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -118,7 +115,6 @@ import ErrorBoundary from '../components/ErrorBoundary';
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
-  
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
@@ -129,8 +125,7 @@ export default function AIServices() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  };
-
+};
   const categories = [
     { id: 'all', name: 'All AI Services', count: 100 },
     { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
@@ -139,8 +134,7 @@ export default function AIServices() {
     { id: 'predictive', name: 'Predictive Analytics', count: 15 },
     { id: 'automation', name: 'AI Automation', count: 15 },
     { id: 'specialized', name: 'Specialized AI', count: 10 }
-  ];
-
+];
   const services = [
     {
       id: 1,
@@ -151,17 +145,17 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
-    };
+};
     {
       id: 2,
       name: 'AI-Powered Financial Trading',
       description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
-    category: 'predictive',
+category: 'predictive',
       features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
       price: 'Custom Pricing',
       popular: true,
       useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
-    };
+};
     {
       id: 3,
       name: 'AI Legal Document Analysis',
@@ -171,17 +165,17 @@ export default function AIServices() {
       price: '$199/month',
       popular: false,
       useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
-    };
+};
     {
       id: 4,
       name: 'AI-Powered Voice Analytics',
       description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
-    category: 'nlp',
+category: 'nlp',
       features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
       price: '$149/month',
       popular: true,
       useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
-    };
+};
     {
       id: 5,
       name: 'AI-Powered Search & Discovery',
@@ -191,17 +185,17 @@ export default function AIServices() {
       price: '$99/month',
       popular: false,
       useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
-    };
+};
     {
       id: 6,
       name: 'Computer Vision Solutions',
       description: 'Advanced image and video analysis for object detection, recognition, and processing.',
-    category: 'computer-vision',
+category: 'computer-vision',
       features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
       price: '$179/month',
       popular: true,
       useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
-    };
+};
     {
       id: 7,
       name: 'Machine Learning Model Training',
@@ -211,17 +205,17 @@ export default function AIServices() {
       price: 'Custom Pricing',
       popular: false,
       useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
-    };
+};
     {
       id: 8,
       name: 'Natural Language Processing',
       description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
-    category: 'nlp',
+category: 'nlp',
       features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
       price: '$129/month',
       popular: true,
       useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
-    };
+};
     {
       id: 9,
       name: 'AI Process Automation',
@@ -231,27 +225,27 @@ export default function AIServices() {
       price: '$159/month',
       popular: false,
       useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
-    };
+};
     {
       id: 10,
       name: 'Predictive Analytics Engine',
       description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
-    category: 'predictive',
+category: 'predictive',
       features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
       price: '$189/month',
       popular: true,
       useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
-    };
+};
     {
       id: 11,
       name: 'AI Content Generation',
       description: 'Intelligent content creation for marketing, documentation, and communication.',
-    category: 'specialized',
+category: 'specialized',
       features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
       price: '$79/month',
       popular: false,
       useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
-    };
+};
     {
       id: 12,
       name: 'AI Chatbot Development',
@@ -262,8 +256,7 @@ export default function AIServices() {
       popular: true,
       useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
     }
-  ];
-
+];
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
@@ -271,13 +264,12 @@ export default function AIServices() {
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+<meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`${contact.site}/ai-services`} />
       </Head>
-      
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
@@ -298,7 +290,6 @@ export default function AIServices() {
               </p>
             </div>
           </section>
-
           {/* Category Filter */}
 
 }
@@ -397,10 +388,22 @@ export default function AIServices() {
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
-                  <div 
-                    key={service.id}
-                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                  <div
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    style={{ transitionDelay: `${index * 100}ms` }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >
                     {service.popular && (
                       <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -549,6 +552,7 @@ export default function AIServices() {
               </div>
             </div>
           </section>
+{/* CTA Section */}
 
 
           {/* CTA Section */  } catch (error) {
@@ -605,7 +609,7 @@ export default function AIServices() {
 
                 >
                   Email Us
-                </a>
+</a>
               </div>
             </div>
           </section>

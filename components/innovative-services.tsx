@@ -42,6 +42,7 @@ import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopula
 
 
 export default function InnovativeServicesPage() {;
+import {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -299,7 +300,6 @@ if ( {) {
       service && service.tagline.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
     );
-
   // Sort services;
   filteredServices && filteredServices.sort((a, b) => {;
     switch (sortBy) {;
@@ -339,7 +339,6 @@ if ( {) {
 
   const popularServices = getPopularInnovativeServices();
   const categories = getInnovativeServiceCategories();
-
   return (
 
 
@@ -354,6 +353,21 @@ if ( {) {
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                 <div className="flex flex-col lg:flex-row gap-6">
                   {/* Search */}
+          {/* Filters and Search */}
+          <section className='px-4 sm:px-6 lg:px-8 mb-12'>
+            <div className='max-w-7xl mx-auto'>
+              <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10'>
+                <div className='flex flex-col lg:flex-row gap-6'>
+                  {/* Search */}
+                  <div className='flex-1'>
+                    <div className='relative'>
+                      <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+                      <input
+                        type='text'
+                        placeholder='Search innovative services...'
+                        value={searchQuery}
+                        onChange={e => setSearchQuery(e.target.value)}
+                        className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                      />                  {/* Search */}
                   <div className="flex-1">
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -453,7 +467,6 @@ if ( {) {
               </div>
             </div>
           </section>
-                      >;
                         <List className="w-5 h-5" />;
           {/* Filters and Search */}
           <section className='px - 4 sm:px - 6 lg:px - 8 mb - 12'>;
@@ -613,19 +626,15 @@ if ( {) {
 
 
                         {/* Description */}
-                        <p className='text-gray-400 text-sm mb-6 leading-relaxed'>;
-                          {service && service.description}
-                        </p>;
-
                         {/* Innovation Level */}
-                        <div className='mb-4'>;
-                          <div className='flex items-center space-x-2 mb-2'>;
-                            <Sparkles className='w-4 h-4 text-yellow-400' />;
-                            <span className='text-sm font-medium text-yellow-400'>;
-                              Innovation Level;
-                            </span>;
-                          </div>;
-                          <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>                            {service && service.innovationLevel}
+                        <div className='mb-4'>
+                          <div className='flex items-center space-x-2 mb-2'>
+                            <Sparkles className='w-4 h-4 text-yellow-400' />
+                            <span className='text-sm font-medium text-yellow-400'>
+                              Innovation Level
+                            </span>
+                          </div>
+                          <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>                            {service.innovationLevel}
                         {/* Description */}
 
                         <div className="grid grid-cols-2 gap-4 mb-6">
@@ -642,7 +651,6 @@ if ( {) {
 
                         </div>
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service && service.description}</p>;
-
                         {/* Innovation Level */}
                         <div className="mb-4">;
                           <div className="flex items-center space-x-2 mb-2">;
@@ -653,7 +661,6 @@ if ( {) {
                             {service && service.innovationLevel}
                           </div>;
                         </div>;
-
                         {/* Price and ROI */}
                         <div className='grid grid-cols-2 gap-4 mb-6'>;
                           <div className='text-center'>;
@@ -672,7 +679,6 @@ if ( {) {
                               average ROI;
                             </div>                          </div>;
                         </div>;
-
                         {/* Key Features */}                        <div className="grid grid-cols-2 gap-4 mb-6">;
                           <div className="text-center">;
                             <div className="text-2xl font-bold text-cyan-400">${service && service.price.monthly && monthly.toLocaleString()}</div>;
@@ -682,7 +688,6 @@ if ( {) {
                             <div className="text-lg font-bold text-green-400">{service && service.roi.split(' ')[0]}</div>;
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
-
                         {/* Key Features */}
 
                         <div className="mb-6">
@@ -717,8 +722,6 @@ if ( {) {
                         </div>
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
-                        <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
-                          <div>
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
@@ -729,7 +732,6 @@ if ( {) {
                         </div>
                           </div>;
                         </div>;
-
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>;
                           <div>;
@@ -744,7 +746,6 @@ if ( {) {
                               {service && service.growthRate}
                             </div>                          </div>;
                         </div>;
-
                         {/* CTA Buttons */}
 
                             className='px-4'>;
@@ -791,7 +792,7 @@ if ( {) {
                     </QuantumHolographicCard>
 
                   ))}
-                </div>;
+</div>;
               )}
 
 
@@ -814,7 +815,6 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             </div>;
           </section>;
-
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
             <div className='max-w-4xl mx-auto text-center'>;
@@ -830,6 +830,23 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
+            </div>
+          </section>
+          {/* Call to Action */}
+          <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <EnhancedFuturisticCard className='p-12'>
+                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+                  Ready to Lead the Future?
+                </h2>
+                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
+                  Join the revolution with our breakthrough micro SAAS services.
+                  Transform your business with quantum AI, autonomous systems
+                  and cutting-edge technology.
+                </p>
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+                  <Button
+                    href={`tel:${contactInfo.mobile}`}
                     variant='primary'
                     className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg'>;
                     <Phone className='w-5 h-5 mr-2' />                    Call Now: {contactInfo && contactInfo.mobile}

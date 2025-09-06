@@ -54,6 +54,15 @@ function CourseCard() {
         </Link>;
       </div>;
     </div>);
+        </Link>
+          <a className=&quot;text-blue-600 hover:underline text-sm&quot;>View course</a>
+        </a>
+
+      </div>
+    </div>
+<<<<<<< HEAD
+  )
+
 }
 
   );

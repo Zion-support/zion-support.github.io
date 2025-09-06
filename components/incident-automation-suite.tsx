@@ -21,7 +21,6 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
 export default function IncidentAutomationSuitePage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>;
       <Head>;

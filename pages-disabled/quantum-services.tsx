@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -43,7 +39,7 @@ import {Atom, Brain, Rocket, Shield, Zap, Target, Cpu, Lock, Cloud, Settings, Ey
 
 
 const QuantumServicesPage: React.FC = () => {
-  const quantum_services = [;
+  const quantumServices = [
     {
 
 
@@ -158,9 +154,9 @@ export default function QuantumServices() {;
       <main className="relative z-10">;
 
         {/* Hero Section */}
-        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">;
-          <div className="text-center max-w-4xl mx-auto">;
-            <motion&& motion.div
+        <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
+          <div className="text-center max-w-4xl mx-auto">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
@@ -189,12 +185,12 @@ export default function QuantumServices() {;
 
 
         {/* Quantum Capabilities */}
-        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">;
-          <div className="max-w-6xl mx-auto">;
-            <motion&& motion.div
+        <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
               className="text-center mb-16">;
@@ -213,17 +209,18 @@ export default function QuantumServices() {;
 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">;
-                  <div className="flex items-center mb-4">;
-                    <div className="p-2 bg-blue-500/20 rounded-lg mr-3">;
-                      {capability && capability.icon}
-                    </div>;
-                    <h3 className="text-xl font-semibold text-white">{capability && capability.title}</h3>;
-                  </div>;
-                  <p className="text-gray-300">{capability && capability.description}</p>;
-                </motion && motion.div>;
+                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="p-2 bg-blue-500/20 rounded-lg mr-3">
+                      {capability.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{capability.title}</h3>
+                  </div>
+                  <p className="text-gray-300">{capability.description}</p>
+                </motion.div>
               ))}
 
             </div>;
@@ -235,12 +232,12 @@ export default function QuantumServices() {;
 
 
         {/* Quantum Services */}
-        <section className="py-20 px-4">;
-          <div className="max-w-6xl mx-auto">;
-            <motion&& motion.div
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
 
               className="text-center mb-16">;
@@ -259,7 +256,7 @@ export default function QuantumServices() {;
 
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
 
@@ -271,13 +268,14 @@ export default function QuantumServices() {;
                       ? 'border-blue-500 shadow-lg shadow-blue-500/25' 
 
                       : 'border-gray-700 hover:border-blue-500'
-                  }`}>;
-                  {service && service.popular && (;
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">;
-                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">;
-                        Most Popular;
-                      </span>;
-                    </div>;
+                  }`}
+                >
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
                   )}
 
       id: 'quantum - neural - networks',
@@ -496,10 +494,10 @@ function QuantumServices() {
                     <div className="inline - flex p - 3 bg - blue - 500 / 20 rounded - full mb - 4">;
 
                       {service.icon}
-                    </div>;
-                    <h3 className="text - 2xl font - bold text - white mb - 2">{service.name}</h3>;
-                    <p className="text - gray - 300 mb - 4">{service.description}</p>;
-                    <div className="text - 3xl font - bold text - blue - 400 mb - 2">;
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <div className="text-3xl font-bold text-blue-400 mb-2">
                       {service.price}
 
 
@@ -521,7 +519,7 @@ function QuantumServices() {
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
 
                         {feature}
-                      </li>;
+                      </li>
                     ))}
 
                   </ul>
@@ -558,9 +556,9 @@ function QuantumServices() {
 
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <motion&& motion.div
+        <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -595,6 +593,8 @@ function QuantumServices() {
 
 export default QuantumServicesPage;
 
+}
+import React from 'react';
                       <span className="text - lg text - gray - 400">/{service.period}</span>;
                     </div>;
                   </div>;
@@ -652,9 +652,3 @@ export default QuantumServicesPage;
 }
 ;
 export default QuantumServicesPage;
-;
-
-  )
-}
-export default QuantumServicesPage;
-

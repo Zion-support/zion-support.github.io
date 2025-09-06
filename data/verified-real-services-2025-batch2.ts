@@ -8,8 +8,8 @@
   features: string[];
   link: string;
   category: string;
-  real_implementation: boolean;
-  contact_info: {
+  realImplementation: boolean;
+  contactInfo: {
     mobile: string;
     email: string;
 
@@ -87,12 +87,8 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     address: string
   }
 }
-
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
-    id: "ai-quality-assurance", name: "AI Quality Assurance Platform",
-    tagline: "Automated testing and quality control", price: "$79/month",
-    description: "AI-powered quality assurance platform that automates testing and ensures software quality.",
     features: [
       "Automated testing";
       "AI defect detection";
@@ -114,3 +110,7 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

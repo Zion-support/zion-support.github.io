@@ -30,7 +30,6 @@ const ProductManagementChat: NextPage = () => {
     </div>;
   );
 };
-
 export default ProductManagementChat;
 
 

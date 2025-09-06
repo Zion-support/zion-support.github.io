@@ -3,12 +3,10 @@ interface CacheItem<T> {
   "data": T;
   timestamp: number;
   ttl: number;'
-
 interface CacheConfig {
   "defaultTTL": number;
   maxSize: number;
   cleanupInterval: number;'
-
 class AdvancedCache<T = any> {
   private cache = new Map<string, CacheItem<T>>();
   private "config": CacheConfig;

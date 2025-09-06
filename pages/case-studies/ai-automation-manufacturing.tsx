@@ -282,12 +282,21 @@ function CaseStudyPage() {
                   <Link;
                     href="/contact";
                     className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
+            <section className="text-center">;
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>;
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">;
+                  This case study demonstrates the real impact of AI automation in manufacturing.;
+                  Let's discuss how we can help you achieve similar results.;
+                </p>;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                  <Link;
+                    href="/contact";
+                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300";
                   >;
                     Get Started;
                   </Link>;
                   <Link;
-                    href="/case - studies";
-                    className="px - 8 py - 4 border border - white / 20 rounded - lg text - white hover:border - cyan - 400 / 50 transition - all duration - 300";
                   >;
                     View More Case Studies;
                   </Link>;
@@ -297,7 +306,3 @@ function CaseStudyPage() {
           </div>;
         </main>;
       </div>;
-    </>);
-}
-
-

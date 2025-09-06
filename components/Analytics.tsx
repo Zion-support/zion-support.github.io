@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -34,7 +30,6 @@ interface AnalyticsProps {
 interface AnalyticsProps {;
   trackingId?: string;
 }
-
 const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {;
   useEffect(() => {;
     // Google Analytics 4;
@@ -44,7 +39,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       script && script.async = true;
       script && script.src = `https://www && www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document && document.head.appendChild(script);
-
       // Initialize gtag;
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
@@ -58,7 +52,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
         page_title: document && document.title,;
         page_location: window && window.location.href,;
       });
-
       // Track page views;
       const trackPageView = () => {;
         gtag('event', 'page_view', {;
@@ -67,32 +60,26 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
           page_path: window && window.location.pathname,;
         });
       };
-
       // Track page view on load;
       trackPageView();
-
       // Track page view on route change (for SPA behavior);
       const handleRouteChange = () => {;
         trackPageView();
       };
-
       // Listen for popstate events (back/forward navigation);
       window && window.addEventListener('popstate', handleRouteChange);
-
       // Cleanup;
       return () => {;
         window && window.removeEventListener('popstate', handleRouteChange);
       };
     }
   }, [trackingId]);
-
   // Track custom events;
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {;
     if (typeof window !== 'undefined' && window && window.gtag) {;
       window && window.gtag('event', eventName, parameters);
     }
   };
-
   // Track button clicks;
   const trackButtonClick = (buttonName: string, location?: string) => {;
     trackEvent('button_click', {;
@@ -100,7 +87,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       location: location || window && window.location.pathname,;
     });
   };
-
   // Track form submissions;
   const trackFormSubmission = (formName: string) => {;
     trackEvent('form_submit', {;
@@ -108,7 +94,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       page_location: window && window.location.href,;
     });
   };
-
   // Track external link clicks;
   const trackExternalLink = (url: string, linkText: string) => {;
     trackEvent('external_link_click', {;
@@ -117,7 +102,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       page_location: window && window.location.href,;
     });
   };
-
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
 
@@ -227,32 +211,6 @@ if ( {) {
 
       <script;
         dangerouslySetInnerHTML={{
-          __html: `;
-            // Performance monitoring;
-            // Check condition
-if ( {) {
-  $2
-}
-              window.addEventListener ('load', function () {
-                set_timeout (function () {
-                  const perf_data = performance.getEntriesByType ('navigation')[0];
-                  // Check condition
-if ( {) {
-  $2
-}
-                    const load_time = perf_data.loadEventEnd - perf_data.loadEventStart;
-                    // Check condition
-if ( {) {
-  $2
-}
-                      window.gtag ('event', 'timing_complete', {
-                        name: 'load',
-                        value: Math.round (load_time),
-
-
-                        name: 'load',
-                        value: Math.round(loadTime),
-
                       });
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
@@ -262,23 +220,3 @@ if ( {) {
                       })
                     }
                   }
-                }, 0)
-              })
-            }
-
-    </Head>);
-}
-;
-
-
-          `,
-
-        }}
-      />
-    </Head>
-  );
-
-};
-
-
-export default Analytics;

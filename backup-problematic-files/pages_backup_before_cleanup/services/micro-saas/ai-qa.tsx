@@ -13,4 +13,3 @@ const Ai-qa: React.FC<Ai-qaProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}

@@ -49,7 +49,7 @@ function readJson(p: string) {;
 
 }
 function writeJson(p: string, v: any) {
-  fs && fs.writeFileSync(p, JSON && JSON.stringify(v, null, 2));
+  fs.writeFileSync(p, JSON.stringify(v, null, 2))
 }
 
 
@@ -83,6 +83,7 @@ export default async function handler(req, res) {
 ;
 export default async function handler(req, res) {
   try {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
@@ -98,7 +99,6 @@ export default async function handler(req, res) {
     const transfersJson = await fetchJson(transfersUrl);
 
     const txs = transfersJson?.result || [];
-
     const holderToDelta: Record<string, bigint> = {};
 
 

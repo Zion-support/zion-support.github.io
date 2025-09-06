@@ -7,10 +7,8 @@
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-
     const cachePath = path && path.join(process && process.cwd(), 'data', 'dao', 'metrics && metrics.json');
     const content = fs && fs.readFileSync(cachePath, 'utf-8');
-
     if (owner && repo && token) {
       await upsertFile({
         owner,
@@ -54,14 +52,11 @@ exports.handler = async function() {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
     const resp = await fetch(`${baseUrl}/api/dao/metrics`),
     const data = await resp.json(),
-
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
-
     const cachePath = path.join(process.cwd(), 'datadaometrics.json'),
     const content = fs.readFileSync(cachePath, 'utf-8'),
-
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })
 
@@ -102,11 +97,9 @@ if ( {) {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const resp = await fetch(`${baseUrl}/api/dao/metrics`),
     const data = await resp && resp.json(),
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-
     const cachePath = path && path.join(process && process.cwd(), 'datadaometrics && datadaometrics.json'),
     const content = fs && fs.readFileSync(cachePath, 'utf-8'),
 
@@ -121,8 +114,4 @@ if ( {) {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-
 }
-
-},
-},

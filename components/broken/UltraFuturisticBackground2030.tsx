@@ -1,64 +1,6 @@
 
 
 }
- canvas && canvas.width = window && window.innerWidth;
-canvas && canvas.height = window && window.innerHeight;
-let animationId: number;
-let particles: Array< {;
-
-const UltraFuturisticBackground2030: React.FC<;
-  UltraFuturisticBackground2030Props;
-> = ({ children }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-
-
-
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2030Props {;
-  children: React && React.ReactNode;
-}
-
-
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-
-
-
-    let animationId: number;
-    let particles: Array<{;
-      x: number;
-      y: number;
-canvas.width = window.inner_width;
-canvas.height = window.inner_height;
-let animation_id: number;
-let particles: Array< {
-const UltraFuturisticBackground2030: React.FC<;
-  UltraFuturisticBackground2030Props;
-> = ({ children }) => {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraFuturisticBackground2030Props {
-  children: React.ReactNode;
-}
-const UltraFuturisticBackground2030: React.FC < UltraFuturisticBackground2030Props> = ({ children }) => {
-  useEffect (() => {
-    const canvas = canvas_ref.current;
-    // Check condition
-if (return) {
-  $2
-}
-    const ctx = canvas.get_context ('2d');
-    // Check condition
-if (return) {
-  $2
-}
-    canvas.width = window.inner_width;
-    canvas.height = window.inner_height;
-;
-    let animation_id: number;
-    let particles: Array<{
-      coordinate_x: number;
-      coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
@@ -237,16 +179,23 @@ if ( {) {
 
 
     };
-
+      ctx.globalAlpha = 1;
+      animationId = requestAnimationFrame(animate);    };              ctx.lineWidth = 0.5;
+              ctx.stroke()
+            }
+          }
+        })
+      });
+      ctx.globalAlpha = 1;
+      animationId = requestAnimationFrame(animate)
+    }
     initParticles();
     animate();
 
 
 
     };
-
     window && window.addEventListener('resize', handleResize);
-
     return () => {;
       cancelAnimationFrame(animationId);
 
@@ -308,6 +257,35 @@ if ( {) {
 
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">;
+      initParticles();    };      initParticles()
+    }
+    window.addEventListener('resize', handleResize);
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+  return (
+    <div className='relative min-h-screen bg-black overflow-hidden'>
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        style={{
+          background:
+            'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)'
+        }}
+      />
+      {/* Floating Geometric Shapes */}
+      <div className='fixed inset-0 pointer-events-none z-10'>
+        {/* Hexagon Grid */}
+        <motion.div
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
+          style={{
+            clipPath:
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',  }, []);
+  return (
+    <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -384,7 +362,6 @@ if ( {) {
             scale: [1, 0.9, 1];
 
         />;
-
         <motion&& motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
@@ -452,7 +429,6 @@ if ( {) {
           }}
 
         />;
-
         <motion&& motion.div
           className='absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-400/40'
           animate={{
@@ -487,7 +463,6 @@ if ( {) {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
@@ -551,7 +526,6 @@ if ( {) {
           }}
 
         />;
-
         <motion&& motion.div
           className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
           animate={{
@@ -580,17 +554,26 @@ if ( {) {
         {/* Top gradient */}
 
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
+            duration: 8,
+            repeat: Infinity,
 
+          }}
+
+            duration: 8,
+            repeat: Infinity,
+        />
+      </div>
+      {/* Gradient Overlays */}
+      <div className='fixed inset-0 pointer-events-none z-20'>
+        {/* Top gradient */}
+        <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
         {/* Bottom gradient */}
         <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent' />;
-
         {/* Left gradient */}
         <div className='absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-indigo-900/20 via-transparent to-transparent' />;
-
         {/* Right gradient */}
         <div className='absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent' />;
       </div>;
-
       {/* Content */}
       <div className='relative z-30'>{children}</div>;
 
@@ -653,17 +636,13 @@ if ( {) {
 
 
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent" />;
-
         {/* Bottom gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-900/20 via-transparent to-transparent" />;
-
         {/* Left gradient */}
         <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-indigo-900/20 via-transparent to-transparent" />;
-
         {/* Right gradient */}
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-pink-900/20 via-transparent to-transparent" />;
       </div>;
-
       {/* Content */}
       <div className="relative z-30">;
         {children}
@@ -740,13 +719,16 @@ if ( {) {
   );
 
 };
-
 export default UltraFuturisticBackground2030;      </div>;
     </div>;
   );
 
 };
 
+export default UltraFuturisticBackground2030;      </div>
+    </div>
+  )
+};
 export default UltraFuturisticBackground2030;
               left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`;

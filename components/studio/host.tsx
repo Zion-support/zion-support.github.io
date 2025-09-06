@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -125,7 +121,6 @@ function StudioHostPage() {
 
     <div className='space-y-8'>;
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>;
-
       <section className='space-y-3'>;
         <h2 className='text-xl font-semibold'>AI Persona</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
@@ -176,7 +171,6 @@ function StudioHostPage() {
 
     <div className="space-y-8">
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>
-
       <section className="space-y-3">
         <h2 className="text-xl font-semibold">AI Persona</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -190,13 +184,11 @@ function StudioHostPage() {
             />          </div>;
         </div>;
       </section>;
-
       <section className='space-y-3'>;
         <h2 className='text-xl font-semibold'>Episode Generator</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>;
         </div>;
       </section>;
-
       <section className='space-y-3'>;
         <h2 className='text-xl font-semibold'>Episode Generator</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
@@ -310,7 +302,6 @@ function StudioHostPage() {
           </div>;
         </div>;
       </section>;
-
           <div>;
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>;
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e && e.target.value)} />;
@@ -332,7 +323,6 @@ function StudioHostPage() {
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>;
       </section>;
-
       {episode && (;
         <section className='space-y-4'>;
           <h2 className='text-xl font-semibold'>Episode Draft</h2>;
@@ -350,13 +340,181 @@ function StudioHostPage() {
               <h4 className="font-semibold">Questions</h4>;
               <ol className="list-decimal list-inside space-y-1">;
                   <li key={idx}>{q}</li>;
+      alert('Failed to generate episode')
+    } finally {
+      setGenerating(false)
+    }
+      alert('Failed to synthesize audio')
+    } finally {
+      setSynthesizing(false)
+    }
+      alert('Failed to update RSS')
+    } finally {
+      setPublishing(false)
+    }
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>AI Persona</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Voice</label>
+            <select
+              className='mt-1 w-full border rounded p-2'
+              value={persona.voice}
+              onChange={e =>
+                setPersona({ ...persona, voice: e.target.value as any })
+              }
+            >
+              <option value='Visionary'>Visionary</option>
+              <option value='Grounded'>Grounded</option>
+              <option value='Technical'>Technical</option>
+            </select>
+          </div>
+          <div>
+            <label className='block text-sm font-medium'>Language</label>
+            <input
+              className='mt-1 w-full border rounded p-2'
+              value={persona.language}
+              onChange={e =>
+                setPersona({ ...persona, language: e.target.value })
+              }
+            />
+          </div>
+          <div>
+            <label className='block text-sm font-medium'>
+              Clone Style (optional)
+            </label>
+            <textarea
+              className='mt-1 w-full border rounded p-2'
+              rows={3}
+              placeholder='Paste representative writing or notes to clone tone'
+              value={persona.cloneStyleText |''}
+              onChange={e =>
+                setPersona({ ...persona, cloneStyleText: e.target.value })
+              }
+            />          </div>
+        </div>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>
+        </div>
+      </section>
+      <section className='space-y-3'>
+        <h2 className='text-xl font-semibold'>Episode Generator</h2>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+          <div>
+            <label className='block text-sm font-medium'>Invitee Name</label>
+            <input
+              className='mt-1 w-full border rounded p-2'
+              value={inviteeName}
+              onChange={e => setInviteeName(e.target.value)}
+            />
+          </div>
+          <div className='md:col-span-2'>
+            <label className='block text-sm font-medium'>Invitee Bio</label>
+            <textarea
+              className='mt-1 w-full border rounded p-2'
+              rows={3}
+              value={inviteeBio}
+              onChange={e => setInviteeBio(e.target.value)}
+            />
+          </div>
+          <div className='md:col-span-3'>
+            <label className='block text-sm font-medium'>Topic</label>
+            <input
+              className='mt-1 w-full border rounded p-2'
+              value={topic}
+              onChange={e => setTopic(e.target.value)}
+            />
+          </div>
+          <div className='md:col-span-3'>
+            <label className='block text-sm font-medium'>Operator Prompt</label>
+            <textarea
+              className='mt-1 w-full border rounded p-2'
+              rows={3}
+              value={operatorPrompt}
+              onChange={e => setOperatorPrompt(e.target.value)}
+            />
+          </div>
+        </div>
+        <button
+          className='px-4 py-2 bg-blue-600 text-white rounded'
+          onClick={handleGenerate}
+          disabled={generating}
+        >          {generating ? 'Generating…' : 'Generate Episode'}
+      <section className="space-y-3">
+        <h2 className="text-xl font-semibold">AI Persona</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>
+            <select
+              className="mt-1 w-full border rounded p-2"
+              value={persona.voice}
+              onChange={(e) => setPersona({ ...persona, voice: e.target.value as any })}
+            >
+              <option value="Visionary">Visionary</option>
+              <option value="Grounded">Grounded</option>
+              <option value="Technical">Technical</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
+            <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
+          </div>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
+
+    }
+  };
+
+  return (
+
+          </div>
+        </div>
+      </section>
+          <div>
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
+            <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
+          </div>
+          <div className="md:col-span-2">
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>
+            <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
+          </div>
+          <div className="md:col-span-3">
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>
+            <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
+          </div>
+        </div>
+        <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
+          {generating ? 'Generating…' : 'Generate Episode'}
+        </button>
+      </section>
+      {episode && (
+        <section className='space-y-4'>
+          <h2 className='text-xl font-semibold'>Episode Draft</h2>
+          <div className='border rounded p-4 space-y-3'>
+            <p className='text-sm text-gray-600'>ID: {episode.id}</p>
+            <h3 className='text-lg font-bold'>{episode.title}</h3>
+            <div>
+              <h4 className='font-semibold'>Questions</h4>
+              <ol className='list-decimal list-inside space-y-1'>                {episode.questions?.map((q: string, idx: number) => (        <section className="space-y-4">
+          <h2 className="text-xl font-semibold">Episode Draft</h2>
+          <div className="border rounded p-4 space-y-3">
+            <p className="text-sm text-gray-600">ID: {episode.id}</p>
+            <h3 className="text-lg font-bold">{episode.title}</h3>
+            <div>
+              <h4 className="font-semibold">Questions</h4>
+              <ol className="list-decimal list-inside space-y-1">
+                  <li key={idx}>{q}</li>
+
                 ))}
 
               </ol>
-            </div>
-            <div>
-              <h4 className="font-semibold">Best Quote</h4>
-              <p>{episode.bestQuote}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
               <div>
@@ -570,6 +728,7 @@ function StudioHostPage() {
 }
 
               <div className='flex gap - 3'>;
+              <div className='flex gap-3'>
                 {episode.audio.mp3Url && (
                   <a;
                     href={episode.audio.mp3Url}
@@ -587,30 +746,3 @@ function StudioHostPage() {
                 {episode.audio.mp4Url && (
                   <a;
                     href={episode.audio.mp4Url}
-                    className='text - blue - 600 underline';
-                  >;
-                    Download MP4;
-                  </a>)}              </div>              <div className="flex gap - 3">;
-                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text - blue - 600 underline">Download MP3</a>}
-                {episode.audio.wav_url && <a href={episode.audio.wav_url} className="text - blue - 600 underline">Download WAV</a>}
-                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text - blue - 600 underline">Download MP4</a>}
-            )}
-          </div>;
-        </section>)}
-    </div>);
-}
-                disabled={publishing}
-              >                {publishing ? 'Publishing…' : 'Update RSS'}
-              </button>
-            </div>
-
-;
-
-            {episode.audio && (
-
-                {publishing ? 'Publishing…' : 'Update RSS'}
-              </button>
-            </div>
-            {episode.audio && (
-
-

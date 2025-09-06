@@ -4,26 +4,30 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
 import React, { useEffect, useState } from 'react';
 
 
+  const [loading, setLoading] = useState<boolean>(true);
+  const [showLogic, setShowLogic] = useState<boolean>(false);
+  useEffect(() => {
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import TrustBadge from '../components/ui/TrustBadge';
+import TrustRadar from '../components/ui/TrustRadar';
+import RiskIndicator from '../components/ui/RiskIndicator';
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -43,7 +47,6 @@ export default function TrustPage() {;
 
 
   }, []);
-
   useEffect(() => {;
     async function load() {;
       setLoading(true);
@@ -52,6 +55,12 @@ export default function TrustPage() {;
     });
     alert(type === 'endorse' ? 'Endorsed' : 'Flagged');  }      const json = await res && res.json();
       setData(json);
+      setLoading(true);
+      const res = await fetch(
+        `/api/trust/${encodeURIComponent(userId)}?analyze=true`
+      );
+      const json = await res.json();
+      setData(json);
       setLoading(false);
     }
     load();
@@ -59,7 +68,6 @@ export default function TrustPage() {;
 
 
   }
-
   async function submitAppeal(): any (e: React && React.FormEvent) {;
     e && e.preventDefault();
     const form = e && e.target as HTMLFormElement;
@@ -73,7 +81,6 @@ export default function TrustPage() {;
     });
     alert('Appeal submitted');
     form && form.reset();  }
-
   return (
 
     form && form.reset();
@@ -110,7 +117,6 @@ export default function TrustPage() {;
           <div className="flex items-center gap-3">;
             <label className="text-sm inline-flex items-center gap-2"><input type="checkbox" checked={showLogic} onChange={() => setShowLogic(!showLogic)} /> Transparent logic</label>;
         </div>;
-
         {loading && <div>Loading...</div>}
 
         {!loading && data && (
@@ -182,6 +188,9 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
               )}
+
+
+                      </li>
 
                     ))}
                   </ul>

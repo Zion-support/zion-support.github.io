@@ -13,4 +13,3 @@ const Devops-autopilot: React.FC<Devops-autopilotProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}

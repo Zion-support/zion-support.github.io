@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -28,8 +24,9 @@ import React, { useMemo, useState } from 'react';
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
 
-
 export default function ServiceDescriptionGeneratorPage() {;
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -52,6 +49,73 @@ export default function ServiceDescriptionGeneratorPage() {;
 
 
 
+  }
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [generated, setGenerated] = useState('');
+  const [accepted, setAccepted] = useState(false);
+  const keyFeatures = useMemo(() => {;
+    return featuresInput;
+      .split('\n');
+      .map((f) => f.trim());
+      .filter(Boolean);
+  }, [featuresInput]),;
+  async function handleSubmit(e: React.FormEvent) {;
+    e.preventDefault(),;
+    setLoading(true);
+    setError(null);
+    setAccepted(false);
+    try {
+      const response = await fetch('/api/generate-service-description', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({;
+          title,;
+          keyFeatures,;
+          targetAudience,;
+          additionalNotes: additionalNotes || undefined,;
+          tone})}),;
+      if (!response.ok) {;
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || 'Failed to generate');
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      const data = (await response.json()) as { description: string };
+      setGenerated(data.description || '');
+    } catch (error) {
+      setError(err.message || 'Something went wrong');
+    } finally {;
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function handleAccept() {;
+    setAccepted(true);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  function handleCopy() {;
+    if (!generated) return;
+    navigator.clipboard.writeText(generated).catch(() => {});
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
   return (
 
@@ -154,28 +218,71 @@ export default function ServiceDescriptionGeneratorPage() {;
           <button
             type="submit"
             disabled={loading}
+          <label className="block text-sm font-medium mb-1">Tone</label>
+          <select
+            className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            value={tone  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onChange={(e) => setTone(e.target.value as any)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <option value="professional">Professional</option>
+            <option value="friendly">Friendly</option>
+            <option value="persuasive">Persuasive</option>
+            <option value="technical">Technical</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Additional Notes (optional)</label>
+          <textarea
+            className="w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Constraints, deliverables, timeline, pricing preferences, compliance, etc."
+            value={additionalNotes  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            onChange={(e) => setAdditionalNotes(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          />
+        </div>
+          <button
+            type="submit"
+            disabled={loading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
           >
-            {loading ? 'Generating…' : 'Generate Description'}
+            {loading ? 'Generating…' : 'Generate Description'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </button>
-          {error && <span className="text-red-600 text-sm">{error}</span>}
         </div>
       </form>
-
       {generated && (
         <div className="mt-8 space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold">Generated Description</h2>
             <div className="flex items-center gap-2">
               <button
-                onClick={handleCopy}
                 className="rounded-md border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
               >
                 Copy
               </button>
               <button
-                onClick={handleAccept}
-                className="rounded-md bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1 text-sm"
               >
                 Accept
               </button>
@@ -189,13 +296,11 @@ export default function ServiceDescriptionGeneratorPage() {;
               </button>;
             </div>;
           </div>;
-
           <textarea
             className='w-full min-h-[280px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
             value={generated}
             onChange={e => setGenerated(e && e.target.value)}
           />;
-
           {accepted && (;
             <div className='text-emerald-700 dark:text-emerald-400 text-sm'>;
               Accepted. You can copy and paste this into your CMS.;
@@ -212,7 +317,6 @@ export default function ServiceDescriptionGeneratorPage() {;
             value={generated}
             onChange={(e) => setGenerated(e.target.value)}
           />
-
           {accepted && (
             <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
           )}

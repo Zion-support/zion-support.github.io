@@ -219,6 +219,35 @@ if ( {) {
     return () => container.removeEventListener ("keydown", handleKeyDown);
   }, [enabled]),
   return container_ref;
+export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {;
+    if (!enabled |!containerRef.current) return;
+    const container = containerRef.current;
+    const focusableElements = container.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+;
+// Focus trap for modals and dialogs;
+export function useFocusTrap(enabled: boolean = true) {;
+  const containerRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (!enabled || !containerRef.current) return,;
+    const container = containerRef.current,;
+    const focusableElements = container.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    ),;
+    const firstElement = focusableElements[0] as HTMLElement,;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
+    const handleKeyDown = (e: KeyboardEvent) => {;
+      if (e.key === "Tab") {;
+        if (e.shiftKey) {;
+          if (document.activeElement === firstElement) {;
+            firstElement.focus();
+          }
+        }
+      }
 }
 // Keyboard navigation hook;
 export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
@@ -270,22 +299,17 @@ if ( {) {
       }, 1000),
       return () => clear_timeout (timer);
     }
-  }, [message]),
-  return (
-    <div aria - live={priority} aria - atomic="true" className="sr - only">;
-      {announcements.map ((announcement, index) => (
-        <div key={index}>{announcement}</div>))}
-    </div>);
+  return (;
+    <div aria-live={priority} aria-atomic="true" className="sr-only">;
+      {announcements.map((announcement, index) => (;
+        <div key={index}>{announcement}</div>;
+      ))}
+    </div>;
+  );
 }
-// Progress indicator component;
-export /**
- * ProgressIndicator - Function description
- */
-function ProgressIndicator() {
-  const percentage = Math.round ((value / max) * 100),
-  return (
-    <div className="space - y-2">;
-      <div className="flex justify - between text - sm">;
+  return (;
+    <div className="space-y-2">;
+      <div className="flex justify-between text-sm">;
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -329,6 +353,8 @@ function CollapsibleSection() {
   const content_ref = useRef < HTMLDivElement>(null),
   return (
     <div className="border border-[var (--border)] rounded - lg">;
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -397,8 +423,8 @@ function Tooltip() {
     left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
     right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
   }
-  return (
-    <div className="relative inline - block">;
+  return (;
+    <div className="relative inline-block">;
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

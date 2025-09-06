@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -93,6 +95,9 @@ console.log('=====')
           "replacement"
         {"pattern": /content="([^"]*)"\s*\/>/g,"replacement": 'content="$1"}
           "replacement": 'const Layout = dynamic(() => import("../components/Layout"), { "ssr"}
+<<<<<<< HEAD
+          "pattern"
+=======
 <<<<<<< HEAD
           "pattern"
 =======

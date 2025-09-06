@@ -16,7 +16,6 @@ export function currentBadge(balance: number): Badge | null {;
   let current: Badge | null = null;
 threshold: number, //token balance threshold ;
 };
-
 const BADGES: Badge[] = [;
   { id: 'starter', label: 'Starter', threshold: 50 },;
   { id: 'rising', label: 'Rising Star', threshold: 200 },;
@@ -25,12 +24,12 @@ const BADGES: Badge[] = [;
 ];
 
 import React from "react";
+
 export type Badge = {
   id: string,
   label: string,
   threshold: number, // token balance threshold
 };
-
 const BADGES: Badge[] = [
   { id: "starter", label: "Starter", threshold: 50 },
   { id: "rising", label: "Rising Star", threshold: 200 },
@@ -38,6 +37,7 @@ const BADGES: Badge[] = [
   { id: "elite", label: "Elite", threshold: 1000 }],
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null,
+
 import React from 'react';
 ;
   id: string;
@@ -51,16 +51,9 @@ const BADGES: Badge[] = [;
   { id: 'pro', label: 'Pro', threshold: 500 },
   { id: 'elite', label: 'Elite', threshold: 1000 },
 ];
-;
-export function current_badge (balance: number): Badge | null {
   let current: Badge | null = null;
 ;
   return current;
-export default /**
- * Badges - Function description
- */
-function Badges() {
-  const active = current_badge (balance);
   return (
     <div className='flex gap - 2 items - center flex - wrap'>;
       {BADGES.map (boolean => (        <span;

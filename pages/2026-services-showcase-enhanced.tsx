@@ -208,9 +208,61 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     if (serviceVariant.includes('api')) return 'quantum-advanced';
     if (serviceVariant.includes('integration')) return 'quantum-advanced';
     if (serviceVariant.includes('analytics')) return 'neural';
+import React, { useState, useMemo } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
+import Button from '../components/ui/Button',;
+import Card from '../components/ui/Card',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
+export default function Services2026ShowcaseEnhancedPage() {
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+
+  // Map service variants to supported card variants
+  const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
+    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced',
+    if (serviceVariant.includes('quantum')) return 'quantum',
+    if (serviceVariant.includes('ai')) return 'ai-futuristic',
+    if (serviceVariant.includes('holographic')) return 'holographic',
+    if (serviceVariant.includes('neural')) return 'neural',
+    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk',
+    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('cloud')) return 'quantum-advanced',
+    if (serviceVariant.includes('security')) return 'cyberpunk',
+    if (serviceVariant.includes('data')) return 'neural',
+    if (serviceVariant.includes('mobility')) return 'holographic',
+    if (serviceVariant.includes('network')) return 'quantum-advanced',
+    if (serviceVariant.includes('backup')) return 'quantum-advanced',
+    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('monitoring')) return 'neural',
+    if (serviceVariant.includes('blockchain')) return 'quantum-advanced',
+    if (serviceVariant.includes('metaverse')) return 'holographic',
+    if (serviceVariant.includes('iot')) return 'quantum-iot',
+    if (serviceVariant.includes('edge')) return 'quantum-advanced',
+    if (serviceVariant.includes('ar')) return 'holographic',
+    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced',
+    if (serviceVariant.includes('5g')) return 'quantum-advanced',
+    if (serviceVariant.includes('biometric')) return 'cyberpunk',
+    if (serviceVariant.includes('autonomous')) return 'ai-futuristic',
+    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced',
+    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic',
+    if (serviceVariant.includes('api')) return 'quantum-advanced',
+    if (serviceVariant.includes('integration')) return 'quantum-advanced',
+    if (serviceVariant.includes('analytics')) return 'neural',
     return 'default'
   };
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -227,6 +279,17 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     ...emergingTech2026ServicesV3;
     ...enterpriseIT2026ServicesV3
   ];
+  },
+
+  // Combine all 2026 services including new ones
+  const all2026Services = [
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...innovative2026AIServicesV3,
+    ...emergingTech2026ServicesV3,
+    ...enterpriseIT2026ServicesV3
+  ],
 
   // Enhanced categories for 2026
   const categories = [
@@ -238,8 +301,7 @@ import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
-  ];
-
+];
   const priceRanges = [
 
       }
@@ -457,8 +519,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
-  };
-
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">
@@ -891,185 +951,63 @@ if (return price >= 20000, ) {
                   <label className="block text - sm font - medium text - gray - 300 mb - 2">Price Range</label>;
                   <select;
                     value={selectedPriceRange}
-                    on_change={(e) => setSelectedPriceRange (e.target.value)}
-                    className="w - full bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - lg px - 3 py - 2 text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500";
-                  >;
-                    {price_ranges.map ((range) => (
-                      <option key={range.id} value={range.id}>;
-
-                        {range.name}
-
-                      </option>))}
-                  </select>;
-                </div>;
-
-                {/* Sort Options */}
-
-
-                        {range.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </option>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </select>;
-                </div>;
-                {/* Sort Options */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
-                  <select
-                    value={sortBy  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    onChange={(e) => setSortBy(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+                    className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  >
+                    {priceRanges.map((range) => (
+                      <option key={range.id} value={range.id}>
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
-
-                <div>;
-                  <label className="block text - sm font - medium text - gray - 300 mb - 2">Sort By</label>;
-                  <select;
-                    value={sort_by}
-                    on_change={(e) => setSortBy (e.target.value)}
-                    className="w - full bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - lg px - 3 py - 2 text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500";
-                  >;
-                    {sort_options.map ((option) => (
-                      <option key={option.id} value={option.id}>;
-
-                        {option.name}
-
-                      </option>))}
-                  </select>;
-                </div>;
-
-                {/* View Mode Toggle */}
-
-
-                        {option.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </option>;
-                    ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  </select>;
-                </div>;
-                {/* View Mode Toggle */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
                     <button
-                      onClick={() => setViewMode('grid')}
-                      className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
+                      onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${;
+                        viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white';
+                      }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     >
                       <Grid className="w-4 h-4 mx-auto" />
                     </button>
                     <button
-                      onClick={() => setViewMode('list')}
-                      className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
-                <div>;
-                  <label className="block text - sm font - medium text - gray - 300 mb - 2">View Mode</label>;
-                  <div className="flex bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - lg p - 1">;
-                    <button;
-                      on_click={() => setViewMode ('grid')}
-                      className={`flex - 1 py - 2 px - 3 rounded - md text - sm font - medium transition - colors ${
-                        view_mode === 'grid' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
-                      }`}
-                    >;
-                      <Grid className="w - 4 h - 4 mx - auto" />;
-                    </button>;
-                    <button;
-                      on_click={() => setViewMode ('list')}
-                      className={`flex - 1 py - 2 px - 3 rounded - md text - sm font - medium transition - colors ${
-                        view_mode === 'list' ? 'bg - cyan - 600 text - white' : 'text - gray - 400 hover:text - white';
-                      }`}
-
-
-              {/* Results Count */  } catch (error) {
+                      onClick={() => setViewMode('list')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-              <div className="text-center">
-                <p className="text-gray-400">
-                  Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '  } catch (error) {
+                      className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${;
+                        viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white';
+                      }`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
+                    >
+                      <List className="w-4 h-4 mx-auto" />
+                    </button>
+                  </div>
+                </div>
+              </div>
                   <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
                 </p>
               </div>
             </div>
           </div>
         </section>
-
-
-        {/* Enhanced Services Grid */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
-
-
-                  initial={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  animate={{ opacity: 1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  exit={{ opacity: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4">🔍</div>
@@ -1080,46 +1018,6 @@ if (return price >= 20000, ) {
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
                   {filteredServices.map((service, index) => (
                     <motion.div
-
-                    >;
-                      <List className="w - 4 h - 4 mx - auto" />;
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;
-              {/* Results Count */}
-              <div className="text - center">;
-                <p className="text - gray - 400">;
-                  Showing <span className="text - cyan - 400 font - semibold">{filtered_services.length}</span> of{' '}
-                  <span className="text - cyan - 400 font - semibold">{all2026Services.length}</span> services;
-                </p>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-
-        {/* Enhanced Services Grid */}
-        <section className="py - 16 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto">;
-            <AnimatePresence mode="wait">;
-              {filtered_services.length === 0 ? (
-                <motion.div;
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text - center py - 20";
-                >;
-                  <div className="text - 6xl mb - 4">🔍</div>;
-                  <h3 className="text - 2xl font - semibold text - gray - 300 mb - 2">No services found</h3>;
-                  <p className="text - gray - 400">Try adjusting your search criteria or filters</p>;
-                </motion.div>) : (
-                <div className={view_mode === 'grid' ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6' : 'space - y-4'}>;
-                  {filtered_services.map ((service, index) => (
-                    <motion.div;
-                      key={service.id}
-                      initial={{ opacity: 0, coordinate_y: 20 }}
-                      animate={{ opacity: 1, coordinate_y: 0 }}
-                      exit={{ opacity: 0, coordinate_y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
 
 
@@ -1181,335 +1079,3 @@ if (return price >= 20000, ) {
                       >;
                         <div className="p - 6">;
                           {/* Service Header */}
-                          <div className="flex items - start justify - between mb - 4">;
-                            <div className="text - 4xl">{service.icon}</div>;
-                            {service.popular && (
-
-                              <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full font - medium">;
-                                Popular;
-                              </div>)}
-                          </div>;
-                          {/* Service Title and Tagline */}
-                          <h3 className="text - xl font - bold text - white mb - 2">{service.name}</h3>;
-                          <p className="text - gray - 300 text - sm mb - 4">{service.tagline}</p>;
-                          {/* Price */}
-                          <div className="mb - 4">;
-                            <span className="text - 3xl font - bold text - cyan - 400">{service.price}</span>;
-                            <span className="text - gray - 400">{service.period}</span>;
-                          </div>;
-                          {/* Description */}
-                          <p className="text - gray - 300 text - sm mb - 4 line - clamp - 3">{service.description}</p>;
-
-                          {/* Key Features */}
-                          <div className="mb - 4">;
-                            <h4 className="text - sm font - semibold text - gray - 200 mb - 2">Key Features:</h4>;
-                            <ul className="space - y-1">;
-                              {service.features.slice (0, 3).map ((feature, idx) => (
-                                <li key={idx} className="flex items - center text - xs text - gray - 400">;
-                                  <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
-                                  {feature}
-                                </li>))}
-                            </ul>;
-                            {service.features.length > 3 && (
-
-
-                          {/* Description */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
-                          {/* Key Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                          <div className="mb-4">
-                            <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
-                            <ul className="space-y-1">
-                              {service.features.slice(0, 3).map((feature, idx) => (
-                                <li key={idx} className="flex items-center text-xs text-gray-400">
-                                  <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-
-                                  {feature  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                                </li>;
-                              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                            </ul>
-                            {service.features.length > 3 && (
-                              <p className="text-xs text-gray-500 mt-1">+{service.features.length - 3} more features</p>
-                            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </div>;
-                          {/* Service Stats */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-                          <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
-                            <div className="text-center">
-                              <div className="text-cyan-400 font-semibold">{service.rating}★</div>
-                              <div className="text-gray-400">{service.reviews} reviews</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-purple-400 font-semibold">{service.customers}</div>
-                              <div className="text-gray-400">customers</div>
-                            </div>
-                            <div className="text-center">
-                              <div className="text-green-400 font-semibold">{service.trialDays}d</div>
-                              <div className="text-gray-400">trial</div>
-                            </div>
-                          </div>
-
-
-                          {/* Market Position */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                          <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
-                            <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
-                            <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
-                          </div>
-
-
-                          {/* ROI */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                          <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
-                            <h4 className="text-xs font-semibold text-green-400 mb-1">ROI Promise:</h4>
-                            <p className="text-xs text-green-300">{service.roi}</p>
-                          </div>
-
-
-                          {/* Action Buttons */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                          <div className="flex space-x-2">
-                            <Button
-                              variant="primary"
-                              size="sm"
-                              className="flex-1"
-
-
-                              onClick={() => window.open(service.link, '_blank')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                            >
-                              Learn More
-                              <ArrowRight className="w-4 h-4 ml-1" />
-                            </Button>
-                            <Button
-                              variant="secondary"
-                              size="sm"
-
-                              <p className="text - xs text - gray - 500 mt - 1">+{service.features.length - 3} more features</p>)}
-                          </div>;
-                          {/* Service Stats */}
-                          <div className="grid grid - cols - 3 gap - 2 mb - 4 text - xs">;
-                            <div className="text - center">;
-                              <div className="text - cyan - 400 font - semibold">{service.rating}★</div>;
-                              <div className="text - gray - 400">{service.reviews} reviews</div>;
-                            </div>;
-                            <div className="text - center">;
-                              <div className="text - purple - 400 font - semibold">{service.customers}</div>;
-                              <div className="text - gray - 400">customers</div>;
-                            </div>;
-                            <div className="text - center">;
-                              <div className="text - green - 400 font - semibold">{service.trial_days}d</div>;
-                              <div className="text - gray - 400">trial</div>;
-                            </div>;
-                          </div>;
-                          {/* Market Position */}
-                          <div className="mb - 4 p - 3 bg - gray - 800 / 30 rounded - lg">;
-                            <h4 className="text - xs font - semibold text - gray - 200 mb - 1">Market Position:</h4>;
-                            <p className="text - xs text - gray - 400 line - clamp - 2">{service.market_position}</p>;
-                          </div>;
-                          {/* ROI */}
-                          <div className="mb - 4 p - 3 bg - green - 900 / 20 border border - green - 500 / 30 rounded - lg">;
-                            <h4 className="text - xs font - semibold text - green - 400 mb - 1">ROI Promise:</h4>;
-                            <p className="text - xs text - green - 300">{service.roi}</p>;
-                          </div>;
-                          {/* Action Buttons */}
-                          <div className="flex space - x-2">;
-                            <Button;
-                              variant="primary";
-                              size="sm";
-                              className="flex - 1";
-                              on_click={() => window.open (service.link, '_blank')}
-                            >;
-                              Learn More;
-                              <ArrowRight className="w - 4 h - 4 ml - 1" />;
-                            </Button>;
-                            <Button;
-                              variant="secondary";
-                              size="sm";
-                              on_click={() => window.open (`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`)}
-
-                              onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-                            >;
-                              Contact;
-                            </Button>;
-                          </div>;
-                        </div>;
-                      </UltraFuturisticCard>;
-                    </motion.div>))}
-                </div>)}
-            </AnimatePresence>;
-          </div>;
-        </section>;
-
-        {/* Enhanced Footer CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="primary"
-                  size="lg"
-
-
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Schedule Consultation
-                </Button>
-                <Button
-                  variant="secondary"
-                  size="lg"
-
-
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </Button>
-              </div>
-              <div className="mt-8 text-sm text-gray-400">
-                <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
-                <p>{contactInfo.address}</p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </UltraFuturisticBackground>
-
-}
-
-              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
-                >;
-                  <Mail className="w - 5 h - 5 mr - 2" />;
-                  Schedule Consultation;
-                </Button>;
-                <Button;
-                  variant="secondary";
-                  size="lg";
-                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-                </Button>;
-              </div>;
-              <div className="mt - 8 text - sm text - gray - 400">;
-                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
-                <p>{contact_info.address}</p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraFuturisticBackground>);
-}
-
-

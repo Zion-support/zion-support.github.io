@@ -339,8 +339,14 @@ function ResourcesPage() {
 
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
-                  <FileText className="w-8 h-8 text-white" />
+                <div className="bg-gradient-to-br from-blue-500 to-cyan-500 p-8">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="inline-block bg-white/20 px-3 py-1 rounded-full text-sm text-white">
+                    </span>
+                    <span className="text-white/80 text-sm">{paper.pages} pages</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3 leading-tight">{paper.title}</h3>
+                  <p className="text-blue-100 leading-relaxed">{paper.description}</p>
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
 
@@ -552,124 +558,26 @@ function ResourcesPage() {
                     Watch Video
                   </a>
                 </div>
-              </motion.div>
-
-                  </span>;
+                <a
+                  href={study.readUrl}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  </ul>;
                 </div>;
-                <div className="p - 6">;
-                  <h3 className="text - lg font - bold text - white mb - 3 leading - tight">{video.title}</h3>;
-                  <p className="text - white / 70 text - sm leading - relaxed mb - 4">{video.description}</p>;
-                  <div className="flex items - center justify - between mb - 4">;
-                    <span className="text - white / 60 text - sm">{video.duration}</span>;
-                  </div>;
-                  <a;
-                    href={video.watch_url}
-                    className="block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105";
-                  >;
-                    Watch Video;
-                  </a>;
-                </div>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-
-      {/* Documentation */}
-      <section className="py - 20 bg - white">;
-        <div className="max - w-7xl mx - auto px - 6">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-
-
-            ))  } catch (error) {
+                <a;
+                  href={study.readUrl  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-          </div>;
-        </div>;
-      </section>;
-      {/* Documentation */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.6 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Documentation</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Technical documentation, implementation guides, and best practices for our solutions.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {documentation.map((doc, index) => (
-              <motion.div
-
-            className="text - center mb - 16";
-          >;
-            <h2 className="text - 4xl font - bold text - slate - 900 mb - 6">Documentation</h2>;
-            <p className="text - xl text - slate - 600 max - w-3xl mx - auto">;
-              Technical documentation, implementation guides, and best practices for our solutions.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            {documentation.map ((doc, index) => (
-              <motion.div;
-
-                key={doc.title}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-
-                key={doc.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-6">
-                  <BookOpen className="w-8 h-8 text-white" />
+                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200"
+                >
+                  <span>Read Case Study</span>
+                  <ArrowRight className="w-4 h-4" />
+                  </span>
                 </div>
                 <span className="inline-block bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full mb-4">
 
@@ -847,6 +755,22 @@ function ResourcesPage() {
       </section>;
       <EnhancedFooter />;
     </>);
+              <a
+                href=&quot;/contact&quot;
+                className=&quot;bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105&quot;
+              >
+                Contact Our Experts
+              </Link>
+              <a
+                href=&quot;/contact&quot;
+                className=&quot;border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200&quot;
+              >
+                Request Custom Research
+              </Link>
+                key={doc.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 

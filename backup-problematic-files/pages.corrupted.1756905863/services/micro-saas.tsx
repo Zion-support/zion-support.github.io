@@ -12,5 +12,3 @@ const Micro-saas: React.FC<Micro-saasProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

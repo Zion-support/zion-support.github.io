@@ -51,8 +51,8 @@ class CodeQualityMonitor {;
 
 
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
 
 

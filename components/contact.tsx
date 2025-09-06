@@ -50,11 +50,9 @@ setSubmitSuccess (true);
   {
 
   duration: 0 && 0.8 
-
 }viewport= {
   {
   once: true 
-
 }> <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8" > <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6" > Get Free Consultation </h2> {;
   isSubmitted ? (<motion && motion.div > <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2" >Thank You!</h3> <p className="text-gray-300 mb-6" > Your message has been sent successfully. We'll get back to you within 24 hours. </p> <div className="text-sm text-gray-400" > <p>✓ Free consultation scheduled</p> <p>✓ Service recommendations prepared</p> <p>✓ ROI analysis in progress</p> </div> return (<UltraFuturisticBackground2029> <Head> <title>Contact Zion Tech Group | Revolutionary 2029 Technology Services</title> <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Get in touch today!" /> <meta name="keywords" content="contact, Zion Tech Group, AI services, quantum computing, space technology, biotechnology, 2029 technology" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/contact" /> </Head> <UltraFuturisticNavigation2029 /> > <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Get In Touch </span> <br /> <span className="text-white" >Transform Your Business</span> </h1> <p className="text-xl text-gray-300 mb-8" > Ready to revolutionize your business with cutting-edge 2029 technology? Our team of experts is here to help you implement the future today. </p> </motion && motion.div> </section> > <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" > <Phone className="w-8 h-8 text-white" /> </div> </div> </motion && motion.div> {;
   /* Email Contact */ ;
@@ -154,11 +152,9 @@ setSubmitSuccess (true);
 }<section className="py-20 px-4 sm:px-6 lg:px-8"> <div className="max-w-4xl mx-auto text-center"> <motion.div initial= {
 
   duration: 0 && 0.6, delay: index * 0 && 0.1 
-
 }viewport= {
   {
   once: true 
-
 }className="group cursor-pointer"> <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105"> {;
   /* Service Icon */ ;
 }<divclassName= {
@@ -251,7 +247,6 @@ export default function ContactPage() {
 }viewport= {
   {
   once: true 
-
 }> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion && motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)             {/* Contact Form */}
             <motion&& motion.div
 
@@ -392,7 +387,6 @@ export default function ContactPage() {
                   Tell us about your project and we'll connect you with the perfect revolutionary technology solution;
                 </p>;
               </div>;
-
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">;
                 {submitSuccess ? (;
                   <motion&& motion.div
@@ -401,7 +395,6 @@ export default function ContactPage() {
 
                         />;
                       </div>;
-
                       <div>;
                         <labelhtmlFor="email" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
 
@@ -422,7 +415,6 @@ export default function ContactPage() {
                         />;
                       </div>;
                     </div>;
-
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
                       <div>;
                         <labelhtmlFor="company" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
@@ -442,7 +434,6 @@ export default function ContactPage() {
 
                         />;
                       </div>;
-
                       <div>;
                         <labelhtmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
 
@@ -462,7 +453,6 @@ export default function ContactPage() {
                         />;
                       </div>;
                     </div>;
-
                     <div>;
                       <labelhtmlFor="service" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
 
@@ -486,7 +476,6 @@ export default function ContactPage() {
                         <option value="custom-solution">Custom Solution Development</option>;
                       </select>;
                     </div>;
-
                     <div>;
                       <labelhtmlFor="message" className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
 
@@ -506,7 +495,6 @@ export default function ContactPage() {
 
                       />;
                     </div>;
-
                     <div className="text-center">;
 
                       <button
@@ -563,7 +551,6 @@ export default function ContactPage() {
                 Explore some of our most sought-after 2029 technology solutions;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {popularServices && popularServices.map((service, index) => (;
                 <motion&& motion.div
@@ -804,12 +791,10 @@ export default function ContactPage() {
 
                     <h3 className="text-xl font-semibold text-white mb-2">{service && service.name}</h3>;
                     <p className="text-sm text-cyan-400 mb-3">{service && service.tagline}</p>;
-
                     {/* Description */}
                     <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">;
                       {service && service.description}
                     </p>;
-
                     {/* Price */}
                     <div className="mb-4">;
                       <span className={`${service && service.textColor} font-semibold text-lg`}>;
@@ -855,7 +840,6 @@ export default function ContactPage() {
               <p className="text-xl text-gray-300 mb-12">;
                 We're not just another technology company - we're your partners in building the future;
               </p>;
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">;
@@ -864,7 +848,6 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3>;
                   <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p>;
                 </div>;
-
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">;
                     <Brain className="w-8 h-8 text-white" />;
@@ -872,7 +855,6 @@ export default function ContactPage() {
                   <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>;
                   <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p>;
                 </div>;
-
                 <div className="text-center">;
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">;
                     <Shield className="w-8 h-8 text-white" />;
@@ -885,7 +867,6 @@ export default function ContactPage() {
           </div>;
         </section>;
       </main>;
-
       <UltraFuturisticFooter2029 />;
     </UltraFuturisticBackground2029>;
   ),;

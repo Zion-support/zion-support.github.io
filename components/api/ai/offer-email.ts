@@ -32,6 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {};
   const prompt = `Draft a professional, friendly job offer email.\n` +
+<<<<<<< HEAD
     `Candidate: ${candidateName || 'Candidate'}\n` +
     `Role: ${roleTitle || 'Software Engineer'}\n` +
     `Compensation: ${compensation || 'Competitive'}\n` +
@@ -98,4 +99,5 @@ function handler() {
     'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });  const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });
+
 }

@@ -81,14 +81,11 @@ class ComprehensiveTestRunner {}
         "command": 'npm run build',
         "type": 'build'
       };
-=======
 #!/usr/bin/env node
 const { execSync } = require('child_process');
-
 class ComprehensiveTestRunner {
   async runTests() {
     console.log('🧪 Running Comprehensive Test Suite...');
-    
     const tests = [
       { name: 'Unit Tests', command: 'npm test -- --passWithNoTests' },
       { name: 'Type Check', command: 'npm run type-check' },
@@ -100,7 +97,6 @@ class ComprehensiveTestRunner {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     ];
-
     for (const test of tests) {
       try {
         console.log(`Running: ${test.name}`);
@@ -112,8 +108,9 @@ class ComprehensiveTestRunner {
     }
   }
 }
-
 const runner = new ComprehensiveTestRunner();
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD

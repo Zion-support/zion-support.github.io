@@ -5,3 +5,4 @@ import React from';react' const ServiceCategory = ({ category,services }) => { c
 </Briefcase>)'
 
 </Briefcase>)'
+</Briefcase>)'

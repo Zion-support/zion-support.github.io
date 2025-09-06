@@ -547,6 +547,123 @@ function ComprehensiveServicesOverviewPage() {
                     selected_category === category.id;
                       ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white shadow - lg';
                       : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
+        <section className="py-20 px-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                Revolutionary Micro SAAS Services 2025
+              </h1>
+              <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
+                Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology with AI, quantum computing, and emerging technologies
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                  <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
+                  <div className="text-white/60">Services Available</div>
+                </div>
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                  <div className="text-3xl font-bold text-green-400">${totalMarketSize.toFixed(1)}B+</div>
+                  <div className="text-white/60">Total Market Size</div>
+                </div>
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                  <div className="text-3xl font-bold text-purple-400">{totalCustomers.toLocaleString()}+</div>
+                  <div className="text-white/60">Total Customers</div>
+                </div>
+                <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                  <div className="text-3xl font-bold text-orange-400">{averageROI.toFixed(0)}%+</div>
+                  <div className="text-white/60">Average ROI</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30">
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h3 className="text-xl font-bold text-white mb-2">First-to-Market Solutions</h3>
+                  <p className="text-white/70 text-sm">Revolutionary services that give you competitive advantages in emerging markets</p>
+                </div>
+                <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-6 border border-green-500/30">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-xl font-bold text-white mb-2">AI-Powered Optimization</h3>
+                  <p className="text-white/70 text-sm">Advanced AI algorithms that continuously optimize and improve your operations</p>
+                </div>
+                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30">
+                  <div className="text-4xl mb-4">🛡️</div>
+                  <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
+                  <p className="text-white/70 text-sm">Military-grade security with quantum-resistant encryption and AI threat detection</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  className="bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-400"
+                >
+                  <option value="popularity">Most Popular</option>
+                  <option value="price">Price: Low to High</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="newest">Newest First</option>
+                </select>
+                <div className="flex bg-white/10 rounded-xl p-1">
+                  <button
+                    onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`p-2 rounded-lg transition-all ${;
+                      viewMode === 'grid' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >
+                    <Grid className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className={`p-2 rounded-lg transition-all ${;
+                      viewMode === 'list' ? 'bg-blue-600 text-white' : 'text-white/60 hover:text-white';
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >
+                    <List className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+              className="flex flex-wrap justify-center gap-3"
+            >
+              {categories.map((category) => (
+                <button
                   }`}
                 >;
                   <span>{category.icon}</span>;
@@ -1190,6 +1307,27 @@ function ComprehensiveServicesOverviewPage() {
         </section>;
       </div>;
     </>);
+                  <a
+                    href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                    className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Contact Sales Team
+                    <ArrowRight className=&quot;w-5 h-5&quot; />
+                  </Link>
+                  <a
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Call +1 302 464 0950
+                  </Link>
+                          </Link>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 

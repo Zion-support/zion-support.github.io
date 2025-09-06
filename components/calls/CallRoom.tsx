@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -50,7 +46,6 @@ type Props = {;
   onLeave?: (durationSec: number) => void;
 
 };
-
 export default function CallRoom(): any ({;
   projectId,;
   userId,;
@@ -115,21 +110,26 @@ type Props = {;
   startMode: StartMode,;
   onLeave?: (durationSec: number) => void;
 };
-
 export default function CallRoom(): any ({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+type Props = {
+  projectId: string
+  userId: string
+  displayName: string
+  roomName: string
+  serverUrl: string
+  token: string
+  startMode: StartMode
+  onLeave?: (durationSec: number) => void
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
-
   const connect = useCallback(async () => {;
     const r = new Room();
-
     r && r.on(RoomEvent && RoomEvent.ParticipantConnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ParticipantDisconnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.LocalTrackPublished, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.TrackSubscribed, () => rebuild());
-
     // create local tracks per start mode;
     let localTracks: any[] = [];
     if (startMode === 'video') {;
@@ -161,7 +161,7 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
 
 
@@ -218,7 +218,6 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
     const count = participants.length |1;
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec);
-
   const gridCols = useMemo(() => {;
     const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';

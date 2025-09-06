@@ -27,7 +27,7 @@ class ErrorBoundary extends React.Component {
 
 import React from 'react';
 import Head from 'next/head';
-export default function RequestQuote() {;
+export default function RequestQuote() {
   return (
 
 

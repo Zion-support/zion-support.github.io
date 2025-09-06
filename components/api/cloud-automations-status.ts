@@ -35,12 +35,15 @@ function handler() {
           const fp = path.join (dir, f);
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
+          data[f.replace(".json", "")] = JSON.parse(
+            fs.readFileSync(fp, "utf8")
+
           );
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
 
           );
-          data[f && f.replace(".json", "")] = JSON && JSON.parse(
+data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
           );
 
@@ -53,7 +56,7 @@ function handler() {
       }
     }
   } catch (e) {
-    // ignore;
+// ignore;
   }
 
 
@@ -64,6 +67,7 @@ function handler() {
 
   res.status (200).json ({ ok: true, data });
   res.status (200).json ({ ok: true, data });
+
 }
   res.status(200).json({ ok: true, data });
 

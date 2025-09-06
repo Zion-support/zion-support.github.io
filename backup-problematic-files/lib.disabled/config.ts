@@ -234,10 +234,6 @@ if ( {) {
 // "Export": singleton instance;
 export: const config = Configuration.get_instance ();
 // Export: types;
-export: type AppConfig = z.infer < typeof AppConfigSchema>;
-export type RuntimeConfig = z.infer < typeof RuntimeConfigSchema>;
-export type FeatureFlags = z.infer < typeof FeatureFlagsSchema>;
-export type Environment = z.infer < typeof EnvironmentSchema>;
 ;
 
 // Export: schemas;

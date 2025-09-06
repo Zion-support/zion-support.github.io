@@ -31,11 +31,9 @@ if ( {) {
   } catch (error) {
 
     const items = fs && fs.readdirSync(currentDir);
-
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
-
       if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
@@ -138,4 +136,3 @@ for (const file of files) {
   }
 }
 console.log (`\n_fixed double commas in ${fixed_count} files.`);
-;

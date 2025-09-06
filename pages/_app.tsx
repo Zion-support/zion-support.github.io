@@ -11,6 +11,9 @@ export default function App({ Component, pageProps }: AppProps) {
 
 import '../src/styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {
+import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {;
 return <Component {...pageProps} />;
 import '../styles/globals.css';
 export default function App({ Component, pageProps }: AppProps) {

@@ -33,6 +33,12 @@ import path from 'path';
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },;
 export async function getServerSideProps() {;
   const file = path && path.join(process && process.cwd(), 'datadep-radar && radar.json');
+) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
+  outdated.map (o => (</tr>) )
+}</tbody> </table> </div>)
+}</div>) import fs from 'fs';
+import path from 'path';
+  const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -47,10 +53,6 @@ function getServerSideProps() {
   const file = path.join (process.cwd (), 'datadep - radar.json');
   let outdated: Outdated[] = [];  let generated_at = '';
   try {
-    const raw = fs.readFileSync (file, 'utf - 8');
-    const json = JSON.parse (raw);
-    outdated = json.outdated || [];
-    generated_at = json.generated_at || '';
   } catch {}
   return { props: { outdated, generated_at } }
 }
@@ -96,4 +98,17 @@ function DepRadarPage() {
           </table>;
         </div>)}
     </div>);
+      ) : (
+        <div className=&quot;overflow-auto border rounded&quot;>
+          <table className=&quot;min-w-full text-sm&quot;>
+            <thead className=&quot;bg-gray-50&quot;>
+              <tr>
+                <th className=&quot;text-left p-2&quot;>Package</th>
+                <th className=&quot;text-left p-2&quot;>Current</th>
+                <th className=&quot;text-left p-2&quot;>Latest</th>
+                <th className=&quot;text-left p-2&quot;>Type</th>
+    outdated = json.outdated || [];
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { outdated, generatedAt } }
 }

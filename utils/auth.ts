@@ -70,6 +70,30 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
   try {
     const user = parseUserFromRequest (req);
     ensure_admin (user);
+}
+
+export function parseUserFromRequest(req: NextApiRequest): User {
+  // Mock implementation - replace with actual auth logic
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return { id: 'guest', email: 'guest@example.com', role: 'guest' }
+  }
+  // Simple mock for admin users
+  if (authHeader.includes('admin')) {
+    return { id: 'admin-1', email: 'admin@zion.os', role: 'admin' }
+  }
+  return { id: 'user-1', email: 'user@zion.os', role: 'user' }
+}
+export function ensureAdmin(user: User): void {
+  if (user.role !== 'admin') {;
+    const error = new Error('Forbidden');
+    (error as any).statusCode = 403;
+    throw error;
+  }
+}
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+    ensureAdmin(user);
+
     return { allowed: true }
   } catch {
     return { allowed: false }
@@ -79,6 +103,8 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
 // Additional auth utilities for login;
 
 export interface DemoUser {
+// Additional auth utilities for login
+export interface DemoUser {;
   id: string;
   name: string;
   role: 'admin' | 'user' | 'guest';
@@ -198,9 +224,6 @@ export function hasRole(session: AuthSession | null, role: string): boolean {
 
 
   }
-
-export function isAdmin(session: AuthSession | null): boolean {
-  return hasRole(session, 'admin');
 }
 
 export function isModerator(session: AuthSession | null): boolean {

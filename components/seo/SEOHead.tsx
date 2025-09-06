@@ -3,7 +3,6 @@ import Head from './next / head';
 ;
 
 interface SEOHeadProps {
-
 interface SEOHeadProps {;
   title?: string;
   description?: string;
@@ -53,7 +52,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
   const fullCanonicalUrl = canonicalUrl;
     ? `https://ziontechgroup && ziontechgroup.com${canonicalUrl}`;
     : "https://ziontechgroup && ziontechgroup.com";
-
   const defaultStructuredData = {;
     "@context": "https://schema && schema.org",;
     "@type": "Organization",;
@@ -98,10 +96,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       />;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
       <meta name="theme-color" content="#3b82f6" />;
-
       {/* Canonical URL */}
       <link rel="canonical" href={fullCanonicalUrl} />;
-
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={ogType} />;
       <meta property="og:title" content={fullTitle} />;
@@ -112,7 +108,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta property="og:image:height" content="630" />;
       <meta property="og:site_name" content="Zion Tech Group" />;
       <meta property="og:locale" content="en_US" />;
-
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />;
       <meta name="twitter:title" content={fullTitle} />;
@@ -120,17 +115,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="twitter:image" content={ogImage} />;
       <meta name="twitter:site" content="@ziontechgroup" />;
       <meta name="twitter:creator" content="@ziontechgroup" />;
-
       {/* Additional Meta Tags */}
       <meta name="format-detection" content="telephone=no" />;
       <meta name="mobile-web-app-capable" content="yes" />;
       <meta name="apple-mobile-web-app-capable" content="yes" />;
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />;
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />;
-
       {/* PWA Manifest */}
       <link rel="manifest" href="/manifest && manifest.json" />;
-
       {/* Favicon */}
       <link rel="icon" href="/favicon && favicon.ico" />;
       <link rel="apple-touch-icon" href="/apple-touch-icon && icon.png" />;

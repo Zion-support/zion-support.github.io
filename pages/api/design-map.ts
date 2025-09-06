@@ -5,7 +5,6 @@ import {
   buildTokenSet,
   fetchLovableTokens,
 } from '../../utils/design-map';
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse

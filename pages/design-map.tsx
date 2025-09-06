@@ -68,7 +68,6 @@ import { getZionDesignMap } from '../utils/design-map';
           <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
           <MapColumn title="Admin Console" sections={designMap.products.admin} />
           <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
-        </div>
 
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>

@@ -53,6 +53,7 @@ function handler() {
     discount: '20%',
     lead_investor: 'TBD'});
   res.status (200).json (terms);
+
 }
 
 }

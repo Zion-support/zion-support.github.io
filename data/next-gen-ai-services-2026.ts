@@ -11,21 +11,21 @@ export interface NextGenAIService2026 {
   popular: boolean;
   icon: string;
   color: string;
-  text_color: string;
+  textColor: string;
   link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
   category: string;
-  real_service: boolean;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  use_cases: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: ServiceVariant;
 
   real_implementation: boolean;
@@ -579,6 +579,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     rating: 4.7,
     reviews: 445;
   }
+<<<<<<< HEAD
 ],
 
   mobile: '+1 302 464 0950',

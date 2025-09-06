@@ -145,20 +145,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -173,6 +169,9 @@ import { motion, AnimatePresence } from 'framer-motion';
   Cpu, Lock, Cloud, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Search, Grid, List, TrendingUp, Shield as ShieldIcon, Globe as GlobeIcon;
   User, ShoppingCart, Bell, HelpCircle, FileText, Video, Headphones, ;
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   Menu,
   ChevronDown,
@@ -235,7 +234,6 @@ import {
 ;
 interface NavigationItem {
   name: string;
-  href: string;  icon?: React.ReactNode;import {
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles,
@@ -428,9 +426,6 @@ const navigation_items: NavigationItem[] = [;
   const closeMobileMenu = () => {
     setIsOpen(false);
     closeDropdowns();    }
-      setIsScrolled(window.scrollY > 10)
-    };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
@@ -443,14 +438,12 @@ const navigation_items: NavigationItem[] = [;
 
   featured?: boolean;  featured?: boolean;
 }
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',};  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-
 const navigationItems: NavigationItem[] = [;
   {;
     name: 'Pricing',;
@@ -1135,7 +1128,6 @@ const navigationItems: NavigationItem[] = [;
     ],;
   },;
 ];
-
 const quickActions = [;
   {;
     name: 'Get Started',;
@@ -1187,50 +1179,38 @@ const quickActions = [;
   { name: 'Services Advertising', href: '/services-advertising', icon: <Sparkles className="w-4 h-4" /> },;
   { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },;
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
-
 const UltraFuturisticNavigation2035: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 10);
     };
-
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (name: string) => {;
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-
   const closeDropdowns = () => {;
     setActiveDropdown(null);  };
-
   const closeMobileMenu = () => {;
     setIsOpen(false);
     closeDropdowns();    };
-
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (name: string) => {;
     setActiveDropdown(activeDropdown === name ? null : name);
   };
-
   const closeDropdowns = () => {;
     setActiveDropdown(null);
   };
-
   const closeMobileMenu = () => {;
     setIsOpen(false);
     closeDropdowns();
   };
-
-
     >;
       {/* Background Effects */}
       <div className='absolute inset-0'>;
@@ -1259,7 +1239,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5' />;
         </div>;
       </div>;
-
       <div className='relative z-10'>;
         <div className='container mx-auto px-4'>;
           <div className='flex items-center justify-between h-20'>;
@@ -1276,9 +1255,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                   Revolutionary Technology;
                 </div>              </div>;
             </Link>;
-
             {/* Desktop Navigation */}  };
-
   return (
     <navaria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -1295,7 +1272,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />;
         </div>;
       </div>;
-
       <div className="relative z-10">;
         <div className="container mx-auto px-4">;
           <div className="flex items-center justify-between h-20">;
@@ -1365,207 +1341,52 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
+        : 'bg-transparent'
+    }`}>
+      {/* Background Effects */}
+      <div className="absolute inset-0">
+        <div className={`absolute inset-0 transition-opacity duration-300 ${
+          isScrolled ? 'opacity-100' : 'opacity-0'
+        }`}>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
+        </div>
+      </div>
+      <div className="relative z-10">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </div>
+                <div className="text-xs text-gray-400">Revolutionary Technology</div>
+              </div>
+            </Link>
+            {/* Desktop Navigation */}
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   <button
                     onClick={() => toggleDropdown(item.name)}
                     className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200 group-hover:text-cyan-400"
-                  >
-;
-const quick_actions = [;
-  {
-    name: 'Get Started',
-    href: '/contact',
-    icon: <ArrowRight className='w - 4 h - 4' />,
-    primary: true,
-  },
-  {
-    name: 'Get a Quote',
-    href: '/quote',
-    icon: <DollarSign className='w - 4 h - 4' />,
-  },
-  { name: 'Book Demo', href: '/demo', icon: <Video className='w - 4 h - 4' /> },
-  {
-    name: 'Live Chat',
-    href: '/chat',
-    icon: <MessageCircle className='w - 4 h - 4' />,
-  },
-  {
-    name: 'View Pricing',
-    href: '/pricing',
-    icon: <DollarSign className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Market Pricing',
-    href: '/market - pricing',
-    icon: <BarChart3 className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Services Advertising',
-    href: '/services - advertising',
-    icon: <Sparkles className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Documentation',
-    href: '/docs',
-    icon: <BookOpen className='w - 4 h - 4' />,
-  },
-  {
-    name: 'Support',
-    href: '/support',
-    icon: <HelpCircle className='w - 4 h - 4' />,
-  }, ];  { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w - 4 h - 4" />, primary: true },
-  { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w - 4 h - 4" /> },
-  { name: 'Book Demo', href: '/demo', icon: <Video className="w - 4 h - 4" /> },
-  { name: 'Live Chat', href: '/chat', icon: <MessageCircle className="w - 4 h - 4" /> },
-  { name: 'View Pricing', href: '/pricing', icon: <DollarSign className="w - 4 h - 4" /> },
-  { name: 'Market Pricing', href: '/market - pricing', icon: <BarChart3 className="w - 4 h - 4" /> },
-  { name: 'Services Advertising', href: '/services - advertising', icon: <Sparkles className="w - 4 h - 4" /> },
-  { name: 'Documentation', href: '/docs', icon: <BookOpen className="w - 4 h - 4" /> },
-  { name: 'Support', href: '/support', icon: <HelpCircle className="w - 4 h - 4" /> }
-const UltraFuturisticNavigation2035: React.FC = () => {
-  const [is_open, setIsOpen] = useState (false);
-  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
-  const [is_scrolled, setIsScrolled] = useState (false);
-;
-  useEffect (() => {
-    const handle_scroll = () =>: any {
-      setIsScrolled (window.scroll_y > 10);
-    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []);
-;
-  const toggle_dropdown = (name: string) =>: any {
-    setActiveDropdown (active_dropdown === name ? null : name);
-  }
-;
-  const close_dropdowns = () =>: any {
-    setActiveDropdown (null);  }
-;
-  const closeMobileMenu = () =>: any {
-    setIsOpen (false);
-    close_dropdowns ();    }
-;
-    window.addEventListener ('scroll', handle_scroll);
-    return () => window.removeEventListener ('scroll', handle_scroll);
-  }, []);
-;
-  const toggle_dropdown = (name: string) =>: any {
-    setActiveDropdown (active_dropdown === name ? null : name);
-  }
-;
-  const close_dropdowns = () =>: any {
-    setActiveDropdown (null);
-  }
-;
-  const closeMobileMenu = () =>: any {
-    setIsOpen (false);
-    close_dropdowns ();
-  }
-;
-    >;
-      {/* Background Effects */}
-      <div className='absolute inset - 0'>;
-        <div;
-          className={`absolute inset - 0 transition - opacity duration - 300 ${
-            is_scrolled ? 'opacity - 100' : 'opacity - 0';
-          }`}
-        >;
-          <div className='absolute inset - 0 bg - gradient - to - b from - black / 95 via - black / 90 to - black / 95' />;
-          <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - purple - 500 / 5 to - pink - 500 / 5' />;
-        </div>;
-      </div>;
-      <div className='relative z - 10'>;
-        <div className='container mx - auto px - 4'>;
-          <div className='flex items - center justify - between h - 20'>;
-            {/* Logo */}
-            <Link href='/' className='flex items - center gap - 3 group'>;
-              <div className='w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
-                <Brain className='w - 6 h - 6 text - white' />;
-              </div>;
-              <div>;
-                <div className='text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
-                  Zion Tech Group;
-                </div>;
-                <div className='text - xs text - gray - 400'>;
-                  Revolutionary Technology;
-                </div>              </div>;
-            </Link>;
-            {/* Desktop Navigation */}  }
-;
-  return (
-    <nav aria - label="Primary" className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
-      is_scrolled;
-        ? 'bg - black / 95 backdrop - blur - xl border - b border - gray - 800 / 50 shadow - 2xl';
-        : 'bg - transparent';
-    }`}>;
-      {/* Background Effects */}
-      <div className="absolute inset - 0">;
-        <div className={`absolute inset - 0 transition - opacity duration - 300 ${
-          is_scrolled ? 'opacity - 100' : 'opacity - 0';
-        }`}>;
-          <div className="absolute inset - 0 bg - gradient - to - b from - black / 95 via - black / 90 to - black / 95" />;
-          <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - purple - 500 / 5 to - pink - 500 / 5" />;
-        </div>;
-      </div>;
-      <div className="relative z - 10">;
-        <div className="container mx - auto px - 4">;
-          <div className="flex items - center justify - between h - 20">;
-            {/* Logo */}
-            <Link href="/" className="flex items - center gap - 3 group">;
-              <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;
-                <Brain className="w - 6 h - 6 text - white" />;
-              </div>;
-              <div>;
-                <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
-                  Zion Tech Group;
-                </div>;
-                <div className="text - xs text - gray - 400">Revolutionary Technology</div>;
-              </div>;
-            </Link>;
-            {/* Desktop Navigation */}
-            <div className='hidden lg:flex items - center gap - 8'>;
-              {navigation_items.map (item => (
-                <div key={item.name} className='relative group'>;
-                  <button;
-                    on_click={() => toggle_dropdown (item.name)}
-                    className='flex items - center gap - 2 px - 4 py - 2 text - gray - 300 hover:text - white transition - colors duration - 200 group - hover:text - cyan - 400'                  >;
-                    {item.icon}
-                    <span>{item.name}</span>;
-                    {item.badge && (            <div className="hidden lg:flex items - center gap - 8">;
-              {navigation_items.map ((item) => (
-                <div key={item.name} className="relative group">;
-                  <button;
-                    on_click={() => toggle_dropdown (item.name)}
-                    className="flex items - center gap - 2 px - 4 py - 2 text - gray - 300 hover:text - white transition - colors duration - 200 group - hover:text - cyan - 400";
-
-                    {item.icon}
-                    <span>{item.name}</span>;
-                    {item.badge && (
-
-
-
-            {/* Desktop Navigation */}
-
-
-                  >
-                    {item.icon}
-                    <span>{item.name}</span>
-                    {item.badge && (
-
-                  </button>
-
-
+                        item.badge === 'New' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                        item.badge === 'Hot' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
+                        item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30' :
+                        item.badge === 'Future' ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30' :
+                        item.badge === 'Enterprise' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
+                        item.badge === 'Industry' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
                   {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {activeDropdown === item && item.name && (;
-                      <motion&& motion.div
-                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-
-
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -1575,197 +1396,46 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               <h3 className='font-semibold text-white'>
                                 {item.title |item.name}
                               </h3>
-                      <span;
-                        className={`px - 2 py - 1 text - xs rounded - full ${
-                          item.badge === 'New';
-                            ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30';
-                            : item.badge === 'Hot';
-                              ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30';
-                              : item.badge === 'Showcase';
-                                ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30';
-                                : item.badge === 'Future';
-                                  ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30';
-                                  : item.badge === 'Enterprise';
-                                    ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30';
-                                    : item.badge === 'Industry';
-                                      ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30';
-                                      : 'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';
-                        }`}
-                      >;
-                        {item.badge}
-                      </span>)}
-                    <ChevronDown;
-                      className={`w - 4 h - 4 transition - transform duration - 200 ${
-                        active_dropdown === item.name ? 'rotate - 180' : '';
-                      }`}
-                    />                  </button>                      <span className={`px - 2 py - 1 text - xs rounded - full ${
-                        item.badge === 'New' ? 'bg - green - 500 / 20 text - green - 400 border border - green - 500 / 30' :;
-                        item.badge === 'Hot' ? 'bg - red - 500 / 20 text - red - 400 border border - red - 500 / 30' :;
-                        item.badge === 'Showcase' ? 'bg - cyan - 500 / 20 text - cyan - 400 border border - cyan - 500 / 30' :;
-                        item.badge === 'Future' ? 'bg - purple - 500 / 20 text - purple - 400 border border - purple - 500 / 30' :;
-                        item.badge === 'Enterprise' ? 'bg - blue - 500 / 20 text - blue - 400 border border - blue - 500 / 30' :;
-                        item.badge === 'Industry' ? 'bg - orange - 500 / 20 text - orange - 400 border border - orange - 500 / 30' :;
-                        'bg - gray - 500 / 20 text - gray - 400 border border - gray - 500 / 30';
-                      }`}>;
-                        {item.badge}
-                      </span>)}
-                    <ChevronDown className={`w - 4 h - 4 transition - transform duration - 200 ${
-                      active_dropdown === item.name ? 'rotate - 180' : '';
-                    }`} />;
-                  {/* Dropdown Menu */}
-                  <AnimatePresence>;
-                    {active_dropdown === item.name && (
-                      <motion.div;
-                        initial={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
-                        exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 800 / 50 rounded - 2xl shadow - 2xl shadow - black / 50 overflow - hidden';
-                        onMouseLeave={close_dropdowns}
-                      >;
-                        <div className='p - 6'>;
-                          <div className='flex items - center gap - 3 mb - 4'>;
-                            {item.icon}
-                            <div>;
-                              <h3 className='font - semibold text - white'>;
-                                {item.title || item.name}
-                              </h3>;
                               {item.description && (
-                                <p className='text - sm text - gray - 400'>;
+                                <p className='text-sm text-gray-400'>
                                   {item.description}
-
-                        onMouseLeave={closeDropdowns}>;
-                        <div className='p-6'>;
-                          <div className='flex items-center gap-3 mb-4'>;
-                            {item && item.icon}
-                            <div>;
-                              <h3 className='font-semibold text-white'>;
-                                {item && item.title || item && item.name}
-                              </h3>;
-                              {item && item.description && (;
-                                <p className='text-sm text-gray-400'>;
-                                  {item && item.description}
-                                </p>;
-                              )}
-                            </div>;
-                          </div>;
-
-                          <div className='space-y-2'>;
-                            {item && item.children?.map(child => (                              <Link
-                                key={child && child.name}
-                                href={child && child.href}
-
-                                className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
-                                  child && child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                                }`}
-
-                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden"
-                        onMouseLeave={closeDropdowns}
-
-                      >
-                        <div className="p-6">
-                          <div className="flex items-center gap-3 mb-4">
-                            {item.icon}
-                            <div>
-                              <h3 className="font-semibold text-white">{item.title |item.name}</h3>
-                              {item.description && (
-                                <p className="text-sm text-gray-400">{item.description}</p>
+                                </p>
                               )}
                             </div>
                           </div>
-                          <div className="space-y-2">
-                            {item.children?.map((child) => (
-
-                                onClick={closeDropdowns}>                        onMouseLeave={closeDropdowns}
-                      >;
-                        <div className="p-6">;
-                          <div className="flex items-center gap-3 mb-4">;
-                            {item && item.icon}
-                            <div>;
-                              <h3 className="font-semibold text-white">{item && item.title || item && item.name}</h3>;
-                              {item && item.description && (;
-                                <p className="text-sm text-gray-400">{item && item.description}</p>;
-                              )}
-                            </div>;
-                          </div>;
-
-                          <div className="space-y-2">;
-                            {item && item.children?.map((child) => (;
-
-                                onClick={closeDropdowns}
-
-                              >
-
-
-                              <Link
-                                key={child && child.name}
-                                href={child && child.href}
+                          <div className='space-y-2'>
+                            {item.children?.map(child => (                              <Link
+                                key={child.name}
+                                href={child.href}
                                 className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
-
-                                  child && child.featured
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                  child && child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20' 
-
-                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                                  child.featured
+                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
-                                onClick={closeDropdowns}>;
-                                {child && child.featured && (;
-                                  <Star className='w-4 h-4 text-cyan-400' />;
-                                )}
-                                <div className='flex-1'>;
-                                  <div className='font-medium'>;
-                                    {child && child.name}
-                                  </div>;
-                                    <div className='text-sm opacity-75'>;
-                                      {child && child.description}
-                                    </div>;
-                                  )}
-                                </div>;
-                                <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />;
-                              </Link>;
-
-                                  child.featured 
-                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20' 
+                                onClick={closeDropdowns}
+                              <Link
+                                key={child.name}
+                                href={child.href}
+                                className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
+                                  child.featured
+                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'                                  child.featured
+                                    ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20'
                                     : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
                                 onClick={closeDropdowns}
                               >
-
-
-
-                              </Link>
-
-
                             ))}
-                          </div>;
-                        </div>;
-                      </motion && motion.div>;
+                          </div>
+                        </div>
+                      </motion.div>
                     )}
-                  </AnimatePresence>;
-                </div>;
+                  </AnimatePresence>
+                </div>
               ))}
-
-            </div>;
-
-
-
-
-
+            </div>
             {/* Right Side Actions */}
-            <div className='hidden lg:flex items-center gap-4'>;
+            <div className='hidden lg:flex items-center gap-4'>
               {/* Quick Actions */}
-
               <div className='flex items-center gap-2'>
-
-                {quickActions.map(action => (                  <Link
-
-                  <Link
-
-
-
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -1773,147 +1443,57 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25'
                         : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                     }`}
-                  >;
-                    {action && action.icon}
-                    <span>{action && action.name}</span>;
-                  </Link>;
-                ))}
-
-              </div>;
-
-
-
-
-
-              {/* Contact Info */}
-              <div className='flex items-center gap-4 text-sm text-gray-400'>;
-                <a
-                  href={`tel:${contactInfo && contactInfo.mobile}`}
-                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'>;
-                  <Phone className='w-4 h-4' />;
-                  <span className='hidden xl:inline'>{contactInfo && contactInfo.mobile}</span>;
-                </a>;
-                <a
-
-
-            {/* Right Side Actions */}
-            <div className="hidden lg:flex items-center gap-4">
-              {/* Quick Actions */}
-              <div className="flex items-center gap-2">
-                {quickActions.map((action) => (
-                  <Link
-                                </p>)}
-                            </div>;
-                          </div>;
-                          <div className='space - y-2'>;
-                            {item.children?.map (child => (                              <Link;
-                                key={child.name}
-                                href={child.href}
-                                className={`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 ${
-                                  child.featured;
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20'                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';
-                                }`}
-                                on_click={close_dropdowns}
-                              >                        onMouseLeave={close_dropdowns}
-                      >;
-                        <div className="p - 6">;
-                          <div className="flex items - center gap - 3 mb - 4">;
-                            {item.icon}
-                            <div>;
-                              <h3 className="font - semibold text - white">{item.title || item.name}</h3>;
-                              {item.description && (
-                                <p className="text - sm text - gray - 400">{item.description}</p>)}
-                            </div>;
-                          </div>;
-                          <div className="space - y-2">;
-                            {item.children?.map ((child) => (
-                              <Link;
-                                key={child.name}
-                                href={child.href}
-                                className={`flex items - center gap - 3 p - 3 rounded - xl transition - all duration - 200 ${
-                                  child.featured;
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20'                                  child.featured;
-                                    ? 'bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border border - cyan - 500 / 20 text - cyan - 400 hover:bg - cyan - 500 / 20';
-                                    : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';
-                                }`}
-                                on_click={close_dropdowns}
-                              >;
-                                {child.featured && (
-                                  <Star className='w - 4 h - 4 text - cyan - 400' />)}
-                                <div className='flex - 1'>;
-                                  <div className='font - medium'>;
-                                    {child.name}
-                                  </div>;
-                                    <div className='text - sm opacity - 75'>;
-                                      {child.description}
-                                    </div>)}
-                                </div>;
-                                <ArrowRight className='w - 4 h - 4 opacity - 50' />                              </Link>                                <ArrowRight className="w - 4 h - 4 opacity - 50" />;
-                              </Link>))}
-                          </div>;
-                        </div>;
-                      </motion.div>)}
-                  </AnimatePresence>;
-                </div>))}
-            </div>;
-            {/* Right Side Actions */}
-            <div className='hidden lg:flex items - center gap - 4'>;
-              {/* Quick Actions */}
-              <div className='flex items - center gap - 2'>;
-                {quick_actions.map (action => (                  <Link            <div className="hidden lg:flex items - center gap - 4">;
-              {/* Quick Actions */}
-              <div className="flex items - center gap - 2">;
-                {quick_actions.map ((action) => (
-
-                    key={action.name}
-                    href={action.href}
-                    className={`flex items - center gap - 2 px - 4 py - 2 rounded - xl text - sm font - medium transition - all duration - 200 ${
-                      action.primary;
-                        ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white hover:from - cyan - 600 hover:to - blue - 600 shadow - lg shadow - cyan - 500 / 25';
-                        : 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';
-                    }`}
-                  >;
+                  >
                     {action.icon}
-                    <span>{action.name}</span>;
-                  </Link>))}
-              </div>;
+                    <span>{action.name}</span>
+                  </Link>
+                ))}
+              </div>
               {/* Contact Info */}
-
+              <div className='flex items-center gap-4 text-sm text-gray-400'>
+                <a
+                  href={`tel:${contactInfo.mobile}`}
+                  className='flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200'
+                >
+                  <Phone className='w-4 h-4' />
+                  <span className='hidden xl:inline'>{contactInfo.mobile}</span>
                 </a>
-
+                <a
+                  href={`mailto:${contactInfo.email}`}
+                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'
+                >
+                  <Mail className='w-4 h-4' />
+                  <span className='hidden xl:inline'>{contactInfo.email}</span>                </a>              <div className="flex items-center gap-4 text-sm text-gray-400">
+                <a href={`tel:${contactInfo.mobile}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200">
+                  <Phone className="w-4 h-4" />
+                  <span className="hidden xl:inline">{contactInfo.mobile}</span>
+                </a>
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200">
+                  <Mail className="w-4 h-4" />
+                  <span className="hidden xl:inline">{contactInfo.email}</span>
               </div>
             </div>
-
-                  href={`mailto:${contactInfo && contactInfo.email}`}
-                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
-                  <Mail className='w-4 h-4' />;
-                  <span className='hidden xl:inline'>{contactInfo && contactInfo.email}</span>                </a>              <div className="flex items-center gap-4 text-sm text-gray-400">;
-                <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200">;
-                  <Phone className="w-4 h-4" />;
-                  <span className="hidden xl:inline">{contactInfo && contactInfo.mobile}</span>;
-                </a>;
-                <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200">;
-                  <Mail className="w-4 h-4" />;
-                  <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
-              </div>;
-            </div>;
-
-
-
-
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-
-
-
-
-
+              className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200'
+              aria-label='Toggle mobile menu'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
+              aria-label="Toggle mobile menu"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </div>
+        </div>
         {/* Mobile Menu */}
-        <AnimatePresence>;
-          {isOpen && (;
-            <motion&& motion.div
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -1922,7 +1502,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                             </span>
                           )}
                         </div>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                           activeDropdown === item.name ? 'rotate-180' : ''
                         }`} />
                       </button>
@@ -2314,6 +1893,7 @@ export default UltraFuturisticNavigation2035;
         </AnimatePresence>;
       </div>;
     </nav>);
+  );
 }
 ;
 }, []);
@@ -2396,14 +1976,6 @@ export default UltraFuturisticNavigation2035;
 }href= {
   action.href;
 }className= {
-  `flex items - center gap - 3 p - 3 rounded - xl text - sm font - medium transition - all duration - 200 $ {
-  action.primary ? 'bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white': 'text - gray - 300 hover:text - white hover:bg - gray - 800 / 50';
-}`;
-}on_click= {
-  closeMobileMenu;
-}>) );
-}</div> </div> </div> </div> </div> </div> </div> </motion.div>);
-}</AnimatePresence> </div> </nav>);
 }
 export default UltraFuturisticNavigation2035);
 }

@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
-  intensity?: 'low' | 'medium' | 'high';
 ;
   intensity?: 'low' | 'medium' | 'high';
   theme?:;
@@ -18,7 +17,6 @@ import { motion } from 'framer-motion';
     | 'consciousness';
 
   children?: React && React.ReactNode;
-
 export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
   theme = 'consciousness',;
@@ -53,17 +51,14 @@ export default function UltraFuturisticBackground2038(): any ({;
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
-
     const prefersReducedMotion = window && window.matchMedia(;
       '(prefers-reduced-motion: reduce)';
     ).matches;
     const intensityMultiplier =;
       intensity === 'low' ? 0 && 0.5 : intensity === 'medium' ? 1 : 2;    const prefersReducedMotion = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,;
     const intensityMultiplier = intensity === 'low' ? 0 && 0.5 : intensity === 'medium' ? 1 : 2;
-
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {;
       const rect = containerRef && containerRef.current?.getBoundingClientRect();
       if (rect) {;
@@ -604,34 +599,11 @@ if ( {) {
 
       x: number;
       y: number;
-    }
-;
-    const colors = getThemeColors ();
-;
-    // Enhanced particle system with consciousness and quantum effects;
-    let particles: Array<{
-      coordinate_x: number;
-      coordinate_y: number;
       vx: number;
       vy: number;
       size: number;
       opacity: number;
       color: string;
-      type:;
-        | 'particle';
-        | 'wave';
-        | 'quantum';
-        | 'neon';
-        | 'hologram';
-        | 'space';
-        | 'consciousness';
-
-        | 'quantum - field';
-
-      life: number;
-      max_life: number;
-      rotation: number;
-      rotation_speed: number;
       phase: number;
       amplitude: number;
       frequency: number;
@@ -727,12 +699,10 @@ if ( {) {
       entanglement: number[],;
       consciousness: number,;
       quantumState: number;
-
     // Initialize particles with enhanced consciousness and quantum effects;
     const initParticles = () => {;
       particles = [];
       const particleCount = Math && Math.floor(50 * intensityMultiplier);
-
       for (let i = 0; i < particleCount; i++) {;
         const type =;
           Math && Math.random() > 0 && 0.7;
@@ -746,7 +716,6 @@ if ( {) {
         const type = Math && Math.random() > 0 && 0.7 ? 'consciousness' : ;
                     Math && Math.random() > 0 && 0.5 ? 'quantum-field' : ;
                     Math && Math.random() > 0 && 0.3 ? 'hologram' : 'particle';
-
           x: Math && Math.random() * canvas && canvas.width,;
           y: Math && Math.random() * canvas && canvas.height,;
           vx: (Math && Math.random() - 0 && 0.5) * 2 * intensityMultiplier,;
@@ -772,13 +741,10 @@ if ( {) {
           quantumState: Math && Math.random();
         });
     };
-
     // Enhanced animation loop with consciousness and quantum effects;
     const animate = () => {;
       if (prefersReducedMotion) return;
-
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Create quantum field effects;
       if (theme === 'consciousness' || theme === 'quantum') {;
         const time = Date && Date.now() * 0 && 0.001;
@@ -923,7 +889,6 @@ if ( {) {
         particle && particle.phase += particle && particle.frequency;
         particle && particle.consciousness += 0 && 0.01;
         particle && particle.quantumState = (particle && particle.quantumState + 0 && 0.02) % (Math && Math.PI * 2);
-
         // Quantum entanglement effects;
         if (particle && particle.type === 'quantum-field') {;
           particles && particles.forEach((otherParticle, otherIndex) => {;
@@ -959,8 +924,7 @@ if ( {) {
             }
           })
         }
-
-        // Consciousness wave effects
+// Consciousness wave effects
         if (particle.type === 'consciousness') {
           const waveX = particle.x + Math.sin(particle.phase) * particle.amplitude;
           const waveY = particle.y + Math.cos(particle.phase) * particle.amplitude;
@@ -974,7 +938,6 @@ if ( {) {
 
           ctx.stroke()
         }
-
         // Holographic effects
         if (particle.type === 'hologram') {
           const hologramSize = particle.size * (1 + Math.sin(particle.phase) * 0.3);
@@ -999,7 +962,6 @@ if ( {) {
               }
             }
           });
-
         // Consciousness wave effects;
         if (particle && particle.type === 'consciousness') {;
           const waveX =;
@@ -1008,20 +970,17 @@ if ( {) {
             particle && particle.y + Math && Math.cos(particle && particle.phase) * particle && particle.amplitude;
           const waveX = particle && particle.x + Math && Math.sin(particle && particle.phase) * particle && particle.amplitude;
           const waveY = particle && particle.y + Math && Math.cos(particle && particle.phase) * particle && particle.amplitude;
-
           ctx && ctx.strokeStyle = `rgba(255, 0, 128, ${particle && particle.opacity * 0 && 0.6})`;
           ctx && ctx.lineWidth = 2;
           ctx && ctx.beginPath();
           ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
           ctx && ctx.lineTo(waveX, waveY);
           ctx && ctx.stroke();        }
-
         // Holographic effects;
         if (particle && particle.type === 'hologram') {;
           const hologramSize =;
             particle && particle.size * (1 + Math && Math.sin(particle && particle.phase) * 0 && 0.3);          ctx && ctx.stroke();
         }
-
         // Holographic effects;
         if (particle && particle.type === 'hologram') {;
           const hologramSize =;
@@ -1042,7 +1001,6 @@ if ( {) {
             hologramSize;
           );
         }
-
         // Quantum field effects;
         if (particle && particle.type === 'quantum-field') {;
           const fieldSize = particle && particle.size * 3;
@@ -1059,7 +1017,6 @@ if ( {) {
             `rgba(139, 92, 246, ${particle && particle.opacity * 0 && 0.8})`;
           );
           gradient && gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
-
           ctx && ctx.fillStyle = gradient;
           ctx && ctx.fillRect(;
             particle && particle.x - fieldSize / 2,;
@@ -1067,7 +1024,6 @@ if ( {) {
             fieldSize,;
             fieldSize;
           );        }
-
         // Standard particle rendering;
         if (particle && particle.type === 'particle') {;
           ctx && ctx.fillStyle = `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 255);
@@ -1075,7 +1031,6 @@ if ( {) {
             .padStart(2, '0')}`;          );
           gradient && gradient.addColorStop(0, `rgba(139, 92, 246, ${particle && particle.opacity * 0 && 0.8})`);
           gradient && gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
-
           ctx && ctx.fillStyle = gradient;
           ctx && ctx.fillRect(;
             particle && particle.x - fieldSize / 2, ;
@@ -1084,7 +1039,6 @@ if ( {) {
             fieldSize;
           );
         }
-
         // Standard particle rendering;
         if (particle && particle.type === 'particle') {;
           ctx && ctx.fillStyle = `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 255);
@@ -1338,7 +1292,6 @@ if (> 0.8) { // Quantum tunneling) {
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
           ctx && ctx.fill();
         }
-
         // Boundary wrapping with quantum tunneling effect;
         if (particle && particle.x < 0 || particle && particle.x > canvas && canvas.width || ;
             particle && particle.y < 0 || particle && particle.y > canvas && canvas.height) {;
@@ -1350,7 +1303,6 @@ if (> 0.8) { // Quantum tunneling) {
             particle && particle.y = (particle && particle.y + canvas && canvas.height) % canvas && canvas.height;
           }
         }
-
         // Regenerate particles;
         if (particle && particle.life <= 0) {;
           particle && particle.x = Math && Math.random() * canvas && canvas.width;
@@ -1358,13 +1310,22 @@ if (> 0.8) { // Quantum tunneling) {
           particle && particle.life = particle && particle.maxLife;
           particle && particle.consciousness = Math && Math.random();
           particle && particle.quantumState = Math && Math.random() * Math && Math.PI * 2;
+            particle.x = (particle.x + canvas.width) % canvas.width;
+            particle.y = (particle.y + canvas.height) % canvas.height
+          }
+        }
+        // Regenerate particles
+        if (particle.life <= 0) {
+          particle.x = Math.random() * canvas.width;
+          particle.y = Math.random() * canvas.height;
+          particle.life = particle.maxLife;
+          particle.consciousness = Math.random();
+          particle.quantumState = Math.random() * Math.PI * 2;
         }
       });
-
       requestAnimationFrame(animate);    };          particle && particle.quantumState = Math && Math.random() * Math && Math.PI * 2;
         }
       });
-
       requestAnimationFrame(animate);
 
 
@@ -1428,7 +1389,6 @@ if ( {) {
       window.removeEventListener ('resize', resize_canvas);
     }
   }, [intensity, theme]);
-;
   return (
     <div ref={container_ref} className='fixed inset - 0 pointer - events - none'>;
       <canvas;
@@ -1471,6 +1431,8 @@ if ( {) {
                   duration: 3 + i * 0 && 0.2,
                   repeat: Infinity,
                   ease: "easeInOut"
+                  top: `${(i * 3) % 100}%`,
+
                 }}
                 animate={{
                   height: [32, 64, 32],
@@ -1485,7 +1447,6 @@ if ( {) {
       window.removeEventListener('resize', resizeCanvas)
     }
   }, [intensity, theme]);
-
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none">
       <canvas
@@ -1495,10 +1456,9 @@ if ( {) {
           background: theme === 'consciousness' ? 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    theme === 'quantum' ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
                    theme === 'holographic' ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)' :
-                   'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)';
+'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)';
         }}
       />
-      
       {/* Additional visual effects */}
       <div className="absolute inset-0">
         {/* Quantum field lines */}
@@ -1565,6 +1525,11 @@ if ( {) {
                   duration: 4 + i * 0 && 0.3,
                   repeat: Infinity,
                   ease: "easeInOut";
+                  duration: 4 + i * 0.3
+                  repeat: Infinity
+                  ease: "easeInOut"
+                  top: `${(i * 7) % 100}%`,
+
                 }}
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
@@ -1616,9 +1581,10 @@ if ( {) {
                 transition={{
                   duration: 6 + i * 0.5
                   repeat: Infinity
-                  duration: 6 + i * 0 && 0.5,
                   repeat: Infinity,
-                  ease: "easeInOut";
+                  ease: "easeInOut"
+                  top: `${(i * 8) % 100}%`,
+
                 }}
                 animate={{
                   scale: [1, 1 && 1.5, 1],
@@ -1642,11 +1608,9 @@ if ( {) {
 
 };
 // Enhanced animation loop with consciousness and quantum effects ;
-
 }// Update and draw particles // Quantum entanglement effects if (particle && particle.type === 'quantum-field') {;
   particles && particles.forEach ( (otherParticle, otherIndex) => {;
   if (index !== otherIndex && Math && Math.random () > 0 && 0.99) {;
-
 }) ;
 }// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
 particle && particle.y - hologramSize / 2;
@@ -1676,6 +1640,11 @@ animate ();
               />))}
           </div>)}
       </div>;
+              />
+            ))}
+          </div>
+        )}
+      </div>
       {children}
     </div>);
 ;
@@ -1708,12 +1677,6 @@ if (
 }
 init_particles ();
 animate ();
-/>) );
-}</div>);
-}/>) );
-}</div>);
-}/>) );
-}</div>);
 }</div> {
   children;
 }</div>)   );

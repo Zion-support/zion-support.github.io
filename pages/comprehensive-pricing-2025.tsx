@@ -22,7 +22,6 @@ export default function ComprehensivePricingPage() {
   // Combine all services
 
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
-
   const categories = [
 import React, { useState } from 'react',
 import Head from 'next / head',
@@ -54,7 +53,7 @@ function ComprehensivePricingPage() {
     { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },
     { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
     { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },
-    { id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽' },
+{ id: 'AR / VR & Metaverse', name: 'AR / VR', icon: '🥽' },
     { id: '5G / 6G Networks', name: '5G / 6G', icon: '📡' },
     { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },
     { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },
@@ -138,6 +137,10 @@ export default function ComprehensivePricingPage(req, res) {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   },
 
+  },
+  const toggleServiceExpansion = (serviceId: string) => {
+    setExpandedService(expandedService === serviceId ? null : serviceId)
+  },
   return (
     <>
       <Head>
@@ -914,6 +917,29 @@ export default function ComprehensivePricingPage(req, res) {
         </section>;
       </div>;
     </>);
+                  <a
+                    href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                    className=&quot;bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Contact Sales Team
+                    <ArrowRight className=&quot;w-5 h-5&quot; />
+                  </Link>
+                  <a
+                    href=&quot;tel:+13024640950&quot;
+                    className=&quot;bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2&quot;
+                  >
+                    Call +1 302 464 0950
+                  </Link>
+                          className="overflow-hidden border-t border-white/10"
+                        >
+                          <div className="p-6 bg-white/5">
+                            {/* Market Position */}
+                      </Link>
+                    </div>
+                    {/* Expanded Details */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 

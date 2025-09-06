@@ -120,7 +120,6 @@ const quickLinks = [;
   { label: 'Countries Served', value: '45+', icon: Globe },
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
 ];
-
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Careers', href: '/careers', icon: Briefcase },;
@@ -129,7 +128,6 @@ const companyLinks = [;
   { name: 'Support', href: '/support', icon: LifeBuoy },;
   { name: 'Status', href: '/status', icon: Activity },;
 ];
-
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -149,7 +147,6 @@ const socialLinks = [;
   },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
 ];
-
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -159,7 +156,6 @@ const certifications = [;
   'FedRAMP Authorized',;
   'Quantum Security Certified',;
   'AI Ethics Compliant',];];
-
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
@@ -167,17 +163,14 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
-
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
 ];
-
 const stats = [;
   { label: 'Happy Customers', value: '50K+', icon: Users },;
   { label: 'Services Delivered', value: '200+', icon: Rocket },;
   { label: 'Countries Served', value: '45+', icon: Globe },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
-
 export default function UltraFuturisticFooter2034() {;
   return (
 
@@ -193,7 +186,6 @@ export default function UltraFuturisticFooter2034() {;
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>;
       </div>;
-
       <div className='relative z-10'>;
 
         {/* Main Footer Content */}
@@ -208,7 +200,6 @@ export default function UltraFuturisticFooter2034() {;
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>;
       </div>;
-
       <div className="relative z-10">;
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
@@ -250,8 +241,6 @@ export default function UltraFuturisticFooter2034() {;
                 </p>
                 {/* Stats */}
                 <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >
-                className="space-y-6"
-              >
                 <div className="flex items-center space-x-3">
                   <div className="relative">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -287,13 +276,11 @@ export default function UltraFuturisticFooter2034() {;
                     </p>;
                   </div>;
                 </div>;
-
                 <p className='text-gray-300 leading-relaxed'>;
                   Leading provider of cutting-edge AI, quantum computing, and;
                   emerging technology solutions. Empowering businesses with;
                   innovative tools for the future.;
                 </p>;
-
                 {/* Stats */}
 
                   ))}
@@ -332,11 +319,14 @@ export default function UltraFuturisticFooter2034() {;
                     </motion.div>
                   ))}
                 </div>
+                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
+
+                    </motion.div>
+
+                  ))}
+                </div>
 
                 {/* Contact Info */}
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                    <Phone className="w-4 h-4" />
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
@@ -403,15 +393,15 @@ export default function UltraFuturisticFooter2034() {;
 
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
 
 
                             </span>
                           </Link>
                         ))}
-                      </div>;
-                    </motion && motion.div>;
+                      </div>
+                    </motion.div>
                   ))}
 
                 </div>;
@@ -569,9 +559,10 @@ export default function UltraFuturisticFooter2034() {;
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
-                  className='hover:text-cyan-400 transition-colors'>;
-                  Privacy Policy;
-                </Link>;
+                  className='hover:text-cyan-400 transition-colors'
+                >
+                  Privacy Policy
+                </Link>
                 <Link
                   href='/terms'
 

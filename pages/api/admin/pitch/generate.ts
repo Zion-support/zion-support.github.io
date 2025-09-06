@@ -39,6 +39,12 @@ Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
+Operator Prompt: ${operatorPrompt}
+Company Mission: ${inputs?.mission}
+Key Metrics: ${JSON && JSON.stringify(metrics)}
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
@@ -59,7 +65,6 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
 
   }
 }
-
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings

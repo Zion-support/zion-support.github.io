@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -65,7 +61,6 @@ import React, { useState } from 'react';
           <div className='absolute top-3/4 right-1/4 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000'></div>;
           <div className='absolute bottom-1/4 left-1/3 w-20 h-20 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000'></div>;
         </div>;
-
         <div className='relative z-10 container mx-auto px-4 text-center'>;
           <motion&& motion.div
 
@@ -286,7 +281,6 @@ import Link from 'next/link';
 
               that delivers measurable results.;
             </p>;
-
             {/* Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>;
               <div className='text-center'>;
@@ -660,7 +654,6 @@ if (return '$500 - $800') {
               services;
             </p>;
           </div>;
-
           {viewMode === 'grid' ? (;
             /* Grid View */;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
@@ -745,7 +738,6 @@ if (return '$500 - $800') {
                           {service.rating}
 
                     <div className='text-6xl mb-6'>{service && service.icon}</div>;
-
                     {/* Service Info */}
                     <h3 className='text-2xl font-bold text-white mb-3'>;
                       {service && service.name}
@@ -753,7 +745,6 @@ if (return '$500 - $800') {
                     <p className='text-gray-300 mb-4 line-clamp-3'>;
                       {service && service.description}
                     </p>;
-
                     {/* Price */}
                     <div className='flex items-center justify-between mb-6'>;
                       <div className='text-3xl font-bold text-cyan-400'>;
@@ -808,7 +799,6 @@ if (return '$500 - $800') {
                         {service.category}
 
                     </div>;
-
                     {/* Category and Setup */}
                     <div className='flex items-center justify-between mb-6 text-sm'>;
                       <span className='px-3 py-1 bg-gray-700 text-gray-300 rounded-full'>;
@@ -1077,7 +1067,6 @@ if (return '$500 - $800') {
               Let's discuss how our innovative services can help you achieve;
               your business goals. Get in touch with our experts today.;
             </p>;
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-8'>;
 
               <a
@@ -1699,185 +1688,149 @@ if (return '$500 - $800') {
                   <Phone className="w-5 h-5 mr-2 inline" />
                   {contactInfo.mobile}
                 </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+      switch (selectedPriceRange) {
+        case 'Under $300':
+          priceMatch = price < 300,
+          break,
+        case '$300 - $500':
+          priceMatch = price >= 300 && price <= 500,
+          break,
+        case '$500 - $800':
+          priceMatch = price > 500 && price <= 800,
+          break,
+        case '$800+':
+          priceMatch = price > 800,
+          break
+      }
+          priceMatch = price > 800;
+          break;}
 
-        {/* Filters and Search Section */}
-        <section className="py-12 bg-gray-900 border-b border-gray-800">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-              {/* Search */}
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-              </div>
+    }
+    
+    const _searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                       service.category.toLowerCase().includes(searchQuery.toLowerCase()),
+    
+    return categoryMatch && priceMatch && searchMatch
+  }),
 
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                      selectedCategory === category
-                        ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
-                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
+  // Sort services
+  const _sortedServices = [...filteredServices].sort(_(a, _b) => {_switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name),
+      case 'price':
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),
+      case 'rating':
+        return b.rating - a.rating,
+      case 'popularity':
+      case 'rating':
+        return b.rating - a.rating,
+      case 'popularity':
 
-              {/* Price Range Filter */}
-              <div className="flex items-center gap-2">
-                <Filter className="w-5 h-5 text-gray-400" />
-                <select
-                  value={selectedPriceRange}
-                  onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                >
-                  {pricingRanges.map((range) => (
-                    <option key={range} value={range}>{range}</option>
-                  ))}
-                </select>
-              </div>
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+      default: return 0
+    }
+  }),
 
-              {/* View Mode Toggle */}
-              <div className="flex items-center gap-2 bg-gray-800 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-all duration-300 ${
-                    viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-all duration-300 ${
-                    viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
-                </button>
-              </div>
+  '$800+',];
 
-              {/* Sort Options */}
-              <div className="flex items-center gap-2">
-                <span className="text-gray-400 text-sm">Sort by:</span>
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                  className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                >
-                  <option value="popularity">Popularity</option>
-                  <option value="name">Name</option>
-                  <option value="price">Price</option>
-                  <option value="rating">Rating</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Grid/List */}
-        <section className="py-20 bg-black">
-          <div className="container mx-auto px-4">
-            {/* Results Count */}
-            <div className="mb-8">
-              <p className="text-gray-400">
-                Showing <span className="text-cyan-400 font-semibold">{sortedServices.length}</span> of{' '}
-                <span className="text-cyan-400 font-semibold">{comprehensiveRealServices2025.length}</span> services
-              </p>
-            </div>
-
-            {viewMode === 'grid' ? (
-              /* Grid View */
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {sortedServices.map((service, index) => (
-                  <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="group"
-                  >
-                    <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 h-full relative overflow-hidden">
-                      {/* Popular Badge */}
-                      {service.popular && (
-                        <div className="absolute top-4 right-4">
-                          <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
-                            Popular
-                          </span>
-                        </div>
-                      )}
-
-                      {/* Service Icon */}
-                      <div className="text-6xl mb-6">{service.icon}</div>
-                      
-                      {/* Service Info */}
-                      <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
-                      <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
-                      
-                      {/* Price */}
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="text-3xl font-bold text-cyan-400">
-                          {service.price}
-                          <span className="text-lg text-gray-400">{service.period}</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                          <span className="text-white font-semibold">{service.rating}</span>
-                          <span className="text-gray-400">({service.reviews})</span>
-                        </div>
-                      </div>
-
-                      {/* Key Features */}
-                      <div className="space-y-2 mb-6">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="flex items-center">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                            <span className="text-gray-300 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Category and Setup */}
-                      <div className="flex items-center justify-between mb-6 text-sm">
-                        <span className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full">
-                          {service.category}
-                        </span>
-                        <span className="text-gray-400">
-                          Setup: {service.setupTime}
-                        </span>
-                      </div>
-
-                      {/* Key Benefits */}
-                      <div className="mb-6">
-                        <h4 className="text-white font-semibold mb-3">Key Benefits:</h4>
-                        <div className="space-y-2">
-                          {service.keyBenefits.slice(0, 2).map((benefit, idx) => (
-                            <div key={idx} className="flex items-center">
-                              <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
-                              <span className="text-gray-300 text-sm">{benefit}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-            <div className='text-center text-gray-400'>;
-              <p className='mb-2'>{contactInfo && contactInfo.address}</p>;
-              <p>;
-                Visit us at:{' '}
-                <a
-
-
+export default function ComprehensiveServicesShowcase2025() {;
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
+  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,;
+  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart;
+} from 'lucide-react',;
+import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const categories = [;
+  'All ServicesAI & Machine LearningCustomer SuccessSupply ChainFinancial PlanningSales IntelligenceHR AnalyticsDecision Intelligence';
+  'Content MarketingCRM & Customer IntelligenceBusiness Intelligence';
+];
+const pricingRanges = [;
+  'All PricesUnder $300$300 - $500$500 - $800$800+';
+];
+export default function ComprehensiveServicesShowcase2025(req, res) {
+  try {
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  // Filter services based on selections;
+  const filteredServices = comprehensiveRealServices2025.filter(service => {;
+    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
+    let priceMatch = true;
+    if (selectedPriceRange !== 'All Prices') {;
+      const price = parseInt(service.price.replace('$', '')),;
+      switch (selectedPriceRange) {;
+        case 'Under $300':;
+          priceMatch = price < 300;
+          break,;
+        case '$300 - $500':;
+          priceMatch = price >= 300 && price <= 500;
+          break,;
+        case '$500 - $800':;
+          priceMatch = price > 500 && price <= 800;
+          break,;
+        case '$800+':;
+          priceMatch = price > 800;
+          break;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                       service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return categoryMatch && priceMatch && searchMatch;
+  });
+  // Sort services;
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'name':;
+        return a.name.localeCompare(b.name);
+      case 'price':;
+        return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),;
+      case 'rating':;
+        return b.rating - a.rating,;
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),;
+      default: return 0;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }),
+  const getPriceRange = (price: string) => {
+    const numPrice = parseInt(price.replace('$', '')),
+    if (numPrice < 300) return 'Under $300',
+    if (numPrice <= 500) return '$300 - $500',
+    if (numPrice <= 800) return '$500 - $800',
+    return '$800+'
+  },
+      category.toLowerCase().includes(cat.id.toLowerCase())
+    ),
+    return categoryData ? categoryData.icon : Globe
+  },
+      category.toLowerCase().includes(cat.id.toLowerCase())
+    ),
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
+  },
+  return (
+    <>
+      <Head>
+        <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>

@@ -4,6 +4,9 @@ import React from 'react';
 
 interface LoadingSpinnerProps {
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+interface LoadingSpinnerProps {
 interface LoadingSpinnerProps {;
 
 
@@ -26,14 +29,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
     md: 'w-8 h-8',;
     lg: 'w-12 h-12',;
   };
-
   const colorClasses = {;
     blue: 'text-blue-600',;
     white: 'text-white',;
     gray: 'text-gray-600',;
     slate: 'text-slate-600';
   };
-
   const spinner = (;
     <div className={`flex flex-col items-center justify-center ${className}`}>;
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />;

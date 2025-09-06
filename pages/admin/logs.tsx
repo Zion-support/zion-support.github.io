@@ -49,6 +49,18 @@ import {
   Search,
 
 interface LogEntry {
+import fs from 'fs';
+import path from 'path';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+} from 'lucide-react';
+
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface LogEntry {
 interface LogEntry {;
   id: string;
   timestamp: string;
@@ -89,9 +101,7 @@ interface LogEntry {
     duration: number;
 
     memory?: number;
-
   }
-
 interface LogsPageProps {;
   logs: LogEntry[];
   errorCount: number;
@@ -157,10 +167,8 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {;
     error: 'bg-red-100 text-red-800',;
     critical: 'bg-red-200 text-red-900',;
   };
-
   return <Badge className={colors[level]}>{level && level.toUpperCase()}</Badge>;
 };
-
 export default function LogsPage(): any ({;
   logs: initialLogs,;
   errorCount,;
@@ -177,7 +185,6 @@ export default function LogsPage(): any ({;
     fps?: number
   }
 }
-
 interface LogsPageProps {
   logs: LogEntry[],
   errorCount: number,
@@ -185,7 +192,6 @@ interface LogsPageProps {
   totalCount: number,
   lastUpdated: string
 }
-
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -201,7 +207,6 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
     default: return <Info className="h-4 w-4 text-gray-500" />
   }
 };
-
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
     debug: 'bg-blue-100 text-blue-800',
@@ -434,71 +439,83 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
-
-  useEffect(() => {
+  useEffect(() => {;
     let filtered = logs;
-
-    // Search filter
-    if (searchTerm) {
-      filtered = filtered.filter(log =>
-        log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
-
-    // Level filter
-    if (levelFilter !== 'all') {
-      filtered = filtered.filter(log => log.level === levelFilter)
-    }
-
-    // Category filter
-    if (categoryFilter !== 'all') {
-      filtered = filtered.filter(log => log.category === categoryFilter)
-    }
-
-    // Source filter
-    if (sourceFilter !== 'all') {
-      filtered = filtered.filter(log => log.source === sourceFilter)
-    }
-
-    setFilteredLogs(filtered)
-  }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]);
-
-  const refreshLogs = async () => {
+    // Search filter;
+    if (searchTerm) {;
+      filtered = filtered.filter(log =>;
+        log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()));
+      );
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Level filter;
+    if (levelFilter !== 'all') {;
+      filtered = filtered.filter(log => log.level === levelFilter);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Category filter;
+    if (categoryFilter !== 'all') {;
+      filtered = filtered.filter(log => log.category === categoryFilter);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    // Source filter;
+    if (sourceFilter !== 'all') {;
+      filtered = filtered.filter(log => log.source === sourceFilter);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    setFilteredLogs(filtered);
+  }, [logs, searchTerm, levelFilter, categoryFilter, sourceFilter]),;
+  const refreshLogs = async () => {;
     setIsLoading(true);
     try {
       const response = await fetch('/api/admin/logs');
-      if (response.ok) {
+      if (response.ok) {;
         const data = await response.json();
-        setLogs(data.logs)
-      }
+        setLogs(data.logs);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     } catch (error) {
-      logErrorToProduction('Failed to refresh logs:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  };
-
-  const exportLogs = () => {
+      logErrorToProduction('Failed to refresh logs:', error);
+    } finally {;
+      setIsLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },;
+  const exportLogs = () => {;
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
-    
-    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
-    
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
-    linkElement.click()
-  };
-
   const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString()
-  };
-
+    return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
     if (!performance) return null;
-    
     const parts = [];
     if (performance.memory) {
       parts.push(`Memory: ${(performance.memory / 1024 / 1024).toFixed(1)}MB`)
@@ -509,15 +526,15 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`)
     }
-    
+  const formatPerformance = (performance?: LogEntry['performance']) => {;
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     return parts.length > 0 ? parts.join() : null
-
-  },;
-  const formatTimestamp = (timestamp: string) => {;
-    return new Date(timestamp).toLocaleString();
-
-  };
-
+  },
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -536,8 +553,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
 
       </div>
-
-      {/* Summary Cards */}
+{/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
 
 
@@ -598,7 +614,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             Export;
           </Button>;
         </div>;
-
       {/* Summary Cards */}
 
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>;
@@ -611,7 +626,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             <div className='text-2xl font-bold'>{totalCount}</div>;
             <p className='text-xs text-muted-foreground'>All log entries</p>          </CardContent>;
         </Card>;
-
         <Card>;
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
             <CardTitle className='text-sm font-medium'>Errors</CardTitle>;
@@ -623,7 +637,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               Critical & error logs;
             </p>          </CardContent>;
         </Card>;
-
         <Card>;
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
             <CardTitle className='text-sm font-medium'>Warnings</CardTitle>;
@@ -635,7 +648,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             </div>;
             <p className='text-xs text-muted-foreground'>Warning logs</p>          </CardContent>;
         </Card>;
-
         <Card>;
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>;
             <CardTitle className='text-sm font-medium'>Last Updated</CardTitle>;
@@ -648,7 +660,6 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             <p className='text-xs text-muted-foreground'>Data freshness</p>          </CardContent>;
         </Card>;
       </div>;
-
       {/* Filters */}
 
 
@@ -664,18 +675,11 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
           <CardTitle>Filters</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="relative">
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder="Search logs..."
                 className="pl-8"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </div>
-            
-            <Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
                 <SelectValue placeholder="All levels" />
               </SelectTrigger>
@@ -705,7 +709,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                 ))}
               </SelectContent>
             </Select>
-            <Select value={sourceFilter} onValueChange={setSourceFilter}>
+<Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
 
                 onChange={e => setSearchTerm(e && e.target.value)}
@@ -1042,9 +1046,7 @@ if ( {) {
                       {formatTimestamp(log && log.timestamp)}
                     </span>;
                   </div>;
-
                   <div className='text-sm font-medium'>{log && log.message}</div>;
-
                   {log && log.context && Object && Object.keys(log && log.context).length > 0 && (;
                     <details className='text-xs'>;
                       <summary className='cursor-pointer text-muted-foreground hover:text-foreground'>;
@@ -1054,7 +1056,6 @@ if ( {) {
                       </pre>;
                     </details>;
                   )}
-
                   {log && log.error && (;
                     <details className='text-xs'>;
                       <summary className='cursor-pointer text-red-600 hover:text-red-800'>;
@@ -1094,43 +1095,6 @@ if ( {) {
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && (
                         <Badge variant="outline">{log.component}</Badge>
-                      )}
-                    </div>
-                    <span className="text-sm text-muted-foreground">
-                      {formatTimestamp(log.timestamp)}
-                    </span>
-                  </div>
-
-
-                  <div className="text-sm font-medium">{log.message}</div>
-
-
-                  {log.context && Object.keys(log.context).length > 0 && (
-                    <details className="text-xs">
-                      <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
-                        View Context
-                      </summary>
-
-
-
-
-                      <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
-                        {JSON.stringify(log.context, null, 2)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </pre>;
-                    </details>;
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
-                  {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
                         View Error Details
@@ -1159,6 +1123,9 @@ if ( {) {
             ) : (;
               <div className='text-center text-muted-foreground py-8'>                No logs found matching the current filters.;
               </div>;
+              <div className="text-center text-muted-foreground py-8">
+                No logs found matching the current filters.
+              </div>
             )}
           </div>;
         </div>;
@@ -1217,7 +1184,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
     // Sort logs by timestamp (newest first)
     logs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
-
     // Calculate statistics
     const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
     const warningCount = logs.filter(log => log.level === 'warn').length;
@@ -1250,121 +1216,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } catch (error) {
     logErrorToProduction ('Error reading logs:', error);    return {
       props: {
-        logs: []
-        errorCount: 0
-        warningCount: 0
-        totalCount: 0
-        lastUpdated: new Date().toISOString()
-      }
-    }
-
-
-        logs: [],
-        errorCount: 0,
-        warningCount: 0,
-        totalCount: 0,
-        lastUpdated: new Date().toISOString(),
-      },
-    };
-
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export const getServerSideProps: GetServerSideProps = async () => {;
-  try {
-    const logsDir = path.join(process.cwd(), 'logs'),;
-    const logs: LogEntry[] = [];
-    // Read all log files;
-    if (fs.existsSync(logsDir)) {;
-      const files = fs.readdirSync(logsDir);
-      const logFiles = files.filter(file => file.endsWith('.log'));
-      for (const file of logFiles) {;
-        try {
-          const filePath = path.join(logsDir, file);
-          const content = fs.readFileSync(filePath, 'utf-8');
-          const lines = content.split('\n').filter(line => line.trim());
-          for (const line of lines) {;
-            try {
-              const logEntry = JSON.parse(line);
-              logs.push(logEntry);
-            } catch (error) {
-              // Skip malformed log entries;
-              } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        } catch (error) {
-          // Skip problematic files;
-          } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-        } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-    // Sort logs by timestamp (newest first);
-    logs && logs.sort(;
-      (a, b) =>;
-        new Date(b && b.timestamp).getTime() - new Date(a && a.timestamp).getTime();
-    );
-
-    // Calculate statistics;
-    const errorCount = logs && logs.filter(;
-      log => log && log.level === 'error' || log && log.level === 'critical';
-    ).length;    const warningCount = logs && logs.filter(log => log && log.level === 'warn').length;
-    const totalCount = logs && logs.length;
-
-    return {;
-      props: {;
-        logs: logs && logs.slice(0, 1000), // Limit to most recent 1000 logs;
-        errorCount,;
-        warningCount,;
-        totalCount,;
-        lastUpdated: new Date().toISOString(),;
-      },;
-    };
-  } catch (error) {;
-    logErrorToProduction('Error reading logs:', error);    return {;
-      props: {;
-        logs: [],;
-        errorCount: 0,;
-        warningCount: 0,;
-        totalCount: 0,;
-        lastUpdated: new Date().toISOString(),;
-      },;
-    };
-  }
-
-}
-
         errorCount;
         warningCount;
         totalCount;

@@ -34,7 +34,6 @@ const allServices = [
   ...cuttingEdgeITInfrastructureServices
 
 ];
-
 const categories = [
   {
     id: 'all',
@@ -112,7 +111,6 @@ const getServicePricing = (service: any) => {
   Mail,;
   MapPin,;
 } from 'lucide-react';
-
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
   {;
@@ -127,7 +125,6 @@ const advancedEnterpriseServices2025 = [;
     icon: "🤖",;
   },;
 ];
-
 const innovativeMicroSaasExpansion2025 = [;
   {;
     id: "micro-1",;
@@ -141,7 +138,6 @@ const innovativeMicroSaasExpansion2025 = [;
     icon: "⚡",;
   },;
 ];
-
 const cuttingEdgeITInfrastructureServices = [;
   {;
     id: "infra-1",;
@@ -164,20 +160,17 @@ import { cuttingEdgeITInfrastructureServices } from '../data/2025-cutting-edge-i
   website: 'https://ziontechgroup && ziontechgroup.com',;
   return 'Contact for pricing'
 };
-
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
   return []
 
 };
-
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
   ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-
 const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
@@ -194,7 +187,6 @@ export default function AdvancedServicesShowcase() {
 
   useEffect(() => {;
     let filtered = allServices;
-
     // Filter by category;
     if (selectedCategory !== 'all') {;
       filtered = filtered && filtered.filter(service => {;
@@ -203,7 +195,6 @@ export default function AdvancedServicesShowcase() {
 
 
   }, [selectedCategory, searchTerm]);
-
   const ServiceCard = ({ service }: { service: any }) => (;
     <motion&& motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -257,7 +248,6 @@ export default function AdvancedServicesShowcase() {
     <motion.div
           </div>;
         </div>;
-
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             ROI & Benefits:;
@@ -266,7 +256,6 @@ export default function AdvancedServicesShowcase() {
             {service && service.roi}
           </p>;
         </div>;
-
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
             Market Position:;
@@ -275,7 +264,6 @@ export default function AdvancedServicesShowcase() {
             {service && service.marketPosition}
           </p>;
         </div>;
-
         <div className='flex items-center justify-between'>;
           <a
             href={service && service.link}
@@ -283,20 +271,17 @@ export default function AdvancedServicesShowcase() {
             Learn More;
             <ArrowRight className='w-4 h-4' />;
           </a>;
-
           <a
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'>            {service && service.roi}
           </p>;
         </div>;
-
         <div className="mb-6">;
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;
           <p className="text-sm text-gray-600 dark:text-gray-400">;
             {service && service.marketPosition}
           </p>;
         </div>;
-
         <div className="flex items-center justify-between">;
           <a
             href={service && service.link}
@@ -304,7 +289,6 @@ export default function AdvancedServicesShowcase() {
             Learn More;
             <ArrowRight className="w-4 h-4" />;
           </a>;
-
           <a
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300">;
@@ -888,7 +872,6 @@ if ( {) {
                 />;
               </div>;
             </div>;
-
             <div className='flex items-center gap-4'>;
               <div className='flex items-center gap-2'>;
 
@@ -941,173 +924,6 @@ if ( {) {
               </div>
             </div>
           </div>
-          
-          {/* Category Filters */}
-          <div className="mt-6">
-            <div className="flex flex-wrap gap-3">
-              {categories.map((category) => (
-                <button
-      {/* Main Content */}
-      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
-        {/* Filters and Search */}
-        <div className='mb - 8'>;
-          <div className='flex flex - col lg:flex - row gap - 6 items - start lg:items - center justify - between'>;
-            <div className='flex - 1'>;
-              <div className='relative max - w-md'>;
-                <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
-                <input;
-                  type='text';
-                  placeholder='Search services...';
-                  value={search_term}
-                  on_change={e => setSearchTerm (e.target.value)}
-                  className='w - full pl - 10 pr - 4 py - 3 border border - gray - 300 dark:border - gray - 600 rounded - lg bg - white dark:bg - gray - 800 text - gray - 900 dark:text - white placeholder - gray - 500 dark:placeholder - gray - 400 focus:ring - 2 focus:ring - blue - 500 focus:border - transparent';
-                />;
-              </div>;
-            </div>;
-            <div className='flex items - center gap - 4'>;
-              <div className='flex items - center gap - 2'>;
-                <button;
-                  on_click={() => setViewMode ('grid')}
-                  className={`p - 2 rounded - lg transition - all duration - 300 ${
-                    view_mode === 'grid';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <Grid className='w - 5 h - 5' />                </button>                <button;
-                  on_click={() => setViewMode ('list')}
-                  className={`p - 2 rounded - lg transition - all duration - 300 ${
-                    view_mode === 'grid';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <Grid className="w - 5 h - 5" />;
-                </button>;
-                <button;
-                  on_click={() => setViewMode ('list')}
-                  className={`p - 2 rounded - lg transition - all duration - 300 ${
-                    view_mode === 'list';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <List className='w - 5 h - 5' />                </button>;
-              </div>;
-            </div>;
-          </div>                    view_mode === 'list';
-                      ? 'bg - blue - 100 dark:bg - blue - 900 text - blue - 600 dark:text - blue - 400';
-                      : 'bg - gray - 100 dark:bg - gray - 700 text - gray - 600 dark:text - gray - 400 hover:bg - gray - 200 dark:hover:bg - gray - 600';
-                  }`}
-                >;
-                  <List className="w - 5 h - 5" />;
-              </div>;
-            </div>;
-          </div>;
-          {/* Category Filters */}
-          <div className='mt - 6'>;
-            <div className='flex flex - wrap gap - 3'>;
-              {categories.map (category => (                <button;
-          {/* Category Filters */}
-          <div className="mt - 6">;
-            <div className="flex flex - wrap gap - 3">;
-              {categories.map ((category) => (
-
-
-
-                <button
-
-
-                  key={category.id}
-                  on_click={() => setSelectedCategory (category.id)}
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
-                    selected_category === category.id;
-                      ? 'bg - gradient - to - r text - white shadow - lg';
-                      : 'bg - white dark:bg - gray - 800 text - gray - 700 dark:text - gray - 300 border border - gray - 200 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700';
-                  } ${category.color}`}
-                >;
-                  {category.icon}
-                  {category.name}
-
-            </div>;
-          </div>;
-        </div>;
-
-
-
-
-
-        {/* Results Summary */}
-
-
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-
-        <div className="space-y-6">
-          {filteredServices.length === 0 ? (
-            <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                No services found
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                Try adjusting your search terms or category filters.
-              </p>
-            </div>
-          ) : (
-            <AnimatePresence>
-              {viewMode === 'grid' ? (
-
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                  {filteredServices.map(service => (
-                    <ServiceCard key={service.id} service={service} />
-                  ))}
-                </div>
-              ) : (
-                <div className='space-y-6'>
-
-                  {filteredServices.map(service => (                    <ServiceList key={service.id} service={service} />
-
-                    <ServiceList key={service.id} service={service} />
-
-
-                  ))}
-                </div>;
-              )}
-            </AnimatePresence>;
-          )}
-
-        </div>;
-
-
-
-
-
-        {/* Call to Action */}
-        <div className='mt-16 text-center'>;
-          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
-            <h2 className='text-3xl md:text-4xl font-bold mb-6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>;
-              Our team of experts is ready to help you implement these;
-              cutting-edge solutions. Get in touch today to discuss your;
-              specific needs and discover how we can drive your success.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
-              <a
-                href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
-                className='inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'>;
-                Start Your Transformation;
-                <ArrowRight className='w-5 h-5' />;
-              </a>;
-              <a
-
-        </div>
-
         {/* Call to Action */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">

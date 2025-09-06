@@ -55,7 +55,6 @@ class MockAmlProvider implements AmlProvider {
 
 // Singleton instance
 export const amlManager = new AmlManager();
-
 // Utility functions
 export function createAmlCheck(
   userId: string,
@@ -70,15 +69,12 @@ export function createAmlCheck(
     details: {}
   };
 }
-
 export function generateAmlCheckId(): string {
   return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-
 export function isAmlCheckExpired(check: AmlCheck): boolean {
   return new Date(check.expiresAt) < new Date();
 }
-
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   const colors = {
     low: 'green',

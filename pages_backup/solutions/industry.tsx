@@ -86,38 +86,40 @@ const industries = [;
   }
 ;];
 const capabilities = [;
-  { title: 'Regulatory Compliance, description: 'Ensure compliance with industry-specific regulations' },',;
-  { title: 'Custom Workflows, description: 'Tailored business processes for your industry' },',;
-  { title: 'Integration Expertise, description: 'Seamless integration with existing industry systems' },',;
-  { title: 'Security Standards, description: 'Industry-specific security and data protection' },',;
-  { title: 'Performance Optimization, description: 'Optimized for industry-specific performance requirements' },',;
-  { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',;
+  { title: 'Regulatory Compliance, description: 'Ensure compliance with industry-specific regulations' },',
+  { title: 'Custom Workflows, description: 'Tailored business processes for your industry' },',
+  { title: 'Integration Expertise, description: 'Seamless integration with existing industry systems' },',
+  { title: 'Security Standards, description: 'Industry-specific security and data protection' },',
+  { title: 'Performance Optimization, description: 'Optimized for industry-specific performance requirements' },',
+  { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',
 ;];
 const stats = [;
-  { number: '15+, label: 'Industries Served' },',;
-  { number: '10+, label: 'Years Experience' },',;
-  { number: '100%, label: 'Compliance Rate' },',;
-  { number: '500+, label: 'Industry Projects' }',;
+  { number: '15+, label: 'Industries Served' },',
+  { number: '10+, label: 'Years Experience' },',
+  { number: '100%, label: 'Compliance Rate' },',
+  { number: '500+, label: 'Industry Projects' }',
 ;];
-export default function IndustrySolutionsPage() {;
-  return (
-    <Layout)
-      title="Industry Solutions - Zion Tech Group""
+export default function IndustrySolutionsPage() {
+  return (;
+    <Layout);
+      title="Industry Solutions - Zion Tech Group"";
       description="Specialized technology solutions tailored to specific industries including healthcare, finance, e-commerce, education, manufacturing, and real estate.""
-      keywords="industry solutions, healthcare technology, fintech, e-commerce, education technology, manufacturing IoT, real estate tech"">;
+      keywords="industry solutions, healthcare technology, fintech, e-commerce, education technology, manufacturing IoT, real estate tech""
+    >;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">";
+        <section className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20 overflow-hidden">"
           <div className="absolute inset-0">";
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
           <div className="container mx-auto px-4 relative z-10">";
-            <motion&& motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center max-w-4xl mx-auto"">;
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto""
+            >;
               <div className="flex items-center justify-center mb-6">";
                 <BarChart3 className="w-16 h-16 text-indigo-400 mr-4" />";
 
@@ -139,11 +141,11 @@ export default function IndustrySolutionsPage() {;
                   Industry Case Studies;
                 </Link>;
               </div>;
-            </motion && motion.div>;
+            </motion.div>;
           </div>;
         </section>;
         {/* Stats Section */}
-        <section className="py-16 bg-white">";
+        <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
 
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
@@ -153,19 +155,20 @@ export default function IndustrySolutionsPage() {;
 
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
-                  className="text-center"">;
-                  <div className="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">{stat && stat.number}</div>";
-                  <div className="text-gray-600 font-medium">{stat && stat.label}</div>";
-                </motion && motion.div>;
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center""
+                >;
+                  <div className="text-4xl md:text-5xl font-bold text-indigo-600 mb-2">{stat.number}</div>"
+                  <div className="text-gray-600 font-medium">{stat.label}</div>"
+                </motion.div>;
               ))}
-            </div>,;
+            </div>,
           </div>;
         </section>;
         {/* Industries Section */}
-        <section className="py-20 bg-gray-50">";
+        <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
-            <motion&& motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -175,13 +178,13 @@ export default function IndustrySolutionsPage() {;
 
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
-                We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,;
+                We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,
               </p>;
-            </motion && motion.div>;
+            </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {industries && industries.map((industry, index) => (,;
-                <motion&& motion.div}),
-                  key={industry && industry.name}
+              {industries.map((industry, index) => (,
+                <motion.div}),
+                  key={industry.name}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
@@ -193,27 +196,27 @@ export default function IndustrySolutionsPage() {;
 
                     </div>;
                     <div>;
-                      <h3 className="text-2xl font-bold text-gray-900">{industry && industry.name}</h3>";
-                      <p className="text-gray-600">{industry && industry.description}</p>";
+                      <h3 className="text-2xl font-bold text-gray-900">{industry.name}</h3>"
+                      <p className="text-gray-600">{industry.description}</p>"
                     </div>;
                   </div>;
                   <ul className="space-y-3">";
-                    {industry && industry.features.map((feature, featureIndex) => (,;
-                      <li key={featureIndex} className="flex items-center text-gray-600">";
+                    {industry.features.map((feature, featureIndex) => (,
+                      <li key={featureIndex} className="flex items-center text-gray-600">"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
                         {feature}
-                      </li>,;
+                      </li>,
                     ))}
-                  </ul>,;
-                </motion && motion.div>;
+                  </ul>,
+                </motion.div>;
               ))}
-            </div>,;
+            </div>,
           </div>;
         </section>;
         {/* Capabilities Section */}
-        <section className="py-20 bg-white">";
+        <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
-            <motion&& motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -225,11 +228,11 @@ export default function IndustrySolutionsPage() {;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Industry-specific capabilities that ensure your solutions meet regulatory requirements and business objectives;
               </p>;
-            </motion && motion.div>;
+            </motion.div>;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
-              {capabilities && capabilities.map((capability, index) => (,;
-                <motion&& motion.div}),
-                  key={capability && capability.title}
+              {capabilities.map((capability, index) => (,
+                <motion.div}),
+                  key={capability.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
 
@@ -240,13 +243,13 @@ export default function IndustrySolutionsPage() {;
                 </motion && motion.div>;
 
               ))}
-            </div>,;
+            </div>,
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">";
+        <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
-            <motion&& motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -271,7 +274,7 @@ export default function IndustrySolutionsPage() {;
                   View All Solutions;
                 </Link>;
               </div>;
-            </motion && motion.div>;
+            </motion.div>;
           </div>;
         </section>;
       </div>;

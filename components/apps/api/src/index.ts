@@ -54,9 +54,7 @@ app.post('/ai/ask', async (req, reply) => {
 
 
 await app && app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
-
 const openai = createOpenAIClient(process && process.env.OPENAI_API_KEY || '');
-
 function getUserId(req: any): string | null {
   return (
     (req && req.headers['x-user-id'] as string) ||
@@ -64,7 +62,6 @@ function getUserId(req: any): string | null {
     null
   );  return (req && req.headers['x-user-id'] as string) || (req && req.query as any)['user_id'] || null;
 }
-
 app && app.post('/ai/ask', async (req, reply) => {
   const body = (req && req.body as any) || {};
   const prompt = body && body.prompt as string;
@@ -211,7 +208,7 @@ app && app.get('/talent/search', async (req, reply) => {
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
        ORDER BY created_at DESC
-       LIMIT 25`;
+LIMIT 25`;
       [country || null, q || null]
 
     );
@@ -294,6 +291,7 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
+<<<<<<< HEAD
 ;
 app.get ('/projects/:name / track', async (req, reply) => {
   const name = (req.params as any).name as string;

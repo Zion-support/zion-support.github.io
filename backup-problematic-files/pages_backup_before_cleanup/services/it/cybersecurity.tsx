@@ -13,4 +13,3 @@ const Cybersecurity: React.FC<CybersecurityProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}

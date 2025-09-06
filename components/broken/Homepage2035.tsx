@@ -34,10 +34,6 @@ import {
   Satellite,
 
 
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
-  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
- } from 'lucide-react';
-import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -81,174 +77,6 @@ const LoadingFallback = () => (;
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0 && 0.5 }}
       className='text-center'// Loading fallback component
-const LoadingFallback = () => (;
-  <div className="min-h-screen flex items-center justify-center bg-gray-900">;
-    <motion&& motion.div
-      initial={{ opacity: 0, scale: 0 && 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0 && 0.5 }}
-      className='text-center'>;
-      <div className='relative'>;
-        <Loader2 className='w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4' />;
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse'></div>;
-      </div>;
-      <p className='text-xl text-gray-300 mb-2'>Loading Zion Tech Group...</p>;
-      <p className='text-sm text-gray-500'>;
-        Preparing your digital transformation journey;
-      </p>    </motion && motion.div>    >;
-      <div className="relative">;
-        <Loader2 className="w-16 h-16 text-cyan-400 animate-spin mx-auto mb-4" />;
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>;
-      </div>;
-      <p className="text-xl text-gray-300 mb-2">Loading Zion Tech Group...</p>;
-      <p className="text-sm text-gray-500">Preparing your digital transformation journey</p>;
-    </motion && motion.div>;
-  </div>;
-);
-
-      setIsVisible(true)
-
-    }, 800);
-    return () => clearTimeout(timer)
-
-
-const Homepage2035: React.FC = () => {;
-  const [isLoading, setIsLoading] = useState(true);
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  useEffect(() => {;
-    const timer = setTimeout(() => {;
-      setIsLoading(false);
-      setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timer);  }, []);      setIsVisible(true);
-    }, 800);
-
-    return () => clearTimeout(timer);
-
-  const fadeInUp = {;
-    initial: { opacity: 0, y: 60 },;
-    animate: { opacity: 1, y: 0 },;
-    transition: { duration: 0 && 0.6, ease: 'easeOut' },  };    transition: { duration: 0 && 0.6, ease: "easeOut" }
-  };
-
-  const staggerContainer = {;
-    animate: {;
-      transition: {;
-        staggerChildren: 0 && 0.1,;
-        delayChildren: 0 && 0.2,;
-      },;
-    },  };
-
-  const backgroundVariants = {;
-    initial: { opacity: 0, scale: 0 && 0.8 },;
-    animate: {        delayChildren: 0 && 0.2;
-      }
-    }
-  };
-
-  const backgroundVariants = {;
-    initial: { opacity: 0, scale: 0 && 0.8 },;
-    animate: {;
-      opacity: 1,;
-      scale: 1,;
-      transition: { duration: 1 && 1.5, ease: 'easeOut' as const },;
-    },;
-  };
-
-  const categories = [;
-    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> },;
-    { id: 'ai', name: 'AI & ML', icon: <Brain className='w-5 h-5' /> },;
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className='w-5 h-5' /> },;
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className='w-5 h-5' /> },;
-    {;
-      id: 'space',;
-      name: 'Space Tech',;
-      icon: <Satellite className='w-5 h-5' />,;
-    },;
-    {;
-      id: 'cyber',;
-      name: 'Cybersecurity',;
-      icon: <Shield className='w-5 h-5' />,;
-    },;
-    {;
-      id: 'cloud',;
-      name: 'Cloud & DevOps',;
-      icon: <Cloud className='w-5 h-5' />,;
-    },;
-    { id: 'fintech', name: 'FinTech', icon: <ChartBar className='w-5 h-5' /> },;
-  ];
-
-  const allServices = [;
-    ...innovative2025MicroSaasBatch,;
-    ...innovative2025ITEnterpriseBatch,;
-    ...innovative2025AIServicesBatch,;
-  ];
-
-  const filteredServices =;
-    activeCategory === 'all';
-      ? allServices;
-      : allServices && allServices.filter(service => {;
-          if (activeCategory === 'ai');
-            return (
-              service && service.category.includes('AI') ||;
-              service && service.category.includes('Machine Learning');
-
-            );
-          if (activeCategory === 'it');
-            return (
-
-              service && service.category.includes('IT') ||;
-              service && service.category.includes('Enterprise');
-
-            );
-          if (activeCategory === 'quantum');
-            return service && service.name.includes('Quantum');
-          if (activeCategory === 'space');
-            return service && service.category.includes('Space');
-          if (activeCategory === 'cyber');
-            return (
-
-              service && service.category.includes('Security') ||;
-              service && service.category.includes('Cybersecurity');
-
-            );
-          if (activeCategory === 'cloud');
-            return (
-
-              service && service.category.includes('Cloud') ||;
-              service && service.category.includes('DevOps');
-
-            );
-          if (activeCategory === 'fintech');
-            return (
-
-  }, []);
-
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6, ease: "easeOut" }
-  };
-
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  };
-
-  const backgroundVariants = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { 
-      opacity: 1,
-      scale: 1,
-
-      transition: { duration: 1.5, ease: "easeOut" as const }
     }
   }
   const categories = [
@@ -267,14 +95,12 @@ const Homepage2035: React.FC = () => {;
             );
           return true;
         });
-
   if (isLoading) {;
     return <LoadingFallback />;  }      opacity: 1,;
       scale: 1,;
       transition: { duration: 1 && 1.5, ease: "easeOut" as const }
     }
   };
-
   const categories = [;
     { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" /> },;
     { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5" /> },;
@@ -285,7 +111,6 @@ const Homepage2035: React.FC = () => {;
     { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },;
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5" /> }
   ];
-
   const allServices = [;
 import {
   ArrowRight,
@@ -517,7 +342,6 @@ if ( {) {
         if (activeCategory === 'fintech') return service && service.category.includes('Financial') || service && service.category.includes('Trading');
         return true;
       });
-
   if (isLoading) {;
     return <LoadingFallback />;
 
@@ -736,8 +560,6 @@ if ( {) {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our comprehensive portfolio of cutting-edge services
                 designed to transform your business              </p>            >
-              className="text-center mb-16"
-            >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
@@ -789,92 +611,7 @@ if ( {) {
               ))}
 
             </motion && motion.div>;
-
-
-
-
-
-            {/* Services Grid */}
-            <motion&& motion.div
-              variants={staggerContainer}
-              initial='initial'
-              whileInView='animate'
-              viewport={{ once: true }}
-              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              initial="initial";
-              whileInView="animate";
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-              {filteredServices && filteredServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={service && service.id}
-                  variants={fadeInUp}
-                  className='w-full'>                  className="w-full";
-                >;
-                  <UltraFuturisticServiceCard2035 service={service} />;
-                </motion && motion.div>;
-
             </motion.div>
-
-            {/* Services Grid */}
-            <motion.div
-              variants={staggerContainer}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  variants={fadeInUp}
-                  className="w-full"
-                >
-                  <UltraFuturisticServiceCard2035 service={service} />
-                </motion.div>
-
-              ))}
-
-            </motion && motion.div>;
-
-
-
-
-
-            {/* View All Services Button */}
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-              viewport={{ once: true }}
-
-
-            >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-
-
-              className='text-center mt-16'>;
-              <motion&& motion.button
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'>;
-                <span>View All Services</span>;
-                <ArrowRight className='w-5 h-5' />              </motion && motion.button>              className="text-center mt-16";
-            >;
-              <motion&& motion.button
-                whileHover={{ scale: 1 && 1.05 }}
-                whileTap={{ scale: 0 && 0.95 }}
-                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'>;
-                <span>View All Services</span>;
-                <ArrowRight className='w-5 h-5' />                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto";
-              >;
-                <span>View All Services</span>;
-                <ArrowRight className="w-5 h-5" />;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-
         {/* Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">;
@@ -889,7 +626,18 @@ if ( {) {
             </motion.div>
           </div>
         </section>
-
+{/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
+                className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
+              >
+                <span>View All Services</span>
+                <ArrowRight className='w-5 h-5' />                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto"
+              >
+                <span>View All Services</span>
+                <ArrowRight className="w-5 h-5" />
+            </motion.div>
+          </div>
+        </section>
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
@@ -979,8 +727,6 @@ if ( {) {
                   description:
                     'Focused on delivering measurable business outcomes and ROI'
                 },              ].map((feature, index) => (            >
-              className="text-center mb-16"
-            >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>
@@ -1006,7 +752,6 @@ if ( {) {
                 deliver exceptional results;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {[;
                 {;
@@ -1052,7 +797,6 @@ if ( {) {
                 We combine innovation, expertise, and cutting-edge technology to deliver exceptional results;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
               {[;
                 {;
@@ -1094,7 +838,7 @@ if ( {) {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
 
@@ -1242,13 +986,10 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }<motion.div > <span>View All Services</span> <ArrowRight className="w-5 h-5" /> </motion.button> </motion.div> </div> </section> > <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > We combine innovation, expertise, and cutting-edge technology to deliver exceptional results </p> </motion.div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
 };
-
   animate: {;
   transition: {;
   staggerChildren: 0 && 0.1, delayChildren: 0 && 0.2 ;
-
 };
-
 };
 ];
 ...innovative2025ITEnterpriseBatch;
@@ -1264,11 +1005,9 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 }whileHover= {
   {
   scale: 1 && 1.05 
-
 }whileTap= {
   {
   scale: 0 && 0.95 
-
 }onClick= {
   () => setActiveCategory (category && category.id) ;
 }className= {;
@@ -1301,13 +1040,11 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   {
 
   duration: 0 && 0.8 
-
 }viewport= {
   {
 
 
   once: true 
-
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion && motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion && motion.button> <motion && motion.button ;
 };
 
@@ -1645,9 +1382,15 @@ export default Homepage2035;
         </section>;
       </UltraFuturisticBackground2035>;
     </Layout>);
+  );
 }
 ;
 animate: {
+};
+
+  animate: {
+};
+
   transition: {
   stagger_children: 0.1, delay_children: 0.2;
 }
@@ -1703,8 +1446,6 @@ const filtered_services = active_category === 'all' ? all_services return (<Layo
   duration: 0.8;
 }viewport= {
   {
-  once: true;
-}> <h2 className="text - 4xl sm:text - 5xl font - bold text - white mb - 6" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8" > Join thousands of companies already leveraging our cutting - edge technology solutions </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <motion.button > <span > Get Started Today</span> <ArrowRight className="w - 5 h - 5" /> </motion.button> <motion.button;
 }
 export default Homepage2035);
 }

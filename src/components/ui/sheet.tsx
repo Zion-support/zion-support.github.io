@@ -41,7 +41,7 @@ const sheetVariants = cva(
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
     defaultVariants: {
-      side: &quot;right&quot;}}
+      side: "right"}}
 )
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>
@@ -105,7 +105,7 @@ const SheetContent = React.forward_ref<;
     <SheetOverlay />;
     <SheetPrimitive.Content;
       ref={ref}
-      className={cn (sheet_variants ({ side }), class_name)}
+      className={cn(sheetVariants({ side }), className)}
       {...props}
     >;
       {children}

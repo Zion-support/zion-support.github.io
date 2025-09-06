@@ -15,7 +15,6 @@
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
-
     const token = jwt && jwt.sign(
       { sub: address && address.toLowerCase(), chain: "evm", chainId },
       JWT_SECRET,

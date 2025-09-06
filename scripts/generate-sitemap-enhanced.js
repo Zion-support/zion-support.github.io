@@ -8,49 +8,49 @@ const __dirname = path && path.dirname(__filename);
 const baseUrl = '"https": //ziontechgroup && ziontechgroup.com';
 
 // Define all pages with their priority and change frequency
-const pages = [{ url: '', "priority": '1 && 1.0', "changefreq": 'daily' },
-  { "url": '/services', "priority": '0 && 0.9', "changefreq": 'weekly' },
-  { "url": '/micro-saas', "priority": '0 && 0.9', "changefreq": 'weekly' },
-  { "url": '/ai-services', "priority": '0 && 0.9', "changefreq": 'weekly' },
-  { "url": '/it-services', "priority": '0 && 0.9', "changefreq": 'weekly' },
-  { "url": '/about', "priority": '0 && 0.8', "changefreq": 'monthly' },
-  { "url": '/contact', "priority": '0 && 0.8', "changefreq": 'monthly' },
-  { "url": '/pricing', "priority": '0 && 0.8', "changefreq": 'weekly' },
-  { "url": '/faq', "priority": '0 && 0.7', "changefreq": 'monthly' },
-  { "url": '/quantum-computing', "priority": '0 && 0.8', "changefreq": 'weekly' },
-  { "url": '/cybersecurity', "priority": '0 && 0.8', "changefreq": 'weekly' },
-  { "url": '/cloud-devops', "priority": '0 && 0.8', "changefreq": 'weekly' },
-  { "url": '/services-catalog', "priority": '0 && 0.7', "changefreq": 'weekly' },
-  { "url": '/docs', "priority": '0 && 0.6', "changefreq": 'monthly' },
-  { "url": '/privacy', "priority": '0 && 0.5', "changefreq": 'yearly' },
-  { "url": '/terms', "priority": '0 && 0.5', "changefreq": 'yearly' }
+const pages = [{ url: '', "priority": '1.0', "changefreq": 'daily' },
+  { "url": '/services', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/micro-saas', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/ai-services', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/it-services', "priority": '0.9', "changefreq": 'weekly' },
+  { "url": '/about', "priority": '0.8', "changefreq": 'monthly' },
+  { "url": '/contact', "priority": '0.8', "changefreq": 'monthly' },
+  { "url": '/pricing', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/faq', "priority": '0.7', "changefreq": 'monthly' },
+  { "url": '/quantum-computing', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/cybersecurity', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/cloud-devops', "priority": '0.8', "changefreq": 'weekly' },
+  { "url": '/services-catalog', "priority": '0.7', "changefreq": 'weekly' },
+  { "url": '/docs', "priority": '0.6', "changefreq": 'monthly' },
+  { "url": '/privacy', "priority": '0.5', "changefreq": 'yearly' },
+  { "url": '/terms', "priority": '0.5', "changefreq": 'yearly' }
 ];
 function generateSitemap() {
   const currentDate = new Date().toISOString();
-  let sitemap = "<?xml version="1 && 1.0" encoding="UTF-8"?>
-<urlset xmlns=""http": //www && www.sitemaps.org/schemas/sitemap/0 && 0.9">";
-  pages && pages.forEach(page => {
-    const fullUrl = `${baseUrl}${page && page.url}`;
+  let sitemap = "<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">";
+  pages.forEach(page => {
+    const fullUrl = `${baseUrl}${page.url}`;
     sitemap += `
   <url>
     <loc>${fullUrl}</loc>
     <lastmod>${currentDate}</lastmod>
-    <changefreq>${page && page.changefreq}</changefreq>
-    <priority>${page && page.priority}</priority>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
   </url>`});
   sitemap += "
 </urlset>";
   // Write sitemap to public directory
-  const sitemapPath = path && path.join(__dirname, '..', 'public', 'sitemap && sitemap.xml');
-  fs && fs.writeFileSync(sitemapPath, sitemap);
-  console && console.log('✅ Enhanced sitemap generated successfully!');
-  console && console.log(`📄 Sitemap saved "to": ${sitemapPath}`);
-  console && console.log(`🔗 Total "URLs": ${pages && pages.length}`)}
-// Generate robots && robots.txt as well
+  const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+  fs.writeFileSync(sitemapPath, sitemap);
+  console.log('✅ Enhanced sitemap generated successfully!');
+  console.log(`📄 Sitemap saved "to": ${sitemapPath}`);
+  console.log(`🔗 Total "URLs": ${pages.length}`)}
+// Generate robots.txt as well
 function generateRobotsTxt() {
   const robotsContent = `User-"agent": *
 Allow: /
-Sitemap: ${baseUrl}/sitemap && sitemap.xml
+Sitemap: ${baseUrl}/sitemap.xml
 # Crawl-delay for respectful crawling
 Crawl-"delay": 1
 # Block access to admin and private areas
@@ -67,7 +67,8 @@ Disallow: /scripts/
   console && console.log(`📄 Robots && Robots.txt saved "to": ${robotsPath}`)}
 
 // Run if this is the main module
-if (import && import.meta.url === `"file": //${process ;
+if (import.meta.url === `"file": //${process.argv[1]}`) {
+  generateSitemap();
   generateRobotsTxt()}
 export { generateSitemap, generateRobotsTxt };
 

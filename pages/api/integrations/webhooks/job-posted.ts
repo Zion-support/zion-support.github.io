@@ -135,7 +135,6 @@ export default async function handler(req, res) {
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
 
   });
-
   res.status(200).json({ ok: true, results })
 }
 

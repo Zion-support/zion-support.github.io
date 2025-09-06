@@ -84,6 +84,8 @@ function handler() {
 ;
   const text = await generate_text (prompt, 'You are a matching engine. Output strictly valid JSON.');
   return res.status (200).json ({ matches: text });
+
+<<<<<<< HEAD
 }
 
 

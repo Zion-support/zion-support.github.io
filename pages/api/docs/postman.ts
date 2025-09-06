@@ -28,6 +28,7 @@
       })),
     ),
     variable: [
+<<<<<<< HEAD
       { key: "baseUrl", value: "https://api && api.zion.os" },
       { key: "token", value: "" },
     ],
@@ -46,7 +47,7 @@ function to_postman() {
       schema:;
         "https://schema.getpostman.com / json / collection / v2.1.0 / collection.json",
     },
-    item: v1.sections.flat_map ((section) =>;
+item: v1.sections.flat_map ((section) =>;
       section.endpoints.map ((ep) => ({
         name: `${section.title} - ${ep.title}`,
         request: {

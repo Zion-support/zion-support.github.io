@@ -5,6 +5,10 @@ export interface Peer {
   base_url: string, // e.g., https: //zion - latam.example.org;
   scope?: SyncScope,
   paused?: boolean;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 export interface InstanceConfig {
   instance_id: string,
@@ -17,6 +21,7 @@ export interface InstanceConfig {
 
 
 }
+;
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -62,22 +67,12 @@ export interface BaseEventPayload {
   }
 
 }
-export interface ProposalVoteEntry {
-  voter_id: string,
-  weight: number,
-  choice: string;
-}
-export interface ProposalPayload extends BaseEventPayload {
-  proposal_id: string,
-  title: string,
-  votes: ProposalVoteEntry[];
-}
-export interface TokenTransferPayload extends BaseEventPayload {
-  tx_id: string,
-  token: string,
-  amount: number,
-  from_subnet: string,
-  to_subnet: string,
+;
+export interface DaoEndorsementPayload extends BaseEventPayload {;
+  fromDAO: string;
+  toDAO: string;
+  resolutionId: string;
+  decision: "endorse" | "reject",;
   timestamp: number;
 
   } catch (error) {
@@ -93,6 +88,7 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
 
 
 }
+;
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
@@ -127,6 +123,10 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>;
 
   events: SyncEvent[];
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
   } catch (error) {

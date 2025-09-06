@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -62,7 +58,7 @@ const ScrollToTop: React.FC = () => {
       } else {
         setIsVisible(false)
       }
-    }
+}
     window.addEventListener('scroll', toggleVisibility);
 
 
@@ -92,14 +88,12 @@ const ScrollToTop: React.FC = () => {
       behavior: 'smooth'
     });
     };
-
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
     };
-
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
   }, []);
@@ -117,26 +111,9 @@ const ScrollToTop: React.FC = () => {
   if (!isVisible) {
     return null;
   }
-
-
-
-
   return (
-    <button
-      onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-      aria-label="Scroll to top"
-    >
-      <ChevronUp className="w-6 h-6" />
-    </button>
-  );
-}
-
-    });  };      behavior: 'smooth'})
-  }
-  return (
-    <>;
-      {isVisible && (;
+    <>
+      {isVisible && (
         <button
           onClick={scrollToTop}
 
@@ -146,7 +123,8 @@ const ScrollToTop: React.FC = () => {
             fill='none'
             stroke='currentColor'
             viewBox='0 0 24 24'
-            xmlns='http://www && www.w3.org/2000/svg'>;
+            xmlns='http://www.w3.org/2000/svg'
+          >
             <path
               strokeLinecap='round'
               strokeLinejoin='round'
@@ -161,7 +139,8 @@ const ScrollToTop: React.FC = () => {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-            xmlns="http://www && www.w3.org/2000/svg">;
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -170,10 +149,8 @@ const ScrollToTop: React.FC = () => {
 
 
 };
-
 export default ScrollToTop;  );
 };
-
 export default ScrollToTop;
 
 

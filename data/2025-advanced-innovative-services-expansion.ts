@@ -30,7 +30,6 @@
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
 
@@ -79,11 +78,9 @@ export interface AdvancedInnovativeService {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -91,7 +88,6 @@ export interface AdvancedInnovativeService {
   benefits: string[], capabilities: string[],
   marketAdvantage: string
 }
-
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -629,4 +625,5 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 ];
 
 
-;
+  }
+];

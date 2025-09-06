@@ -24,7 +24,7 @@
           <div className='mt-4 flex gap-3'>;
 
             <a
-              href='https://github && github.com/Zion-Holdings/zion && zion.app/actions'
+              href='https://github.com/Zion-Holdings/zion.app/actions'
               target='_blank'
               rel='noreferrer'
 

@@ -29,7 +29,6 @@
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
 
@@ -64,9 +63,8 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
-  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => service && service.popular);
-};
-
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -74,7 +72,6 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
 
   })
 }
-
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -90,24 +87,20 @@ export interface InnovativeMicroSaasService2026 {
   competitors: string[], marketSize: string,
   growthRate: string,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
   reviews: number
 }
-
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [
   // AI-Powered Business Intelligence & Analytics
   {
@@ -136,7 +129,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.8,
     reviews: 23
   };
-
   // AI Content Creation & Marketing
   {
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
@@ -164,7 +156,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.7,
     reviews: 34
   };
-
   // AI Customer Service & Support
   {
     id: 'ai-customer-service-automation', name: 'AI Customer Service Automation',
@@ -192,7 +183,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.6,
     reviews: 28
   };
-
   // AI-Powered E-commerce Optimization
   {
     id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
@@ -220,7 +210,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.5,
     reviews: 19
   };
-
   // AI-Powered HR & Recruitment
   {
     id: 'ai-hr-recruitment-suite', name: 'AI HR & Recruitment Suite',
@@ -248,7 +237,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.4,
     reviews: 22
   };
-
   // AI-Powered Financial Management
   {
     id: 'ai-financial-management-platform', name: 'AI Financial Management Platform',
@@ -276,7 +264,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.6,
     reviews: 31
   };
-
   // AI-Powered Project Management
   {
     id: 'ai-project-management-suite', name: 'AI Project Management Suite',
@@ -304,7 +291,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.5,
     reviews: 26
   };
-
   // AI-Powered Learning & Training
   {
     id: 'ai-learning-management-system', name: 'AI Learning Management System',
@@ -332,7 +318,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     rating: 4.4,
     reviews: 21
   };
-
   // AI-Powered Healthcare Solutions
   {
     id: 'ai-healthcare-assistant', name: 'AI Healthcare Assistant',
@@ -361,15 +346,12 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     reviews: 18
   }
 ];
-
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) => {
   return innovativeMicroSaasServices2026.filter(service => service.category === category)
 };
-
 export const getPopularInnovativeMicroSaasServices2026 = () => {
   return innovativeMicroSaasServices2026.filter(service => service.popular)
 };
-
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {
   return innovativeMicroSaasServices2026.filter(service => {
     const price = parseInt(service.price.replace('$', ''));

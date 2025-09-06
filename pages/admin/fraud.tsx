@@ -59,7 +59,6 @@ function FraudAdminPage() {
     fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken]);
-
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
 
@@ -124,6 +123,15 @@ export default function FraudAdminPage() {
   };
 
 
+        'Content-Type': 'application/json',
+        ...(adminToken ? { 'x-admin-token': adminToken } : {})
+      },
+      body: JSON.stringify({ fraudId: id, action })
+    });
+    const json = await res.json();
+    if (res.ok) fetchItems();
+    else alert(json.error || 'Action failed');
+  };
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -223,7 +231,11 @@ export default function FraudAdminPage() {
                   </div>
                 </td>
               </tr>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </tbody>
         </table>
       </div>

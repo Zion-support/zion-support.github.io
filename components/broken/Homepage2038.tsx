@@ -174,7 +174,6 @@ const Homepage2038: React.FC = () => {
                 <span>Innovation Leader 2038</span>;
                 <Sparkles className='w-4 h-4' />;
               </motion && motion.div>;
-
               <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>;
                 Zion Tech Group;
               </h1>;
@@ -182,7 +181,6 @@ const Homepage2038: React.FC = () => {
                 Pioneering the future of technology with revolutionary AI,;
                 quantum computing, and consciousness evolution solutions;
               </p>;
-
               {/* Enhanced CTA Section */}
               <div className='flex flex-col sm:flex-row gap-6 justify-center mb-10'>;
                 <Link href='/get-started'>;
@@ -243,14 +241,12 @@ const Homepage2038: React.FC = () => {
                 <span>Innovation Leader 2038</span>;
                 <Sparkles className="w-4 h-4" />;
               </motion && motion.div>;
-
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight">;
                 Zion Tech Group;
               </h1>;
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">;
                 Pioneering the future of technology with revolutionary AI, quantum computing, and consciousness evolution solutions;
               </p>;
-
               {/* Enhanced CTA Section */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">;
                 <Link href="/get-started">;
@@ -292,7 +288,6 @@ const Homepage2038: React.FC = () => {
           <div className="max-w-7xl mx-auto relative z-10">;
             <motion&& motion.div
 
-
         {/* Company Stats */}
         <section className="py-24 px-4 bg-black/30 relative">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
@@ -311,40 +306,43 @@ const Homepage2038: React.FC = () => {
             >
               <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
-                whileHover={{ scale: 1 && 1.05 }}>;
-                <div className='text-5xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors'>;
-                  100+;
-                </div>;
-                <div className='text-gray-300 text-lg'>AI Services</div>;
-                <div className='text-sm text-cyan-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>;
-                  Cutting-edge solutions;
-                </div>;
-              </motion && motion.div>;
-              <motion&& motion.div
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className='text-5xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors'>
+                  100+
+                </div>
+                <div className='text-gray-300 text-lg'>AI Services</div>
+                <div className='text-sm text-cyan-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>
+                  Cutting-edge solutions
+                </div>
+              </motion.div>
+              <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
-                whileHover={{ scale: 1 && 1.05 }}>;
-                <div className='text-5xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors'>;
-                  200+;
-                </div>;
-                <div className='text-gray-300 text-lg'>Quantum Solutions</div>;
-                <div className='text-sm text-blue-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>;
-                  Next-gen computing;
-                </div>;
-              </motion && motion.div>;
-              <motion&& motion.div
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className='text-5xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors'>
+                  200+
+                </div>
+                <div className='text-gray-300 text-lg'>Quantum Solutions</div>
+                <div className='text-sm text-blue-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>
+                  Next-gen computing
+                </div>
+              </motion.div>
+              <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
-                whileHover={{ scale: 1 && 1.05 }}>;
-                <div className='text-5xl font-bold text-purple-400 mb-3 group-hover:text-purple-300 transition-colors'>;
-                  24/7;
-                </div>;
-                <div className='text-gray-300 text-lg'>;
-                  Autonomous Operations;
-                </div>;
-                <div className='text-sm text-purple-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>;
-                  Always available;
-                </div>;
-              </motion && motion.div>;
-              <motion&& motion.div
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className='text-5xl font-bold text-purple-400 mb-3 group-hover:text-purple-300 transition-colors'>
+                  24/7
+                </div>
+                <div className='text-gray-300 text-lg'>
+                  Autonomous Operations
+                </div>
+                <div className='text-sm text-purple-400 mt-3 opacity-0 group-hover:opacity-100 transition-opacity'>
+                  Always available
+                </div>
+              </motion.div>
+              <motion.div
                 className='p-8 group hover:bg-white/5 rounded-2xl transition-all duration-300'
 
               className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
@@ -435,7 +433,6 @@ const Homepage2038: React.FC = () => {
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
 
-
         {/* Featured AI Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
@@ -460,8 +457,6 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (            >
-              className="text-center mb-20"
-            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Revolutionary AI Services
               </h2>
@@ -482,7 +477,6 @@ const Homepage2038: React.FC = () => {
                 our consciousness evolution and quantum AI platforms;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI && featuredAI.map((service, index) => (            >;
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;
                 Revolutionary AI Services;
@@ -491,7 +485,6 @@ const Homepage2038: React.FC = () => {
                 Experience the next evolution of artificial intelligence with our consciousness evolution and quantum AI platforms;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
               {featuredAI && featuredAI.map((service, index) => (;
                 <motion&& motion.div
@@ -806,6 +799,13 @@ const Homepage2038: React.FC = () => {
 
         {/* Featured Micro SAAS Services */}
         <section className="py-24 px-4 bg-black/20">
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Featured Micro SAAS Services */}
+        <section className='py-24 px-4 bg-black/20'>
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
@@ -825,8 +825,6 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas.map((service, index) => (            >
-              className="text-center mb-20"
-            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                 Innovative Micro SAAS
               </h2>
@@ -847,7 +845,6 @@ const Homepage2038: React.FC = () => {
                 solutions designed for the future;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas && featuredMicroSaas.map((service, index) => (            >;
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">;
                 Innovative Micro SAAS;
@@ -856,7 +853,6 @@ const Homepage2038: React.FC = () => {
                 Transform your business with our cutting-edge micro SAAS solutions designed for the future;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
               {featuredMicroSaas && featuredMicroSaas.map((service, index) => (;
                 <motion&& motion.div
@@ -968,6 +964,13 @@ const Homepage2038: React.FC = () => {
 
         {/* Featured IT Services */}
         <section className="py-24 px-4">
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Featured IT Services */}
+        <section className='py-24 px-4'>
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
@@ -987,8 +990,6 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT.map((service, index) => (            >
-              className="text-center mb-20"
-            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
                 Advanced IT Infrastructure
               </h2>
@@ -1009,7 +1010,6 @@ const Homepage2038: React.FC = () => {
                 AI-powered DevOps automation;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT && featuredIT.map((service, index) => (            >;
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">;
                 Advanced IT Infrastructure;
@@ -1018,7 +1018,6 @@ const Homepage2038: React.FC = () => {
                 Build the future with our quantum cloud infrastructure and AI-powered DevOps automation;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
               {featuredIT && featuredIT.map((service, index) => (;
                 <motion&& motion.div
@@ -1130,6 +1129,13 @@ const Homepage2038: React.FC = () => {
 
         {/* Why Choose Us */}
         <section className="py-24 px-4 bg-black/30">
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Why Choose Us */}
+        <section className='py-24 px-4 bg-black/30'>
+          <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
 
@@ -1234,7 +1240,6 @@ const Homepage2038: React.FC = () => {
                 human consciousness and computing;
               </p>;
             </motion && motion.div>;
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
               {[;
                 {;
@@ -1294,7 +1299,6 @@ const Homepage2038: React.FC = () => {
                 We're not just building technology - we're shaping the future of human consciousness and computing
               </p>
             </motion.div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -1474,8 +1478,6 @@ const Homepage2038: React.FC = () => {
                 <Link href='/services'>
                   <motion.button
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                    whileHover={{ scale: 1.05 }}            >
-              className="space-y-8"
-            >
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Ready to Shape the Future?
               </h2>
@@ -1496,7 +1498,6 @@ const Homepage2038: React.FC = () => {
                 Join the revolution in AI consciousness, quantum computing, and;
                 next-generation technology. Let's build the future together.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
                 <Link href='/contact'>;
                   <motion&& motion.button
@@ -1519,7 +1520,6 @@ const Homepage2038: React.FC = () => {
                 Join the revolution in AI consciousness, quantum computing, and next-generation technology. ;
                 Let's build the future together.;
               </p>;
-
               <div className="flex flex-col sm: flex-row gap-6 justify-center">;
                 <Link href="/contact">;
                   <motion&& motion.button
@@ -1552,10 +1552,8 @@ const Homepage2038: React.FC = () => {
 
 
 };
-
 export default Homepage2038;  );
 };
-
 export default Homepage2038;
 
 

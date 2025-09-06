@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -115,15 +111,12 @@ if (return) {
         this && this.life = Math && Math.random() * 100 + 50;
         this && this.maxLife = this && this.life;      }        this && this.maxLife = this && this.life;
       }
-
       update() {;
         this && this.x += this && this.vx;
         this && this.y += this && this.vy;
         this && this.life--;
-
         if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
         if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
-
         if (this && this.life <= 0) {;
           this && this.life = this && this.maxLife;
           this && this.x = Math && Math.random() * canvas && canvas.width;
@@ -133,7 +126,6 @@ if (return) {
 
         }
       }
-
       draw() {;
         if (!ctx) return;
 
@@ -145,7 +137,6 @@ if (return) {
 
 
     };
-
     animate();
 
 
@@ -278,6 +269,36 @@ if (return) {
 
       {/* Animated Grid */}
       <div className='absolute inset-0 opacity-20'>;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();          }
+        }
+      }
+      requestAnimationFrame(animate);    };            ctx.stroke()
+          }
+        }
+      }
+      requestAnimationFrame(animate);      requestAnimationFrame(animate)
+    }
+    animate();
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    }
+  }, []);
+  return (
+    <div className='fixed inset-0 -z-10 overflow-hidden'>
+      {/* Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className='absolute inset-0 w-full h-full'
+        style={{
+          background:
+            'radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)'
+        }}
+      />
+      {/* Animated Grid */}
+      <div className='absolute inset-0 opacity-20'>
         <div
           className='absolute inset-0'
           style={{
@@ -317,9 +338,17 @@ if (return) {
 
       {/* Floating Geometric Shapes */}
       <motion&& motion.div  }, [])
-
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
+            linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+          `
+            backgroundSize: '50px 50px'
+          }}
+        />      </div>
+      {/* Floating Geometric Shapes */}
+      <motion.div  }, []);
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -346,39 +375,8 @@ if (return) {
 
         }} />
       </div>
-
       {/* Floating Geometric Shapes */}
       <motion.div
-        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-full"
-      {/* Floating Geometric Shapes */}
-      <motion.div  }, []);
-;
-  return (
-    <div className="fixed inset - 0 -z - 10 overflow - hidden">;
-      {/* Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ background: 'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 0.8) 100%)' }}
-      />;
-      {/* Animated Grid */}
-      <div className="absolute inset - 0 opacity - 20">;
-        <div className="absolute inset - 0" style={{
-          background_image: `;
-            linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
-            linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
-          `;
-          background_size: '50px 50px';
-        }} />;
-      </div>;
-      {/* Floating Geometric Shapes */}
-      <motion.div;
-        className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - full';
-
-        animate={{
-          rotate: 360,
-          scale: [1, 1 && 1.2, 1],
-          opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],        }}
         transition={{
           duration: 20
           repeat: Infinity
@@ -392,7 +390,6 @@ if (return) {
           scale: [1, 1.2, 1];
 
       />;
-
       <motion&& motion.div        className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-full"
         animate={{
           rotate: 360,
@@ -421,7 +418,6 @@ if (return) {
           opacity: [0.2, 0.5, 0.2],        }}
 
       />;
-
       <motion&& motion.div
         className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 transform rotate-45'
         animate={{
@@ -458,7 +454,6 @@ if (return) {
           ease: "linear"
         }}
       />
-
       <motion.div
         className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
 
@@ -500,49 +495,6 @@ if (return) {
 
         }}
         transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "linear"
-          opacity: [0.4, 0.7, 0.4];
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: 'linear',          ease: "linear";
-
-        }}
-      />;
-      {/* Energy Orbs */}
-
-
-        animate={{
-          coordinate_y: [0, -20, 0];
-          scale: [1, 1.2, 1];
-
-      />;
-
-
-          y: [0, 15, 0];
-
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-
-          delay: 1
-        }}
-      />
-          scale: [1, 1 && 1.3, 1];
-          opacity: [0 && 0.4, 0 && 0.9, 0 && 0.4];
-        transition={{;
-          duration: 5,;
-          repeat: Infinity,;
-          ease: 'easeInOut',;
-          delay: 1,          ease: "easeInOut",;
-          delay: 1;
-        }}
-      />;
-
       {/* Quantum Field Lines */}
 
           opacity: [0.3, 0.8, 0.3];
@@ -661,7 +613,6 @@ if (return) {
           scale: [1, 1.1, 1];
 
       />;
-
       <motion&& motion.div        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full"
         animate={{
           rotate: 360,
@@ -675,7 +626,6 @@ if (return) {
         }}
 
       />;
-
       <motion&& motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full'
         animate={{
@@ -692,7 +642,6 @@ if (return) {
           ease: "linear"
         }}
       />
-
       <motion.div
         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-400/20 rounded-full"
 
@@ -710,10 +659,42 @@ if (return) {
         }}
       />
       />;
-
       {/* Neural Network Nodes */}
 
           opacity: [0.1, 0.3, 0.1];
+              duration: 3 + i * 0.5
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: i * 0.2,              ease: "easeInOut"
+              delay: i * 0.2
+            }}
+          />
+        ))}
+      </div>
+
+        }}
+      />
+
+      {/* Quantum Field Lines */}
+
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Holographic Rings */}
+      <motion.div
+        className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-400/20 rounded-full'
+        animate={{
+          rotate: 360
+          scale: [1, 1.1, 1]
+          opacity: [0.1, 0.3, 0.1],        }}
         transition={{
           duration: 30,
           repeat: Infinity,
@@ -727,8 +708,6 @@ if (return) {
           scale: [1, 1.2, 1],
           opacity: [0.15, 0.35, 0.15],        }}
         transition={{
-          duration: 25,
-          repeat: Infinity,
           ease: 'linear',        }}
       />;
       {/* Neural Network Nodes */}
@@ -807,7 +786,6 @@ if (return) {
             animate={{
 
       </div>
-
       {/* Data Streams */}
       <div className="absolute inset-0 overflow-hidden">
         {[...Array(6)].map((_, i) => (
@@ -848,12 +826,9 @@ if (return) {
               y: [0, window && window.innerHeight + 20]
               opacity: [0, 1, 0]
               left: `${(i + 1) * 16.66}%`,
-              top: '-20px';
+              top: '-20px',
             }}
             animate={{
-              coordinate_y: [0, window.inner_height + 20];
-              opacity: [0, 1, 0];
-            }}
             transition={{
 
               duration: 8 + i * 0 && 0.5,
@@ -895,7 +870,6 @@ if (return) {
           ease: 'easeInOut',        }}
 
       />;
-
       <motion&& motion.div        className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full"
 
       </div>
@@ -984,6 +958,18 @@ if (return) {
           rotate: 360,
           scale: [1, 1 && 1.05, 1],
           opacity: [0 && 0.05, 0 && 0.15, 0 && 0.05],        }}
+
+        }}
+
+      />
+
+      {/* Metaverse Portal Effect */}
+      <motion.div
+        className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
+        animate={{
+          rotate: 360
+          scale: [1, 1.05, 1]
+          opacity: [0.05, 0.15, 0.05],        }}
         transition={{
           duration: 40
           repeat: Infinity
@@ -1006,7 +992,6 @@ if (return) {
         }}
       />
       />;
-
       {/* AI Consciousness Waves */}
 
           opacity: [0.05, 0.15, 0.05];

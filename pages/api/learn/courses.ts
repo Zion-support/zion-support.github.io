@@ -10,7 +10,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const courses = JSON && JSON.parse(raw);
 
     const { category, level, isFree } = req && req.query;
-
     const filtered = courses && courses.filter((c: any) => {
       if (category && c && c.category !== category) return false;
       if (level && c && c.level !== level) return false;
@@ -23,7 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       return true;
     });
-
     res && res.status(200).json({ courses: filtered });
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });

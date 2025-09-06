@@ -980,6 +980,7 @@ h3 {
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 >>>>>>> main
   
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   .text-gradient-cyan,
   .text-gradient-purple,
   .text-gradient-rainbow {
@@ -1422,6 +1423,9 @@ h3 {
     animation: none;
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-5df1
 <<<<<<< HEAD
 =======

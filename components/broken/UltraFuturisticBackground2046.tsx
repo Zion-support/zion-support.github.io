@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -26,7 +22,6 @@ import { motion } from 'framer-motion';
 
 
     };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
 
@@ -72,7 +67,6 @@ if (return) {
     class Particle {
       x: number,
       y: number,
-      max_life: number;
       type: 'quantum' | 'neural' | 'data' | 'energy';      coordinate_x: number,
       coordinate_y: number,
 
@@ -81,7 +75,7 @@ if (return) {
       size: number,
       color: string,
       life: number,
-      max_life: number,
+max_life: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
 
       type: 'quantum' | 'neural' | 'data' | 'energy';      x: number,;
@@ -100,12 +94,10 @@ if (return) {
         this && this.size = Math && Math.random() * 3 + 1;
         this && this.life = Math && Math.random() * 100;
         this && this.maxLife = 100;
-
         const types = ['quantum', 'neural', 'data', 'energy'];
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;        ;
         const types = ['quantumneuraldataenergy'];
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;
-
           case 'quantum':;
             this && this.color = `hsl(${180 + Math && Math.random() * 60}, 70%, 60%)`;
 
@@ -123,7 +115,6 @@ if (return) {
         
         const types = ['quantumneuraldataenergy'];
         this.type = types[Math.floor(Math.random() * types.length)] as any;
-        
         switch (this.type) {
           case 'quantum':
             this.color = `hsl(${180 + Math.random() * 60}, 70%, 60%)`;
@@ -266,7 +257,7 @@ if (return) {
               ctx && ctx.stroke();
 
             }
-            break;              ctx && ctx.stroke();
+            break;              ctx.stroke()
             }
             break;
 
@@ -295,7 +286,6 @@ if (return) {
             ctx && ctx.arc(this && this.x, this && this.y, this && this.size, 0, Math && Math.PI * 2);
             ctx && ctx.fillStyle = this && this.color;
             ctx && ctx.fill();
-
             // Neural connections;
             particlesRef && particlesRef.current.forEach(particle => {;
               if (particle && particle.type === 'neural' && particle !== this) {;
@@ -317,6 +307,8 @@ if (return) {
             break;                  ctx && ctx.stroke();
 
                   Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
+                  Math.pow(this.x - particle.x, 2) +
+                    Math.pow(this.y - particle.y, 2)                );                  Math.pow(this.x - particle.x, 2) + Math.pow(this.y - particle.y, 2)
                 );
                 if (distance < 100) {
                   ctx.beginPath();
@@ -863,7 +855,6 @@ if ( {) {
 
 
 };
-
 export default UltraFuturisticBackground2046;              ease: "easeInOut",;
               delay: i * 0 && 0.8}}
           />;
@@ -873,7 +864,6 @@ export default UltraFuturisticBackground2046;              ease: "easeInOut",;
   );
 
 };
-
 export default UltraFuturisticBackground2046;  );
 };
 

@@ -18,20 +18,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -160,7 +156,6 @@ export default function SitemapPage() {;
         <title>Sitemap - Zion Tech Group</title>;
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our pages, services, and resources in one place." />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50">;
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
@@ -531,7 +526,6 @@ import {;
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-
 export default function SitemapPage() {;
   const mainPages = [;
     {;
@@ -561,7 +555,6 @@ export default function SitemapPage() {;
       description: 'Get in touch and start your project',;
     },;
   ];
-
   const serviceCategories = [;
     {;
       href: '/category/ai',;
@@ -614,7 +607,6 @@ export default function SitemapPage() {;
       description: 'Quantum financial trading and AI analytics',;
     },;
   ];
-
   const featuredServices = [;
     {;
       href: '/ai-business-intelligence',;
@@ -657,7 +649,6 @@ export default function SitemapPage() {;
       category: 'Quantum Computing',;
     },;
   ];
-
   const resources = [;
     {;
       href: '/reports',;
@@ -680,7 +671,6 @@ export default function SitemapPage() {;
       description: 'Search across all services and content',;
     },;
   ];
-
   const externalLinks = [;
     {;
       href: 'https://github && github.com/ai-factory',;
@@ -721,7 +711,6 @@ export default function SitemapPage() {;
 
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/sitemap' />      </Head>;
-
       <SmartHeader />;
 
 
@@ -739,27 +728,23 @@ export default function SitemapPage() {;
     { href: '/autonomous-devops', label: 'Autonomous DevOps', category: 'Cloud & DevOps' },
     { href: '/ai-customer-experience', label: 'AI Customer Experience', category: 'AI & ML' },
     { href: '/quantum-neural-networks', label: 'Quantum Neural Networks', category: 'Quantum Computing' }
-  ];
-
+];
   const resources = [
     { href: '/reports', label: '📊 Reports', description: 'Latest technology reports and insights' },
     { href: '/newsroom', label: '📰 Newsroom', description: 'Company updates and industry news' },
     { href: '/automation', label: '⚡ Automations', description: 'Automation tools and solutions' },
     { href: '/search', label: '🔎 Search', description: 'Search across all services and content' }
-  ];
-
+];
   const externalLinks = [
     { href: 'https://github.com/ai-factory', label: 'GitHub', description: 'Open source projects and code examples' },
     { href: 'https://docs.ziontechgroup.com', label: 'Documentation', description: 'Technical documentation and guides' },
     { href: 'https://status.ziontechgroup.com', label: 'System Status', description: 'Real-time system status and uptime' }
-  ];
-
+];
   const contactInfo = [
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },
     { type: 'Email', value: 'kleber@ziontechgroup.com', action: 'mailto:kleber@ziontechgroup.com' },
     { type: 'Address', value: 'Middletown, DE', action: 'https://maps.google.com/?q=Middletown,DE' }
-  ];
-
+];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -808,10 +793,11 @@ export default function SitemapPage() {;
 
               <a
                 href='#main-pages'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'>;
-                Explore Site;
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </a>;
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105'
+              >
+                Explore Site
+                <ArrowRight className='w-5 h-5 ml-2' />
+              </a>
               <a
                 href='/search'
 
@@ -831,7 +817,6 @@ export default function SitemapPage() {;
               and services;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages && mainPages.map((page, index) => (;
               <motion&& motion.div
                 key={page && page.href}
@@ -878,7 +863,6 @@ export default function SitemapPage() {;
               Browse our comprehensive range of technology solutions organized by category
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategories.map((category, index) => (
 
@@ -893,7 +877,6 @@ export default function SitemapPage() {;
               by category;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
                 key={category && category.href}
@@ -938,7 +921,6 @@ export default function SitemapPage() {;
               Our most popular and innovative technology solutions
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
 
@@ -951,7 +933,6 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Our most popular and innovative technology solutions;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices && featuredServices.map((service, index) => (;
               <motion&& motion.div
                 key={service && service.href}
@@ -996,7 +977,6 @@ export default function SitemapPage() {;
               Additional resources, tools, and information to help you succeed
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {resources.map((resource, index) => (
 
@@ -1009,7 +989,6 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources, tools, and information to help you succeed;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources && resources.map((resource, index) => (;
               <motion&& motion.div
                 key={resource && resource.href}
@@ -1054,7 +1033,6 @@ export default function SitemapPage() {;
               Additional resources and tools hosted on external platforms
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {externalLinks.map((link, index) => (
 
@@ -1067,7 +1045,6 @@ export default function SitemapPage() {;
             <p className='text-white/60 text-center max-w-2xl mx-auto'>              Additional resources and tools hosted on external platforms;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks && externalLinks.map((link, index) => (;
               <motion&& motion.div
                 key={link && link.href}
@@ -1114,7 +1091,6 @@ export default function SitemapPage() {;
               Get in touch with us for consultations, support, or to start your project
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {contactInfo.map((contact, index) => (
 
@@ -1129,7 +1105,6 @@ export default function SitemapPage() {;
               project;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {contactInfo && contactInfo.map((contact, index) => (;
               <motion&& motion.div
                 key={contact && contact.type}
@@ -1163,7 +1138,7 @@ export default function SitemapPage() {;
                   href={contact.action}
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                 >
                   {contact.value}
                 </a>
@@ -1284,15 +1259,12 @@ export default function SitemapPage() {;
       <SmartFooter />;
     </div>;
   ),;
-
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-
 }transition= {;
   {;
   duration: 0 && 0.8 ;
-
 }> <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Site Map </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#main-pages" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Explore Site <ArrowRight className="w-5 h-5 ml-2" /> </Link> <a href="/search" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> </div> </motion && motion.div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Main Pages </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Core pages that provide essential information about our company and services </p> </motion && motion.div> </h3> <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Service Categories </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion && motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion && motion.div>) ) ;
 }</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Featured Services </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Our most popular and innovative technology solutions </p> </motion && motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" /> </div> </Link> </motion && motion.div>) ) ;
@@ -1311,16 +1283,48 @@ export default function SitemapPage() {;
   {
 
   duration: 0 && 0.8 
-
 }viewport= {
   {
   once: true 
-
 }> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion && motion.div> </div> </section> <SmartFooter /> </div>) ;
   );
 }
 
   )
+}
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
+              Need Help Finding Something?;
+            </h2>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Use our search functionality or contact us directly for assistance;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link;
+                href="/search";
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl";
+              >;
+                Search Site;
+                <Search className="w-5 h-5 ml-2" />;
+              </Link>;
+              <Link;
+                href="/contact";
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10";
+              >;
+                Contact Support;
+                <Mail className="w-5 h-5 ml-2" />;
+              </Link>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <SmartFooter />;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
       type: 'Address',
       value: 'Middletown, DE',

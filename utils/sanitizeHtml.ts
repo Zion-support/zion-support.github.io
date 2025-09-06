@@ -39,11 +39,11 @@ export function sanitizeHtml(html: string): string { let sanitized = html.replac
 
   return sanitized;
 }
-export function sanitize_url (url: string): string {
-  return url.replace (/javascript:/gi, '');
+export function sanitizeUrl(url: string): string {
+  return url.replace(/javascript:/gi, '');
 }
-export function sanitize_css (css: string): string {
-  return css.replace (/expression\s*\(/gi, '');
+export function sanitizeCss(css: string): string {
+  return css.replace(/expression\s*\(/gi, '');
 }
 
 

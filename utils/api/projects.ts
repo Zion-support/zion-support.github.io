@@ -43,15 +43,20 @@ export interface Project {
 import { CurrentUser } from './auth';
 ;
 export interface Milestone {
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+export interface Milestone {;
+
   id: string;
   title: string;
   description?: string;
-  due_date: string;
-  amount_usd: number;
+  dueDate: string;
+  amountUsd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: any[];
-  created_at: string;
-  updated_at: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
   return projects.find(p => p.id === id) |null;
@@ -101,10 +106,6 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 
 
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
-  const project = projects && projects.find(p => p && p.id === id);
-  if (!project) return null,
-  
-  Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
   return project;
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
@@ -126,13 +127,6 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
-  project && project.milestones[idx] = next;
-  project && project.updatedAt = now;
-  saveProject(project);
-  return next;  
-  project && project.milestones.push(newMilestone);
-  project && project.updatedAt = new Date().toISOString();
-  
   return newMilestone;
 }
 
@@ -147,12 +141,6 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
-  const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
-  if (!milestone) return null,
-  
-  Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
-  project && project.updatedAt = new Date().toISOString();
-  
   return milestone;
 }
 

@@ -1,7 +1,6 @@
 
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
-
 export default function WhitepaperPreview() {;
 
 
@@ -29,7 +28,6 @@ export default function WhitepaperPreview() {
       .then(d => setMarkdown(d && d.markdown || ''));
       .catch(() => setNotFound(true));
   }, [id]);
-
   if (notFound);
 
     return (
@@ -39,7 +37,6 @@ export default function WhitepaperPreview() {
     );
   if (!markdown);
     return <div className='container mx-auto px-4 py-6'>Loading…</div>;
-
   return (
 
     <div className='container mx-auto px-4 py-6'>;

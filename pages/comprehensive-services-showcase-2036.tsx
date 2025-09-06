@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -40,7 +36,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     ...real2036ITServices;
     ...real2036AIServices
   ];
-
 const ComprehensiveServicesShowcase2036: React.FC = () => {;
   const allServices = [;
     ...real2036InnovativeServices,;
@@ -48,7 +43,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
     ...real2036AIServices,  ];
 
   const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
-
   return (
 
 
@@ -60,7 +54,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
             >
               Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
             </motion.p>
@@ -68,6 +62,63 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
+className="flex flex-col sm:flex-row gap-4 justify-center"
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            >
+              2036 Services Showcase
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            >
+              Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8, delay: 0.4 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
@@ -183,6 +234,51 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+className="text-center mb-16"
+            {/* Featured Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className='text-center mb-16'
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-gray-400">Starting from</span>
+                    <span className="text-lg font-bold text-green-400">
+                      ${Math.min(...allServices.filter(service => service.category === category).map(s => parseInt(s.price.replace(/[^0-9]/g, ''))))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>;
+                  </div>;
+                </motion.div>;
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+            {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <motion.div;
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
 
                   <div className="flex items-center justify-between">
@@ -275,7 +371,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                 Explore our entire collection of {allServices && allServices.length} innovative;
                 services across all technology domains.              </p>;
             </motion && motion.div>;
-
             {/* Services by Category */}
             {categories && categories.map((category, categoryIndex) => (;
               <motion&& motion.div
@@ -323,9 +418,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
                             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-2 py-1 rounded-full">
                               Popular
                             </span>
-                          )}
-                        </div>
-                        <h4 className="text-lg font-bold mb-2 text-white">{service.name}</h4>
                         <p className="text-gray-300 text-sm mb-3">{service.description}</p>
                         <div className="mb-3">
                           <span className="text-2xl font-bold text-green-400">{service.price}</span>
@@ -366,9 +458,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {;
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                  Contact Us Today
-                </button>
-                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
                   Schedule Demo
                 </button>
               </div>
@@ -664,16 +753,26 @@ export default ComprehensiveServicesShowcase2036;
                   Contact Us Today;
                 </button>;
                 <button className='px - 8 py - 4 border - 2 border - cyan - 400 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105'>                  Schedule Demo;
+
+},
+export default ComprehensiveServicesShowcase2036,
+              className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20";
+            >;
+              <h2 className="text-4xl font-bold mb-6 text-white">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+                Join the future of technology with our revolutionary services. Get in touch to discuss how we can help you achieve your goals.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
+                  Contact Us Today;
+                </button>;
+                <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">;
+                  Schedule Demo;
                 </button>;
               </div>;
             </motion.div>;
           </div>;
         </section>;
       </div>;
-    </Layout>),
-}
-;
-
-
-export default ComprehensiveServicesShowcase2036;
-;

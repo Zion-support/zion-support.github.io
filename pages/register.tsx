@@ -1,6 +1,8 @@
 
 
 export default function RegisterPage() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;
@@ -13,7 +15,6 @@ export default function RegisterPage() {;
     agreeToTerms: false,;
     subscribeNewsletter: false,;
   });
-
   const [passwordRequirements, setPasswordRequirements] = useState({;
     length: false,;
     uppercase: false,;
@@ -21,19 +22,16 @@ export default function RegisterPage() {;
     number: false,;
     special: false,;
   });
-
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     // Handle registration logic here;
   };
-
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value, type, checked } = e && e.target;
     setFormData((prev) => ({;
       ...prev,;
       [name]: type === "checkbox" ? checked : value,;
     }));
-
     // Check password requirements;
     if (name === "password") {;
       setPasswordRequirements({;
@@ -45,7 +43,6 @@ export default function RegisterPage() {;
       });
     }
   };
-
   const isPasswordValid = Object && Object.values(passwordRequirements).every(Boolean);
   const isFormValid =;
     formData && formData.firstName &&;
@@ -81,7 +78,6 @@ export default function RegisterPage() {;
               Join Zion Tech Group and start your digital transformation journey;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
 
             initial={{ opacity: 0, y: 20 }}
@@ -113,7 +109,6 @@ export default function RegisterPage() {;
                     />;
                   </div>;
                 </div>;
-
                 <div>;
 
                   <label
@@ -134,7 +129,6 @@ export default function RegisterPage() {;
                   />;
                 </div>;
               </div>;
-
               <div>;
 
                 <label
@@ -160,7 +154,6 @@ export default function RegisterPage() {;
                   />;
                 </div>;
               </div>;
-
               <div>;
 
                 <label
@@ -179,7 +172,6 @@ export default function RegisterPage() {;
 
                 />;
               </div>;
-
               <div>;
 
                 <label
@@ -470,7 +462,6 @@ if ( {) {
                   )}
                 </div>;
               </div>;
-
               <div>;
 
                 <label
@@ -513,7 +504,6 @@ if ( {) {
                   )}
 
               </div>;
-
               <div className="space-y-4">;
                 <div className="flex items-center">;
 
@@ -621,7 +611,6 @@ if ( {) {
                   </label>;
                 </div>;
               </div>;
-
               <div>;
                 <button
                   type="submit"

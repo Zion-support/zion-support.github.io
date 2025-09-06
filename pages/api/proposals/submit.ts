@@ -70,6 +70,11 @@ function submitByEmail() {
     port,
     secure: port === 465,
     auth: { user, pass },
+  const transporter = nodemailer.createTransport({
+    host
+    port
+    secure: port === 465
+    auth: { user, pass }
   });
 
   try {
@@ -79,7 +84,6 @@ function submitByEmail() {
     if (!id) return res.status(400).json({ error: 'id is required' });
     const meta = getProposal(id);
     if (!meta) return res.status(404).json({ error: 'Proposal not found' });
-
     // Email submission
 
     if (channels.includes('email')) {
@@ -105,13 +109,26 @@ function submitByEmail() {
       .status(500)
 
       .json({ error: error?.message |"Submission failed" });
-  }
-}
+  try {
+    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
+    if (!id) return res.status($1).json({$2});
+    const meta = getProposal(id);
+    if (!meta) return res.status($1).json({$2});
+    // Email submission
+    if (channels.includes('email')) {
+      const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org';
+      const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
+      const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote || 'N/A'}`;
+      await submitByEmail(to, subject, text)
+    }
+
+    // ENS record hash (default: compute and store hash only)
+    let ensRecordHash: string | undefined;
+    try {
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;
       updateArtifacts(id, { ensRecordHash })
     } catch {}
-
     const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }));
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
@@ -128,39 +145,5 @@ function submitByEmail() {
     return res;
       .status (500);
       .json ({ error: error?.message || "Submission failed" });
-  }
-}
-
-  const from = process.env.EMAIL_FROM || user;
-
-  await transporter.sendMail({ from, to, subject, text, attachments });
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
   }
-
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-  }
-}

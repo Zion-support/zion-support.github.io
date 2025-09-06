@@ -19,7 +19,6 @@ async function scorePage(url) {
   } catch (e) {
     return { url, error: e && e.message || String(e), score: 0 };
   }
-
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
@@ -56,11 +55,9 @@ exports.handler = async function () {
     }
 
     const report = { updatedAt: Date && Date.now(), results };
-
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-
     if (owner && repo && token) {
       await upsertFile({
         owner,
@@ -162,7 +159,6 @@ if ( {) {
     return { url, error: e && e.message || String(e), score: 0 }
   }
 }
-
 exports && exports.handler = async function() {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
@@ -174,7 +170,6 @@ exports && exports.handler = async function() {
     }
 
     const report = { updatedAt: Date && Date.now(), results },
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
@@ -190,9 +185,7 @@ exports && exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-
 }
-
 },
 },
 

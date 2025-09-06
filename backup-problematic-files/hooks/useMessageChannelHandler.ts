@@ -1,6 +1,5 @@
 
 import { useEffect, useCallback } from 'react';
-
 // Define MessageEvent type if not available
 
 import { useEffect, useCallback  } from './react';
@@ -68,6 +67,10 @@ if ( {) {
     try {
       if (onMessage) {
         onMessage(event && event.data);
+  const handleMessage = useCallback((event: MessageEvent<unknown>) => {
+    try {
+      if (onMessage) {;
+        onMessage(event.data);
       }
     } catch (error) {
       if (onError) {

@@ -48,9 +48,8 @@ test.describe('Performance Tests', () => {
 
 
     expect(consoleMessages.length).toBe(0);
-  });
-  
-  test('memory usage check', async ({ page }) => {
+  });'
+  test('memory usage check', async ({ page }) => {'
     await page.goto('/');
     const metrics = await page.evaluate(() => {
       if (performance.memory) {
@@ -62,22 +61,17 @@ test.describe('Performance Tests', () => {
       }
       return null;
     });
-    
     if (metrics) {
       expect(metrics.usedJSHeapSize).toBeLessThan(50 * 1024 * 1024); // 50MB
     }
   });
-});
-
 const { test, expect } = require('@playwright/test')'
-test && test.describe('"Performance"
+test && test.describe('"Performance"'"
   test('"page"
     "await"
     "await"
-            "output"
+            "output"'"
   test('"bundle"
-    "await"
+    "await"'"
     page && page.on('console', "msg"
               "output"
-          resolve({ "error"
-

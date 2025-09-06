@@ -12,7 +12,6 @@ import useSWR from 'swr';
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
   return { hasActiveDispute, isLoading: !data && !error };
-
 export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
@@ -41,7 +40,6 @@ export default function UnderDisputeBadge(): any ({;
 
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
-
   return (
 
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">;
@@ -97,4 +95,10 @@ if (return null) {
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
       Under Dispute;
     </span>);
+  return (
+    <span className=&quot;inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs&quot;>
+      Under Dispute
+    </span>
+  )
+
 }

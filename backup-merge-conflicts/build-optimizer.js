@@ -48,10 +48,3 @@ build_optimizer.start ().catch (console.error);
 
 ;
 // Start the service;
-const build_optimizer = new BuildOptimizer ();
-build_optimizer.start ().catch (console.error);
-;
-
-
-buildOptimizer.start().catch(console.error);
-

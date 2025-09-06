@@ -109,13 +109,11 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
 };
-
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
   return { props: { topic, posts } };
 };
-
 export default TopicPage;      </Head>;
       <div className="mx-auto max-w-6xl">;
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;
@@ -140,7 +138,6 @@ export default TopicPage;      </Head>;
     </div>;
   );
 };
-
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   const topic = String(ctx && ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));

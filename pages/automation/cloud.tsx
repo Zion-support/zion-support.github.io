@@ -1,7 +1,6 @@
 
 
 import { useEffect, useState } from 'react';
-
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
@@ -67,7 +66,11 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
               <span>{log.generatedAt || log.file}</span>
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ul>
       </div>
       <div className="flex items-center gap-3">

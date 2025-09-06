@@ -101,7 +101,6 @@ const path = require('path')class PerformanceMonitor {
       recommendations.push('Consider code splitting to reduce bundle size') }
     if() { recommendations.push('High memory usage detected, consider optimization') }
     return recommendations}
-}
 if() { const monitor = new PerformanceMonitor();
   monitor.measureBundleSize();
   monitor.measureMemoryUsage();
@@ -150,7 +149,6 @@ class SecurityAuditor {
     };
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated')}
-}
 if() { const auditor = new SecurityAuditor();
   auditor.checkPackageJson();
   auditor.checkNextConfig();
@@ -199,7 +197,6 @@ const path = require('path')class TestRunner {
     };
     fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
     console.log('Test report generated')}
-}
 if() { const runner = new TestRunner();
   runner.generateReport() }
 module.exports = TestRunner";
@@ -288,7 +285,6 @@ echo "Pre-commit checks completed";
         'Run git push origin main to push changes']};
     fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
     console.log('Git workflow report generated')}
-}
 if() { const workflow = new GitWorkflow();
   workflow.createGitHooks();
   workflow.generateReport() }
@@ -320,7 +316,6 @@ module.exports = GitWorkflow";
     // Report generation;
     this.generateFinalReport();
     this.log('✅ Comprehensive Automation System Completed', 'SUCCESS') }
-}
 // Run the automation;
 if() { const automation = new ComprehensiveAutomation();
   automation.run().catch(error => {

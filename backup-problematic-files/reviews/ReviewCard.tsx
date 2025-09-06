@@ -2,7 +2,7 @@
 
 }</div> </div>) };
 
-const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
+const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
@@ -14,19 +14,14 @@ type Props = {
   review: PublicReview,
   onReport?: (id: string) => void
 };
-
 import {Star} from 'lucide-react';
 
 type Props = {;
   review: PublicReview,;
   onReport?: (id: string) => void;
-
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
   return (
-    <div className='enhanced-card hover:shadow-lg transition-shadow'>;
-      <div className='flex items-center justify-between mb-2'>;
-        <div className='flex items-center gap-2'>;
           <StarRating
             value={review && review.rating}
             onChange={() => {}}
@@ -74,7 +69,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
       </div>;
       <p className='text-sm leading-6'>{review && review.text}</p>;
-
       <div className='flex flex-wrap gap-2 mt-3'>;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className='pill'>;
@@ -98,13 +92,11 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 
 
 };
-
 export default ReviewCard;        {review && review.categories?.wouldWorkWithAgain && (;
           <span className="pill pill-success">Would work again</span>;
         )}
       </div>;
       <p className="text-sm leading-6">{review && review.text}</p>;
-
       <div className="flex flex-wrap gap-2 mt-3">;
         {typeof review && review.categories?.communication === 'number' && (;
           <span className="pill">Communication: {review && review.categories.communication}★</span>;

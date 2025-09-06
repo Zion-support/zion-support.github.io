@@ -3,7 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
-
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
 
@@ -41,7 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       return res && res.status(500).json({ error: 'Reflex failure' });    }
   }
-
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 }      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
@@ -51,7 +49,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
       return res && res.status(500).json({ error: 'Reflex failure' })
   }
-
   return res && res.status(405).json({ error: 'Method not allowed' });
 
 }
@@ -137,6 +134,7 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status (500).json ({ error: 'Reflex failure' });
   }
   return res.status (405).json ({ error: 'Method not allowed' });
+
 }
 
 

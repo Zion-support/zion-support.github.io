@@ -59,13 +59,11 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   education?: Array<{
     institution: string
 };
-
 export type ResumePreviewProps = {;
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
 };
-
 const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({;
   children,;
 }) => (;
@@ -135,19 +133,16 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     technologies?: string[];
   }>;
 };
-
 export type ResumePreviewProps = {;
   data: ResumeData,;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
 };
-
 const SectionTitle: React.FC<{ children: React && React.ReactNode }> = ({ children }) => (;
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">;
 
 
 };
-
     technologies?: string[];
   }>;
 }
@@ -173,15 +168,12 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
       >
         <div className='p-8'>
     const portfolioItems = (data.portfolio || []).slice(0, Math.max(0, maxPortfolioItems));
-
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {;
     const portfolioItems = (data && data.portfolio || []).slice(;
       0,;
       Math && Math.max(0, maxPortfolioItems);
     );
-
-
       >;
         <div className='p-8'>;
           {/* Header */}
@@ -269,6 +261,14 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               <SectionTitle>Skills & Technologies</SectionTitle>;
               <div className='mt-2 text-sm flex flex-wrap gap-2'>;
                 {data && data.skills?.map((s, idx) => (;
+          )}
+
+          {/* Skills & Technologies */}
+          {(data.skills?.length || data.technologies?.length) && (
+            <section className='mb-5'>
+              <SectionTitle>Skills & Technologies</SectionTitle>
+              <div className='mt-2 text-sm flex flex-wrap gap-2'>
+                {data.skills?.map((s, idx) => (
                   <span
                     key={`skill-${idx}`}
                     className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {s}
@@ -281,6 +281,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
           {(data.skills?.length || data.technologies?.length) && (
             <section className="mb-5">
               <SectionTitle>Skills & Technologies</SectionTitle>
+                    className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
               <div className="mt-2 text-sm flex flex-wrap gap-2">
                 {data.skills?.map((s, idx) => (
                   <span key={`skill-${idx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
@@ -516,161 +517,3 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               </div>
             </section>
           ) : null}
-
-
-
-
-
-          {/* Certifications */}
-          {data.certifications?.length ? (
-            <section className="mb-5">
-              <SectionTitle>Certifications</SectionTitle>
-              <ul className="mt-2 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
-                {data.certifications.map((c, idx) => (
-                  <li key={`cert-${idx}`}>{c}</li>
-                ))}
-              </div>;
-            </section>;
-          ) : null}
-
-
-                        <a
-                          className='ml-2 underline text-blue-600 dark:text-blue-400'
-                          href={p && p.link}
-                          target='_blank'
-                          rel='noreferrer'>                          link              <SectionTitle>Portfolio</SectionTitle>;
-              <div className="mt-2 space-y-2">;
-                {portfolioItems && portfolioItems.map((p, idx) => (;
-                  <div key={`proj-${idx}`} className="text-sm">;
-                    <div className="font-medium text-gray-900 dark:text-white">;
-                      {p && p.title}
-                      {p && p.link && (;
-                        <a className="ml-2 underline text-blue-600 dark:text-blue-400" href={p && p.link} target="_blank" rel="noreferrer">;
-                          link;
-                        </a>;
-                      )}
-                    </div>;
-                    {p && p.description && (;
-                      <p className='text-gray-700 dark:text-gray-300'>;
-                        {p && p.description}
-                      </p>;
-                    )}
-                    {p && p.technologies?.length ? (;
-                      <div className='mt-1 text-xs flex flex-wrap gap-2'>;
-                        {p && p.technologies.map((t, tIdx) => (;
-                          <span
-                            key={`proj-${idx}-t-${tIdx}`}
-                            className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                            {t}                    )}
-                    {p && p.technologies?.length ? (;
-                      <div className="mt-1 text-xs flex flex-wrap gap-2">;
-                        {p && p.technologies.map((t, tIdx) => (;
-                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark: border-gray-700">;
-
-          {portfolioItems.length ? (
-            <section className="mb-5">
-              <SectionTitle>Portfolio</SectionTitle>
-              <div className="mt-2 space-y-2">
-                {portfolioItems.map((p, idx) => (
-                  <div key={`proj-${idx}`} className="text-sm">
-                    <div className="font-medium text-gray-900 dark:text-white">
-                    </div>;
-                    <div className='text - gray - 700 dark:text - gray - 300'>;
-                      {[;
-                        ed.degree,
-                        ed.start && ed.end;
-                          ? `${ed.start} – ${ed.end}`;
-                          : ed.start || ed.end,
-                      ]                        .filter (Boolean)                  <div key={`edu-${idx}`} className="text - sm">;
-                    <div className="font - medium text - gray - 900 dark:text - white">{ed.institution}</div>;
-                    <div className="text - gray - 700 dark:text - gray - 300">;
-                      {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end];
-                        .join (' • ')}
-                    </div>;
-                  </div>))}
-              </div>;
-            </section>) : null}
-          {/* Certifications */}
-          {data.certifications?.length ? (
-            <section className='mb - 5'>;
-              <SectionTitle > Certifications</SectionTitle>;
-              <ul className='mt - 2 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                {data.certifications.map ((c, idx) => (            <section className="mb - 5">;
-              <SectionTitle > Certifications</SectionTitle>;
-              <ul className="mt - 2 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1">;
-                {data.certifications.map ((c, idx) => (
-                  <li key={`cert-${idx}`}>{c}</li>))}
-              </ul>;
-            </section>) : null}
-          {/* Portfolio */}
-          {portfolio_items.length ? (
-            <section className='mb - 5'>;
-              <SectionTitle > Portfolio</SectionTitle>;
-              <div className='mt - 2 space - y-2'>;
-                {portfolio_items.map ((p, idx) => (
-                  <div key={`proj-${idx}`} className='text - sm'>;
-                    <div className='font - medium text - gray - 900 dark:text - white'>;
-                      {p.title}
-                      {p.link && (
-                        <a;
-                          className='ml - 2 underline text - blue - 600 dark:text - blue - 400';
-                          href={p.link}
-                          target='_blank';
-                          rel='noreferrer';
-                        >                          link              <SectionTitle > Portfolio</SectionTitle>;
-              <div className="mt - 2 space - y-2">;
-                {portfolio_items.map ((p, idx) => (
-                  <div key={`proj-${idx}`} className="text - sm">;
-                    <div className="font - medium text - gray - 900 dark:text - white">;
-
-                      {p.title}
-                      {p.link && (
-                        <a className="ml - 2 underline text - blue - 600 dark:text - blue - 400" href={p.link} target="_blank" rel="noreferrer">;
-                          link;
-                        </a>)}
-                    </div>;
-                    {p.description && (
-
-
-ResumePreview && ResumePreview.displayName = 'ResumePreview';
-
-
-export default ResumePreview;
-
-
-
-export default ResumePreview;
-
-export default ResumePreview;
-
-
-ResumePreview.displayName = 'ResumePreview';
-
-export default ResumePreview;
-                      <p className='text - gray - 700 dark:text - gray - 300'>;
-                        {p.description}
-                      </p>)}
-                    {p.technologies?.length ? (
-                      <div className='mt - 1 text - xs flex flex - wrap gap - 2'>;
-                        {p.technologies.map ((t, t_idx) => (
-                          <span;
-                            key={`proj-${idx}-t-${t_idx}`}
-                            className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
-                          >                            {t}                    )}
-                    {p.technologies?.length ? (
-                      <div className="mt - 1 text - xs flex flex - wrap gap - 2">;
-                        {p.technologies.map ((t, t_idx) => (
-                          <span key={`proj-${idx}-t-${t_idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark: border - gray - 700">;
-                            {t}
-                          </span>))}
-                      </div>) : null}
-                  </div>))}
-              </div>;
-            </section>) : null}
-        </div>;
-      </div>);
-  }
-);
-;
-ResumePreview.display_name = 'ResumePreview';
-;
-export default ResumePreview;
-;

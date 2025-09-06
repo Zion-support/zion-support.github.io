@@ -338,7 +338,6 @@ const quickLinks = [
   { name: 'Blog', href: '/blog', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const quickLinks = [
     services: [;
       {
@@ -429,7 +428,6 @@ const quickLinks = [;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-
 const companyLinks = [;
   { name: 'About Us', href: '/about', icon: Users },;
   { name: 'Careers', href: '/careers', icon: Briefcase },;
@@ -438,7 +436,6 @@ const companyLinks = [;
   { name: 'Support', href: '/support', icon: LifeBuoy },;
   { name: 'Status', href: '/status', icon: Activity },;
 ];
-
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -458,7 +455,6 @@ const socialLinks = [;
   },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
 ];
-
 const certifications = [;
   'ISO 27001 Certified',;
   'SOC 2 Type II Compliant',;
@@ -468,7 +464,6 @@ const certifications = [;
   'FedRAMP Authorized',;
   'Quantum Security Certified',;
   'AI Ethics Compliant',];];
-
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
@@ -476,16 +471,13 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ];
-
 const certifications = [;
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant';
 ];
-
 export default function UltraFuturisticNavigation2034() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 50);
@@ -493,25 +485,20 @@ export default function UltraFuturisticNavigation2034() {;
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (category: string) => {;
     setActiveDropdown(activeDropdown === category ? null : category);
   };
-
   const closeDropdown = () => {;
     setActiveDropdown(null);  };    };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (category: string) => {;
     setActiveDropdown(activeDropdown === category ? null : category);
   };
-
   const closeDropdown = () => {;
     setActiveDropdown(null);
   };
-
   return (
     <>;
       {/* Top Contact Bar */}
@@ -538,6 +525,12 @@ export default function UltraFuturisticNavigation2034() {;
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4 text-cyan-400" />
               <span className="hover:text-cyan-400 transition-colors">
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
+          <div className='flex items-center space-x-6'>
+            <div className='flex items-center space-x-2'>
+              <Phone className='w-4 h-4 text-cyan-400' />
+              <span className='hover:text-cyan-400 transition-colors'>
                 {contactInfo.mobile}
               </span>
             </div>
@@ -658,16 +651,6 @@ export default function UltraFuturisticNavigation2034() {;
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className="flex items-center space-x-3"
-            >
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Rocket className="w-7 h-7 text-white" />
@@ -697,7 +680,6 @@ export default function UltraFuturisticNavigation2034() {;
                   Future Technology Solutions;
                 </p>              </div>;
             </motion && motion.div>;
-
             {/* Desktop Navigation */}            >;
               <div className="relative">;
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">;
@@ -712,7 +694,6 @@ export default function UltraFuturisticNavigation2034() {;
                 <p className="text-xs text-gray-400">Future Technology Solutions</p>;
               </div>;
             </motion && motion.div>;
-
             {/* Desktop Navigation */}
 
             <div className="hidden lg:flex items-center space-x-8">
@@ -721,11 +702,15 @@ export default function UltraFuturisticNavigation2034() {;
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+                  {link.name}
+                </Link>
+              ))}
+
                 >
                   {link.name}
                 </Link>
               ))}
-              
+
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -1034,7 +1019,6 @@ function UltraFuturisticNavigation2034() {
                   </div>;
                 </div>;
               </div>;
-
               {/* Contact Button */}
               <Link
                 href='/contact'
@@ -1112,7 +1096,6 @@ function UltraFuturisticNavigation2034() {
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
-        {/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (
             <motion.div;
@@ -1218,6 +1201,33 @@ function UltraFuturisticNavigation2034() {
 
                 
                 <Link
+                          className='mt-3 ml-4 space-y-2'
+                        >
+                          {category.services.map(service => (                            <Link
+                              key={service.name}
+                              href={service.href}
+                              onClick={() => setIsOpen(false)}
+                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                            >                          className="mt-3 ml-4 space-y-2"
+                        >
+                          {category.services.map((service) => (
+                            <Link
+                              key={service.name}
+                              href={service.href}
+                              onClick={() => setIsOpen(false)}
+                              className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'                              className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+                <Link
+                  href='/contact'
+                  onClick={() => setIsOpen(false)}
+                  className='block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center'                >                <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"

@@ -98,6 +98,81 @@ const AIPoweredITAssetManagement = () => {
 
 
   return (
+      description: "Reduction in IT asset costs"
+    },
+    {
+      icon: Clock,
+      title: "Time Savings",
+      value: "60%",
+      description: "Faster asset management"
+    },
+    {
+      icon: Shield,
+      title: "Security Improvement",
+      value: "90%",
+      description: "Better security compliance"
+    },
+    {
+      icon: TrendingUp,
+      title: "Efficiency Boost",
+      value: "200%",
+      description: "Increased operational efficiency"
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const capabilities = [
+    "Automated asset discovery and inventory",
+    "Real-time health monitoring and alerts",
+    "Predictive maintenance scheduling",
+    "License compliance management",
+    "Security vulnerability assessment",
+    "Asset lifecycle optimization",
+    "Cost allocation and tracking",
+    "Integration with existing IT tools"
+  ];
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-6 py-20">
+        <h1 className="text-4xl font-bold text-center mb-8">
+          AI-Powered IT Asset Management
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <p className="text-gray-700">{feature}</p>
+            </div>
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+      </div>
+    </div>
+  );
+};
+export default AIPoweredITAssetManagement;
+  ],
+  return (
     <>
       <Head>
         <title>AI-Powered IT Asset Management - Zion Tech Group</title>
@@ -1035,7 +1110,6 @@ const AIPoweredITAssetManagement = () => {;
 
 
 export default AIPoweredITAssetManagement;
-
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Transform Your IT Asset Management?;

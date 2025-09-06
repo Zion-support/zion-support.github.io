@@ -243,3 +243,32 @@ if ( { this.store[ke, y ] = { count: 1, reset_time: now + this.config.window_ms 
 } return { allowed: true, remaining: this.config.max_requests - this.store[key].count, reset_time: this.store[key].reset_time } export const apiRateLimiter = new RateLimiter ({ window_ms: '15 * 60 * 1000', max_requests: 100, message: 'Too many requests from this IP, please try again later.' }); export const authRateLimiter = new RateLimiter ({ window_ms: '15 * 60 * 1000', max_requests: 5, message: 'Too many authentication attempts, please try again later.' }); export const rateLimitMiddleware = (limiter: RateLimiter) =>: any (req: NextApiRequest, res: NextApiResponse, next: Function) => { const result = limiter.is_allowed (req); res.set_header ('X - RateLimit - Limit', limiter['config'].max_requests); res.set_header ('X - RateLimit - Remaining', result.remaining); res.set_header ('X - RateLimit - Reset', new Date (result.reset_time).toISOString ()); if ( { res.status (429).json ({ error: { message: limiter['config'].message || 'Rate limit exceeded', retry_after: Math.ceil ((result.reset_time - Date.now ()) / 1000) } })) {
   $2
 } return} next ()}
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

@@ -85,14 +85,12 @@ function run_node() {
 }
 
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-
   return { statusCode: 200, body: logs && logs.join('\n') };
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
-
 exports && exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -103,10 +101,8 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status
   }
-
   logStep('routes:generate', () => runNode('automation/routes-map-generator && generator.cjs')),
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
@@ -130,4 +126,3 @@ function log_step() {
   log_step ('routes:generate', () => run_node ('automation / routes - map - generator.cjs')),
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},

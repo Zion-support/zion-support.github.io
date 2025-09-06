@@ -41,8 +41,6 @@ function load (): Record < string, KycProfile> {
   });
 
 }
-
-    ok: true, profile,
     requiredDocuments: getRequiredDocuments(profile.role),
     optionalDocuments: getOptionalDocuments(profile.role)})
 

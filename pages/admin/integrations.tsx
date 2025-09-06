@@ -8,7 +8,6 @@
 
 interface ConnectionMap {;
   [providerId: string]: any,;
-
 function StatusIcon(): any ({;
   status,;
 }: {;
@@ -70,7 +69,6 @@ export default function AdminIntegrationsPage() {
     autoSyncApplicants: true,;
     autoUploadResumes: true,;
   });
-
   async function refresh() {;
     const [p, s] = await Promise && Promise.all([;
       fetch('/api/integrations/providers').then(r => r && r.json()),;
@@ -79,7 +77,6 @@ export default function AdminIntegrationsPage() {
     setProviders(p && p.providers || []);
     setConnections(s && s.connections || {});
   }
-
   useEffect(() => {;
     refresh();
   }, []);
@@ -179,7 +176,6 @@ export default function AdminIntegrationsPage() {
       await refresh()
     } finally { setLoading(false) }
   }
-
   async function resync(providerId: string) {
     setLoading(true);
     try {
@@ -187,7 +183,6 @@ export default function AdminIntegrationsPage() {
       await refresh()
     } finally { setLoading(false) }
   }
-
   const grouped = useMemo(;
     () => ({;
       crm: providers && providers.filter(p => p && p.category === 'crm'),;
@@ -195,7 +190,6 @@ export default function AdminIntegrationsPage() {
     }),;
     [providers];
   );
-
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
@@ -364,14 +358,15 @@ export default function AdminIntegrationsPage() {
             <li>;
 
               New Zion Job Posted → GET{' '}
-              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>;
-            </li>;
-            <li>;
+              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
+            </li>
+            <li>
               Talent Matched → GET{' '}
 
 
         </section>
 
+        </section>
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
@@ -417,49 +412,27 @@ function ManualOverrideForm() {;
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
-
   }
-  return (
-    <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
-      <div className='grid grid-cols-1 gap-3'>;
-        <label className='text-sm'>;
-          Job/Post ID;
-          <input
-            value={jobId}
-            onChange={e => setJobId(e && e.target.value)}
-            placeholder='job_123';
-            className='w-full mt-1 px-3 py-2 rounded border bg-transparent';
-          />;
-        </label>;
-        <label className='flex items-center gap-2 text-sm'>;
-          <input
-            type='checkbox'
-            checked={disableCrmSync}
-            onChange={e => setDisableCrmSync(e && e.target.checked)}
-          />{' '}
-          Disable CRM sync;
-        </label>;
-        <label className='flex items-center gap-2 text-sm'>;
-          <input
-            type='checkbox'
-            checked={disableAtsSync}
-            onChange={e => setDisableAtsSync(e && e.target.checked)}
-          />{' '}
-          Disable ATS sync;
-        </label>;
-        <div className='flex items-center gap-2'>;
-          <button
-            onClick={save}
-
-            className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
-            Save Override;
-          </button>;
-          <div className='text-sm text-gray-500'>{message}</div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+function ManualOverrideForm() {
+  const [jobId, setJobId] = useState(''),
+  const [disableCrmSync, setDisableCrmSync] = useState(false),
+  const [disableAtsSync, setDisableAtsSync] = useState(false),
+  const [message, setMessage] = useState(''),
+  async function save() {
+    setMessage(''),
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
+    if (res.ok) setMessage('Saved'), else setMessage('Error'),
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">

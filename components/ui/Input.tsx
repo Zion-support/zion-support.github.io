@@ -3,7 +3,6 @@ import React from './react';
 ;
 
 interface InputProps {
-
 interface InputProps {;
   type?: string;
   placeholder?: string;

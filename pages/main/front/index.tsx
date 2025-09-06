@@ -2,10 +2,7 @@
 
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
-        <meta
-          name='description'
-          content='Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.'
-        />
+        <meta name="description" content="Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously." />
       </Head>
 
 import { motion } from 'framer-motion';
@@ -71,7 +68,6 @@ export default function FrontLanding() {
 
 
 import {motion} from 'framer-motion';
-
 export default function FrontLanding() {;
   return (
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>;
@@ -82,7 +78,6 @@ export default function FrontLanding() {;
           content='Futuristic, cloud-native autonomous automations that innovate, optimize, and sync changes to the repo continuously.'
         />;
       </Head>;
-
       {/* Animated background layers */}
       <div aria-hidden className='pointer-events-none absolute inset-0 -z-10'>;
         <div className='absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float' />;
@@ -92,7 +87,6 @@ export default function FrontLanding() {;
         <div className='absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]'>;
           <div className='twinkle-field absolute inset-0' />        </div>;
       </div>;
-
       {/* Header */}
       <header className='relative z-10'>;
         <nav className='mx-auto flex max-w-7xl items-center justify-between px-6 py-6'>;
@@ -140,7 +134,6 @@ function FrontLanding() {
               className='mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md'>;
               <span className='h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0 && 0.9)]' />              Autonomous agents running continuous improvements;
             </motion && motion.div>;
-
             <motion&& motion.h1
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -149,7 +142,6 @@ function FrontLanding() {
               <span className='gradient-text'>;
                 Autonomous Cloud Automations;
               </span>            </motion && motion.h1>;
-
             <motion&& motion.p
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -158,7 +150,6 @@ function FrontLanding() {
               Self-improving, cloud-native agents that invent, generate, and run;
               new automation factories—fixing, optimizing, and syncing changes;
               to the repository continuously.            </motion && motion.p>;
-
             <motion&& motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -897,163 +888,24 @@ export default function FrontLanding(req, res) {
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <motion.div
+                className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'
+              >
+                <span className='mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]' />
+                <span className='text-sm text-white/80'>{b}</span>              </motion.div>
+            ))}
+          </div>
+        </section>
+        {/* CTA */}
+        <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
-
-          >
-            <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
-            <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
-              <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
-            </div>
-          </motion.div>
-        </section>
-
-            transition={{ duration: 0 && 0.6 }}
-            className='animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl'>;
-            <h3 className='text-2xl font-bold'>;
-              Ready to build with autonomous cloud agents?;
-            </h3>;
-            <p className='mx-auto mt-2 max-w-2xl text-white/80'>;
-              Scale development with a tireless fleet of self‑improving;
-              automations.;
-            </p>;
-            <div className='mt-6 flex flex-wrap justify-center gap-3'>;
-              <Link href='/services'>;
-                <a className='rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white'>;
-                  Get Started;
-                </a>;
-              </Link>;
-              <Link href='/automation'>;
-                <a className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>;
-                  View Automations;
-                </a>;
-              </Link>            </div>;
-          </motion && motion.div>;
-        </section>;
-
-        {/* Explore more */}
-        <section className='mx-auto max-w-7xl px-6 pb-16'>;
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
-            Explore more;
-          </h2>;
-          <div className='mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>;
-            <Link href='/services/ai-seo-auditor'>;
-              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>;
-                <span className='text-white/90'>;
-            className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl';
-          >;
-            <h3 className='text - 2xl font - bold'>;
-              Ready to build with autonomous cloud agents?;
-            </h3>;
-            <p className='mx - auto mt - 2 max - w-2xl text - white / 80'>;
-              Scale development with a tireless fleet of self‑improving;
-              automations.;
-            </p>;
-            <div className='mt - 6 flex flex - wrap justify - center gap - 3'>;
-              <Link href='/services'>;
-                <a className='rounded - xl bg - white / 90 px - 6 py - 3 font - semibold text - slate - 900 hover:bg - white'>;
-                  Get Started;
-                </a>;
-              </Link>;
-              <Link href='/automation'>;
-                <a className='rounded - xl border border - white / 20 bg - white / 5 px - 6 py - 3 font - semibold backdrop - blur - md hover:bg - white / 10'>;
-                  View Automations;
-                </a>;
-              </Link>            </div>;
-          </motion.div>;
-        </section>;
-        {/* Explore more */}
-        <section className='mx - auto max - w-7xl px - 6 pb - 16'>;
-          <h2 className='text - center text - 2xl font - bold tracking - wide text - white / 90'>;
-            Explore more;
-          </h2>;
-          <div className='mt - 6 grid grid - cols - 1 gap - 4 sm: grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4'>;
-            <Link href='/services / ai - seo - auditor'>;
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  AI SEO Auditor — automate SEO improvements;
-                </span>;
-              </a>;
-            </Link>;
-
-            <Link href='/services / customer - support - chatbot'>;
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  Customer Support Chatbot — reduce response time;
-                </span>;
-              </a>;
-            </Link>;
-
-            <Link href='/services / landing - page - generator'>;
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  Landing Page Generator — launch pages instantly;
-                </span>;
-              </a>;
-            </Link>;
-
-            <Link href='/services / price - intelligence - service'>;
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  Price Intelligence — market‑aware pricing;
-                </span>;
-              </a>;
-            </Link>;
-            <Link href='/automation'>;
-
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  Automation Status — live agents & reports;
-                </span>;
-              </a>;
-            </Link>;
-            <Link href='/newsroom'>;
-
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  Newsroom — latest autonomous updates;
-                </span>;
-              </a>;
-            </Link>;
-
-            <Link href='/site - health'>;
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  Site Health — audits & insights;
-                </span>;
-              </a>;
-            </Link>;
-            <Link href='/contact'>;
-
-              <a className='bg - white / 5 hover:bg - white / 10 rounded - lg p - 4 transition - colors border border - white / 10'>;
-                <span className='text - white / 90'>;
-
-                  Contact — discuss your use‑case;
-                </span>;
-              </a>;
-            </Link>          </div>;
-        </section>;
-      </main>;
-
-
-
-    </div>;
-  );
-
+        {/* Explore more */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -1070,31 +922,3 @@ export default function FrontLanding(req, res) {
       </main>
     </div>
   )
-}
-
-    </div>);
-;
-
-        <section className="mx-auto max-w-7xl px-6 pb-16">;
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;
-          <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">;
-            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>;
-            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>;
-            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>;
-            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>;
-            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>;
-            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>;
-            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>;
-            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>;
-          </div>;
-        </section>;
-      </main>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-

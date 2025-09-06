@@ -43,5 +43,6 @@ function handler() {
   const files = fs.readdir_sync (dir).map ((name) => ({ name }));
   appendAuditLog ({ type: "file_list", section });
   res.status (200).json (files);
+
 }
 

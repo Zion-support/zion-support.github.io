@@ -16,7 +16,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
         generatedAt: new Date().toISOString()
 
       };
-
       fs && fs.writeFileSync(p, JSON && JSON.stringify(report, null, 2));
       return res && res.status(201).json(report);
 

@@ -8,6 +8,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 interface EmailValidationResult {
   email: string;
   is_valid: boolean;
+interface EmailValidationResult {
+  email: string;
+  isValid: boolean;
   score: number;
   suggestions: string[];
   details: {
@@ -18,9 +21,7 @@ interface EmailValidationResult {
 
 
 export default async function handler(
-
   req: NextApiRequest
-
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
 
@@ -35,7 +36,6 @@ export default async function handler(
 
     }
     // Basic email format validation
-
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const hasValidFormat = emailRegex && emailRegex.test(email);
@@ -58,7 +58,6 @@ export default async function handler(
       'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
     ];
     const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d));
-
     // Check for role-based emails
     const roleBasedPatterns = [
 
@@ -97,7 +96,6 @@ export default async function handler(
         isFreeProvider,
       },
     };
-
     res && res.status(200).json(result);
 
   } catch (error) {
@@ -118,8 +116,7 @@ export default async function handler(
     if (score < 50) {
       suggestions.push('This email may not be suitable for business use')
     }
-
-    const result: EmailValidationResult = {
+const result: EmailValidationResult = {
       email;
       isValid: score >= 70,
       score: Math.max(0, score);
@@ -137,6 +134,34 @@ export default async function handler(
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
+      suggestions.push('Check email format (should be user@domain.com)');
+    if (isDisposable) {
+      suggestions.push('Consider using a permanent email address');
+    }
+    if (isRoleBased) {
+      suggestions.push('Role-based emails may have delivery issues');
+    }
+    if (score < 50) {
+      suggestions.push('This email may not be suitable for business use');
+    }
+    const result: EmailValidationResult = {
+      email
+      isValid: score >= 70
+      score: Math.max(0, score)
+      suggestions
+      details: {
+        hasValidFormat
+        hasValidDomain
+        hasValidMX: true, // Simplified for demo
+        isDisposable
+        isRoleBased
+        isFreeProvider
+      }
+    }
+    res.status(200).json(result);
+  } catch (error) {
+    console.error('Email validation error:', error);
+    res.status(500).json({ error: 'Internal server error' });
   }      email;
       is_valid: score >= 70;
       score: Math.max (0, score);
@@ -150,7 +175,6 @@ export default async function handler(
         isFreeProvider}
 
     };
-
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Email validation error:', error);
@@ -166,5 +190,6 @@ export default async function handler(
   } catch (error) {
     console.error ('Email validation error:', error);
     res.status (500).json ({ error: 'Internal server error' });
+
   }
 }

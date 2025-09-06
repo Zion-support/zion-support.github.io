@@ -308,12 +308,9 @@ const companyLinks = [;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' },];  { name: 'Status', href: '/status' }
 ];
-
-export default function UltraFuturisticNavigation2032() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
@@ -323,7 +320,6 @@ export default function UltraFuturisticNavigation2032() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -370,7 +366,6 @@ export default function UltraFuturisticNavigation2032() {;
                   2030 Future Technology;
                 </div>              </div>;
             </Link>;
-
             {/* Desktop Navigation */}
 
 
@@ -421,6 +416,41 @@ export default function UltraFuturisticNavigation2032() {;
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <Link
+                  key={item.name}
+                  href={item.href}
+              {/* Services Dropdown */}
+              <div className='relative group'>
+                <button className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group'>
+                  <Briefcase className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                  <span>Services</span>
+                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform' />
+                </button>
+                {/* Mega Menu */}
+                <div className='absolute top-full left-0 w-screen max-w-7xl transform -translate-x-1/2 left-1/2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pt-4'>
+                  <div className='bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-8 shadow-2xl shadow-cyan-500/20'>
+                    <div className='grid grid-cols-2 gap-8'>
+                      {serviceCategories.map((category, index) => (
+                        <div key={index} className='space-y-4'>
+                          <div className='flex items-center space-x-3'>
+                            <div
+                              className={`w-10 h-10 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}
+                            >
+                              <category.icon className='w-5 h-5 text-white' />
+                            </div>
+                            <div>
+                              <h3 className='text-lg font-semibold text-white'>
+                                {category.title}
+                              </h3>
+                              <p className='text-sm text-gray-400'>
+                                {category.description}
+                              </p>
+                            </div>
+                          </div>
+                          <div className='space-y-2'>                            {category.services.map((service, serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                href={service.href}
+                                className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'                <Link
                   key={item.name}
                   href={item.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-2 group"
@@ -497,7 +527,6 @@ export default function UltraFuturisticNavigation2032() {;
                 </div>;
               </div>;
             </div>;
-
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>;
               <Link href='/contact'>;
@@ -801,7 +830,6 @@ export default function UltraFuturisticNavigation2032() {;
 
                       />;
                     </button>;
-
                     {activeCategory === 0 && (;
                       <div className='pl-8 space-y-2'>;
                         {serviceCategories && serviceCategories.map((category, index) => (;
@@ -818,7 +846,6 @@ export default function UltraFuturisticNavigation2032() {;
                       </span>;
                       <ChevronRightIcon className={`w-5 h-5 transition-transform ${activeCategory === 0 ? 'rotate-90' : ''}`} />;
                     </button>;
-
                     {activeCategory === 0 && (;
                       <div className="pl-8 space-y-2">;
                         {serviceCategories && serviceCategories.map((category, index) => (;
@@ -869,11 +896,6 @@ export default function UltraFuturisticNavigation2032() {;
                       <div className='flex items-center space-x-2'>
                         <MapPin className='w-4 h-4 text-pink-400' />
                         <span className='text-xs'>{contactInfo.address}</span>                      </div>                        <span>{contactInfo.mobile}</span>
-                  <div className="pt-4 border-t border-gray-700/50">
-                    <div className="text-sm font-medium text-gray-400 mb-3">Contact</div>
-                    <div className="space-y-2 text-sm text-gray-400">
-                      <div className="flex items-center space-x-2">
-                        <Phone className="w-4 h-4 text-cyan-400" />
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className="flex items-center space-x-2">
@@ -889,7 +911,6 @@ export default function UltraFuturisticNavigation2032() {;
 
                     </div>;
                   </div>;
-
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>;
                     <div className='text-sm font-medium text-gray-400 mb-3'>;
@@ -939,7 +960,6 @@ export default function UltraFuturisticNavigation2032() {;
 
     </>
       </AnimatePresence>;
-
       {/* Spacer for fixed navigation */}
       <div className='h-20' />;
     </>;

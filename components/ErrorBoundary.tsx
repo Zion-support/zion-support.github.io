@@ -46,36 +46,30 @@ interface State {;
 
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
-  children: ReactNode,
+  children: ReactNode;
   fallback?: ReactNode;
-}
-
-
-
-
-
-
-}
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-  static getDerivedStateFromError(error: Error): State {
-
-
-class ErrorBoundary extends Component<Props, State> {;
-  constructor(props: Props) {;
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+interface State {
+  hasError: boolean;
+  error?: Error;
     super(props);
     this && this.state = { hasError: false };
   }
-
-  static getDerivedStateFromError(error: Error): State {;
-    // Update state so the next render will show the fallback UI;
-
-
+  }
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     return { hasError: true, error };
     return { hasError: true, error }
   }
@@ -121,16 +115,13 @@ class ErrorBoundary extends Component<Props, State> {;
       error,;
       errorInfo;
     });
-
     // Log error to external service (e && e.g., Sentry);
     if (typeof window !== 'undefined' && (window as any).Sentry) {;
       (window as any).Sentry && Sentry.captureException(error, { extra: errorInfo });    }
-
     // Call custom error handler if provided;
     if (this && this.props.onError) {;
       this && this.props.onError(error, errorInfo);
     }
-
     // Log to external service in production;
     if (process && process.env.NODE_ENV === 'production') {;
       // Here you would typically send to an error reporting service;
@@ -217,11 +208,23 @@ class ErrorBoundary extends Component<Props, State> {
 
 
               <button
-                onClick={() => window && window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors";
-              >;
-                Refresh Page;
-              </button>;
+                onClick={() => typeof window !== 'undefined' && window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >
+                Reload Page
+              </button>
               <button
 
       return this.props.fallback || (
@@ -340,22 +343,46 @@ class ErrorBoundary extends Component<Props, State> {
 if (.Sentry) {) {
   $2
 }
-      (window as any).Sentry.capture_exception (error, { extra: error_info });    }
-    // Call custom error handler if provided;
-    // Check condition
-if ( {) {
-  $2
+                </pre>
+              </details>
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-      this.props.on_error (error, error_info);
-    }
-// Log to external service in production;
-    // Check condition
-if ( {) {
-  $2
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-      // Here you would typically send to an error reporting service;
-      console.error ('Production error:', error, error_info);
-    }
+  public render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+            <button
+              onClick={() => window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
+          </div>
   }
   handle_reload = () => {
     window.location.reload ();
@@ -510,51 +537,6 @@ if ( {) {
               </pre>;
             </details>;
           )}
-        </div>;
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  public render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-            <button
-              onClick={() => window.location.reload()  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
-            >
-              Reload Page
-            </button>
-          </div>
-
-
-        </div>
-      );
-    }
-
-
-    return this && this.props.children;
-  }
-}
-
-class ErrorBoundary extends Component<Props, State> {;
-  constructor(props: Props) {;
     super(props);
     this && this.state = { hasError: false };
 
@@ -567,7 +549,6 @@ class ErrorBoundary extends Component<Props, State> {;
     console && console.error('ErrorBoundary caught an error:', error, errorInfo);
     this && this.setState({ error, errorInfo });
 }
-
   handleRetry = () => {;
     this && this.setState({ hasError: false, error: undefined, errorInfo: undefined });
 };
@@ -576,7 +557,6 @@ class ErrorBoundary extends Component<Props, State> {;
       if (this && this.props.fallback) {;
         return this && this.props.fallback;
 }
-
       return (
 
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">;

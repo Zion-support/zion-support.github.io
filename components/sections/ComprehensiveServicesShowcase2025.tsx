@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -87,7 +83,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
 
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
-
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">;
       {/* Animated Background Elements */}
@@ -97,7 +92,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>;
         <div className="absolute top-40 left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>;
       </div>;
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
 
         {/* Header */}
@@ -301,7 +295,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                   </p>;
                 </div>;
               </div>;
-
               {/* Services Grid */}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -375,6 +368,9 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
                     {/* Features */}
 
+                      </p>
+                    </div>
+                    {/* Features */}
                     <div className="mb-4">
                       <h5 className="text-sm font-medium text-purple-300 mb-2">Key Features:</h5>
                       <ul className="space-y-1">
@@ -430,9 +426,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                         </div>
                       </div>
                     </div>
-                      </ul>;
                     </div>;
-
                     {/* Pricing */}
                     <div className='mb-4'>;
                       <div className='flex items-center justify-between'>;
@@ -454,7 +448,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                       <div className="text-xs text-gray-500 mt-1">;
                       </div>;
                     </div>;
-
                     {/* ROI */}
                     <div className='mb-4'>;
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>;
@@ -476,7 +469,6 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                         </div>;
                       </div>;
                     </div>;
-
                     {/* Use Cases */}
 
                             </span>;
@@ -579,10 +571,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
 
 };
-
 export default ComprehensiveServicesShowcase2025;  );
 };
-
 export default ComprehensiveServicesShowcase2025;
 
 

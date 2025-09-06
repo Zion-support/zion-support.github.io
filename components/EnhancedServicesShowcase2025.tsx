@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -40,43 +36,13 @@ interface Service {;
   FaMobile,
   FaDatabase,
   FaNetworkWired,
-  FaRobot,
-  FaSearch,
-import {
-  SiNextdotjs,
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiPrisma,
-  SiSupabase,
-  SiVercel,
-  SiDocker,
-  SiKubernetes,
-  SiAws,
-
-  SiGooglecloud,;
-  SiMicrosoftazure,;
-
-} from 'react-icons/si';
-
-
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  icon: React && React.ReactNode;
-  category: string;
-  features: string[];
-  pricing: {;
-    starter: number;
-    professional: number;
-
     enterprise: number;
   }
   technologies: string[];
   benefits: string[];
 
 ;
+
 interface ServiceCategory {
 
   id: string;
@@ -435,12 +401,11 @@ const services: Service[] = [;
       'Intelligent workflow automation',
       'Natural language processing',
       'Predictive analytics',
-      'Real - time decision making',
+      'Real-time decision making',
       'Custom AI model training',
       'Multi - platform integration',
     ],
     pricing: {
-      
       starter: 299,
       professional: 799,
       enterprise: 1999
@@ -448,6 +413,9 @@ const services: Service[] = [;
     },
 
     technologies: [;
+      enterprise: 1999,
+    },
+    technologies: [
       'TensorFlow',
       'PyTorch',
       'OpenAI',
@@ -455,25 +423,11 @@ const services: Service[] = [;
       'React',
       'Node.js',
     ],
-    benefits: [;
-      'Reduce manual tasks by 80%',
-      'Improve accuracy by 95%',
-      '24 / 7 automated operations',
       'Scalable AI infrastructure',
     ],
   },
 
   {
-    id: 'quantum - computing - platform',
-    title: 'Quantum Computing Platform',
-
-    description:;
-      'Next - generation quantum computing solutions for complex problem solving',
-    icon: <FaBrain className='w - 6 h - 6' />,
-    category: 'ai - ml',
-    features: [;
-      'Quantum algorithm optimization',
-      'Hybrid classical - quantum computing',
       'Quantum machine learning',
       'Cryptographic solutions',
       'Quantum simulation tools',
@@ -481,7 +435,6 @@ const services: Service[] = [;
     ],
 
     pricing: {
-      
       starter: 999,
       professional: 2499,
       enterprise: 4999
@@ -493,43 +446,18 @@ const services: Service[] = [;
       'Solve previously impossible problems',
       'Exponential speed improvements',
       'Future - proof technology',
+      enterprise: 4999,
+    },
+    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],
+    benefits: [
+      'Solve previously impossible problems',
+      'Exponential speed improvements',
+      'Future-proof technology',
       'Research and development support',
     ],
   },
 
   {
-    id: 'edge - ai - platform',
-    title: 'Edge AI Computing Platform',
-
-    description:;
-      'Distributed artificial intelligence at the edge for real - time processing',
-    icon: <FaNetworkWired className='w - 6 h - 6' />,
-    category: 'iot',
-    features: [;
-      'Edge device optimization',
-      'Real - time AI inference',
-      'Distributed learning',
-      'Low - latency processing',
-      'Offline AI capabilities',
-      'Edge - to - cloud synchronization',
-    ],
-
-    pricing: {
-      
-      starter: 199,
-      professional: 599,
-      enterprise: 1499
-    
-    },
-
-    technologies: [;
-      'TensorFlow Lite',
-      'ONNX Runtime',
-      'Edge TPU',
-      'Raspberry Pi',
-      'Arduino',
-    ],
-    benefits: [;
       'Reduced latency by 90%',
       'Lower bandwidth costs',
       'Enhanced privacy',
@@ -538,24 +466,9 @@ const services: Service[] = [;
   },
 
   {
-    id: 'quantum - cybersecurity',
-    title: 'Quantum Cybersecurity Suite',
-
-    description:;
-      'Advanced security solutions leveraging quantum - resistant cryptography',
-    icon: <FaShieldAlt className='w - 6 h - 6' />,
-    category: 'security',
-    features: [;
-      'Post - quantum cryptography',
-      'Quantum key distribution',
-      'Advanced threat detection',
-      'Zero - trust architecture',
-      'Compliance frameworks',
-      'Real - time monitoring',
     ],
 
     pricing: {
-      
       starter: 399,
       professional: 999,
       enterprise: 2499
@@ -566,30 +479,22 @@ const services: Service[] = [;
     benefits: [;
       'Future - proof security',
       'Quantum - resistant encryption',
+      enterprise: 2499,
+    },
+    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],
+    benefits: [
+      'Future-proof security',
+      'Quantum-resistant encryption',
       'Comprehensive compliance',
       'Advanced threat protection',
     ],
   },
 
   {
-    id: 'data - fabric - platform',
-    title: 'Intelligent Data Fabric Platform',
-
-    description:;
-      'Unified data management and analytics across all sources and formats',
-    icon: <FaDatabase className='w - 6 h - 6' />,
-    category: 'data',
-    features: [;
-      'Unified data access',
-      'Real - time analytics',
-      'Data governance',
-      'AI - powered insights',
-      'Multi - cloud support',
       'Data lineage tracking',
     ],
 
     pricing: {
-      
       starter: 299,
       professional: 799,
       enterprise: 1999
@@ -603,355 +508,10 @@ const services: Service[] = [;
       'Databricks',
       'Airflow',
     ],
-    benefits: [;
-      'Unified data view',
-      'Real - time insights',
       'Improved data quality',
       'Reduced integration costs',
     ],
   },  {
-    id: 'cloud - native - platform',
-    title: 'Cloud - Native Development Platform',
-    description: 'Modern cloud - native development and deployment platform',
-    icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
-    ];
-  }
-  {
-
-    id: 'cloud-native-platform',
-    title: 'Cloud-Native Development Platform',
-    description: 'Modern cloud-native development and deployment platform',
-
-];
-
-const services: Service[] = [;
-  {;
-    id: 'ai-automation-suite',;
-    title: 'AI-Powered Automation Suite',;
-    description:;
-      'Comprehensive automation platform leveraging artificial intelligence for business process optimization',;
-    icon: <FaRobot className='w-6 h-6' />,;
-    features: [;
-      'Intelligent workflow automation',;
-      'Natural language processing',;
-      'Predictive analytics',;
-      'Real-time decision making',;
-      'Custom AI model training',;
-      'Multi-platform integration',;
-    ],;
-    pricing: {;
-      starter: 299,;
-      professional: 799,;
-      enterprise: 1999,;
-    },;
-    technologies: [;
-      'TensorFlow',;
-      'PyTorch',;
-      'OpenAI',;
-      'LangChain',;
-      'React',;
-      'Node && Node.js',;
-    ],;
-    benefits: [;
-      'Reduce manual tasks by 80%',;
-      'Improve accuracy by 95%',;
-      '24/7 automated operations',;
-      'Scalable AI infrastructure',;
-    ],;
-  },;
-  {;
-    id: 'quantum-computing-platform',;
-    title: 'Quantum Computing Platform',;
-    description:;
-      'Next-generation quantum computing solutions for complex problem solving',;
-    icon: <FaBrain className='w-6 h-6' />,;
-    category: 'ai-ml',;
-    features: [;
-      'Quantum algorithm optimization',;
-      'Hybrid classical-quantum computing',;
-      'Quantum machine learning',;
-      'Cryptographic solutions',;
-      'Quantum simulation tools',;
-      'API access to quantum hardware',;
-    ],;
-    pricing: {;
-      starter: 999,;
-      professional: 2499,;
-      enterprise: 4999,;
-    },;
-    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'CUDA'],;
-    benefits: [;
-      'Solve previously impossible problems',;
-      'Exponential speed improvements',;
-      'Future-proof technology',;
-      'Research and development support',;
-    ],;
-  },;
-  {;
-    id: 'edge-ai-platform',;
-    title: 'Edge AI Computing Platform',;
-    description:;
-      'Distributed artificial intelligence at the edge for real-time processing',;
-    icon: <FaNetworkWired className='w-6 h-6' />,;
-    category: 'iot',;
-    features: [;
-      'Edge device optimization',;
-      'Real-time AI inference',;
-      'Distributed learning',;
-      'Low-latency processing',;
-      'Offline AI capabilities',;
-      'Edge-to-cloud synchronization',;
-    ],;
-    pricing: {;
-      starter: 199,;
-      professional: 599,;
-      enterprise: 1499,;
-    },;
-    technologies: [;
-      'TensorFlow Lite',;
-      'ONNX Runtime',;
-      'Edge TPU',;
-      'Raspberry Pi',;
-      'Arduino',;
-    ],;
-    benefits: [;
-      'Reduced latency by 90%',;
-      'Lower bandwidth costs',;
-      'Enhanced privacy',;
-      'Scalable edge deployment',;
-    ],;
-  },;
-  {;
-    id: 'quantum-cybersecurity',;
-    title: 'Quantum Cybersecurity Suite',;
-    description:;
-      'Advanced security solutions leveraging quantum-resistant cryptography',;
-    icon: <FaShieldAlt className='w-6 h-6' />,;
-    category: 'security',;
-    features: [;
-      'Post-quantum cryptography',;
-      'Quantum key distribution',;
-      'Advanced threat detection',;
-      'Zero-trust architecture',;
-      'Compliance frameworks',;
-      'Real-time monitoring',;
-    ],;
-    pricing: {;
-      starter: 399,;
-      professional: 999,;
-      enterprise: 2499,;
-    },;
-    technologies: ['NIST PQC', 'QKD protocols', 'Zero Trust', 'SIEM', 'SOAR'],;
-    benefits: [;
-      'Future-proof security',;
-      'Quantum-resistant encryption',;
-      'Comprehensive compliance',;
-      'Advanced threat protection',;
-    ],;
-  },;
-  {;
-    id: 'data-fabric-platform',;
-    title: 'Intelligent Data Fabric Platform',;
-    description:;
-      'Unified data management and analytics across all sources and formats',;
-    icon: <FaDatabase className='w-6 h-6' />,;
-    category: 'data',;
-    features: [;
-      'Unified data access',;
-      'Real-time analytics',;
-      'Data governance',;
-      'AI-powered insights',;
-      'Multi-cloud support',;
-      'Data lineage tracking',;
-    ],;
-    pricing: {;
-      starter: 299,;
-      professional: 799,;
-      enterprise: 1999,;
-    },;
-    technologies: [;
-      'Apache Kafka',;
-      'Apache Spark',;
-      'Snowflake',;
-      'Databricks',;
-      'Airflow',;
-    ],;
-    benefits: [;
-      'Unified data view',;
-      'Real-time insights',;
-      'Improved data quality',;
-      'Reduced integration costs',;
-    ],;
-  },  {;
-    id: 'cloud-native-platform',;
-    title: 'Cloud-Native Development Platform',;
-    description: 'Modern cloud-native development and deployment platform',;
-    icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs';
-    ];
-  };
-  {;
-    id: 'cloud-native-platform',;
-    title: 'Cloud-Native Development Platform',;
-    description: 'Modern cloud-native development and deployment platform',;
-    icon: <FaCloud className='w-6 h-6' />,;
-    features: [;
-      'Kubernetes orchestration',;
-      'Microservices architecture',;
-      'CI/CD pipelines',;
-      'Auto-scaling',;
-      'Multi-cloud deployment',;
-      'DevOps automation',;
-    ],;
-    pricing: {;
-      starter: 199,;
-      professional: 599,;
-      enterprise: 1499,;
-    },;
-    technologies: [;
-      'Kubernetes',;
-      'Docker',;
-      'Helm',;
-      'ArgoCD',;
-      'Prometheus',;
-      'Grafana',;
-    ],;
-    benefits: [;
-      'Faster deployment',;
-      'Improved scalability',;
-      'Better resource utilization',;
-      'Enhanced reliability',;
-    ],;
-  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability';
-    ];
-  }
-];
-
-
-  const filteredServices = useMemo(() => {;
-    let filtered = services;
-
-    if (selectedCategory !== 'all') {;
-      filtered = filtered && filtered.filter(;
-        service => service && service.category === selectedCategory;
-      );
-    }
-
-    if (searchTerm) {;
-      filtered = filtered && filtered.filter(;
-        service =>;
-          service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-          service && service.description;
-            .toLowerCase();
-            .includes(searchTerm && searchTerm.toLowerCase()) ||;
-          service && service.technologies.some(tech =>;
-            tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
-          );
-
-      );
-    }    if (selectedCategory !== 'all') {;
-      filtered = filtered && filtered.filter(service => service && service.category === selectedCategory);
-    
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory)
-    }
-
-    
-
-
-    
-    if (searchTerm) {
-      filtered = filtered.filter(service => 
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      )
-    }
-
-    return filtered.sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return a.pricing.starter - b.pricing.starter;
-        case 'category':
-          return a.category.localeCompare(b.category);
-
-
-
-
-
-  const handleServiceSelect = (service: Service) => {
-    setSelectedService(service);
-  }
-  const closeModal = () => {
-
-    if (searchTerm) {;
-      filtered = filtered && filtered.filter(service => ;
-        service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-        service && service.technologies.some(tech => tech && tech.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
-      );
-    }
-
-    return filtered && filtered.sort((a, b) => {;
-      switch (sortBy) {;
-        case 'price':;
-          return a && a.pricing.starter - b && b.pricing.starter;
-        case 'category':;
-          return a && a.category.localeCompare(b && b.category);
-        default:;
-          return a && a.title.localeCompare(b && b.title);
-      }
-    });
-  }, [selectedCategory, searchTerm, sortBy]);
-
-  const handleServiceSelect = (service: Service) => {;
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white'>;
-      {/* Header */}
-      <div className='container mx-auto px-4 py-16'>        <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 && 0.8 }}
-          className='text-center mb-16'      }
-    })
-
-  }, [selectedCategory, searchTerm, sortBy])
-
-  const handleServiceSelect = (service: Service) => {;
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
-
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">;
-      {/* Header */}
-      <div className="container mx-auto px-4 py-16">;
-        <motion&& motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-
-        default: return a.title.localeCompare(b.title)
-      }
-    })
-  }, [selectedCategory, searchTerm, sortBy]);
-
-  const handleServiceSelect = (service: Service) => {
-    setSelectedService(service)
-  };
-
-  const closeModal = () => {
-    setSelectedService(null)
-  };
-
 ;
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selected_category, setSelectedCategory] = useState < string>('all');
@@ -1360,7 +920,7 @@ if ( {) {
                     key={tech}
 
                     {tech}
-                  </span>;
+                  </span>
                 ))}
 
                 {service.technologies.length > 3 && (
@@ -1394,7 +954,6 @@ if ( {) {
                   </span>;
                 )}
               </div>;
-
               <div className='flex items-center justify-between'>;
                 <div className='text-2xl font-bold text-blue-400'>;
                   ${service && service.pricing.starter}
@@ -1412,78 +971,16 @@ if ( {) {
             </motion && motion.div>;
           ))}
         </motion && motion.div>;
-
-
-
-
-
-        {/* No Results */}
-        {filteredServices && filteredServices.length === 0 && (;
-          <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-
-
-        )}
-
-      </div>;
-
-
-      </div>
-
-
-      {/* Service Detail Modal */}
-      <AnimatePresence>;
-        {selectedService && (;
-          <motion&& motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-
-
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0 && 0.9, opacity: 0 }}
-              className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
-
-              onClick={e => e.stopPropagation()}
-
-
-
-
-            >
-              <div className='flex items-start justify-between mb-6'>
-                <div className='flex items-center gap-4'>
-                  <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl'>
+              <div className="flex items-start justify-between mb-6">
+                <div className="flex items-center gap-4">
+                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">
                     {selectedService.icon}
                   </div>
                   <div>
-                    <h2 className='text-3xl font-bold text-white mb-2'>
-                      {selectedService.title}
-                    </h2>
-                    <p className='text-gray-400'>
-                      {
-                        serviceCategories.find(
-                          c => c.id === selectedService.category
-                        )?.name
-                      }
-                    </p>                  </div>;
-                </div>;
-                <button
-                  onClick={closeModal}
-                  className='p-2 hover:bg-white/10 rounded-lg transition-colors'>;
-              <div className="flex items-start justify-between mb-6">;
-                <div className="flex items-center gap-4">;
-                  <div className="p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl">;
-                    {selectedService && selectedService.icon}
-                  </div>;
-                  <div>;
-                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService && selectedService.title}</h2>;
-                    <p className="text-gray-400">{serviceCategories && serviceCategories.find(c => c && c.id === selectedService && selectedService.category)?.name}</p>;
-                  </div>;
-                </div>;
+                    <h2 className="text-3xl font-bold text-white mb-2">{selectedService.title}</h2>
+                    <p className="text-gray-400">{serviceCategories.find(c => c.id === selectedService.category)?.name}</p>
+                  </div>
+                </div>
                 <button
                   onClick={closeModal}
 
@@ -1499,12 +996,12 @@ if ( {) {
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
 
                 {/* Features */}
-                <div>;
-                  <h3 className='text-xl font-bold text-white mb-4'>;
-                    Key Features;
-                  </h3>;
-                  <ul className='space-y-2'>;
-                    {selectedService && selectedService.features.map((feature, index) => (;
+                <div>
+                  <h3 className='text-xl font-bold text-white mb-4'>
+                    Key Features
+                  </h3>
+                  <ul className='space-y-2'>
+                    {selectedService.features.map((feature, index) => (
                       <li
                         key={index}
 
@@ -1514,81 +1011,12 @@ if ( {) {
                   <span className="text-2xl">×</span>;
                 </button>;
               </div>;
-
               <p className="text-gray-300 text-lg mb-8">{selectedService && selectedService.description}</p>;
-
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 {/* Features */}
 
 
                         {feature}
-                      </li>;
-
-
-                        {feature}
-
-
-                      </li>
-                    ))}
-
-                  </ul>;
-                </div>;
-
-
-
-
-
-                {/* Benefits */}
-
-
-                    ))}
-
-                  </ul>;
-                </div>;
-              </div>;
-
-
-
-
-
-              {/* Technologies */}
-
-
-
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
-
-                    >
-
-
-                      {tech}
-                    </span>;
-                  ))}
-
-                </div>;
-              </div>;
-
-
-
-
-
-              {/* Pricing */}
-
-
-              </div>
-            </motion.div>
-          </motion.div>
-        )}
-
-      </AnimatePresence>;
-    </div>;
-  );
-
-};
-
-export default EnhancedServicesShowcase2025;  );
-  )
-};
-
 export default EnhancedServicesShowcase2025;
 
 

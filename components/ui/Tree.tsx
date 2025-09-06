@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 
   name: string;
   path: string;
-
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
@@ -32,11 +31,9 @@ function NodeItem ({
   depth,
   on_deploy,
 }: {
-
 interface TreeProps {;
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
-
 function NodeItem(): any ({;
   node,;
   depth,;
@@ -53,7 +50,6 @@ export interface TreeNode {
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
-
   const copyPath = async () => {;
     await navigator && navigator.clipboard.writeText(node && node.path);  };
 export interface TreeNode {;
@@ -80,7 +76,7 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
 
   const [open, setOpen] = useState<boolean>(false);
 
-  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
+  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
 
   };
@@ -101,7 +97,6 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
     await navigator && navigator.clipboard.writeText(node && node.path);
 
   };
-
   const clonePath = async () => {;
     const url = `${window && window.location.origin}/api/dev/source-map`;
     await fetch(url, {;
@@ -118,9 +113,7 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
         "x-admin-token": localStorage && localStorage.getItem("ADMIN_TOKEN") || ""} as any;
       body: JSON && JSON.stringify({ path: node && node.path })});
   };
-
   const deploy = () => onDeploy && onDeploy(node && node.path);
-
   return (
 
 
@@ -228,7 +221,6 @@ export default Tree;
 }</div>) ;
 
 export default Tree;
-
     <div className="w-full">
       {nodes.map((n) => (
 

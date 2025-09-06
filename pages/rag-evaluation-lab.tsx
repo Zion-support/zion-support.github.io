@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
   return (
-    <>;
+    <>
       <SEO
         title='RAG Evaluation Lab'
         description='Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates.'
@@ -195,6 +195,7 @@ export default function RAGEvaluationLabPage() {
             ].map (function => (
               <div;
                 key={f.title}
+<<<<<<< HEAD
                 className='rounded - xl border border - white / 10 bg - white / 5 p - 6 backdrop - blur';
               >;
                 <h3 className='text - lg font - semibold text - white'>{f.title}</h3>;

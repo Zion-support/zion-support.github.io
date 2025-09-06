@@ -64,7 +64,7 @@ if ( {) {
     headless: true,
     args: ['--no - sandbox--disable - setuid - sandbox']}),
   try {
-    const page = await browser.new_page (),
+const page = await browser.new_page (),
     await page.set_content (html, { wait_until: 'networkidle0' }),
     const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
     await browser.close (),
@@ -74,6 +74,20 @@ if ( {) {
   } catch (e: any) {
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import puppeteer from 'puppeteer';
+export const config = {;
+  api: {;
+    bodyParser: {;
+      sizeLimit: '10mb'}}};
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

@@ -71,7 +71,6 @@ import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-e
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-
 const serviceCategories = [
 import React from 'react',
 import Head from 'next / head',
@@ -861,6 +860,54 @@ function CuttingEdgeServices2025() {
         </div>;
       </section>;
     </Layout>);
+                      <>
+                        <div className=&quot;text-sm text-gray-400&quot;>Perfect for small businesses and startups</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Basic features and standard support</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Email support included</div>
+                      </>
+                    )}
+                    {_plan === 'Professional' && (
+                      <>
+                        <div className=&quot;text-sm text-gray-400&quot;>Ideal for growing businesses</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Advanced features and priority support</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Custom configurations available</div>
+                      </>
+                    )}
+                    {_plan === 'Enterprise' && (
+                      <>
+                        <div className=&quot;text-sm text-gray-400&quot;>For large enterprises and organizations</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Full platform access and custom development</div>
+                        <div className=&quot;text-sm text-gray-400&quot;>Dedicated specialists and 24/7 support</div>
+                      </>
+                    )}
+                  </div>
+
+                  <div className=&quot;text-center mb-8&quot;>
+                    <div className=&quot;text-4xl font-bold text-cyan-400 mb-2&quot;>
+                      {plan === 'Starter' ? 'From $149' : plan === 'Professional' ? 'From $499' : 'From $999'}
+                    </div>
+                    <div className=&quot;text-gray-400&quot;>per month</div>
+                  </div>
+
+                  <a
+                    href=&quot;/contact&quot;
+                    className=&quot;w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300&quot;
+                  >
+                    Get Started
+                    <ArrowRight className=&quot;ml-2 w-4 h-4&quot; />
+                  </Link>
+      {/* Pricing Comparison */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 

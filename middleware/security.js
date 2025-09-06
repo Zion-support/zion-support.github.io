@@ -14,7 +14,7 @@ export function securityMiddleware(request) {;
 
   const response = NextResponse.next();
   const response = NextResponse && NextResponse.next();
-  
+  const response = NextResponse.next();
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
@@ -30,7 +30,7 @@ export function securityMiddleware(request) {;
     );
   }
 
-
+  return response;// Security headers middleware
 // Security headers middleware
 
 export function securityHeaders(req, res, next) {
@@ -107,4 +107,7 @@ function security_headers() {
   });
 ;
   next ();
+}
+}
+
 }

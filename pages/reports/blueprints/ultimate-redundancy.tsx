@@ -18,62 +18,49 @@ const UltimateRedundancyBlueprint: React.FC = () => {
 
       status: 'active',
       priority: 'critical',
-      health: 'excellent';
+      health: 'excellent'
     },
     {
-      name: 'AI - Powered Failover',
+      name: 'AI-Powered Failover',
       description: 'Intelligent failover decisions using machine learning',
       status: 'active',
       priority: 'critical',
-      health: 'excellent';
+      health: 'excellent'
     },
     {
       name: 'Predictive Maintenance',
       description: 'Proactive system maintenance using predictive analytics',
       status: 'active',
       priority: 'high',
-      health: 'excellent';
     },
     {
       name: 'Global Load Distribution',
       description: 'Intelligent traffic routing across global infrastructure',
       status: 'active',
       priority: 'high',
-      health: 'excellent';
-    },
-    {
-      name: 'Self - Healing Systems',
-      description: 'Automated recovery and repair mechanisms',
-      status: 'active',
-      priority: 'critical',
-
-      health: 'excellent'
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
   const advancedCapabilities = [
-
     {
       capability: 'Neural Network Monitoring',
-      description: 'Deep learning - based anomaly detection',
+      description: 'Deep learning-based anomaly detection',
       benefit: 'Early threat detection and prevention',
-      status: 'implemented';
+      status: 'implemented'
     },
     {
       capability: 'Quantum Encryption',
-      description: 'Post - quantum cryptography for data security',
-      benefit: 'Future - proof security standards',
-      status: 'implemented';
+      description: 'Post-quantum cryptography for data security',
+      benefit: 'Future-proof security standards',
+      status: 'implemented'
     },
     {
       capability: 'Adaptive Scaling',
       description: 'Dynamic resource allocation based on AI predictions',
       benefit: 'Optimal performance and cost efficiency',
-      status: 'implemented';
-    },
-    {
-      capability: 'Cross - Region Synchronization',
-      description: 'Real - time data synchronization across continents',
-      benefit: 'Global consistency and availability',
-      status: 'implemented';
     },
     {
       capability: 'Automated Disaster Recovery',

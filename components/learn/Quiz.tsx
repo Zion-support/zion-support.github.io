@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -53,7 +49,6 @@ import React, { useState } from 'react';
 export default function Quiz({ questions, onComplete }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
-
   const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
 
   function submit() {
@@ -95,10 +90,13 @@ export default function Quiz({ questions, onComplete }: Props) {
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
-}
-
-  );
-}
-
-
-
+                />
+              </label>
+            ))}
+          </div>
+          {submitted && (
+              )}
+            </div>
+          )}
+        </div>
+      ))}

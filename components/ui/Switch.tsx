@@ -3,7 +3,6 @@ import React from './react';
 ;
 
 interface SwitchProps {
-
 interface SwitchProps {;
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
@@ -18,7 +17,6 @@ const Switch: React.FC < SwitchProps> = ({
   class_name = "",
 
 }) => {
-
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
   onCheckedChange,;

@@ -10,7 +10,6 @@
         </h1>;
         <p className="text-white/70 mt-2">Monitor and manage your Zion ecosystem deployments</p>;
       </div>;
-
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-8">;
         <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">;
@@ -69,7 +68,6 @@
           </div>;
         </div>;
       </div>;
-
       {/* Filter Tabs */}
 
             }`}
@@ -84,10 +82,7 @@
       <div className='grid grid-cols-1 xl:grid-cols-2 gap-6'>;
         {filteredDeployments && filteredDeployments.map(deployment => (;
       </div>
-
       {/* Deployments Grid */}
-      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-        {filteredDeployments.map((deployment) => (
           <div
             key={deployment && deployment.id}
             className='group relative bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-xl hover:shadow-white/5'>;
@@ -522,7 +517,6 @@ const getVerticalIcon = (vertical: string) =>: any {
                   </span>
                 </div>
               </div>
-
               {/* Progress Bar for Active Deployments */}
               {deployment.status === 'deploying' && (
                 <div className="space-y-2">
@@ -561,30 +555,24 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <div;
                       className="bg - blue - 500 h - 2 rounded - full transition - all duration - 500 ease - out";
                       style={{ width: `${deployment.progress}%` }}
-                    ></div>;
-                  </div>;
-                </div>)}
-            </div>;
+              )}
+            </div>
             {/* Deployment Details */}
-
-
+                  <div className='flex items-center gap-2 text-white/70'>
+                    <MapPin className='w-4 h-4' />
+                    <span>
+                      {[deployment.region, deployment.country]
+                        .filter(Boolean)
+                        .join(', ')}
+                    </span>                  </div>              {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
-
-
-                    {deployment.domain || deployment.subdomain || 'No domain set'}
-                  </span>
-                </div>
-                {(deployment.region || deployment.country) && (
-
-
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
                   </div>
-
             <div className="p-6 space-y-4">;
               {/* Domain & Location */}
               <div className="grid grid-cols-2 gap-4 text-sm">;
@@ -599,43 +587,8 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
-
-
-
-                )}
-              </div>
-              <div className='grid grid-cols-2 gap-4 text-sm'>;
-                <div className='flex items-center gap-2 text-white/70'>;
-                  <Globe className='w-4 h-4' />;
-                  <span className='font-mono'>;
-                    {deployment && deployment.domain ||;
-                      deployment && deployment.subdomain ||;
-                      'No domain set'}
-                  </span>;
-                </div>;
-                {(deployment && deployment.region || deployment && deployment.country) && (;
-                  <div className='flex items-center gap-2 text-white/70'>;
-                    <MapPin className='w-4 h-4' />;
-                    <span>;
-                      {[deployment && deployment.region, deployment && deployment.country];
-                        .filter(Boolean);
-                        .join(', ')}
-                    </span>                  </div>              {/* Domain & Location */}
-              <div className="grid grid-cols-2 gap-4 text-sm">;
-                <div className="flex items-center gap-2 text-white/70">;
-                  <span>🌐</span>;
-                  <span className="font-mono">;
-                    {deployment && deployment.domain || deployment && deployment.subdomain || 'No domain set'}
-                  </span>;
-                </div>;
-                {(deployment && deployment.region || deployment && deployment.country) && (;
-                  <div className="flex items-center gap-2 text-white/70">;
-                    <span>📍</span>;
-                    <span>{deployment && deployment.region} {deployment && deployment.country}</span>;
-                  </div>;
                 )}
               </div>;
-
               {/* Features */}
 
 
@@ -667,26 +620,6 @@ const getVerticalIcon = (vertical: string) =>: any {
 
 
               {/* Timestamps */}
-              <div className='flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10'>;
-                <div className='flex items-center gap-1'>;
-                  <Calendar className='w-3 h-3' />;
-                  <span>Created: {formatDate(deployment && deployment.createdAt)}</span>;
-                </div>;
-                {deployment && deployment.updatedAt !== deployment && deployment.createdAt && (;
-                  <div className='flex items-center gap-1'>;
-                    <RefreshCw className='w-3 h-3' />                    <span>Updated: {formatDate(deployment && deployment.updatedAt)}</span>              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">;
-                <div className="flex items-center gap-1">;
-                  <span>📅</span>;
-                  <span>Created: {formatDate(deployment && deployment.createdAt)}</span>;
-                </div>;
-                {deployment && deployment.updatedAt !== deployment && deployment.createdAt && (;
-                  <div className="flex items-center gap-1">;
-                    <span>🔄</span>;
-                  </div>;
-
-
-              {/* Timestamps */}
-              <div className="flex items-center justify-between text-xs text-white/60 pt-2 border-t border-white/10">
                 <div className="flex items-center gap-1">
                   <span>📅</span>
                   <span>Created: {formatDate(deployment.createdAt)}</span>
@@ -885,204 +818,29 @@ const getVerticalIcon = (vertical: string) =>: any {
                     View Instance;
                   </button>)}
                 {deployment.status === 'failed' && (
-                  <button className='flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200'>;
-                    <RefreshCw className='w - 4 h - 4' />;
-                    Retry;
-                  </button>)}
-                <button className='flex items - center justify - center px - 3 py - 2 bg - white / 10 hover:bg - white / 20 text - white / 80 text - sm font - medium rounded - lg transition - colors duration - 200'>;
-                  <Settings className='w - 4 h - 4' />                </button>                {deployment.status === 'pending' && (
-                  <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
-                    ▶️ Start Deployment;
-                  </button>)}
-
-                {deployment.status === 'deploying' && (
-                  <>;
-                    <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - orange - 600 hover:bg - orange - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
-                      ⏸️ Pause;
-                    </button>;
-                    <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - red - 600 hover:bg - red - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
-                      ⏹️ Stop;
-                    </button>;
-                  </>)}
-                {deployment.status === 'completed' && (
-                  <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - green - 600 hover:bg - green - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
-                    👁️ View Instance;
-                  </button>)}
-                {deployment.status === 'failed' && (
-                  <button className="flex - 1 flex items - center justify - center gap - 2 px - 3 py - 2 bg - blue - 600 hover:bg - blue - 700 text - white text - sm font - medium rounded - lg transition - colors duration - 200">;
-                    🔄 Retry;
-                  </button>)}
-                <button className="flex items - center justify - center px - 3 py - 2 bg - white / 10 hover:bg - white / 20 text - white / 80 text - sm font - medium rounded - lg transition - colors duration - 200">;
-                  ⚙️;
-                </button>;
-              </div>;
-            </div>;
-          </div>))}
-      </div>;
-      {/* Empty State */}
-
-        </div>          </div>;
+      {filteredDeployments.length === 0 && (;
+        <div className="text-center py-16">;
+          <div className="w-16 h-16 mx-auto mb-4 p-4 bg-white/10 rounded-full">;
+            <Rocket className="w-8 h-8 text-white/40" />;
+          </div>;
           <h3 className="text-lg font-medium text-white/60 mb-2">No deployments found</h3>;
           <p className="text-white/40 mb-6">;
-            {filter === 'all' ;
-              ? 'Start by creating your first Zion ecosystem deployment' ;
+            {filter === 'all';
+              ? 'Start by creating your first Zion ecosystem deployment';
               : `No deployments with status "${filter}" found`;
-
             }
           </p>;
           {filter === 'all' && (;
-            <a
-              href="/admin/os-deploy"
-
-
+            <a;
+              href="/admin/os-deploy";
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200";
+            >;
               <Rocket className="w-4 h-4" />;
               Deploy First Instance;
             </a>;
           )}
-
-        </div>;
-      </div>;
-
-
-      {/* Deployments Table */}
-      <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden">;
-        <div className="p-6 border-b border-white/10">;
-          <h2 className="text-xl font-semibold">Deployments</h2>;
-        </div>;
-        <div className="overflow-x-auto">;
-          <table className="w-full">;
-            <thead className="bg-white/5">;
-              <tr>;
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Name</th>;
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Status</th>;
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Region</th>;
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Version</th>;
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Last Deployed</th>;
-                <th className="px-6 py-3 text-left text-xs font-medium text-white/60 uppercase tracking-wider">Actions</th>;
-              </tr>;
-            </thead>;
-            <tbody className="divide-y divide-white/10">;
-              {filteredDeployments && filteredDeployments.map((deployment) => (;
-                <tr key={deployment && deployment.id} className="hover:bg-white/5">;
-                  <td className="px-6 py-4 whitespace-nowrap">;
-                    <div className="text-sm font-medium text-white">{deployment && deployment.name}</div>;
-                    <div className="text-sm text-white/60">ID: {deployment && deployment.id}</div>;
-                  </td>;
-                  <td className="px-6 py-4 whitespace-nowrap">;
-                    <span className={`inline-flex items-center px-2 && 2.5 py-0 && 0.5 rounded-full text-xs font-medium ${getStatusColor(deployment && deployment.status)}`}>;
-                      {deployment && deployment.status}
-                    </span>;
-                  </td>;
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment && deployment.region}</td>;
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment && deployment.version}</td>;
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-white/60">{deployment && deployment.lastDeployed}</td>;
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">;
-                    <button className="text-blue-400 hover:text-blue-300 mr-4">View</button>;
-                    <button className="text-green-400 hover:text-green-300 mr-4">Deploy</button>;
-                    <button className="text-red-400 hover:text-red-300">Stop</button>;
-                  </td>;
-                </tr>;
-              ))}
-      {filtered_deployments.length === 0 && (
-        <div className='text - center py - 16'>;
-          <div className='w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full'>;
-            <Rocket className='w - 8 h - 8 text - white / 40' />;
-          </div>;
-          <h3 className='text - lg font - medium text - white / 60 mb - 2'>;
-            No deployments found;
-          </h3>;
-          <p className='text - white / 40 mb - 6'>;
-            {filter === 'all';
-              ? 'Start by creating your first Zion ecosystem deployment';
-              : `No deployments with status "${filter}" found`}
-          </p>;
-          {filter === 'all' && (
-            <a;
-              href='/admin / os - deploy';
-              className='inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200';
-            >;
-              <Rocket className='w - 4 h - 4' />              Deploy First Instance;
-            </a>)}
-        </div>          </div>;
-          <h3 className="text - lg font - medium text - white / 60 mb - 2">No deployments found</h3>;
-          <p className="text - white / 40 mb - 6">;
-            {filter === 'all';
-              ? 'Start by creating your first Zion ecosystem deployment';
-              : `No deployments with status "${filter}" found`;
-            }
-          </p>;
-          {filter === 'all' && (
-            <a;
-              href="/admin / os - deploy";
-              className="inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200";
-            >;
-              <Rocket className="w - 4 h - 4" />;
-              Deploy First Instance;
-            </a>)}
-        </div>;
-      </div>;
-      {/* Deployments Table */}
-      <div className="bg - white / 5 backdrop - blur - sm rounded - xl border border - white / 10 overflow - hidden">;
-        <div className="p - 6 border - b border - white / 10">;
-          <h2 className="text - xl font - semibold">Deployments</h2>;
-        </div>;
-        <div className="overflow - x-auto">;
-          <table className="w - full">;
-            <thead className="bg - white / 5">;
-              <tr>;
-                <th className="px - 6 py - 3 text - left text - xs font - medium text - white / 60 uppercase tracking - wider">Name</th>;
-                <th className="px - 6 py - 3 text - left text - xs font - medium text - white / 60 uppercase tracking - wider">Status</th>;
-                <th className="px - 6 py - 3 text - left text - xs font - medium text - white / 60 uppercase tracking - wider">Region</th>;
-                <th className="px - 6 py - 3 text - left text - xs font - medium text - white / 60 uppercase tracking - wider">Version</th>;
-                <th className="px - 6 py - 3 text - left text - xs font - medium text - white / 60 uppercase tracking - wider">Last Deployed</th>;
-                <th className="px - 6 py - 3 text - left text - xs font - medium text - white / 60 uppercase tracking - wider">Actions</th>;
-              </tr>;
-            </thead>;
-            <tbody className="divide - y divide - white / 10">;
-              {filtered_deployments.map ((deployment) => (
-                <tr key={deployment.id} className="hover:bg - white / 5">;
-                  <td className="px - 6 py - 4 whitespace - nowrap">;
-                    <div className="text - sm font - medium text - white">{deployment.name}</div>;
-                    <div className="text - sm text - white / 60">ID: {deployment.id}</div>;
-                  </td>;
-                  <td className="px - 6 py - 4 whitespace - nowrap">;
-                    <span className={`inline - flex items - center px - 2.5 py - 0.5 rounded - full text - xs font - medium ${getStatusColor (deployment.status)}`}>;
-                      {deployment.status}
-                    </span>;
-                  </td>;
-                  <td className="px - 6 py - 4 whitespace - nowrap text - sm text - white / 60">{deployment.region}</td>;
-                  <td className="px - 6 py - 4 whitespace - nowrap text - sm text - white / 60">{deployment.version}</td>;
-                  <td className="px - 6 py - 4 whitespace - nowrap text - sm text - white / 60">{deployment.last_deployed}</td>;
-                  <td className="px - 6 py - 4 whitespace - nowrap text - sm font - medium">;
-                    <button className="text - blue - 400 hover:text - blue - 300 mr - 4">View</button>;
-                    <button className="text - green - 400 hover:text - green - 300 mr - 4">Deploy</button>;
-                    <button className="text - red - 400 hover:text - red - 300">Stop</button>;
-                  </td>;
-                </tr>))}
-            </tbody>;
-          </table>;
-        </div>;
-      </div>;
-
-  );
-}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200"
-            >
-              <Rocket className="w-4 h-4" />
-              Deploy First Instance
-            </a>
-          )}
-        </div>
-      )}
-    </div>
-
         </div>;
       )}
     </div>;
-
-
   );
-}
-    </div>))}
-    </div>);
 }

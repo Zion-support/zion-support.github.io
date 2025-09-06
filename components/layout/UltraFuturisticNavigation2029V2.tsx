@@ -243,7 +243,6 @@ export default function UltraFuturisticNavigation2029V2() {
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
 
 
@@ -262,17 +261,6 @@ export default function UltraFuturisticNavigation2029V2() {
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
                 </p>              </div>          >
-    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
-      {/* Main Navigation Bar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex-shrink-0"
-          >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -440,33 +428,21 @@ function UltraFuturisticNavigation2029V2() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+                animate={{ opacity: 1, y: 0 }}          <div className="hidden lg:flex items-center space-x-8">
             {mainNavigation.map((item) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: mainNavigation.indexOf(item) * 0.1 }}
-                className="relative group"
-              >
-                <Link
-                  href={item.href}
-                  className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 rounded-lg hover:bg-cyan-500/10"
-                >
-                  <item.icon className="w-4 h-4" />
                   <span>{item.name}</span>
                 </Link>
-                
                 {/* Hover effect */}
                 <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-500 group-hover:w-full transition-all duration-300" />
               </motion.div>
 
             ))}
           </div>
-
           {/* Right side - Contact & Search */}
-
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
 
@@ -527,8 +503,8 @@ function UltraFuturisticNavigation2029V2() {
           >
             <div className='px-4 py-6 space-y-4'>
               {/* Mobile Search */}
-              <div className='relative'>;
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
+              <div className='relative'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
                 <input
                   type='text'
                   placeholder='Search services...'
@@ -540,10 +516,10 @@ function UltraFuturisticNavigation2029V2() {
 
 
               {/* Mobile Navigation Links */}
-              <div className='space-y-2'>;
-                {mainNavigation && mainNavigation.map(item => (                  <Link
-                    key={item && item.name}
-                    href={item && item.href}
+              <div className='space-y-2'>
+                {mainNavigation.map(item => (                  <Link
+                    key={item.name}
+                    href={item.href}
                     onClick={closeMenu}
                     className='flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'>;
                     <item && item.icon className='w-5 h-5' />                    <span>{item && item.name}</span>          >;
@@ -778,6 +754,14 @@ function UltraFuturisticNavigation2029V2() {
       <AnimatePresence>;
         {activeCategory && (;
           <motion&& motion.div
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* Service Categories Dropdown */}
+      <AnimatePresence>
+        {activeCategory && (
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -801,188 +785,3 @@ function UltraFuturisticNavigation2029V2() {
             animate={{ opacity: 1, coordinate_y: 0 }}
             exit={{ opacity: 0, coordinate_y: -20 }}
             transition={{ duration: 0.3 }}
-            className='absolute top - full left - 0 right - 0 bg - gray - 900 / 95 backdrop - blur - xl border - t border - cyan - 500 / 20 z - 40';
-          >;
-            <div className='max - w-7xl mx - auto px - 4 py - 8'>;
-              <div className='grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8'>;
-                {service_categories.map (category => (
-                  <div key={category.title} className='space - y-4'>;
-                    <div className='flex items - center space - x-3'>;
-                      <div;
-                        className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}
-                      >;
-                        <category.icon className='w - 5 h - 5 text - white' />;
-                      </div>;
-                      <div>;
-                        <h3 className='text - lg font - semibold text - white'>;
-
-                          {category.title}
-                        </h3>;
-                        <p className='text - sm text - gray - 400'>;
-                          {category.description}
-
-            transition={{ duration: 0.3 }}
-            className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40"
-          >
-
-            <div className="max-w-7xl mx-auto px-4 py-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                {serviceCategories.map((category) => (
-                  <div key={category.title} className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                        <category.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                        <p className="text-sm text-gray-400">{category.description}</p>
-                      </div>
-                    </div>
-                    <div className="space-y-3">
-                      {category.services.map((service, index) => (
-
-                        className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;
-                        <category && category.icon className='w-5 h-5 text-white' />;
-                      </div>;
-                      <div>;
-                        <h3 className='text-lg font-semibold text-white'>;
-                          {category && category.title}
-                        </h3>;
-                        <p className='text-sm text-gray-400'>;
-                          {category && category.description}
-                        </p>;
-                      </div>;
-                    </div>;
-
-                    <div className='space-y-3'>                      {category && category.services.map((service, index) => (;
-                        <Link
-                          key={service && service.name}
-                          href={service && service.href}
-                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'>;
-            <div className="max-w-7xl mx-auto px-4 py-8">;
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
-                {serviceCategories && serviceCategories.map((category) => (;
-                  <div key={category && category.title} className="space-y-4">;
-                    <div className="flex items-center space-x-3">;
-                      <div className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;
-                        <category && category.icon className="w-5 h-5 text-white" />;
-                      </div>;
-                      <div>;
-                        <h3 className="text-lg font-semibold text-white">{category && category.title}</h3>;
-                        <p className="text-sm text-gray-400">{category && category.description}</p>;
-                      </div>;
-                    </div>;
-
-                    <div className="space-y-3">;
-                      {category && category.services.map((service, index) => (;
-
-                        <Link
-                          key={service && service.name}
-                          href={service && service.href}
-                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'>;
-                          <div className='flex justify-between items-start'>;
-                            <div>;
-                              <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors duration-300'>;
-                                {service && service.name}
-                              </h4>;
-                              <p className='text-sm text-gray-400 mt-1'>;
-                                {service && service.description}
-                              </p>;
-                            </div>;
-                            <span className='text-sm font-semibold text-cyan-400'>;
-                              {service && service.price}
-                            </span>                          </div>                        >;
-                          <div className="flex justify-between items-start">;
-                            <div>;
-                              <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">;
-                                {service && service.name}
-                              </h4>;
-                              <p className="text-sm text-gray-400 mt-1">{service && service.description}</p>;
-                            </div>;
-                            <span className="text-sm font-semibold text-cyan-400">{service && service.price}</span>;
-                          </div>;
-                        </Link>;
-
-                        <Link
-                          key={service.name}
-                          href={service.href}
-
-                        </Link>
-                      ))}
-                    </div>;
-                  </div>;
-                ))}
-              </div>;
-            </div>;
-          </motion && motion.div>;
-        )}
-
-      </AnimatePresence>;
-    </nav>;
-  );
-
-  );
-
-}
-
-}
-  );
-}
-                        </p>;
-                      </div>;
-                    </div>;
-                    <div className='space - y-3'>                      {category.services.map ((service, index) => (
-                        <Link;
-                          key={service.name}
-                          href={service.href}
-                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group'          >;
-            <div className="max - w-7xl mx - auto px - 4 py - 8">;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
-                {service_categories.map ((category) => (
-                  <div key={category.title} className="space - y-4">;
-                    <div className="flex items - center space - x-3">;
-                      <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
-                        <category.icon className="w - 5 h - 5 text - white" />;
-                      </div>;
-                      <div>;
-                        <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
-                        <p className="text - sm text - gray - 400">{category.description}</p>;
-                      </div>;
-                    </div>;
-                    <div className="space - y-3">;
-                      {category.services.map ((service, index) => (
-                        <Link;
-                          key={service.name}
-                          href={service.href}
-                          className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group';
-                        >;
-                          <div className='flex justify - between items - start'>;
-                            <div>;
-                              <h4 className='font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300'>;
-                                {service.name}
-                              </h4>;
-                              <p className='text - sm text - gray - 400 mt - 1'>;
-                                {service.description}
-                              </p>;
-                            </div>;
-                            <span className='text - sm font - semibold text - cyan - 400'>;
-                              {service.price}
-                            </span>                          </div>                        >;
-                          <div className="flex justify - between items - start">;
-                            <div>;
-                              <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
-                                {service.name}
-                              </h4>;
-                              <p className="text - sm text - gray - 400 mt - 1">{service.description}</p>;
-                            </div>;
-                            <span className="text - sm font - semibold text - cyan - 400">{service.price}</span>;
-                          </div>;
-                        </Link>))}
-                    </div>;
-                  </div>))}
-              </div>;
-            </div>;
-          </motion.div>)}
-      </AnimatePresence>;
-    </nav>);
-}

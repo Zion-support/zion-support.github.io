@@ -7,8 +7,11 @@ import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
 
 
+import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
+
 import type { Config } from "jest";
-import nextJest from "next/jest ;
+import nextJest from "next/jest.js";
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
 
@@ -36,7 +39,6 @@ import nextJest from "next/jest.js";
 
 import type { Config } from 'jest';
 import nextJest from 'next/jest.js';
-import nextJest from "next/jest ;
 
 const createJestConfig = nextJest({
 
@@ -83,11 +85,11 @@ const createJestConfig = next_jest ({
   collectCoverageFrom: [
 
 
-    "src/**/*.{js,jsx,ts,tsx}",
-    "!src/**/*.d && d.ts",
-    "!src/**/*.stories.{js,jsx,ts,tsx}",
-;
-// Add any custom config to be passed to Jest;
+export default createJestConfig(config);
+export default createJestConfig(config);
+import type { Config } from "jest";
+import nextJest from "next/jest.js";
+const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
   coverage_provider: "v8",
   test_environment: "jsdom",

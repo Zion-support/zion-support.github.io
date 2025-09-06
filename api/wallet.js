@@ -24,7 +24,6 @@ const { withErrorLogging } = require(
 
 
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
-
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
@@ -32,7 +31,6 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
   try {
     // Authentication would normally be checked here
     // This is a placeholder implementation

@@ -23,7 +23,7 @@ if ( {) {
     });
     return accounts;
   } catch (error) {
-    throw new Error ('Failed to connect to MetaMask');
+    throw new Error('Failed to connect to MetaMask');
   }
 }
 
@@ -80,7 +80,7 @@ if ( {) {
     });
     return balance;
   } catch (error) {
-    throw new Error ('Failed to get balance');
+    throw new Error('Failed to get balance');
   }
 }
 
@@ -109,7 +109,7 @@ if ( {) {
     });
     return signature;
   } catch (error) {
-    throw new Error ('Failed to sign message');
+    throw new Error('Failed to sign message');
   }
 }
 
@@ -118,7 +118,7 @@ if ( {) {
 declare global {
   interface Window {
     ethereum?: {
-      request: (args: { method: string; params?: any[] }) => Promise < any>;
+      request: (args: { method: string; params?: any[] }) => Promise<any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
 
       remove_listener: (event: string, callback: (accounts: string[]) => void) => void;

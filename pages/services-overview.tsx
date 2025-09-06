@@ -16,11 +16,9 @@ import {
   Star,
   Award,
   Clock,
-  Globe,
-} from './lucide-react';
-import Layout from "../components / Layout";
-;
-const service_categories = [;
+} from "lucide-react";
+import Layout from "../components/Layout";
+const serviceCategories = [
   {
     title: "AI Services",
     description:;
@@ -114,7 +112,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 import Layout from '../components/Layout';
-
 const serviceCategories = [
   {
     title: 'AI Services',
@@ -220,26 +217,21 @@ const benefits = [;
   }
 ];
 export default function ServicesOverviewPage() {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -263,7 +255,6 @@ import {;
   Globe,;
 } from "lucide-react";
 import Layout from "../components/Layout";
-
 const serviceCategories = [;
   {;
     title: "AI Services",;
@@ -378,7 +369,6 @@ const serviceCategories = [;
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -477,7 +467,6 @@ function ServicesOverviewPage() {
             </div>;
           </div>;
         </section>;
-
         {/* Service Categories */}
         <section className="py-16">;
           <div className="container mx-auto px-4">;
@@ -560,7 +549,6 @@ function ServicesOverviewPage() {
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
-                    
                     <div className="space-y-2 mb-6">
                       <h4 className="font-semibold text-gray-900 text-sm">Key Services:</h4>
                       <ul className="space-y-1">
@@ -569,6 +557,7 @@ function ServicesOverviewPage() {
 
 
 
+                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;
@@ -580,7 +569,6 @@ function ServicesOverviewPage() {
                 all your business needs.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {serviceCategories && serviceCategories.map((category, index) => (;
                 <motion&& motion.div
@@ -593,16 +581,13 @@ function ServicesOverviewPage() {
                     className={`h-32 bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
                     <category && category.icon className="w-16 h-16 text-white" />;
                   </div>;
-
                   <div className="p-6">;
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
                       {category && category.title}
                     </h3>;
-
                     <p className="text-gray-600 mb-4 leading-relaxed">;
                       {category && category.description}
                     </p>;
-
                     <div className="space-y-2 mb-6">;
                       <h4 className="font-semibold text-gray-900 text-sm">;
                         Key Services:;
@@ -743,7 +728,6 @@ function ServicesOverviewPage() {
                 and unwavering commitment to your success.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
@@ -764,7 +748,6 @@ function ServicesOverviewPage() {
             </div>;
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">;
           <div className="container mx-auto px-4 text-center">;
@@ -795,14 +778,6 @@ function ServicesOverviewPage() {
                 </Link>;
                 <Link
                   href="/case-studies"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
-                  View Case Studies;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
     </Layout>;
   );
                   className="text - center";

@@ -44,9 +44,9 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   log_event: (event: any) => null,
   get_articles: () => [],
   getArticleById: (id: string) => null;
-}
-;
-export const logSupportEventToOperator = (event: any) =>: any {
+};
+
+export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
 }

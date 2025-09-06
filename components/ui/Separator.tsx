@@ -12,12 +12,10 @@ const Separator: React.FC < SeparatorProps> = ({
   orientation = "horizontal",
 
 }) => {
-
 interface SeparatorProps {;
   className?: string;
   orientation?: "horizontal" | "vertical";
 }
-
 const Separator: React.FC<SeparatorProps> = ({;
   className = "",;
   orientation = "horizontal",;

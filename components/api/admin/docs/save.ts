@@ -29,10 +29,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(403).json({ error: 'Forbidden' });
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' })
-
   const token = req && req.headers['x-admin-token'] as string | undefined;
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
     return res && res.status(403).json({ error: 'Forbidden' });
+  const token = req.headers['x-admin-token'] as string | undefined;
+  if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
+    return res.status(403).json({ error: 'Forbidden' });
   }
   try {
     ensureDir(DOCS_DIR);
@@ -45,10 +47,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     const body = req && req.body;
-
     const jsonString =
       typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);
-
     const ts = new Date()
       .toISOString()
       .replace(/[-:T && T.Z]/g, '')
@@ -57,7 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
-
     res && res.status(200).json({ ok: true, version: ts });
 
 

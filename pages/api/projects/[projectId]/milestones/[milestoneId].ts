@@ -13,10 +13,10 @@ import {
 
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
   if (!user) return;
-  const { projectId, milestoneId } = req && req.query as {
+  const { projectId, milestoneId } = req.query as {
     projectId: string;
     milestoneId: string;
   }
@@ -32,7 +32,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     }
-
   if (req && req.method === "PATCH") {
     const body = req && req.body as any;
     if (body && body.status && !isMilestoneStatus(body && body.status)) {
@@ -49,27 +48,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       }
     }
-    const updated = updateMilestone(project, milestoneId, body);
-    if (!updated) {
-
-
-      return;
-    }
-    res && res.status(200).json({ milestone: updated });
-    return;
-  }
-
-
-}
-;
-
-  res.setHeader('AllowPATCH');
-  res.status(405).end('Method Not Allowed')
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-

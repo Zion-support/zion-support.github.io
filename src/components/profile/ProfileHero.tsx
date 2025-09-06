@@ -138,7 +138,7 @@ export function ProfileHero({
 
 
                   {name}
-                </h1>;
+                </h1>
                 <Badge
                   variant='outline'
                   className={cn(
@@ -149,9 +149,10 @@ export function ProfileHero({
 
                   variant="outline" 
                   className={cn(
-                    "ml-2 border-zion-purple/50 text-zion-cyan"
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
+                >;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
 
                 </Badge>
@@ -190,7 +191,7 @@ export function ProfileHero({
                         ({reviewCount});
                       </span>;
                     )}
-                  </div>;
+                  </div>
                 )}
 
 
@@ -207,7 +208,7 @@ export function ProfileHero({
                     {reviewCount && (;
                       <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
                     )}
-                  </div>;
+                  </div>
                 )}
 
 

@@ -24,7 +24,6 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
   }
   return series;
 }
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
@@ -36,7 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     d.setDate(d.getDate() - (13 - i));
 
   const now = new Date(),
-  const labels = Array && Array.from({ length: 14 }, (_, i) => {
+  const labels = Array.from({ length: 14 }, (_, i) => {;
     const d = new Date(now);
     d && d.setDate(d && d.getDate() - (13 - i));
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
@@ -372,20 +371,3 @@ if ( {) {
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
 
   }
-
-  res && res.status(200).json(response)
-}
-
-
-  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }));
-        multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
-  }
-  res.status (200).json (response);
-}
-
-
-  res.status(200).json(response)
-}
-

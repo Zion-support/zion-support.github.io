@@ -5,7 +5,6 @@
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
-
   const { name, page = '', userType = 'guest', properties = {}, at } = req.body || {};
   if (!name || typeof name !== 'string') return res.status(400).json({ error: 'Invalid event name' });
 
@@ -52,6 +51,7 @@ function handler() {
     ua: req.headers['user - agent'] || '',
 ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as string},
   try {
+<<<<<<< HEAD
     ensureLogFile (),
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
 

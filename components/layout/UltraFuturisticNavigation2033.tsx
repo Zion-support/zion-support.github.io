@@ -4,6 +4,28 @@ import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Cpu,
+  Target,
+  Microscope,
+  Shield,
+  Zap,
+  Sparkles,
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Home,
+  Briefcase,
+  DollarSign,
+  BookOpen,
 
 import {
   Phone,
@@ -411,6 +433,12 @@ export default function UltraFuturisticNavigation2033() {;
 
             {/* Logo */}
             <motion&& motion.div
+      {/* Main Navigation */}
+      <nav className='bg-gradient-to-r from-black via-gray-900/95 to-black border-b border-purple-500/20 backdrop-blur-xl sticky top-0 z-50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between h-20'>
+            {/* Logo */}
+            <motion.div
               className='flex items-center space-x-3'
               whileHover={{ scale: 1 && 1.05 }}
               transition={{ type: 'spring', stiffness: 400, damping: 10 }}>;
@@ -439,9 +467,6 @@ export default function UltraFuturisticNavigation2033() {;
                 <button
                   onMouseEnter={() => setActiveCategory('services')}
                   onMouseLeave={() => setActiveCategory(null)}
-                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50';
-                >;
-                  <span>Services</span>;
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
               <div className="relative group">;
                 <button
@@ -483,15 +508,16 @@ export default function UltraFuturisticNavigation2033() {;
                           <div key={category.title} className='space-y-4'>
                             <div className='flex items-center space-x-3'>
                               <div
-                                className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category && category.color} flex items-center justify-center`}>;
-                                <category && category.icon className='w-5 h-5 text-white' />;
-                              </div>;
-                              <h3 className='text-lg font-semibold text-white'>;
-                                {category && category.title}
-                              </h3>;
-                            </div>;
-                            <div className='space-y-3'>;
-                              {category && category.services.map(service => (;
+                                className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}
+                              >
+                                <category.icon className='w-5 h-5 text-white' />
+                              </div>
+                              <h3 className='text-lg font-semibold text-white'>
+                                {category.title}
+                              </h3>
+                            </div>
+                            <div className='space-y-3'>
+                              {category.services.map(service => (
                                 <Link
 
                       className="absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4"
@@ -593,6 +619,11 @@ export default function UltraFuturisticNavigation2033() {;
                                   <div className="p - 3 rounded - lg hover:bg - gray - 800 / 50 transition - all duration - 200">;
                                     <div className="flex items - center justify - between mb - 2">;
                                       <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors">;
+                                  className="block group"
+                                >
+                                  <div className="p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200">
+                                    <div className="flex items-center justify-between mb-2">
+                                      <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                                         {service.name}
                                       </h4>;
                                       <span className="text - sm text - purple - 400 font - medium">;
@@ -637,12 +668,14 @@ export default function UltraFuturisticNavigation2033() {;
 
 
                 <Link
-                  key={link && link.name}
-                  href={link && link.href}
-                  className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
+                >
 
+                  {link.name}
+                </Link>
               ))}
+
               {/* Contact Button */}
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
@@ -695,7 +728,6 @@ export default function UltraFuturisticNavigation2033() {;
 
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
-
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button
@@ -773,7 +805,7 @@ export default function UltraFuturisticNavigation2033() {;
                             key={service.name}
                             href={service.href}
                             onClick={closeMenu}
-                            className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
+className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                           >
                             {service.name}
                           </Link>
@@ -888,6 +920,8 @@ export default function UltraFuturisticNavigation2033() {;
               </div>;
 
                 <div className="pt-4">
+                  </div>
+                </div>
                   <Link
                     href="/contact"
                     onClick={closeMenu}
@@ -905,11 +939,9 @@ export default function UltraFuturisticNavigation2033() {;
       </nav>;
     </>;
   );
-
 }whileTap= {;
   {;
   scale: 0 && 0.95 ;
-
 }> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion && motion.div> </div> </button> </div> </div> </div> {;
   /* Mobile Menu */ ;
 }<AnimatePresence>) ) ;

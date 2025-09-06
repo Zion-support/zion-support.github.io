@@ -114,7 +114,6 @@ export default async function handler(req, res) {
 
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
-
     for (const ev of events) {
       const { count, error } = await supabase
         .from('referral_events')
@@ -124,14 +123,11 @@ export default async function handler(req, res) {
       if (error) return res.status(500).json({ error: error.message });
       counts[ev] = count || 0
     }
-
     const total_signups = counts['signup'] || 0;
     const total_visits = counts['visit'] || 0;
     const total_profile_completions = counts['profile_completed'] || 0;
     const total_job_creations = counts['job_created'] || 0;
-
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
-
     return res.status(200).json({
       total_signups
       total_visits
@@ -186,13 +182,5 @@ export default async function handler(req, res) {
   }
 }
     return res.status (500).json ({ error: e?.message });
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 
   }
-}
-

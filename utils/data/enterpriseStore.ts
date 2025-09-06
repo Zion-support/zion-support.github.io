@@ -8,6 +8,7 @@ import {
 
 
 const generateId = () => Math.random().toString(36).slice(2, 10);
+<<<<<<< HEAD
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
   name: 'Acme Corporation';
   slug: 'acme';

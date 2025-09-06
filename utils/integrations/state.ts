@@ -24,20 +24,19 @@ export function resetState(): void {
   connections: [],
   logs: [],
   overrides: [];
+  connections: []
+  logs: []
+  overrides: []
 }
 ;
 export function get_state (): IntegrationState {
   return { ...state }
 }
-export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
-  updater (state);
+  updater(state);
   return { ...state }
 }
 export function reset_state (): void {
   state = {
-    connections: [],
-    logs: [],
-    overrides: [];
   }
 }
 

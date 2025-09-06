@@ -7,7 +7,7 @@
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
-export function Logo({ customLogo, customColor }) {}
+export function Logo({ customLogo, customColor }) {};
   const logoColor = customColor || '#22D3EE';',
   return (
     <Link to="/" className="flex items-center space-x-3 group">";
@@ -37,17 +37,6 @@ export function Logo({ customLogo, customColor }) {}
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-export function Logo({ customLogo, customColor }) {
-  const logoColor = customColor || '#22D3EE';
-
-      <divclassName="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"import React from 'react'
-import { Link } from 'react-router-dom'
-
-export function Logo({ customLogo, customColor }) {
-  const logoColor = customColor || '#22D3EE'
-
-  
 
 
   

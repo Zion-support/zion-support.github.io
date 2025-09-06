@@ -13,4 +13,3 @@ const Revenue-ops: React.FC<Revenue-opsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}

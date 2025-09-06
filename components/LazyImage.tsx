@@ -5,7 +5,6 @@ import LoadingSpinner from "./LoadingSpinner";
 ;
 
 interface LazyImageProps {
-
 interface LazyImageProps {;
   src: string;
   alt: string;
@@ -63,7 +62,6 @@ export default function LazyImage({
 
   useEffect(() => {;
     if (priority) return;
-
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
@@ -78,24 +76,19 @@ export default function LazyImage({
         rootMargin: "50px",;
       },;
     );
-
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);
     }
-
     return () => observer && observer.disconnect();
   }, [priority]);
-
   const handleLoad = () => {;
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {;
     setHasError(true);
     onError?.();
   };
-
   if (hasError) {;
 
     return (

@@ -141,14 +141,12 @@ export default function Contact() {
   );
 
 import Head from 'next/head';
-
 const ContactPage: React.FC = () => {
   return (
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
         <meta
-          name='description'
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
         />
         <meta
@@ -168,7 +166,6 @@ const ContactPage: React.FC = () => {
               <p className='text-xl text-slate-300 text-center mb-12'>
                 Ready to transform your business? Get in touch with our experts.
               </p>
-
               <div className='grid: md:grid-cols-2 gap-12'>
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Get In Touch</h2>
@@ -218,7 +215,6 @@ const ContactPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 <div>
                   <h2 className='text-2xl font-bold mb-6'>Send us a Message</h2>
                   <ContactForm />
@@ -287,4 +283,15 @@ function Contact() {
         </div>;
       </div>;
     </Layout>);
+}
+            </div>
+          </div>
+        </div>
+      </div>
+  );
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

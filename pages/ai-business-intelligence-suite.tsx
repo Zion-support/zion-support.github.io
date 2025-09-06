@@ -36,166 +36,26 @@ export default function AIBusinessIntelligenceSuite() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
 
     website: 'https://ziontechgroup.com'
-  }
-  const features = [
-    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards'
-    'Role-based access control and securityAPI access for custom integrations'
-  ]
-  const useCases = [
-    'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
-  ]
-  const integrations = [
-    'SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'
-  ]
-  const technology = [
-    'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
-  ]
-
-  return (
-    <UltraAdvancedFuturisticBackground
-      intensity="high"
-      colorScheme="quantum-fusion"
-      particleCount={500}
-      animationSpeed={2.0}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-    website: 'https://ziontechgroup.com'
-
-  },
-
-  const features = [
-    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards'
-    'Role-based access control and securityAPI access for custom integrations'
-
-  ],
-  const useCases = [
-    'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
-  ],
-  const integrations = [
-    'SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'
-  ],
-  const technology = [
-    'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
-  ],
-
-  return (
-
-
-    >
-      <div className="min-h-screen">
-        <Head>
-          <title>AI Business Intelligence Suite - Zion Tech Group | Transform Data into Insights</title>
-          <meta name="description" content="Transform data into actionable insights with our AI-powered business intelligence platform. Real-time analytics, predictive modeling, and automated reporting. Contact: +1 302 464 0950" />
-          <meta name="keywords" content="AI business intelligence, data analytics, predictive analytics, business insights, data visualization, AI analytics, business intelligence platform" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
-          <meta property="og:title" content="AI Business Intelligence Suite - Zion Tech Group" />
-          <meta property="og:description" content="AI-powered business intelligence platform with real-time analytics and predictive modeling. Contact: +1 302 464 0950" />
-          <meta property="og:url" content="https://ziontechgroup.com/ai-business-intelligence-suite" />
-          <meta property="og:type" content="website" />
-          <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence-suite" />
-        </Head>
-        <UltraAdvancedNavigation />
-
+}
 import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
+import Head from 'next/head',
+import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
   Brain, Database, TrendingUp as TrendingUpIcon, Users,
-  Target, BarChart, PieChart, Activity, Eye, Lock;
-} from 'lucide-react',
-import Button from '../components / ui / Button',
-import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground',
-import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation',
-export default /**
- * AIBusinessIntelligenceSuite - Function description
- */
-function AIBusinessIntelligenceSuite() {
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-  },
-  const features = [;
-    'Real - time data analysis and visualizationAI - powered trend prediction and forecasting_automated report generation and scheduling_custom dashboard builder with drag - and - drop_multi - source data integration (CRM, ERP, Analytics)Natural language query interface_predictive analytics and machine learning models_mobile - responsive dashboards',
-    'Role - based access control and securityAPI access for custom integrations';
-  ],
-  const use_cases = [;
-    'Sales performance analysis_customer behavior insights_financial forecasting_marketing ROI optimization_operational efficiency tracking';
-  ],
-  const integrations = [;
-    'SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams';
-  ],
-  const technology = [;
-    'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker';
-  ],
-  return (
-    <UltraAdvancedFuturisticBackground;
-      intensity="high";
-      color_scheme="quantum - fusion";
-      particle_count={500}
-      animation_speed={2.0}
-      enable_holographic={true}
-      enableQuantumEffects={true}
-    >;
-      <div className="min - h-screen">;
-        <Head>;
-          <title > AI Business Intelligence Suite - Zion Tech Group | Transform Data into Insights</title>;
-          <meta name="description" content="Transform data into actionable insights with our AI - powered business intelligence platform. Real - time analytics, predictive modeling, and automated reporting. Contact: +1 302 464 0950" />;
-          <meta name="keywords" content="AI business intelligence, data analytics, predictive analytics, business insights, data visualization, AI analytics, business intelligence platform" />;
-          <meta name="author" content="Zion Tech Group" />;
-          <meta name="robots" content="index, follow" />;
-          <meta property="og:title" content="AI Business Intelligence Suite - Zion Tech Group" />;
-          <meta property="og:description" content="AI - powered business intelligence platform with real - time analytics and predictive modeling. Contact: +1 302 464 0950" />;
-          <meta property="og:url" content="https://ziontechgroup.com / ai - business - intelligence - suite" />;
-          <meta property="og:type" content="website" />;
-          <link rel="canonical" href="https://ziontechgroup.com / ai - business - intelligence - suite" />;
-        </Head>;
-        <UltraAdvancedNavigation />;
-
-        {/* Hero Section */}
-
-        <section className="relative z - 10 pt - 32 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center mb - 16";
-            >;
-              <motion.div;
-                initial={{ scale: 0.8, rotate: -5 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-
-                className="mb-8"
-              >
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl shadow-2xl mb-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-                  <BarChart3 className="w-12 h-12 text-white relative z-10" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-              </motion.div>
-
-
-
-
-                className="text-5xl md:text-7xl font-black bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent mb-6"
-              >
-                AI Business Intelligence Suite
-              </motion.h1>
-
-
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-
-
-                className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-4xl mx-auto font-medium"
+  Target, BarChart, PieChart, Activity, Eye, Lock
+export default function AIBusinessIntelligenceSuite() {
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  const features = [
+    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards'
+    'Role-based access control and securityAPI access for custom integrations'
+      colorScheme="quantum-fusion"
               >
                 Transform data into actionable insights with <span className="text-blue-400 font-bold">AI-powered analytics</span>
               </motion.p>
@@ -528,8 +388,8 @@ function AIBusinessIntelligenceSuite() {
                   className="group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-2xl p-6 hover:border-green-400/60 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-                      <Target className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
 

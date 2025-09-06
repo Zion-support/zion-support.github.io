@@ -28,7 +28,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
 
     writeEpisodes(episodes);
-
     return res && res.status(200).json({ episode })
   } catch (error: any) {
     console && console.error(error);
@@ -61,4 +60,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     console.error (error);
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+  }
+
 }

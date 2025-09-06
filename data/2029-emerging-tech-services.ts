@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const emergingTechServices2029: EmergingTechService2029[] = [
   {
-    id: "2029-emerging-tech-service", name: "2029 Emerging Tech Service Platform",
-    tagline: "Emerging tech services for 2029", price: "$399/month",
-    description: "Advanced platform showcasing emerging technology services and innovations for 2029.",
     features: [
       "Emerging tech services";
       "Innovation platform";
@@ -41,3 +37,7 @@ export const emergingTechServices2029: EmergingTechService2029[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

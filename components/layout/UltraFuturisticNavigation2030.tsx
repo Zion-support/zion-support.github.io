@@ -121,7 +121,7 @@ import {
 
 
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
-    ];
+    ]
   }
 
 
@@ -248,7 +248,6 @@ const mainNavigation = [;
   { name: 'Blog', href: '/blog', icon: MessageCircle },;
   { name: 'Contact', href: '/contact', icon: MessageCircle },;
 ];
-
 const quickLinks = [;
   {;
     name: 'AI Services',;
@@ -291,12 +290,10 @@ const quickLinks = [;
   { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' },;
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },;
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
-
 export default function UltraFuturisticNavigation2030() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window && window.scrollY > 20);
@@ -306,7 +303,6 @@ export default function UltraFuturisticNavigation2030() {;
     };
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
-
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -358,7 +354,6 @@ export default function UltraFuturisticNavigation2030() {;
           </div>
         </div>
       </div>
-                href={contactInfo && contactInfo.website}
                 className='hover:text-cyan-400 transition-colors'>                {contactInfo && contactInfo.website.replace('https://', '')}              <span>{contactInfo && contactInfo.mobile}</span>;
             </div>;
             <div className="flex items-center space-x-2">;
@@ -490,7 +485,7 @@ function UltraFuturisticNavigation2030() {
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
           : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
       }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
 
         }`}
@@ -579,6 +574,96 @@ function UltraFuturisticNavigation2030() {
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavigation.map((item) => (
                 <Link
+                  key={item.name}
+                  href={item.href}
+className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
+      {/* Main Navigation */}
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl'
+            : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
+        }`}
+      >
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex items-center justify-between h-20'>
+            {/* Logo */}
+            <div className='flex items-center space-x-4'>
+              <Link href='/' className='flex items-center space-x-3 group'>
+                <div className='relative'>
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
+                    <Zap className='w-6 h-6 text-white' />
+                  </div>
+                  <div className='absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>
+                </div>
+                <div className='flex flex-col'>
+                  <span className='text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent'>
+                    Zion Tech Group
+                  </span>
+                  <span className='text-xs text-gray-400 font-mono'>
+                    2030 Future Technology
+                  </span>                </div>            {/* Logo */}
+            <div className="flex items-center space-x-4">
+              <Link href="/" className="flex items-center space-x-3 group">
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center transform group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
+                    <Zap className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </span>
+                  <span className="text-xs text-gray-400 font-mono">2030 Future Technology</span>
+                </div>
+              </Link>
+            </div>
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items-center space-x-8'>
+              {mainNavigation.map(item => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group'
+                >
+                  <item.icon className='w-4 h-4 group-hover:text-purple-400 transition-colors' />
+                  <span>{item.name}</span>
+                </Link>
+              ))}
+              {/* Services Dropdown */}
+              <div className='relative group'>
+                <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
+                  <Briefcase className='w-4 h-4' />
+                  <span>Services</span>
+                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-200' />
+                </button>
+                {/* Mega Menu */}
+                <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4'>
+                  <div className='p-8'>
+                    <div className='grid grid-cols-2 gap-8'>
+                      {serviceCategories.map((category, index) => (
+                        <div key={index} className='space-y-4'>
+                          <div className='flex items-center space-x-3'>
+                            <div
+                              className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}
+                            >
+                              <category.icon className='w-5 h-5 text-white' />
+                            </div>
+                            <div>
+                              <h3 className='text-lg font-semibold text-white'>
+                                {category.title}
+                              </h3>
+                              <p className='text-sm text-gray-400'>
+                                {category.description}
+                              </p>
+                            </div>
+                          </div>
+                          <div className='space-y-2'>                            {category.services.map((service, serviceIndex) => (
+                              <Link
+                                key={serviceIndex}
+                                href={service.href}
+                                className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group'                <Link
                   key={item.name}
                   href={item.href}
                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 group"
@@ -858,6 +943,19 @@ function UltraFuturisticNavigation2030() {
                 {/* Mobile Navigation Links */}
                 <div className='space - y-4'>;
                   {main_navigation.map (item => (                    <Link;
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'
+            >
+              <div className='px-4 py-6 space-y-6'>
+                {/* Mobile Navigation Links */}
+                <div className='space-y-4'>
+                  {mainNavigation.map(item => (                    <Link
                       key={item.name}
                       href={item.href}
                       on_click={close_menu}
@@ -867,165 +965,6 @@ function UltraFuturisticNavigation2030() {
               <div className="px - 4 py - 6 space - y-6">;
 
                 {/* Mobile Navigation Links */}
-                <div className="space - y-4">;
-                  {main_navigation.map ((item) => (
-                    <Link;
-                      key={item.name}
-                      href={item.href}
-
-                </div>;
-
-
-
-
-                    </Link>
-                  ))}
-                </div>
-
-
-                {/* Mobile Services */}
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-semibold text-white px-3'>;
-                    Our Services;
-                  </h3>;
-                  <div className='grid grid-cols-2 gap-3'>;
-                    {quickLinks && quickLinks.map(link => (                      <Link                <div className="space-y-4">;
-                  <h3 className="text-lg font-semibold text-white px-3">Our Services</h3>;
-                  <div className="grid grid-cols-2 gap-3">;
-                    {quickLinks && quickLinks.map((link) => (;
-                        key={link && link.name}
-                        href={link && link.href}
-                        onClick={closeMenu}
-                        className={`p-3 rounded-lg text-center transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 ${;
-                          link && link.color.includes('from-');
-                            ? `bg-gradient-to-r ${link && link.color} text-white`;
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
-                        }`}
-
-
-                        key={link.name}
-                        href={link.href}
-                        onClick={closeMenu}
-                        className={`p-3 rounded-lg text-center transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30 ${
-
-                          link.color.includes('from-')
-                            ? `bg-gradient-to-r ${link.color} text-white`
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                        }`}
-                      >
-                        <link.icon className='w-6 h-6 mx-auto mb-2' />
-
-                        <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
-                            ? `bg-gradient-to-r ${link.color} text-white` 
-
-
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                      >;
-                        <link && link.icon className='w-6 h-6 mx-auto mb-2' />;
-                        <span className='text-sm font-medium'>{link && link.name}</span>                      </Link>                          link && link.color.includes('from-') ;
-                            ? `bg-gradient-to-r ${link && link.color} text-white` ;
-                            : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
-
-
-                        }`}
-
-                      >
-                        <link.icon className="w-6 h-6 mx-auto mb-2" />
-                        <span className="text-sm font-medium">{link.name}</span>
-                      </Link>
-
-                    ))}
-
-                  </div>;
-                </div>;
-
-
-                {/* Mobile CTA */}
-
-
-                  <Link
-                    href='/contact'
-                    onClick={closeMenu}
-                    className='block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200'>;
-                    Get Started;
-                  </Link>                  <Link
-                    href='/pricing'
-                    onClick={closeMenu}
-                    className='block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200'>                    className="block w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white text-center rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200";
-                  >;
-                    Get Started;
-                  </Link>;
-                  <Link
-                    href='/pricing'
-                    onClick={closeMenu}
-                    className='block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200'                    href="/pricing"
-                    onClick={closeMenu}
-                    className="block w-full px-6 py-3 border border-purple-500/30 text-purple-400 text-center rounded-lg hover:bg-purple-500/10 transition-all duration-200">;
-                      on_click={close_menu}
-                      className='flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - purple - 500 / 10 transition - colors duration - 200';
-                    >;
-                      <item.icon className='w - 5 h - 5' />                      className="flex items - center space - x-3 p - 3 rounded - lg text - gray - 300 hover:text - white hover:bg - purple - 500 / 10 transition - colors duration - 200";
-                    >;
-                      <item.icon className="w - 5 h - 5" />;
-                      <span>{item.name}</span>;
-                    </Link>))}
-                </div>;
-                {/* Mobile Services */}
-                <div className='space - y-4'>;
-                  <h3 className='text - lg font - semibold text - white px - 3'>;
-                    Our Services;
-                  </h3>;
-                  <div className='grid grid - cols - 2 gap - 3'>;
-                    {quick_links.map (link => (                      <Link                <div className="space - y-4">;
-                  <h3 className="text - lg font - semibold text - white px - 3">Our Services</h3>;
-                  <div className="grid grid - cols - 2 gap - 3">;
-                    {quick_links.map ((link) => (
-                        key={link.name}
-                        href={link.href}
-                        on_click={close_menu}
-                        className={`p - 3 rounded - lg text - center transition - all duration - 200 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 ${
-                          link.color.includes ('from-');
-                            ? `bg - gradient - to - r ${link.color} text - white`;
-                            : 'bg - gray - 800 text - gray - 300 hover:bg - gray - 700';
-                        }`}
-                      >;
-                        <link.icon className='w - 6 h - 6 mx - auto mb - 2' />;
-                        <span className='text - sm font - medium'>{link.name}</span>                      </Link>                          link.color.includes ('from-');
-                            ? `bg - gradient - to - r ${link.color} text - white`;
-                            : 'bg - gray - 800 text - gray - 300 hover:bg - gray - 700';
-                        }`}
-                      >;
-                        <link.icon className="w - 6 h - 6 mx - auto mb - 2" />;
-                        <span className="text - sm font - medium">{link.name}</span>))}
-                  </div>;
-                </div>;
-                {/* Mobile CTA */}
-                <div className='space - y-3 pt - 4 border - t border - purple - 500 / 20'>;
-                  <Link;
-                    href='/contact';
-                    on_click={close_menu}
-                    className='block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - cyan - 500 text - white text - center rounded - lg hover:from - purple - 600 hover:to - cyan - 600 transition - all duration - 200'                  >;
-                    Get Started;
-                  </Link>                  <Link;
-                    href='/pricing';
-                    on_click={close_menu}
-                    className='block w - full px - 6 py - 3 border border - purple - 500 / 30 text - purple - 400 text - center rounded - lg hover:bg - purple - 500 / 10 transition - all duration - 200'                  >                    className="block w - full px - 6 py - 3 bg - gradient - to - r from - purple - 500 to - cyan - 500 text - white text - center rounded - lg hover:from - purple - 600 hover:to - cyan - 600 transition - all duration - 200";
-                  >;
-                    Get Started;
-                  </Link>;
-                  <Link;
-                    href='/pricing';
-                    on_click={close_menu}
-                    className='block w - full px - 6 py - 3 border border - purple - 500 / 30 text - purple - 400 text - center rounded - lg hover:bg - purple - 500 / 10 transition - all duration - 200'                    href="/pricing";
-                    on_click={close_menu}
-                    className="block w - full px - 6 py - 3 border border - purple - 500 / 30 text - purple - 400 text - center rounded - lg hover:bg - purple - 500 / 10 transition - all duration - 200";
-                  >;
-                    View Pricing;
-                  </Link>;
-                </div>;
-              </div>;
-
-                <div className="space-y-3 pt-4 border-t border-purple-500/20">
                   <Link
                     href="/contact"
                     onClick={closeMenu}

@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -77,7 +73,6 @@ function ApiMockContractTestingPage() {
           href='https://ziontechgroup && ziontechgroup.com/api-mock-contract-testing'
         />;
       </Head>;
-
       <div className='min-h-screen py-20 px-4 sm:px-6 lg:px-8'>;
 
         <ServiceAds
@@ -86,7 +81,6 @@ function ApiMockContractTestingPage() {
           items={adItems}
 
         />;
-
         <div className='max-w-5xl mx-auto mt-8'>;
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
             {tiers && tiers.map(t => (;
@@ -115,8 +109,8 @@ function ApiMockContractTestingPage() {
 
             ))}
           </div>
-
           <div className="mt-8 max-w-3xl mx-auto bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30">
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>

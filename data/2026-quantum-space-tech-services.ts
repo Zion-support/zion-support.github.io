@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   {
-    id: "2026-quantum-space-tech", name: "2026 Quantum Space Tech Platform",
-    tagline: "Quantum computing meets space technology", price: "$599/month",
-    description: "Revolutionary platform combining quantum computing with advanced space technology for 2026.",
     features: [
       "Quantum computing";
       "Space technology";
@@ -41,3 +37,7 @@ export const quantumSpaceTechServices2026: QuantumSpaceTechService2026[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

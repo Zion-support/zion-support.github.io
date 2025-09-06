@@ -38,7 +38,7 @@ default define_config ({
     }
     {
       name: Mobile Safari',      use: {
-        browser_name: webkit',        ...devices['i_phone 12']}
+        browserName: webkit',        ...devices['iPhone 12']}
     }
   ];
 

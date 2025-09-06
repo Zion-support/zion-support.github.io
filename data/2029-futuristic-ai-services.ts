@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const futuristicAIServices2029: FuturisticAiService2029[] = [
   {
-    id: "2029-futuristic-ai", name: "2029 Futuristic AI Platform",
-    tagline: "Futuristic AI for 2029", price: "$499/month",
-    description: "Futuristic AI platform that showcases the most advanced artificial intelligence capabilities for 2029.",
     features: [
       "Futuristic AI";
       "Advanced capabilities";
@@ -41,3 +37,7 @@ export const futuristicAIServices2029: FuturisticAiService2029[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

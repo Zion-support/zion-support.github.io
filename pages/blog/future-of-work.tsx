@@ -19,7 +19,6 @@ function FutureOfWork() {
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <div className='max-w-4xl mx-auto'>;
@@ -30,7 +29,6 @@ function FutureOfWork() {
                 ← Back to Blog;
               </Link>;
             </nav>;
-
             <article className='prose prose-invert prose-lg max-w-none'>;
               <header className='mb-12 text-center'>;
                 <div className='flex items-center gap-3 justify-center mb-4'>;
@@ -50,7 +48,6 @@ function FutureOfWork() {
                   enhances productivity and innovation.;
                 </p>;
               </header>;
-
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>;
                   The Evolution of Work;
@@ -69,7 +66,6 @@ function FutureOfWork() {
                   problem-solving, strategic thinking, and innovation.;
                 </p>;
               </section>;
-
               <section className='mb-12'>;
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>;
                   Augmented Intelligence in Practice;

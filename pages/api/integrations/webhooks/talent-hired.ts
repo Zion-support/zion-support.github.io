@@ -80,7 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of atsProviders) {
     const { log } = await ats.updateStatus(conn, { applicantId: talent.id, status: 'hired' });
     writeState(s => s.logs.push(log));
-    results.push({ providerId: conn.providerId, ok: true })
+results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
 }

@@ -65,7 +65,6 @@ beforeAll(() => {
 
     originalConsoleError && originalConsoleError.call(console, ...args);
   };
-  
   console && console.warn = (...args: any[]) => {
 
     if (

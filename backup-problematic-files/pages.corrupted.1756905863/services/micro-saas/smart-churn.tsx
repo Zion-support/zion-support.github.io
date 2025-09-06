@@ -12,5 +12,3 @@ const Smart-churn: React.FC<Smart-churnProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

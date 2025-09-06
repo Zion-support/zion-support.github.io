@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const revolutionary2027Services: Revolutionary2027Service[] = [
   {
-    id: "2027-revolutionary-service", name: "2027 Revolutionary Service Platform",
-    tagline: "Revolutionary services for 2027", price: "$299/month",
-    description: "Revolutionary service platform that transforms how businesses operate in 2027.",
     features: [
       "Revolutionary services";
       "Transformative capabilities";
@@ -41,3 +37,7 @@ export const revolutionary2027Services: Revolutionary2027Service[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

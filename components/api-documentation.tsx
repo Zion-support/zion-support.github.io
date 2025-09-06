@@ -94,6 +94,11 @@ import {
 
 
 } from 'lucide-react';
+export default function APIDocumentation() {
+	return (
+  Lock,;
+  Brain,;
+} from 'lucide-react';
 
 export default function APIDocumentation() {
 	return (

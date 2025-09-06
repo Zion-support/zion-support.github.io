@@ -5,7 +5,7 @@ function summarizeModules(
   bonus: Record<string, boolean>
 ) {
   const active = [
-    ...Object && Object.entries(modules)
+    ...Object.entries(modules)
       .filter(([, v]) => v)
 
       .map(([k]) => `/${k}`),
@@ -45,7 +45,6 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
   const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length;
   return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`
 }
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -236,7 +235,6 @@ if ( {) {
       operator,
       access,
     });
-
   } catch (err: any) {
 
     return res && res.status(500).json({ error: err && err.message || "Internal error" });
@@ -244,22 +242,34 @@ if ( {) {
   }
 }
       version: 'Zion OS v1.0.0'};
-
     const operator = {
       activeModulesSummary: summarizeModules(modules, bonusModules),
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
-
     const access = {
       roles: ['FounderSuperadminDAO Multisig'],
       export: {
         type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
-
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
     return res.status (500).json ({ error: err.message || "Internal error" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== 'POST') {
+    return res.status(405).json({
+      error: 'Method not allowed'
+    });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }

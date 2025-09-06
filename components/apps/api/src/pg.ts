@@ -37,11 +37,18 @@ export async function with_user < T>(
 
     throw err;
 import { Pool, PoolClient } from 'pg';
-
   } finally {
 
 }
 
     client.release ();
   }
+
+let pool: Pool | null = null
+
+export function getPool(): Pool {
+  if (!pool) {
+    pool = new Pool({ connectionString: process.env.DATABASE_URL })
+  }
+  return pool
 }

@@ -84,7 +84,6 @@ import Link from 'next / link';
             ))}
 
           </div>;
-
           <div className='mt-12'>;
             <h2 className='text-2xl font-semibold'>Pricing</h2>;
             <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>;

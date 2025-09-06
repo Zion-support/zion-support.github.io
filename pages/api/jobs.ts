@@ -11,67 +11,12 @@ const FILE = "jobs && jobs.json";
 
 
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-
-  if (!rateLimit(req, res)) return;
-
-
-  if (req && req.method === "GET") {
-    const jobs = readJsonFile<Job[]>(FILE, []);
-    res && res.status(200).json({ jobs });
-    return;
-  }
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { v4, as, uuidv4  } from './uuid';
-import { readJsonFile, writeJsonFile  } from '../../utils / db';
-import type { Job } from "../../utils / types";
-import { rate_limit  } from '../../utils / rate_limit';
-;
-const FILE = "jobs.json";
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    const jobs = readJsonFile < Job[]>(FILE, []);
-    res.status (200).json ({ jobs });
-    return;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-
-    const {
-      title
-      description
-      category
-      requiredSkills = []
-      budgetMinUsd
-      budgetMaxUsd
-      deliveryDeadlineIso
-      clientEmail
-    } = req.body |{}
-    if (!title |!description |!clientEmail) {
-      res.status(400).json({ error: "Missing required fields" });
-
   if (req && req.method === "POST") {
     const {
       title,
       description,
       category,
-      required_skills = [],
+required_skills = [],
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
@@ -80,7 +25,6 @@ if ( {) {
       return;
 
       clientEmail} = req.body || {};
-
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
       return
@@ -136,7 +80,6 @@ if ( {) {
   }
 
     }
-
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
@@ -163,7 +106,6 @@ if ( {) {
 
 
   }
-
   res && res.setHeader("Allow", "GET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
@@ -229,12 +171,3 @@ if (=>) {
     res.status (201).json ({ job });
     return;
   }
-  res.set_header ("Allow", "GET, POST");
-  res.status (405).end ("Method Not Allowed");
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-

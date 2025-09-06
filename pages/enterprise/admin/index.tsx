@@ -18,8 +18,8 @@ const COMPANY_ID = 'cmp_acme';
 
 
 
-export default function CompanyAdmin() {;
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(;
+export default function CompanyAdmin() {
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members';
 
 
@@ -48,14 +48,13 @@ export default function CompanyAdmin() {;
 
 
   const seatsUsed = members.length;
-
   return (
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
-          <Link href="/workspace/acme">Go to Workspace</Link>
+<Link href="/workspace/acme">Go to Workspace</Link>
         </div>
 
       </header>
@@ -171,6 +170,23 @@ function CompanyAdmin() {
       )}
 
       {tab === 'billing' && (
+        ))}
+      </nav>
+
+      {_tab === 'members' && (
+        <MembersTab members={members} setMembers={_setMembers} />
+      )}
+
+      {_tab === 'usage' && usage && (
+        <UsageTab usage={usage} setUsage={_setUsage} seatsUsed={_seatsUsed} />
+      )}
+
+      {_tab === 'activity' && (
+        <ActivityTab events={activity} />
+      )}
+
+      {_tab === 'billing' && (
+
         <BillingTab invoices={invoices} />
       )}
     </main>
@@ -225,7 +241,6 @@ function CompanyAdmin() {
   }
 
 }
-
 function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
 
   const [name, setName] = useState(''),
@@ -240,7 +255,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
     setMembers([created, ...members]);
     setName(''), setEmail(''), setRole('viewer')
   };
-
   const remove = async (id: string) => {;
     await fetch(;
       `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;
@@ -269,228 +283,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ name, email, role }),
     });
-    const created = await r.json ();
-    set_members ([created, ...members]);
-    set_name ('');
-    set_email ('');
-    set_role ('viewer');
-  }
-;
-  const remove = async (id: string) => {
-    await fetch (
-      `/api / enterprise / companies/${COMPANY_ID}/members?member_id=${id}`,
-      { method: 'DELETE' }
-    );
-    set_members (members.filter (m => m.id !== id));
-  }
-;
-  const change_role = async (id: string, new_role: Member['role']) => {
-    await fetch (`/api / enterprise / companies/${COMPANY_ID}/members`, {
-      method: 'PATCH',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify ({ member_id: id, role: new_role }),
-    });
-    set_members (members.map (m => (m.id === id ? { ...m, role: new_role } : m)));  }
-;
-  return (
-    <section>;
-      <h2 > Team members</h2>;
-      <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>;
-        <input;
-          placeholder='Full name';
-          value={name}
-          on_change={e => set_name (e.target.value)}
-        />;
-        <input;
-          placeholder='Email';
-          value={email}
-          on_change={e => set_email (e.target.value)}
-        />;
-        <select;
-          value={role}
-          on_change={e => set_role (e.target.value as Member['role'])}
-        >;
-          <option value='recruiter'>Recruiter</option>;
-          <option value='manager'>Manager</option>;
-          <option value='viewer'>Viewer</option>;
-          <option value='admin'>Admin</option>;
-        </select>;
-        <button on_click={add} style={{ padding: '0.5rem 0.75rem' }}>;
-          Add;
-        </button>      </div>;
-      <table style={{ width: '100%', border_collapse: 'collapse' }}>;
-        <thead>;
-          <tr>;
-            <th;
-              style={{
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-
-              }}
-            >;
-              Name;
-            </th>;
-            <th;
-              style={{
-
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-
-              }}
-            >;
-              Email;
-            </th>;
-            <th;
-              style={{
-
-                text_align: 'left',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-
-              }}
-            >;
-              Role;
-            </th>;
-            <th;
-              style={{
-
-    <section>
-      <h2>Team members</h2>
-      <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
-        <input placeholder="Full name" value={name} onChange={e => setName(e.target.value)} />
-        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-        <select value={role} onChange={e => setRole(e.target.value as Member['role'])}>
-          <option value="recruiter">Recruiter</option>
-          <option value="manager">Manager</option>
-          <option value="viewer">Viewer</option>
-          <option value="admin">Admin</option>
-        </select>
-
-        </thead>
-        <tbody>
-          {members.map(m => (
-            <tr key={m.id}>
-
-                text_align: 'right',
-                padding: 8,
-                border_bottom: '1px solid #e5e7eb',
-              }}
-            >;
-              Actions;
-            </th>          </tr>;
-        </thead>;
-        <tbody>;
-          {members.map (m => (
-            <tr key={m.id}>;
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
-
-                {m.name}
-              </td>;
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
-                {m.email}
-
-          onChange={e => setRole(e && e.target.value as Member['role'])}
-        >;
-          <option value='recruiter'>Recruiter</option>;
-          <option value='manager'>Manager</option>;
-          <option value='viewer'>Viewer</option>;
-          <option value='admin'>Admin</option>;
-        </select>;
-        <button onClick={add} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
-          Add;
-        </button>      </div>;
-
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
-        <thead>;
-          <tr>;
-            <th
-              style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Name;
-            </th>;
-            <th
-              style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Email;
-            </th>;
-            <th
-              style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Role;
-            </th>;
-            <th
-              style={{
-                textAlign: 'right',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
-              }}>;
-              Actions;
-            </th>          </tr>;
-        </thead>;
-        <tbody>;
-          {members && members.map(m => (;
-            <tr key={m && m.id}>;
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
-                {m && m.name}
-              </td>;
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
-                {m && m.email}
-              </td>;
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
-
-                <select
-                  value={m && m.role}
-                  onChange={e =>;
-                    changeRole(m && m.id, e && e.target.value as Member['role']);
-              </td>;
-              <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
-                <select;
-                  value={m.role}
-                  on_change={e =>;
-                    change_role (m.id, e.target.value as Member['role']);
-                  }
-                >;
-                  <option value='recruiter'>Recruiter</option>;
-                  <option value='manager'>Manager</option>;
-                  <option value='viewer'>Viewer</option>;
-                  <option value='admin'>Admin</option>;
-                </select>;
-              </td>;
-
-              <td;
-
-                style={{
-
-                  padding: 8,
-
-                  style={{ color: '#b91c1c' }}
-                >;
-                  Remove;
-                </button>              </td>;
-
-            </tr>))}
-        </tbody>;
-      </table>;
-    </section>);
-;
-function UsageTab ({
-  usage,
-  set_usage,
-  seats_used,
-
-}: {
-
 function UsageTab(): any ({;
   usage,;
   setUsage,;
@@ -499,7 +291,6 @@ function UsageTab(): any ({;
   usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
-
   const save = async () => {;
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;
       method: 'PATCH',;
@@ -508,7 +299,6 @@ function UsageTab(): any ({;
 
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });  }
-
   return (
     <section>;
       <h2>Usage limits</h2>;
@@ -838,6 +628,13 @@ function BillingTab() {
                 {inv.number}
               </td>;
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</Link>
+              </td>
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
@@ -935,7 +732,7 @@ function BillingTab() {
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
+<a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
               </td>
 
                   border_bottom: '1px solid #f3f4f6',

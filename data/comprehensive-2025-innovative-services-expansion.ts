@@ -66,6 +66,8 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   // AI & Machine Learning Services;
   {
     id: 'ai - content - generation - platform';
+  {;
+    id: 'ai-content-generation-platform';
     name: 'AI Content Generation Platform';
     tagline: 'Create high - quality content at scale with AI';
     price: '$299';
@@ -733,4 +735,4 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 
 
 export default comprehensiveInnovativeServices;
-;
+export default comprehensiveInnovativeServices;

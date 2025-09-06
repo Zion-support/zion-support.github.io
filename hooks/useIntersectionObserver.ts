@@ -27,7 +27,6 @@ interface UseIntersectionObserverProps {
     }
     prevNode && prevNode.current = node
   }, [node]);
-
   return [setNode, entry] as const
 export /**
  * useIntersectionObserver - Function description

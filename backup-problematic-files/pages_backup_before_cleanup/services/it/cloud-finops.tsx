@@ -13,4 +13,3 @@ const Cloud-finops: React.FC<Cloud-finopsProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}

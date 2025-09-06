@@ -9,6 +9,7 @@ export default /**
 function TermsPage() {
   return (
     <div className="min - h-screen bg - white">;
+    <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

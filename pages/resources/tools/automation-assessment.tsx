@@ -36,7 +36,6 @@ export default function ToolPage() {
         'No support - resistance to changeWeak support - some interest but no actionModerate support - willing to try pilot projectsStrong support - actively championing automationFull support - automation is strategic priority'
       ]
     }
-  ]
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
 
@@ -237,12 +236,32 @@ if ( {) {
         </div>
       </>
     )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 
 }
   const currentQ = questions[currentQuestion],
 
+
+            <div className=&quot;text-center mb-12&quot;>
+              <h1 className=&quot;text-4xl font-bold text-white mb-4&quot;>Automation Readiness Assessment</h1>
+              <p className=&quot;text-white/80 text-lg&quot;>Evaluate your organization's readiness for AI automation</p>
+              <div className=&quot;mt-4 text-cyan-400&quot;>
+                Question {currentQuestion + 1} of {questions.length}
+              </div>
+            </div>
+
+            <div className=&quot;bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20&quot;>
+              <h2 className=&quot;text-2xl font-bold mb-6 text-white&quot;>{currentQ.question}</h2>
+              
+              <div className=&quot;space-y-4 mb-8&quot;>
+                {currentQ.options.map((option, index) => (
+                  <label key={index} className=&quot;flex items-center p-4 bg-white/10 rounded-lg border border-white/20 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer&quot;>
+                    <input
+                      type=&quot;radio&quot;
 
   return (
     <>
@@ -416,7 +435,11 @@ if ( {) {
                     />
                     <span className="text-white/90">{option}</span>
                   </label>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>
 
 
@@ -550,6 +573,26 @@ if ( {) {
                   className="bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300 disabled:opacity - 50 disabled:cursor - not - allowed";
                 >;
                   {current_question === questions.length - 1 ? 'Get Results' : 'Next'}
+  );
+};
+                <button
+                  onClick={nextQuestion  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  disabled={!answers[currentQ.id]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </button>;
               </div>;
             </div>;

@@ -30,17 +30,14 @@ type AuthContextType = {;
   role: UserRole;
   setRole: (role: UserRole) => void;
 };
-
 const AuthContext = createContext<AuthContextType>({;
   role: 'talent',;
   setRole: () => {},;
 });  role: UserRole,;
   setRole: (role: UserRole) => void;
 };
-
 const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),;
   const [role, setRoleState] = useState<UserRole>('talent');
-
   useEffect(() => {;
     try {;
       const stored = window && window.localStorage.getItem('userRole') as UserRole | null;
@@ -52,11 +49,9 @@ type AuthContextType = {
   role: UserRole,
   setRole: (role: UserRole) => void
 };
-
 const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} }),
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [role, setRoleState] = useState<UserRole>('talent');
-
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem('userRole') as UserRole | null;
@@ -66,7 +61,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
     } catch {}
   }, []);
-
   const setRole = (r: UserRole) => {;
     setRoleState(r);
 
@@ -127,7 +121,6 @@ export function useAuth() {;
   return useContext(AuthContext);    <AuthContext && AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext && AuthContext.Provider>;
   );
 }
-
 export function useAuth() {;
   return useContext(AuthContext);
 }

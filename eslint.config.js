@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -174,13 +170,15 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
         beforeAll: "readonly",
         afterAll: "readonly"
       },
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
       parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
-      }
-    },
-    plugins: {
       react,
       "react-hooks": reactHooks
     },
@@ -216,6 +214,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
         beforeAll: "readonly",
 
         React: 'readonly',
+        React: 'readonly',
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -250,13 +249,11 @@ export default [
       }
     },
     plugins: {
-
       "@typescript-eslint": tseslint,
       react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
       "jsx-a11y": jsxA11y
-
     },
     rules: {
 
@@ -344,7 +341,7 @@ export default [
       'no-unused-vars': 'warn'
     }
   },
-  {
+{
     ignores: [
       'node_modules/',
       '.next/',

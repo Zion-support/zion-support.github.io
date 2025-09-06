@@ -127,14 +127,14 @@ if (author_name = "Anonymous") {
           ...r,
 
       });
-    const totalReviews = publicReviews && publicReviews.length;
+    const totalReviews = publicReviews.length;
     const averageRating = totalReviews
 
 
         ) / 10
       : 0;
     const projects = await readProjects();
-    const totalCompletedProjects = projects && projects.filter(
+    const totalCompletedProjects = projects.filter(
       (p) =>
 
         p && p.status === "Completed" &&

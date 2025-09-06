@@ -32,6 +32,9 @@ return (
     industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}
     canonical="https: //ziontechgroup.com / ai - predictive - maintenance - platform";
   />);
+		/>
+	)
+
 }
 export default function AIPredictiveMaintenancePlatform() {
 	return (

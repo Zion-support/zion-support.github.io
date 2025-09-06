@@ -12,9 +12,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const record = { id, sessionId, reason: reason ?? 'User request', tag: tag ?? 'manual', status: 'open', createdAt: Date.now() }
     requests.push(record)
     writeJson('support/requests.json', requests)
-
     return res.status(200).json({ ok: true, id })
   }
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' })
 
 }

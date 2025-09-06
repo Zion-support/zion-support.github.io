@@ -32,19 +32,13 @@ if ( {) {
 }
       (global_this as any).self = global;
     }
-  } else // Check condition
-if ( {) {
-  $2
-}
-    (global_this as any).self = global_this;
-  } else // Check condition
-if ( {) {
-  $2
-}
-    (window as any).self = window;
+  } else if (typeof globalThis !== 'undefined') {
+    (globalThis as any).self = globalThis
+  } else if (typeof window !== 'undefined') {
+    (window as any).self = window
   } else {
-    // Last resort - create minimal self object;
-    (global_this as any).self = {}
+    // Last resort - create minimal self object
+    (globalThis as any).self = {}
   }
 
 // Ensure self is properly referenced
@@ -180,7 +174,7 @@ if ( {) {
   window && window.onunhandledrejection = function (event) {
 
     // Suppress specific promise rejection errors
-    if (event && event.reason && typeof event && event.reason.message === 'string') {
+    if (event.reason && typeof event.reason.message === 'string') {
       if (
       }
     }

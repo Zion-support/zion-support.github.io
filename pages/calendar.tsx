@@ -119,8 +119,12 @@ import {;
   Video,;
   MessageSquare,;
   Building,;
+import React from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
 } from "lucide-react";
-
 const timeSlots = [;
   { time: "9:00 AM", available: true, type: "Video Call" },;
   { time: "9:30 AM", available: true, type: "Phone Call" },;
@@ -138,7 +142,6 @@ const timeSlots = [;
   { time: "4:30 PM", available: true, type: "Video Call" },;
   { time: "5:00 PM", available: true, type: "Phone Call" },;
 ];
-
 const consultationTypes = [;
   {;
     title: "Free Discovery Call",;
@@ -183,7 +186,6 @@ const consultationTypes = [;
     ],;
   },;
 ];
-
 const teamMembers = [;
   {;
     name: "Sarah Johnson",;
@@ -214,7 +216,6 @@ const teamMembers = [;
     available: true,;
   },;
 ];
-
 export default function CalendarPage() {;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
@@ -860,13 +861,6 @@ function CalendarPage() {
               </Link>;
               <Link
                 href="/about"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">;
-                Learn About Us;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
     </div>;
   );
               <div className="mt - 8">;

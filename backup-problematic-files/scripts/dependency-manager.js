@@ -191,7 +191,6 @@ class DependencyManager {
       this.log(`Fatal error in dependency "manager": ${error.message}`, 'ERROR');
       throw error}
   }
-}
 // Run the dependency manager if called directly
 if (require.main === module) {
   const manager = new DependencyManager();

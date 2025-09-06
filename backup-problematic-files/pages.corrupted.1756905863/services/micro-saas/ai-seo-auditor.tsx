@@ -12,5 +12,3 @@ const Ai-seo-auditor: React.FC<Ai-seo-auditorProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

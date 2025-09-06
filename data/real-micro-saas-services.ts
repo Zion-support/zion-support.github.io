@@ -743,7 +743,6 @@
       trialDays: 14
       setupTime: '15 minutes'
     }
-
     features: [
       'Inbox labeling and prioritization'
       'On-brand response templates'
@@ -753,7 +752,6 @@
       'Metrics: FRT/ART, deflection rate'
     ]
     benefits: [
-
       'Cut response time by 60%'
       'Deflect 30–50% routine tickets'
       'Improve CSAT and NPS'
@@ -1340,6 +1338,8 @@ export const getServicesByCategory = (category: string) => {
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: any {
   return realMicroSaasServices.filter (service => service.category === category);    id: 'data - contracts - hub';
+export const getServicesByCategory = (category: string) => {;
+  return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -1374,8 +1374,6 @@ export const getServicesByCategory = (category: string) =>: any {
   }
 ];
 // Helper functions
-export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
 techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
@@ -1444,47 +1442,18 @@ reviews: 14
 
 
 export const serviceCategories = [
-  'Legal Technology'
-  'Customer Service & Support'
-  'Digital Marketing & SEO'
-  'Creative & Media'
-  'Data & Analytics'
-  'Human Resources'
-  'Sales & CRM'
-  'Market Research'
-  'Blockchain & Cryptocurrency'
-  'Cloud & DevOps'
-  'Database & Performance'
-  'Design & UI/UX'
-  'Development & DevOps'
-  'Business Intelligence'
-  'Quantum Computing'
-  'Cybersecurity'
-  'Metaverse & Virtual Reality'
-  'Web3 & DeFi'
-  'IoT & Edge Computing'
-  'Autonomous Vehicles & Robotics'
-  'Climate & Environmental'
-  'Biotechnology & Healthcare'
-  'Financial Technology'
-  'Education Technology'
-  'Enterprise IT'
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
-
   return realMicroSaasServices.filter(service => service.category === category)
 };
-
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
     return price >= min && (max === Infinity || price <= max)
   })
 };
-
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular)
 };
-
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
@@ -1525,6 +1494,38 @@ export const service_categories = [;
 ];
 
 
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  }
+}
 ;
 
 export interface RealMicroSaasService {;

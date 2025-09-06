@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -75,12 +71,21 @@ export default function Pagination(): any ({;
   total: number,;
   onChange: (nextPage: number) => void;
 };
-
 export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
   const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+
+export type PaginationProps = {
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+}
+export default function Pagination({
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
-
   const goTo = (p: number) => {;
 
     if (p >= 1 && p <= totalPages) onChange(p);
@@ -225,7 +230,6 @@ const Pagination: React.FC < PaginationProps> = ({
       for (let i = startPage; i <= endPage; i++) {;
         pages && pages.push(i);
 }
-
       if (endPage < totalPages) {;
         if (endPage < totalPages - 1) {;
           pages && pages.push('...');
@@ -397,7 +401,3 @@ export default Pagination;
     </nav>);
 }
 export default Pagination;
-}
-
-  );
-

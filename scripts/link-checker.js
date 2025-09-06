@@ -20,54 +20,54 @@ import path from,"}),"})
 import { fileURLToPath } from,"}),"})
   'url',"}),"})
 ,"}),"})
-const __filename = fileURLToPath(import && import.meta.url),"}),"})
-const __dirname = path && path.dirname(__filename),"}),"})
+const __filename = fileURLToPath(import.meta.url),"}),"})
+const __dirname = path.dirname(__filename),"}),"})
 ,"}),"})
-console && console.log(,"}),"})
+console.log(,"}),"})
   '🔗 Link Checker Started'),"}),"})
 ,"}),"})
 class LinkChecker {,"}),"})
   constructor() {,"}),"})
-    this && this.projectRoot = path && path.resolve(__dirname,..,"}),"})
+    this.projectRoot = path.resolve(__dirname,..,"}),"})
   '),"}),"})
-    this && this.brokenLinks = [],"}),"})
-    this && this.checkedLinks = 0,"}),"})
+    this.brokenLinks = [],"}),"})
+    this.checkedLinks = 0,"}),"})
   }"}),"})
 ,"}),"})
   async checkLinks() {,"}),"})
     try {,"}),"})
-      console && console.log('📁 Scanning project for links...,"}),"})
+      console.log('📁 Scanning project for links...,"}),"})
   '),"}),"})
 ,"}),"})
       // Check HTML files for links,"}),"})
-      await this && this.scanHtmlFiles(),"}),"})
+      await this.scanHtmlFiles(),"}),"})
 ,"}),"})
       // Check markdown files for links,"}),"})
-      await this && this.scanMarkdownFiles(),"}),"})
+      await this.scanMarkdownFiles(),"}),"})
 ,"}),"})
-      // Check package && package.json for repository links,"}),"})
-      await this && this.checkPackageLinks(),"}),"})
+      // Check package.json for repository links,"}),"})
+      await this.checkPackageLinks(),"}),"})
 ,"}),"})
-      console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`),"}),"})
+      console.log(`✅ Link check completed. Checked ${this.checkedLinks} links.`),"}),"})
 ,"}),"})
-      if (this && this.brokenLinks.length > 0) {,"}),"})
-        console && console.log(`⚠️  Found ${this && this.brokenLinks.length} potentially broken "links": `),"}),"})
-        this && this.brokenLinks.forEach(link => {,"}),"})
-          console && console.log(`   - ${link}`),"}),"})
+      if (this.brokenLinks.length > 0) {,"}),"})
+        console.log(`⚠️  Found ${this.brokenLinks.length} potentially broken "links": `),"}),"})
+        this.brokenLinks.forEach(link => {,"}),"})
+          console.log(`   - ${link}`),"}),"})
         }),"}),"})
       } else {,"}),"})
-        console && console.log(,,"}),"})
+        console.log(,,"}),"})
   🎉 All links appear to be valid!,"}),"})
   '),"}),"})
       }"}),"})
 ,"}),"})
     } catch (error) {,"}),"})
-      console && console.error('❌ Error during link "checking": error && error.message),"}),"})
+      console.error('❌ Error during link "checking": error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   async scanHtmlFiles() {,"}),"})
-    const htmlFiles = this && this.findFiles('.html,"}),"})
+    const htmlFiles = this.findFiles('.html,"}),"})
   '),"}),"})
 ,"}),"})
 
@@ -82,16 +82,13 @@ class LinkChecker {,"}),"})
         this.checkedLinks++,"}),"})
         if (!this.isValidLink(link)) {,"}),"})
           this.brokenLinks.push(`${file}: ${link}`),"}),"})
-        this && this.checkedLinks++,"}),"})
-        if (!this && this.isValidLink(link)) {,"}),"})
-          this && this.brokenLinks.push(`${file}: ${link}`),"}),"})
         }"}),"})
       }"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
   async scanMarkdownFiles() {,"}),"})
-    const mdFiles = this && this.findFiles(,"}),"})
+    const mdFiles = this.findFiles(,"}),"})
   '.md'),"}),"})
 ,"}),"})
 
@@ -100,9 +97,8 @@ class LinkChecker {,"}),"})
     ),"})
 
       const content = fs.readFileSync(file,utf8,"}),"})
-      const content = fs && fs.readFileSync(file,utf8,"}),"})
   '),"}),"})
-      const links = this && this.extractMarkdownLinks(content),"}),"})
+      const links = this.extractMarkdownLinks(content),"}),"})
 ,"}),"})
 
 
@@ -112,9 +108,6 @@ class LinkChecker {,"}),"})
         this.checkedLinks++,"}),"})
         if (!this.isValidLink(link)) {,"}),"})
           this.brokenLinks.push(`${file}: ${link}`),"}),"})
-        this && this.checkedLinks++,"}),"})
-        if (!this && this.isValidLink(link)) {,"}),"})
-          this && this.brokenLinks.push(`${file}: ${link}`),"}),"})
         }"}),"})
       }"}),"})
     }"}),"})
@@ -122,21 +115,21 @@ class LinkChecker {,"}),"})
 ,"}),"})
   async checkPackageLinks() {,"}),"})
     try {,"}),"})
-      const packagePath = path && path.join(this && this.projectRoot,package && package.json'),"}),"})
-      if (fs && fs.existsSync(packagePath)) {,"}),"})
-        const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,utf8,"}),"})
+      const packagePath = path.join(this.projectRoot,package.json'),"}),"})
+      if (fs.existsSync(packagePath)) {,"}),"})
+        const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8,"}),"})
   ')),"}),"})
 ,"}),"})
-        if (packageJson && packageJson.repository) {,"}),"})
-          this && this.checkedLinks++,"}),"})
-          if (!this && this.isValidLink(packageJson && packageJson.repository.url || packageJson && packageJson.repository)) {,"}),"})
-            this && this.brokenLinks.push(`package."json": ${packageJson && packageJson.repository.url || packageJson && packageJson.repository}`),"}),"})
+        if (packageJson.repository) {,"}),"})
+          this.checkedLinks++,"}),"})
+          if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {,"}),"})
+            this.brokenLinks.push(`package."json": ${packageJson.repository.url || packageJson.repository}`),"}),"})
           }"}),"})
         }"}),"})
       }"}),"})
     } catch (error) {,"}),"})
-      console && console.warn(,,"}),"})
-  ⚠️  Could not check package && package.json "links": error && error.message),"}),"})
+      console.warn(,,"}),"})
+  ⚠️  Could not check package.json "links": error.message),"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
@@ -145,7 +138,7 @@ class LinkChecker {,"}),"})
 ,"}),"})
     const scanDirectory = (dir) => {,"}),"})
       try {,"}),"})
-        const items = fs && fs.readdirSync(dir),"}),"})
+        const items = fs.readdirSync(dir),"}),"})
 ,"}),"})
 
 
@@ -154,16 +147,14 @@ class LinkChecker {,"}),"})
 
           const fullPath = path.join(dir, item),"}),"})
           const stat = fs.statSync(fullPath),"}),"})
-          const fullPath = path && path.join(dir, item),"}),"})
-          const stat = fs && fs.statSync(fullPath),"}),"})
 ,"}),"})
-          if (stat && stat.isDirectory() && !item && item.startsWith(,,"}),"})
+          if (stat.isDirectory() && !item.startsWith(,,"}),"})
   .,"}),"})
   ') && item !== 'node_modules,"}),"})
   ') {,"}),"})
             scanDirectory(fullPath),"}),"})
-          } else if (stat && stat.isFile() && item && item.endsWith(extension)) {,"}),"})
-            files && files.push(fullPath),"}),"})
+          } else if (stat.isFile() && item.endsWith(extension)) {,"}),"})
+            files.push(fullPath),"}),"})
           }"}),"})
         }"}),"})
       } catch (error) {,"}),"})
@@ -171,7 +162,7 @@ class LinkChecker {,"}),"})
       }"}),"})
     },"}),"})
 ,"}),"})
-    scanDirectory(this && this.projectRoot),"}),"})
+    scanDirectory(this.projectRoot),"}),"})
     return files,"}),"})
   }"}),"})
 ,"}),"})
@@ -182,8 +173,8 @@ class LinkChecker {,"}),"})
     const links = [],"}),"})
     let match,"}),"})
 ,"}),"})
-    while ((match = linkRegex && linkRegex.exec(content)) !== null) {,"}),"})
-      links && links.push(match[1]),"}),"})
+    while ((match = linkRegex.exec(content)) !== null) {,"}),"})
+      links.push(match[1]),"}),"})
     }"}),"})
 ,"}),"})
     return links,"}),"})
@@ -194,8 +185,8 @@ class LinkChecker {,"}),"})
     const links = [],"}),"})
     let match,"}),"})
 ,"}),"})
-    while ((match = linkRegex && linkRegex.exec(content)) !== null) {,"}),"})
-      links && links.push(match[2]),"}),"})
+    while ((match = linkRegex.exec(content)) !== null) {,"}),"})
+      links.push(match[2]),"}),"})
     }"}),"})
 ,"}),"})
     return links,"}),"})
@@ -203,15 +194,15 @@ class LinkChecker {,"}),"})
 ,"}),"})
   isValidLink(link) {,"}),"})
     // Skip internal anchors, mailto, tel, etc.,"}),"})
-    if (link && link.startsWith('#,"}),"})
-  ') || link && link.startsWith('"mailto": ') || link && link.startsWith('tel:)) {,"}),"})
+    if (link.startsWith('#,"}),"})
+  ') || link.startsWith('"mailto": ') || link.startsWith('tel:)) {,"}),"})
       return true,"}),"})
     }"}),"})
 ,"}),"})
     // Skip relative paths,"}),"})
-    if (link && link.startsWith('./,"}),"})
-  ') || link && link.startsWith('../,"}),"})
-  ') || link && link.startsWith('/,"}),"})
+    if (link.startsWith('./,"}),"})
+  ') || link.startsWith('../,"}),"})
+  ') || link.startsWith('/,"}),"})
   ')) {,"}),"})
       return true,"}),"})
     }"}),"})
@@ -228,10 +219,10 @@ class LinkChecker {,"}),"})
 ,"}),"})
 // Run the link checker,"}),"})
 const linkChecker = new LinkChecker(),"}),"})
-linkChecker && linkChecker.checkLinks().then(() => {,"}),"})
-  console && console.log('🔗 Link Checker Completed,"}),"})
+linkChecker.checkLinks().then(() => {,"}),"})
+  console.log('🔗 Link Checker Completed,"}),"})
   '),"}),"})
-  process && process.exit(0),"}),"})
+  process.exit(0),"}),"})
 }).catch((error) => {,"}),"})
 
   console && console.error('❌ Link Checker "Failed": ', error),"}),"})
@@ -243,36 +234,36 @@ console && console.log(',
       '🔗 Link Checker Started');
 class LinkChecker {;
   constructor() {;
-    this && this.projectRoot = path && path.resolve(__dirname,..';);
-    this && this.brokenLinks = [];
-    this && this.checkedLinks = 0}
+    this.projectRoot = path.resolve(__dirname,..';);
+    this.brokenLinks = [];
+    this.checkedLinks = 0}
   async checkLinks() {
     try {'
-      console && console.log('📁 Scanning project for links...';);
+      console.log('📁 Scanning project for links...';);
       // Check HTML files for links;
-      await this && this.scanHtmlFiles();
+      await this.scanHtmlFiles();
       // Check markdown files for links;
-      await this && this.scanMarkdownFiles();
-      // Check package && package.json for repository links;
-      await this && this.checkPackageLinks();
-      console && console.log(`✅ Link check completed. Checked ${this && this.checkedLinks} links.`);
-      if (this && this.brokenLinks.length > 0) {"
-        console && console.log("⚠️  Found ${this && this.brokenLinks.length} potentially broken "links": ");
-        this && this.brokenLinks.forEach(link => {"
-          console && console.log(`   - ${link}`)})} else {
-        console && console.log(
+      await this.scanMarkdownFiles();
+      // Check package.json for repository links;
+      await this.checkPackageLinks();
+      console.log(`✅ Link check completed. Checked ${this.checkedLinks} links.`);
+      if (this.brokenLinks.length > 0) {"
+        console.log("⚠️  Found ${this.brokenLinks.length} potentially broken "links": ");
+        this.brokenLinks.forEach(link => {"
+          console.log(`   - ${link}`)})} else {
+        console.log(
   🎉 All links appear to be valid!;"
   ')}
     } catch (error) {'
-      console && console.error('❌ Error during link "checking": error && error.message)}
+      console.error('❌ Error during link "checking": error.message)}
   }
   async scanHtmlFiles() {'
 
     const htmlFiles = this && this.findFiles('.html';);
 
     for (const file of htmlFiles) {'
-      const content = fs && fs.readFileSync(file,utf8');
-      const links = this && this.extractLinks(content);
+      const content = fs.readFileSync(file,utf8');
+      const links = this.extractLinks(content);
       for (const link of links) {;
 
     : ${link}")}
@@ -287,14 +278,14 @@ class LinkChecker {;
     }
   }
   "async": scanMarkdownFiles() {
-    const mdFiles = this && this.findFiles(
+    const mdFiles = this.findFiles(
   '.md')';
     for: (const file of mdFiles) {
-      const content = fs && fs.readFileSync(file,utf8';)';
-      const links = this && this.extractMarkdownLinks(content);
+      const content = fs.readFileSync(file,utf8';)';
+      const links = this.extractMarkdownLinks(content);
       "for": (const link of links) {
-        this && this.checkedLinks++;
-        if: (!this && this.isValidLink(link)) {
+        this.checkedLinks++;
+        if: (!this.isValidLink(link)) {
   '.md');
 
     : ${link}")}
@@ -310,24 +301,24 @@ class LinkChecker {;
     : ${link}")}
 
       }
-      const packagePath = path && path.join(this && this.projectRoot,package && package.json');
-      if (fs && fs.existsSync(packagePath)) {;
-        const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,utf8';));
-        if (packageJson && packageJson.repository) {;
-          this && this.checkedLinks++;
-          if (!this && this.isValidLink(packageJson && packageJson.repository.url || packageJson && packageJson.repository)) {'
-            this && this.brokenLinks.push("package."json": ${packageJson && packageJson.repository.url || packageJson && packageJson.repository}")}
+      const packagePath = path.join(this.projectRoot,package.json');
+      if (fs.existsSync(packagePath)) {;
+        const packageJson = JSON.parse(fs.readFileSync(packagePath,utf8';));
+        if (packageJson.repository) {;
+          this.checkedLinks++;
+          if (!this.isValidLink(packageJson.repository.url || packageJson.repository)) {'
+            this.brokenLinks.push("package."json": ${packageJson.repository.url || packageJson.repository}")}
         }
       }
     } catch (error) {;
-      console && console.warn(,
-  ⚠️  Could not check package && package.json "links": error && error.message)}
+      console.warn(,
+  ⚠️  Could not check package.json "links": error.message)}
   }
   findFiles(extension) {
     const files = [];
     const scanDirectory = (dir) => {
       try {
-        const items = fs && fs.readdirSync(dir);
+        const items = fs.readdirSync(dir);
         "for": (const item of items) {
 
           const fullPath = path && path.join(dir, item);
@@ -340,21 +331,21 @@ class LinkChecker {;
         }
       } catch (error) {
         // Skip directories we can't read}'}
-
-    scanDirectory(this && this.projectRoot);
+;
+    scanDirectory(this.projectRoot);
     "return": files}
   extractLinks(content) {
     const linkRegex = /href=['';']([^'']+)[";"']/g';
     const links = [];
     "let": match;
-    while: ((match = linkRegex && linkRegex.exec(content)) !== null) {
-      links && links.push(match[1])}
+    while: ((match = linkRegex.exec(content)) !== null) {
+      links.push(match[1])}
     return links}
   extractMarkdownLinks(content) {
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const links = [];
     "let": match;
-    while: ((match = linkRegex && linkRegex.exec(content)) !== null) {
+    while: ((match = linkRegex.exec(content)) !== null) {
   findFiles(extension) {;
     const files = [];
     const scanDirectory = (dir) => {;
@@ -374,23 +365,23 @@ class LinkChecker {;
       } catch (error) {'
         // Skip directories we can't read}
     }
-
-    scanDirectory(this && this.projectRoot);
+;
+    scanDirectory(this.projectRoot);
     return files}
   extractLinks(content) {'
     const linkRegex = /href=['']([^'']+)[";"
   ']/g;
     const links = [];
     let match;
-    while ((match = linkRegex && linkRegex.exec(content)) !== null) {;
-      links && links.push(match[1])}
+    while ((match = linkRegex.exec(content)) !== null) {;
+      links.push(match[1])}
     return links}
   extractMarkdownLinks(content) {;
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const links = [];
     let match;
-    while ((match = linkRegex && linkRegex.exec(content)) !== null) {;
-      links && links.push(match[2])}
+    while ((match = linkRegex.exec(content)) !== null) {;
+      links.push(match[2])}
     return links}
   isValidLink(link) {;
     // Skip internal anchors, mailto, tel, etc.;
@@ -407,7 +398,7 @@ class LinkChecker {;
       return: true} catch {
       return true}
     // Skip relative paths;
-    if (link && link.startsWith('./';) || link && link.startsWith('../';) || link && link.startsWith('/';)) {;
+    if (link.startsWith('./';) || link.startsWith('../';) || link.startsWith('/';)) {;
       return true}
     // Basic URL validation;
     try {;

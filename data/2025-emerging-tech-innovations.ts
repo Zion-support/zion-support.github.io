@@ -4,6 +4,7 @@ export interface EmergingTechInnovationService {
 
 export interface EmergingTechInnovationService {;
 
+export interface EmergingTechInnovationService {;
   id: string;
   name: string;
   tagline: string;
@@ -34,7 +35,6 @@ export interface EmergingTechInnovationService {;
     mobile: string;
     email: string;
     address: string;
-
     website: string;
   }
 
@@ -83,11 +83,9 @@ export interface EmergingTechInnovation {
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
   contactInfo: {
-      
     mobile: string, email: string,
     address: string,
     website: string
-  
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
@@ -95,7 +93,6 @@ export interface EmergingTechInnovation {
   benefits: string[], capabilities: string[],
   marketAdvantage: string
 }
-
 const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -587,4 +584,5 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ];
 
 
-;
+  }
+];

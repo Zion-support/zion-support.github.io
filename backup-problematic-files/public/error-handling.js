@@ -1,6 +1,5 @@
 
   Sentry && Sentry.captureException(error, { "extra": { context } })}
-
     // Show user-friendly error message;
     this && this.showErrorMessage("Something went wrong. Please try again.")},
 

@@ -14,12 +14,10 @@ function runNode(relPath, args = []) {
     stdout: res && res.stdout || '',
     stderr: res && res.stderr || '',
   };
-
 exports && exports.config = {
 
   schedule: '*/20 * * * *', // every 20 minutes
 }
-
 exports && exports.handler = async () => {
   const logs = [];
   function logStep(name, fn) {
@@ -39,7 +37,6 @@ exports && exports.handler = async () => {
   // Attempt to sync changes back to main (best-effort)
 
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-
   return { statusCode: 200, body: logs && logs.join('\n') };
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
@@ -47,11 +44,9 @@ exports && exports.handler = async () => {
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
-
 exports && exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
-
 exports && exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -71,7 +66,6 @@ exports && exports.handler = async () => {
   // Attempt to sync changes back to main (best-effort)
 
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
 
@@ -155,4 +149,3 @@ function log_step() {
   // Attempt to sync changes back to main (best - effort);
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},

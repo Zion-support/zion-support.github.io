@@ -18,7 +18,6 @@ exports.config = {
 }
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-
 exports && exports.config = {
   schedule: '*/15 * * * *',
 
@@ -26,13 +25,11 @@ exports && exports.config = {
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 
 }
-
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
     return res && res.status || 0;
   }
-
   step('alt-text:suggest', () => runNode('automation/alt-text-suggester && suggester.cjs'));
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
   return { statusCode: 200, body: logs && logs.join('\n') };
@@ -67,4 +64,3 @@ function step() {
 }  step ('alt - text:suggest', () => run_node ('automation / alt - text - suggester.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-},

@@ -16,7 +16,6 @@ type TalentItem = {;
 
 
 };
-
 type Props = { items: TalentItem[] };
 
 
@@ -54,7 +53,6 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
 
 
 };
-
 export const getServerSideProps: GetServerSideProps = async () => {;
   const p = path && path.join(;
     process && process.cwd(),;

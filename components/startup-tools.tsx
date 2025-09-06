@@ -50,46 +50,6 @@ import {
   TrendingUp,
   Zap,
   Target,
-  Lightbulb,
-  BookOpen,} from 'lucide-react';import {
-  Rocket;
-  DollarSign,
-  Users,
-  BarChart3,
-  Mail,
-  Calendar,
-  Shield,
-  Globe;
-  ArrowRight;
-  Star;
-  Check;
-  ExternalLink;
-  TrendingUp;
-  Zap;
-  Target;
-  Lightbulb;
-
-
-
-
-      name: 'HubSpot',
-      description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
-    category: 'Marketing & Sales',
-      pricing: 'Free - $45/month',
-      rating: 4.7,
-      users: '135K+',
-      icon: <Target className="w-8 h-8 text-orange-400" />,
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      features: [
-        'CRM systemEmail marketingLead generationAnalytics & reportingMarketing automationFree tier available'
-      ];
-      website: 'https://hubspot.com',
-      useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
-      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],
-      cons: ['Can get expensiveComplex for small teamsLimited customization'],
-
-      bestFor: 'B2B startups, SaaS companies, marketing teams'
-    }
     {
       name: 'Mailchimp'
       description:
@@ -247,14 +207,14 @@ function StartupToolsPage() {
       icon: <Globe className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Social media schedulingAnalytics & reportingTeam collaborationContent calendarMultiple platformsFree tier available'
+        'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem';
       ];
       website: 'https://buffer.com',
       useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
       pros: ['Free tierEasy to useGood analyticsAffordable'],
       cons: ['Limited free featuresBasic schedulingLimited platforms'],
       bestFor: 'Social media managers, small businesses, content creators'
-    };
+};
     {
       name: 'Notion',
       description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
@@ -509,7 +469,6 @@ function StartupToolsPage() {
               </Button>;
             </div>;
           </div>;
-
           {/* Stats */}
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -748,7 +707,6 @@ function StartupToolsPage() {
         </div>;
       </section>;
 
-
       {/* Category Filter */}
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -809,7 +767,6 @@ function StartupToolsPage() {
                 size='sm'>                Explore Communities;
               </Button>;
             </Card>;
-
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>;
                 <BookOpen className='w-8 h-8 text-white' />              Additional Startup Resources;
@@ -818,7 +775,6 @@ function StartupToolsPage() {
               Beyond tools, here are additional resources to help your startup succeed.;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <Card className="text-center">;
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">;
@@ -832,7 +788,6 @@ function StartupToolsPage() {
                 Explore Communities;
               </Button>;
             </Card>;
-
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>;
                 <BookOpen className='w-8 h-8 text-white' />;
@@ -881,10 +836,8 @@ function StartupToolsPage() {
           </div>
         </div>
       </section>
-                size='sm'>                Start Learning;
               </Button>;
             </Card>;
-
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />              </div>;
@@ -896,7 +849,6 @@ function StartupToolsPage() {
                 Start Learning;
               </Button>;
             </Card>;
-
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
                 <TrendingUp className='w-8 h-8 text-white' />;
@@ -1011,8 +963,4 @@ function StartupToolsPage() {
   );
 }
     </>);
-}
-
-import React from 'react';
-
-}
+);

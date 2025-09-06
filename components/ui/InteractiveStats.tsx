@@ -10,7 +10,7 @@ function useCounter(target: number, durationMs: number) {
 
 import {useEffect, useState} from 'react';
 
-function useCounter(): any (target: number, durationMs: number) {;
+function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {;
 

@@ -5,12 +5,13 @@
 
 
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content && content.replace(importCommaRegex, (match, imports) => {
+    content = content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-        .filter((item) => item ;
-      return match && match.replace(imports, fixedImports);
+        .filter((item) => item.trim());
+        .join(", ");
+      return match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
 
@@ -24,7 +25,6 @@
         return match && match.replace(params, fixedParams);
       },
     );
-
     if (content !== fs && fs.readFileSync(filePath, "utf8")) {
       fs && fs.writeFileSync(filePath, content, "utf8");
 
@@ -82,11 +82,9 @@ function fixImportSyntax() {
   } catch (error) {
 
     const items = fs && fs.readdirSync(currentDir);
-
     for (const item of items) {
       const fullPath = path && path.join(currentDir, item);
       const stat = fs && fs.statSync(fullPath);
-
       if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
@@ -188,4 +186,3 @@ for (const file of files) {
   }
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
-;

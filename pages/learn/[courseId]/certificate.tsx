@@ -32,6 +32,9 @@ if (return null, ) {
       <h1 className="text - 2xl font - semibold">Certificate</h1>;
       <CertificatePreview course_id={course_id} />;
     </div>);
+    </div>
+  )
+
 }
 
 

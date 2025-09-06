@@ -8,7 +8,6 @@ import React, {;
   useState,;
 } from 'react';
 export type UserRole = 'client' | 'talent';
-
 type RoleContextValue = {;
   role: UserRole;
   setRole: (role: UserRole) => void;}
@@ -22,7 +21,6 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {  const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-
   create_context,
   useContext,
   useEffect,
@@ -82,14 +80,11 @@ type RoleContextValue = {;
   setRole: (role: UserRole) => void;  role: UserRole,;
   setRole: (role: UserRole) => void;
 };
-
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-
 export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
   children,;
 }) => {export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({ children }) => {;
   const [role, setRole] = useState<UserRole>('client');
-
   useEffect(() => {;
     try {;
       const saved =;
@@ -120,7 +115,6 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
   return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;};  return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;
 
 };
-
 export function useRole(): any (): RoleContextValue {;
   const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');

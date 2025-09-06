@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   {
-    id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform",
-    tagline: "Practical business solutions for 2028", price: "$249/month",
-    description: "Practical business solution platform that provides real-world solutions for 2028.",
     features: [
       "Practical solutions";
       "Business applications";
@@ -41,3 +37,7 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

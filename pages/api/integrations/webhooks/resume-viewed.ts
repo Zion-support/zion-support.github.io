@@ -80,7 +80,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const conn of crms) {
     const { log } = await crm.addEmailTouchpoint(conn, { subject: 'Resume viewed', resumeId: resume.id });
     writeState(s => s.logs.push(log));
-    results.push({ providerId: conn.providerId, ok: true })
+results.push({ providerId: conn.providerId, ok: true })
   }
   res.status(200).json({ ok: true, results })
 }

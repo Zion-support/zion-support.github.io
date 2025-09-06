@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -107,7 +103,6 @@ const HeroSection: React.FC = () => {;
         {/* Grid Pattern */}
         <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0 && 0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0 && 0.02)_1px,transparent_1px)] bg-[size:50px_50px]' />;
       </div>;
-
       <div className='relative container mx-auto px-4 text-center z-10'>        {/* Main Content */}  ];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">;
@@ -290,7 +285,6 @@ const HeroSection: React.FC = () => {;
               Get Started Today;
               <ArrowRight className='inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />;
             </Link>;
-
             <button className='group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300'>;
               <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>;
                 <Play className='w-6 h-6 ml-1' />;
@@ -302,7 +296,6 @@ const HeroSection: React.FC = () => {;
               Get Started Today;
               <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />;
             </Link>;
-
             <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300">;
               <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors">;
                 <Play className="w-6 h-6 ml-1" />;
@@ -402,6 +395,61 @@ const HeroSection: React.FC = () => {;
           >;
             {stats.map ((stat, index) => (
               <motion.div;
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          {/* CTA Buttons */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <Link
+              href='/contact'
+              className='group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1'
+            >
+              Get Started Today
+              <ArrowRight className='inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+            </Link>
+            <button className='group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300'>
+              <div className='w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors'>
+                <Play className='w-6 h-6 ml-1' />
+              </div>
+              <span className='text-lg font-medium'>Watch Demo</span>            </button>          >
+            <Link
+              href="/contact"
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25 transform hover:-translate-y-1"
+            >
+              Get Started Today
+              <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <button className="group flex items-center space-x-3 text-white hover:text-blue-400 transition-colors duration-300">
+              <div className="w-14 h-14 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20 group-hover:border-blue-400 transition-colors">
+                <Play className="w-6 h-6 ml-1" />
+              </div>
+              <span className="text-lg font-medium">Watch Demo</span>
+            </button>
+          </motion.div>
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {stats.map((stat, index) => (
+              <motion.div
+
                 key={stat.label}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}

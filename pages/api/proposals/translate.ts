@@ -69,6 +69,9 @@ function handler() {
     return res;
       .status (500);
       .json ({ error: error?.message || "Translation failed" });
+
+    return res
+      .status(500)
   }
 }
 

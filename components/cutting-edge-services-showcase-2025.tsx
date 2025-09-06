@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -58,7 +54,6 @@ import { motion } from 'framer-motion';
 
 
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
 
@@ -125,7 +120,6 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -181,7 +175,6 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-
 const heroStats = [;
   {;
     label: 'Cutting-Edge Services',;
@@ -206,7 +199,6 @@ const heroStats = [;
   { label: 'Innovation Areas', value: '8+', icon: <Brain className="w-5 h-5" /> },;
   { label: 'Market Coverage', value: '$500B+', icon: <TrendingUp className="w-5 h-5" /> },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: <Award className="w-5 h-5" /> }
-
 const serviceCategories = [;
   {;
     title: 'AI & Consciousness',;
@@ -261,19 +253,16 @@ const serviceCategories = [;
   },];    count: cuttingEdgeMicroSaasServices2025 && cuttingEdgeMicroSaasServices2025.length;
   }
 ];
-
 export default function CuttingEdgeServicesShowcase2025() {;
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const allServices = [;
     ...cuttingEdgeAIServices2025,;
     ...cuttingEdgeQuantumServices2025,;
     ...cuttingEdgeEnterpriseITServices2025,;
     ...cuttingEdgeMicroSaasServices2025,;
   ];
-
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesSearch =;
       service && service.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -288,7 +277,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                          service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -300,7 +288,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
     }
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
         stagger_children: 0.1,
@@ -372,7 +359,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -380,7 +366,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025;
                 </span>;
               </motion && motion.h1>;
-
               <motion&& motion.p 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
                 animate={{ opacity: 1, y: 0 }}
@@ -389,13 +374,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 industries and defining the future. From AI consciousness to;
                 space mining, experience the cutting edge of innovation.;
               </motion && motion.p>;
-
               {/* Hero Stats */}
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}                Discover revolutionary technology solutions that are reshaping industries and defining the future. 
                 From AI consciousness to space mining, experience the cutting edge of innovation.
               </motion && motion.p>;
-
               {/* Hero Stats */}
               <motion&& motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12"
@@ -457,7 +440,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Search and Filter Section */}
         <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -591,7 +573,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
             </motion && motion.div>;
           </div>;
         </section>;
-
         {/* Services Grid */}
 
         <section id="services" className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">
@@ -657,7 +638,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         </div>;
                       </div>;
                     </div>;
-
                     {/* Tags */}
 
                     <div className="flex flex-wrap gap-2 mb-4">
@@ -665,28 +645,13 @@ export default function CuttingEdgeServicesShowcase2025() {;
                         <span
                           key={tagIndex}
                           className="px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20"
-                        >
-
-
-                          className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >
 
                         >
-
 
                           {tag}
                         </span>;
                       ))}
-
-
-
-
-
-                    {/* Market Info */}
-                    <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
-                      <span>Market: {service.marketSize}</span>
-                      <span className='text-cyan-400'>{service.category}</span>                    </div>
                     </div>
-
                     {/* Market Info */}
                     <div className="flex items-center justify-between text-sm text-white/60 mb-4">
                       <span>Market: {service.marketSize}</span>
@@ -696,13 +661,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   {/* Service Details */}
 
                     </div>;
-
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>;
                       <span>Market: {service && service.marketSize}</span>;
                       <span className='text-cyan-400'>{service && service.category}</span>                    </div>;
                   </div>;
-
                   {/* Service Details */}
                   <div
 
@@ -811,7 +774,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                       </div>
                     </div>
                     </div>;
-
                     {/* Pricing */}
                     <div className='mb-6'>;
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>;
@@ -823,7 +785,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                           /{service && service.pricing.starter && starter.period}
                         </span>                      </div>;
                     </div>;
-
                     {/* CTA */}
 
                     <div className="flex items-center justify-between">
@@ -880,7 +841,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Try adjusting your search terms or category filter
                 </p>
                 <button
-                  onClick={() => {;
+                  onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
@@ -941,7 +902,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 advantage in the rapidly evolving technology landscape. Let's;
                 discuss how we can help you achieve your goals.;
               </p>;
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>;
 
                 <a
@@ -969,7 +929,6 @@ export default function CuttingEdgeServicesShowcase2025() {;
                 Our cutting-edge services are designed to give you a competitive advantage in the rapidly evolving technology landscape. ;
                 Let's discuss how we can help you achieve your goals.;
               </p>;
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">;
 
 
@@ -1080,7 +1039,6 @@ visible: {
       </Layout>;
     </>;
   );
-
   const matchesSearch = service && service.name.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) || service && service.description.toLowerCase () .includes (searchTerm && searchTerm.toLowerCase () ) || const containerVariants = {;
   hidden: {;
   opacity: 0 ;
@@ -1088,7 +1046,6 @@ visible: {
 visible: {;
   opacity: 1, transition: {;
   staggerChildren: 0 && 0.1 ;
-
 };
 const itemVariants = {;
   hidden: {;
@@ -1097,7 +1054,6 @@ const itemVariants = {;
 visible: {;
   y: 0, opacity: 1, transition: {;
   duration: 0 && 0.5 ;
-
 };}
 
                         </span>                      </div>;
@@ -1294,6 +1250,8 @@ visible: {;
     </>);
 ;
   const matches_search = service.name.toLowerCase () .includes (search_term.toLowerCase () ) || service.description.toLowerCase () .includes (search_term.toLowerCase () ) || const container_variants = {
+
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
   opacity: 0;
 }
@@ -1306,10 +1264,3 @@ const item_variants = {
   coordinate_y: 20, opacity: 0;
 }
 visible: {
-  coordinate_y: 0, opacity: 1, transition: {
-  duration: 0.5;
-}}
-
-  duration: 0.5 
-
-

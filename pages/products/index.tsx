@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -103,7 +99,6 @@ const products = [;
     popular: false;
   }
 ];
-
 const categories = [;
   'All',;
   'AI & Analytics',;
@@ -113,11 +108,9 @@ const categories = [;
   'Collaboration',;
   'Data Management';
 ];
-
 const ProductsIndex: NextPage = () => {;
   const [selectedCategory, setSelectedCategory] = React && React.useState('All');
   const [searchTerm, setSearchTerm] = React && React.useState('');
-
   const filteredProducts = products && products.filter(product => {;
     const matchesCategory = selectedCategory === 'All' || product && product.category === selectedCategory;
     const matchesSearch = product && product.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
@@ -390,15 +383,12 @@ const ProductsIndex: NextPage = () => {
 
                       </div>;
                     </div>;
-
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
                       {product && product.name}
                     </h3>;
-
                     <p className="text-gray-600 mb-4 leading-relaxed">;
                       {product && product.description}
                     </p>;
-
                     <div className="space-y-2 mb-4">;
                       <h4 className="font-semibold text-gray-900 text-sm">Key Features:</h4>;
                       <ul className="space-y-1">;
@@ -410,7 +400,6 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
-
                     <div className="space-y-2 mb-6">;
                       <h4 className="font-semibold text-gray-900 text-sm">Benefits:</h4>;
                       <ul className="space-y-1">;
@@ -422,14 +411,12 @@ const ProductsIndex: NextPage = () => {
                         ))}
                       </ul>;
                     </div>;
-
                     <div className="space-y-2 mb-6">;
                       <div className="flex justify-between items-center">;
                         <span className="text-sm font-medium text-gray-900">Pricing:</span>;
                         <span className="text-lg font-bold text-blue-600">{product && product.pricing}</span>;
                       </div>;
                     </div>;
-
                     <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group">;
                       Learn More;
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;
@@ -438,7 +425,6 @@ const ProductsIndex: NextPage = () => {
                 </motion && motion.div>;
               ))}
             </div>;
-
             {filteredProducts && filteredProducts.length === 0 && (;
               <div className="text-center py-12">;
                 <div className="text-gray-400 mb-4">;

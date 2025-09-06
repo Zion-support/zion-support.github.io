@@ -6,6 +6,17 @@ import v1 from '../../data/api-docs/v1',;
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
 ;
 
+import React, { useMemo, useState } from 'react';
+import Sidebar from './Sidebar';
+import EndpointDetail from './EndpointDetail';
+import v1 from '../../data/api-docs/v1';
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
+import React, { useMemo, useState } from 'react',;
+import Sidebar from './Sidebar',;
+import EndpointDetail from './EndpointDetail',;
+import v1 from '../../data/api-docs/v1',;
+import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types',;
+;
 export default function ApiDocsPage() {
   const spec: ApiDocsSpec = v1, // could switch by version later
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
@@ -38,49 +49,3 @@ export default function ApiDocsPage() {
             <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>
           </div>
         </header>
-
-
-        {_activeEndpoint ? (
-
-          <EndpointDetail endpoint={activeEndpoint} />
-        ) : (
-          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>
-        )}
-        <section className="mt-8">
-          <div className="text-lg font-semibold mb-2">Changelog</div>
-          <ChangelogWidget />
-        </section>
-      </main>
-    </div>
-  )
-}
-function ChangelogWidget() {
-  const [content, setContent] = useState('')
-  const [message, setMessage] = useState('')
-  async function load() {
-    setMessage('')
-    const res = await fetch('/api/docs/changelog')
-    const data = await res.json()
-    setContent(data.content |'')
-  }
-  async function save() {
-    setMessage('')
-    await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) })
-
-    setMessage('Saved')
-  }
-  return (
-    <div className="space-y-2">
-      <div className="flex gap-2">
-        <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>
-        <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
-        {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
-      </div>
-
-      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )}
-
-  );
-};
-      <textarea className=&quot;w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm&quot; value={content} onChange={(e) => setContent(e.target.value)} placeholder=&quot;Add changelog entries here...&quot; />    </div>
-  )}

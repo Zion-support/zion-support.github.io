@@ -103,7 +103,88 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4 && 4.9,
     reviews: 8
   },
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 
+    website: string;
+  }
+
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+
+export const nextGenInnovativeServices: NextGenInnovativeService[] = [
+  // Quantum AI & Advanced Computing
+  {
     id: 'quantum-ai-brain-computer-interface'
     name: 'Quantum AI Brain-Computer Interface'
     tagline: "World's first quantum-enhanced AI with human-like reasoning"
@@ -266,7 +347,7 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     reviews: 8;
   },
   // Space Technology Platform;
-  {
+{
     id: 'space - technology - platform',
 
     name: 'Space Technology Platform',
@@ -2314,22 +2395,3 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     rating: 4.7,
     reviews: 26;
   }
-],
-
-
-    growthRate: '250% annual growth',
-    variant: 'quantum-iot-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-
-    },
-    realImplementation: true,
-    implementationDetails: 'Complete quantum IoT platform with security, edge computing, and device management features.',
-    launchDate: '2024-03-01',
-    customers: 38,
-    rating: 4.7,
-
-

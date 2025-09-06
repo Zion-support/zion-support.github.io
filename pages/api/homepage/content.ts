@@ -41,7 +41,6 @@ if (return null) {
 
   }
 }
-
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=600');
   try {
@@ -62,7 +61,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message || 'Internal error' })
 
   }
-
   }
   try {
     const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json");
@@ -77,7 +75,7 @@ function handler() {
 if ( {) {
   $2
 }
-    return res.status (405).json ({ error: "Method not allowed" });
+return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
     const local_path = path.join (process.cwd (), "data", "homepage.json");

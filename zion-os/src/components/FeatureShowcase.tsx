@@ -121,6 +121,10 @@ const features: Feature[] = [;
         <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
       </svg>),
     color: "blue",
+    icon: (;
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
+      </svg>;
     details: [;
       "Smart job matching algorithms",
       "Escrow payment systems",
@@ -184,11 +188,11 @@ function FeatureShowcase() {
     }
     return color_map[color as keyof typeof color_map] || "from - blue - 500 to - blue - 600";
   }
-  return (
-    <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - br from - gray - 900 / 50 to - black / 50">;
-      <div className="max - w-7xl mx - auto">;
-        <div className="text - center mb - 16">;
-          <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
+  return (;
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">;
+      <div className="max-w-7xl mx-auto">;
+        <div className="text-center mb-16">;
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">;
             Explore Our Features;
           </h2>;
           <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
@@ -219,6 +223,11 @@ function FeatureShowcase() {
                 } ${is_visible ? 'opacity - 100 translate - x-0' : 'opacity - 0 translate - x-10'}`}
                 style={{ transition_delay: `${index * 100}ms` }}
                 on_click={() => setActiveFeature (active_feature === feature.id ? null : feature.id)}
+                    ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
+                    : 'hover:bg-white/10';
+                } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+                onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
               >;
                 <div className="flex items - start space - x-4">;
                   <div className={`w - 12 h - 12 bg - gradient - to - r ${getColorClasses (feature.color)} rounded - lg flex items - center justify - center text - white flex - shrink - 0`}>;

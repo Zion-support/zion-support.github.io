@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
-    id: "2026-ai-autonomous", name: "2026 AI Autonomous Platform",
-    tagline: "Fully autonomous AI systems", price: "$499/month",
-    description: "Revolutionary AI autonomous platform that operates independently with minimal human intervention.",
     features: [
       "Autonomous operation";
       "Self-learning capabilities";
@@ -41,3 +37,7 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

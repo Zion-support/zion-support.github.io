@@ -4,12 +4,12 @@
 
 
 export interface TokenConfig {
-  token_name: string;
-  token_symbol: string;
+  tokenName: string;
+  tokenSymbol: string;
   decimals: number;
-  total_supply: number;
-  issue_rate: number;
-  redeem_rate: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }
@@ -50,6 +50,9 @@ class TokenStore {
 
   }
 export interface TokenStoreData {
+  };
+
+export interface TokenStoreData {;
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;

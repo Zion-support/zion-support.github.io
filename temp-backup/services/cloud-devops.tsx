@@ -38,10 +38,10 @@ interface ClouddevopsProps {;
 export default function Clouddevops(): any ({ }: ClouddevopsProps) {;
 
   return (
-    <div>;
-      <h1>Clouddevops</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Clouddevops</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 
 

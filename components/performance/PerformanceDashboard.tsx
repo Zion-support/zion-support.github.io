@@ -18,13 +18,11 @@ interface PerformanceMetrics {
 const PerformanceDashboard: React.FC = () => {;
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {;
     if (typeof window !== "undefined" && "performance" in window) {;
       const observer = new PerformanceObserver((list) => {;
         const entries = list && list.getEntries();
         const newMetrics: Partial<PerformanceMetrics> = {};
-
         entries && entries.forEach((entry) => {;
           if (entry && entry.entryType === "paint") {;
             if (entry && entry.name === "first-contentful-paint") {;
@@ -37,29 +35,24 @@ const PerformanceDashboard: React.FC = () => {;
               (newMetrics && newMetrics.cumulativeLayoutShift || 0) + (entry as any).value;
           }
         });
-
         if (Object && Object.keys(newMetrics).length > 0) {;
           setMetrics(;
             (prev) => ({ ...prev, ...newMetrics }) as PerformanceMetrics,;
           );
         }
       });
-
       observer && observer.observe({;
         entryTypes: ["paint", "largest-contentful-paint", "layout-shift"],;
       });
-
       // Get load time;
       window && window.addEventListener("load", () => {;
         const loadTime =;
           performance && performance.timing.loadEventEnd - performance && performance.timing.navigationStart;
         setMetrics((prev) => ({ ...prev, loadTime }) as PerformanceMetrics);
       });
-
       return () => observer && observer.disconnect();
     }
   }, []);
-
   const getScoreColor = (;
     value: number,;
     thresholds: { good: number; needsImprovement: number },;
@@ -79,11 +72,9 @@ const PerformanceDashboard: React.FC = () => {;
       >;
         📊 Performance;
       </button>;
-
       {isVisible && (;
         <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl p-6 w-80 border">;
           <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>;
-
           <div className="space-y-3">;
             {metrics && metrics.loadTime && (;
               <div className="flex justify-between items-center">;
@@ -133,7 +124,6 @@ const PerformanceDashboard: React.FC = () => {;
             )}
 
           </div>;
-
           <div className="mt-4 pt-4 border-t">;
             <div className="text-xs text-gray-500">;
               Core Web Vitals monitoring in real-time;
@@ -287,4 +277,3 @@ if (return null) {
 }
 ;
 export default PerformanceDashboard;
-;

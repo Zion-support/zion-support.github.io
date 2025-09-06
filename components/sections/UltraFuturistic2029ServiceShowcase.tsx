@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -58,7 +54,6 @@ import { CuttingEdgeInnovation2029 } from '../../data / 2029 - cutting - edge - 
 type Service = CuttingEdgeInnovation2029 | any;
 ;
 interface UltraFuturistic2029ServiceShowcaseProps {
-
 interface UltraFuturistic2029ServiceShowcaseProps {;
   services: Service[];
   title?: string;
@@ -132,8 +127,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC<;
   maxServices = 12,;
 }) => {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(;
-    'innovation';
+  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(
+    'innovation'
   );
 
   max_services?: number;
@@ -241,7 +236,6 @@ const category_icons: { [key: string]: any } = {
 
   'AI & Augmented Reality': Eye;
 };
-
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({;
 
   'AI & Augmented Reality': Eye;
@@ -268,10 +262,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           }
           return (
             (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
-
   // Get unique categories;
   const categories = ['all', ...Array && Array.from(new Set(services && services.map(service => service && service.category)))];
-
   // Filter and sort services;
   const filteredServices = services;
     .filter(service => selectedCategory === 'all' || service && service.category === selectedCategory);
@@ -285,63 +277,22 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0);
         case 'price':
+          );
+        case 'price':
+          return (
+            parseFloat(a.price.replace(/[^0-9.]/g, '')) -
+            parseFloat(b.price.replace(/[^0-9.]/g, ''))
+          );
+        case 'rating':
+          return b.rating - a.rating;
+        default:
+          return 0;      }        case 'price':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'rating':
           return b.rating - a.rating;
         default: return 0
 
       }
-    });
-    .slice(0, maxServices);
-
-
-  const containerVariants = {
-  max_services = 12;
-}) => {
-  const [selected_category, setSelectedCategory] = useState < string>('all');
-  const [sort_by, setSortBy] = useState<'innovation' | 'price' | 'rating'>('innovation');
-;
-  // Get unique categories;
-  const categories = ['all', ...Array.from (new Set (services.map (service => service.category)))];
-;
-  // Filter and sort services;
-  const filtered_services = services;
-    .filter (service => selected_category === 'all' || service.category === selected_category);
-    .sort ((a, b) => {
-      switch (sort_by) {
-        case 'innovation':;
-          // Default to 'Advanced' if innovation_level is not available;
-          const a_level = (a as any).innovation_level || 'Advanced';
-          const b_level = (b as any).innovation_level || 'Advanced';
-          const innovation_order = {
-            Revolutionary: 4,
-            Breakthrough: 3,
-            Advanced: 2,
-            Emerging: 1,
-          }
-          return (
-            (innovation_order[b_level] || 0) - (innovation_order[a_level] || 0));
-        case 'price':;
-          return (
-            parse_float (a.price.replace (/[^0 - 9.]/g, '')) -;
-            parse_float (b.price.replace (/[^0 - 9.]/g, '')));
-        case 'rating':;
-          return b.rating - a.rating;
-        default:;
-          return 0;      }        case 'price':;
-          return parse_float (a.price.replace (/[^0 - 9.]/g, '')) - parse_float (b.price.replace (/[^0 - 9.]/g, ''));
-        case 'rating':;
-          return b.rating - a.rating;
-        default: return 0;
-      }
-    });
-    .slice (0, max_services);
-;
-  const container_variants = {
-
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
       transition: {
 
   };
@@ -389,7 +340,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
 
 
   return (
-    <section className='py-20 relative overflow-hidden'>;
+    <section className='py-20 relative overflow-hidden'>
       {/* Background Elements */}
 
       <div className='absolute inset-0 pointer-events-none'>;
@@ -494,7 +445,6 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>;
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>;
-
           {/* Sort Options */}
           <div className="flex items-center space-x-2">
             <span className="text-gray-300 text-sm font-medium">Sort by:</span>
@@ -571,9 +521,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
               <a
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'>;
-                Get Started Today;
-              </a>;
+                className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25'              >
+                Get Started Today
+              </a>
               <a
                 href='/pricing'
                 className='px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold'>        >;
@@ -687,7 +637,42 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
 
               <motion.div
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
+        {/* Innovation Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className='mt-20'
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+            {[
+              {
+                label: 'Revolutionary Services'
+                value: services.filter(
+                  s => s.innovationLevel === 'Revolutionary'
+                ).length
+                icon: Rocket
+                color: 'from-purple-500 to-pink-500'
+              }
+              {
+                label: 'Patent Pending'
+                value: services.filter(s => s.patentStatus === 'Patent Pending')
+                  .length
+                icon: Shield
+                color: 'from-blue-500 to-cyan-500'
+              }
+              {
+                label: 'Total Customers'
+                value: services.reduce((sum, s) => sum + s.customers, 0)
+                icon: Star
+                color: 'from-yellow-500 to-orange-500'
+              }
+              {
+                label: 'Average Rating'
+                value: (
+                  services.reduce((sum, s) => sum + s.rating, 0) /
+                  services.length
+              <motion.div
+<div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
               {;
                 label: 'Revolutionary Services',;

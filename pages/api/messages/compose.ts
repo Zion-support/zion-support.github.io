@@ -57,8 +57,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!user) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
-  const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
-    recipientId: string, body: string,
     linkUrl?: string;
     attachmentBase64?: string;
     attachmentName?: string;
@@ -90,11 +88,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 
     context});
-
   res.status(200).json({ conversation, message })
 
 }
   res.status (200).json ({ conversation, message });
+
 }
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });

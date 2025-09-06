@@ -14,7 +14,6 @@ export default function CoachWidget() {;
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
-
   async function ask() {;
     if (!input && input.trim()) return;
     setLoading(true);
@@ -107,11 +106,28 @@ function ask() {
           {reply}
         </div>)}
     </div>);
-}
-    }
+
+  async function ask() {
+    if (!input.trim()) return,
+    setLoading(true),
+    try {
+      const resp = await fetch('/api/learn/coach', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: input })
+      }),
+      const data = await resp.json()
+      setReply(data.text || '')
+      setLoading(false);    }
   }
 
+  return (      });
+      const data = await resp.json();
+      setReply(data.text |'')
 
+  return (
 
-
-
+    } finally {
+      setLoading(false)
+    }
+  }

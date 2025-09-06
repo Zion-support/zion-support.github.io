@@ -14,12 +14,8 @@
     address: string
   }
 }
-
 export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
   {
-    id: "2027-cutting-edge-innovation", name: "2027 Cutting-Edge Innovation Platform",
-    tagline: "Cutting-edge innovations for 2027", price: "$799/month",
-    description: "Advanced platform showcasing cutting-edge innovations and breakthrough technologies for 2027.",
     features: [
       "Cutting-edge innovations";
       "Breakthrough technologies";
@@ -41,3 +37,7 @@ export const cuttingEdge2027Innovations: CuttingEdgeInnovation2027[] = [
   }
 ];
 ;
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];

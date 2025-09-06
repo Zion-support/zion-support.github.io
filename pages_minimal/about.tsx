@@ -3,6 +3,7 @@
 export default function About() {;
 
   return (
+<<<<<<< HEAD
     <div>;
       <main>;
         <h1>About Zion Tech Group</h1>;

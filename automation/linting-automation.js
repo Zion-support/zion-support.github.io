@@ -225,6 +225,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
 
       const fixOutput = execSync('npm run "lint": fix', { 
+      const fixOutput = execSync('npm run "lint": fix', { 
       const fixOutput = execSync('npm run lint:fix', { 
         cwd: this.projectRoot,
         encoding: 'utf8',
@@ -415,6 +416,7 @@ return { "exists": false };
 
 
     const recentFiles = [];
+    const recentFiles = [];
     const recentFiles = [;];
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
     try {
@@ -466,6 +468,7 @@ const cutoffTime = Date.now() - 60000; // 1 minute ago
 
 
     return recentFiles}
+    return recentFiles}
     return recentFiles;}
     return recentFiles}
   getFilesInDirectory(dir, fileList = []) {}
@@ -509,6 +512,37 @@ if (stat.isDirectory()) {
 
     return fileList}}
     
+    return fileList) {
+    ) {
+          this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+          fileList.push(filePath)}
+      }
+    } catch (error) {
+      // Ignore errors;
+    }
+    return fileList;
+  }}
+  async start() {
+    this.isRunning = true;
+    this.log('Linting Automation started');
+    return fileList}}
+  async start() {}
+    this.isRunning = true;,
+    this.log('Linting Automation started');';,
+    // Initial linting;
+    await this.runLinting();
+    // Set up interval for regular linting;
+    setInterval(async () => {
+      if ( {
+        await this.checkFileChanges()}
+    }, this.lintInterval)) {
+     {
+        await this.checkFileChanges()}
+    }, this.lintInterval);
+  }
+    return fileList}}
+    return fileList}}
+    return fileList}}
     return fileList) {
     ) {
           this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {

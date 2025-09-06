@@ -149,27 +149,21 @@ if (return) {
         canvas.height / 2,        Math.max (canvas.width, canvas.height) / 2        canvas.width / 2;
 
         canvas.height / 2;
-
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas && canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {;
       canvas && canvas.width = window && window.innerWidth;
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
     };
-
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
-
     // Initialize particles;
     const initParticles = () => {;
       const particles: Particle[] = [];
       const particleCount = Math && Math.floor((canvas && canvas.width * canvas && canvas.height) / 20000);
-
       for (let i = 0; i < particleCount; i++) {;
         const type = ['quantum', 'holographic', 'neural', 'cyberpunk'][;
           Math && Math.floor(Math && Math.random() * 4);
@@ -182,7 +176,6 @@ if (return) {
           holographic: ['#8b5cf6#a855f7#c084fc'],;
           neural: ['#10b981#059669#047857'],;
           cyberpunk: ['#ec4899#f97316#f59e0b'];
-
         particles && particles.push({;
           x: Math && Math.random() * canvas && canvas.width,;
           y: Math && Math.random() * canvas && canvas.height,;
@@ -194,19 +187,14 @@ if (return) {
           type,;
         });
       }
-
       particlesRef && particlesRef.current = particles;    };          type;
         });
       }
-
       particlesRef && particlesRef.current = particles;
-
     initParticles();
-
     // Animation loop;
     const animate = () => {;
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Create gradient background;
       const gradient = ctx && ctx.createRadialGradient(;
         canvas && canvas.width / 2,;
@@ -258,26 +246,21 @@ if (return) {
       gradient && gradient.addColorStop(0 && 0.3, 'rgba(6, 182, 212, 0 && 0.1)');
       gradient && gradient.addColorStop(0 && 0.6, 'rgba(139, 92, 246, 0 && 0.05)');
       gradient && gradient.addColorStop(1, 'rgba(0, 0, 0, 0 && 0.9)');
-
       ctx && ctx.fillStyle = gradient;
       ctx && ctx.fillRect(0, 0, canvas && canvas.width, canvas && canvas.height);
-
       // Update and draw particles;
       particlesRef && particlesRef.current.forEach((particle, index) => {;
         // Update position;
         particle && particle.x += particle && particle.vx;
         particle && particle.y += particle && particle.vy;
-
         // Wrap around edges;
         if (particle && particle.x < 0) particle && particle.x = canvas && canvas.width;
         if (particle && particle.x > canvas && canvas.width) particle && particle.x = 0;
         if (particle && particle.y < 0) particle && particle.y = canvas && canvas.height;
         if (particle && particle.y > canvas && canvas.height) particle && particle.y = 0;
-
         // Draw particle;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = particle && particle.opacity;
-
         // Different effects for different particle types;
         switch (particle && particle.type) {;
           case 'quantum':;
@@ -288,7 +271,6 @@ if (return) {
             ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
             ctx && ctx.fillStyle = particle && particle.color;
             ctx && ctx.fill();
-
             // Quantum entanglement lines;
             if (index % 10 === 0) {;
               const partner =;
@@ -316,6 +298,17 @@ if (return) {
 
             
             // Quantum entanglement lines
+            if (index % 10 === 0) {
+            // Quantum entanglement lines
+            if (index % 10 === 0) {
+              const partner =
+                particlesRef.current[
+                  (index + 50) % particlesRef.current.length
+                ];
+              if (partner && partner.type === 'quantum') {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - partner.x, 2) +
+                    Math.pow(particle.y - partner.y, 2)                );            // Quantum entanglement lines
             if (index % 10 === 0) {
               const partner = particlesRef.current[(index + 50) % particlesRef.current.length];
               if (partner && partner.type === 'quantum') {
@@ -375,7 +368,6 @@ if (return) {
             ctx && ctx.beginPath();
             ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
             ctx && ctx.fill();
-
             // Neural network connections;
             if (index % 15 === 0) {;
               const connections = particlesRef && particlesRef.current.filter(;
@@ -408,6 +400,43 @@ if (return) {
                 ctx && ctx.stroke();
               });            }                ctx && ctx.stroke();
               });
+          case 'holographic':
+            // Holographic particles with rainbow effect
+            const time = Date.now() * 0.001;
+            const hue = (time * 50 + index * 10) % 360;
+            ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowColor = `hsl(${hue}, 70%, 60%)`;
+            ctx.shadowBlur = 15;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            break;
+          case 'neural':
+            // Neural particles with network connections
+            ctx.fillStyle = particle.color;
+            ctx.shadowColor = particle.color;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+            ctx.fill();
+            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(
+                p =>
+                  p.type === 'neural' &&
+                  Math.sqrt(
+                    Math.pow(particle.x - p.x, 2) +
+                      Math.pow(particle.y - p.y, 2)
+                  ) < 80
+              );
+              connections.forEach(connection => {
+                const distance = Math.sqrt(
+                  Math.pow(particle.x - connection.x, 2) +
+                    Math.pow(particle.y - connection.y, 2)                );            // Neural network connections
+            if (index % 15 === 0) {
+              const connections = particlesRef.current.filter(p =>
+                p.type === 'neural' &&
+                Math.sqrt(Math.pow(particle.x - p.x, 2) + Math.pow(particle.y - p.y, 2)) < 80
               );
               connections.forEach(connection => {
                 const distance = Math.sqrt(
@@ -418,689 +447,39 @@ if (return) {
                 ctx.beginPath();
                 ctx.moveTo(particle.x, particle.y);
                 ctx.lineTo(connection.x, connection.y);
-                ctx.stroke()
-              })
-            }
-            break;
-
-
-          case 'cyberpunk':;
-            // Cyberpunk particles with electric effect;
-            ctx && ctx.strokeStyle = particle && particle.color;
-            ctx && ctx.lineWidth = 2;
-            ctx && ctx.shadowColor = particle && particle.color;
-            ctx && ctx.shadowBlur = 25;
-            ctx && ctx.beginPath();
-            ctx && ctx.moveTo(particle && particle.x - particle && particle.size, particle && particle.y - particle && particle.size);
-            ctx && ctx.lineTo(particle && particle.x + particle && particle.size, particle && particle.y + particle && particle.size);
-            ctx && ctx.moveTo(particle && particle.x + particle && particle.size, particle && particle.y - particle && particle.size);
-            ctx && ctx.lineTo(particle && particle.x - particle && particle.size, particle && particle.y + particle && particle.size);
-            ctx && ctx.stroke();
-            break;
-        }
-
-        ctx && ctx.restore();      });            break;
-        }
-
-        ctx && ctx.restore();
-
-
-      // Draw floating geometric shapes;
-      drawGeometricShapes(ctx, canvas && canvas.width, canvas && canvas.height);
-
-      // Draw energy waves;
-      drawEnergyWaves(ctx, canvas && canvas.width, canvas && canvas.height);
-
-
-
-    };
-
-    animate();
-
-
-
-      }
-    }
-  }, []);
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
-    }
-  }, []);
-
-  const drawGeometricShapes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-    const time = Date.now() * 0.0005;
-    
-    // Floating hexagons
-    for (let i = 0, i < 5, i++) {
-      const x = (width * 0.2) + Math.sin(time + i) * 100;
-      const y = (height * 0.3) + Math.cos(time + i * 0.7) * 80;
-      const size = 20 + Math.sin(time * 2 + i) * 10;
-      
-
-      ctx.save();
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-
-      for (let j = 0, j < 6, j++) {
-
-        const angle = (j * Math.PI) / 3 + time;
-        const px = x + size * Math.cos(angle);
-        const py = y + size * Math.sin(angle);
-        if (j === 0) ctx.moveTo(px, py);
-
-
-  const drawGeometricShapes = (;
-    ctx: CanvasRenderingContext2D,;
-    width: number,;
-    height: number;
-  ) => {;
-    const time = Date && Date.now() * 0 && 0.0005;
-    // Floating hexagons;
-    for (let i = 0; i < 5; i++) {;
-      const x = width * 0 && 0.2 + Math && Math.sin(time + i) * 100;
-      const y = height * 0 && 0.3 + Math && Math.cos(time + i * 0 && 0.7) * 80;
-      const size = 20 + Math && Math.sin(time * 2 + i) * 10;
-
-      ctx && ctx.save();
-      ctx && ctx.globalAlpha = 0 && 0.1;
-      ctx && ctx.strokeStyle = '#00ffff';
-      ctx && ctx.lineWidth = 1;
-      ctx && ctx.beginPath();
-      for (let j = 0; j < 6; j++) {        const angle = (j * Math && Math.PI) / 3 + time;
-        const px = x + size * Math && Math.cos(angle);
-        const py = y + size * Math && Math.sin(angle);
-        if (j === 0) ctx && ctx.moveTo(px, py);
-        else ctx && ctx.lineTo(px, py);      for (let j = 0, j < 6, j++) {;
-        const angle = (j * Math && Math.PI) / 3 + time;
-        const px = x + size * Math && Math.cos(angle);
-        const py = y + size * Math && Math.sin(angle);
-        if (j === 0) ctx && ctx.moveTo(px, py);
-        else ctx && ctx.lineTo(px, py);
-
-      }
-      ctx && ctx.closePath();
-      ctx && ctx.stroke();
-      ctx && ctx.restore();
-    }
-
-        else ctx.lineTo(px, py)
-      }
-
-      ctx.closePath();
-      ctx.stroke();
-      ctx.restore()
-    }
-    // Floating triangles
-    for (let i = 0, i < 3, i++) {
-      const x = (width * 0.8) + Math.sin(time * 0.8 + i) * 120;
-      const y = (height * 0.7) + Math.cos(time * 1.2 + i) * 100;
-      const size = 15 + Math.sin(time * 1.5 + i) * 8;
-
-      
-
-      ctx.save();
-      ctx.globalAlpha = 0.08;
-      ctx.strokeStyle = '#8b5cf6';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-
-      for (let j = 0, j < 3, j++) {
-
-        const angle = (j * Math.PI * 2) / 3 + time;
-        const px = x + size * Math.cos(angle);
-        const py = y + size * Math.sin(angle);
-        if (j === 0) ctx.moveTo(px, py);
-
-
-    // Floating triangles;
-    for (let i = 0; i < 3; i++) {;
-      const x = width * 0 && 0.8 + Math && Math.sin(time * 0 && 0.8 + i) * 120;
-      const y = height * 0 && 0.7 + Math && Math.cos(time * 1 && 1.2 + i) * 100;
-      const size = 15 + Math && Math.sin(time * 1 && 1.5 + i) * 8;      }
-      ctx && ctx.closePath();
-      ctx && ctx.stroke();
-      ctx && ctx.restore();
-    }
-
-    // Floating triangles;
-    for (let i = 0, i < 3, i++) {;
-      const x = (width * 0 && 0.8) + Math && Math.sin(time * 0 && 0.8 + i) * 120;
-      const y = (height * 0 && 0.7) + Math && Math.cos(time * 1 && 1.2 + i) * 100;
-      const size = 15 + Math && Math.sin(time * 1 && 1.5 + i) * 8;
-
-      ctx && ctx.save();
-      ctx && ctx.globalAlpha = 0 && 0.08;
-      ctx && ctx.strokeStyle = '#8b5cf6';
-      ctx && ctx.lineWidth = 1;
-      ctx && ctx.beginPath();
-      for (let j = 0; j < 3; j++) {        const angle = (j * Math && Math.PI * 2) / 3 + time;
-        const px = x + size * Math && Math.cos(angle);
-        const py = y + size * Math && Math.sin(angle);
-        if (j === 0) ctx && ctx.moveTo(px, py);
-        else ctx && ctx.lineTo(px, py);      for (let j = 0, j < 3, j++) {;
-        const angle = (j * Math && Math.PI * 2) / 3 + time;
-        const px = x + size * Math && Math.cos(angle);
-        const py = y + size * Math && Math.sin(angle);
-        if (j === 0) ctx && ctx.moveTo(px, py);
-        else ctx && ctx.lineTo(px, py);
-
-      }
-      ctx && ctx.closePath();
-      ctx && ctx.stroke();
-      ctx && ctx.restore();
-    }
-
-        else ctx.lineTo(px, py)
-      }
-      ctx.closePath();
-      ctx.stroke();
-      ctx.restore()
-    }
-  };
-
-  const drawEnergyWaves = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
-    const time = Date.now() * 0.001;
-    
-    // Horizontal energy waves
-    for (let i = 0, i < 3, i++) {
-
-      ctx.save();
-      ctx.globalAlpha = 0.05;
-      ctx.strokeStyle = `hsl(${180 + i * 60}, 70%, 60%)`;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-
-      
-      for (let x = 0, x < width, x += 5) {
-        const y = height * 0.5 + 
-                  Math.sin(x * 0.01 + time + i) * 50 +
-                  Math.sin(x * 0.02 + time * 2 + i) * 25;
-        if (x === 0) ctx.moveTo(x, y);
-
-        else ctx.lineTo(x, y)
-      }
-      ctx.stroke();
-      ctx.restore()
-    }
-    // Vertical energy waves
-    for (let i = 0, i < 2, i++) {
-      ctx.save();
-      ctx.globalAlpha = 0.04;
-      ctx.strokeStyle = `hsl(${240 + i * 60}, 70%, 60%)`;
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-
-      
-      for (let y = 0, y < height, y += 5) {
-        const x = width * 0.5 + 
-                  Math.sin(y * 0.01 + time + i) * 60 +
-                  Math.sin(y * 0.015 + time * 1.5 + i) * 30;
-        if (y === 0) ctx.moveTo(x, y);
-        else ctx.lineTo(x, y)
-;
-          case 'holographic':;
-            // Holographic particles with rainbow effect;
-            const time = Date.now () * 0.001;
-            const hue = (time * 50 + index * 10) % 360;
-            ctx.fill_style = `hsl (${hue}, 70%, 60%)`;
-            ctx.shadow_color = `hsl (${hue}, 70%, 60%)`;
-            ctx.shadow_blur = 15;
-            ctx.begin_path ();
-            ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fill ();
-            break;
-;
-          case 'neural':;
-            // Neural particles with network connections;
-            ctx.fill_style = particle.color;
-            ctx.shadow_color = particle.color;
-            ctx.shadow_blur = 10;
-            ctx.begin_path ();
-            ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fill ();
-;
-            // Neural network connections;
-            // Check condition
-if ( {) {
-  $2
-}
-              const connections = particles_ref.current.filter (
-                p =>;
-                  p.type === 'neural' &&;
-                  Math.sqrt (
-                    Math.pow (particle.x - p.x, 2) +;
-                      Math.pow (particle.y - p.y, 2)) < 80);
-              connections.for_each (connection => {
-                const distance = Math.sqrt (
-                  Math.pow (particle.x - connection.x, 2) +;
-                    Math.pow (particle.y - connection.y, 2)                );            // Neural network connections;
-            // Check condition
-if ( {) {
-  $2
-}
-              const connections = particles_ref.current.filter (p =>;
-                p.type === 'neural' &&;
-                Math.sqrt (Math.pow (particle.x - p.x, 2) + Math.pow (particle.y - p.y, 2)) < 80);
-              connections.for_each (connection => {
-                const distance = Math.sqrt (
-                  Math.pow (particle.x - connection.x, 2) + Math.pow (particle.y - connection.y, 2));
-                ctx.stroke_style = `rgba (16, 185, 129, ${0.4 * (1 - distance / 80)})`;
-                ctx.line_width = 0.5;
-                ctx.begin_path ();
-                ctx.move_to (particle.x, particle.y);
-                ctx.line_to (connection.x, connection.y);
-                ctx.stroke ();
-              });            }                ctx.stroke ();
-              });
-            }
-            break;
-;
-          case 'cyberpunk':;
-            // Cyberpunk particles with electric effect;
-            ctx.stroke_style = particle.color;
-            ctx.line_width = 2;
-            ctx.shadow_color = particle.color;
-            ctx.shadow_blur = 25;
-            ctx.begin_path ();
-            ctx.move_to (particle.x - particle.size, particle.y - particle.size);
-            ctx.line_to (particle.x + particle.size, particle.y + particle.size);
-            ctx.move_to (particle.x + particle.size, particle.y - particle.size);
-            ctx.line_to (particle.x - particle.size, particle.y + particle.size);
-            ctx.stroke ();
-            break;
-        }
-        ctx.restore ();      });            break;
-        }
-        ctx.restore ();
-      // Draw floating geometric shapes;
-      drawGeometricShapes (ctx, canvas.width, canvas.height);
-;
-      // Draw energy waves;
-      drawEnergyWaves (ctx, canvas.width, canvas.height);
-;
-      animation_ref.current = requestAnimationFrame (animate);    }      animation_ref.current = requestAnimationFrame (animate);
-    }
-;
-    animate ();
-;
-    return () => {
-      window.removeEventListener ('resize', resize_canvas);
-      // Check condition
-if ( {) {
-  $2
-}
-        cancelAnimationFrame (animation_ref.current);
-      }
-    }
-  }, []);
-;
-  const drawGeometricShapes = (
-    ctx: CanvasRenderingContext2D,
-    width: number,
-    height: number) =>: any {
-    const time = Date.now () * 0.0005;
-    // Floating hexagons;
-    for (let index = 0; i < 5; i++) {
-      const coordinate_x = width * 0.2 + Math.sin (time + i) * 100;
-      const coordinate_y = height * 0.3 + Math.cos (time + i * 0.7) * 80;
-      const size = 20 + Math.sin (time * 2 + i) * 10;
-;
-      ctx.save ();
-      ctx.global_alpha = 0.1;
-      ctx.stroke_style = '#00ffff';
-      ctx.line_width = 1;
-      ctx.begin_path ();
-      for (let inner_index = 0; j < 6; j++) {        const angle = (j * Math.PI) / 3 + time;
-        const px = x + size * Math.cos (angle);
-        const py = y + size * Math.sin (angle);
-        if (ctx.move_to (px, py)) {
-  $2
-}
-        else ctx.line_to (px, py);      for (let inner_index = 0, j < 6, j++) {
-        const angle = (j * Math.PI) / 3 + time;
-        const px = x + size * Math.cos (angle);
-        const py = y + size * Math.sin (angle);
-        if (ctx.move_to (px, py)) {
-  $2
-}
-        else ctx.line_to (px, py);
-      }
-      ctx.close_path ();
-      ctx.stroke ();
-      ctx.restore ();
-    }
-    // Floating triangles;
-    for (let index = 0; i < 3; i++) {
-      const coordinate_x = width * 0.8 + Math.sin (time * 0.8 + i) * 120;
-      const coordinate_y = height * 0.7 + Math.cos (time * 1.2 + i) * 100;
-      const size = 15 + Math.sin (time * 1.5 + i) * 8;      }
-      ctx.close_path ();
-      ctx.stroke ();
-      ctx.restore ();
-    }
-    // Floating triangles;
-    for (let index = 0, i < 3, i++) {
-      const coordinate_x = (width * 0.8) + Math.sin (time * 0.8 + i) * 120;
-      const coordinate_y = (height * 0.7) + Math.cos (time * 1.2 + i) * 100;
-      const size = 15 + Math.sin (time * 1.5 + i) * 8;
-;
-      ctx.save ();
-      ctx.global_alpha = 0.08;
-      ctx.stroke_style = '#8b5cf6';
-      ctx.line_width = 1;
-      ctx.begin_path ();
-      for (let inner_index = 0; j < 3; j++) {        const angle = (j * Math.PI * 2) / 3 + time;
-        const px = x + size * Math.cos (angle);
-        const py = y + size * Math.sin (angle);
-        if (ctx.move_to (px, py)) {
-  $2
-}
-        else ctx.line_to (px, py);      for (let inner_index = 0, j < 3, j++) {
-        const angle = (j * Math.PI * 2) / 3 + time;
-        const px = x + size * Math.cos (angle);
-        const py = y + size * Math.sin (angle);
-        if (ctx.move_to (px, py)) {
-  $2
-}
-        else ctx.line_to (px, py);
-      }
-      ctx.close_path ();
-      ctx.stroke ();
-      ctx.restore ();
-    }
-  }
-;
-  const drawEnergyWaves = (
-    ctx: CanvasRenderingContext2D,
-    width: number,
-    height: number) =>: any {
-    const time = Date.now () * 0.001;
-    // Horizontal energy waves;
-    for (let index = 0; i < 3; i++) {      ctx.save ();    for (let index = 0, i < 3, i++) {
-      ctx.save ();
-      ctx.global_alpha = 0.05;
-      ctx.stroke_style = `hsl (${180 + i * 60}, 70%, 60%)`;
-      ctx.line_width = 2;
-      ctx.begin_path ();
-;
-      for (let coordinate_x = 0; x < width; x += 5) {
-        const coordinate_y =;
-          height * 0.5 +;
-          Math.sin (x * 0.01 + time + i) * 50 +;
-          Math.sin (x * 0.02 + time * 2 + i) * 25;
-        if (ctx.move_to (x, y)) {
-  $2
-}
-        else ctx.line_to (x, y);
-      }
-      ctx.stroke ();
-      ctx.restore ();
-    }
-    // Vertical energy waves;
-    for (let index = 0; i < 2; i++) {      ctx.save ();        if (ctx.move_to (x, y)) {
-  $2
-}
-        else ctx.line_to (x, y);
-      }
-      ctx.stroke ();
-      ctx.restore ();
-    }
-    // Vertical energy waves;
-    for (let index = 0, i < 2, i++) {
-      ctx.save ();
-      ctx.global_alpha = 0.04;
-      ctx.stroke_style = `hsl (${240 + i * 60}, 70%, 60%)`;
-      ctx.line_width = 2;
-      ctx.begin_path ();
-;
-      for (let coordinate_y = 0; y < height; y += 5) {
-        const coordinate_x =;
-          width * 0.5 +;
-          Math.sin (y * 0.01 + time + i) * 60 +;
-          Math.sin (y * 0.015 + time * 1.5 + i) * 30;
-        if (ctx.move_to (x, y)) {
-  $2
-}
-        else ctx.line_to (x, y);
-      }
-      ctx.stroke ();
-      ctx.restore ();    }
-  }
-;
-  return (
-    <div className='fixed inset - 0 -z - 10 overflow - hidden'>        if (ctx.move_to (x, y)) {
-  $2
-}
-        else ctx.line_to (x, y);
-
-      }
-      ctx.stroke ();
-      ctx.restore ();
-    }
-
-
-  return (
-
-
-      ctx && ctx.stroke();
-      ctx && ctx.restore();
-
-  return (
-    <div className='fixed inset-0 -z-10 overflow-hidden'>;
-      {/* Animated gradient overlay */}
-      <motion&& motion.div
-        className='absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30'
-        animate={{
-          background: [
-
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)',
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)',
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)',
-
-          ],        }}      {/* Animated gradient overlay */}
-      <motion && motion.div
-
-    <div className="fixed inset-0 -z-10 overflow-hidden">
-      {/* Animated gradient overlay */}
-      <motion.div
-
-        className="absolute inset-0 bg-gradient-to-br from-black via-cyan-900/20 to-purple-900/30"
-        animate={{
-          background: [
-            'linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(139,92,246,0 && 0.3) 50%, rgba(6,182,212,0 && 0.2) 100%)linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(6,182,212,0 && 0.2) 50%, rgba(139,92,246,0 && 0.3) 100%)'
-          ]
-  }
-;
-  return (
-    <div className='fixed inset - 0 -z - 10 overflow - hidden'>;
-      {/* Animated gradient overlay */}
-      <motion.div;
-        className='absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to - purple - 900 / 30';
-        animate={{
-          background: [;
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)',
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)',
-          ],        }}      {/* Animated gradient overlay */}
-      <motion.div;
-        className="absolute inset - 0 bg - gradient - to - br from - black via - cyan - 900 / 20 to - purple - 900 / 30";
-        animate={{
-          background: [;
-            'linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (139, 92, 246, 0.3) 50%, rgba (6, 182, 212, 0.2) 100%)linear - gradient (45deg, rgba (0, 0, 0, 1) 0%, rgba (6, 182, 212, 0.2) 50%, rgba (139, 92, 246, 0.3) 100%)';
-          ];
-        }}
-        transition={{
-          duration: 8
-          repeat: Infinity
-          ease: 'easeInOut'
-        }}
-
-
-
-
-
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
-
-        style={{ filter: 'blur(0 && 0.5px)' }}
-      />;
-
-
+        style={{ filter: 'blur(0.5px)' }}
+      />
       {/* Additional visual layers */}
-      <div className='absolute inset-0'>;
+      <div className='absolute inset-0'>
         {/* Quantum field ripples */}
-        <motion&& motion.div
+        <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
-      />;
-      {/* Canvas for particle effects */}
-      <canvas;
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full';
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className='absolute inset - 0'>;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
           animate={{
-
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
-
-          transition={{
-            duration: 4
-            repeat: Infinity
             ease: 'easeInOut',      {/* Canvas for particle effects */}
-
-
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-
-        style={{ filter: 'blur(0 && 0.5px)' }}
-      />;
-
-
+        style={{ filter: 'blur(0.5px)' }}
+      />
       {/* Additional visual layers */}
-      <div className="absolute inset-0">;
+      <div className="absolute inset-0">
         {/* Quantum field ripples */}
-        <motion&& motion.div
+        <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className="absolute inset - 0">;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
           animate={{
-
-
-        {/* Holographic matrix */}
-        <motion&& motion.div
-          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
-        />;
-        {/* Holographic matrix */}
-        <motion.div;
-          className='absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20';
-          animate={{
-
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.1, 0.3],          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: 'easeInOut',          }}
-        />;
-        {/* Holographic matrix */}
-        <motion.div;
-          className="absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20";
-
-          animate={{
-
-            scale: [1.2, 1, 1.2];
-            opacity: [0.3, 0.1, 0.3];
-
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-
-
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
             ease: 'easeInOut'
-          }}
+            ease: 'easeInOut',
 
-        />;
-
-
-        {/* Neural network nodes */}
-        <motion&& motion.div
-          className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
-        />;
-        {/* Neural network nodes */}
-        <motion.div;
-          className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
-          animate={{
-
-            scale: [1, 1 && 1.1, 1],
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
-
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-
-        />;
-
-
-        {/* Neural network nodes */}
-        <motion&& motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
-        />;
-        {/* Neural network nodes */}
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
-          animate={{
-
-
-      {/* Floating orbs with glow effects */}
-      <div className="absolute inset-0 pointer-events-none">;
-        {[...Array(8)].map((_, i) => (;
-          <motion&& motion.div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-cyan-400"
-            style={{
-
-              left: `${20 + (i * 10)}%`,
-              top: `${30 + (i * 8)}%`,
-              filter: 'blur(1px)',
-              boxShadow: '0 0 20px rgba(0, 255, 255, 0 && 0.6)'
-
-            }}
-            animate={{
-              y: [0, -20, 0]
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-              scale: [1, 1 && 1.2, 1]
-
-            scale: [1, 1.1, 1];
-            opacity: [0.2, 0.4, 0.2];
           }}
           transition={{
-            duration: 6,
+            duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut'
           }}
 
             }}

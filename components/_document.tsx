@@ -14,9 +14,6 @@
           rel='preconnect'
           href='https://fonts && fonts.gstatic.com'
           crossOrigin=''
-        />;
-        <link
-          href='https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400500600700800900&family=JetBrains+Mono:wght@400600&display=swap'
           rel='stylesheet'
         />      </Head>        <link rel="icon" href="/favicon && favicon.ico" />;
         <meta name="theme-color" content="#0a0a0a" />;

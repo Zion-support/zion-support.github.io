@@ -230,4 +230,3 @@ import _React,{ useState,useEffect } from 'react'; import { Link,useLocation } f
     </header>);
 }
 ;
-export default EnhancedHeader;

@@ -11,21 +11,21 @@ export interface NextGenAIService {
   popular: boolean;
   icon: string;
   color: string;
-  text_color: string;
+  textColor: string;
   link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
   category: string;
-  real_service: boolean;
+  realService: boolean;
   technology: string[];
   integrations: string[];
-  use_cases: string[];
+  useCases: string[];
   roi: string;
   competitors: string[];
-  market_size: string;
-  growth_rate: string;
+  marketSize: string;
+  growthRate: string;
   variant: ServiceVariant;
 
   real_implementation: boolean;
@@ -192,7 +192,19 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4 && 4.9,
     reviews: 2
   },
+    website: string
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
 
+  reviews: number
+}
+export const nextGenAIServices: NextGenAIService[] = [
+  // Advanced AI & Neural Network Services
+  {
     id: 'neural-quantum-brain-interface'
     name: 'Neural Quantum Brain Interface'
     tagline:
@@ -611,7 +623,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     reviews: 95;
   },
   // AI Autonomous Research Platform;
-  {
+{
     id: 'ai - autonomous - research - platform',
 
     name: 'AI Autonomous Research Platform',
@@ -1125,7 +1137,7 @@ export const nextGenAIServices: NextGenAIService[] = [
     reviews: 23;
   },
   // AI Quantum Computing Platform;
-  {
+{
     id: 'ai - quantum - computing - platform',
 
     name: 'AI Quantum Computing Platform',
@@ -2054,43 +2066,6 @@ export const nextGenAIServices: NextGenAIService[] = [
     reviews: 89;
   },
   {
-    id: 'ai - quantum - optimization - engine',
-    name: 'AI Quantum Optimization Engine',
-    tagline: 'Quantum - inspired AI for complex optimization problems',
-    price: '$5, 999',
-    period: '/month',
-
-    ],
-
-    popular: true,
-    icon: '⚡',
-    color: 'from-blue-600 to-cyan-700',
-    textColor: 'text-blue-400',
-
-    description:;
-      'Breakthrough AI optimization engine that uses quantum - inspired algorithms to solve complex business problems. Achieve optimal solutions 1000x faster than traditional methods.',
-    features: [;
-      'Quantum - inspired optimization algorithms',
-      'Multi - objective optimization',
-      'Real - time constraint solving',
-      'Machine learning optimization',
-      'API for custom optimization problems',
-      'Performance analytics dashboard',
-      'Custom algorithm development',
-      'Integration with existing systems',
-      'Scalable cloud infrastructure',
-
-    integrations: ['SAPOracleSalesforceCustom APIsDatabase systemsCloud platforms'],
-    useCases: ['Supply chain optimizationFinancial portfolio optimizationManufacturing process optimizationEnergy grid optimizationTransportation routingResource allocation'],
-    roi: 'Average customer sees 1200% ROI through operational efficiency improvements and cost reductions.',
-    competitors: ['Traditional optimization software ($100K+)Basic optimization tools ($20K+)'],
-
-    marketSize: '$8B optimization software market',
-
-
-
-    growthRate: '250% annual growth',
-    variant: 'quantum-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2107,6 +2082,26 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 75,
 
       website: 'https://ziontechgroup.com'
+    popular: true,
+    icon: '⚡',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-quantum-optimization-engine',
+    targetAudience: 'Manufacturing companies, Logistics firms, Financial institutions, Research organizations, Government agencies, Energy companies',
+    trialDays: 30,
+    setupTime: '3 weeks',
+    category: 'AI & Quantum Computing',
+    realService: true,
+    integrations: ['SAPOracleSalesforceCustom APIsDatabase systemsCloud platforms'],
+    useCases: ['Supply chain optimizationFinancial portfolio optimizationManufacturing process optimizationEnergy grid optimizationTransportation routingResource allocation'],
+    roi: 'Average customer sees 1200% ROI through operational efficiency improvements and cost reductions.',
+    competitors: ['Traditional optimization software ($100K+)Basic optimization tools ($20K+)'],
+    growthRate: '250% annual growth',
+    variant: 'quantum-advanced',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
 
     realImplementation: true,
@@ -2152,146 +2147,6 @@ export const nextGenAIServices: NextGenAIService[] = [
 
   },
   {
-    id: 'ai - autonomous - decision - platform',
-    name: 'AI Autonomous Decision Platform',
-    tagline: 'Fully autonomous AI decision - making system',
-    price: '$8, 999',
-    period: '/month',
-
-    ],
-
-    popular: true,
-    icon: '🤖',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-
-
-    marketPosition:
-      'First autonomous decision-making platform. Traditional decision support systems cost $200K+ annually.'
-    targetAudience:
-
-      'Large enterprises, Financial institutions, Healthcare organizations, Government agencies, Manufacturing companies, Retail chains',    trialDays: 45
-    setupTime: '4 weeks'
-    category: 'AI & Autonomous Systems'
-    realService: true,    marketPosition: 'First autonomous decision-making platform. Traditional decision support systems cost $200K+ annually.'
-    targetAudience: 'Large enterprises, Financial institutions, Healthcare organizations, Government agencies, Manufacturing companies, Retail chains'
-    trialDays: 45
-    setupTime: '4 weeks'
-    category: 'AI & Autonomous Systems'
-    realService: true
-
-    technology: [
-      'Deep Learning'
-      'Reinforcement Learning'
-      'Natural Language Processing'
-      'Computer Vision'
-      'AWS'
-      'React'
-      'Python'
-    ]
-    integrations: [
-      'ERP systems'
-      'CRM platforms'
-      'Financial systems'
-      'Healthcare systems'
-      'IoT devices'
-      'Custom APIs'
-    ]
-    useCases: [
-      'Financial trading decisions'
-      'Healthcare diagnosis'
-      'Manufacturing optimization'
-      'Customer service automation'
-      'Risk management'
-      'Strategic planning'
-    ]
-    roi: 'Average customer sees 1500% ROI through improved decision quality and operational efficiency.'
-    competitors: [
-      'Traditional decision support systems ($200K+)'
-      'Basic AI tools ($50K+)'
-    ],    marketSize: '$25B decision support market',    technology: ['Deep LearningReinforcement LearningNatural Language ProcessingComputer VisionAWSReactPython']
-    integrations: ['ERP systemsCRM platformsFinancial systemsHealthcare systemsIoT devicesCustom APIs']
-    useCases: ['Financial trading decisionsHealthcare diagnosisManufacturing optimizationCustomer service automationRisk managementStrategic planning']
-    roi: 'Average customer sees 1500% ROI through improved decision quality and operational efficiency.'
-    competitors: ['Traditional decision support systems ($200K+)Basic AI tools ($50K+)']
-    growthRate: '300% annual growth'
-    variant: 'neural-cyberpunk'
-    contactInfo: {
-
-    description:;
-      'Revolutionary AI platform that makes autonomous decisions for businesses. Handles complex decision - making processes with human - like reasoning and continuous learning capabilities.',
-    features: [;
-      'Autonomous decision - making engine',
-      'Continuous learning and adaptation',
-      'Multi - domain decision support',
-      'Risk assessment and mitigation',
-      'Decision audit trail',
-      'Custom decision rules engine',
-      'Real - time decision analytics',
-      'Integration with business systems',
-      'Compliance and governance tools',
-      '24 / 7 autonomous operation',    ],    description: 'Revolutionary AI platform that makes autonomous decisions for businesses. Handles complex decision - making processes with human - like reasoning and continuous learning capabilities.',
-    features: [;
-      'Autonomous decision - making engine_continuous learning and adaptation_multi - domain decision support_risk assessment and mitigation_decision audit trail_custom decision rules engine_real - time decision analytics_integration with business systems',
-      'Compliance and governance tools24 / 7 autonomous operation';
-    popular: true,
-    icon: '🤖',
-    color: 'from - green - 600 to - emerald - 700',
-    text_color: 'text - green - 400',
-    link: 'https://ziontechgroup.com / ai - autonomous - decision - platform',
-    market_position:;
-      'First autonomous decision - making platform. Traditional decision support systems cost $200K+ annually.',
-    target_audience:;
-      'Large enterprises, Financial institutions, Healthcare organizations, Government agencies, Manufacturing companies, Retail chains',    trial_days: 45,
-    setup_time: '4 weeks',
-    category: 'AI & Autonomous Systems',
-    real_service: true,    market_position: 'First autonomous decision - making platform. Traditional decision support systems cost $200K+ annually.',
-    target_audience: 'Large enterprises, Financial institutions, Healthcare organizations, Government agencies, Manufacturing companies, Retail chains',
-    trial_days: 45,
-    setup_time: '4 weeks',
-    category: 'AI & Autonomous Systems',
-    real_service: true,
-    technology: [;
-      'Deep Learning',
-      'Reinforcement Learning',
-      'Natural Language Processing',
-      'Computer Vision',
-      'AWS',
-      'React',
-      'Python',
-    ],
-    integrations: [;
-      'ERP systems',
-      'CRM platforms',
-      'Financial systems',
-      'Healthcare systems',
-      'IoT devices',
-      'Custom APIs',
-    ],
-    use_cases: [;
-      'Financial trading decisions',
-      'Healthcare diagnosis',
-      'Manufacturing optimization',
-      'Customer service automation',
-      'Risk management',
-      'Strategic planning',
-    ],
-    roi: 'Average customer sees 1500% ROI through improved decision quality and operational efficiency.',
-    competitors: [;
-      'Traditional decision support systems ($200K+)',
-      'Basic AI tools ($50K+)',
-
-    integrations: ['ERP systemsCRM platformsFinancial systemsHealthcare systemsIoT devicesCustom APIs'],
-    useCases: ['Financial trading decisionsHealthcare diagnosisManufacturing optimizationCustomer service automationRisk managementStrategic planning'],
-    roi: 'Average customer sees 1500% ROI through improved decision quality and operational efficiency.',
-    competitors: ['Traditional decision support systems ($200K+)Basic AI tools ($50K+)'],
-
-    marketSize: '$25B decision support market',
-
-
-
-    growthRate: '300% annual growth',
-    variant: 'neural-cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -2308,6 +2163,26 @@ export const nextGenAIServices: NextGenAIService[] = [
     customers: 45,
 
       website: 'https://ziontechgroup.com'
+    popular: true,
+    icon: '🤖',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/ai-autonomous-decision-platform',
+    targetAudience: 'Large enterprises, Financial institutions, Healthcare organizations, Government agencies, Manufacturing companies, Retail chains',
+    trialDays: 45,
+    setupTime: '4 weeks',
+    category: 'AI & Autonomous Systems',
+    realService: true,
+    integrations: ['ERP systemsCRM platformsFinancial systemsHealthcare systemsIoT devicesCustom APIs'],
+    useCases: ['Financial trading decisionsHealthcare diagnosisManufacturing optimizationCustomer service automationRisk managementStrategic planning'],
+    roi: 'Average customer sees 1500% ROI through improved decision quality and operational efficiency.',
+    competitors: ['Traditional decision support systems ($200K+)Basic AI tools ($50K+)'],
+    growthRate: '300% annual growth',
+    variant: 'neural-cyberpunk',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     },
 
     realImplementation: true,
@@ -3981,22 +3856,3 @@ export const nextGenAIServices: NextGenAIService[] = [
     rating: 4.9,
     reviews: 34;
   }
-],
-
-
-    growthRate: '350% annual growth',
-    variant: 'ai-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-
-    },
-    realImplementation: true,
-    implementationDetails: 'Full healthcare platform with advanced AI models, HIPAA compliance, comprehensive security, and medical device integration.',
-    launchDate: '2024-01-10',
-    customers: 45,
-    rating: 4.9,
-
-

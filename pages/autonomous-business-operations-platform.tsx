@@ -437,8 +437,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                 <motion.div;
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
@@ -539,8 +539,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                 <motion.div;
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_x: -20 }}
-                  whileInView={{ opacity: 1, coordinate_x: 0 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
@@ -637,8 +637,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                 <motion.div;
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
@@ -745,8 +745,8 @@ const AutonomousBusinessOperationsPlatform = () => {;
                 <motion.div;
 
                   key={index}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
@@ -802,19 +802,20 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 export default AutonomousBusinessOperationsPlatform;
 
+export default AutonomousBusinessOperationsPlatform,
             >;
-              <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
                 Ready to Automate Your Business?;
               </h2>;
-              <p className="text - xl text - gray - 400 mb - 8">;
+              <p className="text-xl text-gray-400 mb-8">;
                 Join the autonomous business revolution and transform your operations today;
               </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - blue - 500 to - cyan - 500 text - white font - semibold rounded - lg hover:from - blue - 600 hover:to - cyan - 600 transition - all duration - 200 text - lg">;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 text-lg">;
                   Start Automation;
-                  <Bot className="ml - 2 w - 6 h - 6" />;
+                  <Bot className="ml-2 w-6 h-6" />;
                 </Link>;
-                <Link href="/services" className="inline - flex items - center px - 8 py - 4 border border - blue - 500 text - blue - 400 font - semibold rounded - lg hover:bg - blue - 500 hover:text - white transition - all duration - 200 text - lg">;
+                <Link href="/services" className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 text-lg">;
                   Explore All Services;
                 </Link>;
               </div>;

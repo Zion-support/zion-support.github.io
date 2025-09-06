@@ -19,10 +19,10 @@
       const flag = await createFlag(init);
       return res.status(201).json({ flag });
     } catch (e: any) {
+<<<<<<< HEAD
       return res.status(400).json({ error: e.message || 'Invalid payload' });
     }
   }
-
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
 

@@ -28,11 +28,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     countries: parseArray(req && req.query.countries);
     search: (req && req.query.search as string) || undefined,
     teamOnly: req && req.query.teamOnly === 'true' ? true : undefined};
-
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);
   };
-
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
@@ -103,5 +101,6 @@ const filters: OrgFilters = {
 ;
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
+
 }
 

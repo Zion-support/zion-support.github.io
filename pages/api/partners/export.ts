@@ -35,9 +35,7 @@ import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: 'Missing code' });
-
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-
   try {
     if (usingPlaceholder) {
       const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z';
@@ -47,10 +45,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     }
     const supabase = getServerSupabase();
+    }
+
+    const supabase = getServerSupabase()
+
     const { data, error } = await supabase
 
 
   } catch (e: any) {
+<<<<<<< HEAD
     return res && res.status(500).json({ error: e?.message });
 
   }

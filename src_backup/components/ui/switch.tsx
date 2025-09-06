@@ -4,7 +4,6 @@
   ALL_SERVICES
   AI_SERVICES
   IT_SERVICES
-
   MICRO_SAAS_SERVICES;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
@@ -21,7 +20,6 @@ export function ServicesPage() {;
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const filteredServices = ALL_SERVICES.filter(service => {
 
 
@@ -116,11 +114,9 @@ import {;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS;
 import { ServiceCategory, ServiceSolution } from '@/types/services';
-
 export function ServicesPage() {;
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const filteredServices = ALL_SERVICES && ALL_SERVICES.filter(service => {;
     const matchesCategory =;
       selectedCategory === 'all' || service && service.category === selectedCategory;
@@ -131,14 +127,12 @@ export function ServicesPage() {;
         tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
       );
     return matchesCategory && matchesSearch;  });
-
   const getServicesByCategory = (categoryId: string) => {;
     switch (categoryId) {    const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
     const matchesSearch = service && service.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
                          service && service.tags.some(tag => tag && tag.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
-
   const getServicesByCategory = (categoryId: string) => {;
     switch (categoryId) {;
       case 'ai-services':;
@@ -163,7 +157,6 @@ export function ServicesPage() {;
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch
   });
-
   const getServicesByCategory = (categoryId: string) => {
     switch (categoryId) {
       case 'ai-services': return AI_SERVICES;
@@ -176,7 +169,6 @@ export function ServicesPage() {;
     }
 
   };
-
   const selectedServices =;
     selectedCategory === 'all';
       ? filteredServices;
@@ -351,81 +343,9 @@ function ServicesPage() {
                 href='mailto:kleber@ziontechgroup.com';
                 className='bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors'              >    }
   }
-;
-  const selected_services = selected_category === 'all' ? filtered_services : getServicesByCategory (selected_category);
-;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}
-      <div className="bg - gradient - to - r from - blue - 600 via - purple - 600 to - indigo - 600 text - white">;
-        <div className="container mx - auto px - 4 py - 20">;
-          <div className="text - center max - w-4xl mx - auto">;
-            <h1 className="text - 5xl font - bold mb - 6">;
-              Zion Tech Group Services;
-            </h1>;
-            <p className="text - xl mb - 8 text - blue - 100">;
-              Comprehensive IT, AI, and Micro SAAS solutions to transform your business.;
-              From cutting - edge artificial intelligence to robust infrastructure support.;
-            </p>;
-            <div className="flex flex - wrap justify - center gap - 4">;
-              <a;
-                href="tel:+13024640950";
-                className="bg - white text - blue - 600 px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 50 transition - colors";
-              >;
-                📞 Call Now: +1 302 464 0950;
-              </a>;
-              <a;
-                href="mailto:kleber@ziontechgroup.com";
-                className="bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors";
-              >;
-
-                ✉️ Email Us;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-      {/* Contact Info Banner */}
-      {/* Contact Info Banner */}
-
-
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">📍</span>
-
-
-
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">📱</span>
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">✉️</span>
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-
-
-
-
-            <div className="flex items-center gap-2">
-              <span className="text-blue-600">🌐</span>
-              <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
-                ziontechgroup.com
-
-
-              </Link>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
                 href='https://ziontechgroup && ziontechgroup.com'
                 className='text-blue-600 hover:underline'>                ziontechgroup && ziontechgroup.com              <span>364 E Main St STE 1008, Middletown DE 19709</span>;
             </div>;
@@ -559,9 +479,10 @@ function ServicesPage() {
 
               Why Choose Zion Tech Group?
             </h2>
-            <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We deliver innovative, reliable, and cost-effective solutions that
-              drive real business results
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We deliver innovative, reliable, and cost-effective solutions that drive real business results
             </p>
           </div>
 
@@ -574,10 +495,8 @@ function ServicesPage() {
 
 
               </div>
-              <h3 className='text-xl font-semibold mb-2'>Innovation First</h3>
-              <p className='text-gray-600'>
-                Cutting-edge AI and technology solutions
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Innovation First</h3>
+              <p className="text-gray-600">Cutting-edge AI and technology solutions</p>
             </div>
 
 
@@ -588,12 +507,8 @@ function ServicesPage() {
 
 
               </div>
-              <h3 className='text-xl font-semibold mb-2'>
-                Enterprise Security
-              </h3>
-              <p className='text-gray-600'>
-                SOC 2, HIPAA, GDPR compliant solutions
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
+              <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
             </div>
 
 
@@ -604,8 +519,8 @@ function ServicesPage() {
 
 
               </div>
-              <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
-              <p className='text-gray-600'>Quick setup and implementation</p>
+              <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
+              <p className="text-gray-600">Quick setup and implementation</p>
             </div>
 
       <div className="bg-white py-16">
@@ -658,7 +573,6 @@ function ServicesPage() {
       </div>
 
         </div>;
-
         {selectedServices && selectedServices.length === 0 && (;
           <div className='text-center py-12'>;
             <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>;
@@ -670,7 +584,6 @@ function ServicesPage() {
           </div>;
         )}
       </div>;
-
       {/* Why Choose Zion Tech Group */}
       <div className='bg-white py-16'>;
         <div className='container mx-auto px-4'>;
@@ -728,7 +641,6 @@ function ServicesPage() {
               drive real business results;
             </p>;
           </div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
             <div className='text-center'>;
               <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
@@ -739,7 +651,6 @@ function ServicesPage() {
                 Cutting-edge AI and technology solutions;
               </p>;
             </div>;
-
             <div className='text-center'>;
               <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
                 <span className='text-2xl'>🛡️</span>;
@@ -751,7 +662,6 @@ function ServicesPage() {
                 SOC 2, HIPAA, GDPR compliant solutions;
               </p>;
             </div>;
-
             <div className='text-center'>;
               <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
                 <span className='text-2xl'>⚡</span>;
@@ -759,7 +669,6 @@ function ServicesPage() {
               <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>;
               <p className='text-gray-600'>Quick setup and implementation</p>;
             </div>;
-
             <div className='text-center'>;
               <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>;
                 <span className='text-2xl'>🎯</span>;
@@ -771,7 +680,6 @@ function ServicesPage() {
               We deliver innovative, reliable, and cost-effective solutions that drive real business results;
             </p>;
           </div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             <div className="text-center">;
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
@@ -780,7 +688,6 @@ function ServicesPage() {
               <h3 className="text-xl font-semibold mb-2">Innovation First</h3>;
               <p className="text-gray-600">Cutting-edge AI and technology solutions</p>;
             </div>;
-
             <div className="text-center">;
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl">🛡️</span>;
@@ -788,7 +695,6 @@ function ServicesPage() {
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>;
               <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>;
             </div>;
-
             <div className="text-center">;
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl">⚡</span>;
@@ -796,7 +702,6 @@ function ServicesPage() {
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>;
               <p className="text-gray-600">Quick setup and implementation</p>;
             </div>;
-
             <div className="text-center">;
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
                 <span className="text-2xl">🎯</span>;
@@ -960,6 +865,23 @@ function ServicesPage() {
             Ready to Transform Your Business?
 
           </h2>
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="tel: +13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
+            >
+              📞 Call +1 302 464 0950
+            </Link>
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
+            >
+              ✉️ Get Free Consultation
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
           </p>
@@ -976,12 +898,12 @@ function ServicesPage() {
             >
               ✉️ Get Free Consultation
             </a>
-            <a
+            <a 
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               🌐 Visit Website
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -1011,11 +933,9 @@ interface ServiceCardProps {
       </div>;
     </div>;
   );
-
 interface ServiceCardProps {;
   service: ServiceSolution;  );
 }
-
 interface ServiceCardProps {;
   service: ServiceSolution;
 
@@ -1044,9 +964,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     if (service && service.pricing.basic && basic.popular) return service && service.pricing.basic;
     if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
     return service && service.pricing.professional;
-
   const popularPlan = getPopularPlan();
-
   return (
 
 
@@ -1084,14 +1002,17 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           </span>
         </div>
         {service.aiScore && (
-          <div className="absolute bottom-4 left-4">
             <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
               AI Score: {service.aiScore}
             </span>
           </div>
+          <div className="absolute bottom-4 left-4">
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              AI Score: {service.aiScore}
+            </span>;
+          </div>;
         )}
       </div>
-
       {/* Service Content */}
 
 
@@ -1158,16 +1079,12 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
         </div>
         </div>;
-
         {/* Pricing */}            <p className="font-medium text-gray-900">{service && service.provider.name}</p>;
             <p className="text-sm text-gray-500">{service && service.provider.location}</p>;
           </div>;
           {service && service.provider.verified && (;
             <span className="text-blue-600 text-sm">✓ Verified</span>;
         </div>;
-
-        {/* Pricing */}
-
         <div className="bg-gray-50 rounded-lg p-4 mb-4">
           <div className="text-center">
             <div className="text-2xl font-bold text-gray-900">
@@ -1231,7 +1148,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
         {/* Action Buttons */}
-        <div className='flex gap-2'>;
           <button
             onClick={() => setShowDetails(!showDetails)}
             className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
@@ -1248,50 +1164,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           <button
             onClick={() => setShowDetails(!showDetails)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-          >
-
-
-
-            {showDetails ? 'Hide Details' : 'View Details'}
-          </button>;
-          <a
-            href={`tel:+13024640950`}
-
-
-          >
-            Call Now
-          </a>
-        </div>
-
-
-            className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'>            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors";
-              <span className='text - gray - 500 text - xs'>                +{service.features.length - 3} more              <span className="text - gray - 500 text - xs">;
-                +{service.features.length - 3} more;
-              </span>)}
-          </div>;
-        </div>;
-        {/* Action Buttons */}
-        <div className='flex gap - 2'>;
-          <button;
-            on_click={() => setShowDetails (!show_details)}
-            className='flex - 1 bg - blue - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:bg - blue - 700 transition - colors'          >        <div className="flex gap - 2">;
-          <button;
-            on_click={() => setShowDetails (!show_details)}
-            className="flex - 1 bg - blue - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:bg - blue - 700 transition - colors";
-            {show_details ? 'Hide Details' : 'View Details'}
-          </button>;
-          <a;
-            href={`tel:+13024640950`}
-            className='bg - green - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:bg - green - 700 transition - colors'          >            className="bg - green - 600 text - white py - 2 px - 4 rounded - lg font - medium hover:bg - green - 700 transition - colors";
-          >;
-            Call Now;
-          </a>;
-        </div>;
-
-
-        {/* Detailed Information */}
-        {showDetails && (
-          <div className="mt-6 pt-6 border-t border-gray-200">
             <div className="space-y-4">
               {/* Benefits */}
               <div>
@@ -1350,7 +1222,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
               </div>
                 </div>;
               </div>;
-
               {/* Deployment & Support */}
               <div className='grid grid-cols-2 gap-4 text-sm'>;
                 <div>;
@@ -1370,7 +1241,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   <p className="text-gray-600">{service && service.support.slice(0, 2).join(', ')}</p>;
                 </div>;
               </div>;
-
               {/* All Pricing Plans */}
 
               <div>
@@ -1399,7 +1269,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
-                  </a>
+                  </Link>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
 
@@ -1409,7 +1279,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
                   >
                     ✉️ Email Inquiry
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

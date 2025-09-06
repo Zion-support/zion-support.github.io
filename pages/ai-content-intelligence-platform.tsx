@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -420,10 +416,6 @@ export default function AIContentIntelligencePlatform() {;
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
             >
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">
                 <div className="text-6xl mb-4">🧠</div>
@@ -522,7 +514,6 @@ export default function AIContentIntelligencePlatform() {;
           </div>;
         </div>;
       </section>;
-
       {/* Use Cases Section */}
       <section className='py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
@@ -572,7 +563,6 @@ export default function AIContentIntelligencePlatform() {;
           </div>;
         </div>;
       </section>;
-
       {/* Pricing Section */}
       <section className='py-20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
@@ -609,9 +599,6 @@ export default function AIContentIntelligencePlatform() {;
                       MOST POPULAR
                     </span>
                   </div>
-                )}
-                <div className={`bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border ${plan.popular ? 'border-blue-500' : 'border-gray-700'} rounded-2xl p-8 h-full`}>
-                  <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
                     <div className="text-gray-400 mb-4">{plan.period}</div>
@@ -639,8 +626,14 @@ export default function AIContentIntelligencePlatform() {;
                   </ul>
                   <Link
 
+                  </ul>
+                  <Link
                     href="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`}
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -660,7 +653,6 @@ export default function AIContentIntelligencePlatform() {;
           </div>;
         </div>;
       </section>;
-
       {/* Integrations Section */}
 
 
@@ -1086,6 +1078,57 @@ function AIContentIntelligencePlatform() {
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            className='text-center mb-16'
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Integrations Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              Seamless Integrations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Connect with your existing tools and platforms for a unified content management experience.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {integrations.map((integration, index) => (
+              <motion.div
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1121,7 +1164,6 @@ function AIContentIntelligencePlatform() {
               </div>
             </div>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
@@ -1215,13 +1257,58 @@ function AIContentIntelligencePlatform() {
               <Link;
                 href='/2025 - innovative - new - services - showcase';
                 className='inline - flex items - center px - 8 py - 4 bg - white / 10 backdrop - blur - sm border border - gray - 600 text - white font - semibold rounded - lg hover:bg - white / 20 transition - all duration - 200'              >;
+  )
+          >;
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">;
+              Ready to Transform Your Content Strategy?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Get in touch with our team to discuss how our AI Content Intelligence Platform can revolutionize your content creation and optimization.;
+            </p>;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
+              <div className="flex flex-col items-center space-y-3">;
+                <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">;
+                  <Phone className="w-6 h-6 text-blue-400" />;
+                </div>;
+                <div>;
+                  <h3 className="text-white font-semibold">Call Us</h3>;
+                  <p className="text-gray-400">{contactInfo.mobile}</p>;
+                </div>;
+              </div>;
+              <div className="flex flex-col items-center space-y-3">;
+                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">;
+                  <Mail className="w-6 h-6 text-green-400" />;
+                </div>;
+                <div>;
+                  <h3 className="text-white font-semibold">Email Us</h3>;
+                  <p className="text-gray-400">{contactInfo.email}</p>;
+                </div>;
+              </div>;
+              <div className="flex flex-col items-center space-y-3">;
+                <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">;
+                  <MapPin className="w-6 h-6 text-purple-400" />;
+                </div>;
+                <div>;
+                  <h3 className="text-white font-semibold">Visit Us</h3>;
+                  <p className="text-gray-400">{contactInfo.address}</p>;
+                </div>;
+              </div>;
+            </div>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <Link;
+                href="/contact";
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105";
+              >;
+                Start Your Free Trial;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </Link>;
+              <Link;
+                href="/2025-innovative-new-services-showcase";
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200";
+              >;
                 View All Services;
               </Link>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
-    </Layout>);
-;
-
-

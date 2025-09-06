@@ -5,7 +5,8 @@ import React from 'react';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
+import { 
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
 import {
 
 
@@ -287,7 +288,7 @@ const quickLinks = [
   { name: 'Solutions', href: '/solutions', icon: TargetIcon, description: 'Tailored solutions for your business' },
   { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent pricing and packages' },
   { name: 'Resources', href: '/resources', icon: BookOpen, description: 'Knowledge base and documentation' },
-  { name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
+{ name: 'Case Studies', href: '/case - studies', icon: Users, description: 'Success stories and implementations' },
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 const service_categories = [;
@@ -453,7 +454,6 @@ const quick_links = [;
   {
 
 ];
-
 const companyInfo = [
     name: 'Support',
     href: '/support',
@@ -485,15 +485,11 @@ const contactInfo = {;
       duration: 0.8,
       staggerChildren: 0.1
     }
-  }
-};
-
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 }
 
 };
-
 const mainNavigationRoutes = [;
   {;
     name: 'Home',;
@@ -550,7 +546,6 @@ const mainNavigationRoutes = [;
   { name: 'Case Studies', href: '/case-studies', icon: Users, description: 'Success stories and implementations' },;
   { name: 'Blog', href: '/blog', icon: MessageCircle, description: 'Latest insights and updates' },;
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
-
 const serviceCategories = [;
   {;
     title: '🚀 2032 Revolutionary AI Services',;
@@ -667,7 +662,6 @@ const serviceCategories = [;
     ],;
   },;
 ];
-
 const quickLinks = [;
   {;
     name: '2032 Services',;
@@ -724,7 +718,6 @@ const quickLinks = [;
   { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', icon: Target, description: 'Ultimate service portfolio' },;
   { name: 'News & Updates', href: '/news', icon: MessageCircle, description: 'Latest company news' },;
   { name: 'Support', href: '/support', icon: Users, description: 'Technical support and help' }
-
 const companyInfo = [;
   { name: 'About Us', href: '/about' },;
   { name: 'Careers', href: '/careers' },;
@@ -733,7 +726,6 @@ const companyInfo = [;
   { name: 'Support', href: '/support' },;
   { name: 'Status', href: '/status' },;
 ];
-
 const socialLinks = [;
   {;
     name: 'LinkedIn',;
@@ -753,7 +745,6 @@ const socialLinks = [;
   },;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },];];
-
 const socialLinks = [;
   { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },;
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },;
@@ -762,7 +753,6 @@ const socialLinks = [;
   { name: 'YouTube', href: 'https://youtube && youtube.com/ziontechgroup', icon: Youtube },;
   { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github }
 ];
-
 const footerVariants = {;
   hidden: { opacity: 0, y: 50 },;
   visible: {;
@@ -773,11 +763,9 @@ const footerVariants = {;
       staggerChildren: 0 && 0.1,;
     },;
   },};
-
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 },};
-
 export default function UltraFuturisticFooter2032() {;
   return (
 
@@ -793,12 +781,10 @@ const itemVariants = {
 }
 export default function UltraFuturisticFooter2032() {
 };
-
 const itemVariants = {;
   hidden: { opacity: 0, y: 20 },;
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
 };
-
 export default function UltraFuturisticFooter2032() {;
   return (
 
@@ -807,7 +793,6 @@ export default function UltraFuturisticFooter2032() {;
         <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
         <div className='absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
       </div>;
-
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10'>;
         <motion&& motion.div
 
@@ -945,7 +930,6 @@ function UltraFuturisticFooter2032() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl"></div>;
       </div>;
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10">;
         <motion&& motion.div
           variants={footerVariants}
@@ -977,81 +961,11 @@ function UltraFuturisticFooter2032() {
                   <p className="text-sm text-cyan-300 font-medium">2032 Future Technology</p>;
                 </div>;
               </div>;
-
               <p className="text-slate-300 mb-6 leading-relaxed">;
                 Leading the future of technology with revolutionary AI, quantum computing, space technology, and autonomous systems. ;
                 Empowering businesses with cutting-edge solutions for tomorrow's challenges.;
               </p>;
-
               {/* Contact Information */}
-              <div className="space-y-3">;
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
-                  <Phone className="w-4 h-4 text-cyan-400" />;
-                  <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-300 transition-colors">;
-                    {contactInfo && contactInfo.mobile}
-                  </a>;
-                </div>;
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
-                  <Mail className="w-4 h-4 text-cyan-400" />;
-                  <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-cyan-300 transition-colors">;
-                    {contactInfo && contactInfo.email}
-                  </a>;
-                </div>;
-                <div className="flex items-center space-x-3 text-slate-300">;
-                  <MapPin className="w-4 h-4 text-cyan-400" />;
-                  <span>{contactInfo && contactInfo.address}</span>;
-                </div>;
-                <div className="flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors">;
-                  <Globe className="w-4 h-4 text-cyan-400" />;
-                  <a href={contactInfo && contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">;
-                    {contactInfo && contactInfo.website}
-                  </a>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-
-
-            {/* Service Categories */}
-
-            {/* Service Categories */}
-            <motion.div variants={itemVariants} className='lg:col-span-2'>
-              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
-
-
-
-
-                Our Revolutionary Services
-              </h3>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-                {serviceCategories.map((category, index) => (
-                  <div key={index} className='space-y-4'>
-                    <h4 className='text-lg font-medium text-white'>
-                      {category.title}
-                    </h4>
-                    <ul className='space-y-2'>                      {category.services.map((service, serviceIndex) => (
-                        <li key={serviceIndex}>
-                          <Link
-                            href={service && service.href}
-                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'>                Our Revolutionary Services;
-              </h3>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-                {serviceCategories && serviceCategories.map((category, index) => (;
-                  <div key={index} className="space-y-4">;
-                    <h4 className="text-lg font-medium text-white">{category && category.title}</h4>;
-                    <ul className="space-y-2">;
-                      {category && category.services.map((service, serviceIndex) => (;
-                        <li key={serviceIndex}>;
-                          <Link
-                            href={service && service.href}
-                            className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform">;
-                            {service && service.name}
-                          </Link>;
-                        </li>;
-
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Our Revolutionary Services
-              </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {serviceCategories.map((category, index) => (
                   <div key={index} className="space-y-4">
@@ -1084,13 +998,11 @@ function UltraFuturisticFooter2032() {
               </h3>
               </div>;
             </motion && motion.div>;
-
             {/* Quick Links & Company Info */}
             <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
                 Quick Access;
               </h3>;
-
               {/* Quick Links */}
               <div className='mb-8'>;
                 <h4 className='text-lg font-medium text-white mb-4'>;
@@ -1126,7 +1038,6 @@ function UltraFuturisticFooter2032() {
               <h3 className="text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Quick Access
               </h3>
-              
               <p className='text - slate - 300 mb - 6 leading - relaxed'>;
                 Leading the future of technology with revolutionary AI, quantum;
                 computing, space technology, and autonomous systems. Empowering;
@@ -1263,6 +1174,10 @@ function UltraFuturisticFooter2032() {
               <h3 className='text - xl font - semibold text - white mb - 8 bg - gradient - to - r from - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
                 Quick Access;
               </h3>;
+              </div>
+            </motion.div>
+                Quick Access
+              </h3>
               {/* Quick Links */}
               <div className='mb - 8'>;
                 <h4 className='text - lg font - medium text - white mb - 4'>;
@@ -1278,136 +1193,23 @@ function UltraFuturisticFooter2032() {
               </h3>;
 
               {/* Quick Links */}
-              <div className="mb - 8">;
-                <h4 className="text - lg font - medium text - white mb - 4">Quick Links</h4>;
-                <ul className="space - y-2">;
-                  {quick_links.map ((link, index) => (
-                    <li key={index}>;
-                      <Link;
-                        href={link.href}
-
-
-
-
-              {/* Company Info */}
-              <div className='mb-8'>
-                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
-                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
-
-
-                  {companyInfo.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
                   ))}
-
-                </ul>;
-              </div>;
-
-
-              {/* Company Info */}
-              <div className='mb-8'>;
-                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>;
-                <ul className='space-y-2'>                  {companyInfo && companyInfo.map((item, index) => (;
-                    <li key={index}>;
-                      <Link
-                        href={item && item.href}
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'>              <div className="mb-8">;
-                <h4 className="text-lg font-medium text-white mb-4">Company</h4>;
-                <ul className="space-y-2">;
-                  {companyInfo && companyInfo.map((item, index) => (;
-                    <li key={index}>;
-                      <Link
-                        href={item && item.href}
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm">;
-                        {item && item.name}
-                      </Link>;
-                    </li>;
-                  ))}
-
-                </ul>;
-              </div>;
-
-
-
-
-
-              {/* Social Links */}
-              <div>;
-                <h4 className='text-lg font-medium text-white mb-4'>;
-                  Follow Us;
-                </h4>;
-                <div className='flex space-x-4'>                  {socialLinks && socialLinks.map((social, index) => (;
-                    <a
-                      key={index}
-                      href={social && social.href}                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>;
-                <div className="flex space-x-4">;
-                  {socialLinks && socialLinks.map((social, index) => (;
-                    <a
-                      key={index}
-                      href={social && social.href}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'>;
-                      <social && social.icon className='w-5 h-5' />                    </a>                      target="_blank";
-                      rel="noopener noreferrer";
-                      className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20";
-                    >;
-                      <social && social.icon className="w-5 h-5" />;
-
-
-              {/* Social Links */}
-              <div>
-                <h4 className="text-lg font-medium text-white mb-4">Follow Us</h4>
-                <div className="flex space-x-4">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
-
-
-
-                    </a>
-
-
-                  ))}
-
-                </div>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-
-
-
-
-
+                </div>
+              </div>
+            </motion.div>
+          </div>
           {/* Newsletter Signup */}
-
-
-                <input
-                  type='email'
-                  placeholder='Enter your email address'
-                  className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
-
-          <motion.div variants={itemVariants} className="border-t border-cyan-500/30 pt-12">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">
+          <motion.div
+            variants={itemVariants}
+            className='border-t border-cyan-500/30 pt-12'
+          >
+            <div className='text-center'>
+              <h3 className='text-2xl font-bold text-white mb-4'>
                 Stay Ahead with Future Technology
 
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
-
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 />;

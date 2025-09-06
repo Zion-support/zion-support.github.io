@@ -147,6 +147,99 @@ function Terms() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com';
   }
+  );
+}
+import React from 'react';
+] 
+};
+const termsSections = [ {
+  Please read these terms carefully before using our website or services. </p> </div> </section> 
+};
+{
+  title: 'Service Description',
+content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
+icon: <Globe className="w-6 h-6 text-green-400" /> 
+};
+{
+  title: 'User Responsibilities',
+content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
+icon: <Users className="w-6 h-6 text-yellow-400" /> 
+};
+{
+  title: 'Privacy and Data Protection',
+content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
+icon: <Eye className="w-6 h-6 text-cyan-400" /> 
+};
+{
+  title: 'Intellectual Property Rights',
+content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
+icon: <Shield className="w-6 h-6 text-red-400" /> 
+}];
+const importantNotices = [ {
+  title: 'AI Technology Risks';
+content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.',
+type: 'warning' 
+};
+{
+  title: 'Quantum Computing Limitations';
+content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.',
+type: 'info' 
+};
+{
+  title: 'Service Availability';
+content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.',
+type: 'info' 
+}];
+
+  title: 'Acceptance of Terms';
+icon: <CheckCircle className="w-6 h-6 text-green-400" />;
+content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.' 
+};
+{
+  title: 'Use License';
+icon: <Scale className="w-6 h-6 text-blue-400" />;
+content: 'Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only.' 
+};
+{
+  title: 'Disclaimer';
+icon: <AlertTriangle className="w-6 h-6 text-orange-400" />;
+content: 'The materials on our website are provided on an "as is" basis. We make no warranties, expressed or implied.' 
+};
+{
+  title: 'Limitations';
+icon: <Shield className="w-6 h-6 text-purple-400" />;
+content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.' 
+}];
+
+}</ul> 'Unauthorized access to our systems or networksInterference with service operationDistribution of malware or harmful codeViolation of third-party rightsAttempts to gain unauthorized accessUse of services for illegal activities' ];
+'No guarantee of uninterrupted service';
+'Limitation of liability for damages';
+'No responsibility for third-party content';
+'Service availability subject to change';
+'Technical support during business hours only' ];
+  {
+  opacity: 0, y: 20 
+
+}animate= {
+  {
+  opacity: 1, y: 0 
+
+}transition= {
+  {
+  duration: 0.6 
+
+}> <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Terms of Service </h1> <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto" > Please read these terms carefully before using our services. They govern your use of Zion Tech Group's technology solutions. </p> </div> </motion.div> </div> </section> <motion.div initial= {
+  {
+    title: 'Limitations',
+    icon: <Shield className="w-6 h-6 text-purple-400" />,
+    content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
+export default function Terms() {
   return (
     <>;
       <Head>;
@@ -357,7 +450,6 @@ export default function Terms() {
         keywords={["terms of service", "user agreement", "legal terms", "conditions of use", "service agreement", "Zion Tech Group"]}
 
       />;
-
       <div className="min-h-screen bg-black text-white">;
 
         {/* Hero Section */}
@@ -379,14 +471,12 @@ export default function Terms() {
                 These Terms of Service ("Terms") govern your use of Zion Tech Group's website and services. By accessing or using our services, you agree to be bound by these Terms.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>;
               <p className="text-gray-600 mb-4">;
                 By accessing or using our website, services, or any content provided by Zion Tech Group, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, please do not use our services.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">2. Description of Services</h2>;
               <p className="text-gray-600 mb-4">;
@@ -401,7 +491,6 @@ export default function Terms() {
                 <li>Technology consulting and advisory services</li>;
               </ul>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">3. User Accounts and Registration</h2>;
               <p className="text-gray-600 mb-4">;
@@ -414,7 +503,6 @@ export default function Terms() {
                 <li>Notifying us immediately of any unauthorized use</li>;
               </ul>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">4. Acceptable Use</h2>;
               <p className="text-gray-600 mb-4">;
@@ -430,7 +518,6 @@ export default function Terms() {
                 <li>Attempt to reverse engineer or copy our technology</li>;
               </ul>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">5. Intellectual Property Rights</h2>;
               <p className="text-gray-600 mb-4">;
@@ -440,14 +527,12 @@ export default function Terms() {
                 You may not reproduce, distribute, modify, or create derivative works without our express written consent.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">6. Privacy and Data Protection</h2>;
               <p className="text-gray-600 mb-4">;
                 Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">7. Service Availability and Modifications</h2>;
               <p className="text-gray-600 mb-4">;
@@ -459,7 +544,6 @@ export default function Terms() {
                 <li>Update or change our services to improve functionality</li>;
               </ul>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">8. Limitation of Liability</h2>;
               <p className="text-gray-600 mb-4">;
@@ -475,7 +559,6 @@ export default function Terms() {
                 Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">9. Indemnification</h2>;
               <p className="text-gray-600 mb-4">;
@@ -488,7 +571,6 @@ export default function Terms() {
                 <li>Any content you submit or transmit through our services</li>;
               </ul>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">10. Termination</h2>;
               <p className="text-gray-600 mb-4">;
@@ -498,7 +580,6 @@ export default function Terms() {
                 Upon termination, your right to use our services will cease immediately, and we may delete or remove any content associated with your account.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">11. Governing Law and Dispute Resolution</h2>;
               <p className="text-gray-600 mb-4">;
@@ -508,7 +589,6 @@ export default function Terms() {
                 Any disputes arising from these Terms or your use of our services shall be resolved through binding arbitration in San Francisco, California, in accordance with the rules of the American Arbitration Association.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">12. Changes to Terms</h2>;
               <p className="text-gray-600 mb-4">;
@@ -518,21 +598,18 @@ export default function Terms() {
                 Your continued use of our services after any changes constitutes acceptance of the new Terms.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">13. Severability</h2>;
               <p className="text-gray-600 mb-4">;
                 If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that these Terms will otherwise remain in full force and effect.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">14. Entire Agreement</h2>;
               <p className="text-gray-600 mb-4">;
                 These Terms, together with our Privacy Policy and any other agreements referenced herein, constitute the entire agreement between you and Zion Tech Group regarding your use of our services.;
               </p>;
             </div>;
-
             <div className="mb-8">;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">15. Contact Information</h2>;
               <p className="text-gray-600 mb-4">;
@@ -965,7 +1042,6 @@ function Terms() {
                 Understanding our intellectual property rights and your usage permissions.;
               </p>;
             </motion && motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
               className="text-center mb-16";
             >;
@@ -976,7 +1052,6 @@ function Terms() {
                 Additional terms that apply to specific services or situations.;
               </p>;
             </motion && motion.div>;
-
             <div className="space-y-6">;
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -991,7 +1066,6 @@ function Terms() {
                   Our total liability to you for any claims arising from the use of our services shall not exceed the amount you paid us in the twelve (12) months preceding the claim.;
                 </p>;
               </motion && motion.div>;
-
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1002,7 +1076,6 @@ function Terms() {
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of our services shall be resolved in the courts of the United States.;
                 </p>;
               </motion && motion.div>;
-
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1090,7 +1163,6 @@ function Terms() {
                 Understanding the scope of our liability and your rights as a user.;
               </p>;
             </motion && motion.div>;
-
             <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50">;
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
                 <div>;
@@ -1276,7 +1348,6 @@ function Terms() {
               <p className="text-lg text-gray-300 mb-8">;
                 If you have any questions about these Terms of Service, please contact us.;
               </p>;
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <motion&& motion.button
                   whileHover={{ scale: 1 && 1.05 }}
@@ -1362,7 +1433,6 @@ function Terms() {
               Key sections of our terms of service and what they cover;
             </p>;
           </motion && motion.div>;
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
             {termsSections && termsSections.map((section, index) => (;
               <motion&& motion.div
@@ -1531,7 +1601,6 @@ function Terms() {
                       {service && service.category}
                     </h3>;
                     <p className="text-gray-300 mb-4">{service && service.description}</p>;
-
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>;
                       <ul className="text-sm text-gray-300 space-y-1">;
@@ -1544,7 +1613,6 @@ function Terms() {
                         ))}
                       </ul>;
                     </div>;
-
                     <div>;
                       <h4 className="text-sm font-semibold text-yellow-400 mb-2">Restrictions:</h4>;
                       <ul className="text-sm text-gray-300 space-y-1">;
@@ -1649,7 +1717,6 @@ function Terms() {
                     <span className="font-medium">Clear and fair terms</span>;
                   </div>;
                 </motion && motion.div>;
-
                 <motion&& motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -1662,7 +1729,6 @@ function Terms() {
                       </div>;
                       <h3 className="text-2xl font-bold text-white">Legal Framework</h3>;
                       <p className="text-gray-300">Protecting your rights and ours</p>;
-
                       <div className="grid grid-cols-2 gap-4 text-sm">;
                         <div className="text-center">;
                           <div className="text-2xl font-bold text-cyan-400">100%</div>;
@@ -1760,7 +1826,6 @@ function Terms() {
                 <h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>;
                 <p className="text-xl text-gray-300">Essential information about using our services</p>;
               </motion && motion.div>;
-
               <div className="grid md:grid-cols-2 gap-8">;
                 {termsSections && termsSections.map((section, index) => (;
                   <motion&& motion.div
@@ -1825,7 +1890,6 @@ function Terms() {
                 <h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>;
                 <p className="text-xl text-gray-300">Activities that are not allowed when using our services</p>;
               </motion && motion.div>;
-
               <motion&& motion.div
 
                 initial={{ opacity: 0, y: 20 }}
@@ -1873,7 +1937,6 @@ function Terms() {
                 <h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>;
                 <p className="text-xl text-gray-300">Important information about service availability and warranties</p>;
               </motion && motion.div>;
-
               <motion&& motion.div
 
                 initial={{ opacity: 0, y: 20 }}
@@ -1921,7 +1984,6 @@ function Terms() {
                 className="space-y-12">;
                 <div>;
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Terms and Conditions</h2>;
-
                   <div className="space-y-8">;
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">1. Service Agreement</h3>;
@@ -1936,7 +1998,6 @@ function Terms() {
                         constitutes acceptance of the new terms.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">2. Service Description and Availability</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -1950,7 +2011,6 @@ function Terms() {
                         circumstances beyond our control.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">3. User Accounts and Responsibilities</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -1964,7 +2024,6 @@ function Terms() {
                         and in compliance with applicable laws and regulations.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">4. Payment Terms and Billing</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -1976,7 +2035,6 @@ function Terms() {
                         suspension or termination. You are responsible for all applicable taxes.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">5. Intellectual Property Rights</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -1988,7 +2046,6 @@ function Terms() {
                         our written permission. You may not reverse engineer or attempt to extract source code.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">6. Data Privacy and Security</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2000,7 +2057,6 @@ function Terms() {
                         absolute security. You are responsible for maintaining the security of your own systems.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">7. Limitation of Liability</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2013,7 +2069,6 @@ function Terms() {
                         damages, including lost profits, data, or business opportunities.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">8. Termination and Suspension</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2025,7 +2080,6 @@ function Terms() {
                         in accordance with our data retention policies.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">9. Governing Law and Disputes</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2038,7 +2092,6 @@ function Terms() {
                         class action lawsuits or class-wide arbitration.;
                       </p>;
                     </div>;
-
                     <div>;
                       <h3 className="text-2xl font-bold text-white mb-4">10. Contact Information</h3>;
                       <p className="text-gray-300 mb-4 leading-relaxed">;
@@ -2459,7 +2512,6 @@ function Terms() {
                   Complete terms governing your use of our services.;
                 </p>;
               </div>;
-
               {/* Section 1: Definitions */}
               <div className="prose prose-invert max-w-none">;
                 <h3 className="text-2xl font-bold text-cyan-400 mb-4">1. Definitions</h3>;
@@ -2752,7 +2804,6 @@ export default Terms;
     </Layout>;
   );
 };
-
 export default Terms;
             </div>;
           </section>;
@@ -2814,7 +2865,6 @@ export default TermsPage;
     </ErrorBoundary>;
   );
 };
-
 export default TermsPage;
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion && motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) ;
 };export default TermsPage;

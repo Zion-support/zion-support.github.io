@@ -70,12 +70,10 @@ function toOpenApi() {
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
-
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
-      security_schemes: {
         bearer_auth: { type: "http", scheme: "bearer", bearer_format: "JWT" },
       },
     },

@@ -32,8 +32,8 @@ export function OptimizedImage({
           observer.disconnect()
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#e5e7eb;stop-opacity:1" />
+            <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
@@ -74,14 +74,14 @@ if (return blurDataURL) {
           width={width}
           height={height}
           {...props}
-        />;
+        />
       )}
       {/* Loading placeholder */}
       )}
       {/* Error fallback */}
-      {hasError && (;
-        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>;
-          {fallbackSrc ? (;
+      {hasError && (
+        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+          {fallbackSrc ? (
             <img
               src={fallbackSrc}
               alt={alt}
@@ -104,7 +104,7 @@ if (return blurDataURL) {
               <span className="text-xs">Image not available</span>
             </div>
           )}
-        </div>;
+        </div>
       )}
       {/* Lazy loading placeholder */}
 

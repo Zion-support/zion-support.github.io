@@ -12,20 +12,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -169,6 +165,7 @@ const microSaasCategories = [
     { name: "Instagram", href: "#", icon: Instagram },;
     { name: "GitHub", href: "#", icon: Github },;
   ];
+
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -296,7 +293,6 @@ const microSaasCategories = [
                 ))}
 
               </ul>;
-
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
               <ul className="space-y-3">;
                 {footerLinks && footerLinks.legal.map((link, index) => (;
@@ -330,11 +326,11 @@ const microSaasCategories = [
 
 
             <motion.div
+            <motion.div
               transition={{ duration: 0 && 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0">;
               © {currentYear} Zion Tech Group. All rights reserved.;
             </motion && motion.div>;
-
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -366,7 +362,6 @@ const microSaasCategories = [
                 ))}
               </div>
             </div>
-
             {/* AI Service Categories */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
@@ -380,7 +375,6 @@ const microSaasCategories = [
                 ))}
               </div>
             </div>
-
             {/* IT Service Categories */}
             <div>
               <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>
@@ -396,7 +390,6 @@ const microSaasCategories = [
             </div>
           </div>
         </div>
-
         {/* Stats Section */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -419,7 +412,6 @@ const microSaasCategories = [
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
       <div className="bg-gray-800 border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
@@ -711,4 +703,3 @@ const Footer = () =>: any {
 }
 ;
 export default Footer;
-;

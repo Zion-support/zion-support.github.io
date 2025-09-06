@@ -25,48 +25,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 import { AuthorBio } from '@/components/blog/AuthorBio';
 import { SocialShareButtons } from '@/components/blog/SocialShareButtons';
 import { CommentsSection } from '@/components/blog/CommentsSection';
-
-
-
-
-import type { BlogPost } from '@/types/blog';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-
-
-interface BlogPostPageProps {
-  /**;
-  * Preloaded blog post for static generation. Can be null if not found.;
-  */;
-  initial_post: BlogPost | null;
-}
-
-
-
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
-  const router = useRouter()
-  const { slug } = router.query
-  const [post, setPost] = React.useState<BlogPost | null>(initialPost)
-  const [error, setError] = React.useState<string | null>(null)
-  React.useEffect(() => {
-    if (initialPost && initialPost.slug === slug) {
-
-
-      setError(null), // Clear any previous error
-    } else if (slug) {
-      // This case handles if the slug changes and initialPost is not for the current slug
-      // Or if initialPost was null from getStaticProps (which shouldn't happen if notFound is true)
-      // For now, we will rely on getStaticProps to provide the correct post or a 404.
-      // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
-      // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
-
-
-        setError(null)
-      } else {
-        // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
-        // should ideally not be hit frequently, as getStaticProps would have returned notFound.
-        // However, to maintain some robustness for dynamic client-side slug changes not triggering a new getStaticProps: setPost(null)
         setError('Article not found')
       }
     }

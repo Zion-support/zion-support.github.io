@@ -56,28 +56,29 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
             size="sm" 
 
             className="mt-2"
-            onClick = {onRetry,}>;
-            Try Again;
-          </Button>;
-        </div>;
-      ) : loading ? (;
-        <div className="p-4 space-y-4">;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
-        </div>;
-      ) : notifications && notifications.length === 0 ? (;
-        <div className="p-8">;
+            onClick={onRetry}
+          >
+            Try Again
+          </Button>
+        </div>
+      ) : loading ? (
+        <div className="p-4 space-y-4">
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
+        </div>
+      ) : notifications.length === 0 ? (
+        <div className="p-8">
           <EmptyState
-            icon = {<Bell className="h-8 w-8" />,}
-            title="No Notifications";
-            description="You're all caught up.";
+            icon={<Bell className="h-8 w-8" />}
+            title="No Notifications"
+            description="You're all caught up."
             action={{ text: 'Refresh', onClick: onRetry }}
-            className="border-none bg-transparent";
-          />;
-        </div>;
-      ) : (;
-        notifications && notifications.map((notification,) => (;
+            className="border-none bg-transparent"
+          />
+        </div>
+      ) : (
+        notifications.map((notification) => (
           <NotificationItem
 
     </ScrollArea>;

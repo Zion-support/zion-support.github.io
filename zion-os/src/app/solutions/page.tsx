@@ -9,6 +9,7 @@ export default /**
 function SolutionsPage() {
   return (
     <div className="min - h-screen bg - white">;
+    <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - purple - 600 to - indigo - 700 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

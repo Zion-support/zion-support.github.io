@@ -30,6 +30,7 @@ import { useRouter } from 'next/router';
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
         and preventing them from meeting growing customer demands.</p>
+        
         <h2>Challenge</h2>
 
 
@@ -63,7 +64,6 @@ import { useRouter } from 'next/router';
           <li>Gradual implementation reduces resistance and improves adoption</li>
           <li>Continuous monitoring and optimization is essential for long-term success</li>
         </ul>
-        <h2>Conclusion</h2>
         <p>The AI automation implementation at Global Manufacturing Corp demonstrates the transformative potential
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
@@ -407,6 +407,9 @@ export default function CaseStudyResourcePage(req, res) {
         </div>
       </>
     )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 
@@ -536,59 +539,29 @@ if ( {) {
             <div className="max - w-4xl mx - auto text - center">;
               <h1 className="text - 4xl font - bold mb - 6 text - white">Case Study Resource Not Found</h1>;
               <p className="text - xl text - white / 80 mb - 8">;
+  ];
+  const caseStudy = caseStudies.find(study => study.id === id);
+  if (!caseStudy) {;
+    return (;
+      <>;
+        <Head>;
+          <title>Case Study Resource Not Found | Zion Tech Group</title>;
+        </Head>;
+        <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
+          <main className="container mx-auto px-6 py-12">;
+            <div className="max-w-4xl mx-auto text-center">;
+              <h1 className="text-4xl font-bold mb-6 text-white">Case Study Resource Not Found</h1>;
+              <p className="text-xl text-white/80 mb-8">;
                 The case study resource you're looking for doesn't exist.;
               </p>;
               <Link;
                 href="/resources";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
               >;
                 ← Back to Resources;
               </Link>;
             </div>;
           </main>;
         </div>;
-      </>);
-  }
-  return (
-    <>;
-      <Head>;
-        <title>{case_study.title} | Zion Tech Group - Case Study Resource</title>;
-        <meta name="description" content={case_study.description} />;
-        <meta property="og:title" content={`${case_study.title} | Zion Tech Group`} />;
-        <meta property="og:description" content={case_study.description} />;
-      </Head>;
-      <div className="min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white">;
-        <main className="container mx - auto px - 6 py - 12">;
-          <div className="max - w-4xl mx - auto">;
-            <nav className="mb - 8">;
-              <Link href="/resources" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-                ← Back to Resources;
-              </Link>;
-            </nav>;
-            <header className="mb - 12">;
-              <div className="mb - 6">;
-                <span className="px - 3 py - 1 bg - cyan - 400 / 20 text - cyan - 400 text - sm rounded - full border border - cyan - 400 / 30">;
-                  {case_study.industry}
-                </span>;
-              </div>;
-              <h1 className="text - 4xl font - bold mb - 4 text - white">{case_study.title}</h1>;
-              <p className="text - xl text - cyan - 400 font - semibold mb - 2">{case_study.company}</p>;
-              <p className="text - white / 80 text - lg">{case_study.description}</p>;
-            </header>;
-            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 20 mb - 8">;
-              <h2 className="text - 2xl font - bold mb - 4 text - white">Key Results</h2>;
-              <p className="text - green - 400 font - semibold text - lg">{case_study.results}</p>;
-            </div>;
-            <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 border border - white / 20 mb - 12">;
-              <div;
-                className="prose prose - invert max - w-none";
-                dangerouslySetInnerHTML={{ __html: case_study.full_content }}
-              />;
-            </div>;
-            <div className="text - center">;
-              <Link;
-                href="/contact";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
               >;
                 Get Started with Your Project;
               </Link>;
@@ -596,7 +569,3 @@ if ( {) {
           </div>;
         </main>;
       </div>;
-    </>);
-}
-
-

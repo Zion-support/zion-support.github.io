@@ -2,9 +2,9 @@
 
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
+  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
 
 } from 'lucide-react',;
@@ -174,7 +174,6 @@ function AdvancedServicesShowcase2025() {
 
 
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -195,8 +194,6 @@ function AdvancedServicesShowcase2025() {
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData?.icon || '🚀'
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -1142,6 +1139,30 @@ function AdvancedServicesShowcase2025() {
       </section>;
       <EnhancedFooter />;
     </div>);
+              Ready to Transform Your Business?
+            </h2>
+            <p className=&quot;text-xl text-white/80 mb-8 max-w-2xl mx-auto&quot;>
+              Our advanced services are designed to give you a competitive edge in the rapidly evolving technology landscape.
+            </p>
+            <div className=&quot;flex flex-col sm:flex-row gap-4 justify-center&quot;>
+              <a
+                href=&quot;mailto:kleber@ziontechgroup.com&quot;
+                className=&quot;px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2&quot;
+              >
+                Schedule Consultation
+                <ArrowRight className=&quot;w-5 h-5&quot; />
+              </Link>
+              <a
+                href=&quot;tel:+13024640950&quot;
+                className=&quot;px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2&quot;
+              >
+                Call +1 302 464 0950
+              </Link>
+      {/* CTA Section */}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 

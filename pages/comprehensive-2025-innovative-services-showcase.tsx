@@ -172,7 +172,6 @@ if (return 'mid', ) {
 
 
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -197,6 +196,33 @@ if (return 'mid', ) {
 
 
   };
+        case 'popularity':
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        case 'price':
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+        case 'rating':
+          return b.rating - a.rating,
+        case 'newest':
+
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        default: return 0
+      }
+    }),
+
+  const _containerVariants = {_hidden: { opacity: 0}
+    visible: {_opacity: 1, _transition: {
+        staggerChildren: 0.1}
+    }
+  },
+
+  const _itemVariants = {_hidden: { opacity: 0, _y: 20},
+    visible: {_opacity: 1, _y: 0, _transition: {
+        duration: 0.5}
+    }
+  },
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -205,6 +231,11 @@ if (return 'mid', ) {
 
 
     website: 'https://ziontechgroup.com'
+}
+      transition: {
+        duration: 0.5
+      }
+    }
   }
     website: 'https://ziontechgroup.com'
 

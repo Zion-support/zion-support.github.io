@@ -823,7 +823,71 @@ export default function CaseStudyPage(req, res) {
         </main>;
       </div>;
     </>);
-}
+      </Head>
+      
+      <div className=&quot;min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900&quot;>
+        <main className=&quot;container mx-auto px-6 py-12&quot;>
+          {/* Breadcrumb */}
+          <nav className=&quot;mb-8&quot;>
+            <Link href=&quot;/&quot; className=&quot;text-white/60 hover:text-white transition-colors&quot;>
+              Home
+            </Link>
+            <span className=&quot;text-white/60 mx-2&quot;>→</span>
+            <Link href=&quot;/case-studies&quot; className=&quot;text-white/60 hover:text-white transition-colors&quot;>
+              Case Studies
+            </Link>
+            <span className=&quot;text-white/60 mx-2&quot;>→</span>
+            <span className=&quot;text-white&quot;>Cloud Infrastructure Optimization</span>
+          </nav>
 
+          {/* Header */}
+          <header className=&quot;text-center mb-16&quot;>
+            <div className=&quot;inline-block px-4 py-2 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30 mb-6&quot;>
+              Technology Industry
+            </div>
+            <h1 className=&quot;text-4xl md:text-5xl font-bold text-white mb-6&quot;>
+              Cloud Infrastructure Optimization
+            </h1>
+            <p className=&quot;text-xl text-white/80 max-w-3xl mx-auto&quot;>
+              How an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure
+            </p>
+          </header>
 
+          {/* Case Study Content */}
+          <div className=&quot;max-w-4xl mx-auto&quot;>
+            {/* Company Overview */}
+            <section className=&quot;mb-16&quot;>
+              <h2 className=&quot;text-3xl font-bold text-white mb-6&quot;>Company Overview</h2>
+              <div className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20&quot;>
+                <h3 className=&quot;text-2xl font-semibold text-blue-400 mb-4&quot;>E-commerce Platform</h3>
+                <p className=&quot;text-white/90 text-lg mb-4&quot;>
+                  A growing e-commerce platform serving thousands of customers daily. 
+                  The company faced challenges with high cloud costs, _performance issues, _and manual scaling requirements.
+                </p>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 mt-6&quot;>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-blue-400&quot;>10K+</div>
+                    <div className=&quot;text-white/70&quot;>Daily Users</div>
+                  </div>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-blue-400&quot;>100K+</div>
+                    <div className=&quot;text-white/70&quot;>Products</div>
+                  </div>
+                  <div className=&quot;text-center&quot;>
+                    <div className=&quot;text-3xl font-bold text-blue-400&quot;>$5M+</div>
+                    <div className=&quot;text-white/70&quot;>Annual Revenue</div>
 
+import React from 'react';
+
+import Head from 'next/head';
+import Link from 'next/link';
+export default function CaseStudyPage() {
+  return (
+    <>
+      <Head>
+        <title>Cloud Infrastructure Optimization - Case Study | Zion Tech Group</title>
+        <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
+        <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <main className="container mx-auto px-6 py-12">

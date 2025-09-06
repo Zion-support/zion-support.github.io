@@ -3,6 +3,15 @@ interface LazyComponentProps {component: () => Promise<{ default: React.Componen
   fallback?: React.ReactNode;
   [key: string]: any;
 }
+  ...props;
+}) => {const LazyLoadedComponent = lazy(component);
+  return (;
+    <Suspense fallback={fallback}>;
+      <LazyLoadedComponent {...props} />;
+    </Suspense>;
+  );
+}
+export default LazyComponent;
 
 ;
 const LazyComponent: React.FC<LazyComponentProps> = ({;

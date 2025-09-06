@@ -5,20 +5,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -219,6 +215,7 @@ import {;
   YawningFace2,;
   DizzyFace2,;
 
+} from "lucide-react";
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
@@ -428,7 +425,6 @@ function LoginPage() {
       ...prev,
       [name]: value,
   const [error, setError] = useState('');
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -453,7 +449,6 @@ export default function LoginPage() {
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
     setFormData((prev) => ({;
@@ -464,8 +459,11 @@ export default function LoginPage() {
 
     try {;
       // Simulate API call;
+    setIsLoading(true);
+    setError("");
+    try {
+      // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
       // For demo purposes, accept any email/password;
       if (formData && formData.email && formData && formData.password) {;
         // Redirect to dashboard or home page;
@@ -478,11 +476,9 @@ export default function LoginPage() {
       setError("Login failed. Please try again.");
 
     setError('');
-
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
       // For demo purposes, accept any email/password
       if (formData.email && formData.password) {
         // Redirect to dashboard or home page
@@ -495,6 +491,7 @@ export default function LoginPage() {
 
 
 
+    } finally {
     } finally {
     } finally {;
       setIsLoading(false);
@@ -531,7 +528,6 @@ export default function LoginPage() {
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />;
       </Head>;
-
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-md w-full space-y-8">;
           <motion&& motion.div
@@ -559,7 +555,6 @@ export default function LoginPage() {
               </Link>;
             </p>;
           </motion && motion.div>;
-
           <motion&& motion.div
 
             className="mt-8 bg-white py-8 px-6 shadow-lg rounded-lg"
@@ -589,7 +584,6 @@ export default function LoginPage() {
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
-
               <div>;
                 <label
                   htmlFor="email"
@@ -624,7 +618,6 @@ export default function LoginPage() {
                   />;
                 </div>;
               </div>;
-
               <div>;
                 <label
                   htmlFor="password"
@@ -660,7 +653,6 @@ export default function LoginPage() {
                   </button>;
                 </div>;
               </div>;
-
               <div className="flex items-center justify-between">;
                 <div className="flex items-center">;
 
@@ -694,7 +686,6 @@ export default function LoginPage() {
                     Remember me;
                   </label>;
                 </div>;
-
                 <div className="text-sm">;
                   <Link
                     href="/forgot-password"
@@ -888,7 +879,6 @@ if ( {) {
                 </button>;
               </div>;
             </form>;
-
             <div className="mt-6">;
               <div className="relative">;
                 <div className="absolute inset-0 flex items-center">;
@@ -900,13 +890,11 @@ if ( {) {
                   </span>;
                 </div>;
               </div>;
-
               <div className="mt-6 grid grid-cols-2 gap-3">;
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
                   <Globe className="h-5 w-5" />;
                   <span className="ml-2">Google</span>;
                 </button>;
-
                 <button className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors">;
                   <User className="h-5 w-5" />;
                   <span className="ml-2">Microsoft</span>;
@@ -914,7 +902,6 @@ if ( {) {
               </div>;
             </div>;
           </motion && motion.div>;
-
           <motion&& motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}

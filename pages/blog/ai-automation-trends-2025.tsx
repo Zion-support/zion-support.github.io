@@ -22,7 +22,6 @@ function AIAutomationTrends2025() {
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
         <main className='container mx-auto px-6 py-12'>;
           <div className='max-w-4xl mx-auto'>;
@@ -33,7 +32,6 @@ function AIAutomationTrends2025() {
                 ← Back to Blog;
               </Link>;
             </nav>;
-
             <article className='prose prose-invert prose-lg max-w-none'>;
               <header className='mb-12 text-center'>;
                 <div className='flex items-center gap-3 justify-center mb-4'>;

@@ -2,6 +2,11 @@
 
 
 }: {;
+export default function UseTokensButton({
+serviceId
+  defaultType
+}: {
+
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
@@ -86,5 +91,8 @@ function UseTokensButton() {
         default_type={default_type}
       />;
     </>);
+    </>
+  )
+
 }
 

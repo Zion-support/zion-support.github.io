@@ -25,7 +25,6 @@ type Props = {
   valid: boolean,
   reason?: string
 };
-
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
 
   if (!valid) {
@@ -48,11 +47,9 @@ const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid,
       },;
     } as any;
   }
-
   const expectedFromId =;
     role === "client" ? project && project.clientId : project && project.talentSlug;
   const valid = expectedFromId === fromId;
-
   return {;
     props: {;
       projectId,;

@@ -35,10 +35,6 @@ export default /**
  * LaunchRedirect - Function description
  */
 function LaunchRedirect() {
-  return null;
-}
-
-
-}
-;
-
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {

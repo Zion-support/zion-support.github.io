@@ -421,7 +421,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
     } finally {
       setIsSubmitting (false),
     }
-  }
+  },
 
     }
 
@@ -474,7 +474,6 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
             Resume;
           </TabsTrigger>;
         </TabsList>;
-
         <TabsContent value="message">;
           <MessageTab
             message = {message,}
@@ -502,10 +501,11 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
         <Button
           type="button"
           variant="outline"
-          onClick = {onClose,}
-          className="border-zion-purple/30 text-white">;
-          Cancel;
-        </Button>;
+          onClick={onClose}
+          className="border-zion-purple/30 text-white"
+        >
+          Cancel
+        </Button>
         <Button
 
 

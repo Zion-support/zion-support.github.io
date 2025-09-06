@@ -30,7 +30,6 @@ export default async function handler(
     jurisdiction,
 
   const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
-
   const distLines = Array.isArray(distribution)
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
     : '';
@@ -84,7 +83,7 @@ if ( {) {
         model: 'gpt-4.1-mini',
         input: [
           { role: 'system', content: sysPrompt },
-          { role: 'user', content: userPrompt }
+{ role: 'user', content: userPrompt }
         ],
         temperature: 0.3
       } as any);
@@ -138,6 +137,7 @@ function fallback_markdown (input: any): string {
         .join ("\n");
     : "";
   return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+
 }
 
 ;

@@ -12,5 +12,3 @@ const Lead-enrichment: React.FC<Lead-enrichmentProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-}
-}

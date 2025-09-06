@@ -53,7 +53,6 @@ import { useRouter } from 'next/router';
           <li><strong>Level 4 - Optimization:</strong> Advanced AI systems with continuous improvement</li>
           <li><strong>Level 5 - Innovation:</strong> AI-driven business transformation and new capabilities</li>
         </ul>
-        <h2>Assessment Dimensions</h2>
         <p>The maturity model evaluates several key dimensions:</p>
         <ul>
           <li><strong>Strategy & Leadership:</strong> AI vision, executive support, and strategic alignment</li>
@@ -364,6 +363,9 @@ export default function ToolResourcePage(req, res) {
         </div>
       </>
     )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 
 
@@ -806,15 +808,23 @@ if ( {) {
                     <div>;
                       <span className="text - white / 60 text - sm">Time Required:</span>;
                       <p className="text - white font - medium">{tool.estimated_time}</p>;
+                  </ul>;
+                </div>;
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">;
+                  <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>;
+                  <div className="space-y-3">;
+                    <div>;
+                      <span className="text-white/60 text-sm">Type:</span>;
+                      <p className="text-white font-medium">{tool.type}</p>;
+                    </div>;
+                    <div>;
+                      <span className="text-white/60 text-sm">Time Required:</span>;
+                      <p className="text-white font-medium">{tool.estimatedTime}</p>;
                     </div>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-            <div className="text - center">;
-              <Link;
-                href="/contact";
-                className="inline - flex items - center gap - 2 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 text - white px - 8 py - 4 rounded - lg font - semibold hover: from - cyan - 500 hover:to - fuchsia - 500 transition - all duration - 300";
               >;
                 Get Started with Your Project;
               </Link>;
@@ -822,7 +832,3 @@ if ( {) {
           </div>;
         </main>;
       </div>;
-    </>);
-}
-
-

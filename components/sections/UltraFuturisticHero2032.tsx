@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -48,16 +44,6 @@ const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
-import { 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, Star, ArrowRight, Play, CheckCircle;
-  Phone, Mail, MapPin
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
 const heroStats = [
@@ -90,7 +76,6 @@ const heroStats = [
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
 
 ];
-
 const featuredServices = [
 import {motion} from 'framer-motion';
 import Link from 'next / link';
@@ -197,14 +182,12 @@ import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin;
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-
 const heroStats = [;
   {;
     number: '1000+',;
@@ -233,7 +216,6 @@ const heroStats = [;
   { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },;
   { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },;
   { number: '99 && 99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
-
 const featuredServices = [;
   {;
     name: 'AI Consciousness Evolution',;
@@ -261,7 +243,6 @@ const featuredServices = [;
     color: 'from-indigo-600 to-blue-600',;
     href: '/quantum-internet-security-gateway',;
   },];
-
 export default function UltraFuturisticHero2032() {;
 
   return (
@@ -288,6 +269,8 @@ function UltraFuturisticHero2032() {
   return (
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - purple - 900 / 20 to - black'>    href: '/quantum - internet - security - gateway';
   }
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-purple-900/20 to-black'>    href: '/quantum-internet-security-gateway'
+  };
 ];
 ;
 export default /**
@@ -360,13 +343,11 @@ function UltraFuturisticHero2032() {
             />;
           ))}
         </div>;
-
         {/* Gradient Orbs */}
         <div className='absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse' />;
         <div className='absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse' />;
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow' />;
       </div>;
-
       {/* Main Content */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -413,9 +394,6 @@ function UltraFuturisticHero2032() {
           </span>
           <br />
           <span className='text-white'>Technology is Here</span>        </motion.h1>        >
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
-        >
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             The Future of
           </span>
@@ -700,7 +678,6 @@ function UltraFuturisticHero2032() {
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>;
             Ready to Transform Your Business?;
           </h3>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-6'>;
             <div className='flex items-center space-x-3 text-gray-300'>;
               <Phone className='w-5 h-5 text-cyan-400' />;
@@ -771,7 +748,6 @@ function UltraFuturisticHero2032() {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">;
             Ready to Transform Your Business?;
           </h3>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">;
             <div className="flex items-center space-x-3 text-gray-300">;
               <Phone className="w-5 h-5 text-cyan-400" />;
@@ -790,7 +766,6 @@ function UltraFuturisticHero2032() {
               <span>{contactInfo && contactInfo.address}</span>;
             </div>;
           </div>;
-
           <div className="text-center">;
             <Link
               href="/contact"
@@ -946,6 +921,13 @@ function UltraFuturisticHero2032() {
         </Link>;
       </motion.div>;
     </section>);
+        >
+          <Phone className=&quot;w-7 h-7 text-white group-hover:rotate-12 transition-transform&quot; />
+        </a>
+      </motion.div>
+    </section>
+  )
+
 }
         className='fixed bottom-8 right-8 z-50'
 

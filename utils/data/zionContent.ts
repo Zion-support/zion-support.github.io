@@ -45,7 +45,7 @@ export type WikiContent = {
 
 export type Infobox = {
   founder: string,
-  launch_year: string,
+launch_year: string,
   token: string,
   protocol_type: string;
 },
@@ -59,7 +59,7 @@ export type WikiContent = {
   intro: string,
   infobox: Infobox,
   sections: WikiSection[],
-  references: string[];
+references: string[];
 },
 export type DocsContent = {
   product_overview: WikiSection,
@@ -138,12 +138,12 @@ export function generateZionDocs (): DocsContent {
     tokenomics: {
       id: 'tokenomics',
       title: 'Tokenomics',
-      paragraphs: [;
+paragraphs: [;
         'ZION$ powers staking, curation, and rewards. Fees from marketplace activity flow to contributors and the treasury under DAO policy.']},
     team: {
       id: 'team',
       title: 'Team',
-      paragraphs: [;
+paragraphs: [;
         'Zion Holdings and community contributors maintain core modules and standards, with decentralized working groups over time.']},
     public_roadmap: {
       id: 'public - roadmap',
@@ -209,6 +209,7 @@ if ( {) {
   }
   return lines.join ('\n');
 }
+<<<<<<< HEAD
 export function buildNotionMarkdownFromDocs (docs: DocsContent): string {
   const sections = [;
     docs.product_overview,

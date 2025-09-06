@@ -4,20 +4,16 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
-  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
-    
     return this.props.children;
   }
 }
@@ -106,14 +102,12 @@ import {;
   CheckCircle, Clock, Award, Target, Globe, Sparkles;
   Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
   ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon;
-
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
-
 const features = [;
   'Emotional intelligence training modules',;
   'Consciousness expansion exercises',;
@@ -126,7 +120,6 @@ const features = [;
   'Spiritual growth pathways',;
   'Personal transformation tracking',;
 ];
-
 const useCases = [;
   'Personal development and growth',;
   'Professional leadership training',;
@@ -139,7 +132,6 @@ const useCases = [;
   'Relationship improvement',;
   'Stress management and resilience',;
 ];
-
 const technology = [;
   'Advanced AI algorithms',;
   'Machine learning models',;
@@ -152,7 +144,6 @@ const technology = [;
   'Quantum computing integration',;
   'Blockchain security',;
 ];
-
 const integrations = [;
   'Wearable devices',;
   'Mobile applications',;
@@ -164,7 +155,6 @@ const integrations = [;
   'Social media networks',;
   'Fitness trackers',;
   'Meditation apps',];};
-
 const features = [;
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
@@ -381,12 +371,10 @@ const testimonials = [;
               }}            />;
           ))}
         </div>;
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>          <motion && motion.div                top: `${Math && Math.random() * 100}%`}}
             />;
           ))}
         </div>;
-
         <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto'>        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">;
           <motion&& motion.div
 
@@ -494,7 +482,6 @@ const testimonials = [;
               <Sparkles className='w-4 h-4 mr-2' />;
               Revolutionary AI Technology;
             </motion && motion.div>;
-
             <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>;
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>;
                 AI Consciousness;
@@ -502,14 +489,12 @@ const testimonials = [;
               <br />;
               <span className='text-white'>Evolution Platform</span>;
             </h1>;
-
             <p className='text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed'>;
               Experience the future of personal development with our;
               revolutionary AI-powered consciousness evolution platform. Enhance;
               your emotional intelligence, expand self-awareness, and unlock;
               your full potential.;
             </p>;
-
             {/* Key Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>;
               {[;
@@ -580,7 +565,6 @@ const testimonials = [;
                 Start Free Trial
               </motion.button>
               <motion.button
-                  label: 'Success Rate',
                   value: '94%',
                   icon: <Award className='w - 8 h - 8' />,
                 },
@@ -627,35 +611,6 @@ const testimonials = [;
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>              <motion.button;
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105'              >            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
-              <motion.button;
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105'                className="bg - gradient - to - r from - purple - 500 to - pink - 600 hover:from - purple - 600 hover:to - pink - 700 text - white font - bold py - 4 px - 8 rounded - xl text - lg transition - all duration - 200 hover:shadow - 2xl hover:shadow - purple - 500 / 25 hover:scale - 105";
-              >;
-                Start Free Trial;
-              </motion.button>;
-              <motion.button;
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
-                className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
-                Start Free Trial;
-              </motion && motion.button>;
-              <motion&& motion.button
-                initial={{ opacity: 0, scale: 0 && 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-
-
-      {/* Features Section */}
-      <section className='py-20 bg-black'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <motion&& motion.div
-
-
       {/* Features Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -700,7 +655,6 @@ const testimonials = [;
               development experience ever created.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {features && features.map((feature, index) => (          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Revolutionary Features for;
@@ -711,7 +665,6 @@ const testimonials = [;
               the most advanced consciousness development experience ever created.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -900,7 +853,6 @@ const testimonials = [;
               journey.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[;
               {;
                 step: '01',;
@@ -914,7 +866,6 @@ const testimonials = [;
               experiences that adapt to your unique journey.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
               {;
@@ -1047,7 +998,6 @@ const testimonials = [;
               serves diverse needs across multiple domains.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {useCases && useCases.map((useCase, index) => (          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Transform Your Life with;
@@ -1058,7 +1008,6 @@ const testimonials = [;
               across multiple domains.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {useCases && useCases.map((useCase, index) => (;
               <motion&& motion.div
@@ -1328,6 +1277,20 @@ const testimonials = [;
           <motion&& motion.div
 
 
+              >
+                <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
+                  <Cpu className='w-10 h-10 text-purple-400' />
+                </div>
+                <p className='text-sm text-gray-300 font-medium'>{tech}</p>              </motion.div>              >
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                  <Cpu className="w-10 h-10 text-purple-400" />
+                </div>
+                <p className="text-sm text-gray-300 font-medium">{tech}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1371,7 +1334,6 @@ const testimonials = [;
               with our AI consciousness platform.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {testimonials && testimonials.map((testimonial, index) => (          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               What Our Users;
@@ -1381,7 +1343,6 @@ const testimonials = [;
               Join thousands of satisfied users who have transformed their lives with our AI consciousness platform.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {testimonials && testimonials.map((testimonial, index) => (;
               <motion&& motion.div
@@ -1414,7 +1375,7 @@ const testimonials = [;
                     <Star
                       key={i}
                       className='w-5 h-5 text-yellow-400 fill-current'
-                    />;
+                    />
                   ))}
 
                 className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-purple-500/20 rounded-2xl p-6"
@@ -1502,7 +1463,6 @@ const testimonials = [;
               accessible to everyone.;
             </p>;
           </motion && motion.div>;
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {[          >;
             <h2 className="text-4xl font-bold text-white mb-6">;
               Choose Your;
@@ -1512,7 +1472,6 @@ const testimonials = [;
               Flexible pricing options designed to make consciousness evolution accessible to everyone.;
             </p>;
           </motion && motion.div>;
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {[;
               {;
@@ -1534,240 +1493,6 @@ const testimonials = [;
                 price: '$299',;
                 period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access';
                 ];
-                popular: false;
-              };
-                name: 'Professional',;
-                price: '$299',;
-                period: '/month',;
-                description:;
-                  'Advanced features for serious consciousness development',;
-                features: [;
-                  'Advanced AI assessment',;
-                  'Unlimited exercises',;
-                  'Personalized coaching',;
-                  'Priority support',;
-                  'Advanced analytics',;
-                  'Integration with wearables',;
-                  'Group sessions',;
-                ],;
-                popular: true,;
-              },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions';
-                ];
-                popular: true;
-              };
-                name: 'Enterprise',;
-                price: '$799',;
-                period: '/month',;
-                description: 'Complete solution for organizations and teams',;
-                features: [;
-                  'Everything in Professional',;
-                  'Team management',;
-                  'Custom integrations',;
-                  'Dedicated support',;
-                  'White-label options',;
-                  'Advanced reporting',;
-                  'API access',;
-                ],;
-                popular: false,;
-              },            ].map((plan, index) => (                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access';
-
-                name: 'Enterprise',
-                price: '$799',
-                period: '/month',
-                description: 'Complete solution for organizations and teams',
-
-                features: [;
-                  'Everything in Professional',
-                  'Team management',
-                  'Custom integrations',
-                  'Dedicated support',
-                  'White - label options',
-                  'Advanced reporting',
-                  'API access',
-                ],
-                popular: false,
-              },            ].map ((plan, index) => (                  'Everything in ProfessionalTeam management_custom integrations_dedicated support_white - label options_advanced reportingAPI access';
-
-                ];
-                popular: false;
-              }
-
-
-                }`}
-
-                  plan.popular 
-                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20' 
-
-                    : 'border-purple-500/20'
-              <motion.div;
-                key={plan.name}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className={`relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border rounded - 2xl p - 8 ${
-                  plan.popular;
-                    ? 'border - purple - 500 / 50 shadow - 2xl shadow - purple - 500 / 20'                    : 'border - purple - 500 / 20';
-                }`}
-              >;
-                {plan.popular && (
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                    <span className='bg - gradient - to - r from - purple - 500 to - pink - 600 text - white px - 4 py - 2 rounded - full text - sm font - bold'>                      Most Popular;
-                    </span>;
-                  </div>)}                  plan.popular;
-                    ? 'border - purple - 500 / 50 shadow - 2xl shadow - purple - 500 / 20';
-                    : 'border - purple - 500 / 20';
-                }`}
-              >;
-                {plan.popular && (
-
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                    <span className='bg - gradient - to - r from - purple - 500 to - pink - 600 text - white px - 4 py - 2 rounded - full text - sm font - bold'>                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                    <span className="bg - gradient - to - r from - purple - 500 to - pink - 600 text - white px - 4 py - 2 rounded - full text - sm font - bold">;
-                      Most Popular;
-                    </span>;
-                  </div>)}
-                <div className='text - center mb - 8'>;
-                  <h3 className='text - 2xl font - bold text - white mb - 2'>;
-
-                    {plan.name}
-                  </h3>;
-                  <div className='mb - 4'>;
-                    <span className='text - 4xl font - bold text - purple - 400'>;
-                      {plan.price}
-
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-purple-400">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
-                  </div>
-
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-
-              >;
-                {plan && plan.popular && (;
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
-                    <span className='bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold'>                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )}
-
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-2'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='mb-4'>;
-                    <span className='text-4xl font-bold text-purple-400'>;
-                      {plan && plan.price}
-                    </span>;
-                    <span className='text-gray-400'>{plan && plan.period}</span>;
-                  </div>;
-                  <p className='text-gray-300'>{plan && plan.description}</p>;
-                </div>;
-
-                <ul className='space-y-3 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-300">{plan && plan.description}</p>;
-                </div>;
-
-                <ul className="space-y-3 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />;
-
-                      {feature}
-                    </li>;
-                  ))}
-
-                </ul>;
-
-
-                <button
-                  className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
-                    plan && plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
-                      : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
-                  }`}>                  Get Started                <buttonclassName={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
-                  plan && plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
-                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
-                }`}>;
-                </button>;
-              </motion && motion.div>;
-
-                      {feature}
-
-
-
-
-
-
-                    </li>
-                  ))}
-                </ul>
-
-                <button className={`w-full py-3 px-6 rounded-xl font-bold transition-all duration-200 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 hover:scale-105'
-                    : 'border border-purple-500/50 text-purple-300 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-pink-500/20 hover:text-white'
-                }`}>
-                  Get Started
-                </button>
-              </motion.div>
-            ))}
-
-          </div>;
-        </div>;
-      </section>;
-
-
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>;
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">;
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-          <motion&& motion.div
-
-
-
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-
-
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Evolve Your;
-              <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                {' '}
-
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1821,7 +1546,6 @@ const testimonials = [;
               with our revolutionary AI platform. Start your consciousness;
               evolution journey today.;
             </p>;
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>;
               <button className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>;
                 Start Free Trial;
@@ -1833,7 +1557,6 @@ const testimonials = [;
               Join thousands of users who have already transformed their lives with our revolutionary AI platform. ;
               Start your consciousness evolution journey today.;
             </p>;
-
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
               <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105">;
                 Start Free Trial;
@@ -1842,7 +1565,6 @@ const testimonials = [;
                 Schedule Demo;
               </button>;
             </div>;
-
             {/* Contact Info */}
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>;
               {[;

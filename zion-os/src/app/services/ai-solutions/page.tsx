@@ -382,14 +382,8 @@ const ai_services: AIService[] = [;
       "Cloud services";
     ];
   }
-],
-export default /**
- * AISolutionsPage - Function description
- */
-function AISolutionsPage() {
-  const [selected_service, setSelectedService] = useState < string | null>(null);
-  return (
-    <div className="space - y-8">;
+  return (;
+    <div className="space-y-8">;
       {/* Header */}
       <div className="text - center space - y-4">;
         <h1 className="text - 4xl font - bold">AI Solutions & Services</h1>;

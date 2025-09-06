@@ -18,27 +18,21 @@ ai: 'Advanced AI capabilities and automation'
     return descriptions[key] |'Feature description';
   }
 'use client';
-
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
-
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     setLoading(true);
-
     // Simulate deployment;
     setTimeout(() => {;
       setLoading(false);
     }, 3000);
   };
-
   const loading = false;
   const message = '';
   const messageType = 'success';
-
   // Mock feature keys and functions;
   const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
-
   const labelFor = (key: string) => {;
     const labels: { [key: string]: string } = {;
       ai: 'AI Integration',;
@@ -57,7 +51,6 @@ export default function OSDeployPage() {;
             Deploy your custom Zion OS instance with advanced features and configurations;
           </p>;
         </div>;
-
         <form onSubmit={handleSubmit} className="space-y-8">;
           {/* Basic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
@@ -65,7 +58,6 @@ export default function OSDeployPage() {;
               <span className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white text-sm">⚙️</span>;
               Basic Configuration;
             </h2>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Instance Name *</label>;
@@ -80,7 +72,6 @@ export default function OSDeployPage() {;
 
                 />;
               </div>;
-
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Vertical</label>;
 
@@ -151,7 +142,6 @@ ai: 'Advanced AI capabilities and automation',
                   placeholder="zion && zion.example.com"
                 />;
               </div>;
-
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Subdomain</label>;
 
@@ -164,7 +154,6 @@ ai: 'Advanced AI capabilities and automation',
 
                 />;
               </div>;
-
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Default Language</label>;
 
@@ -176,7 +165,6 @@ ai: 'Advanced AI capabilities and automation',
 
                 />;
               </div>;
-
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Region</label>;
 
@@ -192,14 +180,12 @@ ai: 'Advanced AI capabilities and automation',
               </div>;
             </div>;
           </div>;
-
           {/* Economic Configuration */}
           <div className="glass-effect rounded-2xl p-8">;
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
               <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>;
               Economic Configuration;
             </h2>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Token System</label>;
@@ -292,7 +278,6 @@ ai: 'Advanced AI capabilities and automation',
 
                 />;
               </div>;
-
               <div className="space-y-2">;
                 <label className="block text-sm font-medium text-white/90">Payment Gateway</label>;
 
@@ -310,14 +295,12 @@ ai: 'Advanced AI capabilities and automation',
               </div>;
             </div>;
           </div>;
-
           {/* Feature Selection */}
           <div className="glass-effect rounded-2xl p-8">;
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
               <span className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-white text-sm">🔧</span>;
               Feature Selection;
             </h2>;
-
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">;
               {FeatureKeys && FeatureKeys.map((k) => (;
                 <label
@@ -372,14 +355,12 @@ ai: 'Advanced AI capabilities and automation',
 
             </div>;
           </div>;
-
           {/* Additional Features */}
           <div className="glass-effect rounded-2xl p-8">;
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">;
               <span className="w-8 h-8 bg-orange-600 rounded-lg flex items-center justify-center text-white text-sm">🚀</span>;
               Additional Features;
             </h2>;
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
@@ -398,7 +379,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Manage community funds with transparency</div>;
                 </div>;
               </label>;
-
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
                 <input
@@ -416,7 +396,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Local + global decision making</div>;
                 </div>;
               </label>;
-
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
                 <input
@@ -434,7 +413,6 @@ ai: 'Advanced AI capabilities and automation',
                   <div className="text-sm text-white/60">Automated content and behavior monitoring</div>;
                 </div>;
               </label>;
-
               <label className="flex items-center gap-3 p-4 rounded-lg border border-white/10 hover:border-white/20 transition-colors cursor-pointer group">;
 
                 <input
@@ -534,7 +512,6 @@ ai: 'Advanced AI capabilities and automation',
           </div>;
 
             </button>;
-
             {message && (;
 
               <div
