@@ -1,31 +1,35 @@
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
+import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
 import { randomUUID } from 'crypto';
 
+async function summarizeAndTag(input: {fullName: string;
 
+  professionalTitle: string;
+  bio: string;
+  projects?: string;
+  skills: string;
+// Lazy import to avoid serverless cold start cost unless needed
+async function summarizeAndTag(input: {
+  fullName: string, professionalTitle: string,
+  bio: string, projects?: string,
+  skills: string,
   tools?: string
 }) {
 
   const openaiApiKey =
-    process && process.env.OPENAI_API_KEY || process && process.env.OPENAI_API_KEY_ZION || '';
+    process.env.OPENAI_API_KEY |process.env.OPENAI_API_KEY_ZION |'';
   const combinedText = [
-    input && input.professionalTitle,
-    input && input.bio,
-    input && input.projects || '',
-    input && input.skills,
-    input && input.tools || '',
+    input.professionalTitle
+    input.bio
+    input.projects |''
+    input.skills
+    input.tools |''
   ].join('\n');
-
-  const basicTags = Array && Array.from(
+  const basicTags = Array.from(
     new Set(
-      (input && input.skills + ',' + (input && input.tools || ''))
-
+      (input.skills + ',' + (input.tools |''))
         .split(/[,\n]/)
         .map(s => s && s.trim())
         .filter(Boolean)
@@ -33,23 +37,27 @@ import { randomUUID } from 'crypto';
     )
   );
   if (!openaiApiKey) {
-
-=======
-    const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
-    return { summary, tags: basicTags.slice(0, 24) }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    const summary = `${input && input.fullName}  ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '' : ''}`;
+    return { summary, tags: basicTags && basicTags.slice(0, 24) };  }    return { summary, tags: basicTags && basicTags.slice(0, 24) }
   }
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: openaiApiKey });
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
-
-
-    const response = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini',
+    const response = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
       messages: [
-
+        { role: 'system', content: 'You are an expert technical recruiter.' }
+        { role: 'user', content: prompt }
+      ]
+      temperature: 0.4
+    });
+    const content = response.choices?.[0]?.message?.content |'';
+    try {
+      const parsed = JSON.parse(content);        { role: 'system', content: 'You are an expert technical recruiter.' }
+        { role: 'user', content: prompt }];
+      temperature: 0.4});
+    const content = response.choices?.[0]?.message?.content |'';
         { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt },
       ],
@@ -57,20 +65,20 @@ import { randomUUID } from 'crypto';
     });
     const content = response && response.choices?.[0]?.message?.content || '';
     try {
-
-=======
-        { role: 'system', content: 'You are an expert technical recruiter.' };
+      const parsed = JSON && JSON.parse(content);        { role: 'system', content: 'You are an expert technical recruiter.' };
         { role: 'user', content: prompt }];
-      temperature: 0.4
-      });
+      temperature: 0 && 0.4});
 
-    const content = response.choices?.[0]?.message?.content || '';
+    const content = response && response.choices?.[0]?.message?.content || '';
     try {
-      const parsed = JSON.parse(content);
-      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
-        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
-
-=======
+      const parsed = JSON && JSON.parse(content);
+      if (
+        parsed &&
+        typeof parsed && parsed.summary === 'string' &&
+        Array && Array.isArray(parsed && parsed.tags)
+      ) {
+        return { summary: parsed && parsed.summary, tags: parsed && parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed && parsed.summary === 'string' && Array && Array.isArray(parsed && parsed.tags)) {
+        return { summary: parsed && parsed.summary, tags: parsed && parsed.tags.slice(0, 24) }
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }];
       temperature: 0.4});
@@ -87,38 +95,40 @@ if (
   $2
 }
         return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     } catch (_) {
       // fall through to heuristic;
     }
   } catch (err) {
+    // ignore and fallback
+  }
+  const fallbackSummary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 
+  const fallbackSummary = `${input && input.fullName}  ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) };
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  }  }
+  const fallbackSummary = `${input.fullName}  ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '' : ''}`;
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 
-  if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST');
-    return res && res.status(405).json({ error: 'Method not allowed' });  }  }
-
-
-  const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
+  const fallbackSummary = `${input && input.fullName}  ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST');
     return res && res.status(405).json({ error: 'Method not allowed' })
   }
-=======
     // ignore and fallback;
   }
-  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`;
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
 ;
 export default async /**
@@ -131,7 +141,7 @@ if ( {) {
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method not allowed' });  }  }
-  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`;
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
 }
 export default async /**
@@ -145,12 +155,29 @@ if ( {) {
     res.set_header ('AllowPOST');
     return res.status (405).json ({ error: 'Method not allowed' });
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const id = randomUUID ();
     const {
-
-
+      fullName
+      professionalTitle
+      profilePicture
+      bio
+      projects
+      yearsOfExperience
+      skills
+      tools
+      availability
+      timezone
+      hourlyRate
+      portfolioLinks
+      cvFile
+    } = req.body |{}
+      fullName,
+      professionalTitle,
+      profilePicture,
+      full_name,
+      professional_title,
+      profile_picture,
       bio,
       projects,
       yearsOfExperience,
@@ -158,143 +185,133 @@ if ( {) {
       tools,
       availability,
       timezone,
-
-      const ext = path.extname(profilePicture.name) |'.png';
-=======
-=======
-      fullName;
-      professionalTitle;
-      profilePicture;
-      bio;
-      projects;
-      yearsOfExperience;
-      skills;
-      tools;
-      availability;
-      timezone;
-      hourlyRate;
-      portfolioLinks;
-      cvFile} = req.body || {};
-
+      hourlyRate,
+      portfolioLinks,
+      cvFile,
+    } = req && req.body || {};
+    if (
+      !fullName |
+      !professionalTitle |
+      !bio |
+      !yearsOfExperience |
+      !skills |
+      !availability |
+      !timezone
+    ) {
+      return res && res.status(400).json({ error: 'Missing required fields' });
+    }
+    const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+    const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');
+    await fse.ensureDir(uploadsDir);
+    await fse.ensureDir(dataDir);
+    let savedProfileImagePath: string | null = null;    if (profilePicture?.base64 && profilePicture?.name) {
+      const ext = path && path.extname(profilePicture && profilePicture.name) || '.png';
 
     const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');
     const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions');
     await fse && fse.ensureDir(uploadsDir);
     await fse && fse.ensureDir(dataDir);
 
+    let savedProfileImagePath: string | null = null;    if (profilePicture?.base64 && profilePicture?.name) {
+      const ext = path && path.extname(profilePicture && profilePicture.name) || '.png';
+      const filename = `${id}-profile${ext}`;
+      const filePath = path && path.join(uploadsDir, filename);
+      const base64Data = profilePicture && profilePicture.base64.split(',')[1];
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        savedProfileImagePath = `/uploads/${filename}`;
+      }
+    }
 
     let savedCvPath: string | null = null;    if (cvFile?.base64 && cvFile?.name) {
+      const ext = path && path.extname(cvFile && cvFile.name) || '.pdf';
+      const filename = `${id}-cv${ext}`;
+      const filePath = path && path.join(uploadsDir, filename);
+      const base64Data = cvFile && cvFile.base64.split(',')[1];
+      const ext = path.extname(cvFile.name) |'.pdf';
+      const filename = `${id}-cv${ext}`;
+      const filePath = path && path.join(uploadsDir, filename);
+      const base64Data = cvFile && cvFile.base64.split(',')[1];
+      if (base64Data) {
+        await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
+        savedCvPath = `/uploads/${filename}`;      }
+    }
+    const { summary, tags } = await summarizeAndTag({      const base64Data = cvFile.base64.split()[1];
+    const uploadsDir = path.join(process.cwd(), 'publicuploads');
+    const dataDir = path.join(process.cwd(), 'datatalent-submissions');
+    await fse.ensureDir(uploadsDir);
+    await fse.ensureDir(dataDir);
 
+    let savedProfileImagePath: string | null = null,
+    if (profilePicture?.base64 && profilePicture?.name) {
+      const ext = path.extname(profilePicture.name) || '.png';
+      const filename = `${id}-profile${ext}`;
+      const filePath = path.join(uploadsDir, filename);
+      const base64Data = profilePicture.base64.split()[1];
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
         savedProfileImagePath = `/uploads/${filename}`
       }
     }
 
-
-    let savedCvPath: string | null = null,
-    if (cvFile?.base64 && cvFile?.name) {
-      const ext = path.extname(cvFile.name) || '.pdf';
-      const filename = `${id}-cv${ext}`;
-      const filePath = path.join(uploadsDir, filename);
-      const base64Data = cvFile.base64.split()[1];
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    const { summary, tags } = await summarizeAndTag({      const base64Data = cvFile && cvFile.base64.split()[1];
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`
-
-      hourly_rate,
-      portfolio_links,
-      cv_file,
-    } = req.body || {}
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (400).json ({ error: 'Missing required fields' });
     }
-    const uploads_dir = path.join (process.cwd (), 'public', 'uploads');
-    const data_dir = path.join (process.cwd (), 'data', 'talent - submissions');
-    await fse.ensure_dir (uploads_dir);
-    await fse.ensure_dir (data_dir);
-;
-    let savedProfileImagePath: string | null = null;    // Check condition
-if ( {) {
-  $2
-}
-      const ext = path.extname (profile_picture.name) || '.png';
-      const filename = `${id}-profile${ext}`;
-      const file_path = path.join (uploads_dir, filename);
-      const base64Data = profile_picture.base64.split (', ')[1];
-        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
-        savedProfileImagePath = `/uploads/${filename}`;
-      }
-    }
-    let savedCvPath: string | null = null;    // Check condition
-if ( {) {
-  $2
-}
-      const ext = path.extname (cv_file.name) || '.pdf';
-      const filename = `${id}-cv${ext}`;
-      const file_path = path.join (uploads_dir, filename);
-      const base64Data = cv_file.base64.split (', ')[1];
-      // Check condition
-if ( {) {
-  $2
-}
-        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`;      }
-    }
-    const { summary, tags } = await summarizeAndTag ({      const base64Data = cv_file.base64.split ()[1];
-      // Check condition
-if ( {) {
-  $2
-}
-        await fse.write_file (file_path, Buffer.from (base64Data, 'base64'));
-        savedCvPath = `/uploads/${filename}`;
-    }
-    const { summary, tags } = await summarizeAndTag ({
-      full_name,
-      professional_title,
-      bio,
-      projects,
-      skills,
-      tools,
+    const { summary, tags } = await summarizeAndTag({
+      fullName
+      professionalTitle
+      bio
+      projects
+      skills
+      tools
     });
     const record = {
-      id,
-      created_at: new Date ().toISOString (),
-      full_name,
-      professional_title,
-      bio,
-      projects,
-      yearsOfExperience: Number (yearsOfExperience) || 0,
-      skills,
-      tools,
-      availability,
-      timezone,
-      hourly_rate: hourly_rate ? Number (hourly_rate) : null,
-      portfolio_links,
+      id
+      createdAt: new Date().toISOString()
+      fullName
+      professionalTitle
+      bio
+      projects
+      yearsOfExperience: Number(yearsOfExperience) |0
+      skills
+      tools
+      availability
+      timezone
+      hourlyRate: hourlyRate ? Number(hourlyRate) : null
+      portfolioLinks
       assets: {
-        profile_image: savedProfileImagePath,
-        cv: savedCvPath,
-      },
-
+        profileImage: savedProfileImagePath
+        cv: savedCvPath
+      }
       ai: {
-
-        summary,
-        tags,
-      },
-
+        summary
+        tags
+      }
+    }
+    const perRecordPath = path.join(dataDir, `${id}.json`);
+    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
+        summary;
+        tags}}
+    const perRecordPath = path.join(dataDir, `${id}.json`);
+    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
+    const aggregatePath = path.join(
+      process.cwd()
+      'data'
+      'talent-submissions.json'
+    };
+    const perRecordPath = path && path.join(dataDir, `${id}.json`);
+    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
         summary;
         tags}};
 
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
-
-
+    const aggregatePath = path && path.join(
+      process && process.cwd(),
+      'data',
+      'talent-submissions && submissions.json'
     );    let aggregate: any[] = [];
     if (fs && fs.existsSync(aggregatePath)) {
       try {
@@ -305,76 +322,38 @@ if ( {) {
       try {
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
-
-=======
-    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
-=======
-    }
-    const perRecordPath = path.join (data_dir, `${id}.json`);
-    await fse.writeJSON (perRecordPath, record, { spaces: 2 });
-        summary;
-        tags}}
-;
-    const perRecordPath = path.join (data_dir, `${id}.json`);
-    await fse.writeJSON (perRecordPath, record, { spaces: 2 });
-;
-    const aggregate_path = path.join (
-      process.cwd (),
-      'data',
-      'talent - submissions.json');    let aggregate: any[] = [];
-    if () {) {
-  $2
-}
-      try {
-        const content = await fse.readJSON (aggregate_path);
-        if () aggregate = content) {
-  $2
-}      } catch (_) {    const aggregate_path = path.join (process.cwd (), 'datatalent - submissions.json');
-
     let aggregate: any[] = [];
     if () {) {
   $2
 }
       try {
-
+        const content = await fse.readJSON(aggregatePath);
+        if (Array.isArray(content)) aggregate = content
         const content = await fse.readJSON (aggregate_path);
         if () aggregate = content) {
   $2
 }        if () aggregate = content) {
   $2
 }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       } catch (_) {
         // ignore;
       }
     }
+    aggregate && aggregate.push(record);
+    await fse && fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
 
-
-    return res && res.status(200).json({ ok: true, id, summary, tags });
-
-=======
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
+    // For now, just return success with AI data
+    return res.status(200).json({ ok: true, id, summary, tags });
 
     return res.status(200).json({ ok: true, id, summary, tags })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (error) {
     return res && res.status(500).json({ error: 'Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
   } catch (error) {
-
-    return res && res.status(500).json({ error: 'Internal server error' })
-  };
-
+    return res.status(500).json({ error: 'Internal server error' })
 }
-
-
-=======
-    return res.status(500).json({ error: 'Internal server error' });
-
-  }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+}
     aggregate.push (record);
     await fse.writeJSON (aggregate_path, aggregate, { spaces: 2 });
 ;
@@ -387,5 +366,16 @@ if ( {) {
   } catch (error) {
     return res.status (500).json ({ error: 'Internal server error' });
 }
+<<<<<<< HEAD
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
+=======
+=======
+  }
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,5 +1,4 @@
 
-
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -34,7 +33,7 @@ export default function CloudNativeAutomation() {
                 href='/blog'
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
               >
-                ← Back to Blog
+                 Back to Blog
               </Link>
             </nav>
             <article className='prose prose-invert prose-lg max-w-none'>
@@ -46,7 +45,7 @@ export default function CloudNativeAutomation() {
                   <span className='text-white/60 text-sm'>
                     January 12, 2025
                   </span>
-                  <span className='text-white/60 text-sm'>•</span>
+                  <span className='text-white/60 text-sm'></span>
                   <span className='text-white/60 text-sm'>10 min read</span>
                 </div>
                 <h1 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>
@@ -68,7 +67,7 @@ export default function CloudNativeAutomation() {
                   us to build systems that are:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
-                  <li>• Highly scalable and can handle varying workloads</li>
+                  <li> Highly scalable and can handle varying workloads</li>
                   <li>Resilient to failures with built-in redundancy</li>
                   <li>Easy to maintain and update without downtime</li>
                   <li>Cost-effective through efficient resource utilization</li>
@@ -91,7 +90,7 @@ export default function CloudNativeAutomation() {
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-                    • Consistent runtime environments across development
+                     Consistent runtime environments across development
                     staging, and production
                   </li>
                   <li>
@@ -117,7 +116,7 @@ export default function CloudNativeAutomation() {
                   This approach enables:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
-                  <li>• Version-controlled infrastructure configurations</li>
+                  <li> Version-controlled infrastructure configurations</li>
                   <li>
                     Reproducible environments across different regions and
                     accounts
@@ -140,7 +139,7 @@ export default function CloudNativeAutomation() {
                   maintaining reliable automation systems. We implement:
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
-                  <li>• Real-time metrics collection and alerting</li>
+                  <li> Real-time metrics collection and alerting</li>
                   <li>Distributed tracing for complex workflow analysis</li>
                   <li>Centralized logging with structured data</li>
                   <li>Performance dashboards and automated reporting</li>
@@ -160,7 +159,7 @@ export default function CloudNativeAutomation() {
                 </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
-                    • Identity and access management with role-based permissions
+                     Identity and access management with role-based permissions
                   </li>
                   <li>Encryption at rest and in transit</li>
                   <li>Network security with VPCs and security groups</li>
@@ -178,15 +177,21 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
+<<<<<<< HEAD
+                  infrastructure, we&apos,re exploring emerging technologies
+=======
 
 
                   infrastructure, we're exploring emerging technologies
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
-                  <li>• Serverless computing for event-driven automation</li>
+                  <li> Serverless computing for event-driven automation</li>
                   <li>Edge computing for low-latency processing</li>
                   <li>AI-powered infrastructure optimization</li>
                   <li>Multi-cloud strategies for enhanced reliability</li>
@@ -226,11 +231,7 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
-
-=======
 }
-
-=======
 import Head from 'next / head',
 import Link from 'next / link',
 import React from 'react',
@@ -239,15 +240,6 @@ export default /**
  */
 function CloudNativeAutomation() {
   return (
-=======
-
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react';
-export default function CloudNativeAutomation(req, res) {
-  try {
-  return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title>;
@@ -275,7 +267,7 @@ export default function CloudNativeAutomation(req, res) {
                 href='/blog';
                 className='text - cyan - 400 hover:text - cyan - 300 transition - colors';
               >;
-                ← Back to Blog;
+                 Back to Blog;
               </Link>;
             </nav>;
             <article className='prose prose - invert prose - lg max - w-none'>;
@@ -287,7 +279,7 @@ export default function CloudNativeAutomation(req, res) {
                   <span className='text - white / 60 text - sm'>;
                     January 12, 2025;
                   </span>;
-                  <span className='text - white / 60 text - sm'>•</span>;
+                  <span className='text - white / 60 text - sm'></span>;
                   <span className='text - white / 60 text - sm'>10 min read</span>;
                 </div>;
                 <h1 className='text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
@@ -309,7 +301,7 @@ export default function CloudNativeAutomation(req, res) {
                   us to build systems that are:;
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
-                  <li>• Highly scalable and can handle varying workloads</li>;
+                  <li> Highly scalable and can handle varying workloads</li>;
                   <li > Resilient to failures with built - in redundancy</li>;
                   <li > Easy to maintain and update without downtime</li>;
                   <li > Cost - effective through efficient resource utilization</li>;
@@ -332,7 +324,7 @@ export default function CloudNativeAutomation(req, res) {
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
                   <li>;
-                    • Consistent runtime environments across development,
+                     Consistent runtime environments across development,
                     staging, and production;
                   </li>;
                   <li>;
@@ -357,7 +349,7 @@ export default function CloudNativeAutomation(req, res) {
                   This approach enables:;
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
-                  <li>• Version - controlled infrastructure configurations</li>;
+                  <li> Version - controlled infrastructure configurations</li>;
                   <li>;
                     Reproducible environments across different regions and;
                     accounts;
@@ -380,7 +372,7 @@ export default function CloudNativeAutomation(req, res) {
                   maintaining reliable automation systems. We implement:;
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
-                  <li>• Real - time metrics collection and alerting</li>;
+                  <li> Real - time metrics collection and alerting</li>;
                   <li > Distributed tracing for complex workflow analysis</li>;
                   <li > Centralized logging with structured data</li>;
                   <li > Performance dashboards and automated reporting</li>;
@@ -400,7 +392,7 @@ export default function CloudNativeAutomation(req, res) {
                 </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
                   <li>;
-                    • Identity and access management with role - based permissions;
+                     Identity and access management with role - based permissions;
                   </li>;
                   <li > Encryption at rest and in transit</li>;
                   <li > Network security with VPCs and security groups</li>;
@@ -421,7 +413,7 @@ export default function CloudNativeAutomation(req, res) {
                   infrastructure, we & apos, re exploring emerging technologies;
                   like: </p>;
                 <ul className='space - y-2 text - white / 80 mb - 6'>;
-                  <li>• Serverless computing for event - driven automation</li>;
+                  <li> Serverless computing for event - driven automation</li>;
                   <li > Edge computing for low - latency processing</li>;
                   <li > AI - powered infrastructure optimization</li>;
                   <li > Multi - cloud strategies for enhanced reliability</li>;
@@ -461,7 +453,3 @@ export default function CloudNativeAutomation(req, res) {
       </div>;
     </>);
 }
-
-;
-
-

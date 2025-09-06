@@ -1,113 +1,76 @@
-
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation  } from 'react-i18next';
 import i18n, { supportedLocales, isRtl } from '../../utils/i18n';
-
 const localeLabelKey: Record<string, string> = {
-  en: 'lang.english',
-  pt: 'lang.portuguese',
-  es: 'lang.spanish',
-  ar: 'lang.arabic'
-};
 
-
+  en: "lang.english"
+  pt: "lang.portuguese"
+  es: "lang.spanish"
+  ar: "lang.arabic"
+}
 export default function LanguageSwitchPrompt() {
+<<<<<<< HEAD
+=======
 =======
 
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
+<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+const localeLabelKey: Record<string, string> = {
+
+  en: "lang.english"
+  pt: "lang.portuguese"
+  es: "lang.spanish"
+  ar: "lang.arabic"
+}
+export default function LanguageSwitchPrompt() {
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+const localeLabelKey: Record<string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
-
-const localeLabelKey: Record<string, string> = {;
-  en: "lang && lang.english",;
-  pt: "lang && lang.portuguese",;
-  es: "lang && lang.spanish",;
-  ar: "lang && lang.arabic",;
-};
-export default function LanguageSwitchPrompt() {;
-  const { t } = useTranslation();
-  const [suggested, setSuggested] = useState<string | null>(null);
-
-  useEffect(() => {;
     const key = "langPromptShown";
-    const preferred = localStorage && localStorage.getItem("preferredLanguage");
-    if (preferred) return; // user has chosen;
-    if (localStorage && localStorage.getItem(key)) return; // already prompted;
-
-    const detected =;
-      i18n && i18n.language || i18n && i18n.resolvedLanguage || navigator && navigator.language || "en";
-    const normalized = detected && detected.split("-")[0];
-    const suggestion =;
-      supportedLocales && supportedLocales.includes(normalized as any) && normalized !== "en";
-        ? normalized;
-
-        : null;
-
-=======
-    const key = 'langPromptShown';
-    const preferred = localStorage.getItem('preferredLanguage');
+    const preferred = localStorage.getItem("preferredLanguage");
     if (preferred) return; // user has chosen
     if (localStorage.getItem(key)) return; // already prompted
-
-    const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
-    const normalized = detected.split('-')[0];
-    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    const detected =
+      i18n.language |i18n.resolvedLanguage |navigator.language |"en";
+    const normalized = detected.split("-")[0];
+    const suggestion =
+      supportedLocales.includes(normalized as any) && normalized !== "en"
+        ? normalized
+        : null;
     if (suggestion) setSuggested(suggestion);
   }, []);
   if (!suggested) return null;
-
-
-  const accept = async () => {;
-    await i18n && i18n.changeLanguage(suggested!);
-    localStorage && localStorage.setItem("preferredLanguage", suggested!);
-    localStorage && localStorage.setItem("langPromptShown1", "true");
-    document && document.documentElement.setAttribute(;
-      "dir",;
-      isRtl(suggested!) ? "rtl" : "ltr",;
-
+  const accept = async () => {
+    await i18n.changeLanguage(suggested!);
+    localStorage.setItem("preferredLanguage", suggested!);
+    localStorage.setItem("langPromptShown1", "true");
+    document.documentElement.setAttribute(
+      "dir"
+      isRtl(suggested!) ? "rtl" : "ltr"
     );
     document && document.documentElement.setAttribute("lang", suggested!);
     setSuggested(null);
-
-  };
-
-  const decline = () => {;
-    localStorage && localStorage.setItem("langPromptShown1", "true");
-
+  }
+  const decline = () => {
+    localStorage.setItem("langPromptShown1", "true");
     setSuggested(null);
   }
 
@@ -131,9 +94,10 @@ export default function LanguageSwitchPrompt() {;
         </div>;
       </div>;
     </div>;
-
   );
 }
+<<<<<<< HEAD
+=======
 =======
     localStorage.setItem('preferredLanguage', suggested!);
     localStorage.setItem('langPromptShown1');
@@ -159,10 +123,20 @@ export default function LanguageSwitchPrompt() {;
         </div>
       </div>
     </div>
-
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+);
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useEffect, useState } from './react';
 import { use_translation  } from './react - i18next';
 import i18n, { supported_locales, is_rtl } from "../../utils / i18n";
@@ -245,4 +219,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

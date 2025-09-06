@@ -22,32 +22,46 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-import Image from 'next / image';
-;
-
+import Image from 'next/image';
 interface OptimizedImageProps {
+<<<<<<< HEAD
   src: string
   alt: string
-=======
+<<<<<<< HEAD
 
 interface OptimizedImageProps {;
   src: string,;
   alt: string,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+<<<<<<< HEAD
+  src: string;
+  alt: string;
+=======
+  src: string,
+  alt: string,
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   width?: number;
   height?: number;
   class_name?: string;
   priority?: boolean;
   quality?: number;
 }
-
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({;
-
-=======
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+<<<<<<< HEAD
 const OptimizedImage: React.FC < OptimizedImageProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+  src,
+  alt,
+  width = 800,
+  height = 600,
+  className = '',
+  priority = false,
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   src;
   alt;
 
@@ -55,10 +69,19 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
   height = 600;
   class_name = '';
   priority = false;
+<<<<<<< HEAD
+  quality = 75
 
-  quality = 75,;
-}) => {;
+=======
+<<<<<<< HEAD
+  quality = 75
 
+=======
+>>>>>>> origin/main
+  quality = 75,
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+}) => {
   return (
     <Image;
       src={src}
@@ -68,16 +91,8 @@ const OptimizedImage: React.FC < OptimizedImageProps> = ({
       className={class_name}
       priority={priority}
       quality={quality}
-
-;
-
-=======
-      placeholder="blur"
-      blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-
-    />  );
-};
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      placeholder="blur";
+      blurDataURL="data:image / jpeg, base64, /9j / 4AAQSkZJRgABAQAAAQABAAD / 2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj / 2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj / wAARCAABAAEDASIAAhEBAxEB / 8QAFQABAQAAAAAAAAAAAAAAAAAAAAv / xAAUEAEAAAAAAAAAAAAAAAAAAAAA / 8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX / xAAUEQEAAAAAAAAAAAAAAAAAAAAA / 9oADAMBAAIRAxEAPwCdABmX / 9k=";
+/>  );
+}
 export default OptimizedImage;

@@ -1,7 +1,29 @@
 
-
-export default function Home() {;
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+export default function Home() {
   return (
     <div>;
       <main>;
@@ -11,7 +33,6 @@ export default function Home() {;
       </main>;
     </div>;
   );
-=======
 import React from './react';
 import Link from './next / link';
 ;
@@ -27,5 +48,4 @@ function Home() {
         <Link href="/services">View Our Services</Link>;
       </main>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

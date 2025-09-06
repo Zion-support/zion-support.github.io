@@ -20,7 +20,7 @@ export default function OrderConfirmationPage() {;
         <p className="text-lg mb-4">Your order has been confirmed and is being processed.</p>;
         <div className="mt-4">;
           <a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home;
+             Back to Home;
           </a>;
         </div>;
       </div>;

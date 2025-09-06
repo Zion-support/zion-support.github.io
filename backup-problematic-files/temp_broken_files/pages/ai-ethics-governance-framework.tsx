@@ -9,7 +9,7 @@ export default function AIEthicsGovernanceFramework() {;
 			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations.";
 			subtitle="Ship trustworthy AI with auditable controls and continuous oversight.";
 			pricePerMonthUSD={1599}
-			implementationWeeks="Implementation:3–6 weeks";
+			implementationWeeks="Implementation:36 weeks";
 			roiNote="Reduce compliance risk and accelerate approvals";
 			features={[;
 				"AI risk register and DPIA templates",;
@@ -49,10 +49,10 @@ const AIEthicsGovernanceFramework: React.FC = () => {
               Establish core ethical principles for AI development and deployment.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Fairness and bias prevention</li>
-              <li>• Transparency and explainability</li>
-              <li>• Privacy protection</li>
-              <li>• Human autonomy</li>
+              <li> Fairness and bias prevention</li>
+              <li> Transparency and explainability</li>
+              <li> Privacy protection</li>
+              <li> Human autonomy</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIEthicsGovernanceFramework: React.FC = () => {
               Implement governance structures for AI oversight and accountability.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• AI ethics committees</li>
-              <li>• Review processes</li>
-              <li>• Compliance monitoring</li>
-              <li>• Risk assessment</li>
+              <li> AI ethics committees</li>
+              <li> Review processes</li>
+              <li> Compliance monitoring</li>
+              <li> Risk assessment</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIEthicsGovernanceFramework: React.FC = () => {
               Practical tools and processes for implementing ethical AI practices.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Ethical impact assessments</li>
-              <li>• Bias testing tools</li>
-              <li>• Training programs</li>
-              <li>• Monitoring systems</li>
+              <li> Ethical impact assessments</li>
+              <li> Bias testing tools</li>
+              <li> Training programs</li>
+              <li> Monitoring systems</li>
             </ul>
           </div>
         </div>

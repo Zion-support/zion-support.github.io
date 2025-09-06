@@ -13,7 +13,7 @@ export default function ForbiddenPage() {;
         <p className="text-lg mb-4">You don't have permission to access this resource.</p>;
         <div className="mt-4">;
           <a href="/" className="text-blue-600 hover:underline">;
-            ← Back to Home;
+             Back to Home;
           </a>;
         </div>;
       </div>;

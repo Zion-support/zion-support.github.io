@@ -5,7 +5,7 @@ interface ProviderMeta { id:string, name:string, category:'crm' | 'ats', descrip
 interface ConnectionMap { [providerId:string]:any }
 ;
 function StatusIcon({ status } { status:'connected' | 'warning' | 'disconnected' }) {;
-  const label = status === 'connected' ? '✅' :status === 'warning' ? '⚠️' :'❌',;
+  const label = status === 'connected' ? '' :status === 'warning' ? '' :'',;
   return <span className="text-xl" title={status}>{label}</span>,;
 }
 ;
@@ -95,7 +95,7 @@ export default function AdminIntegrationsPage() {;
     return (;
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">;
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">;
-          <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>;
+          <div className="font-semibold mb-2">Sync Rules  {provider.name}</div>;
           <div className="space-y-3 text-sm">;
             {isCrm ? (;
               <>;
@@ -126,7 +126,7 @@ export default function AdminIntegrationsPage() {;
 ;
   return (;
     <>;
-      <Head><title>Admin Integrations • Zion</title></Head>;
+      <Head><title>Admin Integrations  Zion</title></Head>;
       <main className="container mx-auto px-4 py-8">;
         <h1 className="text-2xl font-semibold mb-2">Integrations</h1>;
         <p className="text-sm text-gray-600 mb-6">Connect your CRM and ATS to sync contacts, applicants, and activity.</p>;
@@ -149,8 +149,8 @@ export default function AdminIntegrationsPage() {;
           <h2 className="text-lg font-semibold mb-2">Zapier</h2>;
           <div className="text-sm text-gray-600">Polling endpoints:</div>;
           <ul className="list-disc pl-6 text-sm mt-2">;
-            <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>;
-            <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>;
+            <li>New Zion Job Posted  GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>;
+            <li>Talent Matched  GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>;
           </ul>;
         </section>;
 ;

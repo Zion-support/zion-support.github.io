@@ -19,23 +19,23 @@ export default function ComprehensiveServicesOverviewPage() {;
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],;
 ;
   const categories = [;
-    { id:'all', name:'All Services', icon:'🚀', count:allServices.length },;
-    { id:'AI & Machine Learning', name:'AI & ML', icon:'🧠', count:allServices.filter(s => s.category === 'AI & Machine Learning').length },;
-    { id:'Healthcare AI', name:'Healthcare', icon:'🏥', count:allServices.filter(s => s.category === 'Healthcare AI').length },;
-    { id:'Fintech AI', name:'Fintech', icon:'💰', count:allServices.filter(s => s.category === 'Fintech AI').length },;
-    { id:'Cybersecurity', name:'Security', icon:'🛡️', count:allServices.filter(s => s.category === 'Cybersecurity').length },;
-    { id:'IoT & Smart Cities', name:'Smart Cities', icon:'🏙️', count:allServices.filter(s => s.category === 'IoT & Smart Cities').length },;
-    { id:'Blockchain & DeFi', name:'Blockchain', icon:'🔗', count:allServices.filter(s => s.category === 'Blockchain & DeFi').length },;
-    { id:'Quantum Computing', name:'Quantum', icon:'⚛️', count:allServices.filter(s => s.category === 'Quantum Computing').length },;
-    { id:'Space Technology', name:'Space Tech', icon:'🚀', count:allServices.filter(s => s.category === 'Space Technology').length },;
-    { id:'Autonomous Systems', name:'Autonomous', icon:'🤖', count:allServices.filter(s => s.category === 'Autonomous Systems').length },;
-    { id:'AR/VR & Metaverse', name:'AR/VR', icon:'🥽', count:allServices.filter(s => s.category === 'AR/VR & Metaverse').length },;
-    { id:'5G/6G Networks', name:'5G/6G', icon:'📡', count:allServices.filter(s => s.category === '5G/6G Networks').length },;
-    { id:'Biotechnology AI', name:'Biotech', icon:'🧬', count:allServices.filter(s => s.category === 'Biotechnology AI').length },;
-    { id:'Renewable Energy', name:'Energy', icon:'⚡', count:allServices.filter(s => s.category === 'Renewable Energy').length },;
-    { id:'Edge Computing', name:'Edge', icon:'🌐', count:allServices.filter(s => s.category === 'Edge Computing').length },;
-    { id:'Quantum Internet', name:'Q-Internet', icon:'🌍', count:allServices.filter(s => s.category === 'Quantum Internet').length },;
-    { id:'Neuromorphic Computing', name:'Neuro', icon:'🧠', count:allServices.filter(s => s.category === 'Neuromorphic Computing').length }
+    { id:'all', name:'All Services', icon:'', count:allServices.length },;
+    { id:'AI & Machine Learning', name:'AI & ML', icon:'', count:allServices.filter(s => s.category === 'AI & Machine Learning').length },;
+    { id:'Healthcare AI', name:'Healthcare', icon:'', count:allServices.filter(s => s.category === 'Healthcare AI').length },;
+    { id:'Fintech AI', name:'Fintech', icon:'', count:allServices.filter(s => s.category === 'Fintech AI').length },;
+    { id:'Cybersecurity', name:'Security', icon:'', count:allServices.filter(s => s.category === 'Cybersecurity').length },;
+    { id:'IoT & Smart Cities', name:'Smart Cities', icon:'', count:allServices.filter(s => s.category === 'IoT & Smart Cities').length },;
+    { id:'Blockchain & DeFi', name:'Blockchain', icon:'', count:allServices.filter(s => s.category === 'Blockchain & DeFi').length },;
+    { id:'Quantum Computing', name:'Quantum', icon:'', count:allServices.filter(s => s.category === 'Quantum Computing').length },;
+    { id:'Space Technology', name:'Space Tech', icon:'', count:allServices.filter(s => s.category === 'Space Technology').length },;
+    { id:'Autonomous Systems', name:'Autonomous', icon:'', count:allServices.filter(s => s.category === 'Autonomous Systems').length },;
+    { id:'AR/VR & Metaverse', name:'AR/VR', icon:'', count:allServices.filter(s => s.category === 'AR/VR & Metaverse').length },;
+    { id:'5G/6G Networks', name:'5G/6G', icon:'', count:allServices.filter(s => s.category === '5G/6G Networks').length },;
+    { id:'Biotechnology AI', name:'Biotech', icon:'', count:allServices.filter(s => s.category === 'Biotechnology AI').length },;
+    { id:'Renewable Energy', name:'Energy', icon:'', count:allServices.filter(s => s.category === 'Renewable Energy').length },;
+    { id:'Edge Computing', name:'Edge', icon:'', count:allServices.filter(s => s.category === 'Edge Computing').length },;
+    { id:'Quantum Internet', name:'Q-Internet', icon:'', count:allServices.filter(s => s.category === 'Quantum Internet').length },;
+    { id:'Neuromorphic Computing', name:'Neuro', icon:'', count:allServices.filter(s => s.category === 'Neuromorphic Computing').length }
   ],;
 ;
   // Filter and sort services;
@@ -63,7 +63,7 @@ export default function ComprehensiveServicesOverviewPage() {;
 ;
   const getCategoryIcon = (category:string) => {;
     const categoryData = categories.find(cat => cat.id === category),;
-    return categoryData?.icon || '🚀';
+    return categoryData?.icon || '';
   },;
 ;
   // Calculate market statistics;
@@ -127,17 +127,17 @@ export default function ComprehensiveServicesOverviewPage() {;
               {/* Key Benefits */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">;
                 <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30">;
-                  <div className="text-4xl mb-4">🚀</div>;
+                  <div className="text-4xl mb-4"></div>;
                   <h3 className="text-xl font-bold text-white mb-2">First-to-Market Solutions</h3>;
                   <p className="text-white/70 text-sm">Revolutionary services that give you competitive advantages in emerging markets</p>;
                 </div>;
                 <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-6 border border-green-500/30">;
-                  <div className="text-4xl mb-4">⚡</div>;
+                  <div className="text-4xl mb-4"></div>;
                   <h3 className="text-xl font-bold text-white mb-2">AI-Powered Optimization</h3>;
                   <p className="text-white/70 text-sm">Advanced AI algorithms that continuously optimize and improve your operations</p>;
                 </div>;
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30">;
-                  <div className="text-4xl mb-4">🛡️</div>;
+                  <div className="text-4xl mb-4"></div>;
                   <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>;
                   <p className="text-white/70 text-sm">Military-grade security with quantum-resistant encryption and AI threat detection</p>;
                 </div>;
@@ -400,7 +400,7 @@ export default function ComprehensiveServicesOverviewPage() {;
                 animate={{ opacity:1 }}
                 className="text-center py-20";
               >;
-                <div className="text-6xl mb-4">🔍</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>;
                 <p className="text-white/60">Try adjusting your search or filter criteria</p>;
               </motion.div>;            )}
@@ -459,7 +459,7 @@ case 'newest': return (<> <Head> <title>Comprehensive Services Overview 2025 - Z
   {
   duration: 0.8 
 }
-}> <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Micro SAAS Services 2025 </h1> <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8" > Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology with AI, quantum computing, and emerging technologies </p> </div> <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-6 border border-green-500/30" > <div className="text-4xl mb-4" >⚡</div> <h3 className="text-xl font-bold text-white mb-2" >AI-Powered Optimization</h3> <p className="text-white/70 text-sm" >Advanced AI algorithms that continuously optimize and improve your operations</p> </div> <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30" > <div className="text-4xl mb-4" >🛡️</div> <h3 className="text-xl font-bold text-white mb-2" >Enterprise Security</h3> <p className="text-white/70 text-sm" >Military-grade security with quantum-resistant encryption and AI threat detection</p> </div> </div> </motion.div> </div> </section> > <option value="popularity" >Most Popular</option> <option value="price" >Price: Low to High</option> <option value="rating" >Highest Rated</option> <option value="newest" >Newest First</option> </select> <div className="flex bg-white/10 rounded-xl p-1" > <button onClick= {
+}> <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Micro SAAS Services 2025 </h1> <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8" > Discover our cutting-edge micro SAAS solutions that are transforming industries and driving the future of technology with AI, quantum computing, and emerging technologies </p> </div> <div className="bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl p-6 border border-green-500/30" > <div className="text-4xl mb-4" ></div> <h3 className="text-xl font-bold text-white mb-2" >AI-Powered Optimization</h3> <p className="text-white/70 text-sm" >Advanced AI algorithms that continuously optimize and improve your operations</p> </div> <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-6 border border-purple-500/30" > <div className="text-4xl mb-4" ></div> <h3 className="text-xl font-bold text-white mb-2" >Enterprise Security</h3> <p className="text-white/70 text-sm" >Military-grade security with quantum-resistant encryption and AI threat detection</p> </div> </div> </motion.div> </div> </section> > <option value="popularity" >Most Popular</option> <option value="price" >Price: Low to High</option> <option value="rating" >Highest Rated</option> <option value="newest" >Newest First</option> </select> <div className="flex bg-white/10 rounded-xl p-1" > <button onClick= {
   () => setViewMode ('grid') 
 }className= {
   `p-2 rounded-lg transition-all $ {
@@ -493,6 +493,6 @@ case 'newest': return (<> <Head> <title>Comprehensive Services Overview 2025 - Z
 }{
   /* No Results */ 
 }{
-  filteredServices.length === 0 && (<motion.div > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/60" >Try adjusting your search or filter criteria</p> </motion.div>) 
+  filteredServices.length === 0 && (<motion.div > <div className="text-6xl mb-4" ></div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/60" >Try adjusting your search or filter criteria</p> </motion.div>) 
 }</div> </section> > <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30" > <h2 className="text-3xl font-bold text-white mb-4" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Join thousands of companies already using our revolutionary micro SAAS services to drive innovation and growth. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 px-8 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2" > Contact Sales Team <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2" > Call +1 302 464 0950 </Link> </div> </div> </motion.div> </div> </section> </div> </>) 
 }

@@ -1,8 +1,14 @@
 
-
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState, useEffect } from 'react';
+=======
 import {useState, useEffect} from 'react';
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
@@ -10,11 +16,8 @@ export function useIsMobile() {
   useEffect(() => {
 
     const handleResize = () => {
-
-      setIsMobile(window && window.innerWidth < 768)
-    };
-
-
+      setIsMobile(window.innerWidth < 768)
+    }
     if (typeof window !== 'undefined') {
       window && window.addEventListener('resize', handleResize);
       return () => window && window.removeEventListener('resize', handleResize)
@@ -23,7 +26,7 @@ export function useIsMobile() {
   }, []);
 
   return isMobile
-
+<<<<<<< HEAD
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -40,15 +43,19 @@ function useIsMobile() {
     // Check condition
 if ( {) {
   $2
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
       window.addEventListener ('resize', handle_resize);
       return () => window.removeEventListener ('resize', handle_resize);
     }
     return undefined;
   }, []);
+<<<<<<< HEAD
 =======
-
-
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
@@ -66,12 +73,13 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
-
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
   return is_mobile;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

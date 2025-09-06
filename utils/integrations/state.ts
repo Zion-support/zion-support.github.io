@@ -4,8 +4,23 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
-
-
+  connections: []
+  logs: []
+  overrides: []
+<<<<<<< HEAD
+}
+export function getState(): IntegrationState {
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+=======
+<<<<<<< HEAD
+}
+export function getState(): IntegrationState {
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+=======
 };
 
 export function getState(): IntegrationState {;
@@ -13,40 +28,30 @@ export function getState(): IntegrationState {;
 }
 
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   updater(state);
   return { ...state }
 }
 export function resetState(): void {
   state = {
-
-  connections: [],
-  logs: [],
-  overrides: [];
-}
-;
-export function get_state (): IntegrationState {
-  return { ...state }
-}
-export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
-  updater (state);
-  return { ...state }
-}
-export function reset_state (): void {
-  state = {
-    connections: [],
-    logs: [],
-    overrides: [];
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+    connections: []
+    logs: []
+    overrides: []
   }
+<<<<<<< HEAD
 }
-
+=======
 =======
 
     connections: [],
     logs: [],
     overrides: [];
   };
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

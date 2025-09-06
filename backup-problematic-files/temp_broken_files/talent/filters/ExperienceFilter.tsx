@@ -52,7 +52,4 @@ mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="
 }years</span> <span> {;
   experienceRange[1] ;
 }years</span> </div> <Slider /> </div>) ;
-
-}</div>) ;
-}"
-
+}</div>) ;"}"

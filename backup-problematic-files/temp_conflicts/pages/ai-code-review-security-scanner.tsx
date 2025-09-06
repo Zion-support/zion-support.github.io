@@ -451,7 +451,7 @@ const AICodeReviewSecurityScanner = () => {;
               </div>;
               ;
               <div className="mt-8 text-gray-400">;
-                <p>14-day free trial • No credit card required • Cancel anytime</p>;
+                <p>14-day free trial  No credit card required  Cancel anytime</p>;
               </div>;
             </motion.div>;
           </div>;

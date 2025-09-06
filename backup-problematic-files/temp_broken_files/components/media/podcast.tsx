@@ -30,7 +30,7 @@ export default function PodcastIndexPage() {
     },
     load()
   }, []),
-  if (loading) return <div>Loading episodes…</div>,
+  if (loading) return <div>Loading episodes</div>,
 
   return (
     <div className=&quot;space-y-6&quot;>
@@ -45,7 +45,7 @@ export default function PodcastIndexPage() {
             <div className=&quot;flex items-center justify-between&quot;>
               <div>
                 <h2 className=&quot;text-xl font-semibold&quot;>{ep.title}</h2>
-                <p className=&quot;text-sm text-gray-500&quot;>Guest: {ep.inviteeName} · {new Date(ep.createdAt).toLocaleString()}</p>
+                <p className=&quot;text-sm text-gray-500&quot;>Guest: {ep.inviteeName}  {new Date(ep.createdAt).toLocaleString()}</p>
                 {ep.summary && <p className=&quot;mt-2 text-gray-700&quot;>{ep.summary}</p>}
               </div>
               <div className=&quot;flex gap-3&quot;>

@@ -24,32 +24,59 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { X } from 'lucide-react';
 
-
+export type SmartNudgeBannerProps = {;
+;
+export type SmartNudgeBannerProps = {
   role: 'talent' | 'client';
   user_id?: string | null;
   message: string;
-
-
+}
+export default function SmartNudgeBanner({
+  role
+  userId
+  message
+}: SmartNudgeBannerProps) {
+  const storageKey = React.useMemo(
+<<<<<<< HEAD
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`
+    [role, userId]
+=======
+<<<<<<< HEAD
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`
+    [role, userId]
+=======
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
     try {
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
-
-
+<<<<<<< HEAD
+  role: 'talent' | 'client'
+  userId?: string | null;
+  message: string
+}
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+=======
+<<<<<<< HEAD
+  role: 'talent' | 'client'
+  userId?: string | null;
+  message: string
+}
+export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+=======
   role: 'talent' | 'client',;
   userId?: string | null;
   message: string
 };
 
 export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
   const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -61,46 +88,19 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     } catch {}
   }, [storageKey]);
   const dismiss = React.useCallback(() => {
-
-};
-
-export default function SmartNudgeBanner(): any ({;
-  role,;
-  userId,;
-  message,;
-}: SmartNudgeBannerProps) {;
-  const storageKey = React && React.useMemo(;
-    () => `zion-nudge-${role}-${userId ?? 'anon'}`,;
-    [role, userId];
-  );  const [hidden, setHidden] = React && React.useState<boolean>(false);
-
-  React && React.useEffect(() => {;
-    try {;
-      const v =;
-        typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {;
-  role: 'talent' | 'client',;
-  userId?: string | null;
-  message: string;
-};
-
-export default function SmartNudgeBanner(): any ({ role, userId, message }: SmartNudgeBannerProps) {;
-  const storageKey = React && React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
-  const [hidden, setHidden] = React && React.useState<boolean>(false);
-
-  React && React.useEffect(() => {;
-    try {;
-      const v =;
-        typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');      const v = typeof window !== 'undefined' ? localStorage && localStorage.getItem(storageKey) : null;
-      setHidden(v === 'dismissed');
-
     } catch {}
   }, [storageKey]);
 
   const dismiss = React && React.useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setHidden(true);
+<<<<<<< HEAD
+    try {;
+      if (typeof window !== 'undefined');
+        localStorage && localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage && localStorage.setItem(storageKey, 'dismissed');
+    try {;
+      if (typeof window !== 'undefined');
+        localStorage && localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage && localStorage.setItem(storageKey, 'dismissed');
+=======
 
 
 =======
@@ -110,34 +110,35 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 
         localStorage.setItem(storageKey, 'dismissed');    } catch {}
 
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
 
   return (
-
-
-        {message}
-
-      </div>;
+    <div className='relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'>;
+      <button
+        onClick={dismiss}
+        aria-label='Dismiss'
+        className='absolute top-2 right-2 p-1 rounded hover:bg-black/5 dark:hover:bg-white/10'>;
+        <X size={16} />;
+      </button>;
+      <div className='text-sm'>{message}</div>;
     </div>;
-  );
-=======
-      <div className='text-sm'>{message}</div>
+  );        <X size={16} />;
+      </button>;
+      <div className="text-sm">;
+        {message}
+      </div>
     </div>
-
-  );
-
-=======
-
-
+<<<<<<< HEAD
+);
 }
-
-
-=======
 }
 ;
 export default /**
@@ -207,4 +208,27 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+<<<<<<< HEAD
+  );        <X size={16} />
+      </button>
+      <div className="text-sm">
+        {message}
+      </div>
+    </div>
+);
+}
+<<<<<<< HEAD
+=======
+  );
+
+=======
+
+}
+
+
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -9,7 +9,7 @@ export default function AiPoweredDecisionEngine() {;
 			subtitle="Make better decisions, continuously";
 			pricePerMonthUSD={279}
 			implementationWeeks="3-7 days";
-			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation";
+			roiNote="Teams report 25x ROI via faster, consistent decisions and uplift from experimentation";
 			features={[;
 				"Policy and risk decisioning with constraints",;
 				"Online experimentation (A/B, multi-armed bandits)",;
@@ -50,10 +50,10 @@ const AIPoweredDecisionEngine: React.FC = () => {
               Automate routine decisions with AI-powered logic and rule engines.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Rule-based decisions</li>
-              <li>• Machine learning models</li>
-              <li>• Real-time processing</li>
-              <li>• Audit trails</li>
+              <li> Rule-based decisions</li>
+              <li> Machine learning models</li>
+              <li> Real-time processing</li>
+              <li> Audit trails</li>
             </ul>
           </div>
 
@@ -63,10 +63,10 @@ const AIPoweredDecisionEngine: React.FC = () => {
               Assess risks and opportunities with AI-powered analysis and modeling.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Risk modeling</li>
-              <li>• Scenario analysis</li>
-              <li>• Probability assessment</li>
-              <li>• Impact evaluation</li>
+              <li> Risk modeling</li>
+              <li> Scenario analysis</li>
+              <li> Probability assessment</li>
+              <li> Impact evaluation</li>
             </ul>
           </div>
 
@@ -76,10 +76,10 @@ const AIPoweredDecisionEngine: React.FC = () => {
               Optimize decisions and outcomes with AI-powered optimization algorithms.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Multi-objective optimization</li>
-              <li>• Constraint handling</li>
-              <li>• Performance metrics</li>
-              <li>• Continuous improvement</li>
+              <li> Multi-objective optimization</li>
+              <li> Constraint handling</li>
+              <li> Performance metrics</li>
+              <li> Continuous improvement</li>
             </ul>
           </div>
         </div>

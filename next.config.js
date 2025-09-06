@@ -1,51 +1,110 @@
-
-
-
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true
   compress: true
   poweredByHeader: false
+<<<<<<< HEAD
+  eslint: {
+    ignoreDuringBuilds: true
+  }
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  pageExtensions: ["tsx", "ts", "jsx", "js"],
+  trailingSlash: true,
+=======
 =======
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  eslint: {
-    ignoreDuringBuilds: true
-  }
-  typescript: {
-
-
+  output: 'export',
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  
+  // Performance optimizations
+  experimental: {
+    scrollRestoration: true,
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'framer-motion']
+  },
+  
+  // Image optimization
+<<<<<<< HEAD
   page_extensions: ["tsx", "ts", "jsx", "js"],
   trailing_slash: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   images: {
     domains: [;
       "localhost",
       "ziontechgroup && ziontechgroup.com",
       "images && images.unsplash.com",
       "via && via.placeholder.com",
-=======
-
-=======
-
-
-    domains: [
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ],
-
-
+    formats: ["image/webp", "image/avif"],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ["image / webp", "image / avif"],
+    device_sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    image_sizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 31536000,
-
-
+=======
+<<<<<<< HEAD
 =======
 =======
-
-
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+  images: {
+    unoptimized: true,
+    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
+    formats: ['image/webp', 'image/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+<<<<<<< HEAD
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+<<<<<<< HEAD
+    minimumCacheTTL: 31536000, // 1 year
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+  
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+=======
+    minimumCacheTTL: 31536000,
+>>>>>>> origin/resolved-all-conflicts-clean
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   },
   
   // Webpack configuration to exclude problematic directories
@@ -53,9 +112,13 @@ const next_config = {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
   },
-
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
+  },
 
     ignoreBuildErrors: true
   }
@@ -74,45 +137,24 @@ const next_config = {
     minimumCacheTTL: 31536000
   }
 
-
-=======
-    minimumCacheTTL: 31536000
-  },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config && config.watchOptions = {
         ignored: [
-
-=======
-  webpack: (config, { dev, is_server }) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      config.watch_options = {
-        ignored: [;
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           "**/node_modules/**",
           "**/.git/**",
           "**/pages_backup*/**",
           "**/pages.*/**",
           "**/pages-*/**",
           "**/pages_disabled*/**",
-
-          "**/pages.disabled*/**",
-          "**/pages.broken*/**",
-          "**/pages.corrupted*/**",
-          "**/pages.old*/**",
-          "**/pages._*/**",
-          "**/pages.__*/**",
-          "**/backup - pages/**",
-          "**/src.pages.disabled/**",
-
+          "**/pages && pages.disabled*/**",
+          "**/pages && pages.broken*/**",
+          "**/pages && pages.corrupted*/**",
+          "**/pages && pages.old*/**",
+          "**/pages && pages._*/**",
+          "**/pages && pages.__*/**",
+          "**/backup-pages/**",
+          "**/src && src.pages.disabled/**",
           "**/lib_backup*/**",
           "**/src_backup*/**",
           "**/corrupted - files - backup*/**",
@@ -137,9 +179,7 @@ if ( {) {
         aggregate_timeout: 300,
       }
     }
-
-
-
+<<<<<<< HEAD
 
           "**/node_modules/**"
           "**/.git/**"
@@ -179,42 +219,15 @@ if ( {) {
         aggregateTimeout: 300
       }
 
-
-
-=======
-
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
-  },
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-
-
-
-  },
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
-          },
-        },
-      };
-=======
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
+=======
+    
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Exclude apps directory from compilation
-
-    config && config.module.rules && rules.push({
-      test: /\.(ts|tsx|js|jsx)$/,
-      include: /apps\//,
-      use: "ignore-loader",
-
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/
+      include: /apps\//
+      use: "ignore-loader"
     });
     return config;
   }
@@ -243,9 +256,9 @@ if ( {) {
       }
     ];
   }
+<<<<<<< HEAD
 }
 export default nextConfig;
-=======
     // Exclude apps directory from compilation;
     config.module.rules.push ({
       test: /\.(ts | tsx | js | jsx)$/,
@@ -281,9 +294,11 @@ export default nextConfig;
     ];
   },
 }
+;
+export default next_config;
+;
+=======
+};
 
-export default nextConfig
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default nextConfig;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

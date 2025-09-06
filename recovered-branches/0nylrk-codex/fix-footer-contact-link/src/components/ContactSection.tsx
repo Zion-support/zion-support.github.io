@@ -1,45 +1,70 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-import { GradientHeading  } from '@/components / GradientHeading';
-import { Button  } from '@/components / ui / button';
-import { Mail  } from './lucide-react';
-export /**
- * ContactSection - Function description
- */
-function ContactSection() {
+import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+export function ContactSection() {;
   return (
-    <section className="py - 20 bg - zion - blue" id="contact">;
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
-        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center">;
+    <section className="py-20 bg-zion-blue" id="contact">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
           <div>;
-            <GradientHeading > Get In Touch</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl mb - 8">;
+            <GradientHeading>Get In Touch</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl mb-8">;
               We have the equipment, the parts, and the maintenance services;
-              ready for you — right now. Contact us today.;
+              ready for you  right now. Contact us today.;
             </p>;
-            <div className="flex items - center mb - 6">;
-              <div className="mr - 4 p - 2 bg - zion - purple / 20 rounded - full text - zion - cyan">;
-                <Mail className="h - 6 w - 6" />;
+            <div className="flex items-center mb-6">;
+              <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">;
+                <Mail className="h-6 w-6" />;
               </div>;
               <div>;
-                <p className="text - white font - semibold">Email Us</p>;
-                <a;
-                  href="mailto:commercial@ziontechgroup.com";
-                  className="text - zion - cyan hover:text - zion - purple transition - colors";
-                >;
-                  commercial@ziontechgroup.com;
+                <p className="text-white font-semibold">Email Us</p>;
+                <a
+                  href="mailto:commercial@ziontechgroup && ziontechgroup.com"
+                  className="text-zion-cyan hover:text-zion-purple transition-colors">;
+                  commercial@ziontechgroup && ziontechgroup.com;
                 </a>;
               </div>;
             </div>;
-            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
-
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
               Request Commercial Proposal;
             </Button>;
           </div>;
           <div className="relative">;
-
-
-
-
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>;
+            <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">;
+              <h3 className="text-xl font-bold mb-6 text-white">;
+                Send Us a Message;
+              </h3>;
+              <form className="space-y-6">;
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
+                  <div>;
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-zion-slate-light mb-1">;
+                      Name;
+                    </label>;
+=======
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
+=======
+import { Button } from "@/components/ui/button",
+import { Mail } from "lucide-react",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -76,101 +101,51 @@ export function ContactSection() {
                       Name
                     </label>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <input
                       type="text"
                       id="name"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">
-                      Email
-                    </label>
-
+                    />;
+                  </div>;
+                  <div>;
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-zion-slate-light mb-1">;
+                      Email;
+                    </label>;
                     <input
                       type="email"
                       id="email"
                       className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
-            <div className="absolute inset - 0 bg - gradient - to - r from - zion - purple / 20 to - zion - cyan / 20 rounded - lg filter blur - 3xl opacity - 30"></div>;
-            <div className="relative bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 8">;
-              <h3 className="text - xl font - bold mb - 6 text - white">;
-                Send Us a Message;
-              </h3>;
-              <form className="space - y-6">;
-                <div className="grid grid - cols - 1 gap - 6 sm:grid - cols - 2">;
-                  <div>;
-                    <label;
-                      html_for="name";
-                      className="block text - sm font - medium text - zion - slate - light mb - 1";
-                    >;
-                      Name;
-                    </label>;
-                    <input;
-                      type="text";
-                      id="name";
-                      className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
-                    />;
-                  </div>;
-                  <div>;
-                    <label;
-                      html_for="email";
-                      className="block text - sm font - medium text - zion - slate - light mb - 1";
-                    >;
-                      Email;
-                    </label>;
-                    <input;
-                      type="email";
-                      id="email";
-                      className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
-
                     />;
                   </div>;
                 </div>;
                 <div>;
-
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">
-                    Subject
-                  </label>
-
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-zion-slate-light mb-1">;
+                    Subject;
+                  </label>;
                   <input
                     type="text"
                     id="subject"
                     className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
-
-                  <label;
-                    html_for="subject";
-                    className="block text - sm font - medium text - zion - slate - light mb - 1";
-                  >;
-                    Subject;
-                  </label>;
-                  <input;
-                    type="text";
-                    id="subject";
-                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus:border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
                   />;
                 </div>;
                 <div>;
-                  <label;
-                    html_for="message";
-                    className="block text - sm font - medium text - zion - slate - light mb - 1";
-                  >;
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-zion-slate-light mb-1">;
                     Message;
                   </label>;
-                  <textarea;
-                    id="message";
+                  <textarea
+                    id="message"
                     rows={4}
-                    className="w - full rounded - md bg - zion - blue - dark border border - zion - blue - light focus: border - zion - purple focus:ring - 1 focus:ring - zion - purple text - white";
-                  ></textarea>;
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"></textarea>;
                 </div>;
                 <div>;
-                  <Button className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
-
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
                     Send Message;
                   </Button>;
                 </div>;
@@ -179,6 +154,8 @@ export function ContactSection() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
 
                   />
                 </div>
@@ -204,11 +181,101 @@ export function ContactSection() {
       </div>
 
     </section>
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Mail } from "lucide-react";
+export function ContactSection() {;
+  return (;
+    <section className="py-20 bg-zion-blue" id="contact">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">;
+          <div>;
+            <GradientHeading>Get In Touch</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl mb-8">;
+              We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.;
+            </p>;
+            <div className="flex items-center mb-6">;
+              <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">;
+                <Mail className="h-6 w-6" />;
+              </div>;
+              <div>;
+                <p className="text-white font-semibold">Email Us</p>;
+                <a href="mailto:commercial@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">;
+                  commercial@ziontechgroup.com;
+                </a>;
+              </div>;
+            </div>;
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+              Request Commercial Proposal;
+            </Button>;
+          </div>;
+          <div className="relative">;
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg filter blur-3xl opacity-30"></div>;
+            <div className="relative bg-zion-blue-light border border-zion-purple/20 rounded-lg p-8">;
+              <h3 className="text-xl font-bold mb-6 text-white">Send Us a Message</h3>;
+              <form className="space-y-6">;
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">;
+                  <div>;
+                    <label htmlFor="name" className="block text-sm font-medium text-zion-slate-light mb-1">;
+                      Name;
+                    </label>;
+                    <input;
+                      type="text";
+                      id="name";
+                      className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+                    />;
+                  </div>;
+                  <div>;
+                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1">;
+                      Email;
+                    </label>;
+                    <input;
+                      type="email";
+                      id="email";
+                      className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+                    />;
+                  </div>;
+                </div>;
+                <div>;
+                  <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1">;
+                    Subject;
+                  </label>;
+                  <input;
+                    type="text";
+                    id="subject";
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+                  />;
+                </div>;
+                <div>;
+                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">;
+                    Message;
+                  </label>;
+                  <textarea;
+                    id="message";
+                    rows={4}
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus: border-zion-purple focus:ring-1 focus:ring-zion-purple text-white";
+                  ></textarea>;
+                </div>;
+                <div>;
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
+                    Send Message;
+                  </Button>;
+                </div>;
+              </form>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </section>;
   );
-=======
-    </section>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

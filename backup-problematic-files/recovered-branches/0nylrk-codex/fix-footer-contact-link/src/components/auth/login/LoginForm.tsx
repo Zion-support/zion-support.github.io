@@ -84,7 +84,7 @@ export function LoginForm() {;
                 <div className="relative">;
                   <Input;
                     type={showPassword ? "text" :"password"}
-                    placeholder="••••••••";
+                    placeholder="";
                     className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple";
                     {...field}
                     autoComplete="off" // Disable browser autofill;

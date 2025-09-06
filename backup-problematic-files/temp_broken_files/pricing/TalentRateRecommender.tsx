@@ -121,7 +121,4 @@ return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<B
   rateType ;
 }/>) ;
 }</div> </div>) ;
-
-};
-'"
-
+};"'"

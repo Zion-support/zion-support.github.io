@@ -1,8 +1,36 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+import React from "react",
+import { TalentProfile } from "@/types/talent",
+import { ActiveFilters } from "@/components/talent/ActiveFilters",
+import { ResultsHeader } from "@/components/talent/ResultsHeader";
+import { TalentGrid } from "@/components/talent/TalentGrid";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {TalentProfile} from "@/types/talent";
+import {ActiveFilters} from "@/components/talent/ActiveFilters";
+import {ResultsHeader} from "@/components/talent/ResultsHeader";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+import { TalentProfile } from "@/types/talent",
+import { ActiveFilters } from "@/components/talent/ActiveFilters",
+<<<<<<< HEAD
+import { ResultsHeader } from "@/components/talent/ResultsHeader";
+import { TalentGrid } from "@/components/talent/TalentGrid";
+=======
+import { ResultsHeader } from "@/components/talent/ResultsHeader",
+import { TalentGrid } from "@/components/talent/TalentGrid",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -13,6 +41,14 @@ interface TalentResultsProps {
   handleToggleSave: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
   activeFiltersProps: {
+<<<<<<< HEAD
+    selectedSkills: string[]
+    toggleSkill: (skill: string) => void
+    selectedAvailability: string[]
+    toggleAvailability: (availability: string) => void
+    selectedRegions: string[]
+    toggleRegion: (region: string) => void
+=======
 
 import React from "react";
 import {TalentProfile} from "@/types/talent";
@@ -35,9 +71,29 @@ import {TalentGrid} from "@/components/talent/TalentGrid";
     clearFilters: () => void
   }
 }
+<<<<<<< HEAD
+=======
 
-
-
+<<<<<<< HEAD
+export function TalentResults({;
+  filteredTalents;
+  isLoading;
+  viewProfile;
+  handleRequestHire;
+  savedTalents;
+  handleToggleSave;
+  isAuthenticated;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function TalentResults({
+  filteredTalents,
+  isLoading,
+  viewProfile,
+  handleRequestHire,
+  savedTalents,
+  handleToggleSave,
+  isAuthenticated,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   activeFiltersProps
 }: TalentResultsProps) {
   return (
@@ -65,6 +121,7 @@ interface TalentResultsProps {;
     selectedRegions: string[],;
     toggleRegion: (region: string) => void,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     priceRange: [number, number];
 
     setPriceRange: (range: [number, number]) => void;
@@ -73,10 +130,7 @@ interface TalentResultsProps {;
     clearFilters: () => void;
   }
 }
-
-
-export function TalentResults(): any ({;
-
+export function TalentResults({
   filteredTalents;
   isLoading;
   viewProfile;
@@ -88,28 +142,27 @@ export function TalentResults(): any ({;
 }: TalentResultsProps) {;
   return (
     <div className="flex-1">;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Active filters */}
-
-      <ActiveFilters {...activeFiltersProps} />;
-
+      <ActiveFilters {...activeFiltersProps} />
       {/* Results count */}
       <ResultsHeader
-        isLoading={isLoading} 
-        resultCount={filteredTalents && filteredTalents.length} 
-      />;
-
-
+        isLoading={isLoading}
+        resultCount={filteredTalents.length}
+      />
       {/* Talents grid */}
       <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}
         viewProfile={viewProfile}
-=======
 import React from './react';
 import { TalentProfile } from '@/types / talent';
 import { ActiveFilters } from '@/components / talent / ActiveFilters';
@@ -156,28 +209,37 @@ function TalentResults() {
         is_loading={is_loading}
         onTalentClick={view_profile}
         view_profile={view_profile}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         handleRequestHire={handleRequestHire}
         savedTalentIds={saved_talents}
         onToggleSave={handleToggleSave}
-
-        clearFilters={activeFiltersProps && activeFiltersProps.clearFilters}
-=======
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
-
-
-      />;
-    </div>;
-  );
+<<<<<<< HEAD
+      />
+    </div>
+  )
 }
-
         is_authenticated={is_authenticated}
         clear_filters={activeFiltersProps.clear_filters}
       />;
     </div>);
 }
-
+=======
+<<<<<<< HEAD
+      />
+    </div>
+  )
+}
+<<<<<<< HEAD
+=======
+      />;
+    </div>;
+  );
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
 =======
 ;
 
@@ -186,4 +248,4 @@ function TalentResults() {
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

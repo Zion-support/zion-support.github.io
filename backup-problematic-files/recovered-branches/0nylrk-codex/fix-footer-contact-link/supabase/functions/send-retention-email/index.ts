@@ -249,7 +249,7 @@ async function generateEmail(emailData:EmailData, userData:any):Promise<{ subjec
     } else {;
       // For clients;
       return {;
-        subject:`Zion's top AI talent this week — don't miss out, ${firstName}`,;
+        subject:`Zion's top AI talent this week  don't miss out, ${firstName}`,;
         html:`;
           <div style="font-family:sans-serif, max-width:600px, margin:0 auto,">;
             <h2>This week's top AI talent</h2>;
@@ -443,7 +443,7 @@ html: ` <h2>New opportunities waiting for you!</h2> <p>Hi $ {
 }, </p> <p>We've seen new AI projects posted in your area of expertise this week.</p> <p>Complete your profile this week and unlock premium visibility to stand out to clients looking for talent like you.</p> </div> <p>The Zion AI Marketplace Team</p> </div> ` 
 }
 }else {
-  //For clients subject: `Zion's top AI talent this week — don't miss out, $ {
+  //For clients subject: `Zion's top AI talent this week  don't miss out, $ {
   firstName 
 }`;
 html: ` <h2>This week's top AI talent</h2> <p>Hi $ {

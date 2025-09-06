@@ -355,7 +355,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-gray-400 text-sm">
-                © 2024 Zion Tech Group. All rights reserved. | 
+                 2024 Zion Tech Group. All rights reserved. | 
                 <Link href="/privacy" className="hover:text-white transition-colors duration-200 ml-2">
                   Privacy Policy
                 </a> | 
@@ -370,12 +370,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <Brain className="w-4 h-4 text-cyan-400" />
                   <span>AI Consciousness</span>
                 </div>
-                <span>•</span>
+                <span></span>
                 <div className="flex items-center space-x-2">
                   <Atom className="w-4 h-4 text-purple-400" />
                   <span>Quantum Computing</span>
                 </div>
-                <span>•</span>
+                <span></span>
                 <div className="flex items-center space-x-2">
                   <Rocket className="w-4 h-4 text-pink-400" />
                   <span>Space Technology</span>

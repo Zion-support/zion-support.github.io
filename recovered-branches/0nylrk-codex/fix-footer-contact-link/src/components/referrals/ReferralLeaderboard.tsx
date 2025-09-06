@@ -1,18 +1,24 @@
 
-
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Award  } from './lucide-react';
-
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
 
+import { Award } from "lucide-react";
+<<<<<<< HEAD
+=======
+=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Award } from "lucide-react",
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Award} from "lucide-react";
@@ -21,28 +27,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Award } from "lucide-react",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface LeaderboardEntry {
   rank: number;
   name: string;
   referrals: number
 }
-
-export /**
- * ReferralLeaderboard - Function description
- */
-function ReferralLeaderboard() {
-  // This would typically be fetched from the server;
-  // For now, we'll use mock data;
-  const leaderboard_data: LeaderboardEntry[] = [;
-    { rank: 1, name: "Alex Johnson", referrals: 24 },
-    { rank: 2, name: "Jamie Smith", referrals: 18 },
-    { rank: 3, name: "Taylor Wong", referrals: 15 },
-    { rank: 4, name: "Casey Brown", referrals: 12 },
-    { rank: 5, name: "Jordan Lee", referrals: 10 },
+export function ReferralLeaderboard() {
+  // This would typically be fetched from the server
+  // For now, we'll use mock data
+  const leaderboardData: LeaderboardEntry[] = [
+    { rank: 1, name: "Alex Johnson", referrals: 24 }
+    { rank: 2, name: "Jamie Smith", referrals: 18 }
+    { rank: 3, name: "Taylor Wong", referrals: 15 }
+    { rank: 4, name: "Casey Brown", referrals: 12 }
+    { rank: 5, name: "Jordan Lee", referrals: 10 }
   ];
-;
-
   return (
     <Card>;
       <CardHeader>;
@@ -57,9 +57,33 @@ function ReferralLeaderboard() {
           {leaderboard_data.map ((entry) => (
             <div;
               key={entry.rank}
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Award} from "lucide-react";
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
+            >
+              <div className="flex items-center gap-3">
+<<<<<<< HEAD
+=======
+                <div
+                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
+                    entry.rank === 1
+                      ? "bg-yellow-200 text-yellow-800"
+                      : entry.rank === 2
+<<<<<<< HEAD
+                        ? "bg-slate-200 text-slate-800"
+                        : entry.rank === 3
+                          ? "bg-amber-200 text-amber-800"
+                          : "bg-muted text-muted-foreground"
+=======
+                      ? "bg-slate-200 text-slate-800"
+                      : entry.rank === 3
+                      ? "bg-amber-200 text-amber-800"
+                      : "bg-muted text-muted-foreground"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Award } from "lucide-react",;
 interface LeaderboardEntry {;
   rank: number,;
   name: string,;
@@ -93,10 +117,18 @@ export function ReferralLeaderboard() {;
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors">;
               <div className="flex items-center gap-3">;
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div
                   className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
                     entry && entry.rank === 1
                       ? "bg-yellow-200 text-yellow-800"
+<<<<<<< HEAD
+                      : entry.rank === 2
+                        ? "bg-slate-200 text-slate-800"
+                        : entry.rank === 3
+                          ? "bg-amber-200 text-amber-800"
+                          : "bg-muted text-muted-foreground"
+=======
 
               className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50 transition - colors";
             >;
@@ -106,24 +138,16 @@ export function ReferralLeaderboard() {;
                     entry.rank === 1;
                       ? "bg - yellow - 200 text - yellow - 800";
                       : entry.rank === 2;
-                        ? "bg - slate - 200 text - slate - 800";
-                        : entry.rank === 3;
-                          ? "bg - amber - 200 text - amber - 800";
-                          : "bg - muted text - muted - foreground";
-
+                      ? "bg-slate-200 text-slate-800";
+                      : entry.rank === 3;
+                      ? "bg-amber-200 text-amber-800";
+                      : "bg-muted text-muted-foreground";
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-                <div
-                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
-                    entry.rank === 1
-                      ? "bg-yellow-200 text-yellow-800"
-                      : entry.rank === 2
-
-                      ? "bg-slate-200 text-slate-800"
-                      : entry.rank === 3
-                      ? "bg-amber-200 text-amber-800"
-                      : "bg-muted text-muted-foreground"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   }`}
                 >;
                   {entry.rank}
@@ -132,40 +156,31 @@ export function ReferralLeaderboard() {;
               </div>;
               <span className="text - sm">;
                 {entry.referrals} referral{entry.referrals !== 1 ? "s" : ""}
-
-                      : entry && entry.rank === 2
-                      ? "bg-slate-200 text-slate-800"
-                      : entry && entry.rank === 3
-                      ? "bg-amber-200 text-amber-800"
-                      : "bg-muted text-muted-foreground"
-                  }`}>;
-                  {entry && entry.rank}
-                </div>;
-                <span className="font-medium">{entry && entry.name}</span>;
-              </div>;
-              <span className="text-sm">;
-                {entry && entry.referrals} referral{entry && entry.referrals !== 1 ? "s" : ""}
-              </span>;
-            </div>;
+              </span>
+            </div>
           ))}
-        </div>;
-      </CardContent>;
-    </Card>;
+        </div>
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }
-
-=======
               </span>;
             </div>))}
         </div>;
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   )
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

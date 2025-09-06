@@ -1,22 +1,47 @@
 
-import React from './react';
-import { Clock } from './lucide-react';
-
+import React from "react";
+import { Clock } from "lucide-react";
 interface TalentCardAvailabilityProps {
   availability_type: string;
 }
+export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
+  // Format availability status
 
-import {Clock} from "lucide-react";
-interface TalentCardAvailabilityProps {;
-  availabilityType: string;
-}
-
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
+  const getAvailabilityColor = (status: string) => {
+    switch (status) {
+<<<<<<< HEAD
+      case 'full-time':
+        return 'bg-green-500/20 text-green-400';
+=======
+      case 'full-time':;
+        return 'bg-green-500/20 text-green-400';
+      case 'part-time':
+        return 'bg-yellow-500/20 text-yellow-400';
+      case 'project-based':
+        return 'bg-blue-500/20 text-blue-400'
+      default:
+        return 'bg-gray-500/20 text-gray-400'
+    }
+  }
+  // Format availability label
+  const getAvailabilityLabel = (status: string) => {
+    switch (status) {
+      case 'full-time':
+        return 'Full-time';
+      case 'part-time':
+        return 'Part-time';
+      case 'project-based':
+        return 'Project'
+      default:
+        return status
+    }
+<<<<<<< HEAD
+  }
 =======
 
 
   };
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from "react",
 import { Clock } from "lucide-react",
@@ -37,51 +62,46 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
 =======
         return 'bg-green-500/20 text-green-400',;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       case 'part-time':;
-        return 'bg-yellow-500/20 text-yellow-400',;
-
-      case 'project-based':;
-        return 'bg-blue-500/20 text-blue-400',;
-      default:;
-        return 'bg-gray-500/20 text-gray-400';
+        return 'bg-yellow-500/20 text-yellow-400';
+      case 'project-based':
+        return 'bg-blue-500/20 text-blue-400'
+      default:
+        return 'bg-gray-500/20 text-gray-400'
     }
-  };
-
-  // Format availability label;
-  const getAvailabilityLabel = (status: string) => {;
-    switch (status) {;
-      case 'full-time':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  }
+  // Format availability label
+  const getAvailabilityLabel = (status: string) => {
+    switch (status) {
+      case 'full-time':
         return 'Full-time';
       case 'part-time':;
         return 'Part-time';
-
-      case 'project-based':;
-        return 'Project',;
-      default:;
-        return status;
-
+      case 'project-based':
+        return 'Project'
+      default:
+        return status
     }
+<<<<<<< HEAD
+  }
+=======
 
   },
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
-
-    <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
-      <span>{getAvailabilityLabel(availabilityType)}</span>;
-    </div>;
-  );
-=======
-
-
+    <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
+      <Clock className="h-3 w-3" />
+      <span>{getAvailabilityLabel(availabilityType)}</span>
+    </div>
+  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * TalentCardAvailability - Function description
  */
@@ -100,6 +120,23 @@ function TalentCardAvailability() {
     }
   }
 ;
-
-
-
+  // Format availability label;
+  const getAvailabilityLabel = (status: string) =>: any {
+    switch (status) {
+      case 'full - time':;
+        return 'Full - time';
+      case 'part - time':;
+        return 'Part - time';
+      case 'project - based':;
+        return 'Project',
+      default:;
+        return status;
+    }
+  }
+;
+  return (
+    <div className={`flex items - center gap - 1 px - 2 py - 0.5 rounded - full text - xs ${getAvailabilityColor (availability_type)}`}>;
+      <Clock className="h - 3 w - 3" />;
+      <span>{getAvailabilityLabel (availability_type)}</span>;
+    </div>);
+}

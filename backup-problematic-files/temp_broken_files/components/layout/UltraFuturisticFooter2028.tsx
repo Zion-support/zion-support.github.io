@@ -17,28 +17,28 @@ const contactInfo = {
   website: 'https://ziontechgroup.com'
 },
 const _serviceCategories = [
-  {_title: '🚀 2028 Futuristic Innovations', _services: [
+  {_title: ' 2028 Futuristic Innovations', _services: [
       { name: 'AI Climate Prediction Platform', _href: '/ai-climate-prediction-platform'},
       {_name: 'Quantum Cybersecurity Firewall', _href: '/quantum-cybersecurity-firewall'},
       {_name: 'Autonomous Drone Delivery Network', _href: '/autonomous-drone-delivery-network'},
       {_name: 'AI Healthcare Diagnosis Platform', _href: '/ai-healthcare-diagnosis-platform'}
     ]
   },
-  {_title: '🏙️ Smart City & Infrastructure', _services: [
+  {_title: ' Smart City & Infrastructure', _services: [
       { name: 'Smart City Infrastructure Management', _href: '/smart-city-infrastructure-management'},
       {_name: 'IoT Energy Management System', _href: '/iot-energy-management-system'},
       {_name: 'Digital Twin Manufacturing Platform', _href: '/digital-twin-manufacturing-platform'},
       {_name: 'Autonomous Manufacturing AI', _href: '/autonomous-manufacturing-ai'}
     ]
   },
-  {_title: '⚛️ Quantum & Advanced Tech', _services: [
+  {_title: ' Quantum & Advanced Tech', _services: [
       { name: 'Quantum Financial Trading Platform', _href: '/quantum-financial-trading-platform'},
       {_name: 'Quantum Machine Learning Platform', _href: '/quantum-machine-learning-platform'},
       {_name: 'Quantum Internet Security Gateway', _href: '/quantum-internet-security-gateway'},
       {_name: 'Quantum Internet Protocol', _href: '/quantum-internet-protocol'}
     ]
   },
-  {_title: '🤖 AI & Machine Learning', _services: [
+  {_title: ' AI & Machine Learning', _services: [
       { name: 'AI Customer Service Automation', _href: '/ai-customer-service-automation'},
       {_name: 'AI Education Platform', _href: '/ai-education-platform'},
       {_name: 'AI Content Creation Suite', _href: '/ai-content-creation-suite'},
@@ -138,7 +138,7 @@ export default function UltraFuturisticFooter2028() {
           {/* Service Categories */}
           <div className=&quot;lg:col-span-2&quot;>
             <h3 className=&quot;text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2&quot;>
-              🚀 Our Services
+               Our Services
             </h3>
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
               {serviceCategories.map((category) => (
@@ -226,7 +226,7 @@ export default function UltraFuturisticFooter2028() {
           <div className=&quot;flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0&quot;>
             {/* Copyright */}
             <div className=&quot;text-sm text-purple-300&quot;>
-              © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.
+               2028 Zion Tech Group. All rights reserved. Leading the future of technology.
             </div>
 
             {/* Legal Links */}

@@ -1,14 +1,9 @@
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "Documentation - Zion Tech Group | Technical Guides & Resources",;
-  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.",;
-  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"};
-export default function DocumentationPage() {;
-  return (;
-
+import Link from "next/link";
+export const metadata = {title: "Documentation - Zion Tech Group | Technical Guides & Resources";
+  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.";
+  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"}
+export default function DocumentationPage() {return (;
     <div className="min-h-screen">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",
@@ -20,7 +15,6 @@ export default /**
 function DocumentationPage() {
   return (
     <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -116,14 +110,14 @@ function DocumentationPage() {
                 Complete documentation for the Zion OS digital economy platform;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Platform Overview</li>;
-                <li>• Installation & Setup</li>;
-                <li>• Configuration Guide</li>;
-                <li>• API Reference</li>;
-                <li>• Deployment Guide</li>;
+                <li> Platform Overview</li>;
+                <li> Installation & Setup</li>;
+                <li> Configuration Guide</li>;
+                <li> API Reference</li>;
+                <li> Deployment Guide</li>;
               </ul>;
               <Link href="/docs / zion - os" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                View Documentation →;
+                View Documentation ;
               </Link>;
             </div>;
             {/* AI Services */}
@@ -138,14 +132,14 @@ function DocumentationPage() {
                 Documentation for AI and machine learning services;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• AI Services Overview</li>;
-                <li>• Content Generation</li>;
-                <li>• Business Intelligence</li>;
-                <li>• Autonomous Operations</li>;
-                <li>• AI Governance</li>;
+                <li> AI Services Overview</li>;
+                <li> Content Generation</li>;
+                <li> Business Intelligence</li>;
+                <li> Autonomous Operations</li>;
+                <li> AI Governance</li>;
               </ul>;
               <Link href="/docs / ai - services" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                View Documentation →;
+                View Documentation ;
               </Link>;
             </div>;
             {/* Quantum Services */}
@@ -160,14 +154,14 @@ function DocumentationPage() {
                 Guides for quantum computing and quantum algorithms;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Quantum Computing Basics</li>;
-                <li>• Algorithm Implementation</li>;
-                <li>• Quantum Error Correction</li>;
-                <li>• Performance Optimization</li>;
-                <li>• Use Case Examples</li>;
+                <li> Quantum Computing Basics</li>;
+                <li> Algorithm Implementation</li>;
+                <li> Quantum Error Correction</li>;
+                <li> Performance Optimization</li>;
+                <li> Use Case Examples</li>;
               </ul>;
               <Link href="/docs / quantum - services" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                View Documentation →;
+                View Documentation ;
               </Link>;
             </div>;
             {/* Cybersecurity */}
@@ -182,14 +176,14 @@ function DocumentationPage() {
                 Security implementation and best practices;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Security Framework</li>;
-                <li>• Threat Detection</li>;
-                <li>• Compliance Guidelines</li>;
-                <li>• Incident Response</li>;
-                <li>• Security Testing</li>;
+                <li> Security Framework</li>;
+                <li> Threat Detection</li>;
+                <li> Compliance Guidelines</li>;
+                <li> Incident Response</li>;
+                <li> Security Testing</li>;
               </ul>;
               <Link href="/docs / cybersecurity" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                View Documentation →;
+                View Documentation ;
               </Link>;
             </div>;
             {/* Enterprise IT */}
@@ -204,14 +198,14 @@ function DocumentationPage() {
                 Infrastructure and enterprise solutions guides;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Infrastructure Setup</li>;
-                <li>• Cloud Migration</li>;
-                <li>• DevOps Practices</li>;
-                <li>• Monitoring & Alerting</li>;
-                <li>• Disaster Recovery</li>;
+                <li> Infrastructure Setup</li>;
+                <li> Cloud Migration</li>;
+                <li> DevOps Practices</li>;
+                <li> Monitoring & Alerting</li>;
+                <li> Disaster Recovery</li>;
               </ul>;
               <Link href="/docs / enterprise - it" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                View Documentation →;
+                View Documentation ;
               </Link>;
             </div>;
             {/* Space Technology */}
@@ -226,14 +220,14 @@ function DocumentationPage() {
                 Satellite and space technology documentation;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Satellite Systems</li>;
-                <li>• Ground Station Setup</li>;
-                <li>• Communication Protocols</li>;
-                <li>• Data Processing</li>;
-                <li>• System Maintenance</li>;
+                <li> Satellite Systems</li>;
+                <li> Ground Station Setup</li>;
+                <li> Communication Protocols</li>;
+                <li> Data Processing</li>;
+                <li> System Maintenance</li>;
               </ul>;
               <Link href="/docs / space - technology" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                View Documentation →;
+                View Documentation ;
               </Link>;
             </div>;
           </div>;
@@ -258,11 +252,11 @@ function DocumentationPage() {
                 and error handling for all Zion Tech Group services.;
               </p>;
               <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <div>• Authentication & Authorization</div>;
-                <div>• Request / Response Formats</div>;
-                <div>• Rate Limiting</div>;
-                <div>• Error Codes</div>;
-                <div>• SDK Examples</div>;
+                <div> Authentication & Authorization</div>;
+                <div> Request / Response Formats</div>;
+                <div> Rate Limiting</div>;
+                <div> Error Codes</div>;
+                <div> SDK Examples</div>;
               </div>;
               <Link href="/docs / api / rest" className="btn - primary">;
                 View REST API Docs;
@@ -275,11 +269,11 @@ function DocumentationPage() {
                 real - time subscriptions across our services.;
               </p>;
               <div className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <div>• Schema Documentation</div>;
-                <div>• Query Examples</div>;
-                <div>• Mutations & Subscriptions</div>;
-                <div>• Type Definitions</div>;
-                <div>• Playground Access</div>;
+                <div> Schema Documentation</div>;
+                <div> Query Examples</div>;
+                <div> Mutations & Subscriptions</div>;
+                <div> Type Definitions</div>;
+                <div> Playground Access</div>;
               </div>;
               <Link href="/docs / api / graphql" className="btn - primary">;
                 View GraphQL Docs;
@@ -318,7 +312,7 @@ function DocumentationPage() {
                 15 min read;
               </div>;
               <Link href="/docs / tutorials / ai - chatbot" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Read Tutorial →;
+                Read Tutorial ;
               </Link>;
             </div>;
             <div className="card group">;
@@ -339,7 +333,7 @@ function DocumentationPage() {
                 25 min read;
               </div>;
               <Link href="/docs / tutorials / quantum - algorithm" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Read Tutorial →;
+                Read Tutorial ;
               </Link>;
             </div>;
             <div className="card group">;
@@ -360,7 +354,7 @@ function DocumentationPage() {
                 20 min read;
               </div>;
               <Link href="/docs / tutorials / security - best - practices" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Read Tutorial →;
+                Read Tutorial ;
               </Link>;
             </div>;
           </div>;
@@ -389,7 +383,7 @@ function DocumentationPage() {
                 Official SDKs for popular programming languages;
               </p>;
               <Link href="/docs / sdks" className="text - blue - 400 hover:text - blue - 300 text - sm">;
-                View SDKs →;
+                View SDKs ;
               </Link>;
             </div>;
             <div className="text - center">;
@@ -403,7 +397,7 @@ function DocumentationPage() {
                 Ready - to - use code examples and snippets;
               </p>;
               <Link href="/docs / code - samples" className="text - purple - 400 hover:text - purple - 300 text - sm">;
-                View Samples →;
+                View Samples ;
               </Link>;
             </div>;
             <div className="text - center">;
@@ -417,7 +411,7 @@ function DocumentationPage() {
                 Connect with other developers;
               </p>;
               <Link href="/docs / community" className="text - green - 400 hover:text - green - 300 text - sm">;
-                Join Community →;
+                Join Community ;
               </Link>;
             </div>;
             <div className="text - center">;
@@ -431,7 +425,7 @@ function DocumentationPage() {
                 Service status and uptime information;
               </p>;
               <Link href="/status" className="text - red - 400 hover:text - red - 300 text - sm">;
-                Check Status →;
+                Check Status ;
               </Link>;
             </div>;
           </div>;

@@ -1,27 +1,60 @@
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 
+const CAPABILITIES = [
+  'Fullstack Web'
+=======
+<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+const CAPABILITIES = [
+  'Full‑stack Web'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  'Mobile (iOS/Android)'
+  'AI/ML'
+  'Cloud & DevOps'
+  'Data Engineering'
+  'Blockchain'
+  'IoT'
+  'Security',];const CAPABILITIES = [
+<<<<<<< HEAD
+  'Fullstack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+const CAPABILITIES = [
+  'Fullstack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+=======
+  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 
 export default function CapabilitiesPage() {;
   return (
-
-
+<<<<<<< HEAD
+    <EnhancedLayout>;
+      <h1 className='text-2xl font-semibold'>Capabilities</h1>;
+      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>;
+        {CAPABILITIES && CAPABILITIES.map(c => (;
+          <div
+            key={c}
+            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'>            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>;
+      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">;
+        {CAPABILITIES && CAPABILITIES.map((c) => (;
+          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">;
+          </div>;
         ))}
-
-      </div>;
-    </EnhancedLayout>;
+      </div>
+    </EnhancedLayout>
+);
+}
   );
 }
-
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 const CAPABILITIES = [;
-  'Full‑stack Web',
+  'Fullstack Web',
   'Mobile (iOS / Android)',
   'AI / ML',
   'Cloud & DevOps',
@@ -29,7 +62,7 @@ const CAPABILITIES = [;
   'Blockchain',
   'IoT',
   'Security', ];const CAPABILITIES = [;
-  'Full‑stack WebMobile (iOS / Android)AI / MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
+  'Fullstack WebMobile (iOS / Android)AI / MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
 ];
 ;
 export default /**
@@ -52,13 +85,30 @@ function CapabilitiesPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+    <EnhancedLayout>
+      <h1 className='text-2xl font-semibold'>Capabilities</h1>
+      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>
+        {CAPABILITIES.map(c => (
+          <div
+            key={c}
+            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'
+          >            {c}      <h1 className="text-2xl font-semibold">Capabilities</h1>
+      <div className="mt-6 grid md:grid-cols-4 gap-4 text-sm">
+        {CAPABILITIES.map((c) => (
+          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
+          </div>
+        ))}
       </div>
-
+<<<<<<< HEAD
+    </EnhancedLayout>
+<<<<<<< HEAD
+);
+}
+=======
   );
 }
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
     </EnhancedLayout>;
 );
@@ -66,4 +116,4 @@ function CapabilitiesPage() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

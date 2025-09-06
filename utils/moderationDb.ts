@@ -1,5 +1,13 @@
-
-
+<<<<<<< HEAD
+export interface ModerationFlag {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export interface ModerationFlag {
+=======
+export interface ModerationFlag {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   contentId: string;
   contentType: string;
@@ -9,7 +17,7 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-=======
+<<<<<<< HEAD
 export interface ModerationFlag {
   id: string;
   content_id: string;
@@ -19,40 +27,65 @@ export interface ModerationFlag {
   status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
   created_at: string;
   admin_notes?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 }
+<<<<<<< HEAD
 
-;
-export async function getFlagById (id: string): Promise < ModerationFlag | null> {
-  return flags.find (flag => flag.id === id) || null;
+// Mock data storage - replace with actual database
+let flags: ModerationFlag[] = [];
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find(flag => flag.id === id) |null;
+
 }
-export async function readAllFlags (): Promise < ModerationFlag[]> {
-  return [...flags];
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  // Mock implementation - replace with actual database logic
+  return [];
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+}
+// Mock data storage - replace with actual database;
+let flags: ModerationFlag[] = [];
+export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+  return flags.find(flag => flag.id === id) |null;
 
+}
+export async function readAllFlags(): Promise<ModerationFlag[]> {
+  // Mock implementation - replace with actual database logic
+  return [];
 }
 export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
   const flag: ModerationFlag = {
-
-  flag && flag.status = status;
-  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
-  flag && flag.updatedAt = new Date().toISOString();
-
+    id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    contentId: data.contentId |''
+    contentType: data.contentType |'post'
+    reason: data.reason |''
+    userEmail: data.userEmail |''
+    status: 'pending'
+    createdAt: new Date().toISOString()
+    ...data
+  }
+  flags.push(flag);
+  return flag;
+}
+export async function updateFlagStatus(
+  id: string
+  status: ModerationFlag['status']
+  adminNotes?: string
+): Promise<FlaggedContent | undefined> {
+  const flag = await getFlagById(id);
+  if (!flag) return undefined;
+  flag.status = status;
+  flag.adminNotes = adminNotes |flag.adminNotes;
+  flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;
+<<<<<<< HEAD
+=======
 
 }
 
 =======
-// Moderation database utilities
-export interface ModerationFlag {
-  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
-  content: string, reporterId: string,
-  reportedUserId?: string;
-  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
-  updatedAt: Date, moderatorId?: string,
-  notes?: string;
-}
 =======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
 
@@ -113,6 +146,7 @@ export async function getActionsForFlag(flagId: string): Promise<ModerationActio
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: `flag_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     content_id: data.content_id || '',
     content_type: data.content_type || 'post',
@@ -141,5 +175,3 @@ if (return undefined) {
   await upsert_flag (flag);
   return flag;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -4,13 +4,13 @@ import ServiceLanding from '../components/sections/ServiceLanding',;
 export default function AIAutonomousBusinessOperations() {;
 	return (;
 		<ServiceLanding;
-			title="AI‑Powered Autonomous Business Operations";
+			title="AIPowered Autonomous Business Operations";
 			slug="ai-autonomous-business-operations";
 			description="Continuous AI agents coordinate workflows across sales, support, finance, and operations. They monitor KPIs, trigger automations, and collaborate with humans to keep your business always-on.";
 			subtitle="From reactive to autonomous:24/7 operations with measurable outcomes.";
 			pricePerMonthUSD={3500}
-			implementationWeeks="Implementation:3–6 weeks";
-			roiNote="Average ROI 5–12x within 120 days";
+			implementationWeeks="Implementation:36 weeks";
+			roiNote="Average ROI 512x within 120 days";
 			features={[;
 				"Autonomous KPI monitoring and anomaly detection",;
 				"Agentic workflows for ticket triage, billing, collections, and renewals",;
@@ -49,10 +49,10 @@ const AIAutonomousBusinessOperations: React.FC = () => {
               AI systems that make complex business decisions based on real-time data and predefined parameters.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Real-time decision making</li>
-              <li>• Risk assessment</li>
-              <li>• Resource allocation</li>
-              <li>• Performance optimization</li>
+              <li> Real-time decision making</li>
+              <li> Risk assessment</li>
+              <li> Resource allocation</li>
+              <li> Performance optimization</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIAutonomousBusinessOperations: React.FC = () => {
               Systems that monitor, maintain, and optimize themselves without human intervention.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Self-healing infrastructure</li>
-              <li>• Automatic scaling</li>
-              <li>• Performance monitoring</li>
-              <li>• Predictive maintenance</li>
+              <li> Self-healing infrastructure</li>
+              <li> Automatic scaling</li>
+              <li> Performance monitoring</li>
+              <li> Predictive maintenance</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIAutonomousBusinessOperations: React.FC = () => {
               Workflows that adapt and optimize themselves based on changing conditions and requirements.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Dynamic workflow adaptation</li>
-              <li>• Process optimization</li>
-              <li>• Exception handling</li>
-              <li>• Continuous improvement</li>
+              <li> Dynamic workflow adaptation</li>
+              <li> Process optimization</li>
+              <li> Exception handling</li>
+              <li> Continuous improvement</li>
             </ul>
           </div>
         </div>

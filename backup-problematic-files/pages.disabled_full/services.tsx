@@ -40,7 +40,7 @@ import {
 import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
-	const title = 'Services — Zion Tech Group';
+	const title = 'Services  Zion Tech Group';
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
 
 	return (
@@ -316,12 +316,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Multi-agent copilots for SDR, AM, and Support with guardrails.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Integrates CRM, Helpdesk, and Knowledge Base</li>
-								<li>• Measurable pipeline lift and deflection</li>
+								<li> Integrates CRM, Helpdesk, and Knowledge Base</li>
+								<li> Measurable pipeline lift and deflection</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-blue-600'>Starting $8k–$25k</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Talk to us →</Link>
+								<span className='font-semibold text-blue-600'>Starting $8k$25k</span>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Talk to us </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -331,12 +331,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Modern ELT, dbt, and warehouse modeling, with governance.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Snowflake/BigQuery/Redshift, Lakehouse setups</li>
-								<li>• Data quality SLAs and observability</li>
+								<li> Snowflake/BigQuery/Redshift, Lakehouse setups</li>
+								<li> Data quality SLAs and observability</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-indigo-600'>Starting $10k–$40k</span>
-								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Get estimate →</Link>
+								<span className='font-semibold text-indigo-600'>Starting $10k$40k</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Get estimate </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -346,12 +346,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>CI/CD for models, feature stores, evals, and monitoring.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Vertex/SageMaker/Databricks integrations</li>
-								<li>• Reproducible pipelines and governance</li>
+								<li> Vertex/SageMaker/Databricks integrations</li>
+								<li> Reproducible pipelines and governance</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-emerald-600'>Starting $15k–$60k</span>
-								<Link href='/contact' className='text-emerald-600 hover:text-emerald-500'>Learn more →</Link>
+								<span className='font-semibold text-emerald-600'>Starting $15k$60k</span>
+								<Link href='/contact' className='text-emerald-600 hover:text-emerald-500'>Learn more </Link>
 							</div>
 						</div>
 						{/* IT & Cloud */}
@@ -362,12 +362,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Rightsizing, savings plans, architectural refactors for cost.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Typical 20–45% monthly savings</li>
-								<li>• Automated policy enforcement</li>
+								<li> Typical 2045% monthly savings</li>
+								<li> Automated policy enforcement</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-green-600'>Assessments $4k–$12k</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Start now →</Link>
+								<span className='font-semibold text-green-600'>Assessments $4k$12k</span>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Start now </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -377,12 +377,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Managed detection & response with 24/7 coverage.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• SIEM, EDR, and threat intel</li>
-								<li>• Incident playbooks and compliance</li>
+								<li> SIEM, EDR, and threat intel</li>
+								<li> Incident playbooks and compliance</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-purple-600'>From $3k/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Request details →</Link>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Request details </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -392,12 +392,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Strategy, roadmap, and architecture leadership on-demand.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Platform modernization & product strategy</li>
-								<li>• Vendor selection and governance</li>
+								<li> Platform modernization & product strategy</li>
+								<li> Vendor selection and governance</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-orange-600'>From $4k/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Book intro →</Link>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Book intro </Link>
 							</div>
 						</div>
 						{/* AI Services - Additional */}
@@ -408,13 +408,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Automated insights, predictive analytics, and intelligent reporting.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Natural language query interface</li>
-								<li>• Automated anomaly detection and alerts</li>
-								<li>• Custom dashboard generation</li>
+								<li> Natural language query interface</li>
+								<li> Automated anomaly detection and alerts</li>
+								<li> Custom dashboard generation</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-violet-600'>From $399/mo</span>
-								<Link href='/contact' className='text-violet-600 hover:text-violet-500'>Schedule demo →</Link>
+								<Link href='/contact' className='text-violet-600 hover:text-violet-500'>Schedule demo </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -424,13 +424,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Extract, classify, and process documents with AI accuracy.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• OCR with 99%+ accuracy</li>
-								<li>• Automated data extraction and validation</li>
-								<li>• Workflow automation and routing</li>
+								<li> OCR with 99%+ accuracy</li>
+								<li> Automated data extraction and validation</li>
+								<li> Workflow automation and routing</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-cyan-600'>From $299/mo</span>
-								<Link href='/contact' className='text-cyan-600 hover:text-cyan-500'>Try free trial →</Link>
+								<Link href='/contact' className='text-cyan-600 hover:text-cyan-500'>Try free trial </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -440,13 +440,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Self-healing test scripts and intelligent test case generation.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Visual regression testing with AI</li>
-								<li>• Automated test maintenance</li>
-								<li>• Cross-browser and device testing</li>
+								<li> Visual regression testing with AI</li>
+								<li> Automated test maintenance</li>
+								<li> Cross-browser and device testing</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-yellow-600'>From $199/mo</span>
-								<Link href='/contact' className='text-yellow-600 hover:text-yellow-500'>Start testing →</Link>
+								<Link href='/contact' className='text-yellow-600 hover:text-yellow-500'>Start testing </Link>
 							</div>
 						</div>
 						{/* Micro SaaS */}
@@ -457,12 +457,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Translate and culturally adapt content at scale.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-market SEO and brand alignment</li>
-								<li>• Human-in-the-loop quality controls</li>
+								<li> Multi-market SEO and brand alignment</li>
+								<li> Human-in-the-loop quality controls</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-rose-600'>From $199/mo</span>
-								<Link href='/contact' className='text-rose-600 hover:text-rose-500'>Request demo →</Link>
+								<Link href='/contact' className='text-rose-600 hover:text-rose-500'>Request demo </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -472,12 +472,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Out-of-the-box anomaly detection for equipment and IoT.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Sensor ingestion, dashboards, and alerts</li>
-								<li>• Edge or cloud deployment options</li>
+								<li> Sensor ingestion, dashboards, and alerts</li>
+								<li> Edge or cloud deployment options</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-sky-600'>From $299/mo</span>
-								<Link href='/contact' className='text-sky-600 hover:text-sky-500'>See live demo →</Link>
+								<Link href='/contact' className='text-sky-600 hover:text-sky-500'>See live demo </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -487,12 +487,12 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Automated evidence collection and continuous controls.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Policy templates and auditor-ready reports</li>
-								<li>• Ticketing and alerting integrations</li>
+								<li> Policy templates and auditor-ready reports</li>
+								<li> Ticketing and alerting integrations</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-teal-600'>From $249/mo</span>
-								<Link href='/contact' className='text-teal-600 hover:text-teal-500'>Book a walkthrough →</Link>
+								<Link href='/contact' className='text-teal-600 hover:text-teal-500'>Book a walkthrough </Link>
 							</div>
 						</div>
 						{/* Additional IT Services */}
@@ -503,13 +503,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Complete CI/CD pipelines with infrastructure as code.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• GitOps workflows and automated deployments</li>
-								<li>• Infrastructure monitoring and alerting</li>
-								<li>• Multi-cloud orchestration</li>
+								<li> GitOps workflows and automated deployments</li>
+								<li> Infrastructure monitoring and alerting</li>
+								<li> Multi-cloud orchestration</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-lime-600'>From $599/mo</span>
-								<Link href='/contact' className='text-lime-600 hover:text-lime-500'>Get started →</Link>
+								<Link href='/contact' className='text-lime-600 hover:text-lime-500'>Get started </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -519,13 +519,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>End-to-end modernization strategy and implementation.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Legacy system migration and modernization</li>
-								<li>• Cloud-native architecture design</li>
-								<li>• Change management and training</li>
+								<li> Legacy system migration and modernization</li>
+								<li> Cloud-native architecture design</li>
+								<li> Change management and training</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-pink-600'>From $8k–$50k</span>
-								<Link href='/contact' className='text-pink-600 hover:text-pink-500'>Schedule consultation →</Link>
+								<span className='font-semibold text-pink-600'>From $8k$50k</span>
+								<Link href='/contact' className='text-pink-600 hover:text-pink-500'>Schedule consultation </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -535,13 +535,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Real-time monitoring with AI-powered anomaly detection.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Application performance monitoring (APM)</li>
-								<li>• Log aggregation and analysis</li>
-								<li>• Predictive scaling and optimization</li>
+								<li> Application performance monitoring (APM)</li>
+								<li> Log aggregation and analysis</li>
+								<li> Predictive scaling and optimization</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-amber-600'>From $199/mo</span>
-								<Link href='/contact' className='text-amber-600 hover:text-amber-500'>Monitor now →</Link>
+								<Link href='/contact' className='text-amber-600 hover:text-amber-500'>Monitor now </Link>
 							</div>
 						</div>
 						{/* Advanced AI Services */}
@@ -552,14 +552,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Advanced image analysis, object detection, and visual content understanding.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Real-time object detection and classification</li>
-								<li>• Facial recognition and biometric authentication</li>
-								<li>• Medical imaging analysis and diagnostics</li>
-								<li>• Quality control and defect detection</li>
+								<li> Real-time object detection and classification</li>
+								<li> Facial recognition and biometric authentication</li>
+								<li> Medical imaging analysis and diagnostics</li>
+								<li> Quality control and defect detection</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-blue-600'>From $2,500/mo</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Schedule demo →</Link>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Schedule demo </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -569,14 +569,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Advanced text analysis, sentiment detection, and language understanding.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-language text classification and extraction</li>
-								<li>• Sentiment analysis and emotion detection</li>
-								<li>• Named entity recognition and knowledge graphs</li>
-								<li>• Automated content moderation and filtering</li>
+								<li> Multi-language text classification and extraction</li>
+								<li> Sentiment analysis and emotion detection</li>
+								<li> Named entity recognition and knowledge graphs</li>
+								<li> Automated content moderation and filtering</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-green-600'>From $1,800/mo</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Try API →</Link>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Try API </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -586,14 +586,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>AI-powered content creation for text, images, videos, and audio.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Custom GPT models for brand-specific content</li>
-								<li>• AI image generation and video synthesis</li>
-								<li>• Voice cloning and audio generation</li>
-								<li>• Multi-modal content orchestration</li>
+								<li> Custom GPT models for brand-specific content</li>
+								<li> AI image generation and video synthesis</li>
+								<li> Voice cloning and audio generation</li>
+								<li> Multi-modal content orchestration</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-purple-600'>From $3,200/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Create content →</Link>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Create content </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -603,14 +603,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Intelligent conversational agents with advanced reasoning capabilities.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-turn conversation management</li>
-								<li>• Context-aware response generation</li>
-								<li>• Integration with business systems and APIs</li>
-								<li>• Voice and text conversation support</li>
+								<li> Multi-turn conversation management</li>
+								<li> Context-aware response generation</li>
+								<li> Integration with business systems and APIs</li>
+								<li> Voice and text conversation support</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-orange-600'>From $1,200/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Build chatbot →</Link>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Build chatbot </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -620,14 +620,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Advanced machine learning models for business forecasting and trend analysis.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Time series forecasting and anomaly detection</li>
-								<li>• Customer lifetime value prediction</li>
-								<li>• Demand forecasting and inventory optimization</li>
-								<li>• Risk assessment and fraud detection</li>
+								<li> Time series forecasting and anomaly detection</li>
+								<li> Customer lifetime value prediction</li>
+								<li> Demand forecasting and inventory optimization</li>
+								<li> Risk assessment and fraud detection</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $2,800/mo</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Predict trends →</Link>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Predict trends </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -637,13 +637,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>AI-powered project tracking with intelligent resource allocation.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Automated task prioritization and scheduling</li>
-								<li>• Team performance analytics and insights</li>
-								<li>• Integration with popular tools (Slack, Jira, etc.)</li>
+								<li> Automated task prioritization and scheduling</li>
+								<li> Team performance analytics and insights</li>
+								<li> Integration with popular tools (Slack, Jira, etc.)</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-emerald-600'>From $149/mo</span>
-								<Link href='/contact' className='text-emerald-600 hover:text-emerald-500'>Start free trial →</Link>
+								<Link href='/contact' className='text-emerald-600 hover:text-emerald-500'>Start free trial </Link>
 							</div>
 						</div>
 						{/* Advanced IT Services */}
@@ -654,14 +654,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Distributed computing infrastructure for real-time data processing and IoT management.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Edge server deployment and management</li>
-								<li>• IoT device connectivity and data collection</li>
-								<li>• Real-time analytics and decision making</li>
-								<li>• Low-latency application deployment</li>
+								<li> Edge server deployment and management</li>
+								<li> IoT device connectivity and data collection</li>
+								<li> Real-time analytics and decision making</li>
+								<li> Low-latency application deployment</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-blue-600'>From $4,500/mo</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Deploy edge →</Link>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Deploy edge </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -671,14 +671,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Decentralized applications, smart contracts, and blockchain infrastructure.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Smart contract development and auditing</li>
-								<li>• DeFi protocol integration and development</li>
-								<li>• NFT marketplace and tokenization</li>
-								<li>• Cross-chain interoperability solutions</li>
+								<li> Smart contract development and auditing</li>
+								<li> DeFi protocol integration and development</li>
+								<li> NFT marketplace and tokenization</li>
+								<li> Cross-chain interoperability solutions</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-green-600'>From $8,000/mo</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Build Web3 →</Link>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Build Web3 </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -688,14 +688,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Next-generation network infrastructure and connectivity solutions.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• 5G network planning and optimization</li>
-								<li>• Software-defined networking (SDN)</li>
-								<li>• Network function virtualization (NFV)</li>
-								<li>• Private 5G network deployment</li>
+								<li> 5G network planning and optimization</li>
+								<li> Software-defined networking (SDN)</li>
+								<li> Network function virtualization (NFV)</li>
+								<li> Private 5G network deployment</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-purple-600'>From $12,000/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Upgrade network →</Link>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Upgrade network </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -705,14 +705,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Prepare your infrastructure for quantum computing and post-quantum cryptography.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Quantum algorithm development and testing</li>
-								<li>• Post-quantum cryptography implementation</li>
-								<li>• Quantum simulation and optimization</li>
-								<li>• Hybrid classical-quantum workflows</li>
+								<li> Quantum algorithm development and testing</li>
+								<li> Post-quantum cryptography implementation</li>
+								<li> Quantum simulation and optimization</li>
+								<li> Hybrid classical-quantum workflows</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-orange-600'>From $15,000/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Go quantum →</Link>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Go quantum </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -722,14 +722,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Virtual, augmented, and mixed reality applications for enterprise and consumer use.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• VR/AR application development</li>
-								<li>• 3D modeling and spatial computing</li>
-								<li>• Metaverse platform development</li>
-								<li>• XR training and simulation systems</li>
+								<li> VR/AR application development</li>
+								<li> 3D modeling and spatial computing</li>
+								<li> Metaverse platform development</li>
+								<li> XR training and simulation systems</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $6,500/mo</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Enter XR →</Link>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Enter XR </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -739,13 +739,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>AI-driven sentiment analysis and actionable insights from customer feedback.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-channel feedback aggregation</li>
-								<li>• Sentiment analysis and trend identification</li>
-								<li>• Automated response recommendations</li>
+								<li> Multi-channel feedback aggregation</li>
+								<li> Sentiment analysis and trend identification</li>
+								<li> Automated response recommendations</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-indigo-600'>From $99/mo</span>
-								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Analyze feedback →</Link>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Analyze feedback </Link>
 							</div>
 						</div>
 						{/* Innovative Micro SaaS Services */}
@@ -756,14 +756,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Live business intelligence with instant insights and predictive alerts.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Real-time data streaming and visualization</li>
-								<li>• Custom KPI tracking and alerting</li>
-								<li>• Multi-source data integration</li>
-								<li>• Mobile-responsive dashboards</li>
+								<li> Real-time data streaming and visualization</li>
+								<li> Custom KPI tracking and alerting</li>
+								<li> Multi-source data integration</li>
+								<li> Mobile-responsive dashboards</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-blue-600'>From $299/mo</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>View demo →</Link>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>View demo </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -773,14 +773,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Enterprise-grade API management with security, monitoring, and monetization.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• API gateway with rate limiting and authentication</li>
-								<li>• Developer portal and documentation</li>
-								<li>• Usage analytics and billing management</li>
-								<li>• API versioning and lifecycle management</li>
+								<li> API gateway with rate limiting and authentication</li>
+								<li> Developer portal and documentation</li>
+								<li> Usage analytics and billing management</li>
+								<li> API versioning and lifecycle management</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-green-600'>From $499/mo</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Manage APIs →</Link>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Manage APIs </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -790,14 +790,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Productivity tools and extensions for modern development workflows.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• VS Code extensions and plugins</li>
-								<li>• Code quality and security scanning</li>
-								<li>• Automated testing and deployment tools</li>
-								<li>• Team collaboration and code review tools</li>
+								<li> VS Code extensions and plugins</li>
+								<li> Code quality and security scanning</li>
+								<li> Automated testing and deployment tools</li>
+								<li> Team collaboration and code review tools</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-purple-600'>From $199/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Boost productivity →</Link>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Boost productivity </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -807,14 +807,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Secure payment processing and financial technology integrations.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-currency payment processing</li>
-								<li>• Cryptocurrency payment integration</li>
-								<li>• Fraud detection and risk management</li>
-								<li>• Financial reporting and compliance tools</li>
+								<li> Multi-currency payment processing</li>
+								<li> Cryptocurrency payment integration</li>
+								<li> Fraud detection and risk management</li>
+								<li> Financial reporting and compliance tools</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-orange-600'>From $799/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Process payments →</Link>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Process payments </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -824,14 +824,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Cross-platform mobile app development with native performance.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• React Native and Flutter development</li>
-								<li>• Progressive Web App (PWA) creation</li>
-								<li>• App store optimization and deployment</li>
-								<li>• Push notifications and analytics</li>
+								<li> React Native and Flutter development</li>
+								<li> Progressive Web App (PWA) creation</li>
+								<li> App store optimization and deployment</li>
+								<li> Push notifications and analytics</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $1,299/mo</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Build apps →</Link>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Build apps </Link>
 							</div>
 						</div>
 						<div className='rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition'>
@@ -841,13 +841,13 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>No-code workflow builder with AI-powered optimization suggestions.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Visual workflow designer with drag-and-drop</li>
-								<li>• 500+ pre-built integrations</li>
-								<li>• AI-powered efficiency recommendations</li>
+								<li> Visual workflow designer with drag-and-drop</li>
+								<li> 500+ pre-built integrations</li>
+								<li> AI-powered efficiency recommendations</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $79/mo</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Automate workflows →</Link>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Automate workflows </Link>
 							</div>
 						</div>
 					</div>
@@ -881,14 +881,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Generate high-quality content at scale with AI-powered writing tools.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Blog posts, articles, and marketing copy</li>
-								<li>• SEO-optimized content with keyword research</li>
-								<li>• Multi-language support and brand voice consistency</li>
-								<li>• Content calendar and publishing automation</li>
+								<li> Blog posts, articles, and marketing copy</li>
+								<li> SEO-optimized content with keyword research</li>
+								<li> Multi-language support and brand voice consistency</li>
+								<li> Content calendar and publishing automation</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-blue-600'>From $199/mo</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial →</Link>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial </Link>
 							</div>
 						</div>
 						{/* Email Automation Platform */}
@@ -899,14 +899,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>AI-powered email campaigns with personalized content and optimal send times.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Behavioral trigger automation</li>
-								<li>• A/B testing and performance optimization</li>
-								<li>• Lead scoring and segmentation</li>
-								<li>• Integration with CRM and marketing tools</li>
+								<li> Behavioral trigger automation</li>
+								<li> A/B testing and performance optimization</li>
+								<li> Lead scoring and segmentation</li>
+								<li> Integration with CRM and marketing tools</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-green-600'>From $149/mo</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Automate now →</Link>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Automate now </Link>
 							</div>
 						</div>
 						{/* AI Email Responder */}
@@ -917,14 +917,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Intelligent email management with smart responses and priority detection.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Auto-respond to common inquiries</li>
-								<li>• Priority flagging and urgent email alerts</li>
-								<li>• Sentiment analysis and response suggestions</li>
-								<li>• Calendar integration and meeting scheduling</li>
+								<li> Auto-respond to common inquiries</li>
+								<li> Priority flagging and urgent email alerts</li>
+								<li> Sentiment analysis and response suggestions</li>
+								<li> Calendar integration and meeting scheduling</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-purple-600'>From $99/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Try demo →</Link>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Try demo </Link>
 							</div>
 						</div>
 						{/* Customer Support Platform */}
@@ -935,14 +935,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Comprehensive support platform with AI chatbots and ticket management.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• 24/7 AI chatbot with human handoff</li>
-								<li>• Multi-channel support (chat, email, phone)</li>
-								<li>• Knowledge base and FAQ automation</li>
-								<li>• Customer satisfaction tracking</li>
+								<li> 24/7 AI chatbot with human handoff</li>
+								<li> Multi-channel support (chat, email, phone)</li>
+								<li> Knowledge base and FAQ automation</li>
+								<li> Customer satisfaction tracking</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-orange-600'>From $299/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Setup support →</Link>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Setup support </Link>
 							</div>
 						</div>
 						{/* Event Management Dashboard */}
@@ -953,14 +953,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Complete event planning and management with AI-powered insights.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Event registration and ticketing</li>
-								<li>• Automated email campaigns and reminders</li>
-								<li>• Real-time analytics and attendee insights</li>
-								<li>• Integration with payment and marketing tools</li>
+								<li> Event registration and ticketing</li>
+								<li> Automated email campaigns and reminders</li>
+								<li> Real-time analytics and attendee insights</li>
+								<li> Integration with payment and marketing tools</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $179/mo</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Plan events →</Link>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Plan events </Link>
 							</div>
 						</div>
 						{/* Workflow Automation Engine */}
@@ -971,14 +971,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>No-code workflow automation with AI optimization recommendations.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Visual workflow designer</li>
-								<li>• 500+ pre-built integrations</li>
-								<li>• AI-powered efficiency suggestions</li>
-								<li>• Performance monitoring and optimization</li>
+								<li> Visual workflow designer</li>
+								<li> 500+ pre-built integrations</li>
+								<li> AI-powered efficiency suggestions</li>
+								<li> Performance monitoring and optimization</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-indigo-600'>From $79/mo</span>
-								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Automate workflows →</Link>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Automate workflows </Link>
 							</div>
 						</div>
 					</div>
@@ -1026,14 +1026,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Complete CI/CD pipelines with infrastructure as code and automated deployments.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• GitOps workflows and automated deployments</li>
-								<li>• Infrastructure monitoring and alerting</li>
-								<li>• Multi-cloud orchestration (AWS, Azure, GCP)</li>
-								<li>• Security scanning and compliance automation</li>
+								<li> GitOps workflows and automated deployments</li>
+								<li> Infrastructure monitoring and alerting</li>
+								<li> Multi-cloud orchestration (AWS, Azure, GCP)</li>
+								<li> Security scanning and compliance automation</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-blue-600'>From $599/mo</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Get started →</Link>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Get started </Link>
 							</div>
 						</div>
 						{/* Infrastructure Monitoring */}
@@ -1044,14 +1044,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Real-time monitoring with AI-powered anomaly detection and predictive scaling.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Application performance monitoring (APM)</li>
-								<li>• Log aggregation and analysis</li>
-								<li>• Predictive scaling and optimization</li>
-								<li>• Custom dashboards and alerting</li>
+								<li> Application performance monitoring (APM)</li>
+								<li> Log aggregation and analysis</li>
+								<li> Predictive scaling and optimization</li>
+								<li> Custom dashboards and alerting</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-green-600'>From $199/mo</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Monitor now →</Link>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Monitor now </Link>
 							</div>
 						</div>
 						{/* API Management */}
@@ -1062,14 +1062,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Enterprise API gateway with rate limiting, authentication, and analytics.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• API versioning and lifecycle management</li>
-								<li>• Rate limiting and throttling</li>
-								<li>• OAuth 2.0 and JWT authentication</li>
-								<li>• API analytics and usage insights</li>
+								<li> API versioning and lifecycle management</li>
+								<li> Rate limiting and throttling</li>
+								<li> OAuth 2.0 and JWT authentication</li>
+								<li> API analytics and usage insights</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-purple-600'>From $299/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Manage APIs →</Link>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Manage APIs </Link>
 							</div>
 						</div>
 						{/* Database Optimization */}
@@ -1080,14 +1080,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Database tuning, optimization, and migration services for peak performance.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Query optimization and indexing</li>
-								<li>• Database migration and scaling</li>
-								<li>• Backup and disaster recovery</li>
-								<li>• Performance monitoring and tuning</li>
+								<li> Query optimization and indexing</li>
+								<li> Database migration and scaling</li>
+								<li> Backup and disaster recovery</li>
+								<li> Performance monitoring and tuning</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-orange-600'>From $399/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Optimize DB →</Link>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Optimize DB </Link>
 							</div>
 						</div>
 						{/* Security Assessment */}
@@ -1098,14 +1098,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Comprehensive security audits and penetration testing for applications and infrastructure.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Web application security testing</li>
-								<li>• Network penetration testing</li>
-								<li>• Vulnerability assessment and remediation</li>
-								<li>• Compliance audits (SOC2, HIPAA, GDPR)</li>
+								<li> Web application security testing</li>
+								<li> Network penetration testing</li>
+								<li> Vulnerability assessment and remediation</li>
+								<li> Compliance audits (SOC2, HIPAA, GDPR)</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $2,500/project</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Secure now →</Link>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Secure now </Link>
 							</div>
 						</div>
 						{/* Cloud Migration */}
@@ -1116,14 +1116,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Seamless migration to cloud platforms with modernization and optimization.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Lift-and-shift and re-platforming</li>
-								<li>• Containerization and microservices</li>
-								<li>• Cost optimization and FinOps</li>
-								<li>• Training and knowledge transfer</li>
+								<li> Lift-and-shift and re-platforming</li>
+								<li> Containerization and microservices</li>
+								<li> Cost optimization and FinOps</li>
+								<li> Training and knowledge transfer</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
-								<span className='font-semibold text-indigo-600'>From $15k–$100k</span>
-								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Migrate to cloud →</Link>
+								<span className='font-semibold text-indigo-600'>From $15k$100k</span>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Migrate to cloud </Link>
 							</div>
 						</div>
 					</div>
@@ -1171,14 +1171,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>AI-powered project tracking with intelligent resource allocation and team collaboration.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Automated task prioritization and scheduling</li>
-								<li>• Team performance analytics and insights</li>
-								<li>• Integration with popular tools (Slack, Jira, etc.)</li>
-								<li>• Real-time collaboration and communication</li>
+								<li> Automated task prioritization and scheduling</li>
+								<li> Team performance analytics and insights</li>
+								<li> Integration with popular tools (Slack, Jira, etc.)</li>
+								<li> Real-time collaboration and communication</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-blue-600'>From $149/mo</span>
-								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial →</Link>
+								<Link href='/contact' className='text-blue-600 hover:text-blue-500'>Start free trial </Link>
 							</div>
 						</div>
 						{/* Analytics Platform */}
@@ -1189,14 +1189,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Comprehensive analytics platform with customizable dashboards and automated reporting.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Real-time data visualization and insights</li>
-								<li>• Automated report generation and scheduling</li>
-								<li>• Custom KPI tracking and alerts</li>
-								<li>• Data integration from multiple sources</li>
+								<li> Real-time data visualization and insights</li>
+								<li> Automated report generation and scheduling</li>
+								<li> Custom KPI tracking and alerts</li>
+								<li> Data integration from multiple sources</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-green-600'>From $199/mo</span>
-								<Link href='/contact' className='text-green-600 hover:text-green-500'>Analyze data →</Link>
+								<Link href='/contact' className='text-green-600 hover:text-green-500'>Analyze data </Link>
 							</div>
 						</div>
 						{/* Customer Feedback Platform */}
@@ -1207,14 +1207,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>AI-driven sentiment analysis and actionable insights from customer feedback across channels.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Multi-channel feedback aggregation</li>
-								<li>• Sentiment analysis and trend identification</li>
-								<li>• Automated response recommendations</li>
-								<li>• Customer satisfaction tracking and NPS</li>
+								<li> Multi-channel feedback aggregation</li>
+								<li> Sentiment analysis and trend identification</li>
+								<li> Automated response recommendations</li>
+								<li> Customer satisfaction tracking and NPS</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-purple-600'>From $99/mo</span>
-								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Analyze feedback →</Link>
+								<Link href='/contact' className='text-purple-600 hover:text-purple-500'>Analyze feedback </Link>
 							</div>
 						</div>
 						{/* Inventory Management */}
@@ -1225,14 +1225,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>AI-powered inventory tracking with predictive analytics and automated reordering.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Real-time inventory tracking and alerts</li>
-								<li>• Predictive analytics for demand forecasting</li>
-								<li>• Automated reorder points and purchase orders</li>
-								<li>• Multi-location and warehouse management</li>
+								<li> Real-time inventory tracking and alerts</li>
+								<li> Predictive analytics for demand forecasting</li>
+								<li> Automated reorder points and purchase orders</li>
+								<li> Multi-location and warehouse management</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-orange-600'>From $179/mo</span>
-								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Manage inventory →</Link>
+								<Link href='/contact' className='text-orange-600 hover:text-orange-500'>Manage inventory </Link>
 							</div>
 						</div>
 						{/* HR Management System */}
@@ -1243,14 +1243,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Complete HR solution with employee management, payroll, and performance tracking.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Employee onboarding and offboarding</li>
-								<li>• Time tracking and attendance management</li>
-								<li>• Performance reviews and goal setting</li>
-								<li>• Payroll integration and benefits management</li>
+								<li> Employee onboarding and offboarding</li>
+								<li> Time tracking and attendance management</li>
+								<li> Performance reviews and goal setting</li>
+								<li> Payroll integration and benefits management</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-red-600'>From $249/mo</span>
-								<Link href='/contact' className='text-red-600 hover:text-red-500'>Manage HR →</Link>
+								<Link href='/contact' className='text-red-600 hover:text-red-500'>Manage HR </Link>
 							</div>
 						</div>
 						{/* Financial Management */}
@@ -1261,14 +1261,14 @@ export default function Services() {
 							</div>
 							<p className='text-sm text-gray-600 mb-3'>Comprehensive financial tracking with invoicing, expense management, and reporting.</p>
 							<ul className='text-sm text-gray-700 space-y-1 mb-4'>
-								<li>• Automated invoicing and payment tracking</li>
-								<li>• Expense management and receipt scanning</li>
-								<li>• Financial reporting and tax preparation</li>
-								<li>• Integration with accounting software</li>
+								<li> Automated invoicing and payment tracking</li>
+								<li> Expense management and receipt scanning</li>
+								<li> Financial reporting and tax preparation</li>
+								<li> Integration with accounting software</li>
 							</ul>
 							<div className='flex items-center justify-between text-sm'>
 								<span className='font-semibold text-indigo-600'>From $199/mo</span>
-								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Manage finances →</Link>
+								<Link href='/contact' className='text-indigo-600 hover:text-indigo-500'>Manage finances </Link>
 							</div>
 						</div>
 					</div>
@@ -1515,7 +1515,7 @@ export default function Services() {
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
 								aria-label='Back to homepage'
 							>
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
+								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'></span>
 							</Link>
 						</div>
 					</div>

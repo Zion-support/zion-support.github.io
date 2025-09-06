@@ -23,27 +23,52 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+<<<<<<< HEAD
 
-
+export type PaginationProps = {;
   page: number;
   page_size: number;
-  total: number;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export type PaginationProps = {;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type PaginationProps = {
-=======
-  on_change: (next_page: number) => void;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+  page: number;
+  pageSize: number;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  total: number;
+  onChange: (nextPage: number) => void;
 }
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
-
+export default function Pagination({
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+<<<<<<< HEAD
   page: number,
   page_size: number,
   total: number,
-
-
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+=======
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+=======
   page,
   pageSize,
   total,
@@ -56,34 +81,12 @@ function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / pag
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
-
-};
-
-export default function Pagination(): any ({;
-  page,;
-  pageSize,;
-  total,;
-  onChange,;
-}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
-  page: number,;
-  pageSize: number,;
-  total: number,;
-  onChange: (nextPage: number) => void;
-};
-
-export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
-  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
-  const canPrev = page > 1;
-  const canNext = page < totalPages;
-
-  const goTo = (p: number) => {;
-
     if (p >= 1 && p <= totalPages) onChange(p);
   }
   return (
@@ -108,13 +111,7 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
       </EnhancedButton>;
     </div>;
   );
-
-}  }
-=======
-    if (p >= 1 && p <= totalPages) onChange(p)
-  };
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}  };
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -123,8 +120,18 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
       </EnhancedButton>;
       <div className="text-sm">;
         Page {page} of {totalPages}
-
-
+      </div>
+      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>
+        Next
+      </EnhancedButton>
+    </div>
+);
+      </div>;
+      <EnhancedButton variant="secondary" size="md" onClick={() => goTo(page + 1)} disabled={!canNext}>;
+        Next;
+      </EnhancedButton>;
+    </div>;
+  );
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface PaginationProps {;
@@ -133,108 +140,30 @@ interface PaginationProps {;
   baseUrl: string;
   className?: string;
 }
-
-
-const Pagination: React.FC<PaginationProps> = ({ ;
-  currentPage,;
-  totalPages,;
-  baseUrl,;
+const Pagination: React.FC<PaginationProps> = ({currentPage
+  totalPages
+  baseUrl
   className = '' ;
-}) => {;
-  const getPageNumbers = () => {;
-=======
-  on_change: (next_page: number) => void;
-}
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {
-  const total_pages = Math.max (1, Math.ceil (total / page_size));
-  const can_prev = page > 1;
-  const can_next = page < total_pages;
-;
-  const go_to = (p: number) =>: any {
-    if (on_change (p)) {
-  $2
-}
-  }
-;
-  return (
-    <div className='flex items - center justify - between gap - 2 mt - 4'>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page - 1)}
-        disabled={!can_prev}
-      >;
-        Prev;
-      </EnhancedButton>;
-      <div className='text - sm'>;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page + 1)}
-        disabled={!can_next}
-      >        Next;
-      </EnhancedButton>;
-    </div>);
-}  }
-;
-  return (
-    <div className="flex items - center justify - between gap - 2 mt - 4">;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page - 1)} disabled={!can_prev}>;
-        Prev;
-      </EnhancedButton>;
-      <div className="text - sm">;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page + 1)} disabled={!can_next}>;
-        Next;
-      </EnhancedButton>;
-    </div>);
-import Link from 'next / link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-interface PaginationProps {
-  current_page: number;
-  total_pages: number;
-  base_url: string;
-  class_name?: string;
-}
-const Pagination: React.FC < PaginationProps> = ({
-  current_page,
-  total_pages,
-  base_url,
-  class_name = '' ;
 }) => {
-  const getPageNumbers = () =>: any {
-
+  const getPageNumbers = () => {const pages = [];
     const pages = [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const maxVisiblePages = 5;
-
-    } else {;
-      const startPage = Math && Math.max(1, currentPage - 2);
-      const endPage = Math && Math.min(totalPages, startPage + maxVisiblePages - 1);
-
+    if (totalPages <= maxVisiblePages) {;
+      for (let i = 1; i <= totalPages; i++) {;
+        pages && pages.push(i);
+}
+    } else {const startPage = Math.max(1, currentPage - 2);
+      const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
       if (startPage > 1) {;
         pages && pages.push(1);
         if (startPage > 2) {;
           pages && pages.push('...');
 }
       }
-
-
-      for (let i = startPage; i <= endPage; i++) {;
-        pages && pages.push(i);
+      for (let i = startPage; i <= endPage; i++) {pages.push(i);
 }
-
-      if (endPage < totalPages) {;
-        if (endPage < totalPages - 1) {;
-          pages && pages.push('...');
-
+      if (endPage < totalPages) {if (endPage < totalPages - 1) {;
+          pages.push('...');
 }
         pages && pages.push(totalPages);
 }
@@ -260,11 +189,8 @@ const Pagination: React.FC < PaginationProps> = ({
       )}
       {/* Page Numbers */}
       <div className="flex items-center space-x-1">;
-
-        {getPageNumbers().map((page, index) => {;
-          if (page === '...') {;
-            return (
-
+        {getPageNumbers().map((page, index) => {if (page === '...') {;
+            return (;
               <span key={index} className="px-3 py-2 text-sm text-gray-500">;
                 ...;
               </span>;
@@ -276,13 +202,11 @@ const Pagination: React.FC < PaginationProps> = ({
             <Link
               key={pageNumber}
               href={`${baseUrl}?page=${pageNumber}`}
-
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                isCurrentPage
-                  ? 'bg-blue-600 text-white border border-blue-600'
-                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900'
-}`}>;
-
+              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${isCurrentPage;
+                  ? 'bg-blue-600 text-white border border-blue-600';
+                  : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50 hover:text-gray-900';
+}`}
+            >;
               {pageNumber}
             </Link>;
           );
@@ -293,7 +217,6 @@ const Pagination: React.FC < PaginationProps> = ({
         <Link
           href={`${baseUrl}?page=${currentPage + 1}`}
           className="flex items-center px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 hover:text-gray-700 transition-colors">;
-=======
     // Check condition
 if ( {) {
   $2
@@ -386,32 +309,41 @@ if ( {) {
         <Link;
           href={`${base_url}?page=${current_page + 1}`}
           className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 500 bg - white border border - gray - 300 rounded - lg hover:bg - gray - 50 hover:text - gray - 700 transition - colors">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Next;
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
-
-
+          <ChevronRight className="w-4 h-4 ml-1" />;
+        </span>;
+      )}
+    </nav>;
+  );
+};
+export default Pagination;
 }
 export default Pagination;
 }
-=======
   );
+<<<<<<< HEAD
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   );
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

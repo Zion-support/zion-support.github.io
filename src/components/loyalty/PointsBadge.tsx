@@ -1,5 +1,39 @@
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+=======
+import React, { useState } from 'react'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { Gift, RefreshCw } from 'lucide-react'
 
-
+import { usePoints } from '@/hooks/usePoints'
+import { useAuth } from '@/hooks/useAuth'
+import Link from 'next/link'
+import {
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
+} from '@/components/ui/tooltip'
+import { LoginModal } from '@/components/auth/LoginModal'
+import { Button } from '@/components/ui/button'
+import { logErrorToProduction } from '@/utils/productionLogger'
+export function PointsBadge() {
+  const { isAuthenticated } = useAuth()
+  const { ledger, balance, loading, fetchLedger } = usePoints()
+  const [loginOpen, setLoginOpen] = useState(false)
+  const [isRefreshing, setIsRefreshing] = useState(false)
+  const points = balance
+  const breakdown = ledger.reduce(
+    (acc, e) => {
+      if (e.reason === 'purchase') acc.purchase += e.delta
+      if (e.reason === 'post') acc.post += e.delta
+      if (e.reason === 'referral') acc.referral += e.delta
+      return acc }
     { purchase: 0, post: 0, referral: 0 }
   );
   const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
@@ -23,87 +57,44 @@ if (return) {
     } catch (error) {
       logErrorToProduction ('Failed to refresh points:', { data: error });
     } finally {
-
-import { Gift, RefreshCw } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints';
-import { useAuth } from '@/hooks/useAuth';
-import Link from 'next/link';
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { LoginModal } from '@/components/auth/LoginModal';
-import { Button } from '@/components/ui/button';
-import { logErrorToProduction } from '@/utils/productionLogger';
-export function PointsBadge() {;
-  const { isAuthenticated } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  const points = balance;
-
-  const breakdown = ledger && ledger.reduce(;
-    (acc, e) => {;
-      if (e && e.reason === 'purchase') acc && acc.purchase += e && e.delta;
-      if (e && e.reason === 'post') acc && acc.post += e && e.delta;
-      if (e && e.reason === 'referral') acc && acc.referral += e && e.delta;
-      return acc;    },;
-    { purchase: 0, post: 0, referral: 0 }
-  );
-
-  const handleClick = (e: React && React.MouseEvent<HTMLAnchorElement>,) => {;
-    if (!isAuthenticated) {;
-      e && e.preventDefault();
-      setLoginOpen(true);
-    }
-  };
-
-  const handleRefresh = async (e: React && React.MouseEvent<HTMLButtonElement>) => {;
-    e && e.preventDefault();
-    e && e.stopPropagation();
-    if (!isAuthenticated) return;
-
-    setIsRefreshing(true);    try {;
-      await fetchLedger();
-    } catch (error) {;
-      logErrorToProduction('Failed to refresh points:', { data: error });
-    } finally {;
-      setIsRefreshing(false);
-
+      setIsRefreshing(false)
+      setIsRefreshing (false);
     }
   }
 
   return (
     <TooltipProvider>;
-
-      <div className='flex items - center gap - 1'>;
+      <div className='flex items-center gap-1'>;
         <Tooltip>;
-          <TooltipTrigger as_child>;
-            <Link;
-              href={is_authenticated ? '/points' : '#'}
-              on_click={handle_click}
-
+          <TooltipTrigger asChild>;
+            <Link
+              href={isAuthenticated ? '/points' : '#'}
+              onClick={handleClick}
               title={
                 is_authenticated ? 'View points' : 'Earn points by participating';
               }
-
-              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
-              <Gift className='h - 4 w - 4' aria - hidden='true' />;
-
+              className='flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95'>;
+              <Gift className='h-4 w-4' aria-hidden='true' />;
               <span>{`${points} pts`}</span>;
             </Link>;
           </TooltipTrigger>;
           <TooltipContent>;
+<<<<<<< HEAD
+            {isAuthenticated ? (;
+              <>;
+                <p className='text-sm font-medium'>Point Breakdown</p>;
+                {points === 0 && (;
+                  <p className='text-xs text-muted-foreground'>;
+                    You haven't earned any points yet.;
+                  </p>;
+=======
 
     }
   },
 
-
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <TooltipProvider>
@@ -118,7 +109,10 @@ export function PointsBadge() {;
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <span>{`${points} pts`}</span>
             </Link>
@@ -132,6 +126,7 @@ export function PointsBadge() {;
                     You haven't earned any points yet.
                   </p>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
                 <ul className='text-xs mt-1 space-y-0 && 0.5'>;
                   <li>Purchases: {breakdown && breakdown.purchase}</li>;
@@ -146,53 +141,49 @@ export function PointsBadge() {;
               <>;
                 <p className='text-sm font-medium'>Zion Rewards Program</p>;
                 <p className='text-xs mt-1 text-muted-foreground'>;
+                   Sign up: 50 pts;
+                  <br />;
+                   First purchase: 100 pts;
+                  <br />;
+                   Community posts: 25 pts each;
+                  <br /> Refer friends: 200 pts each;
+                </p>;
+<<<<<<< HEAD
+                <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
+                  Click to learn more and join!;
+                </p>;
+              </>;
+            )}
+          </TooltipContent>
+        </Tooltip>
 =======
-            {is_authenticated ? (
-              <>;
-                <p className='text - sm font - medium'>Point Breakdown</p>;
-                {points === 0 && (
-                  <p className='text - xs text - muted - foreground'>;
-                    You haven't earned any points yet.;
-                  </p>)}
-                <ul className='text - xs mt - 1 space - y-0.5'>;
-                  <li > Purchases: {breakdown.purchase}</li>;
-                  <li > Posts: {breakdown.post}</li>;
-                  <li > Referrals: {breakdown.referral}</li>;
-                </ul>;
-                <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
-                  Click to view full rewards program;
-                </p>;
-              </>) : (
-              <>;
-                <p className='text - sm font - medium'>Zion Rewards Program</p>;
-                <p className='text - xs mt - 1 text - muted - foreground'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                  • Sign up: 50 pts;
-                  <br />;
-                  • First purchase: 100 pts;
-                  <br />;
-                  • Community posts: 25 pts each;
-                  <br />• Refer friends: 200 pts each;
-                </p>;
 
 
         
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
-=======
-          </TooltipContent>;
-        </Tooltip>;
-
-        {isAuthenticated && (;
-          <Tooltip>;
-            <TooltipTrigger asChild>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+                variant='ghost'
+                size='sm'
+                onClick={handleRefresh}
+                disabled={isRefreshing |loading}
+                className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
+<<<<<<< HEAD
+                aria-label='Refresh points'>;
+                <RefreshCw
+                  className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
+                  aria-hidden='true'
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
                   Click to learn more and join!;
                 </p>;
@@ -212,14 +203,25 @@ export function PointsBadge() {;
                 <RefreshCw;
                   className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}
                   aria - hidden='true';
-
                 />;
               </Button>;
             </TooltipTrigger>;
             <TooltipContent>;
-
-
-
+              <p className='text-sm'>Refresh points balance</p>;
+            </TooltipContent>;
+          </Tooltip>;
+        )}
+      </div>
+      {!isAuthenticated && (
+        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+=======
+                aria-label='Refresh points'              >
+<<<<<<< HEAD
+                <RefreshCw
+                  className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
+                  aria-hidden='true'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                 variant="ghost"
                 size="sm"
@@ -228,9 +230,10 @@ export function PointsBadge() {;
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -243,25 +246,39 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-
+<<<<<<< HEAD
+      </div>
+      {!isAuthenticated && (
+        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+      )}
+    </TooltipProvider>
+  )
+}
+}
+<<<<<<< HEAD
+=======
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       </div>;
 
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       )}
-    </TooltipProvider>;
-  );
+    </TooltipProvider>
+  )
 }
-
-}
+<<<<<<< HEAD
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <p className='text - sm'>Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>)}
@@ -271,6 +288,8 @@ export function PointsBadge() {;
     </TooltipProvider>);
 }
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -278,4 +297,4 @@ export function PointsBadge() {;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

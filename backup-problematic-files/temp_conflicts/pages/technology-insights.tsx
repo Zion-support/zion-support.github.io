@@ -35,19 +35,19 @@ export default function TechnologyInsightsPage() {;
       title:'Autonomous Systems Research',;
       description:'Pioneering research in building truly autonomous systems that can operate independently.',;
       focus:['Decision MakingSelf-Learning', 'Adaptive BehaviorSystem Integration'],;
-      icon:'🔬';
+      icon:'';
     },;
     {;
       title:'AI Ethics & Governance',;
       description:'Research into responsible AI development and ethical considerations for autonomous systems.',;
       focus:['Ethical AIBias Detection', 'TransparencyAccountability'],;
-      icon:'⚖️';
+      icon:'';
     },;
     {;
       title:'Human-AI Collaboration',;
       description:'Exploring how humans and AI can work together effectively and safely.',;
       focus:['Human-AI InterfaceCollaborative Decision Making', 'Safety ProtocolsTrust Building'],;
-      icon:'🤝';
+      icon:'';
     }
   ],;
 ;
@@ -116,7 +116,7 @@ export default function TechnologyInsightsPage() {;
                       href={`/blog/${trend.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors";
                     >;
-                      Read More <span className="ml-1">→</span>;
+                      Read More <span className="ml-1"></span>;
                     </Link>;
                   </div>;
                 ))}
@@ -135,7 +135,7 @@ export default function TechnologyInsightsPage() {;
                     <ul className="space-y-2">;
                       {area.focus.map((focus, focusIndex) => (;
                         <li key={focusIndex} className="text-sm text-white/60 flex items-center">;
-                          <span className="text-cyan-400 mr-2">•</span>;
+                          <span className="text-cyan-400 mr-2"></span>;
                           {focus}
                         </li>;
                       ))}
@@ -161,7 +161,7 @@ export default function TechnologyInsightsPage() {;
                       href={paper.downloadUrl}
                       className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors";
                     >;
-                      Download PDF <span className="ml-1">→</span>;
+                      Download PDF <span className="ml-1"></span>;
                     </Link>;
                   </div>;
                 ))}
@@ -180,14 +180,14 @@ export default function TechnologyInsightsPage() {;
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.;
                     </p>;
                     <ul className="space-y-2 text-white/70">;
-                      <li>• Advanced AI research and development</li>;
-                      <li>• Autonomous system prototyping</li>;
-                      <li>• Ethical AI framework development</li>;
-                      <li>• Industry collaboration and partnerships</li>;
+                      <li> Advanced AI research and development</li>;
+                      <li> Autonomous system prototyping</li>;
+                      <li> Ethical AI framework development</li>;
+                      <li> Industry collaboration and partnerships</li>;
                     </ul>;
                   </div>;
                   <div className="text-center">;
-                    <div className="text-6xl mb-4">🧪</div>;
+                    <div className="text-6xl mb-4"></div>;
                     <p className="text-white/60 text-sm">Innovation Lab</p>;
                   </div>;
                 </div>;

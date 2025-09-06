@@ -1,41 +1,85 @@
+<<<<<<< HEAD
 
-
+// Security middleware
+import { NextResponse } from 'next/server';
+import { getSecurityHeaders } from '../utils/security-headers';
+export function securityMiddleware(request) {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
 >>>>>>> origin/automation-improvements-final
 =======
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
-
-
+<<<<<<< HEAD
+export function securityMiddleware(request) {
+=======
 
 export function securityMiddleware(request) {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const response = NextResponse.next();
-=======
-  const response = NextResponse && NextResponse.next();
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Add security headers
   const headers = getSecurityHeaders();
   headers && headers.forEach(({ key, value }) => {
     response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
-
-  if (request && request.nextUrl.protocol === 'https:') {
-    response && response.headers.set(
-      'Strict-Transport-Security',
-
+  if (request.nextUrl.protocol === 'https:') {
+    response.headers.set(
+      'Strict-Transport-Security'
       'max-age=31536000; includeSubDomains; preload'
     );
   }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  
+<<<<<<< HEAD
+  return response;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 // Security headers middleware
@@ -57,40 +101,75 @@ export function securityHeaders(req, res, next) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+<<<<<<< HEAD
+  return response;
+=======
+// Security headers middleware
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return response;// Security headers middleware
+>>>>>>> origin/main
 export function securityHeaders(req, res, next) {
   Object.entries({
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+    'X-Content-Type-Options': 'nosniff'
+    'X-Frame-Options': 'DENY'
+    'X-XSS-Protection': '1; mode=block'
+    'Referrer-Policy': 'strict-origin-when-cross-origin'
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+<<<<<<< HEAD
+=======
+=======
     'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
+    'X-Frame-Options': 'DENY',;
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
-
-
+<<<<<<< HEAD
+}
+}
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Security middleware;
 import { NextResponse } from 'next / server';
 import { getSecurityHeaders } from '../utils / security - headers';
@@ -112,6 +191,7 @@ function security_middleware() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
     response.headers.set (
       'Strict - Transport - Security',
       'max - age = 31536000; includeSubDomains; preload');
@@ -134,4 +214,10 @@ function security_headers() {
 ;
   next ();
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

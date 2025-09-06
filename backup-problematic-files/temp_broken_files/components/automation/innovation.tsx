@@ -20,7 +20,7 @@ export default function InnovationDigest({ items }: Props) {
     <div className=&quot;space-y-6&quot;>
       <header className=&quot;space-y-2&quot;>
         <h1 className=&quot;text-3xl font-bold&quot;>Innovation Digest</h1>
-        <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Latest AI research and tools—auto-curated.</p>      </header>
+        <p className=&quot;text-gray-600 dark:text-gray-300&quot;>Latest AI research and toolsauto-curated.</p>      </header>
       {items.length === 0 && (
         <div className=&quot;text-gray-600 dark:text-gray-400&quot;>No entries yet. The automation will populate this feed shortly.</div>
       )}

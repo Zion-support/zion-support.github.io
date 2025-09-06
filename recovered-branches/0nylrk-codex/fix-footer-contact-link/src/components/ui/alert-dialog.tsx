@@ -1,13 +1,29 @@
-
-
+<<<<<<< HEAD
+import React from 'react';
+import * as React from 'react';
+import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+=======
+<<<<<<< HEAD
+import * as React from 'react';
+import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import {cn} from '@/lib/utils';
+import {buttonVariants} from '@/components/ui/button';
+const AlertDialog = AlertDialogPrimitive.Root;
+const AlertDialogTrigger = AlertDialogPrimitive.Trigger;
+const AlertDialogPortal = AlertDialogPrimitive.Portal;
+<<<<<<< HEAD
+=======
+=======
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 =======
 =======
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
-
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -20,44 +36,29 @@ const AlertDialogPortal = AlertDialogPrimitive.Portal
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
 ></typeof>(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Overlay
-
-
-const AlertDialog = AlertDialogPrimitive && AlertDialogPrimitive.Root;
-
-const AlertDialogTrigger = AlertDialogPrimitive && AlertDialogPrimitive.Trigger;
-
-const AlertDialogPortal = AlertDialogPrimitive && AlertDialogPrimitive.Portal;
-
-const AlertDialogOverlay = React && React.forwardRef<;
-  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Overlay>,;
-  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Overlay>;
-></typeof>(({ className, ...props }, ref) => (;
-  <AlertDialogPrimitive&& AlertDialogPrimitive.Overlay
-
     className={cn(
       'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
-=======
-    className={cn(
-
-      "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     )}
     {...props}
     ref={ref}
   />;
 ));
+AlertDialogOverlay.displayName = AlertDialogPrimitive.Overlay.displayName;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-
-
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const AlertDialogContent = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.C</typeof>ontent>
@@ -65,20 +66,14 @@ const AlertDialogContent = React.forwardRef<
   <AlertDialogPortal>
     <AlertDialogOverlay />
     <AlertDialogPrimitive.Content
-
-AlertDialogOverlay && AlertDialogOverlay.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Overlay.displayName;
-
-const AlertDialogContent = React && React.forwardRef<;
-  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Content>,;
-  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.C</typeof>ontent>;
->(({ className, ...props }, ref) => (;
-  <AlertDialogPortal>;
-    <AlertDialogOverlay />;
-    <AlertDialogPrimitive&& AlertDialogPrimitive.Content
-
+<<<<<<< HEAD
 =======
-
-
+<<<<<<< HEAD
+      ref={ref}
+      className={cn(
+        'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 const AlertDialogContent = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Content>,;
@@ -87,77 +82,52 @@ const AlertDialogContent = React.forwardRef<;
   <AlertDialogPortal>;
     <AlertDialogOverlay />;
     <AlertDialogPrimitive.Content;
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ref={ref}
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
         className
       )}
       {...props}
-
-    />
-  </AlertDialogPortal>
-
-))
-AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName
-
-
-
+    />;
+  </AlertDialogPortal>;
+));
+AlertDialogContent.displayName = AlertDialogPrimitive.Content.displayName;
 const AlertDialogHeader = ({
   className
   ...props
 }: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
-=======
-AlertDialogContent && AlertDialogContent.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Content.displayName;
-
-const AlertDialogHeader = ({;
-  className,;
-  ...props;
-}: React && React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     className={cn(
-
-
-      "flex flex-col space-y-2 text-center sm:text-left",
-
+      'flex flex-col space-y-2 text-center sm:text-left'
       className
     )}
     {...props}
-  />
-
-)
-AlertDialogHeader.displayName = "AlertDialogHeader"
-
-
-
+  />;
+);
+AlertDialogHeader.displayName = 'AlertDialogHeader';
 const AlertDialogFooter = ({
   className
   ...props
 }: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-=======
-AlertDialogHeader && AlertDialogHeader.displayName = 'AlertDialogHeader';
-
-const AlertDialogFooter = ({;
-  className,;
-  ...props;
-}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   <div
     className={cn(
-
-AlertDialogFooter && AlertDialogFooter.displayName = 'AlertDialogFooter';
-
-const AlertDialogTitle = React && React.forwardRef<;
-  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Title>,;
-  React && React.Component</typeof>PropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Title>;
->(({ className, ...props }, ref) => (;
-  <AlertDialogPrimitive&& AlertDialogPrimitive.Title
-
-=======
+      'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
+      className
+    )}
+    {...props}
+  />;
+);
+AlertDialogFooter.displayName = 'AlertDialogFooter';
+const AlertDialogTitle = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Title>
+  React.Component</typeof>PropsWithoutRef<typeof AlertDialogPrimitive.Title>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Title
 import * as AlertDialogPrimitive from '@radix - ui / react - alert - dialog';
 ;
 import {cn} from '@/lib / utils';
@@ -227,51 +197,25 @@ const AlertDialogTitle = React.forward_ref<;
   React.Component</typeof > PropsWithoutRef < typeof AlertDialogPrimitive.Title>;
 >(({ class_name, ...props }, ref) => (
   <AlertDialogPrimitive.Title;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ('text - lg font - semibold', class_name)}
     {...props}
-
-
-      "flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2",
-
-      className
-    )}
-    {...props}
-  />
-
-)
-AlertDialogFooter.displayName = "AlertDialogFooter"
-
-const AlertDialogTitle = React.forwardRef<
-  React.ElementRef<typeof AlertDialogPrimitive.Title>,
-  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>
-
->(({ className, ...props }, ref) => (
-  <AlertDialogPrimitive.Title
-    ref={ref}
-    className={cn('text-lg font-semibold', className)}
-    {...props}
-  />
+  />;
 ));
 AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const AlertDialogDescription = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Description>
   React.Compon</typeof>entPropsWithoutRef<typeof AlertDialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Description
-=======
-AlertDialogTitle && AlertDialogTitle.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Title.displayName;
-
-const AlertDialogDescription = React && React.forwardRef<;
-  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Description>,;
-  React && React.Compon</typeof>entPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Description>;
->(({ className, ...props }, ref) => (;
-
   />));
 AlertDialogTitle.display_name = AlertDialogPrimitive.Title.display_name;
 ;
@@ -280,37 +224,41 @@ const AlertDialogDescription = React.forward_ref<;
   React.Compon</typeof > entPropsWithoutRef < typeof AlertDialogPrimitive.Description>;
 >(({ class_name, ...props }, ref) => (
   <AlertDialogPrimitive.Description;
-
+<<<<<<< HEAD
+    ref={ref}
+    className={cn ('text - sm text - muted - foreground', class_name)}
+    {...props}
+  />;
+));
+AlertDialogDescription.displayName =
+  AlertDialogPrimitive.Description.displayName;
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
   <AlertDialogPrimitive.Description;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
+  />
+));
+AlertDialogDescription.displayName =
+  AlertDialogPrimitive.Description.displayName;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
-
-
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const AlertDialogAction = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Action>
 </typeof>  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Action
-=======
-AlertDialogDescription && AlertDialogDescription.displayName =;
-  AlertDialogPrimitive && AlertDialogPrimitive.Description.displayName;
-
-const AlertDialogAction = React && React.forwardRef<;
-  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Action>,;
-</typeof>  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Action>;
->(({ className, ...props }, ref) => (;
-  <AlertDialogPrimitive&& AlertDialogPrimitive.Action
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+<<<<<<< HEAD
   />));
 AlertDialogDescription.display_name =;
   AlertDialogPrimitive.Description.display_name;
@@ -320,23 +268,29 @@ const AlertDialogAction = React.forward_ref<;
 </typeof>  React.ComponentPropsWithoutRef < typeof AlertDialogPrimitive.Action>;
 >(({ class_name, ...props }, ref) => (
   <AlertDialogPrimitive.Action;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     ref={ref}
-    className={cn (button_variants (), class_name)}
+    className={cn(buttonVariants(), className)}
     {...props}
-
-AlertDialogAction && AlertDialogAction.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Action.displayName;
-
-const AlertDialogCancel = React && React.forwardRef<;
-  React && React.ElementRef<typeof AlertDialogPrimitive.</typeof>Cancel>,;
-  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Cancel>;
->(({ className, ...props }, ref) => (;
-  <AlertDialogPrimitive&& AlertDialogPrimitive.Cancel
-
+<<<<<<< HEAD
+  />;
+=======
+  />
+));
+AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName;
+const AlertDialogCancel = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.</typeof>Cancel>
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Cancel
     ref={ref}
-
-
-
+<<<<<<< HEAD
+    className={cn(
+      buttonVariants({ variant: 'outline' })
+      'mt-2 sm:mt-0'
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 const AlertDialogAction = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Action>,;
@@ -347,27 +301,52 @@ const AlertDialogAction = React.forwardRef<;
     className={cn(buttonVariants(), className)}
     {...props}
   />
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ));
 AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName;
-const AlertDialogCancel = React.forwardRef<;
-  React.ElementRef<typeof AlertDialogPrimitive.Cancel>,;
-  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>;
->(({ className, ...props }, ref) => (;
-  <AlertDialogPrimitive.Cancel;
+const AlertDialogCancel = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.</typeof>Cancel>
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Cancel
     ref={ref}
-
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     className={cn(
-      buttonVariants({ variant: "outline" }),
-      "mt-2 sm:mt-0",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      buttonVariants({ variant: 'outline' })
+      'mt-2 sm:mt-0'
       className
     )}
     {...props}
   />;
 ));
+AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+export {
+  AlertDialog
+  AlertDialogPortal
+  AlertDialogOverlay
+  AlertDialogTrigger
+  AlertDialogContent
+  AlertDialogHeader
+  AlertDialogFooter
+  AlertDialogTitle
+  AlertDialogDescription
+  AlertDialogAction
+  AlertDialogCancel
+}
+<<<<<<< HEAD
+=======
+=======
 
 AlertDialogCancel && AlertDialogCancel.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Cancel.displayName;
 =======
@@ -389,6 +368,7 @@ export {;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   />));
 AlertDialogAction.display_name = AlertDialogPrimitive.Action.display_name;
 ;
@@ -417,10 +397,15 @@ export {
   AlertDialogTitle,
   AlertDialogDescription,
   AlertDialogAction,
+<<<<<<< HEAD
+  AlertDialogCancel,
+}
+;
+=======
 
   AlertDialogCancel,;
 };
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 export {;
   AlertDialog,;
@@ -435,7 +420,9 @@ export {;
   AlertDialogAction;
   AlertDialogCancel}
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

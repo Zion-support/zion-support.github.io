@@ -1,28 +1,9 @@
-
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
-  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",;
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
-export default function QuantumServicesPage() {;
-  return (;
-
-
+import Link from "next/link";
+export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
+  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"}
+export default function QuantumServicesPage() {return (;
     <div className="min-h-screen">;
-=======
-import Link from './next / link';,
-export const metadata = {
-  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
-  description: "Transform your business with Zion Tech Group's cutting - edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
-  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},
-export default /**
- * QuantumServicesPage - Function description
- */
-function QuantumServicesPage() {
-  return (
-    <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -103,26 +84,19 @@ function QuantumServicesPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10 20l4 - 16m4 4l4 4 - 4 4M6 16l - 4-4 4 - 4" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Custom quantum algorithms designed for your specific business problems,
-
-=======
-
-                Custom quantum algorithms designed for your specific business problems,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>;
+              <p className="text-gray-400 mb-4">;
+                Custom quantum algorithms designed for your specific business problems;
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Custom algorithm design</li>;
-                <li>• Problem - specific optimization</li>;
-                <li>• Hybrid classical - quantum approaches</li>;
-                <li>• Performance benchmarking</li>;
+                <li> Custom algorithm design</li>;
+                <li> Problem - specific optimization</li>;
+                <li> Hybrid classical - quantum approaches</li>;
+                <li> Performance benchmarking</li>;
               </ul>;
               <Link href="/quantum - services / algorithm - development" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Quantum Machine Learning */}
@@ -138,13 +112,13 @@ function QuantumServicesPage() {
                 superposition for faster training and better pattern recognition.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Quantum neural networks</li>;
-                <li>• Quantum feature mapping</li>;
-                <li>• Quantum kernel methods</li>;
-                <li>• Hybrid ML pipelines</li>;
+                <li> Quantum neural networks</li>;
+                <li> Quantum feature mapping</li>;
+                <li> Quantum kernel methods</li>;
+                <li> Hybrid ML pipelines</li>;
               </ul>;
               <Link href="/quantum - services / quantum - ml" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Quantum Optimization */}
@@ -160,13 +134,13 @@ function QuantumServicesPage() {
                 can find global minima in exponentially large search spaces.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Quantum annealing</li>;
-                <li>• Variational quantum algorithms</li>;
-                <li>• Combinatorial optimization</li>;
-                <li>• Supply chain optimization</li>;
+                <li> Quantum annealing</li>;
+                <li> Variational quantum algorithms</li>;
+                <li> Combinatorial optimization</li>;
+                <li> Supply chain optimization</li>;
               </ul>;
               <Link href="/quantum - services / quantum - optimization" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Quantum Simulation */}
@@ -182,13 +156,13 @@ function QuantumServicesPage() {
                 chemistry, and physics research applications.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Molecular dynamics</li>;
-                <li>• Chemical reaction modeling</li>;
-                <li>• Material property prediction</li>;
-                <li>• Quantum chemistry</li>;
+                <li> Molecular dynamics</li>;
+                <li> Chemical reaction modeling</li>;
+                <li> Material property prediction</li>;
+                <li> Quantum chemistry</li>;
               </ul>;
               <Link href="/quantum - services / quantum - simulation" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Quantum Error Correction */}
@@ -204,13 +178,13 @@ function QuantumServicesPage() {
                 and ensure reliable quantum computations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Surface code implementation</li>;
-                <li>• Fault - tolerant quantum computing</li>;
-                <li>• Quantum memory protection</li>;
-                <li>• Noise mitigation strategies</li>;
+                <li> Surface code implementation</li>;
+                <li> Fault - tolerant quantum computing</li>;
+                <li> Quantum memory protection</li>;
+                <li> Noise mitigation strategies</li>;
               </ul>;
               <Link href="/quantum - services / error - correction" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Quantum Consulting */}
@@ -226,13 +200,13 @@ function QuantumServicesPage() {
                 and integration with existing IT infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Quantum readiness assessment</li>;
-                <li>• Implementation roadmap</li>;
-                <li>• Talent development</li>;
-                <li>• ROI analysis</li>;
+                <li> Quantum readiness assessment</li>;
+                <li> Implementation roadmap</li>;
+                <li> Talent development</li>;
+                <li> ROI analysis</li>;
               </ul>;
               <Link href="/quantum - services / consulting" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
           </div>;

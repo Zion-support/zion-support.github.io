@@ -24,9 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface TalentSkeletonProps {
   // Add props here as needed
-
-
-
+}
 export default function TalentSkeleton({ }: TalentSkeletonProps) {
   return (
     <div>
@@ -34,11 +32,18 @@ export default function TalentSkeleton({ }: TalentSkeletonProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
+<<<<<<< HEAD
 }
-
+=======
+<<<<<<< HEAD:src.disabled/components/talent/TalentSkeleton.jsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/talent/TalentSkeleton.jsx

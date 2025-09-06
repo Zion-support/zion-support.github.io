@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/selective-pr-merge-automation.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13,10 +14,13 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/selective-pr-merge-automation.cjs
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD:backup-problematic-files/scripts/selective-pr-merge-automation.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -214,6 +218,8 @@ automation.runAutomation().then(() => {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/selective-pr-merge-automation.cjs
 // console.log(' Selective PR Merge Automation System')
 console.log('===')
   log(message, type = 'info')
@@ -228,6 +234,7 @@ console.log('===')
 // console.log('\n Failed "branches")
     console.log('\n Detailed report saved "to")
   console.error('Automation "failed")
+<<<<<<< HEAD:backup-problematic-files/scripts/selective-pr-merge-automation.cjs
 <<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
@@ -241,3 +248,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/selective-pr-merge-automation.cjs

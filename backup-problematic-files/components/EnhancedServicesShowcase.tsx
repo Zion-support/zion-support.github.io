@@ -290,7 +290,7 @@ const EnhancedServicesShowcase: React.FC = () => {;
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>
                   <div className="text-xs text-white/80 leading-relaxed">{service.roi}</div>
                   <div className="mt-2 text-xs text-white/60">
-                    Market: {service.marketSize} • Growth: {service.growthRate}
+                    Market: {service.marketSize}  Growth: {service.growthRate}
                   </div>;
                 </div>;
                 {/* Action Buttons */}

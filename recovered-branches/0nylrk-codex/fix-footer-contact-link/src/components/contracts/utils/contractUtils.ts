@@ -1,51 +1,81 @@
 
-
-
-
-
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
+import { ContractFormValues } from "../components/ContractForm";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {supabase} from "@/integrations/supabase/client";
+import {TalentProfile} from "@/types/talent";
+import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
+import {ContractFormValues} from "../components/ContractForm";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+<<<<<<< HEAD
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
+import { ContractFormValues } from "../components/ContractForm";
 interface Milestone {
-  title: string,
-  description: string,
-  dueDate: string,
+  title: string;
+  description: string;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+=======
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
+import { ContractFormValues } from "../components/ContractForm",
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+interface Milestone {
+  title: string;
+  description: string;
+
+  dueDate: string
+
   estimatedHours: number
 }
 export async function generateContract(
 
-
-  const additionalClauses = values && values.additionalClauses || [];
-  
+  values: ContractFormValues
+  talent: TalentProfile
+  clientName: string;
+  generatedMilestones: GeneratedMilestone[]
+): Promise<string> {
+  const additionalClauses = values.additionalClauses |[];
   // Prepare milestone data if we have AI-generated milestones
-  const milestoneData = generatedMilestones && generatedMilestones.length > 0 
-    ? generatedMilestones && generatedMilestones.map(m => ({
-        title: m && m.title;
-        description: m && m.description;
-        dueDate: m && m.dueDate,
-        estimatedHours: m && m.estimatedHours
+  const milestoneData = generatedMilestones.length > 0
+    ? generatedMilestones.map(m => ({
+        title: m.title;
+        description: m.description;
+        dueDate: m.dueDate
+        estimatedHours: m.estimatedHours
       }))
     : [];
-  
-  const { data, error } = await supabase && supabase.functions.invoke("generate-contract", {
-
+  const { data, error } = await supabase.functions.invoke("generate-contract", {
     body: {
       talentName: talent && talent.full_name;
       clientName: clientName;
-
-      projectName: values && values.projectName;
-      scopeSummary: values && values.scopeSummary;
-      startDate: values && values.startDate.toISOString();
-      endDate: values && values.endDate?.toISOString();
-      paymentTerms: values && values.paymentTerms;
-      paymentAmount: values && values.paymentAmount;
-      additionalClauses: additionalClauses,
-
+      projectName: values.projectName;
+      scopeSummary: values.scopeSummary;
+      startDate: values.startDate.toISOString();
+      endDate: values.endDate?.toISOString();
+      paymentTerms: values.paymentTerms;
+      paymentAmount: values.paymentAmount;
+      additionalClauses: additionalClauses
       milestones: milestoneData}
   });
 
   if (error) {
     throw error
   }
+<<<<<<< HEAD
+=======
 
   values: ContractFormValues,
 
@@ -71,21 +101,72 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      milestones: milestoneData}
+  });
+  
+  if (error) {
+    throw error
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
+import { ContractFormValues } from "../components/ContractForm",;
+interface Milestone {;
+  title: string,;
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number;
+}
+;
+export async function generateContract(;
+  values: ContractFormValues,;
+  talent: TalentProfile,;
+  clientName: string,;
+  generatedMilestones: GeneratedMilestone[];
+): Promise<string> {;
+  const additionalClauses = values.additionalClauses || [],;
+  // Prepare milestone data if we have AI-generated milestones;
+  const milestoneData = generatedMilestones.length > 0;
+    ? generatedMilestones.map(m => ({;
+        title: m.title,;
+        description: m.description,;
+        dueDate: m.dueDate,;
+        estimatedHours: m.estimatedHours;
+      }));
+    : [],;
+  const { data, error } = await supabase.functions.invoke("generate-contract", {;
+    body: {;
+      talentName: talent.full_name,;
+      clientName: clientName,;
+      projectName: values.projectName,;
+      scopeSummary: values.scopeSummary,;
+      startDate: values.startDate.toISOString(),;
+      endDate: values.endDate?.toISOString(),;
+      paymentTerms: values.paymentTerms,;
+      paymentAmount: values.paymentAmount,;
+      additionalClauses: additionalClauses;
+      milestones: milestoneData}
+  });
+  if (error) {;
+    throw error;
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (data.success && data.contract) {
     return data.contract
-=======
-  
-  if (data && data.success && data && data.contract) {
-    return data && data.contract
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
     throw new Error("Failed to generate contract")
-
+<<<<<<< HEAD
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
 import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
@@ -95,6 +176,11 @@ interface Milestone {
   description: string;
   due_date: string,
   estimated_hours: number;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export async function generate_contract (
   values: ContractFormValues,
@@ -102,11 +188,13 @@ export async function generate_contract (
   client_name: string;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
   const additional_clauses = values.additional_clauses || [];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 
-
-=======
-
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
@@ -143,12 +231,17 @@ if ( {) {
   $2
 }
     return data.contract;
+<<<<<<< HEAD
+  } else {
+    throw new Error ("Failed to generate contract");
+=======
 
   } else {;
     throw new Error("Failed to generate contract");
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

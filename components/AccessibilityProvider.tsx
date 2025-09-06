@@ -1,34 +1,54 @@
 
-
-interface AccessibilityContextType {;
-
-=======
-
-
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { createContext, useContext, useState, ReactNode } from "react";
 interface AccessibilityContextType {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
-=======
 import React, { create_context, useContext, useState, ReactNode } from './react';
 ;
 interface AccessibilityContextType {
   high_contrast: boolean;
   large_text: boolean;
   reduced_motion: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   toggleHighContrast: () => void;
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
-
-
+const AccessibilityContext = createContext<
+  AccessibilityContextType | undefined
+>(undefined);
+<<<<<<< HEAD
+export const useAccessibility = () => {
+=======
+<<<<<<< HEAD
+export const useAccessibility = () => {
+=======
 
 export const useAccessibility = () => {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(
@@ -41,54 +61,33 @@ interface AccessibilityProviderProps {
   children: React.ReactNode;
 }
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-
-
-const AccessibilityContext = createContext<;
-  AccessibilityContextType | undefined;
->(undefined);
-
-export const useAccessibility = () => {;
-  const context = useContext(AccessibilityContext);
-  if (context === undefined) {;
-    throw new Error(;
-      "useAccessibility must be used within an AccessibilityProvider",;
-    );
-  }
-  return context;
-};
-
-interface AccessibilityProviderProps {;
-  children: React && React.ReactNode;
-}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
-  children,;
-}) => {;
-
+<<<<<<< HEAD
+  children
+}) => {
+=======
+<<<<<<< HEAD
+  children
+}) => {
 =======
 
   children,
 }) => {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-
-
-  const value = {;
-    highContrast,;
-    largeText,;
-    reducedMotion,;
-    toggleHighContrast,;
-    toggleLargeText,;
-    toggleReducedMotion,;
-  };
-
-
+  const value = {
+    highContrast
+    largeText
+    reducedMotion
+    toggleHighContrast
+    toggleLargeText
+    toggleReducedMotion
+  }
   return (
     <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
@@ -97,7 +96,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
       </div>;
     </AccessibilityContext && AccessibilityContext.Provider>;
   );
-
+}
+export default AccessibilityProvider;
 const AccessibilityContext = create_context<;
   AccessibilityContextType | undefined;
 >(undefined);
@@ -150,11 +150,3 @@ export const AccessibilityProvider: React.FC < AccessibilityProviderProps> = ({
 ;
 export default AccessibilityProvider;
 ;
-
-=======
-
-};
-
-export default AccessibilityProvider;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -110,7 +110,7 @@ export default function AccountSettingsPage() {;
   return (;
     <>;
       <Head>;
-        <title>Account Settings — Zion</title>;
+        <title>Account Settings  Zion</title>;
       </Head>;
       <div className="max-w-3xl mx-auto space-y-8">;
         <section className="rounded-xl border p-5">;
@@ -137,7 +137,7 @@ export default function AccountSettingsPage() {;
             <input value={lens} onChange={(e) => setLens(e.target.value)} placeholder="Lens handle (e.g. alice.lens)" className="w-full rounded-md border px-3 py-2" />;
             <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />;
             <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />;
-            <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' :'Link & Verify'}</button>;
+            <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking' :'Link & Verify'}</button>;
           </div>;
         </section>;
 ;
@@ -169,5 +169,5 @@ resume: {
   
 };
 projects: [];
-return (<> <Head> <title>Account Settings — Zion</title> </Head> <div className="max-w-3xl mx-auto space-y-8" > <section className="rounded-xl border p-5" > <h1 className="text-xl font-semibold mb-2" >Account</h1> <p className="text-sm text-gray-500" >Manage your Web3 identity and backups. Email is optional when using wallets.</p> <div className="mt-4 flex items-center justify-between" > <div> <div className="text-sm font-medium" >Display Web3 identity</div> <div className="text-xs text-gray-500" >Show ENS/Lens name instead of email</div> </div> </span> </label> </div> </section> </div> </>) 
+return (<> <Head> <title>Account Settings  Zion</title> </Head> <div className="max-w-3xl mx-auto space-y-8" > <section className="rounded-xl border p-5" > <h1 className="text-xl font-semibold mb-2" >Account</h1> <p className="text-sm text-gray-500" >Manage your Web3 identity and backups. Email is optional when using wallets.</p> <div className="mt-4 flex items-center justify-between" > <div> <div className="text-sm font-medium" >Display Web3 identity</div> <div className="text-xs text-gray-500" >Show ENS/Lens name instead of email</div> </div> </span> </label> </div> </section> </div> </>) 
 }

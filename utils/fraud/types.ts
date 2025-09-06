@@ -1,90 +1,98 @@
-
-// Fraud detection types;
-export type AdminActionType =;
-  | 'ban_user';
-  | 'suspend_user';
-  | 'flag_content';
-  | 'remove_content';
-  | 'investigate';
-  | 'dismiss';
+// Fraud detection types
+export type AdminActionType =
+  | 'ban_user'
+  | 'suspend_user'
+  | 'flag_content'
+  | 'remove_content'
+  | 'investigate'
+  | 'dismiss'
   | 'escalate';
-;
-
+<<<<<<< HEAD
+export interface AdminAction {
+=======
+<<<<<<< HEAD
 export interface AdminAction {
 =======
 
 
 export interface AdminAction {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   case_id: string;
   type: AdminActionType;
-
-  admin_id: string;
-  reason: string,
-  details: Record < string, any>;
-  created_at: string;
-  executed_at?: string;
-  status: 'pending' | 'executed' | 'failed',
-
+  adminId: string;
+  reason: string
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: 'pending' | 'executed' | 'failed'
 }
+<<<<<<< HEAD
 export interface FraudDetectionResult {
   is_fraud: boolean;
+<<<<<<< HEAD
+=======
 =======
 }
 
 
 export interface FraudDetectionResult {;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   confidence: number;
   reasons: string[];
-
-  suggested_actions: AdminActionType[],
-  metadata: Record < string, any>;
-
+  suggestedActions: AdminActionType[]
+  metadata: Record<string, any>;
 }
+<<<<<<< HEAD
 export interface FraudDetectionConfig {
+<<<<<<< HEAD
+=======
 =======
 }
 
 
 export interface FraudDetectionConfig {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   enabled: boolean;
   rules: {
     suspicious_activity: {
       enabled: boolean;
-
-      threshold: number,
+      threshold: number
     }
-    fake_profile: {
+    fakeProfile: {
       enabled: boolean;
-      threshold: number,
+      threshold: number
     }
-    payment_fraud: {
+    paymentFraud: {
       enabled: boolean;
-      threshold: number,
+      threshold: number
     }
     spam: {
       enabled: boolean;
-      threshold: number,
+      threshold: number
     }
   }
-  auto_actions: {
+  autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidence_threshold: number,
+<<<<<<< HEAD
+    confidenceThreshold: number
+  }
+}
+=======
+<<<<<<< HEAD
+    confidenceThreshold: number
   }
 }
 
 =======
 
-
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
     confidenceThreshold: number,
   };
@@ -93,4 +101,4 @@ export interface FraudDetectionConfig {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

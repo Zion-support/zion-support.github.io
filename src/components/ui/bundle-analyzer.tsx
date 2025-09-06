@@ -1,21 +1,115 @@
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React, { useState, useEffect } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Progress  } from '@/components/ui/progress';
+<<<<<<< HEAD
+=======
+=======
+import React, { useState, useEffect } from 'react'
+import { useAuth } from '@/hooks/useAuth'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { AlertTriangle, Package, Zap } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface BundleInfo {
   totalSize: number;
   gzippedSize: number;
   chunkCount: number;
   loadTime: number;
+  cacheHitRate: number
+interface ChunkInfo {
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean
+export function BundleAnalyzer() {
 
-
+  const { user } = useAuth()
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
+  if (!isAllowed) {
+    return null
+  }
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null)
+  const [chunks, setChunks] = useState<ChunkInfo[]>([])
+  const [isVisible, setIsVisible] = useState(false)
+  const [isCollecting, setIsCollecting] = useState(false)
+  const [shouldShow, setShouldShow] = useState(false)
+  useEffect((,) => {
+    // Only show in development or when explicitly enabled
+<<<<<<< HEAD
+    const show =
+      process.env.NODE_ENV === 'development' |
+=======
+<<<<<<< HEAD
+    const show =
+      process.env.NODE_ENV === 'development' |
+=======
     const show = null;
       process.env.NODE_ENV === 'development' ||
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return
     setIsVisible(true)
     collectBundleInfo()
   }, [])
+<<<<<<< HEAD
+=======
+  const collectBundleInfo = async () => {
+    if (typeof window === 'undefined') return;
+    setIsCollecting(true)
+    try {
+      // Get performance entries for script resources
+      const resourceEntries = performance.getEntriesByType(
+        'resource'
+      ) as PerformanceResourceTiming[]
+      const scriptEntries = resourceEntries.filter(
+        entry =>
+          entry.name.includes('/_next/static/') &&
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
+      )
+      // Calculate bundle information
+      let totalSize = 0
+      let totalLoadTime = 0
+      const chunkData: ChunkInfo[] = []
+      const chunkData: ChunkInfo[] = []
+      scriptEntries.forEach(entry => {
+        const size = entry.transferSize |entry.encodedBodySize |0
+        const loadTime = entry.responseEnd - entry.requestStart
+        const cached = entry.transferSize === 0
+        totalLoadTime += loadTime
+        chunkData.push({
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
+        })
+      })
+      // Estimate gzipped size (roughly 70% of original)
+      const gzippedSize = totalSize * 0.7
+      const cacheHitRate = null;
+        chunkData.filter(chunk => chunk.cached).length / chunkData.length
+      setBundleInfo({
+<<<<<<< HEAD
+        totalSize
+        gzippedSize
+        chunkCount: chunkData.length
+        loadTime: totalLoadTime / chunkData.length
+        cacheHitRate: cacheHitRate * 100
+      })
 =======
 import React, { useState, useEffect } from 'react';
 import { use_auth } from '@/hooks / use_auth';
@@ -68,6 +162,7 @@ if (return) {
     collectBundleInfo ();
   }, []);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const collectBundleInfo = async () => {
     // Check condition
 if (return) {
@@ -75,6 +170,45 @@ if (return) {
 }
     setIsCollecting (true);
     try {
+<<<<<<< HEAD
+      // Get performance entries for script resources
+      const resourceEntries = performance.getEntriesByType(
+        'resource'
+      ) as PerformanceResourceTiming[]
+      const scriptEntries = resourceEntries.filter(
+        entry =>
+          entry.name.includes('/_next/static/') &&
+          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
+      )
+      // Calculate bundle information
+      let totalSize = 0
+      let totalLoadTime = 0
+      const chunkData: ChunkInfo[] = []
+      const chunkData: ChunkInfo[] = []
+      scriptEntries.forEach(entry => {
+        const size = entry.transferSize |entry.encodedBodySize |0
+        const loadTime = entry.responseEnd - entry.requestStart
+        const cached = entry.transferSize === 0
+        totalLoadTime += loadTime
+        chunkData.push({
+          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+          size
+          loadTime
+          cached
+        })
+      })
+      // Estimate gzipped size (roughly 70% of original)
+      const gzippedSize = totalSize * 0.7
+      const cacheHitRate =
+        chunkData.filter(chunk => chunk.cached).length / chunkData.length
+      setBundleInfo({
+        totalSize
+        gzippedSize
+        chunkCount: chunkData.length
+        loadTime: totalLoadTime / chunkData.length
+        cacheHitRate: cacheHitRate * 100
+      })
+=======
 
 
         totalSize,
@@ -83,49 +217,10 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
-=======
-      // Get performance entries for script resources;
-      const resource_entries = performance.getEntriesByType (
-        'resource') as PerformanceResourceTiming[];
-      const script_entries = resource_entries.filter (
-        entry =>;
-          entry.name.includes ('/_next / static/') &&;
-          (entry.name.ends_with ('.js') || entry.name.ends_with ('.css')));
-      // Calculate bundle information;
-      let total_size = 0;
-      let totalLoadTime = 0;
-      const chunk_data: ChunkInfo[] = [];
-      const chunk_data: ChunkInfo[] = [],
-      script_entries.for_each (entry => {
-        const size = entry.transfer_size || entry.encodedBodySize || 0;
-        const load_time = entry.response_end - entry.request_start;
-        const cached = entry.transfer_size === 0;
-        totalLoadTime += load_time;
-        chunk_data.push ({
-          name: entry.name.split ('/').pop ()?.split ('?')[0] || 'unknown',
-          size,
-          load_time,
-          cached,
-        });
-      });
-      // Estimate gzipped size (roughly 70% of original);
-      const gzipped_size = total_size * 0.7;
-      const cacheHitRate =;
-        chunk_data.filter (chunk => chunk.cached).length / chunk_data.length;
-      setBundleInfo ({
-        total_size,
-        gzipped_size,
-        chunk_count: chunk_data.length,
-        load_time: totalLoadTime / chunk_data.length,
-        cacheHitRate: cacheHitRate * 100,
-      });
-      set_chunks (chunk_data.sort ((a, b) => b.size - a.size).slice (0, 5)); // Top 5 largest chunks    } catch (error) {
-      logErrorToProduction ('Failed to collect bundle info:', { data: error });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsCollecting (false);
     }
@@ -163,10 +258,16 @@ if ( {) {
     }
   }
 
+  if (!shouldShow) {
+    return null
+<<<<<<< HEAD
+  }
+=======
+  }
+<<<<<<< HEAD
 =======
 
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -302,38 +403,36 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-
-
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!isVisible) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className='fixed bottom-20 right-4 z-50'>;
         <Button
-
-
-          variant="outline"
-          size="sm"
+          variant='outline'
+          size='sm'
           onClick={toggleAnalyzer}
+<<<<<<< HEAD
+          className='bg-background/80 backdrop-blur-sm'        >
+          <Package className='w-4 h-4 mr-2' />
+=======
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           Bundle Analyzer
         </Button>
       </div>
     )
-=======
-          className='bg-background/80 backdrop-blur-sm'>;
-          <Package className='w-4 h-4 mr-2' />;
-          Bundle Analyzer;
-        </Button>;
-      </div>;
-    );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <div className='fixed bottom-20 right-4 z-50 w-96'>;
@@ -346,26 +445,30 @@ export function BundleAnalyzer() {;
             </CardTitle>;
             <div className='flex gap-2'>;
               <Button
-
-
-                variant="ghost"
-                size="sm"
+                variant='ghost'
+                size='sm'
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
-                className="h-6 w-6 p-0"
-              >
-                <Zap className="w-3 h-3" />
-              </Button>
+                className='h-6 w-6 p-0'>;
+                <Zap className='w-3 h-3' />;
+              </Button>;
               <Button
-                variant="ghost"
-                size="sm"
+                variant='ghost'
+                size='sm'
                 onClick={toggleAnalyzer}
+<<<<<<< HEAD
+                className='h-6 w-6 p-0'              >
+                
+=======
                 className="h-6 w-6 p-0"
               >
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ✕
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </Button>
             </div>
           </div>
@@ -405,60 +508,41 @@ export function BundleAnalyzer() {;
                 <Progress value={bundleInfo.cacheHitRate} className='h-2' />
               </div>
               <div>
-
-                className='h-6 w-6 p-0'>;
-=======
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='fixed bottom - 20 right - 4 z - 50'>;
-        <Button;
-          variant='outline';
-          size='sm';
-          on_click={toggle_analyzer}
-          className='bg - background / 80 backdrop - blur - sm'        >;
-          <Package className='w - 4 h - 4 mr - 2' />;
-          Bundle Analyzer;
-        </Button>;
-      </div>);
-  }
-  return (
-    <div className='fixed bottom - 20 right - 4 z - 50 w - 96'>;
-      <Card className='bg - background / 95 backdrop - blur - sm border shadow - lg'>;
-        <CardHeader className='pb - 2'>;
-          <div className='flex items - center justify - between'>;
-            <CardTitle className='text - sm flex items - center'>;
-              <Package className='w - 4 h - 4 mr - 2' />;
-              Bundle Analyzer;
-            </CardTitle>;
-            <div className='flex gap - 2'>;
-              <Button;
-                variant='ghost';
-                size='sm';
-                on_click={collectBundleInfo}
-                disabled={is_collecting}
-                className='h - 6 w - 6 p - 0'              >;
-                <Zap className='w - 3 h - 3' />;
-              </Button>;
-              <Button;
-                variant='ghost';
-                size='sm';
-                on_click={toggle_analyzer}
-                className='h - 6 w - 6 p - 0'              >;
-
-                ✕;
+                <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
+                <div className='space-y-1'>
+                  {chunks.map((chunk, index) => (
+                ;
               </Button>;
             </div>;
           </div>;
         </CardHeader>;
+<<<<<<< HEAD
+        <CardContent className='pt-0 space-y-3'>;
+          {bundleInfo ? (;
+            <>;
+              <div className='grid grid-cols-2 gap-2 text-xs'>;
+                <div className='flex justify-between'>;
+                  <span>Total Size:</span>;
+                  <Badge className={getSizeColor(bundleInfo && bundleInfo.totalSize)}>;
+                    {formatSize(bundleInfo && bundleInfo.totalSize)}
+                  </Badge>;
+                </div>;
+                <div className='flex justify-between'>;
+                  <span>Gzipped:</span>;
+                  <Badge variant='outline'>;
+                    {formatSize(bundleInfo && bundleInfo.gzippedSize)}
+                  </Badge>;
+                </div>;
+                <div className='flex justify-between'>;
+                  <span>Chunks:</span>;
+                  <Badge variant='outline'>{bundleInfo && bundleInfo.chunkCount}</Badge>;
+                </div>;
+                <div className='flex justify-between'>;
+                  <span>Avg Load:</span>;
+                  <Badge variant='outline'>;
+                    {bundleInfo && bundleInfo.loadTime.toFixed(0)}ms;
+                  </Badge>;
+=======
 
 
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
@@ -469,8 +553,11 @@ if ( {) {
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -480,7 +567,10 @@ if ( {) {
                       </div>
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {formatSize(chunk.size)}
                       </Badge>
@@ -488,25 +578,87 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>;
               </div>;
 
-              {bundleInfo && bundleInfo.totalSize > 1000000 && (;
-                <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>;
-                  <AlertTriangle className='w-3 h-3 text-yellow-600' />;
-                  <span>Bundle size is large. Consider code splitting.</span>;
+              <div>;
+                <div className='flex justify-between items-center text-xs mb-1'>;
+                  <span>Cache Hit Rate</span>;
+                  <span>{bundleInfo && bundleInfo.cacheHitRate.toFixed(1)}%</span>;
                 </div>;
+                <Progress value={bundleInfo && bundleInfo.cacheHitRate} className='h-2' />;
+              </div>;
 
+              <div>;
+                <div className='text-xs font-medium mb-2'>Largest Chunks:</div>;
+                <div className='space-y-1'>;
+                  {chunks && chunks.map((chunk, index) => (;
+                    <div
+                      key={chunk && chunk.name}
+                      className='flex justify-between items-center text-xs'>;
+                      <div className='flex items-center gap-2 flex-1 min-w-0'>;
+                        <span className='w-4 text-muted-foreground'>;
+                          {index + 1}.;
+                        </span>;
+                        <span className='truncate' title={chunk && chunk.name}>                          {chunk && chunk.name}
+                        </span>;
+                        {chunk && chunk.cached && (;
+                          <Badge
+                            variant='outline'
+                            className='text-xs px-1 py-0'>;
+                            cached;
+                          </Badge>;
+                        )}
+                      </div>;
+                      <Badge
+                        className={getSizeColor(chunk && chunk.size)}
+                        variant='outline'>;
+                        {formatSize(chunk && chunk.size)}
+                      </Badge>;
+                    </div>;
+                  ))}
+                </div>
+              </div>
+              {bundleInfo.totalSize > 1000000 && (
+                <div className='flex items-center gap-2 p-2 bg-yellow-50 dark:bg-yellow-900/20 rounded text-xs'>
+                  <AlertTriangle className='w-3 h-3 text-yellow-600' />
+                  <span>Bundle size is large. Consider code splitting.</span>
+                </div>
               )}
+<<<<<<< HEAD
+            </>;
+          ) : (;
+            <div className='text-xs text-muted-foreground'>;
+              {isCollecting;
+                ? 'Analyzing bundle...';
+                : 'Click refresh to analyze'}
+            </div>;
+=======
 
             </>
           ) : (
-
+<<<<<<< HEAD
+            <div className='text-xs text-muted-foreground'>
+              {isCollecting
+                ? 'Analyzing bundle...'
+                : 'Click refresh to analyze'}
+            </div>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+          )}
+        </CardContent>
+      </Card>
+    </div>
+  )
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+=======
 } 
 
 }
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
         </CardContent>;
@@ -514,15 +666,14 @@ if ( {) {
     </div>;
   );
 } ;
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
         
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <CardContent className='pt - 0 space - y-3'>;
           {bundle_info ? (
             <>;
@@ -603,10 +754,12 @@ if ( {) {
       </Card>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

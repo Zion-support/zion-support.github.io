@@ -146,7 +146,7 @@ const navigationItems: NavigationItem[] = [
       { name: 'Decision Engine', href: '/ai-powered-decision-engine', description: 'AI-powered business decisions' },
       { name: 'Helpdesk & Support', href: '/helpdesk-automation', description: 'AI helpdesk, ticketing, KB, and chat' },
       { name: 'Learning Management (LMS)', href: '/lms-platform', description: 'Adaptive training and certifications' },
-      { name: 'E‑commerce Returns', href: '/ecommerce-returns-management', description: 'Automated returns, labels, and RMAs' },
+      { name: 'Ecommerce Returns', href: '/ecommerce-returns-management', description: 'Automated returns, labels, and RMAs' },
       { name: 'SEO Content Optimizer', href: '/seo-content-optimizer', description: 'On-page AI scoring and fixes' },
       { name: 'Keyword Research Engine', href: '/keyword-research-engine', description: 'Low-competition keywords discovery' },
       { name: 'Privacy Analytics Suite', href: '/analytics-suite', description: 'Cookie-less, privacy-friendly analytics' },

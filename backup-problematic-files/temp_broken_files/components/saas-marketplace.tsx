@@ -57,7 +57,7 @@ export default function SaaSMarketplacePage() {const microSaasServices = [
       name: 'Stripe',
       description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',
       category: 'Payments',
-      pricing: '2.9% + 30¢ per transaction',
+      pricing: '2.9% + 30 per transaction',
       rating: 4.9,
       users: '1M+',
       icon: <Shield className=&quot;w-8 h-8 text-blue-400&quot; />,

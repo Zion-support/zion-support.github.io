@@ -383,7 +383,7 @@ key={tech}
 initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className=&quot;text-center py-16&quot;          >
-            <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+            <div className=&quot;text-6xl mb-4&quot;></div>
             <h3 className=&quot;text-2xl font-bold text-gray-300 mb-2&quot;>No services found</h3>
             <p className=&quot;text-gray-400&quot;>Try adjusting your search terms or category filters</p>
           </motion.div>
@@ -420,7 +420,7 @@ initial={{ scale: 0.9, opacity: 0 }}
                 <button,
 onClick={closeModal}
                   className=&quot;p-2 hover:bg-white/10 rounded-lg transition-colors&quot;                >
-                  <span className=&quot;text-2xl&quot;>×</span>
+                  <span className=&quot;text-2xl&quot;></span>
                 </button>
               </div>
 

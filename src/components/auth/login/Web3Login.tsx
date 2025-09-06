@@ -1,47 +1,98 @@
 
-
-
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { useAuth } from "@/hooks/useAuth"
+import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
+import { Wallet } from 'lucide-react'
+import { toast } from "sonner";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { useWallet as useAppWallet } from "../../../context/WalletContext ;
 import { Wallet } from 'lucide-react'import { toast } from "sonner";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {;
 
+<<<<<<< HEAD
+  const { loginWithWeb3 } = useAuth()
+  const { isWalletSystemAvailable } = useAppWallet()
+  const [isLoading, setIsLoading] = useState(false)
+  const handleWeb3Login = async () => {
+    if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", {
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
+      return
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const handleWeb3Login = async () => {
+    if (!isWalletSystemAvailable) {
+      toast("Web3 login unavailable", {
+        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
+      return
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     try {
-
-      setIsLoading(true),
-      
+      setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
+<<<<<<< HEAD
+      const ethereum = (window as any).ethereum
+=======
       const ethereum = (window as any).ethereum,
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (!ethereum) {
         toast("Web3 wallet not found", {
-          description: "Please install MetaMask or another compatible wallet."}),
-        return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          description: "Please install MetaMask or another compatible wallet."})
+        return
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+      if (!ethereum) {
+        toast("Web3 wallet not found", {
+          description: "Please install MetaMask or another compatible wallet."})
+        return
       }
-
-      
       await loginWithWeb3(), // This is from useAuth, assumed to be a separate flow
-      
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (error: any) {
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
+<<<<<<< HEAD
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  const buttonDisabled = isLoading |!isWalletSystemAvailable
+  const buttonTitle = !isWalletSystemAvailable
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
+    : ""
+}
+=======
+    } finally {
+      setIsLoading(false)
+    }
+<<<<<<< HEAD
+  }
+  const buttonDisabled = isLoading |!isWalletSystemAvailable
+  const buttonTitle = !isWalletSystemAvailable
+    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
+<<<<<<< HEAD
+    : ""
+}
+
+  )
+}
 =======
 import { useState  } from './react';
 import { Button  } from '@/components / ui / button';
@@ -96,7 +147,7 @@ if ( {) {
 };
   );
 };
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },
 
@@ -135,12 +186,10 @@ if ( {) {
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     : "";
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   )
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const button_disabled = is_loading || !isWalletSystemAvailable;
   const button_title = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
@@ -148,12 +197,14 @@ if ( {) {
 }
   );
 }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+=======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 ;
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

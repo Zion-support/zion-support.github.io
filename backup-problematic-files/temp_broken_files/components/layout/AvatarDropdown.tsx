@@ -1,18 +1,10 @@
-
-import React, { useState } from 'react';
-import Link from 'next / link';
-import { use_user } from '../../providers / UserProvider';
-export default /**
- * AvatarDropdown - Function description
- */
-function AvatarDropdown() {
-  const { user, logout } = use_user ();
-  const [open, set_open] = useState (false);
-  // Check condition
-if (return null) {
-  $2
-}
-
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { useUser } from '../../providers/UserProvider'
+export default function AvatarDropdown() {
+  const { user, logout } = useUser()
+  const [open, setOpen] = useState(false)
+  if (!user) return null
   return (
     <div className=&quot;relative & quot;>;
       <button on_click={() => set_open (object => !o)} className=&quot;h - 8 w - 8 rounded - full bg - gradient - to - br from - indigo - 500 to - cyan - 500 text - white text - xs font - semibold grid place - items - center ring - 1 ring - white / 40 & quot;>;
@@ -27,6 +19,8 @@ if (return null) {
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -34,10 +28,12 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
 
   const [open, setOpen] = useState(false)
   if (!user) return null
-
+<<<<<<< HEAD
+  return (
+=======
 ;
   return (;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className=&quot;relative&quot;>
       <button onClick={() => setOpen(o => !o)} className=&quot;h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40&quot;>
         {user.name.split(' ').map(n => n[0]).slice(0,2).join('')}
@@ -52,6 +48,9 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
     </div>;
 
   );}
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/layout/AvatarDropdown.tsx
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

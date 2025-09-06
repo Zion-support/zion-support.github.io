@@ -1,8 +1,40 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {FraudFlag} from "@/types/fraud";
+import {SeverityDisplay} from "./SeverityDisplay";
+import {ActionButtons} from "./ActionButtons";
+import {EmptyFraudState} from "./EmptyFraudState";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React from "react",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { FraudFlag } from "@/types/fraud",
+import { SeverityDisplay } from "./SeverityDisplay",
+<<<<<<< HEAD
+import { ActionButtons } from "./ActionButtons";
+import { EmptyFraudState } from "./EmptyFraudState";
+=======
+<<<<<<< HEAD
+import { ActionButtons } from "./ActionButtons";
+import { EmptyFraudState } from "./EmptyFraudState";
+=======
+import { ActionButtons } from "./ActionButtons",
+import { EmptyFraudState } from "./EmptyFraudState",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -12,10 +44,33 @@ interface FraudFlagsTableProps {
 
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
+<<<<<<< HEAD
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
+  flags;
+  isLoading;
+  hasFilters;
+
+  resetFilters
+=======
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
+  flags;
+  isLoading;
+  hasFilters;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
+<<<<<<< HEAD
+  flags;
+  isLoading;
+  hasFilters;
 
 
 
-
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   onAction
 }) => {
@@ -26,6 +81,8 @@ interface FraudFlagsTableProps {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
     )
+<<<<<<< HEAD
+=======
 
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
@@ -65,59 +122,50 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
-
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
   }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-
-
-              {flag.gpt_explanation || (
-
-
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHead>Severity</TableHead>
+          <TableHead>User</TableHead>
+          <TableHead>Content</TableHead>
+          <TableHead>Type</TableHead>
+          <TableHead>Reason</TableHead>
+          <TableHead>GPT Analysis</TableHead>
+          <TableHead>Timestamp</TableHead>
+          <TableHead>Status</TableHead>
+          <TableHead>Actions</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {flags.map((flag) => (
+          <TableRow key={flag.id}>
+            <TableCell>
+              <SeverityDisplay severity={flag.severity} />
+            </TableCell>
+            <TableCell className="font-medium">
+              {flag.user_email |flag.user_id.substring(0, 8)}
+            </TableCell>
+            <TableCell className="max-w-xs truncate">
+              {flag.content_excerpt}
+            </TableCell>
+            <TableCell>
+              <Badge variant="outline">{flag.content_type}</Badge>
+            </TableCell>
+            <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
+            <TableCell className="max-w-xs truncate">
+              {flag.gpt_explanation |(
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
-=======
-    <Table>;
-      <TableHeader>;
-        <TableRow>;
-          <TableHead>Severity</TableHead>;
-          <TableHead>User</TableHead>;
-          <TableHead>Content</TableHead>;
-          <TableHead>Type</TableHead>;
-          <TableHead>Reason</TableHead>;
-          <TableHead>GPT Analysis</TableHead>;
-          <TableHead>Timestamp</TableHead>;
-          <TableHead>Status</TableHead>;
-          <TableHead>Actions</TableHead>;
-        </TableRow>;
-      </TableHeader>;
-      <TableBody>;
-        {flags && flags.map((flag) => (;
-          <TableRow key={flag && flag.id}>;
-            <TableCell>;
-              <SeverityDisplay severity={flag && flag.severity} />;
-            </TableCell>;
-            <TableCell className="font-medium">;
-              {flag && flag.user_email || flag && flag.user_id.substring(0, 8)}
-            </TableCell>;
-            <TableCell className="max-w-xs truncate">;
-              {flag && flag.content_excerpt}
-            </TableCell>;
-            <TableCell>;
-              <Badge variant="outline">{flag && flag.content_type}</Badge>;
-            </TableCell>;
-            <TableCell className="max-w-xs truncate">{flag && flag.reason}</TableCell>;
-            <TableCell className="max-w-xs truncate">;
-              {flag && flag.gpt_explanation || (;
-                <span className="text-muted-foreground text-xs">Not analyzed</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </TableCell>;
             <TableCell>;
@@ -132,37 +180,47 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                   : flag && flag.status === 'ignored'
                   ? 'outline'
                   : 'default'
-
-              }>;
-                {flag && flag.status}
-              </Badge>;
-            </TableCell>;
-            <TableCell>;
+              }>
+                {flag.status}
+              </Badge>
+            </TableCell>
+            <TableCell>
               <ActionButtons
-                flagId={flag && flag.id} 
-                status={flag && flag.status} 
-                onAction={onAction} 
-              />;
-            </TableCell>;
-          </TableRow>;
+                flagId={flag.id}
+                status={flag.status}
+                onAction={onAction}
+              />
+            </TableCell>
+          </TableRow>
         ))}
+<<<<<<< HEAD
+      </TableBody>
+    </Table>
+  )
+}
+
+=======
+<<<<<<< HEAD
+      </TableBody>
+    </Table>
+  )
+<<<<<<< HEAD
+}
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
       </TableBody>;
     </Table>;
   );
+<<<<<<< HEAD
 =======
-
-
-=======
-      </TableBody>;
-    </Table>;
-  );
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
@@ -262,4 +320,3 @@ if ( {) {
     </Table>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

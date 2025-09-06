@@ -1,56 +1,53 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React from 'react';
+import Head from 'next/head';
 
-
-
-import React from 'react;';
-import * as React from 'react';
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+interface SimpleLayoutProps {
+  title: string;
+  description?: string;
+  children: React.ReactNode;
 }
+
+export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        {description && <meta name="description" content={description} />}
+      </Head>
+      {children}
+    </>
+  );
+}
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react;';
 import * as React from 'react';
 import Head from next/head';
+interface SimpleLayoutProps {
+  title: string
+  description?: string
+  children: React.ReactNode
+}
+export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        {description && <meta name="description" content={description} />}
+      </Head>
+      {children}
+    </>)
+}
 
-interface SimpleLayoutProps {,;
-  title: string,;
-  description?: string,;
-  children: React && React.ReactNode;
-=======
-
-
-};
-export default function SimpleLayout(): any ({ title, description, children }: SimpleLayoutProps) {,;
-  return (,;
-    <>,;
-      <Head>,;
-        <title>{title}</title>,;
-        {description && <meta name="description" content={description} />};
-      </Head>,;
-      {children};
-    </>);
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import Head from next / head';
 ;
 interface SimpleLayoutProps {,
@@ -68,9 +65,19 @@ function SimpleLayout() {,
         <title>{title}</title>,
         {description && <meta name="description" content={description} />}
       </Head>,
+<<<<<<< HEAD
+      {children}
+    </>);
+}
+;
+=======
 
       {children};
     </>)
 };
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -180,7 +180,4 @@ if (!activeFilters.includes (filter) ) {;
   activeFilters.map ( (filter) => (<Badge key= {;"  filter ";"}variant="secondary" className="flex items-center gap-1" > {;
   filter ;
 }<X /> </Badge>) ) ;
-
-}</div> </div> </div>) ;
-}"
-
+}</div> </div> </div>) ;"}"

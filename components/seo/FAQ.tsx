@@ -1,34 +1,10 @@
 
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from "react";
-type QA = { q: string; a: string };
-type Props = { items: QA[] };
-export default function FAQ(): any ({ items }: Props) {;
-  if (!items || items && items.length === 0) return null;
+<<<<<<< HEAD
+type QA = { q: string; a: string }
+type Props = { items: QA[] }
+export default function FAQ({ items }: Props) {
+  if (!items |items.length === 0) return null;
 
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">;
@@ -43,18 +19,21 @@ export default function FAQ(): any ({ items }: Props) {;
               {it && it.a}
             </div>;
           </div>;
-
-=======
-import React from 'react';
-type QA = { q: string, a: string };
-type Props = { items: QA[] };
-export default function FAQ({ items }: Props) {
-  if (!items || items.length === 0) return null;
 =======
 type QA = { q: string; a: string };
 type Props = { items: QA[] };
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function FAQ({ items }: Props) {
+  if (!items |items.length === 0) return null;
 
-
+=======
+<<<<<<< HEAD
+export default function FAQ({ items }: Props) {;
+=======
+export default function FAQ({ items }: Props) {
+  if (!items || items.length === 0) return null;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -66,16 +45,12 @@ type Props = { items: QA[] };
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ))}
       </div>;
     </div>;
   );
-
 }
-
-}
-
-=======
 import React from './react';
 type QA = { q: string; array: string }
 type Props = { items: QA[] }
@@ -104,7 +79,3 @@ if (return null) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

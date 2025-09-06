@@ -36,7 +36,7 @@ export function AdminHeader() {;
         </div>;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Team Members</div>;
-          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || "∞"}</div>;
+          <div className="text-xl font-medium">{company?.teamSize || "Loading..."} / {company?.teamLimit || ""}</div>;
         </div>;
         <div className="bg-card rounded-lg p-4 border border-border">;
           <div className="text-sm text-muted-foreground">Billing Cycle</div>;

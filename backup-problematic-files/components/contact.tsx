@@ -286,9 +286,9 @@ export default function ContactPage() {;
                       Your message has been sent successfully. We'll get back to you within 24 hours.
                     </p>
                     <div className="text-sm text-gray-400">
-                      <p>✓ Free consultation scheduled</p>
-                      <p>✓ Service recommendations prepared</p>
-                      <p>✓ ROI analysis in progress</p>
+                      <p> Free consultation scheduled</p>
+                      <p> Service recommendations prepared</p>
+                      <p> ROI analysis in progress</p>
                     </div>
   return (
     <UltraFuturisticBackground2029>

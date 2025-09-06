@@ -310,7 +310,7 @@ key={suggestion.id}
                             <div className="flex-1">;
                               <div className="text-white">{suggestion.text}</div>;
                               <div className="text-sm text-gray-400 capitalize">;
-                                {suggestion.type} • {suggestion.category}
+                                {suggestion.type}  {suggestion.category}
                               </div>;
                             </div>;
                             <ArrowRight className="w-4 h-4 text-gray-400" />;

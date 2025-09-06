@@ -73,7 +73,7 @@ className=&quot;text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-40
         transition={{ duration: 3, repeat: Infinity }}      >
         Zion Tech Group 2046
       </motion.h1>
-      <p className=&quot;text-xl text-gray-300 mb-3&quot;>Quantum AI • Neural Interfaces • Space Technology</p>
+      <p className=&quot;text-xl text-gray-300 mb-3&quot;>Quantum AI  Neural Interfaces  Space Technology</p>
       <p className=&quot;text-lg text-gray-400&quot;>Preparing your revolutionary digital transformation journey</p>
       
       {/* Quantum progress bar */}

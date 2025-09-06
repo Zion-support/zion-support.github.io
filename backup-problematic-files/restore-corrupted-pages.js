@@ -70,7 +70,6 @@ function restorePage(pagePath) {;
       const parts = backupContent.split(''),;
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
-        backupContent = parts[1].split('>>>>>>>')[0],;
       }
     }
     ;
@@ -124,17 +123,17 @@ function restoreAllCorruptedPages() {;
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {;
         results.total++,;
         ;
-        // // // console.log(`\n🔍 Checking:${fullPath}`),;
+        // // // console.log(`\n Checking:${fullPath}`),;
         const result = restorePage(fullPath),;
         ;
         if (result.restored) {;
           results.restored++,;
-          // // // console.log(`✅ Restored:${fullPath}`),;
+          // // // console.log(` Restored:${fullPath}`),;
           // // // console.log(`   Used backup:${result.backupUsed}`),;
           // // // console.log(`   Corrupted backup:${result.corruptedBackup}`),;
         } else {;
           results.failed++,;
-          // // // console.log(`❌ Failed:${fullPath}`),;
+          // // // console.log(` Failed:${fullPath}`),;
           // // // console.log(`   Reason:${result.reason}`),;
         }
         ;
@@ -146,11 +145,11 @@ function restoreAllCorruptedPages() {;
     }
   }
   ;
-  // // // console.log('🚀 Starting page restoration process...'),;
+  // // // console.log(' Starting page restoration process...'),;
   scanDirectory(pagesDir),;
   ;
   // Generate summary;
-  // // // console.log('\n📊 Restoration Summary:'),;
+  // // // console.log('\n Restoration Summary:'),;
   // // // console.log(`   Total pages:${results.total}`),;
   // // // console.log(`   Restored:${results.restored}`),;
   // // // console.log(`   Failed:${results.failed}`),;
@@ -159,7 +158,7 @@ function restoreAllCorruptedPages() {;
   // Save detailed report;
   const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
-  // // // console.log(`\n📄 Detailed report saved to:${reportPath}`),;
+  // // // console.log(`\n Detailed report saved to:${reportPath}`),;
   ;
   return results,;
 }

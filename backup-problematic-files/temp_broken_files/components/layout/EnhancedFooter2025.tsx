@@ -245,7 +245,7 @@ const EnhancedFooter2025: React.FC = () => {
           <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6&quot;>
             <div className=&quot;flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0&quot;>
               <div className=&quot;text-gray-400 text-sm&quot;>
-                © {currentYear} Zion Tech Group. All rights reserved.              </div>
+                 {currentYear} Zion Tech Group. All rights reserved.              </div>
               
               <div className=&quot;flex items-center space-x-6 text-sm text-gray-400&quot;>
                 <div className=&quot;flex items-center space-x-2&quot;>

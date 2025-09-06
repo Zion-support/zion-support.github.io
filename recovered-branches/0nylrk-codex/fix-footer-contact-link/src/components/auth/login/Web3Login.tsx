@@ -1,4 +1,21 @@
 
+<<<<<<< HEAD
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+import { Wallet } from "@/components/icons";
+import { toast } from "sonner";
+export function Web3Login() {
+  const { loginWithWeb3 } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleWeb3Login = async () => {;
+    try {;
+      setIsLoading(true);
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {useAuth} from "@/hooks/useAuth";
@@ -8,13 +25,21 @@ export function Web3Login() {;
 
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleWeb3Login = async () => {;
-    try {;
-      setIsLoading(true);
-
-
-
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+import { Wallet } from "@/components/icons";
+import { toast } from "sonner";
+=======
+import { Wallet } from "@/components/icons",
+import { toast } from "sonner",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
@@ -27,6 +52,7 @@ export function Web3Login() {
       
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Check if wallet is available
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
@@ -41,33 +67,8 @@ export function Web3Login() {
       console.error("Web3 login error:", error)
     } finally {
       setIsLoading(false)
-
-
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum;
-      if (!ethereum) {;
-        toast("Web3 wallet not found", {;
-          description: "Please install MetaMask or another compatible wallet"}),;
-        return;
-      }
-
-      await loginWithWeb3();
-
-    } catch (error: any) {;
-      toast("Login failed", {;
-        description: error && error.message || "Failed to connect wallet"}),;
-      console && console.error("Web3 login error:", error);
-    } finally {;
-      setIsLoading(false);
-
     }
   }
-=======
-    }
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Button
@@ -75,6 +76,9 @@ export function Web3Login() {
       variant="outline"
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
+<<<<<<< HEAD
+      disabled={isLoading}>;
+=======
 
       disabled={isLoading}
     >
@@ -91,8 +95,14 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+      )}
+    </Button>
+  )
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -131,6 +141,7 @@ export function Web3Login() {;
       disabled={isLoading}
     >;
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {isLoading ? (;
         <span className="flex items-center">;
           <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www && www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">;
@@ -144,18 +155,17 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      )}
-
-    </Button>;
-  );
-}
-
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+      )}
+    </Button>
+  )
+}
 import { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_auth } from '@/hooks / use_auth';
@@ -214,4 +224,3 @@ if ( {) {
         </>)}
     </Button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

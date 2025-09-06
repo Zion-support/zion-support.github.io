@@ -1,3 +1,7 @@
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -23,6 +27,7 @@ module.exports = {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -30,6 +35,10 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -88,6 +97,7 @@ module.exports = {
       "script": 'scripts/pm2/syntax-error-fixer.js';
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -98,6 +108,8 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
         "PORT": 3000
       };
       "env_production": {
@@ -236,6 +248,7 @@ module.exports = {
       "script": 'scripts/pm2/typescript-error-fixer.js';
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -246,6 +259,8 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -296,6 +311,7 @@ module.exports = {
 =======
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -304,6 +320,8 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
       };
@@ -385,6 +403,7 @@ module.exports = {
       "script": 'scripts/pm2/file-extension-normalizer.js';
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -395,6 +414,8 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
       };
@@ -550,6 +571,7 @@ module.exports = {
 =======
         "NODE_ENV": 'production';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -558,6 +580,8 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
       };
@@ -582,6 +606,10 @@ module.exports = {
     }
   }
 };
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -597,6 +625,7 @@ module.exports = {
 };
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD:backup-problematic-files/ecosystem.error-automation.config.cjs
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -604,3 +633,7 @@ module.exports = {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-automation.config.cjs

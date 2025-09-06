@@ -101,7 +101,7 @@ return (<> <Head> <title>Cutting-Edge Services Showcase 2025 - Zion Tech Group |
 }</span>) ) 
 }</div> </li>) ) 
 }</ul> </div> > Learn More <ExternalLink className="ml-1 w-4 h-4" /> </a> <a href="/contact" className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105" > Get Started <ArrowRight className="ml-2 w-4 h-4" /> </a> </div> </div> </motion.div>) ) 
-}</motion.div> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/70 mb-6" >Try adjusting your search terms or category filter</p> <button > Clear Filters </button> </motion.div>) 
+}</motion.div> > <div className="text-6xl mb-4" ></div> <h3 className="text-2xl font-bold text-white mb-2" >No services found</h3> <p className="text-white/70 mb-6" >Try adjusting your search terms or category filter</p> <button > Clear Filters </button> </motion.div>) 
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
@@ -415,7 +415,7 @@ href=&quot;/contact&quot;
 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 className=&quot;text-center py-20&quot;              >
-                <div className=&quot;text-6xl mb-4&quot;>🔍</div>
+                <div className=&quot;text-6xl mb-4&quot;></div>
                 <h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>No services found</h3>
                 <p className=&quot;text-white/70 mb-6&quot;>Try adjusting your search terms or category filter</p>
                 <button,

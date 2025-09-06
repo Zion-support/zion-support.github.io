@@ -1,20 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
 import { getFraudStore, newEvent } from "../../../utils/fraud/store";
 import { extractClientIp } from "../../../utils/ip";
 import {
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  AdminActionRecord
+  GptClassification
+  GptClassificationLabel
+  MonitoredSource
+  StoredFraudRecord
+<<<<<<< HEAD
+=======
+=======
   AdminActionRecord,
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
   StoredFraudRecord,;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "../../../utils/fraud/types";
 import { sendWarningEmail } from "../../../utils/email";
 const allowedSources: MonitoredSource[] = [
@@ -32,26 +48,18 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" });
     return;
 
-
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
-import { classifyWithGPT } from '../../../utils/fraud/gpt';
-import { getFraudStore, newEvent } from '../../../utils/fraud/store';
-import { extractClientIp } from '../../../utils/ip';
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
-import { sendWarningEmail } from '../../../utils/email';
-const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return
-
+  try {
   }
   try {
 
-
+    const body = req.body |{}
+    const source = body.source as MonitoredSource;
+    if (!allowedSources.includes(source)) {
+      res.status(400).json({ error: "Invalid source" });
+      return;
+    }
+    const userId = typeof body.userId === "string" ? body.userId : null;
+    const content = typeof body.content === "string" ? body.content : null;
     const body = req && req.body || {};
     const source = body && body.source as MonitoredSource;
     if (!allowedSources && allowedSources.includes(source)) {
@@ -61,11 +69,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
-
-
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
-=======
+    const ip = extractClientIp(req);
+    const store = getFraudStore();
+    const metadata =
+      body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
       res.status(400).json({ error: 'Invalid source' });
       return
     }
@@ -74,13 +83,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const content = typeof body.content === 'string' ? body.content : null;
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const ip = extractClientIp(req);
     const store = getFraudStore();
-
-      countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
-
-=======
+    const event = newEvent({
+      source
+      userId
+      content
+      metadata
+      ipAddress: ip
+    });
+    const heuristic = await evaluateHeuristics(event, {
+      countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m)
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
@@ -139,22 +152,13 @@ if ( {) {
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
-
-    // Check condition
-if ( {) {
-  $2
-}
-      const privacy = await store.getPrivacySettings (user_id);
-      // Check condition
-if ( {) {
-  $2
-}
-        gpt = await classifyWithGPT (content, source);
-
+    if (content && userId) {
+      const privacy = await store && store.getPrivacySettings(userId);
+      if (!privacy && privacy.monitoringContentAnalysisOptOut) {
+        gpt = await classifyWithGPT(content, source);
       }
     } else // Check condition
 if ( {) {
@@ -162,24 +166,33 @@ if ( {) {
 }
       gpt = await classifyWithGPT (content, source);
     }
-
-      gpt?.label || (heuristic && heuristic.flagged ? "SUSPICIOUS" : "SAFE");
-    if (heuristic && heuristic.severity === "high") combinedLabel = "DANGEROUS";
-
+    let combinedLabel: GptClassificationLabel =
+      gpt?.label |(heuristic.flagged ? "SUSPICIOUS" : "SAFE");
+    if (heuristic.severity === "high") combinedLabel = "DANGEROUS";
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
       process && process.env.FRAUD_AUTOHIDE === "true" &&
       combinedLabel !== "SAFE" &&
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
-
-
+      ...event
+      heuristic
+      gpt
+      autoHidden: !!autoHide
+      status: "PENDING"
+    }
+    const saved = await store.saveEvent(stored);
+    if (process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
+      const prior = await store.countFlaggedForUser(userId);
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
-
-
+      status: "PENDING",
+    };
+    const saved = await store && store.saveEvent(stored);
+    if (process && process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
+      const prior = await store && store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
           toUserId: userId
@@ -188,18 +201,14 @@ if ( {) {
         });
       }
     }
-
-
-    res && res.status(200).json({
-      id: saved && saved.id,
-      flagged: combinedLabel !== "SAFE",
-      label: combinedLabel,
-      heuristic,
-      gpt,
-      autoHidden: saved && saved.autoHidden,
-      createdAt: saved && saved.createdAt,
-
-=======
+    res.status(200).json({
+      id: saved.id
+      flagged: combinedLabel !== "SAFE"
+      label: combinedLabel
+      heuristic
+      gpt
+      autoHidden: saved.autoHidden
+      createdAt: saved.createdAt
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -246,19 +255,21 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
 
   } catch (e: any) {
-
-
+    res
+      .status(500)
+<<<<<<< HEAD
       .json({ error: "Internal error", details: e?.message || String(e) });
-
-
-=======
-      .json({ error: "Internal error", details: e?.message |String(e) });
   }
 }
+=======
+<<<<<<< HEAD
+      .json({ error: "Internal error", details: e?.message |String(e) });
+=======
+      .json({ error: "Internal error", details: e?.message || String(e) });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       status: 'PENDING'};
 
@@ -285,15 +296,14 @@ if ( {) {
   }
 }
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -342,10 +352,12 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

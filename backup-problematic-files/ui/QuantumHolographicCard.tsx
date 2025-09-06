@@ -233,15 +233,15 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
-                <span className="text-blue-400">📱</span>
+                <span className="text-blue-400"></span>
                 <span>{service.contactInfo.mobile}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-green-400">✉️</span>
+                <span className="text-green-400"></span>
                 <span>{service.contactInfo.email}</span>
               </div>
               <div className="flex items-center space-x-2">
-                <span className="text-purple-400">📍</span>
+                <span className="text-purple-400"></span>
                 <span className="text-xs">{service.contactInfo.address}</span>
               </div>
             </div>

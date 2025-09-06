@@ -1,8 +1,30 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+import { Card } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Card} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Button} from "@/components/ui/button";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card } from "@/components/ui/card",
+<<<<<<< HEAD
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+=======
+import { Skeleton } from "@/components/ui/skeleton",
+import { Button } from "@/components/ui/button",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -17,10 +39,22 @@ export function TalentPlaceholder() {
         Join as Talent
       </Button>
     </div>
-
-import {Card} from "@/components/ui/card";
-import {Skeleton} from "@/components/ui/skeleton";
-import {Button} from "@/components/ui/button";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+  )
+=======
+  )
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card } from "@/components/ui/card",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { Button } from "@/components/ui/button";
 export function TalentPlaceholder() {;
   return (
     <div className="p-8 text-center">;
@@ -32,10 +66,9 @@ export function TalentPlaceholder() {;
         Join as Talent;
       </Button>;
     </div>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }
-
-=======
 import { Card  } from '@/components / ui / card';
 import { Skeleton  } from '@/components / ui / skeleton';
 import { Button  } from '@/components / ui / button';
@@ -57,6 +90,8 @@ function TalentPlaceholder() {
       </Button>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
@@ -66,6 +101,8 @@ function TalentPlaceholder() {
 
 }
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

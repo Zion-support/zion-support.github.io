@@ -1,8 +1,37 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {useState} from "react";
+import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
+import {Input} from "@/components/ui/input";
+import {Card} from "@/components/ui/card";
+import {Search} from "lucide-react";
+import {ListingScoreCard} from "@/components/ListingScoreCard";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { useState } from "react",
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
+import { Input } from "@/components/ui/input",
+import { Card } from "@/components/ui/card",
+<<<<<<< HEAD
+import { Search } from "lucide-react";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+=======
+<<<<<<< HEAD
+import { Search } from "lucide-react";
+import { ListingScoreCard } from "@/components/ListingScoreCard";
+=======
+import { Search } from "lucide-react",
+import { ListingScoreCard } from "@/components/ListingScoreCard",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -10,128 +39,99 @@ interface ServiceTypeStepProps {
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
 
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  {
+    id: "service-1"
+    title: "AI Development"
+    category: "Services"
+    image:
+      "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800&auto=format"
+  }
+  {
+    id: "service-2"
+    title: "Cloud Migration"
+    category: "Services"
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format"
+  }
+  {
+    id: "talent-1"
+    title: "AI Engineer"
+    category: "Talents"
+    image:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&auto=format"
+  }
+  {
+    id: "talent-2"
+    title: "Data Scientist"
+    category: "Talents"
+    image:
+      "https://images.unsplash.com/photo-1573497491765-dccce02b29df?w=800&auto=format"
+  }
+  {
+    id: "equipment-1"
+    title: "Workstation"
+    category: "Equipment"
+    image:
+      "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=800&auto=format"
+  }
+  {
+    id: "equipment-2"
+    title: "Server Rack"
+    category: "Equipment"
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format"
+  }
+];
+export function ServiceTypeStep({
+  formData
+  updateFormData
+}: ServiceTypeStepProps) {
+<<<<<<< HEAD
+  const [searchQuery, setSearchQuery] = useState("");
+=======
+  const [searchQuery, setSearchQuery] = useState("");
+  const handleTypeSelect = (type: ServiceType) => {
+    updateFormData({ serviceType: type });
+  }
+=======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {;
   const [searchQuery, setSearchQuery] = useState("");
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
 
   
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleTypeSelect = (type: ServiceType) => {
-    updateFormData({ serviceType: type })
-  },
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    updateFormData({ serviceType: type });
+  }
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item
       serviceCategory: item.category
       serviceType: item.category.toLowerCase() as ServiceType
-
-import { useState  } from './react';
-import { QuoteFormData, ListingItem, ServiceType  } from '@/types / quotes';
-import { Input  } from '@/components / ui / input';
-import { Card  } from '@/components / ui / card';
-import { Search  } from './lucide-react';
-import { ListingScoreCard  } from '@/components / ListingScoreCard';
-interface ServiceTypeStepProps {
-  form_data: QuoteFormData;
-  updateFormData: (data: Partial < QuoteFormData>) => void;
-}
-// Sample data - would come from an API in a real application;
-const SAMPLE_LISTINGS: ListingItem[] = [;
-  {
-    id: "service - 1",
-    title: "AI Development",
-    category: "Services",
-    image:;
-      "https://images.unsplash.com / photo - 1516192518150 - 0d8fee5425e3?w = 800 & auto = format",
-=======
-
-    })
-
-  },
-  {
-    id: "service - 2",
-    title: "Cloud Migration",
-    category: "Services",
-    image:;
-      "https://images.unsplash.com / photo - 1451187580459 - 43490279c0fa?w = 800 & auto = format",
-  },
-  {
-    id: "talent - 1",
-    title: "AI Engineer",
-    category: "Talents",
-    image:;
-      "https://images.unsplash.com / photo - 1560250097 - 0b93528c311a?w = 800 & auto = format",
-  },
-  {
-    id: "talent - 2",
-    title: "Data Scientist",
-    category: "Talents",
-    image:;
-      "https://images.unsplash.com / photo - 1573497491765 - dccce02b29df?w = 800 & auto = format",
-  },
-  {
-    id: "equipment - 1",
-    title: "Workstation",
-    category: "Equipment",
-    image:;
-      "https://images.unsplash.com / photo - 1547082299 - de196ea013d6?w = 800 & auto = format",
-  },
-  {
-    id: "equipment - 2",
-    title: "Server Rack",
-    category: "Equipment",
-    image:;
-      "https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?w = 800 & auto = format",
-  },
-];
-;
-export /**
- * ServiceTypeStep - Function description
- */
-function ServiceTypeStep() {
-  const [search_query, setSearchQuery] = useState ("");
-;
-  const handleTypeSelect = (type: ServiceType) =>: any {
-    updateFormData ({ service_type: type });
-  }
-;
-  const handleItemSelect = (item: ListingItem) =>: any {
-    updateFormData ({
-      specific_item: item,
-      service_category: item.category,
-      service_type: item.category.toLowerCase () as ServiceType,
     });
   }
-;
-  const filtered_listings = SAMPLE_LISTINGS.filter ((item) => {
-    // Filter by category only when a service type has been selected;
-    // Check condition
-if ( {) {
-  $2
-}
-      const category_match =;
-        item.category.toLowerCase () === form_data.service_type.toLowerCase ();
-      // Check condition
-if (return false) {
-  $2
-}
+  const filteredListings = SAMPLE_LISTINGS.filter((item) => {
+    // Filter by category only when a service type has been selected
+    if (formData.serviceType !== "") {
+      const categoryMatch =
+        item.category.toLowerCase() === formData.serviceType.toLowerCase();
+      if (!categoryMatch) return false;
     }
-
-    
-    if (searchQuery.trim() === "") return true,
-    return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-           item.category.toLowerCase().includes(searchQuery.toLowerCase())
-  }),
-
-
-
+    if (searchQuery.trim() === "") return true;
+    return (
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) |
+      item.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  });
+;
   return (
     <div className="space - y-6">;
       <div>;
@@ -145,11 +145,22 @@ if (return false) {
                 ? "bg - zion - purple / 20 border - zion - purple";
                 : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
             }`}
-
-
+            onClick={() => handleTypeSelect("service")}
+          >
+            <h4 className="font-medium text-white">Services</h4>
+            <p className="text-sm text-zion-slate-light">
+              AI solutions, consulting, development
+            </p>
+          </Card>
+<<<<<<< HEAD
+          <Card
+=======
+<<<<<<< HEAD
+          <Card
+=======
           <Card 
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -162,11 +173,15 @@ if (return false) {
               AI specialists, developers, consultants
             </p>
           </Card>
-
-
+<<<<<<< HEAD
+          <Card
+=======
+<<<<<<< HEAD
+          <Card
+=======
           <Card 
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment"
                 ? "bg-zion-purple/20 border-zion-purple"
@@ -183,17 +198,23 @@ if (return false) {
       </div>
       {formData.serviceType && (
         <div className="space-y-4">
-
-import {useState} from "react";
-import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
-import {Input} from "@/components/ui/input";
-import {Card} from "@/components/ui/card";
-import {Search} from "lucide-react";
-import {ListingScoreCard} from "@/components/ListingScoreCard";
+<<<<<<< HEAD
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <Input
+              placeholder={`Search ${formData && formData.serviceType}...`}
+=======
+<<<<<<< HEAD
+          <h3 className="text-xl font-semibold text-white">
+            Select a specific {formData.serviceType}
+          </h3>
 =======
 
           <h3 className="text-xl font-semibold text-white">Select a specific {formData.serviceType}</h3>
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
             <Input
@@ -297,31 +318,29 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />;
 
             <Input;
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder={`Search ${formData.serviceType}...`}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               value={searchQuery}
-
-              onChange={(e) => setSearchQuery(e && e.target.value)}
-              className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple";
-            />;
-          </div>;
-
-          <div className="grid grid-cols-1 gap-4 mt-4">;
-            {filteredListings && filteredListings.length > 0 ? (;
-              filteredListings && filteredListings.map((item) => (;
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10 bg-zion-blue border border-zion-blue-light focus:border-zion-purple"
+            />
+          </div>
+          <div className="grid grid-cols-1 gap-4 mt-4">
+            {filteredListings.length > 0 ? (
+              filteredListings.map((item) => (
                 <div
-                  key={item && item.id}
+                  key={item.id}
                   onClick={() => handleItemSelect(item)}
-                  className={`cursor-pointer transition-all ${;
-                    formData && formData.specificItem?.id === item && item.id ? "ring-2 ring-zion-purple rounded-lg" : "";
-
-=======
-
-                    formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  className={`cursor-pointer transition-all ${
+                    formData.specificItem?.id === item.id
+                      ? "ring-2 ring-zion-purple rounded-lg"
+                      : ""
                   }`}
                 >;
                   <ListingScoreCard
@@ -343,11 +362,8 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
           </div>;
         </div>;
       )}
-
-    </div>;
-
+    </div>
   );
-=======
             on_click={() => handleTypeSelect ("service")}
           >;
             <h4 className="font - medium text - white">Services</h4>;
@@ -425,5 +441,4 @@ export function ServiceTypeStep(): any ({ formData, updateFormData }: ServiceTyp
           </div>;
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -65,7 +65,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
     <div className="milestone-assistant">;
       <div className="assistant-header" style={{ display:"flex", gap:12, alignItems:"center" }}>;
         <button onClick={generate} disabled={loading || isDisabled}>;
-          {loading ? "Generating..." :"💡 Generate AI Milestones"}
+          {loading ? "Generating..." :" Generate AI Milestones"}
         </button>;
         <label style={{ display:"flex", gap:6, alignItems:"center" }}>;
           <input type="checkbox" checked={autoAdd} onChange={(e) => setAutoAdd(e.target.checked)} />;
@@ -92,7 +92,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                 </span>;
               </div>;
               <div style={{ fontSize:12, color:"#555" }}>;
-                Due:{new Date(item.suggestedDueDateIso).toLocaleDateString()} · ~{item.estimatedEffortHours}h;
+                Due:{new Date(item.suggestedDueDateIso).toLocaleDateString()}  ~{item.estimatedEffortHours}h;
               </div>;
             </div>;
             {expandedIdx === idx && (;
@@ -152,7 +152,7 @@ export default MilestoneAssistant,
 }disabled= {
   loading || isDisabled 
 }> {
-  loading ? "Generating..." : "💡 Generate AI Milestones" 
+  loading ? "Generating..." : " Generate AI Milestones" 
 }</button> <label style= {
   {
   display: "flex", gap: 6, alignItems: "center" 
@@ -214,7 +214,7 @@ export default MilestoneAssistant,
 }
 }> Due: {
   new Date (item.suggestedDueDateIso) .toLocaleDateString () 
-}· ~ {
+} ~ {
   item.estimatedEffortHours 
 }h </div> </div> {
   expandedIdx === idx && (<div className="milestone-details" style= {

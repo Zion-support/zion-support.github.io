@@ -1,8 +1,31 @@
 
+<<<<<<< HEAD
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";
+import { Award, Share, Star, TrendingUp } from "lucide-react";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
+import {Award, Share, Star, TrendingUp} from "lucide-react";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+<<<<<<< HEAD
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";
+import { Award, Share, Star, TrendingUp } from "lucide-react";
+=======
+import { ReferralStats as ReferralStatsType } from "@/types/referrals",
+import { Award, Share, Star, TrendingUp } from "lucide-react",
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -34,44 +57,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
-=======
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
-import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
-import { Award, Share, Star, TrendingUp  } from './lucide-react';
-interface ReferralStatsProps {
-  stats: ReferralStatsType;
-  is_loading: boolean;
-}
-export /**
- * ReferralStats - Function description
- */
-function ReferralStats() {
-  const stat_cards = [;
-    {
-      title: "Total Referrals",
-      value: stats.total_referrals,
-      icon: <Share className="h - 5 w - 5 text - muted - foreground" />,
-      description: "People you've invited",
-    },
-    {
-      title: "Completed",
-      value: stats.completed_referrals,
-      icon: <Star className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Signed up & completed onboarding",
-    },
-    {
-      title: "Pending",
-      value: stats.pending_referrals,
-      icon: <TrendingUp className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Not yet completed onboarding",
-    },
-    {
-      title: "Total Rewards",
-      value: stats.total_rewards > 0 ? `$${stats.total_rewards.to_fixed (2)}` : "-",
-      icon: <Award className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Credits earned from referrals",
-    },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   ];
 ;
   return (
@@ -89,6 +74,10 @@ function ReferralStats() {
                 <div className="text - 2xl font - bold">{card.value}</div>;
                 <p className="text - xs text - muted - foreground">;
                   {card.description}
+<<<<<<< HEAD
+                </p>
+              </>
+=======
 
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralStats, as, ReferralStatsType} from "@/types/referrals";
@@ -144,26 +133,31 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
                 <div className="text-2xl font-bold">{card && card.value}</div>;
                 <p className="text-xs text-muted-foreground">{card && card.description}</p>;
               </>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             )}
           </CardContent>;
         </Card>;
       ))}
-
-    </div>;
+    </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }
-
-=======
                 </p>;
               </>)}
           </CardContent>;
         </Card>))}
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
     </div>
@@ -171,5 +165,5 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
   )
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

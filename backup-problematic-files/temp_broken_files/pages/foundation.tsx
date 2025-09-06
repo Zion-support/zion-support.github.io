@@ -12,7 +12,7 @@ export default function FoundationPage() {;
       <div className="space-y-12">;
         <section className="space-y-3">;
           <h1 className="text-3xl font-bold">Zion Foundation</h1>;
-          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Stewarding the protocol’s vision, maintaining global neutrality, and operating outside of any one jurisdiction. This portal provides the charter, transparency reports, grants, and partnership MOUs.</p>;
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl">Stewarding the protocols vision, maintaining global neutrality, and operating outside of any one jurisdiction. This portal provides the charter, transparency reports, grants, and partnership MOUs.</p>;
           <div className="flex flex-wrap gap-3 text-sm">;
             <Link href="/governance/trust"><a className="underline">Governance & Trust</a></Link>;
             <a className="underline" href="#reports">Transparency Reports</a>;
@@ -44,9 +44,9 @@ export default function FoundationPage() {;
           <h2 className="text-2xl font-semibold">Grants Issued</h2>;
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>;
           <ul className="list-disc list-inside space-y-2 text-sm">;
-            <li>Seed safety tooling and evals R&D — Milestone 1 (Pending)</li>;
-            <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned)</li>;
-            <li>Agent interoperability standards and sandbox — RFP (Open)</li>;
+            <li>Seed safety tooling and evals R&D  Milestone 1 (Pending)</li>;
+            <li>Open dataset creation for multilingual benchmarks  Milestone 0 (Planned)</li>;
+            <li>Agent interoperability standards and sandbox  RFP (Open)</li>;
           </ul>;
         </section>;
 ;
@@ -58,5 +58,5 @@ export default function FoundationPage() {;
       </div>;
     </>;
   ); </div>) ) 
-}</div> </section> <section className="space-y-4" id="grants" > <h2 className="text-2xl font-semibold" >Grants Issued</h2> <p className="text-gray-600 dark:text-gray-300" >Cross-multiverse grants across chains, rollups, and alternate compute realms.</p> <ul className="list-disc list-inside space-y-2 text-sm" > <li>Seed safety tooling and evals R&D — Milestone 1 (Pending) </li> <li>Open dataset creation for multilingual benchmarks — Milestone 0 (Planned) </li> <li>Agent interoperability standards and sandbox — RFP (Open) </li> </ul> </section> </section> </div> </>) 
+}</div> </section> <section className="space-y-4" id="grants" > <h2 className="text-2xl font-semibold" >Grants Issued</h2> <p className="text-gray-600 dark:text-gray-300" >Cross-multiverse grants across chains, rollups, and alternate compute realms.</p> <ul className="list-disc list-inside space-y-2 text-sm" > <li>Seed safety tooling and evals R&D  Milestone 1 (Pending) </li> <li>Open dataset creation for multilingual benchmarks  Milestone 0 (Planned) </li> <li>Agent interoperability standards and sandbox  RFP (Open) </li> </ul> </section> </section> </div> </>) 
 }

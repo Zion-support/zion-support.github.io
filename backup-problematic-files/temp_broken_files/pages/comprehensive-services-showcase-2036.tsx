@@ -149,7 +149,7 @@ const ComprehensiveServicesShowcase2036:React.FC = () => {;
                   <div className="space-y-2 mb-4">;
                     {service.features.slice(0, 3).map((feature, idx) => (;
                       <div key={idx} className="flex items-center text-sm text-gray-300">;
-                        <span className="text-cyan-400 mr-2">✓</span>;
+                        <span className="text-cyan-400 mr-2"></span>;
                         {feature}
                       </div>;
                     ))}
@@ -214,7 +214,7 @@ const ComprehensiveServicesShowcase2036:React.FC = () => {;
                         <div className="space-y-1 mb-3">;
                           {service.features.slice(0, 2).map((feature, idx) => (;
                             <div key={idx} className="flex items-center text-xs text-gray-300">;
-                              <span className="text-cyan-400 mr-2">•</span>;
+                              <span className="text-cyan-400 mr-2"></span>;
                               {feature}
                             </div>;
                           ))}

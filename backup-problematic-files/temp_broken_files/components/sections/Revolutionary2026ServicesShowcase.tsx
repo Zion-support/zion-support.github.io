@@ -71,7 +71,7 @@ export default function Revolutionary2026ServicesShowcase() {
               <div className=&quot;text-3xl font-bold text-pink-400&quot;>{metaverseDigitalRealityServices2026.length}</div>
               <div className=&quot;text-gray-400 text-sm&quot;>Metaverse Services</div>            </div>
             <div className=&quot;text-center&quot;>
-              <div className=&quot;text-3xl font-bold text-green-400&quot;>∞</div>
+              <div className=&quot;text-3xl font-bold text-green-400&quot;></div>
               <div className=&quot;text-gray-400 text-sm&quot;>Possibilities</div>
             </div>
           </div>
@@ -344,9 +344,9 @@ export default function Revolutionary2026ServicesShowcase() {
             <div className=&quot;mt-8 text-center&quot;>
               <p className=&quot;text-gray-400 text-sm mb-2&quot;>Contact Information</p>
               <div className=&quot;flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm&quot;>
-                <span className=&quot;text-purple-300&quot;>📱 +1 302 464 0950</span>
-                <span className=&quot;text-purple-300&quot;>✉️ kleber@ziontechgroup.com</span>
-                <span className=&quot;text-purple-300&quot;>🌐 ziontechgroup.com</span>
+                <span className=&quot;text-purple-300&quot;> +1 302 464 0950</span>
+                <span className=&quot;text-purple-300&quot;> kleber@ziontechgroup.com</span>
+                <span className=&quot;text-purple-300&quot;> ziontechgroup.com</span>
               </div>
             </div>
           </div>

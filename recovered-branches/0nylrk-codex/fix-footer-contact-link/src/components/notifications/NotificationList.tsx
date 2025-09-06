@@ -1,6 +1,19 @@
+<<<<<<< HEAD
+=======
 
-
-
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React from 'react';
+import { ScrollArea  } from '@/components/ui/scroll-area';
+import { Skeleton  } from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { NotificationItem  } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+interface NotificationListProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
   loading: boolean,
   error: string | null,
   notifications: Notification[],
@@ -14,7 +27,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   error;
   notifications;
   onMarkAsRead;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
@@ -32,6 +45,7 @@ interface NotificationListProps {;
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   loading: boolean
   error: string | null
@@ -42,24 +56,6 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-
-import {ScrollArea} from '@/components/ui/scroll-area';
-import {Skeleton} from '@/components/ui/skeleton';
-import {Button} from '@/components/ui/button';
-import {NotificationItem} from './NotificationItem';
-import {Notification} from '@/context/notifications';
-interface NotificationListProps {;
-  loading: boolean,;
-  error: string | null,;
-  notifications: Notification[],;
-  onMarkAsRead: (id: string) => Promise<void>,;
-  onDismiss: (id: string) => Promise<void>,;
-  onRetry: () => void;
-}
-
-export const NotificationList: React.FC<NotificationListProps> = ({;
-
-=======
 import {ScrollArea} from '@/components / ui / scroll - area';
 import {Skeleton} from '@/components / ui / skeleton';
 import {Button} from '@/components / ui / button';
@@ -74,43 +70,22 @@ interface NotificationListProps {
   on_retry: () => void;
 }
 export const NotificationList: React.FC < NotificationListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   loading;
   error;
   notifications;
   onMarkAsRead;
 
-
-  loading,
-  error,
-  notifications,
-  onMarkAsRead,
-
-  onDismiss,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  onDismiss
   onRetry
-=======
-  on_dismiss,
-  on_retry;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
-
-  onDismiss,;
-  onRetry;
-}) => {;
-  return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
-      {error ? (;
-        <div className="p-8 text-center text-amber-500">;
-          <p>{error}</p>;
+        <div className="p-8 text-center text-amber-500">
+          <p>{error}</p>
           <Button
-            variant="outline" 
-            size="sm" 
-
+            variant="outline"
+            size="sm"
             className="mt-2"
             onClick={onRetry}>;
             Try Again;
@@ -136,22 +111,31 @@ export const NotificationList: React.FC < NotificationListProps> = ({
           />;
         ));
       )}
+<<<<<<< HEAD
+    </ScrollArea>
+  )
+}
 
+=======
+<<<<<<< HEAD
+    </ScrollArea>
+  )
+<<<<<<< HEAD
+}
 
-
+=======
     </ScrollArea>;
   );
-
 =======
 =======
     </ScrollArea>;
   );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -181,4 +165,3 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     </ScrollArea>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -61,7 +61,4 @@ yearsExperience ;
   /* AI score could be used for verification badge */ ;"}{";"  yearsExperience > 5 && (<BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" /> ;
 }</h3> <TalentCardAvailability availabilityType= {;
   availabilityType ;
-
-}/> </div> </div> </div>) ;
-}"
-
+}/> </div> </div> </div>) ;"}"

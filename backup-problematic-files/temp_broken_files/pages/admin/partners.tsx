@@ -34,7 +34,7 @@ export default function AdminPartners() {;
 ;
   return (;
     <div className="space-y-6">;
-      <h1 className="text-2xl font-semibold">Admin • Partners</h1>;
+      <h1 className="text-2xl font-semibold">Admin  Partners</h1>;
       <div className="overflow-auto">;
         <table className="min-w-full text-sm">;
           <thead>;
@@ -76,11 +76,11 @@ export default function AdminPartners() {;
 ;
       {selected && (;
         <div className="p-4 rounded border">;
-          <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>;
+          <h2 className="font-semibold mb-2">Fraud Flags  {selected}</h2>;
           <ul className="list-disc pl-6">;
             {flags.map((f, idx) => (;
               <li key={idx}>;
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
+                <span className="font-medium">{f.type}</span>  {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
               </li>;
             ))}
             {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
@@ -99,7 +99,7 @@ const AdminPartnersPage: React.FC = () => {
 
   return (
     <div className=&quot;space-y-6&quot;>
-      <h1 className=&quot;text-2xl font-semibold&quot;>Admin • Partners</h1>
+      <h1 className=&quot;text-2xl font-semibold&quot;>Admin  Partners</h1>
       <div className=&quot;overflow-auto&quot;>
         <table className=&quot;min-w-full text-sm&quot;>          <thead>
             <tr className=&quot;text-left border-b&quot;>
@@ -139,11 +139,11 @@ type=&quot;number&quot;
 
       {selected && (
         <div className=&quot;p-4 rounded border&quot;>
-          <h2 className=&quot;font-semibold mb-2&quot;>Fraud Flags • {selected}</h2>
+          <h2 className=&quot;font-semibold mb-2&quot;>Fraud Flags  {selected}</h2>
           <ul className=&quot;list-disc pl-6&quot;>
             {flags.map((f, idx) => (
               <li key={idx}>
-                <span className=&quot;font-medium&quot;>{f.type}</span> — {f.severity} {f.note && <span className=&quot;text-gray-500&quot;>({f.note})</span>}
+                <span className=&quot;font-medium&quot;>{f.type}</span>  {f.severity} {f.note && <span className=&quot;text-gray-500&quot;>({f.note})</span>}
               </li>
             ))}
             {flags.length === 0 && <li className=&quot;text-gray-500 list-none&quot;>No flags</li>}          </ul>

@@ -1,44 +1,21 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Head from "next/head";
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
-  Brain,;
-  Star,;
-
-=======
-
-
 import React from "react";
 import Head from "next/head";
 import {
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Brain
+  Star
+<<<<<<< HEAD
+=======
+=======
   Phone,
   Mail,
   MapPin,
@@ -46,22 +23,24 @@ import {
   ArrowRight,
   Brain,
   Star,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
-
-export default function QuantumAIBCIPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
-    s && s.link.endsWith("/quantum-ai-brain-computer-interface"),;
-
+export default function QuantumAIBCIPage() {
+  const service = enhancedRealMicroSaasServices.find((s) =>
+<<<<<<< HEAD
+    s.link.endsWith("/quantum-ai-brain-computer-interface")
+=======
+<<<<<<< HEAD
+    s.link.endsWith("/quantum-ai-brain-computer-interface")
 =======
 
     s.link.endsWith("/quantum-ai-brain-computer-interface"),;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
   if (!service) return null;
 
@@ -99,35 +78,55 @@ export default function QuantumAIBCIPage() {;
                     <span>{feat}</span>;
                   </li>;
                 ))}
-
-
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white">
-                    {service.price}
-                    <span className="text-slate-400 text-base">
-                      {service.period}
-                    </span>
-                  </div>
-                  <div className="text-slate-400">
-                    {service.trialDays}-day free trial • Setup:{" "}
-                    {service.setupTime}
-                  </div>
-                </div>
-                <div className="flex items-center text-yellow-400">
-                  <Star className="w-4 h-4 mr-1" />
-                  {service.rating.toFixed(1)}
-                </div>
-              </div>
-
+              </ul>;
+            </div>;
+            <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">;
+              <div className="flex items-end justify-between mb-3">;
+                <div>;
+                  <div className="text-3xl font-bold text-white">;
+                    {service && service.price}
+                    <span className="text-slate-400 text-base">;
+                      {service && service.period}
+                    </span>;
+                  </div>;
+                  <div className="text-slate-400">;
+                    {service && service.trialDays}-day free trial  Setup:{" "}
+                    {service && service.setupTime}
+                  </div>;
+                </div>;
+                <div className="flex items-center text-yellow-400">;
+                  <Star className="w-4 h-4 mr-1" />;
+                  {service && service.rating.toFixed(1)}
+                </div>;
+              </div>;
               <Button
                 href="/contact"
                 variant="quantum"
                 size="lg"
-
+                className="w-full">;
+                Book a Demo;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </Button>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2">;
+                  <Phone className="w-4 h-4 text-cyan-400" />;
+                  <span>{service && service.contactInfo.mobile}</span>;
+                </div>;
+                <div className="flex items-center space-x-2">;
+                  <Mail className="w-4 h-4 text-purple-400" />;
+                  <span>{service && service.contactInfo.email}</span>;
+                </div>;
+                <div className="flex items-center space-x-2">;
+                  <MapPin className="w-4 h-4 text-green-400" />;
+                  <span className="text-xs">{service && service.contactInfo.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+  );
 import React from './react';
 import Head from './next / head';
 import {
@@ -152,6 +151,8 @@ function QuantumAIBCIPage() {
   // Check condition
 if (return null) {
   $2
+<<<<<<< HEAD
+=======
 =======
                 className="w-full"
               >
@@ -178,9 +179,14 @@ if (return null) {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD:pages-disabled/quantum-energy.tsx
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> main:pages-disabled/quantum-energy.tsx
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -228,7 +234,7 @@ if (return null) {
                     </span>;
                   </div>;
                   <div className="text - slate - 400">;
-                    {service.trial_days}-day free trial • Setup:{" "}
+                    {service.trial_days}-day free trial  Setup:{" "}
                     {service.setup_time}
                   </div>;
                 </div>;
@@ -265,5 +271,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

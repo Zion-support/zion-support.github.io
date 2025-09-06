@@ -1,28 +1,47 @@
 
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
-import {JobData, MatchResult} from "./types ;
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
-
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+=======
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
+const supabase = createClient(supabaseUrl, supabaseAnonKey),
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Initialize the Supabase client
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
-const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 /**
  * Main function to process job-talent matching
@@ -32,24 +51,16 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
  */
 export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {
   try {
-
-    const jobSkillsNormalized = await normalizeSkillsWithAI(job && job.skills);
-    
+    // Normalize job skills and generate embeddings via OpenAI
+    const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills);
     // Prepare job details for matching prompt
     const jobDetails = {
-      title: job && job.title;
-      description: job && job.description;
-      category: job && job.category;
-      skills: jobSkillsNormalized,
-      budget: job && job.budget
-    };
-    
-
-=======
-
-    // Normalize job skills and generate embeddings via OpenAI
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      title: job.title;
+      description: job.description;
+      category: job.category;
+      skills: jobSkillsNormalized
+      budget: job.budget
+    }
     // Use OpenAI to find best matches
     const bestMatches = await findBestMatches(jobDetails, talents);
     return bestMatches
@@ -67,27 +78,20 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
   const matchInsertPromises = matchedTalents && matchedTalents.map(async (match) => {
     const { error: matchError } = await supabase
       .from("job_talent_matches")
-
-        talent_id: match && match.talentId;
-        match_score: match && match.score;
-        matched_skills: match && match.matchedSkills,
-        reason: match && match.reason
-
-      });
-=======
-
       .insert({
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        job_id: jobId;
+        talent_id: match.talentId;
+        match_score: match.score;
+        matched_skills: match.matchedSkills
+        reason: match.reason
+      });
     if (matchError) {
       console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)
     } else {
       // Create notifications for each matched talent
-
-      await supabase && supabase.rpc('create_notification', {
-        _user_id: match && match.talentId;
-        _title: "New Job Match",
-
+      await supabase.rpc('create_notification', {
+        _user_id: match.talentId;
+        _title: "New Job Match"
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`;
         _type: "job_match"
         _related_id: jobId
@@ -95,11 +99,8 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
     }
   });
 
-  
-  await Promise && Promise.all(matchInsertPromises)
+  await Promise.all(matchInsertPromises)
 }
-
-=======
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { JobData, MatchResult } from './types.ts';
 import { normalizeSkillsWithAI, findBestMatches } from './ai - matcher.ts';
@@ -169,6 +170,8 @@ if ( {) {
       });
     }
   });
+<<<<<<< HEAD
+=======
 =======
       await supabase.rpc('create_notification', {
 
@@ -178,10 +181,83 @@ if ( {) {
         _type: "job_match",
         _related_id: jobId
       })
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+  });
+  
+  await Promise.all(matchInsertPromises)
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
+import { JobData, MatchResult } from "./types.ts",;
+import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
+// Initialize the Supabase client;
+const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
+const supabase = createClient(supabaseUrl, supabaseAnonKey),;
+/**;
+ * Main function to process job-talent matching;
+ * @param job The job data to find matches for;
+ * @param talents Array of talent profiles;
+ * @returns Array of matches with talent IDs, scores, and reasons;
+ */;
+export async function processJobMatching(job: JobData, talents: any[]): Promise<MatchResult[]> {;
+  try {;
+    // Normalize job skills and generate embeddings via OpenAI;
+    const jobSkillsNormalized = await normalizeSkillsWithAI(job.skills),;
+    // Prepare job details for matching prompt;
+    const jobDetails = {;
+      title: job.title,;
+      description: job.description,;
+      category: job.category,;
+      skills: jobSkillsNormalized,;
+      budget: job.budget;
+    },;
+    // Use OpenAI to find best matches;
+    const bestMatches = await findBestMatches(jobDetails, talents),;
+    return bestMatches;
+  } catch (error) {;
+    console.error("Error in processJobMatching:", error),;
+    throw error;
+  }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
-  await Promise.all (matchInsertPromises);
+/**;
+ * Stores match results in the database and creates notifications;
+ * @param jobId The ID of the job;
+ * @param matchedTalents Array of match results;
+ */;
+export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {;
+  const matchInsertPromises = matchedTalents.map(async (match) => {;
+    const { error: matchError } = await supabase;
+      .from("job_talent_matches");
+      .insert({;
+        job_id: jobId,;
+        talent_id: match.talentId,;
+        match_score: match.score,;
+        matched_skills: match.matchedSkills,;
+        reason: match.reason;
+      }),;
+    if (matchError) {;
+      console.error(`Error storing match for talent ${match.talentId}:`, matchError);
+    } else {;
+      // Create notifications for each matched talent;
+      await supabase.rpc('create_notification', {;
+        _user_id: match.talentId,;
+        _title: "New Job Match",;
+        _message: `A new job "${jobTitle}" matches your skills. Check it out!`,;
+        _type: "job_match";
+        _related_id: jobId;
+      });
+    }
+  });
+  await Promise.all(matchInsertPromises);
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

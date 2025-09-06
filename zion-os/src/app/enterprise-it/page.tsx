@@ -1,28 +1,9 @@
-
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",;
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",;
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},;
-export default function EnterpriseITPage() {;
-  return (;
-
-
+import Link from "next/link";
+export const metadata = {title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services";
+  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.";
+  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"}
+export default function EnterpriseITPage() {return (;
     <div className="min-h-screen">;
-=======
-import Link from './next / link';,
-export const metadata = {
-  title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",
-  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",
-  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},
-export default /**
- * EnterpriseITPage - Function description
- */
-function EnterpriseITPage() {
-  return (
-    <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -45,16 +26,8 @@ function EnterpriseITPage() {
                 <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
                   Modernize Your Enterprise Infrastructure;
                 </h2>;
-
-                <p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
-                  In today's digital - first world, enterprises need agile, scalable,
-
-=======
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
-
-                  In today's digital-first world, enterprises need agile, scalable,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  In today's digital-first world, enterprises need agile, scalable;
                   and secure IT infrastructure to compete and thrive. Our comprehensive;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
@@ -111,26 +84,19 @@ function EnterpriseITPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1 - 9.999 5.002 5.002 0 10 - 9.78 2.096A4.001 4.001 0 003 15z" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Seamless migration to cloud platforms with strategic planning,
-
-=======
-
-                Seamless migration to cloud platforms with strategic planning,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">Cloud Migration & Strategy</h3>;
+              <p className="text-gray-400 mb-4">;
+                Seamless migration to cloud platforms with strategic planning;
                 cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Cloud readiness assessment</li>;
-                <li>• Migration planning & execution</li>;
-                <li>• Multi - cloud strategy</li>;
-                <li>• Cost optimization</li>;
+                <li> Cloud readiness assessment</li>;
+                <li> Migration planning & execution</li>;
+                <li> Multi - cloud strategy</li>;
+                <li> Cost optimization</li>;
               </ul>;
               <Link href="/enterprise - it / cloud - migration" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* DevOps & Automation */}
@@ -141,26 +107,19 @@ function EnterpriseITPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M15 12a3 3 0 11 - 6 0 3 3 0 016 0z" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Streamline development and operations with automated CI / CD pipelines,
-
-=======
-
-                Streamline development and operations with automated CI/CD pipelines,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">DevOps & Automation</h3>;
+              <p className="text-gray-400 mb-4">;
+                Streamline development and operations with automated CI/CD pipelines;
                 infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• CI / CD pipeline automation</li>;
-                <li>• Infrastructure as Code (IaC)</li>;
-                <li>• Container orchestration</li>;
-                <li>• Automated testing</li>;
+                <li> CI / CD pipeline automation</li>;
+                <li> Infrastructure as Code (IaC)</li>;
+                <li> Container orchestration</li>;
+                <li> Automated testing</li>;
               </ul>;
               <Link href="/enterprise - it / devops - automation" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Infrastructure Management */}
@@ -170,26 +129,19 @@ function EnterpriseITPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01 - 2 2H5a2 2 0 01 - 2-2v - 6a2 2 0 012 - 2m14 0V9a2 2 0 00 - 2-2M5 11V9a2 2 0 012 - 2m0 0V5a2 2 0 012 - 2h6a2 2 0 012 2v2M7 7h10" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Comprehensive infrastructure management including server provisioning,
-
-=======
-
-                Comprehensive infrastructure management including server provisioning,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">Infrastructure Management</h3>;
+              <p className="text-gray-400 mb-4">;
+                Comprehensive infrastructure management including server provisioning;
                 network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Server provisioning</li>;
-                <li>• Network configuration</li>;
-                <li>• Performance optimization</li>;
-                <li>• Capacity planning</li>;
+                <li> Server provisioning</li>;
+                <li> Network configuration</li>;
+                <li> Performance optimization</li>;
+                <li> Capacity planning</li>;
               </ul>;
               <Link href="/enterprise - it / infrastructure - management" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Data Management */}
@@ -199,26 +151,19 @@ function EnterpriseITPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 7v10c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4V7M4 7c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4M4 7c0 - 2.21 3.582 - 4 8 - 4s8 1.79 8 4m0 5c0 2.21 - 3.582 4 - 8 4s - 8-1.79 - 8-4" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                Enterprise data solutions including warehousing, analytics,
-
-=======
-
-                Enterprise data solutions including warehousing, analytics,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">Data Management</h3>;
+              <p className="text-gray-400 mb-4">;
+                Enterprise data solutions including warehousing, analytics;
                 and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Data warehousing</li>;
-                <li>• Business intelligence</li>;
-                <li>• Data analytics</li>;
-                <li>• Master data management</li>;
+                <li> Data warehousing</li>;
+                <li> Business intelligence</li>;
+                <li> Data analytics</li>;
+                <li> Master data management</li>;
               </ul>;
               <Link href="/enterprise - it / data - management" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Security & Compliance */}
@@ -234,13 +179,13 @@ function EnterpriseITPage() {
                 for SOC2, ISO 27001, and industry - specific regulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Security framework implementation</li>;
-                <li>• Compliance management</li>;
-                <li>• Threat detection & response</li>;
-                <li>• Security training</li>;
+                <li> Security framework implementation</li>;
+                <li> Compliance management</li>;
+                <li> Threat detection & response</li>;
+                <li> Security training</li>;
               </ul>;
               <Link href="/enterprise - it / security - compliance" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Managed Services */}
@@ -250,26 +195,19 @@ function EnterpriseITPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                24 / 7 managed IT services including monitoring, maintenance,
-
-=======
-
-                24/7 managed IT services including monitoring, maintenance,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">Managed Services</h3>;
+              <p className="text-gray-400 mb-4">;
+                24/7 managed IT services including monitoring, maintenance;
                 and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• 24 / 7 monitoring</li>;
-                <li>• Proactive maintenance</li>;
-                <li>• Help desk support</li>;
-                <li>• Performance optimization</li>;
+                <li> 24 / 7 monitoring</li>;
+                <li> Proactive maintenance</li>;
+                <li> Help desk support</li>;
+                <li> Performance optimization</li>;
               </ul>;
               <Link href="/enterprise - it / managed - services" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
           </div>;
@@ -342,16 +280,9 @@ function EnterpriseITPage() {
               <div className="w - 20 h - 20 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
-              <p className="text - gray - 400">;
-                Comprehensive evaluation of current infrastructure,
-
-=======
-
-                Comprehensive evaluation of current infrastructure,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">Assessment</h3>;
+              <p className="text-gray-400">;
+                Comprehensive evaluation of current infrastructure;
                 identifying opportunities and challenges.;
               </p>;
             </div>;

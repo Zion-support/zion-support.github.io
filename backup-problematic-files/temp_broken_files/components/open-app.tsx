@@ -34,8 +34,8 @@ export default function OpenApp() {
   return (
     <div className=&quot;min-h-[50vh] flex items-center justify-center&quot;>
       <div className=&quot;text-center&quot;>
-        <div className=&quot;text-lg font-semibold&quot;>Opening the Zion app…</div>
-        <div className=&quot;mt-2 text-sm opacity-70&quot;>If nothing happens, you’ll be redirected to the store.</div>
+        <div className=&quot;text-lg font-semibold&quot;>Opening the Zion app</div>
+        <div className=&quot;mt-2 text-sm opacity-70&quot;>If nothing happens, youll be redirected to the store.</div>
       </div>
     </div>
   )

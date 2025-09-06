@@ -1,9 +1,17 @@
 
-
+<<<<<<< HEAD
+import { createNotification  } from './createNotification';
+import { OnboardingNotificationParams } from './types';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { createNotification  } from './createNotification';
+import { OnboardingNotificationParams } from './types';
+=======
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /**
  * Creates an onboarding notification for a user
  */
@@ -13,8 +21,6 @@ export async function createOnboardingNotification({
   userRole
 }: OnboardingNotificationParams) {
 
-  try {
-
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -22,7 +28,6 @@ export async function createOnboardingNotification({
   if (userRole === 'talent') {
     switch (missingMilestone) {
       case 'profile_completed':
-=======
 import {create_notification} from './create_notification';
 import {OnboardingNotificationParams} from './types';
 /**;
@@ -43,7 +48,6 @@ if ( {) {
 }
     switch (missing_milestone) {
       case 'profile_completed':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         title = 'Complete your profile';
         message = 'Complete your profile to get discovered by clients';
         action_url = '/profile';
@@ -84,21 +88,30 @@ if ( {) {
         break;
     }
   }
-
-  return create_notification ({
-    user_id;
+  return createNotification({
+    userId;
     title;
     message;
     type: 'onboarding';
+<<<<<<< HEAD
+    sendEmail: false;
+    actionUrl
+
+    actionText
+  })
+}
+=======
     send_email: false;
     action_url,
     action_text;
   });
 
+    actionText
+  })
+<<<<<<< HEAD
 }
 =======
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
@@ -167,10 +180,12 @@ export async function createOnboardingNotification({;
     actionUrl;
     actionText;
   });
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

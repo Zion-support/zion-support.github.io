@@ -1,29 +1,29 @@
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-;
+
 const PUPPETEER_TIMEOUT_MS = Number(process.env.PUPPETEER_TIMEOUT_MS || 20000);
 const WIDTH = 1200;
 const HEIGHT = 630;
-;
+
 const DATA_OVERRIDES = path.join(process.cwd(), 'data', 'page-metadata', 'overrides.json');
 const OUT_DIR = path.join(process.cwd(), 'public', 'og');
-;
-function sanitizeRoute(route) {;
+
+function sanitizeRoute(route) {
   if (route === '/') return 'home';
   return route.replace(/^\//, '').replace(/\/$/, '').replace(/\//g, '__');
 }
-;
-async function ensurePuppeteer() {;
-  try {;
+
+async function ensurePuppeteer() {
+  try {
     return require('puppeteer');
-  } catch (e) {;
+  } catch (e) {
     console.error('Missing puppeteer. Please install it.');
     process.exit(1);
   }
 }
-;
-function buildHtml(title) {;
+
+function buildHtml(title) {
   const safeTitle = (title || 'Zion Tech Solutions').toString();
   return `<!doctype html>;
 <html>;
@@ -50,15 +50,15 @@ function buildHtml(title) {;
   </body>;
 </html>`;
 }
-;
-async function main() {;
-  if (!fs.existsSync(DATA_OVERRIDES)) {;
+
+async function main() {
+  if (!fs.existsSync(DATA_OVERRIDES)) {
     console.error('overrides.json not found. Run scripts/generate-dynamic-seo.cjs first.');
     process.exit(1);
   }
   const overrides = JSON.parse(fs.readFileSync(DATA_OVERRIDES, 'utf8'));
   const routes = Object.entries(overrides.routes || {});
-  if (routes.length === 0) {;
+  if (routes.length === 0) {
     console.log('No routes to process');
     return;
   }
@@ -67,9 +67,9 @@ async function main() {;
   const browser = await puppeteer.launch({ args:['--no-sandbox', '--disable-setuid-sandbox'] });
   const page = await browser.newPage();
   await page.setViewport({ width:WIDTH, height:HEIGHT, deviceScaleFactor:1 });
-;
+
   let processed = 0;
-  for (const [route, meta] of routes) {;
+  for (const [route, meta] of routes) {
     const title = meta.title || route;
     const html = buildHtml(title);
     await page.setContent(html, { waitUntil:'networkidle0', timeout:PUPPETEER_TIMEOUT_MS });
@@ -77,13 +77,13 @@ async function main() {;
     await page.screenshot({ path:outFile, type:'png' });
     processed++;
   }
-;
+
   await browser.close();
   console.log(`Generated ${processed} OG images into ${path.relative(process.cwd(), OUT_DIR)}`);
 }
-;
-if (require.main === module) {;
-  main().catch((err) => {;
+
+if (require.main === module) {
+  main().catch((err) => {
     console.error(err);
     process.exit(1);
   });

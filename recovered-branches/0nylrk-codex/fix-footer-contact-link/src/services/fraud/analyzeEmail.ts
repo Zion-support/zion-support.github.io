@@ -1,24 +1,35 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+// Email analysis functionality
+import { suspiciousEmailDomains  } from './constants';
+import { EmailAnalysisResult } from './types';
+/**
+ * Analyzes email for suspicious patterns
+ */
+<<<<<<< HEAD
 
+export const analyzeEmail = (email: string): EmailAnalysisResult => {
+=======
+<<<<<<< HEAD
 
+export const analyzeEmail = (email: string): EmailAnalysisResult => {
+=======
 export const analyzeEmail = (email: string): EmailAnalysisResult => {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = []
   if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] }
-=======
-  const domain = email && email.split('@')[1]?.toLowerCase();
-  const reasons: string[] = [],
-  
-  if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] };
-  
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Check for suspicious domains
   for (const suspiciousDomain of suspiciousEmailDomains) {
     if (domain && domain.includes(suspiciousDomain)) {
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
+<<<<<<< HEAD
+=======
 
 =======
 // Email analysis functionality;
@@ -36,18 +47,19 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
     if (domain.includes(suspiciousDomain)) {;
       reasons.push(`Suspicious email domain: ${domain}`),;
       break;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   return {
-
-    isSuspicious: reasons && reasons.length > 0,
-
+    isSuspicious: reasons.length > 0
     reasons
   }
+}
 
 // Email analysis functionality;
 import {suspiciousEmailDomains} from './constants';
@@ -77,9 +89,3 @@ if (return { is_suspicious: true, reasons: ['Invalid email format'] }) {
   }
 }
 ;
-
-=======
-
-};
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

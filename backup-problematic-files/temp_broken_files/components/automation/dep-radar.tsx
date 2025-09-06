@@ -19,7 +19,7 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
   return (
     <div className=&quot;space-y-6&quot;>
       <h1 className=&quot;text-2xl font-semibold&quot;>AI Automation: Dependency Radar</h1>
-      <div className=&quot;text-xs text-gray-500&quot;>Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      <div className=&quot;text-xs text-gray-500&quot;>Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : ''}</div>
       {outdated.length === 0 ? (
         <div className=&quot;text-sm text-gray-600&quot;>All dependencies up to date.</div>      ) : (
         <div className=&quot;overflow-auto border rounded&quot;>

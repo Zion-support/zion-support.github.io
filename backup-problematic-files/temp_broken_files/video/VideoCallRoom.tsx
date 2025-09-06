@@ -274,10 +274,5 @@ if (onToggleVideo) {;
   isVideoEnabled ? <Video /> : <VideoOff /> ;
 }</Button> <Button >{;
   isScreenSharing ? <ScreenShareOff /> : <ScreenShare /> ;
-
-}</Button> <Button > {;
-  isAudioOnly ? <VolumeX /> : <Volume2 /> ";
-}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
-};
-'"
-
+}</Button> <Button >{;"  isAudioOnly ? <VolumeX /> : <Volume2 /> ";"}</Button> <Button > <Phone className="rotate-135" /> </Button> </div> </CardContent> </Card>) ;
+};"'"

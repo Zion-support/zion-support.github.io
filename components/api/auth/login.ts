@@ -1,42 +1,42 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
+import {
+<<<<<<< HEAD
+  createSessionCookie
+  validateCredentials;
+=======
+<<<<<<< HEAD
+  createSessionCookie
+  validateCredentials;
+=======
+  createSessionCookie,;
+  validateCredentials,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+} from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });
   }
-
-  const { email, password, code } = req && req.body || {};
-  if (!email || !password || !code) {
-    return res && res.status(400).json({ error: 'Missing credentials' });
-
+  const { email, password, code } = req.body |{}
+  if (!email |!password |!code) {
+    return res.status(400).json({ error: 'Missing credentials' });
   }
 
   const result = validateCredentials(email, password, code);
-
-  const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
-
+  if (!result.ok |!result.role) {
+    return res.status(401).json({ error: 'Invalid credentials' });
+  }
+  const cookie = createSessionCookie({
+    email
+    role: result.role
+    twofaVerified: true
+  });
+  res.setHeader('Set-Cookie', cookie);
+  return res.status(200).json({ ok: true });  const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
   res.setHeader('Set-Cookie', cookie);
 
   return res.status(200).json({ ok: true })
-
-  if (!result && result.ok || !result && result.role) {
-    return res && res.status(401).json({ error: 'Invalid credentials' });
-  }
-  const cookie = createSessionCookie({
-    email,
-    role: result && result.role,
-    twofaVerified: true,
-  });
-  res && res.setHeader('Set-Cookie', cookie);
-  return res && res.status(200).json({ ok: true });  const cookie = createSessionCookie({ email, role: result && result.role, twofaVerified: true });
-  res && res.setHeader('Set-Cookie', cookie);
-  return res && res.status(200).json({ ok: true })
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   createSessionCookie,
   validate_credentials,
 } from '../../../utils / auth - utils';import { createSessionCookie, validate_credentials } from '../../../utils / auth - utils';
@@ -74,9 +74,3 @@ if ( {) {
   res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

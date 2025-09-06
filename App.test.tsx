@@ -1,22 +1,35 @@
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import { render, screen } from '@testing-library/react'
+import { describe, it, expect } from 'vitest'
+import App from './App'
+import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'./App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
+const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
 import React from 'react';
 
-
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByText('Hello App')).toBeInTheDocument();
   });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
-
+  it('displays correct content', () => {
+    render(<App />);
+  });
+  it('handles user interactions', () => {
+    render(<App />);
+  });
+});
   it('displays correct content', () => {
     render(<App />);
     // Add specific content assertions here
@@ -25,12 +38,16 @@ describe('App', () => {
     render(<App />);
     // Add interaction tests here
   });
-
-
-=======
 });
+<<<<<<< HEAD
+});
+});
+});
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
 
@@ -38,3 +55,6 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 });
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

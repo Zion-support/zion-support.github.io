@@ -161,7 +161,7 @@ export default function CategoryDetail() {;
         <div className="container mx-auto px-4 py-12">;
           <div className="mb-4">;
             <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">;
-              ← Back to Categories;
+               Back to Categories;
             </Link>;
           </div>;
           ;
@@ -306,7 +306,7 @@ setIsLoading (false)
 }) 
 }
 };
-return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto px-4 py-12" > <div className="mb-4" > <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center" > ← Back to Categories </Link> </div> {
+return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto px-4 py-12" > <div className="mb-4" > <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center" >  Back to Categories </Link> </div> {
   listings.map ( (listing) => (<ProductListingCard key= {
   listing.id 
 }listing= {

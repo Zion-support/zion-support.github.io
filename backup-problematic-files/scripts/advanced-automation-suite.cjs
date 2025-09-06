@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/advanced-automation-suite.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/advanced-automation-suite.cjs
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -551,6 +554,7 @@ console.log('⚡ Performance optimization completed!');
       fs.mkdirSync(path.dirname(resultsPath), { recursive: true });
     }
     fs.writeFileSync(resultsPath, JSON.stringify(this.results, null, 2));
+<<<<<<< HEAD:backup-problematic-files/scripts/advanced-automation-suite.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -567,6 +571,8 @@ automation.runAllAutomations().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/advanced-automation-suite.cjs
     this.log('\\n🎉 Advanced automation suite completed!');
   }
 }
@@ -611,6 +617,7 @@ async function main() {
 main().catch(console.error);
 // Run the automation suite
 const automation = new AdvancedAutomationSuite();
+<<<<<<< HEAD:backup-problematic-files/scripts/advanced-automation-suite.cjs
 <<<<<<< HEAD
 automation.runAllAutomations().catch(console.error);
 =======
@@ -624,3 +631,6 @@ automation.runAllAutomations().catch(console.error);
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+automation.runAllAutomations().catch(console.error);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/advanced-automation-suite.cjs

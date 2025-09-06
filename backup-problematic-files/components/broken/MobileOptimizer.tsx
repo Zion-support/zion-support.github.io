@@ -533,7 +533,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({;
                   onClick={() => setShowMobilePanel(false)}
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  ×
+                  
                 </button>
               </div>
 

@@ -57,7 +57,7 @@ value={query}
         aria-label=&quot;Search&quot;
       />
       <div className=&quot;absolute inset-y-0 right-2 flex items-center gap-2&quot;>
-        <button type=&quot;button&quot; onClick={startVoice} className=&quot;inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200&quot; aria-label=&quot;Voice search&quot;>🎤</button>
+        <button type=&quot;button&quot; onClick={startVoice} className=&quot;inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200&quot; aria-label=&quot;Voice search&quot;></button>
         <button type=&quot;submit&quot; className=&quot;text-sm font-medium text-indigo-600 hover:text-indigo-700&quot;>Search</button>
       </div>
       {open && suggestions.length > 0 && (

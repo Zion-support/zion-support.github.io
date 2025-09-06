@@ -1,21 +1,53 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react';
+=======
 
+=======
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',;
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Smartphone, CheckCircle, ExternalLink, Shield } from 'lucide-react',
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function MDMPage() {
   const features = [
-    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions']
   const pricing = [
-    { tier: 'SMB (up to 100 devices)', range: '$300–$1,000/month', note: 'Based on device count and features' },
-    { tier: 'Mid-market (100–1,000 devices)', range: '$1,000–$7,000/month', note: 'Advanced policies, integrations, support' };
+    { tier: 'SMB (up to 100 devices)', range: '$300$1,000/month', note: 'Based on device count and features' }
+    { tier: 'Mid-market (1001,000 devices)', range: '$1,000$7,000/month', note: 'Advanced policies, integrations, support' }
+    { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }]
+  const references = [
+    { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' }
+    { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' }
+    { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }]
+
+    'Zero-touch enrollment (Apple DEP/ABM, Android Zero-Touch)Device posture checks, compliance policies, and remediationApp management, OS updates, remote lock/wipe, geofencingIdentity integration (SAML/SCIM) and conditional accessKiosk/COPE/COBO support with granular restrictions'];
+
+  const pricing = [
+    { tier: 'SMB (up to 100 devices)', range: '$300$1,000/month', note: 'Based on device count and features' },
+    { tier: 'Mid-market (1001,000 devices)', range: '$1,000$7,000/month', note: 'Advanced policies, integrations, support' };
     { tier: 'Enterprise (1,000+ devices)', range: 'Custom', note: 'SLA, multi-tenant, dedicated support' }];
 
   const references = [
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
     { name: 'Jamf pricing', url: 'https://www.jamf.com/pricing/' },
     { name: 'VMware Workspace ONE pricing', url: 'https://www.vmware.com/products/workspace-one/pricing.html' }],
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -32,13 +64,20 @@ export default function MDMPage() {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Mobile Device Management (MDM)</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<<<<<<< HEAD
+              <a href="/contact" className="px-8 py-4">Talk to an Engineer</a>
+              <a href="/market-pricing" className="px-8 py-4">Market Pricing</a>
+=======
 
 
               <a href="/contact" className="px-8 py-4">Talk to an Engineer</Link>
               <a href="/market-pricing" className="px-8 py-4">Market Pricing</Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>
           </header>
           <section>
@@ -72,6 +111,10 @@ export default function MDMPage() {
                 <a key={r.name} href={r.url} target="_blank" rel="noopener noreferrer" className="px-4 py-3 rounded-xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 inline-flex items-center gap-2 text-cyan-300">
                   <ExternalLink className="w-4 h-4" />
                   <span>{r.name}</span>
+<<<<<<< HEAD
+                </a>
+              ))}
+=======
 
 
                 </Link>
@@ -80,12 +123,14 @@ export default function MDMPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>
           </section>
-
 
           <section className="text-center">
             <div className="inline-flex items-center justify-center gap-3 text-gray-300">
@@ -96,11 +141,9 @@ export default function MDMPage() {
         </div>
       </div>
     </Layout>
-
-=======
+<<<<<<< HEAD
+  )
 }
-
-=======
 import React from 'react',
 import Head from 'next / head',
 import Layout from '../components / layout / Layout',
@@ -113,8 +156,8 @@ function MDMPage() {
   const features = [;
     'Zero - touch enrollment (Apple DEP / ABM, Android Zero - Touch)Device posture checks, compliance policies, and remediation_app management, OS updates, remote lock / wipe, geofencing_identity integration (SAML / SCIM) and conditional access_kiosk / COPE / COBO support with granular restrictions'],
   const pricing = [;
-    { tier: 'SMB (up to 100 devices)', range: '$300–$1, 000 / month', note: 'Based on device count and features' },
-    { tier: 'Mid - market (100–1, 000 devices)', range: '$1, 000–$7, 000 / month', note: 'Advanced policies, integrations, support' },
+    { tier: 'SMB (up to 100 devices)', range: '$300$1, 000 / month', note: 'Based on device count and features' },
+    { tier: 'Mid - market (1001, 000 devices)', range: '$1, 000$7, 000 / month', note: 'Advanced policies, integrations, support' },
     { tier: 'Enterprise (1, 000+ devices)', range: 'Custom', note: 'SLA, multi - tenant, dedicated support' }],
   const references = [;
     { name: 'Microsoft Intune pricing', url: 'https://www.microsoft.com / en - us / security / business / microsoft - intune / pricing' },
@@ -182,9 +225,23 @@ function MDMPage() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

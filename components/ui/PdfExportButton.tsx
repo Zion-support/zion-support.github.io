@@ -1,15 +1,49 @@
 
-
+html2pdf () .set (opt) .from (element) .save ()
+}
+export default function PdfExportButton({
+  targetRef
+  fileName = 'resume.pdf'
+}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
+export type PdfExportButtonProps = {
+  targetRef: React.RefObject<HTMLDivElement>
+  fileName?: string;
+  theme?: 'light' | 'dark'
+}
+export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {
+    if (!targetRef.current) return;
+    const element = targetRef.current;
+    const html2pdf = (await import('html2pdf.js')).default;
+html2pdf () .set (opt) .from (element) .save ();
+}
+;
+export default /**
+ * PdfExportButton - Function description
+ */
+function PdfExportButton() {  const on_click = async () => {import React from 'react';
+export type PdfExportButtonProps = {
+  target_ref: React.RefObject < HTMLDivElement>,
+  file_name?: string;
+  theme?: 'light' | 'dark';
+}
+;
+export default /**
+ * PdfExportButton - Function description
+ */
+function PdfExportButton() {
+    // Check condition
+if (return) {
+  $2
+}
+    const element = target_ref.current;
+;
+    const html2pdf = (await import ('html2pdf.js')).default;
+;
     const opt = {
-
-      margin: [10, 10, 10, 10];
-      filename: fileName,
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-
+      margin: [10, 10, 10, 10]
+      image: { type: 'jpeg', quality: 0.98 }
+      html2canvas: { scale: 2, useCORS: true }
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -57,8 +91,11 @@ export default function PdfExportButton(): any ({ targetRef, fileName = 'resume 
       image: { type: 'jpeg', quality: 0 && 0.98 },;
       html2canvas: { scale: 2, useCORS: true },;
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     } as any;
+<<<<<<< HEAD
+    html2pdf().set(opt).from(element).save();
+  }
+=======
 
 
 html2pdf () .set (opt) .from (element) .save () 
@@ -66,30 +103,59 @@ html2pdf () .set (opt) .from (element) .save ()
 
 export default function PdfExportButton({
   targetRef,
+<<<<<<< HEAD
+  fileName = 'resume.pdf',
+}: PdfExportButtonProps) {  const onClick = async () => {
 
 
+=======
+  fileName = 'resume.pdf',;
+}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
+export type PdfExportButtonProps = {
+  targetRef: React.RefObject<HTMLDivElement>,;
+  fileName?: string;
+  theme?: 'light' | 'dark'
+};
+
+export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    if (!targetRef.current) return;
+    const element = targetRef.current;
+
+    const html2pdf = (await import('html2pdf.js')).default;
+
+    const opt = {
+      margin: [10, 10, 10, 10],
+
+      filename: fileName,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    } as any;
+
+    html2pdf().set(opt).from(element).save();
+  };
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       >
       Download as PDF
     </button>
-=======
-  };
-
-      >;
-      Download as PDF;
-    </button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }  return (
-
-
-
     <button
       onClick={onClick}
       className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
       aria-label="Download as PDF"
-
-
-=======
+      Download as PDF
+    </button>
+);
+}
+    >
+      Download as PDF
+    </button>
+  );
+}
 ;
     html2pdf ().set (opt).from (element).save ();
   }
@@ -105,12 +171,17 @@ export default function PdfExportButton({
       Download as PDF;
     </button>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
       Download as PDF
     </button>
 
   );
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

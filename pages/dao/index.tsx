@@ -1,6 +1,105 @@
+<<<<<<< HEAD
+import { useEffect, useState } from 'react';
 
+type Holder = { address: string, amount: string }
+type Metrics = {
+  updatedAt: number
+  tokenDistribution: { address: string, percent: number }[]
+  topHolders: Holder[]
+  activeProposals: any[]
+  governanceParticipationRate: number
+  cached?: boolean
+}
+export default function DaoMetrics() {
+  const [data, setData] = useState<Metrics | null>(null)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json)
+      setLoading(false)
+    }
+    load()
+  }, [])
+  if (loading) return <div>Loading...</div>
+  if (!data) return <div>Error loading data</div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useEffect, useState } from 'react',;
+;
+type Holder = { address: string, amount: string },
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useEffect, useState } from 'react';
+<<<<<<< HEAD
+
+type Holder = { address: string, amount: string }
+type Metrics = {
+  updatedAt: number
+  tokenDistribution: { address: string, percent: number }[]
+  topHolders: Holder[]
+  activeProposals: any[]
+  governanceParticipationRate: number
+  cached?: boolean
+}
+export default function DaoMetrics() {
+  const [data, setData] = useState<Metrics | null>(null)
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+    async function load() {
+      setLoading(true)
+      const resp = await fetch('/api/dao/metrics')
+      const json = await resp.json()
+      setData(json)
+      setLoading(false)
+    }
+    load()
+  }, [])
+  if (loading) return <div>Loading...</div>
+  if (!data) return <div>Error loading data</div>
+
+=======
+type Holder = { address: string, amount: string };
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+type Metrics = {
+  updatedAt: number;
+  tokenDistribution: { address: string, percent: number }[],;
+  topHolders: Holder[];
+  activeProposals: any[];
+  governanceParticipationRate: number;
+  cached?: boolean;
+},;
+export default function DaoMetrics(req, res) {
+  try {
+  const [data, setData] = useState<Metrics | null>(null);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      const resp = await fetch('/api/dao/metrics');
+      const json = await resp.json();
+      setData(json);
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    load()
+  }, []),
+  if (loading) return <div>Loading...</div>,
+  if (!data) return <div>Error loading data</div>,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -27,7 +126,6 @@
           </div>
         </div>
 
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -49,7 +147,6 @@
         </div>
       </section>
 
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -61,6 +158,9 @@
             </ul>
           ) : (
             <div className="text-sm text-gray-600">No active proposals.</div>
+<<<<<<< HEAD
+          )}
+=======
 
 
           )  } catch (error) {
@@ -68,9 +168,12 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -82,11 +185,9 @@
         </div>
       </section>
     </div>
-
-=======
+<<<<<<< HEAD
+  )
 }
-
-=======
 import { useEffect, useState } from 'react',
 ;
 type Holder = { address: string, amount: string },
@@ -189,9 +290,23 @@ if (return <div > Error loading data</div>, ) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

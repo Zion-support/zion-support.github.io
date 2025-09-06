@@ -80,7 +80,7 @@ export default function Revolutionary2026ServicesShowcase() {;
               <div className="text-gray-400 text-sm">Metaverse Services</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400">∞</div>
+              <div className="text-3xl font-bold text-green-400"></div>
               <div className="text-gray-400 text-sm">Possibilities</div>
             </div>
           </div>
@@ -367,9 +367,9 @@ export default function Revolutionary2026ServicesShowcase() {;
             <div className="mt-8 text-center">
               <p className="text-gray-400 text-sm mb-2">Contact Information</p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">
-                <span className="text-purple-300">📱 +1 302 464 0950</span>
-                <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>
-                <span className="text-purple-300">🌐 ziontechgroup.com</span>
+                <span className="text-purple-300"> +1 302 464 0950</span>
+                <span className="text-purple-300"> kleber@ziontechgroup.com</span>
+                <span className="text-purple-300"> ziontechgroup.com</span>
               </div>
             </div>
           </div>
@@ -406,9 +406,9 @@ export default function Revolutionary2026ServicesShowcase() {;
             <div className="mt-8 text-center">;
               <p className="text-gray-400 text-sm mb-2">Contact Information</p>;
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm">;
-                <span className="text-purple-300">📱 +1 302 464 0950</span>;
-                <span className="text-purple-300">✉️ kleber@ziontechgroup.com</span>;
-                <span className="text-purple-300">🌐 ziontechgroup.com</span>;
+                <span className="text-purple-300"> +1 302 464 0950</span>;
+                <span className="text-purple-300"> kleber@ziontechgroup.com</span>;
+                <span className="text-purple-300"> ziontechgroup.com</span>;
               </div>;
             </div>;
           </div>;

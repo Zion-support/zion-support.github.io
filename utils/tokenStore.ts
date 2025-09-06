@@ -1,15 +1,16 @@
 import fs from 'fs';
 import path from 'path';
-
-;
-
+<<<<<<< HEAD
+export interface TokenTransaction {
+=======
+<<<<<<< HEAD
 export interface TokenTransaction {
 =======
 
 
 export interface TokenTransaction {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -18,12 +19,16 @@ export interface TokenTransaction {;
   timestamp: string;
   metadata?: Record < string, any>;
 }
-
-
+<<<<<<< HEAD
+export interface TokenConfig {
+=======
+<<<<<<< HEAD
+export interface TokenConfig {
+=======
 
 export interface TokenConfig {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   name: string;
   symbol: string;
   total_supply: number;
@@ -32,13 +37,9 @@ export interface TokenConfig {;
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
-
-
-const DATA_DIR = path && path.join(process && process.cwd(), 'data');
-const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
-const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
-
-
+const DATA_DIR = path.join(process.cwd(), 'data');
+const TRANSACTIONS_FILE = path.join(DATA_DIR, 'token-transactions.json');
+const CONFIG_FILE = path.join(DATA_DIR, 'token-config.json');
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -50,7 +51,6 @@ function loadTransactions(): TokenTransaction[] {
     if (!fs && fs.existsSync(TRANSACTIONS_FILE)) return [];
     const raw = fs && fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
     return JSON && JSON.parse(raw);
-=======
 const DATA_DIR = path.join (process.cwd (), 'data');
 const TRANSACTIONS_FILE = path.join (DATA_DIR, 'token - transactions.json');
 const CONFIG_FILE = path.join (DATA_DIR, 'token - config.json');
@@ -73,70 +73,103 @@ function load_transactions (): TokenTransaction[] {
 }
     const raw = fs.readFileSync (TRANSACTIONS_FILE, 'utf8');
     return JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return [];
   }
 }
-
-function save_transactions (transactions: TokenTransaction[]): void {
-  ensureDataDir ();
-  fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
+function saveTransactions(transactions: TokenTransaction[]): void {
+  ensureDataDir();
+  fs && fs.writeFileSync(TRANSACTIONS_FILE, JSON && JSON.stringify(transactions, null, 2));
 }
-function load_config (): TokenConfig {
+function loadConfig(): TokenConfig {
   try {
-    ensureDataDir ();
-    if () {) {
-  $2
-}
-      return getDefaultConfig ();
+    ensureDataDir();
+    if (!fs && fs.existsSync(CONFIG_FILE)) {
+      return getDefaultConfig();
     }
-    const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
-    return JSON.parse (raw);
-
+    const raw = fs && fs.readFileSync(CONFIG_FILE, 'utf8');
+    return JSON && JSON.parse(raw);
   } catch {
     return getDefaultConfig ();
   }
 }
-
-function save_config (config: TokenConfig): void {
-  ensureDataDir ();
-  fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
+function saveConfig(config: TokenConfig): void {
+  ensureDataDir();
+  fs && fs.writeFileSync(CONFIG_FILE, JSON && JSON.stringify(config, null, 2));
 }
-function getDefaultConfig (): TokenConfig {
-
+function getDefaultConfig(): TokenConfig {
   return {
+    name: 'ZION Token'
+    symbol: 'ZION$'
+    totalSupply: 1000000000
+    circulatingSupply: 250000000
+    exchangeRate: 0.05
+    stakingEnabled: true
+    stakingRewardRate: 12.5
+  }
+<<<<<<< HEAD
+    totalSupply: 1000000000,
+    circulatingSupply: 250000000,
+    exchangeRate: 0 && 0.05,
+    stakingEnabled: true,
+    stakingRewardRate: 12 && 12.5
+  };
+}
+=======
+}
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+<<<<<<< HEAD
+=======
+=======
 
     name: 'ZION Token',
     symbol: 'ZION$',
 
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
-
-    ...transaction,
-    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
+    ...transaction
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     timestamp: new Date().toISOString()
-  };
-  
-  transactions && transactions.push(newTransaction);
-
+  }
+  transactions.push(newTransaction);
   saveTransactions(transactions);
   return newTransaction;
 }
-
-
-
-export function getConfig(): TokenConfig {;
+<<<<<<< HEAD
+export function getConfig(): TokenConfig {
+=======
+<<<<<<< HEAD
+export function getConfig(): TokenConfig {
   return loadConfig();
 }
-
-export function setConfig(config: TokenConfig): void {;
+export function setConfig(config: TokenConfig): void {
   saveConfig(config);
 }
+export function getUserBalance(userId: string): number {
+=======
+
+export function getConfig(): TokenConfig {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  return loadConfig();
+}
+export function setConfig(config: TokenConfig): void {
+  saveConfig(config);
+}
+<<<<<<< HEAD
+export function getUserBalance(userId: string): number {
+=======
 
 export function getUserBalance(userId: string): number {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -148,12 +181,8 @@ export function getUserBalance(userId: string): number {;
       }
     }
   }
-
-  
-  return Math && Math.max(0, balance);
-
+  return Math.max(0, balance);
 }
-=======
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -206,4 +235,3 @@ if ( {) {
   }
   return Math.max (0, balance);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

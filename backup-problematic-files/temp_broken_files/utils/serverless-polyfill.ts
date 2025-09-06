@@ -257,7 +257,6 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   step ( (generator = generator.apply (thisArg, arguments || []) ) .next () );
 });
 
-
 }
 };
 //Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
@@ -276,6 +275,4 @@ awaiter: function (thisArg: any, arguments: any, P: any, generator: any) {;
   return Object.values (checks) .every (Boolean);
 };
 
-  ;
-}, // Ensure this can be imported as a module'"
-
+  ;"}, // Ensure this can be imported as a module'"

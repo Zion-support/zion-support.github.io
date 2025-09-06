@@ -1,9 +1,17 @@
 
-
+<<<<<<< HEAD
+import { jsPDF } from 'jspdf';
+export interface FontConfig {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { jsPDF } from 'jspdf';
+export interface FontConfig {
+=======
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -32,12 +40,10 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
       default: doc && doc.setFont('helvetica')
     }
   } catch (error) {
-
-    console && console.error('Error loading custom fonts:', error);
+    console.error('Error loading custom fonts:', error);
 
     // Fall back to default font
     doc && doc.setFont('helvetica')
-=======
 import {jsPDF} from 'jspdf';
 export interface FontConfig {
   regular: ArrayBuffer;
@@ -73,11 +79,16 @@ if (return, ) {
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
+<<<<<<< HEAD
+    doc.set_font ('helvetica');
+=======
 
     doc.setFont('helvetica');
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

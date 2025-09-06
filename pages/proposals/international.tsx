@@ -1,6 +1,26 @@
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+import React, { useEffect, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+=======
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 type ProposalListItem = {
   id: string
   title: string
@@ -9,12 +29,7 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
-
-=======
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components / layout / EnhancedLayout',
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
 type ProposalListItem = {
   id: string,
   title: string,
@@ -22,25 +37,19 @@ type ProposalListItem = {
   regional_scope: string,
   type: string,
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
+  createdAt: string
+};
 
-
-},
 export default function InternationalProposalsPage() {
-  const [items, setItems] = useState<ProposalListItem[]>([]),
-  const [filter, setFilter] = useState('All'),
-
-  useEffect__(() => {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const [items, setItems] = useState<ProposalListItem[]>([])
+  const [filter, setFilter] = useState('All')
+  useEffect(() => {
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
-
-
-  }, []),
+  }, [])
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
-
 
   return (
     <EnhancedLayout>
@@ -62,18 +71,20 @@ export default function InternationalProposalsPage() {
             <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
               <div>
                 <div className="font-medium">{i.title}</div>
-                <div className="text-sm text-gray-600">{i.targetInstitution} • {i.type} • {i.regionalScope}</div>
+                <div className="text-sm text-gray-600">{i.targetInstitution}  {i.type}  {i.regionalScope}</div>
                 <div className="text-xs text-gray-500">Created {new Date(i.createdAt).toLocaleString()}</div>
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
-
-
-                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</Link>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</Link>
-                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</Link>
+                <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</a>
+                <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</a>
+                <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
               </div>
             </div>
+<<<<<<< HEAD
+          ))}
+          {filtered.length === 0 && <div className="p-4 text-sm text-gray-600">No proposals yet.</div>}
+=======
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -84,18 +95,19 @@ export default function InternationalProposalsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-
-=======
+<<<<<<< HEAD
+  )
 }
-
-=======
   created_at: string;
 },
 export default /**
@@ -131,7 +143,7 @@ function InternationalProposalsPage() {
             <div key={i.id} className="p - 4 flex flex - col md:flex - row md:items - center md:justify - between gap - 2">;
               <div>;
                 <div className="font - medium">{i.title}</div>;
-                <div className="text - sm text - gray - 600">{i.target_institution} • {i.type} • {i.regional_scope}</div>;
+                <div className="text - sm text - gray - 600">{i.target_institution}  {i.type}  {i.regional_scope}</div>;
                 <div className="text - xs text - gray - 500">Created {new Date (i.created_at).toLocaleString ()}</div>;
               </div>;
               <div className="flex items - center gap - 4 text - sm">;
@@ -147,9 +159,23 @@ function InternationalProposalsPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

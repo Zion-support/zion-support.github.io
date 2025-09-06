@@ -94,7 +94,7 @@ aria-label="Dismiss"
               className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"              onClick={_() => { localStorage.setItem('smartBannerDismissed', _'1'); setVisible(false)}}
               className="text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
             >
-              ✕
+              
             </button>
           </div>
         </div>
@@ -149,7 +149,7 @@ const [idx, setIdx] = useState(0),
   return (
     <EnhancedLayout>
       <Head>
-        <title>Zion Mobile App — iOS & Android</title>
+        <title>Zion Mobile App  iOS & Android</title>
         <meta name=&quot;description&quot; content=&quot;Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app.&quot; />
         <link rel=&quot;canonical&quot; href=&quot;/download&quot; />
         <meta property=&quot;og:title&quot; content=&quot;Zion Mobile App&quot; />
@@ -179,7 +179,7 @@ const [idx, setIdx] = useState(0),
                   <div className=&quot;text-xs font-semibold&quot;>Zion</div>
                   <div className=&quot;mt-2 flex-1 rounded-xl bg-white shadow-inner p-3&quot;>
                     <div className=&quot;font-semibold&quot;>Instant AI Matches</div>
-                    <div className=&quot;mt-2 text-xs text-gray-600&quot;>Top candidates matched to your role in seconds…</div>
+                    <div className=&quot;mt-2 text-xs text-gray-600&quot;>Top candidates matched to your role in seconds</div>
                     <div className=&quot;mt-3 h-28 rounded-md bg-gradient-to-br from-indigo-100 to-purple-100&quot; />
                     <div className=&quot;mt-3 grid grid-cols-3 gap-2&quot;>
                       <div className=&quot;h-10 rounded-md bg-gray-100&quot; />
@@ -231,8 +231,8 @@ const [idx, setIdx] = useState(0),
             {testimonials.map((t) => (
               <div key={t.name} className=&quot;w-full md:w-1/3 flex-shrink-0 pr-4&quot;>
                 <div className=&quot;rounded-2xl border border-gray-200 dark:border-gray-800 p-5 bg-white dark:bg-gray-950 h-full&quot;>
-                  <p className=&quot;text-sm&quot;>“{t.quote}”</p>
-                  <div className=&quot;mt-3 text-xs opacity-80&quot;>{t.name} • {t.role}</div>                </div>
+                  <p className=&quot;text-sm&quot;>{t.quote}</p>
+                  <div className=&quot;mt-3 text-xs opacity-80&quot;>{t.name}  {t.role}</div>                </div>
               </div>
             ))}
           </div>;
@@ -242,7 +242,7 @@ const [idx, setIdx] = useState(0),
       {/* Email opt-in */}
       <section className=&quot;mt-12 rounded-3xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950&quot;>
         <h3 className=&quot;text-lg font-semibold&quot;>Get early access to new features</h3>
-        <p className=&quot;mt-1 text-sm opacity-80&quot;>Join the list and we’ll let you know when new capabilities drop.</p>
+        <p className=&quot;mt-1 text-sm opacity-80&quot;>Join the list and well let you know when new capabilities drop.</p>
         <form onSubmit={handleSubmit} className=&quot;mt-4 flex flex-col sm:flex-row gap-3&quot;>          <input,
 type=&quot;email&quot;
             required,
@@ -255,23 +255,23 @@ value={email}
 type=&quot;submit&quot;
             disabled={status === 'loading'}
             className=&quot;rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60&quot;          >
-            {status === 'loading' ? 'Submitting…' : 'Notify me'}
+            {status === 'loading' ? 'Submitting' : 'Notify me'}
           </button>
         </form>
-        {status === 'success' && <div className=&quot;mt-2 text-sm text-emerald-600&quot;>Thanks! You’re on the list.</div>}
+        {status === 'success' && <div className=&quot;mt-2 text-sm text-emerald-600&quot;>Thanks! Youre on the list.</div>}
         {status === 'error' && <div className=&quot;mt-2 text-sm text-rose-600&quot;>{error || 'Please try again later.'}</div>}
       </section>
 
       {/* Helper links */}
       <section className=&quot;mt-10 text-sm opacity-80&quot;>
         <div className=&quot;flex flex-wrap items-center gap-4&quot;>
-          <Link href=&quot;/open-app&quot;><a className=&quot;underline&quot;>Deep link: /open-app</a></a>          <span>•</span>
+          <Link href=&quot;/open-app&quot;><a className=&quot;underline&quot;>Deep link: /open-app</a></a>          <span></span>
           <Link href=&quot;/download&quot;><a className=&quot;underline&quot;>Shareable link: /download</a></a>
         </div>
       </section>
     </EnhancedLayout>
   )}
-}return (<EnhancedLayout> <Head> <title>Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {
+}return (<EnhancedLayout> <Head> <title>Zion Mobile App  iOS & Android</title> <meta name="description" content="Hire from anywhere, AI-match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI-match instantly. Track milestones on the go." /> </Head> <SmartBanner iosUrl= {
   IOS APP URL 
 }androidUrl= {
   ANDROID APP URL 
@@ -282,6 +282,6 @@ type=&quot;submit&quot;
 }/>) ) 
 }<span className="text-sm opacity-80" >4.9 average rating</span> </div> </div> </div>) ) 
 }</div> </div> </section> <input type="email" required > {
-  status === 'loading' ? 'Submitting…' : 'Notify me' 
-}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) 
+  status === 'loading' ? 'Submitting' : 'Notify me' 
+}</button> </form> <span></span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) 
 }

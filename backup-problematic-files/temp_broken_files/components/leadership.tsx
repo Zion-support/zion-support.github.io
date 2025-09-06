@@ -19,7 +19,7 @@ export default function LeadershipPage() {
 						<h2 className=&quot;text-white text-xl font-semibold mb-2&quot;>Advisors</h2>
 						<p className=&quot;text-slate-300&quot;>Advisors from cloud, security, data, and venture ecosystems.</p>					</div>
 				</div>
-				<div className=&quot;mt-10 text-slate-300&quot;>Contact: <a className=&quot;text-cyan-400&quot; href=&quot;mailto:kleber@ziontechgroup.com&quot;>kleber@ziontechgroup.com</a> • <a className=&quot;text-cyan-400&quot; href=&quot;tel:+13024640950&quot;>+1 302 464 0950</a></div>
+				<div className=&quot;mt-10 text-slate-300&quot;>Contact: <a className=&quot;text-cyan-400&quot; href=&quot;mailto:kleber@ziontechgroup.com&quot;>kleber@ziontechgroup.com</a>  <a className=&quot;text-cyan-400&quot; href=&quot;tel:+13024640950&quot;>+1 302 464 0950</a></div>
 			</div>
 		</div>
 	)

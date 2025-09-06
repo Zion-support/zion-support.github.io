@@ -1,15 +1,9 @@
-
-
-
-=======
-
-=======
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import { Footer } from '@/components/Footer'
 import React from 'react'';
 import { Outlet } from 'react-router-dom'';
 import { Footer } from '@/components/Footer';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -23,12 +17,9 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 				{children ?? <Outlet />}
 			</main>
 			{!hideFooter && <Footer />}
-
-
 		</div>
 	)
 }
-=======
 import React from "react";
 
 interface AppLayoutProps {
@@ -45,14 +36,6 @@ export function AppLayout({ children }: AppLayoutProps) {
     </div>
   );
 }
->>>>>>> origin/chore/build-fixes-and-slim-app
-
-=======
-
-=======
 		</div>;
 	);
 }'"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-

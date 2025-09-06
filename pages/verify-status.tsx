@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
@@ -54,15 +58,18 @@ export default function VerifyStatus() {
     setMessage(''),
 
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
+import { AuthLayout } from '@/layout';
 
-
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
+import { AuthLayout } from '@/layout';
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -70,35 +77,38 @@ export default function VerifyStatus() {
 
   const router = useRouter()
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
-
-  const { email: emailParam } = router.query,
-=======
-import { supabase } from '@/integrations/supabase/client', // Import Supabase client;
-import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state;
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
-export default function VerifyStatus(req, res) {
-  try {
-  const router = useRouter();
-  const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext;
-  const { email: emailParam } = router.query;
-
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [isResending, setIsResending] = useState(false);
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
-  const [countdown, setCountdown] = useState(0);
-
-
+  const { email: emailParam } = router.query
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [error, setError] = useState('')
+  const [isResending, setIsResending] = useState(false)
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false)
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null)
+  const [countdown, setCountdown] = useState(0)
+  useEffect(() => {
+    if (typeof emailParam === 'string') {
+      setEmail(emailParam)
+    }
+  }, [emailParam])
+  // Countdown timer for resend button
+  useEffect(() => {
+    let interval: NodeJS.Timeout
+    let interval: NodeJS.Timeout,
     if (countdown > 0) {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1)
       }, 1000)
     }
     return () => clearInterval(interval)
+  }, [countdown])
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address')
+  }, [countdown]);
 
-
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address');
       return
     }
     setIsResending(true)
@@ -106,22 +116,17 @@ export default function VerifyStatus(req, res) {
     setMessage('')
     try {
       const response = await fetch('/api/resend-verification-email', {
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ email })
-      });
-
-      const data = await response.json();
-
+      })
+      const data = await response.json()
       if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.');
-        setLastSentTime(new Date());
-
+        setMessage('Verification email sent successfully! Please check your inbox.')
+        setLastSentTime(new Date())
         setCountdown(60), // 60 second cooldown
       } else {
         setError(data.message |'Failed to resend verification email')
-=======
 import { useState, useEffect } from 'react',
 import { use_router } from 'next / router',
 import { Input } from '@/components / ui / input',
@@ -195,17 +200,17 @@ if ( {) {
         set_countdown (60), // 60 second cooldown;
       } else {
         set_error (data.message || 'Failed to resend verification email');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (err) {
       set_error ('Network error. Please try again.');
     } finally {
-
-      setIsResending (false);
-
+      setIsResending(false)
     }
-
-
+  }
+  const handleCheckStatus = async () => {
+    if (!email) {
+      setError('Please enter your email address');
+      setError('Please enter your email address')
       return
     }
     setIsCheckingStatus(true)
@@ -213,8 +218,12 @@ if ( {) {
     setMessage('')
     try {
       // Attempt to refresh the session to get the latest user status
-
-
+      const { error: refreshError } = await supabase.auth.refreshSession()
+      if (refreshError) {
+        // Don't treat all refresh errors as critical for this check
+      const { error: refreshError } = await supabase.auth.refreshSession(),
+      if (refreshError) {
+        // Don't treat all refresh errors as critical for this check;
         // as user might not have a session yet or it might be invalid.
         logWarn('Error during session refresh:', { data: refreshError.message })
       }
@@ -245,6 +254,10 @@ if ( {) {
     } catch (err: any) {
       logErrorToProduction('Error checking verification status:', { data: err })
       setError('An unexpected error occurred while checking status. Please try again.')
+<<<<<<< HEAD
+    } finally {
+      setIsCheckingStatus(false)
+=======
 
 =======
   },
@@ -289,7 +302,10 @@ if ( {) {
     setIsResending(true);
     setError('');
     setMessage('');
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -311,69 +327,41 @@ if ( {) {
 }
       set_error ('Please enter your email address'),
       return;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
-    setIsCheckingStatus (true),
-    set_error (''),
-    set_message (''),
-    try {
-      // Attempt to refresh the session to get the latest user status;
-      const { error: refresh_error } = await supabase.auth.refresh_session (),
-      // Check condition
-if ( {) {
-  $2
-}
-        // Don't treat all refresh errors as critical for this check,
-        // as user might not have a session yet or it might be invalid.;
-        log_warn ('Error during session refresh:', { data: refresh_error.message });
-      }
-      // Get the current user details from Supabase;
-      const { data: { user }, error: getUserError } = await supabase.auth.get_user (),
-      // Check condition
-if ( {) {
-  $2
-}
-        set_error (`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
-        setIsCheckingStatus (false),
-        return;
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        set_message ('Email is verified! Redirecting to login...'),
-        // The onAuthStateChange listener in AuthProvider should ideally handle redirection.;
-        // But we can also push them to login page directly.;
-        set_timeout (() => {
-          router.push (`/auth / login?email=${encodeURIComponent (email)}`);
-        }, 2000);
-      } else // Check condition
-if ( {) {
-  $2
-}
-        set_message ('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.'),
-        set_message ('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.'),
-        set_error (''), // Clear previous errors;
-      } else {
-        // This case means there's no active user session found by Supabase client.;
-        // This is expected if they haven't clicked the link from a different browser / device context yet.;
-        set_message ('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.'),
-        set_error ('');
-      }
-    } catch (err: any) {
-      logErrorToProduction ('Error checking verification status:', { data: err }),
-      set_error ('An unexpected error occurred while checking status. Please try again.');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  };
+
     } finally {
       setIsCheckingStatus (false);
     }
+  }
+  const handleTryLogin = () => {
+    router.push(`/auth/login?email=${encodeURIComponent(email)}`)
+  }
+  const handleGoBack = () => {
+    router.back()
+  };
 
+  return (
+    <AuthLayout>
+      <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-6">
+  }
 
+  },
+  const handleTryLogin = () =>: any {
+    router.push (`/auth / login?email=${encodeURIComponent (email)}`);
+  },
+  const handleGoBack = () =>: any {
+    router.back ();
+  },
   return (
     <AuthLayout>;
       <div className="flex min - h-screen items - center justify - center p - 4">;
         <div className="w - full max - w-md space - y-6">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {/* Header */}
+<<<<<<< HEAD
+=======
 
 
           {/* Header */  } catch (error) {
@@ -381,9 +369,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -393,6 +384,9 @@ if ( {) {
               Check and manage your email verification status
             </p>
           </div>
+<<<<<<< HEAD
+          {/* Success Message */}
+=======
 
 
           {/* Success Message */  } catch (error) {
@@ -400,35 +394,29 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>{message}</AlertDescription>
             </Alert>
-
-
-          )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Error Message */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
+          )}
+          {/* Error Message */}
           {error && (
             <Alert variant="destructive">
               <AlertCircle className="h-4 w-4" />
               <AlertDescription>{error}</AlertDescription>
             </Alert>
+          )}
 
+<<<<<<< HEAD
+          {/* Email Input */}
+=======
 
           )  } catch (error) {
     console.error("Error:", error);
@@ -441,9 +429,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -451,30 +442,6 @@ if ( {) {
             <Input
               id="email"
               type="email"
-
-=======
-          <div className="text - center">;
-            <div className="mx - auto h - 12 w - 12 bg - blue - 100 rounded - full flex items - center justify - center mb - 4">;
-              <Mail className="h - 6 w - 6 text - blue - 600" />;
-            </div>;
-            <h1 className="text - 2xl font - bold text - gray - 900">Email Verification</h1>;
-            <p className="text - sm text - gray - 600 mt - 2">;
-              Check and manage your email verification status;
-            </p>;
-          </div>;
-          {/* Success Message */}
-          {message && (
-            <Alert className="border - green - 500 bg - green - 50 text - green - 900">;
-              <CheckCircle className="h - 4 w - 4" />;
-              <AlertDescription>{message}</AlertDescription>;
-            </Alert>)}
-          {/* Error Message */}
-          {error && (
-            <Alert variant="destructive">;
-              <AlertCircle className="h - 4 w - 4" />;
-              <AlertDescription>{error}</AlertDescription>;
-            </Alert>)}
-
           {/* Email Input */}
           <div className="space - y-2">;
             <label html_for="email" className="block text - sm font - medium text - gray - 700">;
@@ -483,12 +450,13 @@ if ( {) {
             <Input;
               id="email";
               type="email";
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               value={email}
               on_change={(e) => set_email (e.target.value)}
               placeholder="Enter your email address";
               className="w - full";
             />;
+<<<<<<< HEAD
+=======
 =======
 
               value={email  } catch (error) {
@@ -501,20 +469,25 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               placeholder="Enter your email address"
               className="w-full"
             />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {email && (
-
-              <p className="text - xs text - gray - 500">;
-                We'll check the verification status for this email address;
-              </p>)}
-          </div>;
-
+              <p className="text-xs text-gray-500">
+                We'll check the verification status for this email address
+              </p>
+            )}
+          </div>
           {/* Status Info */}
+<<<<<<< HEAD
+=======
 =======
 
             )  } catch (error) {
@@ -528,27 +501,49 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {email && (
-
-            <div className="bg - blue - 50 dark:bg - slate - 800 border border - blue - 200 dark:border - slate - 700 rounded - lg p - 4">;
-              <h3 className="text - sm font - medium text - slate - 900 dark:text - slate - 100 mb - 2">Verification Status</h3>;
-              <div className="text - sm text - slate - 700 dark:text - slate - 300 space - y-1">;
-                <p>• Check your email inbox for a verification link</p>;
-                <p>• Click the link in the email to verify your account</p>;
-                <p>• Return here or try logging in after verification</p>;
-              </div>;
+            <div className="bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4">
+              <h3 className="text-sm font-medium text-slate-900 dark:text-slate-100 mb-2">Verification Status</h3>
+              <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
+                <p> Check your email inbox for a verification link</p>
+                <p> Click the link in the email to verify your account</p>
+                <p> Return here or try logging in after verification</p>
+              </div>
               {lastSentTime && (
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 flex items-center">
+                  <Clock className="h-3 w-3 mr-1" />
+                  Last email sent: {lastSentTime.toLocaleTimeString()}
+                </p>
+              )}
+            </div>
+          )}
 
+<<<<<<< HEAD
+          {/* Action Buttons */}
+          <div className="space-y-3">
+          {/* Action Buttons */}
+          <div className="space - y-3">;
             {/* Check Status Button */}
-
-
+            <Button
+              onClick={handleCheckStatus}
+              disabled={!email || isCheckingStatus}
+              disabled={!email |isCheckingStatus}
+=======
+            {/* Check Status Button */}
+            <Button
+              onClick={handleCheckStatus}
+<<<<<<< HEAD
+              disabled={!email |isCheckingStatus}
 =======
 
               disabled={!email || isCheckingStatus}
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
@@ -590,10 +585,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="w-full"
               variant="outline"
             >
@@ -607,12 +604,25 @@ if ( {) {
                   <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+              )}
+            </Button>
+            {/* Resend Email Button */}
+            <Button
+              onClick={handleResendEmail}
+<<<<<<< HEAD
+              disabled={!email || isResending || countdown > 0}
+              disabled={!email |isResending |countdown > 0}
+=======
+<<<<<<< HEAD
+              disabled={!email |isResending |countdown > 0}
 =======
 
               disabled={!email || isResending || countdown > 0}
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
               )  } catch (error) {
     console.error("Error:", error);
@@ -636,10 +646,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="w-full"
               variant="secondary"
             >
@@ -658,8 +670,10 @@ if ( {) {
                   <Mail className="h-4 w-4 mr-2" />
                   Resend Verification Email
                 </>
-
+              )}
+            </Button>
             <Button;
+<<<<<<< HEAD
               on_click={handleCheckStatus}
               disabled={!email || isCheckingStatus}
               className="w - full";
@@ -696,19 +710,35 @@ if ( {) {
                   Resend Verification Email;
                 </>)}
             </Button>;
-
             {/* Try Login Button */}
             <Button;
               on_click={handleTryLogin}
               disabled={!email}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              onClick={handleTryLogin  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              disabled={!email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="w-full"
             >
               Try Login
             </Button>
           </div>
+<<<<<<< HEAD
+          {/* Help Text */}
+=======
 
 
           {/* Help Text */  } catch (error) {
@@ -716,14 +746,20 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
+<<<<<<< HEAD
+              onClick={handleGoBack}
+=======
 
 
               onClick={handleGoBack  } catch (error) {
@@ -731,9 +767,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -742,29 +781,32 @@ if ( {) {
               Go Back
             </Button>
           </div>
-
-
-          {/* Additional Options */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+          {/* Additional Options */}
           <div className="border-t pt-4 space-y-2">
             <Button
+<<<<<<< HEAD
+              onClick={() => router.push('/signup')}
+=======
               onClick={() => router.push('/signup')  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               variant="ghost"
               className="w-full text-sm"
             >
               Use Different Email Address
             </Button>
             <Button
+<<<<<<< HEAD
+              onClick={() => router.push('/contact')}
+=======
 
 
               onClick={() => router.push('/contact')  } catch (error) {
@@ -772,9 +814,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               variant="ghost"
               className="w-full text-sm"
             >
@@ -785,11 +830,14 @@ if ( {) {
       </div>
     </AuthLayout>
   )
-
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
-
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+}
               className="w - full";
             >;
               Try Login;
@@ -831,20 +879,25 @@ if ( {) {
       </div>;
     </AuthLayout>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 };
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
+<<<<<<< HEAD
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

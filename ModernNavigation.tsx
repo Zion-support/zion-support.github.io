@@ -1,30 +1,13 @@
-
-import React from './react';
-;
-
+import React from "react";
 interface ModernNavigationProps {
   class_name?: string;
 }
-
-
-export default function ModernNavigation() {
-
-=======
-interface ModernNavigationProps {
-
-
-=======
-  className?: string;
-}
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>
     </div>
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -58,9 +41,7 @@ export default function ModernNavigation(): any ({}: ModernNavigationProps) {;
       <h1>ModernNavigation</h1>;
       <p>This component is currently under development.</p>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-
 export default /**
  * ModernNavigation - Function description
  */
@@ -70,18 +51,4 @@ function ModernNavigation() {
       <h1 > ModernNavigation</h1>;
       <p > This component is currently under development.</p>;
     </div>);
-
 }
-=======
-
-
-
-=======
-
-
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:pages_backup_conflicts/docs.tsx
-=======
-}
->>>>>>> origin/main
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

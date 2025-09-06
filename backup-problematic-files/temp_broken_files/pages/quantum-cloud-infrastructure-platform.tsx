@@ -12,7 +12,7 @@ export default function QuantumCloudInfrastructurePlatformPage() {;
 			</Head>;
 			<ServiceLanding;
 				title="Quantum Cloud Infrastructure Platform";
-				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.";
+				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliancedelivered as managed foundations.";
 				subtitle="Next-gen compute for critical workloads";
 				pricePerMonthUSD={28999}
 				implementationWeeks="1-2 weeks";

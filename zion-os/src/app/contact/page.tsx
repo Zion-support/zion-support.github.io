@@ -1,197 +1,190 @@
-
-import Link from 'next/link';
-export default function ContactPage() {
-
+import Link from 'next / link';
+export default /**
+ * ContactPage - Function description
+ */
+function ContactPage() {
   return (
-    <div className="min-h-screen bg-white">
-
-
+    <div className=&quot;min - h-screen bg - white & quot;>;
       {/* Hero Section */}
-
-      <section className=&quot;bg - gradient - to - r from - indigo - 600 to - purple - 700 text - white py - 20 & quot;>;
-        <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center & quot;>;
-          <h1 className=&quot;text - 4xl md:text - 6xl font - bold mb - 6&quot;>;
-            Get in Touch;
-          </h1>;
-          <p className=&quot;text - xl md:text - 2xl text - indigo - 100 max - w-3xl mx - auto & quot;>;
-            Ready to transform your business? Let's discuss how our AI - powered solutions can drive your success.;
-          </p>;
-        </div>;
-      </section>;
-
+      <section className=&quot;bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20&quot;>
+        <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center&quot;>
+          <h1 className=&quot;text-4xl md:text-6xl font-bold mb-6&quot;>
+            Get in Touch
+          </h1>
+          <p className=&quot;text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto&quot;>
+            Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
+          </p>
+        </div>
+      </section>
       {/* Contact Form & Info */}
       <section className=&quot;py - 20 & quot;>;
         <div className=&quot;max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8&quot;>;
           <div className=&quot;grid grid - cols - 1 lg:grid - cols - 2 gap - 12 & quot;>;
             {/* Contact Form */}
-
-            <div className=&quot;bg - gray - 50 p - 8 rounded - xl & quot;>;
-              <h2 className=&quot;text - 2xl font - bold text - gray - 900 mb - 6&quot;>Send us a Message</h2>;
-              <form className=&quot;space - y-6 & quot;>;
-                <div className=&quot;grid grid - cols - 1 md:grid - cols - 2 gap - 6&quot;>;
-                  <div>;
-                    <label html_for=&quot;first_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                      First Name *;
-                    </label>;
-                    <input;
-                      type=&quot;text & quot;
-                      id=&quot;first_name & quot;
-                      name=&quot;first_name & quot;
-                      required;
-                      className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                      placeholder=&quot;Enter your first name & quot;
-                    />;
-                  </div>;
-                  <div>;
-                    <label html_for=&quot;last_name & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                      Last Name *;
-                    </label>;
-                    <input;
-                      type=&quot;text & quot;
-                      id=&quot;last_name & quot;
-                      name=&quot;last_name & quot;
-                      required;
-                      className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                      placeholder=&quot;Enter your last name & quot;
-                    />;
-                  </div>;
-                </div>;
-                <div>;
-                  <label html_for=&quot;email & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Email Address *;
-                  </label>;
-                  <input;
-                    type=&quot;email & quot;
-                    id=&quot;email & quot;
-                    name=&quot;email & quot;
-                    required;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your email address & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;company & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Company;
-                  </label>;
-                  <input;
-                    type=&quot;text & quot;
-                    id=&quot;company & quot;
-                    name=&quot;company & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your company name & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;phone & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Phone Number;
-                  </label>;
-                  <input;
-                    type=&quot;tel & quot;
-                    id=&quot;phone & quot;
-                    name=&quot;phone & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                    placeholder=&quot;Enter your phone number & quot;
-                  />;
-                </div>;
-                <div>;
-                  <label html_for=&quot;service & quot; className=&quot;block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Service of Interest;
-                  </label>;
-                  <select;
-                    id=&quot;service & quot;
-                    name=&quot;service & quot;
-                    className=&quot;w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
-                  >;
-                    <option value="&quot;>Select a service</option>;
-                    <option value=&quot;ai - automation & quot;>AI & Automation</option>;
-                    <option value=&quot;cybersecurity & quot;>Cybersecurity</option>;
-                    <option value=&quot;it - infrastructure & quot;>IT Infrastructure</option>;
-                    <option value=&quot;research - development & quot;>Research & Development</option>;
-                    <option value=&quot;quantum - computing & quot;>Quantum Computing</option>;
-                    <option value=&quot;other & quot;>Other</option>;
-                  </select>;
-                </div>;
-                <div>;
-                  <label html_for=&quot;message" className="block text - sm font - medium text - gray - 700 mb - 2&quot;>;
-                    Message *;
-                  </label>;
-                  <textarea;
-                    id=&quot;message & quot;
-                    name=&quot;message";
-
+            <div className=&quot;bg-gray-50 p-8 rounded-xl&quot;>
+              <h2 className=&quot;text-2xl font-bold text-gray-900 mb-6&quot;>Send us a Message</h2>
+              <form className=&quot;space-y-6&quot;>
+                <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-6&quot;>
+                  <div>
+                    <label htmlFor=&quot;firstName&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
+                      First Name *
+                    </label>
+                    <input
+                      type=&quot;text&quot;
+                      id=&quot;firstName&quot;
+                      name=&quot;firstName&quot;
+                      required
+                      className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                      placeholder=&quot;Enter your first name&quot;
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor=&quot;lastName&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
+                      Last Name *
+                    </label>
+                    <input
+                      type=&quot;text&quot;
+                      id=&quot;lastName&quot;
+                      name=&quot;lastName&quot;
+                      required
+                      className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                      placeholder=&quot;Enter your last name&quot;
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
+                    Email Address *
+                  </label>
+                  <input
+                    type=&quot;email&quot;
+                    id=&quot;email&quot;
+                    name=&quot;email&quot;
+                    required
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                    placeholder=&quot;Enter your email address&quot;
+                  />
+                </div>
+                <div>
+                  <label htmlFor=&quot;company&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
+                    Company
+                  </label>
+                  <input
+                    type=&quot;text&quot;
+                    id=&quot;company&quot;
+                    name=&quot;company&quot;
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                    placeholder=&quot;Enter your company name&quot;
+                  />
+                </div>
+                <div>
+                  <label htmlFor=&quot;phone&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
+                    Phone Number
+                  </label>
+                  <input
+                    type=&quot;tel&quot;
+                    id=&quot;phone&quot;
+                    name=&quot;phone&quot;
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                    placeholder=&quot;Enter your phone number&quot;
+                  />
+                </div>
+                <div>
+                  <label htmlFor=&quot;service&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
+                    Service of Interest
+                  </label>
+                  <select
+                    id=&quot;service&quot;
+                    name=&quot;service&quot;
+                    className=&quot;w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent&quot;
+                  >
+                    <option value="&quot;>Select a service</option>
+                    <option value=&quot;ai-automation&quot;>AI & Automation</option>
+                    <option value=&quot;cybersecurity&quot;>Cybersecurity</option>
+                    <option value=&quot;it-infrastructure&quot;>IT Infrastructure</option>
+                    <option value=&quot;research-development&quot;>Research & Development</option>
+                    <option value=&quot;quantum-computing&quot;>Quantum Computing</option>
+                    <option value=&quot;other&quot;>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor=&quot;message" className="block text-sm font-medium text-gray-700 mb-2&quot;>
+                    Message *
+                  </label>
+                  <textarea
+                    id=&quot;message&quot;
+                    name=&quot;message"
                     rows={5}
                     required;
                     className="w - full px - 4 py - 3 border border - gray - 300 rounded - lg focus:ring - 2 focus:ring - blue - 500 focus:border - transparent & quot;
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
-
-                  ></textarea>;
-                </div>;
-                <button;
-                  type=&quot;submit";
-                  className="w - full bg - blue - 600 text - white py - 3 px - 6 rounded - lg font - semibold hover:bg - blue - 700 transition - colors";
-                >;
-                  Send Message;
-                </button>;
-              </form>;
-            </div>;
+                  ></textarea>
+                </div>
+                <button
+                  type=&quot;submit"
+                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
             {/* Contact Information */}
-            <div className="space - y-8">;
-              <div>;
-                <h2 className="text - 2xl font - bold text - gray - 900 mb - 6">Contact Information</h2>;
-                <p className="text - lg text - gray - 600 mb - 8">;
-                  We're here to help you succeed. Reach out to us through any of the channels below.;
-                </p>;
-              </div>;
-              <div className="space - y-6">;
-                <div className="flex items - start space - x-4">;
-                  <div className="w - 12 h - 12 bg - blue - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;
-                    <svg className="w - 6 h - 6 text - blue - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M3 5a2 2 0 012 - 2h3.28a1 1 0 01.554.89l - 1.363 12a1 1 0 01-.554.89H5a2 2 0 01 - 2-2V5zM16 12V5a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v7m16 0a2 2 0 012 2v3a2 2 0 01 - 2 2H4a2 2 0 01 - 2-2v - 3a2 2 0 012 - 2h16z" />;
-                    </svg>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Office Address</h3>;
-                    <p className="text - gray - 600">;
-                      Zion Tech Group < br />;
-                      123 Innovation Drive < br />;
-                      Tech Valley, CA 94000 < br />;
-                      United States;
-                    </p>;
-                  </div>;
-                </div>;
-                <div className="flex items - start space - x-4">;
-                  <div className="w - 12 h - 12 bg - green - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;
-                    <svg className="w - 6 h - 6 text - green - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M3 5a2 2 0 012 - 2h3.28a1 1 0 01.554.89l - 1.363 12a1 1 0 01-.554.89H5a2 2 0 01 - 2-2V5zM16 12V5a2 2 0 00 - 2-2H6a2 2 0 00 - 2 2v7m16 0a2 2 0 012 2v3a2 2 0 01 - 2 2H4a2 2 0 01 - 2-2v - 3a2 2 0 012 - 2h16z" />;
-                    </svg>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Contact Details</h3>;
-                    <p className="text - gray - 600">;
-                      <a href="tel:+13024640950" className="hover:text - blue - 600">+1 (302) 464 - 0950</Link><br />;
-                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text - blue - 600">kleber@ziontechgroup.com</Link><br />;
-                      <a href="mailto:info@ziontechgroup.com" className="hover:text - blue - 600">info@ziontechgroup.com</Link>;
-                    </p>;
-                  </div>;
-                </div>;
-                <div className="flex items - start space - x-4">;
-                  <div className="w - 12 h - 12 bg - purple - 100 rounded - lg flex items - center justify - center flex - shrink - 0">;
-                    <svg className="w - 6 h - 6 text - purple - 600 & quot; fill=&quot;none & quot; stroke=&quot;current_color & quot; view_box=&quot;0 0 24 24 & quot;>;
-                      <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M12 8v4l3 3m6 - 3a9 9 0 11 - 18 0 9 9 0 0118 0z" />;
-                    </svg>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - semibold text - gray - 900 mb - 1">Business Hours</h3>;
-                    <p className="text - gray - 600">;
-                      Monday - Friday: 9:00 AM - 6:00 PM PST < br />;
-                      Saturday: 10:00 AM - 2:00 PM PST < br />;
-                      Sunday: Closed < br />;
-                      <span className="text - sm text - gray - 500">24 / 7 Emergency Support Available</span>;
-                    </p>;
-                  </div>;
-                </div>;
-              </div>;
-
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  We're here to help you succeed. Reach out to us through any of the channels below.
+                </p>
+              </div>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-blue-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Office Address</h3>
+                    <p className="text-gray-600">
+                      Zion Tech Group<br />
+                      123 Innovation Drive<br />
+                      Tech Valley, CA 94000<br />
+                      United States
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-green-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M3 5a2 2 0 012-2h3.28a1 1 0 01.554.89l-1.363 12a1 1 0 01-.554.89H5a2 2 0 01-2-2V5zM16 12V5a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0a2 2 0 012 2v3a2 2 0 01-2 2H4a2 2 0 01-2-2v-3a2 2 0 012-2h16z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Contact Details</h3>
+                    <p className="text-gray-600">
+                      <a href="tel:+13024640950" className="hover:text-blue-600">+1 (302) 464-0950</Link><br />
+                      <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600">kleber@ziontechgroup.com</Link><br />
+                      <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-600">info@ziontechgroup.com</Link>
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-purple-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
+                    <p className="text-gray-600">
+                      Monday - Friday: 9:00 AM - 6:00 PM PST<br />
+                      Saturday: 10:00 AM - 2:00 PM PST<br />
+                      Sunday: Closed<br />
+                      <span className="text-sm text-gray-500">24/7 Emergency Support Available</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
               {/* Social Media Links */}
               <div>;
                 <h3 className="font - semibold text - gray - 900 mb - 4">Follow Us</h3>;

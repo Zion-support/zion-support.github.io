@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-testing-automation.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -369,6 +370,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-testing-automation.cjs
 const { execSync } = require('child_process')
   console.log('🧪 Starting Comprehensive Testing Automation...')
     "overallStatus"
@@ -416,6 +422,7 @@ const { execSync } = require('child_process')
       { "endpoint": '/api/contact', "status": 'tested', "response"}
       { "component": 'ContactForm', "status"}
       { "component": 'ErrorBoundary', "status"}
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-testing-automation.cjs
 <<<<<<< HEAD
       { "component": 'PerformanceMonitor', "status"}
 =======
@@ -429,3 +436,6 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+      { "component": 'PerformanceMonitor', "status"}
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-testing-automation.cjs

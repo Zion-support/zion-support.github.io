@@ -17,7 +17,7 @@ export default function UltraFuturisticHero2027() {
 
   const stats = [
     { number: '1000+', label: 'Happy Customers', icon: Users, color: 'text-cyan-400' },
-    { number: '4.9★', label: 'Average Rating', icon: Star, color: 'text-purple-400' },
+    { number: '4.9', label: 'Average Rating', icon: Star, color: 'text-purple-400' },
     { number: '99.9%', label: 'Uptime SLA', icon: CheckCircle, color: 'text-green-400' },
     { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
   ],

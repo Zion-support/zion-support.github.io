@@ -1,14 +1,8 @@
-
-import { useTheme } from "next-themes"
-import { Toaster as Sonner, toast } from "sonner"
-
-
+import { useTheme } from &quot;next-themes&quot;
+import { Toaster as Sonner, toast } from &quot;sonner&quot;
 type ToasterProps = React.ComponentProps<typeof Sonner>
 const Toaster = ({ ...props }: ToasterProps) => {
-
-  const { theme = "system" } = useTheme()
-
-
+  const { theme = &quot;system&quot; } = useTheme()
   return (
     <Sonner
       theme={theme as ToasterProps["theme"]}
@@ -16,18 +10,15 @@ const Toaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           toast:
-
-            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
-          description: "group-[.toast]:text-muted-foreground",
+            &quot;group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg&quot;
+          description: &quot;group-[.toast]:text-muted-foreground&quot;
           actionButton:
-            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
-
+            &quot;group-[.toast]:bg-primary group-[.toast]:text-primary-foreground&quot;
           cancelButton:
             "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground"}}}
       {...props}
     />;
   );
-=======
 import { use_theme } from &quot;next - themes & quot;
 import { Toaster as Sonner, toast } from &quot;sonner & quot;
 ;
@@ -49,10 +40,20 @@ const Toaster = ({ ...props }: ToasterProps) =>: any {
             &quot;group-[.toast]:bg - muted group-[.toast]:text - muted - foreground & quot;}}}
       {...props}
     />);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-
+export { Toaster, toast }
+export { Toaster, toast };
 ;
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export { Toaster, toast };
+=======
+export { Toaster, toast }
+<<<<<<< HEAD
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+;

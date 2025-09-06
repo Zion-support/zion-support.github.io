@@ -1,10 +1,14 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
 
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -287,6 +291,8 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
     totalSize = getDirectorySize(buildDir);
     totalSize = getDirectorySize(buildDir);
 
@@ -314,6 +320,7 @@ if (require.main === module) {
     process.exit(1);
   });
 }
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -345,6 +352,9 @@ module.exports = { runSimpleAutomation }) {
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -375,6 +385,7 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
+<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -407,3 +418,7 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+        "status"
+        "status"
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs

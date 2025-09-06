@@ -1,10 +1,19 @@
 
-import {ProjectHeader, as, OriginalProjectHeader} from '../ProjectHeader';
+<<<<<<< HEAD
+import { ProjectHeader as OriginalProjectHeader  } from '../ProjectHeader';
+// Re-export the existing ProjectHeader component
+export { OriginalProjectHeader as ProjectHeader }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { ProjectHeader as OriginalProjectHeader  } from '../ProjectHeader';
+// Re-export the existing ProjectHeader component
+export { OriginalProjectHeader as ProjectHeader }
 =======
 
 
 import {ProjectHeader, as, OriginalProjectHeader} from '../ProjectHeader';
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 
@@ -13,7 +22,7 @@ import { ProjectHeader as OriginalProjectHeader } from '../ProjectHeader',;
 export { OriginalProjectHeader as ProjectHeader };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ProjectHeader, as, OriginalProjectHeader  } from '../ProjectHeader';
 // Re - export the existing ProjectHeader component;
 export { OriginalProjectHeader as ProjectHeader }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,27 +1,20 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
+<<<<<<< HEAD
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAdminQuotes } from "@/hooks/useAdminQuotes";
+import { useAuth } from "@/hooks/useAuth";
+import { 
+  Card;
+  CardContent
+} from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Navigate } from "react-router-dom",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -31,24 +24,38 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Navigate} from "react-router-dom";
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { QuoteRequest } from "@/types/quotes";
 
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes";
-
-
-export default function QuoteManager() {;
+export default function QuoteManager() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAdminQuotes } from "@/hooks/useAdminQuotes";
+import { useAuth } from "@/hooks/useAuth";
+import { 
+  Card;
+  CardContent
+} from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Navigate } from "react-router-dom",
+<<<<<<< HEAD
+import type { QuoteRequest } from "@/types/quotes";
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
-
-  const {;
-
-=======
+  const {
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -74,7 +81,6 @@ function QuoteManager() {
   const [show_details, setShowDetails] = useState (false);
 ;
   const {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     quotes;
     is_loading;
     error;
@@ -86,29 +92,10 @@ function QuoteManager() {
     setSearchQuery;
     date_range;
     setDateRange;
-
-
-
-  const {
-    quotes,
-    isLoading,
-    error,
-    statusFilter,
-    setStatusFilter,
-    archiveFilter,
-    setArchiveFilter,
-    searchQuery,
-    setSearchQuery,
-    dateRange,
-    setDateRange,
-    updateStatus,
-    toggleArchive,
-    deleteQuote
-
-  } = useAdminQuotes(),
-
-
-
+    updateStatus;
+    toggleArchive;
+    deleteQuote;
+  } = useAdminQuotes();
   // Count quotes by status
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length
@@ -116,60 +103,35 @@ function QuoteManager() {
     accepted: quotes.filter(q => q.status === 'accepted').length
     responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
-
-
-  },
-
-
+  }
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
     setShowDetails(true)
-
-  },
-
-
-
+  }
   const handleResetFilters = () => {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
-
-
-  },
-
-
-
+  }
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
-=======
-
-  // Count quotes by status;
-  const statusCounts = {;
-    new: quotes && quotes.filter(q => q && q.status === 'new').length,;
-    in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length,;
-    accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length,;
-    responded: quotes && quotes.filter(q => q && q.status === 'responded').length,;
-    closed: quotes && quotes.filter(q => q && q.status === 'closed').length;
-  };
-
-  const handleViewDetails = (quote: QuoteRequest) => {;
-    setSelectedQuote(quote),;
-    setShowDetails(true);
-  };
-
-  const handleResetFilters = () => {;
-    setStatusFilter('all');
-    setArchiveFilter('all');
-    setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined });
-  };
-
-  if (!isAdmin) {;
-    return <Navigate to="/unauthorized" replace />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
+    <ProtectedRoute adminOnly>
+      <div>
+        <Header />
+        <div className="min-h-screen bg-zion-blue px-4 py-8">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+              <div>
+                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
+                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
+              </div>
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+            </div>
+=======
 
 =======
 
@@ -251,14 +213,14 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Status Summary Cards */}
-            <QuoteStatusCards statusCounts={statusCounts} />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            <QuoteStatusCards statusCounts={statusCounts} />
             {/* Filters */}
             <QuotesFilter
               searchQuery={searchQuery}
@@ -270,18 +232,14 @@ export default function QuoteManager() {;
               dateRange={dateRange}
               setDateRange={setDateRange}
               onReset={handleResetFilters}
-
-            />;
-
+            />
             {/* Tabs for Active/Archived */}
-            <Tabs defaultValue="active" className="mb-6">;
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">;
-                <TabsTrigger value="active">Active Quotes</TabsTrigger>;
-                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="active">;
-
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
                   <QuotesTable
@@ -291,17 +249,27 @@ export default function QuoteManager() {;
                     toggleArchive={toggleArchive}
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
-
-                  />;
-                </Card>;
-              </TabsContent>;
-
-              <TabsContent value="archived">;
-                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
-
+                  />
+                </Card>
+              </TabsContent>
+              <TabsContent value="archived">
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
                     quotes={quotes && quotes.filter(quote => quote && quote.is_archived)}
                     isArchived={true}
+<<<<<<< HEAD
+                    isLoading={isLoading}
+                    updateStatus={updateStatus}
+                    toggleArchive={toggleArchive}
+                    deleteQuote={deleteQuote}
+                    onViewDetails={handleViewDetails}
+                  />
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+=======
 
                   />;
                 </Card>;
@@ -312,22 +280,29 @@ export default function QuoteManager() {;
 
 
 =======
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
-
-
           onClose={() => {;
             setShowDetails(false);
+<<<<<<< HEAD
+
+            setSelectedQuote(null)
+=======
             setSelectedQuote(null);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }}
         />
         <Footer />
@@ -335,18 +310,6 @@ export default function QuoteManager() {;
     </ProtectedRoute>
   )
 }
-=======
-            setSelectedQuote(null);
-          }}
-        />;
-
-        <Footer />;
-      </div>;
-    </ProtectedRoute>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     update_status;
     toggle_archive;
     delete_quote;
@@ -454,4 +417,3 @@ if ( {) {
       </div>;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

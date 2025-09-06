@@ -1,23 +1,31 @@
+<<<<<<< HEAD
 
-
-import { Resume  } from '@/types / resume';
-
+<<<<<<< HEAD
+import { Resume } from "@/types/resume";
 export interface ResumeOption {
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+<<<<<<< HEAD
+import { Resume } from "@/types/resume";
+export interface ResumeOption {;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   resume?: Resume;
   file?: File
 }
+<<<<<<< HEAD
 export interface ResumeSelectorProps {
-
-
-
+<<<<<<< HEAD
+=======
+=======
 =======
 
 =======
 
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
@@ -36,11 +44,10 @@ export interface ResumeOption {;
 ;
 
 export interface ResumeSelectorProps {;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  onResumeSelected: (resumeOption: ResumeOption) => void;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-  onResumeSelected: (resume_option: ResumeOption) => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  onResumeSelected: (resumeOption: ResumeOption) => void;
 }

@@ -1,35 +1,48 @@
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
-
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+<<<<<<< HEAD
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
-=======
-  if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
-  const { code, amount } = req && req.body || {};
-  if (!code) return res && res.status($1).json({ $2 });
-  const usingPlaceholder =
-    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
-    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({ ok: true, status: "queued", mock: true });
     }
     const supabase = getServerSupabase();
+<<<<<<< HEAD
+    const { error } = await supabase.from("payout_requests").insert({
+      partner_code: String(code).toLowerCase()
+      amount: Number(amount) |null
+      status: "requested"
+=======
 
+  } catch (e: any) {
+<<<<<<< HEAD
+=======
 =======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -65,8 +78,8 @@ export default async function handler(req, res) {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     return res.status(200).json({ ok: true, status: 'requested' });
   } catch (error) {
-
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(500).json({ error: e?.message });
 =======
     const { error } = await supabase.from('payout_requests').insert({
@@ -74,44 +87,15 @@ export default async function handler(req, res) {
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     });
-    if (error) return res && res.status(500).json({ error: "Database error" });
-    return res && res.status(200).json({ ok: true, status: "requested" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    if (error) return res.status(500).json({ error: "Database error" });
+    return res.status(200).json({ ok: true, status: "requested" });
+
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
-
   }
 }
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { code, amount } = req.body || {};
-  if (!code) return res.status(400).json({ error: 'Missing code' });
-
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
-
-  try {
-    if (usingPlaceholder) {
-      return res.status(200).json({ ok: true, status: 'queued', mock: true })
-    }
-
-    const supabase = getServerSupabase();
-    const { error } = await supabase.from('payout_requests').insert({
-      partner_code: String(code).toLowerCase(), amount: Number(amount) || null,
-      status: 'requested'});
-    if (error) return res.status(500).json({ error: error.message });
-
-    return res.status(200).json({ ok: true, status: 'requested' })
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
-
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getServerSupabase  } from '../../../utils / supabase / server';
 export default async /**
@@ -150,4 +134,3 @@ if ( {) {
     return res.status (500).json ({ error: e?.message });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

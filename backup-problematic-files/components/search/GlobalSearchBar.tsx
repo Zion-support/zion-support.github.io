@@ -57,7 +57,7 @@ export default function GlobalSearchBar() {;
         aria-label="Search"
       />
       <div className="absolute inset-y-0 right-2 flex items-center gap-2">
-        <button type="button" onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" aria-label="Voice search">🎤</button>
+        <button type="button" onClick={startVoice} className="inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200" aria-label="Voice search"></button>
         <button type="submit" className="text-sm font-medium text-indigo-600 hover:text-indigo-700">Search</button>
       </div>
       {open && suggestions.length > 0 && (

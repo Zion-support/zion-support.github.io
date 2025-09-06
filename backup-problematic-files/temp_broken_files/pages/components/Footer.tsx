@@ -328,7 +328,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2025 Zion Tech Group. All rights reserved. | 
+               2025 Zion Tech Group. All rights reserved. | 
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>

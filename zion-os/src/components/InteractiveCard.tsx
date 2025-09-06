@@ -1,23 +1,23 @@
-
-'use client',
-import React, { useState } from 'react',
-import Link from 'next / link',
-interface InteractiveCardProps {
-  title: string,
-  description: string,
-  icon: string,
-  href: string,
-  color?: string,
-  class_name?: string,
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+interface InteractiveCardProps {title: string;
+  description: string;
+  icon: string;
+  href: string;
+  color?: string;
+  className?: string;
   children?: React.ReactNode;
 }
-export default /**
- * InteractiveCard - Function description
- */
-function InteractiveCard() {
-  const [is_hovered, setIsHovered] = useState (false),
-  return (
-
+export default function InteractiveCard({title;
+  description;
+  icon;
+  href;
+  color = 'from-purple-500 to-blue-500';
+  className = '';
+  children;
+}: InteractiveCardProps) {const [isHovered, setIsHovered] = useState(false);
+  return (;
     <Link;
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
@@ -26,6 +26,8 @@ function InteractiveCard() {
       aria - label={`Navigate to ${title} page`}
 >;
       <div className=&quot;relative & quot;>;
+<<<<<<< HEAD
+=======
 =======
 
 'use client',;
@@ -62,55 +64,67 @@ export default function InteractiveCard({;
 
     >
       <div className="relative">
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
-
-
-        <div className="relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
+<div className=&quot;relative z - 10 text - 6xl mb - 6 group - hover:scale - 110 transition - transform duration - 300 & quot;>;
           {icon}
         </div>;
         {/* Content */}
+<<<<<<< HEAD
+<div className=&quot;relative z - 10 & quot;>;
+          <h3 className=&quot;text - 2xl font - semibold text - white mb - 4 group - hover:text - purple - 400 transition - colors duration - 300 & quot;>;
+=======
         <div className="relative z-10">
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
-
-
+<<<<<<< HEAD
+{children |(
+            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+{children |(
+=======
 {children || (
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
 =======
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
-
-
-                }`} 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-
-
+                }`}
+                fill=&quot;none&quot;
+                stroke=&quot;currentColor&quot;
+                viewBox=&quot;0 0 24 24&quot;
               >
                 <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
               </svg>
@@ -120,60 +134,19 @@ export default function InteractiveCard({;
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
-
-{children || (
-            <div className=&quot;flex items - center text - purple - 400 font - medium group - hover:text - purple - 300 transition - colors duration - 300 & quot;>;
-              <span > Learn More</span>;
-              <svg;
-                className={`ml - 2 w - 5 h - 5 transition - all duration - 300 ${
-                  is_hovered ? 'translate - x-2' : '';
-                }`}
-                fill=&quot;none & quot; ;
-                stroke=&quot;current_color & quot; ;
-                view_box=&quot;0 0 24 24 & quot;
-              >;
-                <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M13 7l5 5m0 0l - 5 5m5 - 5H6 & quot; />;
-              </svg>;
-            </div>)}
-        </div>;
-        {/* Hover effect overlay */}
-        <div;
-          className={`absolute inset - 0 border - 2 border - transparent rounded - xl bg - gradient - to - r ${color} opacity - 0 group - hover:opacity - 20 transition - opacity duration - 500`}
-          style={{
-            background: `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;
-
-=======
-
-          style={{;
-            background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          style={{background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
           }}
         />;
       </div>;
     </Link>);
 }
-
-export /**
- * FeatureCard - Function description
- */
-function FeatureCard() {
-  return (
-
-=======
-
-;
-export function FeatureCard({;
-  title,;
-  description,;
-  icon,;
-  href,;
-  stats,;
+export function FeatureCard({title;
+  description;
+  icon;
+  href;
+  stats;
   className = '';
-}: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
-  return (;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {return (;
     <InteractiveCard;
       title={title}
       description={description}
@@ -193,39 +166,37 @@ export function FeatureCard({;
         </div>)}
     </InteractiveCard>);
 }
-
-export /**
- * TestimonialCard - Function description
- */
-function TestimonialCard() {
-  return (
-    <div className={`bg - black / 30 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 hover:bg - black / 50 transition - all duration - 300 transform hover:scale - 105 ${class_name}`}>;
-      {/* Quote icon */}
-<div className=&quot;text - 4xl mb - 4&quot;>💬</div>;
-
-=======
-
-;
-export function TestimonialCard({;
-  quote,;
-  author,;
-  position,;
-  company,;
-  rating = 5,;
+export function TestimonialCard({quote;
+  author;
+  position;
+  company;
+  rating = 5;
   className = '';
-}: {;
-  quote: string,;
-  author: string,;
-  position: string,;
+}: {quote: string;
+  author: string;
+  position: string;
   company: string;
   rating?: number;
   className?: string;
-}) {;
-  return (;
+}) {return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+<div className=&quot;text-4xl mb-4&quot;></div>
+=======
+<<<<<<< HEAD
+      <div className="text-4xl mb-4">💬</div>
+      
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+<div className=&quot;text-4xl mb-4&quot;>💬</div>
+=======
+      <div className="text-4xl mb-4">💬</div>
+      
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Rating */}
       <div className=&quot;flex mb - 4&quot;>;
         {Array.from ({ length: rating }).map ((_, i) => (
@@ -234,17 +205,21 @@ export function TestimonialCard({;
           </svg>))}
       </div>;
       {/* Quote */}
+<<<<<<< HEAD
+<blockquote className=&quot;text - gray - 300 text - lg leading - relaxed mb - 6 italic & quot;>;
+        &quot;{quote}&quot;
+=======
 
 
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
         "{quote}"
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      </blockquote>
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
-      </blockquote>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+      </blockquote>
       {/* Author info */}
       <div className=&quot;border - t border - white / 10 pt - 4&quot;>;
         <div className=&quot;font - semibold text - white & quot;>{author}</div>;

@@ -18,8 +18,8 @@ export default function CloudAutomationsPage() {
         {items.map(([key, value]: any) => (
           <div key={key} className=&quot;border rounded p-4 bg-gray-50 dark:bg-gray-900&quot;>
             <h2 className=&quot;text-xl font-semibold&quot;>{value.name || key}</h2>
-            <p className=&quot;text-sm text-gray-500&quot;>Started: {value.startedAt || '—'}</p>
-            <p className=&quot;text-sm text-gray-500&quot;>Finished: {value.finishedAt || '—'}</p>
+            <p className=&quot;text-sm text-gray-500&quot;>Started: {value.startedAt || ''}</p>
+            <p className=&quot;text-sm text-gray-500&quot;>Finished: {value.finishedAt || ''}</p>
             <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
             {value.metrics ? (
               <pre className=&quot;mt-2 text-xs whitespace-pre-wrap&quot;>{JSON.stringify(value.metrics, null, 2)}</pre>            ) : null}

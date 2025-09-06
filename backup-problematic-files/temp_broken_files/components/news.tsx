@@ -166,7 +166,7 @@ import Head from 'next/head',export default function NewsPage() {
       category: &quot;Company News&quot;,
       author: &quot;Zion Tech Group&quot;,
       readTime: &quot;3 min read&quot;,
-      image: &quot;🚀&quot;,
+      image: &quot;&quot;,
       featured: true
     },
     {
@@ -1428,7 +1428,7 @@ initial={_{ opacity: 0, y: 20}}
       category: &quot;Partnerships&quot;,
       author: &quot;Sarah Chen&quot;,
       readTime: &quot;2 min read&quot;,
-      image: &quot;🤝&quot
+      image: &quot;&quot
     },
     {
       id: 3,
@@ -1438,7 +1438,7 @@ initial={_{ opacity: 0, y: 20}}
       category: &quot;Innovation&quot;,
       author: &quot;Dr. Emily Watson&quot;,
       readTime: &quot;4 min read&quot;,
-      image: &quot;⚖️&quot
+      image: &quot;&quot
     },
     {
       id: 4,
@@ -1448,7 +1448,7 @@ initial={_{ opacity: 0, y: 20}}
       category: &quot;Company News&quot;,
       author: &quot;Marcus Rodriguez&quot;,
       readTime: &quot;2 min read&quot;,
-      image: &quot;🌏&quot
+      image: &quot;&quot
     },
     {
       id: 5,
@@ -1458,7 +1458,7 @@ initial={_{ opacity: 0, y: 20}}
       category: "Technology",
       author: "Dr. James Wilson",
       readTime: "5 min read",
-      image: "🧠"    },
+      image: ""    },
     {
       id: 6,
       title: &quot;Annual Sustainability Report Published&quot;,
@@ -1467,7 +1467,7 @@ initial={_{ opacity: 0, y: 20}}
       category: &quot;Sustainability&quot;,
       author: &quot;Lisa Park&quot;,
       readTime: &quot;6 min read&quot;,
-      image: &quot;🌱&quot
+      image: &quot;&quot
     },
     {
       id: 7,
@@ -1477,7 +1477,7 @@ initial={_{ opacity: 0, y: 20}}
       category: &quot;Case Studies&quot;,
       author: &quot;Alex Thompson&quot;,
       readTime: &quot;4 min read&quot;,
-      image: &quot;📊&quot
+      image: &quot;&quot
     },
     {
       id: 8,
@@ -1487,16 +1487,16 @@ initial={_{ opacity: 0, y: 20}}
       category: &quot;Research&quot;,
       author: &quot;Prof. Maria Garcia&quot;,
       readTime: &quot;7 min read&quot;,
-      image: &quot;📚&quot
+      image: &quot;&quot
     }
   ],
 
-  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],    {id: 3, title: "AI Ethics Guidelines Released for Responsible Development", excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.", date: "2025-01-17", category: "Innovation", author: "Dr. Emily Watson", readTime: "4 min read", image: "⚖️"},
-    {id: 4, title: "New Office Opening in Singapore", excerpt: "Expanding our global presence to better serve clients in the Asia-Pacific region with local expertise and support.", date: "2025-01-16", category: "Company News", author: "Marcus Rodriguez", readTime: "2 min read", image: "🌏"},
-    {id: 5, title: "Machine Learning Model Achieves 99.7% Accuracy", excerpt: "Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI performance.", date: "2025-01-15", category: "Technology", author: "Dr. James Wilson", readTime: "5 min read", image: "🧠"},
-    {id: 6, title: "Annual Sustainability Report Published", excerpt: "Comprehensive overview of our environmental impact and commitment to sustainable technology development.", date: "2025-01-14", category: "Sustainability", author: "Lisa Park", readTime: "6 min read", image: "🌱"},
-    {id: 7, title: "Customer Success Story: Retail Automation", excerpt: "How we helped a major retailer increase efficiency by 300% through intelligent automation systems.", date: "2025-01-13", category: "Case Studies", author: "Alex Thompson", readTime: "4 min read", image: "📊"},
-    {id: 8, title: "New Research Paper on Autonomous Systems", excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.", date: "2025-01-12", category: "Research", author: "Prof. Maria Garcia", readTime: "7 min read", image: "📚"}
+  const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"],    {id: 3, title: "AI Ethics Guidelines Released for Responsible Development", excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparency, fairness, and societal benefit in mind.", date: "2025-01-17", category: "Innovation", author: "Dr. Emily Watson", readTime: "4 min read", image: ""},
+    {id: 4, title: "New Office Opening in Singapore", excerpt: "Expanding our global presence to better serve clients in the Asia-Pacific region with local expertise and support.", date: "2025-01-16", category: "Company News", author: "Marcus Rodriguez", readTime: "2 min read", image: ""},
+    {id: 5, title: "Machine Learning Model Achieves 99.7% Accuracy", excerpt: "Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI performance.", date: "2025-01-15", category: "Technology", author: "Dr. James Wilson", readTime: "5 min read", image: ""},
+    {id: 6, title: "Annual Sustainability Report Published", excerpt: "Comprehensive overview of our environmental impact and commitment to sustainable technology development.", date: "2025-01-14", category: "Sustainability", author: "Lisa Park", readTime: "6 min read", image: ""},
+    {id: 7, title: "Customer Success Story: Retail Automation", excerpt: "How we helped a major retailer increase efficiency by 300% through intelligent automation systems.", date: "2025-01-13", category: "Case Studies", author: "Alex Thompson", readTime: "4 min read", image: ""},
+    {id: 8, title: "New Research Paper on Autonomous Systems", excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.", date: "2025-01-12", category: "Research", author: "Prof. Maria Garcia", readTime: "7 min read", image: ""}
   ];
 
   const categories = ["All", "Company News", "Partnerships", "Innovation", "Technology", "Sustainability", "Case Studies", "Research"];
@@ -1557,9 +1557,9 @@ key={category}
                       {article.excerpt}
                     </p>
                     <div className=&quot;flex items-center gap-4 text-sm text-white/60 mb-4&quot;>
-                      <span>By {article.author}</span>                      <span>•</span>
+                      <span>By {article.author}</span>                      <span></span>
                       <span>{article.date}</span>
-                      <span>•</span>
+                      <span></span>
                       <span>{article.readTime}</span>
                     </div>
                     <button className=&quot;px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200&quot;>
@@ -1698,7 +1698,7 @@ date: "2025-01-18";
 category: "Partnerships";
 author: "Sarah Chen";
 readTime: "2 min read";
-image: "🤝" 
+image: "" 
 };
 };
 {
@@ -1709,7 +1709,7 @@ date: "2025-01-14";
 category: "Sustainability";
 author: "Lisa Park";
 readTime: "6 min read";
-image: "🌱" 
+image: "" 
 };
 {
   id: 7;
@@ -1719,7 +1719,7 @@ date: "2025-01-13";
 category: "Case Studies";
 author: "Alex Thompson";
 readTime: "4 min read";
-image: "📊" 
+image: "" 
 };
 {
   id: 8;
@@ -1729,14 +1729,14 @@ date: "2025-01-12";
 category: "Research";
 author: "Prof. Maria Garcia";
 readTime: "7 min read";
-image: "📚" 
+image: "" 
 }];
 min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
   category 
 }</button>) ) 
-}</div> <span>•</span> <span> {
+}</div> <span></span> <span> {
   article.date 
-}</span> <span>•</span> <span> {
+}</span> <span></span> <span> {
   article.readTime 
 }</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) 
 }</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 

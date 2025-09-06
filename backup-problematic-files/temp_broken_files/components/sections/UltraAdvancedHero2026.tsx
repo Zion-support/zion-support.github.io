@@ -89,7 +89,7 @@ export default function UltraAdvancedHero2026() {
               <div className=&quot;text-3xl font-bold text-pink-400&quot;>{metaverseDigitalRealityServices2026.length}</div>
               <div className=&quot;text-gray-300 text-sm&quot;>Metaverse Services</div>            </div>
             <div className=&quot;text-center p-4 bg-gradient-to-br from-green-800/20 to-green-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl&quot;>
-              <div className=&quot;text-3xl font-bold text-green-400&quot;>∞</div>
+              <div className=&quot;text-3xl font-bold text-green-400&quot;></div>
               <div className=&quot;text-gray-300 text-sm&quot;>Possibilities</div>
             </div>
           </motion.div>
@@ -202,7 +202,7 @@ export default function UltraAdvancedHero2026() {
             ease: &quot;easeInOut&quot;
           }}
           className=&quot;absolute top-20 right-20 text-6xl opacity-20&quot;        >
-          🚀
+          
         </motion.div>
         
         <motion.div
@@ -216,7 +216,7 @@ export default function UltraAdvancedHero2026() {
             ease: &quot;easeInOut&quot;
           }}
           className=&quot;absolute bottom-20 left-20 text-6xl opacity-20&quot;        >
-          ⚛️
+          
         </motion.div>
         
         <motion.div
@@ -230,7 +230,7 @@ export default function UltraAdvancedHero2026() {
             ease: &quot;easeInOut&quot;
           }}
           className=&quot;absolute top-1/3 left-10 text-5xl opacity-20&quot;        >
-          🧠
+          
         </motion.div>
         
         <motion.div
@@ -244,7 +244,7 @@ export default function UltraAdvancedHero2026() {
             ease: &quot;easeInOut&quot;
           }}
           className=&quot;absolute bottom-1/3 right-10 text-5xl opacity-20&quot;        >
-          🌐
+          
         </motion.div>
       </div>
     </section>

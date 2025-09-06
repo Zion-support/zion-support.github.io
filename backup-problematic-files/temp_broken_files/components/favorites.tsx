@@ -21,7 +21,7 @@ export default function FavoritesPage() {
   return (
     <div>
       <Head>
-        <title>Favorites — Zion AI Marketplace</title>
+        <title>Favorites  Zion AI Marketplace</title>
       </Head>
 
       <div className=&quot;mb-6 text-sm text-gray-500 dark:text-gray-400&quot;>

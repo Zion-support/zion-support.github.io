@@ -99,10 +99,10 @@ export default function AIAssistant({;
 
               <div className="flex items-center gap-2">
                 <button onClick={callOperator} disabled={loading} className="rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60">
-                  {loading ? 'Generating…' : 'Generate'}
+                  {loading ? 'Generating' : 'Generate'}
                 </button>
                 <button onClick={callOperator} disabled={loading} className="rounded-md border px-3 py-1.5 text-sm">
-                  {loading ? '…' : 'Regenerate'}
+                  {loading ? '' : 'Regenerate'}
                 </button>
                 <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>
@@ -168,10 +168,10 @@ export default function AIAssistant({;
               </div>;
               <div className="flex items-center gap-2">;
                 <button onClick={callOperator} disabled={loading} className="rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60">;
-                  {loading ? 'Generating…' : 'Generate'}
+                  {loading ? 'Generating' : 'Generate'}
                 </button>;
                 <button onClick={callOperator} disabled={loading} className="rounded-md border px-3 py-1.5 text-sm">;
-                  {loading ? '…' : 'Regenerate'}
+                  {loading ? '' : 'Regenerate'}
                 </button>;
                 <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>;
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>;

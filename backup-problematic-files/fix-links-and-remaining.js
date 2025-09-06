@@ -24,9 +24,9 @@ remainingCorruptedFiles.forEach(filePath => {,;
     // Write the fixed content,;
     const content = servicePageTemplate(serviceName, displayName),;
     fs.writeFileSync(filePath, content, "utf8"),;
-    console.log(`✓ Fixed ${filePath}`)} catch (error) {,;
+    console.log(` Fixed ${filePath}`)} catch (error) {,;
 ;
-  console.error(`✗ Error fixing ${filePath} `, error.message)};
+  console.error(` Error fixing ${filePath} `, error.message)};
 ;  // Remove common prefixes and convert to readable format;
   return serviceName;
     .replace(/^AI/, "");
@@ -47,7 +47,7 @@ remainingCorruptedFiles.forEach(filePath => {;
     // Write the fixed content;
     const content = servicePageTemplate(serviceName, displayName);
     fs.writeFileSync(filePath, content, "utf8");
-    console.log(`✓ Fixed ${filePath}`)} catch (error) {;,// Function to extract display name from service name,
+    console.log(` Fixed ${filePath}`)} catch (error) {;,// Function to extract display name from service name,
 function getDisplayName(serviceName) {,
   // Remove common prefixes and convert to readable format,
   return serviceName,
@@ -67,6 +67,6 @@ remainingCorruptedFiles.forEach(filePath => {,
     // Write the fixed content,
     const content = servicePageTemplate(serviceName, displayName),
     fs.writeFileSync(filePath, content, "utf8"),
-    console.log(`✓ Fixed ${filePath}`)} catch (error) {,
+    console.log(` Fixed ${filePath}`)} catch (error) {,
 
     } catch (error) {_;};

@@ -174,7 +174,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 ;
     // Matrix rain effect;
     const matrixRain = () => {;
-      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン',;
+      const characters = '01',;
       const fontSize = 12,;
       const columns = canvas.width / fontSize,;
       const drops: number[] = [],;

@@ -144,7 +144,4 @@ if (!hasActiveFilters) return null;
   selectedRegions.map (region => (<ClickableBadge key= {;
   region ;
 }</ClickableBadge>) ;
-
-}<Button ;
-}'"
-
+}<Button ;"}'"

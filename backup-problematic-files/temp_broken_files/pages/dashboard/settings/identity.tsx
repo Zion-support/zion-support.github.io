@@ -38,7 +38,7 @@ export default function IdentitySettingsPage() {;
         </div>;
 ;
         <div className="mb-4 text-sm text-gray-600">;
-          Status:{profile ? profile.status :'not_started'} • AML:{profile ? profile.amlStatus :'unknown'}
+          Status:{profile ? profile.status :'not_started'}  AML:{profile ? profile.amlStatus :'unknown'}
         </div>;
 ;
         <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>;

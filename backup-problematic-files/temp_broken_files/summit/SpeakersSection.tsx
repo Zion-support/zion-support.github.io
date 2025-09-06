@@ -87,7 +87,4 @@ export function SpeakersSection () {;
 }{;
   sp.linkedin && (<a href= {;"  sp.linkedin ";"}aria-label="LinkedIn" target="blank" rel="noopener noreferrer" className="flex items-center" > <Linkedin className="h-4 w-4" aria-hidden="true" /> <span className="sr-only" >LinkedIn</span> </Link>) ;
 }</div> </div>) ) ;
-
-}</div> </div> </section>) ;
-}'"
-
+}</div> </div> </section>) ;"}'"

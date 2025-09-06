@@ -1,27 +1,129 @@
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button';
+=======
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";
+=======
+<<<<<<< HEAD
+import { Button } from '@/components/ui/button'
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Loader2 } from 'lucide-react'
 
-import { Loader2 } from 'lucide-react';
-import { NavigationButtonsProps } from "./types";
-export const NavigationButtons = ({;
-  onBack;
-  onNext;
-  isNextDisabled = false;
-  backLabel = "Back";
-  nextLabel = "Next";
-  isLoading = false}: NavigationButtonsProps) => {;
+import { NavigationButtonsProps } from './types'
+import { Button } from "@/components/ui/button"
+import { NavigationButtonsProps } from "./types"
+export const NavigationButtons = ({
+  onBack
+  onNext
+  isNextDisabled = false
+  backLabel = "Back"
+  nextLabel = "Next"
+  isLoading = false}: NavigationButtonsProps) => {
   return (
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant='outline' onClick={onBack}>;
-export const NavigationButtons = ({;
-  onBack,;
-  onNext,;
-  isNextDisabled = false,;
-  backLabel = 'Back',;
-  nextLabel = 'Next',;
-  isLoading = false,;
-}: NavigationButtonsProps) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    <div className="flex justify-between">
+      {onBack && (
+        <Button variant='outline' onClick={onBack}>
+<<<<<<< HEAD
+export const NavigationButtons = ({
+  onBack
+  onNext
+  isNextDisabled = false
+  backLabel = 'Back'
+  nextLabel = 'Next'
+  isLoading = false
+}: NavigationButtonsProps) => {
+=======
+import { Button } from "@/components/ui/button",
+import { Loader2 } from 'lucide-react'
+import { NavigationButtonsProps } from "./types",
+=======
+=======
+
+import { Button } from "@/components/ui/button",
+import { Loader2 } from 'lucide-react'
+import { NavigationButtonsProps } from "./types",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const NavigationButtons = ({
+  onBack,
+  onNext,
+  isNextDisabled = false,
+  backLabel = "Back",
+  nextLabel = "Next",
+  isLoading = false}: NavigationButtonsProps) => {
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  return (
+    <div className="flex justify-between">
+      {onBack && (
+<<<<<<< HEAD
+        <Button variant='outline' onClick={onBack}>          {backLabel}
+        <Button variant="outline" onClick={onBack}>
+  return (
+    <div className="flex justify-between">
+      {onBack && (
+        <Button variant="outline" onClick={onBack}>
+          {backLabel}
+        </Button>
+      )}
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
+          {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
+        </Button>
+      )}
+    </div>
+  )
+}
+"          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>
+      )}
+    </div>
+<<<<<<< HEAD
+  )
+}
+"  )
+}
+
+=======
+  );
+};
+"  );
+};
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+        <Button variant="outline" onClick={onBack}>
+import { Button } from "@/components/ui/button",;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { Loader2 } from 'lucide-react';
+import { NavigationButtonsProps } from './types';
+
+import { Button } from "@/components/ui/button";
+import { Loader2 } from 'lucide-react'
+
+import { NavigationButtonsProps } from './types'
+import { Button } from "@/components/ui/button"
+import { NavigationButtonsProps } from "./types"
+export const NavigationButtons = ({
+  on_back;
+  on_next;
+  isNextDisabled = false;
+  back_label = "Back";
+  next_label = "Next";
+  is_loading = false}: NavigationButtonsProps) =>: any {
+  return (
+    <div className="flex justify-between">
+      {onBack && (
+        <Button variant='outline' onClick={onBack}>
+export const NavigationButtons = ({
+  onBack
+  onNext
+  isNextDisabled = false
+  backLabel = 'Back'
+  nextLabel = 'Next'
+  isLoading = false
+}: NavigationButtonsProps) => {
   return (
     <div className='flex justify-between'>;
       {onBack && (;
@@ -34,25 +136,81 @@ export const NavigationButtons = ({;
           {backLabel}
         </Button>;
       )}
-
-
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled |isLoading}>
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
           {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}          {nextLabel}
         </Button>;
       )}
-
-    </div>;
-  );
-};
-
+<<<<<<< HEAD
+    </div>
+  )
+}
 "          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           {nextLabel}
         </Button>;
       )}
+    </div>;
+  );
+};
+"  );
+};
+    </div>
+  )
+}
+"  )
+}
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+    </div>;
+  );
+};
+<<<<<<< HEAD
+"  );
+};
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    <div className="flex justify - between">;
+      {on_back && (
+        <Button variant='outline' on_click={on_back}>;
+export const NavigationButtons = ({
+  on_back,
+  on_next,
+  isNextDisabled = false,
+  back_label = 'Back',
+  next_label = 'Next',
+  is_loading = false,
+}: NavigationButtonsProps) =>: any {
+  return (
+    <div className='flex justify - between'>;
+      {on_back && (
+        <Button variant='outline' on_click={on_back}>          {back_label}
+        <Button variant="outline" on_click={on_back}>;
+  return (
+    <div className="flex justify - between">;
+      {on_back && (
+        <Button variant="outline" on_click={on_back}>;
+          {back_label}
+        </Button>)}
+      {on_next && (
+        <Button on_click={on_next} disabled={isNextDisabled || is_loading}>;
+          {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}          {next_label}
+        </Button>)}
+    </div>);
+}
+"          {is_loading && <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />}
+          {next_label}
+        </Button>)}
+    </div>);
+}
+"  );
+}
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

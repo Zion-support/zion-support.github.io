@@ -1,6 +1,20 @@
+<<<<<<< HEAD
+=======
 
-
-
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React from 'react';
+import { Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle } from '@/components/ui/dialog';
+import { AIEnhancementPanel  } from './AIEnhancementPanel';
+import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
+interface AIEnhancementDialogProps {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -15,7 +29,7 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react',;
 import {;
@@ -35,6 +49,7 @@ interface AIEnhancementDialogProps {;
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   title: string
   isOpen: boolean
@@ -45,39 +60,18 @@ interface AIEnhancementDialogProps {;
   initialContent?: string
 }
 export function AIEnhancementDialog({
-=======
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {AIEnhancementPanel} from './AIEnhancementPanel';
-import {AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {;
-  title: string,;
-  isOpen: boolean,;
-  onClose: () => void,;
-  onApply: (content: string) => void,;
-  defaultOptions: AIEnhancementOptions,;
-  initialContent?: string;
-}
-
-export function AIEnhancementDialog(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title;
   isOpen;
   onClose;
   onApply;
   defaultOptions;
+  initialContent
+}: AIEnhancementDialogProps) {
 
-  initialContent;
-}: AIEnhancementDialogProps) {;
-  const handleApply = (content: string) => {;
-    onApply(content),;
-    onClose();
-  };
-
-=======
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const handleApply = (content: string) => {
+    onApply(content)
+    onClose()
+  }
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;
@@ -90,14 +84,11 @@ export function AIEnhancementDialog(): any ({;
           defaultOptions={defaultOptions}
           onApply={handleApply}
           initialContent={initialContent}
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
+        />
+      </DialogContent>
+    </Dialog>
+  )
 }
-
-=======
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components / ui / dialog';
 import {AIEnhancementPanel} from './AIEnhancementPanel';
 import {AIEnhancementOptions} from '@/hooks / useAIContentEnhancer';
@@ -133,4 +124,3 @@ function AIEnhancementDialog() {
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

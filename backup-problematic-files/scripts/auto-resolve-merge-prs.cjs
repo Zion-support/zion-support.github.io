@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -13,6 +14,8 @@
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/auto-resolve-merge-prs.cjs
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -74,6 +77,7 @@ async function main() {}
   // Stash local changes to avoid checkout conflicts;
   const dirty = sh('git status --porcelain || true');
   let stashed = false;
+<<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -89,6 +93,8 @@ async function main() {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/auto-resolve-merge-prs.cjs
   if (dirty && dirty.split('\n').filter(Boolean).length) {}
     console.log('Local changes detected, stashing...');
     try { sh('git stash push -u -m "auto-resolve-temp"'); stashed = true} catch {};
@@ -100,6 +106,7 @@ async function main() {}
     processed++;
     const head = pr.head.ref;
     const base = pr.base.ref;
+<<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -119,6 +126,8 @@ async function main() {}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/auto-resolve-merge-prs.cjs
     console.log(`\nProcessing PR #${pr.number}: ${pr.title} [${head} -> ${base}]`);
     try {}
       // Checkout PR branch;
@@ -140,6 +149,7 @@ async function main() {}
 });
       if (result && result.merged) {}
         merged++;
+<<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -164,6 +174,8 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)})
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/auto-resolve-merge-prs.cjs
         console.log(`Merged PR #${pr.number}`)} else {`}
         console.log(`Skipped PR #${pr.number}: ${result && result.message ? result.message : 'not merged'}`)};
     } catch (e) {}
@@ -180,6 +192,7 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)})
   };
 };
 main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
+<<<<<<< HEAD:backup-problematic-files/scripts/auto-resolve-merge-prs.cjs
 <<<<<<< HEAD
 });
 =======
@@ -193,3 +206,6 @@ main().catch(err => { console.error('"Error": ', err.message); process.exit(1)}
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+});
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/auto-resolve-merge-prs.cjs

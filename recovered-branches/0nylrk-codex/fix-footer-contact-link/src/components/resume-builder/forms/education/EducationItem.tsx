@@ -1,15 +1,22 @@
 
-import { format  } from './date - fns';
-import { Edit, Trash2  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Education  } from '@/types / resume';
-import { EducationItemProps  } from './types';
-export /**
- * EducationItem - Function description
- */
-function EducationItem() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { format } from "date-fns";
+import { Edit, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Education } from "@/types/resume";
+import { EducationItemProps } from "./types";
+export function EducationItem({
+  education
+  onEdit
+  onDelete
+}: EducationItemProps) {
 
+<<<<<<< HEAD
   return (
     <Card className="bg - muted / 40">;
       <CardContent className="pt - 6">;
@@ -39,7 +46,8 @@ function EducationItem() {
             {education.location && (
               <p className="text - xs text - muted - foreground">;
                 {education.location}
-
+              </p>
+=======
 =======
 
 
@@ -50,8 +58,7 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
@@ -59,9 +66,10 @@ import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
-
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -87,6 +95,7 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
             {education && education.location && (;
               <p className="text-xs text-muted-foreground">{education && education.location}</p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             )}
           </div>;
           <div className="flex gap-2">;
@@ -109,13 +118,14 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         {education && education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
-
-      </CardContent>;
-    </Card>;
+      </CardContent>
+    </Card>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }
-
-=======
               </p>)}
           </div>;
           <div className="flex gap - 2">;
@@ -140,11 +150,13 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   )
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

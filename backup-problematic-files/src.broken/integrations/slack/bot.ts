@@ -43,7 +43,7 @@ class MockApp {;
     // Safely log without direct console reference;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console :undefined,;
     if (safeConsole && safeConsole.log) {;
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`),;
+      safeConsole.log(` Mock Zion Slack bot is running on port ${port || 3000}!`),;
     }
     return Promise.resolve(),;
   }
@@ -123,7 +123,7 @@ async function sendSlackAlert(message:string):Promise<void> {;
 export { sendSlackAlert }, // If standalone;
 ;
 export default app,; // Mock implementation of Slack bot that doesn't require external dependencies // This replaces the original implementation which had dependency issues if (safeConsole && safeConsole.log) {
-  safeConsole.log (`⚡️ Mock Zion Slack bot is running on port $ {
+  safeConsole.log (` Mock Zion Slack bot is running on port $ {
   port || 3000 
 }!`) 
 }return Promise.resolve () 

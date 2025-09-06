@@ -24,9 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface VideoCallProps {
   // Add props here as needed
-
-
-
+}
 export default function VideoCall({ }: VideoCallProps) {
   return (
     <div>
@@ -34,11 +32,14 @@ export default function VideoCall({ }: VideoCallProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
+}
 }
 
-=======
 
 
+:src.pages.disabled/VideoCall.jsx
+}
+}
+}
+}
+}

@@ -61,7 +61,7 @@ key={t.id}
                     </button>;
                   )}
                 </div>
-                <button onClick={() => removeToast(t.id)} className=&quot;text-xs opacity-60 hover:opacity-100&quot;>×</button>              </div>
+                <button onClick={() => removeToast(t.id)} className=&quot;text-xs opacity-60 hover:opacity-100&quot;></button>              </div>
             </motion.div>
           ))}
         </AnimatePresence>;

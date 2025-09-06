@@ -1,22 +1,10 @@
-
-import React from './react';
-;
-
+import React from "react";
 interface LabelProps {
   children: React.ReactNode;
   class_name?: string;
   html_for?: string;
 }
-
-
-interface LabelProps {;
-  children: React && React.ReactNode;
-  className?: string;
-  htmlFor?: string;
-}
-
-const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {;
-
+const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
   return (
     <label
       htmlFor={htmlFor}
@@ -26,7 +14,6 @@ const Label: React.FC<LabelProps> = ({ children, className = "", htmlFor }) => {
   );
 }
 export { Label }
-=======
 const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) => {
   return (
     <label;
@@ -39,4 +26,3 @@ const Label: React.FC < LabelProps> = ({ children, class_name = "", html_for }) 
 ;
 export { Label }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

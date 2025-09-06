@@ -98,7 +98,4 @@ return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="
 }rateType= {;
   rateType ;
 }/> </CardContent> </Card> </div>) ;
-
-};
-"
-
+};""

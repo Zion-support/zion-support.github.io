@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
-;
+
 const fs = require('fs');
 const path = require('path');
-;
-function listFiles(dir, exts) {;
+
+function listFiles(dir, exts) {
   const out = [];
-  (function walk(d) {;
-    for (const name of fs.readdirSync(d)) {;
+  (function walk(d) {
+    for (const name of fs.readdirSync(d)) {
       const p = path.join(d, name);
       const st = fs.statSync(p);
       if (st.isDirectory()) walk(p);
@@ -15,8 +15,8 @@ function listFiles(dir, exts) {;
   })(dir);
   return out;
 }
-;
-function ensureContentForPage(filePath) {;
+
+function ensureContentForPage(filePath) {
   const content = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') :'';
   if (content.trim().length > 30) return false; // has content;
   const rel = filePath.split('pages')[1] || filePath;
@@ -25,8 +25,8 @@ function ensureContentForPage(filePath) {;
   fs.writeFileSync(filePath, component, 'utf8');
   return true;
 }
-;
-function ensureAppShim(appPath) {;
+
+function ensureAppShim(appPath) {
   const exists = fs.existsSync(appPath);
   const src = exists ? fs.readFileSync(appPath, 'utf8') :'';
   if (/export\s+default\s+function|export\s+default\s*\(/.test(src)) return false;
@@ -34,24 +34,24 @@ function ensureAppShim(appPath) {;
   fs.writeFileSync(appPath, shim, 'utf8');
   return true;
 }
-;
-function main() {;
+
+function main() {
   const pagesDir = path.join(process.cwd(), 'pages');
   if (!fs.existsSync(pagesDir)) return;
   let changed = false;
-;
+
   // Heal _app.tsx if needed;
   changed = ensureAppShim(path.join(pagesDir, '_app.tsx')) || changed;
-;
+
   // Heal empty .tsx pages;
   const files = listFiles(pagesDir, ['.tsx']);
-  for (const f of files) {;
+  for (const f of files) {
     if (/(_app|_document)\.tsx$/.test(f)) continue;
     changed = ensureContentForPage(f) || changed;
   }
-;
+
   if (changed) console.log('Empty page healer applied changes.');
   else console.log('Empty page healer:no changes needed.');
 }
-;
+
 main();

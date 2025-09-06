@@ -18,7 +18,4 @@ export const lazyLoadImage = ("img": HTMLImageElemen t) => {,;
           image.src = image.dataset.src,',, ';
           image.classList.remove('lazy'),;
           observer.unobserve(image)};
-
-      };
-}})),'"
-
+      };"}})),'"

@@ -43,10 +43,10 @@ const AIMeetingNotes: React.FC = () => {
               Convert speech to text in real-time with high accuracy and speaker identification.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Live transcription</li>
-              <li>• Speaker identification</li>
-              <li>• Multi-language support</li>
-              <li>• Noise cancellation</li>
+              <li> Live transcription</li>
+              <li> Speaker identification</li>
+              <li> Multi-language support</li>
+              <li> Noise cancellation</li>
             </ul>
           </div>
 
@@ -56,10 +56,10 @@ const AIMeetingNotes: React.FC = () => {
               Automatically generate meeting summaries with key points and decisions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Key point extraction</li>
-              <li>• Decision tracking</li>
-              <li>• Action item identification</li>
-              <li>• Follow-up reminders</li>
+              <li> Key point extraction</li>
+              <li> Decision tracking</li>
+              <li> Action item identification</li>
+              <li> Follow-up reminders</li>
             </ul>
           </div>
 
@@ -69,10 +69,10 @@ const AIMeetingNotes: React.FC = () => {
               Search through meeting history and analyze patterns with AI-powered insights.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Full-text search</li>
-              <li>• Topic analysis</li>
-              <li>• Sentiment tracking</li>
-              <li>• Meeting analytics</li>
+              <li> Full-text search</li>
+              <li> Topic analysis</li>
+              <li> Sentiment tracking</li>
+              <li> Meeting analytics</li>
             </ul>
           </div>
         </div>

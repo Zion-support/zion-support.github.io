@@ -1,154 +1,296 @@
 
-import React, { useState, useRef } from './react';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Upload, Trash2, Plus } from './lucide-react';
-import { AppPlatform } from './MetadataManager';
-import { toast } from './sonner';
-
-interface ScreenshotManagerProps {
-  platform: AppPlatform;
-}
-type Screenshot = {
-
-
-
-  
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
-    
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    if (imageFiles.length === 0) {
-      toast.error("Please select valid image files")
-      return
-    }
-    // Limit the number of screenshots
-
-
-    const maxScreenshots = platform === "ios" ? 10 : 8,
-    const availableSlots = maxScreenshots - screenshots.length,
-    
-    if (availableSlots <= 0) {
-
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-    <Card className="bg-zion-blue border-zion-purple/30">
-      <CardHeader>
-        <CardTitle className="text-lg">App Screenshots</CardTitle>
-      </CardHeader>
-      <CardContent>
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React, { useState, useRef } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Upload, Trash2, Plus } from "lucide-react",
+<<<<<<< HEAD
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
+=======
+<<<<<<< HEAD
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
+=======
+<<<<<<< HEAD
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Upload, Trash2, Plus} from "lucide-react";
 import {AppPlatform} from "./MetadataManager";
 import {toast} from "sonner";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+interface ScreenshotManagerProps {
+  platform: AppPlatform
+}
+
+type Screenshot = {
+  id: string
+  url: string
+  file: File
+<<<<<<< HEAD
+}
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+=======
+};
+
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      addScreenshots(Array.from(e.target.files))
+    }
+<<<<<<< HEAD
+  }
+  const addScreenshots = (files: File[]) => {
+    // Filter for image files only
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+=======
+=======
+  };
+=======
+import React, { useState, useRef } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Upload, Trash2, Plus } from "lucide-react",
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { AppPlatform } from "./MetadataManager",
+import { toast } from "sonner",
+interface ScreenshotManagerProps {
+  platform: AppPlatform
+import React, { useState, useRef } from "react",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Upload, Trash2, Plus } from "lucide-react",;
+import { AppPlatform } from "./MetadataManager",;
+import { toast } from "sonner",;
 interface ScreenshotManagerProps {;
   platform: AppPlatform;
 }
-
+<<<<<<< HEAD
+type Screenshot = {
+  id: string
+  url: string
+  file: File
+}
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
+  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      addScreenshots(Array.from(e.target.files))
+    }
+  }
+=======
+;
 type Screenshot = {;
   id: string,;
   url: string,;
   file: File;
-};
-
+},;
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileSelect = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    if (e && e.target.files) {;
-      addScreenshots(Array && Array.from(e && e.target.files));
+  const [screenshots, setScreenshots] = useState<Screenshot[]>([]),;
+  const [isDragging, setIsDragging] = useState(false),;
+  const fileInputRef = useRef<HTMLInputElement>(null),;
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {;
+    if (e.target.files) {;
+      addScreenshots(Array.from(e.target.files));
+    }
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  const addScreenshots = (files: File[]) => {
+    // Filter for image files only
+    const imageFiles = files.filter(file => file.type.startsWith('image/'));
+    if (imageFiles.length === 0) {
+      toast.error("Please select valid image files")
+      return
+    }
+    // Limit the number of screenshots
+    const maxScreenshots = platform === "ios" ? 10 : 8;
+    const availableSlots = maxScreenshots - screenshots.length;
+    if (availableSlots <= 0) {
+<<<<<<< HEAD
+      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
+      return
+    }
+    const filesToAdd = imageFiles.slice(0, availableSlots);
+    const newScreenshots = filesToAdd.map(file => ({
+      id: Math.random().toString(36).substring(2, 9);
+      url: URL.createObjectURL(file)
+      file
+    }));
+    setScreenshots(prev => [...prev, ...newScreenshots]);
+    if (filesToAdd.length < imageFiles.length) {
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
+    }
+  }
+  const removeScreenshot = (id: string) => {
+    setScreenshots(prev => {
+      const filtered = prev.filter(screenshot => screenshot.id !== id);
+      // Revoke object URL to avoid memory leaks
+      const removed = prev.find(screenshot => screenshot.id === id)
+      if (removed) {
+        URL.revokeObjectURL(removed.url)
+      }
+      return filtered
+    })
+  }
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault()
+    setIsDragging(true)
+  }
+  const handleDragLeave = () => {
+    setIsDragging(false)
+  }
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false)
+    if (e.dataTransfer.files) {
+      addScreenshots(Array.from(e.dataTransfer.files))
+    }
+  }
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
+      return
+    }
+    
+    const filesToAdd = imageFiles.slice(0, availableSlots);
+    
+    const newScreenshots = filesToAdd.map(file => ({
+      id: Math.random().toString(36).substring(2, 9);
+      url: URL.createObjectURL(file),
+      file
+    }));
+    
+    setScreenshots(prev => [...prev, ...newScreenshots]);
+    
+    if (filesToAdd.length < imageFiles.length) {
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
     }
   };
-
+  
+  const removeScreenshot = (id: string) => {
+    setScreenshots(prev => {
+      const filtered = prev.filter(screenshot => screenshot.id !== id);
+      
+      // Revoke object URL to avoid memory leaks
+      const removed = prev.find(screenshot => screenshot.id === id),
+      if (removed) {
+        URL.revokeObjectURL(removed.url)
+      }
+      
+      return filtered
+    })
+  };
+  
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault(),
+    setIsDragging(true)
+  };
+  
+  const handleDragLeave = () => {
+    setIsDragging(false)
+  };
+  
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false),
+    
+    if (e.dataTransfer.files) {
+      addScreenshots(Array.from(e.dataTransfer.files))
+    }
+  };
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
+      return
+  },;
   const addScreenshots = (files: File[]) => {;
     // Filter for image files only;
-    const imageFiles = files && files.filter(file => file && file.type.startsWith('image/'));
-
-    if (imageFiles && imageFiles.length === 0) {;
-      toast && toast.error("Please select valid image files"),;
+    const imageFiles = files.filter(file => file.type.startsWith('image/')),;
+    if (imageFiles.length === 0) {;
+      toast.error("Please select valid image files"),;
       return;
     }
-
+;
     // Limit the number of screenshots;
-    const maxScreenshots = platform === "ios" ? 10 : 8;
-    const availableSlots = maxScreenshots - screenshots && screenshots.length;
-
+    const maxScreenshots = platform === "ios" ? 10 : 8,;
+    const availableSlots = maxScreenshots - screenshots.length,;
     if (availableSlots <= 0) {;
-      toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
+      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),;
       return;
     }
-
-    const filesToAdd = imageFiles && imageFiles.slice(0, availableSlots);
-
-    const newScreenshots = filesToAdd && filesToAdd.map(file => ({;
-      id: Math && Math.random().toString(36).substring(2, 9);
-      url: URL && URL.createObjectURL(file),;
+;
+    const filesToAdd = imageFiles.slice(0, availableSlots),;
+    const newScreenshots = filesToAdd.map(file => ({;
+      id: Math.random().toString(36).substring(2, 9),;
+      url: URL.createObjectURL(file),;
       file;
-    }));
-
-    setScreenshots(prev => [...prev, ...newScreenshots]);
-
-    if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;
-      toast && toast.warning(`Only added ${filesToAdd && filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
+    })),;
+    setScreenshots(prev => [...prev, ...newScreenshots]),;
+    if (filesToAdd.length < imageFiles.length) {;
+      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
     }
-  };
-
+  },;
   const removeScreenshot = (id: string) => {;
     setScreenshots(prev => {;
-      const filtered = prev && prev.filter(screenshot => screenshot && screenshot.id !== id);
-
+      const filtered = prev.filter(screenshot => screenshot.id !== id),;
       // Revoke object URL to avoid memory leaks;
-      const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id),;
+      const removed = prev.find(screenshot => screenshot.id === id),;
       if (removed) {;
-        URL && URL.revokeObjectURL(removed && removed.url);
+        URL.revokeObjectURL(removed.url);
       }
-
+;
       return filtered;
     });
-  };
-
-  const handleDragOver = (e: React && React.DragEvent) => {;
-    e && e.preventDefault(),;
+  },;
+  const handleDragOver = (e: React.DragEvent) => {;
+    e.preventDefault(),;
     setIsDragging(true);
-  };
-
+  },;
   const handleDragLeave = () => {;
     setIsDragging(false);
-  };
-
-  const handleDrop = (e: React && React.DragEvent) => {;
-    e && e.preventDefault();
+  },;
+  const handleDrop = (e: React.DragEvent) => {;
+    e.preventDefault(),;
     setIsDragging(false),;
-
-    if (e && e.dataTransfer.files) {;
-      addScreenshots(Array && Array.from(e && e.dataTransfer.files));
+    if (e.dataTransfer.files) {;
+      addScreenshots(Array.from(e.dataTransfer.files));
     }
-  };
-
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle className="text-lg">App Screenshots</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    <Card className="bg-zion-blue border-zion-purple/30">
+      <CardHeader>
+        <CardTitle className="text-lg">App Screenshots</CardTitle>
+      </CardHeader>
+      <CardContent>
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
-
-
-            isDragging 
-              ? "border-zion-cyan bg-zion-cyan/10" 
-
-
+            isDragging
+              ? "border-zion-cyan bg-zion-cyan/10"
               : "border-zion-purple/30"
           }`}
           onDragOver={handleDragOver}
@@ -163,31 +305,27 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-
-          />;
+          />
           <Button
-            variant="outline" 
-            onClick={() => fileInputRef && fileInputRef.current?.click()}
-            className="mt-2";
-          >;
-            <Plus className="mr-2 h-4 w-4" />;
-            Select Files;
-          </Button>;
-        </div>;
-
-        <div className="text-xs text-gray-400 mb-4">;
-          {platform === "ios" ;
-            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
-            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
+            variant="outline"
+            onClick={() => fileInputRef.current?.click()}
+            className="mt-2"
+          >
+            <Plus className="mr-2 h-4 w-4" />
+            Select Files
+          </Button>
+        </div>
+        <div className="text-xs text-gray-400 mb-4">
+          {platform === "ios"
+            ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
+            : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
-        </div>;
-
-        <div className="grid grid-cols-2 gap-3">;
-          {screenshots && screenshots.map((screenshot) => (;
-            <div key={screenshot && screenshot.id} className="relative group">;
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          {screenshots.map((screenshot) => (
+            <div key={screenshot.id} className="relative group">
               <img
-                src={screenshot && screenshot.url}
-
+                src={screenshot.url}
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />;
@@ -199,23 +337,36 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               </button>;
             </div>;
           ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+        </div>
+      </CardContent>
+    </Card>
+  )
+<<<<<<< HEAD
+}
 
+=======
+<<<<<<< HEAD
+}
 
-
-
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
         </div>;
       </CardContent>;
     </Card>;
   );
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string,
   url: string,
   file: File;
@@ -372,4 +523,3 @@ if ( {) {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

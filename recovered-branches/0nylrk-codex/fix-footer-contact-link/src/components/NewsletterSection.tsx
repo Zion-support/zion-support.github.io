@@ -1,9 +1,16 @@
 
-
-
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading";
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { GradientHeading } from "@/components/GradientHeading";
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
+=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
@@ -12,7 +19,7 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -29,9 +36,23 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
-
-import {GradientHeading} from "@/components/GradientHeading";
-import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+<<<<<<< HEAD
+  );
+}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+}
+=======
+  )
+=======
+  )
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { GradientHeading } from "@/components/GradientHeading",;
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {;
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">;
@@ -60,13 +81,18 @@ function NewsletterSection() {
           </p>;
           <div className="max - w-md mx - auto">;
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <EnhancedNewsletterForm />;
           </div>;
         </div>;
       </div>;
-
+    </section>;
+  );
+}
     </section>);
 }
+<<<<<<< HEAD
+=======
 
 =======
 
@@ -76,6 +102,8 @@ function NewsletterSection() {
 
 }
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

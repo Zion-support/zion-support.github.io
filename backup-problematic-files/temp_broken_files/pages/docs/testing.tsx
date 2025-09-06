@@ -7,7 +7,7 @@ export default function TestingDocRedirect() {;
         <meta httpEquiv="refresh" content="0, url=/TESTING.md" />;
       </Head>;
       <main style={{ padding:24 }}>;
-        <p>Redirecting to Testing documentation…</p>;
+        <p>Redirecting to Testing documentation</p>;
       </main>;
     </>;
   ),;}
@@ -16,5 +16,5 @@ export default function TestingDocRedirect() {;
   {
   padding: 24 
 }
-}> <p>Redirecting to Testing documentation…</p> </main> </>) 
+}> <p>Redirecting to Testing documentation</p> </main> </>) 
 }

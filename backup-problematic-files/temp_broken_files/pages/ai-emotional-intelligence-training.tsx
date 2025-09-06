@@ -9,8 +9,8 @@ export default function AIEmotionalIntelligenceTraining() {;
 			description="Dynamic coaching that improves communication, empathy, and leadership. AI evaluates tone, clarity, and sentiment to deliver tailored practice scenarios and feedback.";
 			subtitle="Upgrade team EQ with measurable gains in manager effectiveness and CSAT.";
 			pricePerMonthUSD={799}
-			implementationWeeks="Implementation:1–2 weeks";
-			roiNote="Average ROI 2–5x within 60–90 days";
+			implementationWeeks="Implementation:12 weeks";
+			roiNote="Average ROI 25x within 6090 days";
 			features={[;
 				"Role-play simulators for negotiation, feedback, and escalation",;
 				"Real-time tone and sentiment coaching",;
@@ -49,10 +49,10 @@ const AIEmotionalIntelligenceTraining: React.FC = () => {
               Evaluate emotional intelligence skills with AI-powered assessments and feedback.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Self-awareness tests</li>
-              <li>• Empathy assessments</li>
-              <li>• Social skills evaluation</li>
-              <li>• Progress tracking</li>
+              <li> Self-awareness tests</li>
+              <li> Empathy assessments</li>
+              <li> Social skills evaluation</li>
+              <li> Progress tracking</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIEmotionalIntelligenceTraining: React.FC = () => {
               Receive customized training programs based on your emotional intelligence profile.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Adaptive learning paths</li>
-              <li>• Interactive exercises</li>
-              <li>• Real-world scenarios</li>
-              <li>• Skill development</li>
+              <li> Adaptive learning paths</li>
+              <li> Interactive exercises</li>
+              <li> Real-world scenarios</li>
+              <li> Skill development</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIEmotionalIntelligenceTraining: React.FC = () => {
               Practice emotional intelligence skills with AI-powered feedback and coaching.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Role-playing exercises</li>
-              <li>• Instant feedback</li>
-              <li>• Performance analytics</li>
-              <li>• Improvement suggestions</li>
+              <li> Role-playing exercises</li>
+              <li> Instant feedback</li>
+              <li> Performance analytics</li>
+              <li> Improvement suggestions</li>
             </ul>
           </div>
         </div>

@@ -1,5 +1,13 @@
 
-
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";
+import { CreateNotificationParams, CreateNotificationResult } from './types';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";
+import { CreateNotificationParams, CreateNotificationResult } from './types';
+=======
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -13,19 +21,30 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { supabase } from "@/integrations/supabase/client",
 import { CreateNotificationParams, CreateNotificationResult } from './types',
 
-
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
+  userId;
+  title;
+  message;
+  type;
 
+<<<<<<< HEAD
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
+=======
 
   userId,
   title,
@@ -34,83 +53,57 @@ export async function createNotification({
   relatedId = null,
   sendEmail = false,
   actionUrl = null,
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
   void actionText;
   try {
     // Call the create_notification database function
-
-    const { data, error } = await supabase.rpc('create_notification', {
-
-      _user_id: userId,
-      _title: title,
-      _message: message,
-      _type: type,
+    const { data, error } = await supabase && supabase.rpc('create_notification', {
+      _user_id: userId;
+      _title: title;
+      _message: message;
+      _type: type
       _related_id: relatedId
-    }),
-    
-    if (error) throw error,
-    
-
+    });
+    if (error) throw error;
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
-      const notificationId = data,
-      await supabase.functions.invoke('send-notification-email', {
-
-import { supabase } from "@/integrations/supabase/client",;
-import { CreateNotificationParams, CreateNotificationResult } from './types',;
-/**;
- * Creates a notification for a user and optionally sends an email notification;
- */;
-export async function createNotification({;
-  userId,;
-  title,;
-  message,;
-  type,;
-  relatedId = null,;
-  sendEmail = false,;
-  actionUrl = null,;
-  actionText = null;
-}: CreateNotificationParams): Promise<CreateNotificationResult> {;
-  void actionUrl,;
-  void actionText,;
-  try {;
-    // Call the create_notification database function;
-    const { data, error } = await supabase.rpc('create_notification', {;
-      _user_id: userId,;
-      _title: title,;
-      _message: message,;
-      _type: type,;
-      _related_id: relatedId;
-    }),;
-    if (error) throw error,;
-    // If sendEmail is true, call the edge function to send an email;
-    if (sendEmail && data) {;
       const notificationId = data;
+<<<<<<< HEAD
+      await supabase && supabase.functions.invoke('send-notification-email', {
+=======
       await supabase.functions.invoke('send-notification-email', {;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
+  } catch (error) {
+=======
 
 
   } catch (error) {;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     console.error('Error creating notification:', error);
 
-=======
-    console && console.error('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { supabase } from '@/integrations / supabase / client';
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**;
@@ -155,12 +148,6 @@ if ( {) {
     return { success: true, notification_id: data }
   } catch (error) {
     console.error ('Error creating notification:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { success: false, error }
   }
-
-
 }
-;
-
-

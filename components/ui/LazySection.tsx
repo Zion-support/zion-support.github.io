@@ -1,26 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+ const getInitialPosition = () => {
+  switch (direction) {
+  case 'up': 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-
-
-
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-
-interface LazySectionProps {
-  children: React.ReactNode,
-  className?: string;
-  threshold?: number;
-  delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right'
-}
-
+const getInitialPosition = () => {
+<<<<<<< HEAD
+  switch (direction) {
+  case 'up':
 export const LazySection: React.FC<LazySectionProps> = ({
-  children;
-  className = '';
-  threshold = 0.1;
-  delay = 0;
-
+=======
+=======
+const getInitialPosition = () => {
+=======
+ const getInitialPosition = () => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  switch (direction) {
+  case 'up':
+export const LazySection: React.FC<LazySectionProps> = ({
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  children
+  className = ''
+  threshold = 0.1
+  delay = 0
   direction = 'up'
 }) => {
+<<<<<<< HEAD
+=======
 =======
 
   children,
@@ -29,8 +39,8 @@ export const LazySection: React.FC<LazySectionProps> = ({
   delay = 0,
   direction = 'up',
 }) => {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {
@@ -43,29 +53,24 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 }
       default:
-
-        return { opacity: 0, y: 50 }
-
+        return { opacity: 0, y: 50 };    }        return { opacity: 0, y: 50 }
     }
   }
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-
-        return { opacity: 1, y: 0 },
+        return { opacity: 1, y: 0 }
       case 'down':
-        return { opacity: 1, y: 0 },
+        return { opacity: 1, y: 0 }
       case 'left':
-        return { opacity: 1, x: 0 },
+        return { opacity: 1, x: 0 }
       case 'right':
-        return { opacity: 1, x: 0 },
-
+        return { opacity: 1, x: 0 }
       default:
         return { opacity: 1, y: 0 }
     }
   }
     >
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -134,21 +139,17 @@ export const LazySection: React.FC<LazySectionProps> = ({;
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {children}
     </motion && motion.div>;
   );
-
-};
-
-export default LazySection;      case 'down':;
-        return { opacity: 1, y: 0 },;
-      case 'left':;
-        return { opacity: 1, x: 0 },;
-      case 'right':;
-        return { opacity: 1, x: 0 },;
-      default:;
-
+}
+export default LazySection;      case 'down':
+        return { opacity: 1, y: 0 }
+      case 'left':
+        return { opacity: 1, x: 0 }
+      case 'right':
+        return { opacity: 1, x: 0 }
+      default:
         return { opacity: 1, y: 0 }
     }
   }
@@ -160,17 +161,11 @@ export default LazySection;      case 'down':;
       transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
       className={className}>;
       {children}
-
-    </motion && motion.div>;
-  );
-};
-
-
+    </motion.div>
+  )
+}
 export default LazySection;
 
-
-
-=======
 const getInitialPosition = () =>: any {
   switch (direction) {
   case 'up':;
@@ -243,7 +238,3 @@ export default LazySection;      case 'down':;
 ;
 export default LazySection;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

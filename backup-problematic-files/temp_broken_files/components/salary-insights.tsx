@@ -158,7 +158,7 @@ export default function SalaryInsightsPage() {
             )}
 
             <button onClick={fetchInsights} disabled={loading} className=&quot;mt-4 w-full rounded bg-indigo-600 text-white py-2 text-sm hover:bg-indigo-700 disabled:opacity-50&quot;>
-              {loading ? 'Calculating…' : 'Update Insights'}
+              {loading ? 'Calculating' : 'Update Insights'}
             </button>
           </div>
 
@@ -179,19 +179,19 @@ export default function SalaryInsightsPage() {
           <div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;>
             <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
               <div className=&quot;text-xs text-gray-500&quot;>Recommended Hourly</div>
-              <div className=&quot;text-xl font-semibold&quot;>{data ? `$${data.recommendedHourlyUsd}` : '—'}</div>
+              <div className=&quot;text-xl font-semibold&quot;>{data ? `$${data.recommendedHourlyUsd}` : ''}</div>
             </div>
             <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
               <div className=&quot;text-xs text-gray-500&quot;>Recommended Monthly</div>
-              <div className=&quot;text-xl font-semibold&quot;>{data ? `$${data.recommendedMonthlyUsd}` : '—'}</div>
+              <div className=&quot;text-xl font-semibold&quot;>{data ? `$${data.recommendedMonthlyUsd}` : ''}</div>
             </div>
             <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
               <div className=&quot;text-xs text-gray-500&quot;>Median</div>
-              <div className=&quot;text-xl font-semibold&quot;>{data ? `$${data.medianHourlyUsd}` : '—'}</div>
+              <div className=&quot;text-xl font-semibold&quot;>{data ? `$${data.medianHourlyUsd}` : ''}</div>
             </div>
             <div className=&quot;rounded-lg border border-gray-200 dark:border-gray-800 p-4&quot;>
               <div className=&quot;text-xs text-gray-500&quot;>Confidence</div>
-              <div className=&quot;text-xl font-semibold&quot;>{data ? `${Math.round(data.confidence * 100)}%` : '—'}</div>
+              <div className=&quot;text-xl font-semibold&quot;>{data ? `${Math.round(data.confidence * 100)}%` : ''}</div>
             </div>
           </div>
 

@@ -188,7 +188,7 @@ export default function AIContentIntelligencePlatform() {;
               className="relative";
             >;
               <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8">;
-                <div className="text-6xl mb-4">🧠</div>;
+                <div className="text-6xl mb-4"></div>;
                 <h3 className="text-2xl font-bold text-white mb-4">Key Benefits</h3>;
                 <div className="space-y-3">;
                   <div className="flex items-center text-green-400">;

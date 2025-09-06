@@ -88,7 +88,7 @@ export default function JobDetails() {;
             size="sm";
             onClick={() => navigate('/jobs')}
           >;
-            ← Back to Jobs;
+             Back to Jobs;
           </Button>;
         </div>;
         ;
@@ -216,7 +216,7 @@ const isOwnJob = user?.id === job.client id;
 }` 
 }description= {
   job.description.substring (0, 160) 
-}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {
+}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button >  Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {
   job.category 
 }</Badge> </div> </CardHeader> <CardContent className="space-y-6" > <div> </div> </div> <div> </Badge>) ) 
 }</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {

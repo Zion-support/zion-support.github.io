@@ -234,24 +234,24 @@ export default function OfflinePage() {;
           >;
             <Card className="max-w-2xl mx-auto">;
               <CardHeader>;
-                <CardTitle className="text-center">💡 Offline Tips</CardTitle>;
+                <CardTitle className="text-center"> Offline Tips</CardTitle>;
               </CardHeader>;
               <CardContent>;
                 <div className="space-y-3 text-sm">;
                   <div className="flex items-start gap-2">;
-                    <span className="text-blue-600 font-semibold">•</span>;
+                    <span className="text-blue-600 font-semibold"></span>;
                     <span>Recently viewed pages are cached and available offline</span>;
                   </div>;
                   <div className="flex items-start gap-2">;
-                    <span className="text-blue-600 font-semibold">•</span>;
+                    <span className="text-blue-600 font-semibold"></span>;
                     <span>Your bookmarks and saved items can be accessed anytime</span>;
                   </div>;
                   <div className="flex items-start gap-2">;
-                    <span className="text-blue-600 font-semibold">•</span>;
+                    <span className="text-blue-600 font-semibold"></span>;
                     <span>Form submissions will be synced when you reconnect</span>;
                   </div>;
                   <div className="flex items-start gap-2">;
-                    <span className="text-blue-600 font-semibold">•</span>;
+                    <span className="text-blue-600 font-semibold"></span>;
                     <span>Check your internet connection and try refreshing the page</span>;
                   </div>;
                 </div>;
@@ -381,6 +381,6 @@ import Head from 'next/head' import Link from 'next/link' export default functio
 }</CardContent> </Card> </motion.div>) ) 
 }</div> </motion.div> {
   /* Tips Section */ 
-}<motion.div > <Card className="max-w-2xl mx-auto" > <CardHeader> <CardTitle className="text-center" >💡 Offline Tips</CardTitle> </CardHeader> <CardContent> <div className="space-y-3 text-sm" > <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Recently viewed pages are cached and available offline</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Your bookmarks and saved items can be accessed anytime</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Form submissions will be synced when you reconnect</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" >•</span> <span>Check your internet connection and try refreshing the page</span> </div> </div> </CardContent> </Card> </motion.div> > <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800" > <CardContent className="p-4" > <div className="flex items-center gap-3" > <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> <span className="text-sm font-medium text-green-700 dark:text-green-300" > Connection restored </span> <Button > Refresh </Button> </div> </CardContent> </Card> </motion.div>) 
+}<motion.div > <Card className="max-w-2xl mx-auto" > <CardHeader> <CardTitle className="text-center" > Offline Tips</CardTitle> </CardHeader> <CardContent> <div className="space-y-3 text-sm" > <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" ></span> <span>Recently viewed pages are cached and available offline</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" ></span> <span>Your bookmarks and saved items can be accessed anytime</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" ></span> <span>Form submissions will be synced when you reconnect</span> </div> <div className="flex items-start gap-2" > <span className="text-blue-600 font-semibold" ></span> <span>Check your internet connection and try refreshing the page</span> </div> </div> </CardContent> </Card> </motion.div> > <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800" > <CardContent className="p-4" > <div className="flex items-center gap-3" > <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> <span className="text-sm font-medium text-green-700 dark:text-green-300" > Connection restored </span> <Button > Refresh </Button> </div> </CardContent> </Card> </motion.div>) 
 }</div> </div> </>) 
 }

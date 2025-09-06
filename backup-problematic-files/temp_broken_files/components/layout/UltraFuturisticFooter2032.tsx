@@ -30,42 +30,42 @@ const mainNavigationRoutes = [
   { name: 'Contact', href: '/contact', icon: MessageCircle, description: 'Get in touch with our team' }
 ],
 const _serviceCategories = [
-  {_title: '🚀 2032 Revolutionary AI Services', _services: [
+  {_title: ' 2032 Revolutionary AI Services', _services: [
       { name: 'AI Consciousness Evolution', _href: '/ai-consciousness-evolution-platform'},
       {_name: 'AI Emotional Intelligence', _href: '/ai-emotional-intelligence-platform'},
       {_name: 'AI Creativity Orchestrator', _href: '/ai-creativity-orchestrator'},
       {_name: 'AI Autonomous Business Manager', _href: '/ai-autonomous-business-manager'}
     ]
   },
-  {_title: '⚛️ 2032 Quantum & Emerging Tech', _services: [
+  {_title: ' 2032 Quantum & Emerging Tech', _services: [
       { name: 'Quantum DNA Computing', _href: '/quantum-dna-computing-platform'},
       {_name: 'Quantum Internet Security', _href: '/quantum-internet-security-gateway'},
       {_name: 'Quantum Financial Trading', _href: '/quantum-financial-trading-platform'},
       {_name: 'Quantum Creativity Studio', _href: '/quantum-creativity-studio'}
     ]
   },
-  {_title: '🏙️ 2032 Enterprise IT Solutions', _services: [
+  {_title: ' 2032 Enterprise IT Solutions', _services: [
       { name: 'Autonomous DevOps', _href: '/autonomous-devops-platform'},
       {_name: 'Zero Trust Architecture', _href: '/zero-trust-network-architecture'},
       {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
       {_name: 'AI IT Operations Center', _href: '/ai-powered-it-operations-center'}
     ]
   },
-  {_title: '🌌 2032 Space & Metaverse Tech', _services: [
+  {_title: ' 2032 Space & Metaverse Tech', _services: [
       { name: 'Space Mining Automation', _href: '/space-mining-automation-platform'},
       {_name: 'Metaverse Development', _href: '/metaverse-development-platform'},
       {_name: 'AI Predictive Health', _href: '/ai-predictive-health-analytics'},
       {_name: 'AI Autonomous Business', _href: '/ai-autonomous-business-manager'}
     ]
   },
-  {_title: '🎯 2032 Innovative Micro SAAS', _services: [
+  {_title: ' 2032 Innovative Micro SAAS', _services: [
       { name: 'AI Business Intelligence', _href: '/ai-business-intelligence-suite'},
       {_name: 'Quantum-Secure Communication', _href: '/quantum-secure-communication-platform'},
       {_name: 'AI Customer Success', _href: '/ai-customer-success-automation'},
       {_name: 'Blockchain Supply Chain', _href: '/blockchain-supply-chain-transparency'}
     ]
   },
-  {_title: '🔬 2032 Research & Development', _services: [
+  {_title: ' 2032 Research & Development', _services: [
       { name: 'Neuromorphic Computing', _href: '/neuromorphic-computing-platform'},
       {_name: 'DNA Computing Platform', _href: '/dna-computing-platform'},
       {_name: 'Photonic Computing', _href: '/photonic-computing-infrastructure'},
@@ -284,7 +284,7 @@ export default function UltraFuturisticFooter2032() {
           {/* Bottom Bar */}
           <motion.div variants={itemVariants} className=&quot;border-t border-cyan-500/30 pt-8&quot;>
             <div className=&quot;flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0&quot;>
-              <div className=&quot;flex items-center space-x-2 text-slate-400 text-sm&quot;>                <span>© 2024 Zion Tech Group. All rights reserved.</span>
+              <div className=&quot;flex items-center space-x-2 text-slate-400 text-sm&quot;>                <span> 2024 Zion Tech Group. All rights reserved.</span>
                 <span className=&quot;text-cyan-400&quot;>|</span>
                 <span>Leading the Future of Technology</span>
               </div>

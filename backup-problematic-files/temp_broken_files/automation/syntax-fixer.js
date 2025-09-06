@@ -81,16 +81,16 @@
   };
 ,;
   async run() {,;
-    this.log("🚀 Starting Syntax Fixer"),;
+    this.log(" Starting Syntax Fixer"),;
 ,;
     try {,;
       await this.fixSyntaxErrors(),;
 ,;
       this.log("=" * 50),;
-      this.log(`🎯 Syntax Fixer completed. Fixes:applied:${this.fixesApplied}`),;
+      this.log(` Syntax Fixer completed. Fixes:applied:${this.fixesApplied}`),;
 ,;
     } catch (error) {,;
-      this.log(`❌ Syntax Fixer:failed:${error.message}`, "ERROR"),;
+      this.log(` Syntax Fixer:failed:${error.message}`, "ERROR"),;
     };
   };
 };
@@ -182,16 +182,16 @@ export default SyntaxFixer,;
 };
 ;
   async run() {;
-    this.log("🚀 Starting Syntax Fixer");
+    this.log(" Starting Syntax Fixer");
 ;
     try {;
       await this.fixSyntaxErrors();
 ;
       this.log("=" * 50);
-      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
+      this.log(` Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`);
 ;
     } catch (error) {;
-      this.log(`❌ Syntax Fixer failed: ${error.message}`, "ERROR");
+      this.log(` Syntax Fixer failed: ${error.message}`, "ERROR");
 };
 };
 };
@@ -252,16 +252,16 @@ export default SyntaxFixer;    })
   };
 ,
   async run() {,
-    this.log("🚀 Starting Syntax Fixer"),
+    this.log(" Starting Syntax Fixer"),
 ,
     try {,
       await this.fixSyntaxErrors(),
 ,
       this.log("=" * 50),
-      this.log(`🎯 Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`),
+      this.log(` Syntax Fixer completed. Fixes applied: ${this.fixesApplied}`),
 
     } catch (error) {,
-      this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
+      this.log(` Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
 },,// Main execution,

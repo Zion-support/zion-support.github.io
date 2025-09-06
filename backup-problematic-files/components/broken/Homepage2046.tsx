@@ -76,7 +76,7 @@ const QuantumLoadingFallback = () => (
       >
         Zion Tech Group 2046
       </motion.h1>
-      <p className="text-xl text-gray-300 mb-3">Quantum AI • Neural Interfaces • Space Technology</p>
+      <p className="text-xl text-gray-300 mb-3">Quantum AI  Neural Interfaces  Space Technology</p>
       <p className="text-lg text-gray-400">Preparing your revolutionary digital transformation journey</p>
       
       {/* Quantum progress bar */}

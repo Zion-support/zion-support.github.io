@@ -9,8 +9,8 @@ export default function RetailTechnologySolutions() {;
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts.";
 			subtitle="Higher margins and better experiences powered by AI.";
 			pricePerMonthUSD={1999}
-			implementationWeeks="Implementation:4–8 weeks";
-			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%";
+			implementationWeeks="Implementation:48 weeks";
+			roiNote="Lift gross margin 24 pts and reduce stockouts 1020%";
 			features={[;
 				"Demand forecasting and dynamic pricing",;
 				"Assortment optimization and store clustering",;
@@ -19,7 +19,7 @@ export default function RetailTechnologySolutions() {;
 				"Omni-channel journey orchestration",;
 				"Integrations:POS, eCom, WMS, ESP, CDP";
 			]}
-			industries={["Retail", "CPG", "E‑commerce"]}
+			industries={["Retail", "CPG", "Ecommerce"]}
 			canonical="https://ziontechgroup.com/retail-technology-solutions";
 		/>;
 	);}

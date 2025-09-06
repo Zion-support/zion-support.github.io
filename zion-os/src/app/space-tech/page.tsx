@@ -1,28 +1,9 @@
-
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
-  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
-export default function SpaceTechPage() {;
-  return (;
-
-
+import Link from "next/link";
+export const metadata = {title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services";
+  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
+export default function SpaceTechPage() {return (;
     <div className="min-h-screen">;
-=======
-import Link from './next / link';,
-export const metadata = {
-  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
-  description: "Explore Zion Tech Group's cutting - edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",
-  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},
-export default /**
- * SpaceTechPage - Function description
- */
-function SpaceTechPage() {
-  return (
-    <div className="min - h-screen">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -103,26 +84,19 @@ function SpaceTechPage() {
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m - 7.08 - 7.071c3.904 - 3.905 10.236 - 3.905 14.141 0M1.394 9.393c5.857 - 5.857 15.355 - 5.857 21.213 0" />;
                 </svg>;
               </div>;
-
-              <h3 className="text - xl font - semibold mb - 3">Satellite Communications</h3>;
-              <p className="text - gray - 400 mb - 4">;
-                High - speed satellite internet, global connectivity solutions,
-
-=======
-
-                High-speed satellite internet, global connectivity solutions,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <h3 className="text-xl font-semibold mb-3">Satellite Communications</h3>;
+              <p className="text-gray-400 mb-4">;
+                High-speed satellite internet, global connectivity solutions;
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• High - speed satellite internet</li>;
-                <li>• Global connectivity solutions</li>;
-                <li>• Remote region communications</li>;
-                <li>• Emergency communications</li>;
+                <li> High - speed satellite internet</li>;
+                <li> Global connectivity solutions</li>;
+                <li> Remote region communications</li>;
+                <li> Emergency communications</li>;
               </ul>;
               <Link href="/space - tech / satellite - communications" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Earth Observation */}
@@ -138,13 +112,13 @@ function SpaceTechPage() {
                 data analytics for climate and resource management.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• High - resolution imaging</li>;
-                <li>• Environmental monitoring</li>;
-                <li>• Climate change tracking</li>;
-                <li>• Resource management</li>;
+                <li> High - resolution imaging</li>;
+                <li> Environmental monitoring</li>;
+                <li> Climate change tracking</li>;
+                <li> Resource management</li>;
               </ul>;
               <Link href="/space - tech / earth - observation" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Space Infrastructure */}
@@ -160,13 +134,13 @@ function SpaceTechPage() {
                 infrastructure for future space exploration missions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Space station development</li>;
-                <li>• Orbital platforms</li>;
-                <li>• Space habitats</li>;
-                <li>• Launch infrastructure</li>;
+                <li> Space station development</li>;
+                <li> Orbital platforms</li>;
+                <li> Space habitats</li>;
+                <li> Launch infrastructure</li>;
               </ul>;
               <Link href="/space - tech / space - infrastructure" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Navigation Systems */}
@@ -183,13 +157,13 @@ function SpaceTechPage() {
                 location - based services for global applications.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Satellite navigation</li>;
-                <li>• Precision positioning</li>;
-                <li>• Location services</li>;
-                <li>• Autonomous navigation</li>;
+                <li> Satellite navigation</li>;
+                <li> Precision positioning</li>;
+                <li> Location services</li>;
+                <li> Autonomous navigation</li>;
               </ul>;
               <Link href="/space - tech / navigation - systems" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Space Research */}
@@ -205,13 +179,13 @@ function SpaceTechPage() {
                 technology development for space exploration.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Scientific platforms</li>;
-                <li>• Space experiments</li>;
-                <li>• Technology development</li>;
-                <li>• Research collaboration</li>;
+                <li> Scientific platforms</li>;
+                <li> Space experiments</li>;
+                <li> Technology development</li>;
+                <li> Research collaboration</li>;
               </ul>;
               <Link href="/space - tech / space - research" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Space Consulting */}
@@ -227,13 +201,13 @@ function SpaceTechPage() {
                 and space industry partnerships.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Space strategy development</li>;
-                <li>• Regulatory compliance</li>;
-                <li>• Industry partnerships</li>;
-                <li>• Investment guidance</li>;
+                <li> Space strategy development</li>;
+                <li> Regulatory compliance</li>;
+                <li> Industry partnerships</li>;
+                <li> Investment guidance</li>;
               </ul>;
               <Link href="/space - tech / consulting" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
           </div>;

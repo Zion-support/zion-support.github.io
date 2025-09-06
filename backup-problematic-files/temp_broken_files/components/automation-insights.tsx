@@ -123,7 +123,7 @@ export default function AutomationInsightsPage() {
                     <Link 
                       href={`/blog/${trend.id}`}
                       className=&quot;inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors&quot;                    >
-                      Read More <span className=&quot;ml-1&quot;>→</span>
+                      Read More <span className=&quot;ml-1&quot;></span>
                     </a>
                   </div>
                 ))}
@@ -136,7 +136,7 @@ export default function AutomationInsightsPage() {
               <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
                 {automationTools.map((tool, index) => (
                   <div key={index} className=&quot;bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center&quot;>
-                    <div className=&quot;text-4xl mb-4&quot;>🔧</div>
+                    <div className=&quot;text-4xl mb-4&quot;></div>
                     <h3 className=&quot;text-xl font-bold mb-3 text-white&quot;>{tool.title}</h3>
                     <p className=&quot;text-white/70 mb-4&quot;>{tool.description}</p>
                     <div className=&quot;flex justify-center gap-2&quot;>

@@ -30,14 +30,14 @@ export default function UltimateServicesShowcase2029() {;
   ],;
 ;
   const categories = [;
-    { id:'all', name:'🚀 All Services', icon:Rocket, count:allServices.length, color:'from-violet-600 to-purple-600' },;
-    { id:'cutting-edge', name:'⚡ Cutting-Edge', icon:Zap, count:cuttingEdge2028MicroSaas.length, color:'from-cyan-600 to-blue-600' },;
-    { id:'business', name:'🎯 Business Solutions', icon:Target, count:practicalBusinessSolutions2028.length, color:'from-green-600 to-emerald-600' },;
-    { id:'ai-autonomous', name:'🤖 AI & Autonomous', icon:Brain, count:advancedAIAutonomousServices2028.length, color:'from-emerald-600 to-teal-600' },;
-    { id:'quantum-space', name:'⚛️ Quantum & Space', icon:Atom, count:quantumSpaceInnovations2028.length, color:'from-indigo-600 to-blue-600' },;
-    { id:'ai', name:'🧠 AI & ML', icon:Brain, count:allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).length, color:'from-pink-600 to-rose-600' },;
-    { id:'quantum', name:'🔮 Quantum Tech', icon:Atom, count:allServices.filter(s => s.category.some(c => c.includes('Quantum'))).length, color:'from-purple-600 to-violet-600' },;
-    { id:'enterprise', name:'🏢 Enterprise', icon:Shield, count:allServices.filter(s => s.category.some(c => c.includes('Enterprise'))).length, color:'from-blue-600 to-cyan-600' }
+    { id:'all', name:' All Services', icon:Rocket, count:allServices.length, color:'from-violet-600 to-purple-600' },;
+    { id:'cutting-edge', name:' Cutting-Edge', icon:Zap, count:cuttingEdge2028MicroSaas.length, color:'from-cyan-600 to-blue-600' },;
+    { id:'business', name:' Business Solutions', icon:Target, count:practicalBusinessSolutions2028.length, color:'from-green-600 to-emerald-600' },;
+    { id:'ai-autonomous', name:' AI & Autonomous', icon:Brain, count:advancedAIAutonomousServices2028.length, color:'from-emerald-600 to-teal-600' },;
+    { id:'quantum-space', name:' Quantum & Space', icon:Atom, count:quantumSpaceInnovations2028.length, color:'from-indigo-600 to-blue-600' },;
+    { id:'ai', name:' AI & ML', icon:Brain, count:allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).length, color:'from-pink-600 to-rose-600' },;
+    { id:'quantum', name:' Quantum Tech', icon:Atom, count:allServices.filter(s => s.category.some(c => c.includes('Quantum'))).length, color:'from-purple-600 to-violet-600' },;
+    { id:'enterprise', name:' Enterprise', icon:Shield, count:allServices.filter(s => s.category.some(c => c.includes('Enterprise'))).length, color:'from-blue-600 to-cyan-600' }
   ],;
 ;
   const priceRanges = [;

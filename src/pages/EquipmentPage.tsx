@@ -1,15 +1,25 @@
-
-
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import { useState, useEffect, useCallback, useMemo  } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useRouter  } from 'next/router';
+import { useState, useEffect, useCallback, useMemo  } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+=======
 
 
 }
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
@@ -25,18 +35,19 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-
-
-    id: "nvidia-a100-server",
-    title: "NVIDIA A100 GPU Training Server",
+    id: "nvidia-a100-server";
+    title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs, designed for demanding machine learning workloads.",
-    category: "AI Hardware",
-    price: 85000,
-    currency: "$",
-    brand: "NVIDIA",
+    category: "AI Hardware";
+    price: 85000;
+    currency: "$";
+    brand: "NVIDIA";
     specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
+<<<<<<< HEAD
+    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
+=======
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:30:00.000Z",
     rating: 4.9,
@@ -194,15 +205,67 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <EquipmentErrorBoundary>
+      <EquipmentPageContent />
+    </EquipmentErrorBoundary>
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <Card className="h-full hover:shadow-lg transition-shadow">
+      <CardHeader className="pb-3">
+        <div className="flex items-start justify-between">
+          <div className="flex-1 min-w-0">
+            <h3 className="font-semibold text-lg truncate">{equipment.title}</h3>
+            <p className="text-sm text-muted-foreground">{equipment.category}</p>
+            <div className="flex items-center gap-2 mt-2">
+              <Badge variant="secondary" className="text-xs">{equipment.brand}</Badge>
+            </div>
+          </div>
+          <div className="text-right">
+            <div className="text-xl font-bold text-blue-600">{formatPrice(equipment.price ?? 0)}</div>
+            <Badge variant={equipment.availability === "In Stock" ? "default" : "outline"} className="text-xs">
+              {equipment.availability}
+            </Badge>
+          </div>
+        </div>
+      </CardHeader>
+      <CardContent className="pt-0">
+        <div className="flex items-center gap-4 mb-3">
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4 text-yellow-500 fill-current" />
+            <span className="text-sm font-medium">{equipment.rating?.toFixed(1)}</span>
+            <span className="text-xs text-muted-foreground">({equipment.reviewCount} reviews)</span>
+          </div>
+        </div>
+        <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{equipment.description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-sm font-medium">{equipment.category}</span>
+          <Button size="sm" onClick={onViewDetails}>
+            <ShoppingCart className="h-4 w-4 mr-1" />
+            View Details
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+},
 
 
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -219,141 +282,26 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
   }
 
 
+}
+// Main export with error boundary
+export default function EquipmentPage() {
+  return (
+    <EquipmentErrorBoundary>
+      <EquipmentPageContent />
+    </EquipmentErrorBoundary>
+  )
+}
+<<<<<<< HEAD
 
 =======
-  // Error state
-  if (error && equipment.length === 0) {
-    return (
-      <div className="container py-8">
-        <div className="text-center space-y-4">
-          <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />
-          <h2 className="text-2xl font-bold">Unable to load equipment</h2>
-          <p className="text-muted-foreground max-w-md mx-auto">{error}</p>
-          <div className="flex gap-2 justify-center">
-            <Button onClick={refresh} variant="outline">
-              <RefreshCw className="h-4 w-4 mr-2" />
-              Try Again
-            </Button>
-            <Button onClick={() => window.location.reload()}>
-              Refresh Page
-            </Button>
-          </div>
-        </div>
-      </div>
-    )
-  }, [sortBy, filterCategory, showRecommended, dataSeed]),;
-  const {;
-    items: equipment,;
-    loading,;
-    error,;
-    hasMore,;
-    total,;
-    isFetching,;
-    lastElementRef,;
-    refresh,;
-    scrollToTop,;
-    loadMore;
-  } = useInfiniteScrollPagination(fetchEquipment, 12),;
-  // Refresh when filters change;
-  useEffect(() => {;
-    const timeoutId = setTimeout(() => {;
-      refresh();
-    }, 100), // Small delay to prevent rapid successive refreshes;
-    return () => clearTimeout(timeoutId);
-  }, [sortBy, filterCategory, showRecommended, refresh]),;
-  const marketStats = useMemo(() => {;
-    if (equipment.length === 0) return null,;
-    return getEquipmentMarketStats(equipment);
-  }, [equipment]),;
-  const categories = useMemo(() => {;
-    // Use all possible categories, not just from current items;
-    return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"];
-  }, []),;
-  const [showScrollTop, setShowScrollTop] = useState(false),;
-  useEffect(() => {;
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
-    window.addEventListener('scroll', handleScroll),;
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  // Loading state;
-  if (loading && equipment.length === 0) {;
-    return (;
-      <div className="container py-8">;
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">;
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
-            Datacenter Equipment;
-          </h1>;
-          <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure</p>;
-        </motion.div>;
-        <EquipmentLoadingGrid />;
-      </div>;
-    );
-  }
 ;
-  // Error state;
-  if (error && equipment.length === 0) {;
-    return (;
-      <div className="container py-8">;
-        <div className="text-center space-y-4">;
-          <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />;
-          <h2 className="text-2xl font-bold">Unable to load equipment</h2>;
-          <p className="text-muted-foreground max-w-md mx-auto">{error}</p>;
-          <div className="flex gap-2 justify-center">;
-            <Button onClick={refresh} variant="outline">;
-              <RefreshCw className="h-4 w-4 mr-2" />;
-              Try Again;
-            </Button>;
-            <Button onClick={() => window.location.reload()}>;
-              Refresh Page;
-            </Button>;
-          </div>;
-        </div>;
-      </div>;
-    );
-  }
-;
-  return (;
-    <div className="container py-8">;
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>;
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
-          Datacenter Equipment;
-        </h1>;
-        <p className="text-muted-foreground text-lg">Professional hardware for modern IT infrastructure and AI workloads</p>;
-      </motion.div>;
-      {marketStats && (;
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>;
-          <EquipmentMarketInsights stats={marketStats} />;
-        </motion.div>;
-      )}
-;
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
-        <EquipmentFilterControls;
-          sortBy={sortBy}
-          setSortBy={setSortBy}
-          filterCategory={filterCategory}
-          setFilterCategory={setFilterCategory}
-          categories={categories}
-          showRecommended={showRecommended}
-          setShowRecommended={setShowRecommended}
-          loading={isFetching}
-        />
-      </motion.div>
-
-
-// Main export with error boundary;
-export default function EquipmentPage() {;
-  return (
-    <EquipmentErrorBoundary>;
-      <EquipmentPageContent />;
-    </EquipmentErrorBoundary>;
-  );
-}
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
 }
 // Main export with error boundary;
@@ -366,10 +314,12 @@ function EquipmentPage() {
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

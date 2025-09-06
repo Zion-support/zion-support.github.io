@@ -12,11 +12,11 @@ interface Language {;
 }
 ;
 const languages:Language[] = [;
-  { code:"en", name:"English", flag:"🇺🇸" },;
-  { code:"es", name:"Español", flag:"🇪🇸" },;
-  { code:"fr", name:"Français", flag:"🇫🇷" },;
-  { code:"de", name:"Deutsch", flag:"🇩🇪" },;
-  { code:"zh", name:"中文", flag:"🇨🇳" }],;
+  { code:"en", name:"English", flag:"" },;
+  { code:"es", name:"Espaol", flag:"" },;
+  { code:"fr", name:"Franais", flag:"" },;
+  { code:"de", name:"Deutsch", flag:"" },;
+  { code:"zh", name:"", flag:"" }],;
 ;
 export function LanguageThemeSelector() {;
   const { theme, setTheme } = useTheme(),;

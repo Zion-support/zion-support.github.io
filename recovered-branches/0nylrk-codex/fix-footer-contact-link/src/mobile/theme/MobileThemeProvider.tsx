@@ -1,51 +1,54 @@
 
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
-
+import React from "react";
+import { useTheme } from "@/hooks/useTheme";
 interface MobileThemeProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
-
-
-
+<<<<<<< HEAD
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
+=======
 
 export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
 =======
-import {useTheme} from "@/hooks/useTheme";
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
+interface MobileThemeProviderProps {
+  children: React.ReactNode
+import React from "react",;
+import { useTheme } from "@/hooks/useTheme",;
 interface MobileThemeProviderProps {;
-  children: React && React.ReactNode;
+  children: React.ReactNode;
 }
-
-export function MobileThemeProvider(): any ({ children }: MobileThemeProviderProps) {;
+export function MobileThemeProvider({ children }: MobileThemeProviderProps) {
   const { theme } = useTheme();
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+<<<<<<< HEAD
   return (
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      {children}
-
-    </div>;
-  );
-}
-
 =======
+  return (;
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+      {children}
+    </div>
+  )
+}
 export /**
  * MobileThemeProvider - Function description
  */
 function MobileThemeProvider() {
   const { theme } = use_theme ();
-;
+
   return (
     <div className={`mobile - app ${theme === 'dark' ? 'dark' : 'light'}`}>;
       {children}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -103,39 +103,39 @@ export default function CloudMonitoringPage() {_const _features = [
   ],
 
   const integrations = [
-    { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
-    { name: 'Azure', icon: '🔷', description: 'Monitor integration' },
-    { name: 'GCP', icon: '☁️', description: 'Stackdriver integration' },
-    { name: 'Docker', icon: '🐳', description: 'Container monitoring' },
-    { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
-    { name: 'Slack', icon: '💬', description: 'Team notifications' },
-    { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
-    { name: 'Jira', icon: '📋', description: 'Issue tracking' }
+    { name: 'AWS', icon: '', description: 'CloudWatch integration' },
+    { name: 'Azure', icon: '', description: 'Monitor integration' },
+    { name: 'GCP', icon: '', description: 'Stackdriver integration' },
+    { name: 'Docker', icon: '', description: 'Container monitoring' },
+    { name: 'Kubernetes', icon: '', description: 'K8s native support' },
+    { name: 'Slack', icon: '', description: 'Team notifications' },
+    { name: 'PagerDuty', icon: '', description: 'Incident management' },
+    { name: 'Jira', icon: '', description: 'Issue tracking' }
   ],
 
   const useCases = [
     {
       title: 'DevOps Teams',
       description: 'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
-      icon: '🔄',
+      icon: '',
       benefits: ['Faster deploymentsReduced downtimeBetter collaborationAutomated scaling']
     },
     {
       title: 'SaaS Companies',
       description: 'Track user experience, application performance, and business metrics.',
-      icon: '💼',
+      icon: '',
       benefits: ['User satisfactionRevenue optimizationCompetitive advantageCustomer retention']
     },
     {
       title: 'E-commerce',
       description: 'Monitor website performance, payment processing, and inventory systems.',
-      icon: '🛒',
+      icon: '',
       benefits: ['Higher conversionFaster checkoutInventory optimizationRevenue growth']
     },
     {
       title: 'Financial Services',
       description: 'Ensure compliance, security, and 24/7 availability of critical systems.',
-      icon: '💰',
+      icon: '',
       benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
     }
   ],
@@ -166,21 +166,21 @@ export default function CloudMonitoringPage() {_const _features = [
   ];
 
   const _integrations = [
-    {_name: 'AWS', _icon: '☁️', _description: 'CloudWatch integration'},
-    {_name: 'Azure', _icon: '🔷', _description: 'Monitor integration'},
-    {_name: 'GCP', _icon: '☁️', _description: 'Stackdriver integration'},
-    {_name: 'Docker', _icon: '🐳', _description: 'Container monitoring'},
-    {_name: 'Kubernetes', _icon: '☸️', _description: 'K8s native support'},
-    {_name: 'Slack', _icon: '💬', _description: 'Team notifications'},
-    {_name: 'PagerDuty', _icon: '🚨', _description: 'Incident management'},
-    {_name: 'Jira', _icon: '📋', _description: 'Issue tracking'}
+    {_name: 'AWS', _icon: '', _description: 'CloudWatch integration'},
+    {_name: 'Azure', _icon: '', _description: 'Monitor integration'},
+    {_name: 'GCP', _icon: '', _description: 'Stackdriver integration'},
+    {_name: 'Docker', _icon: '', _description: 'Container monitoring'},
+    {_name: 'Kubernetes', _icon: '', _description: 'K8s native support'},
+    {_name: 'Slack', _icon: '', _description: 'Team notifications'},
+    {_name: 'PagerDuty', _icon: '', _description: 'Incident management'},
+    {_name: 'Jira', _icon: '', _description: 'Issue tracking'}
   ];
 
   const _useCases = [
-    {_title: 'DevOps Teams', _description: 'Monitor CI/CD pipelines, _deployment success rates, _and infrastructure health.', _icon: '🔄', _benefits: ['Faster deployments', _'Reduced downtime', _'Better collaboration', _'Automated scaling']},
-    {_title: 'SaaS Companies', _description: 'Track user experience, _application performance, _and business metrics.', _icon: '💼', _benefits: ['User satisfaction', _'Revenue optimization', _'Competitive advantage', _'Customer retention']},
-    {_title: 'E-commerce', _description: 'Monitor website performance, _payment processing, _and inventory systems.', _icon: '🛒', _benefits: ['Higher conversion', _'Faster checkout', _'Inventory optimization', _'Revenue growth']},
-    {_title: 'Financial Services', _description: 'Ensure compliance, _security, _and 24/7 availability of critical systems.', _icon: '💰', _benefits: ['Regulatory compliance', _'Fraud detection', _'Risk management', _'Customer trust']}
+    {_title: 'DevOps Teams', _description: 'Monitor CI/CD pipelines, _deployment success rates, _and infrastructure health.', _icon: '', _benefits: ['Faster deployments', _'Reduced downtime', _'Better collaboration', _'Automated scaling']},
+    {_title: 'SaaS Companies', _description: 'Track user experience, _application performance, _and business metrics.', _icon: '', _benefits: ['User satisfaction', _'Revenue optimization', _'Competitive advantage', _'Customer retention']},
+    {_title: 'E-commerce', _description: 'Monitor website performance, _payment processing, _and inventory systems.', _icon: '', _benefits: ['Higher conversion', _'Faster checkout', _'Inventory optimization', _'Revenue growth']},
+    {_title: 'Financial Services', _description: 'Ensure compliance, _security, _and 24/7 availability of critical systems.', _icon: '', _benefits: ['Regulatory compliance', _'Fraud detection', _'Risk management', _'Customer trust']}
   ];
 
   return (

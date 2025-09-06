@@ -70,14 +70,14 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
 
   const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
-    { id: 'ai', label: 'AI Services', icon: '🧠' },
-    { id: 'automation', label: 'AI Automation', icon: '⚡' },
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
-    { id: 'it', label: 'IT Solutions', icon: '💻' },
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
-    { id: 'contact', label: 'Contact', icon: '📞' }
+    { id: 'hero', label: 'Home', icon: '' },
+    { id: 'services', label: 'Micro SAAS', icon: '' },
+    { id: 'ai', label: 'AI Services', icon: '' },
+    { id: 'automation', label: 'AI Automation', icon: '' },
+    { id: 'quantum', label: 'Quantum Security', icon: '' },
+    { id: 'it', label: 'IT Solutions', icon: '' },
+    { id: 'emerging', label: 'Emerging Tech', icon: '' },
+    { id: 'contact', label: 'Contact', icon: '' }
   ],
 
   return (
@@ -235,14 +235,14 @@ initial={{ opacity: 0, height: 0 }}
 href=&quot;tel:+13024640950&quot;
                       className=&quot;flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300&quot;
                     >
-                      <span>📱</span>
+                      <span></span>
                       <span>+1 302 464 0950</span>
                     </a>
                     <a,
 href=&quot;mailto:kleber@ziontechgroup.com&quot;
                       className=&quot;flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300&quot;
                     >
-                      <span>✉️</span>
+                      <span></span>
                       <span>kleber@ziontechgroup.com</span>
                     </a>
                   </div>
@@ -553,21 +553,21 @@ initial={_{ opacity: 0, y: 30}}
             
             <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-8 mb-12&quot;>
               <div className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6&quot;>
-                <div className=&quot;text-3xl mb-4&quot;>📱</div>
+                <div className=&quot;text-3xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Phone</h3>
                 <a href=&quot;tel:+13024640950&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
                   +1 302 464 0950
                 </a>
               </div>
               <div className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6&quot;>
-                <div className=&quot;text-3xl mb-4&quot;>✉️</div>
+                <div className=&quot;text-3xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Email</h3>
                 <a href=&quot;mailto:kleber@ziontechgroup.com&quot; className=&quot;text-cyan-400 hover:text-cyan-300 transition-colors&quot;>
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className=&quot;bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6&quot;>
-                <div className=&quot;text-3xl mb-4&quot;>📍</div>
+                <div className=&quot;text-3xl mb-4&quot;></div>
                 <h3 className=&quot;text-xl font-semibold text-white mb-2&quot;>Address</h3>
                 <p className=&quot;text-gray-300 text-sm&quot;>
                   364 E Main St STE 1008<br />
@@ -655,12 +655,12 @@ initial={{ opacity: 0, y: 30 }}
 
             <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
               {[                {
-                  title: 'Innovation First', description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: '🚀'},
-                {title: 'Proven Results', description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', icon: '📈'},
-                {title: 'Future-Proof Technology', description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.', icon: '🔮'},
-                {title: 'Expert Team', description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.', icon: '👥'},
-                {title: '24/7 Support', description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.', icon: '🛡️'},
-                {title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊'}
+                  title: 'Innovation First', description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: ''},
+                {title: 'Proven Results', description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', icon: ''},
+                {title: 'Future-Proof Technology', description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.', icon: ''},
+                {title: 'Expert Team', description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.', icon: ''},
+                {title: '24/7 Support', description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.', icon: ''},
+                {title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: ''}
               ].map(_(feature, index) => (
                 <motion.div,
 key={feature.title}

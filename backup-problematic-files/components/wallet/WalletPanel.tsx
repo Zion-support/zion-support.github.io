@@ -94,7 +94,7 @@ export default function WalletPanel() {
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">⚡</span>
+            <span className="text-2xl"></span>
             <div>
               <div className="text-sm text-gray-500">Balance</div>
               <div className="text-2xl font-semibold">{balance} {symbol}</div>
@@ -222,7 +222,7 @@ export default function WalletPanel() {;
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">;
         <div className="flex items-center justify-between">;
           <div className="flex items-center gap-2">;
-            <span className="text-2xl">⚡</span>;
+            <span className="text-2xl"></span>;
             <div>;
               <div className="text-sm text-gray-500">Balance</div>;
               <div className="text-2xl font-semibold">{balance} {symbol}</div>;

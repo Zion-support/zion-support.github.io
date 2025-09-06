@@ -1,8 +1,33 @@
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+<<<<<<< HEAD
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+=======
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function About() {
   return (
     <>
@@ -113,14 +138,14 @@ export default function About() {
       <Footer />
     </>
   )
-
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
+<<<<<<< HEAD
+}
 =======
-
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -341,6 +366,7 @@ function About() {
                 <h3 className="text - xl font - bold text - white mb - 3">Trust</h3>;
                 <p className="text - zion - slate - light">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
                 </p>;
               </div>;
@@ -349,11 +375,22 @@ function About() {
         </div>;
       </main>;
       <Footer />;
-
+    </>;
+  );
+<<<<<<< HEAD
+}
     </>);
+}
+=======
+<<<<<<< HEAD
+}
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

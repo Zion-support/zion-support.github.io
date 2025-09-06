@@ -72,7 +72,7 @@ export default function DesignMapPage() {;
               </select>;
             </div>;
             <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>;
-              {isLoading ? 'Generating…' :'GPT Wireframe Suggestion'}
+              {isLoading ? 'Generating' :'GPT Wireframe Suggestion'}
             </button>;
           </div>;
           {suggestion && (;

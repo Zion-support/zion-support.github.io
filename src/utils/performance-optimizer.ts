@@ -1,28 +1,77 @@
-
-  const images = document && document.querySelectorAll('img');
-  images && images.forEach(img => {
-    if (!img && img.loading) {
-      img && img.loading = 'lazy';
+// Performance optimization utilities
+export const optimizeImages = () => {
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (!img.loading) {
+      img.loading = 'lazy'
     }
-    if (!img && img.decoding) {
-      img && img.decoding = 'async';
-
+    if (!img.decoding) {
+      img.decoding = 'async'
     }
-
-export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
-
-  criticalResources && criticalResources.forEach(resource => {    const link = document && document.createElement('link');
-    link && link.rel = 'preload';
-    link && link.href = resource;
-    link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
-    document && document.head.appendChild(link);
-
+<<<<<<< HEAD
   });
 };
 
+export const preloadCriticalResources = null;
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  });
+};
+
+<<<<<<< HEAD
+export const preloadCriticalResources = null;
+    '/css/critical.css'
+  ];
+  
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+  });
+=======
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+};
+
+=======
+<<<<<<< HEAD
+  })
+}
+export const preloadCriticalResources = () => {
+  const criticalResources = ['/fonts/main.woff2/css/critical.css']
+  criticalResources.forEach(resource => {    const link = document.createElement('link')
+    link.rel = 'preload'
+    link.href = resource
+    link.as = resource.endsWith('.css') ? 'style' : 'font'
+    document.head.appendChild(link)
+  })
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
+<<<<<<< HEAD
+  const loadComponent = componentName => {    return import(`./components/${componentName}`)
+  }
+  return { load_component }
+}
+    link.rel = 'preload'
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
+    link.rel = 'preload';
+    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+=======
 
 // Performance optimization utilities;
 export const optimize_images = () =>: any {
@@ -33,34 +82,9 @@ export const optimize_images = () =>: any {
 if ( {) {
   $2
 }
-      img.loading = 'lazy';
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      img.decoding = 'async';
-    }
-  });
-}
-export const preloadCriticalResources = () =>: any {
-  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];
-  critical_resources.for_each (resource => {    const link = document.create_element ('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.ends_with ('.css') ? 'style' : 'font';
-    document.head.append_child (link);
-  });
-}
-export const optimizeBundleSize = () =>: any {
-  // Dynamic imports for non - critical components;
-  const load_component = component_name => {    return import (`./components/${component_name}`);
-
-  }
-  return { load_component }
-}
-
-  const loadComponent = componentName => {    return import(`./components/${componentName}`);
+    link.rel = 'preload'
+<<<<<<< HEAD
+    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font'
 =======
 
 export const lazyLoadComponents = () => {
@@ -83,7 +107,7 @@ export const lazyLoadComponents = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
@@ -92,12 +116,11 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

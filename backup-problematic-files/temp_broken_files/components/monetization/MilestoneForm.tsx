@@ -42,7 +42,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
           className=&quot;mt-1 w-full rounded border px-3 py-2&quot;
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder=&quot;Phase 1 – Backend Setup&quot;          required
+          placeholder=&quot;Phase 1  Backend Setup&quot;          required
         />
       </div>
       <div>

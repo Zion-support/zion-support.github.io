@@ -1,36 +1,43 @@
+<<<<<<< HEAD
+import React, { useState, Suspense } from 'react';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React, { useState, Suspense } from 'react'
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+const ReactPlayer = React.lazy(() => import('react-player'))
+const ModelViewer = React.lazy(async () => {
+  await import('@google/model-viewer')
+  return {
+    default: (props: any) => React.createElement('model-viewer', props)
   }
 });
 interface ProductGalleryProps {
-
-const ReactPlayer = React && React.lazy(() => import('react-player'));
-const ModelViewer = React && React.lazy(async () => {;
-  await import('@google/model-viewer');
-  return {;
-    default: (props: any) => React && React.createElement('model-viewer', props),;
-  };
-});
-interface ProductGalleryProps {;
-  images: string[];
-  videoUrl?: string;
-  modelUrl?: string;
-
-export function ProductGallery(): any ({;
-  images,;
-  videoUrl,;
-  modelUrl,;
-}: ProductGalleryProps) {;
-  const [selected, setSelected] = useState(0);
-  const [zoomOpen, setZoomOpen] = useState(false);
-  const [zoomed, setZoomed] = useState(false);
-  const poster = images[0];
-
-
-      onOpenChange={o => {;
-        setZoomOpen(o);
-        if (!o) setZoomed(false);
-
+  images: string[]
+  videoUrl?: string
+  modelUrl?: string
+export function ProductGallery({
+  images
+  videoUrl
+  modelUrl
+}: ProductGalleryProps) {
+  const [selected, setSelected] = useState(0)
+  const [zoomOpen, setZoomOpen] = useState(false)
+  const [zoomed, setZoomed] = useState(false)
+  const poster = images[0]
+      onOpenChange={o => {
+        setZoomOpen(o)
+        if (!o) setZoomed(false)
       }}
     >;
       <Tabs defaultValue='images' className='w-full'>;
@@ -66,13 +73,10 @@ export function ProductGallery(): any ({;
               ))}
             </div>;
           )}
-
-        </TabsContent>;
-
-        {videoUrl && (;
-          <TabsContent value='video' className='pt-4'>;
-            <AspectRatio ratio={16 / 9}>;
-
+        </TabsContent>
+        {videoUrl && (
+          <TabsContent value='video' className='pt-4'>
+            <AspectRatio ratio={16 / 9}>
               <Suspense
                 fallback={
                   <img
@@ -93,12 +97,9 @@ export function ProductGallery(): any ({;
             </AspectRatio>;
           </TabsContent>;
         )}
-
-
-        {modelUrl && (;
-          <TabsContent value='model' className='pt-4'>;
-            <AspectRatio ratio={16 / 9}>;
-
+        {modelUrl && (
+          <TabsContent value='model' className='pt-4'>
+            <AspectRatio ratio={16 / 9}>
               <Suspense
                 fallback={
                   <img
@@ -113,7 +114,6 @@ export function ProductGallery(): any ({;
                   src={modelUrl}
                   alt='3d model'
                   camera-controls
-=======
   images: string[];
   video_url?: string;
   model_url?: string;
@@ -203,13 +203,19 @@ function ProductGallery() {
                   src={model_url}
                   alt='3d model';
                   camera - controls;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   style={{ width: '100%', height: '100%' }}
                 />;
               </Suspense>;
             </AspectRatio>;
-
-          >;
+          </TabsContent>;
+        )}
+      </Tabs>;
+      {images && images.length > 0 && (;
+        <DialogContent className='max-w-3xl p-0'>;
+          <div
+            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
+            onClick={() => setZoomed(!zoomed)}
+          >
 
             <img
               src={images[selected] |images[0] |''}
@@ -218,16 +224,22 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
-
-    </Dialog>;
-  );
+<<<<<<< HEAD
+    </Dialog>
+  )
+=======
+<<<<<<< HEAD
+    </Dialog>
+  )
+}
+}
 =======
 
     </Dialog>;
   );
 };
 };
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React, { useState, Suspense } from 'react',;
 import {;
@@ -249,14 +261,8 @@ interface ProductGalleryProps {;
   videoUrl?: string,;
   modelUrl?: string;
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-
-}
-=======
-
-=======
           </TabsContent>)}
       </Tabs>;
       {images.length > 0 && (
@@ -273,9 +279,14 @@ interface ProductGalleryProps {;
         </DialogContent>)}
     </Dialog>);
 }
+<<<<<<< HEAD
+}
+=======
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

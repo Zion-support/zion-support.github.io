@@ -1,27 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from 'react',;
+;
+export default function AdminLearn() {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
+  const [message, setMessage] = useState(''),
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
-
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
-  const [message, setMessage] = useState('');
-
-
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
+  const [message, setMessage] = useState('')
   async function saveCourse() {
     setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
-
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify(form)
+<<<<<<< HEAD
     })
     const data = await resp.json()
     if (data.ok) setMessage('Saved')
     else setMessage('Error: ' + (data.error |'unknown'))
 
   }
+<<<<<<< HEAD
+=======
 =======
       body: JSON.stringify(form)
 
@@ -29,7 +34,7 @@ export default function AdminLearn() {
     const data = await resp.json(),
     if (data.ok) setMessage('Saved'),
     else setMessage('Error: ' + (data.error || 'unknown'))
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useEffect, useState } from 'react';
 export default function AdminLearn(req, res) {
@@ -49,13 +54,15 @@ export default function AdminLearn(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -78,11 +85,17 @@ export default function AdminLearn(req, res) {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
-
+<<<<<<< HEAD
+      {message && <div className="text-sm">{message}</div>}
+    </div>
+  )
 =======
+<<<<<<< HEAD
+      {message && <div className="text-sm">{message}</div>}
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
-
-=======
 import { useEffect, useState } from 'react',
 ;
 export default /**
@@ -132,6 +145,8 @@ function save_course() {
       {message && <div className="text - sm">{message}</div>}
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -139,7 +154,7 @@ function save_course() {
     </div>
   );
 };
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       {message && <div className="text-sm">{message}</div>  } catch (error) {
     console.error("Error:", error);
@@ -153,8 +168,10 @@ function save_course() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
+<<<<<<< HEAD
 }
-
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

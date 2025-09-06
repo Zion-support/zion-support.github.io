@@ -164,7 +164,7 @@ const InitPage:NextPage = () => {;
 ;
         <div className="flex items-center gap-3">;
           <button disabled={submitting} className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60">;
-            {submitting ? 'Deploying…' :'Deploy Genesis'}
+            {submitting ? 'Deploying' :'Deploy Genesis'}
           </button>;
           {error && <span className="text-sm text-red-500">{error}</span>}
         </div>;

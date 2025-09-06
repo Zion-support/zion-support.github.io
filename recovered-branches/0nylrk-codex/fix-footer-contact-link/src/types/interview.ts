@@ -1,18 +1,15 @@
 
-export type InterviewStatus =;
-  | 'requested';
-  | 'confirmed';
-  | 'declined';
-  | 'rescheduled';
-  | 'completed';
-  | 'cancelled';
-;
-export type InterviewType = 'video' | 'phone' | 'in - person';
-;
-export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in - app';
-;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-export interface Interview {
+export type InterviewStatus =
+  | 'requested'
+  | 'confirmed'
+  | 'declined'
+  | 'rescheduled'
+  | 'completed'
 =======
 export type InterviewStatus = 
   | 'requested' 
@@ -20,15 +17,25 @@ export type InterviewStatus =
   | 'declined' 
   | 'rescheduled' 
   | 'completed' ;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+export type InterviewStatus =
+  | 'requested'
+  | 'confirmed'
+  | 'declined'
+  | 'rescheduled'
+  | 'completed'
   | 'cancelled';
 export type InterviewType = 'video' | 'phone' | 'in-person';
 export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
+<<<<<<< HEAD
+export interface Interview {
+=======
 
 
 export interface Interview {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   client_id: string;
   talent_id: string;
@@ -45,19 +52,20 @@ export interface Interview {;
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
-
-  client_avatar?: string,
-  talent_avatar?: string;
-
+  client_avatar?: string
+  talent_avatar?: string
 }
+<<<<<<< HEAD
 export interface InterviewRequest {
+<<<<<<< HEAD
+=======
 =======
 }
 
 
 export interface InterviewRequest {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -65,23 +73,35 @@ export interface InterviewRequest {;
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
-
-  interview_type: InterviewType,
-  title?: string;
-
+  interview_type: InterviewType
+  title?: string
 }
+<<<<<<< HEAD
 export interface InterviewResponse {
+<<<<<<< HEAD
+=======
 =======
 }
 
 
 export interface InterviewResponse {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   interview_id: string;
   status: InterviewStatus;
+  alternative_date?: string
 
+<<<<<<< HEAD
+  message?: string
+}
+=======
   alternative_date?: string,
   message?: string;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

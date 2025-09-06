@@ -1,17 +1,81 @@
+<<<<<<< HEAD
+export type MediaBundle = 'general' | 'web3' | 'institutional';
+export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
 
+export interface MediaAsset {
+  path: string;
+  filename: string;
+  type: 'text' | 'image' | 'video';
+  content: string;
+}
 
+export interface MediaGenerationRequest {
+  type: string;
+  companyName: string;
+  date: string;
+}
+
+export interface MediaGenerationResponse {
+  ok: boolean;
+  text?: string;
+  error?: string;
+}
+export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
+  // Mock implementation - in production, this would call OpenAI or other AI service
+  return {
+    ok: true
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
   };
 }
 
-
   }
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
 =======
+<<<<<<< HEAD
+export type MediaBundle = 'general' | 'web3' | 'institutional';
+export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
+export interface MediaGenerationResponse {;
+  ok: boolean;
+  text?: string;
+  error?: string
+}
+export async function generateMediaContent(request: MediaGenerationRequest): Promise<MediaGenerationResponse> {
+  // Mock implementation - in production, this would call OpenAI or other AI service
+  return {
+<<<<<<< HEAD
+    ok: true
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`
+  }
+=======
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
+  };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
+  const base: MediaAsset[] = [
+    {
+      path: ''
+      filename: 'legal/terms-of-use.md'
+      type: 'text'
+      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
+    }
+    {
+      path: ''
+      filename: 'legal/privacy-policy.md'
+      type: 'text'
+      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
+    }
+    {
+<<<<<<< HEAD
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export async function generateMediaContent (request: MediaGenerationRequest): Promise < MediaGenerationResponse> {
   // Mock implementation - in production, this would call OpenAI or other AI service;
   return {
@@ -21,56 +85,87 @@ export async function generateMediaContent (request: MediaGenerationRequest): Pr
 ;
 export function buildLegalDocs (kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     {
-
-=======
-
-
-      path: '',
-
-      filename: 'legal / terms - of - use.md',
-
+      path: ''
+      filename: 'legal/terms-of-use.md'
+      type: 'text'
+      content: `# Terms of Use\n\nBy using Zion products, you agree to these terms. Replace with counsel-approved language.`
+    }
+    {
+      path: ''
+      filename: 'legal/privacy-policy.md'
+      type: 'text'
+      content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.`
+    }
+    {
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
+      filename: 'legal/terms-of-use && use.md',
       type: 'text',
+<<<<<<< HEAD
+      content: `# Terms of Use\n\n_by using Zion products, you agree to these terms. Replace with counsel - approved language.`,
+    },
+=======
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const web3Extras: MediaAsset[] = [
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       path: '',
-
-      filename: 'legal / privacy - policy.md',
-
+      filename: 'legal/privacy-policy && policy.md',
       type: 'text',
       content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`,
     },
     {
       path: '',
-
-      filename: 'legal / jurisdictional - disclosures.md',
-
+      filename: 'legal/jurisdictional-disclosures && disclosures.md',
       type: 'text',
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];
-
-;
-  const web3Extras: MediaAsset[] = [;
-
+  const web3Extras: MediaAsset[] = [
     {
-
+      path: ''
+      filename: 'legal/token-sale-notice.md'
+      type: 'text'
+      content: `# Token Sale Notice (if applicable)\n\nThis document outlines token sale terms. Not an offer to sell securities.`
+    }
+    {
+      path: ''
+      filename: 'legal/dao-disclaimer.md'
+      type: 'text'
+      content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.`
+    }
+      filename: 'legal/token-sale-notice && notice.md',
+      type: 'text',
+      content: `# Token Sale Notice (if applicable)\n\n_this document outlines token sale terms. Not an offer to sell securities.`,
+    },
+    {
       path: '',
-
+      filename: 'legal/dao-disclaimer && disclaimer.md',
+      type: 'text',
+      content: `# DAO Disclaimer\n\n_this is not investment advice. Participation involves risks.`,
+    },
   ];
-
+  if (kind === 'web3') return [...base, ...web3Extras];
+  return base;
+}
 
 export function buildPressRelease(
+<<<<<<< HEAD
   type: PressReleaseType
+<<<<<<< HEAD
 =======
+  params: {
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
   // Check condition
 if (return [...base, ...web3Extras]) {
@@ -80,40 +175,36 @@ if (return [...base, ...web3Extras]) {
 ;
 export function buildPressRelease (
   type: PressReleaseType,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   params: {
     company_name: string;
+<<<<<<< HEAD
+=======
 =======
 export function buildPressRelease(
 
   type: PressReleaseType,
   params: {;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     date: string;
     raise_amount?: string;
     token_name?: string;
     anchors?: string[];
   }
 ): string {
-
-  const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;
-  const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`;
-
-
+  const header = `${params.companyName} ${titleCase(type.replace('-', ' '))}`;
+  const boilerplate = `${params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion.app`;
   if (type === 'seed-round') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
   if (type === 'token-sale') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
   }
+  return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
+}
 
-  return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params && params.companyName}:\n${boilerplate}`;
-
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>
     new Date(d && d.getFullYear(), d && d.getMonth(), d && d.getDate() + days);
@@ -127,23 +218,16 @@ export function buildTimeline(startDate: Date) {
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
-
+<<<<<<< HEAD
+}
 
 function titleCase(s: string) {
-
-=======
-  return s && s.replace(
-    /\w\S*/g,
-    w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
-
+  return s.replace(
+    /\w\S*/g
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+  );
+}
   );}
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 // Media Kit utilities
 export interface MediaAsset {
   id: string;
@@ -575,8 +659,6 @@ export function generateAssetId(): string {
 export function generateCollectionId(): string {
   return `collection_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const header = `${params.company_name} ${title_case (type.replace ('-', ' '))}`;
   const boilerplate = `${params.company_name} builds AI agents for Web3 enterprises. Learn more at https://zion.app`;
 ;
@@ -618,5 +700,21 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+function titleCase(s: string) {
+  return s.replace(
+    /\w\S*/g
+    w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+  );}
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+
+function titleCase(s: string) {
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,16 +1,40 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 
-export default function KnowledgeGraph({ report }: Props) {
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+}
+) )
+}</ul> </section> <section>) )
+}</ul> </section> </div>)
+<<<<<<< HEAD
+=======
+=======
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>)
+export default function KnowledgeGraph({ report }: Props) {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+export default function KnowledgeGraph({ report }: Props) {
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
 }</ul> </section> </div>) ;
 export default function KnowledgeGraph(): any ({ report }: Props) {;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!report) return <div>No knowledge graph yet.</div>;
 
   return (
@@ -38,16 +62,13 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
         <h2 className="font-semibold mb-2">Sample Edges</h2>;
         <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">;
           {report && report.edges.slice(0, 200).map((e, i) => (;
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source}  {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
-  );
+        </ul>
+      </section>
+    </div>
+);
 }
-
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -84,15 +105,8 @@ if (return <div > No knowledge graph yet.</div>) {
         <h2 className="font - semibold mb - 2">Sample Edges</h2>;
         <ul className="text - sm space - y-1 max - h-96 overflow - auto border rounded p - 3 border - gray - 200 dark:border - gray - 800">;
           {report.edges.slice (0, 200).map ((e, i) => (
-            <li key={i} className="flex justify - between gap - 4"><span className="truncate">{e.source} ⇄ {e.target}</span><span className="text - gray - 500 truncate">{e.terms.join (', ')}</span></li>))}
+            <li key={i} className="flex justify - between gap - 4"><span className="truncate">{e.source}  {e.target}</span><span className="text - gray - 500 truncate">{e.terms.join (', ')}</span></li>))}
         </ul>;
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

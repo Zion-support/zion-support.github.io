@@ -85,7 +85,7 @@ export function ProductListingCard({ listing, view = 'grid', onRequestQuote, det
             </div>
             {listing.rating && (
               <div className="flex items-center text-yellow-400">
-                {'★'.repeat(Math.floor(listing.rating))}
+                {''.repeat(Math.floor(listing.rating))}
                 <span className="text-slate-400 text-xs ml-1">({listing.reviewCount})</span>
               </div>
             )}

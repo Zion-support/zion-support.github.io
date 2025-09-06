@@ -139,51 +139,34 @@
   ],
   "recommendations": [
     {
-
-      "priority": "high",
-      "category": "dependencies",
-      "message": "Update dependencies with known vulnerabilities",
-      "action": "Run npm audit fix to automatically fix vulnerabilities"
+      "type": "file_permissions",
+      "message": "package.json is world-readable",
+      "severity": "medium"
     },
     {
-      "priority": "high",
-      "category": "code_security",
-      "message": "Address code security issues",
-      "action": "Review and fix dangerous code patterns identified in the audit"
-    },
-    {
-      "priority": "medium",
-      "category": "environment",
-      "message": "Secure environment variables",
-      "action": "Ensure sensitive environment variables are properly secured and not committed to version control"
-    },
-    {
-      "priority": "low",
-      "category": "permissions",
-      "message": "Review file permissions",
-      "action": "Consider restricting file permissions for sensitive files"
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+      "type": "file_permissions",
+      "message": "package-lock.json is world-readable",
+      "severity": "medium"
+    }
   ],
   "summary": {
     "totalVulnerabilities": 0,
-    "totalSecurityIssues": 17,
-    "criticalIssues": 0,
-    "warnings": 13,
-    "info": 4,
-    "totalRecommendations": 4
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    "totalRecommendations": 2,
+    "securityScore": 90,
+    "status": "good"
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+    "Review and remove any hardcoded secrets",
+    "Update outdated dependencies",
+    "Implement proper environment variable management",
+    "Add security headers to Next.js configuration"
+  ]
 }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

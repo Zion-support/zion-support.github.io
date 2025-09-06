@@ -1,14 +1,89 @@
+<<<<<<< HEAD
 
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from "react";
 import Layout from "../components/Layout";
 
+export default function About() {;
+  return (
+    <Layout
+      title="About Us - Zion Tech Group"
+import Layout from '../components/Layout';
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import Layout from "../components/Layout";
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import React from 'react';
-
+<<<<<<< HEAD
+import Layout from '../components/Layout';
 =======
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  Brain,
+  Shield,
+  Users,
+  Zap,
+  Target,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  BarChart3,
+  Heart,
+  Lightbulb,
+  Rocket,
+  Lock,
+  TrendingUp;
+} from 'lucide-react';
 
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import React from 'react';
 import Head from 'next/head';
@@ -16,6 +91,7 @@ import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -23,43 +99,6 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
-
-
-
-    },
-    {
-      icon: Shield,
-      title: "Trust & Security",
-      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      icon: Users,
-
-      title: "Human-Centric",
-      description: "Technology should serve humanity, enhancing human capabilities and improving quality of life.",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Globe,
-      title: "Global Impact",
-      description: "Creating solutions that address global challenges and benefit communities worldwide.",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Rocket,
-      title: "Excellence",
-      description: "Maintaining the highest standards of quality and performance in everything we deliver.",
-      color: "from-indigo-500 to-purple-500"
-
-    },
-    {
-      icon: Heart,
-      title: "Integrity",
-      description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
-      color: "from-pink-500 to-rose-500"
-
-
     };
     {
       icon: Shield,
@@ -97,76 +136,40 @@ const AboutPage: React.FC = () => {
 } from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
-
-=======
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ];
-
-
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
-
-
-    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-
+    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
+  ];
 
   const values = [
     {
       icon: Brain,
       title: 'Innovation First',
-
-
-      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
+      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.';
       color: 'from-purple-500 to-pink-500'
-    },
-
-
+    };
     {
       icon: Shield,
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
-
-
-    },
-
-
+    };
     {
       icon: Rocket,
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
-
-
-      color: 'from-indigo-500 to-purple-500'
-    },
-
-
+    color: 'from-indigo-500 to-purple-500'
+    };
     {
       icon: Users,
       title: 'Client Success',
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
-
-
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-
+    }
+  ];
 
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
@@ -174,9 +177,38 @@ export default function AboutPage() {
     { name: 'Cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions', color: 'from-red-500 to-orange-500' },
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
+    { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
+  ];
 
-
-
+<<<<<<< HEAD
+=======
+  const team = [
+    {
+<<<<<<< HEAD
+      name: "John Smith",
+      role: "CEO & Founder",
+      image: "/team/john.jpg",
+      bio: "Visionary leader with 15+ years in tech"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO",
+      image: "/team/sarah.jpg", 
+      bio: "Technical expert specializing in cloud architecture"
+    },
+    {
+      name: "Mike Chen",
+      role: "Lead Developer",
+      image: "/team/mike.jpg",
+      bio: "Full-stack developer passionate about innovation"
+    }
+  ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
 =======
 
 >>>>>>> origin/automation-improvements-final
@@ -191,22 +223,31 @@ export default function AboutPage() {
   }
 }
   ],
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const team = [
     {
-      name: 'Kleber',
-      role: 'Founder & CEO',
-      description: 'Visionary leader driving innovation in AI and quantum technologies',
-      image: '/api/placeholder/150/150',
-      color: 'from-cyan-500 to-blue-500'
+      name: "John Smith",
+      role: "CEO & Founder",
+      image: "/team/john.jpg",
+      bio: "Visionary leader with 15+ years in tech"
     },
     {
-      name: 'AI Team',
-      role: 'AI Research & Development',
-      description: 'Expert engineers and researchers pushing the boundaries of artificial intelligence',
-      image: '/api/placeholder/150/150',
-      color: 'from-purple-500 to-pink-500'
+      name: "Sarah Johnson",
+      role: "CTO",
+      image: "/team/sarah.jpg", 
+      bio: "Technical expert specializing in cloud architecture"
     },
     {
+<<<<<<< HEAD
+      name: "Mike Chen",
+      role: "Lead Developer",
+      image: "/team/mike.jpg",
+      bio: "Full-stack developer passionate about innovation"
+    }
+  ];
+
+
+=======
       name: 'Quantum Team',
       role: 'Quantum Computing',
       description: 'Specialists in quantum algorithms and quantum-resistant cryptography',
@@ -318,25 +359,62 @@ export default function AboutPage() {
 },
 export default AboutPage,
 =======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function About() {
-=======
 export default function About() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> origin/main
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function About() {
+  return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <Layout
       title="About Us - Zion Tech Group"
-
-
+      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading technology solutions provider specializing in AI
+              cybersecurity, and digital transformation.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">About page is under construction.</p>
+          </div>
+        </div>
+      </div>
+    </Layout>
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -355,14 +433,20 @@ export default function About() {;
         </div>;
       </div>;
     </Layout>;
-
-
   );
 }
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
     <>
       <Head>
@@ -532,10 +616,9 @@ export default function About() {;
         </section>
       </div>
     </>
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+}
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -655,24 +738,11 @@ export default function AboutPage() {
       </div>
     </>
   )
-
-
-
 };
 
 export default AboutPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
-
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 import React from './react';
 import Layout from "../components / Layout";
 ;
@@ -703,5 +773,27 @@ function About() {
       </div>;
     </Layout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> main
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> main
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

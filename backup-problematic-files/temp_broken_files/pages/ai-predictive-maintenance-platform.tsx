@@ -9,7 +9,7 @@ export default function AIPredictiveMaintenancePlatform() {;
 			subtitle="Reliability at lower cost";
 			pricePerMonthUSD={499}
 			implementationWeeks="2-4 weeks";
-			roiNote="Cut unplanned downtime by 30–50% and maintenance costs by 10–20%";
+			roiNote="Cut unplanned downtime by 3050% and maintenance costs by 1020%";
 			features={[;
 				"Sensor ingestion and anomaly detection",;
 				"Remaining useful life (RUL) predictions",;

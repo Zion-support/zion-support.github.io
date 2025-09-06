@@ -103,39 +103,39 @@ export default function AISeosuitePage() {_const _features = [
   ],
 
   const integrations = [
-    { name: 'Google Analytics', icon: '📊', description: 'Traffic data integration' },
-    { name: 'Google Search Console', icon: '🔍', description: 'Search performance data' },
-    { name: 'WordPress', icon: '🔌', description: 'Plugin integration' },
-    { name: 'Shopify', icon: '🛒', description: 'E-commerce optimization' },
-    { name: 'HubSpot', icon: '📈', description: 'Marketing automation sync' },
-    { name: 'Slack', icon: '💬', description: 'Team notifications' },
-    { name: 'Zapier', icon: '⚡', description: '500+ app integrations' },
-    { name: 'API Access', icon: '🔑', description: 'Custom integrations' }
+    { name: 'Google Analytics', icon: '', description: 'Traffic data integration' },
+    { name: 'Google Search Console', icon: '', description: 'Search performance data' },
+    { name: 'WordPress', icon: '', description: 'Plugin integration' },
+    { name: 'Shopify', icon: '', description: 'E-commerce optimization' },
+    { name: 'HubSpot', icon: '', description: 'Marketing automation sync' },
+    { name: 'Slack', icon: '', description: 'Team notifications' },
+    { name: 'Zapier', icon: '', description: '500+ app integrations' },
+    { name: 'API Access', icon: '', description: 'Custom integrations' }
   ],
 
   const useCases = [
     {
       title: 'E-commerce Websites',
       description: 'Optimize product pages, category pages, and search functionality for better conversions.',
-      icon: '🛍️',
+      icon: '',
       benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
     },
     {
       title: 'Content Marketing',
       description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
-      icon: '📝',
+      icon: '',
       benefits: ['Better content visibilityHigher engagement ratesMore organic trafficAuthority building']
     },
     {
       title: 'Local Businesses',
       description: 'Improve local search visibility and attract customers in your area.',
-      icon: '📍',
+      icon: '',
       benefits: ['Local search dominanceIncreased foot trafficBetter customer acquisitionCompetitive positioning']
     },
     {
       title: 'SaaS Companies',
       description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
-      icon: '💻',
+      icon: '',
       benefits: ['Higher conversion ratesBetter user experienceReduced acquisition costsMarket expansion']
     }
   ],
@@ -173,21 +173,21 @@ export default function AISeosuitePage() {_const _features = [
   ];
 
   const _integrations = [
-    {_name: 'Google Analytics', _icon: '📊', _description: 'Traffic data integration'},
-    {_name: 'Google Search Console', _icon: '🔍', _description: 'Search performance data'},
-    {_name: 'WordPress', _icon: '🔌', _description: 'Plugin integration'},
-    {_name: 'Shopify', _icon: '🛒', _description: 'E-commerce optimization'},
-    {_name: 'HubSpot', _icon: '📈', _description: 'Marketing automation sync'},
-    {_name: 'Slack', _icon: '💬', _description: 'Team notifications'},
-    {_name: 'Zapier', _icon: '⚡', _description: '500+ app integrations'},
-    {_name: 'API Access', _icon: '🔑', _description: 'Custom integrations'}
+    {_name: 'Google Analytics', _icon: '', _description: 'Traffic data integration'},
+    {_name: 'Google Search Console', _icon: '', _description: 'Search performance data'},
+    {_name: 'WordPress', _icon: '', _description: 'Plugin integration'},
+    {_name: 'Shopify', _icon: '', _description: 'E-commerce optimization'},
+    {_name: 'HubSpot', _icon: '', _description: 'Marketing automation sync'},
+    {_name: 'Slack', _icon: '', _description: 'Team notifications'},
+    {_name: 'Zapier', _icon: '', _description: '500+ app integrations'},
+    {_name: 'API Access', _icon: '', _description: 'Custom integrations'}
   ];
 
   const _useCases = [
-    {_title: 'E-commerce Websites', _description: 'Optimize product pages, _category pages, _and search functionality for better conversions.', _icon: '🛍️', _benefits: ['Higher search rankings', _'Increased organic traffic', _'Better conversion rates', _'Competitive advantage']},
-    {_title: 'Content Marketing', _description: 'Optimize blog posts, _articles, _and content for search engines and user engagement.', _icon: '📝', _benefits: ['Better content visibility', _'Higher engagement rates', _'More organic traffic', _'Authority building']},
-    {_title: 'Local Businesses', _description: 'Improve local search visibility and attract customers in your area.', _icon: '📍', _benefits: ['Local search dominance', _'Increased foot traffic', _'Better customer acquisition', _'Competitive positioning']},
-    {_title: 'SaaS Companies', _description: 'Optimize landing pages, _feature pages, _and documentation for better user acquisition.', _icon: '💻', _benefits: ['Higher conversion rates', _'Better user experience', _'Reduced acquisition costs', _'Market expansion']}
+    {_title: 'E-commerce Websites', _description: 'Optimize product pages, _category pages, _and search functionality for better conversions.', _icon: '', _benefits: ['Higher search rankings', _'Increased organic traffic', _'Better conversion rates', _'Competitive advantage']},
+    {_title: 'Content Marketing', _description: 'Optimize blog posts, _articles, _and content for search engines and user engagement.', _icon: '', _benefits: ['Better content visibility', _'Higher engagement rates', _'More organic traffic', _'Authority building']},
+    {_title: 'Local Businesses', _description: 'Improve local search visibility and attract customers in your area.', _icon: '', _benefits: ['Local search dominance', _'Increased foot traffic', _'Better customer acquisition', _'Competitive positioning']},
+    {_title: 'SaaS Companies', _description: 'Optimize landing pages, _feature pages, _and documentation for better user acquisition.', _icon: '', _benefits: ['Higher conversion rates', _'Better user experience', _'Reduced acquisition costs', _'Market expansion']}
   ];
 
   const _successMetrics = [

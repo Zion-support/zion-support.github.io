@@ -460,10 +460,10 @@ export default function AIEmotionIntelligencePlatform() {;
               Automatically adapt responses and actions based on detected emotions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Tone adjustment</li>
-              <li>• Escalation triggers</li>
-              <li>• Response personalization</li>
-              <li>• Context awareness</li>
+              <li> Tone adjustment</li>
+              <li> Escalation triggers</li>
+              <li> Response personalization</li>
+              <li> Context awareness</li>
             </ul>
           </div>
 
@@ -473,10 +473,10 @@ export default function AIEmotionIntelligencePlatform() {;
               Track and analyze emotional trends to improve customer experience.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Emotion trend analysis</li>
-              <li>• Customer satisfaction metrics</li>
-              <li>• Agent performance insights</li>
-              <li>• Experience optimization</li>
+              <li> Emotion trend analysis</li>
+              <li> Customer satisfaction metrics</li>
+              <li> Agent performance insights</li>
+              <li> Experience optimization</li>
             </ul>
           </div>
         </div>

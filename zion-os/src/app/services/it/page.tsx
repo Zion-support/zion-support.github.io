@@ -1,22 +1,9 @@
-
-
-export default function ITServicesPage() {;
-  return (;
-
-
+export default function ITServicesPage() {return (;
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">;
-=======
-export default /**
- * ITServicesPage - Function description
- */
-function ITServicesPage() {
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - green - 600 to - blue - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;
-          <h1 className="text - 5xl font - bold mb - 6">💻 IT Services & Solutions</h1>;
+          <h1 className="text - 5xl font - bold mb - 6"> IT Services & Solutions</h1>;
           <p className="text - xl text - green - 100 max - w-3xl mx - auto">;
             Comprehensive IT infrastructure, cloud solutions, and digital transformation services;
             to modernize your business and drive operational excellence.;
@@ -34,9 +21,9 @@ function ITServicesPage() {
       {/* Contact Info Banner */}
       <div className="bg - zinc - 800 py - 4">;
         <div className="container mx - auto px - 6 text - center text - sm">;
-          <span className="mr - 8">📱 +1 302 464 0950</span>;
-          <span className="mr - 8">✉️ kleber@ziontechgroup.com</span>;
-          <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>;
+          <span className="mr - 8"> +1 302 464 0950</span>;
+          <span className="mr - 8"> kleber@ziontechgroup.com</span>;
+          <span> 364 E Main St STE 1008, Middletown DE 19709</span>;
         </div>;
       </div>;
       {/* IT Services Grid */}
@@ -45,7 +32,7 @@ function ITServicesPage() {
           <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12">;
             {/* Cloud Infrastructure */}
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">☁️</div>;
+              <div className="text - 4xl mb - 6"></div>;
               <h2 className="text - 3xl font - bold mb - 4">Cloud Infrastructure</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Design, deploy, and optimize cloud infrastructure on AWS, Azure, and Google Cloud.;
@@ -54,12 +41,12 @@ function ITServicesPage() {
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Cloud architecture design and planning</li>;
-                  <li>• Migration from on - premises to cloud</li>;
-                  <li>• Multi - cloud and hybrid cloud solutions</li>;
-                  <li>• Cost optimization and resource management</li>;
-                  <li>• Disaster recovery and backup strategies</li>;
-                  <li>• 24 / 7 cloud infrastructure monitoring</li>;
+                  <li> Cloud architecture design and planning</li>;
+                  <li> Migration from on - premises to cloud</li>;
+                  <li> Multi - cloud and hybrid cloud solutions</li>;
+                  <li> Cost optimization and resource management</li>;
+                  <li> Disaster recovery and backup strategies</li>;
+                  <li> 24 / 7 cloud infrastructure monitoring</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -86,30 +73,23 @@ function ITServicesPage() {
                 Learn More About Cloud Infrastructure;
               </a>;
             </div>;
-
-            {/* DevOps & CI / CD */}
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🚀</div>;
-              <h2 className="text - 3xl font - bold mb - 4">DevOps & CI / CD</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Accelerate your software delivery with automated deployment pipelines,
-
-=======
-
-                Accelerate your software delivery with automated deployment pipelines,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* DevOps & CI/CD */}
+            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
+              <div className="text-4xl mb-6"></div>;
+              <h2 className="text-3xl font-bold mb-4">DevOps & CI/CD</h2>;
+              <p className="text-zinc-300 mb-6 text-lg">;
+                Accelerate your software delivery with automated deployment pipelines;
                 infrastructure as code, and DevOps culture implementation that drives innovation.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• CI / CD pipeline design and implementation</li>;
-                  <li>• Infrastructure as Code (Terraform, CloudFormation)</li>;
-                  <li>• Container orchestration (Kubernetes, Docker)</li>;
-                  <li>• Monitoring and observability setup</li>;
-                  <li>• DevOps culture transformation</li>;
-                  <li>• Automated testing and quality gates</li>;
+                  <li> CI / CD pipeline design and implementation</li>;
+                  <li> Infrastructure as Code (Terraform, CloudFormation)</li>;
+                  <li> Container orchestration (Kubernetes, Docker)</li>;
+                  <li> Monitoring and observability setup</li>;
+                  <li> DevOps culture transformation</li>;
+                  <li> Automated testing and quality gates</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -137,29 +117,22 @@ function ITServicesPage() {
               </a>;
             </div>;
             {/* Cybersecurity */}
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🛡️</div>;
-              <h2 className="text - 3xl font - bold mb - 4">Cybersecurity</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Protect your business with comprehensive cybersecurity solutions including security audits,
-
-=======
-
-                Protect your business with comprehensive cybersecurity solutions including security audits,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
+              <div className="text-4xl mb-6"></div>;
+              <h2 className="text-3xl font-bold mb-4">Cybersecurity</h2>;
+              <p className="text-zinc-300 mb-6 text-lg">;
+                Protect your business with comprehensive cybersecurity solutions including security audits;
                 penetration testing, compliance frameworks, and incident response planning.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Security assessments and penetration testing</li>;
-                  <li>• Compliance frameworks (SOC2, ISO27001, HIPAA)</li>;
-                  <li>• Security architecture design and review</li>;
-                  <li>• Incident response planning and training</li>;
-                  <li>• Security awareness and training programs</li>;
-                  <li>• Threat intelligence and monitoring</li>;
+                  <li> Security assessments and penetration testing</li>;
+                  <li> Compliance frameworks (SOC2, ISO27001, HIPAA)</li>;
+                  <li> Security architecture design and review</li>;
+                  <li> Incident response planning and training</li>;
+                  <li> Security awareness and training programs</li>;
+                  <li> Threat intelligence and monitoring</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -188,7 +161,7 @@ function ITServicesPage() {
             </div>;
             {/* Data Engineering */}
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">📈</div>;
+              <div className="text - 4xl mb - 6"></div>;
               <h2 className="text - 3xl font - bold mb - 4">Data Engineering</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Build robust data pipelines, warehousing solutions, and ETL processes that transform;
@@ -197,12 +170,12 @@ function ITServicesPage() {
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Data pipeline design and implementation</li>;
-                  <li>• Data warehouse architecture and design</li>;
-                  <li>• ETL / ELT process development</li>;
-                  <li>• Real - time data streaming solutions</li>;
-                  <li>• Data quality and governance</li>;
-                  <li>• Business intelligence and reporting</li>;
+                  <li> Data pipeline design and implementation</li>;
+                  <li> Data warehouse architecture and design</li>;
+                  <li> ETL / ELT process development</li>;
+                  <li> Real - time data streaming solutions</li>;
+                  <li> Data quality and governance</li>;
+                  <li> Business intelligence and reporting</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -231,7 +204,7 @@ function ITServicesPage() {
             </div>;
             {/* API Development */}
             <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🔌</div>;
+              <div className="text - 4xl mb - 6"></div>;
               <h2 className="text - 3xl font - bold mb - 4">API Development</h2>;
               <p className="text - zinc - 300 mb - 6 text - lg">;
                 Design and develop robust APIs, microservices architecture, and API gateway solutions;
@@ -240,12 +213,12 @@ function ITServicesPage() {
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• RESTful API design and development</li>;
-                  <li>• GraphQL API implementation</li>;
-                  <li>• Microservices architecture design</li>;
-                  <li>• API gateway and management</li>;
-                  <li>• API documentation and testing</li>;
-                  <li>• Performance optimization and scaling</li>;
+                  <li> RESTful API design and development</li>;
+                  <li> GraphQL API implementation</li>;
+                  <li> Microservices architecture design</li>;
+                  <li> API gateway and management</li>;
+                  <li> API documentation and testing</li>;
+                  <li> Performance optimization and scaling</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -273,29 +246,22 @@ function ITServicesPage() {
               </a>;
             </div>;
             {/* Digital Transformation */}
-
-            <div className="bg - zinc - 800 rounded - xl p - 8 border border - zinc - 700">;
-              <div className="text - 4xl mb - 6">🔄</div>;
-              <h2 className="text - 3xl font - bold mb - 4">Digital Transformation</h2>;
-              <p className="text - zinc - 300 mb - 6 text - lg">;
-                Guide your organization through end - to - end digital transformation with strategic consulting,
-
-=======
-
-                Guide your organization through end-to-end digital transformation with strategic consulting,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <div className="bg-zinc-800 rounded-xl p-8 border border-zinc-700">;
+              <div className="text-4xl mb-6"></div>;
+              <h2 className="text-3xl font-bold mb-4">Digital Transformation</h2>;
+              <p className="text-zinc-300 mb-6 text-lg">;
+                Guide your organization through end-to-end digital transformation with strategic consulting;
                 legacy system modernization, and change management expertise.;
               </p>;
               <div className="space - y-4 mb - 8">;
                 <h3 className="text - xl font - semibold text - green - 400">Services Include:</h3>;
                 <ul className="space - y-2 text - zinc - 300">;
-                  <li>• Digital strategy and roadmap development</li>;
-                  <li>• Legacy system modernization</li>;
-                  <li>• Change management and training</li>;
-                  <li>• Process optimization and automation</li>;
-                  <li>• Technology stack evaluation</li>;
-                  <li>• ROI measurement and analytics</li>;
+                  <li> Digital strategy and roadmap development</li>;
+                  <li> Legacy system modernization</li>;
+                  <li> Change management and training</li>;
+                  <li> Process optimization and automation</li>;
+                  <li> Technology stack evaluation</li>;
+                  <li> ROI measurement and analytics</li>;
                 </ul>;
               </div>;
               <div className="bg - zinc - 700 rounded - lg p - 6 mb - 6">;
@@ -329,7 +295,7 @@ function ITServicesPage() {
       <section className="py - 20 bg - zinc - 800">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
-            <h2 className="text - 4xl font - bold mb - 4">⚡ IT Service Delivery Process</h2>;
+            <h2 className="text - 4xl font - bold mb - 4"> IT Service Delivery Process</h2>;
             <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
               Our proven methodology ensures successful project delivery, on - time completion, and maximum value for your investment;
             </p>;
@@ -362,7 +328,7 @@ function ITServicesPage() {
       <section className="py - 20">;
         <div className="container mx - auto px - 6">;
           <div className="text - center mb - 16">;
-            <h2 className="text - 4xl font - bold mb - 4">🛠️ Technology Stack</h2>;
+            <h2 className="text - 4xl font - bold mb - 4"> Technology Stack</h2>;
             <p className="text - xl text - zinc - 300 max - w-3xl mx - auto">;
               We leverage cutting - edge technologies and proven frameworks to deliver robust, scalable, and future - proof solutions;
             </p>;
@@ -371,28 +337,28 @@ function ITServicesPage() {
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700">;
               <h3 className="text - xl font - semibold mb - 4 text - green - 400">Cloud & Infrastructure</h3>;
               <ul className="space - y-2 text - zinc - 300">;
-                <li>• AWS, Azure, Google Cloud</li>;
-                <li>• Kubernetes, Docker, Terraform</li>;
-                <li>• Ansible, Jenkins, GitLab CI</li>;
-                <li>• Prometheus, Grafana, ELK Stack</li>;
+                <li> AWS, Azure, Google Cloud</li>;
+                <li> Kubernetes, Docker, Terraform</li>;
+                <li> Ansible, Jenkins, GitLab CI</li>;
+                <li> Prometheus, Grafana, ELK Stack</li>;
               </ul>;
             </div>;
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700">;
               <h3 className="text - xl font - semibold mb - 4 text - green - 400">Development & APIs</h3>;
               <ul className="space - y-2 text - zinc - 300">;
-                <li>• Node.js, Python, Java, .NET</li>;
-                <li>• React, Angular, Vue.js</li>;
-                <li>• REST, GraphQL, gRPC</li>;
-                <li>• PostgreSQL, MongoDB, Redis</li>;
+                <li> Node.js, Python, Java, .NET</li>;
+                <li> React, Angular, Vue.js</li>;
+                <li> REST, GraphQL, gRPC</li>;
+                <li> PostgreSQL, MongoDB, Redis</li>;
               </ul>;
             </div>;
             <div className="bg - zinc - 800 rounded - xl p - 6 border border - zinc - 700">;
               <h3 className="text - xl font - semibold mb - 4 text - green - 400">Security & Compliance</h3>;
               <ul className="space - y-2 text - zinc - 300">;
-                <li>• OWASP, NIST, ISO27001</li>;
-                <li>• Penetration testing tools</li>;
-                <li>• SIEM, IDS / IPS solutions</li>;
-                <li>• Compliance automation tools</li>;
+                <li> OWASP, NIST, ISO27001</li>;
+                <li> Penetration testing tools</li>;
+                <li> SIEM, IDS / IPS solutions</li>;
+                <li> Compliance automation tools</li>;
               </ul>;
             </div>;
           </div>;
@@ -409,14 +375,14 @@ function ITServicesPage() {
           <div className="space - y-4">;
             <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
               <a href="tel:+13024640950" className="bg - white text - green - 600 px - 8 py - 4 rounded - lg font - semibold hover:bg - green - 50 transition - colors text - lg">;
-                📞 Call +1 302 464 0950;
+                 Call +1 302 464 0950;
               </a>;
               <a href="mailto:kleber@ziontechgroup.com" className="border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold hover:bg - white hover:text - green - 600 transition - colors text - lg">;
-                ✉️ Schedule IT Consultation;
+                 Schedule IT Consultation;
               </a>;
             </div>;
             <p className="text - green - 100 text - sm">;
-              📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https: //ziontechgroup.com;
+               364 E Main St STE 1008, Middletown DE 19709 |  https: //ziontechgroup.com;
             </p>;
           </div>;
         </div>;

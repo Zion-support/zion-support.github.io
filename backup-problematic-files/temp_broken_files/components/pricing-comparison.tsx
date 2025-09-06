@@ -36,7 +36,7 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
         'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates'
       ],
       color: 'from-purple-500 to-indigo-600',
-      icon: '🤖'
+      icon: ''
     },
     {_service: 'Cloud Monitoring', _zionPricing: {
         starter: '$29/month', _professional: '$99/month', _enterprise: '$299/month'},
@@ -69,7 +69,7 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
         'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analyticsCustom dashboardsAPI access'
       ],
       color: 'from-green-500 to-emerald-600',
-      icon: '☁️'
+      icon: ''
     },
     {_service: 'DevOps Automation', _zionPricing: {
         starter: '$39/month', _professional: '$129/month', _enterprise: '$399/month'},
@@ -102,7 +102,7 @@ export default function PricingComparisonPage() {_const _serviceComparisons = [
         'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deploymentTeam collaborationCustom integrations'
       ],
       color: 'from-blue-500 to-cyan-600',
-      icon: '🚀'
+      icon: ''
     }
   ],
 

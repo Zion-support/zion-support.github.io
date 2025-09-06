@@ -170,7 +170,4 @@ case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className
   projectId ;
 }/>) ;
 }</div> Actions frozen due to dispute </Button>) ;
-
-}</div> </CardFooter> </Card>) ;
-}'"
-
+}</div> </CardFooter> </Card>) ;"}'"

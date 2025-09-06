@@ -1,10 +1,20 @@
 
-import { ReactNode  } from './react';
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { ReactNode } from "react";
 export interface HelpArticle {
   id: string;
   title: string;
   content: string;
+<<<<<<< HEAD
+  lastUpdated: string;
+  tags: string[]
+}
+export interface HelpCategory {
+=======
 
   last_updated: string;
   tags: string[];
@@ -12,7 +22,6 @@ export interface HelpArticle {
 }
 export interface HelpCategory {
 =======
-
 import {ReactNode} from "react";
 export interface HelpArticle {;
   id: string;
@@ -23,33 +32,40 @@ export interface HelpArticle {;
 }
 
 export interface HelpCategory {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
   articles: HelpArticle[]
 }
-
-
+<<<<<<< HEAD
+export interface SupportTicket {
+=======
+<<<<<<< HEAD
+export interface SupportTicket {
+=======
 
 export interface SupportTicket {;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   user_id: string;
   subject: string;
   message: string;
   status: "open" | "in - progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
+<<<<<<< HEAD
+=======
 
   created_at: string;
   updated_at: string;
 }
+<<<<<<< HEAD
 
 =======
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { ReactNode } from "react",
 export interface HelpArticle {
@@ -92,11 +108,18 @@ export interface SupportTicket {;
   message: string,;
   status: "open" | "in-progress" | "resolved" | "closed",;
   priority: "low" | "medium" | "high";
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   createdAt: string;
+
   updatedAt: string;
 }
+<<<<<<< HEAD
+
+=======
 ;
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

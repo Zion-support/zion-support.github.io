@@ -29,7 +29,7 @@ const serviceCategories = [  {
 }viewport= {
   {
     id: 'business-automation',
-    title: '🛒 Business Automation',
+    title: ' Business Automation',
     description: 'Streamline business operations',
     icon: ShoppingCart,
     color: 'from-teal-500 to-emerald-500',
@@ -38,7 +38,7 @@ const serviceCategories = [  {
   },
   {
     id: 'robotics-automation',
-    title: '🤖 Robotics & Automation',
+    title: ' Robotics & Automation',
     description: 'Intelligent automation solutions',
     icon: Rocket,
     color: 'from-green-500 to-yellow-500',
@@ -47,7 +47,7 @@ const serviceCategories = [  {
   },
   {
     id: 'research-development',
-    title: '🔬 Research & Development',
+    title: ' Research & Development',
     description: 'Breakthrough technologies and innovations',
     icon: Globe,
     color: 'from-orange-500 to-red-500',

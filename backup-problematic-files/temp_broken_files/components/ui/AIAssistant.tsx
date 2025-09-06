@@ -97,10 +97,10 @@ value={prompt}
 
               <div className=&quot;flex items-center gap-2&quot;>
                 <button onClick={callOperator} disabled={loading} className=&quot;rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60&quot;>
-                  {loading ? 'Generating…' : 'Generate'}
+                  {loading ? 'Generating' : 'Generate'}
                 </button>
                 <button onClick={callOperator} disabled={loading} className=&quot;rounded-md border px-3 py-1.5 text-sm&quot;>
-                  {loading ? '…' : 'Regenerate'}
+                  {loading ? '' : 'Regenerate'}
                 </button>
                 <button onClick={() => setIsEditing((v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
                 <button onClick={onCopy} disabled={!output} className="rounded-md border px-3 py-1.5 text-sm disabled: opacity-60">Copy</button>                <button,
@@ -116,10 +116,10 @@ onClick={() => { onAccept(output), onClose() }}
 
               <div className="flex items-center gap-2">
                 <button onClick={callOperator} disabled={loading} className="rounded-md bg-blue-600 text-white px-3 py-1.5 text-sm disabled:opacity-60">
-                  {loading ? 'Generating…' : 'Generate'}
+                  {loading ? 'Generating' : 'Generate'}
                 </button>
                 <button onClick={callOperator} disabled={loading} className="rounded-md border px-3 py-1.5 text-sm">
-                  {loading ? '…' : 'Regenerate'}
+                  {loading ? '' : 'Regenerate'}
                 </button>
                 <button onClick={_() => setIsEditing(_(v) => !v)} className="rounded-md border px-3 py-1.5 text-sm">{isEditing ? 'Preview' : 'Edit'}</button>
                 <button onClick={onCopy} disabled={_!output} className="rounded-md border px-3 py-1.5 text-sm disabled:opacity-60">Copy</button>

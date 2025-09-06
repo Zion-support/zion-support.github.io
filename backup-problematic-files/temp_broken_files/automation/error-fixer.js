@@ -33,7 +33,7 @@ class ErrorFixer {
       this.log("Fixing lint errors...");
       execSync("npm run lint:fix", { stdio: 'pipe' });
       this.fixesApplied.push("Lint errors fixed");
-      this.log("✓ Lint errors fixed");
+      this.log(" Lint errors fixed");
     } catch (error) {
       this.log(`Failed to fix lint errors: ${error.message}`, "ERROR");
     }
@@ -43,7 +43,7 @@ class ErrorFixer {
     try {
       this.log("Checking TypeScript errors...");
       execSync("npx tsc --noEmit --skipLibCheck", { stdio: 'pipe' });
-      this.log("✓ No TypeScript errors found");
+      this.log(" No TypeScript errors found");
     } catch (error) {
       this.log(`TypeScript errors found: ${error.message}`, "WARN");
       // Could add automatic fixes here
@@ -60,7 +60,7 @@ class ErrorFixer {
       
       // Try building again
       execSync("npm run build", { stdio: 'pipe' });
-      this.log("✓ Build successful after fixes");
+      this.log(" Build successful after fixes");
       this.fixesApplied.push("Build errors fixed");
     } catch (error) {
       this.log(`Build still failing: ${error.message}`, "ERROR");
@@ -68,17 +68,17 @@ class ErrorFixer {
   }
 
   async run() {
-    this.log("🔧 Starting Error Fixer");
+    this.log(" Starting Error Fixer");
     
     try {
       await this.fixBuildErrors();
       
       this.log("=" * 50);
-      this.log(`🎯 Error Fixer completed. Fixes applied: ${this.fixesApplied.length}`);
-      this.fixesApplied.forEach(fix => this.log(`  ✓ ${fix}`));
+      this.log(` Error Fixer completed. Fixes applied: ${this.fixesApplied.length}`);
+      this.fixesApplied.forEach(fix => this.log(`   ${fix}`));
       
     } catch (error) {
-      this.log(`❌ Error Fixer failed: ${error.message}`, "ERROR");
+      this.log(` Error Fixer failed: ${error.message}`, "ERROR");
     }
   }
 }

@@ -53,7 +53,7 @@ const ContentCard: React.FC<ContentCardProps> = ({;
       <div className="flex items-center justify-between">
         <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">
           Read More
-          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300"></span>
         </div>
         
         {date && (

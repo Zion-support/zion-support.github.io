@@ -1,24 +1,48 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
+<<<<<<< HEAD
+  const id = String(req.query.id |"");
+=======
   const id = String(req && req.query.id || "");
 
 =======
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
+<<<<<<< HEAD
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const id = String(req.query.id |"");
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const id = String(req.query.id || "");
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[]);
     const idx = updates && updates.findIndex((x: any) => x && x.id === id);
     if (idx >= 0) {
-
-=======
-  const id = String(req.query.id || '');
-  if (id) {
-    const updates = readJsonFile('updates.json', [] as any[]);
-    const idx = updates.findIndex((x: any) => x.id === id),
-    if (idx >= 0) {
-
+      updates[idx].opens = (updates[idx].opens |0) + 1;
+      writeJsonFile("updates.json", updates);
+    }
+  }
+  const pixel = Buffer.from(
+    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+    "base64"
+  );
+  res.setHeader("Content-Type", "image/gif");
+  res.setHeader(
+    "Cache-Control"
+    "no-store, no-cache, must-revalidate, proxy-revalidate"
+  );
+  res.status(200).send(pixel);
+  res.setHeader("Content-Typeimage/gif");
+  res.setHeader(
+    "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate"
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile("updates && updates.json", updates);
     }
@@ -36,16 +60,10 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage";
   res && res.setHeader("Content-Typeimage/gif");
   res && res.setHeader(
     "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
   res && res.status(200).send(pixel);
 }
 
-
-
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage';
 export default /**
@@ -83,7 +101,3 @@ if ( {) {
   );
   res.status (200).send (pixel);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,17 +1,75 @@
 
+<<<<<<< HEAD
+import React, { forwardRef } from "react";
+import { ChevronDown } from 'lucide-react'import { cn } from "@/lib/utils";
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLButtonElement> {;
+  icon?: React && React.ReactNode;
+  active?: boolean;
+  href?: string;
+  target?: string;
+  badge?: React && React.ReactNode;
+=======
+<<<<<<< HEAD
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+=======
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+import React, { forwardRef } from "react"
+import { ChevronDown } from 'lucide-react'import { cn } from "@/lib/utils"
+import { SafeRef } from "@/types/ref-types"
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
+  icon?: React.ReactNode,
+  active?: boolean,
+  href?: string,
+  target?: string,
+  badge?: React.ReactNode
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+}
 
+const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(;
+  ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {;
+    if (href) {;
+import React, { forward_ref } from './react';
+import { ChevronDown } from 'lucide-react'import { cn  } from '@/lib / utils';
+import { SafeRef  } from '@/types / ref - types';
+interface SidebarMenuItemProps extends React.HTMLAttributes < HTMLButtonElement> {
+  icon?: React.ReactNode;
+  active?: boolean;
+  href?: string;
+  target?: string;
+  badge?: React.ReactNode;
+}
+const SidebarMenuItem = forward_ref < HTMLButtonElement, SidebarMenuItemProps>(
+  ({ icon, active, children, href, target, badge, class_name, ...props }, ref, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
       return (<a;
           href={href}
     return (<button;
         ref={ref}
-
-SidebarMenuItem.display_name = "SidebarMenuItem";
-
+SidebarMenuItem.displayName = "SidebarMenuItem"
 export { SidebarMenuItem, SidebarMenuGroup }
 export { SidebarMenuItem, SidebarMenuGroup }
 }
 export { SidebarMenuItem, SidebarMenuGroup }
 
+<<<<<<< HEAD
+=======
 SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
 
 export { SidebarMenuItem, SidebarMenuGroup };
@@ -19,6 +77,9 @@ export { SidebarMenuItem, SidebarMenuGroup };
 };
 
 export { SidebarMenuItem, SidebarMenuGroup };
+}
+<<<<<<< HEAD
+export { SidebarMenuItem, SidebarMenuGroup }
 
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -42,7 +103,7 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,
   target?: string,
   badge?: React.ReactNode
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -146,7 +207,9 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   );
 },;
 export { SidebarMenuItem, SidebarMenuGroup };
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

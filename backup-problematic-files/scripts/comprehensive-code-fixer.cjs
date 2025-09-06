@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-fixer.cjs
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -159,6 +160,11 @@ const path = require('path')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-fixer.cjs
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Fixer')
 console.log('')
@@ -199,6 +205,7 @@ console.log('')
     execSync('npx tsc --noEmit', { "stdio"})
     execSync('npm run build', { "stdio"})
     console.log('\n Final "Report")
+<<<<<<< HEAD:backup-problematic-files/scripts/comprehensive-code-fixer.cjs
 <<<<<<< HEAD
     console.error(' Comprehensive Code Fixer "failed")
 =======
@@ -212,3 +219,6 @@ console.log('')
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    console.error(' Comprehensive Code Fixer "failed")
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/comprehensive-code-fixer.cjs

@@ -92,7 +92,7 @@ export default function FraudAdminPage() {;
           <tbody>;
             {items.map((it) => (;
               <tr key={it.id} className="border-t">;
-                <td className="p-2 border">{it.userId || '—'}</td>;
+                <td className="p-2 border">{it.userId || ''}</td>;
                 <td className="p-2 border">{it.source}</td>;
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>;
                 <td className="p-2 border">;
@@ -104,7 +104,7 @@ export default function FraudAdminPage() {;
                 </td>;
                 <td className="p-2 border">;
                   <div className="text-sm">;
-                    <div className="font-semibold">{it.gpt?.label || '—'}</div>;
+                    <div className="font-semibold">{it.gpt?.label || ''}</div>;
                     <div className="text-gray-700">{it.gpt?.reason}</div>;
                   </div>;
                 </td>;
@@ -156,7 +156,7 @@ export default function FraudAdminPage() {;
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className=&quot;border-t&quot;>
-                <td className=&quot;p-2 border&quot;>{it.userId || '—'}</td>
+                <td className=&quot;p-2 border&quot;>{it.userId || ''}</td>
                 <td className=&quot;p-2 border&quot;>{it.source}</td>
                 <td className=&quot;p-2 border&quot;>{new Date(it.createdAt).toLocaleString()}</td>
                 <td className=&quot;p-2 border&quot;>
@@ -168,7 +168,7 @@ export default function FraudAdminPage() {;
                 </td>
                 <td className=&quot;p-2 border&quot;>
                   <div className=&quot;text-sm&quot;>
-                    <div className=&quot;font-semibold&quot;>{it.gpt?.label || '—'}</div>
+                    <div className=&quot;font-semibold&quot;>{it.gpt?.label || ''}</div>
                     <div className=&quot;text-gray-700&quot;>{it.gpt?.reason}</div>
                   </div>
                 </td>

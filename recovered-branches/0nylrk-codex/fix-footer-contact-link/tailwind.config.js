@@ -1,7 +1,6 @@
-
-module && module.exports = {
-  darkMode: ["class"],
-
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"]
   content: [
     './pages/**/*.{ts,tsx}./components/**/*.{ts,tsx}./app/**/*.{ts,tsx}./src/**/*.{ts,tsx}']
   theme: {
@@ -34,7 +33,10 @@ module && module.exports = {
           DEFAULT: "hsl(var(--card))"
           foreground: "hsl(var(--card-foreground))"}}
       borderRadius: {
-
+        lg: "var(--radius)"
+        md: "calc(var(--radius) - 2px)"
+        sm: "calc(var(--radius) - 4px)"}}}
+  plugins: []}
 /** @type {import ('tailwindcss').Config} */;
 module.exports = {
   dark_mode: ["class"],
@@ -74,12 +76,3 @@ module.exports = {
         md: "calc (var (--radius) - 2px)",
         sm: "calc (var (--radius) - 4px)"}}},
   plugins: []}
-
-=======
-
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)"}}},
-
-  plugins: []}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

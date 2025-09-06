@@ -1,87 +1,99 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { supabase } from '@/integrations/supabase/client';
+import { SEO } from '@/components/SEO';
+import { Header } from '@/components/Header';
+import { HireNowCTA } from '@/components/HireNowCTA';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Badge } from '@/components/ui/badge';
+import {
+  CheckCircle2,
+  Clock,
+  MapPin,
+  Mail,
+  Phone,
+  Globe,
+  Github,
+  Twitter,
+  Linkedin,
+  LinkIcon,
+} from 'lucide-react';
+import { toast } from '@/hooks/use-toast';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
-
+export default function ProfileDetail() {
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const router = useRouter();
   const profileId = router && router.query.profileId as string;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { useState, useEffect } from "react",
+import { useRouter } from "next/router",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
+<<<<<<< HEAD
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
 
   useEffect(() => {
     const fetchProfile = async () => {
-=======
   useEffect((,) => {;
     const fetchProfile = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsLoading(true);
       setError(null);
       try {;
         if (!profileId) {;
           setError("Profile ID is missing.");
           return;
-=======
-
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      setIsLoading(true),
-      setError(null),
-      try {
-        if (!profileId) {
-
-          setError("Profile ID is missing."),
-          return
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
-
-
-          .single(),
-
-
-
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+          .single();
         if (error) {
           throw new Error(error.message);
         }
         if (!data) {
-
-
-        const { data, error } = await supabase;
-          .from("talent_profiles");
-          .select("*");
-          .eq("id", profileId);
-          .single();
-
-        if (error) {;
-          throw new Error(error && error.message);
-        }
-
-        if (!data) {;
-
           setError("Profile not found.");
           return;
-=======
-
-          setError("Profile not found."),
-          return
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
 
-        setProfileData(data)
+        setProfileData(data);
       } catch (err: any) {
-        setError(err.message |"Failed to fetch profile.")
+        setError(err.message || "Failed to fetch profile.");
         toast({
-          title: "Error"
-          description: err.message |"Failed to fetch profile."
-          variant: "destructive"})
-
+          title: "Error",
+          description: err.message || "Failed to fetch profile.",
+          variant: "destructive"
+        });
       } finally {
-=======
       } catch (err: any) {;
         setError(err && err.message || "Failed to fetch profile."),;
         toast({;
@@ -89,23 +101,12 @@ export default function ProfileDetail() {;
           description: err && err.message || "Failed to fetch profile.",;
           variant: "destructive"});
       } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         setIsLoading(false);
       }
+    };
 
-    }
-    fetchProfile()
-
+    fetchProfile();
   }, [profileId]);
-=======
-
-    },
-
-    fetchProfile()
-  }, [profileId]),
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -125,14 +126,23 @@ export default function ProfileDetail() {;
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
-
+<<<<<<< HEAD
   }, [profileId]);
-
+=======
+    )
+<<<<<<< HEAD
+  }
+  return (
+    <>
+      <SEO
+        title={`${profileData.full_name} | Zion AI Marketplace`}
+<<<<<<< HEAD
+        description = {profileData.bio |"Check out this talent's profile on Zion!",}
 =======
     )
 
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState, useEffect } from "react",;
 import { useRouter } from "next/router",;
@@ -191,6 +201,7 @@ export default function ProfileDetail() {;
     },;
     fetchProfile();
   }, [profileId]),;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   if (isLoading) {;
     return (
@@ -213,34 +224,31 @@ export default function ProfileDetail() {;
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     );
   }
   return (
     <>;
-
-        description = {profileData.bio |"Check out this talent's profile on Zion!",}
-
-=======
-      <SEO;
+      <SEO
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-=======
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
         description = {profileData && profileData.bio || "Check out this talent's profile on Zion!",}
       />;
       <Header />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -262,7 +270,6 @@ export default function ProfileDetail() {;
                       )}
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
-=======
 export default /**
  * ProfileDetail - Function description
  */
@@ -375,19 +382,45 @@ if ( {) {
                         <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
                     </CardTitle>;
                     <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
+                <div className="flex flex-wrap gap-4 text-sm">;
+                  {profileData && profileData.location && (;
+                    <div className="flex items-center text-zion-slate-light">;
+                      <MapPin className="h-4 w-4 mr-1" />;
+                      <span>{profileData && profileData.location}</span>;
+                    </div>;
+                  )}
+                  {profileData && profileData.availability && (;
+                    <div className="flex items-center text-zion-slate-light">;
+                      <Clock className="h-4 w-4 mr-1" />;
+                      <span>{profileData && profileData.availability}</span>;
+                    </div>;
+                  )}
+                  {profileData && profileData.hourly_rate && (;
+                    <div className="text-white font-bold">;
+                      ${profileData && profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>;
+                    </div>;
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+=======
 
 
                 </div>;
               </CardContent>;
             </Card>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -447,107 +480,43 @@ if ( {) {
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
-
-                </div>;
-              </CardContent>;
-            </Card>;
-
-            {/* About Section */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <p className="text-zion-slate-light">{profileData && profileData.bio || "No bio provided."}</p>;
-              </CardContent>;
-            </Card>;
-
-            {/* Skills Section */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-xl font-bold text-white">Skills</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className="flex flex-wrap gap-2">;
-                  {profileData && profileData.skills?.map((skill: string, index: number,) => (;
-                    <Badge key={index} className="bg-zion-blue-light text-zion-slate-light border-none">{skill}</Badge>;
-                  )) || <p className="text-zion-slate-light">No skills provided.</p>}
-                </div>;
-              </CardContent>;
-            </Card>;
-
-            {/* Experience Section */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                {profileData && profileData.experience ? (;
-                  profileData && profileData.experience.map((exp: any, index: number,) => (;
-                    <div key={index} className="mb-4">;
-                      <h4 className="font-bold text-white">{exp && exp.title}</h4>;
-                      <p className="text-zion-cyan">{exp && exp.company}</p>;
-                      <p className="text-sm text-zion-slate-light">{exp && exp.start_date} - {exp && exp.end_date || "Present"}</p>;
-                      <p className="text-zion-slate-light">{exp && exp.description}</p>;
-                    </div>;
-                  ));
-                ) : (;
-                  <p className="text-zion-slate-light">No experience provided.</p>;
-=======
-
-                        {link.title || link.url}
-                      </Link>
-
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>
-
-                )}
-              </CardContent>;
-            </Card>;
-
-            {/* Portfolio Section */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <CardTitle className="text-xl font-bold text-white">Portfolio</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                {profileData && profileData.portfolio_links ? (;
-                  <div className="flex flex-col gap-3">;
-                    {profileData && profileData.portfolio_links.map((link: any, index: number,) => (;
-                      <a
-                        key = {index,}
-                        href = {link && link.url,}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-zion-cyan hover:text-white flex items-center gap-2">;
-                        <LinkIcon className="h-4 w-4" />;
-                        {link && link.title || link && link.url}
-                      </a>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                        {link.title |link.url}
+                      </a>
                     ))}
                   </div>;
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
-
-              </CardContent>;
-            </Card>;
-          </div>;
-
-
+              </CardContent>
+            </Card>
+          </div>
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
               talentProfile={{
+<<<<<<< HEAD
+                id: profileData?.id |''
+                full_name: profileData?.full_name |''
+                professional_title: profileData?.professional_title |''
+                hourly_rate: profileData?.hourly_rate |0
+
+=======
 
 
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-
-
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+                hourly_rate: profileData?.hourly_rate || 0,
+=======
+                hourly_rate: profileData?.hourly_rate || 0
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               }}
             />;
             {/* Contact Information */}
@@ -574,247 +543,115 @@ if ( {) {
                     </a>;
                   </div>;
                 )}
+<<<<<<< HEAD
+              </div>
+            </div>
+=======
 
               </div>;
             </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
               <div className="flex flex-col space-y-3">;
                 {profileData && profileData.github_url && (;
                   <a
-
-                    href = {profileData && profileData.github_url,}
-
+                    href={profileData.github_url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
-
-                    href = {profileData && profileData.twitter_url,}
-
-=======
-                    title="GitHub"
-                  >
-                    <Github className="h-4 w-4" />
-                    GitHub
-
-                  </Link>
+                    title="GitHub">;
+                    <Github className="h-4 w-4" />;
+                    GitHub;
+                  </a>;
                 )}
-                {profileData.twitter_url && (;
-                  <a;
+                {profileData && profileData.twitter_url && (;
+                  <a
                     href={profileData.twitter_url}
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
-
-                    href = {profileData && profileData.linkedin_url,}
-
-=======
-                    title="Twitter"
-                  >
-                    <Twitter className="h-4 w-4" />
-                    Twitter
-
-                  </Link>
+                    title="Twitter">;
+                    <Twitter className="h-4 w-4" />;
+                    Twitter;
+                  </a>;
                 )}
-                {profileData.linkedin_url && (;
-                  <a;
+                {profileData && profileData.linkedin_url && (;
+                  <a
                     href={profileData.linkedin_url}
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
-
-=======
-                <div className="flex flex - wrap gap - 4 text - sm">;
-                  {profile_data.location && (
-                    <div className="flex items - center text - zion - slate - light">;
-                      <MapPin className="h - 4 w - 4 mr - 1" />;
-                      <span>{profile_data.location}</span>;
-                    </div>)}
-                  {profile_data.availability && (
-                    <div className="flex items - center text - zion - slate - light">;
-                      <Clock className="h - 4 w - 4 mr - 1" />;
-                      <span>{profile_data.availability}</span>;
-                    </div>)}
-                  {profile_data.hourly_rate && (
-                    <div className="text - white font - bold">;
-                      ${profile_data.hourly_rate}
-                      <span className="text - zion - slate - light font - normal">/hr</span>;
-                    </div>)}
-                </div>;
-              </CardContent>;
-            </Card>;
-            {/* About Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
-              <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">About Me</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <p className="text - zion - slate - light">{profile_data.bio || "No bio provided."}</p>;
-              </CardContent>;
-            </Card>;
-            {/* Skills Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
-              <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">Skills</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className="flex flex - wrap gap - 2">;
-                  {profile_data.skills?.map ((skill: string, index: number, ) => (
-                    <Badge key={index} className="bg - zion - blue - light text - zion - slate - light border - none">{skill}</Badge>)) || <p className="text - zion - slate - light">No skills provided.</p>}
-                </div>;
-              </CardContent>;
-            </Card>;
-            {/* Experience Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
-              <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">Experience</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                {profile_data.experience ? (
-                  profile_data.experience.map ((exp: any, index: number, ) => (
-                    <div key={index} className="mb - 4">;
-                      <h4 className="font - bold text - white">{exp.title}</h4>;
-                      <p className="text - zion - cyan">{exp.company}</p>;
-                      <p className="text - sm text - zion - slate - light">{exp.start_date} - {exp.end_date || "Present"}</p>;
-                      <p className="text - zion - slate - light">{exp.description}</p>;
-                    </div>))) : (
-                  <p className="text - zion - slate - light">No experience provided.</p>)}
-              </CardContent>;
-            </Card>;
-            {/* Portfolio Section */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
-              <CardHeader>;
-                <CardTitle className="text - xl font - bold text - white">Portfolio</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                {profile_data.portfolio_links ? (
-                  <div className="flex flex - col gap - 3">;
-                    {profile_data.portfolio_links.map ((link: any, index: number, ) => (
-                      <a;
-                        key = {index, }
-                        href = {link.url, }
-                        target="_blank";
-                        rel="noopener noreferrer";
-                        className="text - zion - cyan hover:text - white flex items - center gap - 2";
-                      >;
-                        <LinkIcon className="h - 4 w - 4" />;
-                        {link.title || link.url}
-                      </a>))}
-                  </div>) : (
-                  <p className="text - zion - slate - light">No portfolio links provided.</p>)}
-              </CardContent>;
-            </Card>;
-          </div>;
-          {/* Sidebar with HireNowCTA */}
-          <div className="col - span - 4 lg:col - span - 1">;
-            <HireNowCTA;
-              talent_profile={{
-                id: profile_data?.id || '',
-                full_name: profile_data?.full_name || '',
-                professional_title: profile_data?.professional_title || '',
-                hourly_rate: profile_data?.hourly_rate || 0,
-              }}
-            />;
-            {/* Contact Information */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt - 6">;
-              <h3 className="text - xl font - bold mb - 4">Contact</h3>;
-              <div className="flex flex - col space - y-3">;
-                {profile_data.email && (
-                  <div className="flex items - center gap - 2 text - zion - slate - light">;
-                    <Mail className="h - 4 w - 4" />;
-                    <a href={`mailto:${profile_data.email}`} className="hover:text - zion - cyan">{profile_data.email}</a>;
-                  </div>)}
-                {profile_data.phone && (
-                  <div className="flex items - center gap - 2 text - zion - slate - light">;
-                    <Phone className="h - 4 w - 4" />;
-                    <span>{profile_data.phone}</span>;
-                  </div>)}
-                {profile_data.website && (
-                  <div className="flex items - center gap - 2 text - zion - slate - light">;
-                    <Globe className="h - 4 w - 4" />;
-                    <a href={profile_data.website} target="_blank" rel="noopener noreferrer" className="hover:text - zion - cyan">;
-                      Website;
-                    </a>;
-                  </div>)}
-              </div>;
-            </div>;
-            {/* Social Links */}
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mt - 6">;
-              <h3 className="text - xl font - bold mb - 4">Social</h3>;
-              <div className="flex flex - col space - y-3">;
-                {profile_data.github_url && (
-                  <a;
-                    href = {profile_data.github_url, }
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan";
-                    aria - label="GitHub";
-                    title="GitHub";
-                  >;
-                    <Github className="h - 4 w - 4" />;
-                    GitHub;
-                  </a>)}
-                {profile_data.twitter_url && (
-                  <a;
-                    href = {profile_data.twitter_url, }
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan";
-                    aria - label="Twitter";
-                    title="Twitter";
-                  >;
-                    <Twitter className="h - 4 w - 4" />;
-                    Twitter;
-                  </a>)}
-                {profile_data.linkedin_url && (
-                  <a;
-                    href = {profile_data.linkedin_url, }
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan";
-                    aria - label="LinkedIn";
-                    title="LinkedIn";
-                  >;
-                    <Linkedin className="h - 4 w - 4" />;
+                    title="LinkedIn">;
+                    <Linkedin className="h-4 w-4" />;
                     LinkedIn;
-                  </a>)}
-
-=======
-                    title="LinkedIn"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                    LinkedIn
-
-                  </Link>
+                  </a>;
                 )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-
+    </>;
+  );
+}
 );
 }
 }, [profileId]);
 <p>Error: {error ;
 }</p> </div>) ;
+}return (<> <SEO) : (<AvatarFallback> {profileData.full name?.charAt (0) ;
+}</AvatarFallback>) ;
+}</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
+}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
+}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) ";
+}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
+}</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) ;
+}</CardContent> </Card> </div> <HireNowCTA talentProfile= {{;
+  id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0 ;
+}/> Website </Link> </div>) ;
+}</div> </div> <a href= {profileData.github url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub" > <Github className="h-4 w-4" /> GitHub </Link>) ;
+}{profileData.twitter url && (<a href= {;
+  profileData.twitter url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter" > <Twitter className="h-4 w-4" /> Twitter </Link>) ;
+}{profileData.linkedin url && (<a href= {;
+  profileData.linkedin url ";
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
+}</div> </div> </div> </div> </div> </>) ;
+}'"}
 
-=======
     </>);
 ;
 }
@@ -849,6 +686,8 @@ if ( {) {
 }target="blank" rel="noopener noreferrer" className="flex items - center gap - 2 text - zion - slate - light hover:text - zion - cyan" aria - label="LinkedIn" title="LinkedIn" > <Linkedin className="h - 4 w - 4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"}
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -856,6 +695,9 @@ if ( {) {
   );
 }
 ;
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

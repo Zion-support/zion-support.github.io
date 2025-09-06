@@ -9,8 +9,8 @@ export default function FintechSolutions() {;
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle.";
 			subtitle="Smarter finance with lower risk and faster time to yes.";
 			pricePerMonthUSD={2799}
-			implementationWeeks="Implementation:4–8 weeks";
-			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%";
+			implementationWeeks="Implementation:48 weeks";
+			roiNote="Reduce fraud loss 1535% and manual review by 3050%";
 			features={[;
 				"Transaction anomaly detection and entity resolution",;
 				"Credit risk models with explainability",;

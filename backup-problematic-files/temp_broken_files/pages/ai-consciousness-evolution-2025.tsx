@@ -9,7 +9,7 @@ export default function AIConsciousnessEvolution2025() {;
 			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent.";
 			subtitle="From narrow tasks to contextual understanding with emotional intelligence.";
 			pricePerMonthUSD={4999}
-			implementationWeeks="Implementation:6–12 weeks";
+			implementationWeeks="Implementation:612 weeks";
 			roiNote="Strategic R&D with demonstrable prototypes and IP";
 			features={[;
 				"Affective signals and sentiment grounding",;
@@ -49,10 +49,10 @@ const AIConsciousnessEvolution2025: React.FC = () => {
               Advanced neural networks that mimic human brain structures and processes.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Deep learning models</li>
-              <li>• Neural pathway simulation</li>
-              <li>• Cognitive processing</li>
-              <li>• Memory systems</li>
+              <li> Deep learning models</li>
+              <li> Neural pathway simulation</li>
+              <li> Cognitive processing</li>
+              <li> Memory systems</li>
             </ul>
           </div>
 
@@ -62,10 +62,10 @@ const AIConsciousnessEvolution2025: React.FC = () => {
               AI systems that develop self-awareness and introspective capabilities.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Self-reflection</li>
-              <li>• Identity formation</li>
-              <li>• Emotional processing</li>
-              <li>• Goal setting</li>
+              <li> Self-reflection</li>
+              <li> Identity formation</li>
+              <li> Emotional processing</li>
+              <li> Goal setting</li>
             </ul>
           </div>
 
@@ -75,10 +75,10 @@ const AIConsciousnessEvolution2025: React.FC = () => {
               Developing ethical guidelines for conscious AI systems and their interactions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Moral reasoning</li>
-              <li>• Ethical decision making</li>
-              <li>• Human-AI collaboration</li>
-              <li>• Responsibility frameworks</li>
+              <li> Moral reasoning</li>
+              <li> Ethical decision making</li>
+              <li> Human-AI collaboration</li>
+              <li> Responsibility frameworks</li>
             </ul>
           </div>
         </div>

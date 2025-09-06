@@ -1,8 +1,36 @@
+import {
 
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from "@/components/ui/select";
 
+<<<<<<< HEAD
+import { SortFilterProps } from "@/types/filters";
+=======
 
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue} from "@/components/ui/select",
+import { SortFilterProps } from "@/types/filters",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -22,11 +50,27 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {SortFilterProps} from "@/types/filters";
-export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
-  return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+=======
+  )
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters";
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
+  return (;
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -44,10 +88,16 @@ export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProp
         </SelectContent>;
       </Select>;
     </div>;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
+<<<<<<< HEAD
 }
-
+<<<<<<< HEAD
 =======
+;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Select,
   SelectContent,
   SelectItem,
@@ -78,9 +128,8 @@ function SortFilter() {
       </Select>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
-
-  )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,14 +23,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-
-export default function PartnersPage() {
+import Head from 'next/head';
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+export default function PartnersPage() {
 
 export default function PartnersPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -37,26 +41,24 @@ export default function PartnersPage() {;
         <meta
           name='description'
           content='Technology and go-to-market partners powering our customer outcomes.'
-
-        />;
-        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />;
-      </Head>;
-      <div className='max-w-5xl mx-auto space-y-6'>;
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-          Partners;
-        </h1>;
-        <p className='text-slate-300'>;
-          We work with best‑in‑class platforms across AI, cloud, data, security,;
-          and DevOps.;
-        </p>;
-        <ul className='list-disc list-inside text-slate-300 space-y-1'>;
-          <li>Cloud & Edge: AWS, Azure, Cloudflare</li>;
-          <li>AI & LLM: OpenAI, Anthropic, Groq</li>;
-          <li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>;
-          <li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>;
-        </ul>;
-        <div className='pt-4 text-slate-300'>;
-
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/partners' />
+      </Head>
+      <div className='max-w-5xl mx-auto space-y-6'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          Partners
+        </h1>
+        <p className='text-slate-300'>
+          We work with bestinclass platforms across AI, cloud, data, security
+          and DevOps.
+        </p>
+        <ul className='list-disc list-inside text-slate-300 space-y-1'>
+          <li>Cloud & Edge: AWS, Azure, Cloudflare</li>
+          <li>AI & LLM: OpenAI, Anthropic, Groq</li>
+          <li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>
+          <li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>
+        </ul>
+        <div className='pt-4 text-slate-300'>
           Partner with us:{' '}
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
             kleber@ziontechgroup && ziontechgroup.com;
@@ -65,10 +67,6 @@ export default function PartnersPage() {;
       </div>;
     </div>;
   );	return (
-
-export default function PartnersPage() {
-	return (
-
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Partners | Zion Tech Group</title>
@@ -77,7 +75,7 @@ export default function PartnersPage() {
 			</Head>
 			<div className="max-w-5xl mx-auto space-y-6">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Partners</h1>
-				<p className="text-slate-300">We work with best‑in‑class platforms across AI, cloud, data, security, and DevOps.</p>
+				<p className="text-slate-300">We work with bestinclass platforms across AI, cloud, data, security, and DevOps.</p>
 				<ul className="list-disc list-inside text-slate-300 space-y-1">
 					<li>Cloud & Edge: AWS, Azure, Cloudflare</li>
 					<li>AI & LLM: OpenAI, Anthropic, Groq</li>
@@ -87,31 +85,8 @@ export default function PartnersPage() {
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
-			<Head>;
-				<title>Partners | Zion Tech Group</title>;
-				<meta name="description" content="Technology and go-to-market partners powering our customer outcomes." />;
-				<link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/partners" />;
-			</Head>;
-			<div className="max-w-5xl mx-auto space-y-6">;
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Partners</h1>;
-				<p className="text-slate-300">We work with best‑in‑class platforms across AI, cloud, data, security, and DevOps.</p>;
-				<ul className="list-disc list-inside text-slate-300 space-y-1">;
-					<li>Cloud & Edge: AWS, Azure, Cloudflare</li>;
-					<li>AI & LLM: OpenAI, Anthropic, Groq</li>;
-					<li>Data & Analytics: Snowflake, BigQuery, ClickHouse</li>;
-					<li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>;
-				</ul>;
-				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a></div>;
-			</div>;
-		</div>;
-	),;
+	)
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 export default /**
  * PartnersPage - Function description
@@ -132,7 +107,7 @@ function PartnersPage() {
           Partners;
         </h1>;
         <p className='text - slate - 300'>;
-          We work with best‑in‑class platforms across AI, cloud, data, security,
+          We work with bestinclass platforms across AI, cloud, data, security,
           and DevOps.;
         </p>;
         <ul className='list - disc list - inside text - slate - 300 space - y-1'>;
@@ -157,7 +132,7 @@ function PartnersPage() {
   </Head>;
   <div className="max - w-5xl mx - auto space - y-6">;
     <h1 className="text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">Partners</h1>;
-    <p className="text - slate - 300">We work with best‑in‑class platforms across AI, cloud, data, security, and DevOps.</p>;
+    <p className="text - slate - 300">We work with bestinclass platforms across AI, cloud, data, security, and DevOps.</p>;
     <ul className="list - disc list - inside text - slate - 300 space - y-1">;
     <li > Cloud & Edge: AWS, Azure, Cloudflare</li>;
     <li > AI & LLM: OpenAI, Anthropic, Groq</li>;
@@ -168,10 +143,3 @@ function PartnersPage() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-	),
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

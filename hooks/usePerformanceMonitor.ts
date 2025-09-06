@@ -1,52 +1,67 @@
 ;
 interface PerformanceMetrics {
+  loadTime: number, firstContentfulPaint: number
+  largestContentfulPaint: number, firstInputDelay: number
+  cumulativeLayoutShift: number
+}
+<<<<<<< HEAD
+export function usePerformanceMonitor() {
+=======
+<<<<<<< HEAD
+export function usePerformanceMonitor() {
+=======
 
-      const entries = list && list.getEntries();
-      
-      entries && entries.forEach((entry) => {
-        if (entry && entry.entryType === 'navigation') {
+export function usePerformanceMonitor() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isSupported, setIsSupported] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    // Check if Performance Observer is supported
+    if (!('PerformanceObserver' in window)) {
+    setIsSupported(false)
+    return
+  }
+    setIsSupported(true);
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
-            ...prev,
-            loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
+            ...prev
+            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart
           }));
         }
-        
-        if (entry && entry.entryType === 'paint') {
-
+        if (entry.entryType === 'paint') {
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
-
-              ...prev,
-              firstContentfulPaint: paintEntry && paintEntry.startTime,
+              ...prev
+              firstContentfulPaint: paintEntry.startTime
             }));
           }
         }
-        
-        if (entry && entry.entryType === 'largest-contentful-paint') {
+        if (entry.entryType === 'largest-contentful-paint') {
           const lcpEntry = entry as PerformanceEntry;
           setMetrics(prev => ({
-            ...prev,
-            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
+            ...prev
+            largestContentfulPaint: lcpEntry.startTime
           }));
         }
-        
-        if (entry && entry.entryType === 'first-input') {
+        if (entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({
-            ...prev,
-            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
+            ...prev
+            firstInputDelay: fidEntry.processingStart - fidEntry.startTime
           }));
         }
-        
-        if (entry && entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
+        if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { value: number }
           setMetrics(prev => ({
-            ...prev,
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
-
-=======
+            ...prev
+            cumulativeLayoutShift: (prev?.cumulativeLayoutShift |0) + clsEntry.value
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -129,20 +144,24 @@ if ( {) {
           set_metrics (prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }));
         }
       });
     });
-
-      observer && observer.disconnect();
-    };
-
+    // Observe different performance entry types
+    try {
+      observer && observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console && console.warn('Performance Observer not fully supported:', error);
+    }
+    return () => {
+      observer.disconnect();
+    }
   }, []);
   return { metrics, isSupported }
 }
 
-=======
 ;
     // Observe different performance entry types;
     try {
@@ -158,4 +177,3 @@ if ( {) {
 ;
   return { metrics, is_supported }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

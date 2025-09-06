@@ -1,58 +1,128 @@
+import React, { useState, useRef } from 'react';
+import { Input } from './ui/input';
+import { Button } from './ui/button';
+import { useToast } from '../hooks/use-toast';
+import { Loader2 } from 'lucide-react';
+import { logErrorToProduction } from '../utils/productionLogger';
 
+<<<<<<< HEAD
+export function FooterNewsletter(): any (): React && React.ReactElement {;
+=======
+export function FooterNewsletter(): React.ReactElement {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  const [email, setEmail] = useState('');
+  const [honeypot, setHoneypot] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [emailError, setEmailError] = useState('');
+  const { toast } = useToast();
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      {/* Honeypot field */}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Honeypot check
+    if (honeypot) {
+      return;
+    }
+
+    // Basic validation
+    if (!email) {
+      setEmailError('Email is required');
+      return;
+    }
+
+    if (!EMAIL_REGEX.test(email)) {
+      setEmailError('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setEmailError('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast({
+        title: "Success!",
+        description: "You've been subscribed to our newsletter.",
+      });
+      
+      setEmail('');
+    } catch (error) {
+      logErrorToProduction('Newsletter subscription failed', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+<<<<<<< HEAD
+    } finally {;
+=======
+    } finally {
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <form
+      id="footer-newsletter-form"
+      aria-label="Newsletter sign-up"
+      onSubmit={handleSubmit}
+      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
+    >
+      <div className="flex-1">
+        <Input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className={`w-full ${emailError ? 'border-red-500' : ''}`}
+          required
+        />
+        {emailError && (
+          <p className="text-red-500 text-sm mt-1">{emailError}</p>
+        )}
+      </div>
+      
+      {/* Honeypot field - hidden from users */}
       <input
-
-        onChange={e => setHoneypot(e && e.target.value)}
+        type="text"
+        name="honeypot"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        style={{ display: 'none' }}
         tabIndex={-1}
+<<<<<<< HEAD
+        autoComplete="off"
+      />
+      
+=======
         autoComplete='off';
         style={{ display: 'none' }}
       />;
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Button
         type="submit"
         disabled={isSubmitting}
-
-        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'>;
-=======
-
-        type="text"
-
-
-        value={honeypot}
-        onChange={e => setHoneypot(e.target.value)}
-        tabIndex={-1}
-
-
-=======
-        autoComplete="off"
-        style={{ display: 'none' }}
-      />
-      <Button
-        type="submit"
-        aria-label="Subscribe to newsletter"
-        disabled={isSubmitting}
-        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple";
-      >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-        {isSubmitting ? (;
-          <>;
-            <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
-            Subscribing...;
-          </>;
-        ) : (;
-          'Subscribe';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors"
+      >
+        {isSubmitting ? (
+          <>
+            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+            Subscribing...
+          </>
+        ) : (
+          'Subscribe'
         )}
-      </Button>;
-    </form>;
+      </Button>
+    </form>
   );
+<<<<<<< HEAD
+}
 
-} ;
-} ;
-
-=======
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components / ui / input';
 import { Button } from '@/components / ui / button';
@@ -176,10 +246,6 @@ if ( {) {
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

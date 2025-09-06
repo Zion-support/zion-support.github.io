@@ -103,7 +103,7 @@ const testimonials = [;
     company:'TechFlow Solutions',;
     content:'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',;
     rating:5,;
-    avatar:'👨‍💻';
+    avatar:'';
   },;
   {;
     name:'Sarah Rodriguez',;
@@ -111,7 +111,7 @@ const testimonials = [;
     company:'CloudScale Inc.',;
     content:'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',;
     rating:5,;
-    avatar:'👩‍💼';
+    avatar:'';
   },;
   {;
     name:'David Kim',;
@@ -119,7 +119,7 @@ const testimonials = [;
     company:'SecureNet Corp.',;
     content:'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',;
     rating:5,;
-    avatar:'👨‍🔒';
+    avatar:'';
   }
 ],;
 ;
@@ -442,8 +442,8 @@ export default function AdvancedAIAutomationServices() {;
               </Link>;
             </div>;
             <div className="mt-8 text-center">;
-              <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>;
-              <p className="text-gray-300">🌐 {contactInfo.website}</p>;
+              <p className="text-gray-300 mb-2"> {contactInfo.address}</p>;
+              <p className="text-gray-300"> {contactInfo.website}</p>;
             </div>;
           </motion.div>;
         </div>;
@@ -457,10 +457,10 @@ export default function AdvancedAIAutomationServices() {;
               Automate complex business processes with AI-powered decision making and workflow optimization.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Document processing and analysis</li>
-              <li>• Automated decision trees</li>
-              <li>• Workflow optimization</li>
-              <li>• Exception handling</li>
+              <li> Document processing and analysis</li>
+              <li> Automated decision trees</li>
+              <li> Workflow optimization</li>
+              <li> Exception handling</li>
             </ul>
           </div>
 
@@ -470,10 +470,10 @@ export default function AdvancedAIAutomationServices() {;
               Deploy intelligent chatbots and virtual assistants that understand context and provide meaningful interactions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Natural language processing</li>
-              <li>• Multi-language support</li>
-              <li>• Context-aware responses</li>
-              <li>• Integration with existing systems</li>
+              <li> Natural language processing</li>
+              <li> Multi-language support</li>
+              <li> Context-aware responses</li>
+              <li> Integration with existing systems</li>
             </ul>
           </div>
 
@@ -483,10 +483,10 @@ export default function AdvancedAIAutomationServices() {;
               Leverage machine learning to predict trends, identify opportunities, and make data-driven decisions.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Trend forecasting</li>
-              <li>• Anomaly detection</li>
-              <li>• Customer behavior analysis</li>
-              <li>• Risk assessment</li>
+              <li> Trend forecasting</li>
+              <li> Anomaly detection</li>
+              <li> Customer behavior analysis</li>
+              <li> Risk assessment</li>
             </ul>
           </div>
 
@@ -496,10 +496,10 @@ export default function AdvancedAIAutomationServices() {;
               Implement visual recognition systems for quality control, security, and automated monitoring.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Object detection and recognition</li>
-              <li>• Quality control automation</li>
-              <li>• Security monitoring</li>
-              <li>• Image and video analysis</li>
+              <li> Object detection and recognition</li>
+              <li> Quality control automation</li>
+              <li> Security monitoring</li>
+              <li> Image and video analysis</li>
             </ul>
           </div>
 
@@ -509,10 +509,10 @@ export default function AdvancedAIAutomationServices() {;
               Extract insights from text data, automate content generation, and improve communication efficiency.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Text analysis and sentiment</li>
-              <li>• Automated content generation</li>
-              <li>• Language translation</li>
-              <li>• Document summarization</li>
+              <li> Text analysis and sentiment</li>
+              <li> Automated content generation</li>
+              <li> Language translation</li>
+              <li> Document summarization</li>
             </ul>
           </div>
 
@@ -522,10 +522,10 @@ export default function AdvancedAIAutomationServices() {;
               Automate repetitive tasks and integrate disparate systems for seamless operations.
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Task automation</li>
-              <li>• System integration</li>
-              <li>• Data migration</li>
-              <li>• Process monitoring</li>
+              <li> Task automation</li>
+              <li> System integration</li>
+              <li> Data migration</li>
+              <li> Process monitoring</li>
             </ul>
           </div>
         </div>

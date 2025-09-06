@@ -1,11 +1,33 @@
-
-
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import JSZip from "jszip";
+import {
+=======
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from "next";
+import JSZip from "jszip";
+import {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  getZionDesignMap
+  buildTokenSet
+  buildUIKit
+  UIKitKind
+<<<<<<< HEAD
+=======
+=======
+  getZionDesignMap,
+  buildTokenSet,
+  buildUIKit,
+  UIKitKind,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from './next';
 import JSZip from './jszip';
 import {
@@ -19,53 +41,61 @@ export default async /**
  * handler - Function description
  */
 function handler() {
-
+  try {
+    const kit = (req.query.kit as string) |"tailwind";
+=======
+<<<<<<< HEAD
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
 
     const kind = (
-
-
+      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
+    ) as UIKitKind;
+=======
   try {;
     const kit = (req.query.kit as string) || "tailwind";
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const kind = (
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
     const zip = new JSZip();
-
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
-
     // Core files
     zip.file("map.json", JSON.stringify(map, null, 2));
     zip.file("tokens.json", JSON.stringify(tokens, null, 2));
-
     // UIKit folder
     const uikit = buildUIKit(kind);
     const uiFolder = zip.folder("uikit")!;
     Object.entries(uikit).forEach(([path, content]) =>
-      uiFolder.file(path, content),
+      uiFolder.file(path, content)
     );
-
     // README
     zip.file(
-      "README.md",
-      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
+      "README.md"
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`
     );
-
     const buffer = await zip.generateAsync({ type: "nodebuffer" });
     res.setHeader("Content-Type", "application/zip");
     res.setHeader(
+      "Content-Disposition"
+      `attachment; filename=zion-design-${kind}.zip`
+
+    const buffer = await zip && zip.generateAsync({ type: "nodebuffer" });
+    res && res.setHeader("Content-Type", "application/zip");
+    res && res.setHeader(
       "Content-Disposition",
       `attachment; filename=zion-design-${kind}.zip`,
     );
+<<<<<<< HEAD
+=======
     res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
@@ -112,27 +142,48 @@ export default async function handler(req, res) {
     );
 
     );
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     res && res.status(200).send(buffer);
   } catch (e: any) {
-
-    res && res.status(500).json({ error: e?.message || "Export failed" });
-
+    res.status(500).json({ error: e?.message |"Export failed" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      ["tailwind", "chakra", "react"].includes (kit) ? kit : "tailwind") as UIKitKind;
+    const zip = new JSZip ();
+;
+    const map = getZionDesignMap ();
+    const tokens = await buildTokenSet ();
+;
+    // Core files;
+    zip.file ("map.json", JSON.stringify (map, null, 2));
+    zip.file ("tokens.json", JSON.stringify (tokens, null, 2));
+;
+    // UIKit folder;
+    const uikit = buildUIKit (kind);
+    const ui_folder = zip.folder ("uikit")!;
+    Object.entries (uikit).for_each (([path, content]) =>;
+      ui_folder.file (path, content),
+    );
+;
+    // README;
+    zip.file (
+      "README.md",
+      `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
+    );
+;
+    const buffer = await zip.generate_async ({ type: "nodebuffer" });
+    res.set_header ("Content - Type", "application / zip");
+    res.set_header (
+      "Content - Disposition",
+      `attachment; filename = zion - design-${kind}.zip`,
+    );
+    res.status (200).send (buffer);
+  } catch (e: any) {
+    res.status (500).json ({ error: e?.message || "Export failed" });
+  }
+}
+<<<<<<< HEAD
 =======
-    res.status(200).send(buffer);
-
-  } catch (error) {
-    res.status(500).json({ error: e?.message || 'Export failed' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -149,6 +200,13 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+}
+=======
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

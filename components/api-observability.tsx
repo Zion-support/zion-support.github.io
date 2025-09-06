@@ -1,31 +1,50 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name
+}- Zion Tech Group</title>) )
+<<<<<<< HEAD
+=======
+=======
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+=======
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+=======
+ return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   service.name 
 }- Zion Tech Group</title>) ) 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
-
-
-=======
-import React from 'react';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
-
-
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function ApiObservabilityPage() {
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
+<<<<<<< HEAD
+=======
 =======
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function ApiObservabilityPage() {
+
+=======
+<<<<<<< HEAD
 export default function ApiObservabilityPage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/api-observability'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export default function ApiObservabilityPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!service) return null;
 
   return (
@@ -55,7 +74,7 @@ export default function ApiObservabilityPage() {;
               <div className="flex items-end justify-between mb-3">;
                 <div>;
                   <div className="text-3xl font-bold text-white">{service && service.price}<span className="text-slate-400 text-base">{service && service.period}</span></div>;
-                  <div className="text-slate-400">{service && service.trialDays}-day free trial • Setup: {service && service.setupTime}</div>;
+                  <div className="text-slate-400">{service && service.trialDays}-day free trial  Setup: {service && service.setupTime}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>;
@@ -63,7 +82,6 @@ export default function ApiObservabilityPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
   service.name;
 }- Zion Tech Group</title>) );
 }</ul> </div> <div className="bg - black / 30 rounded - 2xl border border - cyan - 500 / 30 p - 6 h - fit" > <div className="flex items - end justify - between mb - 3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
@@ -107,7 +125,7 @@ if (return null) {
               <div className="flex items - end justify - between mb - 3">;
                 <div>;
                   <div className="text - 3xl font - bold text - white">{service.price}<span className="text - slate - 400 text - base">{service.period}</span></div>;
-                  <div className="text - slate - 400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                  <div className="text - slate - 400">{service.trial_days}-day free trial  Setup: {service.setup_time}</div>;
                 </div>;
               </div>;
               <Link href="/contact" variant="quantum" size="lg" className="w - full">Start Trial < ArrowRight className="w - 5 h - 5 ml - 2" /></Button>;
@@ -115,22 +133,30 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-
-
-=======
-
+<<<<<<< HEAD
+    </UltraAdvancedFuturisticBackground>;
+  );
+}
 
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+=======
+
+
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

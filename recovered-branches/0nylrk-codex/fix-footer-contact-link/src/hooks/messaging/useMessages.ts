@@ -1,11 +1,22 @@
 
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
+=======
+=======
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -13,19 +24,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle message operations
  */
 export function useMessages(
-=======
-import {UserProfile, UserDetails} from '@/types / auth';
-import {supabase} from '@/integrations / supabase / client';
-import {Message, Conversation} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-/**;
-* Hook to handle message operations;
-*/;
-export function use_messages (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -34,15 +32,32 @@ export function use_messages (
   set_conversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
   setUnreadCount: (updater: (prev: number) => number) => void;
   setIsLoading: (loading: boolean) => void;
-
-      
-      if (unreadMessages && unreadMessages.length > 0) {
-
+  fetchConversations: () => Promise<void>
+) {
+  /**
+   * Fetch messages for a conversation
+   */
+  const loadMessages = async (conversationId: string) => {
+    if (!user) return;
+    setIsLoading(true)
+    try {
+      const { data, error } = await supabase
+        .from('messages')
+        .select('*')
+        .eq('conversation_id', conversationId)
+        .order('created_at', { ascending: true });
+      if (error) throw error;
+      // Use updater function for setActiveMessages
+      setActiveMessages(() => data as Message[]);
+      // Mark messages as read
+      const unreadMessages = data && data.filter(
+        msg => !msg && msg.read && msg && msg.recipient_id === user && user.id
+      );
+      if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)
-=======
   fetch_conversations: () => Promise < void>) {
   /**;
   * Fetch messages for a conversation;
@@ -79,11 +94,12 @@ if ( {) {
       }
     } catch (error) {
       console.error ('Error fetching messages:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
   }
+<<<<<<< HEAD
+=======
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
@@ -129,30 +145,32 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
-
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
   };
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   /**
    * Send a message to an existing conversation
    */
   const sendMessage = async (conversationId: string, content: string) => {
-
-    if (!user || !content && content.trim() || !conversationId) return;
-    
+    if (!user |!content.trim() |!conversationId) return;
     try {
-      const conversation = conversations && conversations.find(c => c && c.id === conversationId),
-
+      const conversation = conversations.find(c => c.id === conversationId)
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -174,9 +192,13 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
-
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      // Update conversations list
+      await fetchConversations();
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
   },;
   /**;
@@ -208,49 +230,76 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
-
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Update conversations list
-      await fetchConversations(),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      await fetchConversations();
       // Return the sent message
       return data
     } catch (error) {
       console && console.error('Error sending message:', error);
       toast({
-
-      setActiveMessages(prev => 
-        prev && prev.map(msg => 
-          msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+        title: "Failed to send message";
+        description: "Please try again later"
+        variant: "destructive"
+      })
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+    }
+  }
+  /**
+   * Mark messages as read
+   */
+  const markAsRead = async (conversationId: string) => {
+    if (!user |!conversationId) return
+    try {
+      const { error } = await supabase
+        .from('messages')
+        .update({ read: true })
+        .eq('conversation_id', conversationId)
+<<<<<<< HEAD
+        .eq('recipient_id', user && user.id)
+=======
+        .eq('recipient_id', user.id)
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+        .eq('read', false);
+      if (error) throw error;
+      // Update active messages to show they've been read
+      setActiveMessages(prev =>
+        prev.map(msg =>
+          msg.recipient_id === user.id ? { ...msg, read: true } : msg
         )
       );
       // Update conversations to reflect read messages
-
-      setConversations(prev => 
-        prev && prev.map(conv => 
-          conv && conv.id === conversationId 
-
+      setConversations(prev =>
+        prev.map(conv =>
+          conv.id === conversationId
             ? { ...conv, unread_count: 0 }
             : conv
         )
       );
       // Recalculate unread count
       setUnreadCount(prev => {
-
-        const updatedConversations = conversations && conversations.map(conv => 
-          conv && conv.id === conversationId 
+        const updatedConversations = conversations.map(conv =>
+          conv.id === conversationId
             ? { ...conv, unread_count: 0 }
             : conv
         );
-        
-        return updatedConversations && updatedConversations.reduce(
-          (total, conv) => total + (conv && conv.unread_count || 0), 
-
+        return updatedConversations.reduce(
+          (total, conv) => total + (conv.unread_count |0)
           0
         )
       })
@@ -264,7 +313,17 @@ export function useMessages(;
 
     markAsRead
   }
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+        title: "Failed to send message",
+        description: "Please try again later",
+        variant: "destructive"
+      })
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
   /**;
   * Send a message to an existing conversation;
@@ -319,10 +378,62 @@ if ( {) {
         variant: "destructive";
       });
     }
+<<<<<<< HEAD
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },;
+  /**;
+   * Mark messages as read;
+   */;
+  const markAsRead = async (conversationId: string) => {;
+    if (!user || !conversationId) return,;
+    try {;
+      const { error } = await supabase;
+        .from('messages');
+        .update({ read: true });
+        .eq('conversation_id', conversationId);
+        .eq('recipient_id', user.id);
+        .eq('read', false),;
+      if (error) throw error,;
+      // Update active messages to show they've been read;
+      setActiveMessages(prev =>;
+        prev.map(msg =>;
+          msg.recipient_id === user.id ? { ...msg, read: true } : msg;
+        );
+      ),;
+      // Update conversations to reflect read messages;
+      setConversations(prev =>;
+        prev.map(conv =>;
+          conv.id === conversationId;
+            ? { ...conv, unread_count: 0 }
+            : conv;
+        );
+      ),;
+      // Recalculate unread count;
+      setUnreadCount(prev => {;
+        const updatedConversations = conversations.map(conv =>;
+          conv.id === conversationId;
+            ? { ...conv, unread_count: 0 }
+            : conv;
+        ),;
+        return updatedConversations.reduce(;
+          (total, conv) => total + (conv.unread_count || 0),;
+          0;
+        );
+      });
+    } catch (error) {;
+      console.error('Error marking messages as read:', error);
+    }
+  },;
+  return {;
+    loadMessages;
+    sendMessage;
+    markAsRead;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ;
   /**;
@@ -378,5 +489,4 @@ if (throw error) {
     send_message;
     markAsRead;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

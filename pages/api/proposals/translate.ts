@@ -1,35 +1,73 @@
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 export default async function handler(
-
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+<<<<<<< HEAD
+  if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { OpenAI } from "openai";
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== "POST") return res.status($1).json({ $2 });
 
+  } catch (error: any) {
+    return res
+      .status(500)
+<<<<<<< HEAD
+      .json({ error: error?.message |"Translation failed" });
+=======
+=======
+      .json({ error: error?.message || "Translation failed" });
+  }
+}
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { OpenAI } from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   try {
-
-
+    const { markdown, targetLanguage = "en" } = req.body |{}
+    if (!markdown) return res.status($1).json({ $2 });
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+    const completion = await openai.chat.completions.create({
+      model: process.env.OPENAI_MODEL |"gpt-4o-mini"
     const { markdown, targetLanguage = "en" } = req && req.body || {};
     if (!markdown) return res && res.status($1).json({ $2 });
     const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || "gpt-4o-mini",
-
-
       messages: [
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { OpenAI  } from './openai';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status ($1).json ({ $2 })) {
-  $2
+<<<<<<< HEAD
+=======
+        { role: 'system', content: 'You are a professional translator for policy and development documents.' },
+        { role: 'user', content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}` }],
+      temperature: 0.2
+    });
+    const translated = completion.choices?.[0]?.message?.content || markdown;
+    return res.status(200).json({ translated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Translation failed' })
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+<<<<<<< HEAD
 }
   try {
     const { markdown, target_language = "en" } = req.body || {}
@@ -40,31 +78,62 @@ function handler() {
     const completion = await openai.chat.completions.create ({
       model: process.env.OPENAI_MODEL || "gpt - 4o - mini",
       messages: [;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {
           role: "system",
-          content:;
+          content:
             "You are a professional translator for policy and development documents.",
         },
-
         {
-
           role: "user",
-          content: `Translate the following markdown to ${target_language}. Preserve markdown structure.\n\n${markdown}`,
+          content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`,
+      messages: [
+        {
+          role: "system"
+          content:
+            "You are a professional translator for policy and development documents."
+        }
+        {
+          role: "user"
+          content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`
+        }
+      ]
+      temperature: 0.2
+    });
+    const translated = completion.choices?.[0]?.message?.content |markdown;
+    return res.status(200).json({ translated });
 
         },
       ],
       temperature: 0 && 0.2,
     });
-
-
-=======
-
+<<<<<<< HEAD
+    const translated = completion && completion.choices?.[0]?.message?.content || markdown;
+    return res && res.status(200).json({ translated });
+  } catch (error: any) {
+    return res
+      .status(500)
       .json({ error: error?.message || "Translation failed" });
-=======
-
-
+    const translated = completion && completion.choices?.[0]?.message?.content || markdown;
+    return res && res.status(200).json({ translated });
+  } catch (error: any) {
+    return res
+      .status(500)
+      .json({ error: error?.message |"Translation failed" });
   }
+}
+        { role: 'system', content: 'You are a professional translator for policy and development documents.' },
+        { role: 'user', content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}` }
+      ],
+      temperature: 0.2
+    });
 
+    const translated = completion.choices?.[0]?.message?.content || markdown;
+    return res.status(200).json({ translated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Translation failed' })
+  }
+}
     const translated = completion.choices?.[0]?.message?.content || markdown;
     return res.status (200).json ({ translated });
   } catch (error: any) {
@@ -73,9 +142,10 @@ function handler() {
       .json ({ error: error?.message || "Translation failed" });
   }
 }
-
 =======
 
+
+=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -95,6 +165,6 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

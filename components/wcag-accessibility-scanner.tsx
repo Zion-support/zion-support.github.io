@@ -24,13 +24,17 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+export default function WCAGScannerPage() {
 
-
+  const service = extraServices.find(s =>
+    s.link.endsWith('/wcag-accessibility-scanner')
 
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s =>;
     s && s.link.endsWith('/wcag-accessibility-scanner');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  if (!service) return null;import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s => s && s.link.endsWith('/wcag-accessibility-scanner'));
@@ -82,7 +86,7 @@ export default function WCAGScannerPage() {;
                   </div>;
                   <div className='text-slate-400'>;
                     {service && service.trialDays;
-                      ? `${service && service.trialDays}-day free trial • `;
+                      ? `${service && service.trialDays}-day free trial  `;
                       : ''}
                     Setup: {service && service.setupTime}
                   </div>;
@@ -113,7 +117,6 @@ export default function WCAGScannerPage() {;
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-=======
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import { extra_services } from '../data / extra - services';
@@ -182,7 +185,7 @@ if (return null) {
                   </div>;
                   <div className='text - slate - 400'>;
                     {service.trial_days;
-                      ? `${service.trial_days}-day free trial • `;
+                      ? `${service.trial_days}-day free trial  `;
                       : ''}
                     Setup: {service.setup_time}
                   </div>;
@@ -214,16 +217,13 @@ if (return null) {
                 <div className="flex items - center space - x-2"><Phone className="w - 4 h - 4 text - cyan - 400" /><span>{service.contact_info.mobile}</span></div>;
                 <div className="flex items - center space - x-2"><Mail className="w - 4 h - 4 text - purple - 400" /><span>{service.contact_info.email}</span></div>;
                 <div className="flex items - center space - x-2"><MapPin className="w - 4 h - 4 text - green - 400" /><span className="text - xs">{service.contact_info.address}</span></div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
       </div>;
-
-=======
+    </UltraAdvancedFuturisticBackground>;
+  );
 }
-
-=======
 import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
   const service = extraServices.find(s => s.link.endsWith('/wcag-accessibility-scanner'));
@@ -256,7 +256,7 @@ export default function WCAGScannerPage() {
               <div className="flex items-end justify-between mb-3">
                 <div>
                   <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial • ` : ''}Setup: {service.setupTime}</div>
+                  <div className="text-slate-400">{service.trialDays ? `${service.trialDays}-day free trial  ` : ''}Setup: {service.setupTime}</div>
                 </div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
@@ -271,15 +271,26 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+}
 
     </UltraAdvancedFuturisticBackground>);
 }
 ;
+<<<<<<< HEAD
+=======
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
 }
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+;
+}
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

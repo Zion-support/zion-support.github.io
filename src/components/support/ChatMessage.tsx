@@ -1,10 +1,64 @@
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useMemo } from 'react'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { cn } from '@/lib/utils'
+import { format } from 'date-fns'
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+import { useTheme } from '@/hooks/useTheme'
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+import { useTheme } from "@/hooks/useTheme"
+interface ChatMessageProps {
+  message: string
+  isUser: boolean
+  timestamp: Date
+export const ChatMessage: React.FC<ChatMessageProps> = ({
+  message,
+  isUser,
+  timestamp,
+}: ChatMessageProps) => {
+  const { theme } = useTheme()
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
+  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
+  const sanitizedHtml = useMemo<{ __html: string }>(
+    () => ({ __html: formatMessageWithLinks(message) }),    [message]
+  )
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React, { useMemo } from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
+// Use the wrapper hook so TypeScript properly infers the return type
+// from the ThemeProvider context
+<<<<<<< HEAD
+import React, { useMemo } from 'react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
+// Use the wrapper hook so TypeScript properly infers the return type;
+// from the ThemeProvider context;
+import { useTheme } from '@/hooks/useTheme';
+// Use the wrapper hook so TypeScript properly infers the return type;
+// from the ThemeProvider context;
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {;
   message: string;
   isUser: boolean;
+  timestamp: Date
+export const ChatMessage: React.FC<ChatMessageProps> = ({
 
+<<<<<<< HEAD
+=======
   timestamp: Date;
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({;
@@ -21,10 +75,28 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
   );
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  message
+  isUser
+  timestamp
+}: ChatMessageProps) => {
+  const { theme } = useTheme()
+<<<<<<< HEAD
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render 
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
+  const sanitizedHtml = useMemo<{ __html: string }>(
+    () => ({ __html: formatMessageWithLinks(message) }),    [message]
+  )
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
       <Avatar className='h-8 w-8'>;
@@ -47,29 +119,51 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
             </AvatarFallback>;
           </>;
         )}
-
-      </Avatar>;
-
-
+      </Avatar>
       <div
         className={cn(
+<<<<<<< HEAD
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
+<<<<<<< HEAD
+=======
 =======
       </Avatar>
 
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           isUser
             ? 'bg-zion-purple text-white'
             : theme === 'dark'
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
+<<<<<<< HEAD
+        )}>;
+        <div dangerouslySetInnerHTML={sanitizedHtml} />;
+=======
 
         )}
       >
-
-
+<<<<<<< HEAD
+        <div dangerouslySetInnerHTML={sanitizedHtml} />
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+        <div
+          className={cn(
+            'text-xs mt-1'
+            isUser
+              ? 'text-white/70'
+              : theme === 'dark'
+                ? 'text-gray-300'
+                : 'text-gray-500'
+<<<<<<< HEAD
+          )}>;
+          {format(timestamp, 'h:mm a')}
+=======
+          )}
+        >
+          {format(timestamp, 'h:mm a')}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
       
       <div className={cn(
@@ -93,12 +187,18 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
           {format(timestamp, "h:mm a")}
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
       </div>
     </div>
   )
-
-
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+=======
 },
 
 
@@ -108,19 +208,45 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 =======
 },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+function formatMessageWithLinks(message: string): string {
+  // First, escape any HTML so that user input cannot break out of the intended
+  // markup.
+  const safeText = escapeHtml(message)
+  // Replace URLs
+  const urlRegex = /(https?:\/\/[^\s]+)/g
+  let formattedMessage = safeText.replace(
+    urlRegex
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  // Replace help-center references like [Getting Started]
+  const helpCenterRegex = /\[([^\]]+)\]/g
+  formattedMessage = formattedMessage.replace(
+    helpCenterRegex
+    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
+  )
+  return formattedMessage; return formattedMessage
+}
 
 =======
-
 =======
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")
@@ -222,6 +348,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 function escapeHtml(): any (unsafe: string): string {;
   return unsafe;
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -234,19 +361,20 @@ function formatMessageWithLinks(message: string): string {
   // Replace URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g
   let formattedMessage = safeText.replace(
-    urlRegex,
+    urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   // Replace help-center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex,
+    helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   return formattedMessage; return formattedMessage
 }
-;
 
+<<<<<<< HEAD
+=======
 function formatMessageWithLinks(message: string): string {;
 
   // First, escape any HTML so that user input cannot break out of the intended;
@@ -270,11 +398,14 @@ function formatMessageWithLinks(message: string): string {;
   return formattedMessage;  return formattedMessage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 
 
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { cn } from '@/lib / utils';
@@ -295,7 +426,7 @@ export const ChatMessage: React.FC < ChatMessageProps> = ({
   timestamp,
 }: ChatMessageProps) => {
   const { theme } = use_theme ();
-  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –;
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render ;
   // this avoids the `react / jsx - no - constructed - context - values` & `react / jsx - no - bind` warnings.;
   const sanitized_html = useMemo<{ __html: string }>(
     () => ({ __html: formatMessageWithLinks (message) }),    [message]);
@@ -371,10 +502,12 @@ function formatMessageWithLinks (message: string): string {
     '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
   return formatted_message; return formatted_message;
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

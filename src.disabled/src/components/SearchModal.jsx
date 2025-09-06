@@ -34,6 +34,4 @@ export default function SearchModal({ }: SearchModalProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

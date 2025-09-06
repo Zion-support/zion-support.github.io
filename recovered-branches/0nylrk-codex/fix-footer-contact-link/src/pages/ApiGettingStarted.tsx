@@ -1,23 +1,46 @@
 
-
-
-
+<<<<<<< HEAD
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from "react",
+<<<<<<< HEAD
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+=======
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
-
-import React from './react';
-import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
-import { CodeBlock } from '@/components / developers / CodeBlock';
-export /**
- * ApiGettingStarted - Function description
- */
-function ApiGettingStarted() {
-  const auth_example = `curl -X GET \\;
-  https: //api.zionai.com / v1 / jobs \\;
-  -H "Authorization: Bearer YOUR_API_KEY"`,
-
+<<<<<<< HEAD
+  -H "Authorization: Bearer YOUR_API_KEY"`
+const quickStartJs = `import axios from 'axios';
+const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  -H "Authorization: Bearer YOUR_API_KEY"`
 const quickStartJs = `import axios from 'axios';
 const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 =======
@@ -25,7 +48,7 @@ const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
   const quickStartJs = `import axios from 'axios',
-
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
@@ -34,17 +57,12 @@ const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
   }
-
-
-}),
-
-// // // console.log(response.data),`,
-
-
-
+});
+console.log(response.data),`;
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
@@ -57,12 +75,8 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
         </p>
         <h2>Authentication</h2>
         <p>
-
-
-          All API requests must include your API key in the Authorization header. 
-          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
-
-
+          All API requests must include your API key in the Authorization header.
+          You can generate API keys in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
         </p>
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -106,29 +120,9 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
       </div>
     </ApiDocsLayout>
   )
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
 }
+<<<<<<< HEAD
+=======
 
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
@@ -223,11 +217,13 @@ console && console.log(response && response.data),`;
 }
 
 ;
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default ApiGettingStarted;
 
-=======
 ;
 console.log (response.data), `;
 ;
@@ -290,4 +286,3 @@ console.log (response.data), `;
 }
 export default ApiGettingStarted;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

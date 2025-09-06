@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Trophy } from 'lucide-react'
-=======
   Card,
   CardContent,
   CardDescription,
@@ -11,22 +16,69 @@ import { Trophy } from 'lucide-react'
   CardTitle,
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export interface LeaderboardEntry {
+  name: string;
+  points: number;
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[];
+  entries: LeaderboardEntry[];
+}
 export interface LeaderboardEntry {
 
+  name: string
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+<<<<<<< HEAD
+
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Trophy } from 'lucide-react'
+export interface LeaderboardEntry {
+  name: string
+  points: number
+<<<<<<< HEAD
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[]
+  entries: LeaderboardEntry[]
+}
+export interface LeaderboardEntry {
+<<<<<<< HEAD
+=======
   name: string,
   points: number;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+  points: number
 }
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
-
-
-
+<<<<<<< HEAD
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 =======
+
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[]
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {;
   Card,;
   CardContent,;
@@ -41,7 +93,10 @@ export interface LeaderboardEntry {;
 
 interface UserLeaderboardProps {;
   entries: LeaderboardEntry[];
-  entries: LeaderboardEntry[];
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 export interface LeaderboardEntry {;
@@ -54,11 +109,50 @@ interface UserLeaderboardProps {;
 }
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+    <Card>;
+      <CardHeader>;
+        <CardTitle className='flex items-center gap-2'>;
+          <Trophy className='h-5 w-5' /> Leaderboard        </CardTitle>;
+        <CardDescription>Top users by points</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='space-y-2'>        <CardTitle className="flex items-center gap-2">;
+          <Trophy className="h-5 w-5" /> Leaderboard;
+        </CardTitle>;
+        <CardDescription>Top users by points</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='space-y-2'>;
+          {entries && entries.map((e, idx) => (;
+            <div
+              key={e && e.name}
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
+              key = {e && e.name,}
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50">;
+              <span className='font-medium'>;
+                {idx + 1}. {e && e.name}
+              </span>;
+              <span className='text-sm'>{e && e.points} pts</span>            </div>              <span className="text-sm">{e && e.points} pts</span>;
+            </div>;
+=======
+    <Card>
+      <CardHeader>
+<<<<<<< HEAD
+        <CardTitle className='flex items-center gap-2'>
+          <Trophy className='h-5 w-5' /> Leaderboard        </CardTitle>
+        <CardDescription>Top users by points</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className='space-y-2'>        <CardTitle className="flex items-center gap-2">
+=======
+        <CardTitle className="flex items-center gap-2">
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
@@ -71,10 +165,11 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
           {entries.map((e, idx) => (
             <div
               key={e.name}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >
               <span className="font-medium">
@@ -87,15 +182,22 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
             </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
-
-        </div>;
-      </CardContent>;
-    </Card>;
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
   );
 }
-
+<<<<<<< HEAD
 =======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export /**
  * UserLeaderboard - Function description
  */
@@ -131,9 +233,11 @@ function UserLeaderboard() {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

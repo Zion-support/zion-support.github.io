@@ -391,7 +391,7 @@ const Talent: React.FC<TalentProps> = ({ className }) => {
                     {job.title}
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    {job.department} • {job.location} • {job.type}
+                    {job.department}  {job.location}  {job.type}
                   </p>
                   <p className="text-gray-700 mb-4">
                     {job.description}

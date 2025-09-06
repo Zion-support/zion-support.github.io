@@ -13,7 +13,7 @@ export default function ITAssetDiscoveryAgentPage() {;
 			</Head>;
 			<div className="container mx-auto px-4 py-16 text-white">;
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">IT Asset Discovery Agent</h1>;
-				<p className="text-gray-300 max-w-3xl mb-8">Agentless discovery across AWS, Azure, GCP, and on‑prem with CMDB export and drift alerts.</p>;
+				<p className="text-gray-300 max-w-3xl mb-8">Agentless discovery across AWS, Azure, GCP, and onprem with CMDB export and drift alerts.</p>;
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
 					<Card className="p-6 bg-black/40 border border-gray-800">;
 						<h2 className="font-semibold mb-2">Features</h2>;

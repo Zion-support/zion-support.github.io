@@ -1,8 +1,52 @@
-
-
+import { NextRequest, NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { prisma } from '@/lib/prisma';
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession();
+if (!session?.user?.email) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+    // Update user's onboarding status
+    const updatedUser = await prisma.user.update({
+      where: { email: session.user.email }
+      data: { onboardingCompleted: true }
+    });
+    return NextResponse.json(
+import { NextRequest, NextResponse } from 'next / server';
+import { getServerSession } from 'next - auth';
+import { prisma } from '@/lib / prisma';
+export async /**
+ * POST - Function description
+ */
+function POST() {
+  try {
+    const session = await getServerSession ();
+;
+// Check condition
+if ( {) {
+  $2
+}
+      return NextResponse.json ({ error: 'Unauthorized' }, { status: 401 });
+    }
+    // Update user's onboarding status;
+    const updated_user = await prisma.user.update ({
+      where: { email: session.user.email },
+      data: { onboarding_completed: true },
+    });
+;
+    return NextResponse.json (
       {
         message: 'Onboarding completed successfully'
         user: {
+<<<<<<< HEAD
+          id: updatedUser.id
+          name: updatedUser.name
+          email: updatedUser.email
+          role: updatedUser.role
+          onboardingCompleted: updatedUser.onboardingCompleted
+        }
+=======
 
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
@@ -14,8 +58,10 @@
       { status: 200 }
     );
   } catch (error) {
-    console && console.error('Onboarding completion error:', error);
-    return NextResponse && NextResponse.json(
+    console.error('Onboarding completion error:', error);
+    return NextResponse.json(
+<<<<<<< HEAD
+      { error: 'Internal server error' }
 =======
           id: updated_user.id,
           name: updated_user.name,
@@ -31,12 +77,7 @@
     return NextResponse.json (
 
       { error: 'Internal server error' },
-
-
-=======
-
-      { error: 'Internal server error' },
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
@@ -71,10 +112,11 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
-
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     );
   }
@@ -102,17 +144,21 @@ export async function POST(request: NextRequest) { try {
         email: updatedUser.email,
         role: updatedUser.role,
         onboardingCompleted: updatedUser.onboardingCompleted
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
-    });
-  } catch (_error) {
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error('Onboarding completion error:', error);
     return NextResponse.json(
-      { error: 'Failed to complete onboarding' },
-
+      { error: 'Internal server error' }
+      { error: 'Internal server error' },
       { status: 500 }
     );
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+      { status: 500 }
+    );
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}

@@ -1,35 +1,20 @@
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import { useEffect, useState } from 'react';
 
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
-=======
-
-import { useEffect, useState } from 'react',
-=======
-import { useEffect, useState } from 'react',;
-;
-=======
-import { useEffect, useState } from 'react',
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default function CloudAutomationHub() {
-  const [logs, setLogs] = useState<any[]>([]),
-export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
-  useEffect__(() => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetch('/api/automation/cloud-logs')
       .then((r) => r.json())
       .then((d) => setLogs(d.logs |[]))
       .catch(() => setLogs([]))
 
-
-  }, []),
-
+  }, [])
 
   return (
     <div className="space-y-6">
@@ -41,41 +26,53 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
         <a href="/docs/ROADMAP.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
           <h3 className="font-semibold">Roadmap (Autonomous)</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/ROADMAP.md</p>
-
-
-        </Link>
+        </a>
         <a href="/docs/LINK_HEALTH.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
           <h3 className="font-semibold">Link Health</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/LINK_HEALTH.md</p>
-        </Link>
+        </a>
         <a href="/docs/INTELLIGENCE_DIGEST.md" className="rounded-lg border p-4 hover:bg-gray-50 dark:hover:bg-gray-900">
           <h3 className="font-semibold">Intelligence Digest</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/INTELLIGENCE_DIGEST.md</p>
+<<<<<<< HEAD
+        </a>
+=======
         </Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
-
-
-
+<<<<<<< HEAD
+          {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
+=======
+<<<<<<< HEAD
+          {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
+<<<<<<< HEAD
+          {logs.map((log) => (
+            <li key={log.id} className="flex items-center justify-between">
+              <span>{log.generatedAt |log.file}</span>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
-              <span>{log.generatedAt || log.file}</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <span>{log.generatedAt |log.file}</span>
               <span className="text-gray-600">{log.insights?.theme}</span>
             </li>
           ))}
@@ -86,11 +83,9 @@ export default function CloudAutomationHub() {_const [logs, _setLogs] = useState
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
-
-=======
+<<<<<<< HEAD
+  )
 }
-
-=======
 import { useEffect, useState } from 'react',
 ;
 export default /**
@@ -106,6 +101,28 @@ function CloudAutomationHub() {
   }, []),
   return (
     <div className="space - y-6">;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  )
+import { useEffect, useState } from 'react';
+export default function CloudAutomationHub(req, res) {
+  try {
+  const [logs, setLogs] = useState<any[]>([]);
+  useEffect(() => {;
+    fetch('/api/automation/cloud-logs');
+      .then((r) => r.json());
+      .then((d) => setLogs(d.logs || []));
+      .catch(() => setLogs([]));
+  }, []);
+  return (;
+    <div className="space-y-6">;
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div>;
         <h1 className="text - 2xl font - bold">Autonomous Cloud Automation</h1>;
         <p className="text - sm text - gray - 600 dark:text - gray - 400">Runs scheduled workflows: roadmap synthesis, link health checks, market intelligence, sitemap refresh, and logging.</p>;
@@ -139,11 +156,20 @@ function CloudAutomationHub() {
         <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline - flex items - center px - 4 py - 2 rounded - md bg - indigo - 600 text - white hover:bg - indigo - 700">View Workflow</a>;
         <a href="/api / automation / cloud - logs" className="inline - flex items - center px - 4 py - 2 rounded - md border border - gray - 300 dark:border - gray - 700">Refresh Logs</a>;
       </div>;
-    </div>);
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

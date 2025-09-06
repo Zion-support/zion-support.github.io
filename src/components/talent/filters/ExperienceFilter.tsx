@@ -1,36 +1,58 @@
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from '@/components/ui/slider';
+import { ExperienceFilterProps } from '@/types/filters';
+import { ChevronDown, ChevronUp } from 'lucide-react'
 
+import { Slider } from '@/components/ui/slider'
+import { ExperienceFilterProps } from '@/types/filters'
+export function ExperienceFilter({
+  experienceRange
+  setExperienceRange
+  expanded
+  toggleSection
+  isMobileFilterOpen
+}: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setExperienceRange([values[0] |0, values[1] |15])
+  }
+export function ExperienceFilter(): any ({;
+  experienceRange,;
+  setExperienceRange,;
+  expanded,;
+  toggleSection,;
+  isMobileFilterOpen,;
+}: ExperienceFilterProps) {;
+  const handleChange = (values: number[]) => {;
+    setExperienceRange([values[0] || 0, values[1] || 15]);
+  };
 
   return (
-
-    <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
-      <button;
-        on_click={toggle_section}
-        className='flex w - full items - center justify - between text - white font - medium'      >;
-        <span > Years of Experience</span>;
-        {expanded ? (
-          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
-          <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
-      </button>;
+    <div className='mb-6 border-b border-zion-blue-light pb-6'>;
+      <button
+        onClick={toggleSection}
+        className='flex w-full items-center justify-between text-white font-medium'>;
+        <span>Years of Experience</span>;
+        {expanded ? (;
+          <ChevronUp className='h-4 w-4 text-zion-slate-light' />;
+        ) : (;
+          <ChevronDown className='h-4 w-4 text-zion-slate-light' />;
+        )}
+      </button>
       {expanded && (
-        <div className='mt - 6'>;
-          <div className='flex justify - between text - sm text - zion - slate - light mb - 2'>            <span>{experience_range[0]} years</span>;
-            <span>{experience_range[1]} years</span>;
-          </div>;
-          <Slider;
-            aria - label='Experience range'            value={[experience_range[0], experience_range[1]]}
-        <div className="mt - 6">;
-          <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
-import { Slider  } from '@/components / ui / slider';
-import { ExperienceFilterProps  } from '@/types / filters';
-export /**
- * ExperienceFilter - Function description
- */
-function ExperienceFilter() {
-  const handle_change = (values: number[]) =>: any {
-    setExperienceRange ([values[0] || 0, values[1] || 15]);
-
+        <div className='mt-6'>
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>
+            <span>{experienceRange[1]} years</span>
+          </div>
+          <Slider
+            aria-label='Experience range'            value={[experienceRange[0], experienceRange[1]]}
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+import { Slider } from "@/components/ui/slider"
+import { ExperienceFilterProps } from "@/types/filters"
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setExperienceRange([values[0] |0, values[1] |15])
   }
-=======
       </button>;
 
       {expanded && (;
@@ -43,6 +65,8 @@ function ExperienceFilter() {
         <div className="mt-6">;
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
 
+<<<<<<< HEAD
+=======
 =======
 
 
@@ -54,6 +78,48 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     setExperienceRange([values[0] || 0, values[1] || 15])
   },
 
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  return (
+    <div className="mb-6 border-b border-zion-blue-light pb-6">
+      <button
+        onClick={toggleSection}
+<<<<<<< HEAD
+        className='flex w-full items-center justify-between text-white font-medium'      >
+=======
+        className="flex w-full items-center justify-between text-white font-medium"
+      >
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        <span>Years of Experience</span>
+        {expanded ? (
+          <ChevronUp className="h-4 w-4 text-zion-slate-light" />
+        ) : (
+          <ChevronDown className="h-4 w-4 text-zion-slate-light" />
+        )}
+      </button>
+<<<<<<< HEAD
+      {expanded && (
+        <div className='mt-6'>
+          <div className='flex justify-between text-sm text-zion-slate-light mb-2'>            <span>{experienceRange[0]} years</span>
+            <span>{experienceRange[1]} years</span>
+          </div>
+          <Slider
+            aria-label='Experience range'            value={[experienceRange[0], experienceRange[1]]}
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+import { Slider } from "@/components/ui/slider"
+import { ExperienceFilterProps } from "@/types/filters"
+export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {
+  const handleChange = (values: number[]) => {
+    setExperienceRange([values[0] |0, values[1] |15])
+  }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
@@ -75,7 +141,10 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
       
       {expanded && (
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
@@ -86,6 +155,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
             aria-label="Experience range"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from "@/components/ui/slider";
 import { ExperienceFilterProps } from "@/types/filters";
@@ -93,7 +163,6 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0] || 0, values[1] || 15]);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
@@ -106,35 +175,86 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+      </button>
+      {expanded && (
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+            <span>{experienceRange[0]} years</span>
+            <span>{experienceRange[1]} years</span>
+          </div>
+      </button>;
 
+<<<<<<< HEAD
+      {expanded && (;
+        <div className="mt-6">;
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+            <span>{experienceRange[0]} years</span>;
+            <span>{experienceRange[1]} years</span>;
+          </div>;
+          <Slider
+            aria-label='Experience range'            aria-label="Experience range"
+        <div className="mt-6">
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
+            <span>{experienceRange[0]} years</span>
+            <span>{experienceRange[1]} years</span>
+          </div>
+          <Slider
+            aria-label="Experience range"
+=======
 
 =======
           <Slider;
             aria-label="Experience range";
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-    </div>;
-  );
+<<<<<<< HEAD
+            className='mt-6'          />            className="mt-6";
+            className="mt-6";
+          />;
+        </div>;
+      )}
+    </div>
+  )
 }
-
+=======
+<<<<<<< HEAD
+            className='mt-6'          />            className="mt-6"
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+            className="mt-6"
+          />
+        </div>
+      )};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="mt-6"
           />
         </div>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
     </div>
+  )
+}
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </div>;
   );
 }
-
-=======
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>{experience_range[0]} years</span>;
@@ -153,10 +273,15 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         </div>)}
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 ;
-
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

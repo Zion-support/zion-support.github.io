@@ -19,7 +19,7 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
   return (
     <div className=&quot;space-y-6&quot;>
       <h1 className=&quot;text-2xl font-semibold&quot;>AI Automation: Site Map Intelligence</h1>
-      <div className=&quot;text-xs text-gray-500&quot;>Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      <div className=&quot;text-xs text-gray-500&quot;>Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : ''}</div>
       <div className=&quot;overflow-auto border rounded&quot;>
         <table className=&quot;min-w-full text-sm&quot;>
           <thead className=&quot;bg-gray-50&quot;>            <tr>

@@ -1,11 +1,34 @@
 
-import {initReactI18next} from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import enTranslation from './locales/en/translation ;
-import esTranslation from './locales/es/translation ;
-import ptTranslation from './locales/pt/translation ;
-import arTranslation from './locales/ar/translation ;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 
+import i18n from 'i18next';
+import { initReactI18next  } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector',
+import enTranslation from './locales/en/translation.json',
+import esTranslation from './locales/es/translation.json',
+import ptTranslation from './locales/pt/translation.json',
+import arTranslation from './locales/ar/translation.json',
 // Initialize i18next
 i18n
   .use(LanguageDetector) // Detect user language
@@ -27,8 +50,7 @@ i18n
     }
     fallbackLng: 'en', // Default language
 
-    debug: process && process.env.NODE_ENV === 'development',
-
+    debug: process.env.NODE_ENV === 'development'
     interpolation: {
       escapeValue: false, // React already escapes by default
     }
@@ -38,23 +60,17 @@ i18n
       caches: ['localStorage']
     }});
 // For RTL language support
-
-document && document.documentElement.dir = i18n && i18n.dir();
-
+document.documentElement.dir = i18n.dir();
 // Listen for language changes to update RTL/LTR direction
-i18n && i18n.on('languageChanged', (lng) => {
-  document && document.documentElement.dir = i18n && i18n.dir();
-  
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.dir = i18n.dir();
   // Save language preference to localStorage
-  localStorage && localStorage.setItem('zion_language', lng);
-  
-
+  localStorage.setItem('zion_language', lng);
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 });
 export default i18n;
 
-=======
 import i18n from 'i18next';
 import {initReactI18next} from 'react - i18next';
 import LanguageDetector from 'i18next - browser - languagedetector';
@@ -62,17 +78,6 @@ import en_translation from './locales / en / translation.json';
 import es_translation from './locales / es / translation.json';
 import pt_translation from './locales / pt / translation.json';
 import ar_translation from './locales / ar / translation.json';
-=======
-
-
-import i18n from 'i18next',;
-import { initReactI18next } from 'react-i18next',;
-import LanguageDetector from 'i18next-browser-languagedetector',;
-import enTranslation from './locales/en/translation.json',;
-import esTranslation from './locales/es/translation.json',;
-import ptTranslation from './locales/pt/translation.json',;
-import arTranslation from './locales/ar/translation.json',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Initialize i18next;
 i18n;
   .use (LanguageDetector) // Detect user language;
@@ -115,10 +120,16 @@ i18n.on ('language_changed', (lng) => {
 ;
   // If user is authenticated, save language preference to profile;
   // This will be implemented in the LanguageContext;
+<<<<<<< HEAD
+});
+;
+=======
 
 }),;
-
-
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default i18n;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

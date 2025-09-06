@@ -1,14 +1,12 @@
-
-export const metadata = {;
-  title: "Services | Zion Tech Group",;
-  description:;
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
+import Link from "next/link";
+export const metadata = {
+  title: "Services | Zion Tech Group",
+  description:
+<<<<<<< HEAD
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 =======
-
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed. Expert solutions for modern enterprises.",
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
 export default function ServicesOverviewPage() {;
   return (
@@ -35,12 +33,49 @@ export default function ServicesOverviewPage() {;
             "Foundational architecture"
             "Billing + subscriptions"
             "Growth analytics"
-=======
+<<<<<<< HEAD
 import Link from './next / link';
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:;
     "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
+=======
+          ]}
+          icon="🚀"
+        />
+        <ServiceCard
+          href="/services/ai-services"
+          title="AI Services"
+          description="LLM applications, RAG systems, and MLOps pipelines"
+          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
+          icon="🤖"
+        />
+        <ServiceCard
+          href="/services/it-services"
+          title="IT Services"
+          description="Cloud migration, DevOps, and security solutions"
+          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
+          icon="⚙️"
+        />
+        <ServiceCard
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi protocols, NFTs, smart contracts, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "NFT marketplaces"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/mobile-development"
+          title="Mobile Development"
+          description="iOS, Android, and cross-platform mobile applications"
+          bullets={["Native development", "Cross-platform", "App store optimization"]}
+          icon="📱"
+        />
+      </div>
+      <CTA />{" "}
+    </div>;
+  );
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export default /**
  * ServicesOverviewPage - Function description
@@ -70,55 +105,79 @@ function ServicesOverviewPage() {
             "Foundational architecture",
             "Billing + subscriptions",
             "Growth analytics",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           ]}
-          icon="🚀";
+          icon="";
         />{" "}
         <ServiceCard;
           href="/services / ai - services";
           title="AI Services";
           description="LLM applications, RAG systems, and MLOps pipelines";
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖";
+          icon="";
         />{" "}
         <ServiceCard;
           href="/services / it - services";
           title="IT Services";
           description="Cloud migration, DevOps, and security solutions";
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️";
+          icon="";
         />{" "}
       </div>{" "}
       <CTA />{" "}
-
-function ServiceCard(): any ({;
-  href,;
-  title,;
-  description,;
-  bullets,;
-  icon,;
-}: {;
-
+    </div>;
+  );
+}
+function ServiceCard({
+  href
+  title
+  description
+  bullets
+  icon
+}: {
   href: string;
   title: string;
   description: string;
   bullets: string[];
   icon: string;
 }) {;
-=======
     </div>);
 }
 /**
  * ServiceCard - Function description
  */
 function ServiceCard() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <Link;
       href={href}
-
-        Talk to our experts about your project. We'll help you choose the right;
-
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">;
+      {" "}
+      <div className="text-4xl mb-4">{icon}</div>{" "}
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">;
+        {title}
+      </h3>{" "}
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
+      <ul className="text-gray-600 space-y-2">;
+        {" "}
+        {bullets && bullets.map((bullet) => (;
+          <li key={bullet} className="flex items-center">;
+            {" "}
+            <span className="text-blue-500 mr-2"></span> {bullet}{" "}
+          </li>;
+        ))}{" "}
+      </ul>{" "}
+    </Link>;
+  );
+}
+function CTA() {;
+  return (
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">;
+      {" "}
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">;
+        Ready to Get Started?;
+      </h3>{" "}
+      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">;
+        {" "}
+        Talk to our experts about your project. We&apos;ll help you choose the right
         service and create a custom solution for your business needs.{" "}
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">;
@@ -132,7 +191,6 @@ function ServiceCard() {
         <a
           href="mailto:kleber@ziontechgroup && ziontechgroup.com"
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">;
-=======
       className="group border border - gray - 200 rounded - xl p - 8 block hover:border - blue - 300 hover:shadow - lg transition - all duration - 200 bg - white";
     >;
       {" "}
@@ -146,7 +204,7 @@ function ServiceCard() {
         {bullets.map ((bullet) => (
           <li key={bullet} className="flex items - center">;
             {" "}
-            <span className="text - blue - 500 mr - 2">•</span> {bullet}{" "}
+            <span className="text - blue - 500 mr - 2"></span> {bullet}{" "}
           </li>))}{" "}
       </ul>{" "}
     </Link>);
@@ -179,12 +237,10 @@ function CTA() {
           href="mailto:kleber@ziontechgroup.com";
           className="border - 2 border - blue - 600 text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - blue - 600 hover:text - white transition - colors";
         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {" "}
           Email Us{" "}
         </a>{" "}
       </div>{" "}
-
-    </div>);
-
+    </div>;
+  );
 }

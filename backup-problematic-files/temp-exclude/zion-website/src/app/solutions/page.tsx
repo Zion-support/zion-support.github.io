@@ -149,7 +149,7 @@ export default function SolutionsPage() {;
                   href={solution.href}
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200";
                 >;
-                  Learn more <span aria-hidden="true">→</span>;
+                  Learn more <span aria-hidden="true"></span>;
                 </a>;
               </div>;
             ))}
@@ -245,7 +245,7 @@ export default function SolutionsPage() {;
               Get Started;
             </a>;
             <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">;
-              View Services <span aria-hidden="true">→</span>;
+              View Services <span aria-hidden="true"></span>;
             </a>;
           </div>;
         </div>;

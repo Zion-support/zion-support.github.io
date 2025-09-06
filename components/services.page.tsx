@@ -1,14 +1,7 @@
-
-import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
-
-export default function ServicesPage() {;
-
-=======
-
-import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
-
+<<<<<<< HEAD
+import EnhancedLayout from '../components/layout/EnhancedLayout';
+import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
 export default function ServicesPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold'>Services</h1>;
@@ -45,12 +38,26 @@ export default function ServicesPage() {
       </div>;
     </EnhancedLayout>;
   );
-
+}        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;
+          <BadgeCheck className="h-6 w-6 text-indigo-500" />;
+          <div className="mt-3 text-lg font-semibold">AI Integrations</div>;
+          <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>;
+      </div>;
+    </EnhancedLayout>;
   );
 }
 =======
-import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
 
+import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
+<<<<<<< HEAD
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -78,6 +85,7 @@ export default function ServicesPage() {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 export default /**
@@ -129,6 +137,8 @@ function ServicesPage() {
       </div>;
     </EnhancedLayout>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 }        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">
@@ -139,6 +149,12 @@ function ServicesPage() {
     </EnhancedLayout>
 
   );
-
+}
+=======
+  );
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -204,7 +204,7 @@ const Revolutionary2027ServicesShowcase = () => {;
                   <div className="pt-4 border-t border-gray-700/50">
                     <div className="flex justify-between items-center text-sm text-gray-400">
                       <span>Market: {service.marketSize}</span>
-                      <span className="text-green-400">↑ {service.growthRate}</span>
+                      <span className="text-green-400"> {service.growthRate}</span>
                     </div>
                   </div>
 

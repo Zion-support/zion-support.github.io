@@ -1,7 +1,19 @@
 
+<<<<<<< HEAD
+
+import {z} from "zod";
+export const basicInfoSchema = z.object({
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import {z} from "zod";
+export const basicInfoSchema = z.object({
+=======
+import {z} from "zod";
 export const basicInfoSchema = z.object({;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   fullName: z.string().min(1, "Full name is required");
   title: z.string().min(1, "Professional title is required");
   email: z.string().email("Invalid email address");
@@ -9,21 +21,15 @@ export const basicInfoSchema = z.object({;
   location: z.string().optional();
   website: z.string().url().optional().or(z.literal(""));
   linkedin: z.string().optional();
-
-export const basicInfoSchema = z && z.object({
-  fullName: z && z.string().min(1, "Full name is required");
-  title: z && z.string().min(1, "Professional title is required");
-  email: z && z.string().email("Invalid email address");
-  phone: z && z.string().optional();
-  location: z && z.string().optional();
-  website: z && z.string().url().optional().or(z && z.literal(""));
-  linkedin: z && z.string().optional();
-  github: z && z.string().optional(),
-  hourlyRate: z && z.number().positive().optional()});
-
-export type BasicInfoFormData = z && z.infer<typeof basicInfoSchema>;
-
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  github: z.string().optional()
+  hourlyRate: z.number().positive().optional()});
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+
+<<<<<<< HEAD
 import { z } from './zod';
 export const basicInfoSchema = z.object ({
   full_name: z.string ().min (1, "Full name is required");
@@ -38,10 +44,9 @@ export const basicInfoSchema = z.object ({
 ;
 export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
-
-
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { z } from "zod",
 export const basicInfoSchema = z.object({
@@ -56,8 +61,28 @@ export const basicInfoSchema = z.object({
   github: z.string().optional(),
   hourlyRate: z.number().positive().optional()}),
 
-
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>,
+import { z } from "zod",;
+export const basicInfoSchema = z.object({;
+  fullName: z.string().min(1, "Full name is required"),;
+  title: z.string().min(1, "Professional title is required"),;
+  email: z.string().email("Invalid email address"),;
+  phone: z.string().optional(),;
+  location: z.string().optional(),;
+  website: z.string().url().optional().or(z.literal("")),;
+  linkedin: z.string().optional(),;
+  github: z.string().optional(),;
+  hourlyRate: z.number().positive().optional()});
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

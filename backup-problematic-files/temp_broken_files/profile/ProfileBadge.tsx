@@ -11,22 +11,22 @@ interface ProfileBadgeProps {
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
-      icon: '✓',
+      icon: '',
       text: 'Verified',
       colors: 'bg-green-100 text-green-800'
     },
     featured: {
-      icon: '⭐',
+      icon: '',
       text: 'Featured',
       colors: 'bg-yellow-100 text-yellow-800'
     },
     new: {
-      icon: '🆕',
+      icon: '',
       text: 'New',
       colors: 'bg-blue-100 text-blue-800'
     },
     'top-rated': {
-      icon: '🏆',
+      icon: '',
       text: 'Top Rated',
       colors: 'bg-purple-100 text-purple-800'
     }

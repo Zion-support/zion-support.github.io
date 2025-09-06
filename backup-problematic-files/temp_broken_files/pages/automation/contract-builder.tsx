@@ -212,7 +212,7 @@ export default function ContractBuilderPage() {;
 ;
         <div className="md:col-span-2 flex items-center gap-3">;
           <button type="submit" className="btn btn-primary" disabled={!canSubmit || loading}>;
-            {loading ? 'Generating…' :'Generate contract'}
+            {loading ? 'Generating' :'Generate contract'}
           </button>;
           {error && <span className="text-red-600 text-sm">{error}</span>}
         </div>;

@@ -443,7 +443,7 @@ const "Services": NextPage = () => {
         <footer className="bg-gray-900 text-white py-12">
           <div className="max-w-7xl mx-auto px-4 "sm": p x-6 lg: p x-8 text-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+               {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </p>
           </div>
         </footer>

@@ -1,7 +1,39 @@
 
+<<<<<<< HEAD
+import { Button } from "./ui/button",
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {Button} from "./ui/button";
+import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
+import {toast} from "./ui/use-toast";
+export function SocialShareSection() {
+  // Current URL and text to share;
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Button } from "./ui/button",
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
+import { toast } from "./ui/use-toast";
+export function SocialShareSection() {
+  // Current URL and text to share
 
-
-
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
+  // Social sharing functions
+  const shareToTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
+  }
+  const shareToFacebook = () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
+  }
+  const shareToLinkedIn = () => {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
+  }
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
@@ -16,48 +48,33 @@
           variant: "destructive"
         })
       })
-
-
-  },
-
-
-
+  }
   const shareLinks = [
     {
       name: "Twitter"
       icon: <Twitter className="h-5 w-5" />
       color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
       onClick: shareToTwitter
-
-
-    },
-
-
+    }
     {
       name: "Facebook"
       icon: <Facebook className="h-5 w-5" />
       color: "bg-[#4267B2] hover:bg-[#4267B2]/80"
       onClick: shareToFacebook
-
-
-    },
-
-
+    }
     {
       name: "LinkedIn"
       icon: <Linkedin className="h-5 w-5" />
       color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
       onClick: shareToLinkedIn
-
-
-    },
-
-
+    }
     {
       name: "Copy Link"
       icon: <Link className="h-5 w-5" />
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80"
       onClick: copyLinkToClipboard
+<<<<<<< HEAD
+=======
 
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
@@ -79,8 +96,22 @@ import {toast} from "./ui/use-toast";
                 key={index}
                 className={`${link.color} text-white`}
                 size="sm"
-
-
+<<<<<<< HEAD
+                onClick={link.onClick}
+              >
+                {link.icon}
+                <span>{link.name}</span>
+              </Button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
@@ -146,6 +177,7 @@ export function SocialShareSection() {;
       onClick: copyLinkToClipboard;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Button } from './ui / button';
 import { Twitter, Facebook, Linkedin, Link } from '@/components / icons';
 import { toast } from './ui / use - toast';
@@ -210,27 +242,45 @@ function SocialShareSection() {
       icon: <Link className="h - 5 w - 5" />,
       color: "bg - zion - blue - dark hover:bg - zion - blue - dark / 80",
       on_click: copyLinkToClipboard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }];
 ;
   return (
+<<<<<<< HEAD
+    <section className="py-12 bg-zion-blue">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
+          <div>;
+            <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
+            <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
+=======
 
             {shareLinks.map((link, index) => (;
               <Button;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 =======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>;
-        </div>;
-      </div>;
-    </section>;
-  );
+          <div className="flex flex-wrap gap-3">;
+            {shareLinks && shareLinks.map((link, index) => (;
+              <Button
+                key={index}
+                className={`${link && link.color} text-white`}
+                size="sm"
+                onClick={link && link.onClick}>;
+                {link && link.icon}
+                <span>{link && link.name}</span>;
+              </Button>;
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <section className="py - 12 bg - zion - blue">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6">;
@@ -254,4 +304,3 @@ function SocialShareSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

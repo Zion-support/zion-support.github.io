@@ -1,8 +1,12 @@
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
-
-
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -11,15 +15,23 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
 interface JobApplicationsTableProps {;
   jobId: string;
 }
+<<<<<<< HEAD
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
+=======
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
+<<<<<<< HEAD
 
-export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProps) {;
-  const { ;
-    applications, ;
-    isLoading, ;
-    error, ;
-    updateApplicationStatus, ;
-
+  const {
+    applications
+    isLoading
+    error
+    updateApplicationStatus
 =======
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
@@ -28,40 +40,45 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     isLoading, 
     error, 
     updateApplicationStatus, ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     markApplicationAsViewed;
     refetch;
   } = useJobApplications(jobId);
   const [processingId, setProcessingId] = useState<string | null>(null);
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
-
-
-  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
-    setProcessingId(applicationId),;
-    try {;
-
+  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
+    setProcessingId(applicationId)
+    try {
       await updateApplicationStatus(applicationId, newStatus);
       // If it's not already viewed, mark it as viewed;
       const application = applications && applications.find(app => app && app.id === applicationId);
       if (application && !application && application.viewed_at) {;
         await markApplicationAsViewed(applicationId);
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     } finally {;
       setProcessingId(null);
     }
-
-
+<<<<<<< HEAD
+  }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+=======
   };
 
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application)
     setShowScoreDialog(true)
@@ -72,51 +89,41 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
     refetch()
   }
-=======
-  };
-
-  const handleViewScore = (application: JobApplication) => {;
-    setSelectedApplication(application),;
-    setShowScoreDialog(true);
-  };
-
-  const handleViewApplication = async (applicationId: string) => {;
-    await markApplicationAsViewed(applicationId);
-  };
-
-  const handleScoreUpdated = (updatedApplication: JobApplication) => {;
-    refetch();
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return <LoadingState />;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-
-
-  if (error) {;
-    return <ErrorState error={error} />;
-  }
-
-  if (applications && applications.length === 0) {;
-    return <EmptyState />;
-
-  }
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
+  if (error) {
+    return <ErrorState error={error} />
+  }
+  if (applications.length === 0) {
+    return <EmptyState />
+  }
+<<<<<<< HEAD
+=======
+
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  }
+  if (error) {
+    return <ErrorState error={error} />
+  }
+  if (applications.length === 0) {
+    return <EmptyState />
+  }
   return (
     <>;
       <ApplicationsTable
-=======
 import { useState } from './react';
 import { JobApplication, ApplicationStatus } from '@/types / jobs';
 import { useJobApplications } from '@/hooks / useJobApplications';
@@ -193,33 +200,23 @@ if ( {) {
   return (
     <>;
       <ApplicationsTable;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         applications={applications}
         processing_id={processing_id}
         onViewApplication={handleViewApplication}
         onStatusChange={handleStatusChange}
         onViewScore={handleViewScore}
-
-      />;
-
-
+      />
       <ScoreDialog
-=======
       />;
       <ScoreDialog;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
         onScoreUpdated={handleScoreUpdated}
-
-      />;
-    </>;
-  );
+      />
+    </>
+  )
 }
-
-=======
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

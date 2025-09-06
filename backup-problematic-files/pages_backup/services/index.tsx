@@ -16,7 +16,7 @@ const ServicesIndex: NextPage = () => {
         'Fraud Detection & Risk Assessment'
       ],
       pricing: 'Starting at $2,500/month',
-      icon: '🧠',
+      icon: '',
       link: '/services/ai-development'
     },
     {
@@ -32,7 +32,7 @@ const ServicesIndex: NextPage = () => {
         'Disaster Recovery & Backup'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '☁️',
+      icon: '',
       link: '/services/cloud-solutions'
     },
     {
@@ -48,7 +48,7 @@ const ServicesIndex: NextPage = () => {
         'Blockchain Security Audits'
       ],
       pricing: 'Starting at $3,500/month',
-      icon: '🔗',
+      icon: '',
       link: '/services/blockchain'
     },
     {
@@ -64,7 +64,7 @@ const ServicesIndex: NextPage = () => {
         'Remote Device Control'
       ],
       pricing: 'Starting at $2,200/month',
-      icon: '🌐',
+      icon: '',
       link: '/services/iot-platforms'
     },
     {
@@ -80,7 +80,7 @@ const ServicesIndex: NextPage = () => {
         'Third-party Integrations'
       ],
       pricing: 'Starting at $1,500/month',
-      icon: '⚡',
+      icon: '',
       link: '/products/micro-saas'
     },
     {
@@ -96,7 +96,7 @@ const ServicesIndex: NextPage = () => {
         'Vulnerability Management'
       ],
       pricing: 'Starting at $2,000/month',
-      icon: '🔒',
+      icon: '',
       link: '/services/cybersecurity'
     },
     {
@@ -112,7 +112,7 @@ const ServicesIndex: NextPage = () => {
         'Performance Optimization'
       ],
       pricing: 'Starting at $1,200/month',
-      icon: '💻',
+      icon: '',
       link: '/services/web-development'
     },
     {
@@ -128,7 +128,7 @@ const ServicesIndex: NextPage = () => {
         'Custom Reporting Solutions'
       ],
       pricing: 'Starting at $1,800/month',
-      icon: '📊',
+      icon: '',
       link: '/services/data-analytics'
   const microSaasServices = [
     {
@@ -342,7 +342,7 @@ export default function ServicesIndex() {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="text-sm text-gray-500 mb-4">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="mb-1">• {feature}</li>
+                    <li key={idx} className="mb-1"> {feature}</li>
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
@@ -428,7 +428,7 @@ export default function ServicesIndex() {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="text-sm text-gray-500 mb-4">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="mb-1">• {feature}</li>
+                    <li key={idx} className="mb-1"> {feature}</li>
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">
@@ -453,7 +453,7 @@ export default function ServicesIndex() {
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="text-sm text-gray-500 mb-4">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="mb-1">• {feature}</li>
+                    <li key={idx} className="mb-1"> {feature}</li>
                   ))}
                 </ul>
                 <div className="flex justify-between items-center">

@@ -1,85 +1,125 @@
+<<<<<<< HEAD
 
-
-import React from './react';
-import { ResumeSelector, ResumeOption  } from '../resume - selector';
-import { Button  } from '@/components / ui / button';
-export interface ResumeTabProps {
-
+import React from 'react',
+<<<<<<< HEAD
+import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { Button } from "@/components/ui/button";
+export interface ResumeTabProps {;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from "react";
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { ResumeSelector, ResumeOption } from "../resume-selector";
+import { Button } from "@/components/ui/button";
+export interface ResumeTabProps {;
   selectedResumeId?: string | null;
-  onSelectResume?: (resume_id: string) => void;
+  onSelectResume?: (resumeId: string) => void;
   onResumeSelected?: (resume: ResumeOption) => void;
+  onApply?: () => Promise<void>;
+  isSubmitting?: boolean
+}
 
-export function ResumeTab(): any ({;
-  selectedResumeId,;
-  onSelectResume,;
-  onResumeSelected,;
-  onApply,;
-  isSubmitting = false,;
-}: ResumeTabProps) {;
-  const handleResumeSelected = (resume: ResumeOption) => {;
+export function ResumeTab({
+  selectedResumeId
+  onSelectResume
+  onResumeSelected
+  onApply
+  isSubmitting = false
+}: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {;
       onResumeSelected(resume);
     }
-
-    if (onSelectResume) {;
-      onSelectResume(resume && resume.id);
-
+    if (onSelectResume) {
+      onSelectResume(resume.id);
     }
   }
 
   return (
-
-
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={handleResumeSelected} />
+<<<<<<< HEAD
       {onApply && (
         <div className="mt-6">
-          <Button 
-            onClick={onApply} 
-            disabled={!selectedResumeId || isSubmitting}
+          <Button
+            onClick={onApply}
+            disabled={!selectedResumeId |isSubmitting}
+=======
+=======
+=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react',
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { Button } from "@/components/ui/button",
+export interface ResumeTabProps {
+
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  selectedResumeId?: string | null;
+  onSelectResume?: (resume_id: string) => void;
+  onResumeSelected?: (resume: ResumeOption) => void;
+  onApply?: () => Promise<void>;
+  isSubmitting?: boolean
+}
+
+export function ResumeTab({
+  selectedResumeId
+  onSelectResume
+  onResumeSelected
+  onApply
+  isSubmitting = false
+}: ResumeTabProps) {
+  const handleResumeSelected = (resume: ResumeOption) => {
+    if (onResumeSelected) {
+      onResumeSelected(resume);
+    }
+    if (onSelectResume) {
+      onSelectResume(resume.id);
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <ResumeSelector onResumeSelected={handleResumeSelected} />
+      {onApply && (
+        <div className="mt-6">
+          <Button
+            onClick={onApply}
+            disabled={!selectedResumeId |isSubmitting}
             className="w-full"
           >
             {isSubmitting ? "Submitting..." : "Submit Application"}
           </Button>
+<<<<<<< HEAD
+=======
 
 
           
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {!selectedResumeId && (
             <p className="text-sm text-muted-foreground mt-2">
               Please select a resume to continue
             </p>
-=======
-    <div className="space-y-4">;
-      <ResumeSelector onResumeSelected={handleResumeSelected} />;
-
-      {onApply && (;
-        <div className="mt-6">;
-          <Button
-            onClick={onApply}
-            disabled={!selectedResumeId || isSubmitting}
-            className="w-full">;
-            {isSubmitting ? "Submitting..." : "Submit Application"}
-          </Button>;
-
-          {!selectedResumeId && (;
-            <p className="text-sm text-muted-foreground mt-2">;
-              Please select a resume to continue;
-            </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
         </div>;
       )}
-
-
     </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  );
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  );
   on_apply?: () => Promise < void>;
   is_submitting?: boolean;
 }
@@ -120,5 +160,4 @@ if ( {) {
             </p>)}
         </div>)}
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

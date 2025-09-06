@@ -127,7 +127,7 @@ export function TestimonialCard({;
   return (;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
-      <div className="text-4xl mb-4">💬</div>;
+      <div className="text-4xl mb-4"></div>;
       ;
       {/* Rating */}
       <div className="flex mb-4">;

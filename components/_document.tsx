@@ -1,5 +1,40 @@
 
+<<<<<<< HEAD
+import Document, {
+=======
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+import Document, {
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
+<<<<<<< HEAD
+} from 'next/document';
+=======
+=======
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+} from 'next/document';
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
+export default function Document() {
+import Document, {;
+  Html,;
+  Head,;
+  Main,;
+  NextScript,;
+  DocumentContext,;
+} from 'next/document';
+export default function Document() {;
   return (
     <Html lang='en'>;
       <Head>;
@@ -24,7 +59,6 @@
         <link rel="preconnect" href="https: //fonts && fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="" />;
         <link href="https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />;
-=======
   Html,
   Head,
   Main,
@@ -59,55 +93,12 @@ function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="" />;
         <link href="https://fonts.googleapis.com / css2?family = Inter:wght@400, 500, 600, 700, 800, 900 & family = JetBrains + Mono:wght@400, 600 & display = swap" rel="stylesheet" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <body>;
         <Main />;
         <NextScript />;
       </body>;
-
+    </Html>;
   );
 }
-=======
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
-
-
-import Document, {
-
-  Html,
-  Head,
-  Main,
-  NextScript,;
-  DocumentContext,;
-
-} from 'next/document';
-
-
-
-export default function Document() {
-  return (
-    <Html lang="en">
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0a0a0a" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
-
     </Html>);
 }
-
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

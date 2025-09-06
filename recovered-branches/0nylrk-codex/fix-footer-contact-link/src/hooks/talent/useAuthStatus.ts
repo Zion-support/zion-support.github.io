@@ -1,8 +1,14 @@
 
-
+<<<<<<< HEAD
+import { useState } from 'react';
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { useState } from 'react';
+=======
 import {useState} from 'react';
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function useAuthStatus() {
   // Mock authenticated status
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -11,7 +17,7 @@ export function useAuthStatus() {
     id: 'user-123';
     name: 'Demo User';
 
-    email: 'demo@example && example.com',
+    email: 'demo@example.com'
 
     avatar: ''
   });
@@ -42,19 +48,24 @@ export function useAuthStatus() {
     handleToggleSave;
 
     toggleAuth
-
+<<<<<<< HEAD
+  }
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
  */
 function useAuthStatus() {
 =======
-
-
+<<<<<<< HEAD
+  }
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 import { useState } from 'react',;
 export function useAuthStatus() {;
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Mock authenticated status;
   const [is_authenticated, setIsAuthenticated] = useState (false);
 ;
@@ -87,6 +98,8 @@ if ( {) {
       // In a real app, we might show a login prompt;
       console.log ('User needs to log in to save talents');
     }
+<<<<<<< HEAD
+=======
 
   },;
   // For demo purposes, let's provide a login/logout toggle;
@@ -99,10 +112,11 @@ if ( {) {
     savedTalents;
     handleToggleSave;
     toggleAuth;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ;
   // For demo purposes, let's provide a login / logout toggle;
@@ -117,5 +131,4 @@ if ( {) {
     handleToggleSave;
     toggle_auth;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

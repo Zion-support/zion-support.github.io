@@ -1,28 +1,36 @@
 
-
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import { jsPDF  } from 'jspdf';
+import { ResumeBasicInfo  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(
+<<<<<<< HEAD
+=======
+=======
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
+  doc.setFontSize(24);
 
-  doc && doc.setFontSize(24);
-  doc && doc.setTextColor(colors && colors.heading),
-  doc && doc.text(basicInfo && basicInfo.title || 'Resume', 20, 20);
-  
+  doc.setTextColor(colors.heading)
+  doc.text(basicInfo.title |'Resume', 20, 20);
   let yPos = 30;
-  
-  if (basicInfo && basicInfo.headline) {
-    doc && doc.setFontSize(14);
-    doc && doc.setTextColor(colors && colors.subheading);
-    doc && doc.text(basicInfo && basicInfo.headline, 20, yPos);
-
+  if (basicInfo.headline) {
+    doc.setFontSize(14);
+    doc.setTextColor(colors.subheading);
+    doc.text(basicInfo.headline, 20, yPos);
     yPos += 5
   }
   // Add horizontal line divider
@@ -31,12 +39,58 @@ export function addBasicInfoSection(;
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
   // Add summary if available
+  if (basicInfo.summary) {
+    doc.setFontSize(12);
+    doc.setTextColor(colors.text);
+    // Split text into multiple lines to fit within page width
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
+    doc.text(summaryLines, 20, yPos);
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    yPos += (summaryLines.length * 6) + 10
+<<<<<<< HEAD
+=======
+=======
+import { jsPDF } from 'jspdf',;
+import { ResumeBasicInfo } from '@/types/resume',;
+import { PdfThemeColors } from '../themeConfig',;
+export function addBasicInfoSection(;
+  doc: jsPDF,;
+  basicInfo: ResumeBasicInfo,;
+  colors: PdfThemeColors;
+): number {;
+  // Add header with name and title;
+  doc.setFontSize(24),;
+  doc.setTextColor(colors.heading),;
+  doc.text(basicInfo.title || 'Resume', 20, 20),;
+  let yPos = 30,;
+  if (basicInfo.headline) {;
+    doc.setFontSize(14),;
+    doc.setTextColor(colors.subheading),;
+    doc.text(basicInfo.headline, 20, yPos),;
+    yPos += 5;
+  }
+;
+  // Add horizontal line divider;
+  doc.setDrawColor(colors.accent),;
+  doc.setLineWidth(0.5),;
+  doc.line(20, yPos, 190, yPos),;
+  yPos += 10,;
+  // Add summary if available;
+  if (basicInfo.summary) {;
+    doc.setFontSize(12),;
+    doc.setTextColor(colors.text),;
+    // Split text into multiple lines to fit within page width;
+    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
+    doc.text(summaryLines, 20, yPos);
+    yPos += (summaryLines.length * 6) + 10;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return yPos
-=======
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -80,5 +134,4 @@ if ( {) {
     y_pos += (summary_lines.length * 6) + 10;
   }
   return y_pos;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

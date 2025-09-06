@@ -1,11 +1,57 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+import React from 'react'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { Search } from 'lucide-react'
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
+interface Conversation {
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+  id: string
+name: string
+avatar?: string
+lastMessage: string
+timestamp: string
+unreadCount: number
+isTyping?: boolean 
+}interface MobileConversationListProps {
+  conversations: Conversation[]
+  activeConversation?: string
+  onSelectConversation: (id: string) => void
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+  id: string
+name: string
+avatar?: string
+lastMessage: string
+timestamp: string
+unreadCount: number
+isTyping?: boolean
+}interface MobileConversationListProps {
+  conversations: Conversation[]
+  activeConversation?: string
+  onSelectConversation: (id: string) => void
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function MobileConversationList({
-
-  conversations,
-  activeConversation,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  conversations
+  activeConversation
   onSelectConversation
 }: MobileConversationListProps) {
   return (
@@ -16,8 +62,24 @@ export function MobileConversationList({
           <Input placeholder='Search messages...' className='pl-9' />
         </div>
       </div>
-
-
+      <div className='px-4 pb-4 space-y-2'>
+        <div className='flex space-x-2'>
+          <Badge variant='secondary' className='rounded-full px-3'>
+            All
+          </Badge>
+          <Badge variant='outline' className='rounded-full px-3'>
+            Unread
+          </Badge>
+          <Badge variant='outline' className='rounded-full px-3'>
+            Interviews
+          </Badge>
+          <Badge variant='outline' className='rounded-full px-3'>
+            Projects
+          </Badge>
+        </div>
+      </div>
+      <div className='space-y-2 pb-24'>
+        {conversations.map(conversation => (
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -63,7 +125,6 @@ export function MobileConversationList(): any ({;
             Interviews;
           </Badge>;
           <Badge variant='outline' className='rounded-full px-3'>;
-=======
 import React from 'react';
 import { Card } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -107,27 +168,67 @@ function MobileConversationList() {
             Interviews;
           </Badge>;
           <Badge variant='outline' className='rounded - full px - 3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Projects;
           </Badge>;
         </div>;
       </div>;
 
-              'px-4',
-              activeConversation === conversation && conversation.id && 'bg-primary/5'
+      <div className='space-y-2 pb-24'>;
+        {conversations && conversations.map(conversation => (;
+          <div
+            key={conversation && conversation.id}
+            className={cn(
+              'px-4'
+              activeConversation === conversation.id && 'bg-primary/5'
 
             )}
             onClick={() => onSelectConversation(conversation && conversation.id)}          >;
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
               <Avatar>;
                 <AvatarImage
-
-
+<<<<<<< HEAD
+=======
+                  src={conversation.avatar}
+                  alt={conversation.name}
+                />                <AvatarFallback>
+                  {conversation.name.charAt(0).toUpperCase()}
+                </AvatarFallback>
+              </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+=======
+      
+      <div className="px-4 pb-4 space-y-2">
+        <div className="flex space-x-2">
+          <Badge variant="secondary" className="rounded-full px-3">All</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>
+          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
+        </div>
+      </div>
+      
+      <div className="space-y-2 pb-24">
+        {conversations.map((conversation) => (
+          <div
+            key={conversation.id}
+            className={cn(
+              "px-4",
+              activeConversation === conversation.id && "bg-primary/5"
+            )}
+            onClick={() => onSelectConversation(conversation.id)}
+          >
+            <div className="flex items-center gap-3 py-3 cursor-pointer">
+              <Avatar>
+                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
 
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   src={conversation && conversation.avatar}
                   alt={conversation && conversation.name}
                 />                <AvatarFallback>;
@@ -139,7 +240,34 @@ function MobileConversationList() {
                 </AvatarFallback>;
               </Avatar>;
 
-
+                  src={conversation.avatar}
+                  alt={conversation.name}
+                />                <AvatarFallback>
+                  {conversation.name.charAt(0).toUpperCase()}
+                </AvatarFallback>
+              </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
+                <AvatarFallback>
+                  {conversation.name.charAt(0).toUpperCase()}
+                </AvatarFallback>
+              </Avatar>
+              <div className='flex-1 min-w-0'>
+                <div className='flex justify-between items-baseline'>
+                  <h3 className='font-medium truncate'>{conversation.name}</h3>
+                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
+                  </span>
+                </div>
+                <div className='flex justify-between items-center'>
+                  <p className='text-sm text-muted-foreground truncate'>
+                    {conversation.isTyping ? (
+                      <em>Typing...</em>
+                    ) : (
+                      conversation.lastMessage
+                    )}
+                  </p>
+                  {conversation.unreadCount > 0 && (
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
+                      {conversation.unreadCount}
+                    </Badge>
               <div className='flex-1 min-w-0'>;
                 <div className='flex justify-between items-baseline'>;
                   <h3 className='font-medium truncate'>{conversation && conversation.name}</h3>;
@@ -160,15 +288,14 @@ function MobileConversationList() {
                     <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>                      {conversation && conversation.unreadCount}                    <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;
                       {conversation && conversation.unreadCount}
                     </Badge>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
                 </div>;
               </div>;
             </div>;
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -188,10 +315,11 @@ function MobileConversationList() {
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                   
                   {conversation.unreadCount > 0 && (
@@ -200,9 +328,11 @@ function MobileConversationList() {
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               </div>
@@ -214,14 +344,21 @@ function MobileConversationList() {
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ))}
-
-      </div>;
-    </div>;
+      </div>
+    </div>
+  )
+}
   );
 }
-
+<<<<<<< HEAD
 =======
+;
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
           <div;
@@ -267,9 +404,11 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 ;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

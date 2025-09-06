@@ -1,9 +1,38 @@
-
-
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+function fixImportSyntax(filePath) {
+  try {
+<<<<<<< HEAD
+    let content = fs && fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content && content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists
+      const fixedImports = imports ;/g, ",");
+      return match && match.replace(imports, fixedImports);
+    });
+    // Fix missing commas in import statements
+=======
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
+    // Fix semicolons in import statements
+    const importSemicolonRegex =;
+      /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
+    content = content.replace(importSemicolonRegex, (match, imports) => {
+      // Replace semicolons with commas in import lists;
+      const fixedImports = imports.replace(/;/g, ",");
+      return match.replace(imports, fixedImports);
+    });
+<<<<<<< HEAD
+    // Fix missing commas in import statements
+=======
 
     // Fix missing commas in import statements;
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content && content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
@@ -13,22 +42,17 @@
       return match && match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
-
-    content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
-
+    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
     // Fix function parameter syntax errors
-    content = content && content.replace(
-      /function\s*\(([^)]+)\)\s*{/g,
+    content = content.replace(
+      /function\s*\(([^)]+)\)\s*{/g
       (match, params) => {
-        const fixedParams = params && params.replace(/;/g, ",");
-        return match && match.replace(params, fixedParams);
-      },
+        const fixedParams = params.replace(/;/g, ",");
+        return match.replace(params, fixedParams);
+      }
     );
-
-    if (content !== fs && fs.readFileSync(filePath, "utf8")) {
-      fs && fs.writeFileSync(filePath, content, "utf8");
-
-=======
+    if (content !== fs.readFileSync(filePath, "utf8")) {
+      fs.writeFileSync(filePath, content, "utf8");
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -77,33 +101,35 @@ function fixImportSyntax() {
   $2
 }
       fs.writeFileSync (file_path, content, "utf8");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       modified = true;
     }
     return modified;
   } catch (error) {
-
-    const items = fs && fs.readdirSync(currentDir);
-
+    console && console.error(`Error processing ${filePath}:`, error && error.message);
+    return false;
+  }
+}
+function findFilesWithSyntaxErrors(dir) {
+  const files = [];
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     for (const item of items) {
-      const fullPath = path && path.join(currentDir, item);
-      const stat = fs && fs.statSync(fullPath);
-
-      if (stat && stat.isDirectory()) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
         // Skip certain directories
         if (
           [
-            "node_modules",
-            ".git",
-            ".next",
-            "dist",
-            "build",
-            "out",
-            "ai-optimization-backups",
-            "apps && apps.backup",
-            "backup-merge-conflicts",
-            "apps",
-
+            "node_modules"
+            ".git"
+            ".next"
+            "dist"
+            "build"
+            "out"
+            "ai-optimization-backups"
+            "apps.backup"
+            "backup-merge-conflicts"
+            "apps"
           ].includes(item)
         ) {
           continue;
@@ -113,7 +139,6 @@ function fixImportSyntax() {
         const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
           files && files.push(fullPath);
-=======
     console.error (`Error processing ${file_path}:`, error.message);
     return false;
   }
@@ -154,27 +179,24 @@ if (
   $2
 }
           files.push (full_path);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }
     }
   }
-
-
-console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
-
-
+  traverse(dir);
+  return files;
+}
+// Main execution
+const files = findFilesWithSyntaxErrors(".");
+let fixedCount = 0;
+console.log(`Found ${files.length} files to check for syntax errors...`);
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
     console && console.log(`Fixed syntax in: ${file}`);
   }
 }
-
-
-console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);
-
-=======
+console.log(`\nFixed syntax errors in ${fixedCount} files.`);
   traverse (dir);
   return files;
 }
@@ -194,4 +216,3 @@ for (const file of files) {
 }
 console.log (`\n_fixed syntax errors in ${fixed_count} files.`);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
