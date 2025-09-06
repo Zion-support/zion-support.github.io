@@ -8,26 +8,26 @@ export default function DevOpsAutomationPage() {;
   const features = [;
     {;
       icon:<GitBranch className="w-6 h-6" />,;
-      title:'CI/CD Pipelines',;
-      description:'Automated build, test, and deployment workflows',;
+      title:'CI/CD Pipelines',,
+  description:'Automated build, test, and deployment workflows',;
       color:'bg-gradient-to-br from-blue-500 to-cyan-600';
     },;
     {;
       icon:<Zap className="w-6 h-6" />,;
-      title:'Infrastructure as Code',;
-      description:'Terraform, CloudFormation, and Kubernetes automation',;
+      title:'Infrastructure as Code',,
+  description:'Terraform, CloudFormation, and Kubernetes automation',;
       color:'bg-gradient-to-br from-green-500 to-emerald-600';
     },;
     {;
       icon:<Shield className="w-6 h-6" />,;
-      title:'Security Automation',;
-      description:'Automated security scanning and compliance checks',;
+      title:'Security Automation',,
+  description:'Automated security scanning and compliance checks',;
       color:'bg-gradient-to-br from-purple-500 to-indigo-600';
     },;
     {;
       icon:<BarChart3 className="w-6 h-6" />,;
-      title:'Performance Monitoring',;
-      description:'Real-time performance insights and optimization',;
+      title:'Performance Monitoring',,
+  description:'Real-time performance insights and optimization',;
       color:'bg-gradient-to-br from-orange-500 to-red-600';
     }
   ],;
@@ -36,8 +36,8 @@ export default function DevOpsAutomationPage() {;
     {;
       name:'Starter',;
       price:'$39',;
-      period:'/month',;
-      description:'Perfect for small teams and startups',;
+      period:'/month',,
+  description:'Perfect for small teams and startups',;
       features:[;
         'Up to 5 repositoriesBasic CI/CD pipelines',;
         'GitHub integrationEmail notifications',;
@@ -50,8 +50,8 @@ export default function DevOpsAutomationPage() {;
     {;
       name:'Professional',;
       price:'$129',;
-      period:'/month',;
-      description:'Ideal for growing development teams',;
+      period:'/month',,
+  description:'Ideal for growing development teams',;
       features:[;
         'Up to 25 repositoriesAdvanced CI/CD workflows',;
         'Multi-cloud deploymentSlack & Teams integration',;
@@ -65,8 +65,8 @@ export default function DevOpsAutomationPage() {;
     {;
       name:'Enterprise',;
       price:'$399',;
-      period:'/month',;
-      description:'For large-scale development operations',;
+      period:'/month',,
+  description:'For large-scale development operations',;
       features:[;
         'Unlimited repositoriesEnterprise CI/CD',;
         'Advanced IaC automationCustom integrations',;
@@ -132,23 +132,23 @@ export default function DevOpsAutomationPage() {;
 ;
   const automationExamples = [;
     {;
-      title:'Automated Testing',;
-      description:'Run comprehensive test suites on every commit',;
+      title:'Automated Testing',,
+  description:'Run comprehensive test suites on every commit',;
       color:'from-green-500 to-emerald-600';
     },;
     {;
-      title:'Security Scanning',;
-      description:'Automated vulnerability detection and compliance checks',;
+      title:'Security Scanning',,
+  description:'Automated vulnerability detection and compliance checks',;
       color:'from-red-500 to-pink-600';
     },;
     {;
-      title:'Deployment Automation',;
-      description:'Zero-downtime deployments with rollback capabilities',;
+      title:'Deployment Automation',,
+  description:'Zero-downtime deployments with rollback capabilities',;
       color:'from-blue-500 to-cyan-600';
     },;
     {;
-      title:'Infrastructure Management',;
-      description:'Automated scaling and resource optimization',;
+      title:'Infrastructure Management',,
+  description:'Automated scaling and resource optimization',;
       color:'from-purple-500 to-indigo-600';
     }
   ],;

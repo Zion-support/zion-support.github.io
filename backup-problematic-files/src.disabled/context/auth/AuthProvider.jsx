@@ -6,6 +6,6 @@ const AuthProvider = ({ className }) => {
       <h1>AuthProvider</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

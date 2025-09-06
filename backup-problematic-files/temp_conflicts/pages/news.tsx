@@ -497,8 +497,8 @@ export default function News() {;
       type:'Conference',;
       date:'2024-02-15',;
       time:'9:00 AM - 6:00 PM',;
-      location:'San Francisco, CA',;
-      description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
+      location:'San Francisco, CA',,
+  description:'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',;
       registration:'https://ziontechgroup.com/events/ai-consciousness-summit-2024';
     },;
     {;
@@ -507,8 +507,8 @@ export default function News() {;
       type:'Workshop',;
       date:'2024-02-22',;
       time:'1:00 PM - 5:00 PM',;
-      location:'Virtual',;
-      description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
+      location:'Virtual',,
+  description:'Hands-on workshop covering quantum computing fundamentals and practical applications.',;
       registration:'https://ziontechgroup.com/events/quantum-workshop';
     }
   ],;

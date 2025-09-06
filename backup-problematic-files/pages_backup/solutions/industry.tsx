@@ -14,6 +14,6 @@ const Industry: React.FC<IndustryProps> = ({ className }) => {
       <h1>Industry</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

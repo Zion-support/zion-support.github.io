@@ -13,8 +13,8 @@ export default function CookiesPage() {;
 ;
   const cookieTypes = [;
     {;
-      name:'Essential Cookies',;
-      description:'These cookies are necessary for the website to function properly and cannot be disabled.',;
+      name:'Essential Cookies',,
+  description:'These cookies are necessary for the website to function properly and cannot be disabled.',;
       examples:[;
         'Authentication and security cookiesSession management cookies',;
         'Load balancing cookiesUser preference cookies';
@@ -23,8 +23,8 @@ export default function CookiesPage() {;
       color:'from-green-500 to-emerald-600';
     },;
     {;
-      name:'Analytics Cookies',;
-      description:'These cookies help us understand how visitors interact with our website.',;
+      name:'Analytics Cookies',,
+  description:'These cookies help us understand how visitors interact with our website.',;
       examples:[;
         'Google Analytics cookiesPage view tracking',;
         'User behavior analysisPerformance monitoring';
@@ -33,8 +33,8 @@ export default function CookiesPage() {;
       color:'from-blue-500 to-cyan-600';
     },;
     {;
-      name:'Marketing Cookies',;
-      description:'These cookies are used to deliver relevant advertisements and track marketing campaign window.window.window.performance.',;
+      name:'Marketing Cookies',,
+  description:'These cookies are used to deliver relevant advertisements and track marketing campaign window.window.window.performance.',;
       examples:[;
         'Social media cookiesAdvertising cookies',;
         'Retargeting cookiesCampaign tracking cookies';
@@ -43,8 +43,8 @@ export default function CookiesPage() {;
       color:'from-purple-500 to-pink-600';
     },;
     {;
-      name:'Functional Cookies',;
-      description:'These cookies enable enhanced functionality and personalization.',;
+      name:'Functional Cookies',,
+  description:'These cookies enable enhanced functionality and personalization.',;
       examples:[;
         'Language preference cookiesTheme selection cookies',;
         'Form auto-fill cookiesUser experience cookies';

@@ -32,8 +32,8 @@ interface HealthData {;
       low:number;
     },;
     topErrors:Array<{;
-      patternId:string,;
-      description:string,;
+      patternId:string,,
+  description:string,;
       occurrences:number,;
       severity:string,;
       solution?:string;
@@ -422,7 +422,7 @@ return (</div> <div className="flex items-center space-x-2" > <Button > {';
 }</div>) : (<p className="text-gray-600 text-sm" >No recurring errors</p>) ";
 }</CardContent> </Card> </div> </TabsContent> <TabsContent value="metrics" className="space-y-4" > <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" > <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Error Rate</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Critical Errors</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Avg Response</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> <Card> <CardHeader className="pb-2" > <CardTitle className="text-sm" >Memory Usage</CardTitle> </CardHeader> <CardContent> </CardContent> </Card> </div> </TabsContent> <TabsContent value="recommendations" className="space-y-4" > <Card> <CardHeader> <CardTitle>Improvement Recommendations</CardTitle> </CardHeader> <CardContent> </li>) ) ";
 }</ul>) : (<p className="text-gray-600" >No specific recommendations at this time</p>) ;
-}</CardContent> </Card> </TabsContent> </Tabs> </div>) ;
+}</CardContent> </Card> </TabsContent> </Tabs> </div>) 
 };
 export default HealthDashboard;
 '"

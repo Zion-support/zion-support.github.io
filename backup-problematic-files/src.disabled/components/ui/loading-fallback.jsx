@@ -6,6 +6,6 @@ const Loading-fallback = ({ className }) => {
       <h1>Loading-fallback</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

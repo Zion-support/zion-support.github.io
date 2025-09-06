@@ -6,6 +6,6 @@ const ErrorRoutes = ({ className }) => {
       <h1>ErrorRoutes</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

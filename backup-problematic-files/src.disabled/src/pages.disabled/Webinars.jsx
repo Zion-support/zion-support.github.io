@@ -6,6 +6,6 @@ const Webinars = ({ className }) => {
       <h1>Webinars</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

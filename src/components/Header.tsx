@@ -43,29 +43,32 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Mobile menu button */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 text-gray-300 hover:text-white"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-white transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-700">
-            <nav className="flex flex-col space-y-4">
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm border-t border-slate-700">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
+                  className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-            </nav>
+            </div>
           </div>
         )}
       </div>

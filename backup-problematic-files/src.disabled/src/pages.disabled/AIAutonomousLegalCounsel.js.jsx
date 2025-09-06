@@ -6,6 +6,6 @@ const AIAutonomousLegalCounsel.js = ({ className }) => {
       <h1>AIAutonomousLegalCounsel.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

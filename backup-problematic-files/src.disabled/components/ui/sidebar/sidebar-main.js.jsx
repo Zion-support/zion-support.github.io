@@ -6,6 +6,6 @@ const Sidebar-main.js = ({ className }) => {
       <h1>Sidebar-main.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

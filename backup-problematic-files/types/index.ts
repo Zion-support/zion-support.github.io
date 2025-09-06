@@ -9,14 +9,14 @@ export interface ContactInfo {
 // Service interfaces
 export interface Service {
   id: string;
-  name: string;
+  name: string,
   description: string;
   category: 'micro-saas' | 'ai-services' | 'it-services';
   price: {
     min: number;
     max: number;
-    currency: string;
-  };
+    currency: string
+};
   features: string[];
   technologies: string[];
   deliveryTime: string;
@@ -26,7 +26,7 @@ export interface Service {
 }
 
 export interface ServiceCategory {
-  title: string;
+  title: string,
   description: string;
   count: number;
   features: string[];
@@ -85,8 +85,8 @@ export interface FormField {
     min?: number;
     max?: number;
     pattern?: string;
-    message?: string;
-  };
+    message?: string
+};
 }
 
 // Team and company
@@ -104,20 +104,20 @@ export interface TeamMember {
 
 export interface CompanyInfo {
   name: string;
-  tagline: string;
+  tagline: string,
   description: string;
   address: {
     street: string;
     city: string;
     state: string;
     zip: string;
-    country: string;
-  };
+    country: string
+};
   contact: {
     phone: string;
     email: string;
-    website: string;
-  };
+    website: string
+};
   certifications: string[];
 }
 
@@ -173,7 +173,7 @@ export interface PricingTier {
   features: string[];
   limitations?: string[];
   popular?: boolean;
-  cta: string;
+  cta: string,
   description: string;
 }
 
@@ -208,8 +208,8 @@ export interface PaginatedResponse<T> {
     total: number;
     pages: number;
     hasNext: boolean;
-    hasPrev: boolean;
-  };
+    hasPrev: boolean
+};
 }
 
 // User and preferences
@@ -242,8 +242,8 @@ export interface UserPreferences {
   notifications: {
     email: boolean;
     browser: boolean;
-    marketing: boolean;
-  };
+    marketing: boolean
+};
 }
 
 export interface AccessibilitySettings {
@@ -286,7 +286,7 @@ export interface Notification {
 // Project management
 export interface Project {
   id: string;
-  name: string;
+  name: string,
   description: string;
   status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
   priority: 'low' | 'medium' | 'high' | 'critical';
@@ -295,21 +295,21 @@ export interface Project {
   budget: {
     allocated: number;
     spent: number;
-    currency: string;
-  };
+    currency: string
+};
   team: {
     lead: string;
     members: string[];
-    external: string[];
-  };
+    external: string[]
+};
   client: {
     name: string;
     contact: string;
-    industry: string;
-  };
+    industry: string
+};
   deliverables: {
-    name: string;
-    description: string;
+    name: string,
+  description: string;
     status: 'pending' | 'in-progress' | 'completed' | 'review';
     dueDate: Date;
   }[];
@@ -321,8 +321,8 @@ export interface Project {
   }[];
   dependencies: {
     project: string;
-    type: 'blocking' | 'influencing';
-    description: string;
+    type: 'blocking' | 'influencing',
+  description: string;
   }[];
   metrics: {
     name: string;

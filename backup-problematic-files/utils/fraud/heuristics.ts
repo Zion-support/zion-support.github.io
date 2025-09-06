@@ -3,7 +3,6 @@ function containsSuspiciousPhrase(text: string): string[] {
   const lower = text && text.toLowerCase();
   return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p));
 
-
 function containsVagueJobClaims(text: string): string[] {
   const lower = text && text.toLowerCase();
   const reasons: string[] = [];

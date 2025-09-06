@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,9 +28,12 @@
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 const fs = require('fs');
 const path = require('path');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -200,20 +204,33 @@ const path = require('path');
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     
     // Check if file has merge conflicts
+=======
+
+    // Check if file has merge conflict markers
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     if (!content.includes('<<<<<<< HEAD')) {
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
       return false;
     }
+<<<<<<< HEAD
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     
 <<<<<<< HEAD
     // Split by merge conflict markers
+=======
+
+    console.log(`Resolving conflicts in: ${filePath}`);
+
+    // Split content by conflict markers and keep HEAD version
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     const lines = content.split('\n');
     const fixedLines = [];
     let inConflict = false;
+<<<<<<< HEAD
     let conflictType = '';
 =======
     // Remove merge conflict markers and keep the second version (after =======)
@@ -227,10 +244,19 @@ function fixMergeConflicts(filePath) {
       const line = lines[i];
       
 <<<<<<< HEAD
+=======
+    let keepLines = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+      if (line.includes('<<<<<<< HEAD')) {
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         inConflict = true;
         conflictType = 'head';
         continue;
       }
+<<<<<<< HEAD
       
         inConflict = false;
         conflictType = '';
@@ -274,13 +300,42 @@ function fixMergeConflicts(filePath) {
     const fixedContent = fixedLines.join('\n');
     fs.writeFileSync(filePath, fixedContent, 'utf8');
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+
+      if (!inConflict || keepLines) {
+        resolvedLines.push(line);
+      }
+    }
+
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
+=======
+/**
+ * Merge Conflict Resolver
+ * Automatically resolves merge conflicts by keeping HEAD version
+ */
+class MergeConflictResolver {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = [];
   }
-}
+};
 
+<<<<<<< HEAD
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+  }
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
@@ -308,6 +363,28 @@ function findFilesWithConflicts(dir) {
           } catch (error) {
             // Skip files that can't be read
           }
+=======
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  let totalFixed = 0;
+
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+
+    if (stat.isDirectory()) {
+      // Skip node_modules and .git directories
+      if (item === 'node_modules' || item === '.git') {
+        continue;
+      }
+      totalFixed += processDirectory(fullPath);
+    } else if (stat.isFile()) {
+      // Process JavaScript, TypeScript, and JSX files
+      if (/\.(js|jsx|ts|tsx|json)$/.test(item)) {
+        if (resolveMergeConflicts(fullPath)) {
+          totalFixed++;
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
         }
       }
     }
@@ -338,6 +415,7 @@ function findFilesWithConflicts(dir) {
     return false;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
   }
+<<<<<<< HEAD
   
   scanDirectory(dir);
   return files;
@@ -643,3 +721,128 @@ console.log('🎉 Merge conflict resolution complete!');
 =======
 console.log('Merge conflict fixing completed!');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-9d47
+=======
+  resolveMergeConflicts(filePath) {
+    try {
+      this.log(`Processing: ${filePath}`);
+      
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+      
+      // Remove merge conflict markers and keep HEAD version
+      const conflictPattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
+      
+      content = content.replace(conflictPattern, (match, headContent, otherContent) => {
+        modified = true;
+        this.log(`Resolved conflict in ${filePath} - keeping HEAD version`);
+        return headContent.trim();
+      });
+      
+      // Remove any remaining conflict markers
+      content = content.replace(/<<<<<<< HEAD\n?/g, '');
+      content = content.replace(/=======\n?/g, '');
+      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+      
+      if (modified) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed merge conflicts in: ${filePath}`, 'SUCCESS');
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      this.log(`❌ Error processing ${filePath}: ${error.message}`, 'ERROR');
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
+    }
+  } catch (error) {
+    console.log(`⚠️  Could not fix ${filePath}: ${error.message}`);
+  }
+
+  async findFilesWithConflicts() {
+    this.log('🔍 Searching for files with merge conflicts...');
+    
+    try {
+      // Find all TypeScript and JavaScript files with merge conflicts
+      const command = `find ${this.projectRoot} -path "*/node_modules" -prune -o -path "*/.next" -prune -o -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v .next | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true`;
+      
+      const result = execSync(command, { encoding: 'utf8' });
+      const files = result.trim().split('\n').filter(file => file.length > 0);
+      
+      this.log(`Found ${files.length} files with merge conflicts`);
+      return files;
+    } catch (error) {
+      this.log(`Error finding files: ${error.message}`, 'ERROR');
+      return [];
+    }
+  }
+
+  async resolveAllConflicts() {
+    this.log('🚀 Starting merge conflict resolution...');
+    
+    const files = await this.findFilesWithConflicts();
+    
+    if (files.length === 0) {
+      this.log('✅ No merge conflicts found!', 'SUCCESS');
+      return;
+    }
+    
+    let fixedCount = 0;
+    
+    for (const file of files) {
+      if (this.resolveMergeConflicts(file)) {
+        fixedCount++;
+      }
+    }
+    
+    this.log(`🎉 Merge conflict resolution completed!`, 'SUCCESS');
+    this.log(`📊 Summary: ${fixedCount}/${files.length} files fixed`);
+    
+    if (this.errors.length > 0) {
+      this.log(`⚠️ ${this.errors.length} errors occurred:`, 'WARNING');
+      this.errors.forEach(err => {
+        this.log(`  - ${err.file}: ${err.error}`, 'ERROR');
+      });
+    }
+    
+    // Generate report
+    this.generateReport();
+  }
+
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalFilesProcessed: this.fixedFiles.length + this.errors.length,
+      fixedFiles: this.fixedFiles.length,
+      errors: this.errors.length,
+      fixedFileList: this.fixedFiles,
+      errorList: this.errors
+    };
+    
+    const reportPath = path.join(this.projectRoot, 'merge-conflict-resolution-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📄 Report saved to: ${reportPath}`);
+  }
+}
+
+// Run the resolver
+if (require.main === module) {
+  const resolver = new MergeConflictResolver();
+  resolver.resolveAllConflicts().catch(console.error);
+}
+
+module.exports = MergeConflictResolver;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+
+  return totalFixed;
+}
+
+// Main execution
+console.log('Starting merge conflict resolution...');
+const totalFixed = processDirectory('.');
+console.log(`\nResolved conflicts in ${totalFixed} files.`);
+console.log('Merge conflict resolution complete!');
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

@@ -6,6 +6,6 @@ const EmptyState.js = ({ className }) => {
       <h1>EmptyState.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

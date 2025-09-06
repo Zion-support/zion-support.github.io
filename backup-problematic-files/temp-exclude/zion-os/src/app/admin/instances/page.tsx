@@ -18,8 +18,8 @@ interface InstanceWithCounts {;
   daoConfig:any | null;
   _count:{;
     deployments:number;
-    features:number;
-  };
+    features:number
+};
 }
 ;
 export default function InstancesPage() {;
