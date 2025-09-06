@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'AI Marketing Automation Platform | Zion Tech Group',
-  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 65% with smart marketing AI.',
-  keywords: 'AI marketing automation, personalized marketing, campaign optimization, lead nurturing, marketing analytics, customer segmentation'
+  title: 'AI Financial Analytics Platform | Zion Tech Group',
+  description: 'Advanced financial analytics with AI-powered forecasting, risk assessment, and investment insights. Make data-driven financial decisions with 95% accuracy predictions.',
+  keywords: 'AI financial analytics, financial forecasting, investment analysis, risk assessment, financial planning, portfolio optimization'
 };
 
 interface FeatureCardProps {
@@ -75,7 +75,7 @@ function PricingTier({
         ))}
       </ul>
       <a
-        href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation - {name} Plan"
+        href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics - {name} Plan"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -88,21 +88,21 @@ function PricingTier({
   );
 }
 
-export default function AIMarketingAutomationPage() {
+export default function AIFinancialAnalyticsPage() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-gradient-to-br from-pink-50 to-purple-100 rounded-lg">
+      <section className="text-center py-16 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          AI Marketing Automation Platform
+          AI Financial Analytics Platform
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-          Revolutionize your marketing with AI-powered automation that personalizes every customer interaction, 
-          optimizes campaigns in real-time, and increases conversion rates by 65% with intelligent insights.
+          Transform your financial decision-making with AI-powered analytics, forecasting, and risk assessment. 
+          Achieve 95% accuracy in financial predictions and optimize your investment strategies with intelligent insights.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Demo"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Demo"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Request Demo
@@ -119,184 +119,216 @@ export default function AIMarketingAutomationPage() {
       {/* Key Features */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Marketing Automation</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced AI Financial Intelligence</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered platform transforms your marketing with smart automation and personalized customer experiences.
+            Our AI-powered platform provides comprehensive financial analysis with unprecedented accuracy and speed.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <FeatureCard
-            icon="🎯"
-            title="AI Customer Segmentation"
-            description="Automatically segment customers based on behavior, preferences, and predicted lifetime value using machine learning."
+            icon="📈"
+            title="Predictive Financial Modeling"
+            description="Advanced machine learning models that forecast revenue, expenses, and cash flow with 95% accuracy."
             benefits={[
-              "Behavioral segmentation",
-              "Predictive modeling",
-              "Dynamic segments",
-              "Custom criteria",
-              "Real-time updates"
+              "Revenue forecasting",
+              "Expense prediction",
+              "Cash flow analysis",
+              "Scenario modeling",
+              "Risk-adjusted projections"
             ]}
           />
           <FeatureCard
-            icon="📧"
-            title="Smart Email Campaigns"
-            description="AI-powered email marketing with personalized content, optimal send times, and automated A/B testing."
+            icon="🎯"
+            title="Investment Optimization"
+            description="AI-driven portfolio optimization and investment recommendations based on risk tolerance and market conditions."
             benefits={[
-              "Personalized content",
-              "Send time optimization",
-              "Subject line testing",
-              "Content optimization",
+              "Portfolio optimization",
+              "Risk assessment",
+              "Asset allocation",
+              "Rebalancing alerts",
               "Performance tracking"
             ]}
           />
           <FeatureCard
-            icon="🤖"
-            title="Automated Lead Nurturing"
-            description="Intelligent lead nurturing sequences that adapt based on customer behavior and engagement patterns."
+            icon="🔍"
+            title="Risk Assessment & Management"
+            description="Comprehensive risk analysis including market risk, credit risk, and operational risk with mitigation strategies."
             benefits={[
-              "Behavioral triggers",
-              "Multi-channel nurturing",
-              "Content personalization",
-              "Lead scoring",
-              "Conversion optimization"
+              "Market risk analysis",
+              "Credit risk assessment",
+              "Operational risk monitoring",
+              "Stress testing",
+              "Risk mitigation strategies"
             ]}
           />
           <FeatureCard
             icon="📊"
-            title="Predictive Analytics"
-            description="Advanced analytics that predict customer behavior, campaign performance, and optimal marketing strategies."
+            title="Real-time Market Analysis"
+            description="Continuous monitoring of market conditions, news sentiment, and economic indicators for informed decisions."
             benefits={[
-              "Behavior prediction",
-              "Campaign forecasting",
-              "ROI optimization",
-              "Trend analysis",
-              "Performance insights"
+              "Market sentiment analysis",
+              "News impact assessment",
+              "Economic indicator tracking",
+              "Real-time alerts",
+              "Trend identification"
             ]}
           />
           <FeatureCard
-            icon="🎨"
-            title="AI Content Generation"
-            description="Automated content creation for ads, emails, and social media with brand voice consistency and optimization."
+            icon="🤖"
+            title="Automated Reporting"
+            description="AI-generated financial reports, insights, and recommendations tailored to your specific needs and goals."
             benefits={[
-              "Content automation",
-              "Brand voice training",
-              "Multi-format generation",
-              "SEO optimization",
-              "Performance testing"
+              "Custom report generation",
+              "Automated insights",
+              "Executive summaries",
+              "Compliance reporting",
+              "Performance dashboards"
             ]}
           />
           <FeatureCard
-            icon="📱"
-            title="Cross-Channel Orchestration"
-            description="Seamlessly coordinate marketing campaigns across email, social media, SMS, and web channels."
+            icon="💡"
+            title="Smart Recommendations"
+            description="Personalized financial advice and recommendations based on your financial goals, risk profile, and market conditions."
             benefits={[
-              "Multi-channel campaigns",
-              "Unified customer journey",
-              "Channel optimization",
-              "Message consistency",
-              "Performance tracking"
+              "Personalized advice",
+              "Goal-based planning",
+              "Action recommendations",
+              "Opportunity identification",
+              "Strategy optimization"
             ]}
           />
         </div>
       </section>
 
-      {/* ROI Section */}
+      {/* Accuracy Metrics */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Marketing Results</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Proven Accuracy</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI marketing automation platform delivers measurable improvements across all key marketing metrics.
+            Our AI models have been trained on decades of financial data and continuously improve through machine learning.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">65%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Higher Conversion</div>
-            <div className="text-sm text-gray-600">Average increase in conversion rates</div>
+            <div className="text-4xl font-bold text-green-600 mb-2">95%</div>
+            <div className="text-lg font-semibold text-gray-900 mb-1">Prediction Accuracy</div>
+            <div className="text-sm text-gray-600">Financial forecasting accuracy</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-blue-600 mb-2">40%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">More Leads</div>
-            <div className="text-sm text-gray-600">Increase in qualified lead generation</div>
+            <div className="text-lg font-semibold text-gray-900 mb-1">Better Returns</div>
+            <div className="text-sm text-gray-600">Average improvement in investment returns</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">50%</div>
-            <div className="text-lg font-semibold text-gray-900 mb-1">Cost Reduction</div>
-            <div className="text-sm text-gray-600">Reduction in cost per acquisition</div>
+            <div className="text-4xl font-bold text-purple-600 mb-2">60%</div>
+            <div className="text-lg font-semibold text-gray-900 mb-1">Risk Reduction</div>
+            <div className="text-sm text-gray-600">Reduction in portfolio volatility</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-orange-600 mb-2">80%</div>
             <div className="text-lg font-semibold text-gray-900 mb-1">Time Saved</div>
-            <div className="text-sm text-gray-600">Reduction in manual marketing tasks</div>
+            <div className="text-sm text-gray-600">Reduction in analysis time</div>
           </div>
         </div>
       </section>
 
-      {/* Marketing Channels */}
+      {/* Use Cases */}
       <section className="py-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Multi-Channel Marketing</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Reach your customers across all touchpoints with intelligent, coordinated campaigns.
+            Our AI financial analytics platform serves a wide range of financial professionals and organizations.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">📧</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Email Marketing</h3>
-            <p className="text-gray-600 mb-4">AI-powered email campaigns with personalization and optimization.</p>
+            <div className="text-3xl mb-4">🏦</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Financial Institutions</h3>
+            <p className="text-gray-600 mb-4">Banks, credit unions, and financial services companies managing complex portfolios and risk.</p>
             <ul className="space-y-2">
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Personalized content
+                Credit risk assessment
               </li>
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Send time optimization
+                Regulatory compliance
               </li>
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                A/B testing automation
+                Portfolio management
               </li>
             </ul>
           </div>
           <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">📱</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">Social Media</h3>
-            <p className="text-gray-600 mb-4">Automated social media management with AI content creation and scheduling.</p>
+            <div className="text-3xl mb-4">💼</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Investment Firms</h3>
+            <p className="text-gray-600 mb-4">Hedge funds, asset managers, and investment advisors optimizing client portfolios.</p>
             <ul className="space-y-2">
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Content generation
+                Portfolio optimization
               </li>
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Optimal posting times
+                Market analysis
               </li>
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Engagement optimization
+                Client reporting
               </li>
             </ul>
           </div>
           <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200">
-            <div className="text-3xl mb-4">💬</div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">SMS Marketing</h3>
-            <p className="text-gray-600 mb-4">Intelligent SMS campaigns with personalization and compliance management.</p>
+            <div className="text-3xl mb-4">🏢</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">Corporate Finance</h3>
+            <p className="text-gray-600 mb-4">Large corporations managing treasury operations, financial planning, and risk management.</p>
             <ul className="space-y-2">
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Personalized messages
+                Treasury management
               </li>
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Compliance automation
+                Financial planning
               </li>
               <li className="text-sm text-gray-600 flex items-center">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                Delivery optimization
+                Risk management
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Security & Compliance */}
+      <section className="py-12 bg-gray-50 rounded-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise-Grade Security</h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Your financial data is protected with bank-level security and regulatory compliance.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center p-4">
+            <div className="text-3xl mb-3">🔒</div>
+            <h3 className="font-semibold text-gray-900 mb-2">256-bit Encryption</h3>
+            <p className="text-sm text-gray-600">End-to-end encryption for all data</p>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-3xl mb-3">🛡️</div>
+            <h3 className="font-semibold text-gray-900 mb-2">SOC 2 Compliant</h3>
+            <p className="text-sm text-gray-600">Certified security standards</p>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-3xl mb-3">📋</div>
+            <h3 className="font-semibold text-gray-900 mb-2">GDPR Ready</h3>
+            <p className="text-sm text-gray-600">Full data privacy compliance</p>
+          </div>
+          <div className="text-center p-4">
+            <div className="text-3xl mb-3">🔐</div>
+            <h3 className="font-semibold text-gray-900 mb-2">Multi-Factor Auth</h3>
+            <p className="text-sm text-gray-600">Advanced authentication</p>
           </div>
         </div>
       </section>
@@ -306,98 +338,67 @@ export default function AIMarketingAutomationPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Pricing Plans</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Choose the plan that fits your marketing needs and team size. All plans include our core AI features.
+            Choose the plan that fits your organization's size and financial analysis needs.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <PricingTier
-            name="Starter"
-            price="$199"
+            name="Professional"
+            price="$299"
             period="month"
-            description="Perfect for small businesses and startups"
+            description="Perfect for individual financial advisors and small firms"
             features={[
-              "Up to 5,000 contacts",
-              "Basic AI automation",
-              "Email marketing",
-              "Social media posting",
-              "Basic analytics",
+              "Up to 5 users",
+              "Basic AI analytics",
+              "Portfolio optimization",
+              "Risk assessment",
+              "Standard reporting",
               "Email support"
             ]}
           />
           <PricingTier
-            name="Professional"
-            price="$499"
+            name="Enterprise"
+            price="$799"
             period="month"
-            description="Most popular for growing businesses"
+            description="Most popular for mid-size financial institutions"
             features={[
-              "Up to 25,000 contacts",
-              "Advanced AI features",
-              "Multi-channel campaigns",
-              "Predictive analytics",
-              "A/B testing",
+              "Up to 25 users",
+              "Advanced AI models",
+              "Custom analytics",
+              "Real-time data feeds",
+              "API access",
               "Priority support",
-              "API access"
+              "Custom integrations"
             ]}
             popular={true}
           />
           <PricingTier
-            name="Enterprise"
-            price="$1,299"
+            name="Institutional"
+            price="$1,999"
             period="month"
-            description="For large organizations with complex needs"
+            description="For large financial institutions and corporations"
             features={[
-              "Unlimited contacts",
-              "Custom AI models",
+              "Unlimited users",
+              "Custom AI development",
               "White-label options",
               "Dedicated support",
-              "Advanced integrations",
-              "Custom development",
-              "On-premise deployment"
+              "On-premise deployment",
+              "Advanced security",
+              "Custom compliance"
             ]}
           />
-        </div>
-      </section>
-
-      {/* Integration Section */}
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Connect with your existing marketing tools and platforms for a unified marketing experience.
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-          {[
-            { name: "HubSpot", icon: "🟠" },
-            { name: "Salesforce", icon: "☁️" },
-            { name: "Mailchimp", icon: "📬" },
-            { name: "Facebook Ads", icon: "📘" },
-            { name: "Google Ads", icon: "🔍" },
-            { name: "LinkedIn", icon: "💼" },
-            { name: "Twitter", icon: "🐦" },
-            { name: "Instagram", icon: "📷" },
-            { name: "Shopify", icon: "🛍️" },
-            { name: "WooCommerce", icon: "🛒" },
-            { name: "Zapier", icon: "⚡" },
-            { name: "Webhooks", icon: "🔗" }
-          ].map((integration, index) => (
-            <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
-              <div className="text-2xl mb-2">{integration.icon}</div>
-              <h3 className="font-semibold text-gray-900 text-sm">{integration.name}</h3>
-            </div>
-          ))}
         </div>
       </section>
 
       {/* Contact CTA */}
       <section className="py-12 bg-blue-600 rounded-lg text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Marketing?</h2>
+        <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Financial Analysis?</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Join thousands of businesses already using our AI-powered marketing automation platform to boost conversions and grow revenue.
+          Join leading financial institutions already using our AI-powered analytics platform to make smarter, data-driven decisions.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Marketing Automation Inquiry"
+            href="mailto:kleber@ziontechgroup.com?subject=AI Financial Analytics Inquiry"
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Start Free Trial
