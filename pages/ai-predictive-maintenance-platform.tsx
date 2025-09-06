@@ -1,12 +1,5 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-
-export default function AIPredictiveMaintenancePlatform() {
-  
-    />
-  );
-=======
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
@@ -31,4 +24,3 @@ export default function AIPredictiveMaintenancePlatform() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

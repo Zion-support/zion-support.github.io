@@ -1,8 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
 // @ts-ignore
 import data from '../../data/remote-roles.json';
 export default function RemoteRolesPage() {
@@ -26,4 +22,3 @@ export default function RemoteRolesPage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

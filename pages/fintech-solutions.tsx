@@ -1,12 +1,5 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-
-export default function FintechSolutions() {
-  
-    />
-  );
-=======
 export default function FintechSolutions() {
 	return (
 		<ServiceLanding
@@ -30,4 +23,3 @@ export default function FintechSolutions() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

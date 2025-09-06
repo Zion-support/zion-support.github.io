@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import ServicePage, {
-  getStaticProps as getSlugStaticProps,;
-} from './services/[slug]';
-
-export default function AISalesIntelligencePlatform() {
-  
-    />
-  );
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AISalesIntelligencePlatform() {
@@ -33,4 +23,3 @@ export default function AISalesIntelligencePlatform() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

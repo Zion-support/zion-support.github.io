@@ -7,6 +7,7 @@ function ensureDir(dirPath: string) {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
+}
 
 export function readJson<T>(relativePath: string, fallback: T): T {
   const full = path.join(dataRoot, relativePath);
@@ -16,8 +17,10 @@ export function readJson<T>(relativePath: string, fallback: T): T {
   } catch (_) {
     return fallback;
   }
+}
 
 export function writeJson<T>(relativePath: string, value: T): void {
   const full = path.join(dataRoot, relativePath);
   ensureDir(path.dirname(full));
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
+}

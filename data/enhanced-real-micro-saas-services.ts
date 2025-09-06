@@ -1,29 +1,3 @@
-<<<<<<< HEAD
- name: string;
-tagline: string;
-price: string;
-period: string;
-description: string;
-features: string[];
-popular: boolean;
-icon: string;
-category: string;
-}export const microSaasServices: MicroSaasService[] = [ {
-  id: 'ai-content-generator';
-name: 'AI Content Generator';
-tagline: 'Generate high-quality content with AI';
-price: '$29';
-period: '/month';
-popular: true;
-icon: '🤖';
-category: 'AI & Machine Learning';
-}];
-'All';
-'AI & Machine Learning';
-'Cybersecurity';
-'Cloud Computing';
-'Data Analytics' ];
-=======
 export interface MicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1594,4 +1568,3 @@ export const serviceCategories = [
   'Customer Service & SupportSupply Chain & LogisticsHuman ResourcesLegal TechnologySales & MarketingBlockchain & Web3IoT & Edge ComputingCloud & Infrastructure';
   'Video & MediaSEO & Digital MarketingAutomation & RoboticsEdge ComputingPredictive Analytics'
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

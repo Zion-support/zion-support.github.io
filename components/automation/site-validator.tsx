@@ -1,8 +1,3 @@
-<<<<<<< HEAD
- 
-
-};
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -57,4 +52,3 @@ export default function SiteValidator({ report }: Props) {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

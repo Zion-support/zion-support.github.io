@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-// Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = () => {
-  // Placeholder implementation
-  return true;
-};
-
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-};
-=======
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
 
@@ -124,4 +112,3 @@ export async function authenticateAdmin(email: string, password: string): Promis
 export function getAdminUser(id: string): AdminUser | null {
   return adminUsers.find(u => u.id === id) || null;
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

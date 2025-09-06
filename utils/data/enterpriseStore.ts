@@ -2,7 +2,7 @@ import {
   CompanyRecord,
   CompanyMember,
   EnterpriseRole,
-  InvoiceRecord,;
+  InvoiceRecord,
 } from '../types/enterprise';
 
 const generateId = () => Math.random().toString(36).slice(2, 10);

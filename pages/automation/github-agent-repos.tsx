@@ -1,8 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
 // @ts-ignore
 import data from '../../data/github-agent-repos.json';
 export default function GithubAgentReposPage() {
@@ -25,4 +21,3 @@ export default function GithubAgentReposPage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

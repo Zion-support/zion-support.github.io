@@ -1,15 +1,3 @@
-<<<<<<< HEAD
- 
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  if (!isAuthorized(req))
-    return res.status(401).json({ error: 'Unauthorized' });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 
@@ -22,7 +10,6 @@ function isAuthorized(req: NextApiRequest): boolean {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const started = Date.now();
   try {
@@ -31,28 +18,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const routed = await routeToChain(result.intent, payload || {});
     const latencyMs = Date.now() - started;
 
-<<<<<<< HEAD
-    appendLog({
-      module: 'router',
-      type: result.intent,
-      status: 'ok',
-      latencyMs,
-      payload: { textLength: String(text || '').length, routed },
-    });
-
-    return res.status(200).json({ ...result, routed });
-  } catch (e: any) {
-    const latencyMs = Date.now() - started;
-    appendLog({
-      module: 'router',
-      type: 'audit',
-      status: 'error',
-      latencyMs,
-      payload: { error: e?.message || 'unknown' },
-    });
-    return res.status(500).json({ error: 'Router failure' });
-  }
-=======
     appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } });
 
     return res.status(200).json({ ...result, routed })
@@ -62,4 +27,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Router failure' })
   };
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

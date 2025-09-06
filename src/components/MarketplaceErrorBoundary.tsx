@@ -4,18 +4,6 @@ import * as Sentry from '@sentry/nextjs';
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-<<<<<<< HEAD
-import { RefreshCcw, AlertCircle } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-interface MarketplaceErrorFallbackProps extends FallbackProps {
-  // Additional props if needed
-
-function MarketplaceErrorFallback({
-  error,
-  resetErrorBoundary,
-}: MarketplaceErrorFallbackProps) {
-=======
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
@@ -23,49 +11,18 @@ interface MarketplaceErrorFallbackProps extends FallbackProps {
 }
 
 function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const handleRetry = async () => {
     try {
       // Re-call SWR mutate('*') to refresh all cached data
       await mutate(() => true, undefined, { revalidate: true });
-<<<<<<< HEAD
-      resetErrorBoundary();
-    } catch (retryError) {
-      logErrorToProduction('Error during retry:', { data: retryError });
-      Sentry.captureException(retryError);
-=======
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError });
       Sentry.captureException(retryError)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
   };
 
   return (
-<<<<<<< HEAD
-    <div className='flex items-center justify-center min-h-[400px] p-6'>
-      <div className='max-w-md w-full space-y-4'>
-        <Alert variant='destructive'>
-          <AlertCircle className='h-4 w-4' />
-          <AlertTitle>Something went wrong in the marketplace</AlertTitle>
-          <AlertDescription className='mt-2'>
-            {error?.message ||
-              'An unexpected error occurred while loading marketplace content.'}
-          </AlertDescription>
-        </Alert>
-
-        <div className='flex flex-col space-y-2'>
-          <Button onClick={handleRetry} className='w-full' variant='default'>
-            <RefreshCcw className='mr-2 h-4 w-4' />
-            Retry
-          </Button>
-
-          <Button
-            onClick={() => window.location.reload()}
-            variant='outline'
-            className='w-full'
-=======
     <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
@@ -90,26 +47,16 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           >
             Reload Page
           </Button>
         </div>
-<<<<<<< HEAD
-
-        <div className='text-center text-sm text-muted-foreground'>
-          If the problem persists, please{' '}
-          <a
-            href='mailto:support@example.com'
-            className='text-primary hover:underline'
-=======
         
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
           >
             contact support
           </a>
@@ -117,32 +64,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       </div>
     </div>
   );
-<<<<<<< HEAD
-
-interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode;
-
-export function MarketplaceErrorBoundary({
-  children,
-}: MarketplaceErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
-    // Log boundary errors to Sentry
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
-      componentStack: errorInfo.componentStack,
-    });
-
-    Sentry.withScope(scope => {
-      scope.setTag('errorBoundary', 'marketplace');
-      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack || undefined,
-      });
-      scope.setLevel('error');
-      Sentry.captureException(error);
-    });
-  };
-
-  
-=======
 }
 
 interface MarketplaceErrorBoundaryProps {
@@ -167,12 +88,8 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     <ErrorBoundary 
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     >
       {children}
     </ErrorBoundary>
   );
-<<<<<<< HEAD
-=======
 } 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

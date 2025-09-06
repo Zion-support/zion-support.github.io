@@ -1,8 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
 // @ts-ignore
 import data from '../../data/arxiv-research.json';
 export default function ArxivResearchPage() {
@@ -27,4 +23,3 @@ export default function ArxivResearchPage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
- </div> </div>) ) 
-}</div> </div>) 
-=======
 import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -49,4 +45,3 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

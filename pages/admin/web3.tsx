@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
-export default function AdminWeb3Page() {
-  const [users, setUsers] = useState<
-    { id: string; enabled: boolean; chain?: string }[]
-  >([]);
-
-  useEffect(() => {
-    const raw =
-      typeof window !== 'undefined'
-        ? window.localStorage.getItem('zion-web3-users')
-        : null;
-    setUsers(raw ? JSON.parse(raw) : []);
-  }, []);
-
-  const save = (list: any) => {
-    if (typeof window !== 'undefined')
-      window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
-    setUsers(list);
-=======
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
@@ -33,7 +11,6 @@ export default function AdminWeb3Page() {
   const save = (list: any) => {
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list));
     setUsers(list)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   };
 
   const metrics = {
@@ -41,60 +18,6 @@ export default function AdminWeb3Page() {
     evm: users.filter(u => u.chain === 'evm').length,
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
-<<<<<<< HEAD
-    disabled: users.filter(u => !u.enabled).length,
-  };
-
-  return (
-    <>
-      <Head>
-        <title>Admin — Web3</title>
-      </Head>
-      <div className='max-w-3xl mx-auto space-y-6'>
-        <h1 className='text-xl font-semibold'>Web3 Admin</h1>
-        <div className='rounded-md border p-4'>
-          <div className='font-medium mb-2'>Usage Metrics</div>
-          <div className='text-sm text-gray-600'>
-            Total: {metrics.total} · EVM: {metrics.evm} · Solana: {metrics.sol}{' '}
-            · Enabled: {metrics.enabled} · Disabled: {metrics.disabled}
-          </div>
-        </div>
-        <div className='rounded-md border p-4'>
-          <div className='font-medium mb-2'>Users</div>
-          {users.length === 0 && (
-            <div className='text-sm text-gray-500'>No data yet</div>
-          )}
-          <ul className='space-y-2'>
-            {users.map((u, i) => (
-              <li key={i} className='flex items-center justify-between'>
-                <div className='text-sm'>{u.id}</div>
-                <label className='inline-flex items-center gap-2 text-sm'>
-                  <span>Web3</span>
-                  <input
-                    type='checkbox'
-                    checked={u.enabled}
-                    onChange={e => {
-                      const next = users.slice();
-                      next[i] = { ...u, enabled: e.target.checked };
-                      save(next);
-                    }}
-                  />
-                </label>
-              </li>
-            ))}
-          </div>
-        )}
-
-        {/* Add New Project Button */}
-        <div className="mt-6 text-center">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
-            Add New Web3 Project
-          </button>
-        </div>
-      </main>
-    </>
-  );
-=======
     disabled: users.filter(u => !u.enabled).length},
   return (
     <>
@@ -126,4 +49,3 @@ export default function AdminWeb3Page() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getWalletSummary } from '../../../utils/token/service';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { userId } = req.query;
-  if (!userId || typeof userId !== 'string') {
-    return res.status(400).json({ error: 'Missing userId' });
-  }
-  try {
-    const summary = getWalletSummary(userId);
-    return res.status(200).json(summary);
-  } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Unknown error' });
-  }
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getWalletSummary } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -28,4 +12,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: err.message || "Unknown error" })
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

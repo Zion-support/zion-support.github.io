@@ -14,20 +14,25 @@ async function ensureFilesExist(): Promise<void> {
   if (!(await fs.pathExists(REVIEWS_PATH))) {
     await fs.writeJson(REVIEWS_PATH, [], { spaces: 2 });
   }
+}
 
 export async function readProjects(): Promise<Project[]> {
   await ensureFilesExist();
   return fs.readJson(PROJECTS_PATH);
+}
 
 export async function writeProjects(projects: Project[]): Promise<void> {
   await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2 });
+}
 
 export async function readReviews(): Promise<Review[]> {
   await ensureFilesExist();
   return fs.readJson(REVIEWS_PATH);
+}
 
 export async function writeReviews(reviews: Review[]): Promise<void> {
   await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2 });
+}
 
 export async function findProjectById(
   projectId: string

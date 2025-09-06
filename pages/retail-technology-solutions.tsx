@@ -1,12 +1,5 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-
-export default function RetailTechnologySolutions() {
-  
-    />
-  );
-=======
 export default function RetailTechnologySolutions() {
 	return (
 		<ServiceLanding
@@ -30,4 +23,3 @@ export default function RetailTechnologySolutions() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

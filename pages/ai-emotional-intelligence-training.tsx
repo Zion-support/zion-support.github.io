@@ -1,13 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIEmotionalIntelligenceTraining() {
-  
-    />
-  );
-=======
 import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEmotionalIntelligenceTraining() {
 	return (
@@ -32,4 +23,3 @@ export default function AIEmotionalIntelligenceTraining() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

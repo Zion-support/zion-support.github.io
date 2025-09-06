@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import ServicePage, {
-  getStaticProps as getSlugStaticProps,;
-} from './services/[slug]';
-
-export default function AiHrAnalyticsPlatform() {
-  
-    />
-  );
-=======
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 
 export default function AiHrAnalyticsPlatform() {
@@ -34,4 +24,3 @@ export default function AiHrAnalyticsPlatform() {
 		/>
 	)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

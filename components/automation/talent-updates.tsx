@@ -1,7 +1,3 @@
-<<<<<<< HEAD
- </div>) ) 
-}</div> </div>) 
-=======
 import fs from 'fs';
 import path from 'path';
 import { TALENT_PROFILES } from '../../data/talent';
@@ -37,4 +33,3 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -4,34 +4,12 @@ import { validateKycSubmission } from '../../../utils/kyc';
 import { getAmlProvider } from '../../../utils/aml';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 const FILE = path.join(DATA_DIR, 'profiles.json');
 
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
-<<<<<<< HEAD
-    return JSON.parse(raw);
-  } catch {
-    return {};
-  }
-
-function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true });
-  fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-=======
     return JSON.parse(raw)
   } catch {
     return {}
@@ -45,7 +23,6 @@ function save(db: Record<string, KycProfile>) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const { userId } = req.body as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
 
@@ -54,33 +31,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!profile) return res.status(404).json({ error: 'Profile not found.' });
 
   const validation = validateKycSubmission(profile);
-<<<<<<< HEAD
-  if (!validation.ok)
-    return res
-      .status(400)
-      .json({ error: 'Missing data', missing: validation.missing });
-
-  // Simple AML check
-  const aml = getAmlProvider();
-  const amlResult =
-    profile.role === 'enterprise'
-      ? await aml.checkBusiness({
-          businessName: profile.businessName || '',
-          country: profile.country,
-        })
-      : await aml.checkPerson({
-          fullLegalName: profile.fullLegalName || '',
-          country: profile.country,
-          dob: profile.dateOfBirth,
-        });
-
-  profile.amlStatus =
-    amlResult.status === 'clear'
-      ? 'clear'
-      : amlResult.status === 'match'
-        ? 'match'
-        : 'review';
-=======
   if (!validation.ok) return res.status(400).json({ error: 'Missing data', missing: validation.missing });
 
   // Simple AML check
@@ -90,36 +40,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     : await aml.checkPerson({ fullLegalName: profile.fullLegalName || '', country: profile.country, dob: profile.dateOfBirth });
 
   profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   // Flags and risk scoring
   const flags = new Set<string>(profile.flags || []);
   if (amlResult.status !== 'clear') flags.add('aml_alert');
-<<<<<<< HEAD
-  const name = (
-    profile.fullLegalName ||
-    profile.businessName ||
-    ''
-  ).toLowerCase();
-  if (name.includes('test') || name.includes('demo') || name.includes('fake'))
-    flags.add('fraud_risk');
-
-  const ip = (
-    (req.headers['x-forwarded-for'] as string) ||
-    req.socket.remoteAddress ||
-    ''
-  )
-    .split(',')[0]
-    .trim();
-  if (ip) {
-    // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
-    const sameIpCount = Object.values(db).filter(p =>
-      (p.auditTrail || []).some(
-        a => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip
-      )
-    ).length;
-    if (sameIpCount >= 2) flags.add('duplicate_ip');
-=======
   const name = (profile.fullLegalName || profile.businessName || '').toLowerCase();
   if (name.includes('test') || name.includes('demo') || name.includes('fake')) flags.add('fraud_risk');
 
@@ -130,7 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (p.auditTrail || []).some((a) => a.action === 'kyc_submitted' && (a.details as any)?.ip === ip)
     ).length;
     if (sameIpCount >= 2) flags.add('duplicate_ip')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   }
 
   // Compute simple risk score
@@ -146,23 +69,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   profile.status = 'submitted';
   const now = new Date().toISOString();
   profile.lastUpdatedAt = now;
-<<<<<<< HEAD
-  profile.auditTrail.push({
-    at: now,
-    by: userId,
-    action: 'kyc_submitted',
-    details: { aml: amlResult, ip },
-  });
-=======
   profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   db[userId] = profile;
   save(db);
 
-<<<<<<< HEAD
-  res.status(200).json({ ok: true, profile, aml: amlResult });
-=======
   res.status(200).json({ ok: true, profile, aml: amlResult })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

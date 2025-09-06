@@ -56,6 +56,7 @@ function passesRls(
   const level = visibility || 'public';
   const order: AccessLevel[] = ['public', 'member', 'admin'];
   return order.indexOf(access) >= order.indexOf(level);
+}
 
 export function searchAll(
   filters: ParsedFilters,

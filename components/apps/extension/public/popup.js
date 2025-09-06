@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const API BASE = 'http: //localhost:4000';
-=======
 const API_BASE = 'http: //localhost:4000',
 
 function getUserId(cb) {
@@ -67,4 +64,3 @@ document.getElementById('signIn').addEventListener('click', async () => {
   setUserId(id),
   document.getElementById('result').textContent = 'Signed in (local).';
 }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

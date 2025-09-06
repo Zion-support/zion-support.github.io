@@ -1,8 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
 // @ts-ignore
 import data from '../../data/npm-trends.json';
 export default function NpmTrendsPage() {
@@ -27,4 +23,3 @@ export default function NpmTrendsPage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

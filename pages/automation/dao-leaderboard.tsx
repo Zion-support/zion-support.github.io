@@ -1,8 +1,4 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-// @ts-ignore </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
 // @ts-ignore
 import data from '../../data/dao-leaderboard.json';
 export default function DaoLeaderboardPage() {
@@ -27,4 +23,3 @@ export default function DaoLeaderboardPage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

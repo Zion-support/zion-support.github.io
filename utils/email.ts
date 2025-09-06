@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import fs from 'fs-extra';
-import path from 'path';
-
-export interface WarningEmailPayload {
-  toUserId: string;
-  toAddress?: string | null;
-  subject: string;
-  body: string;
-
-export async function sendWarningEmail(
-  payload: WarningEmailPayload
-): Promise<void> {
-  const logDir = path.resolve(process.cwd(), 'data/fraud');
-  const logPath = path.join(logDir, 'emails.log');
-  await fs.ensureDir(logDir);
-
-  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
-  await fs.appendFile(logPath, line, 'utf8');
-=======
 // Email utilities
 export interface EmailConfig {
   provider: 'smtp' | 'sendgrid' | 'ses' | 'mailgun' | 'nodemailer';
@@ -389,4 +369,3 @@ export const COMMON_TEMPLATES = {
   PAYMENT_CONFIRMATION: 'payment_confirmation',
   SECURITY_NOTIFICATION: 'security_notification'
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

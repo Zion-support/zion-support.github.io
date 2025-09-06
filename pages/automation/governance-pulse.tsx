@@ -1,7 +1,3 @@
-<<<<<<< HEAD
- </div> </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/governance-pulse.json';
 export default function GovernancePulsePage() {
@@ -27,4 +23,3 @@ export default function GovernancePulsePage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

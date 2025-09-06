@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import type { NextApiRequest } from 'next';
-
-export function extractClientIp(req: NextApiRequest): string | null {
-  const xff = (req.headers['x-forwarded-for'] as string) || '';
-  const ip =
-    xff.split(',')[0]?.trim() ||
-    (req.headers['x-real-ip'] as string) ||
-    (req.socket?.remoteAddress ?? null);
-  if (!ip) return null;
-  if (ip.startsWith('::ffff:')) return ip.substring(7);
-  return ip;
-=======
 // IP address utilities
 export interface IpInfo {
   ip: string;
@@ -362,4 +349,3 @@ export const PRIVATE_IP_RANGES = [
   '127.0.0.0/8',
   '169.254.0.0/16'
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,47 +1,23 @@
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
-
-export type FeedbackWidgetProps = {
-  responseId?: string;
-  aiModel?: string;
-};
-
-export default function FeedbackWidget({
-  responseId,
-  aiModel,
-}: FeedbackWidgetProps) {
-=======
 export type FeedbackWidgetProps = {
   responseId?: string;
   aiModel?: string
 };
 
 export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetProps) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const [rating, setRating] = useState<null | 'up' | 'down'>(null);
   const [comment, setComment] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-<<<<<<< HEAD
-  const effectiveResponseId = useMemo(
-    () => responseId || uuidv4(),
-    [responseId]
-  );
-=======
   const effectiveResponseId = useMemo(() => responseId || uuidv4(), [responseId]);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const submit = async () => {
     if (!rating) {
       setError('Please choose 👍 or 👎');
-<<<<<<< HEAD
-      return;
-=======
       return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
     setError(null);
     setSubmitting(true);
@@ -51,23 +27,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           responseId: effectiveResponseId,
-<<<<<<< HEAD
-          rating,
-          comment: comment.trim(),
-          pagePath:
-            typeof window !== 'undefined'
-              ? window.location.pathname
-              : undefined,
-          aiModel,
-        }),
-      });
-      if (!res.ok) throw new Error('Failed to submit feedback');
-      setSubmitted(true);
-    } catch (e: any) {
-      setError(e?.message || 'Something went wrong');
-    } finally {
-      setSubmitting(false);
-=======
           rating;
           comment: comment.trim(),
           pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
@@ -78,24 +37,10 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       setError(e?.message || 'Something went wrong')
     } finally {
       setSubmitting(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     }
   };
 
   return (
-<<<<<<< HEAD
-    <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
-      <div className='text-sm font-medium mb-2'>Was this answer useful?</div>
-      {submitted ? (
-        <div className='text-sm text-emerald-700 dark:text-emerald-300'>
-          Thanks for your feedback!
-        </div>
-      ) : (
-        <div className='space-y-3'>
-          <div className='flex items-center gap-2'>
-            <button
-              type='button'
-=======
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60">
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>
       {submitted ? (
@@ -105,7 +50,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           <div className="flex items-center gap-2">
             <button
               type="button"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               onClick={() => setRating(rating === 'up' ? null : 'up')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : ''}`}
               aria-pressed={rating === 'up'}
@@ -114,11 +58,7 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
               <span>Yes</span>
             </button>
             <button
-<<<<<<< HEAD
-              type='button'
-=======
               type="button"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               onClick={() => setRating(rating === 'down' ? null : 'down')}
               className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm ${rating === 'down' ? 'bg-red-600 text-white border-red-600' : ''}`}
               aria-pressed={rating === 'down'}
@@ -128,21 +68,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
             </button>
           </div>
           <textarea
-<<<<<<< HEAD
-            placeholder='Optional feedback (what worked, what didn’t)'
-            value={comment}
-            onChange={e => setComment(e.target.value.slice(0, 2000))}
-            className='w-full rounded-md border px-3 py-2 text-sm'
-            rows={3}
-          />
-          {error && <div className='text-xs text-red-600'>{error}</div>}
-          <div>
-            <button
-              onClick={submit}
-              disabled={submitting}
-              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm'
-            >
-=======
             placeholder="Optional feedback (what worked, what didn’t)"
             value={comment}
             onChange={(e) => setComment(e.target.value.slice(0, 2000))}
@@ -152,7 +77,6 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
           {error && <div className="text-xs text-red-600">{error}</div>}
           <div>
             <button onClick={submit} disabled={submitting} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               {submitting ? 'Submitting…' : 'Submit feedback'}
             </button>
           </div>
@@ -160,7 +84,4 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

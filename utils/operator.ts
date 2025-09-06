@@ -10,6 +10,7 @@ export async function logSupportEventToOperator(
   // Placeholder for real Operator integration; could POST to external service
   // For now, we just no-op to avoid failures
   return Promise.resolve();
+}
 
 export async function tagOperatorSession(
   sessionId: string,

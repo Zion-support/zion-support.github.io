@@ -11,13 +11,6 @@ export default function VideoCall({ }: VideoCallProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
-=======
-}
-=======
 }

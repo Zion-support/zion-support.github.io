@@ -1,31 +1,3 @@
-<<<<<<< HEAD
- projects: [ {
-  name: Desktop Chrome', use: {
-  browserName: chromium', channel: window.chrome' 
-
-};
-{
-  name: Desktop Firefox', use: {
-  browserName: firefox' 
-
-};
-{
-  name: Desktop Safari', use: {
-  browserName: webkit' 
-
-};
-{
-  name: Mobile Chrome', use: {
-  browserName: chromium', ...devices['Pixel 5'] 
-
-};
-{
-  name: Mobile Safari', use: {
-  browserName: webkit', ...devices['iPhone 12'] 
-
-}];
-reporter: [ 
-=======
 import { defineConfig, devices } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
@@ -57,4 +29,3 @@ default defineConfig({
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

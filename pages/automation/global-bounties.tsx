@@ -1,7 +1,3 @@
-<<<<<<< HEAD
- </li>) ) 
-}</ul> </div> </EnhancedLayout>) 
-=======
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore - JSON import import data from '../../data/global-bounties.json';
 export default function GlobalBountiesPage() {
@@ -28,4 +24,3 @@ export default function GlobalBountiesPage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

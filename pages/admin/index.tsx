@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-export default function Page() {
-  return (
-    <div className='space-y-2'>
-      <h1 className='text-2xl font-semibold'>Admin</h1>
-      <ul className='list-disc pl-6'>
-        <li>
-          <Link href='/admin/partners'>
-            <a className='text-blue-600 underline'>Partners</a>
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-=======
 import Link from 'next/link';
 export default function AdminIndex() {
   return (
@@ -25,4 +9,3 @@ export default function AdminIndex() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

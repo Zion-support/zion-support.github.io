@@ -1,6 +1,3 @@
-<<<<<<< HEAD
- 
-=======
 export default function AutodocsPage() {
   return (
     <div className="py-10">
@@ -10,4 +7,3 @@ export default function AutodocsPage() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

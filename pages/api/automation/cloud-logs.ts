@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method !== 'GET') {
-      res.setHeader('Allow', ['GET']);
-      return res.status(405).end('Method Not Allowed');
-    }
-    
-    const files: string[] = [];
-    if (files.length > 0) {
-      const logs = files.slice(0, 50).map((f) => {
-        try {
-          return { file: f, content: 'log content' };
-        } catch {
-          return { file: f, error: 'Failed to read' };
-        }
-      });
-      res.status(200).json({ logs });
-    } else {
-      res.status(200).json({ logs: [] });
-    }
-  } catch {
-    // fall through to GitHub
-    res.status(200).json({ logs: [] });
-  }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -85,4 +57,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const remote = await fetchFromGitHub();
   return res.status(200).json({ logs: remote })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
