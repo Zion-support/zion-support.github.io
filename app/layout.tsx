@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Analytics from './components/Analytics';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import './globals.css';
 
 export const metadata = {
@@ -176,6 +178,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen bg-white text-gray-900">
+        <Analytics />
+        <PerformanceMonitor />
         <Header />
         <main className="max-w-6xl mx-auto px-4 py-6 min-h-screen">
           {children}
