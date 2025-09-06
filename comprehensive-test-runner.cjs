@@ -2,7 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class ComprehensiveTestRunner {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -16,7 +15,6 @@ class ComprehensiveTestRunner {}
     console.log(`[${new Date().toISOString()}] ${message}`)};
   async runTests() {}
     this.log('🧪 Running Comprehensive Test Suite');
-    
     const tests = [{}]
         "name": 'Lint Check',
         "command": 'npm run lint',
@@ -38,9 +36,7 @@ class ComprehensiveTestRunner {}
         "type": 'build'
       };
     ];
-    
     const results = [];
-    
     for (const test of tests) {}
       try {}
         this.log(`"Running": ${test.name}`);
@@ -50,7 +46,6 @@ class ComprehensiveTestRunner {}
           "timeout": 120000 // 2 minutes timeout;
         }
 });
-        
         results.push({})
           "name": test.name,
           "type": test.type,
@@ -58,7 +53,6 @@ class ComprehensiveTestRunner {}
           "output": output;
         }
 });
-        
         this.testResults.passed++} catch (error) {}
         results.push({})
           "name": test.name,
@@ -67,7 +61,6 @@ class ComprehensiveTestRunner {}
           "error": error.message;
         }
 });
-        
         this.testResults.failed++};
       this.testResults.total++};
     const report = {}
@@ -79,12 +72,10 @@ class ComprehensiveTestRunner {}
         "failed": (this.testResults.failed / this.testResults.total * 100).toFixed(2) + '%'
       };
     };
-    
     fs.writeFileSync()
       path.join(this.projectRoot, 'test-results-comprehensive.json'),
       JSON.stringify(report, null, 2);
     );
-    
     this.log(`🧪 Tests "Completed": ${this.testResults.passed}/${this.testResults.total} passed`)};
 };
 const runner = new ComprehensiveTestRunner();

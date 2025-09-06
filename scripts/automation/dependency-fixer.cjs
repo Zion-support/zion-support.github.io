@@ -8,4 +8,3 @@ const path = require('path')
       this.log(' Dependency fixing logic to be implemented')
         "successRate"
         "version"
-  console.error('Fatal "error")

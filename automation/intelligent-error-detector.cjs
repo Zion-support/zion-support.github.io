@@ -6,213 +6,13 @@ const { execSync } = require('child_process');
 
 class IntelligentErrorDetector {
   constructor() {
-<<<<<<< HEAD
-    this.projectRoot = process.cwd();
-    this.errors = [];
-    this.fixes = [];
-    this.patterns = {
-          conflictType = 'branch';
-          continue;
-        } else if (line.includes('>>>>>>>')) {
-          // End of conflict - choose the newer version (branch content)
-          if (branchContent.length > 0) {
-            fixedLines.push(...branchContent);
-          } else if (headContent.length > 0) {
-            fixedLines.push(...headContent);
-          }
-          
-          inConflict = false;
-          conflictType = null;
-          headContent = [];
-          branchContent = [];
-          continue;
-        }
-        
-        if (inConflict) {
-          if (conflictType === 'head') {
-            headContent.push(line);
-          } else if (conflictType === 'branch') {
-            branchContent.push(line);
-          }
-        } else {
-          fixedLines.push(line);
-        }
-      }
-      
-      const fixedContent = fixedLines.join('\n');
-      fs.writeFileSync(filePath, fixedContent);
-      
-      this.fixes.push({
-        type: 'merge_conflict',
-        file: filePath,
-        message: 'Resolved merge conflicts'
-      });
-      
-      return true;
-    } catch (error) {
-      this.log(`Error fixing merge conflicts in ${filePath}: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
-  async fixConsoleStatements(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-      
-      // Remove console statements
-      content = content
-        .replace(/console\.log\([^)]*\);?\s*/g, '')
-        .replace(/console\.warn\([^)]*\);?\s*/g, '')
-        .replace(/console\.error\([^)]*\);?\s*/g, '')
-        .replace(/console\.info\([^)]*\);?\s*/g, '');
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
-        
-        this.fixes.push({
-          type: 'console_statement',
-          file: filePath,
-          message: 'Removed console statements'
-        });
-        
-        return true;
-      }
-      
-      return false;
-    } catch (error) {
-      this.log(`Error fixing console statements in ${filePath}: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
-  async fixUnescapedEntities(filePath) {
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-      
-      // Fix common unescaped entities
-      content = content
-        .replace(/([^\\])'/g, "$1&apos;")
-        .replace(/([^\\])"/g, "$1&quot;");
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content);
-        
-        this.fixes.push({
-          type: 'unescaped_entities',
-          file: filePath,
-          message: 'Fixed unescaped entities'
-        });
-        
-        return true;
-      }
-      
-      return false;
-    } catch (error) {
-      this.log(`Error fixing unescaped entities in ${filePath}: ${error.message}`, 'ERROR');
-      return false;
-    }
-  }
-
-  async run() {
-    this.log('🔍 Starting intelligent error detection...');
-    
-    // Scan relevant directories
-    const directories = ['pages', 'components', 'utils', 'hooks', 'src'];
-    const allFiles = [];
-    
-    for (const dir of directories) {
-      if (fs.existsSync(dir)) {
-        const files = await this.scanDirectory(dir);
-        allFiles.push(...files);
-      }
-    }
-    
-    this.log(`Found ${allFiles.length} files to scan`);
-    
-    // Scan each file
-    for (const file of allFiles) {
-      const issues = await this.scanFile(file);
-      if (issues.length > 0) {
-        this.errors.push({
-          file,
-          issues
-        });
-      }
-    }
-    
-    this.log(`Found ${this.errors.length} files with issues`);
-    
-    // Apply fixes
-    for (const error of this.errors) {
-      const { file, issues } = error;
-      
-      for (const issue of issues) {
-        switch (issue.type) {
-          case 'merge_conflict':
-            await this.fixMergeConflicts(file);
-            break;
-          case 'console_statement':
-            await this.fixConsoleStatements(file);
-            break;
-          case 'unescaped_entities':
-            await this.fixUnescapedEntities(file);
-            break;
-        }
-      }
-    }
-    
-    // Generate report
-    this.log('\n📊 INTELLIGENT ERROR DETECTION REPORT');
-    this.log('=====================================');
-    this.log(`Files scanned: ${allFiles.length}`);
-    this.log(`Files with issues: ${this.errors.length}`);
-    this.log(`Fixes applied: ${this.fixes.length}`);
-    
-    if (this.fixes.length > 0) {
-      this.log('\n✅ Fixes applied:');
-      this.fixes.forEach(fix => {
-        this.log(`  - ${fix.file}: ${fix.message}`);
-      });
-    }
-    
-    if (this.errors.length > 0) {
-      this.log('\n⚠️ Remaining issues:');
-      this.errors.forEach(error => {
-        this.log(`  - ${error.file}:`);
-        error.issues.forEach(issue => {
-          this.log(`    * ${issue.type}: ${issue.message}`);
-        });
-      });
-    }
-    
-    this.log('\n🎉 Intelligent error detection completed!');
-    
-    return {
-      filesScanned: allFiles.length,
-      filesWithIssues: this.errors.length,
-      fixesApplied: this.fixes.length,
-      errors: this.errors,
-      fixes: this.fixes
-    };
-  }
-}
-
-if (require.main === module) {
-  const detector = new IntelligentErrorDetector();
-  detector.run().catch(console.error);
-}
-
-module.exports = IntelligentErrorDetector;
-=======
     this.errorPatterns = {
-      synta: x: /SyntaxError|ParseError|Unexpected token/gi,
-      typ: e: /TypeError|ReferenceError/gi,
-      modul: e: /Cannot find module|Module not found/gi,
-      impor: t: /Cannot resolve module|Import error/gi,
-      buil: d: /Build failed|Compilation error/gi,
-      runtim: e: /Runtime error|Uncaught exception/gi,
+      syntax: /SyntaxError|ParseError|Unexpected token/gi,
+      type: /TypeError|ReferenceError/gi,
+      module: /Cannot find module|Module not found/gi,
+      import: /Cannot resolve module|Import error/gi,
+      build: /Build failed|Compilation error/gi,
+      runtime: /Runtime error|Uncaught exception/gi,
     };
     this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
     this.ensureLogDirectory();
@@ -221,7 +21,7 @@ module.exports = IntelligentErrorDetector;
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
@@ -236,24 +36,24 @@ module.exports = IntelligentErrorDetector;
     this.log('🔍 Starting intelligent error detection...');
 
     const errors = {
-      synta: x: await this.detectSyntaxErrors(),
-      typ: e: await this.detectTypeErrors(),
-      modul: e: await this.detectModuleErrors(),
-      impor: t: await this.detectImportErrors(),
-      buil: d: await this.detectBuildErrors(),
-      runtim: e: await this.detectRuntimeErrors(),
+      syntax: await this.detectSyntaxErrors(),
+      type: await this.detectTypeErrors(),
+      module: await this.detectModuleErrors(),
+      import: await this.detectImportErrors(),
+      build: await this.detectBuildErrors(),
+      runtime: await this.detectRuntimeErrors(),
     };
 
     const totalErrors = Object.values(errors).reduce(
-      (sum, arr) => sum + arr.length;
+      (sum, arr) => sum + arr.length,
       0
     );
     this.log(`Found ${totalErrors} total errors across all categories`);
 
     if (totalErrors > 0) {
-      await this.generateErrorReport(errors);
-      await this.suggestFixes(errors);
-    }
+    await this.generateErrorReport(errors),
+    await this.suggestFixes(errors)
+  }
 
     return errors;
   }
@@ -261,8 +61,8 @@ module.exports = IntelligentErrorDetector;
   async detectSyntaxErrors() {
     try {
       const result = execSync('npx eslint . --format json', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdio: 'pipe',
+        cwd: process.cwd(),
       });
       const eslintOutput = JSON.parse(result);
       return eslintOutput.filter(issue =>
@@ -276,56 +76,56 @@ module.exports = IntelligentErrorDetector;
   async detectTypeErrors() {
     try {
       const result = execSync('npx tsc --noEmit --skipLibCheck', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdio: 'pipe',
+        cwd: process.cwd(),
       });
       return [];
     } catch (error) {
-      const lines = error.stdout.split('\n');
-      return lines.filter(line => this.errorPatterns.type.test(line));
-    }
+    const lines = error.stdout.split('\n'),
+    return lines.filter(line => this.errorPatterns.type.test(line))
+  }
   }
 
   async detectModuleErrors() {
     try {
       const result = execSync('npm run build', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdio: 'pipe',
+        cwd: process.cwd(),
       });
       return [];
     } catch (error) {
-      const lines = (error.stdout || error.stderr || '').split('\n');
-      return lines.filter(line => this.errorPatterns.module.test(line));
-    }
+    const lines = (error.stdout || error.stderr || '').split('\n'),
+    return lines.filter(line => this.errorPatterns.module.test(line))
+  }
   }
 
   async detectImportErrors() {
     try {
       const result = execSync(
-        'npx eslint . --rule "import/no-unresolve: d: error"',
+        'npx eslint . --rule "import/no-unresolved: error"',
         {
-          stdi: o: 'pipe',
-          cw: d: process.cwd(),
+          stdio: 'pipe',
+          cwd: process.cwd(),
         }
       );
       return [];
     } catch (error) {
-      const lines = (error.stdout || error.stderr || '').split('\n');
-      return lines.filter(line => this.errorPatterns.import.test(line));
-    }
+    const lines = (error.stdout || error.stderr || '').split('\n'),
+    return lines.filter(line => this.errorPatterns.import.test(line))
+  }
   }
 
   async detectBuildErrors() {
     try {
       const result = execSync('npm run build', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdio: 'pipe',
+        cwd: process.cwd(),
       });
       return [];
     } catch (error) {
-      const lines = (error.stdout || error.stderr || '').split('\n');
-      return lines.filter(line => this.errorPatterns.build.test(line));
-    }
+    const lines = (error.stdout || error.stderr || '').split('\n'),
+    return lines.filter(line => this.errorPatterns.build.test(line))
+  }
   }
 
   async detectRuntimeErrors() {
@@ -340,10 +140,10 @@ module.exports = IntelligentErrorDetector;
         if (this.errorPatterns.runtime.test(content)) {
           runtimeErrors.push({
             file,
-            lin: e:
+            line:
               content
                 .split('\n')
-                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1;
+                .findIndex(line => this.errorPatterns.runtime.test(line)) + 1,
           });
         }
       } catch (error) {
@@ -389,30 +189,30 @@ module.exports = IntelligentErrorDetector;
 
   async generateErrorReport(errors) {
     const report = {
-      timestam: p: new Date().toISOString(),
-      totalError: s: Object.values(errors).reduce(
+      timestamp: new Date().toISOString(),
+      totalErrors: Object.values(errors).reduce(
         (sum, arr) => sum + arr.length,
         0
       ),
-      errorsByCategor: y: Object.entries(errors).reduce(
+      errorsByCategory: Object.entries(errors).reduce(
         (acc, [category, errorList]) => {
-          acc[category] = errorList.length;
-          return acc;
-        };
+    acc[category] = errorList.length,
+    return acc
+  },
         {}
       ),
-      detail: s: errors,
+      details: errors,
     };
 
     const reportFile = path.join(
-      __dirname;
-      'reports';
+      __dirname,
+      'reports',
       'error-detection-report.json'
     );
-    fs.mkdirSync(path.dirname(reportFile), { recursiv: e: true });
+    fs.mkdirSync(path.dirname(reportFile), { recursive: true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-    this.log(`Error report: generated: ${reportFile}`);
+    this.log(`Error report generated: ${reportFile}`);
   }
 
   async suggestFixes(errors) {
@@ -445,7 +245,7 @@ module.exports = IntelligentErrorDetector;
     }
 
     if (suggestions.length > 0) {
-      this.log('💡 Suggested: fixes:');
+      this.log('💡 Suggested fixes: '),
       suggestions.forEach((suggestion, index) => {
         this.log(`   ${index + 1}. ${suggestion}`);
       });
@@ -455,9 +255,8 @@ module.exports = IntelligentErrorDetector;
 
 // Run if called directly
 if (require.main === module) {
-  const detector = new IntelligentErrorDetector();
-  detector.detectErrors().catch(console.error);
-}
+    const detector = new IntelligentErrorDetector(),
+    detector.detectErrors().catch(console.error)
+  }
 
 module.exports = IntelligentErrorDetector;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

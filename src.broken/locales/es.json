@@ -1,10 +1,10 @@
 {
-  "greeting": "¡Hola, {{name}}!",
+  "greeting": "Hola, {{name}}!",
   "nav": {
     "home": "Inicio",
     "marketplace": "Mercado",
     "marketplace_overview": "Resumen",
-    "categories": "Categorías",
+    "categories": "Categoras",
     "talent": "Talento",
     "equipment": "Equipo",
     "community": "Comunidad",
@@ -14,12 +14,12 @@
     "resources": "Recursos",
     "docs": "Documentos",
     "tutorials": "Tutoriales",
-    "case_studies": "Casos de éxito",
+    "case_studies": "Casos de xito",
     "about": "Acerca de",
     "dashboard": "Tablero",
-    "analytics": "Analítica",
+    "analytics": "Analtica",
     "cart": "Carrito"
   },
-  "login": "Iniciar sesión",
+  "login": "Iniciar sesin",
   "signup": "Registrarse"
 }

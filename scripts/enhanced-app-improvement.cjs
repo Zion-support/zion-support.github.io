@@ -3,7 +3,6 @@
  * Enhanced App Improvement Script;
  * Comprehensive automation for testing, fixing, and improving the application;
  */
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -46,4 +45,3 @@ const path = require('path')
         "name"
       'git commit -m ""feat": automated improvements and fixes"
         execSync(step, { "stdio"})
-      this.log(` Process "failed"`)

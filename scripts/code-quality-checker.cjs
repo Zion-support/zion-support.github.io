@@ -47,4 +47,3 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
-      this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)

@@ -18,7 +18,6 @@ module.exports = {}
         "NODE_OPTIONS": '--max-old-space-size=6144 --openssl-legacy-provider'
       };
     },
-
     // Continuous Error Fixer - runs every 5 minutes (HIGHEST PRIORITY);
     {}
       "name": 'continuous-error-fixer',
@@ -36,7 +35,6 @@ module.exports = {}
       "error_file": './logs/continuous-error-fixer-error.log',
       "out_file": './logs/continuous-error-fixer-out.log'
     },
-
     // TypeScript Error Monitor - runs every 10 minutes;
     {}
       "name": 'typescript-error-monitor',
@@ -54,7 +52,6 @@ module.exports = {}
       "error_file": './logs/typescript-error-monitor-error.log',
       "out_file": './logs/typescript-error-monitor-out.log'
     },
-
     // Import/Export Fixer - runs every 15 minutes;
     {}
       "name": 'import-export-fixer',
@@ -72,7 +69,6 @@ module.exports = {}
       "error_file": './logs/import-export-fixer-error.log',
       "out_file": './logs/import-export-fixer-out.log'
     },
-
     // Build Error Detector - runs every 20 minutes;
     {}
       "name": 'build-error-detector',
@@ -90,7 +86,6 @@ module.exports = {}
       "error_file": './logs/build-error-detector-error.log',
       "out_file": './logs/build-error-detector-out.log'
     },
-
     // ESLint Auto-Fixer - runs every 30 minutes;
     {}
       "name": 'eslint-auto-fixer',
@@ -108,7 +103,6 @@ module.exports = {}
       "error_file": './logs/eslint-auto-fixer-error.log',
       "out_file": './logs/eslint-auto-fixer-out.log'
     },
-
     // Code Quality Monitor - runs every hour;
     {}
       "name": 'code-quality-monitor',
@@ -126,7 +120,6 @@ module.exports = {}
       "error_file": './logs/code-quality-monitor-error.log',
       "out_file": './logs/code-quality-monitor-out.log'
     },
-
     // Dependency Health Checker - runs every 2 hours;
     {}
       "name": 'dependency-health-checker',
@@ -144,7 +137,6 @@ module.exports = {}
       "error_file": './logs/dependency-health-checker-error.log',
       "out_file": './logs/dependency-health-checker-out.log'
     },
-
     // Performance Error Detector - runs every 4 hours;
     {}
       "name": 'performance-error-detector',
@@ -162,7 +154,6 @@ module.exports = {}
       "error_file": './logs/performance-error-detector-error.log',
       "out_file": './logs/performance-error-detector-out.log'
     },
-
     // Security Vulnerability Scanner - runs every 6 hours;
     {}
       "name": 'security-vulnerability-scanner',
@@ -180,7 +171,6 @@ module.exports = {}
       "error_file": './logs/security-vulnerability-scanner-error.log',
       "out_file": './logs/security-vulnerability-scanner-out.log'
     },
-
     // Master Error Orchestrator - coordinates all error fixers;
     {}
       "name": 'master-error-orchestrator',
@@ -199,7 +189,6 @@ module.exports = {}
       "out_file": './logs/master-error-orchestrator-out.log'
     };
   ],
-
   "deploy": {}
     production: {}
       user: 'root',

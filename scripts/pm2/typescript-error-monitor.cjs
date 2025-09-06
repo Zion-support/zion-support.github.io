@@ -37,4 +37,3 @@ import { execSync, spawn } from;
         useEffect: "
         useRef: "
         FC: "
-        ReactNode: "

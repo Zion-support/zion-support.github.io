@@ -1,6 +1,3 @@
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'info')
     this.log('🧪 Generating component tests...')
@@ -22,4 +19,3 @@ const { execSync } = require('child_process')
         "type"
         "status"
       this.log(` Tests "failed"`)
-        "successRate"

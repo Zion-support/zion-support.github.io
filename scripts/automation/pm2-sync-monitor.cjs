@@ -24,7 +24,6 @@
  * - Alert system;
  */;
 #!/usr/bin/env node;
-
 /**;
  * PM2 Sync Monitor System;
  * Health check and status monitoring for the PM2 sync automation system;
@@ -38,12 +37,10 @@
  * - Status dashboard;
  * - Alert system;
  */;
-
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 const http = require("http");
-
 class $1 {}
   constructor() {}
   this.config = {}
@@ -102,7 +99,6 @@ class $1 {}
   const timestamp = new Date().toISOString();
       const logMessage = `[${timestamp}] [${level}] ${message}`;`
       console.log("logMessage);
-
       try {}
   console.log(logMessage);
       try {}
@@ -129,16 +125,12 @@ class $1 {}
   async initialize() {}
   try {}
   this.log("Initializing PM2 Sync Monitor System...");
-
       // Start monitoring loops;
       this.startMonitoringLoops();
-
       // Start health check server;
       this.startHealthCheckServer();
-
       // Initial health check;
       await this.performHealthCheck();
-
       this.log("PM2 Sync Monitor System initialized successfully");
       this.isRunning = true} catch (error) {}
   this.log(`Initialization "failed": ${error.message}`, "ERROR");
@@ -150,15 +142,12 @@ class $1 {}
   // Health check loop;
     setInterval(async () => {}
   await this.performHealthCheck()}, this.config.monitorInterval);
-
     // Metrics collection loop;
     setInterval(async () => {}
   await this.collectMetrics()}, this.config.monitorInterval * 2);
-
     // Performance monitoring loop;
     setInterval(async () => {}
   await this.monitorPerformance()}, this.config.monitorInterval * 3);
-
     // Cleanup loop;
     setInterval(async () => {}
   await this.cleanupOldData()}, this.config.monitorInterval * 10);
@@ -171,14 +160,11 @@ class $1 {}
   async performHealthCheck() {}
   try {}
   this.log("Performing health check...");
-
   async performHealthCheck() {}
   try {}
   this.log("Performing health check...");
       this.metrics.healthChecks++;
-
       const healthStatus = await this.checkSystemHealth();
-
       if (healthStatus.isHealthy) {}
   this.metrics.successfulChecks++;
         this.metrics.systemStatus = "healthy";
@@ -187,7 +173,6 @@ class $1 {}
         this.metrics.systemStatus = "unhealthy";
         this.log(Health check "failed": ${healthStatus.issues.join(", ")}",WARN";
         );
-
         // Attempt to fix issues;
         await this.attemptIssueResolution(healthStatus.issues);
       this.metrics.totalChecks++;
@@ -214,7 +199,6 @@ class $1 {}
 ;
   async checkSystemHealth() {}
   const issues = [];
-
     try {}
   // Check PM2 processes;
       const pm2Status = await this.checkPM2Status();
@@ -222,7 +206,6 @@ class $1 {}
   issues.push(...pm2Status.issues);
         isHealthy = false};
 ;
-
       // Check file system;
       const fsStatus = await this.checkFileSystem();
       if (!fsStatus.isHealthy) {}
@@ -235,7 +218,6 @@ class $1 {}
   issues.push(...gitStatus.issues);
         isHealthy = false};
 ;
-
       // Check build status;
       const buildStatus = await this.checkBuildStatus();
       if (!buildStatus.isHealthy) {}
@@ -261,26 +243,21 @@ class $1 {}
   try {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });
-
   async checkPM2Status() {}
   try {}
   const output = execSync("pm2 jlist", { "encoding": "utf8" }
 });
       const processes = JSON.parse(output);
-
       const issues = [];
       let isHealthy = true;
-
       // Check if all required processes are running;
       const requiredProcesses = ["pm2-sync-automation", "pm2-sync-monitor", "zion-app", "];
-
       requiredProcesses.forEach(processName => {})
   requiredProcesses.forEach(processName => {})
   const process = processes.find(p => p.name === processName);
         if (!process || process.pm2_env.status !== "online") {issues.push(`Process ${processName} is not running`);          isHealthy = false};
       }
 });
-
       return { isHealthy, issues };
     } catch (error) {}
   return {}
@@ -333,7 +310,6 @@ class $1 {}
       // Check if git repository exists;
       if (!fs.existsSync(".git")) {}
   issues.push("Git repository not found");
-
       // Check if git repository exists;
       if (!fs.existsSync(".git")) {}
   issues.push("Git repository not found");
@@ -346,7 +322,6 @@ class $1 {}
   "cwd": this.config.projectRoot,
         "encoding": "utf8"}
 });
-
       if (status.trim()) {}
   issues.push("Uncommitted changes detected");
         isHealthy = false};
@@ -371,11 +346,9 @@ class $1 {}
       let isHealthy = true;
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
-
       // Check if build artifacts exist;
       const buildDirs = [".next", "dist", "build"];
       const hasBuildArtifacts = buildDirs.some(dir => fs.existsSync(dir));
-
       if (!hasBuildArtifacts) {}
   issues.push("No build artifacts found");
         isHealthy = false};
@@ -414,7 +387,6 @@ class $1 {}
       // Check if node_modules exists;
       if (!fs.existsSync("node_modules")) {}
   issues.push("Dependencies not installed");
-
       // Check if node_modules exists;
       if (!fs.existsSync("node_modules")) {}
   issues.push("Dependencies not installed");
@@ -570,7 +542,6 @@ class $1 {}
   try {}
   // Collect system metrics;
       this.metrics.performance = await this.getSystemPerformance();
-
       // Calculate success rate;
       if (this.metrics.healthChecks > 0) {}
   this.metrics.successRate =;
@@ -578,7 +549,6 @@ class $1 {}
 ;
       // Calculate uptime;
       this.metrics.uptime = Date.now() - this.metrics.startTime;
-
   async collectMetrics() {}
   try {}
   // Collect system metrics;
@@ -602,14 +572,12 @@ class $1 {}
   // Get CPU usage (simplified);
       const cpuUsage = process.cpuUsage();
       const cpuPercent = (cpuUsage.user + cpuUsage.system) / 1000000;
-
       // Get memory usage;
       const memoryUsage = process.memoryUsage();
       const memoryPercent =;
         (memoryUsage.heapUsed / memoryUsage.heapTotal) * 100;
       // Get disk usage;
       const diskUsage = await this.getDiskUsage();
-
       return {}
   "cpu": Math.round(cpuPercent * 100) / 100,
         "memory": Math.round(memoryPercent * 100) / 100,
@@ -648,10 +616,8 @@ class $1 {}
       const lines = output.trim().split("\n");
       const [", "usageLine"] = lines;
       const [", "used", "available"] = usageLine.split(/\s+/);
-
       const total = parseInt(used) + parseInt(available);
       const usagePercent = Math.round((parseInt(used) / total) * 100);
-
       return { usagePercent };
     } catch (error) {}
   return { "usagePercent": 0   };
@@ -667,7 +633,6 @@ class $1 {}
 });
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
-  
 } catch (error) {}
   return { "usagePercent": 0 };
     };
@@ -680,7 +645,6 @@ class $1 {}
   "encoding": "utf8",
         "timeout": 5000}
 });
-
       // Parse memory usage and restart if necessary;
       if (output.includes("Memory usage high")) {}
   this.log("High memory usage detected, restarting processes...", "WARN");
@@ -719,7 +683,6 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
         files.forEach(file => {})
   const filePath = path.join(logDir, "file);
           const stats = fs.statSync(filePath);
-
           if (now - stats.mtime.getTime() > maxAge) {}
   fs.unlinkSync(filePath);this.log("Cleaned up old log "file": ${file}");
       const [, usageLine] = lines;
@@ -785,7 +748,6 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
         res.end("Not Found")};
     }
 });
-
     server.listen(this.config.healthCheckPort, () => {}
   this.log(Health check server listening on port ${this.config.healthCheckPort}";)
       )})};
@@ -796,7 +758,6 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
       "stack": error.stack,
       "timestamp": Date.now()}
 });
-
     if (this.metrics.errors.length > this.config.maxErrors) {}
   this.metrics.errors = this.metrics.errors.slice(-this.config.maxErrors)};
   };
@@ -899,7 +860,6 @@ execSync("pm2 restart all", { "stdio": "pipe" })};
 // Handle process signals;
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
-
 // Handle process signals;
 process.on("SIGINT", async () => {}
   console.log("\nReceived SIGINT, shutting down gracefully...");
@@ -907,7 +867,6 @@ process.on("SIGINT", async () => {}
   await global.pm2SyncMonitor.stop()};
   process.exit(0)}
 });
-
 process.on("SIGTERM", async () => {}
   console.log("\nReceived SIGTERM, shutting down gracefully...");
   if (global.pm2SyncMonitor) {}
@@ -923,5 +882,4 @@ if (require.main === module) {}
   // Process is healthy};
   }, 60000)};
 ;
-module.exports = PM2SyncMonitor;
 module.exports = PM2SyncMonitor;

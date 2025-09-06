@@ -117,7 +117,6 @@ class $1 {}
   try {}
   if (fs.existsSync(this.stateFile)) {}
   return JSON.parse(fs.readFileSync(this.stateFile, "utf8"));
-
 // Deployment State Management;
 class DeploymentState {}
   constructor() {}
@@ -785,7 +784,6 @@ const main = async () => {}
     throw error};
 };
 const checkDeploymentRequests = async () => {}
-  
 } else {log(`Deployment to ${request.environment} "failed": ${result.error}`, "ERROR");
           // Consider automatic rollback;
           if (CONFIG.ROLLBACK_ENABLED && request.environment !== "production") {log(`Initiating automatic rollback for ${request.environment}`);
@@ -823,13 +821,11 @@ const generateDeploymentReport = async (deploymentSystem) => {}
 // Handle process signals;
 process.on("SIGINT", () => {}
   log("Received SIGINT. Shutting down gracefully...");
-
 // Handle process signals;
 process.on("SIGINT", () => {}
   log("Received SIGINT. Shutting down gracefully...");
   process.exit(0)}
 });
-
 process.on("SIGTERM", () => {}
   log("Received SIGTERM. Shutting down gracefully...");
   process.exit(0)}
@@ -848,4 +844,3 @@ module.exports = {}
   DeploymentSystem,
   HealthCheckSystem,
   DeploymentState,
-  main};

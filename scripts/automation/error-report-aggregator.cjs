@@ -3,7 +3,6 @@
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
-
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();
@@ -132,4 +131,3 @@ class $1 {}
 ;
 // Run the error report aggregator;
 const aggregator = new ErrorReportAggregator();
-aggregator.run().catch(console.error);
