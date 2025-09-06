@@ -1,128 +1,32 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Star,
-  Award,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Eye,
-  Code,
-  Palette,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
+import { Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
+  CheckCircle, ArrowRight, Zap, Target, Microscope;
+  Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
+  Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const heroStats = [
-  {
-    label: 'Cutting-Edge Services',
-    value: '25+',
-    icon: <Star className='w-5 h-5' />,
-  },
-  {
-    label: 'Innovation Areas',
-    value: '8+',
-    icon: <Brain className='w-5 h-5' />,
-  },
-  {
-    label: 'Market Coverage',
-    value: '$500B+',
-    icon: <TrendingUp className='w-5 h-5' />,
-  },
-  {
-    label: 'Success Rate',
-    value: '99.9%',
-    icon: <Award className='w-5 h-5' />,
-  },
+const contactInfo = null;
 ];
-
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
-description:
-      'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: cuttingEdgeAIServices2025,
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
-count: cuttingEdgeAIServices2025.length,
-  },
-  {
-    title: 'Quantum & Emerging Tech',
-    description:
-      'Breakthrough quantum computing and space technology solutions',
-    services: cuttingEdgeQuantumServices2025,
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
-count: cuttingEdgeQuantumServices2025.length,
-  },
-  {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: cuttingEdgeEnterpriseITServices2025,
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-600',
-    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',
-count: cuttingEdgeEnterpriseITServices2025.length,
-  },
-  {
-    title: 'Micro SAAS',
-    description: 'Innovative business solutions for modern enterprises',
-    services: cuttingEdgeMicroSaasServices2025,
-    icon: Rocket,
-    color: 'from-teal-500 to-emerald-600',
-    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
-count: cuttingEdgeMicroSaasServices2025.length,
-  },
-];
-
 export default function CuttingEdgeServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
   const allServices = [
 ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025,
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.tags.some(tag =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
       );
@@ -132,9 +36,9 @@ export default function CuttingEdgeServicesShowcase2025() {
   });
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -193,7 +97,6 @@ className='text-center'
                   Showcase 2025
                 </span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'
                 initial={{ opacity: 0, y: 20 }}
@@ -204,7 +107,6 @@ Discover revolutionary technology solutions that are reshaping
                 industries and defining the future. From AI consciousness to
                 space mining, experience the cutting edge of innovation.
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'
@@ -226,7 +128,6 @@ Discover revolutionary technology solutions that are reshaping
                   </div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
 <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center'
@@ -251,7 +152,6 @@ href='#services'
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
 <section className='py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -273,7 +173,6 @@ href='#services'
                   className='w-full pl-10 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'
                 />
               </div>
-
               {/* Category Filter */}
 <div className='flex flex-wrap gap-2'>
                 <button
@@ -300,7 +199,6 @@ href='#services'
                   </button>
                 ))}
               </div>
-
               {/* View Mode Toggle */}
 <div className='flex items-center gap-2'>
                 <button
@@ -327,7 +225,6 @@ href='#services'
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
 <section
           id='services'
@@ -372,7 +269,6 @@ href='#services'
                         </div>
                       </div>
                     </div>
-
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-4'>
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -384,19 +280,16 @@ href='#services'
                         </span>
                       ))}
                     </div>
-
                     {/* Market Info */}
 <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
                   </div>
-
                   {/* Service Details */}
 <div
                     className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
                   >
-                    {/* Features */}
                     <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>
                         Key Features
@@ -415,7 +308,6 @@ href='#services'
                           ))}
                       </ul>
                     </div>
-
                     {/* Pricing */}
 <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-3 uppercase tracking-wider'>
@@ -428,7 +320,6 @@ href='#services'
                         </span>
                       </div>
                     </div>
-
                     {/* CTA */}
 <div className='flex items-center justify-between'>
                       <a
@@ -447,13 +338,11 @@ href='#services'
                       </a>
                     </div>
                   </div>
-
                   {/* Hover Effect Overlay */}
 <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />
                 </motion.div>
               ))}
             </motion.div>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -474,6 +363,9 @@ className='text-center py-20'
                     setSelectedCategory('all');
                   }}
                   className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                    setSelectedCategory('all')
+                  }}
+                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                 >
                   Clear Filters
                 </button>
@@ -481,7 +373,6 @@ className='text-center py-20'
             )}
           </div>
         </section>
-
         {/* Contact CTA Section */}
 <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
@@ -499,7 +390,6 @@ className='text-center py-20'
                 advantage in the rapidly evolving technology landscape. Let's
                 discuss how we can help you achieve your goals.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <a
                   href='/contact'
@@ -516,7 +406,6 @@ className='text-center py-20'
                   Call Now
                 </a>
               </div>
-
               {/* Contact Info */}
 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div className='flex flex-col items-center'>
@@ -561,18 +450,16 @@ className='text-center py-20'
   );
 const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
-  opacity: 0 
-};
+  opacity: 0
+}
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1 
-
-
-};
+  staggerChildren: 0.1
+}
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0 
-};
+  y: 20, opacity: 0
+}
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 

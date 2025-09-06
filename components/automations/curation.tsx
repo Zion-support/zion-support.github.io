@@ -1,14 +1,17 @@
+import React from "react",
+import fs from "fs";
+import path from "path";
+type Experiment = any;
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
-
 type Experiment = {
   title: string;
 hypothesis?: string;
 metric?: string;
 effort?: number;
-impact?: number 
-};
+impact?: number
+}
 type Props = {
   updatedAt: string | null;
 items: Experiment[]
@@ -20,7 +23,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
       <h1 className='text-2xl font-bold text-gray-900'>
         AI Curated Growth Experiments
       </h1>
-      {updatedAt ? (
         <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>
       ) : (
         <p className='mt-2 text-sm text-gray-600'>
@@ -28,7 +30,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
           next run.
         </p>
       )}
-
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -38,7 +39,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
             <div className='text-base font-semibold text-gray-900'>
               {exp.title}
             </div>
-            {(exp.hypothesis || exp.metric) && (
+            {(exp.hypothesis |exp.metric) && (
               <div className='mt-2 text-sm text-gray-700'>
                 {exp.hypothesis && (
                   <div>
@@ -53,7 +54,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
                 )}
               </div>
             )}
-            {(exp.effort || exp.impact) && (
+            {(exp.effort |exp.impact) && (
               <div className='mt-2 text-xs text-gray-500'>
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? ' · ' : null}
@@ -73,9 +74,9 @@ export default function CurationPage({ updatedAt, items }: Props) {
 export async function getStaticProps() {
   try {
     const filePath = path.join(
-      process.cwd(),
-      'data',
-      'ai-curation',
+      process.cwd()
+      'data'
+      'ai-curation'
       'growth-experiments.json'
     );
     const raw = fs.readFileSync(filePath, 'utf8');
@@ -96,3 +97,6 @@ items: [],
       revalidate: 300,
     };
   }
+      revalidate: 300}
+}
+}

@@ -1,13 +1,10 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
 
     }
-
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true)
       const res = await fetch('/api/jobs', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 title,
           description,
@@ -31,9 +28,13 @@ router.push(`/client/dashboard`);
       setError(err.message || 'Something went wrong');
     } finally {
       setIsSubmitting(false);
+      router.push(`/client/dashboard`)
+    } catch (err: any) {
+      setError(err.message |'Something went wrong')
+    } finally {
+      setIsSubmitting(false)
     }
   }
-
   return (
 <div className='max-w-2xl mx-auto'>
       <h1 className='text-2xl font-semibold mb-4'>Post a Job</h1>

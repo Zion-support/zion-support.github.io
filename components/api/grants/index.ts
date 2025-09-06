@@ -3,17 +3,14 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import type {
-  CreateGrantPayload,
-  GrantApplication,;
+  CreateGrantPayload
+  GrantApplication;
 } from '../../../types/grants';
-
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
-
 function readAllGrants(): GrantApplication[] {
   ensureDir();
   const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
@@ -22,11 +19,7 @@ function readAllGrants(): GrantApplication[] {
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
   });
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-    const { status, sector, region, program } = req.query;
-const list = readAllGrants().filter(g => {
+  const files = null;
       return (
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
@@ -76,16 +69,17 @@ id,
         votes: [],
       };
       fs.writeFileSync(
-        path.join(GRANTS_DIR, `${id}.json`),
-        JSON.stringify(record, null, 2),
+        path.join(GRANTS_DIR, `${id}.json`)
+        JSON.stringify(record, null, 2)
         'utf8'
       );
       res.status(201).json({ id, record });
     } catch (e: any) {
-      res.status(500).json({ error: e?.message || 'Failed to create grant' });
+      res.status(500).json({ error: e?.message |'Failed to create grant' });
     }
     return;
   }
-
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
+  res.status(405).end('Method Not Allowed')
+}

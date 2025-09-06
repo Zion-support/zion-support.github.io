@@ -1,56 +1,44 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import {
-  Rocket,
-  DollarSign,
-  Users,
-  BarChart3,
-  Mail,
-  Calendar,
-  Shield,
-  Globe,
-  ArrowRight,
-  Star,
-  Check,
-  ExternalLink,
-  TrendingUp,
-  Zap,
-  Target,
-  Lightbulb,
-  BookOpen,;
-} from 'lucide-react';
-
+import { Rocket;
+  DollarSign;
+  Users;
+  BarChart3;
+  Mail;
+  Calendar;
+  Shield;
+  Globe;
+  ArrowRight;
+  Star;
+  Check;
+  ExternalLink;
+  TrendingUp;
+  Zap;
+  Target;
+  Lightbulb;
+  BookOpen
+ } from 'lucide-react';
 export default function StartupToolsPage() {
-  const startupTools = [
-    {
-      name: 'HubSpot',
-description:
-        'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
-      category: 'Marketing & Sales',
-      pricing: 'Free - $45/month',
-      rating: 4.7,
-      users: '135K+',
-      icon: <Target className='w-8 h-8 text-orange-400' />,
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+  const startupTools = null;
       features: [
-        'CRM system',
-        'Email marketing',
-        'Lead generation',
-        'Analytics & reporting',
-        'Marketing automation',
-        'Free tier available',
-      ],
-      website: 'https://hubspot.com',
+        'CRM system'
+        'Email marketing'
+        'Lead generation'
+        'Analytics & reporting'
+        'Marketing automation'
+        'Free tier available'
+      ]
+      website: 'https://hubspot.com'
       useCase:
-        'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
+        'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.'
       pros: [
-        'Free tier',
-        'All-in-one solution',
-        'Great for beginners',
-        'Excellent support',
-      ],
+        'Free tier'
+        'All-in-one solution'
+        'Great for beginners'
+        'Excellent support'
+      ]
       cons: [
         'Can get expensive',
         'Complex for small teams',
@@ -145,22 +133,25 @@ icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
     {
       name: 'Buffer',
       description:
-        'Social media management platform that helps businesses schedule posts, analyze performance, and manage multiple accounts.',
-      category: 'Social Media',
-      pricing: 'Free - $15/month',
-      rating: 4.4,
-      users: '140K+',
-      icon: <Globe className='w-8 h-8 text-green-400' />,
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+        'Graphic design platform that makes it easy to create professional designs without design skills.',      category: 'Design'
+      pricing: 'Free - $12.99/month'
+      rating: 4.6
+      users: '100M+'
+      icon: <Lightbulb className='w-8 h-8 text-blue-400' />,      description: 'Graphic design platform that makes it easy to create professional designs without design skills.'
+      category: 'Design'
+      pricing: 'Free - $12.99/month'
+      rating: 4.6
+      users: '100M+'
+      icon: <Lightbulb className='w-8 h-8 text-blue-400' />
       features: [
-        'Social media scheduling',
-        'Analytics & reporting',
-        'Team collaboration',
-        'Content calendar',
-        'Multiple platforms',
-        'Free tier available',
-      ],
-      website: 'https://buffer.com',
+        'Design templates'
+        'Stock photos & icons'
+        'Brand kit'
+        'Team collaboration'
+        'Social media formats'
+        'Free tier available'
+      ]
+      website: 'https://canva.com'
       useCase:
         'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
       pros: ['Free tier', 'Easy to use', 'Good analytics', 'Affordable'],
@@ -272,16 +263,16 @@ icon: <Users className='w-8 h-8 text-green-400' />,
 icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior tracking',
-        'Funnel analysis',
-        'A/B testing',
-        'Real-time data',
-        'Custom events',
-        'Mobile analytics',
-      ],
-      website: 'https://mixpanel.com',
+        'User behavior tracking'
+        'Funnel analysis'
+        'A/B testing'
+        'Real-time data'
+        'Custom events'
+        'Mobile analytics'
+      ]
+      website: 'https://mixpanel.com'
       useCase:
-        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
+        'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.'
       pros: [
         'Powerful analytics',
         'Real-time data',
@@ -358,8 +349,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           content='Essential tools and resources for startups and entrepreneurs to accelerate growth.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -367,9 +356,7 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -378,7 +365,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                 Startup Growth Tools
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               Startup Tools & Resources
             </h1>
@@ -387,7 +373,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
               Expert-curated selection of SaaS services for entrepreneurs and
               growing businesses.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#tools'
@@ -409,7 +394,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
               </Button>
             </div>
           </div>
-
           {/* Stats */}
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -442,7 +426,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           </div>
         </div>
       </section>
-
       {/* Category Filter */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -463,7 +446,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           </div>
         </div>
       </section>
-
       {/* Tools Grid */}
 <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -472,14 +454,12 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
               {selectedCategory === 'All'
                 ? 'All Startup Tools'
                 : `${selectedCategory} Tools`}
-            </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the essential tools that successful startups use to grow and scale their businesses.'
                 : `Explore the best ${selectedCategory.toLowerCase()} tools to accelerate your startup's growth.`}
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
               <Card
@@ -507,7 +487,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                         </span>
                       </div>
                     </div>
-
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>
                         {tool.category}
@@ -515,11 +494,9 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                       <span>{tool.users} users</span>
                       <span className='text-green-400'>{tool.pricing}</span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {tool.description}
                     </p>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -538,14 +515,12 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                           ))}
                       </div>
                     </div>
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Best For:
                       </h4>
                       <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                     </div>
-
                     <div className='flex items-center justify-between'>
                       <Button
                         href={tool.website}
@@ -556,7 +531,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
                         Visit Website
                         <ExternalLink className='w-4 h-4 ml-2' />
                       </Button>
-
                       <div className='text-right'>
                         <div className='text-xs text-gray-500 mb-1'>
                           Use Case:
@@ -573,7 +547,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           </div>
         </div>
       </section>
-
       {/* Startup Resources Section */}
 <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -586,7 +559,6 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
               succeed.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600'>
@@ -646,13 +618,11 @@ icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-            Ready to Scale Your Startup?
           </h2>
           <p className='text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our startup experts can help you choose the right tools, implement

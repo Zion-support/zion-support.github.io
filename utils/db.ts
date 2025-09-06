@@ -1,35 +1,25 @@
 import fs from 'fs';
 import path from 'path';
-
-const DATA_ROOT = path.join(process.cwd(), 'data', 'marketplace');
-
-function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_ROOT)) {
-    fs.mkdirSync(DATA_ROOT, { recursive: true });
-  }
-
 function getFilePath(fileName: string): string {
-  ensureDataDir();
-  return path.join(DATA_ROOT, fileName);
-
-export function readJsonFile<T>(fileName: string, defaultValue: T): T {
+  return path.join(process.cwd(), 'data', `${fileName}.json`);
+}
+export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
-    const filePath = getFilePath(fileName);
-    if (!fs.existsSync(filePath)) {
-      return defaultValue;
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
     }
-    const raw = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as T;
   } catch (error) {
-    return defaultValue;
+    console.error('Error reading file:', error);
   }
-
+  return defaultValue;
+}
 export function writeJsonFile<T>(fileName: string, data: T): void {
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
   fs.renameSync(tmpPath, filePath);
-
+}
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);

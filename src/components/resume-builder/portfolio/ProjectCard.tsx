@@ -1,64 +1,49 @@
 
-import { useState } from 'react';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,;
-} from '@/components/ui/alert-dialog';
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react';
+import { useState  } from 'react';
+import { Card, CardContent, CardFooter  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle  } from '@/components/ui/alert-dialog';
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
-
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void;
-
+  onDelete: (projectId: string) => void
+}
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-
-  const handleDelete = () => {
-    if (project.id) {
-      onDelete(project.id);
-    }
-    setDeleteDialogOpen(false);
-  };
-
+  const handleDelete = null;
   return (
     <Card className='h-full flex flex-col'>
-      <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>
+      <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project.image_url ? (
+          <Image
+            src={project.image_url}
+            alt={project.title}
+            className='object-cover'
+            loading='lazy'    <Card className="h-full flex flex-col">
+      <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (
           <Image
             src={project.image_url}
             alt={project.title}
 className='object-cover'
             loading='lazy'
-          />
         ) : (
           <div className='w-full h-full flex items-center justify-center bg-muted'>
             <FileText className='h-12 w-12 text-muted-foreground/50' />
           </div>
         )}
       </div>
-
       <CardContent className='flex-grow pt-6'>
         <div className='space-y-2'>
           <h3 className='font-semibold text-lg'>{project.title}</h3>
-
           {project.description && (
             <p className='text-sm text-muted-foreground line-clamp-3'>
               {project.description}
             </p>
           )}
-
           {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
@@ -79,21 +64,24 @@ className='object-cover'
               rel='noopener noreferrer'
               aria-label='GitHub'
               title='GitHub'
+              href = {project.github_url,}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              title="GitHub"
             >
               <Button variant='ghost' size='icon' aria-label='GitHub link'>
                 <Github className='h-4 w-4' />
               </Button>
             </a>
           )}
-
           {project.demo_url && (
             <a
               href={project.demo_url}
               target='_blank'
               rel='noopener noreferrer'
               aria-label='Live demo'
-              title='Live demo'
-            >
+              title='Live demo'            >
               <Button variant='ghost' size='icon' aria-label='Live demo link'>
                 <Link className='h-4 w-4' />
               </Button>
@@ -108,7 +96,6 @@ className='object-cover'
             aria-label='Edit project'
           >
             <Edit className='h-4 w-4' />
-          </Button>
           <Button
             variant='ghost'
             size='icon'

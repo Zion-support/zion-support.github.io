@@ -3,34 +3,21 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
-  colorScheme?:
-    | 'quantum-fusion'
-    | 'neon-cyber'
-    | 'holographic-matrix'
     | 'space-time';
+  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
   enableNeonEffects?: boolean;
-enableSpaceTime?: boolean;
+  enableSpaceTime?: boolean
+}
 
-const UltraFuturisticBackground2035: React.FC<
-  UltraFuturisticBackground2035Props
-> = ({
-  intensity = 'medium',
-  colorScheme = 'quantum-fusion',
-  particleCount = 200,
-  animationSpeed = 1.0,
-  enableHolographic = true,
-  enableQuantumEffects = true,
-  enableNeonEffects = true,
-  enableSpaceTime = true,
-}) => {
+const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
+  intensity;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
-
   const getColorScheme = () => {
     switch (colorScheme) {
       case 'quantum-fusion':
@@ -74,17 +61,13 @@ glow: 'rgba(255, 107, 53, 0.3)',
 glow: 'rgba(0, 255, 255, 0.3)',
         };
     }
-  };
-
+  }
   const colors = getColorScheme();
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -92,7 +75,6 @@ canvas.height = window.innerHeight;
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
@@ -109,28 +91,22 @@ for (let i = 0; i < particleCount; i++) {
 color: Math.random() > 0.5 ? colors.primary : colors.secondary,
         });
       }
-    };
-
+    }
     initParticles();
-
     // Animation loop
     const animate = () => {
       ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
+        if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Update life
         particle.life--;
-
         // Regenerate particle if it dies
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -138,18 +114,15 @@ color: Math.random() > 0.5 ? colors.primary : colors.secondary,
           particle.life = particle.maxLife;
 particle.type = Math.random() > 0.7 ? 'quantum' : 'normal';
         }
-
         // Draw particle
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
-
         if (particle.type === 'quantum' && enableQuantumEffects) {
           // Quantum particle effect
           ctx.beginPath();
           ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2);
           ctx.fillStyle = colors.accent;
           ctx.fill();
-
           // Quantum glow
           ctx.shadowColor = colors.accent;
           ctx.shadowBlur = 20;
@@ -166,7 +139,6 @@ ctx.shadowBlur = 0;
 ctx.fill();
         }
       });
-
       // Draw holographic grid
       if (enableHolographic) {
 drawHolographicGrid(ctx, colors);
@@ -186,21 +158,20 @@ drawSpaceTimeEffects(ctx, colors);
     };
 
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
 cancelAnimationFrame(animationRef.current);
       }
-    };
+    }
   }, [
-    particleCount,
-    animationSpeed,
-    colorScheme,
-    enableHolographic,
-    enableQuantumEffects,
-    enableNeonEffects,
-    enableSpaceTime,
+    particleCount
+    animationSpeed
+    colorScheme
+    enableHolographic
+    enableQuantumEffects
+    enableNeonEffects
+    enableSpaceTime
   ]);
 
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
@@ -224,7 +195,6 @@ for (let x = 0; x < ctx.canvas.width; x += gridSize) {
       ctx.lineTo(ctx.canvas.width, y);
       ctx.stroke();
     }
-
     // Animated diagonal lines
     ctx.strokeStyle = colors.secondary;
     ctx.globalAlpha = 0.2;
@@ -235,8 +205,7 @@ for (let i = 0; i < 5; i++) {
       ctx.lineTo(offset + 200, ctx.canvas.height);
 ctx.stroke();
     }
-  };
-
+  }
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
 // Neon orbs
@@ -244,7 +213,6 @@ ctx.stroke();
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
       const y = (Math.cos(time * 0.3 + i) * 0.3 + 0.5) * ctx.canvas.height;
       const size = 30 + Math.sin(time + i) * 10;
-
       // Glow effect
       ctx.shadowColor = colors.primary;
       ctx.shadowBlur = 30;
@@ -252,7 +220,6 @@ ctx.stroke();
       ctx.arc(x, y, size, 0, Math.PI * 2);
       ctx.fillStyle = colors.glow;
       ctx.fill();
-
       // Core
       ctx.shadowBlur = 0;
       ctx.beginPath();
@@ -260,14 +227,13 @@ ctx.stroke();
       ctx.fillStyle = colors.primary;
 ctx.fill();
     }
-  };
-
+  }
   const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
 
     // Wormhole effect
     const centerX = ctx.canvas.width / 2;
-    const centerY = ctx.canvas.height / 2;
+    const centerY = ctx.canvas.height / 2
     const maxRadius = Math.min(ctx.canvas.width, ctx.canvas.height) * 0.3;
 
 for (let i = 0; i < 20; i++) {
@@ -291,10 +257,9 @@ ctx.fill();
         ref={canvasRef}
         className='w-full h-full'
         style={{
-          background: colors.background,
+          background: colors.background
         }}
       />
-
       {/* Additional overlay effects */}
       <div className='absolute inset-0 pointer-events-none'>
         {/* Quantum energy field */}
@@ -313,7 +278,6 @@ ctx.fill();
 ease: 'easeInOut',
           }}
         />
-
         {/* Holographic scan lines */}
         <div className='absolute inset-0 opacity-20'>
           {[...Array(20)].map((_, i) => (
@@ -321,8 +285,8 @@ ease: 'easeInOut',
               key={i}
               className='absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent'
               style={{
-                top: `${(i / 20) * 100}%`,
-                color: colors.primary,
+                top: `${(i / 20) * 100}%`
+                color: colors.primary
               }}
               animate={{
                 opacity: [0, 1, 0],

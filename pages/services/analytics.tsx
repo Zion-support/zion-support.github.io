@@ -1,86 +1,90 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { BarChart3, Database, Zap, Shield, Rocket, Cpu;
+  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
+ } from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+export default function AnalyticsServicesPage() {
+  const services = null;
 import {
-  BarChart3,
-  Database,
-  Zap,
-  Shield,
-  Rocket,
-  Cpu,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
+  BarChart3
+  Database
+  Zap
+  Shield
+  Rocket
+  Cpu
+  ArrowRight
+  CheckCircle
+  Star
+  Users
+  Clock
+  TrendingUp;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-
 export default function AnalyticsServicesPage() {
   const services = [
     {
-      title: 'Big Data Processing',
-      description: 'Scalable data processing and analytics platforms',
+      title: 'Big Data Processing'
+      description: 'Scalable data processing and analytics platforms'
       features: [
-        'Data Pipeline Engineering',
-        'Real-time Processing',
-        'Batch Processing',
-        'Data Quality',
-      ],
-      price: 'From $8,000',
-      icon: Database,
-      color: 'from-indigo-500 to-purple-500',
-    },
+        'Data Pipeline Engineering'
+        'Real-time Processing'
+        'Batch Processing'
+        'Data Quality'
+      ]
+      price: 'From $8,000'
+      icon: Database
+      color: 'from-indigo-500 to-purple-500'
+    }
     {
-      title: 'Business Intelligence',
-      description: 'Interactive dashboards and reporting solutions',
+      title: 'Business Intelligence'
+      description: 'Interactive dashboards and reporting solutions'
       features: [
-        'Custom Dashboards',
-        'KPI Tracking',
-        'Data Visualization',
-        'Automated Reports',
-      ],
-      price: 'From $5,000',
-      icon: BarChart3,
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'Custom Dashboards'
+        'KPI Tracking'
+        'Data Visualization'
+        'Automated Reports'
+      ]
+      price: 'From $5,000'
+      icon: BarChart3
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      title: 'Predictive Analytics',
-      description: 'AI-powered predictive modeling and forecasting',
+      title: 'Predictive Analytics'
+      description: 'AI-powered predictive modeling and forecasting'
       features: [
-        'Machine Learning Models',
-        'Forecasting',
-        'Risk Assessment',
-        'Trend Analysis',
-      ],
-      price: 'From $12,000',
-      icon: Zap,
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Machine Learning Models'
+        'Forecasting'
+        'Risk Assessment'
+        'Trend Analysis'
+      ]
+      price: 'From $12,000'
+      icon: Zap
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      title: 'Data Strategy & Governance',
-      description: 'Comprehensive data strategy and governance frameworks',
+      title: 'Data Strategy & Governance'
+      description: 'Comprehensive data strategy and governance frameworks'
       features: [
-        'Data Architecture',
-        'Governance Policies',
-        'Compliance',
-        'Data Quality',
-      ],
-      price: 'From $10,000',
-      icon: Shield,
-      color: 'from-emerald-500 to-teal-500',
-    },
+        'Data Architecture'
+        'Governance Policies'
+        'Compliance'
+        'Data Quality'
+      ]
+      price: 'From $10,000'
+      icon: Shield
+      color: 'from-emerald-500 to-teal-500'
+    }
   ];
-
   const stats = [
-    { number: '1M+', label: 'Data Points Processed', icon: Database },
-    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle },
-    { number: '24/7', label: 'Real-time Analytics', icon: Clock },
-    { number: '300%', label: 'ROI Improvement', icon: TrendingUp },
+    { number: '1M+', label: 'Data Points Processed', icon: Database }
+    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle }
+    { number: '24/7', label: 'Real-time Analytics', icon: Clock }
+    { number: '300%', label: 'ROI Improvement', icon: TrendingUp }
   ];
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -104,7 +108,6 @@ export default function AnalyticsServicesPage() {
       </Head>
 
       <EnhancedNavigation />
-
       {/* Hero Section */}
 <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -122,7 +125,6 @@ className='mb-8'
               growth
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,7 +143,6 @@ className='mb-12'
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
 <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -167,7 +168,6 @@ className='text-center'
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -230,7 +230,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -258,7 +257,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 );
@@ -266,16 +264,13 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
   once: true 

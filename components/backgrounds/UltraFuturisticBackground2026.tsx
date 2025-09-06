@@ -2,24 +2,20 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2026Props {
   children: React.ReactNode;
-  className?: string;
+  className?: string
+}
 
-const UltraFuturisticBackground2026: React.FC<
-  UltraFuturisticBackground2026Props
-> = ({ children, className = '' }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({ 
+  children;
+  className;
   const animationRef = useRef<number | undefined>(undefined);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-
     let particles: Array<{
 x: number;
       y: number;
@@ -42,11 +38,9 @@ x: number;
       '#0080ff', // Blue
 '#ff8000', // Orange
     ];
-
     const createParticle = () => {
       const side = Math.floor(Math.random() * 4);
       let x, y, vx, vy;
-
       switch (side) {
         case 0: // Top
           x = Math.random() * canvas.width;
@@ -73,7 +67,6 @@ x: number;
           vy = (Math.random() - 0.5) * 2;
 break;
       }
-
       return {
         x,
         y,
@@ -92,11 +85,9 @@ maxLife: Math.random() * 200 + 100,
 for (let i = 0; i < 100; i++) {
         particles.push(createParticle());
       }
-    };
-
+    }
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -120,7 +111,6 @@ if (
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
-
         // Draw glow effect
         const gradient = ctx.createRadialGradient(
 particle.x,
@@ -138,7 +128,6 @@ particle.x,
         ctx.fill();
 ctx.restore();
       });
-
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 1;
@@ -156,7 +145,6 @@ ctx.stroke();
           }
         });
       });
-
       // Draw grid pattern
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.05)';
       ctx.lineWidth = 0.5;
@@ -185,7 +173,6 @@ canvas.height = window.innerHeight;
     window.addEventListener('resize', handleResize);
     initParticles();
     animate();
-
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationRef.current) {
@@ -193,7 +180,6 @@ cancelAnimationFrame(animationRef.current);
       }
     };
   }, []);
-
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Animated Canvas Background */}
@@ -202,10 +188,9 @@ cancelAnimationFrame(animationRef.current);
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
           background:
-            'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)',
+            'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
         }}
       />
-
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>
         <motion.div
@@ -258,7 +243,6 @@ ease: 'linear',
           }}
         />
       </div>
-
       {/* Energy Field Effects */}
 <div className='fixed inset-0 pointer-events-none z-20'>
         <motion.div
@@ -284,7 +268,6 @@ ease: 'linear',
           }}
         />
       </div>
-
       {/* Content */}
 <div className='relative z-30'>{children}</div>
 
@@ -295,6 +278,5 @@ ease: 'linear',
       </div>
     </div>
   );
-};
-
+}
 export default UltraFuturisticBackground2026;

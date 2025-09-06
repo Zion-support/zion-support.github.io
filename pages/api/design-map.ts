@@ -11,29 +11,14 @@ export default async function handler(
 ) {
   try {
     const base = getZionDesignMap();
-    const [localTokens, cmsTokens] = await Promise.all([
-      buildTokenSet(),
-      fetchLovableTokens(),
-    ]);
-
-    const tokens = {
-      colors: {
-        ...localTokens.colors,
-        ...(cmsTokens?.colors || {})
-      },
-      typography: {
-        fontSizes: {
-          ...localTokens.typography.fontSizes,
-          ...(cmsTokens?.typography?.fontSizes || {}),
-        },
-      },
-    };
-
-    res
-      .status(200)
-      .json({ route: base.route, products: base.products, tokens });
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to build design map' });
+    const [localTokens, cmsTokens] = await Promise.all([;
+      buildTokenSet();
+      fetchLovableTokens()]);
+    const tokens = {;
+      colors: { ...localTokens.colors, ...(cmsTokens?.colors |{}) }
+      typography: {fontSizes: { ...localTokens.typography.fontSizes, ...(cmsTokens?.typography?.fontSizes |{}) }}}
+    res.status(200).json({ route: base.route, products: base.products, tokens });
+  } catch (e: any) {res.status(500).json({ error: e?.message |'Failed to build design map' });
   }
 
 }

@@ -30,8 +30,8 @@ export interface ComprehensiveInnovativeService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -39,7 +39,6 @@ export interface ComprehensiveInnovativeService {
   rating: number;
   reviews: number;
   benefits: string[];
-  capabilities: string[];
   marketAdvantage: string;
 
 const contact = {

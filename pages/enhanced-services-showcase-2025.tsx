@@ -1,50 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Monitor,
-  Cpu,
-  Zap,
-  Database,
-  Cloud,
-  Lock,
-  Code,
-  Sparkles,
-  Target,
-  Award,
-  Lightbulb,;
-} from 'lucide-react';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { Search, Star, Users, TrendingUp;
+  DollarSign, Clock, CheckCircle, ArrowRight;
+  Rocket, Monitor, Cpu;
+  Zap, Database, Cloud, Lock, Code;
+  Sparkles, Target, Award, Lightbulb
+ } from 'lucide-react';
+import { innovative2025Services  } from '../data/innovative-2025-services';
+import { emergingTech2025Services  } from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
+export default function EnhancedServicesShowcase2025() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
 
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
-{
-      id: 'quantum',
-      name: 'Quantum Computing',
-      icon: '⚛️',
-      count: quantumCount,
-    },
+  const allServices = null;
+  return (
+    <EnhancedFuturisticBackground 
+      intensity="high" 
+      colorScheme="quantum"
+      particleCount={300}
+      animationSpeed={1.5}
     {
-      id: 'blockchain',
-      name: 'Blockchain & Web3',
-      icon: '⛓️',
-      count: blockchainCount,
-    },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },
-    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
+      id: 'blockchain'
+      name: 'Blockchain & Web3'
+      icon: '⛓️'
+      count: blockchainCount
+    }
+    { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount }
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount }
     {
       id: 'security',
       name: 'Cybersecurity',
@@ -72,44 +58,41 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     const parsePriceToNumber = (price: string | number): number => {
-      if (typeof price === 'number') return price;
+      if (typeof price === 'number') return price
       if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
 return isNaN(parsed) ? 0 : parsed;
       }
       return 0;
-    };
-
+    }
     let filtered = allServices.filter(service => {
       const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
-
       const matchesCategory =
-        selectedCategory === 'all' ||
-        (selectedCategory === 'ai' && service.category.includes('AI')) ||
+        selectedCategory === 'all' |
+        (selectedCategory === 'ai' && service.category.includes('AI')) |
         (selectedCategory === 'quantum' &&
-          service.category.includes('Quantum')) ||
+          service.category.includes('Quantum')) |
         (selectedCategory === 'blockchain' &&
-          service.category.includes('Blockchain')) ||
-        (selectedCategory === 'iot' && service.category.includes('IoT')) ||
-        (selectedCategory === 'space' && service.category.includes('Space')) ||
+          service.category.includes('Blockchain')) |
+        (selectedCategory === 'iot' && service.category.includes('IoT')) |
+        (selectedCategory === 'space' && service.category.includes('Space')) |
         (selectedCategory === 'security' &&
-          (service.category.includes('Security') ||
+          (service.category.includes('Security') |
             service.category.includes('Cybersecurity')));
-
       const matchesPrice =
-        selectedPriceRange === 'all' ||
+        selectedPriceRange === 'all' |
         (selectedPriceRange === 'low' &&
-          parsePriceToNumber(service.price) < 2000) ||
+          parsePriceToNumber(service.price) < 2000) |
         (selectedPriceRange === 'medium' &&
           parsePriceToNumber(service.price) >= 2000 &&
-          parsePriceToNumber(service.price) < 8000) ||
+          parsePriceToNumber(service.price) < 8000) |
         (selectedPriceRange === 'high' &&
           parsePriceToNumber(service.price) >= 8000 &&
-          parsePriceToNumber(service.price) < 20000) ||
+          parsePriceToNumber(service.price) < 20000) |
         (selectedPriceRange === 'premium' &&
           parsePriceToNumber(service.price) >= 20000);
 
@@ -142,9 +125,9 @@ filtered.sort((a, b) => a.name.localeCompare(b.name));
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -152,10 +135,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
 duration: 0.5,
       },
@@ -197,7 +180,6 @@ duration: 0.5,
             href='https://ziontechgroup.com/enhanced-services-showcase-2025'
           />
         </Head>
-
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -221,7 +203,6 @@ duration: 0.5,
                 Discover our cutting-edge solutions that are transforming
                 industries and driving the future of technology
               </p>
-
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
@@ -252,7 +233,6 @@ duration: 0.5,
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filters */}
 <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -269,7 +249,6 @@ duration: 0.5,
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                   />
                 </div>
-
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
@@ -282,7 +261,6 @@ onChange={e => setSelectedCategory(e.target.value)}
                     </option>
                   ))}
                 </select>
-
                 {/* Price Range Filter */}
                 <select
                   value={selectedPriceRange}
@@ -295,7 +273,6 @@ onChange={e => setSelectedPriceRange(e.target.value)}
                     </option>
                   ))}
                 </select>
-
                 {/* Sort Options */}
                 <select
                   value={sortBy}
@@ -312,7 +289,6 @@ onChange={e => setSortBy(e.target.value)}
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
 <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -340,7 +316,6 @@ onChange={e => setSortBy(e.target.value)}
                         </div>
                       )}
                     </div>
-
                     {/* Service Title and Description */}
 <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>
                       {service.name}
@@ -348,7 +323,6 @@ onChange={e => setSortBy(e.target.value)}
                     <p className='text-gray-300 text-sm mb-4 line-clamp-2'>
                       {service.description}
                     </p>
-
                     {/* Price and Customer Count */}
 <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
@@ -362,7 +336,6 @@ onChange={e => setSortBy(e.target.value)}
                         <span>{service.customers}</span>
                       </div>
                     </div>
-
                     {/* Key Features */}
 <div className='mb-6'>
                       <div className='text-sm text-gray-400 mb-2'>
@@ -380,7 +353,6 @@ onChange={e => setSortBy(e.target.value)}
                         ))}
                       </ul>
                     </div>
-
                     {/* Market Position */}
 <div className='mb-6 p-3 bg-gray-700/40 rounded-lg'>
                       <div className='text-xs text-gray-400 mb-1'>
@@ -390,7 +362,6 @@ onChange={e => setSortBy(e.target.value)}
                         {service.marketPosition}
                       </div>
                     </div>
-
                     {/* ROI and Setup Time */}
 <div className='flex items-center justify-between mb-6 text-sm'>
                       <div className='flex items-center space-x-1 text-green-400'>
@@ -402,7 +373,6 @@ onChange={e => setSortBy(e.target.value)}
                         <span>{service.setupTime}</span>
                       </div>
                     </div>
-
                     {/* Action Buttons */}
 <div className='flex gap-3'>
                       <a
@@ -421,7 +391,6 @@ onChange={e => setSortBy(e.target.value)}
                         Contact Us
                       </a>
                     </div>
-
                     {/* Contact Information */}
 <div className='mt-4 pt-4 border-t border-gray-700'>
                       <div className='text-xs text-gray-400 mb-2'>
@@ -437,7 +406,6 @@ onChange={e => setSortBy(e.target.value)}
                 ))}
               </AnimatePresence>
             </motion.div>
-
             {/* No Results Message */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -456,7 +424,6 @@ animate={{ opacity: 1 }}
             )}
           </div>
         </section>
-
         {/* Call to Action */}
 <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -472,7 +439,6 @@ animate={{ opacity: 1 }}
                 Join thousands of companies achieving breakthrough results with
                 our revolutionary services
               </p>
-
               {/* Contact Information */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3'>
@@ -498,7 +464,6 @@ animate={{ opacity: 1 }}
                   </span>
                 </div>
               </div>
-
               {/* Action Buttons */}
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a

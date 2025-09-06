@@ -105,10 +105,12 @@ export function getAllTransactions() {
   return tokenStore.getTransactions();
 
 export function getConfig() {
-  return tokenStore.getConfig();
-
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
-): void {
+  return {
+    tokenName: 'Zion Token',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000
+  };
+}
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });

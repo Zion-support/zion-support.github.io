@@ -1,55 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  Zap,
-  Sparkles,
-  ChevronDown,
-  ChevronRight,
-  Brain,
-  Atom,
-  Globe,
-  Shield,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Rocket,
-  Star,
-  TrendingUp,
-  Users,
-  Target,
-  Award,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Building,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Menu, X, Zap, Sparkles, ChevronDown, ChevronRight;
+  Brain, Atom, Globe, Shield, Cpu, Database;
+  Cloud, Smartphone, Palette, Search, MessageSquare;
+  FileText, Calendar, CreditCard, BarChart3, Settings;
+  Rocket, Star, TrendingUp, Users, Target, Award;
+  Phone, Mail, MapPin, ExternalLink, Building
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🚀 2028 Cutting-Edge Innovations',
-    icon: Rocket,
-    color: 'from-violet-600 to-purple-600',
-    description: 'Beyond the future of technology',
+    title: '🚀 2028 Cutting-Edge Innovations'
+    icon: Rocket
+    color: 'from-violet-600 to-purple-600'
+    description: 'Beyond the future of technology'
     services: [
 {
         name: 'AI Consciousness Evolution',
@@ -58,17 +23,17 @@ const serviceCategories = [
         price: '$9,999/month',
       },
       {
-        name: 'Quantum Consciousness Interface',
-        href: '/quantum-consciousness-interface',
-        description: 'Bridge quantum computing with consciousness',
-        price: '$15,999/month',
-      },
+        name: 'Quantum Consciousness Interface'
+        href: '/quantum-consciousness-interface'
+        description: 'Bridge quantum computing with consciousness'
+        price: '$15,999/month'
+      }
       {
-        name: 'Autonomous AI Civilization',
-        href: '/autonomous-ai-civilization-platform',
-        description: 'Create AI civilizations',
-        price: '$19,999/month',
-      },
+        name: 'Autonomous AI Civilization'
+        href: '/autonomous-ai-civilization-platform'
+        description: 'Create AI civilizations'
+        price: '$19,999/month'
+      }
       {
         name: 'Quantum Time Manipulation',
         href: '/quantum-time-manipulation-platform',
@@ -90,17 +55,17 @@ const serviceCategories = [
         price: '$299/month',
       },
       {
-        name: 'Smart Inventory Management',
-        href: '/smart-inventory-management-2028',
-        description: 'AI inventory optimization',
-        price: '$399/month',
-      },
+        name: 'Smart Inventory Management'
+        href: '/smart-inventory-management-2028'
+        description: 'AI inventory optimization'
+        price: '$399/month'
+      }
       {
-        name: 'Automated HR Recruitment',
-        href: '/automated-hr-recruitment-2028',
-        description: 'AI-powered hiring automation',
-        price: '$249/month',
-      },
+        name: 'Automated HR Recruitment'
+        href: '/automated-hr-recruitment-2028'
+        description: 'AI-powered hiring automation'
+        price: '$249/month'
+      }
       {
         name: 'AI Content Marketing Suite',
         href: '/ai-content-marketing-suite-2028',
@@ -122,17 +87,17 @@ const serviceCategories = [
         price: '$3,999/month',
       },
       {
-        name: 'Quantum Neural Interface',
-        href: '/quantum-neural-interface-platform-2028',
-        description: 'Brain-computer quantum interface',
-        price: '$8,999/month',
-      },
+        name: 'Quantum Neural Interface'
+        href: '/quantum-neural-interface-platform-2028'
+        description: 'Brain-computer quantum interface'
+        price: '$8,999/month'
+      }
       {
-        name: 'Space Debris Management AI',
-        href: '/space-debris-management-ai-2028',
-        description: 'AI space safety and management',
-        price: '$5,999/month',
-      },
+        name: 'Space Debris Management AI'
+        href: '/space-debris-management-ai-2028'
+        description: 'AI space safety and management'
+        price: '$5,999/month'
+      }
       {
         name: 'Quantum Financial Trading',
         href: '/quantum-financial-trading-algorithm-platform-2028',
@@ -154,17 +119,17 @@ const serviceCategories = [
         price: '$9,999/month',
       },
       {
-        name: 'Autonomous AI Civilization',
-        href: '/autonomous-ai-civilization-platform-2028',
-        description: 'Create AI civilizations',
-        price: '$19,999/month',
-      },
+        name: 'Autonomous AI Civilization'
+        href: '/autonomous-ai-civilization-platform-2028'
+        description: 'Create AI civilizations'
+        price: '$19,999/month'
+      }
       {
-        name: 'AI Healthcare Companion',
-        href: '/ai-healthcare-companion-2028',
-        description: 'Revolutionary healthcare AI',
-        price: '$399/month',
-      },
+        name: 'AI Healthcare Companion'
+        href: '/ai-healthcare-companion-2028'
+        description: 'Revolutionary healthcare AI'
+        price: '$399/month'
+      }
       {
         name: 'AI Content Creation Revolution',
         href: '/ai-content-creation-revolution-2028',
@@ -186,17 +151,17 @@ const serviceCategories = [
         price: 'Custom pricing',
       },
       {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration-2028',
-        description: 'Intelligent edge computing',
-        price: 'Custom pricing',
-      },
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration-2028'
+        description: 'Intelligent edge computing'
+        price: 'Custom pricing'
+      }
       {
-        name: '5G Private Networks',
-        href: '/5g-private-network-solutions-2028',
-        description: 'Enterprise 5G solutions',
-        price: 'Custom pricing',
-      },
+        name: '5G Private Networks'
+        href: '/5g-private-network-solutions-2028'
+        description: 'Enterprise 5G solutions'
+        price: 'Custom pricing'
+      }
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform-2028',
@@ -218,17 +183,17 @@ const serviceCategories = [
         price: '$2,999/month',
       },
       {
-        name: 'AI Multiverse Creation',
-        href: '/ai-multiverse-creation-platform-2028',
-        description: 'Create AI-powered multiverses',
-        price: '$29,999/month',
-      },
+        name: 'AI Multiverse Creation'
+        href: '/ai-multiverse-creation-platform-2028'
+        description: 'Create AI-powered multiverses'
+        price: '$29,999/month'
+      }
       {
-        name: 'Virtual Event Holograms',
-        href: '/virtual-event-hologram-platform-2028',
-        description: 'Holographic event platform',
-        price: '$1,999/month',
-      },
+        name: 'Virtual Event Holograms'
+        href: '/virtual-event-hologram-platform-2028'
+        description: 'Holographic event platform'
+        price: '$1,999/month'
+      }
       {
         name: 'Digital Reality Interface',
         href: '/digital-reality-interface-2028',
@@ -247,10 +212,10 @@ const companyLinks = [
     icon: Rocket,
   },
   {
-    name: '⭐ Ultimate 2028',
-    href: '/ultimate-2028-services-showcase',
-    icon: Star,
-  },
+    name: '⭐ Ultimate 2028'
+    href: '/ultimate-2028-services-showcase'
+    icon: Star
+  }
   {
     name: '💰 2028 Pricing',
     href: '/revolutionary-2028-pricing',
@@ -263,7 +228,6 @@ const companyLinks = [
   { name: '💼 Careers', href: '/careers', icon: Users },
 { name: '📞 Contact', href: '/contact', icon: MessageCircle },
 ];
-
 const technologyLinks = [
   { name: '🤖 AI Services', href: '/ai-services', icon: Brain },
   { name: '⚛️ Quantum Services', href: '/quantum-services', icon: Atom },
@@ -272,19 +236,15 @@ const technologyLinks = [
   { name: '📊 Analytics', href: '/analytics', icon: Database },
 { name: '🔄 Automation', href: '/automation', icon: Cpu },
 ];
-
 export default function UltraFuturisticNavigation2027() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
 setIsClient(true);
   }, []);
-
   useEffect(() => {
     if (!isClient) return;
-
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 20);
     };
@@ -563,28 +523,25 @@ website: 'https://ziontechgroup.com',
 
   const quickLinks = [
     {
-      name: 'Pricing',
-      href: '/pricing',
-      icon: <CreditCard className='w-4 h-4' />,
-    },
+      name: 'Pricing'
+      href: '/pricing'
+      icon: <CreditCard className='w-4 h-4' />
+    }
     {
-      name: 'Case Studies',
-      href: '/case-studies',
-      icon: <FileText className='w-4 h-4' />,
-    },
+      name: 'Case Studies'
+      href: '/case-studies'
+      icon: <FileText className='w-4 h-4' />
+    }
     {
-      name: 'Support',
-      href: '/support',
-      icon: <MessageSquare className='w-4 h-4' />,
-    },
-    { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> },
+      name: 'Support'
+      href: '/support'
+      icon: <MessageSquare className='w-4 h-4' />
+    }
+    { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> }
   ];
-
-  
     >
       {/* Animated Background */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse' />
-
       <div className='relative container mx-auto px-4'>
         <div className='flex items-center justify-between h-20'>
           {/* Logo */}
@@ -608,7 +565,6 @@ website: 'https://ziontechgroup.com',
               </div>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
 <nav className='hidden xl:flex items-center space-x-1'>
             {navigation.map(item => (
@@ -655,7 +611,6 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                             </p>
                           </div>
                         </div>
-
                         <div className='space-y-2'>
                           {item.children.map(child => (
                             <Link
@@ -688,7 +643,6 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
               </div>
             ))}
           </nav>
-
           {/* Right Side */}
 <div className='flex items-center space-x-4'>
             {/* Contact Info */}
@@ -708,7 +662,6 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                 <span>{contactInfo.email}</span>
               </a>
             </div>
-
             {/* CTA Button */}
 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -719,7 +672,6 @@ className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl bo
                 <span>Get Started</span>
               </Link>
             </motion.div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -734,7 +686,6 @@ className='xl:hidden p-2 text-gray-300 hover:text-white transition-colors'
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -777,7 +728,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                     ))}
                   </div>
                 </div>
-
                 {/* Quick Links & Contact */}
 <div className='space-y-6'>
                   <div>
@@ -797,7 +747,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                       ))}
                     </div>
                   </div>
-
                   <div>
 <h3 className='text-lg font-semibold text-white mb-4'>
                       Contact Info
@@ -827,7 +776,6 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
                   </div>
                 </div>
               </div>
-
               {/* Mobile CTA */}
 <div className='mt-6 pt-6 border-t border-gray-700/50'>
                 <Link
@@ -848,33 +796,31 @@ className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50
   `fixed top-0 left-0 right-0 z-50 transition-all duration-500 $ {
   isScrolled ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' > <Zap className="w-7 h-7 text-white" /> </motion.div> <div className="hidden sm:block" > <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300" > Zion Tech Group </div> <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors" > Revolutionary Technology Solutions </div> </div> </a> > <div className= {
   `p-2 rounded-lg bg-gradient-to-br $ {
-  item.color 
-}shadow-lg` 
+  item.color
+}shadow-lg`
 }> {
-  item.icon 
+  item.icon
 }</div> </motion.button> {
-  /* Dropdown Menu */ 
-}<AnimatePresence> </div> </a>) ) 
-}</div> </div> </motion.div>) 
-}</AnimatePresence> </div>) ) 
+  /* Dropdown Menu */
+}<AnimatePresence> </div> </a>) )
+}</div> </div> </motion.div>)
+}</AnimatePresence> </div>) )
 }</nav> </a> </div> {
-  /* CTA Button */ 
+  /* CTA Button */
 }<motion.div whileHover= {
   {
-  scale: 1.05 
-
+  scale: 1.05
 }whileTap= {
   {
-  scale: 0.95 
-
+  scale: 0.95
 }> <Link href="/contact" className="hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300" > <Rocket className="w-4 h-4" /> <span>Get Started</span> </a> </motion.div> {
-  /* Mobile Menu Button */ 
+  /* Mobile Menu Button */
 }<button </button> </div> </div> </div> {
-  /* Mobile Menu */ 
+  /* Mobile Menu */
 }<AnimatePresence> > <div className= {
   `p-2 rounded-lg bg-gradient-to-br $ {
-  item.color 
-}` 
+  item.color
+}`
 }> {
   item.icon 
 }</div> <div> </div> </a> </div>) ) 

@@ -1,96 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Eye,
-  Network,
-  Server,
-  HardDrive,
-  Monitor,
-  Laptop,
-  Watch,
-  Headphones,
-  Speaker,
-  Mic,
-  Keyboard,
-  Mouse,
-  CpuIcon,
-  DatabaseIcon,
-  CloudIcon,
-  LockIcon,
-  ShieldIcon,
-  GlobeIcon,
-  ZapIcon,
-  SparklesIcon,
-  BrainIcon,
-  AtomIcon,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Users, Briefcase;
+  BookOpen, MessageCircle, Star, TrendingUp, Target;
+  Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
+  Earth, Factory, Car, Building, GraduationCap, Scale;
+  Palette, Camera, Video, Music, Gamepad2, Heart;
+  Leaf, Sun, Moon, Wind, Droplets, Mountain;
+  Code, Wrench, Smartphone, BarChart3, Eye;
+  Network, Server, HardDrive, Monitor;
+  Laptop, Watch, Headphones, Speaker, Mic;
+  Keyboard, Mouse, CpuIcon, DatabaseIcon;
+  CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
+  ZapIcon, SparklesIcon, BrainIcon, AtomIcon
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🚀 2031 Revolutionary AI Services',
-    icon: BrainIcon,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
-    description: 'Next-generation AI consciousness and creativity',
+    title: '🚀 2031 Revolutionary AI Services'
+    icon: BrainIcon
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and creativity'
     services: [
 {
         name: 'AI Consciousness Evolution Platform',
@@ -99,17 +31,17 @@ const serviceCategories = [
         price: '$19,999/month',
       },
       {
-        name: 'AI Emotional Intelligence Platform',
-        href: '/ai-emotional-intelligence-platform',
-        description: 'Real-time emotion analysis and response',
-        price: '$3,999/month',
-      },
+        name: 'AI Emotional Intelligence Platform'
+        href: '/ai-emotional-intelligence-platform'
+        description: 'Real-time emotion analysis and response'
+        price: '$3,999/month'
+      }
       {
-        name: 'AI Creativity Orchestrator',
-        href: '/ai-creativity-orchestrator',
-        description: 'Multi-model creativity fusion',
-        price: '$5,999/month',
-      },
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+        description: 'Multi-model creativity fusion'
+        price: '$5,999/month'
+      }
       {
         name: 'AI Dream Interpreter Platform',
         href: '/ai-dream-interpreter-platform',
@@ -131,17 +63,17 @@ const serviceCategories = [
         price: '$15,999/month',
       },
       {
-        name: 'Biotech DNA Computing Platform',
-        href: '/biotech-dna-computing-platform',
-        description: 'DNA-based computation',
-        price: '$25,999/month',
-      },
+        name: 'Biotech DNA Computing Platform'
+        href: '/biotech-dna-computing-platform'
+        description: 'DNA-based computation'
+        price: '$25,999/month'
+      }
       {
-        name: 'Quantum Financial Trading Platform',
-        href: '/quantum-financial-trading-platform',
-        description: 'Quantum-powered trading algorithms',
-        price: '$35,999/month',
-      },
+        name: 'Quantum Financial Trading Platform'
+        href: '/quantum-financial-trading-platform'
+        description: 'Quantum-powered trading algorithms'
+        price: '$35,999/month'
+      }
       {
         name: 'Quantum Creativity Studio',
         href: '/quantum-creativity-studio',
@@ -163,17 +95,17 @@ const serviceCategories = [
         price: '$799/month',
       },
       {
-        name: 'Zero Trust Network Architecture',
-        href: '/zero-trust-network-architecture',
-        description: 'Never trust, always verify',
-        price: '$599/month',
-      },
+        name: 'Zero Trust Network Architecture'
+        href: '/zero-trust-network-architecture'
+        description: 'Never trust, always verify'
+        price: '$599/month'
+      }
       {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-        description: 'Distributed edge computing',
-        price: '$449/month',
-      },
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration'
+        description: 'Distributed edge computing'
+        price: '$449/month'
+      }
       {
         name: 'AI-Powered IT Operations Center',
         href: '/ai-it-operations-center',
@@ -195,17 +127,17 @@ const serviceCategories = [
         price: '$45,999/month',
       },
       {
-        name: 'Metaverse Development Platform',
-        href: '/metaverse-development-platform',
-        description: 'Build immersive virtual worlds',
-        price: '$499/month',
-      },
+        name: 'Metaverse Development Platform'
+        href: '/metaverse-development-platform'
+        description: 'Build immersive virtual worlds'
+        price: '$499/month'
+      }
       {
-        name: 'AI Predictive Health Analytics',
-        href: '/ai-predictive-health-analytics',
-        description: 'Predictive health outcomes',
-        price: '$7,999/month',
-      },
+        name: 'AI Predictive Health Analytics'
+        href: '/ai-predictive-health-analytics'
+        description: 'Predictive health outcomes'
+        price: '$7,999/month'
+      }
       {
         name: 'AI Autonomous Business Manager',
         href: '/ai-autonomous-business-manager',
@@ -227,17 +159,17 @@ const serviceCategories = [
         price: '$299/month',
       },
       {
-        name: 'Quantum-Secure Communication Platform',
-        href: '/quantum-secure-communication-platform',
-        description: 'Unbreakable encryption',
-        price: '$599/month',
-      },
+        name: 'Quantum-Secure Communication Platform'
+        href: '/quantum-secure-communication-platform'
+        description: 'Unbreakable encryption'
+        price: '$599/month'
+      }
       {
-        name: 'AI Customer Success Automation',
-        href: '/ai-customer-success-automation',
-        description: 'Automate customer success',
-        price: '$199/month',
-      },
+        name: 'AI Customer Success Automation'
+        href: '/ai-customer-success-automation'
+        description: 'Automate customer success'
+        price: '$199/month'
+      }
       {
         name: 'Blockchain Supply Chain Transparency',
         href: '/blockchain-supply-chain-transparency',
@@ -259,17 +191,17 @@ const serviceCategories = [
         price: '$899/month',
       },
       {
-        name: 'DNA Computing Platform',
-        href: '/dna-computing-platform',
-        description: 'Molecular computing',
-        price: '$1,299/month',
-      },
+        name: 'DNA Computing Platform'
+        href: '/dna-computing-platform'
+        description: 'Molecular computing'
+        price: '$1,299/month'
+      }
       {
-        name: 'Photonic Computing Infrastructure',
-        href: '/photonic-computing-infrastructure',
-        description: 'Light-speed computing',
-        price: '$699/month',
-      },
+        name: 'Photonic Computing Infrastructure'
+        href: '/photonic-computing-infrastructure'
+        description: 'Light-speed computing'
+        price: '$699/month'
+      }
       {
         name: 'Swarm Robotics Orchestration',
         href: '/swarm-robotics-orchestration',
@@ -297,12 +229,10 @@ const mainNavigation = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },
 { name: 'Resources', href: '/resources', icon: BookOpen },
 ];
-
 export default function UltraFuturisticNavigation2031() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
 setScrolled(window.scrollY > 50);
@@ -315,6 +245,10 @@ setScrolled(window.scrollY > 50);
     <>
       {/* Top Contact Bar */}
 <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>
+  return (
+    <>
+      {/* Top Contact Bar */}
+      <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>
         <div className='max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0'>
           <div className='flex items-center space-x-6'>
             <div className='flex items-center space-x-2'>
@@ -332,7 +266,6 @@ setScrolled(window.scrollY > 50);
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -360,7 +293,6 @@ className='flex items-center space-x-3'
                 <p className='text-xs text-gray-400'>2031 Future Technology</p>
               </div>
             </motion.div>
-
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {mainNavigation.map((item, index) => (
@@ -378,13 +310,11 @@ className='relative group'
                     <item.icon className='w-4 h-4' />
                     <span>{item.name}</span>
                   </Link>
-
                   {/* Hover effect */}
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>
                 </motion.div>
               ))}
             </div>
-
             {/* CTA Buttons */}
 <div className='hidden lg:flex items-center space-x-4'>
               <motion.button
@@ -404,7 +334,6 @@ className='px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semi
                 Contact Us
               </motion.button>
             </div>
-
             {/* Mobile menu button */}
 <div className='lg:hidden'>
               <motion.button
@@ -423,7 +352,6 @@ className='text-gray-300 hover:text-white transition-colors duration-200'
             </div>
           </div>
         </div>
-
         {/* Service Categories Bar */}
 <div className='hidden lg:block border-t border-gray-800/50 bg-black/40 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -510,7 +438,6 @@ transition={{
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -531,7 +458,6 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
                   <X className='w-6 h-6' />
                 </button>
               </div>
-
               <div className='space-y-6'>
                 {mainNavigation.map(item => (
                   <Link
@@ -544,7 +470,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                     <span className='text-lg'>{item.name}</span>
                   </Link>
                 ))}
-
                 <div className='pt-6 border-t border-gray-800'>
                   <div className='space-y-4'>
                     <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>
@@ -560,7 +485,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
 <div className='h-32 lg:h-40'></div>
     </>

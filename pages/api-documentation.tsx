@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function APIDocumentationPage() {
@@ -8,7 +8,7 @@ export default function APIDocumentationPage() {
         <title>API Documentation | Zion Tech Group</title>
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/api-documentation'
+          href='https: //ziontechgroup.com/api-documentation'
         />
       </Head>
       <section className='container mx-auto px-4 py-24'>

@@ -1,29 +1,24 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import {
-  Code,
-  GitBranch,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Cpu,
-  Globe,;
-} from 'lucide-react';
-
+import { Code;
+  GitBranch;
+  Database;
+  Cloud;
+  Shield;
+  Zap;
+  Star;
+  ExternalLink;
+  CheckCircle;
+  TrendingUp;
+  Cpu;
+  Globe
+ } from 'lucide-react';
 export default function DeveloperToolsPage() {
-  const developerTools = [
-    {
-icon: <Code className='w-8 h-8 text-white' />,
-      title: 'GitHub Copilot',
+  const developerTools = null;
       description:
-        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
+        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
       features: [
         'Intelligent code completion',
         'Multi-language support',
@@ -146,7 +141,6 @@ category: 'Security',
 category: 'API Development',
     },
   ];
-
   const devMarketStats = [
     {
       title: 'Dev Tools Market',
@@ -173,7 +167,6 @@ description: 'Cloud-based development platforms',
 description: 'Average productivity improvement',
     },
   ];
-
   const devCategories = [
     {
       name: 'Code Generation',
@@ -212,7 +205,6 @@ avgPrice: '$62/month',
       avgPrice: '$55/month',
     },
   ];
-
   const devWorkflow = [
     {
       phase: 'Development',
@@ -235,7 +227,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
       description: 'Deploy and host applications',
     },
   ];
-
   return (
     <>
       <Head>
@@ -257,13 +248,11 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -279,20 +268,17 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </p>
         </div>
       </section>
-
       {/* Developer Market Statistics */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              Developer Tools Market Insights
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the developer tools landscape helps you make
               informed decisions about your development stack.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
             {devMarketStats.map((stat, index) => (
               <Card
@@ -317,7 +303,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
-
       {/* Developer Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -326,7 +311,7 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
               Curated Developer Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Each tool has been carefully selected based on performance,
+              Each tool has been carefully selected based on performance
               reliability, and real-world developer usage.
             </p>
           </div>
@@ -360,7 +345,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />
                   </div>
-
                   <div className='flex-1'>
                     <div className='flex items-center justify-between mb-2'>
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -370,11 +354,9 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                         {tool.category}
                       </span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
-
                     <div className='mb-6'>
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
@@ -393,7 +375,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
                         </span>
                       </div>
                     </div>
-
                     <ul className='space-y-2 mb-6'>
                       {tool.features.map((feature, featureIndex) => (
                         <li
@@ -430,7 +411,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
-
       {/* Developer Workflow */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -443,7 +423,6 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
               that work together seamlessly.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {devWorkflow.map((phase, index) => (
               <Card
@@ -475,20 +454,17 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
-
       {/* Tool Categories */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              Developer Tool Categories
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of developer tools helps you
               build a comprehensive development stack.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {devCategories.map((category, index) => (
               <Card
@@ -516,12 +492,10 @@ tools: ['GitHub Copilot', 'VS Code', 'Git'],
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-            Ready to Level Up Your Development?
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one tool or build a complete development stack. Each tool

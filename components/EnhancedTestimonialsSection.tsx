@@ -1,13 +1,13 @@
 import React from 'react';
+import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
 import {
-  Star,
-  Quote,
-  Users,
-  Award,
-  TrendingUp,
-  CheckCircle,;
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
 } from 'lucide-react';
-
 interface Testimonial {
   id: string;
   name: string;
@@ -16,8 +16,19 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-  category: string;
+  category: string
+}
 
+const EnhancedTestimonialsSection: React.FC;
+  category: string;  id: string
+  name: string
+  title: string
+  company: string
+  content: string
+  rating: number
+  avatar: string
+  category: string
+}
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
@@ -94,7 +105,6 @@ content:
     { number: '99.9%', label: 'Client Satisfaction', icon: Award },
 { number: '4.9/5', label: 'Average Rating', icon: Star },
   ];
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -113,7 +123,6 @@ content:
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />
       </div>
-
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -127,7 +136,6 @@ content:
             their business with cutting-edge technology solutions
           </p>
         </div>
-
         {/* Stats Section */}
 <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'>
           {stats.map((stat, index) => (
@@ -142,7 +150,6 @@ content:
             </div>
           ))}
         </div>
-
         {/* Testimonials Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
@@ -154,19 +161,16 @@ content:
               <div className='absolute top-4 right-4 text-blue-400/20 group-hover:text-blue-400/40 transition-colors duration-300'>
                 <Quote className='w-8 h-8' />
               </div>
-
               {/* Content */}
               <div className='p-8'>
                 {/* Rating */}
                 <div className='flex items-center gap-1 mb-4'>
                   {renderStars(testimonial.rating)}
                 </div>
-
                 {/* Testimonial Text */}
 <p className='text-white/80 text-sm leading-relaxed mb-6'>
                   "{testimonial.content}"
                 </p>
-
                 {/* Author Info */}
 <div className='flex items-center gap-4'>
                   <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold text-sm'>
@@ -184,7 +188,6 @@ content:
                     </div>
                   </div>
                 </div>
-
                 {/* Category Badge */}
 <div className='mt-4'>
                   <span className='inline-block px-3 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full border border-blue-500/30'>
@@ -192,13 +195,11 @@ content:
                   </span>
                 </div>
               </div>
-
               {/* Hover Effect */}
 <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
 <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -226,13 +227,17 @@ href='tel:+13024640950'
             </div>
           </div>
         </div>
-
         {/* Trust Indicators */}
 <div className='mt-16 text-center'>
           <div className='inline-flex items-center gap-8 text-white/60 text-sm'>
             <div className='flex items-center gap-2'>
               <CheckCircle className='w-4 h-4 text-green-400' />
               <span>Enterprise-grade security</span>
+            </div>              <span>Enterprise-grade security</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-4 h-4 text-blue-400" />
+              <span>Proven ROI</span>
             </div>
             <div className='flex items-center gap-2'>
               <TrendingUp className='w-4 h-4 text-blue-400' />

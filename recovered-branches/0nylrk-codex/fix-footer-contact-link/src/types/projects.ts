@@ -1,3 +1,7 @@
+
+<<<<<<< HEAD
+export type ProjectStatus = any;
+=======
 export type ProjectStatus =
   | 'offer_sent'
   | 'offer_accepted'
@@ -5,7 +9,6 @@ export type ProjectStatus =
   | 'in_progress'
   | 'completed'
   | 'canceled';
-
 export interface Project {
   id: string;
   client_id: string;
@@ -19,19 +22,19 @@ export interface Project {
   created_at: string;
   updated_at: string;
   job?: {
-    title: string;
-    description: string;
-  };
+    title: string
+    description: string
+  }
   talent_profile?: {
     full_name: string;
-    professional_title?: string;
-    profile_picture_url?: string;
-  };
+    professional_title?: string
+    profile_picture_url?: string
+  }
   client_profile?: {
-    display_name: string;
-    avatar_url?: string;
-  };
-
+    display_name: string
+    avatar_url?: string
+  }
+}
 export interface ProjectNote {
   id: string;
   project_id: string;
@@ -39,6 +42,8 @@ export interface ProjectNote {
   content: string;
   created_at: string;
   created_by_profile?: {
-    display_name: string;
-    avatar_url?: string;
-  };
+    display_name: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    avatar_url?: string
+  }
+}

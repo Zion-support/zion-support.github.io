@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { connectMetaMask, getAccounts } from '../../utils/wallet';
 
 export type RedemptionType =
-  | 'boost_profile'
-  | 'promote_listing'
-  | 'premium_support';
-
+  | "boost_profile"
+  | "promote_listing"
+  | "premium_support";
 export default function UseTokensModal({
-  isOpen,
-  onClose,
-  serviceId,
-  defaultType,
+  isOpen
+  onClose
+  serviceId
+  defaultType
 }: {
   isOpen: boolean;
   onClose: () => void;
@@ -19,24 +16,21 @@ export default function UseTokensModal({
 }) {
   const [account, setAccount] = useState<string | null>(null);
   const [type, setType] = useState<RedemptionType>(
-    defaultType ?? 'boost_profile'
+    defaultType ?? "boost_profile"
   );
   const [tokens, setTokens] = useState<number>(100);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const usdValue = (tokens * 0.01).toFixed(2);
-
   useEffect(() => {
     (async () => {
       const accs = await getAccounts();
 if (accs && accs.length > 0) setAccount(accs[0]);
     })();
   }, []);
-
   async function connect() {
     const accs = await connectMetaMask();
 if (accs && accs.length > 0) setAccount(accs[0]);
   }
-
   async function redeem() {
     setIsSubmitting(true);
     try {
@@ -53,9 +47,7 @@ body: JSON.stringify({ account, amount: tokens, type, serviceId }),
       setIsSubmitting(false);
     }
   }
-
   if (!isOpen) return null;
-
   return (
 <div className='fixed inset-0 z-[60] flex items-end sm:items-center justify-center'>
       <div className='absolute inset-0 bg-black/40' onClick={onClose} />
@@ -121,9 +113,9 @@ body: JSON.stringify({ account, amount: tokens, type, serviceId }),
             access premium support.
           </div>
           <button
-            disabled={!account || isSubmitting || tokens <= 0}
+            disabled={!account |isSubmitting |tokens <= 0}
             onClick={redeem}
-            className='enhanced-button enhanced-button-primary disabled:opacity-50'
+            className="enhanced-button enhanced-button-primary disabled: opacity-50"
           >
             Redeem
           </button>

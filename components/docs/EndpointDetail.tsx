@@ -1,13 +1,15 @@
-import React from 'react';
-import CodeSamples from './CodeSamples';
+import React from 'react',
+import CodeSamples from './CodeSamples',
 import TryItConsole from './TryItConsole';
 import { EndpointSpec } from '../../data/api-docs/types';
+export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
+  return (
+    <div className="space-y-4">
 export default function EndpointDetail({
-  endpoint,
+  endpoint
 }: {
   endpoint: EndpointSpec;
 }) {
-  return (
     <div className='space-y-4'>
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
@@ -28,24 +30,21 @@ export default function EndpointDetail({
           </span>
         </div>
       </div>
-
       <div>
 <div className='font-medium mb-2'>Code Examples</div>
         <CodeSamples samples={endpoint.samples} />
       </div>
-
       <div>
 <div className='font-medium mb-2'>Try It</div>
         <TryItConsole
           method={endpoint.method}
           path={endpoint.path}
           requiresAuth={
-            (endpoint.auth || []).includes('jwt') ||
-            (endpoint.auth || []).includes('wallet')
+            (endpoint.auth |[]).includes('jwt') |
+            (endpoint.auth |[]).includes('wallet')
           }
         />
       </div>
-
       {endpoint.rateLimits && endpoint.rateLimits.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Rate Limits</div>

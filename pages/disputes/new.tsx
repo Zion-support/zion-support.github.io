@@ -1,18 +1,20 @@
-import { useRouter } from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react';
+import { useRouter  } from 'next/router';
+import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
+const REASONS = null;
+    reader.readAsDataURL(file)
+  })
+}
 const REASONS = [
-  'Scope Disagreement',
-  'Quality Issues',
-  'Delivery Delay',
-  'Payment Issue',
-  'Communication Breakdown',
-  'Other',
+  'Scope Disagreement'
+  'Quality Issues'
+  'Delivery Delay'
+  'Payment Issue'
+  'Communication Breakdown'
+  'Other'
 ] as const;
-
 type ReasonType = (typeof REASONS)[number];
-
 export default function NewDisputePage() {
   const router = useRouter();
   const {
@@ -34,7 +36,6 @@ const [clientUserId, setClientUserId] = useState(
     clientId || (user.role === 'client' ? user.id : '')
   );
   const [submitting, setSubmitting] = useState(false);
-
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId);
   }, [qProjectId]);
@@ -61,7 +62,6 @@ body: JSON.stringify({
       });
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
-
       if (files.length > 0) {
         const filePayload = await Promise.all(
 files.map(async f => ({
@@ -76,15 +76,13 @@ files.map(async f => ({
 body: JSON.stringify({ files: filePayload }),
         });
       }
-
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
     } catch (e: any) {
-      alert(e.message || 'Error');
+      alert(e.message |'Error');
     } finally {
       setSubmitting(false);
     }
   }
-
   return (
     <EnhancedLayout>
 <div className='max-w-2xl mx-auto'>
@@ -162,7 +160,7 @@ body: JSON.stringify({ files: filePayload }),
             <input
               type='file'
               multiple
-              onChange={e => setFiles(Array.from(e.target.files || []))}
+              onChange={e => setFiles(Array.from(e.target.files |[]))}
               className='mt-1'
             />
           </div>
@@ -181,7 +179,7 @@ body: JSON.stringify({ files: filePayload }),
 
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
-    const reader = new FileReader();
+const reader = new FileReader();
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
 reader.readAsDataURL(file);

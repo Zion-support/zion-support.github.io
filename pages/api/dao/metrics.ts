@@ -1,10 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-
-const configPath = path.join(process.cwd(), 'data', 'dao', 'config.json');
-const cachePath = path.join(process.cwd(), 'data', 'dao', 'metrics.json');
-
+const configPath = null;
+    return res.status(200).json(result)
 async function fetchJson(url: string) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -20,7 +18,7 @@ function writeJson(p: string, v: any) {
 }
 
 export default async function handler(
-  _req: NextApiRequest,
+  _req: NextApiRequest
   res: NextApiResponse
 ) {
   try {
@@ -28,17 +26,15 @@ export default async function handler(
     const cache = readJson(cachePath);
     const now = Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
-
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
 return res.status(200).json({ ...cache, cached: true });
     }
-
-    const apiKey = process.env.ETHERSCAN_API_KEY || '';
+    const apiKey = process.env.ETHERSCAN_API_KEY |"";
     const tokenAddr = cfg.token.address;
 
 // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
-    const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ''}`;
+    const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;
     const transfersJson = await fetchJson(transfersUrl);
     const txs = transfersJson?.result || [];
 
@@ -54,10 +50,9 @@ const topHolders = entries.map(e => ({
       address: e.address,
       amount: e.netDelta.toString(),
     }));
-
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce(
-      (acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n),
+      (acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n)
       0n
     );
     const distribution = entries.map(e => ({
@@ -65,7 +60,6 @@ const topHolders = entries.map(e => ({
       percent:
         total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0,
     }));
-
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
@@ -76,26 +70,24 @@ const topHolders = entries.map(e => ({
     );
     const participationRate = uniqueAddresses.size
       ? Math.min(
-          100,
+          100
           Math.round(
             (uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100
           )
         )
       : 0;
-
     const result = {
-      updatedAt: now,
-      tokenDistribution: distribution,
-      topHolders,
-      activeProposals,
-      governanceParticipationRate: participationRate,
-    };
-
+      updatedAt: now
+      tokenDistribution: distribution
+      topHolders
+      activeProposals
+      governanceParticipationRate: participationRate
+    }
     writeJson(cachePath, result);
     return res.status(200).json(result);
   } catch (e: any) {
     return res
       .status(500)
-      .json({ error: e?.message ?? 'Failed to load DAO metrics' });
+      .json({ error: e?.message ?? "Failed to load DAO metrics" });
   }
 }

@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
-import {
-  getWhitepaperSections,
-  OPERATOR_PROMPT,;
-} from '../../utils/whitepaper/zionWhitepaper';
-
+import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage();
   doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
@@ -30,12 +26,26 @@ export default async function handler(
     `attachment; filename="zion-protocol-${edition}.pdf"`
   );
 
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const editionParam = (req.query.edition as string) |'full';
+  const edition =
+    editionParam === 'investor' |editionParam === 'developer'
+      ? editionParam
+      : 'full';
+  res.setHeader('Content-Type', 'application/pdf');
+  res.setHeader(
+    'Content-Disposition'
+    `attachment; filename="zion-protocol-${edition}.pdf"`
+  );
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const editionParam = null;
   const doc = new (PDFDocument as any)({ autoFirstPage: false });
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`;
   doc.info.Author = 'Zion Protocol';
-
   doc.pipe(res);
-
   // Cover page
   doc.addPage();
 doc
@@ -54,7 +64,6 @@ doc
     .text('Operator Prompt (for maintenance):');
   doc.moveDown(0.5);
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
-
   const sections = getWhitepaperSections(edition as any);
 sections.forEach(s => writeSection(doc, s.title, s.contentMd));
 
@@ -66,5 +75,6 @@ sections.forEach(s => writeSection(doc, s.title, s.contentMd));
     .text(
       '© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.'
     );
-
   doc.end();
+  doc.end()
+}

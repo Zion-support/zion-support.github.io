@@ -1,8 +1,3 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   Star,
   TrendingUp,
   Users,
@@ -44,11 +39,10 @@ import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-ser
 ];
 
 export default function InnovativeMicroSaasShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState('grid');
-  const [sortBy, setSortBy] = useState('popularity');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [viewMode, setViewMode] = useState('grid')
+  const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
 ...innovativeRealMicroSaasServices2025,
@@ -74,19 +68,16 @@ const matchesCategory =
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
 return (
           parseFloat(a.price.replace('$', '')) -
           parseFloat(b.price.replace('$', ''))
         );
       case 'price-high':
-        return (
-          parseFloat(b.price.replace('$', '')) -
-          parseFloat(a.price.replace('$', ''))
-        );
+        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''))
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating
       case 'newest':
         return (
           new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
@@ -94,8 +85,7 @@ return (
       default:
         return 0;
     }
-  });
-
+  })
   return (
     <Layout>
       <Head>
@@ -153,7 +143,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
           </motion.div>
         </div>
       </section>
-
       {/* Contact Bar */}
 <section className='bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 py-4'>
         <div className='container mx-auto px-4'>
@@ -175,7 +164,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
 <section className='py-8 bg-black/50 backdrop-blur-sm border-b border-white/10'>
         <div className='container mx-auto px-4'>
@@ -191,7 +179,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                 className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
               />
             </div>
-
             {/* Category Filter */}
 <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
@@ -209,7 +196,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                 </button>
               ))}
             </div>
-
             {/* View Mode and Sort */}
 <div className='flex items-center space-x-4'>
               <div className='flex bg-white/10 rounded-lg p-1'>
@@ -226,7 +212,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
 <List className='w-5 h-5' />
                 </button>
               </div>
-
               <select
                 value={sortBy}
 onChange={e => setSortBy(e.target.value)}
@@ -242,7 +227,6 @@ onChange={e => setSortBy(e.target.value)}
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
 <section className='py-16'>
         <div className='container mx-auto px-4'>
@@ -256,7 +240,6 @@ onChange={e => setSortBy(e.target.value)}
               {filteredServices.length} services found
             </p>
           </div>
-
           {viewMode === 'grid' ? (
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
               {sortedServices.map((service, index) => (
@@ -273,7 +256,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       Popular
                     </div>
                   )}
-
                   {/* Service Icon */}
 <div className='text-4xl mb-4'>{service.icon}</div>
 
@@ -284,7 +266,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                   <p className='text-gray-400 text-sm mb-4 line-clamp-2'>
                     {service.tagline}
                   </p>
-
                   {/* Price */}
 <div className='flex items-center justify-between mb-4'>
                     <div className='text-2xl font-bold text-purple-400'>
@@ -303,7 +284,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       </span>
                     </div>
                   </div>
-
                   {/* Features */}
 <div className='mb-4'>
                     <div className='text-sm text-gray-400 mb-2'>
@@ -321,7 +301,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       ))}
                     </div>
                   </div>
-
                   {/* Category and Setup */}
 <div className='flex items-center justify-between text-xs text-gray-500 mb-4'>
                     <span className='bg-white/10 px-2 py-1 rounded'>
@@ -329,7 +308,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                     </span>
                     <span>Setup: {service.setupTime}</span>
                   </div>
-
                   {/* Action Buttons */}
 <div className='flex space-x-2'>
                     <Link
@@ -342,7 +320,6 @@ className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rou
                       <Heart className='w-4 h-4' />
                     </button>
                   </div>
-
                   {/* Hover Overlay */}
 <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6'>
                     <div className='text-center w-full'>
@@ -437,7 +414,6 @@ className='group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p
           )}
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20'>
         <div className='container mx-auto px-4 text-center'>

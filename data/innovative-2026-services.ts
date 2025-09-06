@@ -30,93 +30,54 @@ export interface Innovative2026Service {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const innovative2026Services: Innovative2026Service[] = [
-  // AI Consciousness & Neural Interface Services
-  {
-id: 'ai-consciousness-simulation-pro',
-    name: 'AI Consciousness Simulation Pro',
-    tagline: 'Simulate human consciousness with quantum precision',
+    id: 'ai-consciousness-simulation-pro';
+    name: 'AI Consciousness Simulation Pro';
+    tagline: 'Simulate human consciousness with quantum precision';
     price: '$2,999',
-    period: '/month',
-    description:
-      'Advanced AI platform that simulates human consciousness patterns, enabling researchers, psychologists, and AI developers to understand and replicate human cognitive processes.',
+    period: '/month';
+    description: 'Advanced AI platform that simulates human consciousness patterns, enabling researchers, psychologists, and AI developers to understand and replicate human cognitive processes.',
     features: [
-      'Multi-dimensional consciousness mapping',
-      'Emotional state simulation',
-      'Memory pattern replication',
-      'Decision-making process modeling',
-      'Personality trait simulation',
-      'Real-time consciousness monitoring',
-      'Quantum neural network integration',
-      'Ethical AI guidelines compliance',
-      'Research collaboration tools',
-      'Advanced analytics dashboard',
-    ],
-    popular: true,
-    icon: '🧠',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-simulation-pro',
-    marketPosition:
-      'First-to-market consciousness simulation platform. No direct competitors in this specialized field.',
-    targetAudience:
-      'AI researchers, Neuroscientists, Psychology researchers, Tech companies, Government agencies, Educational institutions',
-    trialDays: 7,
-    setupTime: '2-3 weeks',
-    category: 'AI & Consciousness',
-    realService: true,
-    technology: [
-      'Quantum AI',
-      'Neural Networks',
-      'Consciousness Mapping',
-      'Advanced ML',
-      'Quantum Computing',
-      'Neuroscience APIs',
-    ],
-    integrations: [
-      'Research databases',
-      'Academic platforms',
-      'AI development tools',
-      'Neuroscience equipment',
-      'Cloud computing platforms',
-    ],
-    useCases: [
-      'AI consciousness research',
-      'Psychology studies',
-      'Neural interface development',
-      'Human-AI interaction research',
-      'Cognitive science applications',
-    ],
-    roi: 'Research institutions report 500% ROI through accelerated discoveries and breakthrough insights.',
-    competitors: [
-      'No direct competitors',
-      'Research institutions building custom solutions',
-    ],
-    marketSize: '$15B emerging market',
-    growthRate: '300% annual growth',
-    variant: 'ai-futuristic',
+      'Multi-dimensional consciousness mappingEmotional state simulationMemory pattern replicationDecision-making process modelingPersonality trait simulationReal-time consciousness monitoringQuantum neural network integrationEthical AI guidelines compliance';
+      'Research collaboration toolsAdvanced analytics dashboard'
+    ];
+    popular: true;
+    icon: '🧠';
+    color: 'from-purple-600 to-indigo-700';
+    textColor: 'text-purple-400';
+    link: 'https://ziontechgroup.com/ai-consciousness-simulation-pro';
+    marketPosition: 'First-to-market consciousness simulation platform. No direct competitors in this specialized field.';
+    targetAudience: 'AI researchers, Neuroscientists, Psychology researchers, Tech companies, Government agencies, Educational institutions',
+    trialDays: 7;
+    setupTime: '2-3 weeks';
+    category: 'AI & Consciousness';
+    realService: true;
+    technology: ['Quantum AINeural NetworksConsciousness MappingAdvanced MLQuantum ComputingNeuroscience APIs'];
+    integrations: ['Research databasesAcademic platformsAI development toolsNeuroscience equipmentCloud computing platforms'];
+    useCases: ['AI consciousness researchPsychology studiesNeural interface developmentHuman-AI interaction researchCognitive science applications'];
+    roi: 'Research institutions report 500% ROI through accelerated discoveries and breakthrough insights.';
+    competitors: ['No direct competitorsResearch institutions building custom solutions'];
+    marketSize: '$15B emerging market';
+    growthRate: '300% annual growth';
+    variant: 'ai-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Advanced AI platform with quantum computing integration, real-time consciousness simulation, and comprehensive research tools.',
-    launchDate: '2026-01-15',
-    customers: 150,
-    rating: 4.9,
-    reviews: 89,
+    realImplementation: true;
+    implementationDetails: 'Advanced AI platform with quantum computing integration, real-time consciousness simulation, and comprehensive research tools.',
+    launchDate: '2026-01-15';
+    customers: 150;
+    rating: 4.9;
+    reviews: 89
   },
 
   // Quantum Neural Interface Platform
@@ -440,4 +401,7 @@ id: 'ai-consciousness-simulation-pro',
     rating: 4.8,
     reviews: 234,
   },
+];
+    reviews: 234
+  }
 ];

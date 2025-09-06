@@ -1,30 +1,13 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Github,
-  Linkedin,
-  ExternalLink,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { motion  } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+const contactInfo = null;
 export default function NeoFuturisticFooter() {
   return (
-<footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>
+    <footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl' />
         <div className='absolute inset-0 bg-neural-dots opacity-20 animate-shimmer' />
-      </div>
-
       <div className='relative container mx-auto px-4 py-12 text-slate-200'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
           <div>
@@ -42,7 +25,6 @@ export default function NeoFuturisticFooter() {
               reliability.
             </p>
           </div>
-
           <div className='space-y-2 text-sm'>
             <div className='font-semibold text-slate-100 mb-2'>Contact</div>
             <div className='flex items-center gap-2 text-cyan-300'>
@@ -81,7 +63,6 @@ export default function NeoFuturisticFooter() {
               </a>
             </div>
           </div>
-
           <div className='space-y-2 text-sm'>
             <div className='font-semibold text-slate-100 mb-2'>Resources</div>
             <a

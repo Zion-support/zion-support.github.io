@@ -1,69 +1,8 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
-
-    {
-      id: 'ai-automation',
-      title: 'AI-Powered Automation',
-      description: 'Intelligent automation that learns and improves over time.',
-features: [
-        'Process Automation',
-        'Workflow Optimization',
-        'Intelligent Routing',
-        'Adaptive Workflows',
-      ],
-      icon: '⚡',
-      category: 'Automation',
-      complexity: 'Intermediate',
-    },
+  const aiSolutions = null;
   ];
-
-  const useCases = [
-    {
-      industry: 'Manufacturing',
-solutions: [
-        'Quality Control',
-        'Predictive Maintenance',
-        'Supply Chain Optimization',
-      ],
-      icon: '🏭',
-    },
-    {
-      industry: 'Healthcare',
-      solutions: [
-        'Diagnostic Support',
-        'Patient Care Optimization',
-        'Drug Discovery',
-      ],
-      icon: '🏥',
-    },
-    {
-      industry: 'Finance',
-      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading'],
-      icon: '💳',
-    },
-    {
-      industry: 'Retail',
-      solutions: [
-        'Customer Segmentation',
-        'Inventory Management',
-        'Personalized Marketing',
-      ],
-      icon: '🛍️',
-    },
-  ];
-
-  const technologies = [
-    'TensorFlow',
-    'PyTorch',
-    'Scikit-learn',
-    'OpenAI GPT',
-    'BERT',
-    'YOLO',
-    'Keras',
-    'Pandas',
-  ];
-
   return (
     <>
       <Head>
@@ -81,7 +20,6 @@ solutions: [
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
@@ -93,7 +31,6 @@ solutions: [
               businesses and drive innovation
             </p>
           </section>
-
           <section className='mx-auto max-w-7xl'>
             {/* AI Solutions Grid */}
             <div className='mb-16'>
@@ -140,7 +77,6 @@ solutions: [
                 ))}
               </div>
             </div>
-
             {/* Industry Use Cases */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -170,7 +106,6 @@ solutions: [
                 ))}
               </div>
             </div>
-
             {/* Technologies */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -189,7 +124,6 @@ solutions: [
                 </div>
               </div>
             </div>
-
             {/* Success Stories */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -228,7 +162,6 @@ solutions: [
                 </div>
               </div>
             </div>
-
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>

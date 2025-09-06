@@ -1,24 +1,28 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function QuantumAIBCIPage() {
+  const service = null;
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Brain,
-  Star,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Brain
+  Star;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-ai-brain-computer-interface')
   );
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -28,7 +32,6 @@ export default function QuantumAIBCIPage() {
           rel='canonical'
           href='https://ziontechgroup.com/quantum-ai-brain-computer-interface'
         />
-      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>

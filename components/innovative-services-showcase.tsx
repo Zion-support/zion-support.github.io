@@ -1,34 +1,19 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Rocket,
-  Shield,
-  DollarSign,
-  Users,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,;
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { Star, TrendingUp, Zap, Brain, Rocket, Shield;
+  DollarSign, Users, Clock, CheckCircle, ArrowRight;
+  Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
+import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
-
-  };
-
+  const contactInfo = null;
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
         staggerChildren: 0.1,
 delayChildren: 0.2,
@@ -127,6 +112,9 @@ description:
     <UltraAdvancedFuturisticBackground>
 <div className='min-h-screen'>
         <Head>
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className='min-h-screen'>
           <title>
             Innovative Services Showcase - Zion Tech Group | Cutting-Edge
             Technology
@@ -157,7 +145,6 @@ description:
             href='https://ziontechgroup.com/innovative-services-showcase'
           />
         </Head>
-
         {/* Hero Section */}
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -173,13 +160,11 @@ description:
                 <br />
                 <span className='text-white'>Services Showcase</span>
               </h1>
-
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
                 Experience the future of technology with our most revolutionary
                 and cutting-edge services. These are the innovations that will
                 transform industries and reshape the world.
               </p>
-
               {/* Contact Info */}
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12'>
                 <div className='text-center'>
@@ -201,7 +186,6 @@ description:
             </motion.div>
           </div>
         </section>
-
         {/* Featured Innovative Services */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -241,7 +225,6 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
                     <p className='text-gray-300 mb-6 leading-relaxed'>
                       {service.description}
                     </p>
-
                     <div className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-4 rounded-lg border border-cyan-500/20 mb-6'>
                       <div className='text-2xl font-bold text-cyan-400 mb-2'>
                         {service.price}
@@ -253,7 +236,6 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
                         {service.savings}
                       </div>
                     </div>
-
                     <div className='mb-6'>
                       <h4 className='text-lg font-semibold text-white mb-3'>
                         Key Features:
@@ -292,7 +274,6 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
             </div>
           </div>
         </section>
-
         {/* Emerging Tech Services */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -314,7 +295,6 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
                 transforming industries
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -357,7 +337,6 @@ className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm bo
                   </motion.div>
                 ))}
             </div>
-
             <motion.div
               className='text-center mt-16'
               initial={{ opacity: 0, y: 30 }}
@@ -377,7 +356,6 @@ href='/services'
             </motion.div>
           </div>
         </section>
-
         {/* ArrowRight-Gen AI Services */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -440,7 +418,6 @@ href='/services'
                 </motion.div>
               ))}
             </div>
-
             <motion.div
 className='text-center mt-16'
               initial={{ opacity: 0, y: 30 }}
@@ -460,7 +437,6 @@ href='/services'
             </motion.div>
           </div>
         </section>
-
         {/* Call to Action */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -477,7 +453,6 @@ href='/services'
                 Join the revolution and transform your business with our
                 cutting-edge services
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'

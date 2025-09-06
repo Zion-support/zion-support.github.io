@@ -1,6 +1,6 @@
 export class TestingSystem {
   static async testUserInteraction(
-    element: HTMLElement,
+    element: HTMLElement
     action: 'click' | 'type' | 'hover'
   ) {
     switch (action) {

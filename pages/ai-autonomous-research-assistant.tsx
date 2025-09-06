@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIAutonomousResearchAssistant() {
-  
-    />
-  );
+			title;
+				"Compliance-friendly data handling, audit logs"
+			]}
+			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
+		/>
+	)
+}

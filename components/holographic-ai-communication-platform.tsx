@@ -1,11 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
+import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-
-  ];
-
+  const contactInfo = null;
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -18,7 +16,6 @@ import Button from '../components/ui/Button';
           rel='canonical'
           href='https://ziontechgroup.com/holographic-ai-communication-platform'
         />
-      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>

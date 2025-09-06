@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
+import { getServerSupabase } from '[^']*';
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = null;
+    return res.status(200).json({ leaders })
 export default async function handler(
-  _req: NextApiRequest,
+  _req: NextApiRequest
   res: NextApiResponse
 ) {
   const usingPlaceholder =
@@ -18,25 +21,21 @@ export default async function handler(
         ],
       });
     }
-
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
     startOfMonth.setDate(1);
     startOfMonth.setHours(0, 0, 0, 0);
-
     const { data, error } = await supabase
-      .from('referral_events')
-      .select('partner_code, event, created_at')
-      .gte('created_at', startOfMonth.toISOString());
-    if (error) return res.status(500).json({ error: error.message });
-
+      .from("referral_events")
+      .select("partner_code, event, created_at")
+      .gte("created_at", startOfMonth.toISOString());
+    if (error) return res.status(500).json({ error: "Database error" });
     const map = new Map<string, number>();
-    for (const row of data || []) {
-      if (row.event !== 'profile_completed') continue;
+    for (const row of data |[]) {
+      if (row.event !== "profile_completed") continue;
       const key = row.partner_code as string;
 map.set(key, (map.get(key) || 0) + 1);
     }
-
     const leaders = Array.from(map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
       .sort((a, b) => b.profile_completions - a.profile_completions)
@@ -47,4 +46,7 @@ return res.status(200).json({ leaders });
     return res.status(500).json({ error: e?.message });
   }
 
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+  }
 }

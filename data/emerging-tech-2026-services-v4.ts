@@ -30,91 +30,54 @@ export interface EmergingTech2026ServiceV4 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
-  // Neuromorphic Computing Platform
-  {
-id: 'neuromorphic-computing-platform',
-    name: 'Neuromorphic Computing Platform',
-    tagline: 'Brain-inspired computing for next-generation AI applications',
+    id: 'neuromorphic-computing-platform';
+    name: 'Neuromorphic Computing Platform';
+    tagline: 'Brain-inspired computing for next-generation AI applications';
     price: '$1,299',
-    period: '/month',
-    description:
-      "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing solutions.",
+    period: '/month';
+    description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing solutions.',
     features: [
-      'Brain-inspired neural architecture',
-      'Ultra-low power consumption',
-      'Real-time learning capabilities',
-      'Spiking neural networks',
-      'Adaptive processing',
-      'Hardware acceleration',
-      'Edge computing optimization',
-      'AI model training',
-      'Performance analytics',
-      'Custom chip design',
-    ],
-    popular: false,
-    icon: '🧠',
-    color: 'from-indigo-600 to-purple-600',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
-    marketPosition:
-      'First commercial neuromorphic computing platform. Competitive advantage: Brain-inspired architecture, ultra-efficiency, and real-time learning.',
-    targetAudience:
-      'AI research institutions, Technology companies, Government agencies, Healthcare organizations, Automotive companies',
-    trialDays: 7,
-    setupTime: '1 month',
-    category: 'Neuromorphic Computing',
-    realService: true,
-    technology: [
-      'Neuromorphic Chips',
-      'Spiking Neural Networks',
-      'Python',
-      'C++',
-      'CUDA',
-      'AWS',
-      'Custom Hardware',
-    ],
-    integrations: [
-      'TensorFlow',
-      'PyTorch',
-      'AI frameworks',
-      'IoT devices',
-      'Edge computing platforms',
-    ],
-    useCases: [
-      'AI acceleration',
-      'Edge computing',
-      'Autonomous systems',
-      'Healthcare AI',
-      'Robotics',
-    ],
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesSpiking neural networksAdaptive processingHardware accelerationEdge computing optimizationAI model training';
+      'Performance analyticsCustom chip design'
+    ];
+    popular: false;
+    icon: '🧠';
+    color: 'from-indigo-600 to-purple-600';
+    textColor: 'text-indigo-400';
+    link: 'https://ziontechgroup.com/neuromorphic-computing-platform';
+    marketPosition: 'First commercial neuromorphic computing platform. Competitive advantage: Brain-inspired architecture, ultra-efficiency, and real-time learning.',
+    targetAudience: 'AI research institutions, Technology companies, Government agencies, Healthcare organizations, Automotive companies',
+    trialDays: 7;
+    setupTime: '1 month';
+    category: 'Neuromorphic Computing';
+    realService: true;
+    technology: ['Neuromorphic ChipsSpiking Neural NetworksPythonC++CUDAAWSCustom Hardware'];
+    integrations: ['TensorFlowPyTorchAI frameworksIoT devicesEdge computing platforms'];
+    useCases: ['AI accelerationEdge computingAutonomous systemsHealthcare AIRobotics'];
     roi: 'Reduce AI processing costs by 80%, improve energy efficiency by 90%, accelerate AI training by 10x',
-    competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip'],
-    marketSize: '$8B neuromorphic computing market by 2030',
-    growthRate: '150% annual growth',
-    variant: 'quantum-futuristic',
+    competitors: ['Intel LoihiIBM TrueNorthBrainChip'];
+    marketSize: '$8B neuromorphic computing market by 2030';
+    growthRate: '150% annual growth';
+    variant: 'quantum-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.',
-    launchDate: '2026-04-01',
-    customers: 15,
-    rating: 4.9,
-    reviews: 12,
+    realImplementation: true;
+    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.';
+    launchDate: '2026-04-01';
+    customers: 15;
+    rating: 4.9;
+    reviews: 12
   },
 
   // Quantum Internet Security Gateway
@@ -655,4 +618,12 @@ id: 'neuromorphic-computing-platform',
     rating: 4.8,
     reviews: 25,
   },
+];
+    realImplementation: true;
+    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
+    launchDate: '2026-05-15';
+    customers: 30;
+    rating: 4.8;
+    reviews: 25
+  }
 ];

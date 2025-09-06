@@ -1,88 +1,92 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import { Brain, Cpu, Database, Zap, Shield, Rocket;
+  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
+ } from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
+export default function AIMLServicesPage() {
+  const services = null;
 import {
-  Brain,
-  Cpu,
-  Database,
-  Zap,
-  Shield,
-  Rocket,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
+  Brain
+  Cpu
+  Database
+  Zap
+  Shield
+  Rocket
+  ArrowRight
+  CheckCircle
+  Star
+  Users
+  Clock
+  TrendingUp;
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-
 export default function AIMLServicesPage() {
   const services = [
     {
-      title: 'Custom AI Solutions',
+      title: 'Custom AI Solutions'
       description:
-        'Tailored AI applications built for your specific business needs',
+        'Tailored AI applications built for your specific business needs'
       features: [
-        'Machine Learning Models',
-        'Neural Networks',
-        'Predictive Analytics',
-        'Natural Language Processing',
-      ],
-      price: 'From $5,000',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Machine Learning Models'
+        'Neural Networks'
+        'Predictive Analytics'
+        'Natural Language Processing'
+      ]
+      price: 'From $5,000'
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      title: 'AI-Powered Automation',
-      description: 'Intelligent automation systems that learn and adapt',
+      title: 'AI-Powered Automation'
+      description: 'Intelligent automation systems that learn and adapt'
       features: [
-        'Process Automation',
-        'Workflow Optimization',
-        'Smart Decision Making',
-        'Continuous Learning',
-      ],
-      price: 'From $3,500',
-      icon: Zap,
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'Process Automation'
+        'Workflow Optimization'
+        'Smart Decision Making'
+        'Continuous Learning'
+      ]
+      price: 'From $3,500'
+      icon: Zap
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      title: 'Data Intelligence Platform',
-      description: 'Advanced analytics and insights powered by AI',
+      title: 'Data Intelligence Platform'
+      description: 'Advanced analytics and insights powered by AI'
       features: [
-        'Big Data Processing',
-        'Real-time Analytics',
-        'Business Intelligence',
-        'Predictive Insights',
-      ],
-      price: 'From $7,500',
-      icon: Database,
-      color: 'from-emerald-500 to-teal-500',
-    },
+        'Big Data Processing'
+        'Real-time Analytics'
+        'Business Intelligence'
+        'Predictive Insights'
+      ]
+      price: 'From $7,500'
+      icon: Database
+      color: 'from-emerald-500 to-teal-500'
+    }
     {
-      title: 'AI Consulting & Strategy',
+      title: 'AI Consulting & Strategy'
       description:
-        'Strategic guidance for AI implementation and transformation',
+        'Strategic guidance for AI implementation and transformation'
       features: [
-        'AI Roadmap Planning',
-        'Technology Assessment',
-        'Implementation Strategy',
-        'ROI Optimization',
-      ],
-      price: 'From $2,500',
-      icon: Rocket,
-      color: 'from-orange-500 to-red-500',
-    },
+        'AI Roadmap Planning'
+        'Technology Assessment'
+        'Implementation Strategy'
+        'ROI Optimization'
+      ]
+      price: 'From $2,500'
+      icon: Rocket
+      color: 'from-orange-500 to-red-500'
+    }
   ];
-
   const stats = [
-    { number: '500+', label: 'AI Models Deployed', icon: Brain },
-    { number: '99.9%', label: 'Accuracy Rate', icon: CheckCircle },
-    { number: '24/7', label: 'AI Monitoring', icon: Clock },
-    { number: '2500%', label: 'Average ROI', icon: TrendingUp },
+    { number: '500+', label: 'AI Models Deployed', icon: Brain }
+    { number: '99.9%', label: 'Accuracy Rate', icon: CheckCircle }
+    { number: '24/7', label: 'AI Monitoring', icon: Clock }
+    { number: '2500%', label: 'Average ROI', icon: TrendingUp }
   ];
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -103,7 +107,6 @@ export default function AIMLServicesPage() {
       </Head>
 
       <EnhancedNavigation />
-
       {/* Hero Section */}
 <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -121,7 +124,6 @@ className='mb-8'
               business
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -140,7 +142,6 @@ className='mb-12'
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
 <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -166,7 +167,6 @@ className='text-center'
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
 <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -229,7 +229,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -243,7 +242,7 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
               Ready to Transform Your Business with AI?
             </h2>
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>
-              Let's discuss how our AI solutions can drive innovation,
+              Let's discuss how our AI solutions can drive innovation
               efficiency, and growth for your organization.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -257,7 +256,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 );
@@ -265,16 +263,13 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 30 
-
+  opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
   once: true 

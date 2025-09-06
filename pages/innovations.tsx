@@ -1,6 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Rocket,
@@ -85,10 +82,8 @@ export default function InnovationsPage() {
             content='https://ziontechgroup.com/og-image.jpg'
           />
         </Head>
-
         {/* Enhanced Navigation */}
         <UltraFuturisticNavigation2029V2 />
-
         {/* Hero Section */}
 <section className='relative pt-32 pb-20 overflow-hidden'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -126,7 +121,6 @@ className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed m
                 enterprise solutions that are reshaping industries and unlocking
                 unprecedented possibilities.
               </motion.p>
-
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -152,7 +146,6 @@ className='flex flex-col sm:flex-row gap-6 justify-center items-center'
             </div>
           </div>
         </section>
-
         {/* Innovation Categories Overview */}
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -273,12 +266,10 @@ className='group'
             </div>
           </div>
         </section>
-
         {/* Comprehensive Services Showcase */}
 <section id='innovations' className='py-20'>
           <ComprehensiveServicesShowcase2029 />
         </section>
-
         {/* Innovation Impact Section */}
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -324,6 +315,8 @@ description:
                     'Solutions designed for the next decade of technological advancement',
                   stats: '2029+ Future-ready',
                 },
+                  stats: '2029+ Future-ready'
+                }
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
@@ -350,7 +343,6 @@ className='text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 bor
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
 <section className='py-20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -398,7 +390,6 @@ className='text-center'
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Footer */}
         <UltraFuturisticFooter2029V2 />
       </div>

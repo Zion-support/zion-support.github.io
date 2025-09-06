@@ -13,9 +13,6 @@ export default function AccountSettingsPage() {
   const [linking, setLinking] = useState(false);
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
-  const [status, setStatus] = useState<string | null>(null);
-
-  useEffect(() => {
 const saved =
       typeof window !== 'undefined'
         ? window.localStorage.getItem('zion-web3-user')
@@ -65,14 +62,13 @@ const payload = {
         } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {
           const enc = new TextEncoder().encode(msg);
           const { signature: sig } = await (window as any).solana.signMessage(
-            enc,
+            enc
             'utf8'
           );
           const bs58 = (await import('bs58')).default;
           signature = bs58.encode(sig);
         }
       } catch {}
-
       const res = await fetch('/api/did/link', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -81,7 +77,7 @@ body: JSON.stringify({ payload, message: msg, signature }),
       if (!res.ok) throw new Error('Failed to link DIDs');
       setStatus('Linked successfully');
     } catch (e: any) {
-      setStatus(e?.message || 'Linking failed');
+      setStatus(e?.message |'Linking failed');
     } finally {
       setLinking(false);
     }
@@ -99,12 +95,12 @@ user,
         reviews: [],
       };
       const res = await fetch('/api/backup/upload', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(profile),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify(profile)
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Backup failed');
+      if (!res.ok) throw new Error(data?.error |'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
     } catch (e: any) {
@@ -206,7 +202,6 @@ setFarcaster(did.farcaster || '');
             </button>
           </div>
         </section>
-
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Decentralized Backup</h2>
           <p className='text-sm text-gray-500 mb-3'>
@@ -241,7 +236,6 @@ setFarcaster(did.farcaster || '');
             </button>
           </div>
         </section>
-
         {status && <div className='text-sm text-gray-600'>{status}</div>}
       </div>
     </>

@@ -8,11 +8,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 
 interface DiscussionPost {
-  id: number;
-  author: string;
-  avatar?: string;
-  time: string;
-  title: string;
   body: string;
 
 const initialPosts: DiscussionPost[] = [
@@ -38,8 +33,25 @@ export const CommunityDiscussion: React.FC = () => {
   const [newTitle, setNewTitle] = useState('');
   const [newBody, setNewBody] = useState('');
 
+  body: string
+}
+const initialPosts: DiscussionPost[] = [
+  {
+    id: 1;
+    author: "Anna Zhou";
+    time: "2h ago";
+    title: "What AI trends are you most excited for in 2025?";
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
+  {
+    id: 2;
+    author: "David Kim";
+    time: "50m ago";
+    title: "Quick tip: How to rank your Zion listing higher";
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
+
+export const CommunityDiscussion: React.FC;
   const handleAddPost = () => {
-    if (!newTitle.trim() || !newBody.trim()) return;
+    if (!newTitle.trim() |!newBody.trim()) return
     setPosts([
       {
         id: Date.now(),
@@ -71,8 +83,7 @@ author: 'You',
         <Button
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
-          onClick={() => setShowNew(v => !v)}
-        >
+          onClick={() => setShowNew(v => !v)}        >
           {showNew ? 'Cancel' : 'New Post'}
         </Button>
       </div>
@@ -96,8 +107,7 @@ className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-
                 setNewBody(e.target.value)
               }
               maxLength={400}
-              rows={3}
-            />
+              rows={3}            />
             <div className='flex gap-3 justify-end'>
               <Button
                 variant='secondary'
@@ -111,7 +121,9 @@ className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-
 size='sm'
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'
                 onClick={handleAddPost}
-                disabled={!newTitle.trim() || !newBody.trim()}
+                disabled={!newTitle.trim() |!newBody.trim()}
+                onClick = {handleAddPost,}
+                disabled = {!newTitle.trim() |!newBody.trim(),}
               >
                 Post
               </Button>

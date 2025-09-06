@@ -1,17 +1,42 @@
-import fs from 'fs';
-import path from 'path';
-import { TokenConfig, TokenTransaction, Wallet } from './types';
-import { DEFAULT_TOKEN_CONFIG } from './rules';
+class TokenStore {
+  private config: any = {};
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const STORE_FILE = path.join(DATA_DIR, 'token_store.json');
+  setConfig(config: any) {
+    this.config = config;
+  }
 
+  getConfig() {
+    return this.config;
+  }
+}
+
+export const tokenStore = new TokenStore();
+export interface TokenConfig {
+  tokenName: string;
+  tokenSymbol: string;
+  decimals: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
+  minIssueAmount: number;
+  maxIssueAmount: number;
+}
+class TokenStore {
+  private config: TokenConfig = {
+    tokenName: 'ZION$'
+    tokenSymbol: 'ZION'
+    decimals: 18
+    totalSupply: 1000000000
+    issueRate: 1.0
+    redeemRate: 1.0
+    minIssueAmount: 1
+    maxIssueAmount: 10000
+  }
 export interface TokenStoreData {
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
-
-
+}
 function readFromDisk(): TokenStoreData | null {
   try {
     ensureDataDir();

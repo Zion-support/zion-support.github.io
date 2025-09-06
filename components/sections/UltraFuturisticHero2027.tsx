@@ -1,72 +1,50 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Target,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
-  CheckCircle,;
-} from 'lucide-react';
-
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Target, Cpu, Database, Cloud, Lock, ArrowRight;
+  Star, TrendingUp, Users, CheckCircle
+ } from 'lucide-react';
 export default function UltraFuturisticHero2027() {
-  const features = [
-{
-      icon: Brain,
-      text: 'AI Consciousness Evolution',
-      color: 'from-purple-400 to-pink-400',
-    },
+  const features = null;
+            ease: "easeInOut"
     {
-      icon: Atom,
-      text: 'Quantum Computing',
-      color: 'from-blue-400 to-cyan-400',
-    },
+      icon: Atom
+      text: 'Quantum Computing'
+      color: 'from-blue-400 to-cyan-400'
+    }
     {
-      icon: Globe,
-      text: 'Digital Reality',
-      color: 'from-green-400 to-emerald-400',
-    },
+      icon: Globe
+      text: 'Digital Reality'
+      color: 'from-green-400 to-emerald-400'
+    }
     {
-      icon: Shield,
-      text: 'Enterprise Security',
-      color: 'from-red-400 to-orange-400',
-    },
+      icon: Shield
+      text: 'Enterprise Security'
+      color: 'from-red-400 to-orange-400'
+    }
   ];
-
   const stats = [
     {
-      number: '1000+',
-      label: 'Happy Customers',
-      icon: Users,
-      color: 'text-cyan-400',
-    },
+      number: '1000+'
+      label: 'Happy Customers'
+      icon: Users
+      color: 'text-cyan-400'
+    }
     {
-      number: '4.9★',
-      label: 'Average Rating',
-      icon: Star,
-      color: 'text-purple-400',
-    },
+      number: '4.9★'
+      label: 'Average Rating'
+      icon: Star
+      color: 'text-purple-400'
+    }
     {
-      number: '99.9%',
-      label: 'Uptime SLA',
-      icon: CheckCircle,
-      color: 'text-green-400',
-    },
-    { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' },
+      number: '99.9%'
+      label: 'Uptime SLA'
+      icon: CheckCircle
+      color: 'text-green-400'
+    }
+    { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-400' }
   ];
-
   return (
     <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
       {/* Background Elements */}
@@ -99,7 +77,6 @@ ease: 'easeInOut',
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
 className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-full blur-3xl'
           animate={{
@@ -113,11 +90,9 @@ className='absolute bottom-32 left-1/3 w-40 h-40 bg-gradient-to-r from-green-500
 ease: 'easeInOut',
           }}
         />
-
         {/* Grid Pattern */}
 <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]' />
       </div>
-
       <div className='max-w-7xl mx-auto relative z-10'>
         <div className='text-center'>
           {/* Main Heading */}
@@ -139,7 +114,6 @@ className='mb-8'
               </span>
             </h2>
           </motion.div>
-
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -151,7 +125,6 @@ className='text-xl md:text-2xl lg:text-3xl text-cyan-300 mb-12 max-w-5xl mx-auto
             computing breakthroughs, and practical micro SAAS solutions that
             will transform your business beyond imagination.
           </motion.p>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -167,7 +140,6 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
               <span>Explore 2027 Services</span>
               <ArrowRight className='w-6 h-6 group-hover:translate-x-1 transition-transform duration-300' />
             </Link>
-
             <Link
               href='/contact'
               className='px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 font-bold text-xl rounded-2xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 flex items-center justify-center space-x-3'
@@ -176,7 +148,6 @@ className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
               <span>Start Your Journey</span>
             </Link>
           </motion.div>
-
           {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -205,7 +176,6 @@ className='group'
               </motion.div>
             ))}
           </motion.div>
-
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -237,7 +207,6 @@ className='text-center group'
               </motion.div>
             ))}
           </motion.div>
-
           {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -272,7 +241,6 @@ className='text-center'
           </motion.div>
         </div>
       </div>
-
       {/* Bottom Glow */}
 <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
     </section>

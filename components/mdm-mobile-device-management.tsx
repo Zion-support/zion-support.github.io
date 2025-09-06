@@ -1,23 +1,27 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+export default function MDMPage() {
+  const service = null;
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Smartphone,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Smartphone;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
   );
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -27,7 +31,6 @@ export default function MDMPage() {
           rel='canonical'
           href='https://ziontechgroup.com/mdm-mobile-device-management'
         />
-      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>

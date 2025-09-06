@@ -1,11 +1,11 @@
-const partners: Partner[] = [ {
-  name: 'Gov Partner' 
-};
+import Head from 'next/head';
+import React from 'react';
+type Speaker = any;
 {
-  name: 'Venture Partner' 
-};
+  name: 'Venture Partner'
+}
 {
-  name: 'University Partner' 
+  name: 'University Partner'
 }];
 const onSubmit = async (e: React.FormEvent) => {
   e.preventDefault ();
@@ -15,27 +15,26 @@ try {
   const res = await fetch ('/api/summit/register', {
   method: 'POST';
 headers: {
-  'Content-Type': 'application/json' 
-};
+  'Content-Type': 'application/json'
+}
 body: JSON.stringify ({
-  ...form, source: 'summit-page' 
-}) 
+  ...form, source: 'summit-page'
+})
 });
 const data = await res.json ();
-if (!res.ok) throw new Error (data?.error || 'Failed');
+if (!res.ok) throw new Error (data?.error |'Failed');
 setResult ({
-  ok: true 
+  ok: true
 });
 setForm ({
-  name: '', email: '', role: '', country: '' 
-}) 
+  name: '', email: '', role: '', country: ''
+})
 }catch (err: any) {
   setResult ({
-  error: err?.message || 'Unexpected error' 
-}) 
+  error: err?.message |'Unexpected error'
+})
 }finally {
-  setSubmitting (false) 
-
+  setSubmitting (false)
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter'
@@ -44,10 +43,10 @@ export default function SummitPage() {
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
-    name: '',
-    email: '',
-    role: '',
-    country: '',
+    name: ''
+    email: ''
+    role: ''
+    country: ''
   });
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{
@@ -79,16 +78,15 @@ bio: 'Leading the architecture of ZionDAO and trust rails.',
 twitter: 'https://twitter.com',
     },
   ];
-
   const partners: Partner[] = [
-    { name: 'Gov Partner' },
-    { name: 'Venture Partner' },
-    { name: 'University Partner' },
+    { name: 'Gov Partner' }
+    { name: 'Venture Partner' }
+    { name: 'University Partner' }
   ];
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setResult(null);
+    setResult(null)
     try {
       const res = await fetch('/api/summit/register', {
         method: 'POST',
@@ -96,11 +94,11 @@ twitter: 'https://twitter.com',
 body: JSON.stringify({ ...form, source: 'summit-page' }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data?.error || 'Failed');
+      if (!res.ok) throw new Error(data?.error |'Failed');
       setResult({ ok: true });
       setForm({ name: '', email: '', role: '', country: '' });
     } catch (err: any) {
-      setResult({ error: err?.message || 'Unexpected error' });
+      setResult({ error: err?.message |'Unexpected error' });
     } finally {
       setSubmitting(false);
     }
@@ -112,11 +110,9 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
       );
     }
     if (platform === 'twitch') {
-      
         />
       );
     }
-    
       />
     );
   };
@@ -130,7 +126,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
         />
       </Head>
-
       <section className='relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue'>
         <div className='max-w-4xl'>
           <p className='uppercase tracking-widest text-neon-blue'>
@@ -323,7 +318,6 @@ body: JSON.stringify({ ...form, source: 'summit-page' }),
         </div>
         <div className='mt-4'>{livestreamEmbed()}</div>
       </section>
-
       <section
         id='register'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'

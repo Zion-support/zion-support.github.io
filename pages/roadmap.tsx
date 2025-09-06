@@ -1,105 +1,18 @@
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
-
-type RoadmapInputs = {
-milestones: string;
-  keywords: string;
-  priorities: string;
-};
-
-type Stage = {
-  id: number;
-  name: string;
-  theme: string;
-  objective: string;
-  highlights: string[];
-  metrics: string[];
-};
-
-function generateStages({
-  milestones,
-  keywords,
-  priorities,
-}: RoadmapInputs): Stage[] {
-  const keywordList = keywords
-    .split(/,|\n/)
-    .map(s => s.trim())
-    .filter(Boolean);
-
-  const priorityList = priorities
-    .split(/,|\n/)
-.map(s => s.trim())
-    .filter(Boolean);
-
-  const baseThemes = [
-    'Foundations',
-    'Trust Layer',
-    'AI-Native Matching',
-    'Reputation & Identity',
-    'Payments & Escrow',
-    'Marketplace Liquidity',
-    'Sovereign Workflows',
-    'Open Protocol Interfaces',
-    'Governance & Ownership',
-    'Global Scale',
-  ];
-
-  return baseThemes.map((theme, index) => {
-    const id = index + 1;
-    const name = `Zion v${id}`;
-
-const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join(', ') || 'core principles'}; focus: ${
-      priorityList.join(', ') || 'execution and learning'
-    }.`;
-
-    const highlights: string[] = [
-      index === 0 &&
-        'Design system, domain model, and initial data architecture',
-      index === 1 &&
-        'Verifiable credentials, attestations, and dispute primitives',
-      index === 2 && 'AI-assisted scoping, matching, and brief generation',
-      index === 3 && 'Reputation graph, portable profiles, contribution proofs',
-      index === 4 &&
-        'Programmable escrow, milestone releases, stable on/off-ramps',
-      index === 5 &&
-        'Liquidity flywheel: supply activation, demand orchestration',
-      index === 6 &&
-        'Sovereign workspaces: contracts, IP, revenue share automations',
-      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem',
-      index === 8 &&
-        'Progressive decentralization, contributor ownership, councils',
-      index === 9 &&
-        'Regionalization, localization, reliability, and performance',
-    ]
-      .filter(Boolean)
-      .map(s => String(s));
-
-    const metrics: string[] = [
-      'Weekly active contributors',
-      'Verified engagements (intros, briefs, scopes)',
-      'On-chain/escrow settlement volume',
-      'Time-to-hire and time-to-pay',
-      'Retention and NPS',
-    ];
-
-    return { id, name, theme, objective, highlights, metrics };
-  });
-
+type RoadmapInputs = any;
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
-
 Inputs you will receive:
 - milestones (string list)
 - keywords (string list)
 - priorities (string list)
-
 Goals:
 1) Produce a 10-stage roadmap labeled Zion v1 → v10
 2) For each stage: theme, objective, 3-5 highlights, 3-5 measurable metrics
 3) Ensure alignment with AI-native, trustless, talent-first, and sovereign tools ethos
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
-
 Format:
 Zion v{n} — {theme}
 Objective: ...
@@ -128,10 +41,8 @@ export default function RoadmapPage(): JSX.Element {
   const stages = useMemo(
     () => generateStages({ milestones, keywords, priorities }),
     [milestones, keywords, priorities]
-  );
-
-  const operatorPrompt = useMemo(() => defaultOperatorPrompt(), []);
-
+  )
+  const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
       await navigator.clipboard.writeText(operatorPrompt);
@@ -140,8 +51,7 @@ setTimeout(() => setCopied(false), 1500);
     } catch {
       setCopied(false);
     }
-  };
-
+  }
   return (
     <>
       <Head>

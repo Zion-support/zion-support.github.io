@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
-
+        <meta name;
             </p>
           </header>
-
           {/* Case Study Content */}
 <div className='max-w-4xl mx-auto'>
             {/* Company Overview */}
@@ -38,11 +37,24 @@ import Link from 'next/link';
                       $100M+
                     </div>
                     <div className='text-white/70'>Annual Revenue</div>
+                  investment, and insurance products. The company faced challenges with high customer service costs and long response times.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-400">1M+</div>
+                    <div className="text-white/70">Customers</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-400">500+</div>
+                    <div className="text-white/70">Support Agents</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-green-400">$100M+</div>
+                    <div className="text-white/70">Annual Revenue</div>
                   </div>
                 </div>
               </div>
             </section>
-
             {/* Challenge */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -78,7 +90,6 @@ import Link from 'next/link';
                 </ul>
               </div>
             </section>
-
             {/* Solution */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -139,7 +150,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Results */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -213,7 +223,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Technologies */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -239,7 +248,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Implementation */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -308,7 +316,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Call to Action */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-green-500/10 to-cyan-500/10 rounded-2xl p-8 border border-green-500/20'>

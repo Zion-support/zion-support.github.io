@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react';
-import { revolutionary2025MicroSaasServices } from '../../data/revolutionary-2025-micro-saas';
-import { emergingTech2025Services } from '../../data/emerging-tech-2025-services';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Users, Shield, Zap  } from 'lucide-react';
+import { revolutionary2025MicroSaasServices  } from '../../data/revolutionary-2025-micro-saas';
+import { emergingTech2025Services  } from '../../data/emerging-tech-2025-services';
 import { enterpriseIT2025Services } from '../../data/enterprise-it-2025-services';
-
-  };
-
+const RevolutionaryServicesShowcase: React.FC;
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -18,10 +16,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
 duration: 0.5,
       },
@@ -47,12 +45,11 @@ duration: 0.5,
             <span className='text-white'>Services</span>
           </h2>
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-            Experience the future with our cutting-edge AI, quantum computing,
+            Experience the future with our cutting-edge AI, quantum computing
             and emerging technology solutions. Transform your business with
             services that were once science fiction.
           </p>
         </motion.div>
-
         {/* Category Filter */}
 <motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'
@@ -81,7 +78,6 @@ setVisibleServices(12);
             </button>
           ))}
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -104,7 +100,6 @@ className='group relative cursor-pointer'
                   <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500'></div>
                   <div className='absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700'></div>
                 </div>
-
                 {/* Popular Badge */}
                 {service.popular && (
 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300'>
@@ -112,7 +107,6 @@ className='group relative cursor-pointer'
                     POPULAR
                   </div>
                 )}
-
                 {/* Service Header */}
 <div className='relative z-10'>
                   <div className='flex items-start justify-between mb-4'>
@@ -136,12 +130,10 @@ className='group relative cursor-pointer'
                       </div>
                     </div>
                   </div>
-
                   {/* Description */}
 <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
-
                   {/* Stats Grid */}
                   <div className='grid grid-cols-2 gap-3 mb-4'>
                     <div className='flex items-center space-x-2 text-sm'>
@@ -169,7 +161,6 @@ className='group relative cursor-pointer'
                       </span>
                     </div>
                   </div>
-
                   {/* Action Buttons */}
 <div className='flex space-x-3 mt-6'>
                     <a
@@ -186,7 +177,6 @@ className='group relative cursor-pointer'
                     </button>
                   </div>
                 </div>
-
                 {/* Floating Particles */}
 <div className='absolute inset-0 pointer-events-none overflow-hidden'>
                   <div
@@ -214,7 +204,6 @@ className='group relative cursor-pointer'
             </motion.div>
           ))}
         </motion.div>
-
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
 <motion.div
@@ -232,7 +221,6 @@ className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white fon
             </button>
           </motion.div>
         )}
-
         {/* Call to Action */}
 <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'

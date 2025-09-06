@@ -9,8 +9,6 @@ type Note = {
   createdAt: number;
 };
 
-const notesStore: Note[] = [];
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });
@@ -34,13 +32,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return res.status(400).json({ error: 'Missing fields' });
     const note: Note = {
       id: randomUUID(),
-      targetType,
-      targetId,
-      text: String(text),
-      authorId,
-      createdAt: Date.now(),
+      content: req.body.content || '',
+      createdAt: new Date().toISOString()
     };
-    notesStore.push(note);
     return res.status(200).json({ ok: true, note });
   }
 

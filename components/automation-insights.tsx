@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
-
+  const automationTrends = null;
   ];
-
   const automationTools = [
     {
       id: 'automation-framework',
@@ -29,7 +28,6 @@ description:
 complexity: 'Beginner',
     },
   ];
-
   const successMetrics = [
     {
       metric: '227',
@@ -52,7 +50,6 @@ description: 'Successfully deployed and running',
       description: 'Content created autonomously',
     },
   ];
-
   return (
     <>
       <Head>
@@ -72,8 +69,6 @@ description: 'Successfully deployed and running',
           content='Expert insights on AI automation, autonomous systems, and industry trends.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
@@ -85,7 +80,6 @@ description: 'Successfully deployed and running',
               future of intelligent technology
             </p>
           </section>
-
           <section className='mx-auto max-w-7xl'>
             {/* Success Metrics */}
             <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16'>
@@ -108,7 +102,6 @@ description: 'Successfully deployed and running',
                 ))}
               </div>
             </div>
-
             {/* Automation Trends */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -142,7 +135,6 @@ description: 'Successfully deployed and running',
                 ))}
               </div>
             </div>
-
             {/* Automation Tools & Frameworks */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -171,7 +163,6 @@ description: 'Successfully deployed and running',
                 ))}
               </div>
             </div>
-
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>

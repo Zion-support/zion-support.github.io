@@ -1,18 +1,31 @@
 import React, { useState } from 'react';
-
 export default function UNBridge() {
   const [form, setForm] = useState({
-    title: 'Zion DAO x Digital Labor Initiative',
-    targetInstitution: 'UN Development Programme',
-    type: 'Workforce Dev',
-    regionalScope: 'Global South',
-    budgetOrResolution: 'USD 3M over 24 months',
+    title: 'Zion DAO x Digital Labor Initiative';
+    targetInstitution: 'UN Development Programme';
+    type: 'Workforce Dev';
+    regionalScope: 'Global South';
+    budgetOrResolution: 'USD 3M over 24 months';
     supportingMultiverses: 'Digital Labor, AI Ethics',
-promptAssist:
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en',
-  });
+    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
+    language: 'en'});
   const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any>(null),
+  const [translated, setTranslated] = useState<string>(''),
+
+  const onChange = null;
+      setResult((r: any) => ({ ...r, meta: data.meta }))
+    } finally { setLoading(false) }
+    title: 'Zion DAO x Digital Labor Initiative'
+    targetInstitution: 'UN Development Programme'
+    type: 'Workforce Dev'
+    regionalScope: 'Global South'
+    budgetOrResolution: 'USD 3M over 24 months'
+    supportingMultiverses: 'Digital Labor, AI Ethics'
+    promptAssist:
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'
+    language: 'en'
+  });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
 
@@ -29,15 +42,15 @@ const onChange = (
     setLoading(true);
     try {
       const res = await fetch('/api/proposals/generate', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 ...form,
           supportingMultiverses: form.supportingMultiverses
             .split(',')
             .map(s => s.trim())
-            .filter(Boolean),
-        }),
+            .filter(Boolean)
+        })
       });
       const data = await res.json();
       setResult(data);
@@ -48,7 +61,7 @@ const onChange = (
 
   async function translate(targetLanguage: string) {
     if (!result?.markdown) return;
-    setLoading(true);
+    setLoading(true)
     try {
       const res = await fetch('/api/proposals/translate', {
         method: 'POST',
@@ -74,7 +87,7 @@ body: JSON.stringify({ id: result.meta.id }),
       // Refresh meta
       const list = await fetch('/api/proposals/list');
       const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id);
+      const updated = proposals.find((p: any) => p.id === result.meta.id)
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {
       setLoading(false);
@@ -83,7 +96,7 @@ body: JSON.stringify({ id: result.meta.id }),
 
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return;
-    setLoading(true);
+    setLoading(true)
     try {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',
@@ -96,7 +109,6 @@ body: JSON.stringify({ id: result.meta.id, channels }),
       setLoading(false);
     }
   }
-
   return (
     <div className='space-y-6'>
       <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>
@@ -186,26 +198,26 @@ body: JSON.stringify({ id: result.meta.id, channels }),
         <div className='space-y-3'>
           <div className='text-sm opacity-70'>Output</div>
           <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
-            {result?.markdown || 'No draft yet'}
+            {result?.markdown |'No draft yet'}
           </div>
           <div className='flex items-center gap-2'>
             <button
               onClick={() => translate('fr')}
-              disabled={loading || !result}
+              disabled={loading |!result}
               className='px-3 py-2 border rounded'
             >
               Translate FR
             </button>
             <button
               onClick={() => translate('es')}
-              disabled={loading || !result}
+              disabled={loading |!result}
               className='px-3 py-2 border rounded'
             >
               Translate ES
             </button>
             <button
               onClick={() => translate('ar')}
-              disabled={loading || !result}
+              disabled={loading |!result}
               className='px-3 py-2 border rounded'
             >
               Translate AR
@@ -219,14 +231,14 @@ body: JSON.stringify({ id: result.meta.id, channels }),
           <div className='flex items-center gap-2'>
             <button
               onClick={exportArtifacts}
-              disabled={loading || !result}
+              disabled={loading |!result}
               className='px-3 py-2 border rounded'
             >
               Export PDF + Sign + IPFS
             </button>
             <button
               onClick={() => submit(['email'])}
-              disabled={loading || !result}
+              disabled={loading |!result}
               className='px-3 py-2 border rounded'
             >
               Submit (Email)

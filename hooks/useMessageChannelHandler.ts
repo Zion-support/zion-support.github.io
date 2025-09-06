@@ -1,13 +1,24 @@
-import { useState, useEffect, useCallback } from 'react';
-
-export const useMessageChannelHandler = () => {
-  const [state, setState] = useState(null);
-  
+  onMessage;
+  onError
+}: MessageChannelHandlerProps = {}) {
+  const handleMessage = useCallback(
+    (event: MessageEvent<unknown>) => {
+      try {
+        if (onMessage) {
+          onMessage(event.data);
+        }
+      } catch (error) {
+        if (onError) {
+          onError(error as Error);
+        }
+      }
+    }
+    [onMessage, onError]
+  );
   useEffect(() => {
-    // Hook implementation
-  }, []);
-  
-  return { state, setState };
-};
-
-export default useMessageChannelHandler;
+    window.addEventListener("message", handleMessage);
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    }
+  }, [handleMessage]);
+}

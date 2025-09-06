@@ -1,181 +1,177 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Globe;
+  Twitter, Linkedin, Github;
+  ArrowUp, Crown, Zap, Brain, Rocket;
+  Shield, Users, BookOpen, Briefcase, Atom
+ } from 'lucide-react';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Twitter,
-  Linkedin,
-  Github,
-  ArrowUp,
-  Crown,
-  Zap,
-  Brain,
-  Rocket,
-  Shield,
-  Users,
-  BookOpen,
-  Briefcase,
-  Atom,;
+  Mail
+  Phone
+  MapPin
+  Globe
+  Twitter
+  Linkedin
+  Github
+  ArrowUp
+  Crown
+  Zap
+  Brain
+  Rocket
+  Shield
+  Users
+  BookOpen
+  Briefcase
+  Atom;
 } from 'lucide-react';
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
-
 interface FooterLink {
   label: string;
   href: string;
   description?: string;
-  external?: boolean;
-
-interface FooterSection {
-  title: string;
   links: FooterLink[];
 
+  external?: boolean
+}
+interface FooterSection {
+  title: string;
+  links: FooterLink[]
+}
 const footerSections: FooterSection[] = [
   {
-    title: 'Services',
+    title: 'Services';
     links: [
-{
-        label: 'AI & Machine Learning',
-        href: '/ai-services',
-        description: 'Advanced AI solutions',
-      },
       {
-        label: 'Quantum Computing',
-        href: '/quantum-computing',
-        description: 'Next-gen quantum tech',
-      },
+        label: 'AI & Machine Learning'
+        href: '/ai-services'
+        description: 'Advanced AI solutions'
+      }
       {
-        label: 'Space Technology',
-        href: '/space-tech',
-        description: 'Innovative space solutions',
-      },
+        label: 'Quantum Computing'
+        href: '/quantum-computing'
+        description: 'Next-gen quantum tech'
+      }
       {
-        label: 'Q4 2025 Innovation',
-        href: '/innovative-2025-q4-showcase',
-        description: 'Latest revolutionary services',
-      },
+        label: 'Space Technology'
+        href: '/space-tech'
+        description: 'Innovative space solutions'
+      }
       {
-        label: 'Pricing Guide',
-        href: '/comprehensive-pricing-2025-q4',
-        description: 'Comprehensive pricing',
-      },
+        label: 'Q4 2025 Innovation'
+        href: '/innovative-2025-q4-showcase'
+        description: 'Latest revolutionary services'
+      }
       {
-        label: 'Cybersecurity',
-        href: '/cybersecurity',
-        description: 'Enterprise security',
-      },
+        label: 'Pricing Guide'
+        href: '/comprehensive-pricing-2025-q4'
+        description: 'Comprehensive pricing'
+      }
       {
-        label: 'Cloud Solutions',
-        href: '/cloud-platform',
-        description: 'Scalable cloud infrastructure',
-      },
+        label: 'Cybersecurity'
+        href: '/cybersecurity'
+        description: 'Enterprise security'
+      }
       {
-        label: 'View All Services',
-        href: '/services',
-        description: 'Complete service portfolio',
-      },
-    ],
-  },
+        label: 'Cloud Solutions'
+        href: '/cloud-platform'
+        description: 'Scalable cloud infrastructure'
+      }
+      {
+        label: 'View All Services'
+        href: '/services'
+        description: 'Complete service portfolio'
+      }
+    ]
+  }
   {
-    title: 'Solutions',
+    title: 'Solutions';
     links: [
       {
-        label: 'Healthcare & Biotech',
-        href: '/healthcare-solutions',
-        description: 'Medical technology',
-      },
+        label: 'Healthcare & Biotech'
+        href: '/healthcare-solutions'
+        description: 'Medical technology'
+      }
       {
-        label: 'Financial Services',
-        href: '/solutions?industry=financial',
-        description: 'Fintech solutions',
-      },
+        label: 'Financial Services'
+        href: '/solutions?industry=financial'
+        description: 'Fintech solutions'
+      }
       {
-        label: 'Manufacturing',
-        href: '/solutions?industry=manufacturing',
-        description: 'Industry 4.0',
-      },
+        label: 'Manufacturing'
+        href: '/solutions?industry=manufacturing'
+        description: 'Industry 4.0'
+      }
       {
-        label: 'Retail & E-commerce',
-        href: '/solutions?industry=retail',
-        description: 'Digital commerce',
-      },
+        label: 'Retail & E-commerce'
+        href: '/solutions?industry=retail'
+        description: 'Digital commerce'
+      }
       {
-        label: 'Government',
-        href: '/solutions?industry=government',
-        description: 'Public sector',
-      },
+        label: 'Government'
+        href: '/solutions?industry=government'
+        description: 'Public sector'
+      }
       {
-        label: 'Education',
-        href: '/solutions?industry=education',
-        description: 'EdTech solutions',
-      },
-    ],
-  },
+        label: 'Education'
+        href: '/solutions?industry=education'
+        description: 'EdTech solutions'
+      }
   {
-    title: 'Company',
+    title: 'Solutions'
+    links: [
+      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
+      { label: 'Financial Services', href: '/solutions?industry;
     links: [
       {
-        label: 'About Us',
-        href: '/about',
-        description: 'Our mission and values',
-      },
-      { label: 'Careers', href: '/careers', description: 'Join our team' },
-      { label: 'Contact', href: '/contact', description: 'Get in touch' },
-    ],
-  },
+        label: 'About Us'
+        href: '/about'
+        description: 'Our mission and values'
+      }
+      { label: 'Careers', href: '/careers', description: 'Join our team' }
+      { label: 'Contact', href: '/contact', description: 'Get in touch' }
+    ]
+  },  {
+    title: 'Resources'
+    links: [
+      { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
+    title: 'Solutions'
+    links: [
+      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
+      { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
+      { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
+      { label: 'Retail & E-commerce', href: '/solutions?industry=retail', description: 'Digital commerce' }
+      { label: 'Government', href: '/solutions?industry=government', description: 'Public sector' }
+      { label: 'Education', href: '/solutions?industry=education', description: 'EdTech solutions' }
+    ]
+  }
   {
-    title: 'Resources',
+    title: 'Company'
     links: [
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-{
-        label: 'White Papers',
-        href: '/white-papers',
-        description: 'In-depth research',
-      },
-      {
-        label: 'Webinars',
-        href: '/webinars',
-        description: 'Educational content',
-      },
-      {
-        label: 'Documentation',
-        href: '/docs',
-        description: 'Technical guides',
-      },
-      { label: 'Blog', href: '/blog', description: 'Industry insights' },
-      {
-        label: 'Case Studies',
-        href: '/case-studies',
-        description: 'Success stories',
-      },
-      { label: 'Support', href: '/support', description: 'Help & assistance' },
-    ],
-  },
+      { label: 'About Us', href: '/about', description: 'Our mission and values' }
+      { label: 'Careers', href: '/careers', description: 'Join our team' }
+      { label: 'Contact', href: '/contact', description: 'Get in touch' }
+    ]
+  }
   {
-    title: 'Industries',
+    title: 'Resources'
     links: [
+      { label: 'Blog', href: '/blog', description: 'Industry insights' }
       {
-        label: 'Healthcare',
-        href: '/healthcare-solutions',
-        description: 'Medical technology',
-      },
+        label: 'White Papers'
+        href: '/white-papers'
+        description: 'In-depth research'
+      }
       {
-        label: 'Finance',
-        href: '/financial-solutions',
-        description: 'Fintech solutions',
-      },
+        label: 'Webinars'
+        href: '/webinars'
+        description: 'Educational content'
+      }
       {
-        label: 'Manufacturing',
-        href: '/manufacturing-ai-solutions',
-        description: 'Industry 4.0',
-      },
-      {
-        label: 'Government',
-        href: '/government-technology-solutions',
-        description: 'Public sector',
-      },
+        label: 'Documentation'
+        href: '/docs'
+        description: 'Technical guides'
+      }
       {
         label: 'Education',
         href: '/education-technology-solutions',
@@ -230,7 +226,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const footerSections = [
     {
-      title: 'Services',
+      title: 'Services'
       items: [
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
@@ -240,7 +236,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
       ],
     },
     {
-      title: 'Solutions',
+      title: 'Solutions'
       items: [
         { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
         { label: 'Micro SAAS', href: '/micro-saas' },
@@ -250,7 +246,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
       ],
     },
     {
-      title: 'Company',
+      title: 'Company'
       items: [
         { label: 'About Us', href: '/about' },
         { label: 'Our Team', href: '/team' },
@@ -260,7 +256,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
       ],
     },
     {
-      title: 'Resources',
+      title: 'Resources'
       items: [
         { label: 'Blog', href: '/blog' },
         { label: 'Case Studies', href: '/case-studies' },
@@ -285,11 +281,10 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' },
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -297,10 +292,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
 duration: 0.5,
       },
@@ -329,17 +324,15 @@ className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-f
 ease: 'easeInOut',
             }}
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
             }}
           />
         ))}
-
         {/* Gradient Overlays */}
         <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-purple-900/20 to-transparent'></div>
         <div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900'></div>
       </div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
@@ -368,19 +361,16 @@ ease: 'easeInOut',
                   </p>
                 </div>
               </div>
-
               <p className='text-gray-300 mb-6 leading-relaxed'>
-                Pioneering the future with revolutionary AI consciousness,
+                Pioneering the future with revolutionary AI consciousness
                 quantum computing, and autonomous systems. Transforming
                 businesses through next-generation technology.
               </p>
-
               <p className='text-gray-300 leading-relaxed mb-6 max-w-md'>
-                Leading provider of innovative technology solutions,
+                Leading provider of innovative technology solutions
                 specializing in AI, automation, and future-ready services. We
                 help businesses transform and thrive in the digital age.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -406,7 +396,6 @@ ease: 'easeInOut',
                 </div>
               </div>
             </motion.div>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div key={section.title} variants={itemVariants}>
@@ -440,7 +429,6 @@ ease: 'easeInOut',
               </motion.div>
             ))}
           </motion.div>
-
           {/* Social Links & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -467,7 +455,6 @@ className='mt-16 pt-12 border-t border-gray-800/50'
                   </motion.a>
                 ))}
               </div>
-
               {/* Newsletter Signup */}
 <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -495,7 +482,6 @@ className='mt-16 pt-12 border-t border-gray-800/50'
             </div>
           </motion.div>
         </div>
-
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -507,14 +493,13 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-gray-400 text-sm'>
-                © 2024 Zion Tech Group. All rights reserved. |
+                © 2024 Zion Tech Group. All rights reserved.
                 <Link
                   href='/privacy'
                   className='hover:text-white transition-colors duration-200 ml-2'
                 >
                   Privacy Policy
                 </Link>{' '}
-                |
                 <Link
                   href='/terms'
                   className='hover:text-white transition-colors duration-200 ml-2'
@@ -522,12 +507,10 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
                   Terms of Service
                 </Link>
               </div>
-
               <div className='flex items-center space-x-4 text-gray-400 text-sm'>
                 <span>Powered by</span>
                 <div className='flex items-center space-x-2'>
-                  <Brain className='w-4 h-4 text-cyan-400' />
-                  <span>AI Consciousness</span>
+                  <Brain className='w-4 h-4 text-cyan-400' />                  <span>AI Consciousness</span>
                 </div>
                 <span>•</span>
                 <div className='flex items-center space-x-2'>
@@ -544,7 +527,6 @@ className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
           </div>
         </motion.div>
       </div>
-
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}

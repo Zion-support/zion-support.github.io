@@ -1,49 +1,5 @@
 import Link from 'next/link';
-
-const tiers = [
-  {
-    id: 'teams',
-    name: 'Teams',
-    price: '$199/mo',
-    blurb: 'Up to 10 users, core collaboration features',
-highlights: ['10 seats', 'Private portal', 'Admin dashboard'],
-    includes: {
-      private_portal: true,
-      dedicated_talent_pool: false,
-      custom_sla: false,
-      branded_onboarding: true,
-      admin_dashboards: true,
-    },
-  },
-  {
-    id: 'business',
-    name: 'Business',
-    price: '$499/mo',
-    blurb: 'Up to 50 users, advanced controls and limits',
-highlights: ['50 seats', 'Dedicated talent pool', 'SLA options'],
-    includes: {
-      private_portal: true,
-      dedicated_talent_pool: true,
-      custom_sla: true,
-      branded_onboarding: true,
-      admin_dashboards: true,
-    },
-  },
-  {
-    id: 'enterprise-custom',
-    name: 'Enterprise',
-    price: 'Custom',
-    blurb: 'Unlimited users, custom contracts and SLAs',
-highlights: ['Unlimited seats', 'Custom SLA', 'Dedicated CSM'],
-    includes: {
-      private_portal: true,
-      dedicated_talent_pool: true,
-      custom_sla: true,
-      branded_onboarding: true,
-      admin_dashboards: true,
-    },
-  },
-];
+const features = null;
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -106,7 +62,6 @@ export default function EnterprisePlans() {
           </div>
         ))}
       </section>
-
       <section style={{ marginTop: '2rem' }}>
         <h2>Feature comparison</h2>
         <div style={{ overflowX: 'auto', marginTop: 12 }}>

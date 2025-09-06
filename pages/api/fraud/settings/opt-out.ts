@@ -1,14 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
+import { getFraudStore } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const store = null;
+    return res.status(200).json(updated)
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   const store = getFraudStore();
-
-  if (req.method === 'GET') {
-    const userId = (req.query.userId as string) || '';
-    if (!userId) return res.status(400).json({ error: 'Missing userId' });
+  if (req.method === "GET") {
+    const userId = (req.query.userId as string) |"";
+    if (!userId) return res.status(400).json({ error: "Missing userId" });
     const settings = await store.getPrivacySettings(userId);
 return res.status(200).json(settings);
   }

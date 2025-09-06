@@ -1,5 +1,3 @@
-export const advancedMicroSaasExpansion2025V2 = [
-  {
 name: 'AI Content Factory Pro',
     description: 'Advanced AI-powered content creation and management platform',
     category: 'AI & Data',

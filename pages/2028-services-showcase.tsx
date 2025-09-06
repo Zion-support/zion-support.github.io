@@ -1,8 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   CheckCircle,
   ArrowRight,
   Star,
@@ -127,9 +122,7 @@ export default function ServicesShowcase2028() {
           href='https://ziontechgroup.com/2028-services-showcase'
         />
       </Head>
-
       <UltraFuturisticNavigation2028 />
-
       {/* Hero Section */}
 <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden'>
         {/* Animated Background */}
@@ -181,7 +174,6 @@ className='space-y-8'
                 <DollarSign className='w-5 h-5' />
               </Link>
             </div>
-
             {/* Stats */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
               <div className='text-center'>
@@ -204,7 +196,6 @@ className='space-y-8'
           </motion.div>
         </div>
       </section>
-
       {/* Services Categories */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -262,7 +253,6 @@ className='group relative'
                         </div>
                       ))}
                     </div>
-
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
 className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
@@ -277,7 +267,6 @@ className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
 <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -370,7 +359,6 @@ className='group relative'
           </div>
         </div>
       </section>
-
       {/* Market Analysis */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -405,8 +393,11 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               </p>
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
+                with some sectors growing at 300-800% annually.
+              </p>
+              <div className="text-3xl font-bold text-green-400">500%+</div>
+              <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -425,7 +416,6 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
               <div className='text-3xl font-bold text-blue-400'>$500B+</div>
               <div className='text-blue-300'>Total Addressable Market</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -447,7 +437,6 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -505,7 +494,6 @@ className='space-y-8'
           </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2028 />
     </>
 );

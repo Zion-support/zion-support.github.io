@@ -1,6 +1,5 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
-
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -16,7 +15,6 @@ export default function ServicesPage() {
             Dedicated squads to launch your MVP in weeks with tight feedback
             cycles.
           </p>
-        </section>
         <section
           id='security'
           className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'

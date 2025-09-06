@@ -1,11 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
-    };
-
+const UltraFuturisticBackground2046: React.FC;
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle class
     class Particle {
 x: number;
@@ -42,16 +39,13 @@ const types = ['quantum', 'neural', 'data', 'energy'];
 break;
         }
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
-
         // Bounce off edges
-        if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
-        if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
-
+        if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
+        if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
         // Add some quantum randomness
         if (Math.random() < 0.01) {
           this.vx += (Math.random() - 0.5) * 0.5;
@@ -62,7 +56,6 @@ this.vy += (Math.random() - 0.5) * 0.5;
         this.vx = Math.max(-3, Math.min(3, this.vx));
 this.vy = Math.max(-3, Math.min(3, this.vy));
       }
-
       draw() {
         if (!ctx) return;
 const alpha = this.life / this.maxLife;
@@ -115,9 +108,9 @@ case 'data':
             // Data streams
             ctx.fillStyle = this.color;
             ctx.fillRect(
-              this.x - this.size / 2,
-              this.y - this.size / 2,
-              this.size,
+              this.x - this.size / 2
+              this.y - this.size / 2
+              this.size
               this.size
             );
             // Data flow lines
@@ -137,11 +130,11 @@ case 'data':
             ctx.fill();
 // Glow effect
             const gradient = ctx.createRadialGradient(
-              this.x,
-              this.y,
-              0,
-              this.x,
-              this.y,
+              this.x
+              this.y
+              0
+              this.x
+              this.y
               this.size * 3
             );
             gradient.addColorStop(0, this.color);
@@ -150,23 +143,19 @@ case 'data':
             ctx.fill();
 break;
         }
-
         ctx.restore();
       }
-
       isDead() {
         return this.life <= 0;
       }
     }
-
     // Initialize particles
     const initParticles = () => {
       particlesRef.current = [];
 for (let i = 0; i < 150; i++) {
         particlesRef.current.push(new Particle());
       }
-    };
-
+    }
     // Animation loop
     const animate = () => {
       if (!ctx || !canvas) return;
@@ -174,7 +163,6 @@ for (let i = 0; i < 150; i++) {
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         particle.update();
@@ -184,33 +172,27 @@ for (let i = 0; i < 150; i++) {
           particlesRef.current[index] = new Particle();
         }
       });
-
       // Draw quantum field lines
       drawQuantumField(ctx, canvas.width, canvas.height);
 // Draw neural network grid
       drawNeuralGrid(ctx, canvas.width, canvas.height);
-
       animationRef.current = requestAnimationFrame(animate);
-    };
-
+    }
     // Quantum field lines
     const drawQuantumField = (
-      ctx: CanvasRenderingContext2D,
-      width: number,
+      ctx: CanvasRenderingContext2D
+      width: number
       height: number
     ) => {
       const time = Date.now() * 0.001;
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 1;
-
       for (let i = 0; i < 20; i++) {
         ctx.beginPath();
         const x = (i / 20) * width;
         const y = Math.sin(time + i * 0.5) * 50 + height / 2;
-
         ctx.moveTo(x, 0);
         ctx.lineTo(x, height);
-
         // Add wave interference
         for (let j = 0; j < height; j += 10) {
           const waveY = y + Math.sin(time * 2 + i * 0.3) * 30;
@@ -219,18 +201,15 @@ for (let i = 0; i < 150; i++) {
 
         ctx.stroke();
       }
-    };
-
+    }
     // Neural network grid
 const drawNeuralGrid = (
       ctx: CanvasRenderingContext2D,
       width: number,
       height: number
     ) => {
-      const time = Date.now() * 0.002;
       ctx.strokeStyle = 'rgba(255, 0, 255, 0.05)';
       ctx.lineWidth = 0.5;
-
       const gridSize = 50;
       for (let x = 0; x < width; x += gridSize) {
         for (let y = 0; y < height; y += gridSize) {
@@ -244,12 +223,10 @@ const drawNeuralGrid = (
 ctx.stroke();
         }
       }
-    };
-
+    }
     // Start animation
     initParticles();
     animate();
-
     // Cleanup
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -258,7 +235,6 @@ cancelAnimationFrame(animationRef.current);
       }
     };
   }, []);
-
   return (
     <div className='fixed inset-0 pointer-events-none z-0'>
       {/* Animated gradient background */}
@@ -266,25 +242,23 @@ cancelAnimationFrame(animationRef.current);
         className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 via-cyan-900/30 to-black'
         animate={{
           background: [
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
-            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)',
-            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)',
-          ],
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
+            'linear-gradient(to bottom right, #000000, #0c4a6e, #1e1b4b, #000000)'
+            'linear-gradient(to bottom right, #000000, #1e1b4b, #0c4a6e, #000000)'
+          ]
         }}
         transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: 'easeInOut',
+          duration: 10
+          repeat: Infinity
+          ease: 'easeInOut'
         }}
       />
-
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ filter: 'blur(0.5px)' }}
       />
-
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 overflow-hidden'>
         {[...Array(8)].map((_, i) => (
@@ -292,73 +266,70 @@ cancelAnimationFrame(animationRef.current);
             key={i}
             className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
             }}
             animate={{
-              rotate: [0, 360],
-              scale: [0.5, 1, 0.5],
-              opacity: [0.1, 0.3, 0.1],
+              rotate: [0, 360]
+              scale: [0.5, 1, 0.5]
+              opacity: [0.1, 0.3, 0.1]
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: i * 0.5,
+              duration: Math.random() * 10 + 10
+              repeat: Infinity
+              ease: 'linear'
+              delay: i * 0.5
             }}
           />
         ))}
-
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={`square-${i}`}
             className='absolute w-24 h-24 border border-purple-500/20 rotate-45'
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
             }}
             animate={{
-              rotate: [45, 405],
-              scale: [0.3, 0.8, 0.3],
-              opacity: [0.1, 0.2, 0.1],
+              rotate: [45, 405]
+              scale: [0.3, 0.8, 0.3]
+              opacity: [0.1, 0.2, 0.1]
             }}
             transition={{
-              duration: Math.random() * 8 + 8,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: i * 0.7,
+              duration: Math.random() * 8 + 8
+              repeat: Infinity
+              ease: 'linear'
+              delay: i * 0.7
             }}
           />
         ))}
       </div>
-
       {/* Energy waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32'>
         <motion.div
           className='absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-transparent'
           animate={{
-            height: ['32px', '48px', '32px'],
+            height: ['32px', '48px', '32px']
           }}
           transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut'
           }}
         />
         <motion.div
           className='absolute inset-0 bg-gradient-to-t from-purple-500/10 to-transparent'
           animate={{
-            height: ['24px', '40px', '24px'],
+            height: ['24px', '40px', '24px']
           }}
           transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 1,
+            duration: 3
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 1
           }}
         />
       </div>
-
       {/* Quantum interference patterns */}
       <div className='absolute inset-0'>
         {[...Array(5)].map((_, i) => (
@@ -366,11 +337,11 @@ cancelAnimationFrame(animationRef.current);
             key={`interference-${i}`}
             className='absolute inset-0 opacity-5'
             style={{
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
+              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`
             }}
             animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.05, 0.1, 0.05],
+              scale: [1, 1.5, 1]
+              opacity: [0.05, 0.1, 0.05]
             }}
             transition={{
               duration: Math.random() * 6 + 4,

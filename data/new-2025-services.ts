@@ -1,42 +1,28 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-// Additional 2025 real micro-SaaS, AI and IT services
-export const new2025Services: EnhancedRealMicroSaasService[] = [
-  {
-id: 'llm-safety-observability-suite',
-    name: 'LLM Safety & Observability Suite',
-    tagline: 'Detect jailbreaks, PII leaks and drift with real-time dashboards',
-    price: '$129',
-    period: '/month',
+const contact = null;
     description:
-      'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.',
+      'Policy checks, toxicity filters, red-team scenarios and model drift detection with alerts and CI gates. SDKs with minimal code changes.'
     features: [
-      'Prompt/output policy engine',
-      'Jailbreak and injection detection',
-      'PII redaction and audit trail',
-      'Hallucination and grounding score',
-      'Dashboards and CI quality gates',
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from-rose-600 to-red-700',
-    textColor: 'text-rose-300',
-    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite',
+      'Prompt/output policy engine'
+      'Jailbreak and injection detection'
+      'PII redaction and audit trail'
+      'Hallucination and grounding score'
+      'Dashboards and CI quality gates'
+    ]
+    popular: true
+    icon: '🛡️'
+    color: 'from-rose-600 to-red-700'
+    textColor: 'text-rose-300'
+    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite'
     marketPosition:
-      'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.',
-    targetAudience: 'Teams shipping AI copilots and assistants',
-    trialDays: 14,
-    setupTime: '30 minutes',
-    category: 'AI & Data',
-    realService: true,
-    technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry'],
-    integrations: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions'],
+      'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.'
+    targetAudience: 'Teams shipping AI copilots and assistants'
+    trialDays: 14
+    setupTime: '30 minutes'
+    category: 'AI & Data'
+    realService: true
+    technology: ['TypeScript', 'OpenAI', 'Anthropic', 'OpenTelemetry']
+    integrations: ['Slack', 'PagerDuty', 'Datadog', 'GitHub Actions']
     useCases: [
       'Prevent unsafe outputs',
       'Compliance readiness',

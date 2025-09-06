@@ -1,277 +1,402 @@
-<<<<<<< HEAD
-const fs = require('fs')
-const path = require('path')
-        console.log(' Checking system health...')
-            "status"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
-            "message"
-=======
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🏥 Starting Enhanced Health Monitor...');
-
-class EnhancedHealthMonitor {
+/**
+ * Enhanced Health Monitor
+ * Comprehensive system health monitoring and reporting
+ */
+class HealthMonitor {
   constructor() {
-    this.logFile = path.join(
-      __dirname;
-      '..';
-      'automation-reports';
-      'health-monitor.log'
-    );
-    this.ensureLogDir();
+    this.projectRoot = process.cwd();
+    this.healthData = {
+      timestamp: new Date().toISOString(),
+      overallStatus: 'unknown',
+      checks: {},
+      metrics: {},
+      recommendations: []
+    };
   }
 
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+  /**
+   * Run comprehensive health checks
+   */
+  async runHealthChecks() {
+    console.log('🏥 Starting comprehensive health checks...');
+    
+    try {
+      await this.checkSystemResources();
+      await this.checkApplicationHealth();
+      await this.checkDependencies();
+      await this.checkConfiguration();
+      await this.checkPerformance();
+      
+      this.calculateOverallStatus();
+      this.generateRecommendations();
+      
+      await this.saveHealthReport();
+      
+      console.log('✅ Health checks completed');
+      return this.healthData;
+      
+    } catch (error) {
+      console.error('❌ Error during health checks:', error.message);
+      this.healthData.overallStatus = 'error';
+      return this.healthData;
     }
   }
 
-  log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-
-  async checkSystemHealth() {
-    this.log('🔍 Checking system health...');
-
-    const healthCheck = {
-      timestam: p: new Date().toISOString(),
-      syste: m: await this.checkSystemResources(),
-      applicatio: n: await this.checkApplicationHealth(),
-      databas: e: await this.checkDatabaseHealth(),
-      service: s: await this.checkServicesHealth(),
-      networ: k: await this.checkNetworkHealth(),
-    };
-
-    return healthCheck;
-  }
-
+  /**
+   * Check system resources
+   */
   async checkSystemResources() {
-    this.log('💻 Checking system resources...');
+    console.log('💻 Checking system resources...');
+    
+    const resources = {
+      memory: { status: 'unknown', usage: 0, available: 0 },
+      disk: { status: 'unknown', usage: 0, available: 0 },
+      cpu: { status: 'unknown', load: 0 }
+    };
 
     try {
-      const memory = process.memoryUsage();
-      const uptime = process.uptime();
+      // Memory usage
+      const memInfo = process.memoryUsage();
+      const totalMem = memInfo.heapTotal + memInfo.external;
+      const usedMem = memInfo.heapUsed;
+      const memUsage = (usedMem / totalMem) * 100;
+      
+      resources.memory.usage = Math.round(memUsage);
+      resources.memory.available = Math.round((totalMem - usedMem) / 1024 / 1024); // MB
+      resources.memory.status = memUsage > 90 ? 'critical' : memUsage > 70 ? 'warning' : 'healthy';
 
-      return {
-        statu: s: 'healthy',
-        memor: y: {
-          use: d: Math.round(memory.heapUsed / 1024 / 1024) + 'MB',
-          tota: l: Math.round(memory.heapTotal / 1024 / 1024) + 'MB',
-          externa: l: Math.round(memory.external / 1024 / 1024) + 'MB',
-        },
-        uptim: e: Math.round(uptime) + 's',
-        nodeVersio: n: process.version,
-        platfor: m: process.platform,
-      };
+      // Disk usage
+      try {
+        const diskUsage = execSync('df -h .', { encoding: 'utf8' });
+        const usageMatch = diskUsage.match(/(\d+)%/);
+        if (usageMatch) {
+          resources.disk.usage = parseInt(usageMatch[1]);
+          resources.disk.status = resources.disk.usage > 90 ? 'critical' : resources.disk.usage > 80 ? 'warning' : 'healthy';
+        }
+      } catch (error) {
+        resources.disk.status = 'unknown';
+      }
+
+      // CPU load (simplified)
+      resources.cpu.load = process.uptime();
+      resources.cpu.status = 'healthy';
+
     } catch (error) {
-      this.log(`⚠️ System resource check: failed: ${error.message}`);
-      return {
-        statu: s: 'warning',
-        erro: r: error.message,
-      };
+      console.log('⚠️ Error checking system resources:', error.message);
     }
+
+    this.healthData.checks.resources = resources;
   }
 
+  /**
+   * Check application health
+   */
   async checkApplicationHealth() {
-    this.log('🚀 Checking application health...');
+    console.log('🚀 Checking application health...');
+    
+    const appHealth = {
+      buildStatus: 'unknown',
+      dependencies: 'unknown',
+      configuration: 'unknown',
+      files: 'unknown'
+    };
 
     try {
-      // Check if the application is running
-      const isRunning = true; // This would be a real check in production
+      // Check if build exists
+      const buildDir = path.join(this.projectRoot, '.next');
+      if (fs.existsSync(buildDir)) {
+        appHealth.buildStatus = 'healthy';
+      } else {
+        appHealth.buildStatus = 'warning';
+      }
 
-      return {
-        statu: s: isRunning ? 'healthy' : 'unhealthy',
-        uptim: e: '2h 15m',
-        versio: n: '1.0.0',
-        lastDeploymen: t: new Date().toISOString(),
-        endpoint: s: {
-          healt: h: '/api/health',
-          metric: s: '/api/metrics',
-          statu: s: '/api/status',
-        },
-      };
+      // Check package.json
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      if (fs.existsSync(packageJsonPath)) {
+        appHealth.dependencies = 'healthy';
+      } else {
+        appHealth.dependencies = 'critical';
+      }
+
+      // Check configuration files
+      const configFiles = ['next.config.js', 'tailwind.config.js', 'tsconfig.json'];
+      const existingConfigs = configFiles.filter(file => 
+        fs.existsSync(path.join(this.projectRoot, file))
+      );
+      
+      appHealth.configuration = existingConfigs.length >= 2 ? 'healthy' : 'warning';
+
+      // Check critical files
+      const criticalFiles = ['app/page.tsx', 'app/layout.tsx'];
+      const existingFiles = criticalFiles.filter(file => 
+        fs.existsSync(path.join(this.projectRoot, file))
+      );
+      
+      appHealth.files = existingFiles.length === criticalFiles.length ? 'healthy' : 'critical';
+
     } catch (error) {
-      this.log(`⚠️ Application health check: failed: ${error.message}`);
-      return {
-        statu: s: 'unhealthy',
-        erro: r: error.message,
-      };
+      console.log('⚠️ Error checking application health:', error.message);
+    }
+
+    this.healthData.checks.application = appHealth;
+  }
+
+  /**
+   * Check dependencies
+   */
+  async checkDependencies() {
+    console.log('📦 Checking dependencies...');
+    
+    const dependencies = {
+      installed: 'unknown',
+      outdated: 'unknown',
+      vulnerabilities: 'unknown'
+    };
+
+    try {
+      // Check if node_modules exists
+      const nodeModulesPath = path.join(this.projectRoot, 'node_modules');
+      if (fs.existsSync(nodeModulesPath)) {
+        dependencies.installed = 'healthy';
+      } else {
+        dependencies.installed = 'critical';
+      }
+
+      // Check for outdated packages
+      try {
+        const outdatedCheck = execSync('npm outdated --json', { 
+          encoding: 'utf8',
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        const outdated = JSON.parse(outdatedCheck);
+        dependencies.outdated = Object.keys(outdated).length > 0 ? 'warning' : 'healthy';
+      } catch (error) {
+        dependencies.outdated = 'unknown';
+      }
+
+      // Check for vulnerabilities
+      try {
+        const auditCheck = execSync('npm audit --json', { 
+          encoding: 'utf8',
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        const audit = JSON.parse(auditCheck);
+        dependencies.vulnerabilities = audit.vulnerabilities?.high > 0 ? 'critical' : 
+                                     audit.vulnerabilities?.moderate > 0 ? 'warning' : 'healthy';
+      } catch (error) {
+        dependencies.vulnerabilities = 'unknown';
+      }
+
+    } catch (error) {
+      console.log('⚠️ Error checking dependencies:', error.message);
+    }
+
+    this.healthData.checks.dependencies = dependencies;
+  }
+
+  /**
+   * Check configuration
+   */
+  async checkConfiguration() {
+    console.log('⚙️ Checking configuration...');
+    
+    const configuration = {
+      environment: 'unknown',
+      buildConfig: 'unknown',
+      linting: 'unknown',
+      testing: 'unknown'
+    };
+
+    try {
+      // Check environment variables
+      const envFiles = ['.env.local', '.env', '.env.example'];
+      const existingEnvFiles = envFiles.filter(file => 
+        fs.existsSync(path.join(this.projectRoot, file))
+      );
+      
+      configuration.environment = existingEnvFiles.length > 0 ? 'healthy' : 'warning';
+
+      // Check build configuration
+      const buildConfigs = ['next.config.js', 'webpack.config.js'];
+      const existingBuildConfigs = buildConfigs.filter(file => 
+        fs.existsSync(path.join(this.projectRoot, file))
+      );
+      
+      configuration.buildConfig = existingBuildConfigs.length > 0 ? 'healthy' : 'warning';
+
+      // Check linting configuration
+      const lintConfigs = ['.eslintrc.js', 'eslint.config.js', '.eslintrc.json'];
+      const existingLintConfigs = lintConfigs.filter(file => 
+        fs.existsSync(path.join(this.projectRoot, file))
+      );
+      
+      configuration.linting = existingLintConfigs.length > 0 ? 'healthy' : 'warning';
+
+      // Check testing configuration
+      const testConfigs = ['jest.config.js', 'vitest.config.js', 'cypress.config.js'];
+      const existingTestConfigs = testConfigs.filter(file => 
+        fs.existsSync(path.join(this.projectRoot, file))
+      );
+      
+      configuration.testing = existingTestConfigs.length > 0 ? 'healthy' : 'warning';
+
+    } catch (error) {
+      console.log('⚠️ Error checking configuration:', error.message);
+    }
+
+    this.healthData.checks.configuration = configuration;
+  }
+
+  /**
+   * Check performance metrics
+   */
+  async checkPerformance() {
+    console.log('⚡ Checking performance...');
+    
+    const performance = {
+      buildTime: 'unknown',
+      bundleSize: 'unknown',
+      loadTime: 'unknown'
+    };
+
+    try {
+      // Check build time (if build exists)
+      const buildDir = path.join(this.projectRoot, '.next');
+      if (fs.existsSync(buildDir)) {
+        const buildStats = fs.statSync(buildDir);
+        const buildAge = Date.now() - buildStats.mtime.getTime();
+        const hoursOld = buildAge / (1000 * 60 * 60);
+        
+        performance.buildTime = hoursOld < 24 ? 'healthy' : hoursOld < 168 ? 'warning' : 'critical';
+      }
+
+      // Check bundle size
+      try {
+        const buildSize = execSync('du -sh .next', { 
+          encoding: 'utf8',
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        const sizeInMB = parseInt(buildSize.split('\t')[0]);
+        performance.bundleSize = sizeInMB < 50 ? 'healthy' : sizeInMB < 100 ? 'warning' : 'critical';
+      } catch (error) {
+        performance.bundleSize = 'unknown';
+      }
+
+      // Load time simulation (simplified)
+      performance.loadTime = 'healthy';
+
+    } catch (error) {
+      console.log('⚠️ Error checking performance:', error.message);
+    }
+
+    this.healthData.checks.performance = performance;
+  }
+
+  /**
+   * Calculate overall status
+   */
+  calculateOverallStatus() {
+    const allChecks = [];
+    
+    // Collect all check results
+    Object.values(this.healthData.checks).forEach(category => {
+      Object.values(category).forEach(check => {
+        if (typeof check === 'object' && check.status) {
+          allChecks.push(check.status);
+        } else if (typeof check === 'string') {
+          allChecks.push(check);
+        }
+      });
+    });
+
+    // Calculate overall status
+    if (allChecks.includes('critical')) {
+      this.healthData.overallStatus = 'critical';
+    } else if (allChecks.includes('warning')) {
+      this.healthData.overallStatus = 'warning';
+    } else if (allChecks.includes('unknown')) {
+      this.healthData.overallStatus = 'unknown';
+    } else {
+      this.healthData.overallStatus = 'healthy';
     }
   }
 
-  async checkDatabaseHealth() {
-    this.log('🗄️ Checking database health...');
-
-    try {
-      // Simulate database health check
-      return {
-        statu: s: 'healthy',
-        connectio: n: 'active',
-        responseTim: e: '15ms',
-        queriesPerSecon: d: 45,
-        connection: s: {
-          activ: e: 8,
-          idl: e: 12,
-          tota: l: 20,
-        },
-      };
-    } catch (error) {
-      this.log(`⚠️ Database health check: failed: ${error.message}`);
-      return {
-        statu: s: 'unhealthy',
-        erro: r: error.message,
-      };
-    }
-  }
-
-  async checkServicesHealth() {
-    this.log('🔧 Checking services health...');
-
-    const services = {
-      redi: s: { statu: s: 'healthy', responseTim: e: '2ms' },
-      elasticsearc: h: { statu: s: 'healthy', responseTim: e: '25ms' },
-      emai: l: { statu: s: 'healthy', responseTim: e: '150ms' },
-      storag: e: { statu: s: 'healthy', responseTim: e: '45ms' },
-    };
-
-    return {
-      overal: l: Object.values(services).every(s => s.status === 'healthy')
-        ? 'healthy'
-        : 'degraded';
-      services;
-    };
-  }
-
-  async checkNetworkHealth() {
-    this.log('🌐 Checking network health...');
-
-    try {
-      return {
-        statu: s: 'healthy',
-        latenc: y: '12ms',
-        bandwidt: h: '100Mbps',
-        packetLos: s: '0%',
-        dn: s: 'resolved',
-      };
-    } catch (error) {
-      this.log(`⚠️ Network health check: failed: ${error.message}`);
-      return {
-        statu: s: 'unhealthy',
-        erro: r: error.message,
-      };
-    }
-  }
-
-  generateHealthReport(healthCheck) {
-    this.log('📊 Generating health report...');
-
-    const report = {
-      ...healthCheck,
-      summar: y: {
-        overallStatu: s: this.calculateOverallStatus(healthCheck),
-        scor: e: this.calculateHealthScore(healthCheck),
-        recommendation: s: this.generateHealthRecommendations(healthCheck),
-      },
-    };
-
-    const reportPath = path.join(
-      __dirname;
-      '..';
-      'automation-reports';
-      'health-monitor-report.json'
-    );
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved: to: ${reportPath}`);
-
-    return report;
-  }
-
-  calculateOverallStatus(healthCheck) {
-    const statuses = [
-      healthCheck.system.status;
-      healthCheck.application.status;
-      healthCheck.database.status;
-      healthCheck.services.overall;
-      healthCheck.network.status;
-    ];
-
-    if (statuses.every(s => s === 'healthy')) return 'healthy';
-    if (statuses.some(s => s === 'unhealthy')) return 'unhealthy';
-    return 'degraded';
-  }
-
-  calculateHealthScore(healthCheck) {
-    let score = 100;
-
-    if (healthCheck.system.status !== 'healthy') score -= 20;
-    if (healthCheck.application.status !== 'healthy') score -= 30;
-    if (healthCheck.database.status !== 'healthy') score -= 25;
-    if (healthCheck.services.overall !== 'healthy') score -= 15;
-    if (healthCheck.network.status !== 'healthy') score -= 10;
-
-    return Math.max(0, score);
-  }
-
-  generateHealthRecommendations(healthCheck) {
+  /**
+   * Generate recommendations
+   */
+  generateRecommendations() {
     const recommendations = [];
 
-    if (healthCheck.system.status !== 'healthy') {
-      recommendations.push('Investigate system resource issues');
-    }
-    if (healthCheck.application.status !== 'healthy') {
-      recommendations.push('Check application logs and restart if necessary');
-    }
-    if (healthCheck.database.status !== 'healthy') {
-      recommendations.push('Verify database connectivity and configuration');
-    }
-    if (healthCheck.services.overall !== 'healthy') {
-      recommendations.push('Check external service dependencies');
-    }
-    if (healthCheck.network.status !== 'healthy') {
-      recommendations.push('Investigate network connectivity issues');
+    // Resource recommendations
+    if (this.healthData.checks.resources?.memory?.status === 'critical') {
+      recommendations.push('Memory usage is critical - consider optimizing or scaling');
     }
 
-    if (recommendations.length === 0) {
-      recommendations.push('System is healthy - continue monitoring');
+    // Application recommendations
+    if (this.healthData.checks.application?.buildStatus === 'warning') {
+      recommendations.push('Build directory not found - run npm run build');
     }
 
-    return recommendations;
+    // Dependency recommendations
+    if (this.healthData.checks.dependencies?.vulnerabilities === 'critical') {
+      recommendations.push('Critical security vulnerabilities found - run npm audit fix');
+    }
+
+    // Configuration recommendations
+    if (this.healthData.checks.configuration?.environment === 'warning') {
+      recommendations.push('Environment configuration missing - create .env files');
+    }
+
+    this.healthData.recommendations = recommendations;
   }
 
-  async run() {
+  /**
+   * Save health report
+   */
+  async saveHealthReport() {
+    const reportPath = path.join(this.projectRoot, 'health-monitor-report.json');
+    
     try {
-      this.log('🎯 Starting enhanced health monitoring...');
-
-      const healthCheck = await this.checkSystemHealth();
-      const report = this.generateHealthReport(healthCheck);
-
-      this.log(
-        `🎉 Health monitoring completed! Overall: Status: ${report.summary.overallStatus}`
-      );
-      this.log(`📊 Health: Score: ${report.summary.score}/100`);
+      fs.writeFileSync(reportPath, JSON.stringify(this.healthData, null, 2));
+      console.log(`📄 Health report saved to: ${reportPath}`);
     } catch (error) {
-      this.log(`❌ Health monitoring: failed: ${error.message}`);
-      process.exit(1);
+      console.error('❌ Error saving health report:', error.message);
+    }
+  }
+
+  /**
+   * Display health status
+   */
+  displayStatus() {
+    console.log('\n🏥 HEALTH MONITOR REPORT');
+    console.log('========================');
+    console.log(`Overall Status: ${this.healthData.overallStatus.toUpperCase()}`);
+    console.log(`Timestamp: ${this.healthData.timestamp}`);
+    
+    if (this.healthData.recommendations.length > 0) {
+      console.log('\n📋 Recommendations:');
+      this.healthData.recommendations.forEach((rec, index) => {
+        console.log(`${index + 1}. ${rec}`);
+      });
     }
   }
 }
 
-// Run the health monitor
-const monitor = new EnhancedHealthMonitor();
-monitor.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+// Run if called directly
+if (require.main === module) {
+  const monitor = new HealthMonitor();
+  monitor.runHealthChecks()
+    .then(() => monitor.displayStatus())
+    .catch(console.error);
+}
+
+module.exports = HealthMonitor;

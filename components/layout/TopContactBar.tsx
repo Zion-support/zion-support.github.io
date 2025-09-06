@@ -1,44 +1,12 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Clock,
-  ChevronDown,
-  ChevronUp,
-  MessageCircle,
-  Calendar,
-  Star,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-  hours: 'Mon-Fri: 9AM-6PM EST',
-rating: '4.9/5 (200+ Reviews)',
-};
-
-const quickActions = [
-  {
-    name: 'Get Quote',
-    href: '/quote',
-    icon: <MessageCircle className='w-4 h-4' />,
-  },
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className='w-4 h-4' /> },
-  {
-    name: 'Live Chat',
-    href: '/chat',
-    icon: <MessageCircle className='w-4 h-4' />,
-  },
-];
-
+import { Phone, Mail, MapPin, Globe;
+  Clock, ChevronDown, ChevronUp;
+  MessageCircle, Calendar, Star
+ } from 'lucide-react';
+const contactInfo = null;
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
 <div className='relative z-40'>
       {/* Main Contact Bar */}
@@ -57,7 +25,6 @@ export default function TopContactBar() {
                   {contactInfo.mobile}
                 </a>
               </div>
-
               {/* Email */}
 <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>
                 <Mail className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />
@@ -68,7 +35,6 @@ export default function TopContactBar() {
                   {contactInfo.email}
                 </a>
               </div>
-
               {/* Address */}
 <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>
                 <MapPin className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />
@@ -76,7 +42,6 @@ export default function TopContactBar() {
                   {contactInfo.address}
                 </span>
               </div>
-
               {/* Website */}
 <div className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group'>
                 <Globe className='w-4 h-4 text-cyan-400 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />
@@ -90,7 +55,6 @@ export default function TopContactBar() {
                 </a>
               </div>
             </div>
-
             {/* Center - Business Hours & Rating */}
 <div className='hidden lg:flex items-center space-x-6 text-sm'>
               {/* Business Hours */}
@@ -98,14 +62,12 @@ export default function TopContactBar() {
                 <Clock className='w-4 h-4 text-cyan-400' />
                 <span>{contactInfo.hours}</span>
               </div>
-
               {/* Rating */}
 <div className='flex items-center space-x-2 text-gray-300'>
                 <Star className='w-4 h-4 text-yellow-400 fill-current' />
                 <span>{contactInfo.rating}</span>
               </div>
             </div>
-
             {/* Right Side - Quick Actions & Expand Button */}
 <div className='flex items-center space-x-4'>
               {/* Quick Actions */}
@@ -121,7 +83,6 @@ export default function TopContactBar() {
                   </a>
                 ))}
               </div>
-
               {/* Expand/Collapse Button */}
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
@@ -138,7 +99,6 @@ className='flex items-center space-x-1 px-3 py-1.5 text-xs text-gray-300 hover:t
           </div>
         </div>
       </div>
-
       {/* Expanded Information Panel */}
       <AnimatePresence>
         {isExpanded && (
@@ -182,7 +142,6 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                     </div>
                   </div>
                 </div>
-
                 {/* Business Information */}
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -211,7 +170,6 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                     </div>
                   </div>
                 </div>
-
                 {/* Quick Actions */}
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -233,7 +191,6 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                     ))}
                   </div>
                 </div>
-
                 {/* Company Highlights */}
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -268,7 +225,6 @@ className='bg-gray-900/95 backdrop-blur-md border-b border-cyan-500/30 overflow-
                   </div>
                 </div>
               </div>
-
               {/* Call to Action */}
 <div className='mt-6 pt-6 border-t border-cyan-500/30'>
                 <div className='text-center'>
@@ -304,13 +260,13 @@ href='/comprehensive-services-showcase-2025'
   );
 /* Main Contact Bar */ 
 }</a> </div> </div> > {
-  action.icon 
+  action.icon
 }<span> {
-  action.name 
-}</span> </a>) ) 
+  action.name
+}</span> </a>) )
 }</div> {
-  /* Expand/Collapse Button */ 
-}<button) : (<ChevronDown className="w-4 h-4" />) 
+  /* Expand/Collapse Button */
+}<button) : (<ChevronDown className="w-4 h-4" />)
 }</button> </div> </div> </div> </div> {
   /* Expanded Information Panel */ 
 }<AnimatePresence> </div> </div> </div> Visit Website </a> </div> </div> </div> </a>) ) 

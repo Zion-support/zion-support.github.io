@@ -34,7 +34,7 @@ export default function CommunityPage() {
               or email{' '}
               <a
                 className='text-purple-400'
-                href='mailto:kleber@ziontechgroup.com'
+                href='mailto: kleber@ziontechgroup.com'
               >
                 kleber@ziontechgroup.com
               </a>

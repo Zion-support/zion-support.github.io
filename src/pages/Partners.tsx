@@ -1,15 +1,14 @@
 import { Button } from '@/components/ui/button';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { PartnerRegistrationForm } from '@/components/partners/PartnerRegistrationForm';
 import { PartnerReferralLinks } from '@/components/partners/PartnerReferralLinks';
@@ -20,29 +19,38 @@ import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
-export default function Partners() {
-  logInfo('PartnersPage rendering');
-  const [activeTab, setActiveTab] = useState('overview');
-  const { t } = useTranslation();
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-
   useEffect(() => {
     async function checkHealth() {
       try {
         const res = await fetch('/api/auth/health');
 setAuthServiceAvailable(res.ok);
       } catch (err) {
+import { useState, useEffect } from "react";
+import { useTranslation  } from 'react-i18next';
+import Link from 'next/link',
+import { PartnerRegistrationForm } from "@/components/partners/PartnerRegistrationForm",
+import { PartnerReferralLinks } from "@/components/partners/PartnerReferralLinks",
+import { PartnerDashboard } from "@/components/partners/PartnerDashboard",
+import { PartnerLeaderboard } from "@/components/partners/PartnerLeaderboard",
+import { PartnerResources } from "@/components/partners/PartnerResources",
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter  } from 'next/router';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+export default function Partners() {
+
+  logInfo('PartnersPage rendering');
+  const [activeTab, setActiveTab] = useState("overview");
+  const { t } = useTranslation();
+  const { user, isAuthenticated } = useAuth();
+  const router = null;
         logErrorToProduction('Partner login auth health check failed', {
-          data: err,
+          data: err
         });
         setAuthServiceAvailable(false);
       }
     }
     checkHealth();
   }, []);
-
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     logInfo('PartnersPage rendering Unauthenticated View');
@@ -56,7 +64,6 @@ setAuthServiceAvailable(res.ok);
             {t('partner.subtitle')}
           </p>
         </div>
-
         <div className='grid md:grid-cols-2 gap-8 mb-12'>
           <Card className='bg-zion-blue-dark border-zion-blue-light'>
             <CardHeader>
@@ -163,11 +170,9 @@ setAuthServiceAvailable(res.ok);
                   {t('partner.steps.join_title')}
                 </CardTitle>
               </CardHeader>
-              <CardContent className='text-center text-sm text-zion-slate-light'>
-                <p>{t('partner.steps.join_desc')}</p>
+              <CardContent className='text-center text-sm text-zion-slate-light'>                <p>{t('partner.steps.join_desc')}</p>
               </CardContent>
             </Card>
-
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
@@ -181,7 +186,6 @@ setAuthServiceAvailable(res.ok);
                 <p>{t('partner.steps.share_desc')}</p>
               </CardContent>
             </Card>
-
             <Card className='bg-zion-blue-dark border-zion-blue-light'>
               <CardHeader className='text-center pb-2'>
                 <div className='mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4'>
@@ -214,6 +218,8 @@ setAuthServiceAvailable(res.ok);
             className='text-zion-cyan border-zion-cyan'
             disabled={!authServiceAvailable}
             onClick={() => router.push('/login')}
+            disabled = {!authServiceAvailable,}
+            onClick = {() => router.push('/login'),}
           >
             {t('partner.login')}
           </Button>
@@ -226,7 +232,6 @@ setAuthServiceAvailable(res.ok);
       </div>
     );
   }
-
   // Authenticated user view - Partner Dashboard
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
   return (
@@ -313,8 +318,7 @@ async function checkHealth () {;
 
 }checkHealth () ;
 }, []);
-//If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {;
-  t ('partner.login') ;
+//If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
 }</Button>) ;
 }</div> </div>) ";
 }//Authenticated user view - Partner Dashboard return (<div className="container max-w-7xl py-10" > <h1>DEBUG: Partners Page - Authenticated View</h1> <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8" > <div> </Button> </div> </div> </TabsList> <TabsContent value="overview" className="space-y-4" > <PartnerDashboard /> </TabsContent> <TabsContent value="referrals" className="space-y-4" > <PartnerReferralLinks /> </TabsContent> <TabsContent value="earnings" className="space-y-4" > <Card> <CardHeader> <CardTitle> {';

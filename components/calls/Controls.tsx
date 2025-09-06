@@ -1,18 +1,11 @@
 import React from 'react';
 import type { Room } from 'livekit-client';
-type Props = {
-  room: Room | null;
-  onLeave: () => void;
-  accent?: 'blue' | 'cyan';
-};
-
+type Props = any;
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
-
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
-
   const toggleMic = async () => {
     if (!room) return;
 const enabled =
@@ -39,11 +32,12 @@ const enabled =
 
   return (
 <div className='flex items-center gap-3'>
+  return (
+    <div className='flex items-center gap-3'>
       <button
         onClick={toggleMic}
         className={`px-4 py-2 rounded ${accentClass} text-white`}
       >
-        {micEnabled ? 'Mute' : 'Unmute'}
       </button>
       <button
         onClick={toggleCam}

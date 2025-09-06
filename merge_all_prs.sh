@@ -120,8 +120,7 @@ resolve_conflicts() {
     local conflicts=$(git diff --name-only --diff-filter=U)
     
     for file in $conflicts; do
-        log "Resolving conflicts in $file"
-        
+        log "Resolving conflicts in $file"        
         # Use git checkout to take our version for most conflicts
         git checkout --ours "$file" || true
         

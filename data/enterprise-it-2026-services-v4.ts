@@ -30,93 +30,54 @@ export interface EnterpriseIT2026ServiceV4 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const enterpriseIT2026ServicesV4: EnterpriseIT2026ServiceV4[] = [
-  // Zero-Trust Network Architecture Platform
-  {
-id: 'zero-trust-network-architecture-platform',
-    name: 'Zero-Trust Network Architecture Platform',
-    tagline: 'Secure every connection with zero-trust principles',
+    id: 'zero-trust-network-architecture-platform';
+    name: 'Zero-Trust Network Architecture Platform';
+    tagline: 'Secure every connection with zero-trust principles';
     price: '$1,299',
-    period: '/month',
-    description:
-      'Comprehensive zero-trust network architecture platform that implements continuous verification, least-privilege access, and micro-segmentation to protect enterprise networks from modern cyber threats.',
+    period: '/month';
+    description: 'Comprehensive zero-trust network architecture platform that implements continuous verification, least-privilege access, and micro-segmentation to protect enterprise networks from modern cyber threats.',
     features: [
-      'Continuous identity verification',
-      'Least-privilege access control',
-      'Micro-segmentation',
-      'Real-time threat detection',
-      'Behavioral analytics',
-      'API security',
-      'Cloud-native architecture',
-      'Compliance reporting',
-      'Integration APIs',
-      '24/7 monitoring',
-    ],
-    popular: true,
-    icon: '🛡️',
-    color: 'from-blue-600 to-indigo-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/zero-trust-network-architecture-platform',
-    marketPosition:
-      'First comprehensive zero-trust network architecture platform. Competitive advantage: Continuous verification, micro-segmentation, and behavioral analytics.',
-    targetAudience:
-      'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies',
-    trialDays: 14,
-    setupTime: '1 month',
-    category: 'Enterprise Security',
-    realService: true,
-    technology: [
-      'Zero-Trust Architecture',
-      'AI/ML',
-      'Microservices',
-      'React',
-      'Python',
-      'PostgreSQL',
-      'AWS',
-      'Kubernetes',
-    ],
-    integrations: [
-      'Active Directory',
-      'SAML',
-      'OAuth',
-      'SIEM systems',
-      'Firewalls',
-      'VPNs',
-    ],
-    useCases: [
-      'Network security',
-      'Access control',
-      'Threat prevention',
-      'Compliance',
-      'Cloud security',
-    ],
+      'Continuous identity verificationLeast-privilege access controlMicro-segmentationReal-time threat detectionBehavioral analyticsAPI securityCloud-native architectureCompliance reporting';
+      'Integration APIs24/7 monitoring'
+    ];
+    popular: true;
+    icon: '🛡️';
+    color: 'from-blue-600 to-indigo-600';
+    textColor: 'text-blue-400';
+    link: 'https://ziontechgroup.com/zero-trust-network-architecture-platform';
+    marketPosition: 'First comprehensive zero-trust network architecture platform. Competitive advantage: Continuous verification, micro-segmentation, and behavioral analytics.',
+    targetAudience: 'Enterprise companies, Financial institutions, Healthcare organizations, Government agencies, Technology companies',
+    trialDays: 14;
+    setupTime: '1 month';
+    category: 'Enterprise Security';
+    realService: true;
+    technology: ['Zero-Trust ArchitectureAI/MLMicroservicesReactPythonPostgreSQLAWSKubernetes'];
+    integrations: ['Active DirectorySAMLOAuthSIEM systemsFirewallsVPNs'];
+    useCases: ['Network securityAccess controlThreat preventionComplianceCloud security'];
     roi: 'Reduce security incidents by 90%, improve compliance by 95%, lower security costs by 40%',
-    competitors: ['Cisco', 'Palo Alto Networks', 'VMware'],
-    marketSize: '$60B cybersecurity market',
-    growthRate: '50% annual growth',
-    variant: 'enterprise-futuristic',
+    competitors: ['CiscoPalo Alto NetworksVMware'];
+    marketSize: '$60B cybersecurity market';
+    growthRate: '50% annual growth';
+    variant: 'enterprise-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Comprehensive zero-trust network architecture platform with continuous verification and micro-segmentation.',
-    launchDate: '2026-03-01',
-    customers: 60,
-    rating: 4.8,
-    reviews: 48,
+    realImplementation: true;
+    implementationDetails: 'Comprehensive zero-trust network architecture platform with continuous verification and micro-segmentation.';
+    launchDate: '2026-03-01';
+    customers: 60;
+    rating: 4.8;
+    reviews: 48
   },
 
   // AI-Powered IT Operations Center
@@ -665,4 +626,12 @@ id: 'zero-trust-network-architecture-platform',
     rating: 4.9,
     reviews: 32,
   },
+];
+    realImplementation: true;
+    implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.';
+    launchDate: '2026-05-01';
+    customers: 40;
+    rating: 4.9;
+    reviews: 32
+  }
 ];

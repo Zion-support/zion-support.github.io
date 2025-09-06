@@ -1,10 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
-
-export type AdminNotesPanelProps = {
-targetType: string; // e.g., 'user' | 'listing'
+export type AdminNotesPanelProps = any;
   targetId: string; // unique identifier for the target
-};
-
+}
 type Note = {
   id: string;
   targetType: string;
@@ -12,8 +9,7 @@ type Note = {
   text: string;
   authorId: string;
   createdAt: number;
-};
-
+}
 export default function AdminNotesPanel({
   targetType,
   targetId,
@@ -24,14 +20,13 @@ export default function AdminNotesPanel({
   const [loading, setLoading] = useState(false);
   const [adding, setAdding] = useState(false);
   const [text, setText] = useState('');
-
   async function fetchNotes() {
     try {
       setLoading(true);
 const res = await fetch(
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
         {
-          headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
+          headers: { 'X-Admin': isAdmin ? 'true' : 'false' }
         }
       );
       if (!res.ok) {
@@ -39,16 +34,14 @@ const res = await fetch(
         return;
       }
       const data = await res.json();
-      setNotes(data.notes || []);
+      setNotes(data.notes |[]);
     } finally {
       setLoading(false);
     }
   }
-
   useEffect(() => {
 if (isAdmin) fetchNotes();
   }, [isAdmin, targetType, targetId]);
-
   async function addNote() {
     if (!text.trim()) return;
     setAdding(true);
@@ -70,9 +63,11 @@ headers: {
       await fetchNotes();
     } finally {
       setAdding(false);
+      await fetchNotes()
+    } finally {
+      setAdding(false)
     }
   }
-
   if (!isAdmin) {
     return (
 <div className='rounded border p-3'>
@@ -84,12 +79,10 @@ headers: {
             onChange={e => setIsAdmin(e.target.checked)}
           />
           <label htmlFor='isAdminToggle'>Admin</label>
-        </div>
         <div className='text-xs opacity-60 mt-2'>Admin-only notes hidden.</div>
       </div>
     );
   }
-
   return (
     <div className='rounded border p-4 space-y-3'>
       <div className='flex items-center justify-between'>
@@ -111,7 +104,6 @@ headers: {
           />
         </div>
       </div>
-
       <div className='space-y-2'>
         <textarea
           className='w-full border rounded-md px-3 py-2'
@@ -121,14 +113,13 @@ headers: {
           onChange={e => setText(e.target.value)}
         />
         <button
-          disabled={!text.trim() || adding}
+          disabled={!text.trim() |adding}
           onClick={addNote}
           className='px-3 py-2 rounded-md bg-gray-900 text-white disabled:opacity-50'
         >
           {adding ? 'Adding…' : 'Add Note'}
         </button>
       </div>
-
       <div className='border-t pt-3'>
         <div className='text-sm opacity-70 mb-2'>
           Notes are private, time-stamped, and include author ID.

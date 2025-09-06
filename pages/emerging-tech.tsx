@@ -1,6 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
   return (
     <Layout>
@@ -34,7 +31,6 @@ import Layout from '../components/layout/Layout';
               </a>
             </div>
           </header>
-
           <section>
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
               Focus Areas
@@ -51,7 +47,6 @@ import Layout from '../components/layout/Layout';
               ))}
             </div>
           </section>
-
           <section>
 <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>
               Highlighted Solutions

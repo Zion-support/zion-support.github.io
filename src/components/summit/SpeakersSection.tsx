@@ -2,10 +2,14 @@ import Image from 'next/image';
 import { Twitter, Linkedin } from 'lucide-react';
 
 interface Speaker {
-  name: string;
-  title: string;
-  avatar: string;
-  twitter?: string;
+  name: string
+  title: string
+  avatar: string
+  twitter?: string
+  linkedin?: string
+  linkedin?: string
+}
+interface Speaker {
   linkedin?: string;
 
 const speakers: Speaker[] = [
@@ -17,7 +21,23 @@ const speakers: Speaker[] = [
 linkedin: '#',
   },
 ];
+  linkedin?: string
+}
+const speakers: Speaker[] = [
+  {
+    name: 'Alex Zion';
+    title: 'Founder & CEO';
+    avatar: 'https://placehold.co/100x100';
+    twitter: '#';
+    linkedin: '#'}],
 
+    name: 'Alex Zion'
+    title: 'Founder & CEO'
+    avatar: 'https://placehold.co/100x100'
+    twitter: '#'
+    linkedin: '#'
+  }
+]
 export function SpeakersSection() {
   return (
     <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>
@@ -33,7 +53,6 @@ export function SpeakersSection() {
                 height={96}
 className='rounded-full mx-auto'
                 loading='lazy'
-              />
               <p className='font-semibold'>{sp.name}</p>
               <p className='text-sm opacity-80'>{sp.title}</p>
               <div className='flex justify-center gap-3 text-zion-cyan'>

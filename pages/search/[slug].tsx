@@ -7,13 +7,13 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import ProductCard from '@/components/ProductCard';
-import { TalentCard } from '@/components/talent/TalentCard';
-import { CategoryCard } from '@/components/CategoryCard';
-import { SearchEmptyState } from '@/components/marketplace/EmptyState';
-import { MARKETPLACE_LISTINGS } from '@/data/listingData';
-import { TALENT_PROFILES } from '@/data/talentData';
-import { BLOG_POSTS } from '@/data/blog-posts';
-import { useDebounce } from '@/hooks/useDebounce';
+import { TalentCard  } from '@/components/talent/TalentCard';
+import { CategoryCard  } from '@/components/CategoryCard';
+import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 interface BaseSearchResult {
@@ -24,11 +24,12 @@ interface BaseSearchResult {
   image?: string;
   author?: {
     name: string;
-    avatar?: string;
-  };
-  tags?: string[];
+    avatar?: string
+  },
+  tags?: string[],
   category?: string;
-  date?: string;
+  date?: string
+}
 
 interface ProductSearchResult extends BaseSearchResult {
   type: 'product' | 'equipment';
@@ -45,6 +46,12 @@ interface BlogSearchResult extends BaseSearchResult {
 interface CategorySearchResult extends BaseSearchResult {
   type: 'category';
 
+interface BlogSearchResult extends BaseSearchResult {
+  type: 'blog';
+interface CategorySearchResult extends BaseSearchResult {
+  type: 'category';
+
+type SearchResult = any;
 type SearchResult =
   | ProductSearchResult
   | TalentSearchResult
@@ -76,14 +83,13 @@ interface OfflineFilters {
 minRating?: number;
 
 function offlineSearch(
-  query: string,
-  page = 1,
-  limit = 12,
+  query: string
+  page = 1
+  limit = 12
   filters: OfflineFilters = {}
 ): { results: SearchResult[]; totalCount: number } {
   const term = query.toLowerCase().trim();
   const match = (text?: string) => text?.toLowerCase().includes(term);
-
   const productResults = MARKETPLACE_LISTINGS.filter(
 p =>
       match(p.title) ||
@@ -106,12 +112,11 @@ p =>
     category: p.category,
     date: p.createdAt,
   }));
-
   const talentResults = TALENT_PROFILES.filter(
     t =>
-      match(t.full_name) ||
-      match(t.professional_title) ||
-      match(t.bio) ||
+      match(t.full_name) |
+      match(t.professional_title) |
+      match(t.bio) |
       t.skills?.some(s => match(s))
   ).map(t => ({
     id: t.id,
@@ -126,12 +131,11 @@ p =>
     category: t.location,
 date: undefined,
   }));
-
   const blogResults = BLOG_POSTS.filter(
     b =>
-      match(b.title) ||
-      match(b.excerpt) ||
-      match(b.content) ||
+      match(b.title) |
+      match(b.excerpt) |
+      match(b.content) |
       b.tags?.some(t => match(t))
   ).map(b => ({
     id: b.slug,
@@ -146,7 +150,6 @@ date: b.publishedDate,
   }));
 
   let all = [...productResults, ...talentResults, ...blogResults];
-
   if (filters.category) {
 all = all.filter(r => r.category === filters.category);
   }
@@ -196,7 +199,7 @@ return bPrice - aPrice;
 const aRating =
             a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
           const bRating =
-            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+            b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
           return bRating - aRating;
         });
         break;
@@ -230,7 +233,6 @@ export default function SearchResultsPage({
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
-
   // Fetch search results
   const fetchResults = async (searchTerm: string, page = 1) => {
     try {
@@ -246,13 +248,10 @@ sort: sortBy,
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
-
       const response = await fetch(`/api/search?${params.toString()}`);
-
       if (!response.ok) {
 throw new Error(`Search API error: ${response.status}`);
       }
-
       const data = await response.json();
       logInfo('Search results received:', { data: data });
 
@@ -261,16 +260,16 @@ throw new Error(`Search API error: ${response.status}`);
       if (page === 1) {
 setResults(data.results || []);
       } else {
-        setResults(prev => [...prev, ...(data.results || [])]);
+        setResults(prev => [...prev, ...(data.results |[])]);
       }
     } catch (error) {
       logErrorToProduction('Error fetching search results:', { data: error });
       const offline = offlineSearch(searchTerm, page, 12, {
-        sortBy,
-        category: categoryFilter !== 'all' ? categoryFilter : undefined,
-        minPrice: minPrice ? Number(minPrice) : undefined,
-        maxPrice: maxPrice ? Number(maxPrice) : undefined,
-        minRating: minRating ? Number(minRating) : undefined,
+        sortBy
+        category: categoryFilter !== 'all' ? categoryFilter : undefined
+        minPrice: minPrice ? Number(minPrice) : undefined
+        maxPrice: maxPrice ? Number(maxPrice) : undefined
+        minRating: minRating ? Number(minRating) : undefined
       });
       setTotalResults(offline.totalCount);
       if (page === 1) {
@@ -285,7 +284,7 @@ setResults(data.results || []);
 
   // Handle search input change
   const handleSearch = (newQuery: string) => {
-    setSearchQuery(newQuery);
+    setSearchQuery(newQuery)
     if (newQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
 shallow: true,
@@ -302,7 +301,6 @@ fetchResults(debouncedQuery, 1);
       setTotalResults(0);
     }
   }, [debouncedQuery]);
-
   // Load more results
   const loadMore = () => {
     const nextPage = currentPage + 1;
@@ -332,7 +330,7 @@ return false;
 return false;
       }
     }
-    if (minRating && (r.type === 'product' || r.type === 'talent')) {
+    if (minRating && (r.type === 'product' |r.type === 'talent')) {
       if ((r.rating ?? 0) < Number(minRating)) {
 return false;
       }
@@ -410,8 +408,8 @@ availability_type: 'available',
 <div key={result.id} data-testid='result-card'>
             <CategoryCard
               title={result.title}
-              description={result.description || ''}
-              icon={result.image || '📁'}
+              description={result.description |''}
+              icon={result.image |'📁'}
             />
           </div>
         );
@@ -456,7 +454,6 @@ availability_type: 'available',
                     : `No results found for "${query}"`}
                 </p>
               </div>
-
               {/* Search Input */}
 <div className='relative w-full lg:w-96'>
                 <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
@@ -469,7 +466,6 @@ availability_type: 'available',
                 />
               </div>
             </div>
-
             {/* Controls */}
 <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
               <div className='flex items-center gap-2 flex-wrap'>
@@ -482,7 +478,6 @@ availability_type: 'available',
                   <Filter className='h-4 w-4' />
                   Filters
                 </Button>
-
                 <select
                   value={sortBy}
 onChange={e => setSortBy(e.target.value)}
@@ -526,7 +521,6 @@ onChange={e => setCategoryFilter(e.target.value)}
                     className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
                   />
                 </div>
-
                 <select
                   value={minRating}
 onChange={e => setMinRating(e.target.value)}
@@ -538,7 +532,6 @@ onChange={e => setMinRating(e.target.value)}
                   <option value='2'>2★ & up</option>
                 </select>
               </div>
-
               <div className='flex items-center gap-2'>
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
@@ -561,21 +554,18 @@ onChange={e => setMinRating(e.target.value)}
               </div>
             </div>
           </div>
-
           {/* Loading State */}
           {loading && results.length === 0 && (
 <div className='flex justify-center py-12'>
               <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
             </div>
           )}
-
           {/* Empty State */}
           {!loading && filteredResults.length === 0 && (
 <div data-testid='search-empty-state'>
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
           )}
-
           {/* Results */}
           {filteredResults.length > 0 && (
 <div className='space-y-8'>
@@ -584,7 +574,6 @@ onChange={e => setMinRating(e.target.value)}
                   <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>
                     {type}s ({typeResults.length})
                   </h2>
-
                   <div
                     className={
                       viewMode === 'grid'
@@ -596,7 +585,6 @@ onChange={e => setMinRating(e.target.value)}
                   </div>
                 </div>
               ))}
-
               {/* Load More Button */}
               {results.length < totalResults && (
 <div className='flex justify-center py-8'>
@@ -627,25 +615,21 @@ export const getServerSideProps: GetServerSideProps<
   SearchResultsPageProps
 > = async (context: any) => {
   const params = context.params;
-  const slug = params?.slug as string;
-
+  const slug = params?.slug as string
   // Convert slug back to query term
   const query = slug ? slug.replace(/-/g, ' ') : '';
-
   try {
     // In production, replace with your actual API base URL
     const apiBaseUrl =
 process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
 
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
-
     const response = await fetch(
       `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`
     );
 
     let results = [];
     let totalCount = 0;
-
     if (response.ok) {
       const data = await response.json();
       results = data.results || [];
@@ -671,7 +655,6 @@ query,
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
-
     return {
       props: {
         initialResults: offline.results,

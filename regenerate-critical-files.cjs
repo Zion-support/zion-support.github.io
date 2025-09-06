@@ -7,6 +7,8 @@ class CriticalFileRegenerator {
   constructor() {
     this.projectRoot = process.cwd(),
     this.regeneratedFiles = []
+    this.projectRoot = process.cwd(),
+    this.regeneratedFiles = []
   }
 
   log(message, type = 'INFO') {
@@ -90,6 +92,7 @@ export default LandingPage;`;
     const buttonTsx = `import React from 'react';
 
 interface ButtonProps {
+  children: React.ReactNode, onClick?: () => void,
   children: React.ReactNode, onClick?: () => void,
   className?: string;
   type?: 'button' | 'submit' | 'reset';

@@ -1,14 +1,11 @@
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
-type DistributionItem = { label: string; percent: number };
-
+type DistributionItem = any;
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
-
 export default function TokenomicsWhitepaperBuilder() {
   const [isAdmin, setIsAdmin] = useState(true);
   const [publicPreview, setPublicPreview] = useState(false);
   const [legalReview, setLegalReview] = useState(false);
-
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
 const [useCases, setUseCases] = useState<string>(
@@ -32,9 +29,8 @@ const [useCases, setUseCases] = useState<string>(
   const [operatorPrompt, setOperatorPrompt] = useState<string>(
     defaultOperatorPrompt
   );
-
   const totalPercent = useMemo(
-    () => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0),
+    () => distribution.reduce((acc, d) => acc + (Number(d.percent) |0), 0)
     [distribution]
   );
 
@@ -43,31 +39,30 @@ const [useCases, setUseCases] = useState<string>(
 
 const [activeSection, setActiveSection] =
     useState<string>('Executive Summary');
-
   const previewMarkdown = useMemo(() => {
     return (
-      generatedMarkdown ||
+      generatedMarkdown |
       buildLocalMarkdown({
-        tokenName,
-        tokenSupply,
-        useCases,
-        rewardsLogic,
-        distribution,
-        governance,
-        jurisdiction,
-        legalReview,
+        tokenName
+        tokenSupply
+        useCases
+        rewardsLogic
+        distribution
+        governance
+        jurisdiction
+        legalReview
       })
     );
   }, [
-    generatedMarkdown,
-    tokenName,
-    tokenSupply,
-    useCases,
-    rewardsLogic,
-    distribution,
-    governance,
-    jurisdiction,
-    legalReview,
+    generatedMarkdown
+    tokenName
+    tokenSupply
+    useCases
+    rewardsLogic
+    distribution
+    governance
+    jurisdiction
+    legalReview
   ]);
 
   async function handleGenerate() {
@@ -80,20 +75,20 @@ headers: {
           'X-Admin': isAdmin ? 'true' : 'false',
         },
         body: JSON.stringify({
-          tokenName,
-          tokenSupply,
-          useCases,
-          rewardsLogic,
-          distribution,
-          governance,
-          jurisdiction,
-          operatorPrompt,
-          legalReview,
-        }),
+          tokenName
+          tokenSupply
+          useCases
+          rewardsLogic
+          distribution
+          governance
+          jurisdiction
+          operatorPrompt
+          legalReview
+        })
       });
       if (!res.ok) throw new Error('Failed to generate');
       const data = await res.json();
-      setGeneratedMarkdown(data.markdown || '');
+      setGeneratedMarkdown(data.markdown |'');
     } catch (e) {
       console.error(e);
       alert('Generation failed');
@@ -101,7 +96,6 @@ headers: {
       setIsGenerating(false);
     }
   }
-
   async function handleDownload(ext: 'md' | 'pdf') {
     if (ext === 'md') {
 const blob = new Blob([previewMarkdown], {
@@ -129,10 +123,9 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
       window.open(url, '_blank');
     }
   }
-
   function updateDistribution(
-    index: number,
-    key: keyof DistributionItem,
+    index: number
+    key: keyof DistributionItem
     value: string
   ) {
     setDistribution(prev => {
@@ -144,11 +137,9 @@ body: JSON.stringify({ markdown: previewMarkdown, tokenName }),
 return copy;
     });
   }
-
   function addDistributionItem() {
     setDistribution(prev => [...prev, { label: 'New Allocation', percent: 0 }]);
   }
-
   function removeDistributionItem(index: number) {
     setDistribution(prev => prev.filter((_, i) => i !== index));
   }
@@ -167,15 +158,14 @@ body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
     await navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
   }
-
   const sections = [
-    'Executive Summary',
-    'Market Context',
-    'Utility & Usage',
-    'Rewards System',
-    'Distribution',
-    'Governance Model',
-    'Risks + Disclaimers',
+    'Executive Summary'
+    'Market Context'
+    'Utility & Usage'
+    'Rewards System'
+    'Distribution'
+    'Governance Model'
+    'Risks + Disclaimers'
   ];
 
   return (
@@ -211,7 +201,6 @@ body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
             </button>
           </div>
         </div>
-
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
           <div className='space-y-6'>
             <div className='rounded-lg border p-4 space-y-4'>
@@ -347,7 +336,7 @@ body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
               />
               <div className='flex gap-3'>
                 <button
-                  disabled={!isAdmin || isGenerating}
+                  disabled={!isAdmin |isGenerating}
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
                 >
@@ -361,7 +350,6 @@ body: JSON.stringify({ markdown: previewMarkdown, publicPreview }),
                 </button>
               </div>
             </div>
-
             <div className='rounded-lg border p-4 space-y-2'>
               <h3 className='font-medium'>Output</h3>
               <div className='flex gap-3'>
@@ -440,7 +428,7 @@ return 'Designed for utility under EU frameworks; subject to MiCA and local guid
 
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
-  const total = data.reduce((a, b) => a + b.percent, 0) || 1;
+  const total = data.reduce((a, b) => a + b.percent, 0) |1;
   return (
 <div className='space-y-1 text-sm'>
       {data.map((d, idx) => (
@@ -458,18 +446,17 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
       ))}
     </div>
   );
-
 function MarkdownPreview({
-  markdown,
-  activeSection,
+  markdown
+  activeSection
 }: {
   markdown: string;
   activeSection: string;
 }) {
   // Very lightweight section filter: split by headings
   const parts = useMemo(() => {
-    const sections = markdown.split(/\n## /g);
-    const map: Record<string, string> = {};
+    const sections = markdown.split(/\n## /g)
+    const map: Record<string, string> = {}
     sections.forEach((s, i) => {
 if (i === 0) return; // first is H1
       const [titleLine, ...rest] = s.split('\n');
@@ -483,5 +470,10 @@ if (i === 0) return; // first is H1
   return (
 <pre className='whitespace-pre-wrap text-sm leading-6'>
       {content || markdown}
+    </pre>
+  );
+  return (
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content |markdown}
     </pre>
   );

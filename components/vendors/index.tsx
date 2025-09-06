@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
-type Props = { vendors: Vendor[] };
-
+type Props = any;
 export default function VendorsPage({ vendors }: Props) {
   return (
     <div className='space-y-6'>

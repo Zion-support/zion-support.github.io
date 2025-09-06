@@ -1,9 +1,7 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
-  const router = useRouter();
-  const {
     type,
     recipientId,
     recipientName,
@@ -17,7 +15,6 @@ export default function ComposePage() {
   const [linkUrl, setLinkUrl] = React.useState('');
   const [file, setFile] = React.useState<File | null>(null);
   const [sending, setSending] = React.useState(false);
-
   React.useEffect(() => {
 if (!loading && !user) router.replace('/auth');
   }, [loading, user, router]);
@@ -26,9 +23,9 @@ if (!loading && !user) router.replace('/auth');
 
 const headerTitle =
     type === 'invite'
-      ? `Invite ${recipientName || talentName || 'Talent'}`
+      ? `Invite ${recipientName |talentName |'Talent'}`
       : type === 'apply'
-        ? `Apply to ${jobTitle || 'Job'}`
+        ? `Apply to ${jobTitle |'Job'}`
         : 'New Message';
   const context =
     type === 'invite'
@@ -48,8 +45,8 @@ let attachmentBase64: string | undefined;
 attachmentBase64 = `data:${mime};base64,${base64}`;
     }
     const res = await fetch('/api/messages/compose', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({
         recipientId: recipientId || talentId,
         body: message,
@@ -63,8 +60,7 @@ attachmentBase64,
     setSending(false);
     if (data?.conversation?.id)
       router.replace(`/messages/${data.conversation.id}`);
-  };
-
+  }
   return (
     <div className='min-h-screen bg-gray-50'>
       <div className='max-w-2xl mx-auto p-4'>
@@ -73,7 +69,7 @@ attachmentBase64,
             <h1 className='text-xl font-semibold'>{headerTitle}</h1>
             <p className='text-sm text-gray-500'>
               {type === 'invite' && jobTitle
-                ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`
+                ? `Hi ${talentName |recipientName |''}, I’d like to invite you to discuss a project: ${jobTitle}`
                 : null}
               {type === 'apply' && jobTitle ? `Applying to: ${jobTitle}` : null}
             </p>
@@ -86,7 +82,7 @@ attachmentBase64,
               className='w-full border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500'
               placeholder={
                 type === 'invite' && jobTitle
-                  ? `Hi ${talentName || recipientName || ''}, I’d like to invite you to discuss a project: ${jobTitle}`
+                  ? `Hi ${talentName |recipientName |''}, I’d like to invite you to discuss a project: ${jobTitle}`
                   : 'Write your message...'
               }
             />
@@ -99,7 +95,7 @@ attachmentBase64,
             />
             <input
               type='file'
-              onChange={e => setFile(e.target.files?.[0] || null)}
+              onChange={e => setFile(e.target.files?.[0] |null)}
               className='text-sm'
             />
           </div>

@@ -1,9 +1,8 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
-import Link from 'next/link';
-import Image from 'next/image';
-
+import React from "react",
+import { cn } from "@/lib/utils",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link";
+import Image from "next/image";
 interface ListingCardProps {
   id?: string;
   title: string;
@@ -11,36 +10,72 @@ interface ListingCardProps {
   images?: string[];
   category: string;
   tags?: string[];
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string };
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string },
   className?: string;
-  profileType?: 'service' | 'talent';
+  profileType?: 'service' | 'talent'
+}
 
+export function ListingCard({ 
+  id;
+  title;
+  description;
+  images;
+  category;
+  tags;
+  author;
+  className;
+  profileType;
+        className
+      )}
+    >
+import React from 'react'
+import { cn } from '@/lib/utils'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+import Image from 'next/image';interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string, id?: string, avatarUrl?: string, email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
+}
+interface ListingCardProps {
+  id?: string
+  title: string
+  description: string
+  images?: string[]
+  category: string
+  tags?: string[]
+  author?: { name: string; id?: string; avatarUrl?: string; email?: string }
+  className?: string
+  profileType?: 'service' | 'talent'
 export function ListingCard({
-  id,
-  title,
-  description,
-  images,
-  category,
-  tags,
-  author,
-  className,
-  profileType = 'service',
+  id
+  title
+  description
+  images
+  category
+  tags
+  author
+  className
+  profileType = 'service'
 }: ListingCardProps) {
   // Generate a profile ID based on the listing data
   // In a real app, this would be a proper ID from the database
   const profileId =
-    id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
-
-  
-    >
+    id |(profileType === 'service' ? 'service-provider-1' : 'talent-1')
+      >
       {images && images.length > 0 && images[0] && (
         <div className='h-48 w-full overflow-hidden relative'>
           <Image
             src={images[0]}
             alt={title}
             className='object-cover transition-transform duration-300 group-hover:scale-105'
-            loading='lazy'
-          />
+            loading='lazy'          />
         </div>
       )}
       <div className='flex flex-col p-4 flex-grow'>
@@ -56,7 +91,6 @@ export function ListingCard({
           {title}
         </h3>
         <p className='text-zion-slate mb-4 flex-grow'>{description}</p>
-
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (

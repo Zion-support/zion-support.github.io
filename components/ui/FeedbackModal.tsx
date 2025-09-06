@@ -1,12 +1,12 @@
 import { useState } from 'react';
-export type FeedbackContext = { actionType?: string; metadata?: any };
-
+export type FeedbackContext = any;
+    onClose(true)
 export default function FeedbackModal({
-  isOpen,
-  onClose,
-  defaultContext,
-  defaultKind = 'general',
-  userHeaders,
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
 }: {
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
@@ -19,9 +19,7 @@ export default function FeedbackModal({
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
   const [comment, setComment] = useState('');
   const [loading, setLoading] = useState(false);
-
   if (!isOpen) return null;
-
   async function submit() {
     if (rating < 1) return onClose(false);
     setLoading(true);
@@ -30,17 +28,15 @@ export default function FeedbackModal({
         method: 'POST',
 headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) },
         body: JSON.stringify({
-          rating,
-          comment,
-          kind,
-          context: defaultContext || {},
-        }),
+          rating
+          comment
+          kind
+          context: defaultContext |{}
+        })
       });
-    } catch {}
     setLoading(false);
     onClose(true);
   }
-
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>
       <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>
@@ -108,7 +104,7 @@ className={
           </button>
           <button
             onClick={submit}
-            disabled={loading || rating < 1}
+            disabled={loading |rating < 1}
             className='px-3 py-2 rounded bg-gray-900 text-white'
           >
             {loading ? 'Submitting…' : 'Submit'}

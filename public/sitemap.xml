@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>2025-09-05T22:16:45.298Z</lastmod>
+<lastmod>2025-09-05T22:16:45.298Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -24,4 +24,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 </urlset>

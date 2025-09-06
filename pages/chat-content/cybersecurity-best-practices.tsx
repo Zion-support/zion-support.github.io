@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
+const CybersecurityBestPractices: NextPage;
       <main>
         <h1>CybersecurityBestPractices</h1>
         <p>This page is under construction.</p>

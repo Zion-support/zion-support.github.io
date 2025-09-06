@@ -1,74 +1,65 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import {
-  Brain,
-  Monitor,
-  Search,
-  Shield,
-  Mail,
-  Share2,
-  Check,
-  Star,
-  Zap,
-  TrendingUp,
-  Users,
-  Globe,
-  Lock,
-  BarChart3,
-  Calendar,
-  Target,;
-} from 'lucide-react';
-
+import { Brain;
+  Monitor;
+  Search;
+  Shield;
+  Mail;
+  Share2;
+  Check;
+  Star;
+  Zap;
+  TrendingUp;
+  Users;
+  Globe;
+  Lock;
+  BarChart3;
+  Calendar;
+  Target
+ } from 'lucide-react';
 export default function MicroSaasServicesPage() {
-  const microSaasServices = [
-    {
-      id: 'ai-content-generator',
-      name: 'AI Content Generator',
-description:
-        'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
-      icon: <Brain className='w-8 h-8 text-white' />,
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      gradient: 'from-purple-400 to-pink-500',
+  const microSaasServices = null;
+            we deliver professional solutions with competitive pricing and exceptional value.
       features: [
-        'AI-powered content generation',
-        'Multiple content types (blog, social, email)',
-        'SEO optimization suggestions',
-        'Content templates library',
-        'Plagiarism-free content',
-        'Multi-language support',
-      ],
+        'AI-powered content generation'
+        'Multiple content types (blog, social, email)'
+        'SEO optimization suggestions'
+        'Content templates library'
+        'Plagiarism-free content'
+        'Multi-language support'
+      ]
       useCases: [
-        'Blog content creation',
-        'Social media posts',
-        'Email marketing campaigns',
-        'Product descriptions',
-        'Landing page copy',
-        'Newsletter content',
-      ],
+        'Blog content creation'
+        'Social media posts'
+        'Email marketing campaigns'
+        'Product descriptions'
+        'Landing page copy'
+        'Newsletter content'
+      ]
       pricing: {
         starter: {
-          price: 29,
+          price: 29
           features: [
-            '100 generations/month',
-            'Basic templates',
-            'SEO analysis',
-            'Email support',
-          ],
-        },
+            '100 generations/month'
+            'Basic templates'
+            'SEO analysis'
+            'Email support'
+          ]
+        }
         professional: {
-          price: 99,
+          price: 99
           features: [
-            '500 generations/month',
-            'Premium templates',
-            'Advanced SEO',
-            'Priority support',
-            'API access',
-          ],
-        },
+            '500 generations/month'
+            'Premium templates'
+            'Advanced SEO'
+            'Priority support'
+            'API access'
+          ]
+        }
         enterprise: {
-          price: 299,
+          price: 299
           features: [
             'Unlimited generations',
             'Custom templates',
@@ -398,7 +389,6 @@ description:
       demo: 'https://demo.social.ziontech.ai',
     },
   ];
-
   const marketInsights = [
     {
       title: 'AI Content Generation',
@@ -442,7 +432,6 @@ description:
         'Increasing need for multi-platform social media coordination',
     },
   ];
-
   return (
     <>
       <Head>
@@ -464,13 +453,11 @@ description:
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -487,7 +474,6 @@ description:
           </p>
         </div>
       </section>
-
       {/* Market Overview */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -500,7 +486,6 @@ description:
               strong demand and proven business models.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {marketInsights.map((insight, index) => (
               <Card
@@ -527,7 +512,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -540,7 +524,6 @@ description:
               with professional-grade features and competitive pricing.
             </p>
           </div>
-
           <div className='space-y-16'>
             {microSaasServices.map((service, index) => (
               <div
@@ -563,7 +546,6 @@ description:
                         <p className='text-gray-400'>{service.description}</p>
                       </div>
                     </div>
-
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-8'>
                       <div>
                         <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
@@ -582,7 +564,6 @@ description:
                           ))}
                         </ul>
                       </div>
-
                       <div>
 <h4 className='text-lg font-semibold text-white mb-3 flex items-center'>
                           <Target className='w-5 h-5 mr-2 text-cursor-blue' />
@@ -620,15 +601,12 @@ variant='outline'
                       </Button>
                     </div>
                   </div>
-
                   {/* Pricing & Market Info */}
 <div className='lg:col-span-1'>
                     <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>
                       <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
                         <BarChart3 className='w-5 h-5 mr-2 text-cursor-blue' />
-                        Pricing & Market
                       </h4>
-
                       <div className='space-y-4'>
                         <div>
                           <p className='text-sm text-gray-400 mb-1'>
@@ -638,7 +616,6 @@ variant='outline'
                             {service.marketPrice}
                           </p>
                         </div>
-
                         <div>
                           <p className='text-sm text-gray-400 mb-1'>
                             Our Pricing
@@ -661,7 +638,6 @@ variant='outline'
                             )}
                           </div>
                         </div>
-
                         <div>
 <p className='text-sm text-gray-400 mb-1'>
                             Key Competitors
@@ -688,7 +664,6 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* Why Choose Our Services */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -701,7 +676,6 @@ variant='outline'
               deliver exceptional value for your business.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
@@ -716,7 +690,6 @@ variant='outline'
                 </p>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
@@ -730,7 +703,6 @@ variant='outline'
                 </p>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
@@ -744,7 +716,6 @@ variant='outline'
                 </p>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue text-center'>
               <div className='p-6'>
                 <div className='w-16 h-16 mx-auto mb-4 rounded-2xl bg-cursor-blue/10 flex items-center justify-center'>
@@ -761,7 +732,6 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />

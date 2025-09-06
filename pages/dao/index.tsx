@@ -1,37 +1,24 @@
-useEffect ( () => {
-  async function load () {
-  if (loading) return <div>Loading...</div>;
-  if (!data) return <div>Error loading data</div>;
-
+type Holder = any;
   return (
-<div className='space-y-6'>
-      <div className='flex items-end justify-between'>
+    <div className="space-y-6">
+      <div className="flex items-end justify-between">
         <div>
-          <h1 className='text-2xl font-semibold'>DAO Metrics</h1>
-          <div className='text-xs text-gray-500'>
-            Updated {new Date(data.updatedAt).toLocaleString()}{' '}
-            {data.cached ? '(cached)' : ''}
-          </div>
+          <h1 className="text-2xl font-semibold">DAO Metrics</h1>
+          <div className="text-xs text-gray-500">Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
         </div>
       </div>
-
-      <section className='grid lg:grid-cols-2 gap-6'>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-2'>
-            Token Distribution (top ~sample)
-          </div>
-          <div className='space-y-2'>
-            {data.tokenDistribution.map(d => (
-              <div key={d.address} className='text-sm'>
-                <div className='flex items-center justify-between'>
-                  <span className='truncate mr-2'>{d.address}</span>
+      <section className="grid lg:grid-cols-2 gap-6">
+        <div className="border rounded p-4">
+          <div className="font-medium mb-2">Token Distribution (top ~sample)</div>
+          <div className="space-y-2">
+            {data.tokenDistribution.map((d) => (
+              <div key={d.address} className="text-sm">
+                <div className="flex items-center justify-between">
+                  <span className="truncate mr-2">{d.address}</span>
                   <span>{d.percent.toFixed(2)}%</span>
                 </div>
-                <div className='w-full h-2 bg-gray-200 dark:bg-gray-800 rounded'>
-                  <div
-                    className='h-2 bg-emerald-600 rounded'
-                    style={{ width: `${Math.min(100, d.percent)}%` }}
-                  />
+                <div className="w-full h-2 bg-gray-200 dark:bg-gray-800 rounded">
+                  <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
             ))}

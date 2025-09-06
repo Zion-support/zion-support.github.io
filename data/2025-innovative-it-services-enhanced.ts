@@ -30,77 +30,54 @@ export interface InnovativeITService2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
-  // Quantum Cloud Infrastructure Platform
-  {
-id: 'quantum-cloud-infrastructure',
-    name: 'Quantum Cloud Infrastructure Platform',
-    tagline: 'Next-generation cloud computing powered by quantum technology',
+    id: 'quantum-cloud-infrastructure';
+    name: 'Quantum Cloud Infrastructure Platform';
+    tagline: 'Next-generation cloud computing powered by quantum technology';
     price: '$1,999',
-    period: '/month',
-    description:
-      'Revolutionary quantum-enhanced cloud infrastructure that provides unprecedented computing power, security, and scalability. Combines quantum computing with traditional cloud services for breakthrough performance.',
+    period: '/month';
+    description: 'Revolutionary quantum-enhanced cloud infrastructure that provides unprecedented computing power, security, and scalability. Combines quantum computing with traditional cloud services for breakthrough performance.',
     features: [
-      'Quantum-enhanced computing power',
-      'Unbreakable quantum encryption',
-      'Automatic scaling and optimization',
-      'Quantum machine learning acceleration',
-      'Real-time performance monitoring',
-      'Multi-cloud orchestration',
-      'Advanced security protocols',
-      'Cost optimization algorithms',
-      'Global edge computing network',
-      'Quantum-safe data storage',
-    ],
-    popular: true,
-    icon: '☁️',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
-    marketPosition:
-      'Competes with AWS ($200/month), Azure ($150/month), GCP ($180/month). Our advantage: Quantum enhancement and superior security.',
-    targetAudience:
-      'Enterprise businesses, Technology companies, Research institutions, Financial services, Healthcare organizations',
-    trialDays: 21,
-    setupTime: '1-2 weeks',
-    category: 'Quantum Computing & Cloud',
-    realService: true,
-    technology: [
-      'Quantum algorithms, Python, Kubernetes, Docker, React, Node.js, PostgreSQL',
-    ],
-    integrations: [
-      'AWS, Azure, GCP, Kubernetes, Docker, CI/CD platforms, Monitoring tools',
-    ],
-    useCases: [
-      'High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate modeling',
-    ],
-    roi: 'Organizations report 500% performance improvement and 90% reduction in security risks.',
+      'Quantum-enhanced computing powerUnbreakable quantum encryptionAutomatic scaling and optimizationQuantum machine learning accelerationReal-time performance monitoringMulti-cloud orchestrationAdvanced security protocolsCost optimization algorithms';
+      'Global edge computing networkQuantum-safe data storage'
+    ];
+    popular: true;
+    icon: '☁️';
+    color: 'from-blue-600 to-indigo-700';
+    textColor: 'text-blue-400';
+    link: 'https://ziontechgroup.com/quantum-cloud-infrastructure';
+    marketPosition: 'Competes with AWS ($200/month), Azure ($150/month), GCP ($180/month). Our advantage: Quantum enhancement and superior security.';
+    targetAudience: 'Enterprise businesses, Technology companies, Research institutions, Financial services, Healthcare organizations',
+    trialDays: 21;
+    setupTime: '1-2 weeks';
+    category: 'Quantum Computing & Cloud';
+    realService: true;
+    technology: ['Quantum algorithms, Python, Kubernetes, Docker, React, Node.js, PostgreSQL'],
+    integrations: ['AWS, Azure, GCP, Kubernetes, Docker, CI/CD platforms, Monitoring tools'],
+    useCases: ['High-performance computing, Quantum research, Financial modeling, Drug discovery, Climate modeling'],
+    roi: 'Organizations report 500% performance improvement and 90% reduction in security risks.';
     competitors: ['AWS, Azure, GCP, IBM Cloud, Oracle Cloud'],
-    marketSize: '$500B cloud computing market',
-    growthRate: '35% annual growth',
-    variant: 'quantum-cloud-enterprise',
+    marketSize: '$500B cloud computing market';
+    growthRate: '35% annual growth';
+    variant: 'quantum-cloud-enterprise';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Quantum-enhanced cloud infrastructure with advanced algorithms, quantum encryption, and comprehensive cloud management tools.',
-    launchDate: '2024-12-01',
-    customers: 23,
-    rating: 4.9,
-    reviews: 15,
+    realImplementation: true;
+    implementationDetails: 'Quantum-enhanced cloud infrastructure with advanced algorithms, quantum encryption, and comprehensive cloud management tools.',
+    launchDate: '2024-12-01';
+    customers: 23;
+    rating: 4.9;
+    reviews: 15
   },
 
   // Zero Trust Security Platform
@@ -1492,4 +1469,12 @@ id: 'quantum-cloud-infrastructure',
     rating: 4.8,
     reviews: 52,
   },
+];
+    realImplementation: true;
+    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
+    launchDate: '2024-09-01';
+    customers: 123;
+    rating: 4.8;
+    reviews: 52
+  }
 ];

@@ -1,19 +1,17 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react',
 import Link from 'next/link';
-import {
-  getWhitepaperSections,
-  OPERATOR_PROMPT,;
-} from '../utils/whitepaper/zionWhitepaper';
+import { getWhitepaperSections, OPERATOR_PROMPT  } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
+  const sections = null;
+export default function WhitepaperBuilderPage() {
+  const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
-
   const downloadHref = useMemo(() => {
     if (edition === 'full') return '/docs/zion-protocol.pdf';
 return `/api/zion-whitepaper-pdf?edition=${edition}`;
   }, [edition]);
-
   return (
     <div className='space-y-6'>
       <div className='flex flex-col gap-2'>
@@ -22,7 +20,6 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
           Investor and Developer editions. Toggle, review, and download as PDF.
         </p>
       </div>
-
       <div className='flex flex-wrap gap-3 items-center'>
         <label className='font-medium'>Edition</label>
         <select
@@ -36,6 +33,25 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
         </select>
         <Link href={downloadHref} legacyBehavior>
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>
+  return (
+    <div className="space-y-6">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>
+        <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>
+      </div>
+      <div className="flex flex-wrap gap-3 items-center">
+        <label className="font-medium" htmlFor="input-Edition">Edition</label>
+        <select
+          value={edition}
+          onChange={(e) => setEdition(e.target.value as WhitepaperEdition)}
+          className="border rounded px-3 py-2 bg-white dark:bg-black"
+        >
+          <option value="full">Full</option>
+          <option value="investor">Investor</option>
+          <option value="developer">Developer</option>
+        </select>
+        <Link href={downloadHref} legacyBehavior>
+          <a className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90">
             Download PDF
           </a>
         </Link>
@@ -47,7 +63,6 @@ return `/api/zion-whitepaper-pdf?edition=${edition}`;
           {OPERATOR_PROMPT}
         </pre>
       </div>
-
       <div className='space-y-10'>
         {sections.map(s => (
           <section key={s.id} className='space-y-2'>

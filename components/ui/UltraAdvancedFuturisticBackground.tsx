@@ -4,11 +4,6 @@ let particles: Array< {
 window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion';
 particles.push ({
-  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic : 
-
-const UltraAdvancedFuturisticBackground: React.FC<
-  UltraAdvancedFuturisticBackgroundProps
-> = ({
   intensity = 'high',
   colorScheme = 'quantum-fusion',
   particleCount = 300,
@@ -17,13 +12,21 @@ const UltraAdvancedFuturisticBackground: React.FC<
   enableQuantumEffects = true,
   children,
 }) => {
+  intensity?: 'low' | 'medium' | 'high';
+  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai';
+  particleCount?: number;
+  animationSpeed?: number;
+  enableHolographic?: boolean;
+  enableQuantumEffects?: boolean;
+  children: React.ReactNode
+}
+const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
+  intensity;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -46,11 +49,9 @@ let animationFrameId: number;
         canvas.width = rect.width;
 canvas.height = rect.height;
       }
-    };
-
+    }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Color schemes
     const colorSchemes = {
       'quantum-fusion': {
@@ -84,7 +85,6 @@ holographic: '#ff0088',
     };
 
     const colors = colorSchemes[colorScheme];
-
     // Initialize particles
     const initParticles = () => {
       particles = [];
@@ -125,7 +125,6 @@ for (let i = 0; i < particles.length; i++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
           if (
             distance < 100 &&
             particles[i].type === 'quantum' &&
@@ -140,25 +139,20 @@ ctx.stroke();
           }
         }
       }
-    };
-
+    }
     // Holographic grid effect
     const createHolographicGrid = () => {
       if (!enableHolographic) return;
 const gridSize = 50;
       const offset = (Date.now() * 0.001) % gridSize;
-
       ctx.strokeStyle = `rgba(255, 0, 136, 0.1)`;
       ctx.lineWidth = 0.5;
-
       // Vertical lines
       for (let x = offset; x < canvas.width; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
+        ctx.stroke();      }
       // Horizontal lines
       for (let y = offset; y < canvas.height; y += gridSize) {
         ctx.beginPath();
@@ -174,13 +168,11 @@ const gridSize = 50;
 const nodes = particles.filter(
         p => p.type === 'quantum' || p.type === 'holographic'
       );
-
       for (let i = 0; i < nodes.length; i++) {
         for (let j = i + 1; j < nodes.length; j++) {
           const dx = nodes[i].x - nodes[j].x;
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
           if (distance < 150) {
             const strength = 1 - distance / 150;
             ctx.beginPath();
@@ -192,8 +184,7 @@ ctx.stroke();
           }
         }
       }
-    };
-
+    }
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -281,10 +272,10 @@ for (let i = 0; i < 3; i++) {
             (time * 50 + i * 100) % (Math.max(canvas.width, canvas.height) * 2);
           ctx.beginPath();
           ctx.arc(
-            canvas.width / 2,
-            canvas.height / 2,
-            waveRadius,
-            0,
+            canvas.width / 2
+            canvas.height / 2
+            waveRadius
+            0
             Math.PI * 2
           );
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.3 * (1 - waveRadius / (Math.max(canvas.width, canvas.height) * 2))})`;
@@ -298,20 +289,18 @@ for (let i = 0; i < 3; i++) {
 
     initParticles();
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
 cancelAnimationFrame(animationFrameId);
     };
   }, [
-    intensity,
-    colorScheme,
-    particleCount,
-    animationSpeed,
-    enableHolographic,
-    enableQuantumEffects,
+    intensity
+    colorScheme
+    particleCount
+    animationSpeed
+    enableHolographic
+    enableQuantumEffects
   ]);
-
   return (
     <div ref={containerRef} className='relative w-full h-full overflow-hidden'>
       <canvas
@@ -319,14 +308,12 @@ cancelAnimationFrame(animationFrameId);
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
       />
-
       {/* Additional CSS-based effects */}
       <div className='absolute inset-0 pointer-events-none'>
         {/* Floating geometric shapes */}
         <div className='absolute top-20 left-20 w-32 h-32 border border-cyan-500/20 rounded-full animate-pulse'></div>
         <div className='absolute top-40 right-32 w-24 h-24 border border-purple-500/20 rounded-full animate-pulse delay-1000'></div>
         <div className='absolute bottom-32 left-32 w-28 h-28 border border-green-500/20 rounded-full animate-pulse delay-500'></div>
-
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>
@@ -335,7 +322,6 @@ cancelAnimationFrame(animationFrameId);
             <div className='absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-green-400 rounded-full animate-ping delay-700'></div>
           </>
         )}
-
         {/* Holographic elements */}
         {enableHolographic && (
           <>
@@ -346,17 +332,15 @@ cancelAnimationFrame(animationFrameId);
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin'
               style={{
-                animationDuration: '15s',
-                animationDirection: 'reverse',
+                animationDuration: '15s'
+                animationDirection: 'reverse'
               }}
             ></div>
           </>
         )}
       </div>
-
       {children}
     </div>
   );
-};
-
+}
 export default UltraAdvancedFuturisticBackground;

@@ -1,76 +1,74 @@
 import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { ChevronDown, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Eye, Timer, Sparkles  } from 'lucide-react';
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
+import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+type Service = any;
 import { motion } from 'framer-motion';
 import {
-  ChevronDown,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Eye,
-  Timer,
-  Sparkles,;
+  ChevronDown
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Eye
+  Timer
+  Sparkles;
 } from 'lucide-react';
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
 import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
-
 type Service = CuttingEdgeInnovation2029 | any;
-
 interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[];
   title?: string;
   subtitle?: string;
   maxServices?: number;
-
 const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600',
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',
-  'Space Colonization': 'from-red-600 to-orange-600',
-  'Space Mining': 'from-yellow-600 to-orange-600',
-  'Space Architecture': 'from-green-600 to-teal-600',
-  'Space Energy': 'from-yellow-500 to-orange-500',
-  'AI & Business': 'from-blue-600 to-cyan-600',
-  'Quantum & Time': 'from-green-600 to-emerald-600',
-  'AI & Augmented Reality': 'from-orange-600 to-red-600',
-};
-
+  'AI & Consciousness': 'from-purple-600 to-pink-600'
+  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600'
+  'Space Colonization': 'from-red-600 to-orange-600'
+  'Space Mining': 'from-yellow-600 to-orange-600'
+  'Space Architecture': 'from-green-600 to-teal-600'
+  'Space Energy': 'from-yellow-500 to-orange-500'
+  'AI & Business': 'from-blue-600 to-cyan-600'
+  'Quantum & Time': 'from-green-600 to-emerald-600'
+  'AI & Augmented Reality': 'from-orange-600 to-red-600'
+}
 const categoryIcons: { [key: string]: any } = {
-  'AI & Consciousness': Brain,
-  'Quantum & Neuroscience': Cpu,
-  'Space Colonization': Rocket,
-  'Space Mining': Zap,
-  'Space Architecture': Globe,
-  'Space Energy': Sparkles,
-  'AI & Business': Database,
-  'Quantum & Time': Timer,
-  'AI & Augmented Reality': Eye,
-};
-
+  'AI & Consciousness': Brain
+  'Quantum & Neuroscience': Cpu
+  'Space Colonization': Rocket
+  'Space Mining': Zap
+  'Space Architecture': Globe
+  'Space Energy': Sparkles
+  'AI & Business': Database
+  'Quantum & Time': Timer
+  'AI & Augmented Reality': Eye
+}
 const UltraFuturistic2029ServiceShowcase: React.FC<
   UltraFuturistic2029ServiceShowcaseProps
 > = ({
-  services,
-  title = '2029 Ultra-Futuristic Innovations',
-  subtitle = 'Experience the future of technology with our revolutionary services',
-  maxServices = 12,
+  services
+  title = '2029 Ultra-Futuristic Innovations'
+  subtitle = 'Experience the future of technology with our revolutionary services'
+  maxServices = 12
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(
     'innovation'
   );
-
   // Get unique categories
   const categories = [
-    'all',
-    ...Array.from(new Set(services.map(service => service.category))),
+    'all'
+    ...Array.from(new Set(services.map(service => service.category)))
   ];
-
   // Filter and sort services
   const filteredServices = services
     .filter(
@@ -90,7 +88,7 @@ const innovationOrder = {
             Emerging: 1,
           };
           return (
-            (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0)
+            (innovationOrder[bLevel] |0) - (innovationOrder[aLevel] |0)
           );
         case 'price':
           return (
@@ -104,11 +102,10 @@ const innovationOrder = {
       }
     })
     .slice(0, maxServices);
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -116,10 +113,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
         duration: 0.6,
 ease: 'easeOut' as const,
@@ -161,7 +158,6 @@ className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'
             {subtitle}
           </motion.p>
         </motion.div>
-
         {/* Filters and Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -190,7 +186,6 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
               ))}
             </div>
           </div>
-
           {/* Sort Options */}
 <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
@@ -205,7 +200,6 @@ className='flex flex-col sm:flex-row items-center justify-between gap-4 mb-12'
             </select>
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -227,7 +221,6 @@ className='group'
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -259,7 +252,6 @@ href='/pricing'
             </div>
           </div>
         </motion.div>
-
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -270,28 +262,28 @@ className='mt-20'
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
-                label: 'Revolutionary Services',
+                label: 'Revolutionary Services'
                 value: services.filter(
                   s => s.innovationLevel === 'Revolutionary'
-                ).length,
-                icon: Rocket,
-                color: 'from-purple-500 to-pink-500',
-              },
+                ).length
+                icon: Rocket
+                color: 'from-purple-500 to-pink-500'
+              }
               {
-                label: 'Patent Pending',
+                label: 'Patent Pending'
                 value: services.filter(s => s.patentStatus === 'Patent Pending')
-                  .length,
-                icon: Shield,
-                color: 'from-blue-500 to-cyan-500',
-              },
+                  .length
+                icon: Shield
+                color: 'from-blue-500 to-cyan-500'
+              }
               {
-                label: 'Total Customers',
-                value: services.reduce((sum, s) => sum + s.customers, 0),
-                icon: Star,
-                color: 'from-yellow-500 to-orange-500',
-              },
+                label: 'Total Customers'
+                value: services.reduce((sum, s) => sum + s.customers, 0)
+                icon: Star
+                color: 'from-yellow-500 to-orange-500'
+              }
               {
-                label: 'Average Rating',
+                label: 'Average Rating'
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length

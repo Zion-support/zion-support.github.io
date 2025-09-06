@@ -1,9 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
-import Head from 'next/head';
+import { useEffect, useMemo, useState  } from 'react';
+import Head from 'next/head',
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
-
-
+  const storageKey = null;
   return (
     <div>
       <Head>

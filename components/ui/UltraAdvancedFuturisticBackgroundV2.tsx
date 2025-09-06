@@ -1,3 +1,13 @@
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraAdvancedFuturisticBackgroundV2Props {
+  children: React.ReactNode;
+  className?: string
+}
+
+const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
+  children;
+  className;
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -12,10 +22,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
@@ -30,7 +38,6 @@ let animationFrameId: number;
       life: number;
       maxLife: number;
     }> = [];
-
     const colors = [
       '#00ffff',
       '#ff00ff',
@@ -43,7 +50,6 @@ let animationFrameId: number;
       '#ff0080',
       '#80ff00',
     ];
-
     // Initialize particles
     const initParticles = () => {
       particles = [];
@@ -59,12 +65,10 @@ for (let i = 0; i < 150; i++) {
 maxLife: 100,
         });
       }
-    };
-
+    }
     // Update and draw particles
     const updateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createRadialGradient(
 canvas.width / 2,
@@ -79,17 +83,14 @@ canvas.width / 2,
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
-
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
+        if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Reset particle if it dies
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -97,7 +98,6 @@ canvas.width / 2,
           particle.life = particle.maxLife;
 particle.color = colors[Math.floor(Math.random() * colors.length)];
         }
-
         // Draw particle
         const alpha = particle.life / particle.maxLife;
         ctx.globalAlpha = alpha;
@@ -105,7 +105,6 @@ particle.color = colors[Math.floor(Math.random() * colors.length)];
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
-
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
@@ -134,9 +133,7 @@ ctx.stroke();
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
+        ctx.stroke();      }
       // Horizontal lines
       for (let y = 0; y < canvas.height; y += 50) {
         ctx.beginPath();
@@ -173,7 +170,6 @@ initParticles();
     window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
-
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationFrameId) {
@@ -181,7 +177,6 @@ cancelAnimationFrame(animationFrameId);
       }
     };
   }, []);
-
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Animated Canvas Background */}
@@ -190,10 +185,9 @@ cancelAnimationFrame(animationFrameId);
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
           background:
-            'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)',
+            'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)'
         }}
       />
-
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-10'>
         <motion.div
@@ -209,7 +203,6 @@ className='fixed inset-0 w-full h-full pointer-events-none z-0'
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
           animate={{
@@ -223,7 +216,6 @@ ease: 'easeInOut',
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
           animate={{
@@ -237,7 +229,6 @@ ease: 'easeInOut',
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
           animate={{
@@ -252,7 +243,6 @@ ease: 'easeInOut',
           }}
         />
       </div>
-
       {/* Quantum Energy Particles */}
 <div className='fixed inset-0 pointer-events-none z-20'>
         {[...Array(20)].map((_, i) => (
@@ -260,8 +250,8 @@ ease: 'easeInOut',
             key={i}
             className='absolute w-2 h-2 bg-cyan-400 rounded-full'
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
             }}
             animate={{
               y: [0, -100, 0],
@@ -277,7 +267,6 @@ ease: 'easeInOut',
           />
         ))}
       </div>
-
       {/* Neural Network Connections */}
 <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
@@ -317,7 +306,6 @@ ease: 'easeInOut',
           ))}
         </svg>
       </div>
-
       {/* Content */}
 <div className='relative z-40'>{children}</div>
     </div>

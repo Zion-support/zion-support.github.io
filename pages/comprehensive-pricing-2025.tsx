@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
   Check,
   Star,
   Users,
@@ -137,7 +133,6 @@ export default function ComprehensivePricingPage() {
                   </span>
                 )}
               </div>
-
               {/* Stats */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
                 <div className='bg-white/5 rounded-2xl p-6 border border-white/10'>
@@ -164,7 +159,6 @@ export default function ComprehensivePricingPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Category Filter */}
 <section className='px-6 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -191,7 +185,6 @@ className='flex flex-wrap justify-center gap-3'
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
 <section className='px-6 pb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -213,7 +206,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         Popular
                       </div>
                     )}
-
                     {/* Service Header */}
 <div className='p-6'>
                       <div className='flex items-start justify-between mb-4'>
@@ -251,7 +243,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           </div>
                         ))}
                       </div>
-
                       {/* Service Stats */}
 <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
                         <div>
@@ -273,7 +264,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           <div className='text-xs text-white/60'>Trial</div>
                         </div>
                       </div>
-
                       {/* Expand/Collapse Button */}
                       <button
                         onClick={() => toggleServiceExpansion(service.id)}
@@ -288,7 +278,6 @@ className='w-full bg-white/10 text-white py-3 px-4 rounded-xl font-medium hover:
                           }`}
                         />
                       </button>
-
                       {/* CTA Button */}
                       <a
                         href={service.link}
@@ -300,7 +289,6 @@ target='_blank'
                         <ExternalLink className='w-4 h-4' />
                       </a>
                     </div>
-
                     {/* Expanded Details */}
                     <AnimatePresence>
                       {expandedService === service.id && (
@@ -338,7 +326,6 @@ className='overflow-hidden border-t border-white/10'
                                 ))}
                               </div>
                             </div>
-
                             {/* Use Cases */}
 <div className='mb-6'>
                               <h4 className='text-lg font-semibold text-white mb-2'>
@@ -356,7 +343,6 @@ className='overflow-hidden border-t border-white/10'
                                 ))}
                               </div>
                             </div>
-
                             {/* ROI and Benefits */}
 <div className='mb-6'>
                               <h4 className='text-lg font-semibold text-white mb-2'>
@@ -377,7 +363,6 @@ className='overflow-hidden border-t border-white/10'
                                 ))}
                               </div>
                             </div>
-
                             {/* Contact Information */}
 <div className='bg-white/5 rounded-xl p-4'>
                               <h4 className='text-lg font-semibold text-white mb-3'>
@@ -400,7 +385,6 @@ className='overflow-hidden border-t border-white/10'
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
 <section className='px-6 pb-20'>
           <div className='max-w-4xl mx-auto'>

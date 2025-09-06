@@ -1,24 +1,8 @@
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-
-export default function Ecommerce() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'E-commerce Platform',
-    description:
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
-    url: 'https://app.ziontechgroup.com/features/e-commerce',
-  };
-
+  const schema = null;
   return (
     <>
       <SEO
-title='E-commerce Platform'
+        title='E-commerce Platform'
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
         canonical='https://app.ziontechgroup.com/features/e-commerce'

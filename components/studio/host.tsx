@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-
-type PersonaConfig = {
-voice: 'Visionary' | 'Grounded' | 'Technical';
+type PersonaConfig = any;
   language: string;
   cloneStyleText?: string;
-};
-
+}
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
-    voice: 'Visionary',
-    language: 'English',
+    voice: 'Visionary'
+    language: 'English'
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
@@ -22,7 +19,6 @@ export default function StudioHostPage() {
   const [episode, setEpisode] = useState<any>(null);
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
-
   const handleGenerate = async () => {
     setGenerating(true);
     try {
@@ -44,8 +40,7 @@ body: JSON.stringify({
     } finally {
       setGenerating(false);
     }
-  };
-
+  }
   const handleSynthesize = async () => {
     if (!episode?.id) return;
     setSynthesizing(true);
@@ -63,8 +58,7 @@ body: JSON.stringify({ episodeId: episode.id, persona }),
     } finally {
       setSynthesizing(false);
     }
-  };
-
+  }
   const handlePublishRss = async () => {
     if (!episode?.id) return;
     setPublishing(true);
@@ -78,12 +72,10 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
     } finally {
       setPublishing(false);
     }
-  };
-
+  }
   return (
 <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>
-
       <section className='space-y-3'>
         <h2 className='text-xl font-semibold'>AI Persona</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -119,7 +111,7 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
               className='mt-1 w-full border rounded p-2'
               rows={3}
               placeholder='Paste representative writing or notes to clone tone'
-              value={persona.cloneStyleText || ''}
+              value={persona.cloneStyleText |''}
               onChange={e =>
                 setPersona({ ...persona, cloneStyleText: e.target.value })
               }
@@ -174,7 +166,6 @@ const res = await fetch('/api/podcast/rss', { method: 'POST' });
           {generating ? 'Generating…' : 'Generate Episode'}
         </button>
       </section>
-
       {episode && (
 <section className='space-y-4'>
           <h2 className='text-xl font-semibold'>Episode Draft</h2>

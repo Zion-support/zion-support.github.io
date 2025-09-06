@@ -1,10 +1,5 @@
-> Report abuse </button> </div>) 
-}</div> </div>)
-};
-
-const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
-  return (
-<div className='enhanced-card hover:shadow-lg transition-shadow'>
+type Props = any;
+export default ReviewCard;
       <div className='flex items-center justify-between mb-2'>
         <div className='flex items-center gap-2'>
           <StarRating
@@ -31,7 +26,6 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         )}
       </div>
       <p className='text-sm leading-6'>{review.text}</p>
-
       <div className='flex flex-wrap gap-2 mt-3'>
         {typeof review.categories?.communication === 'number' && (
           <span className='pill'>

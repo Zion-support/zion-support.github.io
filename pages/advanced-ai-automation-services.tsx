@@ -1,133 +1,57 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Atom,
-  Dna,
-  Users,
-  Globe,
-  Cpu,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Target as TargetIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Search,
-  Code,
-  TestTube,
-  Server,
-  Database,
-  Network,
-  Shield as SecurityIcon,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const heroStats = [
-  {
-    label: 'AI Services Delivered',
-    value: '200+',
-    icon: <Brain className='w-5 h-5' />,
-  },
-  {
-    label: 'Happy AI Clients',
-    value: '500+',
-    icon: <Users className='w-5 h-5' />,
-  },
-  {
-    label: 'AI Success Rate',
-    value: '99.8%',
-    icon: <Award className='w-5 h-5' />,
-  },
-  {
-    label: 'AI ROI Average',
-    value: '500%',
-    icon: <TrendingUp className='w-5 h-5' />,
-  },
-];
-
-const serviceCategories = [
-  {
-    title: 'AI Development Tools',
-    description: 'Advanced AI-powered development and testing automation',
-services: advancedAIAutomationServices2025.filter(
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+const contactInfo = null;
       s => s.category === 'AI Development Tools'
-    ),
-    icon: Code,
-    color: 'from-emerald-500 to-teal-600',
-    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence'],
-  },
+    )
+    icon: Code
+    color: 'from-emerald-500 to-teal-600'
+    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence']
+  }
   {
-    title: 'AI Testing & Quality Assurance',
-    description: 'Intelligent testing automation with AI-driven insights',
+    title: 'AI Testing & Quality Assurance'
+    description: 'Intelligent testing automation with AI-driven insights'
     services: advancedAIAutomationServices2025.filter(
       s => s.category === 'AI Testing & Quality Assurance'
-    ),
-    icon: TestTube,
-    color: 'from-purple-500 to-indigo-600',
-    features: ['Test Generation', 'Performance Testing', 'Quality Assurance'],
-  },
+    )
+    icon: TestTube
+    color: 'from-purple-500 to-indigo-600'
+    features: ['Test Generation', 'Performance Testing', 'Quality Assurance']
+  }
   {
-    title: 'AI DevOps & Infrastructure',
-    description: 'Self-managing infrastructure with AI optimization',
+    title: 'AI DevOps & Infrastructure'
+    description: 'Self-managing infrastructure with AI optimization'
     services: advancedAIAutomationServices2025.filter(
       s => s.category === 'AI DevOps & Infrastructure'
-    ),
-    icon: Server,
-    color: 'from-blue-500 to-indigo-600',
+    )
+    icon: Server
+    color: 'from-blue-500 to-indigo-600'
     features: [
-      'Infrastructure Management',
-      'Deployment Optimization',
-      'Performance Monitoring',
-    ],
-  },
+      'Infrastructure Management'
+      'Deployment Optimization'
+      'Performance Monitoring'
+    ]
+  }
   {
-    title: 'AI Cybersecurity',
-    description: 'Proactive threat detection and response with AI',
+    title: 'AI Cybersecurity'
+    description: 'Proactive threat detection and response with AI'
     services: advancedAIAutomationServices2025.filter(
       s => s.category === 'AI Cybersecurity'
-    ),
-    icon: SecurityIcon,
-    color: 'from-red-500 to-pink-600',
-    features: ['Threat Detection', 'Incident Response', 'Security Automation'],
-  },
+    )
+    icon: SecurityIcon
+    color: 'from-red-500 to-pink-600'
+    features: ['Threat Detection', 'Incident Response', 'Security Automation']
+  }
   {
-    title: 'AI Data Management',
-    description: 'Intelligent data infrastructure with AI automation',
+    title: 'AI Data Management'
+    description: 'Intelligent data infrastructure with AI automation'
     services: advancedAIAutomationServices2025.filter(
       s => s.category === 'AI Data Management'
-    ),
-    icon: Database,
-    color: 'from-cyan-500 to-blue-600',
+    )
+    icon: Database
+    color: 'from-cyan-500 to-blue-600'
     features: [
       'Pipeline Management',
       'Quality Assurance',
@@ -228,7 +152,6 @@ export default function AdvancedAIAutomationServices() {
           href='https://ziontechgroup.com/advanced-ai-automation-services'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20'></div>
@@ -294,7 +217,7 @@ className='text-center mb-16'
               Why Choose Our AI Automation Services?
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI automation services provide unprecedented efficiency,
+              Our AI automation services provide unprecedented efficiency
               accuracy, and cost savings across all aspects of technology
               operations
             </p>
@@ -447,7 +370,6 @@ className='relative group'
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -502,7 +424,6 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-cyan-500/20'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

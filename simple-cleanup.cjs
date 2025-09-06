@@ -9,14 +9,10 @@ console.log('🧹 Starting simple cleanup...');
 // Function to remove merge conflict markers
 function removeMergeConflicts(content) {
   return content
-    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-    .replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '')
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/<<<<<<< [^\n]+[\s\S]*?/g, '')
     .replace(/^<<<<<<< [^\n]+$/gm, '')
-    .replace(/^=======$/gm, '')
-    .replace(/^>>>>>>> [^\n]+$/gm, '');
-}
+    .replace(/^$/gm, '')
+    .replace(/^}
 
 // Function to fix common syntax issues
 function fixSyntaxIssues(content) {

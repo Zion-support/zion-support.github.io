@@ -1,35 +1,60 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaRocket;
+  FaBrain;
+  FaCloud;
+  FaShieldAlt;
+  FaChartLine;
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
+  FaSearch
+ } from 'react-icons/fa';
+import { SiNextdotjs;
+  SiReact;
+  SiTypescript;
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
+  SiMicrosoftazure
+ } from 'react-icons/si';
 import {
-  FaRocket,
-  FaBrain,
-  FaCloud,
-  FaShieldAlt,
-  FaChartLine,
-  FaCogs,
-  FaLightbulb,
-  FaGlobe,
-  FaMobile,
-  FaDatabase,
-  FaNetworkWired,
-  FaRobot,
-  FaSearch,;
-} from 'react-icons/fa';
+  FaRocket
+  FaBrain
+  FaCloud
+  FaShieldAlt
+  FaChartLine
+  FaCogs
+  FaLightbulb
+  FaGlobe
+  FaMobile
+  FaDatabase
+  FaNetworkWired
+  FaRobot
+  FaSearch;
 import {
-  SiNextdotjs,
-  SiReact,
-  SiTypescript,
-  SiTailwindcss,
-  SiPrisma,
-  SiSupabase,
-  SiVercel,
-  SiDocker,
-  SiKubernetes,
-  SiAws,
-  SiGooglecloud,
-  SiMicrosoftazure,;
+  SiNextdotjs
+  SiReact
+  SiTypescript
+  SiTailwindcss
+  SiPrisma
+  SiSupabase
+  SiVercel
+  SiDocker
+  SiKubernetes
+  SiAws
+  SiGooglecloud
+  SiMicrosoftazure;
 } from 'react-icons/si';
-
 interface Service {
   id: string;
   title: string;
@@ -40,64 +65,27 @@ interface Service {
   pricing: {
     starter: number;
     professional: number;
-    enterprise: number;
-  };
+    enterprise: number
+  },
   technologies: string[];
-  benefits: string[];
+  benefits: string[]
+}
 
 interface ServiceCategory {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
-  color: string;
-
+  color: string
+}
 const serviceCategories: ServiceCategory[] = [
   {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-description:
-      'Cutting-edge artificial intelligence and machine learning solutions',
-    icon: <FaBrain className='w-8 h-8' />,
-    color: 'from-purple-500 to-pink-500',
-  },
-  {
-    id: 'cloud',
-    name: 'Cloud & DevOps',
-    description: 'Scalable cloud infrastructure and development operations',
-icon: <FaCloud className='w-8 h-8' />,
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
-    id: 'security',
-    name: 'Cybersecurity',
-    description: 'Advanced security solutions for modern threats',
-icon: <FaShieldAlt className='w-8 h-8' />,
-    color: 'from-red-500 to-orange-500',
-  },
-  {
-    id: 'data',
-    name: 'Data & Analytics',
-    description: 'Comprehensive data management and analytics platforms',
-icon: <FaDatabase className='w-8 h-8' />,
-    color: 'from-green-500 to-emerald-500',
-  },
-  {
-    id: 'iot',
-    name: 'IoT & Edge Computing',
-    description: 'Internet of Things and edge computing solutions',
-icon: <FaNetworkWired className='w-8 h-8' />,
-    color: 'from-indigo-500 to-purple-500',
-  },
-  {
-    id: 'automation',
-    name: 'Process Automation',
-    description: 'Intelligent automation for business processes',
-icon: <FaRobot className='w-8 h-8' />,
-    color: 'from-yellow-500 to-orange-500',
-  },
+    id: 'ai-ml';
+    name: 'AI & Machine Learning';
+    description: 'Cutting-edge artificial intelligence and machine learning solutions';
+    icon: <FaBrain className;
+export default EnhancedServicesShowcase2025;
 ];
-
 const services: Service[] = [
   {
     id: 'ai-automation-suite',
@@ -107,13 +95,13 @@ description:
     icon: <FaRobot className='w-6 h-6' />,
     category: 'automation',
     features: [
-      'Intelligent workflow automation',
-      'Natural language processing',
-      'Predictive analytics',
-      'Real-time decision making',
-      'Custom AI model training',
-      'Multi-platform integration',
-    ],
+      'Intelligent workflow automation'
+      'Natural language processing'
+      'Predictive analytics'
+      'Real-time decision making'
+      'Custom AI model training'
+      'Multi-platform integration'
+    ]
     pricing: {
       starter: 299,
       professional: 799,
@@ -278,13 +266,13 @@ icon: <FaCloud className='w-6 h-6' />,
       enterprise: 1499,
     },
     technologies: [
-      'Kubernetes',
-      'Docker',
-      'Helm',
-      'ArgoCD',
-      'Prometheus',
-      'Grafana',
-    ],
+      'TensorFlow'
+      'PyTorch'
+      'OpenAI'
+      'LangChain'
+      'React'
+      'Node.js'
+    ]
     benefits: [
       'Faster deployment',
       'Improved scalability',
@@ -293,13 +281,11 @@ icon: <FaCloud className='w-6 h-6' />,
     ],
   },
 ];
-
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name');
-
   const filteredServices = useMemo(() => {
     let filtered = services;
 if (selectedCategory !== 'all') {
@@ -307,14 +293,13 @@ if (selectedCategory !== 'all') {
         service => service.category === selectedCategory
       );
     }
-
     if (searchTerm) {
       filtered = filtered.filter(
         service =>
-          service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
+            .includes(searchTerm.toLowerCase()) |
           service.technologies.some(tech =>
             tech.toLowerCase().includes(searchTerm.toLowerCase())
           )
@@ -331,15 +316,12 @@ default:
       }
     });
   }, [selectedCategory, searchTerm, sortBy]);
-
   const handleServiceSelect = (service: Service) => {
     setSelectedService(service);
-  };
-
+  }
   const closeModal = () => {
     setSelectedService(null);
-  };
-
+  }
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white'>
       {/* Header */}
@@ -359,7 +341,6 @@ className='text-center mb-16'
             building tomorrow's innovations today.
           </p>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -378,7 +359,6 @@ className='mb-12'
               />
               <FaSearch className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400' />
             </div>
-
             <select
               value={sortBy}
               onChange={e =>
@@ -392,7 +372,6 @@ className='mb-12'
             </select>
           </div>
         </motion.div>
-
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -427,7 +406,6 @@ className='mb-12'
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -461,11 +439,9 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                   </p>
                 </div>
               </div>
-
               <p className='text-gray-300 mb-4 line-clamp-3'>
                 {service.description}
               </p>
-
               <div className='flex flex-wrap gap-2 mb-4'>
                 {service.technologies.slice(0, 3).map(tech => (
                   <span
@@ -495,7 +471,6 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
             </motion.div>
           ))}
         </motion.div>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -513,7 +488,6 @@ className='text-center py-16'
           </motion.div>
         )}
       </div>
-
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -556,11 +530,9 @@ className='p-2 hover:bg-white/10 rounded-lg transition-colors'
                   <span className='text-2xl'>×</span>
                 </button>
               </div>
-
               <p className='text-gray-300 text-lg mb-8'>
                 {selectedService.description}
               </p>
-
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                 {/* Features */}
                 <div>
@@ -579,7 +551,6 @@ className='p-2 hover:bg-white/10 rounded-lg transition-colors'
                     ))}
                   </ul>
                 </div>
-
                 {/* Benefits */}
                 <div>
 <h3 className='text-xl font-bold text-white mb-4'>
@@ -598,7 +569,6 @@ className='p-2 hover:bg-white/10 rounded-lg transition-colors'
                   </ul>
                 </div>
               </div>
-
               {/* Technologies */}
 <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -615,7 +585,6 @@ className='p-2 hover:bg-white/10 rounded-lg transition-colors'
                   ))}
                 </div>
               </div>
-
               {/* Pricing */}
 <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>

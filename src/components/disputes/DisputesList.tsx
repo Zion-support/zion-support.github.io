@@ -1,57 +1,86 @@
-import React, { useState } from 'react';
-import { Dispute, DisputeStatus } from '@/types/disputes';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+
+import React, { useState } from "react",
+import { Dispute, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-TableRow,;
-} from '@/components/ui/table';
-import Skeleton from '@/components/ui/skeleton';
-import { formatDistanceToNow } from 'date-fns';
-import { ShieldAlert } from 'lucide-react';
-import Link from 'next/link';
-
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import Skeleton from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns";
+import { ShieldAlert } from 'lucide-react'
+import Link from "next/link";
+type DisputesListProps = any;
 type DisputesListProps = {
-  disputes: Dispute[];
-isLoading: boolean ;
-};
-
+  disputes: Dispute[]
+isLoading: boolean
+}
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
     'all'
-  );
-
+  )
   const filteredDisputes =
     statusFilter === 'all'
       ? disputes
-      : disputes.filter(dispute => dispute.status === statusFilter);
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
+      : disputes.filter(dispute => dispute.status === statusFilter)
+  const getStatusBadgeVariant = (status: DisputeStatus,) => {
     switch (status) {
       case 'open':
-        return 'default';
+        return 'default'
       case 'under_review':
-        return 'secondary';
+        return 'secondary'
       case 'resolved':
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
-        return 'outline';
+        return 'outline'
       default:
-        return 'default';
+        return 'default'
+import React, { useState } from "react"
+import { Dispute, DisputeStatus } from "@/types/disputes"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import {
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow} from "@/components/ui/table"
+import Skeleton from "@/components/ui/skeleton"
+import { formatDistanceToNow } from "date-fns"
+import Link from "next/link"
+type DisputesListProps = {
+  disputes: Dispute[]
+  isLoading: boolean
+}
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all")
+  const filteredDisputes = statusFilter === "all"
+    ? disputes
+    : disputes.filter(dispute => dispute.status === statusFilter)
+  const getStatusBadgeVariant = (status: DisputeStatus) => {
+    switch (status) {
+      case "open": return "default"
+      case "under_review":
+        return "secondary"
+      case "resolved":
+        return "outline", // Changed from "success" to "outline"
+      case "closed":
+        return "outline"
+      default:
+        return "default"
     }
-  };
-
+  }
   if (isLoading) {
     return (
       <div className='space-y-4'>
         <div className='flex gap-2 mb-4'>
           {['All', 'Open', 'Under Review', 'Resolved', 'Closed'].map(status => (
-            <Skeleton key={status} className='h-10 w-24' />
-          ))}
+            <Skeleton key={status} className='h-10 w-24' />          ))}
         </div>
         <div className='border rounded-md'>
           <Table>
@@ -66,7 +95,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {[...Array(5)].map((_, i) => (
+              {[...Array(5)].map((_, i,) => (
                 <TableRow key={i}>
 <TableCell>
                     <Skeleton className='h-4 w-24' />
@@ -104,9 +133,8 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
           No active disputes match the selected filter
         </p>
       </div>
-    );
+    )
   }
-
   return (
 <div className='space-y-4'>
       <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
@@ -160,19 +188,22 @@ variant={statusFilter === 'closed' ? 'default' : 'outline'}
             </TableRow>
           </TableHeader>
           <TableBody>
-            {filteredDisputes.map(dispute => (
+            {filteredDisputes.map(dispute => (            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-                  {dispute.project?.title || 'Unknown Project'}
+                  {dispute.project?.title |'Unknown Project'}
                 </TableCell>
                 <TableCell>
                   <div className='flex flex-col text-sm'>
                     <span>
                       Client:{' '}
-                      {dispute.client_profile?.display_name || 'Unknown Client'}
+                      {dispute.client_profile?.display_name |'Unknown Client'}
                     </span>
                     <span>
                       Talent:{' '}

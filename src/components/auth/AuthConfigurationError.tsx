@@ -1,31 +1,24 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
-import {
-  AlertTriangle,
-  ExternalLink,
-  RefreshCw,
-  Settings,
-  CheckCircle,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-
 interface AuthConfigurationErrorProps {
   onRetry?: () => void;
-showSetupButton?: boolean;
+}
 
+export function AuthConfigurationError({ onRetry, showSetupButton;
 export function AuthConfigurationError({
-  onRetry,
-  showSetupButton = true,
+  onRetry
+  showSetupButton = true
 }: AuthConfigurationErrorProps) {
   const handleRefresh = () => {
     if (onRetry) {
-      onRetry();
+      onRetry()
     } else {
       window.location.reload();
     }
-  };
-
+  }
   return (
 <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>
       <div className='max-w-2xl w-full'>
@@ -43,7 +36,6 @@ export function AuthConfigurationError({
               accounts
             </p>
           </div>
-
           <Alert variant='destructive' className='mb-6'>
             <AlertTriangle className='h-4 w-4' />
             <AlertDescription>
@@ -52,7 +44,6 @@ export function AuthConfigurationError({
               resolved.
             </AlertDescription>
           </Alert>
-
           {/* Technical Details */}
 <div className='bg-gray-50 rounded-lg p-4 mb-6'>
             <h3 className='font-semibold text-gray-900 mb-2'>
@@ -66,7 +57,6 @@ export function AuthConfigurationError({
               <li>• AUTH0_CLIENT_SECRET</li>
             </ul>
           </div>
-
           {/* Action Buttons */}
 <div className='flex flex-col sm:flex-row gap-3 mb-6'>
             {showSetupButton && (
@@ -74,13 +64,14 @@ export function AuthConfigurationError({
                 onClick={() =>
                   window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md', '_blank')
                 }
-                className='bg-blue-600 hover:bg-blue-700 text-white flex-1'
+                className='bg-blue-600 hover:bg-blue-700 text-white flex-1'              <Button
+                onClick = {(,) => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+                className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className='w-4 h-4 mr-2' />
                 Setup Guide
               </Button>
             )}
-
             <Button
               onClick={handleRefresh}
               variant='outline'
@@ -90,7 +81,6 @@ export function AuthConfigurationError({
               Check Again
             </Button>
           </div>
-
           {/* Quick Setup Steps */}
 <div className='border-t pt-6'>
             <h3 className='font-semibold text-gray-900 mb-3'>
@@ -114,7 +104,6 @@ export function AuthConfigurationError({
                   </a>
                 </div>
               </li>
-
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   2
@@ -139,7 +128,6 @@ export function AuthConfigurationError({
                   file
                 </div>
               </li>
-
               <li className='flex items-start gap-3'>
                 <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
                   4
@@ -157,7 +145,6 @@ export function AuthConfigurationError({
             </ol>
           </div>
         </div>
-
         {/* Alternative Actions Card */}
 <div className='bg-blue-50 rounded-xl border border-blue-200 p-6'>
           <h3 className='font-semibold text-blue-900 mb-3'>
@@ -168,10 +155,31 @@ export function AuthConfigurationError({
               href='/marketplace'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
             >
+              <span>Browse Marketplace</span>            >
               <span>Browse Marketplace</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/talent"
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+            >
+              <span>View Talent Pool</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/help"
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+            >
+              <span>Contact Support</span>
+              <ExternalLink className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/status"
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+            >
+              <span>System Status</span>
               <ExternalLink className='w-4 h-4' />
             </Link>
-
             <Link
               href='/talent'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
@@ -179,7 +187,6 @@ export function AuthConfigurationError({
               <span>View Talent Pool</span>
               <ExternalLink className='w-4 h-4' />
             </Link>
-
             <Link
               href='/help'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
@@ -187,7 +194,6 @@ export function AuthConfigurationError({
               <span>Contact Support</span>
               <ExternalLink className='w-4 h-4' />
             </Link>
-
             <Link
               href='/status'
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
@@ -197,7 +203,6 @@ export function AuthConfigurationError({
             </Link>
           </div>
         </div>
-
         {/* Setup Script Info */}
         {showSetupButton && (
 <div className='mt-6 text-center'>
@@ -215,7 +220,6 @@ export function AuthConfigurationError({
             </div>
           </div>
         )}
-
         {/* Footer */}
 <div className='mt-6 text-center text-sm text-gray-500'>
           <p>

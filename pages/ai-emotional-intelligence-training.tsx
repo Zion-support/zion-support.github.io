@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIEmotionalIntelligenceTraining() {
-  
-    />
-  );
+			title;
+				"Privacy-first voice and text processing"
+			]}
+			industries={["Customer Support", "Sales", "HR & L&D", "Leadership"]}
+			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
+		/>
+	)
+}

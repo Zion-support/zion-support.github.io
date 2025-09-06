@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import { useRouter  } from 'next/router';
+import Head from 'next/head',
+import MilestoneForm from '../../../components/monetization/MilestoneForm',
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
-import { Milestone } from '../../../utils/types/milestones';
-import {
-  createMilestone,
-  fetchMilestones,
-  updateMilestoneStatus,;
-} from '../../../utils/api/milestones-client';
-
+import { Milestone  } from '../../../utils/types/milestones';
+import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+  if (typeof window;
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
   const url = new URL(window.location.href);
@@ -27,7 +24,6 @@ const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() =>
   const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
 setRole(getRoleFromEnvOrQuery());
   }, []);
@@ -46,7 +42,6 @@ const userId =
       document.cookie = `x-user-role=${role}; path=/`;
     } catch {}
   }, [role]);
-
   useEffect(() => {
     if (!projectId) return;
     let cancelled = false;
@@ -57,16 +52,15 @@ const userId =
         const data = await fetchMilestones(projectId as string);
 if (!cancelled) setMilestones(data.milestones || []);
       } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Failed to load milestones');
+        if (!cancelled) setError(e?.message |'Failed to load milestones');
       } finally {
         if (!cancelled) setLoading(false);
       }
     })();
     return () => {
       cancelled = true;
-    };
+    }
   }, [projectId]);
-
   const handleCreate = async (payload: {
     title: string;
     description?: string;
@@ -79,10 +73,10 @@ if (!cancelled) setMilestones(data.milestones || []);
   };
 
   const handleAction = async (
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
-    if (!projectId) return;
+    if (!projectId) return
     const map: Record<string, string> = {
       in_progress: 'In Progress',
       submitted: 'Submitted',
@@ -91,7 +85,7 @@ paid: 'Paid',
     };
     const status = map[action];
     const res = await updateMilestoneStatus(projectId as string, milestoneId, {
-      status,
+      status
     });
     setMilestones(prev =>
       prev.map(m => (m.id === milestoneId ? res.milestone : m))
@@ -107,7 +101,6 @@ paid: 'Paid',
           content='Track project deliverables and milestone payments'
         />
       </Head>
-
       <div className='max-w-5xl mx-auto px-4 py-8'>
         <div className='mb-6'>
           <h1 className='text-2xl font-bold'>Milestones</h1>
@@ -115,7 +108,6 @@ paid: 'Paid',
             Project: {projectId as string}
           </p>
         </div>
-
         {role !== 'talent' && (
           <div className='mb-8 p-4 rounded bg-gray-50 border'>
             <div className='flex items-center justify-between mb-3'>
@@ -125,7 +117,6 @@ paid: 'Paid',
             <MilestoneForm onSubmit={handleCreate} />
           </div>
         )}
-
         {loading && <div>Loading milestones...</div>}
 {error && <div className='text-red-600'>{error}</div>}
 

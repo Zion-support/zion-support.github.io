@@ -5,18 +5,18 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Sparkles } from 'lucide-react';
 
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from 'lucide-react'
 interface AIListingFormProps {
   onSubmit: (formData: {
     title: string;
     category: string;
     keyFeatures: string;
-    targetAudience: string;
-  }) => void;
-  isLoading: boolean;
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
+    targetAudience: string
 targetAudience?: string;
   };
 
@@ -36,7 +36,7 @@ export function AIListingForm({
   );
 
   const handleSubmit = () => {
-    if (!title || !category) {
+    if (!title |!category) {
       toast({
 title: 'Missing required fields',
         description: 'Please provide at least a title and category.',
@@ -44,15 +44,13 @@ title: 'Missing required fields',
       });
       return;
     }
-
     onSubmit({
-      title,
-      category,
-      keyFeatures,
-      targetAudience,
-    });
-  };
-
+      title
+      category
+      keyFeatures
+      targetAudience
+    })
+  }
   return (
     <div className='space-y-4'>
       <div className='space-y-2'>
@@ -68,8 +66,7 @@ title: 'Missing required fields',
           onChange={e => setTitle(e.target.value)}
           placeholder='Enter your product or service title'
           className='bg-zion-blue border border-zion-blue-light text-white'
-          disabled={isLoading}
-        />
+          disabled={isLoading}        />
       </div>
       <div className='space-y-2'>
         <label
@@ -84,8 +81,7 @@ title: 'Missing required fields',
           onChange={e => setCategory(e.target.value)}
           placeholder='e.g. AI Tool, Digital Product, Service'
           className='bg-zion-blue border border-zion-blue-light text-white'
-          disabled={isLoading}
-        />
+          disabled={isLoading}        />
       </div>
       <div className='space-y-2'>
         <label
@@ -100,8 +96,7 @@ title: 'Missing required fields',
           onChange={e => setKeyFeatures(e.target.value)}
           placeholder='Briefly describe the main features or benefits'
           className='bg-zion-blue border border-zion-blue-light text-white min-h-20'
-          disabled={isLoading}
-        />
+          disabled={isLoading}        />
       </div>
       <div className='space-y-2'>
         <label

@@ -1,73 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  HelpCircle, 
-  MessageCircle, 
-  Mail, 
-  Phone, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  FileText, 
-  Video, 
-  Users ;
-} from 'lucide-react';
-
-const supportChannels = [
-  {
-    icon: MessageCircle,
-    title: 'Live Chat',
-    description: 'Get instant help with our 24/7 live chat support',
-    availability: '24/7'
-  },
-  {
-    icon: Phone,
-    title: 'Phone Support',
-    description: 'Speak directly with our technical experts',
-    availability: 'Mon-Fri 9AM-6PM EST'
-  },
-  {
-    icon: Mail,
-    title: 'Email Support',
-    description: 'Send us detailed questions and get comprehensive answers',
-    availability: '24/7'
-  },
-  {
-    icon: Video,
-    title: 'Video Calls',
-    description: 'Schedule screen sharing sessions for complex issues',
-    availability: 'By appointment'
-  }
-];
-
-export default function SupportPage() {
-  return (
-    <>
-      <Head>
-        <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for all your technology needs." />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">Support Center</h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                We're here to help you succeed with comprehensive support options.
-              </p>
-            </motion.div>
+import { HelpCircle, MessageCircle, Phone, Mail, Clock;
+  BookOpen, Video, FileText, Search, Filter;
+  CheckCircle, ArrowRight, Brain, Atom, Rocket;
+  Shield, Zap, Users, Star, TrendingUp, Code
+ } from 'lucide-react';
+export default function Support() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const supportCategories = null;
           </div>
         </section>
-
         {/* Support Channels */}
 <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">

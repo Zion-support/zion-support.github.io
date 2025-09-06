@@ -1,101 +1,42 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Zap,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Target,
-  BookOpen,
-  Users,
-  Star,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Youtube,
-  Github,
-  MessageCircle,
-  MessageSquare,
-  ArrowUp,
-  ExternalLink,
-  Building,
-  Code,
-  Database,
-  Network,
-  Server,
-  Monitor,
-  Smartphone,
-  Camera,
-  Gamepad2,
-  Palette,
-  Music,
-  Film,
-  BookOpenCheck,
-  HelpCircle,
-  FileText,
-  Video,
-  Headphones,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const footerSections = [
-  {
-    title: 'Featured Services',
-    description: 'Our most popular and innovative solutions',
-icon: <Star className='w-5 h-5 text-yellow-400' />,
+import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
+  Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
+  Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
+  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
+  ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
+  Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
+ } from 'lucide-react';
+const contactInfo = null;
     links: [
       {
-        name: 'AI Customer Success Platform',
-        href: '/ai-customer-success-platform',
-        featured: true,
-      },
+        name: 'AI Customer Success Platform'
+        href: '/ai-customer-success-platform'
+        featured: true
+      }
       {
-        name: 'Supply Chain Optimization',
-        href: '/intelligent-supply-chain-optimization',
-        featured: true,
-      },
+        name: 'Supply Chain Optimization'
+        href: '/intelligent-supply-chain-optimization'
+        featured: true
+      }
       {
-        name: 'AI Financial Planning',
-        href: '/ai-financial-planning-platform',
-        featured: true,
-      },
+        name: 'AI Financial Planning'
+        href: '/ai-financial-planning-platform'
+        featured: true
+      }
       {
-        name: 'AI Sales Intelligence',
-        href: '/ai-sales-intelligence-platform',
-        featured: true,
-      },
-      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform' },
-      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
+        name: 'AI Sales Intelligence'
+        href: '/ai-sales-intelligence-platform'
+        featured: true
+      }
+      { name: 'HR Analytics Platform', href: '/ai-hr-analytics-platform' }
+      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' }
       {
-        name: 'Content Automation',
-        href: '/intelligent-content-automation-platform',
-      },
-      { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' },
+        name: 'Content Automation'
+        href: '/intelligent-content-automation-platform'
+      }
+      { name: 'CRM Intelligence Suite', href: '/smart-crm-intelligence-suite' }
       {
         name: 'AI Evaluation Orchestrator',
         href: '/ai-evaluation-orchestrator',
@@ -327,13 +268,12 @@ window.scrollTo({ top: 0, behavior: 'smooth' });
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-black' />
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5' />
-
         {/* Animated grid */}
         <motion.div
           className='absolute inset-0 opacity-5'
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px)
             `,
             backgroundSize: '200px 200px',
@@ -374,13 +314,11 @@ className='space-y-6'
                     </p>
                   </div>
                 </div>
-
                 <p className='text-gray-300 leading-relaxed max-w-md'>
                   Leading the future with cutting-edge AI consciousness, quantum
                   computing, and innovative micro SAAS solutions. Transform your
                   business with our revolutionary technology.
                 </p>
-
                 {/* Contact Info */}
                 <div className='space-y-3'>
                   <a
@@ -402,7 +340,6 @@ className='space-y-6'
                     <span className='text-sm'>{contactInfo.address}</span>
                   </div>
                 </div>
-
                 {/* Social Links */}
 <div className='flex items-center gap-4'>
                   {socialLinks.map(social => (
@@ -419,7 +356,6 @@ className='space-y-6'
                 </div>
               </motion.div>
             </div>
-
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div
@@ -453,7 +389,6 @@ link.featured
               </motion.div>
             ))}
           </div>
-
           {/* Bottom Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -465,7 +400,6 @@ className='mt-16 pt-8 border-t border-gray-800/50'
               <div className='text-sm text-gray-400'>
                 © 2025 Zion Tech Group. All rights reserved.
               </div>
-
               <div className='flex items-center gap-6 text-sm text-gray-400'>
                 <Link
                   href='/privacy'
@@ -486,7 +420,6 @@ className='mt-16 pt-8 border-t border-gray-800/50'
                   Cookie Policy
                 </Link>
               </div>
-
               <button
                 onClick={scrollToTop}
 className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110'
@@ -504,25 +437,27 @@ className='p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hove
 
   /* Animated grid */ 
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
-  social.icon 
-}</a>) ) 
+  social.icon
+}</a>) )
 }</div> </motion.div> </div> {
-  /* Footer Sections */ 
+  /* Footer Sections */
 }{
   footerSections.map ( (section, index) => (<motion.div key= {
-  section.title 
+  section.title
 }<li key= {
-  link.name 
+  link.name
 }> <Link href= {
-  link.href 
+  link.href
 }className= {
   `text-sm transition-colors duration-200 $ {
-  link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white' 
-}` 
-}> </li>) ) 
-}</ul> </motion.div>) ) 
+  link.featured ? 'text-cyan-400 hover:text-cyan-300' : 'text-gray-400 hover:text-white'
+}`
+}> </li>) )
+}</ul> </motion.div>) )
 }</div> {
-  /* Bottom Section */ 
-}<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
-};
+  /* Bottom Section */
+}<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)
+}
+export default UltraFuturisticFooter2035;  )
+}
 export default UltraFuturisticFooter2035;

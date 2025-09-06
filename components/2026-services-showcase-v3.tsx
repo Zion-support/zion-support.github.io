@@ -1,13 +1,36 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+import { motion  } from 'framer-motion';
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026',
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-
+  const contactInfo = null;
+  return (
+    <UltraQuantumHolographicBackground
+      intensity="extreme"
+      colorScheme="neural-network"
+      particleCount={500}
+      animationSpeed={3}
+    >
+      <Head>
+        <title>Revolutionary 2026 Services Showcase | Zion Tech Group</title>
+        <meta name="description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
+        <meta name="keywords" content="2026 services, AI services, quantum computing, micro SAAS, emerging technology, blockchain, metaverse, autonomous systems, biotech AI, climate AI" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
+        <meta property="og:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-v3" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
+        <meta name="twitter:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
+        <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v3" />
+      </Head>
+      <div className='min-h-screen'>      <div className="min-h-screen">
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
-
         {/* Hero Section */}
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -45,12 +68,10 @@ className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold
             </motion.div>
           </div>
         </section>
-
         {/* Services Showcase */}
 <div id='services'>
           <Enhanced2026ServicesShowcaseV3 />
         </div>
-
         {/* Contact Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>

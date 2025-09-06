@@ -1,18 +1,21 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Cpu  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AIIoTPlatformPage() {
+  const service = null;
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Cpu,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Cpu;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function AIIoTPlatformPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-iot-platform')
@@ -103,7 +106,7 @@ export default function AIIoTPlatformPage() {
             Build smart, connected systems with our AI-powered IoT platform for seamless device management and automation.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-violet-600 text-white px-6 py-3 rounded-lg hover:bg-violet-700">
+            <a href="/contact" className="bg-violet-600 text-white px-6 py-3 rounded-lg hover: bg-violet-700">
               Get Started
             </a>
             <a href="/about" className="border border-violet-600 text-violet-600 px-6 py-3 rounded-lg hover:bg-violet-50">

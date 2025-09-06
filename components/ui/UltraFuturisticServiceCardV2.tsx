@@ -1,16 +1,17 @@
 import React from 'react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, Users, TrendingUp, Zap, Shield, Globe, Rocket } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight,
-  Star,
-  Users,
-  TrendingUp,
-  Zap,
-  Shield,
-  Globe,
-  Rocket,;
+  ArrowRight
+  Star
+  Users
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Rocket;
 } from 'lucide-react';
-
 interface ServiceCardProps {
   service: {
     id: string;
@@ -24,8 +25,8 @@ interface ServiceCardProps {
       currency: string;
       trialDays: number;
       setupTime: string;
-      enterprise?: number;
-    };
+      enterprise?: number
+    },
     features: string[];
     benefits: string[];
     targetAudience: string[];
@@ -48,43 +49,18 @@ interface ServiceCardProps {
     rating: number;
     reviews: number;
     marketSize?: string;
-    growthRate?: string;
-  };
-  index: number;
-
-const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
-  service,
-  index,
-}) => {
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
-      case 'ai & consciousness':
-        return <Zap className='w-5 h-5' />;
-      case 'quantum & emerging tech':
-        return <Rocket className='w-5 h-5' />;
-      case 'enterprise it':
-        return <Shield className='w-5 h-5' />;
-      case 'space & metaverse':
-        return <Globe className='w-5 h-5' />;
-      case 'micro saas':
-        return <TrendingUp className='w-5 h-5' />;
-      default:
         return <Zap className='w-5 h-5' />;
     }
-  };
-
+  }
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
 return color;
     }
     return 'from-cyan-500 to-blue-500';
-  };
-
-  
+  }
     >
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
-
       {/* Main card */}
       <div className='relative bg-gray-900/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full overflow-hidden'>
         {/* Background pattern */}
@@ -92,7 +68,6 @@ return color;
           <div className='absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-400'></div>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length:20px_20px]'></div>
         </div>
-
         {/* Header */}
         <div className='relative z-10 mb-6'>
           <div className='flex items-start justify-between mb-4'>
@@ -129,7 +104,6 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
             {service.tagline}
           </p>
         </div>
-
         {/* Stats */}
 <div className='relative z-10 mb-6'>
           <div className='grid grid-cols-3 gap-4'>
@@ -153,7 +127,6 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
             </div>
           </div>
         </div>
-
         {/* Pricing */}
 <div className='relative z-10 mb-6'>
           <div className='bg-gray-800/50 rounded-xl p-4 border border-gray-600/30'>
@@ -184,7 +157,6 @@ transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
             )}
           </div>
         </div>
-
         {/* Features preview */}
 <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -210,7 +182,6 @@ className='flex items-center space-x-2 text-sm'
             )}
           </div>
         </div>
-
         {/* Benefits */}
 <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
@@ -231,7 +202,6 @@ className='flex items-center space-x-2 text-sm'
             ))}
           </div>
         </div>
-
         {/* Market info */}
         {service.marketSize && service.growthRate && (
 <div className='relative z-10 mb-6'>
@@ -251,7 +221,6 @@ className='flex items-center space-x-2 text-sm'
             </div>
           </div>
         )}
-
         {/* CTA Button */}
 <div className='relative z-10'>
           <motion.a
@@ -264,12 +233,10 @@ className='group/btn relative w-full inline-flex items-center justify-center px-
               <span>Learn More</span>
               <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200' />
             </span>
-
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300'></div>
           </motion.a>
         </div>
-
         {/* Hover overlay */}
         <motion.div
           initial={{ opacity: 0 }}

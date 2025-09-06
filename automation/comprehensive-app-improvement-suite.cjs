@@ -729,8 +729,8 @@ class ComprehensiveAppImprovementSuite {
 
 // Run the comprehensive app improvement suite
 if (require.main === module) {
-    const suite = new ComprehensiveAppImprovementSuite(),
-    suite.run().catch(console.error)
-  }
+  const suite = new ComprehensiveAppImprovementSuite();
+  suite.run().catch(console.error);
+}
 
 module.exports = ComprehensiveAppImprovementSuite;

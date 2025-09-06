@@ -48,9 +48,7 @@ class PerformanceOptimizer {; constructor() {; this.optimizations = []; this.log
 ; generateRecommendations() {; return [
     ; "Implement code splitting for better performance"; "Optimize images using WebP format"; "Remove unused dependencies"; "Enable gzip compression",
     "Use React.memo for expensive components"
-  ]};
-; saveReport(report) {; const reportFile = path.join(__dirname, "logs", "performance-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}};
-;
+  ]}; saveReport(report) {const reportFile = path.join(__dirname, "logs", "performance-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}}
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report = > {; if (report) {; console.log("Performance report: ", report)}}),`;
 ; const scriptPath = path.join(__dirname, "performance-optimizer.js"); fs.writeFileSync(scriptPath, script);

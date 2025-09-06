@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React, { useState, useEffect } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-import {
-  Lock,
-  Shield,
-  Eye,
-  EyeOff,
-  Copy,
-  RefreshCw,
-  CheckCircle,
-  XCircle,
-  AlertTriangle,
-  ArrowRight,;
-} from 'lucide-react';
-
+import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 export default function PasswordCheckerPage() {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -22,17 +10,16 @@ export default function PasswordCheckerPage() {
   const [strengthText, setStrengthText] = useState('');
   const [strengthColor, setStrengthColor] = useState('');
   const [checks, setChecks] = useState({
-    length: false,
-    uppercase: false,
-    lowercase: false,
-    numbers: false,
-    symbols: false,
-    noCommon: false,
-noSequential: false,
+    length: false;
+    uppercase: false;
+    lowercase: false;
+    numbers: false;
+    symbols: false;
+    noCommon: false;
+    noSequential: false
   });
-  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [suggestions, setSuggestions] = useState<string[]>([]),
   const [generatedPassword, setGeneratedPassword] = useState('');
-
   useEffect(() => {
     if (password) {
 analyzePassword(password);
@@ -40,9 +27,6 @@ analyzePassword(password);
       resetAnalysis();
     }
   }, [password]);
-
-  const analyzePassword = (pass: string) => {
-    const newChecks = {
       length: pass.length >= 8,
       uppercase: /[A-Z]/.test(pass),
       lowercase: /[a-z]/.test(pass),
@@ -53,7 +37,6 @@ symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
     };
 
     setChecks(newChecks);
-
     // Calculate strength score
     let score = 0;
     score += newChecks.length ? 15 : 0;
@@ -63,13 +46,10 @@ symbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(pass),
     score += newChecks.symbols ? 20 : 0;
     score += newChecks.noCommon ? 10 : 0;
     score += newChecks.noSequential ? 10 : 0;
-
     // Bonus for length
     if (pass.length >= 12) score += 10;
     if (pass.length >= 16) score += 5;
-
     setStrength(score);
-
     // Set strength text and color
     if (score >= 90) {
       setStrengthText('Very Strong');
@@ -87,7 +67,6 @@ setStrengthColor('text-green-400');
       setStrengthText('Very Weak');
       setStrengthColor('text-red-400');
     }
-
     // Generate suggestions
     generateSuggestions(newChecks, pass);
   };
@@ -109,8 +88,7 @@ setStrengthColor('text-green-400');
       'hello',
     ];
     return commonPasswords.includes(pass.toLowerCase());
-  };
-
+  }
   const hasSequentialChars = (pass: string) => {
     const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc', '789', '456'];
     return sequences.some(seq => pass.toLowerCase().includes(seq));
@@ -131,7 +109,6 @@ if (!checks.length)
       suggestions.push('Avoid common passwords like "password" or "123456"');
     if (!checks.noSequential)
       suggestions.push('Avoid sequential characters like "123" or "abc"');
-
     if (pass.length < 12)
       suggestions.push(
         'Consider making your password 12+ characters for better security'
@@ -163,18 +140,15 @@ noSequential: false,
 const charset =
       'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*';
     let result = '';
-
     // Ensure at least one of each required character type
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)]; // Uppercase
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)]; // Lowercase
     result += '0123456789'[Math.floor(Math.random() * 10)]; // Number
     result += '!@#$%^&*'[Math.floor(Math.random() * 8)]; // Symbol
-
     // Fill the rest randomly
     for (let i = 4; i < length; i++) {
       result += charset[Math.floor(Math.random() * charset.length)];
     }
-
     // Shuffle the password
     result = result
       .split('')
@@ -182,8 +156,7 @@ const charset =
       .join('');
     setGeneratedPassword(result);
     setPassword(result);
-  };
-
+  }
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   };
@@ -221,7 +194,6 @@ return 'bg-red-400';
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -238,10 +210,10 @@ return 'bg-red-400';
             Analyze your password security with our advanced strength checker.
             Get detailed feedback, suggestions, and generate strong passwords to
             protect your accounts and data.
+            suggestions, and generate strong passwords to protect your accounts and data.
           </p>
         </div>
       </section>
-
       {/* Password Checker Tool */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -254,7 +226,6 @@ return 'bg-red-400';
               determine password strength and security.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {/* Input Form */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -262,7 +233,6 @@ return 'bg-red-400';
                 <Lock className='w-6 h-6 mr-3 text-indigo-400' />
                 Password Analysis
               </h3>
-
               <div className='space-y-6'>
                 {/* Password Input */}
                 <div>
@@ -290,7 +260,6 @@ return 'bg-red-400';
                     </button>
                   </div>
                 </div>
-
                 {/* Generate Password */}
                 <div>
                   <Button
@@ -301,7 +270,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                     Generate Strong Password
                   </Button>
                 </div>
-
                 {/* Generated Password Display */}
                 {generatedPassword && (
 <div className='p-4 bg-gray-700 rounded-lg border border-gray-600'>
@@ -333,14 +301,12 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 </div>
               </div>
             </Card>
-
             {/* Strength Analysis */}
 <Card className='p-8 bg-gray-800 border border-gray-700'>
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
                 <Shield className='w-6 h-6 mr-3 text-purple-400' />
                 Security Analysis
               </h3>
-
               {password ? (
 <div className='space-y-6'>
                   {/* Strength Score */}
@@ -348,6 +314,8 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                     <div className='flex items-center justify-between mb-2'>
                       <span className='text-sm text-gray-300'>
                         Password Strength:
+                      </span>                      <span className={`text-lg font-bold ${strengthColor}`}>
+                        {strengthText} ({strength}/100)
                       </span>
                       <span className={`text-lg font-bold ${strengthColor}`}>
                         {strengthText} ({strength}/100)
@@ -360,7 +328,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                       />
                     </div>
                   </div>
-
                   {/* Security Checks */}
                   <div>
 <h4 className='text-lg font-semibold text-white mb-3'>
@@ -386,7 +353,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                       ))}
                     </div>
                   </div>
-
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -422,20 +388,17 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
           </div>
         </div>
       </section>
-
       {/* Features */}
 <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-              Advanced Password Security Features
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Comprehensive password analysis with real-time feedback and
               security recommendations.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔍</div>
@@ -447,7 +410,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 advanced security algorithms.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📊</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -458,7 +420,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 password detection.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>💡</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -469,7 +430,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 and strength.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔐</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -480,7 +440,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 security requirements.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🛡️</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -491,7 +450,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 maximum protection.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔒</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -505,7 +463,6 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
           </div>
         </div>
       </section>
-
       {/* Security Tips */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -518,15 +475,13 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
               passwords for all your accounts.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='text-4xl mb-4'>✅</div>
               <h3 className='text-2xl font-bold text-white mb-4'>Do's</h3>
               <ul className='space-y-3 text-gray-300'>
                 <li className='flex items-start'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
-                  Use at least 12 characters for important accounts
+                  <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />                  Use at least 12 characters for important accounts
                 </li>
                 <li className='flex items-start'>
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0' />
@@ -554,6 +509,19 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
                 <li className='flex items-start'>
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
                   Don't use personal information (names, birthdays)
+                </li>                  Don't use personal information (names, birthdays)
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Avoid common words or patterns
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Never share passwords with others
+                </li>
+                <li className="flex items-start">
+                  <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />
+                  Don't reuse passwords across accounts
                 </li>
                 <li className='flex items-start'>
                   <XCircle className='w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0' />
@@ -576,12 +544,10 @@ className='w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indi
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-            Ready to Secure Your Passwords?
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 import Link from 'next/link';
 import { useRole } from '../context/RoleContext';
-
+      const has = null;
       }
     } catch {}
   }, []);
-
   function completeOnboarding() {
     try {
       if (typeof window !== 'undefined') {
@@ -16,7 +15,6 @@ window.localStorage.setItem('zion_has_onboarded', '1');
   }
 
   if (!open) return null;
-
   return (
 <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4'>
       <div className='w-full max-w-xl rounded-lg bg-white dark:bg-zinc-900 border border-gray-200 dark:border-gray-800 shadow-xl'>

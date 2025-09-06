@@ -1,8 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   CheckCircle,
   ArrowRight,
   Star,
@@ -99,10 +94,10 @@ description:
 
 const pricing = [
   {
-    name: 'Starter',
-    price: '$299',
-    period: '/month',
-    description: 'Perfect for small teams getting started with emotion AI',
+    name: 'Starter'
+    price: '$299'
+    period: '/month'
+    description: 'Perfect for small teams getting started with emotion AI'
     features: [
 'Up to 1,000 emotion analyses per month',
       'Basic emotion detection (7 core emotions)',
@@ -114,10 +109,10 @@ const pricing = [
     cta: 'Get Started',
   },
   {
-    name: 'Professional',
-    price: '$1,299',
-    period: '/month',
-    description: 'Advanced emotion intelligence for growing businesses',
+    name: 'Professional'
+    price: '$1,299'
+    period: '/month'
+    description: 'Advanced emotion intelligence for growing businesses'
     features: [
 'Up to 10,000 emotion analyses per month',
       'Full emotion detection (27 emotions)',
@@ -132,10 +127,10 @@ const pricing = [
     cta: 'Start Free Trial',
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    period: '',
-    description: 'Custom solutions for large organizations',
+    name: 'Enterprise'
+    price: 'Custom'
+    period: ''
+    description: 'Custom solutions for large organizations'
     features: [
 'Unlimited emotion analyses',
       'Custom emotion models',
@@ -194,9 +189,32 @@ export default function AIEmotionIntelligencePlatform() {
                 className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6'
               >
                 <Sparkles className='w-4 h-4 mr-2' />
+export default function AIEmotionIntelligencePlatform() {
+  return (
+    <>
+      <Head>
+        <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights." />
+        <meta name="keywords" content="AI emotion detection, sentiment analysis, customer experience, emotion AI, real-time analysis" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <UltraFuturisticBackground2030>
+        <UltraFuturisticNavigation2030 />
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }} className="mb-8">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -207,7 +225,6 @@ transition={{ duration: 0.8, delay: 0.4 }}
                   AI Emotion Intelligence Platform
                 </span>
               </motion.h1>
-
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -217,7 +234,6 @@ transition={{ duration: 0.8, delay: 0.6 }}
                 Real-time emotion analysis and response for customer
                 interactions
               </motion.p>
-
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -230,7 +246,6 @@ transition={{ duration: 0.8, delay: 0.8 }}
                 customer experience.
               </motion.p>
             </motion.div>
-
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -259,7 +274,6 @@ transition={{ duration: 0.8, delay: 1.0 }}
                 </span>
               </Link>
             </motion.div>
-
             {/* Key Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -442,7 +456,6 @@ viewport={{ once: true }}
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     href={plan.name === 'Enterprise' ? '/contact' : '/contact'}
                     className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
@@ -458,7 +471,6 @@ viewport={{ once: true }}
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
 <section className='py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -534,7 +546,6 @@ viewport={{ once: true }}
             </motion.div>
           </div>
         </section>
-
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>

@@ -1,22 +1,24 @@
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
+import { useRouter  } from 'next/router';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
+const fetcher = null;
+    mutate()
+  }
+
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function DisputeDetailPage() {
   const router = useRouter();
-  const { id } = router.query as { id?: string };
+  const { id } = router.query as { id?: string }
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
-
   const dispute = data?.dispute;
 const [activeTab, setActiveTab] = useState<
     'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'
   >('Overview');
   const [message, setMessage] = useState('');
   const [resolutionSummary, setResolutionSummary] = useState('');
-
   async function sendMessage() {
     if (!message.trim() || !id) return;
 await fetch(`/api/disputes/${id}/message`, {
@@ -53,7 +55,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
               {dispute.status}
             </span>
           </div>
-
           <div className='mb-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
             <div className='p-3 border rounded'>
               <div className='font-medium text-gray-500'>Project</div>
@@ -68,7 +69,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
               <div className='mt-1'>{dispute.talentUserId}</div>
             </div>
           </div>
-
           <div className='border-b mb-4 flex gap-4 text-sm'>
             {(
               ['Overview', 'Messages', 'Attachments', 'Admin Notes'] as const
@@ -130,7 +130,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
               </div>
             </div>
           )}
-
           {activeTab === 'Messages' && (
 <div className='space-y-4'>
               <div className='max-h-72 overflow-auto border rounded p-3 bg-gray-50 dark:bg-gray-900'>
@@ -168,7 +167,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
               )}
             </div>
           )}
-
           {activeTab === 'Attachments' && (
 <div className='space-y-3'>
               {dispute.attachments.length === 0 ? (
@@ -198,7 +196,6 @@ await fetch(`/api/disputes/${id}/resolve`, {
               )}
             </div>
           )}
-
           {activeTab === 'Admin Notes' && (
 <div className='space-y-4'>
               {user.role !== 'admin' ? (

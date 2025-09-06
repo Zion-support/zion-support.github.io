@@ -19,12 +19,6 @@ import {
   Zap,;
 } from 'lucide-react';
 export default function MarketResearchPage() {
-  const marketSegments = [
-    {
-      name: 'AI & Machine Learning',
-      marketSize: '$15.7B',
-      growthRate: '23.4% CAGR',
-      keyTrends: [
 'Generative AI adoption accelerating',
         'AI-powered automation increasing',
         'Natural language processing growth',
@@ -41,9 +35,9 @@ export default function MarketResearchPage() {
       icon: <Zap className='w-8 h-8 text-white' />,
     },
     {
-      name: 'Database & Analytics',
-      marketSize: '$8.9B',
-      growthRate: '18.7% CAGR',
+      name: 'Database & Analytics'
+      marketSize: '$8.9B'
+      growthRate: '18.7% CAGR'
       keyTrends: [
 'Real-time analytics demand',
         'Cloud database migration',
@@ -61,9 +55,9 @@ export default function MarketResearchPage() {
       icon: <BarChart3 className='w-8 h-8 text-white' />,
     },
     {
-      name: 'Security & Identity',
-      marketSize: '$12.3B',
-      growthRate: '21.2% CAGR',
+      name: 'Security & Identity'
+      marketSize: '$12.3B'
+      growthRate: '21.2% CAGR'
       keyTrends: [
 'Zero-trust security adoption',
         'Multi-factor authentication growth',
@@ -81,9 +75,9 @@ export default function MarketResearchPage() {
       icon: <Target className='w-8 h-8 text-white' />,
     },
     {
-      name: 'Business Intelligence',
-      marketSize: '$22.1B',
-      growthRate: '19.8% CAGR',
+      name: 'Business Intelligence'
+      marketSize: '$22.1B'
+      growthRate: '19.8% CAGR'
       keyTrends: [
 'Self-service BI adoption',
         'Real-time data integration',
@@ -101,9 +95,9 @@ export default function MarketResearchPage() {
       icon: <Activity className='w-8 h-8 text-white' />,
     },
     {
-      name: 'API Management',
-      marketSize: '$6.8B',
-      growthRate: '24.1% CAGR',
+      name: 'API Management'
+      marketSize: '$6.8B'
+      growthRate: '24.1% CAGR'
       keyTrends: [
 'Microservices architecture growth',
         'API-first development',
@@ -121,9 +115,9 @@ export default function MarketResearchPage() {
       icon: <Globe className='w-8 h-8 text-white' />,
     },
     {
-      name: 'User Experience Analytics',
-      marketSize: '$9.4B',
-      growthRate: '20.5% CAGR',
+      name: 'User Experience Analytics'
+      marketSize: '$9.4B'
+      growthRate: '20.5% CAGR'
       keyTrends: [
 'Privacy-compliant tracking',
         'Real-time user insights',
@@ -141,17 +135,16 @@ export default function MarketResearchPage() {
       icon: <Users className='w-8 h-8 text-white' />,
     },
   ];
-
   const competitiveAnalysis = [
     {
       company: 'Enterprise Giants',
 examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
       strengths: [
-        'Extensive resources and R&D',
-        'Established customer base',
-        'Comprehensive feature sets',
-        'Global presence and support',
-      ],
+        'Extensive resources and R&D'
+        'Established customer base'
+        'Comprehensive feature sets'
+        'Global presence and support'
+      ]
       weaknesses: [
         'High pricing and complexity',
         'Slow innovation cycles',
@@ -198,13 +191,12 @@ examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
       pricing: 'Low ($10-100/month)',
     },
   ];
-
   const marketTrends = [
     {
-      trend: 'AI-First Approach',
-      description: 'Companies prioritizing AI capabilities in their products',
-      impact: 'High',
-      timeline: '2024-2026',
+      trend: 'AI-First Approach'
+      description: 'Companies prioritizing AI capabilities in their products'
+      impact: 'High'
+      timeline: '2024-2026'
       examples: [
 'AI-powered content generation',
         'Intelligent automation',
@@ -259,8 +251,8 @@ examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
 
   const pricingStrategies = [
     {
-      strategy: 'Value-Based Pricing',
-      description: 'Pricing based on customer value and ROI',
+      strategy: 'Value-Based Pricing'
+      description: 'Pricing based on customer value and ROI'
       pros: [
 'Higher profit margins',
         'Customer alignment',
@@ -268,11 +260,11 @@ examples: ['Salesforce', 'Microsoft', 'Oracle', 'SAP'],
         'Competitive differentiation',
       ],
       cons: [
-        'Complex pricing structure',
-        'Customer education required',
-        'Value measurement challenges',
-        'Pricing optimization needed',
-      ],
+        'Complex pricing structure'
+        'Customer education required'
+        'Value measurement challenges'
+        'Pricing optimization needed'
+      ]
       bestFor:
         'Enterprise solutions, high-value services, ROI-focused products',
     },
@@ -339,7 +331,6 @@ description:
 description: 'Average time for SaaS companies to reach profitability',
     },
   ];
-
   return (
     <>
       <Head>
@@ -358,13 +349,11 @@ description: 'Average time for SaaS companies to reach profitability',
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -380,20 +369,17 @@ description: 'Average time for SaaS companies to reach profitability',
           </p>
         </div>
       </section>
-
       {/* Investment Insights */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-16'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              Investment & Market Metrics
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Key investment metrics and market indicators for the SaaS industry
               to help you understand the current market landscape.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {investmentInsights.map((insight, index) => (
               <Card
@@ -421,7 +407,6 @@ description: 'Average time for SaaS companies to reach profitability',
           </div>
         </div>
       </section>
-
       {/* Market Segments */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -434,7 +419,6 @@ description: 'Average time for SaaS companies to reach profitability',
               size, growth rates, trends, and opportunities.
             </p>
           </div>
-
           <div className='space-y-8'>
             {marketSegments.map((segment, index) => (
               <Card
@@ -455,7 +439,6 @@ description: 'Average time for SaaS companies to reach profitability',
                         <h3 className='text-2xl font-bold mb-3 text-white'>
                           {segment.name}
                         </h3>
-
                         {/* Market Data */}
                         <div className='space-y-3 text-sm mb-6'>
                           <div className='flex items-center justify-between'>
@@ -473,7 +456,6 @@ description: 'Average time for SaaS companies to reach profitability',
                         </div>
                       </div>
                     </div>
-
                     {/* Market Analysis */}
 <div className='lg:w-2/3'>
                       <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
@@ -495,7 +477,6 @@ description: 'Average time for SaaS companies to reach profitability',
                             ))}
                           </ul>
                         </div>
-
                         {/* Top Players */}
                         <div>
 <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -515,7 +496,6 @@ description: 'Average time for SaaS companies to reach profitability',
                           </ul>
                         </div>
                       </div>
-
                       {/* Opportunities */}
 <div className='mt-8 pt-6 border-t border-gray-700'>
                         <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -544,7 +524,6 @@ description: 'Average time for SaaS companies to reach profitability',
           </div>
         </div>
       </section>
-
       {/* Competitive Analysis */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -557,7 +536,6 @@ description: 'Average time for SaaS companies to reach profitability',
               for different types of SaaS companies.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {competitiveAnalysis.map((analysis, index) => (
               <Card
@@ -569,7 +547,6 @@ description: 'Average time for SaaS companies to reach profitability',
                   <h3 className='text-xl font-bold text-white mb-4'>
                     {analysis.company}
                   </h3>
-
                   {/* Examples */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-400 mb-2'>
@@ -579,7 +556,6 @@ description: 'Average time for SaaS companies to reach profitability',
                       {analysis.examples.join(', ')}
                     </div>
                   </div>
-
                   {/* Market Share & Pricing */}
                   <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                     <div>
@@ -595,7 +571,6 @@ description: 'Average time for SaaS companies to reach profitability',
                       </div>
                     </div>
                   </div>
-
                   {/* Strengths */}
 <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>
@@ -610,7 +585,6 @@ description: 'Average time for SaaS companies to reach profitability',
                       ))}
                     </ul>
                   </div>
-
                   {/* Weaknesses */}
                   <div>
 <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -631,7 +605,6 @@ description: 'Average time for SaaS companies to reach profitability',
           </div>
         </div>
       </section>
-
       {/* Market Trends */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -644,7 +617,6 @@ description: 'Average time for SaaS companies to reach profitability',
               opportunities for innovation and growth.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {marketTrends.map((trend, index) => (
               <Card
@@ -689,7 +661,6 @@ description: 'Average time for SaaS companies to reach profitability',
                       ))}
                     </ul>
                   </div>
-
                   <div>
 <h4 className='text-sm font-semibold text-green-400 mb-2'>
                       Opportunities:
@@ -704,7 +675,6 @@ description: 'Average time for SaaS companies to reach profitability',
           </div>
         </div>
       </section>
-
       {/* Pricing Strategies */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -717,7 +687,6 @@ description: 'Average time for SaaS companies to reach profitability',
               market and their implications for business success.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingStrategies.map((strategy, index) => (
               <Card
@@ -730,7 +699,6 @@ description: 'Average time for SaaS companies to reach profitability',
                     {strategy.strategy}
                   </h3>
                   <p className='text-gray-300 mb-6'>{strategy.description}</p>
-
                   {/* Pros */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-green-400 mb-2'>
@@ -745,7 +713,6 @@ description: 'Average time for SaaS companies to reach profitability',
                       ))}
                     </ul>
                   </div>
-
                   {/* Cons */}
 <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -760,7 +727,6 @@ description: 'Average time for SaaS companies to reach profitability',
                       ))}
                     </ul>
                   </div>
-
                   {/* Best For */}
                   <div>
 <h4 className='text-sm font-semibold text-blue-400 mb-2'>
@@ -774,7 +740,6 @@ description: 'Average time for SaaS companies to reach profitability',
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />

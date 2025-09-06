@@ -1,92 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Brain,
-  DollarSign,
-  TrendingUp,
-  Shield,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  Award,
-  Clock,
-  Globe,
-  BarChart3,
-  Target,
-  Microscope,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowUpRight,
-  Play,
-  BarChart,
-  PieChart,
-  LineChart,
-  Activity,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const features = [
-  {
-    title: 'Real-time Market Sentiment Analysis',
-description:
-      'Advanced AI algorithms analyze market sentiment with 94% accuracy using neural networks and natural language processing.',
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-  },
-  {
-    title: 'AI-Powered Risk Assessment',
-    description:
-      'Intelligent risk modeling using machine learning to identify and quantify potential risks in real-time.',
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-600',
-  },
-  {
-    title: 'Predictive Market Analysis',
-    description:
-      'Neural network-powered forecasting models that predict market trends with unprecedented accuracy.',
-    icon: TrendingUp,
-    color: 'from-green-500 to-emerald-600',
-  },
-  {
-    title: 'Automated Trading Strategies',
-    description:
-      'Backtest and deploy automated trading strategies with advanced risk management and execution algorithms.',
-    icon: Zap,
-    color: 'from-orange-500 to-red-600',
-  },
-  {
-    title: 'Portfolio Performance Monitoring',
-    description:
-      'Real-time portfolio tracking with advanced analytics, performance metrics, and optimization suggestions.',
-    icon: BarChart3,
-    color: 'from-pink-500 to-purple-600',
-  },
-  {
-    title: 'Multi-Asset Class Support',
-    description:
-      'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.',
-    icon: Globe,
-    color: 'from-cyan-500 to-blue-600',
-  },
-];
-
+const contactInfo = null;
 const pricingPlans = [
   {
-    name: 'Starter',
-    price: 199,
-    period: 'month',
-    description: 'Perfect for individual traders and small investment firms',
+    name: 'Starter'
+    price: 199
+    period: 'month'
+    description: 'Perfect for individual traders and small investment firms'
     features: [
 'Basic market analysis and insights',
       'Portfolio tracking and monitoring',
@@ -209,12 +131,10 @@ const NeuralFinanceAI: React.FC = () => {
           href='https://ziontechgroup.com/neural-finance-ai'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]'></div>
-
         <div className='relative z-10 max-w-7xl mx-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
             <motion.div
@@ -226,7 +146,6 @@ const NeuralFinanceAI: React.FC = () => {
                 <Brain className='w-4 h-4' />
                 <span>AI-Powered Financial Intelligence</span>
               </div>
-
               <h1 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
                 <span className='bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Neural Finance AI
@@ -236,14 +155,12 @@ const NeuralFinanceAI: React.FC = () => {
                   Revolutionary Trading Intelligence
                 </span>
               </h1>
-
               <p className='text-xl text-gray-300 mb-8 leading-relaxed'>
                 Advanced AI-powered financial analysis and trading platform
                 using neural networks for real-time market prediction, risk
                 assessment, and automated portfolio optimization with 94%
                 accuracy.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 mb-8'>
                 <Link
                   href='#pricing'
@@ -257,7 +174,6 @@ const NeuralFinanceAI: React.FC = () => {
                   <span>Watch Demo</span>
                 </button>
               </div>
-
               <div className='flex flex-wrap gap-6 text-sm text-gray-400'>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-4 h-4 text-green-400' />
@@ -299,7 +215,6 @@ className='relative'
                       </div>
                     </div>
                   </div>
-
                   <div className='space-y-4'>
                     <div className='flex items-center justify-between p-3 bg-gray-800/50 rounded-lg border border-gray-700/50'>
                       <span className='text-gray-300'>AI Models</span>
@@ -326,7 +241,6 @@ className='relative'
           </div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
@@ -374,7 +288,6 @@ className='group bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 round
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>
@@ -435,7 +348,6 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section id='pricing' className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
@@ -492,7 +404,6 @@ plan.popular
                     </span>
                   </div>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -504,7 +415,6 @@ plan.popular
                     </li>
                   ))}
                 </ul>
-
                 <Link
                   href='/contact'
                   className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-200 transform hover:scale-105 ${
@@ -520,7 +430,6 @@ plan.popular
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/30'>
         <div className='max-w-7xl mx-auto'>
@@ -562,7 +471,6 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl 
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>
@@ -574,7 +482,6 @@ className='bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl 
               Join leading investment firms using Neural Finance AI to gain
               competitive advantages in today's dynamic financial markets.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Link
                 href='/contact'

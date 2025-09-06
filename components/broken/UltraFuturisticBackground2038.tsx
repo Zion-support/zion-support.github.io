@@ -1,6 +1,14 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 interface UltraFuturisticBackground2038Props {
+  intensity?: 'low' | 'medium' | 'high',
+  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness';
+  children?: React.ReactNode
+}
+
+export default function UltraFuturisticBackground2038({ 
+  intensity;
+import { motion } from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
   theme?:
     | 'quantum'
@@ -10,7 +18,6 @@ interface UltraFuturisticBackground2038Props {
     | 'space'
     | 'consciousness';
   children?: React.ReactNode;
-
 export default function UltraFuturisticBackground2038({
   intensity = 'medium',
   theme = 'consciousness',
@@ -18,7 +25,6 @@ export default function UltraFuturisticBackground2038({
 }: UltraFuturisticBackground2038Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -31,7 +37,6 @@ const prefersReducedMotion = window.matchMedia(
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       const rect = containerRef.current?.getBoundingClientRect();
       if (rect) {
@@ -39,11 +44,9 @@ const prefersReducedMotion = window.matchMedia(
         canvas.height = rect.height * (window.devicePixelRatio || 1);
 ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1);
       }
-    };
-
+    }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Enhanced theme-based color schemes for 2038
     const getThemeColors = () => {
       switch (theme) {
@@ -58,196 +61,195 @@ primary: [
               '#00ff80',
             ],
             secondary: [
-              '#ff8000',
-              '#0080ff',
-              '#ff4080',
-              '#40ffff',
-              '#ffff40',
-              '#ff40ff',
-            ],
+              '#ff8000'
+              '#0080ff'
+              '#ff4080'
+              '#40ffff'
+              '#ffff40'
+              '#ff40ff'
+            ]
             accent: [
-              '#ff6b6b',
-              '#4ecdc4',
-              '#45b7d1',
-              '#96ceb4',
-              '#feca57',
-              '#ff9ff3',
-            ],
+              '#ff6b6b'
+              '#4ecdc4'
+              '#45b7d1'
+              '#96ceb4'
+              '#feca57'
+              '#ff9ff3'
+            ]
             quantum: [
-              '#8b5cf6',
-              '#06b6d4',
-              '#ec4899',
-              '#10b981',
-              '#f59e0b',
-              '#ef4444',
-            ],
-          };
+              '#8b5cf6'
+              '#06b6d4'
+              '#ec4899'
+              '#10b981'
+              '#f59e0b'
+              '#ef4444'
+            ]
         case 'neon':
           return {
             primary: [
-              '#ff0080',
-              '#00ffff',
-              '#ffff00',
-              '#ff00ff',
-              '#8000ff',
-              '#00ff80',
-            ],
+              '#ff0080'
+              '#00ffff'
+              '#ffff00'
+              '#ff00ff'
+              '#8000ff'
+              '#00ff80'
+            ]
             secondary: [
-              '#ff8000',
-              '#0080ff',
-              '#ff4080',
-              '#40ffff',
-              '#ffff40',
-              '#ff40ff',
-            ],
+              '#ff8000'
+              '#0080ff'
+              '#ff4080'
+              '#40ffff'
+              '#ffff40'
+              '#ff40ff'
+            ]
             accent: [
-              '#ff6b6b',
-              '#4ecdc4',
-              '#45b7d1',
-              '#96ceb4',
-              '#feca57',
-              '#ff9ff3',
-            ],
+              '#ff6b6b'
+              '#4ecdc4'
+              '#45b7d1'
+              '#96ceb4'
+              '#feca57'
+              '#ff9ff3'
+            ]
             quantum: [
-              '#8b5cf6',
-              '#06b6d4',
-              '#ec4899',
-              '#10b981',
-              '#f59e0b',
-              '#ef4444',
-            ],
-          };
+              '#8b5cf6'
+              '#06b6d4'
+              '#ec4899'
+              '#10b981'
+              '#f59e0b'
+              '#ef4444'
+            ]
+          }
         case 'holographic':
           return {
             primary: [
-              '#ff6b6b',
-              '#4ecdc4',
-              '#45b7d1',
-              '#96ceb4',
-              '#feca57',
-              '#ff9ff3',
-            ],
+              '#ff6b6b'
+              '#4ecdc4'
+              '#45b7d1'
+              '#96ceb4'
+              '#feca57'
+              '#ff9ff3'
+            ]
             secondary: [
-              '#54a0ff',
-              '#5f27cd',
-              '#ff9ff3',
-              '#54a0ff',
-              '#5f27cd',
-              '#ff6b6b',
-            ],
+              '#54a0ff'
+              '#5f27cd'
+              '#ff9ff3'
+              '#54a0ff'
+              '#5f27cd'
+              '#ff6b6b'
+            ]
             accent: [
-              '#4ecdc4',
-              '#45b7d1',
-              '#96ceb4',
-              '#feca57',
-              '#ff9ff3',
-              '#54a0ff',
-            ],
+              '#4ecdc4'
+              '#45b7d1'
+              '#96ceb4'
+              '#feca57'
+              '#ff9ff3'
+              '#54a0ff'
+            ]
             quantum: [
-              '#8b5cf6',
-              '#06b6d4',
-              '#ec4899',
-              '#10b981',
-              '#f59e0b',
-              '#ef4444',
-            ],
-          };
+              '#8b5cf6'
+              '#06b6d4'
+              '#ec4899'
+              '#10b981'
+              '#f59e0b'
+              '#ef4444'
+            ]
+          }
         case 'cyberpunk':
           return {
             primary: [
-              '#ff0055',
-              '#00ffff',
-              '#ffff00',
-              '#ff00ff',
-              '#8000ff',
-              '#00ff80',
-            ],
+              '#ff0055'
+              '#00ffff'
+              '#ffff00'
+              '#ff00ff'
+              '#8000ff'
+              '#00ff80'
+            ]
             secondary: [
-              '#ff8000',
-              '#0080ff',
-              '#ff4080',
-              '#40ffff',
-              '#ffff40',
-              '#ff40ff',
-            ],
+              '#ff8000'
+              '#0080ff'
+              '#ff4080'
+              '#40ffff'
+              '#ffff40'
+              '#ff40ff'
+            ]
             accent: [
-              '#ffff40',
-              '#ff40ff',
-              '#ff6b6b',
-              '#4ecdc4',
-              '#45b7d1',
-              '#96ceb4',
-            ],
+              '#ffff40'
+              '#ff40ff'
+              '#ff6b6b'
+              '#4ecdc4'
+              '#45b7d1'
+              '#96ceb4'
+            ]
             quantum: [
-              '#8b5cf6',
-              '#06b6d4',
-              '#ec4899',
-              '#10b981',
-              '#f59e0b',
-              '#ef4444',
-            ],
-          };
+              '#8b5cf6'
+              '#06b6d4'
+              '#ec4899'
+              '#10b981'
+              '#f59e0b'
+              '#ef4444'
+            ]
+          }
         case 'space':
           return {
             primary: [
-              '#1e3a8a',
-              '#7c3aed',
-              '#059669',
-              '#dc2626',
-              '#ea580c',
-              '#0891b2',
-            ],
+              '#1e3a8a'
+              '#7c3aed'
+              '#059669'
+              '#dc2626'
+              '#ea580c'
+              '#0891b2'
+            ]
             secondary: [
-              '#8b5cf6',
-              '#ec4899',
-              '#f59e0b',
-              '#10b981',
-              '#06b6d4',
-              '#a855f7',
-            ],
+              '#8b5cf6'
+              '#ec4899'
+              '#f59e0b'
+              '#10b981'
+              '#06b6d4'
+              '#a855f7'
+            ]
             accent: [
-              '#f97316',
-              '#ef4444',
-              '#84cc16',
-              '#06b6d4',
-              '#a855f7',
-              '#f97316',
-            ],
+              '#f97316'
+              '#ef4444'
+              '#84cc16'
+              '#06b6d4'
+              '#a855f7'
+              '#f97316'
+            ]
             quantum: [
-              '#8b5cf6',
-              '#06b6d4',
-              '#ec4899',
-              '#10b981',
-              '#f59e0b',
-              '#ef4444',
-            ],
-          };
+              '#8b5cf6'
+              '#06b6d4'
+              '#ec4899'
+              '#10b981'
+              '#f59e0b'
+              '#ef4444'
+            ]
+          }
         default: // quantum
           return {
             primary: [
-              '#8b5cf6',
-              '#06b6d4',
-              '#ec4899',
-              '#10b981',
-              '#f59e0b',
-              '#ef4444',
-            ],
+              '#8b5cf6'
+              '#06b6d4'
+              '#ec4899'
+              '#10b981'
+              '#f59e0b'
+              '#ef4444'
+            ]
             secondary: [
-              '#f59e0b',
-              '#ef4444',
-              '#8b5cf6',
-              '#06b6d4',
-              '#ec4899',
-              '#10b981',
-            ],
+              '#f59e0b'
+              '#ef4444'
+              '#8b5cf6'
+              '#06b6d4'
+              '#ec4899'
+              '#10b981'
+            ]
             accent: [
-              '#ec4899',
-              '#10b981',
-              '#f59e0b',
-              '#ef4444',
-              '#8b5cf6',
-              '#06b6d4',
-            ],
+              '#ec4899'
+              '#10b981'
+              '#f59e0b'
+              '#ef4444'
+              '#8b5cf6'
+              '#06b6d4'
+            ]
             quantum: [
               '#8b5cf6',
               '#06b6d4',
@@ -261,7 +263,6 @@ primary: [
     };
 
     const colors = getThemeColors();
-
     // Enhanced particle system with consciousness and quantum effects
     let particles: Array<{
 x: number;
@@ -332,7 +333,6 @@ entanglement: [Math.random(), Math.random()],
     // Enhanced animation loop with consciousness and quantum effects
     const animate = () => {
       if (prefersReducedMotion) return;
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 // Create quantum field effects
       if (theme === 'consciousness' || theme === 'quantum') {
@@ -349,7 +349,6 @@ entanglement: [Math.random(), Math.random()],
           }
         }
       }
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update particle properties
@@ -360,7 +359,6 @@ entanglement: [Math.random(), Math.random()],
         particle.phase += particle.frequency;
         particle.consciousness += 0.01;
         particle.quantumState = (particle.quantumState + 0.02) % (Math.PI * 2);
-
         // Quantum entanglement effects
         if (particle.type === 'quantum-field') {
           particles.forEach((otherParticle, otherIndex) => {
@@ -402,13 +400,11 @@ const hologramSize =
           ctx.strokeStyle = `rgba(78, 205, 196, ${particle.opacity})`;
           ctx.lineWidth = 1;
           ctx.strokeRect(
-            particle.x - hologramSize / 2,
-            particle.y - hologramSize / 2,
-            hologramSize,
+            particle.x - hologramSize / 2
+            particle.y - hologramSize / 2
             hologramSize
           );
         }
-
         // Quantum field effects
         if (particle.type === 'quantum-field') {
           const fieldSize = particle.size * 3;
@@ -421,16 +417,14 @@ particle.x,
             fieldSize
           );
           gradient.addColorStop(
-            0,
+            0
             `rgba(139, 92, 246, ${particle.opacity * 0.8})`
           );
           gradient.addColorStop(1, 'rgba(139, 92, 246, 0)');
-
           ctx.fillStyle = gradient;
           ctx.fillRect(
-            particle.x - fieldSize / 2,
-            particle.y - fieldSize / 2,
-            fieldSize,
+            particle.x - fieldSize / 2
+            particle.y - fieldSize / 2
             fieldSize
           );
         }
@@ -444,12 +438,11 @@ ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill();
         }
-
         // Boundary wrapping with quantum tunneling effect
         if (
-          particle.x < 0 ||
-          particle.x > canvas.width ||
-          particle.y < 0 ||
+          particle.x < 0 |
+          particle.x > canvas.width |
+          particle.y < 0 |
           particle.y > canvas.height
         ) {
           if (Math.random() > 0.8) {
@@ -461,7 +454,6 @@ ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255)
             particle.y = (particle.y + canvas.height) % canvas.height;
           }
         }
-
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -477,12 +469,10 @@ particle.quantumState = Math.random() * Math.PI * 2;
 
     initParticles();
     animate();
-
     return () => {
 window.removeEventListener('resize', resizeCanvas);
     };
   }, [intensity, theme]);
-
   return (
     <div ref={containerRef} className='fixed inset-0 pointer-events-none'>
       <canvas
@@ -496,10 +486,9 @@ window.removeEventListener('resize', resizeCanvas);
                 ? 'radial-gradient(ellipse at center, rgba(6, 182, 212, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)'
                 : theme === 'holographic'
                   ? 'radial-gradient(ellipse at center, rgba(78, 205, 196, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)'
-                  : 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)',
+                  : 'radial-gradient(ellipse at center, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%)'
         }}
       />
-
       {/* Additional visual effects */}
       <div className='absolute inset-0'>
         {/* Quantum field lines */}
@@ -522,11 +511,18 @@ window.removeEventListener('resize', resizeCanvas);
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
+                animate={{
+                  height: [32, 64, 32]
+                  opacity: [0.2, 0.6, 0.2]
+                }}
+                transition={{
+                  duration: 3 + i * 0.2
+                  repeat: Infinity
+                  ease: 'easeInOut',                }}
               />
             ))}
           </div>
         )}
-
         {/* Holographic grid */}
         {theme === 'holographic' && (
 <div className='absolute inset-0'>
@@ -545,11 +541,17 @@ window.removeEventListener('resize', resizeCanvas);
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
+                animate={{
+                  opacity: [0.3, 0.8, 0.3]
+                }}
+                transition={{
+                  duration: 4 + i * 0.3
+                  repeat: Infinity
+                  ease: 'easeInOut',                }}
               />
             ))}
           </div>
         )}
-
         {/* Consciousness waves */}
         {theme === 'consciousness' && (
 <div className='absolute inset-0'>
@@ -569,13 +571,21 @@ window.removeEventListener('resize', resizeCanvas);
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
                   ease: 'easeInOut',
+                  ease: "easeInOut"
                 }}
+                animate={{
+                  scale: [1, 1.5, 1]
+                  opacity: [0.2, 0.6, 0.2]
+                }}
+                transition={{
+                  duration: 6 + i * 0.5
+                  repeat: Infinity
+                  ease: 'easeInOut',                }}
               />
             ))}
           </div>
         )}
       </div>
-
       {children}
     </div>
 );
@@ -588,30 +598,27 @@ window.removeEventListener('resize', resizeCanvas);
 }// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
   particles.forEach ( (otherParticle, otherIndex) => {
   if (index !== otherIndex && Math.random () > 0.99) {
-  
-
-
-}) 
+})
 }// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2;
 particle.y - hologramSize / 2;
 hologramSize;
-hologramSize) 
+hologramSize)
 }// Quantum field effects ctx.fillStyle = gradient;
 ctx.fillRect (particle.x - fieldSize / 2;
 particle.y - fieldSize / 2;
 fieldSize;
-fieldSize) 
-}// Standard particle rendering 
-}// Boundary wrapping with quantum tunneling effect if (particle.x < 0 || particle.x > canvas.width || requestAnimationFrame (animate) 
-};
+fieldSize)
+}// Standard particle rendering
+}// Boundary wrapping with quantum tunneling effect if (particle.x < 0 |particle.x > canvas.width |requestAnimationFrame (animate)
+}
 initParticles ();
 animate ();
-/>) ) 
-}</div>) 
-}/>) ) 
-}</div>) 
-}/>) ) 
-}</div>) 
+/>) )
+}</div>)
+}/>) )
+}</div>)
+}/>) )
+}</div>)
 }</div> {
   children 
 }</div>)

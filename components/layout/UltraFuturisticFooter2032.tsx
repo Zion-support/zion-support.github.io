@@ -1,136 +1,26 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Cpu,
-  Target,
-  Microscope,
-  Users,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  CheckCircle,
-  Home,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  DollarSign,
-  TrendingUp,
-  Target as TargetIcon,
-  Users as UsersIcon,
-  Briefcase as BriefcaseIcon,
-  BookOpen as BookOpenIcon,
-  MessageCircle as MessageCircleIcon,
-  Star as StarIcon,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const mainNavigationRoutes = [
-  {
-    name: 'Home',
-    href: '/',
-    icon: Home,
-    description: 'Welcome to Zion Tech Group',
-  },
-  {
-    name: 'Services',
-    href: '/services',
-    icon: Briefcase,
-    description: 'Our comprehensive service portfolio',
-  },
-  {
-    name: 'Solutions',
-    href: '/solutions',
-    icon: TargetIcon,
-    description: 'Tailored solutions for your business',
-  },
-  {
-    name: 'Pricing',
-    href: '/pricing',
-    icon: DollarSign,
-    description: 'Transparent pricing and packages',
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: BookOpen,
-    description: 'Knowledge base and documentation',
-  },
-  {
-    name: 'Case Studies',
-    href: '/case-studies',
-    icon: Users,
-    description: 'Success stories and implementations',
-  },
-  {
-    name: 'Blog',
-    href: '/blog',
-    icon: MessageCircle,
-    description: 'Latest insights and updates',
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-    icon: MessageCircle,
-    description: 'Get in touch with our team',
-  },
-];
-
-const serviceCategories = [
-  {
-    title: '🚀 2032 Revolutionary AI Services',
-    services: [
-{
-        name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-platform',
-      },
-      {
-        name: 'AI Emotional Intelligence',
-        href: '/ai-emotional-intelligence-platform',
-      },
-      {
-        name: 'AI Creativity Orchestrator',
-        href: '/ai-creativity-orchestrator',
-      },
-      {
-        name: 'AI Autonomous Business Manager',
-        href: '/ai-autonomous-business-manager',
-      },
-    ],
-  },
-  {
-    title: '⚛️ 2032 Quantum & Emerging Tech',
+import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+  Facebook, Twitter, Linkedin, Instagram, Youtube;
+  Github, ArrowRight, Heart, Star, Award, CheckCircle;
+  Home, Briefcase, BookOpen, MessageCircle, DollarSign;
+  TrendingUp, Target as TargetIcon, Users as UsersIcon;
+  Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
+  MessageCircle as MessageCircleIcon, Star as StarIcon
+ } from 'lucide-react';
+const contactInfo = null;
+                and autonomous systems development. Join our community of future technology pioneers.
     services: [
       {
-        name: 'Quantum DNA Computing',
-        href: '/quantum-dna-computing-platform',
-      },
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+      }
       {
-        name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-gateway',
-      },
+        name: 'AI Emotional Intelligence'
+        href: '/ai-emotional-intelligence-platform'
+      }
       {
         name: 'Quantum Financial Trading',
         href: '/quantum-financial-trading-platform',
@@ -289,12 +179,11 @@ const socialLinks = [
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 ];
-
 const footerVariants = {
-  hidden: { opacity: 0, y: 50 },
+  hidden: { opacity: 0, y: 50 }
   visible: {
-    opacity: 1,
-    y: 0,
+    opacity: 1
+    y: 0
     transition: {
       duration: 0.8,
 staggerChildren: 0.1,
@@ -316,7 +205,6 @@ export default function UltraFuturisticFooter2032() {
         <div className='absolute top-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
         <div className='absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>
       </div>
-
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-10'>
         <motion.div
           variants={footerVariants}
@@ -342,14 +230,12 @@ export default function UltraFuturisticFooter2032() {
                   </p>
                 </div>
               </div>
-
               <p className='text-slate-300 mb-6 leading-relaxed'>
                 Leading the future of technology with revolutionary AI, quantum
                 computing, space technology, and autonomous systems. Empowering
                 businesses with cutting-edge solutions for tomorrow's
                 challenges.
               </p>
-
               {/* Contact Information */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-slate-300 hover:text-cyan-300 transition-colors'>
@@ -387,7 +273,6 @@ export default function UltraFuturisticFooter2032() {
                 </div>
               </div>
             </motion.div>
-
             {/* Service Categories */}
 <motion.div variants={itemVariants} className='lg:col-span-2'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
@@ -415,13 +300,11 @@ className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 tex
                 ))}
               </div>
             </motion.div>
-
             {/* Quick Links & Company Info */}
 <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Quick Access
               </h3>
-
               {/* Quick Links */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -441,7 +324,6 @@ className='flex items-center space-x-2 text-slate-300 hover:text-purple-300 tran
                   ))}
                 </ul>
               </div>
-
               {/* Company Info */}
 <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -458,7 +340,6 @@ className='text-slate-300 hover:text-purple-300 transition-colors duration-200 t
                   ))}
                 </ul>
               </div>
-
               {/* Social Links */}
               <div>
 <h4 className='text-lg font-medium text-white mb-4'>
@@ -480,7 +361,6 @@ target='_blank'
               </div>
             </motion.div>
           </div>
-
           {/* Newsletter Signup */}
 <motion.div
             variants={itemVariants}
@@ -502,12 +382,19 @@ target='_blank'
                   className='flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300'
                 />
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105'>
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transform hover:scale-105">
                   Subscribe
                 </button>
               </div>
             </div>
           </motion.div>
-
           {/* Bottom Bar */}
 <motion.div
             variants={itemVariants}
@@ -519,7 +406,6 @@ target='_blank'
                 <span className='text-cyan-400'>|</span>
                 <span>Leading the Future of Technology</span>
               </div>
-
               <div className='flex items-center space-x-6 text-sm'>
                 <Link
                   href='/privacy'
@@ -544,7 +430,6 @@ target='_blank'
           </motion.div>
         </motion.div>
       </div>
-
       {/* Floating Action Button */}
 <div className='fixed bottom-8 right-8 z-50'>
         <motion.button

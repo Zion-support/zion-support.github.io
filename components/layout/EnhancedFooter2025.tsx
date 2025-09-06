@@ -1,42 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Target,
-  Microscope,
-  Zap,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3,
-  Twitter,
-  Linkedin,
-  Github,
-  Youtube,
-  Instagram,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Phone, Mail, MapPin, Star, ArrowRight;
+  Brain, Atom, Shield, Rocket, Target, Microscope;
+  Zap, Globe, Database, Lock, Cloud, BarChart3;
+  Twitter, Linkedin, Github, Youtube, Instagram
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: 'AI & Consciousness',
-    icon: Brain,
+    title: 'AI & Consciousness'
+    icon: Brain
     services: [
 {
         name: 'AI Consciousness Evolution',
@@ -126,15 +100,12 @@ const socialLinks = [
     color: 'hover:text-pink-400',
   },
 ];
-
 const EnhancedFooter2025: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
+  const currentYear = new Date().getFullYear()
   return (
 <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-gray-800/50'>
       {/* Background Effects */}
       <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5'></div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -154,13 +125,11 @@ const EnhancedFooter2025: React.FC = () => {
                   </div>
                 </div>
               </div>
-
               <p className='text-gray-400 mb-6 leading-relaxed'>
                 Leading the future with revolutionary AI, quantum computing, and
                 emerging technology solutions that transform businesses
                 worldwide.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -187,7 +156,6 @@ const EnhancedFooter2025: React.FC = () => {
                 </div>
               </div>
             </div>
-
             {/* Service Categories */}
             {serviceCategories.map((category, index) => (
               <motion.div
@@ -206,7 +174,6 @@ className='space-y-4'
                     {category.title}
                   </h3>
                 </div>
-
                 <div className='space-y-2'>
                   {category.services.map(service => (
                     <Link
@@ -221,7 +188,6 @@ className='space-y-4'
               </motion.div>
             ))}
           </div>
-
           {/* Additional Links */}
 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
             {/* Company Links */}
@@ -239,7 +205,6 @@ className='space-y-4'
                 ))}
               </div>
             </div>
-
             {/* Legal Links */}
             <div>
 <h4 className='text-white font-semibold mb-4'>Legal</h4>
@@ -255,7 +220,6 @@ className='space-y-4'
                 ))}
               </div>
             </div>
-
             {/* Social Links */}
             <div>
 <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
@@ -274,7 +238,6 @@ className='space-y-4'
             </div>
           </div>
         </div>
-
         {/* Newsletter Section */}
 <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -317,7 +280,6 @@ className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
 <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>

@@ -1,6 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
-
+  const router = null;
     }
     controller.current?.abort();
     controller.current = new AbortController();
@@ -10,14 +10,13 @@ const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
           signal: controller.current!.signal,
         });
         const j = await r.json();
-        setSuggestions(j.suggestions || []);
+        setSuggestions(j.suggestions |[]);
         setOpen(true);
       } catch {}
-    };
+    }
     const id = setTimeout(run, 150);
     return () => clearTimeout(id);
   }, [query]);
-
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
@@ -43,9 +42,7 @@ const Speech: any =
 if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
     };
     rec.start();
-  };
-
-  
+  }
     >
       <input
         value={query}
@@ -84,6 +81,9 @@ if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
                     router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
+                  }}
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
                   {s}
                 </button>

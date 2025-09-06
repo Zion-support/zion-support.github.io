@@ -1,28 +1,21 @@
-import { format } from 'date-fns';
-import { CalendarIcon } from 'lucide-react';
-import { UseFormReturn, ControllerRenderProps } from 'react-hook-form';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,;
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import { Calendar } from '@/components/ui/calendar';
-import { ContractFormValues } from './ContractForm';
-
+import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
+import { 
+  FormField;
+  FormItem;
+  FormLabel;
+  FormControl;
+  FormDescription;
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Button } from "@/components/ui/button",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Calendar } from "@/components/ui/calendar";
+import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;
-
+  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
+}
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (
     <>
@@ -30,9 +23,9 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
         control={form.control}
 name='projectName'
         render={({
-          field,
+          field
         }: {
-          field: ControllerRenderProps<ContractFormValues, 'projectName'>;
+          field: ControllerRenderProps<ContractFormValues, 'projectName'>
         }) => (
           <FormItem>
             <FormLabel>Project Name</FormLabel>
@@ -47,7 +40,7 @@ name='projectName'
         control={form.control}
         name='scopeSummary'
         render={({
-          field,
+          field
         }: {
           field: ControllerRenderProps<ContractFormValues, 'scopeSummary'>;
         }) => (
@@ -72,9 +65,9 @@ placeholder='Describe the project scope, deliverables, and expectations...'
           control={form.control}
           name='startDate'
           render={({
-            field,
+            field
           }: {
-            field: ControllerRenderProps<ContractFormValues, 'startDate'>;
+            field: ControllerRenderProps<ContractFormValues, 'startDate'>
           }) => (
             <FormItem className='flex flex-col'>
               <FormLabel>Start Date</FormLabel>
@@ -84,7 +77,6 @@ placeholder='Describe the project scope, deliverables, and expectations...'
                     <Button
 variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
-                    >
                       {field.value ? (
                         format(field.value, 'PPP')
                       ) : (
@@ -112,9 +104,9 @@ variant={'outline'}
           control={form.control}
           name='endDate'
           render={({
-            field,
+            field
           }: {
-            field: ControllerRenderProps<ContractFormValues, 'endDate'>;
+            field: ControllerRenderProps<ContractFormValues, 'endDate'>
           }) => (
             <FormItem className='flex flex-col'>
               <FormLabel>End Date (Optional)</FormLabel>
@@ -124,7 +116,6 @@ variant={'outline'}
                     <Button
 variant={'outline'}
                       className={`w-full pl-3 text-left font-normal ${!field.value && 'text-muted-foreground'}`}
-                    >
                       {field.value ? (
                         format(field.value, 'PPP')
                       ) : (
@@ -137,7 +128,7 @@ variant={'outline'}
                 <PopoverContent className='w-auto p-0' align='start'>
                   <Calendar
                     mode='single'
-                    selected={field.value || undefined}
+                    selected={field.value |undefined}
                     onSelect={field.onChange}
                     disabled={date => date < form.getValues('startDate')}
                     initialFocus

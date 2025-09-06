@@ -7,15 +7,13 @@ useState,;
 } from 'react';
 
 export type UserRole = 'client' | 'talent';
-
 export type User = {
 id: string;
   name: string;
   role: UserRole;
   avatarUrl?: string;
   onboardingCompleted: boolean;
-};
-
+}
 export type UserContextValue = {
   user: User | null;
   setUser: (user: User | null) => void;
@@ -24,7 +22,6 @@ export type UserContextValue = {
 };
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
-
 const DEFAULT_USER: User = {
 id: 'u_001',
   name: 'Jordan Lee',
@@ -47,7 +44,6 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
       setUser(DEFAULT_USER);
     }
   }, []);
-
   useEffect(() => {
     try {
 if (user) localStorage.setItem('zion.user', JSON.stringify(user));
@@ -57,9 +53,9 @@ if (user) localStorage.setItem('zion.user', JSON.stringify(user));
 
   const value = useMemo<UserContextValue>(
     () => ({
-      user,
-      setUser,
-      logout: () => setUser(null),
+      user
+      setUser
+      logout: () => setUser(null)
       completeOnboarding: () =>
 setUser(prev => (prev ? { ...prev, onboardingCompleted: true } : prev)),
     }),

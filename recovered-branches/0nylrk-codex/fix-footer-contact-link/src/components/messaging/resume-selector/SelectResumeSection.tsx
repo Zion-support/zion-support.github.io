@@ -1,30 +1,37 @@
-import React from 'react';
-import { FileText } from 'lucide-react';
-import { ResumeOption } from '../resume-selector/types';
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { Resume } from '@/types/resume';
 
+import React from 'react';
+import { FileText  } from 'lucide-react';
+import { ResumeOption  } from '../resume-selector/types';
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
+<<<<<<< HEAD
   resumeOptions: ResumeOption[];
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
-  isLoading: boolean;
-
+=======
+  resumeOptions: ResumeOption[]
+  selectedResume: ResumeOption | null
+  handleResumeSelect: (resumeId: string) => void
+  handleDownloadResume: () => void
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  isLoading: boolean
+}
 export function SelectResumeSection({
-  resumeOptions,
-  selectedResume,
-  handleResumeSelect,
-  handleDownloadResume,
-  isLoading,
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
+  isLoading
 }: SelectResumeSectionProps) {
   return (
-    <div className='space-y-2'>
+    <div className="space-y-2">
       {resumeOptions.length === 0 ? (
-        <p className='text-sm text-zion-slate'>No saved resumes found.</p>
+        <p className="text-sm text-zion-slate">No saved resumes found.</p>
       ) : (
         <>
-          {resumeOptions.map(option => (
+          {resumeOptions.map((option) => (
             <button
               key={option.id}
               className={`w-full text-left p-3 rounded-md transition ${
@@ -34,13 +41,12 @@ export function SelectResumeSection({
               }`}
               onClick={() => handleResumeSelect(option.id)}
             >
-              <div className='flex items-center'>
-                <FileText className='h-4 w-4 mr-2 text-zion-cyan' />
-                <span className='text-white'>{option.title}</span>
+              <div className="flex items-center">
+                <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
+                <span className="text-white">{option.title}</span>
               </div>
             </button>
           ))}
-
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume={selectedResume.resume as Resume}
@@ -51,4 +57,5 @@ export function SelectResumeSection({
         </>
       )}
     </div>
-  );
+  )
+}

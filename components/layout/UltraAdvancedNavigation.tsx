@@ -1,40 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Rocket,
-  Dna,
-  Globe,
-  Shield,
-  Wifi,
-  Package,
-  Bot,
-  Car,
-  Building2,
-  DollarSign,
-  Monitor,
-  Users,
-  Cpu,
-  Zap,
-  Atom,
-  Database,
-  Cloud,
-  Lock,
-  Code,;
-} from 'lucide-react';
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
+  Bot, Car, Building2, DollarSign, Monitor, Users;
+  Cpu, Zap, Atom, Database, Cloud, Lock, Code
+ } from 'lucide-react';
 import Link from 'next/link';
-const UltraAdvancedNavigation: React.FC = () => {
+const UltraAdvancedNavigation: React.FC;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 50);
@@ -51,10 +26,10 @@ setIsScrolled(window.scrollY > 50);
 icon: null,
     },
     {
-      name: 'AI Services',
-      href: '#',
-      icon: Brain,
-      description: 'Cutting-edge AI solutions',
+      name: 'AI Services'
+      href: '#'
+      icon: Brain
+      description: 'Cutting-edge AI solutions'
       dropdown: [
         {
           name: 'AI Agent Orchestrator',
@@ -238,7 +213,6 @@ description: 'Benchmarks & vendor references',
       icon: null,
     },
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -270,7 +244,6 @@ className='flex items-center'
               </div>
             </Link>
           </motion.div>
-
           {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -301,7 +274,6 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                     <span>{item.name}</span>
                   </Link>
                 )}
-
                 {/* Dropdown Menu */}
                 {item.dropdown && (
                   <AnimatePresence>
@@ -332,8 +304,7 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                                     {dropdownItem.name}
                                   </div>
                                   <div className='text-sm text-gray-400'>
-                                    {dropdownItem.description}
-                                  </div>
+                                    {dropdownItem.description}                                  </div>
                                 </div>
                                 <div className='text-sm font-semibold text-cyan-400'>
                                   {dropdownItem.price}
@@ -349,7 +320,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
               </div>
             ))}
           </div>
-
           {/* Contact Info & CTA */}
 <div className='hidden lg:flex items-center space-x-6'>
             <div className='flex items-center space-x-4 text-sm text-gray-300'>
@@ -368,7 +338,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
                 <span className='hidden xl:inline'>{contactInfo.email}</span>
               </a>
             </div>
-
             <motion.a
               href='/contact'
               whileHover={{ scale: 1.05 }}
@@ -378,7 +347,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
               Get Started
             </motion.a>
           </div>
-
           {/* Mobile Menu Button */}
 <div className='lg:hidden'>
             <button
@@ -394,7 +362,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl bo
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -417,7 +384,6 @@ onClick={() =>
                           )
                         }
                         className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-200 py-3'
-                      >
                         <div className='flex items-center space-x-3'>
                           {item.icon && <item.icon className='w-5 h-5' />}
                           <span>{item.name}</span>
@@ -428,7 +394,6 @@ onClick={() =>
                           }`}
                         />
                       </button>
-
                       {activeDropdown === item.name && (
                         <div className='ml-8 mt-2 space-y-2'>
                           {item.dropdown.map(dropdownItem => (
@@ -478,7 +443,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                     <span>{contactInfo.address}</span>
                   </div>
                 </div>
-
                 <motion.a
                   href='/contact'
                   whileHover={{ scale: 1.05 }}

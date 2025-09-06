@@ -2,28 +2,23 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import {
-  Brain,
-  MessageSquare,
-  Image,
-  Video,
-  Code,
-  FileText,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Shield,;
-} from 'lucide-react';
-
+import { Brain;
+  MessageSquare;
+  Image;
+  Video;
+  Code;
+  FileText;
+  Zap;
+  Star;
+  ExternalLink;
+  CheckCircle;
+  TrendingUp;
+  Shield
+ } from 'lucide-react';
 export default function AiToolsPage() {
-  const aiTools = [
-    {
-icon: <Brain className='w-8 h-8 text-white' />,
-      title: 'ChatGPT Plus',
+  const aiTools = null;
       description:
-        'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+        'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
       features: [
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
@@ -107,7 +102,7 @@ category: 'Video Generation',
       icon: <MessageSquare className='w-8 h-8 text-white' />,
       title: 'Claude Pro',
       description:
-        "Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.",
+        'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.'
       features: [
         'Advanced reasoning abilities',
         'Document analysis',
@@ -146,7 +141,6 @@ category: 'Conversational AI',
 category: 'Content Creation',
     },
   ];
-
   const aiMarketStats = [
     {
       title: 'AI Market Size',
@@ -173,7 +167,6 @@ description: 'Global AI investment in 2024',
 description: 'Average productivity improvement',
     },
   ];
-
   const aiCategories = [
     {
       name: 'Conversational AI',
@@ -206,7 +199,6 @@ avgPrice: '$44/month',
 avgPrice: '$82/month',
     },
   ];
-
   return (
     <>
       <Head>
@@ -227,13 +219,11 @@ avgPrice: '$82/month',
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -249,20 +239,17 @@ avgPrice: '$82/month',
           </p>
         </div>
       </section>
-
       {/* AI Market Statistics */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              AI Market Insights
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the AI landscape helps you make informed decisions
               about which tools to invest in.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
             {aiMarketStats.map((stat, index) => (
               <Card
@@ -287,7 +274,6 @@ avgPrice: '$82/month',
           </div>
         </div>
       </section>
-
       {/* AI Tools Grid */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -296,7 +282,7 @@ avgPrice: '$82/month',
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Each tool has been carefully selected based on performance,
+              Each tool has been carefully selected based on performance
               reliability, and real-world value.
             </p>
           </div>
@@ -330,7 +316,6 @@ avgPrice: '$82/month',
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />
                   </div>
-
                   <div className='flex-1'>
                     <div className='flex items-center justify-between mb-2'>
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -340,11 +325,9 @@ avgPrice: '$82/month',
                         {tool.category}
                       </span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
-
                     <div className='mb-6'>
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
@@ -363,7 +346,6 @@ avgPrice: '$82/month',
                         </span>
                       </div>
                     </div>
-
                     <ul className='space-y-2 mb-6'>
                       {tool.features.map((feature, featureIndex) => (
                         <li
@@ -400,20 +382,17 @@ avgPrice: '$82/month',
           </div>
         </div>
       </section>
-
       {/* AI Categories Overview */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              AI Tool Categories
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
               comprehensive toolkit for your needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
               <Card
@@ -441,7 +420,6 @@ avgPrice: '$82/month',
           </div>
         </div>
       </section>
-
       {/* AI Implementation Guide */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -454,7 +432,6 @@ avgPrice: '$82/month',
               maximizing their value.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
@@ -498,12 +475,10 @@ avgPrice: '$82/month',
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-            Ready to Supercharge Your Workflow?
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
             Start with one AI tool or build a complete AI-powered toolkit. Each

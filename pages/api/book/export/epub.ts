@@ -1,5 +1,17 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from '[^']*';
+import { promises as fs } from '[^']*';
+const Epub = null;
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join('\n')
+}
 
+import { NextApiRequest, NextApiResponse } from "next";
+import { randomUUID } from "crypto";
+import { promises as fs } from "fs";
+import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
@@ -8,12 +20,27 @@ sizeLimit: '10mb',
   },
 };
 
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+function chapterToHtml(text: string): string {
+  if (!text) return "";
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join("\n");
+}
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== "POST") {
+    res.status(405).json({ error: "Method not allowed" });
     return;
   }
 
@@ -22,7 +49,6 @@ export default async function handler(
     res.status(400).json({ error: 'Invalid payload' });
 return;
   }
-
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
 title: project.meta.title,
@@ -39,12 +65,12 @@ title: project.meta.title,
     const buf = await fs.readFile(tmpPath);
 res.setHeader('Content-Type', 'application/epub+zip');
     res.setHeader(
-      'Content-Disposition',
+      "Content-Disposition"
       'attachment; filename="zion-os-book.epub"'
     );
     res.status(200).send(buf);
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Failed to build EPUB' });
+    res.status(500).json({ error: e?.message |"Failed to build EPUB" });
   } finally {
     try {
       await fs.unlink(tmpPath);

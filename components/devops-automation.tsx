@@ -1,38 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-import {
-  GitBranch,
-  Zap,
-  Shield,
-  BarChart3,
-  Check,
-  Star,
-  GitPullRequest,
-  Cpu,;
-} from 'lucide-react';
-
+import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
 export default function DevOpsAutomationPage() {
-  const features = [
+  const features = null;
+              and intelligent security automation. Deploy faster, safer, and more reliably.
     {
-icon: <GitBranch className='w-6 h-6' />,
-      title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-    },
+      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
+      description: 'Automated build, test, and deployment workflows';
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+    }
     {
-      icon: <Zap className='w-6 h-6' />,
-      title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-    },
-    {
-      icon: <Shield className='w-6 h-6' />,
-      title: 'Security Automation',
-      description: 'Automated security scanning and compliance checks',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-    },
+      icon: <Zap className="w-6 h-6" />
+      title: 'Infrastructure as Code'
+      description: 'Terraform, CloudFormation, and Kubernetes automation';
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    }
     {
       icon: <BarChart3 className='w-6 h-6' />,
       title: 'Performance Monitoring',
@@ -40,13 +24,12 @@ icon: <GitBranch className='w-6 h-6' />,
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
     },
   ];
-
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
+      name: 'Starter'
+      price: '$39'
+      period: '/month'
+      description: 'Perfect for small teams and startups'
       features: [
 'Up to 5 repositories',
         'Basic CI/CD pipelines',
@@ -125,7 +108,6 @@ pros: ['Completely free', 'Highly customizable'],
       cons: ['Requires maintenance', 'No managed service'],
     },
   ];
-
   const testimonials = [
     {
       name: 'Michael Chen',
@@ -152,7 +134,6 @@ content:
       rating: 5,
     },
   ];
-
   const automationExamples = [
     {
       title: 'Automated Testing',
@@ -179,7 +160,6 @@ color: 'from-blue-500 to-cyan-600',
 color: 'from-purple-500 to-indigo-600',
     },
   ];
-
   return (
     <>
       <Head>
@@ -200,8 +180,6 @@ color: 'from-purple-500 to-indigo-600',
           content='Professional DevOps automation starting at $39/month. CI/CD pipelines, infrastructure as code, and security automation.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'>
@@ -240,7 +218,6 @@ href='#demo'
             </div>
           </div>
         </section>
-
         {/* Features Section */}
 <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -273,7 +250,6 @@ href='#demo'
             </div>
           </div>
         </section>
-
         {/* Automation Examples Section */}
 <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -305,7 +281,6 @@ href='#demo'
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
 <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -373,13 +348,11 @@ size='lg'
             </div>
           </div>
         </section>
-
         {/* Market Comparison Section */}
 <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-                How We Compare to the Competition
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
                 See why Zion DevOps is the smart choice for automation.
@@ -449,7 +422,6 @@ size='lg'
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
 <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -486,12 +458,10 @@ size='lg'
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-              Ready to Automate Your DevOps?
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation

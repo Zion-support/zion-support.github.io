@@ -1,41 +1,53 @@
-export type MonitoredSource =
-  | 'signup'
-  | 'job_post'
-  | 'message'
-  | 'quote'
-  | 'review';
-
-export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
-export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED';
-export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE';
-
-export interface AdminActionRecord {
+// Fraud detection types
+export type AdminActionType =
+  | 'ban_user'
+  | 'suspend_user'
+  | 'flag_content'
+  | 'remove_content'
+  | 'investigate'
+  | 'dismiss'
+  | 'escalate';
+export interface AdminAction {
   id: string;
-  fraudId: string;
-  action: AdminActionType;
-  adminId: string | null;
-  reason: string | null;
-  createdAt: string; // ISO
-
-export interface PrivacySettings {
-  userId: string;
-  monitoringContentAnalysisOptOut: boolean;
-  updatedAt: string; // ISO
-
-export interface ListFilters {
-  source?: MonitoredSource;
-  userId?: string;
-  label?: GptClassificationLabel;
-  status?: FraudReviewStatus;
-
-export interface MonthlyReport {
-  month: string; // YYYY-MM
-  totals: {
-    all: number;
-    safe: number;
-    suspicious: number;
-    dangerous: number;
-  };
-  bySource: Record<MonitoredSource, number>;
-  falsePositives: number; // count of IGNORED actions
-  topReasons: Array<{ reason: string; count: number }>;
+  caseId: string;
+  type: AdminActionType;
+  adminId: string;
+  reason: string
+  details: Record<string, any>;
+  createdAt: string;
+  executedAt?: string;
+  status: 'pending' | 'executed' | 'failed'
+}
+export interface FraudDetectionResult {
+  isFraud: boolean;
+  confidence: number;
+  reasons: string[];
+  suggestedActions: AdminActionType[]
+  metadata: Record<string, any>;
+}
+export interface FraudDetectionConfig {
+  enabled: boolean;
+  rules: {
+    suspiciousActivity: {
+      enabled: boolean;
+      threshold: number
+    }
+    fakeProfile: {
+      enabled: boolean;
+      threshold: number
+    }
+    paymentFraud: {
+      enabled: boolean;
+      threshold: number
+    }
+    spam: {
+      enabled: boolean;
+      threshold: number
+    }
+  }
+  autoActions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+    confidenceThreshold: number
+  }
+}

@@ -1,7 +1,9 @@
-resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
-type ParticleType = 'quantum' | 'neural' | 'holographic';
-// Particle system 
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2034Props {
+  intensity?: number;
+  theme?: 'quantum' | 'cyberpunk' | 'neural' | 'holographic'
+}
 
 const UltraFuturisticBackground2034: React.FC<
   UltraFuturisticBackground2034Props
@@ -9,13 +11,12 @@ const UltraFuturisticBackground2034: React.FC<
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  intensity;
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -23,7 +24,6 @@ canvas.height = window.innerHeight;
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     type ParticleType = 'quantum' | 'neural' | 'holographic';
 // Particle system
     const particles: Array<{
@@ -71,8 +71,7 @@ type: ['quantum', 'neural', 'holographic'][
           ] as ParticleType,
         });
       }
-    };
-
+    }
     // Initialize neural network
     const initNeuralNetwork = () => {
 for (let i = 0; i < 20 * intensity; i++) {
@@ -83,7 +82,6 @@ for (let i = 0; i < 20 * intensity; i++) {
 activation: Math.random(),
         });
       }
-
       // Create connections
       neuralNodes.forEach((node, i) => {
         const numConnections = Math.floor(Math.random() * 3) + 1;
@@ -112,26 +110,21 @@ entanglementLines.push({
           life: Math.random() * 100,
         });
       }
-    };
-
+    }
     initParticles();
     initNeuralNetwork();
     initEntanglementLines();
-
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
-
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
+        if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Draw particle
         const alpha = particle.life / particle.maxLife;
         ctx.save();
@@ -149,18 +142,15 @@ if (particle.type === 'quantum') {
           ctx.shadowColor = 'lime';
           ctx.shadowBlur = 6;
         }
-
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
-
         // Remove dead particles
         if (particle.life <= 0) {
 particles.splice(index, 1);
         }
       });
-
       // Draw entanglement lines
       entanglementLines.forEach((line, index) => {
         line.life--;
@@ -178,12 +168,10 @@ particles.splice(index, 1);
         ctx.lineTo(line.x2, line.y2);
         ctx.stroke();
         ctx.restore();
-
         if (line.life <= 0) {
 entanglementLines.splice(index, 1);
         }
       });
-
       // Draw neural network
       neuralNodes.forEach((node, i) => {
         node.activation = Math.sin(Date.now() * 0.001 + i) * 0.5 + 0.5;
@@ -207,7 +195,6 @@ entanglementLines.splice(index, 1);
 ctx.restore();
           }
         });
-
         // Draw node
         ctx.save();
         ctx.globalAlpha = node.activation;
@@ -235,7 +222,6 @@ type: ['quantum', 'neural', 'holographic'][
           ] as ParticleType,
         });
       }
-
       // Add new entanglement lines
       if (entanglementLines.length < 15 * intensity) {
         const x1 = Math.random() * canvas.width;
@@ -256,7 +242,6 @@ entanglementLines.push({
     };
 
     animate();
-
     return () => {
       if (animationRef.current) {
 cancelAnimationFrame(animationRef.current);
@@ -274,7 +259,6 @@ setMousePosition({ x: e.clientX, y: e.clientY });
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
-
   return (
     <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>
       {/* HTML Canvas Background */}
@@ -283,7 +267,6 @@ setMousePosition({ x: e.clientX, y: e.clientY });
         className='absolute inset-0 w-full h-full'
         style={{ filter: `blur(${0.5 * intensity}px)` }}
       />
-
       {/* Framer Motion Geometric Shapes */}
       <div className='absolute inset-0'>
         {/* Floating geometric shapes */}
@@ -300,7 +283,6 @@ setMousePosition({ x: e.clientX, y: e.clientY });
 ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
           animate={{
@@ -314,7 +296,6 @@ ease: 'linear',
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30'
           style={{ clipPath: 'polygon(0% 0%, 100% 0%, 80% 100%, 20% 100%)' }}
@@ -329,7 +310,6 @@ ease: 'linear',
           }}
         />
       </div>
-
       {/* Energy waves */}
 <div className='absolute inset-0'>
         <motion.div
@@ -343,7 +323,6 @@ ease: 'linear',
 ease: 'linear',
           }}
         />
-
         <motion.div
           className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent'
           animate={{
@@ -356,7 +335,6 @@ ease: 'linear',
           }}
         />
       </div>
-
       {/* Holographic matrix effect */}
 <div className='absolute inset-0'>
         {Array.from({ length: 20 }).map((_, i) => (
@@ -377,13 +355,12 @@ ease: 'easeInOut',
           />
         ))}
       </div>
-
       {/* Cyberpunk grid */}
 <div className='absolute inset-0'>
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
-            backgroundSize: '50px 50px',
+            backgroundSize: '50px 50px'
           }}
           animate={{
             opacity: [0.3, 0.6, 0.3],

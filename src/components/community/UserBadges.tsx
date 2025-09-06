@@ -7,9 +7,6 @@ import {
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
 
-interface UserBadgesProps {
-  badges: Badge[];
-
 const iconMap = {
   Trophy,
   Award,

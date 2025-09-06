@@ -1,11 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
-
-};
-
+const contactInfo = null;
+                  color: 'from-indigo-500 to-purple-600'
+                }
+              ].map((feature, index) => (
 export default function Innovations2034Page() {
   return (
     <>
@@ -24,7 +25,6 @@ export default function Innovations2034Page() {
           rel='canonical'
           href='https://ziontechgroup.com/2034-innovations'
         />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -40,7 +40,6 @@ export default function Innovations2034Page() {
         />
         <meta property='og:type' content='website' />
         <meta property='og:site_name' content='Zion Tech Group' />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -52,10 +51,8 @@ export default function Innovations2034Page() {
           content='Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms.'
         />
       </Head>
-
       <div className='min-h-screen bg-black'>
         <UltraFuturisticNavigation2032 />
-
         {/* Hero Section */}
         <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-20'>
           {/* Animated Background */}
@@ -63,7 +60,6 @@ export default function Innovations2034Page() {
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,255,255,0.15),transparent_50%)] animate-pulse'></div>
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(139,92,246,0.15),transparent_50%)] animate-pulse delay-1000'></div>
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(236,73,153,0.15),transparent_50%)] animate-pulse delay-2000'></div>
-
             {/* Floating Elements */}
             <div className='absolute inset-0'>
               {[...Array(15)].map((_, i) => (
@@ -71,14 +67,14 @@ export default function Innovations2034Page() {
                   key={i}
                   className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60'
                   style={{
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`
+                    top: `${Math.random() * 100}%`
                   }}
                   animate={{
-                    y: [0, -100, 0],
-                    opacity: [0.6, 1, 0.6],
-                    scale: [1, 1.5, 1],
-                    rotate: [0, 360],
+                    y: [0, -100, 0]
+                    opacity: [0.6, 1, 0.6]
+                    scale: [1, 1.5, 1]
+                    rotate: [0, 360]
                   }}
                   transition={{
                     duration: 4 + Math.random() * 3,
@@ -108,7 +104,6 @@ export default function Innovations2034Page() {
                 <br />
                 <span className='text-6xl md:text-8xl'>Innovations</span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'
                 initial={{ opacity: 0, y: 30 }}
@@ -134,7 +129,6 @@ transition={{ duration: 1, delay: 0.6 }}
                 >
                   Explore Innovations
                 </motion.button>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -145,7 +139,6 @@ transition={{ duration: 1, delay: 0.6 }}
               </motion.div>
             </motion.div>
           </div>
-
           {/* Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -166,7 +159,6 @@ transition={{ duration: 1, delay: 1 }}
             </motion.div>
           </motion.div>
         </section>
-
         {/* Innovation Categories Overview */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='container mx-auto px-4'>
@@ -282,7 +274,6 @@ viewport={{ once: true }}
             </div>
           </div>
         </section>
-
         {/* Services Showcase */}
 
 {/* Why Choose Zion Tech Group */}
@@ -373,7 +364,6 @@ viewport={{ once: true }}
             </div>
           </div>
         </section>
-
         {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20'>
           <div className='container mx-auto px-4 text-center'>
@@ -392,7 +382,6 @@ viewport={{ once: true }}
                 already leveraging our 2034 innovations to transform their
                 industries and accelerate their growth.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
                   <span className='text-cyan-400'>📱</span>
@@ -407,7 +396,6 @@ viewport={{ once: true }}
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
-
               <motion.button
                 whileHover={{ scale: 1.05 }}
 whileTap={{ scale: 0.95 }}
@@ -419,7 +407,6 @@ whileTap={{ scale: 0.95 }}
           </div>
         </section>
       </div>
-
       <UltraFuturisticFooter2034 />
     </>
 );

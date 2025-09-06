@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+</name>#!/usr/bin/env node
 
 /**
  * Trigger GitHub Workflows
@@ -91,7 +91,6 @@ function main() {
       
     default:
       console.log('GitHub Workflows Trigger Tool');
-      console.log('=============================');
       console.log('');
       console.log('Usage:');
       console.log('  node trigger-workflows.cjs list                    - List available workflows');

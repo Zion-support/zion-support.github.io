@@ -29,94 +29,54 @@ id: string;
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const comprehensiveITServices: ComprehensiveITService[] = [
-  // Enterprise IT Infrastructure Services
-  {
-id: 'enterprise-it-infrastructure',
-    name: 'Enterprise IT Infrastructure Management',
-    tagline:
-      'Complete enterprise IT infrastructure with 99.99% uptime guarantee',
+    id: 'enterprise-it-infrastructure';
+    name: 'Enterprise IT Infrastructure Management';
+    tagline: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee';
     price: '$25,999',
-    period: '/month',
-    description:
-      'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
+    period: '/month';
+    description: 'Comprehensive enterprise IT infrastructure management service providing complete network, server, storage, and security management. Achieves 99.99% uptime with 24/7 monitoring and support.',
     features: [
-      'Network infrastructure management',
-      'Server and storage management',
-      'Security monitoring and management',
-      '24/7 infrastructure monitoring',
-      'Performance optimization',
-      'Disaster recovery planning',
-      'Compliance management',
-      'IT asset management',
-      'Help desk support',
-      'Strategic IT consulting',
-    ],
-    popular: true,
-    icon: '🏢',
-    color: 'from-gray-600 to-blue-700',
-    textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/enterprise-it-infrastructure',
-    marketPosition:
-      'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.',
-    targetAudience:
-      'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions',
-    trialDays: 0,
-    setupTime: '8-12 weeks',
-    category: 'Enterprise IT Infrastructure',
-    realService: true,
-    technology: [
-      'Cloud computing',
-      'Virtualization',
-      'Network management',
-      'Security systems',
-      'Monitoring tools',
-      'Automation platforms',
-      'AI operations',
-    ],
-    integrations: [
-      'ERP systems',
-      'CRM platforms',
-      'Security tools',
-      'Monitoring systems',
-      'Cloud platforms',
-      'Legacy systems',
-    ],
-    useCases: [
-      'IT infrastructure management',
-      'Digital transformation',
-      'Cloud migration',
-      'Security enhancement',
-      'Performance optimization',
-      'Compliance management',
-    ],
+      'Network infrastructure managementServer and storage managementSecurity monitoring and management24/7 infrastructure monitoringPerformance optimizationDisaster recovery planningCompliance managementIT asset management';
+      'Help desk supportStrategic IT consulting'
+    ];
+    popular: true;
+    icon: '🏢';
+    color: 'from-gray-600 to-blue-700';
+    textColor: 'text-gray-400';
+    link: 'https://ziontechgroup.com/enterprise-it-infrastructure';
+    marketPosition: 'Competes with IBM Global Services ($100K+), Accenture ($150K+), and Deloitte ($200K+). Our advantage: Modern technology stack and competitive pricing.';
+    targetAudience: 'Large enterprises, Fortune 500 companies, Government agencies, Healthcare systems, Financial institutions, Educational institutions',
+    trialDays: 0;
+    setupTime: '8-12 weeks';
+    category: 'Enterprise IT Infrastructure';
+    realService: true;
+    technology: ['Cloud computingVirtualizationNetwork managementSecurity systemsMonitoring toolsAutomation platformsAI operations'];
+    integrations: ['ERP systemsCRM platformsSecurity toolsMonitoring systemsCloud platformsLegacy systems'];
+    useCases: ['IT infrastructure managementDigital transformationCloud migrationSecurity enhancementPerformance optimizationCompliance management'];
     roi: 'Enterprises achieve 400% ROI through reduced IT costs, improved performance, and enhanced security',
-    competitors: ['IBM Global Services', 'Accenture', 'Deloitte', 'PwC', 'EY'],
+    competitors: ['IBM Global ServicesAccentureDeloittePwCEY'];
     marketSize: '$1.2T IT services market, 8% annual growth',
-    growthRate: '8% annual growth',
-    variant: 'enterprise-futuristic',
+    growthRate: '8% annual growth';
+    variant: 'enterprise-futuristic';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.',
-    launchDate: '2024-01-01',
-    customers: 25,
-    rating: 4.8,
-    reviews: 18,
+    realImplementation: true;
+    implementationDetails: 'Fully functional enterprise IT infrastructure management service with comprehensive monitoring, security, and support capabilities. Includes 24/7 operations center and strategic consulting.',
+    launchDate: '2024-01-01';
+    customers: 25;
+    rating: 4.8;
+    reviews: 18
   },
 
   // Cloud Migration & Optimization Services
@@ -871,4 +831,7 @@ id: 'enterprise-it-infrastructure',
     rating: 4.9,
     reviews: 156,
   },
+];
+    reviews: 156
+  }
 ];

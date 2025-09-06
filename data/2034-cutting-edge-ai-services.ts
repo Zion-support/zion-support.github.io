@@ -1,5 +1,4 @@
-export type CuttingEdgeAIService = {
-id: string;
+export type CuttingEdgeAIService = any;
   name: string;
   description: string;
   category:
@@ -11,7 +10,7 @@ id: string;
     | 'AI Healthcare'
     | 'AI Neural Interfaces'
     | 'AI Quantum Computing';
-  pricing: { starter: string; professional?: string; enterprise?: string };
+  pricing: { starter: string; professional?: string; enterprise?: string }
   features: string[];
   integrations?: string[];
   useCases?: string[];
@@ -19,52 +18,51 @@ id: string;
   rating?: number;
   launchDate?: string;
   realService?: boolean;
-};
-
+}
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
   {
-    id: 'ai-emotional-support-agent',
-    name: 'AI Emotional Support Agent',
+    id: 'ai-emotional-support-agent'
+    name: 'AI Emotional Support Agent'
     description:
-      'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
-    category: 'AI Emotional Intelligence',
-    pricing: { starter: '$99/mo' },
+      'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
+    category: 'AI Emotional Intelligence'
+    pricing: { starter: '$99/mo' }
     features: [
-      'CBT-guided prompts',
-      'Mood tracking',
-      'Crisis escalation',
-      'HIPAA-friendly modes',
-    ],
-    integrations: ['Twilio', 'Slack'],
-    useCases: ['Employee wellness', '24/7 support'],
-    link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
-    realService: true,
-  },
+      'CBT-guided prompts'
+      'Mood tracking'
+      'Crisis escalation'
+      'HIPAA-friendly modes'
+    ]
+    integrations: ['Twilio', 'Slack']
+    useCases: ['Employee wellness', '24/7 support']
+    link: 'https://ziontechgroup.com/services/ai-emotional-support-agent'
+    realService: true
+  }
   {
-    id: 'ai-product-spec-writer',
-    name: 'AI Product Spec Writer',
+    id: 'ai-product-spec-writer'
+    name: 'AI Product Spec Writer'
     description:
-      'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
-    category: 'AI Business Management',
-    pricing: { starter: '$79/mo' },
+      'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+    category: 'AI Business Management'
+    pricing: { starter: '$79/mo' }
     features: [
-      'PRD templates',
-      'Story generation',
-      'Acceptance criteria',
-      'Analytics alignment',
-    ],
-    integrations: ['Jira', 'Linear'],
-    useCases: ['Faster planning', 'Better alignment'],
-    link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
-    realService: true,
-  },
+      'PRD templates'
+      'Story generation'
+      'Acceptance criteria'
+      'Analytics alignment'
+    ]
+    integrations: ['Jira', 'Linear']
+    useCases: ['Faster planning', 'Better alignment']
+    link: 'https://ziontechgroup.com/services/ai-product-spec-writer'
+    realService: true
+  }
   {
-    id: 'ai-creative-studio',
-    name: 'AI Creative Studio',
+    id: 'ai-creative-studio'
+    name: 'AI Creative Studio'
     description:
-      'Generate brand-consistent images and short-form videos with approvals and rights management.',
-    category: 'AI Creativity',
-    pricing: { starter: '$149/mo' },
+      'Generate brand-consistent images and short-form videos with approvals and rights management.'
+    category: 'AI Creativity'
+    pricing: { starter: '$149/mo' }
     features: [
       'Brand kit',
       'Image & video gen',

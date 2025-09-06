@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+</names>#!/usr/bin/env node
 
 /**
  * PM2 Resurrect Hook
@@ -292,7 +292,6 @@ async function main() {
       case 'help':
       default:
         console.log('PM2 Resurrect Hook');
-        console.log('==================');
         console.log('');
         console.log('Usage:');
         console.log('  node pm2-resurrect-hook.cjs resurrect      - Resurrect all processes');

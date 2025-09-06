@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIContentPersonalizationEngine() {
-  
-    />
-  );
+			title;
+				"Integrations: CDP, ESP, CMS, Web SDK"
+			]}
+			industries={["E‑commerce", "Media", "SaaS", "Education"]}
+			canonical="https: //ziontechgroup.com/ai-content-personalization-engine"
+		/>
+	)
+}

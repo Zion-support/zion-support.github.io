@@ -1,42 +1,26 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-color: `hsl(${Math.random() * 360}, 70%, 60%)`,
-        life: Math.random() * 100,
-        maxLife: 100,
-      });
-    }
-
+const UltraFuturisticBackground: React.FC;
     // Animation loop
     const animate = () => {
       ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life--;
-
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color;
         ctx.globalAlpha = particle.life / particle.maxLife;
         ctx.fill();
-
         // Reset particle if it dies
         if (particle.life <= 0) {
           particles[index] = {
@@ -51,7 +35,6 @@ color: `hsl(${Math.random() * 360}, 70%, 60%)`,
           };
         }
       });
-
       // Draw quantum entanglement lines
       particles.forEach((particle1, i) => {
 particles.slice(i + 1).forEach(particle2 => {
@@ -74,7 +57,6 @@ ctx.stroke();
     };
 
     animate();
-
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
@@ -82,12 +64,10 @@ canvas.height = window.innerHeight;
     };
 
     window.addEventListener('resize', handleResize);
-
     return () => {
 window.removeEventListener('resize', handleResize);
     };
   }, []);
-
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>
       {/* Canvas Background */}
@@ -96,15 +76,13 @@ window.removeEventListener('resize', handleResize);
         className='absolute inset-0 w-full h-full'
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
+            'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)'
         }}
       />
-
       {/* Quantum Grid */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
       </div>
-
       {/* Floating Geometric Shapes */}
       <div className='absolute inset-0'>
         {/* Hexagon */}
@@ -112,7 +90,7 @@ window.removeEventListener('resize', handleResize);
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30'
           style={{
             clipPath:
-              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
           }}
           animate={{
             rotate: [0, 360],
@@ -125,12 +103,11 @@ window.removeEventListener('resize', handleResize);
 ease: 'linear',
           }}
         />
-
         {/* Triangle */}
         <motion.div
 className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
           style={{
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
           }}
           animate={{
             rotate: [360, 0],
@@ -143,7 +120,6 @@ className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
 ease: 'linear',
           }}
         />
-
         {/* Circle */}
         <motion.div
 className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 rounded-full'
@@ -157,7 +133,6 @@ className='absolute bottom-32 left-1/3 w-20 h-20 border border-blue-400/30 round
 ease: 'easeInOut',
           }}
         />
-
         {/* Square */}
         <motion.div
 className='absolute bottom-20 right-20 w-28 h-28 border border-green-400/30'
@@ -173,7 +148,6 @@ ease: 'linear',
           }}
         />
       </div>
-
       {/* Energy Orbs */}
 <div className='absolute inset-0'>
         {[...Array(8)].map((_, i) => (
@@ -181,8 +155,8 @@ ease: 'linear',
             key={i}
             className='absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
             style={{
-              left: `${20 + i * 10}%`,
-              top: `${30 + i * 5}%`,
+              left: `${20 + i * 10}%`
+              top: `${30 + i * 5}%`
             }}
             animate={{
               scale: [0.5, 2, 0.5],
@@ -198,7 +172,6 @@ ease: 'easeInOut',
           />
         ))}
       </div>
-
       {/* Quantum Wave Effects */}
 <div className='absolute inset-0'>
         {[...Array(5)].map((_, i) => (
@@ -206,7 +179,7 @@ ease: 'easeInOut',
             key={i}
             className='absolute w-full h-1 bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent'
             style={{
-              top: `${20 + i * 15}%`,
+              top: `${20 + i * 15}%`
             }}
             animate={{
               x: ['-100%', '100%'],
@@ -221,14 +194,12 @@ ease: 'linear',
           />
         ))}
       </div>
-
       {/* Neon Glow Effects */}
 <div className='absolute inset-0'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />
       </div>
-
       {/* Data Stream Effect */}
       <div className='absolute inset-0'>
         {[...Array(20)].map((_, i) => (
@@ -236,8 +207,8 @@ ease: 'linear',
             key={i}
             className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
             style={{
-              left: `${Math.random() * 100}%`,
-              top: '-2rem',
+              left: `${Math.random() * 100}%`
+              top: '-2rem'
             }}
             animate={{
               y: ['0vh', '100vh'],
@@ -252,7 +223,6 @@ ease: 'linear',
           />
         ))}
       </div>
-
       {/* Quantum Entanglement Lines */}
 <div className='absolute inset-0'>
         <svg className='w-full h-full'>

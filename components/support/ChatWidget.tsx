@@ -1,7 +1,4 @@
-useEffect ( () => {
-  if (!isOpen && messages.length === 0) {
-  //Seed greeting setMessages ([
-
+type ChatMessage = any;
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
@@ -11,11 +8,9 @@ export default function ChatWidget() {
   const [showEscalation, setShowEscalation] = useState(false);
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
-
   useEffect(() => {
 sessionIdRef.current = generateSessionId();
   }, []);
-
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
@@ -28,16 +23,13 @@ sessionIdRef.current = generateSessionId();
       ]);
     }
   }, [isOpen, messages.length]);
-
   useEffect(() => {
 messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
-
   const quickReplies = useMemo(
     () => ['How do I hire?', 'How do I get matched?', 'Billing help'],
     []
   );
-
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
@@ -51,7 +43,6 @@ body: JSON.stringify({
       });
     } catch {}
   }
-
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -66,7 +57,6 @@ body: JSON.stringify({
       setShowEscalation(true);
     } catch {}
   }
-
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
@@ -82,8 +72,8 @@ const newUserMessage: ChatMessage = {
     await logEvent('message/user', { content: text });
     try {
       const res = await fetch('/api/support/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
           sessionId: sessionIdRef.current,
 messages: [...messages, newUserMessage].map(({ role, content }) => ({
@@ -93,7 +83,6 @@ messages: [...messages, newUserMessage].map(({ role, content }) => ({
         }),
       });
       const data = await res.json();
-
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage = {
           role: 'assistant',
@@ -102,11 +91,10 @@ timestamp: Date.now(),
         };
         setMessages(prev => [...prev, assistantMessage]);
         await logEvent('message/assistant', {
-          content: assistantMessage.content,
-          meta: data.meta,
+          content: assistantMessage.content
+          meta: data.meta
         });
       }
-
       if (data?.meta?.intentMatched === false) {
         setFailedIntents(n => {
           const next = n + 1;
@@ -120,19 +108,18 @@ timestamp: Date.now(),
       }
     } catch (e) {
       setMessages(prev => [
-        ...prev,
+        ...prev
         {
-          role: 'assistant',
+          role: 'assistant'
           content:
-            'Sorry, something went wrong. Please try again or contact support.',
-          timestamp: Date.now(),
-        },
+            'Sorry, something went wrong. Please try again or contact support.'
+          timestamp: Date.now()
+        }
       ]);
     } finally {
       setIsLoading(false);
     }
   }
-
   return (
 <div className='fixed bottom-4 right-4 z-50'>
       {!isOpen && (
@@ -144,7 +131,6 @@ timestamp: Date.now(),
           ?
         </button>
       )}
-
       {isOpen && (
 <div className='w-[360px] max-w-[92vw] h-[520px] max-h-[80vh] rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col'>
           <div className='flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-800'>
@@ -186,7 +172,6 @@ timestamp: Date.now(),
             )}
             <div ref={messagesEndRef} />
           </div>
-
           {!showEscalation && (
 <div className='px-3 pb-2'>
               <div className='flex flex-wrap gap-2 mb-2'>
@@ -217,6 +202,11 @@ timestamp: Date.now(),
                   }}
                   placeholder='Ask a question…'
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
+                      onSend()
+                    }
+                  }}
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <button
                   onClick={() => onSend()}

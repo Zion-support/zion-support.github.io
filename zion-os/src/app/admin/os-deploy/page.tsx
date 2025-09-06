@@ -2,16 +2,13 @@
 import { useState } from 'react';
 
 export default function OSDeployPage() {
-  const [loading, setLoading] = useState(false);
-
+const [loading, setLoading] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
     // Simulate deployment
     setTimeout(() => {
       setLoading(false);
-      window.alert('Deployment initiated! Check your instances page for updates.');
     }, 3000);
   };
 

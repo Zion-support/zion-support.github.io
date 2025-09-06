@@ -1,10 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
-
-export type UseAutoTranslateResult = {
-  translations: Record<string, string>;
-  loading: boolean;
-  error?: string;
 };
 
 export function useAutoTranslate(
@@ -15,15 +10,12 @@ export function useAutoTranslate(
   const [translations, setTranslations] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
-
   const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
-
   useEffect(() => {
-    if (!text || targets.length === 0) {
+    if (!text |targets.length === 0) {
       setTranslations({});
 return;
     }
-
     let cancelled = false;
     const timer = setTimeout(async () => {
       try {
@@ -32,12 +24,11 @@ return;
         const res = await translateTextViaAI(text, targets);
 if (!cancelled) setTranslations(res);
       } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed');
+        if (!cancelled) setError(e?.message |'Translation failed');
       } finally {
         if (!cancelled) setLoading(false);
       }
     }, debounceMs);
-
     return () => {
       cancelled = true;
 clearTimeout(timer);
@@ -45,3 +36,8 @@ clearTimeout(timer);
   }, [key, debounceMs]);
 
   return { translations, loading, error };
+  return { translations, loading, error }
+    }
+  }, [key, debounceMs]);
+  return { translations, loading, error }
+}

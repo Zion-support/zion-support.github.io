@@ -8,11 +8,11 @@ import Link from 'next/link';
 
 <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Core Stewards</div>
               <div className='text-sm text-gray-600 dark:text-gray-400'>
-                Appointed via DAO ratification; accountable to publish roadmaps,
+                Appointed via DAO ratification, accountable to publish roadmaps
                 risk registers, and post-mortems.
               </div>
             </div>

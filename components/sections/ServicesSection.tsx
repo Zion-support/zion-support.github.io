@@ -1,8 +1,4 @@
 'use client';
-
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {
   Brain,
   Cloud,
@@ -75,7 +71,7 @@ features: [
       icon: Shield,
       title: 'Blockchain Solutions',
       description:
-        'Decentralized technology platforms and smart contract development.',
+        'Scalable cloud solutions and infrastructure design for modern applications.'
       features: [
         'Smart Contracts',
         'DeFi Applications',
@@ -101,9 +97,9 @@ features: [
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -142,20 +138,17 @@ className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
-
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Comprehensive Technology
             <span className='block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
               Solutions
             </span>
           </h2>
-
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.
           </p>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -176,14 +169,12 @@ className='group relative'
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                 />
-
                 {/* Icon */}
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <service.icon className='w-8 h-8 text-white' />
                 </div>
-
                 {/* Content */}
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {service.title}
@@ -192,7 +183,6 @@ className='group relative'
                 <p className='text-gray-300 mb-6 leading-relaxed'>
                   {service.description}
                 </p>
-
                 {/* Features */}
 <ul className='space-y-2 mb-8'>
                   {service.features.map(feature => (
@@ -205,7 +195,6 @@ className='group relative'
                     </li>
                   ))}
                 </ul>
-
                 {/* CTA */}
                 <Link
                   href={service.href}
@@ -214,14 +203,12 @@ className='inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 
                   <span className='font-medium'>Learn More</span>
                   <ArrowRight className='w-4 h-4' />
                 </Link>
-
                 {/* Hover Effect */}
                 <div className='absolute inset-0 border-2 border-transparent rounded-2xl group-hover:border-blue-500/30 transition-colors duration-300' />
               </div>
             </motion.div>
           ))}
         </motion.div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

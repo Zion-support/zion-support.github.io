@@ -1,25 +1,21 @@
-description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
-    icon: Brain,
-
+import Link from 'next/link',
+import Head from 'next/head';
+import { useState, useEffect  } from 'react';
+import { ContactInfo  } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-site: 'https://ziontechgroup.com',
-  };
-
+    const timer = null;
+                  return (
+                    <div 
+                      key={category.title}
+                      className={`p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-${category.color}-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                      style={{ transitionDelay: `${index * 200}ms` }}
             </div>
           </div>
         </section>
-
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Our Services
               </h1>
@@ -37,7 +33,6 @@ site: 'https://ziontechgroup.com',
             </motion.div>
           </div>
         </section>
-
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -52,7 +47,6 @@ site: 'https://ziontechgroup.com',
                 From micro SaaS development to enterprise IT solutions, we provide comprehensive technology services.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -92,7 +86,6 @@ site: 'https://ziontechgroup.com',
             </div>
           </div>
         </section>
-
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -108,7 +101,6 @@ site: 'https://ziontechgroup.com',
                 We deliver exceptional results through our proven expertise and commitment to excellence.
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -133,15 +125,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
 export default function Services() {
   const serviceCategories = [
     {
-      title: 'Micro SaaS Products',
+      title: 'Micro SaaS Products'
       description:
-        'Innovative, focused software solutions for modern businesses',
-      count: '150+',
-      color: 'blue',
+        'Innovative, focused software solutions for modern businesses'
+      count: '150+'
+      color: 'blue'
       services: [
         'AI-Powered Video Clip Maker',
         'Smart Contract Analyzer',
@@ -234,7 +225,6 @@ ring: 'focus:ring-green-500',
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href={`${contact.site}/services`} />
       </Head>
-
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -259,14 +249,12 @@ ring: 'focus:ring-green-500',
               </p>
             </div>
           </section>
-
           {/* Service Categories */}
 <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid lg:grid-cols-3 gap-8'>
                 {serviceCategories.map((category, index) => {
                   const colors = getColorClasses(category.color);
-                  
                     >
                       <div className='flex items-center justify-between mb-6'>
                         <h3 className={`text-2xl font-bold ${colors.text}`}>
@@ -279,7 +267,6 @@ ring: 'focus:ring-green-500',
 <p className='text-slate-300 mb-6'>
                         {category.description}
                       </p>
-
                       <ul className='text-slate-400 space-y-2 mb-8'>
                         {category.services.map((service, serviceIndex) => (
                           <li key={serviceIndex} className='flex items-center'>
@@ -314,14 +301,12 @@ ring: 'focus:ring-green-500',
             </div>
           </div>
         </section>
-
           {/* Why Choose Us */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
                 Why Choose Zion Tech Group?
               </h2>
-
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -344,7 +329,6 @@ ring: 'focus:ring-green-500',
                     Rapid deployment and implementation of solutions
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -366,7 +350,6 @@ ring: 'focus:ring-green-500',
                     Scalable solutions for businesses of all sizes
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -388,7 +371,6 @@ ring: 'focus:ring-green-500',
                     Bank-level security and 99.9% uptime guarantee
                   </p>
                 </div>
-
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -425,7 +407,6 @@ ring: 'focus:ring-green-500',
                 and discover how our innovative solutions can transform your
                 business.
               </p>
-
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
                 <Link
                   href='/contact'
@@ -451,14 +432,13 @@ ring: 'focus:ring-green-500',
         </section>
     </>
   );
-
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Ready to Get Started?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Contact our experts to discuss your project requirements and discover 
+              Contact our experts to discuss your project requirements and discover
               how our solutions can drive your business forward.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

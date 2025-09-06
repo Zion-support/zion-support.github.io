@@ -1,65 +1,64 @@
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
 
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { toast } from 'sonner';
 export interface MilestoneInput {
   scope: string;
   startDate: string;
+<<<<<<< HEAD
   endDate: string | null;
-  projectType: string;
-
+=======
+  endDate: string | null
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  projectType: string
+}
 export interface GeneratedMilestone {
   title: string;
   description: string;
   dueDate: string;
+<<<<<<< HEAD
   estimatedHours: number;
-  isAiGenerated: boolean;
-
+=======
+  estimatedHours: number
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  isAiGenerated: boolean
+}
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedMilestones, setGeneratedMilestones] = useState<
-    GeneratedMilestone[]
-  >([]);
+<<<<<<< HEAD
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
 
-  const generateMilestones = async (
-    input: MilestoneInput
-  ): Promise<GeneratedMilestone[]> => {
+  const generateMilestones = null;
+=======
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
+  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
     try {
-      setIsGenerating(true);
-
-      const { data, error } = await supabase.functions.invoke(
-        'generate-milestones',
-        {
-          body: input,
-        }
-      );
-
+      setIsGenerating(true)
+      const { data, error } = await supabase.functions.invoke('generate-milestones', {
+        body: input
+      });
       if (error) throw error;
-
       // Mark each milestone as AI generated
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({
-        ...milestone,
-        isAiGenerated: true,
-      }));
-
+        ...milestone
+        isAiGenerated: true}));
       setGeneratedMilestones(milestonesWithFlag);
-      return milestonesWithFlag;
+      return milestonesWithFlag
     } catch (error) {
       console.error('Error generating milestones:', error);
       toast.error('Failed to generate milestones');
-      return [];
+      return []
     } finally {
-      setIsGenerating(false);
+      setIsGenerating(false)
     }
-  };
-
+  }
   const clearGeneratedMilestones = () => {
-    setGeneratedMilestones([]);
-  };
-
+    setGeneratedMilestones([])
+  }
   return {
-    generateMilestones,
-    generatedMilestones,
-    isGenerating,
-    clearGeneratedMilestones,
-  };
+    generateMilestones;
+    generatedMilestones;
+    isGenerating;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    clearGeneratedMilestones}
+}

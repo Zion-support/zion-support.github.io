@@ -1,7 +1,9 @@
+import React from 'react',
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>

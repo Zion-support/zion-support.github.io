@@ -1,6 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 
   };
 
@@ -30,7 +27,6 @@ import Link from 'next/link';
                 ← Back to Case Studies
               </Link>
             </nav>
-
             {/* Header */}
 <header className='mb-12 text-center'>
               <div className='mb-4'>
@@ -49,7 +45,6 @@ import Link from 'next/link';
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
-
             {/* Challenge */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-red-400'>
@@ -59,7 +54,6 @@ import Link from 'next/link';
                 <p className='text-white/90 text-lg'>{caseStudy.challenge}</p>
               </div>
             </section>
-
             {/* Solution */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-green-400'>
@@ -69,7 +63,6 @@ import Link from 'next/link';
                 <p className='text-white/90 text-lg'>{caseStudy.solution}</p>
               </div>
             </section>
-
             {/* Technologies */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
@@ -86,7 +79,6 @@ import Link from 'next/link';
                 ))}
               </div>
             </section>
-
             {/* Results */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>
@@ -112,7 +104,6 @@ import Link from 'next/link';
                 ))}
               </div>
             </section>
-
             {/* Call to Action */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20'>

@@ -1,5 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeNewService {
+import { ServiceVariant  } from "../types/service-variants";
+export interface InnovativeNewService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -30,76 +32,54 @@ export interface InnovativeNewService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const innovativeNewServices2025: InnovativeNewService[] = [
-  // AI-Powered Legal Document Analysis
-  {
-id: 'ai-legal-document-analyzer',
-    name: 'AI Legal Document Analyzer',
-    tagline:
-      'Transform legal document review with AI-powered analysis and insights',
-    price: '$199',
-    period: '/month',
-    description:
-      'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',
+    id: 'ai-legal-document-analyzer';
+    name: 'AI Legal Document Analyzer';
+    tagline: 'Transform legal document review with AI-powered analysis and insights';
+    price: '$199';
+    period: '/month';
+    description: 'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',
     features: [
-      'AI-powered contract analysis and risk assessment',
-      'Automated compliance checking',
-      'Legal document summarization',
-      'Risk scoring and alerts',
-      'Template generation and customization',
-      'Multi-language support',
-      'Integration with legal management systems',
-      'Audit trail and version control',
-      'Real-time collaboration tools',
-      'Mobile-responsive interface',
-    ],
-    popular: true,
-    icon: '⚖️',
-    color: 'from-purple-600 to-indigo-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-legal-document-analyzer',
-    marketPosition:
-      'Competes with DocuSign ($25/month), ContractPodAi ($500/month). Our advantage: AI analysis reduces review time by 80% and catches 95% of potential issues.',
-    targetAudience:
-      'Law firms, Corporate legal departments, Contract managers, Compliance officers, Legal consultants',
-    trialDays: 14,
-    setupTime: '2-3 hours',
-    category: 'Legal Technology',
-    realService: true,
+      'AI-powered contract analysis and risk assessmentAutomated compliance checkingLegal document summarizationRisk scoring and alertsTemplate generation and customizationMulti-language supportIntegration with legal management systemsAudit trail and version control';
+      'Real-time collaboration toolsMobile-responsive interface'
+    ];
+    popular: true;
+    icon: '⚖️';
+    color: 'from-purple-600 to-indigo-600';
+    textColor: 'text-purple-400';
+    link: 'https://ziontechgroup.com/ai-legal-document-analyzer';
+    marketPosition: 'Competes with DocuSign ($25/month), ContractPodAi ($500/month). Our advantage: AI analysis reduces review time by 80% and catches 95% of potential issues.';
+    targetAudience: 'Law firms, Corporate legal departments, Contract managers, Compliance officers, Legal consultants',
+    trialDays: 14;
+    setupTime: '2-3 hours';
+    category: 'Legal Technology';
+    realService: true;
     technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker, AWS'],
-    integrations: [
-      'DocuSign, Salesforce, Microsoft Office, Google Workspace, Slack, Zoom',
-    ],
-    useCases: [
-      'Contract review and analysis, Compliance monitoring, Risk assessment, Legal research automation, Document generation',
-    ],
-    roi: 'Law firms report 400% ROI through faster document processing and reduced legal risks.',
+    integrations: ['DocuSign, Salesforce, Microsoft Office, Google Workspace, Slack, Zoom'],
+    useCases: ['Contract review and analysis, Compliance monitoring, Risk assessment, Legal research automation, Document generation'],
+    roi: 'Law firms report 400% ROI through faster document processing and reduced legal risks.';
     competitors: ['DocuSign, ContractPodAi, LexisNexis, Westlaw'],
-    marketSize: '$15.2B legal tech market',
-    growthRate: '18% annual growth',
-    variant: 'ai-legal-enterprise',
+    marketSize: '$15.2B legal tech market';
+    growthRate: '18% annual growth';
+    variant: 'ai-legal-enterprise';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
-    launchDate: '2025-01-15',
-    customers: 28,
-    rating: 4.9,
-    reviews: 15,
+    realImplementation: true;
+    implementationDetails: 'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
+    launchDate: '2025-01-15';
+    customers: 28;
+    rating: 4.9;
+    reviews: 15
   },
 
   // Quantum-Secure Communication Platform
@@ -354,4 +334,12 @@ id: 'ai-legal-document-analyzer',
     rating: 4.9,
     reviews: 6,
   },
+];
+    realImplementation: true;
+    implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
+    launchDate: '2025-01-08';
+    customers: 12;
+    rating: 4.9;
+    reviews: 6
+  }
 ];

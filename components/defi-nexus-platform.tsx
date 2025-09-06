@@ -1,84 +1,13 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  TrendingUp,
-  Brain,
-  Shield,
-  Zap,
-  Target,
-  BarChart3,
-  Cpu,
-  Globe,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
+import { TrendingUp, Brain, Shield, Zap, Target;
+  BarChart3, Cpu, Globe, Users, Award;
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const features = [
-  'Multi-chain DeFi aggregation',
-  'Automated yield optimization',
-  'Liquidity pool management',
-  'Cross-chain bridge services',
-  'Smart contract auditing',
-  'DeFi analytics dashboard',
-  'Mobile app integration',
-  'Staking and governance',
+const contactInfo = null;
 ];
-
-const pricingPlans = [
-  {
-    name: 'Starter',
-    price: 29,
-    period: 'month',
-features: [
-      'Basic DeFi tools',
-      '3 blockchain networks',
-      'Yield tracking',
-      'Standard support',
-    ],
-    popular: false,
-  },
-  {
-    name: 'Professional',
-    price: 99,
-    period: 'month',
-features: [
-      'Advanced DeFi tools',
-      'All major networks',
-      'Automated strategies',
-      'Analytics',
-      'Priority support',
-    ],
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 299,
-    period: 'month',
-features: [
-      'Custom DeFi solutions',
-      'White-label platform',
-      'API access',
-      'Priority support',
-      'Custom integrations',
-    ],
-    popular: false,
-  },
-];
-
 export default function DeFiNexusPlatform() {
   return (
     <Layout>
@@ -105,11 +34,9 @@ export default function DeFiNexusPlatform() {
           content='https://ziontechgroup.com/defi-nexus-platform'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>
@@ -140,7 +67,6 @@ className='mb-8'
               farming, liquidity provision, and cross-chain DeFi services.
             </p>
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -165,7 +91,6 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center'
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-20 bg-gradient-to-b from-black to-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -207,7 +132,6 @@ className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-g
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -222,7 +146,7 @@ className='text-center mb-16'
               Choose Your Plan
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Flexible pricing options designed for DeFi users of all levels,
+              Flexible pricing options designed for DeFi users of all levels
               from beginners to institutional investors.
             </p>
           </motion.div>
@@ -259,7 +183,6 @@ plan.popular
                     </span>
                   </div>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -280,7 +203,6 @@ plan.popular
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
 <section
         id='contact'
@@ -317,7 +239,6 @@ className='text-center'
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -331,7 +252,6 @@ className='text-center'
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

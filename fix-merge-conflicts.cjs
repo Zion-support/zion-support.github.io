@@ -14,6 +14,7 @@ class MergeConflictResolver {
     this.fixedFiles = [];
     this.errors = [];
   }
+};
 
   log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
@@ -55,6 +56,8 @@ class MergeConflictResolver {
       this.errors.push({ file: filePath, error: error.message });
       return false;
     }
+  } catch (error) {
+    console.log(`⚠️  Could not fix ${filePath}: ${error.message}`);
   }
 
   async findFilesWithConflicts() {

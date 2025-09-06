@@ -3,31 +3,19 @@ import Head from 'next/head';
 import { getZionDesignMap } from '../utils/design-map';
 
 export default function DesignMapPage() {
-  const designMap = useMemo(() => getZionDesignMap(), []);
-  const [screenName, setScreenName] = useState('');
-  const [role, setRole] = useState('Talent');
-  const [suggestion, setSuggestion] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-
-  async function requestWireframe() {
-    if (!screenName) return;
-    setIsLoading(true);
-    setSuggestion(null);
-    try {
       const res = await fetch('/api/figma/wireframe-suggest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ screenName, role }),
       });
       const json = await res.json();
-      setSuggestion(json?.suggestion || 'No suggestion received');
+      setSuggestion(json?.suggestion |"No suggestion received");
     } catch (e: any) {
-      setSuggestion(e?.message || 'Failed to fetch suggestion');
+      setSuggestion(e?.message |"Failed to fetch suggestion");
     } finally {
       setIsLoading(false);
     }
   }
-
   return (
     <>
       <Head>
@@ -38,50 +26,49 @@ body: JSON.stringify({ screenName, role }),
           <h1 className='text-2xl font-semibold'>Zion OS Design Map</h1>
           <div className='flex gap-2'>
             <a
-              href='/api/design-map'
-              className='px-3 py-2 rounded bg-gray-900 text-white text-sm'
+              href="/api/design-map"
+              className="px-3 py-2 rounded bg-gray-900 text-white text-sm"
             >
               JSON
             </a>
             <a
-              href='/api/figma/export?kit=tailwind'
-              className='px-3 py-2 rounded bg-neon-blue text-black text-sm'
+              href="/api/figma/export?kit=tailwind"
+              className="px-3 py-2 rounded bg-neon-blue text-black text-sm"
             >
               Export Tailwind
             </a>
             <a
-              href='/api/figma/export?kit=chakra'
-              className='px-3 py-2 rounded bg-neon-purple text-white text-sm'
+              href="/api/figma/export?kit=chakra"
+              className="px-3 py-2 rounded bg-neon-purple text-white text-sm"
             >
               Export Chakra
             </a>
             <a
-              href='/api/figma/export?kit=react'
-              className='px-3 py-2 rounded bg-neon-green text-black text-sm'
+              href="/api/figma/export?kit=react"
+              className="px-3 py-2 rounded bg-neon-green text-black text-sm"
             >
               Export React
             </a>
           </div>
         </div>
-
-        <div className='grid md:grid-cols-2 gap-6'>
+        <div className="grid md:grid-cols-2 gap-6">
           <MapColumn
-            title='Foundations'
+            title="Foundations"
             sections={designMap.products.foundations}
           />
-          <MapColumn title='Talent UI' sections={designMap.products.talent} />
-          <MapColumn title='Client UI' sections={designMap.products.client} />
+          <MapColumn title="Talent UI" sections={designMap.products.talent} />
+          <MapColumn title="Client UI" sections={designMap.products.client} />
           <MapColumn
-            title='AI Tools UI'
+            title="AI Tools UI"
             sections={designMap.products.aiTools}
           />
-          <MapColumn title='DAO & Token UI' sections={designMap.products.dao} />
+          <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
           <MapColumn
-            title='Admin Console'
+            title="Admin Console"
             sections={designMap.products.admin}
           />
           <MapColumn
-            title='Mobile Layouts'
+            title="Mobile Layouts"
             sections={designMap.products.mobile}
           />
         </div>
@@ -117,8 +104,8 @@ body: JSON.stringify({ screenName, role }),
             </div>
 <button
               onClick={requestWireframe}
-              className='px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60'
-              disabled={isLoading || !screenName}
+              className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60"
+              disabled={isLoading |!screenName}
             >
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
             </button>
@@ -134,8 +121,8 @@ body: JSON.stringify({ screenName, role }),
 );
 
 function MapColumn({
-  title,
-  sections,
+  title
+  sections
 }: {
   title: string;
   sections: {

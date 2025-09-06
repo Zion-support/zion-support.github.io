@@ -1,59 +1,20 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Globe,
-  Atom,
-  Heart,
-  Leaf,
-  Car,
-  GraduationCap,
-  Scale,
-  Building,
-  Factory,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,;
-} from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2
+ } from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-
-};
-
-const serviceCategories = [
-  {
-    title: '🚀 2028 Futuristic Innovations',
-    description: 'Beyond the future of technology',
-    icon: Rocket,
-    color: 'from-violet-600 to-purple-600',
-services: futuristic2028Services.slice(0, 4),
-  },
-  {
-    title: '🏙️ Smart City & Infrastructure',
-    description: 'Intelligent urban solutions',
-    icon: Building,
-    color: 'from-blue-600 to-cyan-600',
-services: emergingTech2028Services
+const contactInfo = null;
       .filter(
         s =>
-          s.category.includes('Smart City') ||
+          s.category.includes('Smart City') |
           s.category.includes('Infrastructure')
       )
       .slice(0, 4),
@@ -95,7 +56,6 @@ services: futuristic2028Services
       .slice(0, 4),
   },
 ];
-
 export default function ServicesShowcase2028() {
   return (
     <>
@@ -129,7 +89,6 @@ export default function ServicesShowcase2028() {
       </Head>
 
       <UltraFuturisticNavigation2028 />
-
       {/* Hero Section */}
 <section className='relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-purple-900/20 to-blue-900/20 overflow-hidden'>
         {/* Animated Background */}
@@ -150,7 +109,6 @@ className='space-y-8'
               <Sparkles className='w-4 h-4' />
               <span>2028 Future Technology</span>
             </div>
-
             <h1 className='text-5xl md:text-7xl font-bold text-white leading-tight'>
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent'>
                 Futuristic
@@ -158,13 +116,11 @@ className='space-y-8'
               <br />
               <span className='text-white'>Services</span>
             </h1>
-
             <p className='text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed'>
               Experience the future of technology with our cutting-edge 2028
               services. From AI consciousness to quantum internet, we're
               building tomorrow's solutions today.
             </p>
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <Link
                 href='/contact'
@@ -181,7 +137,6 @@ className='space-y-8'
                 <DollarSign className='w-5 h-5' />
               </Link>
             </div>
-
             {/* Stats */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
               <div className='text-center'>
@@ -204,7 +159,6 @@ className='space-y-8'
           </motion.div>
         </div>
       </section>
-
       {/* Services Categories */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -234,21 +188,18 @@ className='group relative'
               >
                 <div className='relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-
                   <div className='relative z-10'>
                     <div
                       className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                     >
                       <category.icon className='w-8 h-8 text-white' />
                     </div>
-
                     <h3 className='text-2xl font-bold text-white mb-3'>
                       {category.title}
                     </h3>
                     <p className='text-purple-300 mb-6'>
                       {category.description}
                     </p>
-
                     <div className='space-y-3 mb-6'>
                       {category.services.slice(0, 3).map(service => (
                         <div
@@ -262,7 +213,6 @@ className='group relative'
                         </div>
                       ))}
                     </div>
-
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
 className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
@@ -277,7 +227,6 @@ className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
 <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -306,7 +255,6 @@ className='group relative'
               >
                 <div className='relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105'>
                   <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-
                   <div className='relative z-10'>
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
@@ -319,14 +267,12 @@ className='group relative'
                         </div>
                       </div>
                     </div>
-
                     <h3 className='text-2xl font-bold text-white mb-3'>
                       {service.name}
                     </h3>
                     <p className='text-purple-300 mb-4'>
                       {service.description}
                     </p>
-
                     <div className='mb-6'>
                       <div className='flex items-center space-x-2 mb-2'>
                         <Star className='w-4 h-4 text-yellow-400' />
@@ -346,7 +292,6 @@ className='group relative'
                         {service.growthRate}
                       </div>
                     </div>
-
                     <div className='flex items-center justify-between'>
                       <Link
                         href={service.link}
@@ -370,7 +315,6 @@ className='group relative'
           </div>
         </div>
       </section>
-
       {/* Market Analysis */}
 <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -400,13 +344,16 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
                 Market Growth
               </h3>
               <p className='text-purple-300 mb-6'>
-                Our services target markets with exponential growth potential,
+                Our services target markets with exponential growth potential
                 with some sectors growing at 300-800% annually.
               </p>
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
+                with some sectors growing at 300-800% annually.
+              </p>
+              <div className="text-3xl font-bold text-green-400">500%+</div>
+              <div className="text-purple-300">Average Annual Growth</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -425,7 +372,6 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
               <div className='text-3xl font-bold text-blue-400'>$500B+</div>
               <div className='text-blue-300'>Total Addressable Market</div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -447,7 +393,6 @@ className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 bor
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -470,7 +415,6 @@ className='space-y-8'
               futuristic services to gain competitive advantages and drive
               innovation.
             </p>
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <Link
                 href='/contact'
@@ -487,11 +431,9 @@ className='space-y-8'
                 <TrendingUp className='w-5 h-5' />
               </Link>
             </div>
-
             <div className='flex items-center justify-center space-x-8 text-purple-300'>
               <div className='flex items-center space-x-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span>30-Day Free Trial</span>
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>30-Day Free Trial</span>
               </div>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
@@ -505,7 +447,6 @@ className='space-y-8'
           </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2028 />
     </>
   );

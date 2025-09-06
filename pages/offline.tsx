@@ -1,48 +1,34 @@
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  WifiOff,
-  RefreshCw,
-  Home,
-  ShoppingCart,
-  Clock,
-  Bookmark,
-  Search,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import {motion} from 'framer-motion';
+import {WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search,} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
+import {useState, useEffect} from 'react';
+import {logErrorToProduction} from '@/utils/productionLogger';
 export default function OfflinePage() {
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
-
-  useEffect(() => {
+  useEffect(() =></string> {
     // Check online status
     const updateOnlineStatus = () => {
       setIsOnline(navigator.onLine);
       if (navigator.onLine) {
         setLastUpdate(new Date().toLocaleTimeString());
       }
-    };
-
+    }
     // Set initial status
     updateOnlineStatus();
-
     // Listen for online/offline events
     window.addEventListener('online', updateOnlineStatus);
     window.addEventListener('offline', updateOnlineStatus);
-
     return () => {
       window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus);
-    };
+    }
   }, []);
-
   const handleRetry = () => {
     try {
       setRetryCount(prev => prev + 1);
@@ -50,39 +36,37 @@ export default function OfflinePage() {
     } catch (err) {
       logErrorToProduction('Failed to reload page', err);
     }
-  };
-
+  }
   const quickActions = [
     {
-      title: 'Browse Cached Equipment',
-      description: 'View recently visited equipment listings',
-      icon: Search,
-      href: '/equipment',
-      available: true,
-    },
+      title: 'Browse Cached Equipment'
+      description: 'View recently visited equipment listings'
+      icon: Search
+      href: '/equipment'
+      available: true
+    }
     {
-      title: 'View Bookmarks',
-      description: 'Access your saved items',
-      icon: Bookmark,
-      href: '/bookmarks',
-      available: true,
-    },
+      title: 'View Bookmarks'
+      description: 'Access your saved items'
+      icon: Bookmark
+      href: '/bookmarks'
+      available: true
+    }
     {
-      title: 'Visit Marketplace',
-      description: 'Browse all available services and gear',
-      icon: ShoppingCart,
-      href: '/marketplace',
-      available: true,
-    },
+      title: 'Visit Marketplace'
+      description: 'Browse all available services and gear'
+      icon: ShoppingCart
+      href: '/marketplace'
+      available: true
+    }
     {
-      title: 'Go to Homepage',
-      description: 'Return to the main page',
-      icon: Home,
-      href: '/',
-      available: true,
-    },
+      title: 'Go to Homepage'
+      description: 'Return to the main page'
+      icon: Home
+      href: '/'
+      available: true
+    }
   ];
-
   return (
     <>
       <Head>
@@ -93,7 +77,6 @@ export default function OfflinePage() {
         />
         <meta name='robots' content='noindex, nofollow' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900'>
         <div className='container mx-auto px-4 py-8'>
           <motion.div
@@ -111,8 +94,8 @@ export default function OfflinePage() {
                     : { rotate: [0, -10, 10, -10, 0] }
                 }
                 transition={{
-                  duration: isOnline ? 0.6 : 2,
-                  repeat: isOnline ? 1 : Infinity,
+                  duration: isOnline ? 0.6 : 2
+                  repeat: isOnline ? 1 : Infinity
                 }}
                 className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${
                   isOnline
@@ -126,7 +109,6 @@ export default function OfflinePage() {
                   }`}
                 />
               </motion.div>
-
               <Badge
                 variant={isOnline ? 'default' : 'secondary'}
                 className='text-sm px-3 py-1'
@@ -134,17 +116,14 @@ export default function OfflinePage() {
                 {isOnline ? 'Connection Restored' : 'Offline Mode'}
               </Badge>
             </div>
-
             <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
               {isOnline ? "You're Back Online!" : "You're Offline"}
             </h1>
-
             <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-6'>
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
             </p>
-
             {lastUpdate && (
               <p className='text-sm text-muted-foreground flex items-center justify-center gap-2'>
                 <Clock className='w-4 h-4' />
@@ -152,7 +131,6 @@ export default function OfflinePage() {
               </p>
             )}
           </motion.div>
-
           {/* Action Buttons */}
           <div className='flex flex-col sm:flex-row gap-4 justify-center mb-12'>
             <Button
@@ -164,7 +142,6 @@ export default function OfflinePage() {
               <RefreshCw className='w-5 h-5' />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'}
             </Button>
-
             <Button
               asChild
               variant='outline'
@@ -176,7 +153,6 @@ export default function OfflinePage() {
                 Go to Homepage
               </Link>
             </Button>
-
             <Button
               asChild
               variant='outline'
@@ -189,7 +165,6 @@ export default function OfflinePage() {
               </Link>
             </Button>
           </div>
-
           {/* Quick Actions */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -199,7 +174,6 @@ export default function OfflinePage() {
             <h2 className='text-2xl font-bold text-center mb-8'>
               Available Offline Features
             </h2>
-
             <div className='grid md:grid-cols-3 gap-6 max-w-4xl mx-auto'>
               {quickActions.map((action, index) => (
                 <motion.div
@@ -257,7 +231,6 @@ export default function OfflinePage() {
               ))}
             </div>
           </motion.div>
-
           {/* Tips Section */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -299,7 +272,6 @@ export default function OfflinePage() {
               </CardContent>
             </Card>
           </motion.div>
-
           {/* Auto-refresh when online */}
           {isOnline && (
             <motion.div

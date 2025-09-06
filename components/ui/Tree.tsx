@@ -3,29 +3,6 @@ import React, { useState } from 'react';
 export interface TreeNode {
   name: string;
   path: string;
-  type: 'folder' | 'file';
-  exists?: boolean;
-  children?: TreeNode[];
-
-interface TreeProps {
-  nodes: TreeNode[];
-  onDeploy?: (path: string) => void;
-
-function NodeItem({
-  node,
-  depth,
-  onDeploy,
-}: {
-  node: TreeNode;
-  depth: number;
-  onDeploy?: (path: string) => void;
-}) {
-  const [open, setOpen] = useState<boolean>(false);
-
-  const hasChildren = Array.isArray(node.children) && node.children.length > 0;
-  const toggle = () => setOpen(v => !v);
-
-  const copyPath = async () => {
     await navigator.clipboard.writeText(node.path);
   };
 
@@ -33,8 +10,19 @@ function NodeItem({
     const url = `${window.location.origin}/api/dev/source-map`;
     await fetch(url, {
 method: 'POST',
+  exists?: boolean;
+  children?: TreeNode[]
+}
+interface TreeProps {
+  nodes: TreeNode[];
+  onDeploy?: (path: string) => void
+}
+function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const hasChildren = null;
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/json'
         // Expect an admin token in local storage, fall back to prompt
         'x-admin-token': localStorage.getItem('ADMIN_TOKEN') || '',
       } as any,
@@ -43,7 +31,6 @@ method: 'POST',
   };
 
   const deploy = () => onDeploy && onDeploy(node.path);
-
   return (
 <div className='ml-2'>
       <div className='flex items-center gap-2 py-1'>
@@ -110,26 +97,26 @@ export default Tree;
 }</div> </div> {
   hasChildren && open && (<div className="ml-4 border-l pl-2"> {
   node.children!.map ( (child) => (<NodeItem key= {
-  child.path 
+  child.path
 }node= {
-  child 
+  child
 }depth= {
-  depth + 1 
+  depth + 1
 }onDeploy= {
-  onDeploy 
-}/>) ) 
-}</div>) 
-}</div>) 
+  onDeploy
+}/>) )
+}</div>)
+}</div>)
 }export function Tree ({
-  nodes, onDeploy 
+  nodes, onDeploy
 }: TreeProps) {
   return (<div className="w-full"> {
   nodes.map ( (n) => (<NodeItem key= {
-  n.path 
+  n.path
 }node= {
-  n 
+  n
 }depth= {
-  0 
+  0
 }onDeploy= {
   onDeploy 
 }/>) ) 

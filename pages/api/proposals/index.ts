@@ -1,6 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
 
 async function ensureStore() {
@@ -11,13 +8,13 @@ if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   } catch {
     await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
-
+}
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   await ensureStore();
-  if (req.method === 'GET') {
+  if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
   }

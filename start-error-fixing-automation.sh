@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Error Fixing Automation Startup Script
 # This script starts the comprehensive error fixing automation system
 # Error Fixing Automation PM2 Management Script
@@ -45,6 +46,7 @@ pm2 start ecosystem-error-fixing.config.cjs --update-env
 # Show status
 echo "PM2 Status:"
 pm2 status
+
 echo "📋 Available commands:"
 echo "  pm2 logs error-fixer-automation          # View main error fixer logs"
 echo "  pm2 logs typescript-error-fixer          # View TypeScript error fixer logs"

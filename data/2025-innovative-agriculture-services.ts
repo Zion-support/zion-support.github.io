@@ -30,32 +30,23 @@ export interface InnovativeAgricultureService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number
+}
 
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-  {
-id: 'ai-powered-precision-agriculture',
-    name: 'AI-Powered Precision Agriculture',
+const contact = null;
     tagline:
-      'Intelligent farming with AI-powered crop monitoring and optimization',
-    price: '$1,899',
-    period: '/month',
+      'Intelligent farming with AI-powered crop monitoring and optimization'
+    price: '$1,899'
+    period: '/month'
     description:
-      'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',
+      'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.'
     features: [
       'AI-powered crop monitoring',
       'Irrigation optimization',

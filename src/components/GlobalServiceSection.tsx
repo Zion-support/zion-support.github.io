@@ -1,53 +1,56 @@
-import { GradientHeading } from './GradientHeading';
-import {
-  Server,
-  HardDrive,
-  Network,
-  Clock,
-  Recycle,
-  Truck,;
-} from 'lucide-react';
-import { Button } from './ui/button';
 
+import { GradientHeading } from "./GradientHeading";
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
+import { Button } from "./ui/button";
+const services = null;
+import { GradientHeading } from './GradientHeading'
+import {
+  Server
+  HardDrive
+  Network
+  Clock
+  Recycle
+  Truck
+} from 'lucide-react'
+import { Button } from './ui/button'
 const services = [
   {
-    title: 'Servers',
+    title: 'Servers'
     description:
-      'Enterprise-grade servers for any workload with 24/7 maintenance and support',
-    icon: <Server className='h-10 w-10' />,
-  },
+      'Enterprise-grade servers for any workload with 24/7 maintenance and support'
+    icon: <Server className='h-10 w-10' />
+  }
   {
-    title: 'Storage',
+    title: 'Storage'
     description:
-      'Scalable storage solutions from SSDs to large-scale enterprise storage systems',
-    icon: <HardDrive className='h-10 w-10' />,
-  },
+      'Scalable storage solutions from SSDs to large-scale enterprise storage systems'
+    icon: <HardDrive className='h-10 w-10' />
+  }
   {
-    title: 'Networking',
+    title: 'Networking'
     description:
-      'Connectivity solutions including switches, routers, and network security devices',
-    icon: <Network className='h-10 w-10' />,
-  },
+      'Connectivity solutions including switches, routers, and network security devices'
+    icon: <Network className='h-10 w-10' />
+  }
   {
-    title: '24x7x365 Support',
+    title: '24x7x365 Support'
     description:
-      'Around-the-clock technical support with rapid response times guaranteed',
-    icon: <Clock className='h-10 w-10' />,
-  },
+      'Around-the-clock technical support with rapid response times guaranteed'
+    icon: <Clock className='h-10 w-10' />
+  }
   {
-    title: 'Recycling Services',
+    title: 'Recycling Services'
     description:
-      'Sustainable disposal and recycling of IT equipment following eco-friendly practices',
-    icon: <Recycle className='h-10 w-10' />,
-  },
+      'Sustainable disposal and recycling of IT equipment following eco-friendly practices'
+    icon: <Recycle className='h-10 w-10' />
+  }
   {
-    title: 'Equipment Rentals',
+    title: 'Equipment Rentals'
     description:
-      'Flexible rental options for temporary projects and scaling requirements',
-    icon: <Truck className='h-10 w-10' />,
-  },
-];
-
+      'Flexible rental options for temporary projects and scaling requirements'
+    icon: <Truck className='h-10 w-10' />
+  }
+]
 export function GlobalServiceSection() {
   return (
     <section className='py-20 bg-zion-blue' id='global-services'>
@@ -59,7 +62,6 @@ export function GlobalServiceSection() {
             solutions for businesses of all sizes
           </p>
         </div>
-
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {services.map((service, index) => (
             <div

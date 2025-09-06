@@ -1,25 +1,18 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Rocket,
-  Globe,
-  Sparkles,;
-} from 'lucide-react';
-import Link from 'next/link';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
+import Link from 'next/link';
+import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
-
-
+  const featuredAIServices = null;
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -27,10 +20,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
 duration: 0.6,
       },
@@ -48,6 +41,16 @@ duration: 0.6,
       </div>
 
       <div className='max-w-7xl mx-auto relative z-10'>
+  return (
+    <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Enhanced Background Effects */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-cyan-900/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/20 via-transparent to-blue-900/20"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Enhanced Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -62,13 +65,11 @@ className='text-center mb-20'
               2026 Revolutionary Innovations
             </span>
           </div>
-
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8 leading-tight'>
             <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
               The Future is Now
             </span>
           </h2>
-
           <p className='text-gray-300 text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed'>
             Experience the most advanced AI, quantum computing, and metaverse
             technologies ever created.
@@ -78,7 +79,6 @@ className='text-center mb-20'
             </span>{' '}
             with our revolutionary solutions.
           </p>
-
           {/* Service Statistics */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
             <div className='text-center'>
@@ -107,7 +107,6 @@ className='text-center mb-20'
             </div>
           </div>
         </motion.div>
-
         {/* AI Autonomous Services Section */}
         <motion.div
           variants={containerVariants}
@@ -148,11 +147,9 @@ className='group relative'
                       <p className='text-blue-300 text-sm'>{service.tagline}</p>
                     </div>
                   </div>
-
                   <p className='text-gray-300 mb-4 text-sm leading-relaxed'>
                     {service.description}
                   </p>
-
                   <div className='space-y-3 mb-6'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className='flex items-center space-x-2'>
@@ -179,7 +176,6 @@ className='group relative'
                       </span>
                     </div>
                   </div>
-
                   <Link
                     href={service.link}
                     className='inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium'
@@ -201,7 +197,6 @@ className='group relative'
             </Link>
           </div>
         </motion.div>
-
         {/* Quantum Space Tech Services Section */}
         <motion.div
           variants={containerVariants}
@@ -244,11 +239,9 @@ className='group relative'
                       </p>
                     </div>
                   </div>
-
                   <p className='text-gray-300 mb-4 text-sm leading-relaxed'>
                     {service.description}
                   </p>
-
                   <div className='space-y-3 mb-6'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className='flex items-center space-x-2'>
@@ -275,7 +268,6 @@ className='group relative'
                       </span>
                     </div>
                   </div>
-
                   <Link
                     href={service.link}
                     className='inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors text-sm font-medium'
@@ -297,7 +289,6 @@ className='group relative'
             </Link>
           </div>
         </motion.div>
-
         {/* Metaverse & Digital Reality Services Section */}
         <motion.div
           variants={containerVariants}
@@ -338,11 +329,9 @@ className='group relative'
                       <p className='text-pink-300 text-sm'>{service.tagline}</p>
                     </div>
                   </div>
-
                   <p className='text-gray-300 mb-4 text-sm leading-relaxed'>
                     {service.description}
                   </p>
-
                   <div className='space-y-3 mb-6'>
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className='flex items-center space-x-2'>
@@ -369,7 +358,6 @@ className='group relative'
                       </span>
                     </div>
                   </div>
-
                   <Link
                     href={service.link}
                     className='inline-flex items-center text-pink-400 hover:text-pink-300 transition-colors text-sm font-medium'
@@ -391,7 +379,6 @@ className='group relative'
             </Link>
           </div>
         </motion.div>
-
         {/* Call to Action Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -413,7 +400,6 @@ className='text-center'
               </span>{' '}
               to start your transformation.
             </p>
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <Link
                 href='/contact'
@@ -422,7 +408,6 @@ className='text-center'
                 <Zap className='w-5 h-5 mr-2' />
                 Get Started Today
               </Link>
-
               <Link
                 href='/services'
                 className='inline-flex items-center px-8 py-4 border border-purple-500/50 text-purple-300 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300'
@@ -431,7 +416,6 @@ className='text-center'
                 <ArrowRight className='w-5 h-5 ml-2' />
               </Link>
             </div>
-
             <div className='mt-8 text-center'>
               <p className='text-gray-400 text-sm mb-2'>Contact Information</p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm'>

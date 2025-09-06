@@ -1,23 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-export const config = {
-  api: {
 responseLimit: false,
   },
 };
 
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   const { companyId, invoiceId } = req.query;
   if (
-    !companyId ||
-    typeof companyId !== 'string' ||
-    !invoiceId ||
-    typeof invoiceId !== 'string'
+    !companyId |
+    typeof companyId !== "string" |
+    !invoiceId |
+    typeof invoiceId !== "string"
   ) {
-    return res.status(400).json({ error: 'companyId and invoiceId required' });
+    return res.status(400).json({ error: "companyId and invoiceId required" });
   }
 
   if (req.method !== 'GET')
@@ -30,7 +26,7 @@ export default async function handler(
 
 res.setHeader('Content-Type', 'application/pdf');
   res.setHeader(
-    'Content-Disposition',
+    "Content-Disposition"
     `attachment; filename="invoice-${invoiceId}.pdf"`
   );
   res.status(200).send(pdfBuffer);

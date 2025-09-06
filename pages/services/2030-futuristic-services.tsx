@@ -1,6 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
 import {
   ArrowRight,
   Star,
@@ -161,11 +158,9 @@ description: 'Breakthrough research and development solutions',
           }}
         />
       </Head>
-
       <UltraFuturisticBackground2031>
         {/* Ultra Advanced Navigation */}
         <UltraFuturisticNavigation2031 />
-
         {/* Hero Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>
@@ -209,7 +204,6 @@ whileTap={{ scale: 0.95 }}
                 </motion.button>
               </div>
             </motion.div>
-
             {/* Stats */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
               {[
@@ -237,6 +231,7 @@ whileTap={{ scale: 0.95 }}
                   value: 'Quantum-Safe',
                   color: 'text-pink-400',
                 },
+                { icon: Shield, label: 'Security Rating', value: 'Quantum-Safe', color: 'text-pink-400' }
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -258,7 +253,6 @@ viewport={{ once: true }}
             </div>
           </div>
         </section>
-
         {/* Services by Category */}
         {serviceCategories.map((category, categoryIndex) => (
 <section
@@ -350,7 +344,6 @@ whileHover={{ y: -5 }}
             </div>
           </section>
         ))}
-
         {/* Contact CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -407,7 +400,6 @@ whileTap={{ scale: 0.95 }}
             </motion.div>
           </div>
         </section>
-
         {/* Footer */}
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2031>

@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
+import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
+  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
+ } from 'lucide-react';
 import {
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Users,
-  CheckCircle,
-  TrendingUp,
-  Clock,
-  Star,
-  Filter,
-  ChevronDown,;
+  Brain
+  Shield
+  Rocket
+  Cpu
+  Database
+  Atom
+  Users
+  CheckCircle
+  TrendingUp
+  Clock
+  Star
+  Filter
+  ChevronDown;
 } from 'lucide-react';
-
 interface Service {
   id: string;
   name: string;
@@ -31,12 +33,32 @@ interface Service {
   growthRate: string;
   popular?: boolean;
   icon: React.ComponentType<any>;
-  color: string;
+  color: string
+}
 
+const EnhancedServicesShowcase: React.FC;
+  color: string;} from 'lucide-react';
+interface Service {
+  id: string
+  name: string
+  tagline: string
+  category: string
+  price: string
+  period: string
+  setupTime: string
+  customers: string
+  features: string[]
+  benefits: string[]
+  roi: string
+  marketSize: string
+  growthRate: string
+  popular?: boolean;
+  icon: React.ComponentType<any>
+  color: string
+}
 const EnhancedServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const services: Service[] = [
     {
       id: 'ai-bi',
@@ -126,18 +148,22 @@ color: 'from-emerald-500 to-teal-500',
       id: 'space-tech',
       name: 'Space Technology Innovation',
       tagline:
-        'Accelerate space exploration with cutting-edge technology solutions',
-      category: 'Space Tech',
-      price: '$2,499',
-      period: '/month',
-      setupTime: '8-12 weeks',
-      customers: '25+',
+        'Deploy and manage applications at the edge with intelligent orchestration',      category: 'Infrastructure',      color: 'from-red-500 to-orange-500'
+    }
+    {
+      id: 'edge-computing'
+      name: 'Edge Computing Orchestration'
+      tagline: 'Deploy and manage applications at the edge with intelligent orchestration'
+      price: '$349'
+      period: '/month'
+      setupTime: '1-2 weeks'
+      customers: '200+'
       features: [
-        'Satellite management',
-        'AI mission planning',
-        'Quantum communication',
-        'Space analytics',
-      ],
+        'Edge node management'
+        'IoT device management'
+        'Real-time monitoring'
+        'Auto-scaling'
+      ]
       benefits: [
         'Mission success rate 95%+',
         'Reduced launch costs',
@@ -188,11 +214,11 @@ period: '/month',
       setupTime: '10-14 weeks',
       customers: '15+',
       features: [
-        'Quantum neural networks',
-        'Consciousness simulation',
-        'Advanced learning',
-        'Quantum optimization',
-      ],
+        'Quantum neural networks'
+        'Consciousness simulation'
+        'Advanced learning'
+        'Quantum optimization'
+      ]
       benefits: [
         'Unprecedented AI capabilities',
         'Breakthrough research',
@@ -240,7 +266,6 @@ color: 'from-blue-500 to-cyan-500',
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.1),transparent_50%)]' />
       </div>
-
       <div className='max-w-7xl mx-auto relative z-10'>
         {/* Header */}
         <div className='text-center mb-16'>
@@ -254,7 +279,6 @@ color: 'from-blue-500 to-cyan-500',
             business and accelerate innovation
           </p>
         </div>
-
         {/* Filters */}
 <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
@@ -276,7 +300,6 @@ color: 'from-blue-500 to-cyan-500',
             </select>
 <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
-
           {/* Search */}
           <div className='relative'>
             <input
@@ -289,7 +312,6 @@ color: 'from-blue-500 to-cyan-500',
             <Filter className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50' />
           </div>
         </div>
-
         {/* Services Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {filteredServices.map((service, index) => (
@@ -306,7 +328,6 @@ color: 'from-blue-500 to-cyan-500',
                   </div>
                 </div>
               )}
-
               {/* Service Content */}
 <div className='p-8'>
                 {/* Icon and Category */}
@@ -319,7 +340,7 @@ color: 'from-blue-500 to-cyan-500',
                   <div className='text-right'>
                     <div className='text-xs text-white/60 mb-1'>
                       {getCategoryIcon(service.category)({
-                        className: 'w-3 h-3',
+                        className: 'w-3 h-3'
                       })}
                     </div>
                     <div className='text-xs text-white/40'>
@@ -327,7 +348,6 @@ color: 'from-blue-500 to-cyan-500',
                     </div>
                   </div>
                 </div>
-
                 {/* Service Info */}
 <h3 className='text-xl font-bold mb-3 text-white'>
                   {service.name}
@@ -335,7 +355,6 @@ color: 'from-blue-500 to-cyan-500',
                 <p className='text-white/70 text-sm mb-4 leading-relaxed'>
                   {service.tagline}
                 </p>
-
                 {/* Pricing */}
                 <div className='mb-6'>
                   <div className='flex items-baseline gap-2 mb-2'>
@@ -355,7 +374,6 @@ color: 'from-blue-500 to-cyan-500',
                     </span>
                   </div>
                 </div>
-
                 {/* Key Features */}
 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -373,7 +391,6 @@ color: 'from-blue-500 to-cyan-500',
                     ))}
                   </div>
                 </div>
-
                 {/* Benefits */}
 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -391,7 +408,6 @@ color: 'from-blue-500 to-cyan-500',
                     ))}
                   </div>
                 </div>
-
                 {/* ROI and Market Info */}
 <div className='mb-6 p-4 bg-white/5 rounded-lg'>
                   <div className='text-xs text-white/60 mb-2'>
@@ -404,7 +420,6 @@ color: 'from-blue-500 to-cyan-500',
                     Market: {service.marketSize} • Growth: {service.growthRate}
                   </div>
                 </div>
-
                 {/* Action Buttons */}
 <div className='flex gap-3'>
                   <button
@@ -428,7 +443,6 @@ onClick={() =>
             </div>
           ))}
         </div>
-
         {/* CTA Section */}
 <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>

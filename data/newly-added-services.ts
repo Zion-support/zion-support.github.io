@@ -1,32 +1,19 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
-id: 'managed-ml-feature-store-starter',
-    name: 'Managed ML Feature Store Starter',
-    tagline: 'Production-ready feature store with governance and lineage',
-    price: '$249',
-    period: '/month',
+const contact = null;
     description:
-      'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.',
+      'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.'
     features: [
-      'Online/offline consistency checks',
-      'Schema/version governance',
-      'Backfills and point-in-time joins',
-      'Drift alerts and quality tests',
-      'RBAC and audit logs',
-    ],
-    popular: true,
-    icon: '🧬',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-300',
-    link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter',
+      'Online/offline consistency checks'
+      'Schema/version governance'
+      'Backfills and point-in-time joins'
+      'Drift alerts and quality tests'
+      'RBAC and audit logs'
+    ]
+    popular: true
+    icon: '🧬'
+    color: 'from-purple-600 to-indigo-700'
+    textColor: 'text-purple-300'
+    link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter'
     marketPosition:
       'Accelerates ML platform maturity versus building from scratch.',
     targetAudience: 'ML platform teams and data engineering',

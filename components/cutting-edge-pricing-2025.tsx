@@ -1,49 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Check,
-  Zap,
-  Shield,
-  Brain,
-  Atom,
-  Target,
-  Rocket,
-  Star,
-  TrendingUp,
-  Award,
-  Users,
-  ArrowRight,
-  ExternalLink,
-  Phone,
-  Mail,
-  MapPin,;
+import { motion  } from 'framer-motion';
+import { Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin
+ } from 'lucide-react';
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
-import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-
-];
-
-const serviceCategories = [
-  {
-    name: 'AI & Consciousness Services',
-icon: <Brain className='w-8 h-8' />,
-    color: 'from-cyan-500 to-blue-500',
-    services: cuttingEdgeAIServices2025.slice(0, 6),
+const contactInfo = null;
     description:
-      'Revolutionary AI platforms with consciousness and emotional intelligence',
-  },
+      'Revolutionary AI platforms with consciousness and emotional intelligence'
+  }
   {
-    name: 'Quantum & Emerging Tech',
-    icon: <Atom className='w-8 h-8' />,
-    color: 'from-purple-500 to-pink-500',
-    services: cuttingEdgeQuantumServices2025.slice(0, 6),
+    name: 'Quantum & Emerging Tech'
+    icon: <Atom className='w-8 h-8' />
+    color: 'from-purple-500 to-pink-500'
+    services: cuttingEdgeQuantumServices2025.slice(0, 6)
     description:
-      'Breakthrough quantum computing and space technology solutions',
-  },
+      'Breakthrough quantum computing and space technology solutions'
+  }
   {
     name: 'Enterprise IT Solutions',
     icon: <Shield className='w-8 h-8' />,
@@ -89,23 +66,21 @@ const stats = [
 
 export default function CuttingEdgePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const allServices = [
 ...cuttingEdgeAIServices2025,
     ...cuttingEdgeQuantumServices2025,
     ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025,
   ];
-
   const filteredServices =
     selectedCategory === 'all'
       ? allServices
       : allServices.filter(service => service.category === selectedCategory);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -127,6 +102,10 @@ duration: 0.5,
     <>
       <Head>
 <title>
+  return (
+    <>
+      <Head>
+        <title>
           Cutting-Edge Pricing 2025 - Zion Tech Group | Future Technology
           Solutions
         </title>
@@ -164,7 +143,6 @@ className='text-center'
                   Pricing 2025
                 </span>
               </motion.h1>
-
               <motion.p
                 className='text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed'
                 initial={{ opacity: 0, y: 20 }}
@@ -175,7 +153,6 @@ Experience revolutionary technology at competitive prices. Our
                 cutting-edge services are designed to give you a competitive
                 advantage while maintaining affordability and value.
               </motion.p>
-
               {/* Hero Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'
@@ -200,7 +177,6 @@ Experience revolutionary technology at competitive prices. Our
             </motion.div>
           </div>
         </section>
-
         {/* Pricing Tiers Section */}
 <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -267,7 +243,6 @@ className='text-center mb-16'
                         </span>
                       </div>
                     </div>
-
                     <ul className='space-y-4 mb-8'>
                       {tier.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className='flex items-start'>
@@ -276,7 +251,6 @@ className='text-center mb-16'
                         </li>
                       ))}
                     </ul>
-
                     <a
                       href={tier.ctaLink}
                       className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
@@ -294,7 +268,6 @@ className='text-center mb-16'
             </div>
           </div>
         </section>
-
         {/* Service Categories Section */}
 <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -317,7 +290,6 @@ className='text-center mb-16'
                 solutions for different business needs.
               </p>
             </motion.div>
-
             {/* Category Filter */}
 <div className='flex flex-wrap justify-center gap-4 mb-12'>
               <button
@@ -344,7 +316,6 @@ className='text-center mb-16'
                 </button>
               ))}
             </div>
-
             {/* Services Grid */}
             <motion.div
               variants={containerVariants}
@@ -375,7 +346,6 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                         </div>
                       </div>
                     </div>
-
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-4'>
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
@@ -387,13 +357,11 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                         </span>
                       ))}
                     </div>
-
                     {/* Market Info */}
 <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
-
                     {/* Pricing */}
                     <div className='mb-6'>
                       <h4 className='text-sm font-semibold text-cyan-400 mb-2 uppercase tracking-wider'>
@@ -406,7 +374,6 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                         </span>
                       </div>
                     </div>
-
                     {/* CTA */}
 <div className='flex items-center justify-between'>
                       <a
@@ -425,7 +392,6 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                       </a>
                     </div>
                   </div>
-
                   {/* Hover Effect Overlay */}
 <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />
                 </motion.div>
@@ -433,7 +399,6 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
             </motion.div>
           </div>
         </section>
-
         {/* Contact CTA Section */}
 <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
@@ -451,7 +416,6 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                 and get you started with our cutting-edge technology solutions.
                 Contact us today for a personalized consultation.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <a
                   href='/contact'
@@ -468,7 +432,6 @@ className='group relative overflow-hidden rounded-2xl border border-cyan-500/20 
                   Call Now
                 </a>
               </div>
-
               {/* Contact Info */}
 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div className='flex flex-col items-center'>

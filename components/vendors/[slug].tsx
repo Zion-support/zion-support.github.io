@@ -1,20 +1,14 @@
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useState } from 'react';
 import type { Vendor } from '../../utils/vendor-types';
-type Props = { vendor: Vendor | null };
-export default function VendorProfilePage({ vendor }: Props) {
-  const [message, setMessage] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
-
-if (!vendor) return <div className='text-gray-500'>Vendor not found.</div>;
-
+type Props = any;
   async function submitLead(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const title = String(formData.get('title') || 'New lead');
+    const title = String(formData.get('title') |'New lead');
     setLoading(true);
-    setMessage(null);
+    setMessage(null)
     try {
       const res = await fetch('/api/vendors/lead', {
         method: 'POST',
@@ -30,7 +24,6 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
       setLoading(false);
     }
   }
-
   return (
 <div className='space-y-8'>
       <div className='flex items-center gap-4'>
@@ -58,14 +51,12 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
           </div>
         </div>
       </div>
-
       <div>
 <h2 className='text-lg font-medium mb-2'>About</h2>
         <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-line'>
           {vendor.about || 'No description provided.'}
         </p>
       </div>
-
       {vendor.packages && vendor.packages.length > 0 && (
         <div>
 <h2 className='text-lg font-medium mb-2'>Packages</h2>
@@ -85,7 +76,6 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
           </div>
         </div>
       )}
-
       {vendor.sampleProjects && vendor.sampleProjects.length > 0 && (
         <div>
 <h2 className='text-lg font-medium mb-2'>Sample Projects</h2>
@@ -114,7 +104,6 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
           </div>
         </div>
       )}
-
       <div>
 <h2 className='text-lg font-medium mb-2'>Request a Quote</h2>
         <form onSubmit={submitLead} className='space-y-3'>
@@ -133,13 +122,11 @@ body: JSON.stringify({ vendorId: vendor.id, title }),
           {message && <div className='text-sm'>{message}</div>}
         </form>
       </div>
-
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
-
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
-  const slug = String(ctx.params?.slug || '');
+  const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };

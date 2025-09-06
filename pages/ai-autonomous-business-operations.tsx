@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIAutonomousBusinessOperations() {
-  
-    />
-  );
+			title;
+				"Integrations: Slack/Teams, Jira, Zendesk, QuickBooks, Stripe"
+			]}
+			industries={["SaaS", "Healthcare", "Finance", "Retail"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
+		/>
+	)
+}

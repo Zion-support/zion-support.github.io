@@ -1,6 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
 
   };
 
@@ -27,7 +24,6 @@ import Link from 'next/link';
                 ← Back to Resources
               </Link>
             </nav>
-
             {/* Header */}
 <header className='mb-12 text-center'>
               <div className='mb-4'>
@@ -55,7 +51,6 @@ import Link from 'next/link';
                 <p className='text-white/90 text-lg'>{caseStudy.results}</p>
               </div>
             </section>
-
             {/* Detailed Analysis */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
@@ -97,11 +92,27 @@ import Link from 'next/link';
                     increase in production efficiency and 60% reduction in
                     unplanned downtime. These improvements directly translated
                     to increased profitability and customer satisfaction.
+                    sharing data for comprehensive insights.
+                  </p>
+                </div>
+                <div className="bg-purple-500/10 rounded-lg p-6 border border-purple-500/20">
+                  <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>
+                  <p className="text-white/90">
+                    We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and
+                    predictive analytics to create a comprehensive automation solution that could adapt to changing
+                    production requirements.
+                  </p>
+                </div>
+                <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
+                  <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
+                  <p className="text-white/90">
+                    The implementation resulted in significant improvements across all key metrics, with the most
+                    notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime.
+                    These improvements directly translated to increased profitability and customer satisfaction.
                   </p>
                 </div>
               </div>
             </section>
-
             {/* Related Resources */}
 <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
@@ -134,7 +145,6 @@ import Link from 'next/link';
                 </Link>
               </div>
             </section>
-
             {/* Call to Action */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20'>

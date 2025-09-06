@@ -1,69 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router';
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { fireEvent } from '@/lib/analytics';
-import { SearchSuggestion } from '@/types/search';
-import { slugify } from '@/lib/slugify';
-import { useDebounce } from '@/hooks/useDebounce';
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
-
+  value: string;
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
-onChange: (val: string) => void;
+  onChange: (val: string) => void;
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
-onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
   /**
    * The placeholder text for the search input
    */
-  placeholder?: string;
-
+  placeholder?: string
+}
 /**
  * SearchBar component that allows users to search for content.
  */
-export function SearchBar({
-  value,
-  onChange,
-  onSelectSuggestion,
-  placeholder = 'Search...',
-}: SearchBarProps) {
-  const router = useRouter();
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [focused, setFocused] = useState(false);
-  const [highlightedIndex, setHighlightedIndex] = useState(-1);
-const listId = 'searchbar-autocomplete-list';
-  const debounced = useDebounce(value, 150);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-
-  useEffect(() => {
-    if (!debounced) {
-      setSuggestions([]);
-      setHighlightedIndex(-1);
-      return;
+export function SearchBar({ value, onChange, onSelectSuggestion, placeholder;
+              default: break
     }
-    const controller = new AbortController();
+    const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
-      signal: controller.signal,
+      signal: controller.signal
     })
       .then(res => {
-        if (!res.ok) throw new Error('Failed to fetch suggestions');
-        return res.json();
+        if (!res.ok) throw new Error('Failed to fetch suggestions')
+        return res.json()
       })
       .then(data => {
         if (Array.isArray(data)) {
           setSuggestions(data.slice(0, 5));
         } else {
-          setSuggestions([]);
+          setSuggestions([])
         }
-        setHighlightedIndex(-1);
+        setHighlightedIndex(-1)
       })
       .catch(() => setSuggestions([]));
 return () => controller.abort();
@@ -90,8 +62,7 @@ inputRef.current?.blur();
       aria-expanded={focused && suggestions.length > 0}
       aria-haspopup='listbox'
       aria-controls={listId}
-      data-testid='search-bar'
-    >
+      data-testid='search-bar'    >
       <div className='relative'>
         <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-zion-slate' />
         <Input
@@ -102,24 +73,22 @@ inputRef.current?.blur();
           value={value}
           onChange={e => onChange(e.target.value)}
           onFocus={e => {
-            setFocused(true);
-            // Ensure the input receives focus properly
+            setFocused(true);            // Ensure the input receives focus properly
             e.target.setSelectionRange(
-              e.target.value.length,
               e.target.value.length
-            );
+              e.target.value.length
+            )
           }}
           onBlur={e => {
             // Only blur if not clicking on suggestions
-            const relatedTarget = e.relatedTarget as HTMLElement;
+            const relatedTarget = e.relatedTarget as HTMLElement
             if (
-              !relatedTarget ||
+              !relatedTarget |
               !containerRef.current?.contains(relatedTarget)
             ) {
-              setFocused(false);
-              setHighlightedIndex(-1);
-            }
-          }}
+              setFocused(false)
+              setHighlightedIndex(-1)
+            }          }}
           className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate'
           aria-autocomplete='list'
           aria-activedescendant={
@@ -146,14 +115,13 @@ inputRef.current?.blur();
               }
               return;
             }
-
             switch (e.key) {
               case 'ArrowDown':
                 e.preventDefault();
 setHighlightedIndex(prev => (prev + 1) % suggestions.length);
                 break;
               case 'ArrowUp':
-                e.preventDefault();
+                e.preventDefault()
                 setHighlightedIndex(
                   prev => (prev - 1 + suggestions.length) % suggestions.length
                 );
@@ -194,12 +162,12 @@ className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-
         )}
       </div>
       <AutocompleteSuggestions
-        suggestions={suggestions}
-        searchTerm={value}
-        onSelectSuggestion={handleSelect}
-        visible={focused}
-        highlightedIndex={highlightedIndex}
-        listId={listId}
+        suggestions = {suggestions,}
+        searchTerm = {value,}
+        onSelectSuggestion = {handleSelect,}
+        visible = {focused,}
+        highlightedIndex = {highlightedIndex,}
+        listId = {listId,}
       />
     </div>
 );

@@ -1,7 +1,8 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import { useRouter  } from 'next/router';
 import TalentGrid from '../../components/seo/TalentGrid';
 import FAQ from '../../components/seo/FAQ';
+export type LandingPayload = any;
 export type LandingPayload = {
   title: string;
   h1: string;
@@ -13,13 +14,11 @@ export type LandingPayload = {
 
 export default function SEOLandingPage() {
   const router = useRouter();
-  const { slug } = router.query as { slug?: string };
-
+  const { slug } = router.query as { slug?: string }
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
-
   React.useEffect(() => {
-    if (!router.isReady || !slug) return;
-    const dataParam = (router.query?.data as string) || '';
+    if (!router.isReady |!slug) return;
+    const dataParam = (router.query?.data as string) |'';
     if (dataParam) {
       try {
         setPayload(JSON.parse(decodeURIComponent(dataParam)));
@@ -38,7 +37,6 @@ return;
   }, [router.isReady, slug]);
 
   if (!payload) return null;
-
   return (
 <div className='max-w-4xl mx-auto'>
       <head>
@@ -53,12 +51,10 @@ return;
         className='prose dark:prose-invert max-w-none'
         dangerouslySetInnerHTML={{ __html: payload.bodyHtml }}
       />
-
       <div className='mt-8'>
         <h2 className='text-lg font-semibold mb-2'>Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
       </div>
-
       <FAQ items={payload.faq} />
     </div>
 );

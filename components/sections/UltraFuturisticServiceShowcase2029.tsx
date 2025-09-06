@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
-
 interface Service {
 id: string;
   name: string;
@@ -10,7 +9,8 @@ id: string;
   price: string;
   description: string;
   features: string[];
-  link: string;
+  link: string
+}
 
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[];
@@ -25,6 +25,10 @@ export default function UltraFuturisticServiceShowcase2029({
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+}: UltraFuturisticServiceShowcase2029Props) {
+  return (
+    <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +60,6 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                   <span className='text-sm text-gray-300'>5.0</span>
                 </div>
               </div>
-
               <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {service.name}
               </h3>
@@ -64,7 +67,6 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
               <p className='text-gray-300 mb-4 line-clamp-3'>
                 {service.description}
               </p>
-
               <div className='flex items-center justify-between mb-4'>
                 <span className='text-2xl font-bold text-cyan-400'>
                   {service.price}
@@ -75,7 +77,6 @@ className='group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 back
                   <Brain className='w-4 h-4 text-purple-400' />
                 </div>
               </div>
-
               <Link
                 href={service.link}
 className='inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'
@@ -86,7 +87,6 @@ className='inline-flex items-center justify-center w-full bg-gradient-to-r from-
             </motion.div>
           ))}
         </div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

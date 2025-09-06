@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState  } from 'react';
 import Head from 'next/head';
-
+    const res = null;
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
   }
 
+    const res = await fetch('/api/offworld/orbit?action=chat', {
+      method: 'POST'
+      headers: { 'content-type': 'application/json' }
+      body: JSON.stringify({ from: 'anon', text: chat })
+    });
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
+  }
   async function castVote() {
     setStatus('Recording vote...');
 const res = await fetch('/api/offworld/orbit?action=vote', {
@@ -12,20 +21,18 @@ const res = await fetch('/api/offworld/orbit?action=vote', {
     });
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
   }
-
   async function syncProfile() {
     setStatus('Pinning profile...');
 const res = await fetch('/api/offworld/ipfs?action=json', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({
-        profile: { name, skills: skills.split(',').map(s => s.trim()) },
-      }),
+        profile: { name, skills: skills.split(',').map(s => s.trim()) }
+      })
     });
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
   }
-
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
 const res = await fetch('/api/offworld/ipfs?action=broadcast', {
@@ -34,15 +41,12 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       body: JSON.stringify({ message: 'We build beyond platforms.' }),
     });
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
-  }
-
   return (
     <div className='min-h-screen p-8 space-y-8'>
       <Head>
         <title>Zion Offworld Console</title>
       </Head>
       <h1 className='text-2xl font-bold'>Offworld Console</h1>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>Chat</h2>
         <input
@@ -58,7 +62,6 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
           Send
         </button>
       </section>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>DAO Voting</h2>
         <input
@@ -83,7 +86,6 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
           Vote
         </button>
       </section>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>Talent Profile Sync</h2>
         <input
@@ -105,7 +107,6 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
           Pin Profile to IPFS
         </button>
       </section>
-
       <section className='space-y-2'>
         <h2 className='font-semibold'>Broadcast Manifesto</h2>
         <button
@@ -115,7 +116,6 @@ const res = await fetch('/api/offworld/ipfs?action=broadcast', {
           Broadcast
         </button>
       </section>
-
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
   );

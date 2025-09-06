@@ -1,54 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-import {
-  ExternalLink,
-  Check,
-  Star,
-  Zap,
-  Users,
-  Globe,
-  BarChart3,
-  Bot,
-  Cloud,
-  Lock,
-  Database,
-  Code,
-  Palette,
-  Search,
-  Mail,
-  Calendar,
-  CreditCard,
-  FileText,
-  Video,
-  Music,
-  Image,
-  Globe2,
-  Smartphone,
-  Monitor,
-  Server,
-  Cpu,
-  HardDrive,
-  Brain,
-  Target,
-  TrendingUp,
-  Shield,
-  Rocket,
-  Briefcase,
-  Cog,
-  Lightbulb,
-  ChartBar,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  MessageSquare,;
-} from 'lucide-react';
-
+import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+export default function BusinessToolsPage() {
+  const businessTools = null;
+            communicate effectively, market their products, and grow their operations. Real pricing and features.
 export default function BusinessToolsPage() {
   const businessTools = [
     {
-      category: 'Project Management',
+      category: 'Project Management'
       tools: [
         {
           name: 'Notion',
@@ -401,7 +362,6 @@ description:
 color: 'text-orange-400',
     },
   ];
-
   const productivityTips = [
     {
       title: 'Start with Free Tiers',
@@ -412,17 +372,17 @@ description:
     {
       title: 'Focus on Integration',
       description:
-        'Choose tools that work well together to avoid data silos and manual work.',
-      icon: <Cog className='w-6 h-6 text-blue-400' />,
-    },
+        'Choose tools that work well together to avoid data silos and manual work.'
+      icon: <Cog className='w-6 h-6 text-blue-400' />
+    }
     {
-      title: 'Measure ROI',
+      title: 'Measure ROI'
       description:
-        "Track how each tool improves your team's productivity and business outcomes.",
-      icon: <ChartBar className='w-6 h-6 text-purple-400' />,
-    },
+        "Track how each tool improves your team's productivity and business outcomes."
+      icon: <ChartBar className='w-6 h-6 text-purple-400' />
+    }
     {
-      title: 'Train Your Team',
+      title: 'Train Your Team'
       description:
         'Invest in proper training to maximize the value of your chosen tools.',
       icon: <Users className='w-6 h-6 text-orange-400' />,
@@ -447,13 +407,11 @@ description:
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -469,7 +427,6 @@ description:
           </p>
         </div>
       </section>
-
       {/* Business Insights */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -482,7 +439,6 @@ description:
               landscape and emerging opportunities.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {businessInsights.map((insight, index) => (
               <Card
@@ -506,7 +462,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Business Tools */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -520,7 +475,6 @@ description:
               and business impact.
             </p>
           </div>
-
           {businessTools.map((category, categoryIndex) => (
 <div key={categoryIndex} className='mb-20'>
               <div className='text-center mb-12'>
@@ -561,7 +515,6 @@ style={{
                         {tool.description}
                       </p>
                     </div>
-
                     <div className='mb-6'>
                       <div className='text-center mb-4'>
                         <span className='text-2xl font-bold text-cursor-blue'>
@@ -580,7 +533,6 @@ style={{
                         ))}
                       </ul>
                     </div>
-
                     <Button
                       href={tool.website}
 variant='primary'
@@ -598,20 +550,17 @@ variant='primary'
           ))}
         </div>
       </section>
-
       {/* Productivity Tips */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-16'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-              Productivity Tips & Best Practices
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
               strategies and best practices.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {productivityTips.map((tip, index) => (
               <Card
@@ -631,13 +580,11 @@ variant='primary'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8'>
-            Ready to Transform Your Business Operations?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team

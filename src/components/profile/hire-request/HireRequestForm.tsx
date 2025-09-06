@@ -17,45 +17,69 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string;
     email?: string;
-    id?: string;
-  };
-  onSubmitSuccess?: () => void;
-
+    id?: string
+  }
+  onSubmitSuccess?: () => void
 export function HireRequestForm({
-  talent,
-  onClose,
-  initialJobTitle,
-  userDetails,
-  onSubmitSuccess,
+  talent
+  onClose
+  initialJobTitle
+  userDetails
+  onSubmitSuccess
 }: HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
-    talent,
-    onClose: onSubmitSuccess || onClose,
-    initialJobTitle,
-    userDetails,
-  });
-
+    talent
+    onClose: onSubmitSuccess |onClose
+    initialJobTitle
+    userDetails
+  })
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <PersonalInfoFields form={form} />
         </div>
-
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
-
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <BudgetFields form={form} talent={talent} />
         </div>
-
         <DialogFooter className='pt-4'>
           <Button
             type='button'
             variant='outline'
             onClick={onClose}
-            className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
+    talent;
+    onClose: onSubmitSuccess || onClose;
+    initialJobTitle;
+    userDetails 
+  });
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <PersonalInfoFields form={form} />
+        </div>
+        <ProjectDetailsField form={form} />
+        <TimelineField form={form} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <BudgetFields form={form} talent={talent} />
+        </div>
+        <DialogFooter className="pt-4">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onClose}
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
             disabled={isSubmitting}
+        <DialogFooter className="pt-4">
+          <Button
+            type="button"
+            variant="outline"
+            onClick = {onClose,}
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+            disabled = {isSubmitting,}
           >
             Cancel
           </Button>
@@ -63,6 +87,7 @@ export function HireRequestForm({
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'
             disabled={isSubmitting}
+            disabled = {isSubmitting,}
           >
             {isSubmitting ? (
               <>

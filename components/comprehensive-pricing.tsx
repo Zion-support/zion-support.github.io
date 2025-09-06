@@ -1,77 +1,83 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Head from 'next/head';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond  } from 'lucide-react';
+import Button from '../components/ui/Button',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { revolutionaryMicroSaasServices, revolutionaryServiceCategories  } from '../data/revolutionary-micro-saas-services';
+import { enhancedMicroSaasServices  } from '../data/enhanced-micro-saas-services';
 import {
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  Eye,
-  Trophy,
-  FlaskConical as FlaskIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Crown,
-  Gem,
-  Diamond,;
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon
+  Crown
+  Gem
+  Diamond;
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -82,13 +88,11 @@ import {
 } from '../data/revolutionary-micro-saas-services';
 import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
-
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('price');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
 const allServices = [
     ...revolutionaryMicroSaasServices,
@@ -112,17 +116,14 @@ const allServices = [
     { value: 'category', label: 'Category' },
 { value: 'roi', label: 'Highest ROI' },
   ];
-
   // Filter and sort services
   let filteredServices = allServices;
-
   // Category filter
   if (selectedCategory !== 'All') {
 filteredServices = filteredServices.filter(
       service => service.category === selectedCategory
     );
   }
-
   // Price range filter
   if (priceRange !== 'All') {
 const [min, max] = priceRange
@@ -144,7 +145,6 @@ filteredServices = filteredServices.filter(
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }
-
   // Sort services
   filteredServices.sort((a, b) => {
     switch (sortBy) {
@@ -158,14 +158,13 @@ return (
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] |'0');
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] |'0');
         return bRoi - aRoi;
 default:
         return a.name.localeCompare(b.name);
     }
   });
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -176,10 +175,10 @@ website: 'https://ziontechgroup.com',
   // Pricing tiers
   const pricingTiers = [
     {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for small businesses and startups'
       features: [
 'Basic service access',
         'Email support',
@@ -255,11 +254,10 @@ icon: <Shield className='w-6 h-6' />,
 icon: <TrendingUp className='w-6 h-6' />,
     },
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -267,10 +265,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
 duration: 0.5,
       },
@@ -312,7 +310,6 @@ duration: 0.5,
             href='https://ziontechgroup.com/comprehensive-pricing'
           />
         </Head>
-
         {/* Hero Section */}
         <section className='relative py-20 overflow-hidden'>
           <div className='container mx-auto px-4 text-center'>
@@ -339,7 +336,6 @@ Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.
               </motion.p>
-
               {/* Market Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
@@ -359,7 +355,6 @@ Transparent pricing for all our revolutionary micro SaaS
                   </div>
                 ))}
               </motion.div>
-
               {/* CTA Buttons */}
 <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
@@ -375,7 +370,6 @@ Transparent pricing for all our revolutionary micro SaaS
                       .getElementById('pricing-tiers')
                       ?.scrollIntoView({ behavior: 'smooth' })
                   }
-                >
                   View Pricing Tiers
                   <DollarSign className='ml-2 w-5 h-5' />
                 </Button>
@@ -395,7 +389,6 @@ Transparent pricing for all our revolutionary micro SaaS
             </div>
           </div>
         </section>
-
         {/* Contact Information Banner */}
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-purple-400/20'>
           <div className='container mx-auto px-4'>
@@ -415,7 +408,6 @@ Transparent pricing for all our revolutionary micro SaaS
             </div>
           </div>
         </section>
-
         {/* Pricing Tiers */}
 <section id='pricing-tiers' className='py-20'>
           <div className='container mx-auto px-4'>
@@ -438,7 +430,6 @@ Transparent pricing for all our revolutionary micro SaaS
                 plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
-
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'
               variants={containerVariants}
@@ -483,7 +474,6 @@ variant={
                       </div>
                       <div className='text-sm text-gray-400'>{tier.period}</div>
                     </div>
-
                     <div className='space-y-3 mb-8'>
                       {tier.features.map((feature, idx) => (
                         <div key={idx} className='flex items-center gap-2'>
@@ -501,7 +491,7 @@ variant={
                         size='md'
                         onClick={() =>
                           window.open(
-                            'https://ziontechgroup.com/contact',
+                            'https://ziontechgroup.com/contact'
                             '_blank'
                           )
                         }
@@ -517,7 +507,6 @@ variant={
             </motion.div>
           </div>
         </section>
-
         {/* Services Pricing Grid */}
 <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
@@ -543,7 +532,6 @@ variant={
                       </option>
                     ))}
                   </select>
-
                   <select
                     value={priceRange}
                     onChange={e => setPriceRange(e.target.value)}
@@ -555,7 +543,6 @@ variant={
                       </option>
                     ))}
                   </select>
-
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
@@ -568,7 +555,6 @@ variant={
                     ))}
                   </select>
                 </div>
-
                 <div className='flex items-center gap-4'>
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -598,7 +584,6 @@ variant={
                 </div>
               </div>
             </motion.div>
-
             {/* Services Display */}
 <motion.div
               className={
@@ -638,7 +623,6 @@ variant={(service.variant as any) || 'quantum-advanced'}
                         <div className='text-sm text-gray-400 mb-4'>
                           {service.period}
                         </div>
-
                         <div className='space-y-2 mb-6'>
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div
@@ -666,7 +650,7 @@ variant={(service.variant as any) || 'quantum-advanced'}
                             size='sm'
                             onClick={() =>
                               window.open(
-                                'https://ziontechgroup.com/contact',
+                                'https://ziontechgroup.com/contact'
                                 '_blank'
                               )
                             }
@@ -702,7 +686,6 @@ variant={(service.variant as any) || 'quantum-advanced'}
                               </div>
                             </div>
                           </div>
-
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                             <div>
                               <h4 className='text-sm font-semibold text-cyan-400 mb-2'>
@@ -744,7 +727,6 @@ variant={(service.variant as any) || 'quantum-advanced'}
                               </div>
                             </div>
                           </div>
-
                           <div className='flex gap-2'>
                             <Button
                               variant='primary'
@@ -761,7 +743,7 @@ variant={(service.variant as any) || 'quantum-advanced'}
                               size='sm'
                               onClick={() =>
                                 window.open(
-                                  'https://ziontechgroup.com/contact',
+                                  'https://ziontechgroup.com/contact'
                                   '_blank'
                                 )
                               }
@@ -777,7 +759,6 @@ variant={(service.variant as any) || 'quantum-advanced'}
                 </motion.div>
               ))}
             </motion.div>
-
             {filteredServices.length === 0 && (
 <motion.div
                 className='text-center py-16'
@@ -803,10 +784,14 @@ variant={(service.variant as any) || 'quantum-advanced'}
                   Clear Filters
                 </Button>
               </motion.div>
+                     setPriceRange('All')
+                   }}
+                 >
+                   Clear Filters
+                 </Button>
             )}
           </div>
         </section>
-
         {/* Contact Section */}
 <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
@@ -824,7 +809,6 @@ variant={(service.variant as any) || 'quantum-advanced'}
                 Contact our sales team to discuss pricing, custom plans, and
                 implementation options.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <Button
                   variant='primary'
@@ -847,7 +831,6 @@ variant={(service.variant as any) || 'quantum-advanced'}
                   <Calendar className='ml-2 w-5 h-5' />
                 </Button>
               </div>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div>
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />

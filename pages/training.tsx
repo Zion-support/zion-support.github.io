@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
 import {
   GraduationCap,
   Users,
@@ -37,7 +33,7 @@ import {
 
 export default function TrainingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
+  const [expandedProgram, setExpandedProgram] = useState<number | null>(null),
 
   const trainingCategories = [
     { id: 'all', name: 'All Programs', count: 24 },
@@ -870,3 +866,4 @@ href='/resources'
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 };
 export default Training;
+};export default Training;

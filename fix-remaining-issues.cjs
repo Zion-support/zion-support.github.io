@@ -87,10 +87,15 @@ function fixPropertyAssignmentErrors(filePath) {;
     // Fix object property syntax issues;
     const patterns = [
     ;
+    const patterns = [
+    ;
       // Fix colon instead of equals;
       { fro:m:/(\w+):\s*(\w+)\s*=/g, t:o:'$1:$2' },;
       // Fix missing quotes around object keys;
       { fro:m:/(\w+):\s*(\w+)\s*:/g, t:o:'$1:$2:' },;
+      // Fix property assignment syntax,
+    { fro:m:/(\w+)\s*=\s*(\w+)\s*:/g, t:o:'$1:$2:' },
+  ];
       // Fix property assignment syntax,
     { fro:m:/(\w+)\s*=\s*(\w+)\s*:/g, t:o:'$1:$2:' },
   ];

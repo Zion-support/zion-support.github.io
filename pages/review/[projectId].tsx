@@ -1,21 +1,16 @@
-import React from 'react';
-import type { NextPage, GetServerSideProps } from 'next';
-import ReviewForm from '../../components/reviews/ReviewForm';
-import { findProjectById } from '../../utils/dataStore';
 type Props = {
   projectId: string;
-  fromRole: 'client' | 'talent';
+  fromRole: "client" | "talent";
   fromId: string;
   valid: boolean;
   reason?: string;
-};
-
+}
 const ReviewSubmitPage: NextPage<Props> = ({
-  projectId,
-  fromRole,
-  fromId,
-  valid,
-  reason,
+  projectId
+  fromRole
+  fromId
+  valid
+  reason
 }) => {
   if (!valid) {
     return (
@@ -54,44 +49,40 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
       },
     };
   }
-
   const project = await findProjectById(projectId);
   if (!project) {
 return {
       props: {
-        projectId,
-        fromRole: role,
-        fromId,
-        valid: false,
-        reason: 'Project not found',
-      },
+        projectId
+        fromRole: role
+        fromId
+        valid: false
+        reason: "Project not found"
+      }
     } as any;
   }
-  if (project.status !== 'Completed') {
+  if (project.status !== "Completed") {
     return {
       props: {
-        projectId,
-        fromRole: role,
-        fromId,
-        valid: false,
-        reason: 'Project is not completed yet',
-      },
+        projectId
+        fromRole: role
+        fromId
+        valid: false
+        reason: "Project is not completed yet"
+      }
     } as any;
   }
-
   const expectedFromId =
-    role === 'client' ? project.clientId : project.talentSlug;
+    role === "client" ? project.clientId : project.talentSlug;
   const valid = expectedFromId === fromId;
-
   return {
     props: {
-      projectId,
-      fromRole: role,
-      fromId,
-      valid,
-      reason: valid ? null : 'Invalid reviewer for this project',
-    },
+      projectId
+      fromRole: role
+      fromId
+      valid
+      reason: valid ? null : "Invalid reviewer for this project"
+    }
   } as any;
-};
-
+}
 export default ReviewSubmitPage;

@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/Layout';
-
-export default function APIDocsPage() {
+export default function ApiDocsPage() {
   return (
     <>
       <Head>

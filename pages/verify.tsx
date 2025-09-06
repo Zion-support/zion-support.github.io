@@ -1,6 +1,6 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head';
-import { getBadgeLabels } from '../utils/kyc';
+import { getBadgeLabels  } from '../utils/kyc';
 import type { KycProfile, KycRole, KycDocumentMeta } from '../utils/kyc';
 import { VerifiedBadge } from '../components/ui/VerifiedBadge';
 
@@ -8,10 +8,6 @@ import { VerifiedBadge } from '../components/ui/VerifiedBadge';
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
-  const [message, setMessage] = useState<string>('');
-
-  const progress = useMemo(() => {
-    if (!profile) return 0;
 const uploaded = new Set((profile.documents || []).map(d => d.kind));
     const required = requiredDocs.length;
     const have = Array.from(uploaded).filter(k =>
@@ -43,13 +39,13 @@ body: JSON.stringify({
       setRequiredDocs(data.requiredDocuments);
 setOptionalDocs(data.optionalDocuments);
     } else {
-      setMessage(data.error || 'Failed to start');
+      setMessage(data.error |'Failed to start');
     }
     setBusy(false);
   }
 
   async function upload(kind: KycDocumentMeta['kind']) {
-    const filename = prompt(`Enter filename for ${kind}`) || '';
+    const filename = prompt(`Enter filename for ${kind}`) |'';
     if (!filename) return;
     setBusy(true);
     const res = await fetch('/api/kyc/upload', {
@@ -61,7 +57,7 @@ body: JSON.stringify({ userId, kind, filename }),
     if (data.ok) {
       setProfile(data.profile);
     } else {
-      setMessage(data.error || 'Upload failed');
+      setMessage(data.error |'Upload failed');
     }
     setBusy(false);
   }
@@ -78,7 +74,7 @@ body: JSON.stringify({ userId }),
       setProfile(data.profile);
       setMessage('Submitted. AML check performed.');
     } else {
-      setMessage(data.error || 'Submit failed');
+      setMessage(data.error |'Submit failed');
     }
     setBusy(false);
   }
@@ -100,7 +96,6 @@ body: JSON.stringify({ userId }),
         <p className='text-sm text-gray-600 mb-6'>
           Guided step-by-step KYC/AML verification with progress tracking.
         </p>
-
         {labels.length > 0 && (
           <div className='mb-4'>
             <VerifiedBadge labels={labels} />
@@ -171,7 +166,6 @@ body: JSON.stringify({ userId }),
             Start/Update
           </button>
         </div>
-
         {profile && (
           <div className='space-y-6'>
             <div>
@@ -189,15 +183,13 @@ body: JSON.stringify({ userId }),
                 />
               </div>
             </div>
-
             <section>
 <h2 className='font-semibold mb-2'>Required documents</h2>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                 {requiredDocs.map(k => {
-                  const hasIt = (profile.documents || []).some(
+                  const hasIt = (profile.documents |[]).some(
                     d => d.kind === k
                   );
-                  
                     >
                       <div>
                         <div className='text-sm font-medium'>{k}</div>
@@ -217,16 +209,14 @@ body: JSON.stringify({ userId }),
                 })}
               </div>
             </section>
-
             {optionalDocs.length > 0 && (
               <section>
 <h2 className='font-semibold mb-2'>Optional documents</h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
                   {optionalDocs.map(k => {
-                    const hasIt = (profile.documents || []).some(
+                    const hasIt = (profile.documents |[]).some(
                       d => d.kind === k
                     );
-                    
                       >
                         <div>
                           <div className='text-sm font-medium'>{k}</div>
@@ -247,12 +237,11 @@ body: JSON.stringify({ userId }),
                 </div>
               </section>
             )}
-
             <div>
 <button
                 disabled={
-                  busy ||
-                  profile.status === 'submitted' ||
+                  busy |
+                  profile.status === 'submitted' |
                   profile.status === 'approved'
                 }
                 onClick={submit}

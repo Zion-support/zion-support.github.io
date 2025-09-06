@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react';
-
-export type ResumeData = {
-name: string;
+export type ResumeData = any;
   contact?: {
     email?: string;
     phone?: string;
@@ -34,30 +32,25 @@ bullets?: string[];
     link?: string;
     technologies?: string[];
   }>;
-};
-
+}
 export type ResumePreviewProps = {
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
-};
-
+}
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
-  children,
+  children
 }) => (
   <h2 className='text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1'>
     {children}
   </h2>
 );
-
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
 const portfolioItems = (data.portfolio || []).slice(
       0,
       Math.max(0, maxPortfolioItems)
     );
-
-    
       >
         <div className='p-8'>
           {/* Header */}
@@ -101,7 +94,6 @@ const portfolioItems = (data.portfolio || []).slice(
               )}
             </div>
           </header>
-
           {/* Summary */}
           {data.summary && (
 <section className='mb-5'>
@@ -111,7 +103,6 @@ const portfolioItems = (data.portfolio || []).slice(
               </p>
             </section>
           )}
-
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (
 <section className='mb-5'>
@@ -136,7 +127,6 @@ const portfolioItems = (data.portfolio || []).slice(
               </div>
             </section>
           )}
-
           {/* Experience */}
           {data.experience?.length ? (
 <section className='mb-5'>
@@ -152,7 +142,7 @@ const portfolioItems = (data.portfolio || []).slice(
                       <div className='text-xs text-gray-600 dark:text-gray-300'>
                         {(role.start || role.end) && (
                           <span>
-                            {role.start || ''}
+                            {role.start |''}
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
                         )}
@@ -171,7 +161,6 @@ const portfolioItems = (data.portfolio || []).slice(
               </div>
             </section>
           ) : null}
-
           {/* Education */}
           {data.education?.length ? (
 <section className='mb-5'>
@@ -184,7 +173,7 @@ const portfolioItems = (data.portfolio || []).slice(
                     </div>
                     <div className='text-gray-700 dark:text-gray-300'>
                       {[
-                        ed.degree,
+                        ed.degree
                         ed.start && ed.end
                           ? `${ed.start} – ${ed.end}`
                           : ed.start || ed.end,
@@ -197,7 +186,6 @@ const portfolioItems = (data.portfolio || []).slice(
               </div>
             </section>
           ) : null}
-
           {/* Certifications */}
           {data.certifications?.length ? (
 <section className='mb-5'>
@@ -209,7 +197,6 @@ const portfolioItems = (data.portfolio || []).slice(
               </ul>
             </section>
           ) : null}
-
           {/* Portfolio */}
           {portfolioItems.length ? (
 <section className='mb-5'>
@@ -257,7 +244,6 @@ const portfolioItems = (data.portfolio || []).slice(
     );
   }
 );
-
 ResumePreview.displayName = 'ResumePreview';
 
 export default ResumePreview;

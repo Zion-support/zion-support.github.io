@@ -1,6 +1,5 @@
 import React from 'react';
 import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
-
 interface SidebarProps {
 spec: ApiDocsSpec;
   activeEndpointId?: string;
@@ -8,16 +7,17 @@ spec: ApiDocsSpec;
   selectedVersion: string;
   onChangeVersion: (v: string) => void;
   visibilityFilter: Visibility | 'all';
-  onChangeVisibility: (v: Visibility | 'all') => void;
+  onChangeVisibility: (v: Visibility | 'all') => void
+}
 
 export default function Sidebar({
-  spec,
-  activeEndpointId,
-  onSelectEndpoint,
-  selectedVersion,
-  onChangeVersion,
-  visibilityFilter,
-  onChangeVisibility,
+  spec
+  activeEndpointId
+  onSelectEndpoint
+  selectedVersion
+  onChangeVersion
+  visibilityFilter
+  onChangeVisibility
 }: SidebarProps) {
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>
@@ -36,7 +36,6 @@ export default function Sidebar({
           ))}
         </div>
       </div>
-
       <div>
 <div className='text-xs text-high-contrast-muted mb-1'>
           Publish Mode
@@ -52,7 +51,6 @@ export default function Sidebar({
           <option value='internal'>Internal</option>
         </select>
       </div>
-
       <nav className='space-y-3'>
         {spec.sections.map(section => (
           <div key={section.id}>

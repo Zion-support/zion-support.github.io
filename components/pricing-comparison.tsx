@@ -1,14 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
-
 export default function PricingComparisonPage() {
-  const serviceComparisons = [
-    {
-      service: 'AI Content Generator',
-      zionPricing: {
 starter: '$19/month',
         professional: '$49/month',
         enterprise: '$199/month',
@@ -159,7 +154,6 @@ pros: ['Completely free', 'Highly customizable', 'Open source'],
       icon: '🚀',
     },
   ];
-
   const marketInsights = [
     {
       insight: 'Zion services are 30-60% more affordable than market leaders',
@@ -182,7 +176,6 @@ icon: <DollarSign className='w-6 h-6' />,
       color: 'text-yellow-400',
     },
   ];
-
   return (
     <>
       <Head>
@@ -203,8 +196,6 @@ icon: <DollarSign className='w-6 h-6' />,
           content="Compare Zion's pricing to Jasper AI, Datadog, GitHub Actions and more. Save 30-60% with better features."
         />
         <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-
       <div className='min-h-screen bg-black'>
         {/* Hero Section */}
         <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20'>
@@ -243,7 +234,6 @@ href='/pricing'
             </div>
           </div>
         </section>
-
         {/* Market Insights */}
 <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -274,7 +264,6 @@ href='/pricing'
             </div>
           </div>
         </section>
-
         {/* Detailed Comparison */}
 <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -287,7 +276,6 @@ href='/pricing'
                 value.
               </p>
             </div>
-
             {serviceComparisons.map((service, serviceIndex) => (
 <div key={serviceIndex} className='mb-24'>
                 <div className='text-center mb-16'>
@@ -320,7 +308,6 @@ href='/pricing'
                     </span>
                   </div>
                 </div>
-
                 <div className='grid grid-cols-1 lg:grid-cols-4 gap-8'>
                   {/* Zion Service */}
                   <div className='lg:col-span-1'>
@@ -354,7 +341,6 @@ href='/pricing'
                       </div>
                     </Card>
                   </div>
-
                   {/* Competitors */}
                   {service.competitors.map((competitor, compIndex) => (
 <div key={compIndex} className='lg:col-span-1'>
@@ -431,12 +417,10 @@ href='/pricing'
             ))}
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-              Ready to Save Money and Get Better Features?
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses

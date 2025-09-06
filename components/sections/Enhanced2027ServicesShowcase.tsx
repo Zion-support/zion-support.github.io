@@ -1,35 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Target,
-  CheckCircle,
-  ExternalLink,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,;
-} from 'lucide-react';
+import { ArrowRight, Star, TrendingUp, Zap, Brain, Atom;
 import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom
+  Rocket, Shield, Target, CheckCircle, ExternalLink;
+  Search, Filter, Grid, List, ChevronDown
+ } from 'lucide-react';
+import { cuttingEdge2027Innovations  } from '../../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../../data/2027-practical-micro-saas';
 import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';
-
-
-  // Filter and sort services
-  const filteredServices = all2027Services
-    .filter(service => {
-const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+const Enhanced2027ServicesShowcase: React.FC;
         service.tags.some(tag =>
           tag.toLowerCase().includes(searchTerm.toLowerCase())
         );
@@ -55,7 +38,6 @@ return (
           return 0;
       }
     });
-
   const getCategoryColor = (category: string) => {
     const colors = {
 'AI & Machine Learning': 'from-purple-500 to-indigo-600',
@@ -116,7 +98,6 @@ return (
             business into a future-ready powerhouse.
           </p>
         </motion.div>
-
         {/* Search and Filters */}
 <motion.div
           className='mb-12'
@@ -139,7 +120,6 @@ return (
                   />
                 </div>
               </div>
-
               {/* Category Filter */}
 <div className='flex items-center space-x-4'>
                 <div className='relative'>
@@ -156,7 +136,6 @@ return (
                   </select>
 <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
                 </div>
-
                 {/* Sort */}
                 <div className='relative'>
                   <select
@@ -170,7 +149,6 @@ return (
                   </select>
                   <ChevronDown className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none' />
                 </div>
-
                 {/* View Mode */}
                 <div className='flex bg-gray-700/50 rounded-xl p-1'>
                   <button
@@ -198,7 +176,6 @@ viewMode === 'list'
             </div>
           </div>
         </motion.div>
-
         {/* Results Count */}
 <motion.div
           className='mb-8'
@@ -218,7 +195,6 @@ viewMode === 'list'
             services
           </p>
         </motion.div>
-
         {/* Services Grid/List */}
 <AnimatePresence mode='wait'>
           {viewMode === 'grid' ? (
@@ -255,7 +231,6 @@ className='group'
                         </div>
                       </div>
                     </div>
-
                     {/* Content */}
 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                       {service.name}
@@ -263,7 +238,6 @@ className='group'
                     <p className='text-gray-300 mb-4 leading-relaxed'>
                       {service.description}
                     </p>
-
                     {/* Features */}
 <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-400 mb-2'>
@@ -281,7 +255,6 @@ className='group'
                         ))}
                       </ul>
                     </div>
-
                     {/* Tags */}
 <div className='flex flex-wrap gap-2 mb-6'>
                       {service.tags.slice(0, 3).map((tag, idx) => (
@@ -293,7 +266,6 @@ className='group'
                         </span>
                       ))}
                     </div>
-
                     {/* CTA */}
                     <Link
                       href={service.link}
@@ -341,7 +313,6 @@ className='group'
                           </div>
                         </div>
                       </div>
-
                       {/* Content */}
 <div className='flex-1'>
                         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
@@ -361,7 +332,6 @@ className='group'
                           ))}
                         </div>
                       </div>
-
                       {/* Stats and CTA */}
 <div className='flex flex-col items-end space-y-3'>
                         <div className='text-right'>
@@ -385,7 +355,6 @@ className='group'
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* No Results */}
         {filteredServices.length === 0 && (
 <motion.div
@@ -413,7 +382,6 @@ setSelectedCategory('all');
             </button>
           </motion.div>
         )}
-
         {/* CTA Section */}
 <motion.div
           className='mt-20 text-center'
@@ -456,51 +424,53 @@ setSelectedCategory('all');
   /* Search and Filters */ 
 }<motion.div /> </div> </div> > {
   categories.map ( (category) => (<option key= {
-  category 
+  category
 }value= {
-  category 
+  category
 }> {
-  category === 'all' ? 'All Categories' : category 
-}</option>) ) 
+  category === 'all' ? 'All Categories' : category
+}</option>) )
 }</select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="roi" >Sort by ROI</option> </select> <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" /> </div> <button onClick= {
-  () => setViewMode ('grid') 
+  () => setViewMode ('grid')
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' 
-}` 
+  viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
+}`
 }> <Grid className="w-5 h-5" /> </button> <button onClick= {
-  () => setViewMode ('list') 
+  () => setViewMode ('list')
 }className= {
   `p-2 rounded-lg transition-all duration-200 $ {
-  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white' 
-}` 
+  viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'text-gray-400 hover:text-white'
+}`
 }> <List className="w-5 h-5" /> </button> </div> </div> </div> </div> </motion.div> {
-  /* Results Count */ 
+  /* Results Count */
 }<motion.div > {
   filteredServices.map ( (service, index) => (<motion.div key= {
-  service.id 
-}</li>) ) 
+  service.id
+}</li>) )
 }</ul> </div> <span key= {
-  idx 
+  idx
 }className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
-  tag 
-}</span>) ) 
+  tag
+}</span>) )
 }</div> {
-  /* CTA */ 
-}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion.div>) ) 
+  /* CTA */
+}<Link > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </motion.div>) )
 }</motion.div> > {
   filteredServices.map ( (service, index) => (<motion.div key= {
-  service.id 
+  service.id
 }<span key= {
-  idx 
+  idx
 }className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-lg border border-gray-600/50" > {
-  tag 
-}</span>) ) 
-}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) ) 
-}</motion.div>) 
-}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>) 
+  tag
+}</span>) )
+}</div> </div> > <span>Learn More</span> <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </a> </div> </div> </div> </motion.div>) )
+}</motion.div>)
+}</AnimatePresence> > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-white mb-4" >No services found</h3> <p className="text-gray-400 mb-8" > Try adjusting your search terms or category filter to find what you're looking for. </p> <button > Clear Filters </button> </motion.div>)
 }{
-  /* CTA Section */ 
-}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
-};
+  /* CTA Section */
+}<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>)
+}
+export default Enhanced2027ServicesShowcase;  )
+}
 export default Enhanced2027ServicesShowcase;

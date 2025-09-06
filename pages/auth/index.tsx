@@ -1,7 +1,3 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useState } from 'react';
-import EnhancedButton from '../../components/ui/EnhancedButton';
 const steps = ['Account', 'Profile', 'Preferences', 'Preview'];
 
 const Onboarding: NextPage = () => {
@@ -22,7 +18,7 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
         {steps.map((label, i) => (
           <div
             key={label}
-            className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}
+            className={`px-3 py-1 rounded-full border ${i === step ? "bg-blue-600 text-white border-blue-600" : "opacity-80"}`}
           >
             {i + 1}. {label}
           </div>
@@ -37,21 +33,19 @@ const next = () => setStep(s => Math.min(s + 1, steps.length - 1));
           <div>Preview your profile/listing before going live.</div>
         )}
       </div>
-
-      <div className='flex gap-2'>
+      <div className="flex gap-2">
         <EnhancedButton
-          variant='secondary'
+          variant="secondary"
           onClick={prev}
           disabled={step === 0}
         >
           Back
         </EnhancedButton>
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>
-          {step === steps.length - 1 ? 'Done' : 'Next'}
+          {step === steps.length - 1 ? "Done" : "Next"}
         </EnhancedButton>
       </div>
     </div>
   );
-};
-
+}
 export default Onboarding;

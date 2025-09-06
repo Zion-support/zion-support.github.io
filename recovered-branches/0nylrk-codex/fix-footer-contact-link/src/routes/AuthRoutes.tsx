@@ -1,26 +1,28 @@
-import { Fragment } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Login from '@/pages/Login';
-import Signup from '@/pages/Signup';
-import ForgotPassword from '@/pages/ForgotPassword';
-import UpdatePassword from '@/pages/UpdatePassword';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import Onboarding from '@/pages/Onboarding';
-import TalentOnboarding from '@/pages/TalentOnboarding';
-import ServiceOnboarding from '@/pages/ServiceOnboarding';
 
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import Login from "@/pages/Login",
+import Signup from "@/pages/Signup",
+import ForgotPassword from "@/pages/ForgotPassword",
+import UpdatePassword from "@/pages/UpdatePassword",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Onboarding from "@/pages/Onboarding",
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
+<<<<<<< HEAD
+const AuthRoutes = null;
+=======
 const AuthRoutes = () => {
   return (
     <Routes>
       {/* Auth Routes */}
-      <Route path='/login' element={<Login />} />
-      <Route path='/signup' element={<Signup />} />
-      <Route path='/forgot-password' element={<ForgotPassword />} />
-      <Route path='/update-password' element={<UpdatePassword />} />
-
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/forgot-password" element={<ForgotPassword />} />
+      <Route path="/update-password" element={<UpdatePassword />} />
       {/* Onboarding Routes */}
       <Route
-        path='/onboarding'
+        path="/onboarding"
         element={
           <ProtectedRoute>
             <Onboarding />
@@ -28,7 +30,7 @@ const AuthRoutes = () => {
         }
       />
       <Route
-        path='/talent-onboarding'
+        path="/talent-onboarding"
         element={
           <ProtectedRoute>
             <TalentOnboarding />
@@ -36,7 +38,7 @@ const AuthRoutes = () => {
         }
       />
       <Route
-        path='/service-onboarding'
+        path="/service-onboarding"
         element={
           <ProtectedRoute>
             <ServiceOnboarding />
@@ -44,6 +46,7 @@ const AuthRoutes = () => {
         }
       />
     </Routes>
-  );
-};
+  )
+}
 export default AuthRoutes;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

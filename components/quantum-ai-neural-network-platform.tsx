@@ -1,63 +1,61 @@
 import React from 'react';
+import { motion  } from 'framer-motion';
+import { Atom, Brain, Zap, Shield, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
+import SEO from '../components/SEO';
+const QuantumAINeuralNetworkPlatform: React.FC;
 import { motion } from 'framer-motion';
 import {
-  Atom,
-  Brain,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  ArrowRight,
-  Check,
-  Star,
-  Globe,
-  Cpu,
-  Network,;
+  Atom
+  Brain
+  Zap
+  Shield
+  Users
+  Target
+  ArrowRight
+  Check
+  Star
+  Globe
+  Cpu
+  Network;
 } from 'lucide-react';
-import SEO from '../components/SEO';
-
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
-    'Quantum-enhanced neural network architecture',
-    'Superposition-based learning algorithms',
-    'Quantum entanglement optimization',
-    'Quantum-classical hybrid training',
-    'Quantum error correction protocols',
-    'Multi-dimensional quantum states',
-    'Quantum memory management',
-    'Quantum coherence preservation',
-    'Quantum measurement optimization',
-    'Cross-platform quantum synchronization',
+    'Quantum-enhanced neural network architecture'
+    'Superposition-based learning algorithms'
+    'Quantum entanglement optimization'
+    'Quantum-classical hybrid training'
+    'Quantum error correction protocols'
+    'Multi-dimensional quantum states'
+    'Quantum memory management'
+    'Quantum coherence preservation'
+    'Quantum measurement optimization'
+    'Cross-platform quantum synchronization'
   ];
-
   const benefits = [
-    'Exponential computational power',
-    'Quantum advantage in AI training',
-    'Enhanced pattern recognition',
-    'Faster convergence rates',
-    'Quantum-secure AI operations',
+    'Exponential computational power'
+    'Quantum advantage in AI training'
+    'Enhanced pattern recognition'
+    'Faster convergence rates'
+    'Quantum-secure AI operations'
   ];
-
   const pricing = {
-    starter: '$999/month',
-    professional: '$1,999/month',
-    enterprise: 'Custom pricing',
-  };
-
+    starter: '$999/month'
+    professional: '$1,999/month'
+    enterprise: 'Custom pricing'
+  }
   return (
     <div className='min-h-screen bg-black text-white'>
       <SEO
         title='Quantum AI Neural Network Platform 2045 | Zion Tech Group'
         description='Revolutionary quantum-powered AI neural network platform with exponential computational power and quantum advantage.'
         keywords={[
-          'quantum AI',
-          'neural networks',
-          'quantum computing',
-          'AI platform',
-          'quantum advantage',
+          'quantum AI'
+          'neural networks'
+          'quantum computing'
+          'AI platform'
+          'quantum advantage'
         ]}
       />
-
       {/* Hero Section */}
       <section className='relative py-20 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-cyan-900/20 to-indigo-900/20'></div>
@@ -75,17 +73,14 @@ className='text-center'
                 <Atom className='w-10 h-10 text-white' />
               </div>
             </div>
-
             <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent'>
               Quantum AI Neural Network Platform 2045
             </h1>
-
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Experience the future of AI with quantum-powered neural networks
-              that deliver exponential computational power, quantum advantage,
+              that deliver exponential computational power, quantum advantage
               and unprecedented learning capabilities.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -105,7 +100,6 @@ className='px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rou
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -144,7 +138,6 @@ className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
 <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -179,7 +172,6 @@ className='text-center'
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -227,7 +219,6 @@ plan === 'professional'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

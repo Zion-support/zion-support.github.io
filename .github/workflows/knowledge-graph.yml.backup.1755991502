@@ -1,7 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 name: Knowledge Graph Builder
 
 on:
@@ -16,6 +28,11 @@ on:
 permissions:
   contents: write
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
 =======
 name: Knowledge Graph
 
@@ -27,6 +44,14 @@ on:
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 jobs:
   graph:
     runs-on: ubuntu-latest
@@ -40,7 +65,19 @@ jobs:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
       - name: Install deps
         run: npm ci --no-audit --no-fund
       - name: Build knowledge graph
@@ -50,6 +87,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ -n "$(git status --porcelain)" ]]; then
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
             git add -A
 =======
@@ -63,10 +105,21 @@ jobs:
           git add public/automation/knowledge-graph.json automation_logs/knowledge-graph.log || true
           if ! git diff --cached --quiet; then
 >>>>>>> origin/cursor/design-zion-ai-marketplace-mobile-app-ui-348a
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             git commit -m "chore(automation): update knowledge graph [skip ci]"
+            git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
             git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+            git add -A            git commit -m "chore(automation): update knowledge graph [skip ci]"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
             git push
           else
             echo "No changes to commit"

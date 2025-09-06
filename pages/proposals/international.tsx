@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-type ProposalListItem = {
-  id: string;
-  title: string;
-  targetInstitution: string;
-  regionalScope: string;
-  type: string;
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
-  createdAt: string;
-};
-
+type ProposalListItem = any;
 export default function InternationalProposalsPage() {
-  const [items, setItems] = useState<ProposalListItem[]>([]);
-  const [filter, setFilter] = useState('All');
-
+  const [items, setItems] = useState<ProposalListItem[]>([])
+  const [filter, setFilter] = useState('All')
   useEffect(() => {
     fetch('/api/proposals')
 .then(r => r.json())
@@ -36,6 +26,13 @@ export default function InternationalProposalsPage() {
             value={filter}
             onChange={e => setFilter(e.target.value)}
           >
+  return (
+    <EnhancedLayout>
+      <div className="space-y-4">
+        <h1 className="text-2xl font-semibold">International Proposals</h1>
+        <div className="flex items-center gap-2 text-sm">
+          <span>Filter by region:</span>
+          <select className="border rounded px-2 py-1" value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option>All</option>
             <option>Global</option>
             <option>Africa</option>

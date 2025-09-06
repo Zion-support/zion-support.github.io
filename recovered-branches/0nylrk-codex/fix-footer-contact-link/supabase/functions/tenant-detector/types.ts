@@ -1,3 +1,4 @@
+
 export interface TenantInfo {
   id: string;
   brand_name: string;
@@ -8,11 +9,20 @@ export interface TenantInfo {
   theme_preset: string;
   landing_page_copy: {
     headline: string;
+<<<<<<< HEAD
     subtitle: string;
-    cta: string;
-  };
-  is_active: boolean;
-
+=======
+    subtitle: string
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    cta: string
+  }
+  is_active: boolean
+}
 export interface TenantResponse {
+<<<<<<< HEAD
   tenant: TenantInfo | null;
-  error?: string;
+=======
+  tenant: TenantInfo | null
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+  error?: string
+}

@@ -1,75 +1,56 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  DollarSign,
-  TrendingUp,
-  Shield,
-  Zap,
-  Target,
-  BarChart3,
-  CheckCircle,
-  Star,
-  Globe,
-  Lock,
-  Smartphone,
-  Monitor,
-  Award,
-  MessageCircle,
-  Calculator,;
-} from 'lucide-react';
-
+import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
+  Award, MessageCircle, Calculator
+ } from 'lucide-react';
 export default function AIFinancialPlanningPlatform() {
-  const features = [
-    {
-icon: <DollarSign className='w-6 h-6' />,
-      title: 'AI-Powered Financial Analysis',
+  const features = null;
       description:
-        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.',
-    },
+        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
+    }
     {
-      icon: <TrendingUp className='w-6 h-6' />,
-      title: 'Predictive Financial Planning',
+      icon: <TrendingUp className='w-6 h-6' />
+      title: 'Predictive Financial Planning'
       description:
-        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.',
-    },
+        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
+    }
     {
-      icon: <Target className='w-6 h-6' />,
-      title: 'Goal-Based Planning',
+      icon: <Target className='w-6 h-6' />
+      title: 'Goal-Based Planning'
       description:
-        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.',
-    },
+        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
+    }
     {
-      icon: <Zap className='w-6 h-6' />,
-      title: 'Automated Portfolio Management',
+      icon: <Zap className='w-6 h-6' />
+      title: 'Automated Portfolio Management'
       description:
-        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.',
-    },
+        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
+    }
     {
-      icon: <Shield className='w-6 h-6' />,
-      title: 'Risk Assessment & Management',
+      icon: <Shield className='w-6 h-6' />
+      title: 'Risk Assessment & Management'
       description:
-        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.',
-    },
+        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
+    }
     {
-      icon: <BarChart3 className='w-6 h-6' />,
-      title: 'Real-Time Financial Insights',
+      icon: <BarChart3 className='w-6 h-6' />
+      title: 'Real-Time Financial Insights'
       description:
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.',
-    },
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.'
+    }
   ];
-
   const benefits = [
-    'Increase investment returns by 25%',
-    'Reduce financial planning time by 70%',
-    'Improve risk-adjusted returns by 40%',
-    'Optimize tax efficiency by 30%',
-    'Reduce portfolio volatility by 35%',
-    'Improve financial goal achievement by 50%',
-    'Reduce financial planning costs by 60%',
-    'Gain professional-grade financial insights',
+    'Increase investment returns by 25%'
+    'Reduce financial planning time by 70%'
+    'Improve risk-adjusted returns by 40%'
+    'Optimize tax efficiency by 30%'
+    'Reduce portfolio volatility by 35%'
+    'Improve financial goal achievement by 50%'
+    'Reduce financial planning costs by 60%'
+    'Gain professional-grade financial insights'
   ];
-
   <div className='mt-12'>
     <h2 className='text-2xl font-semibold'>Pricing</h2>
     <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -161,7 +142,6 @@ icon: <DollarSign className='w-6 h-6' />,
           href='https://ziontechgroup.com/ai-financial-planning-platform'
         />
       </Head>
-
       <div className='min-h-screen bg-black text-white'>
         {/* Hero Section */}
         <section className='relative pt-32 pb-20 overflow-hidden'>
@@ -191,6 +171,13 @@ className='text-center'
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'
+                portfolio optimization, and risk management that drives financial success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
                 >
                   Start Free Trial
                 </motion.button>
@@ -205,7 +192,6 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -248,7 +234,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
 <section className='py-20 bg-black'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -288,7 +273,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -328,7 +312,6 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>

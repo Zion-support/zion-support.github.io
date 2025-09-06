@@ -1,59 +1,6 @@
-'use client';
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  AlertTriangle,
-  RefreshCw,
-  Home,
-  Bug,
-  Send,
-  Clipboard,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import * as Sentry from '@sentry/nextjs';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-  retryCount: number;
-  userFeedback: string;
-  showDetails: boolean;
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableRetry?: boolean;
-  maxRetries?: number;
-  showReportButton?: boolean;
-  context?: string;
-
-export class GlobalErrorBoundary extends Component<
-  ErrorBoundaryProps,
-  ErrorBoundaryState
-> {
-  private retryTimeouts: NodeJS.Timeout[] = [];
-
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-      retryCount: 0,
-      userFeedback: '',
-showDetails: false,
-    };
+    this.state;
   }
-
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
@@ -136,7 +83,6 @@ return (
     }
     return null;
   }
-
   private getBuildInfo() {
     return {
       version: process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',
@@ -144,7 +90,6 @@ return (
 buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     };
   }
-
   private getErrorSeverity(
     error: Error
   ): 'low' | 'medium' | 'high' | 'critical' {
@@ -225,20 +170,19 @@ userAgent:
     try {
       await navigator.clipboard.writeText(
         JSON.stringify(errorDetails, null, 2)
-      );
+      )
       // Could show a toast notification here
     } catch (err) {
-      logErrorToProduction('Failed to copy error details:', { data: err });
+      logErrorToProduction('Failed to copy error details:', { data: err })
     }
-  };
-
+  }
   private reportError = async () => {
     if (!this.state.error || !this.state.errorId) return;
 
     try {
       // Report to your error reporting service
       const response = await fetch('/api/error-report', {
-        method: 'POST',
+        method: 'POST'
         headers: {
 'Content-Type': 'application/json',
         },
@@ -323,7 +267,6 @@ return this.props.fallback;
                   <p className='text-gray-600 dark:text-gray-300 mb-4'>
                     {suggestion}
                   </p>
-
                   {this.state.retryCount > 0 && (
                     <p className='text-sm text-orange-600 dark:text-orange-400'>
                       Retry attempt: {this.state.retryCount}/
@@ -331,7 +274,6 @@ return this.props.fallback;
                     </p>
                   )}
                 </div>
-
                 {/* Action Buttons */}
 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
                   {canRetry && (
@@ -343,7 +285,6 @@ return this.props.fallback;
                       Try Again
                     </Button>
                   )}
-
                   <Button
                     onClick={this.goHome}
                     variant='outline'
@@ -352,7 +293,6 @@ return this.props.fallback;
                     <Home className='h-4 w-4' />
                     Go Home
                   </Button>
-
                   <Button
                     onClick={() =>
                       this.setState({ showDetails: !this.state.showDetails })
@@ -365,7 +305,6 @@ return this.props.fallback;
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
                 </div>
-
                 {/* Error Details */}
                 <AnimatePresence>
                   {this.state.showDetails && (
@@ -396,7 +335,6 @@ className='border-t pt-4'
                               </pre>
                             </div>
                           )}
-
                         <div className='flex gap-2'>
                           <Button
                             onClick={this.copyErrorDetails}
@@ -406,7 +344,6 @@ className='border-t pt-4'
                             <Clipboard className='h-4 w-4 mr-2' />
                             Copy Details
                           </Button>
-
                           {this.props.showReportButton !== false && (
                             <Button
                               onClick={this.reportError}
@@ -451,10 +388,10 @@ export const useErrorBoundary = () => {
 
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<P>
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
-) => {
-  const WrappedComponent = (props: P) => (
+,) => {
+  const WrappedComponent = (props: P,) => (
     <GlobalErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </GlobalErrorBoundary>

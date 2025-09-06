@@ -1,12 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readReviews, writeReviews } from '../../../utils/dataStore';
+import { readReviews, writeReviews } from '[^']*';
 
-const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
-
-type Action = 'approve' | 'remove' | 'edit';
-
+const ADMIN_KEY = null;
+    return res.status(200).json({ message: 'OK' })
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
@@ -22,13 +20,11 @@ return res.status(401).json({ error: 'Unauthorized' });
     const { action, reviewId, updates } = req.body as {
 action: Action;
       reviewId: string;
-      updates?: { rating?: number; text?: string };
-    };
-
+      updates?: { rating?: number; text?: string }
+    }
     const reviews = await readReviews();
     const idx = reviews.findIndex(r => r.id === reviewId);
     if (idx < 0) return res.status(404).json({ error: 'Review not found' });
-
     if (action === 'approve') {
       reviews[idx].approved = true;
     } else if (action === 'remove') {
@@ -47,7 +43,6 @@ return res.status(400).json({ error: 'Rating must be 1-5' });
     } else {
       return res.status(400).json({ error: 'Invalid action' });
     }
-
     await writeReviews(reviews);
     return res.status(200).json({ message: 'OK' });
   } catch (error: any) {

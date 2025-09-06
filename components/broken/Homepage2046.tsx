@@ -1,103 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  ArrowRight,
-  Play,
-  Star,
-  Users,
-  Award,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Loader2,
-  ChevronDown,
-  Zap,
-  Globe,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Palette,
-  Heart,
-  Phone,
-  Mail,
-  MapPin,
-  Search,
-  Grid,
-  List,
-  Sparkles,
-  Target,
-  BarChart3,
-  Lightbulb,
-  Code,
-  Server,
-  Network,
-  ShieldCheck,
-  BrainCircuit,
-  Atom,
-  Satellite,
-  Eye,
-  Clock,
-  DollarSign,
-  CheckCircle,
-  ArrowUpRight,;
-} from 'lucide-react';
+import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
+  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
+  Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
+ } from 'lucide-react';
 import Link from 'next/link';
 // Import our new innovative services
-import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
-import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects
-const QuantumLoadingFallback = () => (
-  <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
-    {/* Quantum particle effects */}
-    <div className='absolute inset-0'>
-      {[...Array(100)].map((_, i) => (
-        <motion.div
-          key={i}
-          className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full'
-          animate={{
-            x: [0, Math.random() * 1200],
-            y: [0, Math.random() * 800],
-            opacity: [0, 1, 0],
-            scale: [0, 1, 0],
-          }}
-          transition={{
-            duration: Math.random() * 4 + 3,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          style={{
-            left: Math.random() * 100 + '%',
-            top: Math.random() * 100 + '%',
-          }}
-        />
-      ))}
-    </div>
-    {/* Quantum loading animation */}
-    <motion.div
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
 className='text-center relative z-10'
     >
       <div className='relative'>
         <motion.div
           animate={{
-            rotate: 360,
-            scale: [1, 1.2, 1],
+            rotate: 360
+            scale: [1, 1.2, 1]
             boxShadow: [
-              '0 0 20px rgba(6, 182, 212, 0.5)',
-              '0 0 40px rgba(168, 85, 247, 0.8)',
-              '0 0 20px rgba(6, 182, 212, 0.5)',
-            ],
+              '0 0 20px rgba(6, 182, 212, 0.5)'
+              '0 0 40px rgba(168, 85, 247, 0.8)'
+              '0 0 20px rgba(6, 182, 212, 0.5)'
+            ]
           }}
           transition={{
-            rotate: { duration: 3, repeat: Infinity, ease: 'linear' },
-            scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
-            boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' },
+            rotate: { duration: 3, repeat: Infinity, ease: 'linear' }
+            scale: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
+            boxShadow: { duration: 2, repeat: Infinity, ease: 'easeInOut' }
           }}
           className='w-32 h-32 mx-auto mb-8'
         >
@@ -120,7 +52,6 @@ className='text-center relative z-10'
       <p className='text-lg text-gray-400'>
         Preparing your revolutionary digital transformation journey
       </p>
-
       {/* Quantum progress bar */}
       <div className='mt-8 w-64 mx-auto bg-gray-700 rounded-full h-2'>
         <motion.div
@@ -133,14 +64,12 @@ className='text-center relative z-10'
     </motion.div>
   </div>
 );
-
 const Homepage2046: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -163,38 +92,32 @@ entries.forEach(entry => {
         },
         { threshold: 0.3 }
       );
-
       const sections = document.querySelectorAll('section[id]');
 sections.forEach(section => observer.observe(section));
 
       return () => observer.disconnect();
     }
   }, []);
-
   if (isLoading) {
     return <QuantumLoadingFallback />;
   }
-
   const allServices = [
 ...innovative2046AIServices,
     ...innovative2046ITServices,
     ...innovative2046MicroSAASServices,
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesCategory =
-      selectedCategory === 'all' || service.category === selectedCategory;
+      selectedCategory === 'all' |service.category === selectedCategory;
     const matchesSearch =
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   const categories = [
-    'all',
-    ...Array.from(new Set(allServices.map(s => s.category))),
+    'all'
+    ...Array.from(new Set(allServices.map(s => s.category)))
   ];
-
   return (
     <Layout>
       <div className='min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
@@ -208,14 +131,14 @@ sections.forEach(section => observer.observe(section));
               key={i}
 className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
               animate={{
-                x: [0, Math.random() * 100 - 50],
-                y: [0, Math.random() * 100 - 50],
-                opacity: [0.3, 0.8, 0.3],
+                x: [0, Math.random() * 100 - 50]
+                y: [0, Math.random() * 100 - 50]
+                opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
-                duration: Math.random() * 10 + 10,
-                repeat: Infinity,
-                ease: 'easeInOut',
+                duration: Math.random() * 10 + 10
+                repeat: Infinity
+                ease: 'easeInOut'
               }}
               style={{
                 left: Math.random() * 100 + '%',
@@ -224,7 +147,6 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded
             />
           ))}
         </div>
-
         {/* Hero Section */}
 <section
           id='hero'
@@ -246,7 +168,6 @@ className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded
                   Zion Tech Group
                 </span>
               </motion.h1>
-
               <motion.p
                 className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto'
                 initial={{ opacity: 0, y: 30 }}
@@ -265,8 +186,6 @@ Revolutionary{' '}
                   Space Technology
                 </span>{' '}
                 Solutions
-              </motion.p>
-
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'
                 initial={{ opacity: 0, y: 30 }}
@@ -276,8 +195,8 @@ Revolutionary{' '}
 <Link href='/services'>
                   <motion.button
                     whileHover={{
-                      scale: 1.05,
-                      boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)',
+                      scale: 1.05
+                      boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)'
                     }}
                     whileTap={{ scale: 0.95 }}
                     className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
@@ -285,12 +204,11 @@ Revolutionary{' '}
                     Explore Services <ArrowRight className='w-5 h-5' />
                   </motion.button>
                 </Link>
-
                 <Link href='/contact'>
                   <motion.button
                     whileHover={{
-                      scale: 1.05,
-                      boxShadow: '0 0 30px rgba(168, 85, 247, 0.5)',
+                      scale: 1.05
+                      boxShadow: '0 0 30px rgba(168, 85, 247, 0.5)'
                     }}
                     whileTap={{ scale: 0.95 }}
                     className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'
@@ -300,7 +218,6 @@ Revolutionary{' '}
                 </Link>
               </motion.div>
             </motion.div>
-
             {/* Contact Information */}
             <motion.div
 className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30'
@@ -334,7 +251,6 @@ className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border
             </motion.div>
           </div>
         </section>
-
         {/* Services Showcase Section */}
 <section id='services' className='relative z-10 py-20 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -356,7 +272,6 @@ className='text-center mb-16'
                 worldwide.
               </p>
             </motion.div>
-
             {/* Search and Filter */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -376,7 +291,6 @@ className='mb-12'
                     className='w-full pl-10 pr-4 py-3 bg-black/30 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 backdrop-blur-lg'
                   />
                 </div>
-
                 <div className='flex gap-2'>
                   {categories.map(category => (
                     <button
@@ -394,7 +308,6 @@ className='mb-12'
                 </div>
               </div>
             </motion.div>
-
             {/* Services Grid */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -443,11 +356,9 @@ className='group'
 <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
                       {service.name}
                     </h3>
-
                     <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
                       {service.description}
                     </p>
-
                     <div className='mb-4'>
                       <div className='flex items-center gap-2 text-cyan-400 font-semibold'>
                         <DollarSign className='w-4 h-4' />
@@ -482,7 +393,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                           Learn More <ArrowUpRight className='w-4 h-4' />
                         </motion.button>
                       </Link>
-
                       <div className='text-right text-xs text-gray-400'>
                         <div className='flex items-center gap-1'>
                           <Users className='w-3 h-3' />
@@ -498,7 +408,6 @@ className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rou
                 </motion.div>
               ))}
             </motion.div>
-
             {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -519,8 +428,8 @@ className='text-center mt-20'
                   <Link href='/contact'>
                     <motion.button
                       whileHover={{
-                        scale: 1.05,
-                        boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)',
+                        scale: 1.05
+                        boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)'
                       }}
                       whileTap={{ scale: 0.95 }}
                       className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
@@ -531,8 +440,8 @@ className='text-center mt-20'
 <Link href='/services'>
                     <motion.button
                       whileHover={{
-                        scale: 1.05,
-                        boxShadow: '0 0 30px rgba(168, 85, 247, 0.5)',
+                        scale: 1.05
+                        boxShadow: '0 0 30px rgba(168, 85, 247, 0.5)'
                       }}
                       whileTap={{ scale: 0.95 }}
                       className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'

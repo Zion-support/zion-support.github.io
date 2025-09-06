@@ -1,35 +1,17 @@
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-import {
-  Brain,
-  Rocket,
-  Shield,
-  Zap,
-  Target,
-  Atom,
-  Globe,
-  Cpu,
-  Lock,
-  Cloud,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Star,
-  TrendingUp,
-  Users,
-  Building,
-  Lightbulb,
-  ArrowRight,
-  Filter,
-  Search,
-  Grid,
-  List,
-  Phone,
-  Mail,
-  MapPin,;
+import { Brain, Rocket, Shield, Zap, Target, Atom, Globe;
+  Cpu, Lock, Cloud, Settings, Eye, Award, Clock;
+  Star, TrendingUp, Users, Building, Lightbulb;
+  ArrowRight, Filter, Search, Grid, List, Phone, Mail, MapPin
+ } from 'lucide-react';
+import { real2036InnovativeServices  } from '../data/real-2036-innovative-services';
+import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
+const contactInfo = null;
+              AI platforms, and cutting-edge technology solutions designed for the future.
+            </p>
 } from 'lucide-react';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
@@ -84,19 +66,17 @@ export default function InnovativeServicesShowcase2036() {
 const [sortBy, setSortBy] = useState<
     'name' | 'price' | 'rating' | 'marketSize'
   >('name');
-
   const allServices = [
-    ...real2036InnovativeServices,
-    ...real2036SpecializedServices,
+    ...real2036InnovativeServices
+    ...real2036SpecializedServices
   ];
-
   const filteredServices = allServices.filter(service => {
     const matchesCategory =
-      selectedCategory === 'All Services' ||
+      selectedCategory === 'All Services' |
       service.category === selectedCategory;
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
@@ -109,21 +89,20 @@ return (
           parseFloat(b.price.replace('$', '').replace(',', ''))
         );
       case 'rating':
-        return (b.rating || 0) - (a.rating || 0);
+        return (b.rating |0) - (a.rating |0);
       case 'marketSize':
         return (
-          parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') -
-          parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0')
+          parseFloat(b.marketSize?.replace('$', '').replace('B', '') |'0') -
+          parseFloat(a.marketSize?.replace('$', '').replace('B', '') |'0')
         );
       default:
         return a.name.localeCompare(b.name);
     }
   });
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -131,10 +110,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
 duration: 0.5,
       },
@@ -148,7 +127,6 @@ duration: 0.5,
         description='Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology.'
         keywords='2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group'
       />
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center px-4 overflow-hidden'>
         {/* Animated Background */}
@@ -156,7 +134,6 @@ duration: 0.5,
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]' />
         </div>
-
         {/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>
           {[...Array(20)].map((_, i) => (
@@ -164,12 +141,12 @@ duration: 0.5,
               key={i}
               className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`
               }}
               animate={{
-                y: [0, -100, 0],
-                opacity: [0.3, 1, 0.3],
+                y: [0, -100, 0]
+                opacity: [0.3, 1, 0.3]
               }}
               transition={{
                 duration: 3 + Math.random() * 2,
@@ -214,7 +191,6 @@ Experience the future of technology with our cutting-edge micro SAAS
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
 <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
         <div className='max-w-6xl mx-auto'>
@@ -243,7 +219,6 @@ Experience the future of technology with our cutting-edge micro SAAS
           </motion.div>
         </div>
       </section>
-
       {/* Services Section */}
 <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -264,7 +239,6 @@ Experience the future of technology with our cutting-edge micro SAAS
               designed for the future.
             </p>
           </motion.div>
-
           {/* Filters and Controls */}
 <motion.div
             className='mb-12 space-y-6'
@@ -285,7 +259,6 @@ Experience the future of technology with our cutting-edge micro SAAS
                   className='w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300'
                 />
               </div>
-
               <div className='flex gap-4 items-center'>
                 <select
                   value={sortBy}
@@ -314,7 +287,6 @@ Experience the future of technology with our cutting-edge micro SAAS
                 </div>
               </div>
             </div>
-
             {/* Category Filters */}
 <div className='flex flex-wrap gap-3 justify-center'>
               {categories.map(category => (
@@ -333,7 +305,6 @@ Experience the future of technology with our cutting-edge micro SAAS
               ))}
             </div>
           </motion.div>
-
           {/* Services Grid */}
           <motion.div
             variants={containerVariants}
@@ -357,13 +328,12 @@ initial='hidden'
                 {viewMode === 'list' && (
 <div className='flex-shrink-0'>
                     <div className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl'>
-                      {categoryIcons[service.category] || (
+                      {categoryIcons[service.category] |(
                         <Star className='w-8 h-8' />
                       )}
                     </div>
                   </div>
                 )}
-
                 <div className='flex-1'>
                   {/* Service Header */}
                   <div className='mb-4'>
@@ -389,7 +359,6 @@ initial='hidden'
                       {service.description}
                     </p>
                   </div>
-
                   {/* Service Details */}
                   <div className='space-y-4'>
                     {/* Category and Rating */}
@@ -406,7 +375,6 @@ initial='hidden'
                         </div>
                       )}
                     </div>
-
                     {/* Market Size */}
                     {service.marketSize && (
 <div className='text-sm text-gray-400'>
@@ -416,7 +384,6 @@ initial='hidden'
                         </span>
                       </div>
                     )}
-
                     {/* Features */}
                     <div>
 <h4 className='text-sm font-semibold text-gray-300 mb-2'>
@@ -439,7 +406,6 @@ initial='hidden'
                         )}
                       </div>
                     </div>
-
                     {/* Target Audience */}
                     {service.targetAudience && (
                       <div>
@@ -451,7 +417,6 @@ initial='hidden'
                         </p>
                       </div>
                     )}
-
                     {/* Competitive Advantage */}
                     {service.competitiveAdvantage && (
                       <div>
@@ -463,7 +428,6 @@ initial='hidden'
                         </p>
                       </div>
                     )}
-
                     {/* CTA Button */}
 <div className='mt-6'>
                       <a
@@ -479,7 +443,6 @@ initial='hidden'
               </motion.div>
             ))}
           </motion.div>
-
           {/* Results Summary */}
 <motion.div
             className='mt-12 text-center text-gray-400'
@@ -492,7 +455,6 @@ initial='hidden'
           </motion.div>
         </div>
       </section>
-
       {/* Call to Action */}
 <section className='py-20 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -534,104 +496,95 @@ className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounde
 };
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0 
-};
+  y: 20, opacity: 0
+}
 visible: {
   y: 0, opacity: 1, transition: {
-  duration: 0.5 
-
-
-};
-
+  duration: 0.5
+}
 }%`;
 top: `$ {
-  Math.random () * 100 
-}%` 
-
+  Math.random () * 100
+}%`
 }animate= {
   {
-  y: [0, -100, 0], opacity: [0.3, 1, 0.3] 
-
+  y: [0, -100, 0], opacity: [0.3, 1, 0.3]
 }transition= {
   {
-  duration: 3 + Math.random () * 2, repeat: Infinity, delay: Math.random () * 2 
-
-}/>) ) 
+  duration: 3 + Math.random () * 2, repeat: Infinity, delay: Math.random () * 2
+}/>) )
 }</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion.h1 > 2036 Innovative Services </motion.h1> <motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
-AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion.p> <motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion.div> </div> </section> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services;
+AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion.p> <motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion.div> </div> </section> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services
 AI platforms, and cutting-edge technology solutions designed for the future. </p> </motion.div> {
-  /* Filters and Controls */ 
+  /* Filters and Controls */
 }<motion.div /> </div> <div className="flex gap-4 items-center" > <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="rating" >Sort by Rating</option> <option value="marketSize" >Sort by Market Size</option> </select> <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1" > <button onClick= {
-  () => setViewMode ('grid') 
+  () => setViewMode ('grid')
 }className= {
   `p-2 rounded $ {
-  viewMode === 'grid'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white' 
-}` 
+  viewMode === 'grid'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white'
+}`
 }> <Grid className="w-5 h-5" /> </button> <button onClick= {
-  () => setViewMode ('list') 
+  () => setViewMode ('list')
 }className= {
   `p-2 rounded $ {
-  viewMode === 'list'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white' 
-}` 
+  viewMode === 'list'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white'
+}`
 }> <List className="w-5 h-5" /> </button> </div> </div> </div> key= {
-  category 
+  category
 }onClick= {
-  () => setSelectedCategory (category) 
+  () => setSelectedCategory (category)
 }className= {
   `px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 $ {
-  selectedCategory === category ? 'bg-cyan-500 text-black border-cyan-500': 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400' 
-}` 
-}> </button>) ) 
+  selectedCategory === category ? 'bg-cyan-500 text-black border-cyan-500': 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400'
+}`
+}> </button>) )
 }</div> </motion.div> {
-  /* Services Grid */ 
+  /* Services Grid */
 }<motion.div > {
   sortedServices.map ( (service, index) => (<motion.div key= {
-  service.id 
+  service.id
 }variants= {
-  itemVariants 
+  itemVariants
 }className= {
   `bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 $ {
-  viewMode === 'list'? 'flex gap-6': '' 
-}` 
-}> </div> </div>) 
-}</div>) 
-}</div> </div>) 
+  viewMode === 'list'? 'flex gap-6': ''
+}`
+}> </div> </div>)
+}</div>)
+}</div> </div>)
 }{
-  /* Features */ 
+  /* Features */
 }<div> + {
-  service.features.length - 4 
-}more features </div>) 
+  service.features.length - 4
+}more features </div>)
 }</div> </div> {
-  /* Target Audience */ 
+  /* Target Audience */
 }{
   service.targetAudience && (<div> <h4 className="text-sm font-semibold text-gray-300 mb-2" >Target Audience:</h4> <p className="text-sm text-gray-400" > {
-  service.targetAudience 
-}</p> </div>) 
+  service.targetAudience
+}</p> </div>)
 }{
-  /* Competitive Advantage */ 
+  /* Competitive Advantage */
 }{
   service.competitiveAdvantage && (<div> <h4 className="text-sm font-semibold text-gray-300 mb-2" >Competitive Advantage:</h4> <p className="text-sm text-gray-400" > {
-  service.competitiveAdvantage 
-}</p> </div>) 
-}> Learn More <ArrowRight className="w-4 h-4" /> </Link> </div> </div> </div> </motion.div>) ) 
+  service.competitiveAdvantage
+}</p> </div>)
+}> Learn More <ArrowRight className="w-4 h-4" /> </Link> </div> </div> </div> </motion.div>) )
 }</motion.div> {
-  /* Results Summary */ 
+  /* Results Summary */
 }<motion.div > Showing {
-  sortedServices.length 
+  sortedServices.length
 }of {
-  allServices.length 
+  allServices.length
 }services </motion.div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 20 
-
+  opacity: 0, y: 20
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.6 
-
+  duration: 0.6
 }viewport= {
   {
   once: true 

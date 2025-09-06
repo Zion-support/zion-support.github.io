@@ -14,10 +14,8 @@ export default function ReportsIndex() {
             agents.
           </p>
         </div>
-
         {/* Content Categorizer Component */}
         <ContentCategorizer />
-
         {/* Back to Home */}
 <div className='mt-12 text-center'>
           <Link

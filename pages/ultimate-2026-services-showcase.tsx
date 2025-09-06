@@ -1,8 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
 Search,
   Star,
   DollarSign,
@@ -20,12 +15,11 @@ Search,
 import { ultimate2026Services } from '../data/ultimate-2026-services';
 import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
 export default function Ultimate2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all')
+  const [sortBy, setSortBy] = useState<string>('name')
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -124,8 +118,8 @@ let filtered = allServices.filter(service => {
     // Sort services
     switch (sortBy) {
       case 'name':
-        filtered.sort((a, b) => a.name.localeCompare(b.name));
-        break;
+        filtered.sort((a, b) => a.name.localeCompare(b.name))
+        break
       case 'price':
         filtered.sort((a, b) => {
 const priceA =
@@ -140,8 +134,8 @@ const priceA =
         });
         break;
       case 'popularity':
-        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
-        break;
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
+        break
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
         break;
@@ -259,7 +253,6 @@ default:
             </div>
           </motion.div>
         </div>
-
         {/* Floating Elements */}
 <div className='absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse'></div>
         <div className='absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000'></div>
@@ -296,7 +289,6 @@ default:
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -383,7 +375,6 @@ transition={{ duration: 0.8, delay: index * 0.1 }}
           </div>
         </div>
       </section>
-
       {/* Services Section */}
 <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -403,7 +394,6 @@ transition={{ duration: 0.8, delay: index * 0.1 }}
               Explore our complete portfolio of cutting-edge 2026 innovations
             </p>
           </motion.div>
-
           {/* Filters and Search */}
 <div className='mb-12 space-y-6'>
             {/* Search Bar */}
@@ -417,7 +407,6 @@ transition={{ duration: 0.8, delay: index * 0.1 }}
                 className='w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-700 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'
               />
             </div>
-
             {/* Filters */}
 <div className='flex flex-wrap items-center justify-center gap-4'>
               {/* Category Filter */}
@@ -484,7 +473,6 @@ transition={{ duration: 0.8, delay: index * 0.1 }}
               </div>
             </div>
           </div>
-
           {/* Services Grid/List */}
 <div
             className={
@@ -603,7 +591,6 @@ className={
               </motion.div>
             ))}
           </div>
-
           {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -621,7 +608,6 @@ animate={{ opacity: 1 }}
           )}
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600'>
         <div className='max-w-4xl mx-auto text-center px-6'>
@@ -669,12 +655,35 @@ animate={{ opacity: 1 }}
               <div className='text-center'>
                 <div className='text-3xl font-bold text-white mb-2'>99.9%</div>
                 <div className='text-white/80'>Uptime Guarantee</div>
+              and emerging technology solutions to gain competitive advantages and drive unprecedented growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                <Phone className="w-5 h-5 mr-2" />
+                Get Started Today
+              </Link>
+              <Link href="/pricing" className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300">
+                <DollarSign className="w-5 h-5 mr-2" />
+                View Pricing
+              </Link>
+            </div>
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">500%+</div>
+                <div className="text-white/80">Average ROI</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                <div className="text-white/80">Support Available</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-white/80">Uptime Guarantee</div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Footer Contact */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -704,7 +713,6 @@ animate={{ opacity: 1 }}
                 </div>
               </div>
             </div>
-
             <div>
 <h4 className='text-2xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?

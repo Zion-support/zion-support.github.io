@@ -1,6 +1,4 @@
 // Stub talent data - placeholder for missing functionality
-export const TALENT_PROFILES = [
-  {
 id: '1',
     slug: 'sample-talent',
     name: 'Sample Talent',

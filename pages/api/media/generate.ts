@@ -1,7 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { buildPressRelease } from '../../../utils/mediaKit';
+import { buildPressRelease } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { type;
+    res.status(200).json({ ok: true, text, fallback: true })
+  } catch (e: any) {
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   try {
@@ -49,4 +55,5 @@ const text = buildPressRelease(type, {
     res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
   }
 
+  }
 }

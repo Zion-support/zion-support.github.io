@@ -1,26 +1,21 @@
 import React, { useState } from 'react';
-import {
-  SERVICE_CATEGORIES,
-  ALL_SERVICES,
-  AI_SERVICES,
-  IT_SERVICES,
-  MICRO_SAAS_SERVICES,
-  CYBERSECURITY_SERVICES,
-  DATA_ANALYTICS_SERVICES,
-  CLOUD_SOLUTIONS,;
-} from '@/data/servicesData';
-import { ServiceCategory, ServiceSolution } from '@/types/services';
-
+import { SERVICE_CATEGORIES;
+  ALL_SERVICES;
+  AI_SERVICES;
+  IT_SERVICES;
+  MICRO_SAAS_SERVICES;
+  CYBERSECURITY_SERVICES;
+  DATA_ANALYTICS_SERVICES;
+  CLOUD_SOLUTIONS
+ } from '@/data/servicesData';
+import { ServiceCategory, ServiceSolution  } from '@/types/services';
 export function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-
-  const filteredServices = ALL_SERVICES.filter(service => {
-const matchesCategory =
-      selectedCategory === 'all' || service.category === selectedCategory;
+  const filteredServices = null;
     const matchesSearch =
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.tags.some(tag =>
         tag.toLowerCase().includes(searchTerm.toLowerCase())
       );
@@ -44,13 +39,11 @@ case 'ai-services':
       default:
         return ALL_SERVICES;
     }
-  };
-
+  }
   const selectedServices =
     selectedCategory === 'all'
       ? filteredServices
       : getServicesByCategory(selectedCategory);
-
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
       {/* Hero Section */}
@@ -82,7 +75,6 @@ case 'ai-services':
           </div>
         </div>
       </div>
-
       {/* Contact Info Banner */}
 <div className='bg-white border-b'>
         <div className='container mx-auto px-4 py-4'>
@@ -111,7 +103,6 @@ case 'ai-services':
           </div>
         </div>
       </div>
-
       {/* Search and Filter Section */}
 <div className='container mx-auto px-4 py-8'>
         <div className='bg-white rounded-xl shadow-lg p-6 mb-8'>
@@ -142,14 +133,12 @@ case 'ai-services':
             </div>
           </div>
         </div>
-
         {/* Services Grid */}
 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
           {selectedServices.map(service => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-
         {selectedServices.length === 0 && (
 <div className='text-center py-12'>
             <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>
@@ -159,7 +148,6 @@ case 'ai-services':
           </div>
         )}
       </div>
-
       {/* Why Choose Zion Tech Group */}
 <div className='bg-white py-16'>
         <div className='container mx-auto px-4'>
@@ -172,7 +160,6 @@ case 'ai-services':
               drive real business results
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             <div className='text-center'>
               <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -183,7 +170,6 @@ case 'ai-services':
                 Cutting-edge AI and technology solutions
               </p>
             </div>
-
             <div className='text-center'>
               <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <span className='text-2xl'>🛡️</span>
@@ -195,7 +181,6 @@ case 'ai-services':
                 SOC 2, HIPAA, GDPR compliant solutions
               </p>
             </div>
-
             <div className='text-center'>
               <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <span className='text-2xl'>⚡</span>
@@ -203,7 +188,6 @@ case 'ai-services':
               <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
               <p className='text-gray-600'>Quick setup and implementation</p>
             </div>
-
             <div className='text-center'>
               <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <span className='text-2xl'>🎯</span>
@@ -214,7 +198,6 @@ case 'ai-services':
           </div>
         </div>
       </div>
-
       {/* CTA Section */}
 <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
         <div className='container mx-auto px-4 text-center'>
@@ -256,7 +239,6 @@ interface ServiceCardProps {
 
 function ServiceCard({ service }: ServiceCardProps) {
   const [showDetails, setShowDetails] = useState(false);
-
   const getPopularPlan = () => {
 if (service.pricing.professional.popular)
       return service.pricing.professional;
@@ -266,7 +248,6 @@ if (service.pricing.professional.popular)
   };
 
   const popularPlan = getPopularPlan();
-
   return (
 <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
       {/* Service Image */}
@@ -289,7 +270,6 @@ if (service.pricing.professional.popular)
           </div>
         )}
       </div>
-
       {/* Service Content */}
 <div className='p-6'>
         <div className='flex items-start justify-between mb-3'>
@@ -306,9 +286,7 @@ if (service.pricing.professional.popular)
             </span>
           </div>
         </div>
-
         <p className='text-gray-600 mb-4 line-clamp-3'>{service.description}</p>
-
         {/* Provider Info */}
         <div className='flex items-center gap-3 mb-4'>
           <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
@@ -324,7 +302,6 @@ if (service.pricing.professional.popular)
             <span className='text-blue-600 text-sm'>✓ Verified</span>
           )}
         </div>
-
         {/* Pricing */}
 <div className='bg-gray-50 rounded-lg p-4 mb-4'>
           <div className='text-center'>
@@ -342,7 +319,6 @@ if (service.pricing.professional.popular)
             )}
           </div>
         </div>
-
         {/* Features Preview */}
 <div className='mb-4'>
           <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>
@@ -362,7 +338,6 @@ if (service.pricing.professional.popular)
             )}
           </div>
         </div>
-
         {/* Action Buttons */}
 <div className='flex gap-2'>
           <button
@@ -378,7 +353,6 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
             Call Now
           </a>
         </div>
-
         {/* Detailed Information */}
         {showDetails && (
 <div className='mt-6 pt-6 border-t border-gray-200'>
@@ -392,7 +366,6 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
                   ))}
                 </ul>
               </div>
-
               {/* Use Cases */}
               <div>
 <h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>
@@ -407,7 +380,6 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
                   ))}
                 </div>
               </div>
-
               {/* Technologies */}
               <div>
 <h4 className='font-semibold text-gray-900 mb-2'>
@@ -424,7 +396,6 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
                   ))}
                 </div>
               </div>
-
               {/* Deployment & Support */}
 <div className='grid grid-cols-2 gap-4 text-sm'>
                 <div>
@@ -438,7 +409,6 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
                   </p>
                 </div>
               </div>
-
               {/* All Pricing Plans */}
               <div>
 <h4 className='font-semibold text-gray-900 mb-2'>
@@ -459,7 +429,6 @@ className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-gre
                   ))}
                 </div>
               </div>
-
               {/* Contact CTA */}
 <div className='bg-blue-50 rounded-lg p-4 text-center'>
                 <p className='text-sm text-blue-800 mb-2'>

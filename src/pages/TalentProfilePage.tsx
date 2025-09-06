@@ -17,44 +17,12 @@ import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
 
 export default function TalentProfilePage() {
-  const router = useRouter();
-  // Get id from Next.js router query params
-  const { id } = router.query as { id?: string };
-  const { profile, isLoading, error } = useTalentProfile(id);
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const { isAuthenticated, user } = useAuth();
-
-  // Create a compatible UserProfile from UserDetails or the authenticated user
-  const userProfile: UserProfile = user
-    ? {
-        id: user.id || '',
-        displayName: user.displayName || '',
-        email: user.email || '', // Ensure email is always a string
-        userType: user.userType || null,
-        profileComplete: user.profileComplete || false,
-        created_at: user.created_at || new Date().toISOString(),
-        updated_at: user.updatedAt || new Date().toISOString(),
-        role: user.role || '',
-        name: user.name || '',
-        points: user.points || 0,
-      }
-    : {
-        id: userDetails?.id || '',
-        displayName: userDetails?.name || '',
-        email: userDetails?.email || '', // Ensure email is always a string
-        userType: null, // Default empty string since userDetails doesn't have this property
-        profileComplete: false, // Default value since userDetails doesn't have this property
-        created_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
-        updated_at: new Date().toISOString(), // Default value since userDetails doesn't have this property
-        role: '', // Default empty string since userDetails doesn't have this property
         name: '',
         points: 0,
       };
 
   // Handle loading error gracefully
-  useEffect(() => {
+  useEffect((,) => {
     if (error) {
       toast({
 title: 'Error loading profile',
@@ -63,16 +31,13 @@ title: 'Error loading profile',
         variant: 'destructive',
       });
     }
-  }, [error]);
-
+  }, [error])
   if (isLoading) {
-    return <ProfileLoadingState />;
+    return <ProfileLoadingState />
   }
-
-  if (error || !profile) {
-    return <ProfileErrorState error={error} />;
+  if (error |!profile) {
+    return <ProfileErrorState error={error} />
   }
-
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
@@ -101,9 +66,9 @@ title: 'Authentication required',
   return (
     <>
       <SEO
-        title={profile.full_name}
-        description={profile.bio || 'Talent profile'}
-        ogImage={profile.profile_picture_url}
+        title = {profile.full_name,}
+        description = {profile.bio |'Talent profile',}
+        ogImage = {profile.profile_picture_url,}
       />
 <div className='min-h-screen bg-zion-blue pb-12'>
         <TalentProfile
@@ -112,7 +77,6 @@ title: 'Authentication required',
           onMessageTalent={handleMessageTalent}
         />
         <BackToDirectoryButton />
-
         {/* Sticky action buttons that appear when scrolling */}
         <StickyAction>
           <div className='p-2 flex gap-2'>
@@ -135,7 +99,6 @@ title: 'Authentication required',
             </Button>
           </div>
         </StickyAction>
-
         {/* Request to Hire Modal */}
         <HireRequestModal
           talent={profile}
@@ -143,7 +106,6 @@ title: 'Authentication required',
           onClose={() => setIsHireModalOpen(false)}
           userDetails={userProfile}
         />
-
         {/* Message Talent Modal */}
         <MessageTalentModal
           talent={profile}

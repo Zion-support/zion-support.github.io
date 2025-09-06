@@ -1,5 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTechService2025 {
+export interface EmergingTechService {
   id: string;
   name: string;
   tagline: string;
@@ -30,82 +31,54 @@ export interface EmergingTechService2025 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
-  // Space Mining Platform
-  {
-id: 'space-mining-platform',
-    name: 'Space Mining Platform',
-    tagline: 'Revolutionary asteroid mining and space resource extraction',
+    id: 'space-mining-platform';
+    name: 'Space Mining Platform';
+    tagline: 'Revolutionary asteroid mining and space resource extraction';
     price: '$5,999',
-    period: '/month',
-    description:
-      'Advanced space mining platform that enables automated asteroid mining, resource extraction, and space resource management. Provides access to rare minerals and materials from space.',
+    period: '/month';
+    description: 'Advanced space mining platform that enables automated asteroid mining, resource extraction, and space resource management. Provides access to rare minerals and materials from space.',
     features: [
-      'Automated asteroid detection',
-      'Resource extraction algorithms',
-      'Space logistics management',
-      'Real-time monitoring systems',
-      'Resource processing automation',
-      'Safety and compliance protocols',
-      'Cost optimization algorithms',
-      'Performance analytics',
-      'Integration with space agencies',
-      'Global space network',
-    ],
-    popular: true,
-    icon: '🚀',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/space-mining-platform',
-    marketPosition:
-      'First-to-market space mining platform. Competes with space agencies ($100M+ projects). Our advantage: Automated mining and cost-effective operations.',
-    targetAudience: [
-      'Space agencies',
-      'Mining companies',
-      'Technology companies',
-      'Government agencies',
-      'Research institutions',
-    ],
-    trialDays: 30,
-    setupTime: '2-4 weeks',
-    category: 'Space Technology & Mining',
-    realService: true,
-    technology: [
-      'Space robotics, AI algorithms, Python, React, Node.js, PostgreSQL, Satellite systems',
-    ],
-    integrations: [
-      'NASA APIs, ESA systems, Satellite networks, Space tracking systems, Mining equipment',
-    ],
-    useCases: [
-      'Asteroid mining, Resource extraction, Space logistics, Research and development, Commercial space operations',
-    ],
-    roi: 'Organizations report 1000% ROI through access to rare space resources and new revenue streams.',
+      'Automated asteroid detectionResource extraction algorithmsSpace logistics managementReal-time monitoring systemsResource processing automationSafety and compliance protocolsCost optimization algorithmsPerformance analytics';
+      'Integration with space agenciesGlobal space network'
+    ];
+    popular: true;
+    icon: '🚀';
+    color: 'from-purple-600 to-indigo-700';
+    textColor: 'text-purple-400';
+    link: 'https://ziontechgroup.com/space-mining-platform';
+    marketPosition: 'First-to-market space mining platform. Competes with space agencies ($100M+ projects). Our advantage: Automated mining and cost-effective operations.';
+    targetAudience: ['Space agenciesMining companiesTechnology companiesGovernment agenciesResearch institutions'];
+    trialDays: 30;
+    setupTime: '2-4 weeks';
+    category: 'Space Technology & Mining';
+    realService: true;
+    technology: ['Space robotics, AI algorithms, Python, React, Node.js, PostgreSQL, Satellite systems'],
+    integrations: ['NASA APIs, ESA systems, Satellite networks, Space tracking systems, Mining equipment'],
+    useCases: ['Asteroid mining, Resource extraction, Space logistics, Research and development, Commercial space operations'],
+    roi: 'Organizations report 1000% ROI through access to rare space resources and new revenue streams.';
     competitors: ['NASA, ESA, SpaceX, Blue Origin, Planetary Resources'],
-    marketSize: '$3.5B space mining market',
-    growthRate: '800% annual growth',
-    variant: 'space-mining-enterprise',
+    marketSize: '$3.5B space mining market';
+    growthRate: '800% annual growth';
+    variant: 'space-mining-enterprise';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Space mining platform with automated detection, extraction algorithms, and comprehensive space resource management.',
-    launchDate: '2024-12-01',
-    customers: 8,
-    rating: 4.9,
-    reviews: 5,
+    realImplementation: true;
+    implementationDetails: 'Space mining platform with automated detection, extraction algorithms, and comprehensive space resource management.',
+    launchDate: '2024-12-01';
+    customers: 8;
+    rating: 4.9;
+    reviews: 5
   },
 
   // Quantum Bio-Computing Platform
@@ -997,4 +970,12 @@ id: 'space-mining-platform',
     rating: 4.8,
     reviews: 11,
   },
+];
+    realImplementation: true;
+    implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.';
+    launchDate: '2024-04-30';
+    customers: 18;
+    rating: 4.8;
+    reviews: 11
+  }
 ];

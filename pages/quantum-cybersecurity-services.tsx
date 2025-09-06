@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { quantumCybersecurityServices } from '../data/2026-quantum-cybersecurity-services';
+import { motion  } from 'framer-motion';
+import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
 import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
 
@@ -44,7 +44,6 @@ href='mailto:kleber@ziontechgroup.com'
                 Get Started
               </a>
             </motion.div>
-
             {/* Key Benefits */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -84,7 +83,6 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'
             </motion.div>
           </div>
         </section>
-
         {/* Services Section */}
 <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
@@ -124,7 +122,6 @@ className='text-center mb-16'
             </div>
           </div>
         </section>
-
         {/* Why Quantum Security Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative bg-black/20'>
           <div className='max-w-7xl mx-auto'>
@@ -163,7 +160,6 @@ className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl 
                   <li>• Financial systems exposed</li>
                 </ul>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -188,7 +184,6 @@ className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl 
             </div>
           </div>
         </section>
-
         {/* Security Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
@@ -272,7 +267,6 @@ className='text-center'
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -291,7 +285,6 @@ className='text-center'
                 Don't wait for quantum computers to break your security. Contact
                 us now to implement quantum-resistant protection.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
                 <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
                   <div className='text-3xl mb-4'>📱</div>

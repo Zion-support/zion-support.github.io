@@ -1,84 +1,13 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  Brain,
-  Shield,
-  Zap,
-  Target,
-  Stethoscope,
-  BarChart3,
-  Cpu,
-  Globe,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
+import { Brain, Shield, Zap, Target, Stethoscope;
+  BarChart3, Cpu, Globe, Users, Award;
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const features = [
-  'AI-powered medical image analysis',
-  'Symptom assessment algorithms',
-  'Treatment recommendation engine',
-  'Patient history integration',
-  'Real-time diagnostic updates',
-  'Multi-specialty coverage',
-  'Mobile app integration',
-  'HIPAA-compliant platform',
+const contactInfo = null;
 ];
-
-const pricingPlans = [
-  {
-    name: 'Starter',
-    price: 299,
-    period: 'month',
-features: [
-      'Basic diagnostic tools',
-      '3 medical specialties',
-      'Standard reporting',
-      'Standard support',
-    ],
-    popular: false,
-  },
-  {
-    name: 'Professional',
-    price: 799,
-    period: 'month',
-features: [
-      'Advanced AI diagnostics',
-      'All specialties',
-      'Custom reporting',
-      'API access',
-      'Priority support',
-    ],
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 1999,
-    period: 'month',
-features: [
-      'Custom AI models',
-      'White-label solution',
-      'Dedicated support',
-      'Custom integrations',
-      'Training included',
-    ],
-    popular: false,
-  },
-];
-
 export default function AIDiagnosticPlatform() {
   return (
     <Layout>
@@ -105,11 +34,9 @@ export default function AIDiagnosticPlatform() {
           content='https://ziontechgroup.com/ai-diagnostic-platform'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse'></div>
@@ -141,7 +68,6 @@ className='mb-8'
               recommendations.
             </p>
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -166,7 +92,6 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center'
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-20 bg-gradient-to-b from-black to-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -207,7 +132,6 @@ className='bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blu
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -259,7 +183,6 @@ plan.popular
                     </span>
                   </div>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -280,7 +203,6 @@ plan.popular
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
 <section
         id='contact'
@@ -317,7 +239,6 @@ className='text-center'
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -331,7 +252,6 @@ className='text-center'
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

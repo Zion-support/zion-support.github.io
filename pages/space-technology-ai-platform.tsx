@@ -1,76 +1,54 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Satellite,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Globe,
-  Zap,
-  Shield,
-  Users,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Sparkles,;
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
-export default function SpaceTechnologyAIPlatform() {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-  };
-
+  const contactInfo = null;
+  return (
+    <UltraAdvancedFuturisticBackground 
+      intensity="extreme" 
+      colorScheme="neural-network"
+      particleCount={500}
+      animationSpeed={2.5}
+      enableHolographic={true}
+      enableQuantumEffects={true}
+      enableNeuralNetwork={true}
   const features = [
-    'AI-powered satellite operations',
-    'Autonomous space exploration',
-    'Space data analytics',
-    'Satellite constellation management',
-    'Space debris tracking',
-    'Real-time monitoring',
-    'Predictive maintenance',
-    'Mission planning tools',
-    'API access',
-    'Expert consultation',
+    'AI-powered satellite operations'
+    'Autonomous space exploration'
+    'Space data analytics'
+    'Satellite constellation management'
+    'Space debris tracking'
+    'Real-time monitoring'
+    'Predictive maintenance'
+    'Mission planning tools'
+    'API access'
+    'Expert consultation'
   ];
-
   const useCases = [
-    'Satellite operations',
-    'Space exploration',
-    'Earth observation',
-    'Space debris monitoring',
-    'Mission planning',
-    'Space research',
+    'Satellite operations'
+    'Space exploration'
+    'Earth observation'
+    'Space debris monitoring'
+    'Mission planning'
+    'Space research'
   ];
-
   const integrations = [
-    'NASA APIs',
-    'ESA APIs',
-    'Satellite ground stations',
-    'GIS systems',
-    'Slack',
-    'Microsoft Teams',
-    'Custom applications',
+    'NASA APIs'
+    'ESA APIs'
+    'Satellite ground stations'
+    'GIS systems'
+    'Slack'
+    'Microsoft Teams'
+    'Custom applications'
   ];
-
   const competitors = [
-    'Maxar ($5000-50000/month)',
-    'Planet Labs ($1000-10000/month)',
-    'Airbus Defence ($10000-100000/month)',
-    'Lockheed Martin',
-    'Boeing',
-    'Northrop Grumman',
+    'Maxar ($5000-50000/month)'
+    'Planet Labs ($1000-10000/month)'
+    'Airbus Defence ($10000-100000/month)'
+    'Lockheed Martin'
+    'Boeing'
+    'Northrop Grumman'
   ];
-
-  
     >
       <div className='min-h-screen'>
         <Head>
@@ -103,7 +81,6 @@ website: 'https://ziontechgroup.com',
         </Head>
 
         <EnhancedNavigation2026 />
-
         {/* Hero Section */}
 <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-blue-900/30 via-transparent to-indigo-900/30'></div>
@@ -120,7 +97,6 @@ className='text-center mb-16'
                   2026 Revolutionary Innovation
                 </span>
               </div>
-
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
                   Space Technology
@@ -128,13 +104,11 @@ className='text-center mb-16'
                 <br />
                 <span className='text-white'>AI Platform</span>
               </h1>
-
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
                 Revolutionary AI platform that combines space technology with
-                artificial intelligence to enable autonomous space exploration,
+                artificial intelligence to enable autonomous space exploration
                 satellite operations, and space data analysis.
               </p>
-
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12'>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -144,7 +118,6 @@ className='text-center mb-16'
                   <span className='text-2xl font-bold'>$3,999</span>
                   <span>/month</span>
                 </motion.div>
-
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -154,7 +127,6 @@ className='text-center mb-16'
                   <ArrowRight className='w-5 h-5' />
                 </motion.div>
               </div>
-
               <div className='flex items-center justify-center space-x-8 text-gray-400'>
                 <div className='flex items-center space-x-2'>
                   <CheckCircle className='w-5 h-5 text-green-400' />
@@ -172,7 +144,6 @@ className='text-center mb-16'
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
@@ -222,7 +193,6 @@ className='group relative'
             </div>
           </div>
         </section>
-
         {/* Market Position Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
@@ -270,13 +240,12 @@ className='space-y-6'
                   <div className='flex items-center space-x-3'>
                     <div className='w-3 h-3 bg-green-500 rounded-full'></div>
                     <span className='text-green-300 font-semibold'>
-                      Our Advantage: AI integration, comprehensive platform,
+                      Our Advantage: AI integration, comprehensive platform
                       affordable pricing
                     </span>
                   </div>
                 </div>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -317,7 +286,6 @@ className='space-y-6'
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>
@@ -367,7 +335,6 @@ className='group relative'
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>

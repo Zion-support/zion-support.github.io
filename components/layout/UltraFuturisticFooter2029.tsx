@@ -1,56 +1,29 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ArrowRight,
-  Star,
-  Rocket,
-  Brain,
-  Atom,
-  Building,
-  Briefcase,
-  Microscope,
-  Twitter,
-  Facebook,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
-  Zap,
-  Sparkles,
-  Shield,
-  Cpu,
-  Database,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Phone, Mail, MapPin, Globe, ArrowRight, Star;
+  Rocket, Brain, Atom, Building, Briefcase, Microscope;
+  Twitter, Facebook, Linkedin, Instagram, Youtube;
+  Github, Zap, Sparkles, Shield, Cpu, Database
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: 'AI & Machine Learning',
-    icon: Brain,
+    title: 'AI & Machine Learning'
+    icon: Brain
     services: [
 {
         name: 'AI Consciousness Evolution',
         href: '/ai-consciousness-evolution-2029',
       },
       {
-        name: 'Quantum Neural Networks',
-        href: '/quantum-neural-network-platform',
-      },
+        name: 'Quantum Neural Networks'
+        href: '/quantum-neural-network-platform'
+      }
       {
-        name: 'Autonomous Business Operations',
-        href: '/autonomous-business-operations-platform',
-      },
+        name: 'Autonomous Business Operations'
+        href: '/autonomous-business-operations-platform'
+      }
       {
         name: 'AI-Powered IT Asset Management',
         href: '/ai-powered-it-asset-management',
@@ -67,7 +40,7 @@ const serviceCategories = [
     ],
   },
   {
-    title: '⚛️ Quantum & Emerging Tech',
+    title: '⚛️ Quantum & Emerging Tech'
     services: [
       { name: 'Quantum Computing', href: '/quantum-computing' },
       { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
@@ -76,7 +49,7 @@ const serviceCategories = [
     ],
   },
   {
-    title: '🏙️ Enterprise Solutions',
+    title: '🏙️ Enterprise Solutions'
     services: [
       { name: 'Enterprise IT', href: '/enterprise-it' },
       { name: 'Cloud Solutions', href: '/cloud-solutions' },
@@ -85,7 +58,6 @@ const serviceCategories = [
     ],
   },
 ];
-
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Services', href: '/services', icon: Briefcase },
@@ -126,7 +98,7 @@ const socialLinks = [
 
 const footerSections = [
   {
-    title: 'Company',
+    title: 'Company'
     links: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Mission', href: '/mission' },
@@ -190,13 +162,11 @@ const UltraFuturisticFooter2029 = () => {
                 <p className='text-sm text-gray-400'>Innovating the Future</p>
               </div>
             </div>
-
             <p className='text-gray-400 mb-6 leading-relaxed'>
               Leading the revolution in AI, quantum computing, and autonomous
               technology solutions. Transforming businesses with cutting-edge
               innovation.
             </p>
-
             {/* Contact Information */}
             <div className='space-y-3 mb-6'>
               <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
@@ -216,7 +186,6 @@ const UltraFuturisticFooter2029 = () => {
                 <span className='text-sm'>{contactInfo.address}</span>
               </div>
             </div>
-
             {/* Social Links */}
 <div className='flex space-x-4'>
               {socialLinks.map(social => (
@@ -232,7 +201,6 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
-
           {/* Service Categories */}
 <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -261,7 +229,6 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
-
           {/* Quick Links */}
 <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -280,7 +247,6 @@ const UltraFuturisticFooter2029 = () => {
               ))}
             </div>
           </div>
-
           {/* Footer Sections */}
 <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -308,7 +274,6 @@ const UltraFuturisticFooter2029 = () => {
           </div>
         </div>
       </div>
-
       {/* Bottom Footer */}
 <div className='border-t border-slate-700/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -316,7 +281,6 @@ const UltraFuturisticFooter2029 = () => {
             <div className='text-sm text-gray-400'>
               © 2025 Zion Tech Group. All rights reserved.
             </div>
-
             <div className='flex items-center space-x-6 text-sm text-gray-400'>
               <Link
                 href='/privacy'
@@ -340,7 +304,6 @@ const UltraFuturisticFooter2029 = () => {
           </div>
         </div>
       </div>
-
       {/* Newsletter Signup */}
 <div className='bg-gradient-to-r from-purple-600/10 to-blue-600/10 border-t border-slate-700/50'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -353,7 +316,6 @@ const UltraFuturisticFooter2029 = () => {
               technology. Join our newsletter for exclusive updates and industry
               insights.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto'>
               <input
                 type='email'

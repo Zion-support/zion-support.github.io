@@ -1,22 +1,25 @@
-import { useEffect, useState } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import type { Wallet, TokenTransaction } from '@/types/tokens';
 
+import { useEffect, useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {
   const { user } = useAuth();
-  const [wallet, setWallet] = useState<Wallet | null>(null);
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]);
+  const [wallet, setWallet] = useState<Wallet | null>(null),
+  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+  const [error, setError] = useState<string | null>(null),
 
+=======
+  const [error, setError] = useState<string | null>(null);
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   async function fetchWallet() {
     if (!user?.id) {
       setWallet(null);
       setLoading(false);
-      return;
+      return
     }
-
     try {
       setLoading(true);
       const { data, error } = await supabase
@@ -24,24 +27,21 @@ export function useWallet() {
         .select('*')
         .eq('user_id', user.id)
         .single();
-
       if (error) {
-        throw error;
+        throw error
       }
-
-      setWallet(data);
+      setWallet(data)
     } catch (err: any) {
       console.error('Error fetching wallet:', err);
-      setError(err.message);
+      setError(err.message)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   }
-
   async function fetchTransactions() {
     if (!user?.id) {
       setTransactions([]);
-      return;
+      return
     }
     try {
       const { data, error } = await supabase
@@ -49,32 +49,28 @@ export function useWallet() {
         .select('*')
         .eq('user_id', user.id)
         .order('created_at', { ascending: false });
-
       if (error) throw error;
-      setTransactions((data || []) as TokenTransaction[]);
+      setTransactions((data |[]) as TokenTransaction[])
     } catch (err: any) {
-      console.error('Error fetching transactions:', err);
+      console.error('Error fetching transactions:', err)
     }
   }
-
   async function earnTokens(amount: number, reason?: string) {
     if (!user?.id) return;
-    setWallet(prev =>
-      prev ? { ...prev, balance: prev.balance + amount } : prev
-    );
+<<<<<<< HEAD
+    setWallet(prev;
+=======
+    setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
     setTransactions(prev => [
       {
-        id: crypto.randomUUID(),
-        user_id: user.id,
-        amount,
-        transaction_type: 'earn',
-        reason: reason || null,
-        created_at: new Date().toISOString(),
-      },
-      ...prev,
-    ]);
+        id: crypto.randomUUID();
+        user_id: user.id;
+        amount;
+        transaction_type: 'earn';
+        reason: reason |null
+        created_at: new Date().toISOString()}
+      ...prev])
   }
-
   async function spendTokens(amount: number, reason?: string) {
     if (!user?.id) return;
     setWallet(prev =>
@@ -82,29 +78,26 @@ export function useWallet() {
     );
     setTransactions(prev => [
       {
-        id: crypto.randomUUID(),
-        user_id: user.id,
-        amount,
-        transaction_type: 'burn',
-        reason: reason || null,
-        created_at: new Date().toISOString(),
-      },
-      ...prev,
-    ]);
+        id: crypto.randomUUID();
+        user_id: user.id;
+        amount;
+        transaction_type: 'burn';
+        reason: reason |null
+        created_at: new Date().toISOString()}
+      ...prev])
   }
-
   useEffect(() => {
     fetchWallet();
-    fetchTransactions();
+    fetchTransactions()
   }, [user?.id]);
-
   return {
-    wallet,
-    transactions,
-    loading,
-    error,
-    fetchWallet,
-    fetchTransactions,
-    earnTokens,
-    spendTokens,
-  };
+    wallet;
+    transactions;
+    loading;
+    error;
+    fetchWallet;
+    fetchTransactions;
+    earnTokens;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+    spendTokens}
+}

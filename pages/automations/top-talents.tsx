@@ -1,7 +1,3 @@
-import type { NextPage, GetServerSideProps } from 'next';
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
 type TalentItem = {
   talentSlug: string;
   talentName: string;
@@ -44,7 +40,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   );
   let items: TalentItem[] = [];
   try {
-    const raw = fs.readFileSync(p, 'utf8');
+    const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
 items = data.items || [];
   } catch {}

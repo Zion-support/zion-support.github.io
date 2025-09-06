@@ -1,16 +1,17 @@
 import React from 'react';
+import { motion  } from 'framer-motion';
+import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
-  Star,
-  ExternalLink,
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Clock,
-  Shield,
-  Zap,;
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
 } from 'lucide-react';
-
 interface EnhancedServiceCardProps {
   service: {
     id: string;
@@ -43,53 +44,22 @@ interface EnhancedServiceCardProps {
       mobile: string;
       email: string;
       address: string;
-      website: string;
-    };
+      website: string
+    },
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-    reviews: number;
-  };
+    reviews: number
+  }
+}
 
-const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
-  service,
-}) => {
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-ease: 'easeOut' as const,
-      },
-    },
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
+  const cardVariants = null;
     hover: {
-      y: -8,
-      scale: 1.02,
-      transition: {
-        duration: 0.3,
-ease: 'easeOut' as const,
-      },
-    },
-  };
-
-  const iconVariants = {
-    hidden: { rotate: -180, scale: 0 },
-visible: {
-      rotate: 0,
-      scale: 1,
-      transition: {
-        duration: 0.6,
-ease: 'backOut' as const,
-      },
-    },
-    hover: {
-      rotate: 360,
-      scale: 1.1,
+      y: -8
+      scale: 1.02
       transition: {
         duration: 0.6,
 ease: 'easeInOut' as const,
@@ -108,10 +78,9 @@ ease: 'easeInOut' as const,
             .replace('to-', '')
             .split(' ')
             .map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`)
-            .join(', ')})`,
+            .join(', ')})`
         }}
       />
-
       {/* Popular Badge */}
       {service.popular && (
         <div className='absolute top-4 right-4 z-10'>
@@ -126,7 +95,6 @@ ease: 'easeInOut' as const,
           </motion.div>
         </div>
       )}
-
       {/* Card Content */}
 <div className='relative p-6'>
         {/* Header */}
@@ -140,13 +108,11 @@ ease: 'easeInOut' as const,
           >
             {service.icon}
           </motion.div>
-
           <div className='text-right'>
             <div className='text-2xl font-bold text-white'>{service.price}</div>
             <div className='text-sm text-gray-400'>{service.period}</div>
           </div>
         </div>
-
         {/* Title & Tagline */}
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
           {service.name}
@@ -154,12 +120,10 @@ ease: 'easeInOut' as const,
         <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
           {service.tagline}
         </p>
-
         {/* Description */}
 <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>
           {service.description}
         </p>
-
         {/* Key Metrics */}
 <div className='grid grid-cols-2 gap-4 mb-6'>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
@@ -175,7 +139,6 @@ ease: 'easeInOut' as const,
             <div className='text-xs text-gray-400'>Rating</div>
           </div>
         </div>
-
         {/* Features Preview */}
 <div className='mb-6'>
           <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
@@ -202,7 +165,6 @@ ease: 'easeInOut' as const,
             )}
           </div>
         </div>
-
         {/* Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
           <div className='flex items-center justify-between mb-2'>
@@ -222,7 +184,6 @@ ease: 'easeInOut' as const,
             <span className='text-xs text-yellow-400'>{service.roi}</span>
           </div>
         </div>
-
         {/* Trial & Setup Info */}
 <div className='flex items-center justify-between mb-6 text-sm'>
           <div className='flex items-center gap-2 text-gray-400'>
@@ -234,7 +195,6 @@ ease: 'easeInOut' as const,
             {service.setupTime}
           </div>
         </div>
-
         {/* Action Buttons */}
 <div className='flex gap-3'>
           <motion.a
@@ -246,7 +206,6 @@ ease: 'easeInOut' as const,
             <ExternalLink className='w-4 h-4' />
             Learn More
           </motion.a>
-
           <motion.a
             href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
             className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center'
@@ -256,7 +215,6 @@ ease: 'easeInOut' as const,
             <ArrowRight className='w-4 h-4' />
           </motion.a>
         </div>
-
         {/* Contact Info */}
 <div className='mt-4 pt-4 border-t border-white/10'>
           <div className='text-xs text-gray-500 text-center'>
@@ -264,7 +222,6 @@ ease: 'easeInOut' as const,
           </div>
         </div>
       </div>
-
       {/* Hover Effect Border */}
 <div className='absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
     </motion.div>

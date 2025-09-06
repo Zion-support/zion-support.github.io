@@ -1,52 +1,32 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Check,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  Shield,
-  Zap,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Target,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,;
-} from 'lucide-react';
+import { Check, Star, Users, TrendingUp, DollarSign, Clock;
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';import {
+  Check, Star, Users, TrendingUp, DollarSign, Clock
+  Shield, Zap, Rocket, Brain, Atom, Globe, Target;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+ } from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
-
   // Combine all services
-  const allServices = [
-...enhancedRealMicroSaasServices,
-    ...innovativeAIServices2029,
-    ...quantumSpaceInnovations2029,
-    ...enterpriseITInnovations2029,
-    ...innovativeMicroSaas2029,
+  const allServices = null;
   ];
-
   // Get unique services by ID
   const uniqueServices = allServices.filter(
     (service, index, self) => index === self.findIndex(s => s.id === service.id)
   );
-
   // Get all categories
   const categories = [
-    'All',
+    'All'
     ...Array.from(
       new Set(
         uniqueServices.map(s =>
@@ -64,7 +44,6 @@ export default function PricingPage() {
     { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' },
 { id: '$20K+', name: '$20K+/month', range: '$20K+' },
   ];
-
   // Filter services
   const filteredServices = uniqueServices.filter(service => {
 const matchesCategory =
@@ -72,13 +51,12 @@ const matchesCategory =
       (Array.isArray(service.category)
         ? service.category.includes(selectedCategory)
         : service.category === selectedCategory);
-
     const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
     const matchesPrice =
-      selectedPriceRange === 'All' ||
-      (selectedPriceRange === 'Under $1K' && price < 1000) ||
-      (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
-      (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) ||
+      selectedPriceRange === 'All' |
+      (selectedPriceRange === 'Under $1K' && price < 1000) |
+      (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) |
+      (selectedPriceRange === '$5K - $20K' && price >= 5000 && price < 20000) |
       (selectedPriceRange === '$20K+' && price >= 20000);
 
     return matchesCategory && matchesPrice;
@@ -102,7 +80,7 @@ website: 'https://ziontechgroup.com',
       }
       acc[category].push(service);
       return acc;
-    },
+    }
     {} as Record<string, typeof filteredServices>
   );
 
@@ -113,46 +91,44 @@ answer:
         'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.',
     },
     {
-      question: 'Is there a free trial available?',
+      question: 'Is there a free trial available?'
       answer:
-        'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.',
-    },
+        'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.'
+    }
     {
-      question: 'What payment methods do you accept?',
+      question: 'What payment methods do you accept?'
       answer:
-        'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.',
-    },
+        'We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can be invoiced.'
+    }
     {
-      question: 'Do you offer volume discounts?',
+      question: 'Do you offer volume discounts?'
       answer:
-        'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.',
-    },
+        'Yes, we offer volume discounts for teams and organizations. Contact our sales team for custom pricing.'
+    }
     {
-      question: 'Can I cancel my subscription?',
+      question: 'Can I cancel my subscription?'
       answer:
-        "Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your billing period.",
-    },
+        "Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your billing period."
+    }
     {
-      question: 'Is there a setup fee?',
+      question: 'Is there a setup fee?'
       answer:
-        'No setup fees for any of our plans. You can start using our services immediately after signing up.',
-    },
+        'No setup fees for any of our plans. You can start using our services immediately after signing up.'
+    }
   ];
-
   const categories = [
-    'All',
-    'Content & Marketing',
-    'Development & DevOps',
-    'Sales & CRM',
-    'Legal & Compliance',
-    'Human Resources',
-    'Analytics & Data',
-    'Finance & Accounting',
-    'Project Management',
-    'Customer Experience',
-    'Security & Compliance',
+    'All'
+    'Content & Marketing'
+    'Development & DevOps'
+    'Sales & CRM'
+    'Legal & Compliance'
+    'Human Resources'
+    'Analytics & Data'
+    'Finance & Accounting'
+    'Project Management'
+    'Customer Experience'
+    'Security & Compliance'
   ];
-
   const filteredServices =
     selectedCategory === 'All'
       ? microSaasServices
@@ -162,6 +138,7 @@ answer:
 
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
 
+  const yearlyDiscount = 0.2, // 20% discount for yearly billing
   return (
     <UltraFuturisticBackground2029>
       <Head>
@@ -200,7 +177,6 @@ className='max-w-4xl mx-auto'
               Transparent pricing for our cutting-edge technology services that
               are already operational and delivering transformative results
             </p>
-
             {/* Filter Controls */}
             <div className='flex flex-col lg:flex-row gap-4 justify-center items-center mb-8'>
               <select
@@ -214,7 +190,6 @@ className='max-w-4xl mx-auto'
                   </option>
                 ))}
               </select>
-
               <select
                 value={selectedPriceRange}
                 onChange={e => setSelectedPriceRange(e.target.value)}
@@ -236,7 +211,6 @@ className='max-w-4xl mx-auto'
             </div>
           </motion.div>
         </section>
-
         {/* Pricing Categories */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -259,7 +233,6 @@ className='max-w-4xl mx-auto'
                       solutions
                     </p>
                   </div>
-
                   <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {services.map((service, serviceIndex) => (
                       <motion.div
@@ -267,8 +240,8 @@ className='max-w-4xl mx-auto'
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{
-                          duration: 0.6,
-                          delay: serviceIndex * 0.1,
+                          duration: 0.6
+                          delay: serviceIndex * 0.1
                         }}
                         viewport={{ once: true }}
                         className='group cursor-pointer'
@@ -287,14 +260,12 @@ className='max-w-4xl mx-auto'
                               </div>
                             </div>
                           )}
-
                           {/* Service Icon */}
                           <div
                             className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
                           >
                             <span className='text-2xl'>{service.icon}</span>
                           </div>
-
                           {/* Service Title and Tagline */}
                           <h3 className='text-xl font-semibold text-white mb-2'>
                             {service.name}
@@ -302,7 +273,6 @@ className='max-w-4xl mx-auto'
                           <p className='text-sm text-cyan-400 mb-4'>
                             {service.tagline}
                           </p>
-
                           {/* Price */}
                           <div className='mb-6'>
                             <div className='flex items-baseline'>
@@ -321,12 +291,10 @@ className='max-w-4xl mx-auto'
                               </p>
                             )}
                           </div>
-
                           {/* Description */}
                           <p className='text-gray-300 leading-relaxed mb-6 line-clamp-3'>
                             {service.description}
                           </p>
-
                           {/* Key Features */}
                           <div className='mb-6'>
                             <h4 className='text-sm font-medium text-gray-400 mb-3'>
@@ -353,7 +321,6 @@ className='max-w-4xl mx-auto'
                               )}
                             </div>
                           </div>
-
                           {/* Additional Info */}
                           <div className='mb-6 p-4 bg-gray-800/30 rounded-xl'>
                             <div className='grid grid-cols-2 gap-4 text-sm'>
@@ -393,7 +360,6 @@ className='max-w-4xl mx-auto'
                               )}
                             </div>
                           </div>
-
                           {/* Market Position */}
                           {service.marketPosition && (
                             <div className='mb-6 p-3 bg-blue-900/20 border border-blue-500/20 rounded-lg'>
@@ -402,7 +368,6 @@ className='max-w-4xl mx-auto'
                               </p>
                             </div>
                           )}
-
                           {/* ROI Information */}
                           {service.roi && (
                             <div className='mb-6 p-3 bg-green-900/20 border border-green-500/20 rounded-lg'>
@@ -411,11 +376,10 @@ className='max-w-4xl mx-auto'
                               </p>
                             </div>
                           )}
-
                           {/* CTA */}
                           <div className='flex items-center justify-between'>
                             <Link
-                              href={service.link || `/services/${service.id}`}
+                              href={service.link |`/services/${service.id}`}
                             >
                               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
                                 <span className='flex items-center'>
@@ -435,7 +399,6 @@ className='max-w-4xl mx-auto'
             )}
           </div>
         </section>
-
         {/* Contact CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -456,7 +419,6 @@ className='max-w-4xl mx-auto'
                 Contact our team to discuss pricing, implementation, and how our
                 revolutionary 2029 services can transform your business.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <Link href='/contact'>
                   <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
@@ -471,7 +433,6 @@ className='max-w-4xl mx-auto'
                   </button>
                 </a>
               </div>
-
               {/* Contact Information */}
 <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
                 <div className='flex items-center justify-center space-x-2'>
@@ -487,7 +448,6 @@ className='max-w-4xl mx-auto'
                   <span className='text-sm'>{contactInfo.address}</span>
                 </div>
               </div>
-
               {/* Additional Info */}
 <div className='mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20'>
                 <h3 className='text-xl font-semibold text-white mb-4'>
@@ -497,6 +457,15 @@ className='max-w-4xl mx-auto'
                   <div className='flex items-center space-x-2'>
                     <Check className='w-4 h-4 text-green-400' />
                     <span>All services are operational and market-tested</span>
+                  </div>                    <span>All services are operational and market-tested</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>Proven ROI and customer success stories</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>Comprehensive support and implementation</span>
                   </div>
                   <div className='flex items-center space-x-2'>
                     <Check className='w-4 h-4 text-green-400' />
@@ -516,18 +485,15 @@ className='max-w-4xl mx-auto'
           </div>
         </section>
       </main>
-
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   );
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
   once: true 

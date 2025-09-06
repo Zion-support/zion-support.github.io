@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Star, CheckCircle, ArrowRight, TrendingUp, Users;
 import {
-  Star,
-  CheckCircle,
-  ArrowRight,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  Zap,
-  Shield,
-  Brain,
-  Atom,
-  Rocket,
-  ShoppingCart,
-  Cpu,
-  Globe,
-  Lock,
-  Video,
-  Palette,
-  BarChart,
-  UserCheck,
-  FileText,
-  Heart,
-  Eye,
-  Search,
-  Phone,;
+  Star
+  CheckCircle
+  ArrowRight
+  TrendingUp
+  Users
+  Award
+  Clock
+  Zap
+  Shield
+  Brain
+  Atom
+  Rocket
+  ShoppingCart
+  Cpu
+  Globe
+  Lock
+  Video
+  Palette
+  BarChart
+  UserCheck
+  FileText
+  Heart
+  Eye
+  Search
+  Phone;
 } from 'lucide-react';
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
@@ -35,20 +36,26 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 website: 'https://ziontechgroup.com',
 };
+  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
+  ShoppingCart, Cpu, Globe, Lock, Video, Palette;
+  BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
+ } from 'lucide-react';
+import { realMarketServices  } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
+const contactInfo = null;
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1 
-
-
-};
-> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) ) 
+  staggerChildren: 0.1
+}
+}
+> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6" > Revolutionary Technology Services </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our comprehensive suite of cutting-edge AI, quantum computing, and emerging technology solutions. Each service is designed to transform your business and propel you into the future. </p> </motion.div>) )
 }</div> </motion.div> {
-  /* Search and Filter */ 
+  /* Search and Filter */
 }<motion.div /> <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" /> </div> {
-  /* Category Filter */ 
-}<select </option>) ) 
+  /* Category Filter */
+}<select </option>) )
 }</select> </div> </motion.div> {
-  /* Service Categories */ 
+  /* Service Categories */
 }<motion.div key= {
   category.id 
 }initial= {
@@ -80,8 +87,8 @@ services: aiEmergingTechServices.filter(
     color: 'from-blue-500 to-cyan-500',
 services: realMarketServices.filter(
       s =>
-        s.category.includes('Security') ||
-        s.category.includes('HR') ||
+        s.category.includes('Security') |
+        s.category.includes('HR') |
         s.category.includes('Project')
     ),
     gradient: 'from-blue-500/20 to-teal-500/20',
@@ -94,8 +101,8 @@ services: realMarketServices.filter(
     color: 'from-teal-500 to-emerald-500',
 services: realMarketServices.filter(
       s =>
-        s.category.includes('E-commerce') ||
-        s.category.includes('Marketing') ||
+        s.category.includes('E-commerce') |
+        s.category.includes('Marketing') |
         s.category.includes('Finance')
     ),
     gradient: 'from-teal-500/20 to-green-500/20',
@@ -123,27 +130,25 @@ services: aiEmergingTechServices.filter(
     gradient: 'from-orange-500/20 to-pink-500/20',
   },
 ];
-
 export default function UltraFuturisticServiceShowcase2034() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-
   const allServices = [...realMarketServices, ...aiEmergingTechServices];
 const filteredServices = allServices.filter(service => {
     const matchesCategory =
-      selectedCategory === 'all' ||
+      selectedCategory === 'all' |
       serviceCategories.some(cat => cat.services.includes(service));
     const matchesSearch =
-      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
       service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -181,7 +186,6 @@ className='text-center mb-16'
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
-
           {/* Stats */}
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mt-12'>
             {[
@@ -193,6 +197,7 @@ className='text-center mb-16'
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },
+              { label: 'Global Reach', value: '45+ Countries', icon: Globe }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -211,7 +216,6 @@ className='text-center p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-
             ))}
           </div>
         </motion.div>
-
         {/* Search and Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -232,7 +236,6 @@ className='mb-12'
               />
               <Search className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
             </div>
-
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -248,7 +251,6 @@ onChange={e => setSelectedCategory(e.target.value)}
             </select>
           </div>
         </motion.div>
-
         {/* Service Categories */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -298,7 +300,6 @@ selectedCategory === category.id
             ))}
           </div>
         </motion.div>
-
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -319,7 +320,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   Popular
                 </div>
               )}
-
               {/* Service Icon */}
 <div className='flex items-center justify-between mb-4'>
                 <div
@@ -334,7 +334,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   <div className='text-sm text-gray-400'>{service.period}</div>
                 </div>
               </div>
-
               {/* Service Info */}
 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors'>
                 {service.name}
@@ -342,7 +341,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
               <p className='text-gray-300 mb-4 leading-relaxed'>
                 {service.description}
               </p>
-
               {/* Features */}
 <div className='space-y-2 mb-4'>
                 {service.features.slice(0, 3).map((feature, idx) => (
@@ -360,12 +358,20 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   </div>
                 )}
               </div>
-
               {/* Service Meta */}
 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <Clock className='w-4 h-4' />
                   <span>{service.setupTime}</span>
+                </div>                  <span>{service.setupTime}</span>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-400">
+                  <Users className="w-4 h-4" />
+                  <span>{service.customers.toLocaleString()}</span>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-400">
+                  <Star className="w-4 h-4 text-yellow-400" />
+                  <span>{service.rating}/5</span>
                 </div>
                 <div className='flex items-center space-x-2 text-gray-400'>
                   <Users className='w-4 h-4' />
@@ -380,7 +386,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   <span>{service.growthRate}</span>
                 </div>
               </div>
-
               {/* Market Position */}
 <div className='mb-4 p-3 rounded-lg bg-white/5 border border-white/10'>
                 <div className='text-xs text-gray-400 mb-1'>
@@ -390,7 +395,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   {service.marketPosition}
                 </div>
               </div>
-
               {/* ROI */}
 <div className='mb-6 p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30'>
                 <div className='text-xs text-green-400 mb-1 font-semibold'>
@@ -400,7 +404,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   {service.roi}
                 </div>
               </div>
-
               {/* Action Buttons */}
 <div className='flex space-x-3'>
                 <a
@@ -414,7 +417,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
                   <Eye className='w-4 h-4' />
                 </button>
               </div>
-
               {/* Trial Info */}
 <div className='mt-4 text-center'>
                 <div className='text-sm text-gray-400'>
@@ -427,7 +429,6 @@ className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border bord
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

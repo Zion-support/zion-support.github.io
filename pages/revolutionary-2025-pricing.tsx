@@ -1,133 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Code,
-  BookOpen,
-  Activity,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  ChevronRight,
-  Crown,
-  Infinity,
-  Check,
-  X,
-  AlertTriangle,
-  Info,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Users as UsersIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Cloud as CloudIcon,
-  Smartphone as SmartphoneIcon,
-  Palette as PaletteIcon,
-  Search as SearchIcon,
-  MessageSquare as MessageSquareIcon,
-  FileText as FileTextIcon,
-  Calendar as CalendarIcon,
-  CreditCard as CreditCardIcon,
-  BarChart3 as BarChart3Icon,
-  Settings as SettingsIcon,
-  Code as CodeIcon,
-  BookOpen as BookIcon,
-  Activity as ActivityIcon,
-  Database as DatabaseIcon2,
-  Play as PlayIcon,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon,
-  Filter as FilterIcon,
-  Grid as GridIcon,
-  List as ListIcon,
-  ChevronDown as ChevronDownIcon,
-  ChevronUp as ChevronUpIcon,
-  Sparkles as SparklesIcon,
-  FlaskConical as FlaskConicalIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Globe2 as Globe2Icon,
-  Bot as BotIcon,
-  ChevronRight as ChevronRightIcon,
-  Eye,
-  Heart,
-  Share2,
-  Download,
-  Bookmark,
-  ThumbsUp,
-  MessageCircle,
-  Share,
-  Users as UsersIcon2,
-  Target as TargetIcon,
-  Zap as ZapIcon2,;
-} from 'lucide-react';
-
+import { motion  } from 'framer-motion';
+import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2  } from 'lucide-react';
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
 import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
 import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
 export default function Revolutionary2025Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
-    'monthly'
   );
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
@@ -154,25 +35,24 @@ website: 'https://ziontechgroup.com',
       count: allRevolutionaryServices.length,
     },
     {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      count: revolutionaryAI2025Services.length,
-    },
+      id: 'ai'
+      name: 'AI & Machine Learning'
+      icon: Brain
+      count: revolutionaryAI2025Services.length
+    }
     {
-      id: 'infrastructure',
-      name: 'IT Infrastructure',
-      icon: Cpu,
-      count: revolutionaryITInfrastructure2025Services.length,
-    },
+      id: 'infrastructure'
+      name: 'IT Infrastructure'
+      icon: Cpu
+      count: revolutionaryITInfrastructure2025Services.length
+    }
     {
-      id: 'saas',
-      name: 'Micro SaaS',
-      icon: Zap,
-      count: revolutionary2025MicroSaasServices.length,
-    },
+      id: 'saas'
+      name: 'Micro SaaS'
+      icon: Zap
+      count: revolutionary2025MicroSaasServices.length
+    }
   ];
-
   // Filter services based on selected category
   const filteredServices =
     selectedCategory === 'all'
@@ -181,19 +61,18 @@ website: 'https://ziontechgroup.com',
           if (selectedCategory === 'ai') return service.category.includes('AI');
           if (selectedCategory === 'infrastructure')
             return (
-              service.category.includes('IT') ||
-              service.category.includes('Network') ||
+              service.category.includes('IT') |
+              service.category.includes('Network') |
               service.category.includes('Computing')
             );
           if (selectedCategory === 'saas')
             return (
-              service.category.includes('AI') ||
-              service.category.includes('Virtual') ||
+              service.category.includes('AI') |
+              service.category.includes('Virtual') |
               service.category.includes('Creative')
             );
           return true;
         });
-
   // Calculate pricing with billing cycle
   const getPrice = (service: any) => {
     const basePrice = parseInt(service.price.replace('$', '').replace(',', ''));
@@ -206,11 +85,11 @@ website: 'https://ziontechgroup.com',
   // Pricing tiers for comparison
   const pricingTiers = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name: 'Starter'
+      description: 'Perfect for small businesses and startups'
+      price: billingCycle === 'monthly' ? 99 : 79
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 'Access to 25+ Core Services',
         'Basic AI Integration',
@@ -292,6 +171,9 @@ globalReach: '150+ countries',
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
 <div className='min-h-screen'>
+  return (
+    <UltraQuantumHolographicBackground intensity={2.0}>
+      <div className='min-h-screen'>
         <Head>
           <title>
             Revolutionary 2025 Pricing - Zion Tech Group | Competitive AI & IT
@@ -327,7 +209,6 @@ globalReach: '150+ countries',
         </Head>
 
         <UltraAdvancedNavigation />
-
         {/* Hero Section */}
 <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
@@ -344,7 +225,6 @@ globalReach: '150+ countries',
                 revolutionary services deliver 10x better performance at 50%
                 lower costs than traditional solutions.
               </p>
-
               {/* Billing Toggle */}
               <div className='flex items-center justify-center gap-4 mb-12'>
                 <span className='text-gray-400'>Monthly</span>
@@ -368,7 +248,6 @@ billingCycle === 'yearly'
                 </button>
                 <span className='text-gray-400'>Yearly (Save 20%)</span>
               </div>
-
               {/* Market Analysis */}
               <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12'>
                 <motion.div
@@ -382,7 +261,6 @@ billingCycle === 'yearly'
                   </div>
                   <div className='text-xs text-gray-400'>Market Size</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -394,7 +272,6 @@ billingCycle === 'yearly'
                   </div>
                   <div className='text-xs text-gray-400'>Growth Rate</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -406,7 +283,6 @@ billingCycle === 'yearly'
                   </div>
                   <div className='text-xs text-gray-400'>Satisfaction</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -418,7 +294,6 @@ billingCycle === 'yearly'
                   </div>
                   <div className='text-xs text-gray-400'>Average ROI</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -430,7 +305,6 @@ billingCycle === 'yearly'
                   </div>
                   <div className='text-xs text-gray-400'>Time to Value</div>
                 </motion.div>
-
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -446,7 +320,6 @@ billingCycle === 'yearly'
             </motion.div>
           </div>
         </section>
-
         {/* Pricing Tiers */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -496,14 +369,12 @@ tier.popular
                       {tier.name}
                     </h3>
                     <p className='text-gray-400 mb-6'>{tier.description}</p>
-
                     <div className='mb-4'>
                       <span className='text-4xl font-bold text-white'>
                         ${tier.price}
                       </span>
                       <span className='text-gray-400'>{tier.period}</span>
                     </div>
-
                     {tier.savings && (
                       <div className='text-green-400 text-sm font-semibold mb-6'>
                         {tier.savings}
@@ -528,7 +399,6 @@ tier.popular
             </div>
           </div>
         </section>
-
         {/* Service Pricing Grid */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -547,7 +417,6 @@ viewport={{ once: true }}
                 All services include free trials and comprehensive support.
               </p>
             </motion.div>
-
             {/* Category Filter */}
 <div className='flex flex-wrap justify-center gap-4 mb-12'>
               {serviceCategories.map(category => (
@@ -568,7 +437,6 @@ viewport={{ once: true }}
                 </button>
               ))}
             </div>
-
             {/* Services Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {filteredServices.map(service => (
@@ -600,12 +468,10 @@ viewport={{ once: true }}
                       </div>
                     )}
                   </div>
-
                   {/* Service Description */}
 <p className='text-gray-300 mb-4 line-clamp-3'>
                     {service.description}
                   </p>
-
                   {/* Price and Rating */}
                   <div className='flex items-center justify-between mb-4'>
                     <div className='flex items-center gap-2'>
@@ -622,7 +488,6 @@ viewport={{ once: true }}
                       </span>
                     </div>
                   </div>
-
                   {/* Key Features */}
 <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-2'>
@@ -645,7 +510,6 @@ viewport={{ once: true }}
                       )}
                     </div>
                   </div>
-
                   {/* Market Position */}
 <div className='mb-4 p-3 bg-gray-800/50 rounded-lg'>
                     <h4 className='text-xs font-semibold text-gray-300 mb-1'>
@@ -655,7 +519,6 @@ viewport={{ once: true }}
                       {service.marketPosition}
                     </p>
                   </div>
-
                   {/* Actions */}
                   <div className='flex items-center gap-3'>
                     <button className='flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
@@ -674,7 +537,6 @@ viewport={{ once: true }}
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -692,7 +554,6 @@ viewport={{ once: true }}
                 quote. We offer flexible pricing and payment options to fit your
                 budget.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-6 border border-blue-500/30'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-3' />
@@ -703,7 +564,6 @@ viewport={{ once: true }}
                     {contactInfo.mobile}
                   </p>
                 </div>
-
                 <div className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm rounded-2xl p-6 border border-green-500/30'>
                   <Mail className='w-8 h-8 text-green-400 mx-auto mb-3' />
                   <h3 className='text-lg font-semibold text-white mb-2'>
@@ -711,7 +571,6 @@ viewport={{ once: true }}
                   </h3>
                   <p className='text-green-400'>{contactInfo.email}</p>
                 </div>
-
                 <div className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/30'>
                   <MapPin className='w-8 h-8 text-purple-400 mx-auto mb-3' />
                   <h3 className='text-lg font-semibold text-white mb-2'>
@@ -722,7 +581,6 @@ viewport={{ once: true }}
                   </p>
                 </div>
               </div>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700'>
                   <Phone className='w-5 h-5 mr-2' />

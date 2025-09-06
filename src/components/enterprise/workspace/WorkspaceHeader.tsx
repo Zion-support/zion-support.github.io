@@ -3,9 +3,12 @@ import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
 
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+import { Bell, Users, Settings } from 'lucide-react'
 interface WorkspaceHeaderProps {
-  company: Company;
-
+  company: Company
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className='space-y-6'>
@@ -13,11 +16,10 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         <div className='flex items-center gap-4'>
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>
             <img
-              src={company.logoUrl || '/placeholder.svg'}
+              src={company.logoUrl |'/placeholder.svg'}
               alt={company.name}
               className='max-h-10 max-w-10'
-              loading='lazy'
-            />
+              loading='lazy'            />
           </div>
           <div>
             <h1 className='text-3xl font-bold tracking-tight'>
@@ -40,7 +42,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           </Button>
         </div>
       </div>
-
       <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>

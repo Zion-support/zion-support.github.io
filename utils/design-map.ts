@@ -270,24 +270,46 @@ export function getZionDesignMap(): DesignMap {
 
 export type TokenSet = {
   colors: Record<string, string>;
-  typography: {
-    fontSizes: Record<string, string>;
-  };
-};
-
-export async function buildTokenSet(): Promise<TokenSet> {
-  // Dynamically import Tailwind config for color extraction;
-  const tailwindConfig = require('../tailwind.config.js');
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
-  const colors: Record<string, string> = {};
-
-  function flattenColors(prefix: string, obj: any) {
-    Object.entries(obj || {}).forEach(([key, value]) => {
-      const newKey = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === 'string') {
-        colors[newKey] = value;
-      } else if (typeof value === 'object') {
-        flattenColors(newKey, value);
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+export interface UIKit {
+  components: Record<string, any>;
+  tokens: TokenSet;
+}
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
+    colors: {
+      primary: '#007AFF'
+      secondary: '#5856D6'
+      success: '#34C759'
+      warning: '#FF9500'
+      error: '#FF3B30'
+    }
+    typography: {
+      heading1: { fontSize: 32, fontWeight: 'bold' }
+      heading2: { fontSize: 24, fontWeight: 'bold' }
+      body: { fontSize: 16, fontWeight: 'normal' }
+    }
+    spacing: {
+      xs: 4
+      sm: 8
+      md: 16
+      lg: 24
+      xl: 32
+    }
+  }
+}
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+  const tokens = await buildTokenSet(fileId);
+  return {
+    components: {
+      button: {
+        primary: {
+          backgroundColor: tokens.colors.primary
+          padding: tokens.spacing.md
+        }
       }
     });
   }

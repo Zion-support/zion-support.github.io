@@ -1,18 +1,16 @@
-import { useRouter } from 'next/router';
+import { useRouter  } from 'next/router';
 import useSWR from 'swr';
 import { useEffect, useState } from 'react';
-
+const fetcher = null;
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export default function EditJobPage() {
   const router = useRouter();
   const { id } = router.query;
   const { data } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
   const job = data?.job;
-
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('');
-
   useEffect(() => {
     if (job) {
       setTitle(job.title || '');
@@ -20,7 +18,6 @@ export default function EditJobPage() {
 setCategory(job.category || '');
     }
   }, [job]);
-
   async function save() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
@@ -31,7 +28,6 @@ body: JSON.stringify({ title, description, category }),
   }
 
   if (!job) return <div>Loading…</div>;
-
   return (
 <div className='max-w-2xl mx-auto space-y-4'>
       <h1 className='text-2xl font-semibold'>Edit Job</h1>

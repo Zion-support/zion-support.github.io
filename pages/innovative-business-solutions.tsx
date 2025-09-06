@@ -1,142 +1,57 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Atom,
-  Dna,
-  Users,
-  Globe,
-  Cpu,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Target as TargetIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Search,
-  Code,
-  TestTube,
-  Server,
-  Database,
-  Network,
-  Shield as SecurityIcon,
-  Wifi,
-  Building,
-  Cpu as CpuIcon,
-  TrendingUp as ChartIcon,
-  Megaphone,
-  HeadphonesIcon,
-  Users as TeamIcon,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const heroStats = [
-  {
-    label: 'Business Solutions',
-    value: '100+',
-    icon: <Target className='w-5 h-5' />,
-  },
-  {
-    label: 'Happy Businesses',
-    value: '250+',
-    icon: <Users className='w-5 h-5' />,
-  },
-  {
-    label: 'Success Rate',
-    value: '99.5%',
-    icon: <Award className='w-5 h-5' />,
-  },
-  {
-    label: 'ROI Average',
-    value: '400%',
-    icon: <TrendingUp className='w-5 h-5' />,
-  },
-];
-
-const serviceCategories = [
-  {
-    title: 'Business Intelligence & Analytics',
-description:
-      'AI-powered business intelligence and data analytics solutions',
+const contactInfo = null;
     services: innovativeBusinessSolutions2025.filter(
       s => s.category === 'Business Intelligence & Analytics'
-    ),
-    icon: ChartIcon,
-    color: 'from-blue-500 to-cyan-600',
-    features: ['Data Analysis', 'Predictive Analytics', 'Real-time Insights'],
-  },
+    )
+    icon: ChartIcon
+    color: 'from-blue-500 to-cyan-600'
+    features: ['Data Analysis', 'Predictive Analytics', 'Real-time Insights']
+  }
   {
-    title: 'Marketing Automation',
-    description: 'Intelligent marketing automation with AI-driven optimization',
+    title: 'Marketing Automation'
+    description: 'Intelligent marketing automation with AI-driven optimization'
     services: innovativeBusinessSolutions2025.filter(
       s => s.category === 'Marketing Automation'
-    ),
-    icon: Megaphone,
-    color: 'from-purple-500 to-pink-600',
+    )
+    icon: Megaphone
+    color: 'from-purple-500 to-pink-600'
     features: [
-      'Campaign Optimization',
-      'Content Personalization',
-      'ROI Tracking',
-    ],
-  },
+      'Campaign Optimization'
+      'Content Personalization'
+      'ROI Tracking'
+    ]
+  }
   {
-    title: 'Sales Intelligence',
-    description: 'AI-powered sales automation and intelligence solutions',
+    title: 'Sales Intelligence'
+    description: 'AI-powered sales automation and intelligence solutions'
     services: innovativeBusinessSolutions2025.filter(
       s => s.category === 'Sales Intelligence'
-    ),
-    icon: TrendingUp,
-    color: 'from-green-500 to-emerald-600',
-    features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization'],
-  },
+    )
+    icon: TrendingUp
+    color: 'from-green-500 to-emerald-600'
+    features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization']
+  }
   {
-    title: 'Customer Service',
-    description: 'Intelligent customer service with AI automation',
+    title: 'Customer Service'
+    description: 'Intelligent customer service with AI automation'
     services: innovativeBusinessSolutions2025.filter(
       s => s.category === 'Customer Service'
-    ),
-    icon: HeadphonesIcon,
-    color: 'from-orange-500 to-red-600',
-    features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis'],
-  },
+    )
+    icon: HeadphonesIcon
+    color: 'from-orange-500 to-red-600'
+    features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis']
+  }
   {
-    title: 'HR Management',
-    description: 'AI-powered HR automation and management solutions',
+    title: 'HR Management'
+    description: 'AI-powered HR automation and management solutions'
     services: innovativeBusinessSolutions2025.filter(
       s => s.category === 'HR Management'
-    ),
-    icon: TeamIcon,
-    color: 'from-teal-500 to-cyan-600',
+    )
+    icon: TeamIcon
+    color: 'from-teal-500 to-cyan-600'
     features: [
       'Recruitment Automation',
       'Performance Analytics',
@@ -237,7 +152,6 @@ export default function InnovativeBusinessSolutions() {
           href='https://ziontechgroup.com/innovative-business-solutions'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20'></div>
@@ -251,7 +165,7 @@ export default function InnovativeBusinessSolutions() {
               Innovative Business Solutions
             </h1>
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-              Transform your business operations with AI-powered intelligence,
+              Transform your business operations with AI-powered intelligence
               automation, and analytics that drive growth and efficiency
             </p>
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
@@ -290,7 +204,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg p
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -340,7 +253,6 @@ className='relative group'
           </div>
         </div>
       </section>
-
       {/* Services Section */}
 <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -459,7 +371,6 @@ className='relative group'
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -514,7 +425,6 @@ className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-teal-900/20 via-green-900/20 to-emerald-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -558,39 +468,33 @@ className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-
 );
 
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
-  /* Hero Section */ 
+  /* Hero Section */
 }<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
   {
-  opacity: 0, y: 20 
-
+  opacity: 0, y: 20
 }animate= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
-}> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion.div>) ) 
-}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>) 
-}</div> </div>) ) 
-}</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) ) 
-}</div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) ) 
-}</div> </div> </motion.div>) ) 
+  duration: 0.8
+}> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion.div>) )
+}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>)
+}</div> </div>) )
+}</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) )
+}</div> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) )
+}</div> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 20 
-
+  opacity: 0, y: 20
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8 
-
+  duration: 0.8
 }viewport= {
   {
   once: true 

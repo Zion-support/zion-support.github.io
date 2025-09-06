@@ -1,32 +1,33 @@
 import React from 'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface Props {
-  children: React.ReactNode;
-
+  children: React.ReactNode
+}
 interface State {
   hasError: boolean;
-  error?: Error;
-
+  error?: Error
+}
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
-this.state = { hasError: false };
-  }
-
+    this.state = { hasError: false }
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
-
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     logErrorToProduction('Equipment page error:', error, {
-      componentStack: errorInfo.componentStack,
-    });
+      componentStack: errorInfo.componentStack
+    }) }
+    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
   }
-
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error }
+  }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    logErrorToProduction('Equipment page error:', error, { componentStack: errorInfo.componentStack })
+  }
   render() {
     if (this.state.hasError) {
       return (
@@ -46,8 +47,7 @@ this.state = { hasError: false };
                   onClick={() =>
                     this.setState({ hasError: false, error: undefined })
                   }
-                  variant='outline'
-                >
+                  variant='outline'                >
                   <RefreshCw className='h-4 w-4 mr-2' />
                   Try Again
                 </Button>

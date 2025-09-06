@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIEthicsGovernanceFramework() {
-  
-    />
-  );
+			title;
+				"Training and incident response runbooks"
+			]}
+			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}
+			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
+		/>
+	)
+}

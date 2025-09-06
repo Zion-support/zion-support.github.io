@@ -1,17 +1,11 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Award } from 'lucide-react';
 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Award } from 'lucide-react'
 interface LeaderboardEntry {
   rank: number;
   name: string;
-  referrals: number;
-
+  referrals: number
+}
 export function ReferralLeaderboard() {
   // This would typically be fetched from the server
   // For now, we'll use mock data
@@ -37,7 +31,7 @@ export function ReferralLeaderboard() {
           {leaderboardData.map(entry => (
             <div
               key={entry.rank}
-              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors'              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >
               <div className='flex items-center gap-3'>
                 <div

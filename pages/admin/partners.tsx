@@ -1,6 +1,15 @@
+import { useEffect, useState  } from 'react';
+export default function AdminPartners() {
+  const [partners, setPartners] = useState<any[]>([]),
+  const [selected, setSelected] = useState<string>(''),
+  const [flags, setFlags] = useState<any[]>([]);
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = null;
+    setFlags(json.flags || [])
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-
 interface Partner {
   id: string;
   code: string;
@@ -13,55 +22,52 @@ interface Partner {
   lastActivity: string;
   totalReferrals: number;
   totalEarnings: number;
-
 const mockPartners: Partner[] = [
   {
-    id: '1',
-    code: 'PART001',
-    name: 'Tech Solutions Inc.',
-    status: 'active',
-    commission: 15,
-    contactEmail: 'contact@techsolutions.com',
-    contactPhone: '+1-555-0123',
-    joinedAt: '2024-01-15T00:00:00Z',
-    lastActivity: '2025-01-15T10:30:00Z',
-    totalReferrals: 25,
+    id: '1'
+    code: 'PART001'
+    name: 'Tech Solutions Inc.'
+    status: 'active'
+    commission: 15
+    contactEmail: 'contact@techsolutions.com'
+    contactPhone: '+1-555-0123'
+    joinedAt: '2024-01-15T00:00:00Z'
+    lastActivity: '2025-01-15T10:30:00Z'
+    totalReferrals: 25
     totalEarnings: 12500
-  },
+  }
   {
-    id: '2',
-    code: 'PART002',
-    name: 'Digital Marketing Pro',
-    status: 'active',
-    commission: 12,
-    contactEmail: 'hello@digitalmarketingpro.com',
-    contactPhone: '+1-555-0456',
-    joinedAt: '2024-03-20T00:00:00Z',
-    lastActivity: '2025-01-14T16:45:00Z',
-    totalReferrals: 18,
+    id: '2'
+    code: 'PART002'
+    name: 'Digital Marketing Pro'
+    status: 'active'
+    commission: 12
+    contactEmail: 'hello@digitalmarketingpro.com'
+    contactPhone: '+1-555-0456'
+    joinedAt: '2024-03-20T00:00:00Z'
+    lastActivity: '2025-01-14T16:45:00Z'
+    totalReferrals: 18
     totalEarnings: 8750
-  },
+  }
   {
-    id: '3',
-    code: 'PART003',
-    name: 'Cloud Services LLC',
-    status: 'pending',
-    commission: 10,
-    contactEmail: 'info@cloudservices.com',
-    contactPhone: '+1-555-0789',
-    joinedAt: '2025-01-10T00:00:00Z',
-    lastActivity: '2025-01-10T00:00:00Z',
-    totalReferrals: 0,
+    id: '3'
+    code: 'PART003'
+    name: 'Cloud Services LLC'
+    status: 'pending'
+    commission: 10
+    contactEmail: 'info@cloudservices.com'
+    contactPhone: '+1-555-0789'
+    joinedAt: '2025-01-10T00:00:00Z'
+    lastActivity: '2025-01-10T00:00:00Z'
+    totalReferrals: 0
     totalEarnings: 0
   }
 ];
-
 const AdminPartnersPage: React.FC = () => {
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
@@ -87,9 +93,8 @@ const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
     const json = await res.json();
-    setFlags(json.flags || []);
+    setFlags(json.flags |[]);
   }
-
   return (
     <div className='space-y-6'>
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>
@@ -119,7 +124,7 @@ const res = await fetch(
                     step={0.01}
 onBlur={e =>
                       updatePartner(p.code, {
-                        commission_rate: Number(e.target.value),
+                        commission_rate: Number(e.target.value)
                       })
                     }
                     className='w-24 border rounded px-2 py-1'
@@ -154,7 +159,6 @@ onBlur={e =>
           </tbody>
         </table>
       </div>
-
       {selected && (
 <div className='p-4 rounded border'>
           <h2 className='font-semibold mb-2'>Fraud Flags • {selected}</h2>
@@ -170,8 +174,7 @@ onBlur={e =>
             )}
           </ul>
         </div>
-
-        {/* Stats Cards */}
+{/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Total Partners</h3>
@@ -190,7 +193,6 @@ onBlur={e =>
             <p className="text-2xl font-bold text-blue-600">${totalEarnings.toLocaleString()}</p>
           </div>
         </div>
-
         {/* Filters */}
         <div className="bg-white rounded-lg shadow p-6 mb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -219,13 +221,11 @@ onBlur={e =>
             </div>
           </div>
         </div>
-
         {/* Partners Table */}
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="px-6 py-4 border-b">
             <h2 className="text-lg font-semibold">Partners ({filteredPartners.length})</h2>
           </div>
-          
           {loading ? (
             <div className="text-center py-8">Loading partners...</div>
           ) : filteredPartners.length === 0 ? (

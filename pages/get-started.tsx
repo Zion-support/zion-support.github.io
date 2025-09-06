@@ -1,30 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Rocket,
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  Users,
-  Clock,
-  Target,
-  Star,
-  FileText,
-  Video,
-  Code,
-  Globe,
-  Building,;
-} from 'lucide-react';
-
+import { Rocket, CheckCircle, ArrowRight, Brain, Atom;
+  Shield, Zap, Users, Clock, Target, Star;
+  FileText, Video, Code, Globe, Building
+ } from 'lucide-react';
 export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>('');
+  const [selectedPath, setSelectedPath] = useState<string>(''),
   const [currentStep, setCurrentStep] = useState(1);
-
-  const onboardingSteps = [
-    {
       step: 1,
       title: 'Choose Your Path',
       description: 'Select the technology area that best fits your needs',
@@ -58,11 +40,11 @@ description:
         'Develop AI systems with genuine self-awareness and emotional intelligence',
       icon: <Brain className='w-8 h-8 text-cyan-400' />,
       features: [
-        'AI consciousness development',
-        'Emotional intelligence training',
-        'Self-aware neural networks',
-        'Autonomous decision making',
-      ],
+        'AI consciousness development'
+        'Emotional intelligence training'
+        'Self-aware neural networks'
+        'Autonomous decision making'
+      ]
       useCases: [
         'Customer Success',
         'HR Analytics',
@@ -221,7 +203,6 @@ className='text-center max-w-4xl mx-auto'
           </motion.div>
         </div>
       </section>
-
       {/* Onboarding Steps */}
 <section className='py-20'>
         <div className='container mx-auto px-4'>
@@ -267,7 +248,6 @@ className='text-center mb-16'
           </div>
         </div>
       </section>
-
       {/* Technology Paths */}
       {currentStep === 1 && (
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-black'>
@@ -308,7 +288,6 @@ className='group cursor-pointer'
                         </p>
                       </div>
                     </div>
-
                     <div className='grid md:grid-cols-2 gap-6 mb-6'>
                       <div>
                         <h4 className='text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3'>
@@ -365,7 +344,6 @@ className='group cursor-pointer'
           </div>
         </section>
       )}
-
       {/* Requirements Definition */}
       {currentStep === 2 && (
 <section className='py-20 bg-gradient-to-r from-gray-900/50 to-black'>
@@ -383,7 +361,6 @@ className='text-center mb-16'
                 Help us understand your project goals and constraints
               </p>
             </motion.div>
-
             <div className='max-w-4xl mx-auto'>
               <div className='bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl p-8 border border-gray-800/50'>
                 <div className='text-center mb-8'>
@@ -395,7 +372,6 @@ className='text-center mb-16'
                     Now let's gather more details about your specific needs
                   </p>
                 </div>
-
                 <div className='space-y-6'>
                   <div className='grid md:grid-cols-2 gap-6'>
                     <div>
@@ -431,7 +407,6 @@ className='text-center mb-16'
                       placeholder='Describe your project goals, challenges, and specific requirements...'
                     />
                   </div>
-
                   <div className='flex justify-between pt-6'>
                     <button
                       onClick={handlePreviousStep}
@@ -452,7 +427,6 @@ className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white round
           </div>
         </section>
       )}
-
       {/* Quick Start Options */}
 <section className='py-20'>
         <div className='container mx-auto px-4'>
@@ -483,21 +457,18 @@ className='group cursor-pointer'
                   <div className='flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                     {option.icon}
                   </div>
-
                   <h3 className='text-xl font-bold text-white mb-3 text-center'>
                     {option.title}
                   </h3>
                   <p className='text-gray-300 mb-4 text-center leading-relaxed'>
                     {option.description}
                   </p>
-
                   <div className='text-center mb-4'>
                     <span className='inline-flex items-center gap-1 px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm'>
                       <Clock className='w-4 h-4' />
                       {option.duration}
                     </span>
                   </div>
-
                   <button
                     className={`w-full py-3 px-4 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}
                   >
@@ -509,7 +480,6 @@ className='group cursor-pointer'
           </div>
         </div>
       </section>
-
       {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>
         <div className='container mx-auto px-4 text-center'>
@@ -549,41 +519,37 @@ className='group cursor-pointer'
 
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
-  duration: 0.8, delay: index * 0.1 
-
+  duration: 0.8, delay: index * 0.1
 }className= {
   `text-center p-6 rounded-2xl border transition-all duration-300 $ {
-  currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50' 
-}` 
-}> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div> </li>) ) 
+  currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50'
+}`
+}> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div> </li>) )
 }</ul> </div> <div> <span key= {
-  useCase 
+  useCase
 }className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm" > {
-  useCase 
-}</span>) ) 
-}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) ) 
-}</div> </div> </section>) 
-}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>) 
+  useCase
+}</span>) )
+}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) )
+}</div> </div> </section>)
+}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>)
 }> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Quick Start Options </h2> <p className="text-xl text-gray-400" >Get started immediately with these quick options</p> </motion.div> </span> </div> <button className= {
   `w-full py-3 px-4 bg-gradient-to-r $ {
-  option.color 
-}text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300` 
+  option.color
+}text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`
 }> {
-  option.action 
-}</button> </div> </motion.div>) ) 
+  option.action
+}</button> </div> </motion.div>) )
 }</div> </div> </section> <motion.div initial= {
   {
-  opacity: 0, y: 20 
-
+  opacity: 0, y: 20
 }whileInView= {
   {
-  opacity: 1, y: 0 
-
+  opacity: 1, y: 0
 }transition= {
   {
   duration: 0.8 

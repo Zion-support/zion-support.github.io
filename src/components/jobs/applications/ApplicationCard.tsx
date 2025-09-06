@@ -1,75 +1,59 @@
-import { useState } from 'react';
-import { formatDistanceToNow } from 'date-fns';
-import { JobApplication } from '@/types/jobs';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import {
-  FileText,
-  MessageSquare,
-  HelpCircle,
-  Calendar,
-  ExternalLink,
-  Download,;
-} from 'lucide-react';
-import Link from 'next/link';
-import { StatusBadge } from './StatusBadge';
-import { ApplicationProgress } from './ApplicationProgress';
-import { toast } from 'sonner';
 
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'
+import Link from "next/link",
+import { StatusBadge } from "./StatusBadge",
+import { ApplicationProgress } from "./ApplicationProgress";
+import { toast } from "sonner";
 interface ApplicationCardProps {
-  application: JobApplication;
-
+  application: JobApplication
 export function ApplicationCard({ application }: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState(false);
-
+  const [ expanded, setExpanded ] = useState(false)
   const handleDownloadResume = () => {
     // This would typically download the resume file
-    toast.info('Resume download functionality will be implemented soon');
-  };
-
+    toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
-    switch (application.status) {
-case 'shortlisted':
+    switch (application.status) {interface ApplicationCardProps {
+  application: JobApplication
+}
+export function ApplicationCard({ application }: ApplicationCardProps) {
+  const [expanded, setExpanded] = useState(false);
+  const handleDownloadResume = null;
         return (
           <Button variant='default' size='sm'>
             <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview
-          </Button>
-        );
+        )
       case 'interview':
         return (
           <Button variant='default' size='sm'>
             <Calendar className='h-4 w-4 mr-1' /> View Interview Details
           </Button>
-        );
+        )
       case 'hired':
-        
           >
             <FileText className='h-4 w-4 mr-1' /> View Offer
           </Button>
-        );
+        )
       case 'rejected':
         return (
           <Button variant='outline' size='sm'>
             <HelpCircle className='h-4 w-4 mr-1' /> View Feedback
           </Button>
-        );
+        )
       default:
-        return null;
+        return null
     }
-  };
-
+  }
   return (
     <Card className='overflow-hidden'>
       <CardHeader className='pb-3'>
         <div className='flex justify-between items-start'>
           <div>
-            <CardTitle>{application.job?.title || 'Unknown Job'}</CardTitle>
+            <CardTitle>{application.job?.title |'Unknown Job'}</CardTitle>
             <div className='text-sm text-muted-foreground mt-1'>
               Applied{' '}
               {formatDistanceToNow(new Date(application.created_at), {
@@ -82,7 +66,6 @@ case 'shortlisted':
       </CardHeader>
 <CardContent className='pb-3'>
         <ApplicationProgress status={application.status} className='my-4' />
-
         {expanded && (
           <div className='mt-4 space-y-3'>
             {application.cover_letter && (
@@ -93,14 +76,13 @@ case 'shortlisted':
                 </p>
               </div>
             )}
-
             {application.resume && (
               <div className='border rounded-md p-3 bg-muted/20'>
                 <div className='flex justify-between items-center'>
                   <div className='flex items-center'>
                     <FileText className='h-4 w-4 mr-2 text-blue-500' />
                     <span className='text-sm font-medium'>
-                      {application.resume.title || 'Resume'}
+                      {application.resume.title |'Resume'}
                     </span>
                   </div>
                   <Button

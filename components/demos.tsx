@@ -1,26 +1,17 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
-import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
-import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import EmailValidatorDemo from '../components/demos/EmailValidatorDemo',
+import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',
+import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',
 import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
-import {
-  Mail,
-  Lock,
-  Link,
-  FileText,
-  CheckCircle,
-  Zap,
-  BarChart3,
-  Code,
-  Play,;
-} from 'lucide-react';
-
+import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play  } from 'lucide-react';
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
-
+  const demos = null;
+export default function DemosPage() {
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
     {
       id: 'email-validator',
@@ -59,9 +50,7 @@ description:
       component: <TextAnalyzerDemo />,
     },
   ];
-
   const activeDemoData = demos.find(demo => demo.id === activeDemo);
-
   return (
     <>
       <Head>
@@ -82,7 +71,6 @@ description:
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -90,9 +78,7 @@ description:
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -101,7 +87,6 @@ description:
                 Interactive Demos
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               Try Our
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>
@@ -113,7 +98,6 @@ description:
               with interactive demos. Test, explore, and see the power of our
               APIs in action.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#demos'
@@ -136,7 +120,6 @@ description:
               </Button>
             </div>
           </div>
-
           {/* Stats */}
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -169,7 +152,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Demo Navigation */}
 <section
         id='demos'
@@ -186,7 +168,6 @@ description:
               functionality
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
             {demos.map(demo => (
               <button
@@ -220,7 +201,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Active Demo */}
 <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -240,21 +220,18 @@ description:
 <div className='animate-fade-in'>{activeDemoData?.component}</div>
         </div>
       </section>
-
       {/* Features */}
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-              Why Test Our Demos?
             </h2>
             <p className='text-lg text-gray-400 max-w-3xl mx-auto'>
               Experience the quality and reliability of our services before
               integrating them into your applications
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -268,7 +245,6 @@ description:
                 times
               </p>
             </Card>
-
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <CheckCircle className='w-8 h-8 text-green-400' />
@@ -281,7 +257,6 @@ description:
                 responses
               </p>
             </Card>
-
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <Code className='w-8 h-8 text-purple-400' />
@@ -332,13 +307,11 @@ description:
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-            Ready to Integrate?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             After testing our demos, integrate these professional services into

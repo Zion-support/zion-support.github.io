@@ -1,156 +1,165 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink;
 import {
-  Star,
-  Clock,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  ExternalLink,
-  ChevronRight,
-  Shield,
-  Zap,
-  Globe,
-  Rocket,
-  Brain,
-  Atom,
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
-  Award,
-  Target,;
+  Star
+  Clock
+  Users
+  TrendingUp
+  CheckCircle
+  ExternalLink
+  ChevronRight
+  Shield
+  Zap
+  Globe
+  Rocket
+  Brain
+  Atom
+  Search
+  Filter
+  Grid
+  List
+  ArrowRight
+  Award
+  Target;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+  ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
+  Search, Filter, Grid, List, ArrowRight, Award, Target
+ } from 'lucide-react';
+import { comprehensiveMicroSaasServices  } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensiveServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState<string | null>(null),
   const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-const [sortBy, setSortBy] = useState<
-    'popularity' | 'price' | 'rating' | 'newest'
-  >('popularity');
-
-  // Combine all services
-  const allServices = [
-    ...comprehensiveMicroSaasServices,
-    ...specializedEmergingTechServices,
+  const allServices = null;
   ];
-
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     {
-      id: 'AI & Machine Learning',
-      name: 'AI & ML',
-      icon: '🧠',
+      id: 'AI & Machine Learning'
+      name: 'AI & ML'
+      icon: '🧠'
       count: allServices.filter(s => s.category === 'AI & Machine Learning')
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Healthcare AI',
-      name: 'Healthcare',
-      icon: '🏥',
-      count: allServices.filter(s => s.category === 'Healthcare AI').length,
-    },
+      id: 'Healthcare AI'
+      name: 'Healthcare'
+      icon: '🏥'
+      count: allServices.filter(s => s.category === 'Healthcare AI').length
+    }
     {
-      id: 'Fintech AI',
-      name: 'Fintech',
-      icon: '💰',
-      count: allServices.filter(s => s.category === 'Fintech AI').length,
-    },
+      id: 'Fintech AI'
+      name: 'Fintech'
+      icon: '💰'
+      count: allServices.filter(s => s.category === 'Fintech AI').length
+    }
     {
-      id: 'Cybersecurity',
-      name: 'Security',
-      icon: '🛡️',
-      count: allServices.filter(s => s.category === 'Cybersecurity').length,
-    },
+      id: 'Cybersecurity'
+      name: 'Security'
+      icon: '🛡️'
+      count: allServices.filter(s => s.category === 'Cybersecurity').length
+    }
     {
-      id: 'IoT & Smart Cities',
-      name: 'Smart Cities',
-      icon: '🏙️',
+      id: 'IoT & Smart Cities'
+      name: 'Smart Cities'
+      icon: '🏙️'
       count: allServices.filter(s => s.category === 'IoT & Smart Cities')
-        .length,
-    },
+        .length
+    }
     {
-      id: 'Blockchain & DeFi',
-      name: 'Blockchain',
-      icon: '🔗',
-      count: allServices.filter(s => s.category === 'Blockchain & DeFi').length,
-    },
+      id: 'Blockchain & DeFi'
+      name: 'Blockchain'
+      icon: '🔗'
+      count: allServices.filter(s => s.category === 'Blockchain & DeFi').length
+    }
     {
-      id: 'Quantum Computing',
-      name: 'Quantum',
-      icon: '⚛️',
-      count: allServices.filter(s => s.category === 'Quantum Computing').length,
-    },
+      id: 'Quantum Computing'
+      name: 'Quantum'
+      icon: '⚛️'
+      count: allServices.filter(s => s.category === 'Quantum Computing').length
+    }
     {
-      id: 'Space Technology',
-      name: 'Space Tech',
-      icon: '🚀',
-      count: allServices.filter(s => s.category === 'Space Technology').length,
-    },
+      id: 'Space Technology'
+      name: 'Space Tech'
+      icon: '🚀'
+      count: allServices.filter(s => s.category === 'Space Technology').length
+    }
     {
-      id: 'Autonomous Systems',
-      name: 'Autonomous',
-      icon: '🤖',
+      id: 'Autonomous Systems'
+      name: 'Autonomous'
+      icon: '🤖'
       count: allServices.filter(s => s.category === 'Autonomous Systems')
-        .length,
-    },
+        .length
+    }
     {
-      id: 'AR/VR & Metaverse',
-      name: 'AR/VR',
-      icon: '🥽',
-      count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length,
-    },
+      id: 'AR/VR & Metaverse'
+      name: 'AR/VR'
+      icon: '🥽'
+      count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length
+    }
     {
-      id: '5G/6G Networks',
-      name: '5G/6G',
-      icon: '📡',
-      count: allServices.filter(s => s.category === '5G/6G Networks').length,
-    },
+      id: '5G/6G Networks'
+      name: '5G/6G'
+      icon: '📡'
+      count: allServices.filter(s => s.category === '5G/6G Networks').length
+    }
     {
-      id: 'Biotechnology AI',
-      name: 'Biotech',
-      icon: '🧬',
-      count: allServices.filter(s => s.category === 'Biotechnology AI').length,
-    },
+      id: 'Biotechnology AI'
+      name: 'Biotech'
+      icon: '🧬'
+      count: allServices.filter(s => s.category === 'Biotechnology AI').length
+    }
     {
-      id: 'Renewable Energy',
-      name: 'Energy',
-      icon: '⚡',
-      count: allServices.filter(s => s.category === 'Renewable Energy').length,
-    },
+      id: 'Renewable Energy'
+      name: 'Energy'
+      icon: '⚡'
+      count: allServices.filter(s => s.category === 'Renewable Energy').length
+    }
     {
-      id: 'Edge Computing',
-      name: 'Edge',
-      icon: '🌐',
-      count: allServices.filter(s => s.category === 'Edge Computing').length,
-    },
+      id: 'Edge Computing'
+      name: 'Edge'
+      icon: '🌐'
+      count: allServices.filter(s => s.category === 'Edge Computing').length
+    }
     {
-      id: 'Quantum Internet',
-      name: 'Q-Internet',
-      icon: '🌍',
-      count: allServices.filter(s => s.category === 'Quantum Internet').length,
-    },
+      id: 'Quantum Internet'
+      name: 'Q-Internet'
+      icon: '🌍'
+      count: allServices.filter(s => s.category === 'Quantum Internet').length
+    }
     {
-      id: 'Neuromorphic Computing',
-      name: 'Neuro',
-      icon: '🧠',
+      id: 'Neuromorphic Computing'
+      name: 'Neuro'
+      icon: '🧠'
       count: allServices.filter(s => s.category === 'Neuromorphic Computing')
-        .length,
-    },
-  ];
-
+        .length
+    },  ];    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length }
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length }
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length }
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length }
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length }
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length }
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length }
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length }
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length }
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length }
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length }
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length }
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length }
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length }
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length }
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
 const matchesCategory =
         selectedCategory === 'all' || service.category === selectedCategory;
       const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
     })
@@ -173,7 +182,6 @@ return (
           return 0;
       }
     });
-
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
 return categoryData?.icon || '🚀';
@@ -181,11 +189,13 @@ return categoryData?.icon || '🚀';
 
   const formatPrice = (price: string) => {
     return price.replace('$', '').replace(',', '');
-  };
-
+  }
   return (
     <section className='py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
       <div className='max-w-7xl mx-auto'>
+  return (
+    <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -238,7 +248,6 @@ className='text-center mb-16'
             </div>
           </div>
         </motion.div>
-
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -259,7 +268,6 @@ className='mb-12'
                 className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'
               />
             </div>
-
             {/* Sort and View Controls */}
 <div className='flex items-center gap-4'>
               <select
@@ -272,7 +280,6 @@ className='mb-12'
                 <option value='rating'>Highest Rated</option>
                 <option value='newest'>Newest First</option>
               </select>
-
               <div className='flex bg-white/10 rounded-xl p-1'>
                 <button
                   onClick={() => setViewMode('grid')}
@@ -298,7 +305,6 @@ viewMode === 'list'
             </div>
           </div>
         </motion.div>
-
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -327,7 +333,6 @@ className='mb-12'
             ))}
           </div>
         </motion.div>
-
         {/* Services Display */}
         {viewMode === 'grid' ? (
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -348,7 +353,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                       Popular
                     </div>
                   )}
-
                   {/* Service Content */}
 <div className='p-6'>
                     <div className='flex items-start justify-between mb-4'>
@@ -362,14 +366,12 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         </div>
                       </div>
                     </div>
-
                     <h3 className='text-xl font-bold text-white mb-2'>
                       {service.name}
                     </h3>
                     <p className='text-white/70 text-sm mb-4'>
                       {service.tagline}
                     </p>
-
                     {/* Features */}
                     <div className='space-y-2 mb-6'>
                       {service.features.slice(0, 3).map((feature, idx) => (
@@ -382,7 +384,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         </div>
                       ))}
                     </div>
-
                     {/* Stats */}
 <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
                       <div>
@@ -404,7 +405,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         <div className='text-xs text-white/60'>Trial</div>
                       </div>
                     </div>
-
                     {/* CTA */}
                     <a
                       href={service.link}
@@ -442,7 +442,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         </div>
                       )}
                     </div>
-
                     {/* Center - Service Details */}
 <div className='flex-1'>
                       <div className='flex items-start justify-between mb-4'>
@@ -464,7 +463,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           <div className='text-white/60'>{service.period}</div>
                         </div>
                       </div>
-
                       {/* Features Grid */}
 <div className='grid grid-cols-2 gap-2 mb-4'>
                         {service.features.slice(0, 6).map((feature, idx) => (
@@ -477,7 +475,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           </div>
                         ))}
                       </div>
-
                       {/* Stats Row */}
 <div className='flex items-center gap-6 text-sm text-white/60'>
                         <div className='flex items-center gap-2'>
@@ -485,6 +482,10 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           <span>
                             {service.rating} ({service.reviews} reviews)
                           </span>
+                        </div>                        </div>
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4 text-blue-400" />
+                          <span>{service.customers}+ customers</span>
                         </div>
                         <div className='flex items-center gap-2'>
                           <Users className='w-4 h-4 text-blue-400' />
@@ -496,7 +497,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                         </div>
                       </div>
                     </div>
-
                     {/* Right Side - CTA and Category */}
 <div className='flex-shrink-0 flex flex-col items-end gap-4'>
                       <div className='text-right'>
@@ -508,7 +508,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           <span className='text-sm'>{service.category}</span>
                         </div>
                       </div>
-
                       <a
                         href={service.link}
 target='_blank'
@@ -525,7 +524,6 @@ target='_blank'
             </AnimatePresence>
           </div>
         )}
-
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -542,7 +540,6 @@ className='text-center py-20'
             </p>
           </motion.div>
         )}
-
         {/* Contact CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -22,12 +22,6 @@ export default function JSONFormatterPage() {
   const [indentSize, setIndentSize] = useState(2);
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
-
-  const formatJSON = () => {
-    if (!inputJson.trim()) {
-      setFormattedJson('');
-      setIsValid(true);
-      setErrorMessage('');
 return;
     }
 
@@ -36,7 +30,6 @@ return;
 const formatted = compactMode
         ? JSON.stringify(parsed)
         : JSON.stringify(parsed, null, indentSize);
-
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('');
@@ -45,8 +38,7 @@ const formatted = compactMode
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
       setFormattedJson('');
     }
-  };
-
+  }
   const minifyJSON = () => {
     if (!inputJson.trim()) return;
 
@@ -68,7 +60,6 @@ setErrorMessage('');
       setErrorMessage('');
 return;
     }
-
     try {
       JSON.parse(inputJson);
       setIsValid(true);
@@ -88,8 +79,7 @@ setErrorMessage('');
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-  };
-
+  }
   const downloadJSON = (content: string, filename: string) => {
     const blob = new Blob([content], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -108,11 +98,11 @@ name: 'John Doe',
       age: 30,
       email: 'john.doe@example.com',
       address: {
-        street: '123 Main St',
-        city: 'Anytown',
-        state: 'CA',
-        zipCode: '12345',
-      },
+        street: '123 Main St'
+        city: 'Anytown'
+        state: 'CA'
+        zipCode: '12345'
+      }
       phoneNumbers: [
         {
           type: 'home',
@@ -153,7 +143,6 @@ return lines.map((_, index) => index + 1).join('\n');
           content='Professional JSON formatting and validation service.'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -173,7 +162,6 @@ return lines.map((_, index) => index + 1).join('\n');
           </p>
         </div>
       </section>
-
       {/* JSON Formatter Tool */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -186,7 +174,6 @@ return lines.map((_, index) => index + 1).join('\n');
               and real-time validation.
             </p>
           </div>
-
           {/* Settings Bar */}
 <Card className='p-6 bg-gray-800 border border-gray-700 mb-8'>
             <div className='flex flex-wrap items-center justify-between gap-4'>
@@ -218,7 +205,6 @@ return lines.map((_, index) => index + 1).join('\n');
                     Compact mode
                   </label>
                 </div>
-
                 <div className='flex items-center space-x-2'>
                   <input
                     type='checkbox'
@@ -235,7 +221,6 @@ return lines.map((_, index) => index + 1).join('\n');
                   </label>
                 </div>
               </div>
-
               <div className='flex items-center space-x-3'>
                 <Button
                   onClick={loadSampleJSON}
@@ -252,6 +237,13 @@ variant='outline'
                   size='sm'
                   className='border-gray-600 text-gray-300 hover:bg-gray-700'
                 >
+                  <Upload className='w-4 h-4 mr-2' />                  Load Sample
+                </Button>
+                <Button
+                  onClick={clearAll}
+                  variant='outline'
+                  size='sm'
+                  className='border-gray-600 text-gray-300 hover:bg-gray-700'                >
                   Clear All
                 </Button>
               </div>
@@ -296,7 +288,6 @@ onChange={e => setInputJson(e.target.value)}
                     }`}
                   />
                 </div>
-
                 {!isValid && errorMessage && (
 <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
                     <strong>Error:</strong> {errorMessage}
@@ -331,7 +322,6 @@ variant='outline'
                 </div>
               </div>
             </Card>
-
             {/* Output Section */}
 <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -390,7 +380,6 @@ variant='outline'
                     </p>
                   </div>
                 )}
-
                 {formattedJson && (
 <div className='text-sm text-gray-400'>
                     <p>• Characters: {formattedJson.length}</p>
@@ -406,20 +395,17 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* Features */}
 <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-              Professional JSON Formatting Features
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
               professionally.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>✨</div>
@@ -431,7 +417,6 @@ variant='outline'
                 spacing options.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>✅</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -442,7 +427,6 @@ variant='outline'
                 highlighting.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📦</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -453,7 +437,6 @@ variant='outline'
                 formatting.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔢</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -464,7 +447,6 @@ variant='outline'
                 large JSON files.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>💾</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -475,7 +457,6 @@ variant='outline'
                 click.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>⚙️</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -489,7 +470,6 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -502,7 +482,6 @@ variant='outline'
               your formatting needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>👨‍💻</div>
@@ -568,12 +547,10 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-            Ready to Format Your JSON?
           </h2>
           <p className='text-xl text-teal-100 mb-8'>
             Join thousands of developers and professionals who trust our JSON

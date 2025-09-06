@@ -1,8 +1,3 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
   Mail,
   AlertCircle,
@@ -32,9 +27,14 @@ export default function VerifyStatus() {
   useEffect(() => {
     if (typeof emailParam === 'string') {
 setEmail(emailParam);
-    }
-  }, [emailParam]);
+import { supabase } from '@/integrations/supabase/client', // Import Supabase client
+import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
+export default function VerifyStatus() {
 
+  const router = null;
+    }
+  }, [emailParam])
   // Countdown timer for resend button
   useEffect(() => {
 let interval: NodeJS.Timeout;
@@ -51,11 +51,9 @@ let interval: NodeJS.Timeout;
       setError('Please enter your email address');
 return;
     }
-
-    setIsResending(true);
-    setError('');
-    setMessage('');
-
+    setIsResending(true)
+    setError('')
+    setMessage('')
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
@@ -79,18 +77,15 @@ setMessage(
     } finally {
       setIsResending(false);
     }
-  };
-
+  }
   const handleCheckStatus = async () => {
     if (!email) {
       setError('Please enter your email address');
 return;
     }
-
-    setIsCheckingStatus(true);
-    setError('');
-    setMessage('');
-
+    setIsCheckingStatus(true)
+    setError('')
+    setMessage('')
     try {
       // Attempt to refresh the session to get the latest user status
 const { error: refreshError } = await supabase.auth.refreshSession();
@@ -116,9 +111,8 @@ const { error: refreshError } = await supabase.auth.refreshSession();
         setIsCheckingStatus(false);
         return;
       }
-
       if (user && user.email_confirmed_at) {
-        setMessage('Email is verified! Redirecting to login...');
+        setMessage('Email is verified! Redirecting to login...')
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
         // But we can also push them to login page directly.
         setTimeout(() => {
@@ -150,8 +144,7 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
     } finally {
       setIsCheckingStatus(false);
     }
-  };
-
+  }
   const handleTryLogin = () => {
 router.push(`/auth/login?email=${encodeURIComponent(email)}`);
   };
@@ -173,10 +166,20 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
               Email Verification
             </h1>
             <p className='text-sm text-gray-600 mt-2'>
+  return (
+    <AuthLayout>
+      <div className="flex min-h-screen items-center justify-center p-4">
+        <div className="w-full max-w-md space-y-6">
+          {/* Header */}
+          <div className="text-center">
+            <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+              <Mail className="h-6 w-6 text-blue-600" />
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900">Email Verification</h1>
+            <p className="text-sm text-gray-600 mt-2">
               Check and manage your email verification status
             </p>
           </div>
-
           {/* Success Message */}
           {message && (
 <Alert className='border-green-500 bg-green-50 text-green-900'>
@@ -184,7 +187,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
               <AlertDescription>{message}</AlertDescription>
             </Alert>
           )}
-
           {/* Error Message */}
           {error && (
 <Alert variant='destructive'>
@@ -192,7 +194,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
-
           {/* Email Input */}
 <div className='space-y-2'>
             <label
@@ -215,7 +216,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
               </p>
             )}
           </div>
-
           {/* Status Info */}
           {email && (
 <div className='bg-blue-50 dark:bg-slate-800 border border-blue-200 dark:border-slate-700 rounded-lg p-4'>
@@ -235,7 +235,6 @@ router.push(`/auth/login?email=${encodeURIComponent(email)}`);
               )}
             </div>
           )}
-
           {/* Action Buttons */}
 <div className='space-y-3'>
             {/* Check Status Button */}
@@ -257,7 +256,6 @@ className='w-full'
                 </>
               )}
             </Button>
-
             {/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
@@ -282,7 +280,6 @@ className='w-full'
                 </>
               )}
             </Button>
-
             {/* Try Login Button */}
             <Button
               onClick={handleTryLogin}
@@ -292,7 +289,6 @@ className='w-full'
               Try Login
             </Button>
           </div>
-
           {/* Help Text */}
 <div className='text-center text-sm text-gray-500 space-y-2'>
             <p>
@@ -309,7 +305,6 @@ className='w-full'
               Go Back
             </Button>
           </div>
-
           {/* Additional Options */}
 <div className='border-t pt-4 space-y-2'>
             <Button

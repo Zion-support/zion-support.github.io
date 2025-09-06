@@ -1,5 +1,3 @@
-export const advancedITInfrastructureExpansion2025V2 = [
-  {
 name: 'Autonomous DevOps Platform',
     description: 'Self-managing DevOps automation platform',
     category: 'Cloud & FinOps',

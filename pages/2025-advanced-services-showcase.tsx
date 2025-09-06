@@ -1,6 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   ArrowRight,
   Brain,
@@ -62,14 +59,14 @@ const matchesSearch =
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
 return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
           );
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating
         case 'newest':
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
@@ -77,12 +74,11 @@ return (
         default:
           return 0;
       }
-    });
-
+    })
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -90,10 +86,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
 duration: 0.5,
       },
@@ -130,9 +126,7 @@ return categoryData?.icon || '🚀';
           href='https://ziontechgroup.com/2025-advanced-services-showcase'
         />
       </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
 <section className='relative py-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -181,7 +175,6 @@ return categoryData?.icon || '🚀';
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -204,7 +197,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                 />
               </div>
             </div>
-
             {/* Filters Row */}
 <div className='flex flex-col lg:flex-row gap-6'>
               {/* Category Filter */}
@@ -224,7 +216,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   ))}
                 </select>
               </div>
-
               {/* Sort By */}
 <div className='flex-1'>
                 <label className='block text-sm font-medium text-white/70 mb-3'>
@@ -241,7 +232,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   <option value='newest'>Newest</option>
                 </select>
               </div>
-
               {/* Price Range */}
 <div className='flex-1'>
                 <label className='block text-sm font-medium text-white/70 mb-3'>
@@ -274,7 +264,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   />
                 </div>
               </div>
-
               {/* View Mode Toggle */}
 <div className='flex items-end'>
                 <div className='flex bg-white/10 rounded-xl p-1'>
@@ -304,7 +293,6 @@ viewMode === 'list'
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid/List */}
 <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
@@ -319,7 +307,6 @@ className='mb-8'
               Showing {filteredServices.length} of {allServices.length} services
             </p>
           </motion.div>
-
           {/* Services Display */}
           <motion.div
             variants={containerVariants}
@@ -366,7 +353,6 @@ className={
                         </span>
                       )}
                     </div>
-
                     {/* Description */}
 <p className='text-white/80 mb-4 leading-relaxed'>
                       {service.description}
@@ -401,7 +387,6 @@ className={
                         </span>
                       </div>
                     </div>
-
                     {/* Features */}
 <div className='mb-6'>
                       <h4 className='text-white font-semibold mb-3'>
@@ -423,7 +408,6 @@ className={
                         )}
                       </div>
                     </div>
-
                     {/* Category and Technology */}
 <div className='flex items-center justify-between mb-6'>
                       <div className='flex items-center gap-2'>
@@ -436,7 +420,6 @@ className={
                         {service.technology.length > 2 && '...'}
                       </div>
                     </div>
-
                     {/* ROI and Benefits */}
 <div className='mb-6'>
                       <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20'>
@@ -458,7 +441,6 @@ className={
                         </div>
                       </div>
                     </div>
-
                     {/* Action Buttons */}
 <div className='flex gap-3'>
                       <a
@@ -483,7 +465,6 @@ className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 roun
               ))}
             </AnimatePresence>
           </motion.div>
-
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
@@ -505,6 +486,9 @@ className='text-center py-20'
 setPriceRange([0, 10000]);
                 }}
                 className='bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300'
+                  setPriceRange([0, 10000])
+                }}
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Clear Filters
               </button>
@@ -512,7 +496,6 @@ setPriceRange([0, 10000]);
           )}
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='px-6 py-20'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -547,7 +530,6 @@ setPriceRange([0, 10000]);
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 );

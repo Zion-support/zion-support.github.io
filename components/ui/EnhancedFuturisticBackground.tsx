@@ -1,3 +1,17 @@
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface EnhancedFuturisticBackgroundProps {
+  children: React.ReactNode;
+  className?: string;
+  intensity?: 'low' | 'medium' | 'high';
+  colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic';
+  particleCount?: number;
+  animationSpeed?: number
+}
+
+const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
+  children;
+  className;
 const colorSchemes = {
   quantum: {
   resizeCanvas ();
@@ -28,7 +42,6 @@ const EnhancedFuturisticBackground: React.FC<
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
-
   const colorSchemes = {
     quantum: {
       
@@ -117,10 +130,8 @@ high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -128,10 +139,8 @@ canvas.height = window.innerHeight;
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     const colors = colorSchemes[colorScheme];
     const settings = intensitySettings[intensity];
-
     // Enhanced particle system
     class Particle {
 x: number;
@@ -160,29 +169,26 @@ this.color =
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
-
         // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-
         // Fade out near end of life
         if (this.life < 20) {
 this.opacity *= 0.95;
         }
       }
-
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
 // Create gradient for particle
         const gradient = ctx.createRadialGradient(
-          this.x,
-          this.y,
-          0,
-          this.x,
-          this.y,
+          this.x
+          this.y
+          0
+          this.x
+          this.y
           this.size
         );
         gradient.addColorStop(0, this.color);
@@ -193,18 +199,15 @@ this.opacity *= 0.95;
         ctx.fill();
 ctx.restore();
       }
-
       isDead() {
         return this.life <= 0 || this.opacity < 0.01;
       }
     }
-
     // Connection lines between particles
     class Connection {
 p1: Particle;
       p2: Particle;
       opacity: number;
-
       constructor(p1: Particle, p2: Particle) {
         this.p1 = p1;
         this.p2 = p2;
@@ -216,7 +219,6 @@ p1: Particle;
 Math.pow(this.p1.x - this.p2.x, 2) +
             Math.pow(this.p1.y - this.p2.y, 2)
         );
-
         if (distance < 150) {
           ctx.save();
           ctx.globalAlpha = this.opacity * (1 - distance / 150);
@@ -230,14 +232,12 @@ ctx.restore();
         }
       }
     }
-
     let particles: Particle[] = [];
     let connections: Connection[] = [];
 // Initialize particles
     for (let i = 0; i < settings.particleCount; i++) {
       particles.push(new Particle());
     }
-
     // Matrix rain effect
     const matrixRain = () => {
 const characters =
@@ -249,11 +249,9 @@ const characters =
 for (let i = 0; i < columns; i++) {
         drops[i] = 1;
       }
-
       const drawMatrix = () => {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-
         ctx.fillStyle = colors.primary;
         ctx.font = `${fontSize}px monospace`;
 
@@ -261,7 +259,6 @@ for (let i = 0; i < drops.length; i++) {
           const text =
             characters[Math.floor(Math.random() * characters.length)];
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0;
           }
@@ -273,22 +270,18 @@ for (let i = 0; i < drops.length; i++) {
     };
 
     const drawMatrix = matrixRain();
-
     // Main animation loop
     const animate = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = colors.background;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Draw matrix rain
       drawMatrix();
-
       // Update and draw particles
       particles.forEach(particle => {
         particle.update();
 particle.draw();
       });
-
       // Remove dead particles and add new ones
       particles = particles.filter(particle => !particle.isDead());
       while (particles.length < settings.particleCount) {
@@ -308,10 +301,8 @@ for (let i = 0; i < particles.length; i++) {
           }
         }
       }
-
       // Draw connections
       connections.forEach(connection => connection.draw());
-
       // Add floating geometric shapes
       if (Math.random() < 0.02) {
         const x = Math.random() * canvas.width;
@@ -335,10 +326,8 @@ ctx.stroke();
           // Draw square
           ctx.strokeRect(x - size, y - size, size * 2, size * 2);
         }
-
         ctx.restore();
       }
-
       // Respect reduced motion
       const prefersReduced = window.matchMedia(
         '(prefers-reduced-motion: reduce)'
@@ -351,10 +340,8 @@ ctx.stroke();
       } else {
         animationRef.current = requestAnimationFrame(animate);
       }
-    };
-
+    }
     animate();
-
     return () => {
       if (animationRef.current) {
 cancelAnimationFrame(animationRef.current);
@@ -370,7 +357,6 @@ cancelAnimationFrame(animationRef.current);
 className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{ background: 'transparent' }}
       />
-
       {/* Overlay gradient */}
       <div
         className='fixed inset-0 pointer-events-none z-0'

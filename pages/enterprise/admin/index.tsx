@@ -1,14 +1,13 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState  } from 'react';
 import Link from 'next/link';
+type Member = any;
 type Member = {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'manager' | 'recruiter' | 'viewer';
-};
-
-type Usage = { monthlyJobPosts: number; budgetCapUsd: number };
-
+  role: 'admin' | 'manager' | 'recruiter' | 'viewer'
+}
+type Usage = { monthlyJobPosts: number, budgetCapUsd: number }
 type Invoice = {
   id: string;
   number: string;
@@ -19,7 +18,6 @@ type Invoice = {
 };
 
 const COMPANY_ID = 'cmp_acme';
-
 export default function CompanyAdmin() {
 const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members'
@@ -28,7 +26,6 @@ const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
-
   useEffect(() => {
 fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       .then(r => r.json())
@@ -45,15 +42,14 @@ fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
   }, []);
 
   const seatsUsed = members.length;
-
   return (
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
 <header
         style={{
-          marginBottom: 16,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 12,
+          marginBottom: 16
+          display: 'flex'
+          alignItems: 'center'
+          gap: 12
         }}
       >
         <h1 style={{ margin: 0 }}>Company Admin</h1>
@@ -61,29 +57,26 @@ fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
           <Link href='/workspace/acme'>Go to Workspace</Link>
         </div>
       </header>
-
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
 {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
           <button
             key={t}
             onClick={() => setTab(t)}
             style={{
-              padding: '0.5rem 0.75rem',
-              borderRadius: 8,
-              border: '1px solid #e5e7eb',
-              background: tab === t ? '#111827' : 'white',
-              color: tab === t ? 'white' : '#111827',
+              padding: '0.5rem 0.75rem'
+              borderRadius: 8
+              border: '1px solid #e5e7eb'
+              background: tab === t ? '#111827' : 'white'
+              color: tab === t ? 'white' : '#111827'
             }}
           >
             {t}
           </button>
         ))}
       </nav>
-
       {tab === 'members' && (
         <MembersTab members={members} setMembers={setMembers} />
       )}
-
       {tab === 'usage' && usage && (
         <UsageTab usage={usage} setUsage={setUsage} seatsUsed={seatsUsed} />
       )}
@@ -93,10 +86,9 @@ fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       {tab === 'billing' && <BillingTab invoices={invoices} />}
     </main>
   );
-
 function MembersTab({
-  members,
-  setMembers,
+  members
+  setMembers
 }: {
   members: Member[];
   setMembers: (m: Member[]) => void;
@@ -104,7 +96,6 @@ function MembersTab({
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
-
   const add = async () => {
 const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
       method: 'POST',
@@ -116,21 +107,19 @@ const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
     setName('');
     setEmail('');
     setRole('viewer');
-  };
-
+  }
   const remove = async (id: string) => {
     await fetch(
-      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,
+      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`
       { method: 'DELETE' }
     );
     setMembers(members.filter(m => m.id !== id));
-  };
-
+  }
   const changeRole = async (id: string, newRole: Member['role']) => {
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ memberId: id, role: newRole }),
+      method: 'PATCH'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ memberId: id, role: newRole })
     });
     setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));
   };
@@ -168,36 +157,36 @@ const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
           <tr>
 <th
               style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'left'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Name
             </th>
             <th
               style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'left'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Email
             </th>
             <th
               style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'left'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Role
             </th>
             <th
               style={{
-                textAlign: 'right',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'right'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Actions
@@ -228,9 +217,9 @@ const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
               </td>
               <td
                 style={{
-                  padding: 8,
-                  borderBottom: '1px solid #f3f4f6',
-                  textAlign: 'right',
+                  padding: 8
+                  borderBottom: '1px solid #f3f4f6'
+                  textAlign: 'right'
                 }}
               >
                 <button
@@ -248,9 +237,9 @@ const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
 );
 
 function UsageTab({
-  usage,
-  setUsage,
-  seatsUsed,
+  usage
+  setUsage
+  seatsUsed
 }: {
   usage: Usage;
   setUsage: (u: Usage) => void;
@@ -260,12 +249,11 @@ function UsageTab({
     usage.monthlyJobPosts
   );
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
-
   const save = async () => {
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }),
+      method: 'PATCH'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
     });
     setUsage({ monthlyJobPosts, budgetCapUsd });
   };
@@ -274,11 +262,15 @@ function UsageTab({
     <section>
       <h2>Usage limits</h2>
 <div
+  return (
+    <section>
+      <h2>Usage limits</h2>
+      <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-          gap: 12,
-          maxWidth: 600,
+          display: 'grid'
+          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
+          gap: 12
+          maxWidth: 600
         }}
       >
         <label>
@@ -300,10 +292,10 @@ function UsageTab({
       </div>
       <div
         style={{
-          marginTop: 12,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 12,
+          marginTop: 12
+          display: 'flex'
+          alignItems: 'center'
+          gap: 12
         }}
       >
         <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>
@@ -340,45 +332,45 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
           <tr>
 <th
               style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'left'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Invoice #
             </th>
             <th
               style={{
-                textAlign: 'left',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'left'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Period
             </th>
             <th
               style={{
-                textAlign: 'right',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'right'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Amount
             </th>
             <th
               style={{
-                textAlign: 'center',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'center'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Status
             </th>
             <th
               style={{
-                textAlign: 'right',
-                padding: 8,
-                borderBottom: '1px solid #e5e7eb',
+                textAlign: 'right'
+                padding: 8
+                borderBottom: '1px solid #e5e7eb'
               }}
             >
               Actions
@@ -396,27 +388,27 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               </td>
               <td
                 style={{
-                  padding: 8,
-                  borderBottom: '1px solid #f3f4f6',
-                  textAlign: 'right',
+                  padding: 8
+                  borderBottom: '1px solid #f3f4f6'
+                  textAlign: 'right'
                 }}
               >
                 ${inv.amountUsd.toFixed(2)}
               </td>
               <td
                 style={{
-                  padding: 8,
-                  borderBottom: '1px solid #f3f4f6',
-                  textAlign: 'center',
+                  padding: 8
+                  borderBottom: '1px solid #f3f4f6'
+                  textAlign: 'center'
                 }}
               >
                 {inv.status}
               </td>
               <td
                 style={{
-                  padding: 8,
-                  borderBottom: '1px solid #f3f4f6',
-                  textAlign: 'right',
+                  padding: 8
+                  borderBottom: '1px solid #f3f4f6'
+                  textAlign: 'right'
                 }}
               >
                 <a

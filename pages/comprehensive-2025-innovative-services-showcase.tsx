@@ -1,7 +1,3 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
   ArrowRight,
   CheckCircle,
   Globe,
@@ -36,14 +32,14 @@ const matchesSearch =
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
 return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
           );
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating
         case 'newest':
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
@@ -51,12 +47,11 @@ return (
         default:
           return 0;
       }
-    });
-
+    })
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -64,10 +59,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20 }
     visible: {
-      opacity: 1,
-      y: 0,
+      opacity: 1
+      y: 0
       transition: {
 duration: 0.5,
       },
@@ -108,9 +103,7 @@ website: 'https://ziontechgroup.com',
           href='https://ziontechgroup.com/comprehensive-2025-services-showcase'
         />
       </Head>
-
       <EnhancedNavigation />
-
       {/* Hero Section */}
 <section className='relative py-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -143,7 +136,6 @@ website: 'https://ziontechgroup.com',
                 <span>{contactInfo.address}</span>
               </div>
             </div>
-
             {/* Stats */}
 <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
               <div className='text-center'>
@@ -174,7 +166,6 @@ website: 'https://ziontechgroup.com',
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -197,7 +188,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                 />
               </div>
             </div>
-
             {/* Filters */}
 <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
               {/* Category Filter */}
@@ -217,7 +207,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   ))}
                 </select>
               </div>
-
               {/* Price Range Filter */}
               <div>
 <label className='block text-sm font-medium text-white/70 mb-2'>
@@ -234,7 +223,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   <option value='enterprise'>Enterprise ($5,000+)</option>
                 </select>
               </div>
-
               {/* Sort By */}
               <div>
 <label className='block text-sm font-medium text-white/70 mb-2'>
@@ -251,7 +239,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
                   <option value='newest'>Newest</option>
                 </select>
               </div>
-
               {/* View Mode */}
               <div>
 <label className='block text-sm font-medium text-white/70 mb-2'>
@@ -284,7 +271,6 @@ viewMode === 'list'
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
 <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
@@ -306,7 +292,6 @@ viewMode === 'list'
                   : selectedCategory}
               </p>
             </div>
-
             {filteredServices.length === 0 ? (
 <div className='text-center py-20'>
                 <div className='text-6xl mb-4'>🔍</div>
@@ -323,6 +308,9 @@ viewMode === 'list'
 setPriceRange('all');
                   }}
                   className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300'
+                    setPriceRange('all')
+                  }}
+                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
                 </button>
@@ -370,12 +358,10 @@ setPriceRange('all');
                           </div>
                         )}
                       </div>
-
                       {/* Description */}
 <p className='text-white/80 text-sm mb-4 line-clamp-3'>
                         {service.description}
                       </p>
-
                       {/* Features */}
 <div className='mb-4'>
                         <h4 className='text-sm font-semibold text-white/70 mb-2'>
@@ -398,7 +384,6 @@ setPriceRange('all');
                           )}
                         </div>
                       </div>
-
                       {/* Price and Rating */}
 <div className='flex items-center justify-between mb-4'>
                         <div className='text-2xl font-bold text-cyan-400'>
@@ -417,7 +402,6 @@ setPriceRange('all');
                           </span>
                         </div>
                       </div>
-
                       {/* Action Buttons */}
 <div className='flex gap-2'>
                         <a
@@ -435,7 +419,6 @@ className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg 
                           Contact
                         </a>
                       </div>
-
                       {/* Additional Info */}
 <div className='mt-4 pt-4 border-t border-white/10'>
                         <div className='grid grid-cols-2 gap-4 text-xs text-white/50'>
@@ -471,7 +454,6 @@ className='px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg 
           </motion.div>
         </div>
       </section>
-
       {/* Contact CTA */}
 <section className='px-6 pb-20'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -517,7 +499,6 @@ className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rou
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
 );

@@ -29,36 +29,13 @@ id: string;
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const innovativeMicroSaas: InnovativeMicroSaas[] = [
-  {
-    id: 'ai-powered-invoice-processor',
-    name: 'AI-Powered Invoice Processor',
-    tagline: 'Automate invoice processing with AI accuracy',
-    price: '$79',
-    period: '/month',
-    description:
-      'Intelligent invoice processing platform that automatically extracts, validates, and processes invoices using advanced AI and machine learning.',
-    features: [
-      'AI-powered data extraction',
-      'Multi-format support (PDF, images, emails)',
-      'Automatic validation',
-      'Integration with accounting software',
-      'Real-time processing',
-      'Custom workflow automation',
-      'Analytics and reporting',
-      'Mobile app access',
-      'API for developers',
-      '24/7 support',
-    ],
     popular: true,
     icon: '📄',
     color: 'from-blue-500 to-indigo-600',
@@ -458,4 +435,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     rating: 4.8,
     reviews: 1600,
   },
+];
+    reviews: 1600
+  }
 ];

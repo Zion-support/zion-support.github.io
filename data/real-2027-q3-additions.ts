@@ -1,5 +1,3 @@
-export const real2027Q3Additions = [
-  {
 id: 'it-asset-discovery-agent',
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network-wide discovery and enrichment',

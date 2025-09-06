@@ -1,17 +1,13 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  Zap,
-  TrendingUp,
-  Users,
-  Award,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin  } from 'lucide-react';
+import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';
+export default function Revolutionary2030ServicesPage() {
+  const contactInfo = null;
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -36,8 +32,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
-
-        {/* Open Graph */}
         <meta
           property='og:title'
           content='2030 Revolutionary Technology Services | Zion Tech Group'
@@ -55,7 +49,6 @@ import { innovative2030Services } from '../data/2030-innovative-services';
           property='og:image'
           content='https://ziontechgroup.com/og-image.jpg'
         />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -70,32 +63,30 @@ import { innovative2030Services } from '../data/2030-innovative-services';
           name='twitter:image'
           content='https://ziontechgroup.com/twitter-image.jpg'
         />
-
         {/* Additional Meta Tags */}
         <meta name='theme-color' content='#8b5cf6' />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/2030-revolutionary-services'
         />
-
         {/* Structured Data */}
         <script
           type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Zion Tech Group',
+              '@context': 'https://schema.org'
+              '@type': 'Organization'
+              name: 'Zion Tech Group'
               description:
-                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',
-              url: 'https://ziontechgroup.com',
-              logo: 'https://ziontechgroup.com/logo.png',
+                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing'
+              url: 'https://ziontechgroup.com'
+              logo: 'https://ziontechgroup.com/logo.png'
               contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+1-302-464-0950',
-                contactType: 'customer service',
-                email: 'kleber@ziontechgroup.com',
-              },
+                '@type': 'ContactPoint'
+                telephone: '+1-302-464-0950'
+                contactType: 'customer service'
+                email: 'kleber@ziontechgroup.com'
+              }
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: '364 E Main St STE 1008',
@@ -107,12 +98,14 @@ import { innovative2030Services } from '../data/2030-innovative-services';
               sameAs: ['https://github.com/Zion-Holdings'],
             }),
           }}
+              "sameAs": [
+                "https://github.com/Zion-Holdings"
+              ]
+            })
         />
       </Head>
-
       {/* Navigation */}
       <UltraFuturisticNavigation2030 />
-
       {/* Hero Section */}
 <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -129,7 +122,6 @@ className='mb-8'
               </span>
             </div>
           </motion.div>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -144,7 +136,6 @@ className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-ti
               Technology Services
             </span>
           </motion.h1>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -173,7 +164,6 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center'
           </motion.div>
         </div>
       </section>
-
       {/* Services Showcase */}
 <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto'>
@@ -193,14 +183,12 @@ className='text-center mb-20'
                 2030 Services
               </span>
             </h2>
-
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover our comprehensive range of cutting-edge 2030 technology
               services that will transform your business and propel you into the
               future.
             </p>
           </motion.div>
-
           {/* Services Grid */}
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20'>
             {innovative2030Services.map((service, index) => (
@@ -235,12 +223,10 @@ className='group cursor-pointer'
                       </div>
                     )}
                   </div>
-
                   {/* Description */}
 <p className='text-gray-300 leading-relaxed mb-6'>
                     {service.description}
                   </p>
-
                   {/* Features */}
                   <div className='grid grid-cols-2 gap-3 mb-6'>
                     {service.features
@@ -255,7 +241,6 @@ className='group cursor-pointer'
                         </div>
                       ))}
                   </div>
-
                   {/* Service Details */}
                   <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                     <div className='flex items-center space-x-2'>
@@ -283,7 +268,6 @@ className='group cursor-pointer'
                       </span>
                     </div>
                   </div>
-
                   {/* Price and CTA */}
 <div className='flex items-center justify-between'>
                     <div>
@@ -303,7 +287,6 @@ className='group cursor-pointer'
               </motion.div>
             ))}
           </div>
-
           {/* Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -333,7 +316,6 @@ className='text-center'
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
 <section className='py-24 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -355,7 +337,6 @@ className='text-center'
               revolutionary 2030 services can transform your business and propel
               you into the future.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>
                 Schedule Consultation
@@ -382,7 +363,6 @@ className='text-center'
           </motion.div>
         </div>
       </section>
-
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>

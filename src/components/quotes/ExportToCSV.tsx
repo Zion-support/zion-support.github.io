@@ -1,39 +1,8 @@
-import { Button } from '@/components/ui/button';
-import { Download } from 'lucide-react';
-import type { QuoteRequest } from '@/types/quotes';
-
-interface ExportToCSVProps {
   quotes: QuoteRequest[];
-  filename?: string;
+  filename?: string
+}
 
-export const ExportToCSV = ({
-  quotes,
-  filename = 'quote-requests',
-}: ExportToCSVProps) => {
-  const handleExport = () => {
-    // Define CSV Headers
-    const headers = [
-      'ID',
-      'Talent Name',
-      'Requester Name',
-      'Requester Email',
-      'Project Name',
-      'Project Summary',
-      'Budget',
-      'Timeline',
-      'Status',
-      'Created Date',
-    ];
-
-    // Format quote data for CSV
-    const rows = quotes.map(quote => [
-      quote.id,
-      quote.talent_name || 'Unknown',
-      quote.requester_name,
-      quote.requester_email,
-      quote.project_name,
-      quote.project_summary,
-      quote.budget_display ||
+export const ExportToCSV = null;
         (quote.budget_min && quote.budget_max
           ? `$${quote.budget_min} - $${quote.budget_max}`
           : quote.budget_min
@@ -71,7 +40,7 @@ export const ExportToCSV = ({
     );
     document.body.appendChild(link);
     // Download file and clean up
-    link.click();
+    link.click()
     setTimeout(() => {
       document.body.removeChild(link);
 URL.revokeObjectURL(url);

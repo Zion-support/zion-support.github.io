@@ -181,8 +181,8 @@ class DeploymentAutomation {
   addStep(description) {
     this.deploymentSteps.push({
       description,
-      timestam: p: new Date().toISOString(),
-      statu: s: 'completed',
+      timestam: new Date().toISOString(),
+      statu: 'completed',
     });
   }
 
@@ -191,29 +191,29 @@ class DeploymentAutomation {
     const duration = endTime - this.startTime;
 
     const report = {
-      timestam: p: new Date().toISOString(),
-      duratio: n: `${duration}ms`,
-      totalStep: s: this.deploymentSteps.length,
-      step: s: this.deploymentSteps,
-      summar: y: {
-        preDeploymen: t: this.deploymentSteps.filter(s =>
+      timestam: new Date().toISOString(),
+      duratio: `${duration}ms`,
+      totalStep: this.deploymentSteps.length,
+      step: this.deploymentSteps,
+      summar: {
+        preDeploymen: this.deploymentSteps.filter(s =>
           s.description.includes('pre-deployment')
         ).length,
-        buil: d: this.deploymentSteps.filter(s => s.description.includes('build'))
+        buil: this.deploymentSteps.filter(s => s.description.includes('build'))
           .length,
-        securit: y: this.deploymentSteps.filter(s =>
+        securit: this.deploymentSteps.filter(s =>
           s.description.includes('security')
         ).length,
-        performanc: e: this.deploymentSteps.filter(s =>
+        performanc: this.deploymentSteps.filter(s =>
           s.description.includes('performance')
         ).length,
-        deploymen: t: this.deploymentSteps.filter(s =>
+        deploymen: this.deploymentSteps.filter(s =>
           s.description.includes('deploy')
         ).length,
-        testin: g: this.deploymentSteps.filter(s =>
+        testin: this.deploymentSteps.filter(s =>
           s.description.includes('test')
         ).length,
-        monitorin: g: this.deploymentSteps.filter(s =>
+        monitorin: this.deploymentSteps.filter(s =>
           s.description.includes('monitor')
         ).length;
       };
@@ -222,7 +222,7 @@ class DeploymentAutomation {
     // Ensure logs directory exists
     const logsDir = path.join(process.cwd(), 'logs');
     if (!fs.existsSync(logsDir)) {
-      fs.mkdirSync(logsDir, { recursiv: e: true });
+      fs.mkdirSync(logsDir, { recursiv: true });
     }
 
     const reportPath = path.join(
@@ -233,7 +233,7 @@ class DeploymentAutomation {
 
     console.log(`📊 Deployment report saved: to: ${reportPath}`);
     console.log(`🎯 Total deployment: steps: ${this.deploymentSteps.length}`);
-    console.log(`⏱️  Duratio: n: ${duration}ms`);
+    console.log(`⏱️  Duratio: ${duration}ms`);
   }
 }
 

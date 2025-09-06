@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Check,
   Star,
@@ -160,14 +157,14 @@ const matchesCategory =
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return b.popular ? 1 : -1;
+          return b.popular ? 1 : -1
         case 'price':
 return (
             parseFloat(a.price.replace('$', '').replace(',', '')) -
             parseFloat(b.price.replace('$', '').replace(',', ''))
           );
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating
         case 'newest':
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
@@ -175,8 +172,7 @@ return (
         default:
           return 0;
       }
-    });
-
+    })
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category);
 return categoryData?.icon || '🚀';
@@ -262,7 +258,6 @@ return sum + (marketSize ? parseFloat(marketSize[1]) : 0);
                   <div className='text-white/60'>Average ROI</div>
                 </div>
               </div>
-
               {/* Key Benefits */}
 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl p-6 border border-blue-500/30'>
@@ -299,7 +294,6 @@ return sum + (marketSize ? parseFloat(marketSize[1]) : 0);
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filters */}
 <section className='px-6 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -320,7 +314,6 @@ className='flex flex-col lg:flex-row gap-6 items-center justify-between'
                   className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20'
                 />
               </div>
-
               {/* Sort and View Controls */}
 <div className='flex items-center gap-4'>
                 <select
@@ -360,7 +353,6 @@ viewMode === 'list'
             </motion.div>
           </div>
         </section>
-
         {/* Category Filter */}
 <section className='px-6 mb-16'>
           <div className='max-w-7xl mx-auto'>
@@ -390,7 +382,6 @@ className='flex flex-wrap justify-center gap-3'
             </motion.div>
           </div>
         </section>
-
         {/* Services Display */}
 <section className='px-6 pb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -413,7 +404,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                           Popular
                         </div>
                       )}
-
                       {/* Service Content */}
 <div className='p-6'>
                         <div className='flex items-start justify-between mb-4'>
@@ -447,7 +437,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                             </div>
                           ))}
                         </div>
-
                         {/* Stats */}
 <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
                           <div>
@@ -471,7 +460,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                             <div className='text-xs text-white/60'>Trial</div>
                           </div>
                         </div>
-
                         {/* CTA */}
                         <a
                           href={service.link}
@@ -509,7 +497,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                             </div>
                           )}
                         </div>
-
                         {/* Center - Service Details */}
 <div className='flex-1'>
                           <div className='flex items-start justify-between mb-4'>
@@ -533,7 +520,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                               </div>
                             </div>
                           </div>
-
                           {/* Features Grid */}
 <div className='grid grid-cols-2 gap-2 mb-4'>
                             {service.features
@@ -567,7 +553,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                             </div>
                           </div>
                         </div>
-
                         {/* Right Side - CTA and Category */}
 <div className='flex-shrink-0 flex flex-col items-end gap-4'>
                           <div className='text-right'>
@@ -581,7 +566,6 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
                               </span>
                             </div>
                           </div>
-
                           <a
                             href={service.link}
 target='_blank'
@@ -598,7 +582,6 @@ target='_blank'
                 </AnimatePresence>
               </div>
             )}
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -617,7 +600,6 @@ className='text-center py-20'
             )}
           </div>
         </section>
-
         {/* Contact CTA */}
 <section className='px-6 pb-20'>
           <div className='max-w-4xl mx-auto'>

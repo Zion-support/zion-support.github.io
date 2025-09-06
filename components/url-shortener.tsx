@@ -1,53 +1,33 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-import {
-  Link,
-  Copy,
-  BarChart3,
-  ArrowRight,
-  RefreshCw,
-  CheckCircle,
-  ExternalLink,
-  QrCode,
-  Settings,
-  Trash2,;
-} from 'lucide-react';
-
+import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 export default function URLShortenerPage() {
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
   const [isShortening, setIsShortening] = useState(false);
-  const [showQR, setShowQR] = useState<string | null>(null);
-
-  const generateShortUrl = async () => {
-    if (!longUrl.trim()) return;
 setIsShortening(true);
 
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
-
-    const alias = customAlias.trim() || generateRandomAlias();
+    const alias = customAlias.trim() |generateRandomAlias();
     const shortUrl = `https://zion.tech/${alias}`;
-
     const newShortUrl = {
-      id: Date.now(),
-      longUrl: longUrl.trim(),
-      shortUrl,
-      alias,
-      clicks: 0,
-      createdAt: new Date().toISOString(),
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`,
-    };
-
+      id: Date.now()
+      longUrl: longUrl.trim()
+      shortUrl
+      alias
+      clicks: 0
+      createdAt: new Date().toISOString()
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`
+    }
     setShortenedUrls(prev => [newShortUrl, ...prev]);
     setLongUrl('');
     setCustomAlias('');
     setIsShortening(false);
-  };
-
+  }
   const generateRandomAlias = () => {
     const chars =
       'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -56,28 +36,23 @@ setIsShortening(true);
       result += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return result;
-  };
-
+  }
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
-  };
-
+  }
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>
       prev.map(url =>
         url.id === id ? { ...url, clicks: url.clicks + 1 } : url
       )
     );
-  };
-
+  }
   const deleteUrl = (id: number) => {
     setShortenedUrls(prev => prev.filter(url => url.id !== id));
-  };
-
+  }
   const getTotalClicks = () => {
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
-  };
-
+  }
   const getTotalUrls = () => {
     return shortenedUrls.length;
   };
@@ -96,7 +71,6 @@ setIsShortening(true);
           content='Professional URL shortening service with analytics and QR code generation.'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-orange-900 via-red-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -116,7 +90,6 @@ setIsShortening(true);
           </p>
         </div>
       </section>
-
       {/* URL Shortening Tool */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -129,7 +102,6 @@ setIsShortening(true);
               links in seconds.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {/* Input Form */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -137,7 +109,6 @@ setIsShortening(true);
                 <Link className='w-6 h-6 mr-3 text-orange-400' />
                 URL Shortening
               </h3>
-
               <div className='space-y-6'>
                 {/* Long URL Input */}
                 <div>
@@ -152,7 +123,6 @@ setIsShortening(true);
                     className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent'
                   />
                 </div>
-
                 {/* Custom Alias */}
                 <div>
 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -174,7 +144,6 @@ setIsShortening(true);
                     Leave empty for auto-generated alias
                   </p>
                 </div>
-
                 <Button
                   onClick={generateShortUrl}
                   disabled={!longUrl.trim() || isShortening}
@@ -201,14 +170,12 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                 </div>
               </div>
             </Card>
-
             {/* Statistics */}
 <Card className='p-8 bg-gray-800 border border-gray-700'>
               <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
                 <BarChart3 className='w-6 h-6 mr-3 text-red-400' />
                 Your Statistics
               </h3>
-
               <div className='space-y-6'>
                 <div className='grid grid-cols-2 gap-4'>
                   <div className='text-center p-4 bg-gray-700 rounded-lg'>
@@ -224,14 +191,12 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                     <div className='text-sm text-gray-400'>Total Clicks</div>
                   </div>
                 </div>
-
                 {shortenedUrls.length === 0 ? (
 <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
                     <div className='text-6xl mb-4'>📊</div>
                     <p className='text-gray-400'>
                       Your URL statistics will appear here. Create your first
                       short URL to get started.
-                    </p>
                   </div>
                 ) : (
                   <div className='space-y-3'>
@@ -264,7 +229,6 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
           </div>
         </div>
       </section>
-
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 <section className='py-20 bg-gray-800'>
@@ -310,7 +274,6 @@ className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-
                         </div>
                       </div>
                     </div>
-
                     {/* Actions and Stats */}
 <div className='flex flex-col space-y-3'>
                       <div className='text-center p-4 bg-gray-800 rounded-lg'>
@@ -366,7 +329,6 @@ variant='outline'
                       </div>
                     </div>
                   </div>
-
                   {/* QR Code */}
                   {showQR === url.id && (
 <div className='mt-4 p-4 bg-gray-800 rounded-lg text-center'>
@@ -386,20 +348,17 @@ variant='outline'
           </div>
         </section>
       )}
-
       {/* Features */}
 <section className='py-20 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-              Professional URL Shortening Features
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
               URLs effectively.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔗</div>
@@ -411,7 +370,6 @@ variant='outline'
                 reflect your brand.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📊</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -422,7 +380,6 @@ variant='outline'
                 shortened URLs.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📱</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -433,7 +390,6 @@ variant='outline'
                 shortened URLs.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🛡️</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -444,7 +400,6 @@ variant='outline'
                 accessible and secure.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>⚡</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -455,7 +410,6 @@ variant='outline'
                 experience worldwide.
               </p>
             </Card>
-
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>🔧</div>
               <h3 className='text-xl font-bold text-white mb-4'>
@@ -469,7 +423,6 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
 <section className='py-20 bg-gray-800'>
         <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -482,7 +435,6 @@ variant='outline'
               all your link management needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <Card className='p-8 bg-gray-700 border border-gray-600'>
               <div className='text-4xl mb-4'>📢</div>
@@ -550,12 +502,10 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-            Ready to Shorten Your URLs?
           </h2>
           <p className='text-xl text-orange-100 mb-8'>
             Join thousands of businesses using our professional URL shortening

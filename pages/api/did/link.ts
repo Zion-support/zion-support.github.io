@@ -1,6 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-// In-memory demo store per process
 const store: Record<string, any> = (global as any).__ZION_DID_STORE__ || {};
 (global as any).__ZION_DID_STORE__ = store;
 
@@ -13,4 +11,5 @@ if (!payload || !payload.address)
   store[key] = { payload, message, signature, updatedAt: Date.now() };
   return res.status(200).json({ ok: true });
 
+  return res.status(200).json({ ok: true })
 }

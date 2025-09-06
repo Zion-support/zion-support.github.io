@@ -1,49 +1,26 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
 // Lazy import to avoid serverless cold start cost unless needed
-async function summarizeAndTag(input: {;
+async function summarizeAndTag(input: {
   fullName: string;
+async function summarizeAndTag(input: {fullName: string;
   professionalTitle: string;
   bio: string;
   projects?: string;
   skills: string;
-  tools?: string;
+  tools?: string
 }) {
-  const openaiApiKey =
-    process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || '';
-  const combinedText = [
-    input.professionalTitle,
-    input.bio,
-    input.projects || '',
-    input.skills,
-    input.tools || '',
-  ].join('\n');
-
-  const basicTags = Array.from(
-    new Set(
-      (input.skills + ',' + (input.tools || ''))
-        .split(/[,\n]/)
-        .map(s => s.trim())
-        .filter(Boolean)
-        .map(s => s.toLowerCase())
-    )
-  );
-
-  if (!openaiApiKey) {
-    const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags.slice(0, 24) };
   }
-
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: openaiApiKey });
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
-
     const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4o-mini'
       messages: [
 { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt },
@@ -67,19 +44,16 @@ if (
   } catch (err) {
 // ignore and fallback
   }
-
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
-  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) };
-
+  return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
-
   try {
     const id = randomUUID();
     const {
@@ -99,17 +73,16 @@ fullName,
     } = req.body || {};
 
     if (
-      !fullName ||
-      !professionalTitle ||
-      !bio ||
-      !yearsOfExperience ||
-      !skills ||
-      !availability ||
+      !fullName |
+      !professionalTitle |
+      !bio |
+      !yearsOfExperience |
+      !skills |
+      !availability |
       !timezone
     ) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
-
     const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
     const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');
     await fse.ensureDir(uploadsDir);
@@ -191,7 +164,6 @@ if (Array.isArray(content)) aggregate = content;
     }
     aggregate.push(record);
     await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
-
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 

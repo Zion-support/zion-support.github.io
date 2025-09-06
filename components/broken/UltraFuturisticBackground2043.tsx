@@ -1,11 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-
-    };
-
+const UltraFuturisticBackground2043: React.FC;
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle system
     const particles: Array<{
 x: number;
@@ -46,29 +43,24 @@ maxLife: Math.random() * 100 + 50,
     for (let i = 0; i < 100; i++) {
       particles.push(createParticle());
     }
-
     // Animation loop
     const animate = () => {
       // Clear canvas with fade effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
-
+        if (particle.x <= 0 |particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 |particle.y >= canvas.height) particle.vy *= -1;
         // Update life
         particle.life--;
         if (particle.life <= 0) {
 particles[index] = createParticle();
         }
-
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
@@ -78,7 +70,6 @@ particles[index] = createParticle();
         ctx.fill();
 ctx.restore();
       });
-
       // Draw connecting lines between nearby particles
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 0.5;
@@ -87,7 +78,6 @@ for (let i = 0; i < particles.length; i++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
-
           if (distance < 100) {
             ctx.globalAlpha = ((100 - distance) / 100) * 0.1;
             ctx.beginPath();
@@ -102,12 +92,10 @@ requestAnimationFrame(animate);
     };
 
     animate();
-
     return () => {
 window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
-
   return (
     <div className='fixed inset-0 -z-10 overflow-hidden'>
       {/* Canvas background */}
@@ -116,10 +104,9 @@ window.removeEventListener('resize', resizeCanvas);
         className='absolute inset-0 w-full h-full'
         style={{
           background:
-            'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)',
+            'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)'
         }}
       />
-
       {/* Enhanced floating orbs */}
       <div className='absolute inset-0'>
         {/* Primary orb */}
@@ -180,36 +167,40 @@ className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/
             delay: 1,
           }}
         />
-
         <motion.div
 className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl'
           animate={{
-            scale: [1, 1.4, 1],
-            opacity: [0.4, 0.7, 0.4],
-          }}
+            scale: [1, 1.4, 1]
+            opacity: [0.4, 0.7, 0.4]
+          animate={{
+            scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}}
           transition={{
             duration: 11,
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 3,
           }}
+          transition={{
+            duration: 11
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 3,          }}
         />
       </div>
-
       {/* Enhanced grid pattern */}
 <div className='absolute inset-0 opacity-10'>
         <div
           className='absolute inset-0'
           style={{
             backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px',
           }}
         />
       </div>
-
       {/* Floating geometric shapes */}
 <div className='absolute inset-0'>
         {/* Triangle */}
@@ -239,7 +230,6 @@ className='absolute bottom-1/6 left-1/6 w-24 h-24 border border-purple-500/20'
             ease: 'easeInOut',
           }}
         />
-
         {/* Circle */}
         <motion.div
 className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rounded-full'
@@ -253,9 +243,13 @@ className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rou
             ease: 'easeInOut',
             delay: 2,
           }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 2,          }}
         />
       </div>
-
       {/* Energy waves */}
 <div className='absolute inset-0'>
         {[...Array(3)].map((_, i) => (
@@ -272,10 +266,14 @@ className='absolute top-1/2 right-1/4 w-20 h-20 border border-emerald-500/20 rou
               ease: 'easeOut',
               delay: i * 2,
             }}
+            transition={{
+              duration: 6
+              repeat: Infinity
+              ease: 'easeOut'
+              delay: i * 2,            }}
           />
         ))}
       </div>
-
       {/* Quantum particles */}
 <div className='absolute inset-0'>
         {[...Array(15)].map((_, i) => (
@@ -301,7 +299,6 @@ ease: 'easeInOut',
           />
         ))}
       </div>
-
       {/* Consciousness energy field */}
 <div className='absolute inset-0'>
         <motion.div
@@ -314,6 +311,10 @@ ease: 'easeInOut',
             repeat: Infinity,
             ease: 'easeInOut',
           }}
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}
         />
       </div>
     </div>

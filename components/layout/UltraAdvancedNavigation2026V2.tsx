@@ -1,38 +1,45 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
+
+  useEffect(() => {
+    const handleScroll = null;
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Zap,
-  Brain,
-  Atom,
-  Microscope,
-  Gamepad2,
-  Shield,
-  Rocket,
-  Database,
-  TestTube,
-  Car,
-  Globe,
-  Code,
-  Palette,
-  Cloud,
-  Server,
-  Network,
-  Cpu,;
-} from 'lucide-react';
-
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Zap
+  Brain
+  Atom
+  Microscope
+  Gamepad2
+  Shield
+  Rocket
+  Database
+  TestTube
+  Car
+  Globe
+  Code
+  Palette
+  Cloud
+  Server
+  Network
+  Cpu;
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
 export default function UltraAdvancedNavigation2026V2() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 20);
@@ -155,7 +162,6 @@ icon: <Zap className='w-4 h-4' />,
       icon: <Mail className='w-4 h-4' />,
     },
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -166,6 +172,10 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
     <>
       {/* Top Contact Bar */}
 <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>
+  return (
+    <>
+      {/* Top Contact Bar */}
+      <div className='bg-gradient-to-r from-purple-900/80 to-blue-900/80 backdrop-blur-sm border-b border-white/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between py-2 text-sm'>
             <div className='flex items-center space-x-6 text-gray-300'>
@@ -193,7 +203,6 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -219,7 +228,6 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
                 <div className='text-xs text-gray-400'>Innovation 2026</div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
@@ -243,7 +251,6 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                       <span>{item.name}</span>
                     </Link>
                   )}
-
                   {/* Dropdown Menu */}
                   {item.dropdown && activeDropdown === item.name && (
                     <div
@@ -272,7 +279,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
 <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
@@ -281,7 +287,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                 </button>
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -296,7 +301,6 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -317,7 +321,6 @@ className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l
                   <X className='w-6 h-6' />
                 </button>
               </div>
-
               <div className='space-y-6'>
                 {navigationItems.map(item => (
                   <div key={item.name}>
@@ -377,7 +380,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
                     </button>
                   </Link>
                 </div>
-
                 {/* Mobile Contact Info */}
 <div className='pt-6 border-t border-white/10 space-y-3 text-sm text-gray-400'>
                   <div className='flex items-center space-x-2'>
@@ -398,7 +400,6 @@ className='flex items-center space-x-3 text-gray-300 hover:text-white transition
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Overlay */}
       {isOpen && (
         <motion.div
@@ -410,7 +411,6 @@ className='fixed inset-0 bg-black/50 z-40 lg:hidden'
           onClick={() => setIsOpen(false)}
         />
       )}
-
       {/* Spacer for fixed navigation */}
 <div className='h-32'></div>
     </>

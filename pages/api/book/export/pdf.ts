@@ -1,31 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb',
-    },
-  },
-};
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
+export const config = null;
   }
-
-  const { html, pageSize } = req.body as {
-    html: string;
-    pageSize?: 'A4' | 'LETTER';
-  };
-  if (!html) {
-    res.status(400).json({ error: 'Missing html' });
-    return;
-  }
-
   const browser = await puppeteer.launch({
     headless: true,
 args: ['--no-sandbox', '--disable-setuid-sandbox'],
@@ -53,4 +27,9 @@ const pdfBuffer = await page.pdf({
     res.status(500).json({ error: e?.message || 'Failed to render PDF' });
   }
 
+    res.status(200).send(pdfBuffer)
+  } catch (e: any) {
+    try { await browser.close() } catch {}
+    res.status(500).json({ error: e?.message |'Failed to render PDF' })
+  }
 }

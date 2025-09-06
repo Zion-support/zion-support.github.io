@@ -1,25 +1,12 @@
-import React from 'react';
-import Layout from './layout/Layout';
+import React from 'react',
+import Layout from './layout/Layout',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  MapPin,
-  Users,
-  Building,
-  Rocket,
-  CheckCircle,
-  Phone,
-  Mail,;
-} from 'lucide-react';
-
+import { ArrowRight, Star;
+  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
+  Users, Building, Rocket, CheckCircle, Phone, Mail
+ } from 'lucide-react';
+const Homepage2026: React.FC;
 const Homepage2026: React.FC = () => {
   return (
     <Layout>
@@ -51,7 +38,6 @@ className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cy
                 <Star className='w-4 h-4' />
                 <span>Innovation Leader 2026</span>
               </motion.div>
-
               <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Zion Tech Group
               </h1>
@@ -60,7 +46,6 @@ className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cy
                 services, cutting-edge IT infrastructure, and advanced AI
                 solutions
               </p>
-
               {/* Enhanced CTA Section */}
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
                 <Link href='/comprehensive-2025-services-showcase'>
@@ -106,7 +91,6 @@ className='flex items-center justify-center space-x-6 text-sm text-gray-400'
             </motion.div>
           </div>
         </section>
-
         {/* Company Stats */}
 <section className='py-20 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
@@ -141,7 +125,6 @@ className='text-center'
                   Starting at $69/month for specialized business solutions
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -156,7 +139,6 @@ className='text-center'
                   Starting at $499/month for robust infrastructure solutions
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +153,6 @@ className='text-center'
                   Starting at $199/month for intelligent automation
                 </p>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -189,7 +170,6 @@ className='text-center'
             </div>
           </div>
         </section>
-
         {/* Service Categories */}
 <section className='py-20 px-4'>
           <div className='max-w-6xl mx-auto'>
@@ -245,7 +225,6 @@ className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blu
                   </button>
                 </Link>
               </motion.div>
-
               {/* IT Infrastructure Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -282,7 +261,6 @@ className='bg-gradient-to-br from-green-600/20 to-emerald-600/20 border border-g
                   </button>
                 </Link>
               </motion.div>
-
               {/* Micro SAAS Solutions */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -319,7 +297,6 @@ className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-pur
                   </button>
                 </Link>
               </motion.div>
-
               {/* Cutting-Edge AI Services */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -359,7 +336,6 @@ className='bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-oran
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
 <section className='py-20 px-4 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -376,7 +352,6 @@ className='space-y-6'
                 Get in touch with our team to discuss how our innovative
                 services can drive your success
               </p>
-
               {/* Contact Information */}
               <div className='bg-black/30 backdrop-blur-sm border border-gray-700 rounded-lg p-8 mb-8'>
                 <h3 className='text-2xl font-semibold text-cyan-400 mb-6'>

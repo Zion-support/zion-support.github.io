@@ -30,32 +30,23 @@ export interface ComprehensiveService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number
+}
 
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-export const comprehensiveServicesExpansion: ComprehensiveService[] = [
-  {
-id: 'ai-powered-code-review-assistant',
-    name: 'AI-Powered Code Review Assistant',
+const contact = null;
     tagline:
-      'Automated code quality analysis, security scanning, and best practice recommendations',
-    price: '$199',
-    period: '/month',
+      'Automated code quality analysis, security scanning, and best practice recommendations'
+    price: '$199'
+    period: '/month'
     description:
-      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
+      'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.'
     features: [
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',

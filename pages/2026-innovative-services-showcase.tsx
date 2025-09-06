@@ -1,25 +1,21 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Zap,
-  Brain,
-  Globe,
-  Shield,
-  Phone,
-  Mail,;
-} from 'lucide-react';
-import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail  } from 'lucide-react';
+import { innovative2026MicroSaasServicesV4  } from '../data/innovative-2026-micro-saas-v4';
+import { emergingTech2026ServicesV4  } from '../data/emerging-tech-2026-services-v4';
+import { enterpriseIT2026ServicesV4  } from '../data/enterprise-it-2026-services-v4';
+import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
+import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+export default function Innovative2026ServicesShowcase() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
+  const [sortBy, setSortBy] = useState<string>('name'),
+
+  const allServices = null;
+                    setSelectedPriceRange('all')
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
@@ -62,7 +58,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
-
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -108,10 +103,10 @@ default:
     if (searchTerm) {
 filtered = filtered.filter(
         service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
           service.description
             .toLowerCase()
-            .includes(searchTerm.toLowerCase()) ||
+            .includes(searchTerm.toLowerCase()) |
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
@@ -136,9 +131,9 @@ default:
   }, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]);
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -146,10 +141,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
 duration: 0.5,
       },
@@ -186,7 +181,6 @@ duration: 0.5,
           href='https://ziontechgroup.com/2026-innovative-services-showcase'
         />
       </Head>
-
       <UltraAdvancedFuturisticBackground2026
         intensity='extreme'
         colorScheme='neural-network'
@@ -197,7 +191,6 @@ duration: 0.5,
         enableNeuralNetworks={true}
         enableMultidimensional={true}
       />
-
       <UltraAdvancedNavigation2026 />
 
 <div className='min-h-screen relative z-10'>
@@ -220,7 +213,6 @@ className='mb-8'
                 next-generation innovation.
               </p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -248,7 +240,6 @@ className='flex flex-wrap justify-center gap-4 mb-12'
                 </span>
               </div>
             </motion.div>
-
             {/* Search and Filters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -266,7 +257,6 @@ className='max-w-4xl mx-auto'
                   className='w-full pl-12 pr-4 py-4 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent'
                 />
               </div>
-
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
                 {categories.map(category => (
                   <button
@@ -302,7 +292,6 @@ className='max-w-4xl mx-auto'
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
 <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -336,13 +325,11 @@ className='max-w-4xl mx-auto'
                       </h3>
                       <p className='text-gray-300 text-sm'>{service.tagline}</p>
                     </div>
-
                     {/* Service Content */}
                     <div className='p-6'>
                       <p className='text-gray-300 text-sm mb-4 line-clamp-3'>
                         {service.description}
                       </p>
-
                       <div className='flex items-center justify-between mb-4'>
                         <div className='flex items-center space-x-2'>
                           <Star className='w-4 h-4 text-yellow-500 fill-current' />
@@ -360,7 +347,6 @@ className='max-w-4xl mx-auto'
                           </span>
                         </div>
                       </div>
-
                       <div className='flex items-center justify-between mb-4'>
                         <div className='text-2xl font-bold text-white'>
                           {service.price}
@@ -369,7 +355,6 @@ className='max-w-4xl mx-auto'
                           {service.period}
                         </div>
                       </div>
-
                       <div className='flex items-center justify-between mb-4'>
                         <div className='flex items-center space-x-2'>
                           <Clock className='w-4 h-4 text-green-400' />
@@ -411,7 +396,6 @@ className='max-w-4xl mx-auto'
                           )}
                         </div>
                       </div>
-
                       {/* Category Badge */}
 <div className='mb-4'>
                         <span
@@ -420,7 +404,6 @@ className='max-w-4xl mx-auto'
                           {service.category}
                         </span>
                       </div>
-
                       {/* CTA Button */}
                       <Link href={service.link}>
 <button className='w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
@@ -431,14 +414,12 @@ className='max-w-4xl mx-auto'
                         </button>
                       </Link>
                     </div>
-
                     {/* Hover Effect Overlay */}
 <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
                   </div>
                 </motion.div>
               ))}
             </motion.div>
-
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -456,13 +437,14 @@ setSelectedPriceRange('all');
                   }}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
                 >
+                  }}
+                  className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >
                   Clear Filters
                 </button>
               </motion.div>
             )}
           </div>
         </section>
-
         {/* Contact Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -479,7 +461,6 @@ setSelectedPriceRange('all');
                 Contact our team to learn more about our innovative 2026
                 services and how they can revolutionize your operations.
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />
@@ -497,7 +478,6 @@ setSelectedPriceRange('all');
                   <p className='text-green-300'>ziontechgroup.com</p>
                 </div>
               </div>
-
               <Link href='/contact'>
                 <button className='bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg'>
                   Get Started Today

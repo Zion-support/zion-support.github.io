@@ -1,18 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-function writeJson(p: string, data: any) {
-  fs.writeFileSync(p, JSON.stringify(data, null, 2));
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).end('Method Not Allowed');
+const usersPath = null;
   }
-
-  const { userId = 'demo-user', courseId, enableBoost } = req.body || {};
-  if (!courseId) return res.status(400).json({ error: 'courseId required' });
-
+  const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
+  if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
@@ -51,3 +43,8 @@ const user = users[userId] || {
   }
 
 }}
+    return res.status(200).json({ ok: true, user })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
+  }
+}

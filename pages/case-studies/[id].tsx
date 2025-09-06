@@ -1,18 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
       fullContent: `
         <h2>Background</h2>
-        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes. 
+        <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line.</p>
-        
         <h2>Challenge</h2>
-        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
-        and reducing operational costs. They required a solution that could adapt to changing production demands 
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards
+        and reducing operational costs. They required a solution that could adapt to changing production demands
         and minimize human intervention.</p>
-        
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
         <ul>
@@ -21,7 +15,6 @@ import { useRouter } from 'next/router';
           <li>Automated quality control systems</li>
           <li>Intelligent scheduling and resource allocation</li>
         </ul>
-        
         <h2>Results</h2>
         <p>The implementation delivered exceptional results:</p>
         <ul>
@@ -29,9 +22,8 @@ import { useRouter } from 'next/router';
           <li><strong>60% reduction in downtime</strong> - Predictive maintenance prevented equipment failures</li>
           <li><strong>25% improvement in quality control</strong> - AI-powered inspection systems caught defects early</li>
         </ul>
-        
         <h2>Implementation Timeline</h2>
-        <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
+        <p>The project was completed in 6 months with minimal disruption to ongoing operations.
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
 `,
     },
@@ -54,14 +46,12 @@ challenge:
         'Transforming content creation through autonomous AI systems.',
       fullContent: `
         <h2>Background</h2>
-        <p>A leading digital marketing agency was struggling to scale their content creation capabilities. 
+        <p>A leading digital marketing agency was struggling to scale their content creation capabilities.
         Their manual processes were limiting growth and preventing them from taking on new clients.</p>
-        
         <h2>Challenge</h2>
-        <p>The agency needed to dramatically increase their content production capacity while maintaining 
-        high quality standards and creative excellence. They required a solution that could handle multiple 
+        <p>The agency needed to dramatically increase their content production capacity while maintaining
+        high quality standards and creative excellence. They required a solution that could handle multiple
         content types and formats.</p>
-        
         <h2>Solution</h2>
         <p>We implemented an autonomous content generation system that included:</p>
         <ul>
@@ -70,7 +60,6 @@ challenge:
           <li>Intelligent content optimization</li>
           <li>Human oversight and quality control</li>
         </ul>
-        
         <h2>Results</h2>
         <p>The transformation was remarkable:</p>
         <ul>
@@ -78,9 +67,8 @@ challenge:
           <li><strong>85% improvement in engagement</strong> - AI-optimized content performed significantly better</li>
           <li><strong>70% reduction in production time</strong> - Automated workflows accelerated delivery</li>
         </ul>
-        
         <h2>Implementation Timeline</h2>
-        <p>The system was deployed in 4 months with comprehensive training for the creative team. 
+        <p>The system was deployed in 4 months with comprehensive training for the creative team.
         The AI systems learned from human feedback and continuously improved over time.</p>
 `,
     },
@@ -102,13 +90,11 @@ challenge:
       description: 'Building self-healing, auto-scaling cloud infrastructure.',
       fullContent: `
         <h2>Background</h2>
-        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
+        <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
-        
         <h2>Challenge</h2>
-        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability. 
+        <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
-        
         <h2>Solution</h2>
 <p>We designed and implemented a comprehensive cloud optimization system:</p>
         <ul>
@@ -117,7 +103,6 @@ challenge:
           <li>Cost optimization algorithms</li>
           <li>Performance monitoring and alerting</li>
         </ul>
-        
         <h2>Results</h2>
         <p>The optimization delivered outstanding results:</p>
         <ul>
@@ -125,9 +110,8 @@ challenge:
           <li><strong>99.9% uptime achieved</strong> - Self-healing systems prevented outages</li>
           <li><strong>3x improvement in performance</strong> - Optimized infrastructure handled traffic spikes</li>
         </ul>
-        
         <h2>Implementation Timeline</h2>
-        <p>The project was completed in 8 months with careful planning to avoid service disruption. 
+        <p>The project was completed in 8 months with careful planning to avoid service disruption.
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
 `,
     },
@@ -162,7 +146,6 @@ challenge:
       </>
 );
   }
-
   return (
     <>
       <Head>

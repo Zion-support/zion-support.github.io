@@ -1,9 +1,3 @@
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import SEOOptimizer from '../components/SEOOptimizer';
-import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
 import {
   Shield,
   Lock,
@@ -216,8 +210,10 @@ className='text-center mb-16'
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Our Privacy Principles
                 </h2>
-                <p className='text-xl text-gray-300'>
-                  The foundation of how we handle your data
+                <p className="mb-6">
+                  We collect information you provide directly to us, such as
+                  when you create an account, use our services, or contact us
+                  for support.
                 </p>
               </motion.div>
 
@@ -264,8 +260,9 @@ className='text-center mb-16'
                 <h2 className='text-4xl font-bold mb-4 text-white'>
                   Your Privacy Rights
                 </h2>
-                <p className='text-xl text-gray-300'>
-                  You have control over your personal information
+                <p className="mb-6">
+                  We use the information we collect to provide, maintain, and
+                  improve our services.
                 </p>
               </motion.div>
 

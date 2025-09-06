@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import {
-  GeneratedMilestone,
-  MilestoneInput,
-  useMilestoneGenerator,;
-} from '@/hooks/useMilestoneGenerator';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, Sparkles, Check } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { format, parseISO } from 'date-fns';
 
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Loader2, Sparkles, Check } from 'lucide-react'
+import { Badge  } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
 projectName: string;
   scopeSummary: string;
@@ -44,27 +40,35 @@ startDate: startDate.toISOString(),
       setShowSuggestions(true);
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones);
+export function MilestoneSuggestions({
+  projectName;
+  scopeSummary;
+  startDate;
+  endDate;
+  projectType;
+  onMilestonesGenerated
+}: MilestoneSuggestionsProps) {
+  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const handleGenerateMilestones = null;
       }
     }
-  };
-
-  const formatDate = (dateString: string) => {
+  }
+  const formatDate = (dateString: string,) => {
     try {
 return format(parseISO(dateString), 'MMM dd, yyyy');
     } catch (error) {
       return dateString;
     }
-  };
-
+  }
   return (
     <div className='space-y-4'>
       {!showSuggestions && (
         <Button
           variant='outline'
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scopeSummary || !startDate}
-          className='w-full'
-        >
+          disabled={isGenerating |!scopeSummary |!startDate}
+          className='w-full'        >
           {isGenerating ? (
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
@@ -78,7 +82,6 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
           )}
         </Button>
       )}
-
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
 <CardHeader className='pb-3'>
@@ -92,8 +95,7 @@ return format(parseISO(dateString), 'MMM dd, yyyy');
               {generatedMilestones.map((milestone, index) => (
                 <div key={index} className='p-3 border rounded-lg bg-muted/10'>
                   <div className='flex items-center justify-between mb-1'>
-                    <div className='font-medium flex items-center'>
-                      {milestone.title}
+                    <div className='font-medium flex items-center'>                      {milestone.title}
                       <Badge variant='secondary' className='ml-2 text-xs'>
                         AI Suggested
                       </Badge>

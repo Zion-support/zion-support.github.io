@@ -1,125 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Eye,
-  Network,
-  Server,
-  HardDrive,
-  Monitor,
-  Laptop,
-  Watch,
-  Headphones,
-  Speaker,
-  Mic,
-  Keyboard,
-  Mouse,
-  CpuIcon,
-  DatabaseIcon,
-  CloudIcon,
-  LockIcon,
-  ShieldIcon,
-  GlobeIcon,
-  ZapIcon,
-  SparklesIcon,
-  BrainIcon,
-  AtomIcon,
-  HeartIcon,
-  RocketIcon,
-  ShieldIcon as ShieldIcon2,
-  TargetIcon,
-  MicroscopeIcon,
-  StarIcon,
-  ArrowRight,
-  Infinity,
-  Crown,
-  Gem,
-  Sparkles as SparklesIcon2,
-  ShoppingCart,
-  UserCheck,
-  FileText,
-  BarChart,
-  PaletteIcon,
-  VideoIcon,
-  LockIcon as LockIcon2,
-  GlobeIcon as GlobeIcon2,
-  CpuIcon as CpuIcon2,
-  Handshake,
-  LifeBuoy,
-  Activity,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
-  Github,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Users, Briefcase;
+  BookOpen, MessageCircle, Star, TrendingUp, Target;
+  Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
+  Earth, Factory, Car, Building, GraduationCap, Scale;
+  Palette, Camera, Video, Music, Gamepad2, Heart;
+  Leaf, Sun, Moon, Wind, Droplets, Mountain;
+  Code, Wrench, Smartphone, BarChart3, Eye;
+  Network, Server, HardDrive, Monitor;
+  Laptop, Watch, Headphones, Speaker, Mic;
+  Keyboard, Mouse, CpuIcon, DatabaseIcon;
+  CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
+  ZapIcon, SparklesIcon, BrainIcon, AtomIcon;
+  HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2;
+  TargetIcon, MicroscopeIcon, StarIcon, ArrowRight;
+  Infinity, Crown, Gem, Sparkles as SparklesIcon2;
+  ShoppingCart, UserCheck, FileText, BarChart;
+  PaletteIcon, VideoIcon, LockIcon as LockIcon2;
+  GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2;
+  Handshake, LifeBuoy, Activity;
+  Linkedin, Twitter, Facebook, Instagram, Youtube, Github
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🧠 Revolutionary AI Services',
-    icon: BrainIcon,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
-    description: 'Next-generation AI consciousness and creativity',
+    title: '🧠 Revolutionary AI Services'
+    icon: BrainIcon
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and creativity'
     services: [
 {
         name: 'AI Business Intelligence Pro',
@@ -128,17 +39,17 @@ const serviceCategories = [
         price: '$299/month',
       },
       {
-        name: 'AI Video Generation Platform',
-        href: '/ai-video-generation-platform',
-        description: 'Create professional videos with AI',
-        price: '$499/month',
-      },
+        name: 'AI Video Generation Platform'
+        href: '/ai-video-generation-platform'
+        description: 'Create professional videos with AI'
+        price: '$499/month'
+      }
       {
-        name: 'AI-Powered Cybersecurity',
-        href: '/ai-cybersecurity-platform',
-        description: 'Next-generation threat detection',
-        price: '$799/month',
-      },
+        name: 'AI-Powered Cybersecurity'
+        href: '/ai-cybersecurity-platform'
+        description: 'Next-generation threat detection'
+        price: '$799/month'
+      }
       {
         name: 'AI Drug Discovery Platform',
         href: '/ai-drug-discovery-platform',
@@ -160,17 +71,17 @@ const serviceCategories = [
         price: '$1,999/month',
       },
       {
-        name: 'Blockchain AI Platform',
-        href: '/blockchain-ai-platform',
-        description: 'Decentralized AI for the future',
-        price: '$899/month',
-      },
+        name: 'Blockchain AI Platform'
+        href: '/blockchain-ai-platform'
+        description: 'Decentralized AI for the future'
+        price: '$899/month'
+      }
       {
-        name: 'Edge AI Computing',
-        href: '/edge-ai-computing-platform',
-        description: 'AI at the edge for real-time processing',
-        price: '$599/month',
-      },
+        name: 'Edge AI Computing'
+        href: '/edge-ai-computing-platform'
+        description: 'AI at the edge for real-time processing'
+        price: '$599/month'
+      }
       {
         name: 'AI Climate Modeling',
         href: '/ai-climate-modeling-platform',
@@ -192,17 +103,17 @@ const serviceCategories = [
         price: '$399/month',
       },
       {
-        name: 'Customer Success Automation',
-        href: '/customer-success-automation',
-        description: 'Automate customer success workflows',
-        price: '$199/month',
-      },
+        name: 'Customer Success Automation'
+        href: '/customer-success-automation'
+        description: 'Automate customer success workflows'
+        price: '$199/month'
+      }
       {
-        name: 'HR Automation Suite',
-        href: '/hr-automation-suite',
-        description: 'Streamline HR processes with AI',
-        price: '$179/month',
-      },
+        name: 'HR Automation Suite'
+        href: '/hr-automation-suite'
+        description: 'Streamline HR processes with AI'
+        price: '$179/month'
+      }
       {
         name: 'Project Management AI',
         href: '/project-management-ai-platform',
@@ -224,17 +135,17 @@ const serviceCategories = [
         price: '$249/month',
       },
       {
-        name: 'Marketing Automation Suite',
-        href: '/marketing-automation-suite',
-        description: 'Automate your entire marketing operation',
-        price: '$279/month',
-      },
+        name: 'Marketing Automation Suite'
+        href: '/marketing-automation-suite'
+        description: 'Automate your entire marketing operation'
+        price: '$279/month'
+      }
       {
-        name: 'Financial Analytics Platform',
-        href: '/financial-analytics-platform',
-        description: 'Real-time financial insights',
-        price: '$349/month',
-      },
+        name: 'Financial Analytics Platform'
+        href: '/financial-analytics-platform'
+        description: 'Real-time financial insights'
+        price: '$349/month'
+      }
       {
         name: 'Legal Document Automation',
         href: '/legal-document-automation',
@@ -256,17 +167,17 @@ const serviceCategories = [
         price: '$2,499/month',
       },
       {
-        name: 'AI Content Generator Elite',
-        href: '/ai-content-generator-elite',
-        description: 'Professional AI content creation',
-        price: '$49/month',
-      },
+        name: 'AI Content Generator Elite'
+        href: '/ai-content-generator-elite'
+        description: 'Professional AI content creation'
+        price: '$49/month'
+      }
       {
-        name: 'AI Guardrails Suite',
-        href: '/ai-guardrails-suite',
-        description: 'Policy and safety for LLM apps',
-        price: '$199/month',
-      },
+        name: 'AI Guardrails Suite'
+        href: '/ai-guardrails-suite'
+        description: 'Policy and safety for LLM apps'
+        price: '$199/month'
+      }
       {
         name: 'AI Business Intelligence',
         href: '/ai-business-intelligence-suite',
@@ -288,17 +199,17 @@ const serviceCategories = [
         price: '$35,999/month',
       },
       {
-        name: 'Space Mining Automation',
-        href: '/space-mining-automation-platform',
-        description: 'Automated asteroid mining',
-        price: '$45,999/month',
-      },
+        name: 'Space Mining Automation'
+        href: '/space-mining-automation-platform'
+        description: 'Automated asteroid mining'
+        price: '$45,999/month'
+      }
       {
-        name: 'Metaverse AI Development',
-        href: '/metaverse-ai-development-platform',
-        description: 'Build immersive virtual worlds',
-        price: '$2,999/month',
-      },
+        name: 'Metaverse AI Development'
+        href: '/metaverse-ai-development-platform'
+        description: 'Build immersive virtual worlds'
+        price: '$2,999/month'
+      }
       {
         name: 'Holographic Event Platform',
         href: '/holographic-event-platform',
@@ -319,7 +230,6 @@ const quickLinks = [
   { name: 'Blog', href: '/blog', icon: MessageCircle },
 { name: 'Contact', href: '/contact', icon: MessageCircle },
 ];
-
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
@@ -359,12 +269,10 @@ const certifications = [
   'Quantum Security Certified',
   'AI Ethics Compliant',
 ];
-
 export default function UltraFuturisticNavigation2034() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 50);
@@ -372,11 +280,9 @@ setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const toggleDropdown = (category: string) => {
     setActiveDropdown(activeDropdown === category ? null : category);
-  };
-
+  }
   const closeDropdown = () => {
     setActiveDropdown(null);
   };
@@ -385,6 +291,10 @@ setIsScrolled(window.scrollY > 50);
     <>
       {/* Top Contact Bar */}
 <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
+  return (
+    <>
+      {/* Top Contact Bar */}
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
         <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
           <div className='flex items-center space-x-6'>
             <div className='flex items-center space-x-2'>
@@ -420,7 +330,6 @@ setIsScrolled(window.scrollY > 50);
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -453,7 +362,6 @@ className='flex items-center space-x-3'
                 </p>
               </div>
             </motion.div>
-
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
@@ -512,7 +420,6 @@ className='flex items-center space-x-3'
                   </div>
                 </div>
               </div>
-
               {/* Contact Button */}
               <Link
 href='/contact'
@@ -521,7 +428,6 @@ href='/contact'
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
 <div className='lg:hidden'>
               <button
@@ -537,7 +443,6 @@ href='/contact'
             </div>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -612,7 +517,6 @@ className='block text-sm text-gray-400 hover:text-cyan-400 transition-colors'
           )}
         </AnimatePresence>
       </nav>
-
       {/* Spacer for fixed navigation */}
 <div className='h-20'></div>
     </>

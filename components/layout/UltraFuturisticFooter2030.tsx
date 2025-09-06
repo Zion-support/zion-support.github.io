@@ -1,77 +1,25 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Zap,
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Cpu,
-  Target,
-  Microscope,
-  Users,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Github,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  CheckCircle,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const serviceCategories = [
-  {
-    title: '🚀 AI & Consciousness',
-    services: [
-{
-        name: 'AI Consciousness Evolution',
-        href: '/ai-consciousness-evolution-platform',
-      },
-      {
-        name: 'AI Emotional Intelligence',
-        href: '/ai-emotion-intelligence-platform',
-      },
-      {
-        name: 'AI Creativity Orchestrator',
-        href: '/ai-creativity-orchestrator',
-      },
-      {
-        name: 'AI Autonomous Business Manager',
-        href: '/ai-autonomous-business-manager',
-      },
-    ],
-  },
-  {
-    title: '⚛️ Quantum & Emerging Tech',
+import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+  Facebook, Twitter, Linkedin, Instagram, Youtube;
+  Github, ArrowRight, Heart, Star, Award, CheckCircle
+ } from 'lucide-react';
+const contactInfo = null;
     services: [
       {
-        name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-gateway',
-      },
+        name: 'AI Consciousness Evolution'
+        href: '/ai-consciousness-evolution-platform'
+      }
       {
-        name: 'Quantum Learning Accelerator',
-        href: '/quantum-learning-accelerator',
-      },
+        name: 'AI Emotional Intelligence'
+        href: '/ai-emotion-intelligence-platform'
+      }
       {
-        name: 'Quantum Financial Trading',
-        href: '/quantum-financial-trading-platform',
-      },
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+      }
       {
         name: 'Quantum Cloud Infrastructure',
         href: '/quantum-cloud-infrastructure',
@@ -162,7 +110,6 @@ const quickLinks = [
   { name: 'Blog', href: '/blog' },
 { name: 'Contact', href: '/contact' },
 ];
-
 const companyInfo = [
   { name: 'About Us', href: '/about' },
   { name: 'Careers', href: '/careers' },
@@ -205,6 +152,9 @@ const certifications = [
 export default function UltraFuturisticFooter2030() {
   return (
 <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
+export default function UltraFuturisticFooter2030() {
+  return (
+    <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
       {/* Animated Background */}
       <div className='absolute inset-0'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5'></div>
@@ -215,7 +165,6 @@ export default function UltraFuturisticFooter2030() {
           <div className='absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse'></div>
         </div>
       </div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -235,13 +184,11 @@ export default function UltraFuturisticFooter2030() {
                   </p>
                 </div>
               </div>
-
               <p className='text-gray-300 text-sm leading-relaxed'>
-                Pioneering the future with cutting-edge AI, quantum computing,
+                Pioneering the future with cutting-edge AI, quantum computing
                 and emerging technologies. Transforming businesses through
                 innovative solutions and intelligent automation.
               </p>
-
               {/* Contact Info */}
               <div className='space-y-3'>
                 <div className='flex items-center space-x-3 text-sm text-gray-300'>
@@ -277,7 +224,6 @@ export default function UltraFuturisticFooter2030() {
                 </div>
               </div>
             </div>
-
             {/* Service Categories */}
 <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -305,7 +251,6 @@ className='block text-xs text-gray-400 hover:text-purple-300 transition-colors'
                 ))}
               </div>
             </div>
-
             {/* Quick Links */}
 <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -338,14 +283,12 @@ className='block text-xs text-gray-400 hover:text-cyan-300 transition-colors'
                 ))}
               </div>
             </div>
-
             {/* Social & Certifications */}
 <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
                 <span>Connect & Trust</span>
               </h4>
-
               {/* Social Links */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300'>
@@ -365,7 +308,6 @@ target='_blank'
                   ))}
                 </div>
               </div>
-
               {/* Certifications */}
 <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
@@ -387,7 +329,6 @@ target='_blank'
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
 <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>

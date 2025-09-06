@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+import { useAuth  } from '@/hooks/useAuth';
+import { usePoints  } from '@/hooks/usePoints';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
+import { ScrollArea  } from '@/components/ui/scroll-area';
+import { formatDistanceToNow  } from 'date-fns';
 import {
-  Gift,
-  Star,
-  Users,
-  ShoppingBag,
-  MessageSquare,
-  TrendingUp,
-  History,;
+  Gift
+  Star
+  Users
+  ShoppingBag
+  MessageSquare
+  TrendingUp
+  History
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
@@ -29,32 +37,27 @@ export default function PointsPage() {
   const { ledger, balance, loading, fetchLedger } = usePoints();
   const [loginOpen, setLoginOpen] = useState(false);
   const [redeeming, setRedeeming] = useState(false);
-
-  async function handleRedeem(reward: {
-    id: string;
-    cost: number;
-    title: string;
   }) {
     if (!user?.id) return;
     setRedeeming(true);
     try {
       await fetch('/api/points/redeem', {
-        method: 'POST',
+        method: 'POST';
         headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({
-          userId: user.id,
-          cost: reward.cost,
-          reward: reward.title,
-        }),
+        body: JSON.stringify({
+          userId: user.id
+          cost: reward.cost
+          reward: reward.title
+        })
       });
       await fetchLedger();
     } finally {
-      setRedeeming(false);
+      setRedeeming(false);    }      });
+      await fetchLedger()
+    } finally {
+      setRedeeming(false)
     }
   }
-
-  const earningOpportunities = [
-    {
 icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
@@ -62,12 +65,12 @@ icon: <Users className='h-5 w-5' />,
       action: isAuthenticated ? '✓ Completed' : 'Get Started',
     },
     {
-      icon: <ShoppingBag className='h-5 w-5' />,
-      title: 'First Purchase',
-      description: 'Make your first purchase on the marketplace',
-      points: '100 pts',
-      action: 'Browse Marketplace',
-    },
+      icon: <MessageSquare className='h-5 w-5' />
+      title: 'Community Engagement'
+      description: 'Post in the community or comment on discussions'
+      points: '25 pts per post'
+      action: 'Join Community'
+    }
     {
       icon: <MessageSquare className='h-5 w-5' />,
       title: 'Community Engagement',
@@ -93,20 +96,18 @@ icon: <Users className='h-5 w-5' />,
       category: 'Subscription',
     },
     {
-      id: 'swag',
-      title: 'Zion Swag Pack',
-      cost: 1500,
-      category: 'Merchandise',
-    },
+      id: 'swag'
+      title: 'Zion Swag Pack'
+      cost: 1500
+      category: 'Merchandise'
+    }
     {
-      id: 'coupon25',
-      title: '$25 Off Coupon',
-      cost: 2000,
-      category: 'Discount',
-    },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-  ];
-
+      id: 'coupon25'
+      title: '$25 Off Coupon'
+      cost: 2000
+      category: 'Discount'
+    }
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   if (!isAuthenticated) {
     return (
       <>
@@ -152,7 +153,6 @@ icon: <Users className='h-5 w-5' />,
                 ))}
               </CardContent>
             </Card>
-
             <Card>
               <CardHeader>
 <CardTitle className='flex items-center gap-2'>
@@ -168,8 +168,7 @@ icon: <Users className='h-5 w-5' />,
                   <div
                     key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'
-                  >
-                    <div>
+                  >                    <div>
                       <h4 className='font-medium'>{reward.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {reward.category}
@@ -198,7 +197,6 @@ icon: <Users className='h-5 w-5' />,
       </>
     );
   }
-
   return (
 <div className='container py-10 max-w-4xl'>
       <div className='text-center mb-8'>
@@ -238,7 +236,11 @@ icon: <Users className='h-5 w-5' />,
                   <h4 className='font-medium'>{opportunity.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
-                  </p>
+                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                <div className="text-primary mt-1">{opportunity.icon}</div>
+                <div className="flex-1">
+                  <h4 className="font-medium">{opportunity.title}</h4>
+                  <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
                 <div className='text-right'>
                   <Badge variant='secondary' className='mb-1'>
@@ -252,7 +254,6 @@ icon: <Users className='h-5 w-5' />,
             ))}
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
 <CardTitle className='flex items-center gap-2'>
@@ -269,7 +270,6 @@ icon: <Users className='h-5 w-5' />,
                 key={reward.id}
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
-                <div>
                   <h4 className='font-medium'>{reward.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {reward.category}
@@ -284,8 +284,7 @@ icon: <Users className='h-5 w-5' />,
                       size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
-                    >
-                      {redeeming ? 'Processing...' : 'Redeem'}
+                    >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
                     <p className='text-xs text-muted-foreground'>
@@ -298,7 +297,6 @@ icon: <Users className='h-5 w-5' />,
           </CardContent>
         </Card>
       </div>
-
       <Card>
         <CardHeader>
 <CardTitle className='flex items-center gap-2'>
@@ -312,7 +310,6 @@ icon: <Users className='h-5 w-5' />,
 <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
-          ) : (
             <ScrollArea className='h-64'>
               <div className='space-y-2 mt-2'>
                 {ledger.map(entry => (
@@ -322,11 +319,11 @@ icon: <Users className='h-5 w-5' />,
                   >
                     <div>
                       <p className='font-medium capitalize'>
-                        {entry.reason || 'adjustment'}
+                        {entry.reason |'adjustment'}
                       </p>
                       <p className='text-xs text-muted-foreground'>
                         {formatDistanceToNow(new Date(entry.created_at), {
-                          addSuffix: true,
+                          addSuffix: true
                         })}
                       </p>
                     </div>
@@ -336,7 +333,8 @@ icon: <Users className='h-5 w-5' />,
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
-                      }
+                      }                      variant="outline"
+                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
                     >
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts
@@ -366,6 +364,8 @@ icon: <Users className='h-5 w-5' />,
             <Button variant='outline' asChild>
               <Link href='/community'>Join Community</Link>
             </Button>
+            <Button variant='outline' asChild>
+              <Link href='/community'>Join Community</Link>            </Button>
           </div>
         </CardContent>
       </Card>

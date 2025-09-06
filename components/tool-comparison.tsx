@@ -1,32 +1,26 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import {
-  Search,
-  Filter,
-  TrendingUp,
-  DollarSign,
-  Users,
-  Star,
-  Check,
-  X,
-  ArrowRight,
-  ExternalLink,
-  Zap,
-  Brain,
-  Globe,
-  Rocket,;
-} from 'lucide-react';
-
+import { Search;
+  Filter;
+  TrendingUp;
+  DollarSign;
+  Users;
+  Star;
+  Check;
+  X;
+  ArrowRight;
+  ExternalLink;
+  Zap;
+  Brain;
+  Globe;
+  Rocket
+ } from 'lucide-react';
 export default function ToolComparisonPage() {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
-
-  const allTools = [
-    // AI Tools
-    {
       name: 'ChatGPT',
       category: 'AI Assistant',
       pricing: 'Free - $20/month',
@@ -240,7 +234,6 @@ return (
         return 0;
     }
   });
-
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400';
     if (pricing.includes('$')) return 'text-blue-400';
@@ -261,8 +254,6 @@ return 'text-gray-400';
           content='Comprehensive comparison of SaaS tools and AI services to help you make informed decisions.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
@@ -270,9 +261,7 @@ return 'text-gray-400';
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]' />
         </div>
-
         <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-20 animate-fade-in'>
             <div className='mb-8'>
@@ -281,7 +270,6 @@ return 'text-gray-400';
                 Smart Tool Selection
               </div>
             </div>
-
             <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
               Tool Comparison
             </h1>
@@ -290,7 +278,6 @@ return 'text-gray-400';
               informed decisions with our comprehensive analysis and expert
               insights.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               <Button
                 href='#comparison'
@@ -312,7 +299,6 @@ return 'text-gray-400';
               </Button>
             </div>
           </div>
-
           {/* Stats */}
 <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
@@ -345,7 +331,6 @@ return 'text-gray-400';
           </div>
         </div>
       </section>
-
       {/* Filters and Search */}
 <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -361,7 +346,6 @@ return 'text-gray-400';
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
               />
             </div>
-
             {/* Category Filter */}
 <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
@@ -378,7 +362,6 @@ return 'text-gray-400';
                 </button>
               ))}
             </div>
-
             {/* Sort */}
 <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
@@ -395,20 +378,17 @@ return 'text-gray-400';
           </div>
         </div>
       </section>
-
       {/* Comparison Table */}
 <section id='comparison' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Tool Comparison
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Compare features, pricing, and user ratings to find the perfect
               tools for your business needs.
             </p>
           </div>
-
           <div className='overflow-x-auto'>
             <table className='w-full'>
               <thead>
@@ -486,8 +466,7 @@ return 'text-gray-400';
                           href={tool.website}
                           variant='outline'
                           size='sm'
-                          className='text-xs'
-                        >
+                          className='text-xs'                        >
                           Visit
                           <ExternalLink className='w-3 h-3 ml-1' />
                         </Button>
@@ -506,7 +485,6 @@ return 'text-gray-400';
               </tbody>
             </table>
           </div>
-
           {sortedTools.length === 0 && (
 <div className='text-center py-20'>
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
@@ -520,20 +498,17 @@ return 'text-gray-400';
           )}
         </div>
       </section>
-
       {/* Detailed Comparison Cards */}
 <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-              Detailed Analysis
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
               best decision for your business.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
               <Card
@@ -569,7 +544,6 @@ return 'text-gray-400';
                   </h4>
                   <p className='text-sm text-gray-400'>{tool.bestFor}</p>
                 </div>
-
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                   <div>
                     <h4 className='text-sm font-semibold text-green-400 mb-2 flex items-center'>
@@ -628,13 +602,11 @@ variant='outline'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-            Need Help Choosing?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the

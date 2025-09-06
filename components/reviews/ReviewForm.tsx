@@ -1,12 +1,6 @@
-</div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
-  submitting ? 'Submitting...' : 'Submit Review' 
-}</button> </form>) 
-};
-
-type Props = {
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
-};
-
+import React, { useState } from 'react';
+import StarRating from './StarRating';
+export type ReviewFormValues = any;
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -17,15 +11,14 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
-
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSubmitting(true);
-    setMessage(null);
+    setMessage(null)
     try {
       const res = await fetch('/api/reviews/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
           projectId: initial.projectId,
           fromRole: initial.fromRole,
@@ -34,15 +27,15 @@ rating,
           text,
           anonymous,
           categories: {
-            communication,
-            qualityOfWork,
-            timeliness,
-            wouldWorkWithAgain,
-          },
-        }),
+            communication
+            qualityOfWork
+            timeliness
+            wouldWorkWithAgain
+          }
+        })
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to submit');
+      if (!res.ok) throw new Error(data.error |'Failed to submit');
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {
       setMessage(err.message);
@@ -50,14 +43,12 @@ rating,
       setSubmitting(false);
     }
   }
-
   return (
 <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
-
       <div>
 <label className='block text-sm font-medium mb-2'>Your Review</label>
         <textarea
@@ -77,14 +68,12 @@ rating,
           onChange={e => setAnonymous(e.target.checked)}
         />
         <label htmlFor='anonymous'>Submit anonymously</label>
-      </div>
-
       <div className='grid md:grid-cols-2 gap-4'>
         <div className='enhanced-card'>
           <div className='flex items-center justify-between mb-2'>
             <span className='text-sm'>Communication</span>
             <StarRating
-              value={communication || 0}
+              value={communication |0}
               onChange={v => setCommunication(v)}
             />
           </div>
@@ -94,7 +83,7 @@ rating,
           <div className='flex items-center justify-between mb-2'>
             <span className='text-sm'>Quality of Work</span>
             <StarRating
-              value={qualityOfWork || 0}
+              value={qualityOfWork |0}
               onChange={v => setQualityOfWork(v)}
             />
           </div>
@@ -104,7 +93,7 @@ rating,
           <div className='flex items-center justify-between mb-2'>
             <span className='text-sm'>Timeliness</span>
             <StarRating
-              value={timeliness || 0}
+              value={timeliness |0}
               onChange={v => setTimeliness(v)}
             />
           </div>

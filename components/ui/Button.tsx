@@ -1,33 +1,20 @@
+import React from 'react';
+import Link from 'next/link';
 import React from "react";
-import Link from "next/link";
-
 interface ButtonProps {
   children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
   href?: string;
   onClick?: () => void;
-  type?: "button" | "submit" | "reset";
-  variant?: "primary" | "secondary" | "outline";
   className?: string;
   disabled?: boolean;
-  style?: React.CSSProperties;
-
+  type?: 'button' | 'submit' | 'reset',
+  icon?: React.ReactNode;
+  iconPosition?: 'left' | 'right',
+  style?: React.CSSProperties
+}
 const Button: React.FC<ButtonProps> = ({
-  children,
-  href,
-  onClick,
-  type = "button",
-  variant = "primary",
-  className = "",
-  disabled = false,
-  type = 'button',
-  icon,
-  iconPosition = 'left',
-  style,
-}) => {
-  const baseClasses =
-    'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group hover:scale-105 active:scale-95';
-
-  const variantClasses = {
     primary:
       'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',
     secondary:

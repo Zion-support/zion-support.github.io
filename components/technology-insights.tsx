@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
-
+  const technologyTrends = null;
+                      AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
   ];
-
   const researchAreas = [
     {
       title: 'Autonomous Systems Research',
@@ -67,7 +67,6 @@ description:
       downloadUrl: '/whitepapers/automation-roi-guide.pdf',
     },
   ];
-
   return (
     <>
       <Head>
@@ -88,7 +87,6 @@ description:
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <section className='text-center mb-16'>
@@ -100,7 +98,6 @@ description:
               AI, automation, and emerging technologies
             </p>
           </section>
-
           <section className='mx-auto max-w-7xl'>
             {/* Technology Trends */}
             <div className='mb-16'>
@@ -135,7 +132,6 @@ description:
                 ))}
               </div>
             </div>
-
             {/* Research Areas */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -167,7 +163,6 @@ description:
                 ))}
               </div>
             </div>
-
             {/* Whitepapers */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -201,7 +196,6 @@ description:
                 ))}
               </div>
             </div>
-
             {/* Innovation Lab */}
 <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -215,12 +209,14 @@ description:
                     </h3>
                     <p className='text-white/80 mb-6'>
                       Our innovation lab is dedicated to exploring the frontiers
-                      of technology, conducting research in autonomous systems,
+                      of technology, conducting research in autonomous systems
                       AI ethics, and human-AI collaboration. We work with
                       leading institutions and industry partners to advance the
                       state of the art.
                     </p>
                     <ul className='space-y-2 text-white/70'>
+                    </p>
+                    <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
                       <li>• Autonomous system prototyping</li>
                       <li>• Ethical AI framework development</li>
@@ -234,7 +230,6 @@ description:
                 </div>
               </div>
             </div>
-
             {/* Call to Action */}
 <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>

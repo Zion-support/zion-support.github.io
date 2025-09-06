@@ -1,78 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Earth,
-  Factory,
-  Car,
-  Building,
-  GraduationCap,
-  Scale,
-  Palette,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Heart,
-  Leaf,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Mountain,
-  Code,
-  Wrench,
-  Smartphone,
-  BarChart3,
-  Eye,
-  Infinity,
-  Hexagon,
-  Network,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Users, Briefcase;
+  BookOpen, MessageCircle, Star, TrendingUp, Target;
+  Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
+  Earth, Factory, Car, Building, GraduationCap, Scale;
+  Palette, Camera, Video, Music, Gamepad2, Heart;
+  Leaf, Sun, Moon, Wind, Droplets, Mountain;
+  Code, Wrench, Smartphone, BarChart3, Eye;
+  Infinity, Hexagon, Network
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🚀 2030 Ultra-Futuristic AI Services',
-    icon: Brain,
-    color: 'from-violet-600 via-purple-600 to-indigo-600',
-    description: 'Next-generation AI consciousness and creativity',
+    title: '🚀 2030 Ultra-Futuristic AI Services'
+    icon: Brain
+    color: 'from-violet-600 via-purple-600 to-indigo-600'
+    description: 'Next-generation AI consciousness and creativity'
     services: [
 {
         name: 'AI Consciousness Evolution Platform',
@@ -81,17 +27,17 @@ const serviceCategories = [
         price: '$19,999/month',
       },
       {
-        name: 'AI Emotional Intelligence Platform',
-        href: '/ai-emotion-intelligence-platform',
-        description: 'Real-time emotion analysis and response',
-        price: '$1,299/month',
-      },
+        name: 'AI Emotional Intelligence Platform'
+        href: '/ai-emotion-intelligence-platform'
+        description: 'Real-time emotion analysis and response'
+        price: '$1,299/month'
+      }
       {
-        name: 'AI Creativity Orchestrator',
-        href: '/ai-creativity-orchestrator',
-        description: 'Multi-model creativity fusion',
-        price: '$1,799/month',
-      },
+        name: 'AI Creativity Orchestrator'
+        href: '/ai-creativity-orchestrator'
+        description: 'Multi-model creativity fusion'
+        price: '$1,799/month'
+      }
       {
         name: 'AI Autonomous Business Manager',
         href: '/ai-autonomous-business-manager',
@@ -113,17 +59,17 @@ const serviceCategories = [
         price: '$3,999/month',
       },
       {
-        name: 'Quantum Learning Accelerator',
-        href: '/quantum-learning-accelerator',
-        description: 'Quantum-enhanced learning paths',
-        price: '$899/month',
-      },
+        name: 'Quantum Learning Accelerator'
+        href: '/quantum-learning-accelerator'
+        description: 'Quantum-enhanced learning paths'
+        price: '$899/month'
+      }
       {
-        name: 'Quantum Financial Trading Platform',
-        href: '/quantum-financial-trading-platform',
-        description: 'Quantum-powered trading algorithms',
-        price: '$4,999/month',
-      },
+        name: 'Quantum Financial Trading Platform'
+        href: '/quantum-financial-trading-platform'
+        description: 'Quantum-powered trading algorithms'
+        price: '$4,999/month'
+      }
       {
         name: 'Quantum Cloud Infrastructure',
         href: '/quantum-cloud-infrastructure',
@@ -145,17 +91,17 @@ const serviceCategories = [
         price: '$5,999/month',
       },
       {
-        name: 'Biotech Personalized Nutrition',
-        href: '/biotech-personalized-nutrition',
-        description: 'DNA-based nutrition plans',
-        price: '$599/month',
-      },
+        name: 'Biotech Personalized Nutrition'
+        href: '/biotech-personalized-nutrition'
+        description: 'DNA-based nutrition plans'
+        price: '$599/month'
+      }
       {
-        name: 'AI Predictive Health Analytics',
-        href: '/ai-predictive-health-analytics',
-        description: 'Predictive health outcomes',
-        price: '$1,599/month',
-      },
+        name: 'AI Predictive Health Analytics'
+        href: '/ai-predictive-health-analytics'
+        description: 'Predictive health outcomes'
+        price: '$1,599/month'
+      }
       {
         name: 'Advanced Research Automation',
         href: '/advanced-research-automation',
@@ -177,17 +123,17 @@ const serviceCategories = [
         price: '$2,999/month',
       },
       {
-        name: 'Autonomous IT Operations Center',
-        href: '/autonomous-it-operations-center',
-        description: 'Self-managing IT infrastructure',
-        price: '$6,999/month',
-      },
+        name: 'Autonomous IT Operations Center'
+        href: '/autonomous-it-operations-center'
+        description: 'Self-managing IT infrastructure'
+        price: '$6,999/month'
+      }
       {
-        name: 'AI-Powered Enterprise Security',
-        href: '/ai-powered-enterprise-security',
-        description: 'AI-driven threat detection',
-        price: '$2,999/month',
-      },
+        name: 'AI-Powered Enterprise Security'
+        href: '/ai-powered-enterprise-security'
+        description: 'AI-driven threat detection'
+        price: '$2,999/month'
+      }
       {
         name: 'Intelligent Data Governance',
         href: '/intelligent-data-governance',
@@ -209,17 +155,17 @@ const serviceCategories = [
         price: '$8,999/month',
       },
       {
-        name: 'Metaverse Digital Reality Platform',
-        href: '/metaverse-digital-reality-platform',
-        description: 'Immersive virtual worlds',
-        price: '$2,499/month',
-      },
+        name: 'Metaverse Digital Reality Platform'
+        href: '/metaverse-digital-reality-platform'
+        description: 'Immersive virtual worlds'
+        price: '$2,499/month'
+      }
       {
-        name: 'Quantum Research Platform',
-        href: '/quantum-research-platform',
-        description: 'Quantum computing research',
-        price: '$3,999/month',
-      },
+        name: 'Quantum Research Platform'
+        href: '/quantum-research-platform'
+        description: 'Quantum computing research'
+        price: '$3,999/month'
+      }
       {
         name: 'AI Research Assistant',
         href: '/ai-research-assistant',
@@ -241,17 +187,17 @@ const serviceCategories = [
         price: '$299/month',
       },
       {
-        name: 'AI Customer Experience Platform 2030',
-        href: '/ai-customer-experience-platform-2030',
-        description: 'AI-powered customer experience management',
-        price: '$199/month',
-      },
+        name: 'AI Customer Experience Platform 2030'
+        href: '/ai-customer-experience-platform-2030'
+        description: 'AI-powered customer experience management'
+        price: '$199/month'
+      }
       {
-        name: 'AI Marketing Automation Suite 2030',
-        href: '/ai-marketing-automation-2030',
-        description: 'Intelligent marketing automation powered by AI',
-        price: '$179/month',
-      },
+        name: 'AI Marketing Automation Suite 2030'
+        href: '/ai-marketing-automation-2030'
+        description: 'Intelligent marketing automation powered by AI'
+        price: '$179/month'
+      }
       {
         name: 'AI HR Management Suite 2030',
         href: '/ai-hr-management-suite-2030',
@@ -316,7 +262,6 @@ export default function UltraFuturisticNavigation2030() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 20);
@@ -327,7 +272,6 @@ setIsScrolled(window.scrollY > 20);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
   return (
     <>
       {/* Top Contact Bar */}
@@ -360,7 +304,6 @@ setIsScrolled(window.scrollY > 20);
           </div>
         </div>
       </div>
-
       {/* Main Navigation */}
 <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -390,7 +333,6 @@ setIsScrolled(window.scrollY > 20);
                 </div>
               </Link>
             </div>
-
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {mainNavigation.map(item => (
@@ -403,7 +345,6 @@ setIsScrolled(window.scrollY > 20);
                   <span>{item.name}</span>
                 </Link>
               ))}
-
               {/* Services Dropdown */}
               <div className='relative group'>
                 <button className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
@@ -411,7 +352,6 @@ setIsScrolled(window.scrollY > 20);
                   <span>Services</span>
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-200' />
                 </button>
-
                 {/* Mega Menu */}
                 <div className='absolute top-full left-0 w-screen max-w-6xl bg-black/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4'>
                   <div className='p-8'>
@@ -463,7 +403,6 @@ className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duratio
                 </div>
               </div>
             </div>
-
             {/* CTA Buttons */}
 <div className='hidden lg:flex items-center space-x-4'>
               <Link
@@ -479,7 +418,6 @@ href='/pricing'
                 View Pricing
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
 <div className='lg:hidden'>
               <button
@@ -495,7 +433,6 @@ href='/pricing'
             </div>
           </div>
         </div>
-
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -520,7 +457,6 @@ className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-w
                     </Link>
                   ))}
                 </div>
-
                 {/* Mobile Services */}
 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white px-3'>
@@ -544,7 +480,6 @@ link.color.includes('from-')
                     ))}
                   </div>
                 </div>
-
                 {/* Mobile CTA */}
 <div className='space-y-3 pt-4 border-t border-purple-500/20'>
                   <Link
@@ -567,7 +502,6 @@ href='/pricing'
           )}
         </AnimatePresence>
       </nav>
-
       {/* Spacer for fixed navigation */}
 <div className='h-20'></div>
     </>

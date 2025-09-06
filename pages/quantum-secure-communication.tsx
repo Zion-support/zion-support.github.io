@@ -1,8 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   CheckCircle,
   ArrowRight,
   Star,
@@ -30,10 +25,29 @@ import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 
+  return (
+    <UltraAdvancedFuturisticBackground
+      intensity="high"
+      colorScheme="quantum-fusion"
+      particleCount={500}
+      animationSpeed={2.0}
+      enableHolographic={true}
+      enableQuantumEffects={true}
+    >
+      <div className="min-h-screen">
+        <Head>
+          <title>Quantum-Secure Communication - Zion Tech Group | Unbreakable Encryption</title>
+          <meta name="description" content="Unbreakable encryption for the quantum era with quantum key distribution and quantum-resistant protocols. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="quantum secure communication, quantum encryption, quantum key distribution, post-quantum cryptography, secure messaging, quantum security" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="robots" content="index, follow" />
+          <meta property="og:title" content="Quantum-Secure Communication - Zion Tech Group" />
+          <meta property="og:description" content="Unbreakable encryption for the quantum era with quantum key distribution. Contact: +1 302 464 0950" />
+          <meta property="og:url" content="https://ziontechgroup.com/quantum-secure-communication" />
+          <meta property="og:type" content="website" />
+          <link rel="canonical" href="https://ziontechgroup.com/quantum-secure-communication" />
         </Head>
-
         <UltraAdvancedNavigation />
-
         {/* Hero Section */}
 <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -121,7 +135,6 @@ className='bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2
                     </div>
                   </div>
                 </motion.div>
-
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -139,7 +152,6 @@ className='bg-gradient-to-r from-purple-500 to-pink-600 p-1 rounded-2xl shadow-2
                   </Button>
                 </motion.div>
               </motion.div>
-
               {/* Key Benefits */}
               <motion.div
                 initial={{ opacity: 0 }}
@@ -176,7 +188,6 @@ className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto'
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-7xl mx-auto'>
@@ -222,7 +233,6 @@ className='group bg-gradient-to-br from-purple-900/20 to-pink-900/20 border bord
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -268,7 +278,6 @@ className='group bg-gradient-to-br from-green-900/20 to-emerald-900/20 border bo
             </div>
           </div>
         </section>
-
         {/* Technology & Integrations */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-7xl mx-auto'>
@@ -301,7 +310,6 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
                   ))}
                 </div>
               </motion.div>
-
               {/* Integrations */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -333,7 +341,6 @@ className='flex items-center space-x-3 p-3 bg-gray-800/40 rounded-lg border bord
             </div>
           </div>
         </section>
-
         {/* Market Position & ROI */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -384,7 +391,6 @@ className='bg-gradient-to-br from-yellow-900/20 to-orange-900/20 border border-y
                   </div>
                 </div>
               </motion.div>
-
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -424,7 +430,6 @@ className='bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-g
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-transparent to-gray-900/20'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -460,7 +465,6 @@ className='bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-g
                     </span>
                   </Button>
                 </motion.div>
-
                 <motion.div
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}

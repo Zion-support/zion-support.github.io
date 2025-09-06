@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-
+const InnovationInEnterpriseTechnology: NextPage;
       <main>
         <h1>InnovationInEnterpriseTechnology</h1>
         <p>This page is under construction.</p>

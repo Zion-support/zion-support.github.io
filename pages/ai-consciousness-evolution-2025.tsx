@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIConsciousnessEvolution2025() {
-  
-    />
-  );
+			title;
+				"Partnered research roadmap and governance"
+			]}
+			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}
+			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
+		/>
+	)
+}

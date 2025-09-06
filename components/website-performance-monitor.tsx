@@ -1,62 +1,65 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-import {
-  Activity,
-  Zap,
-  TrendingUp,
-  AlertTriangle,
-  CheckCircle,
-  ArrowRight,
-  Monitor,
-  Gauge,
-  BarChart3,
-  Clock,;
-} from 'lucide-react';
-
+import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
-
+  const features = null;
+            and AI-powered optimization recommendations. Never let performance issues impact your users again.
+import {
+  Activity
+  Zap
+  TrendingUp
+  AlertTriangle
+  CheckCircle
+  ArrowRight
+  Monitor
+  Gauge
+  BarChart3
+  Clock;
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+export default function WebsitePerformanceMonitorPage() {
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
   const features = [
     {
 icon: <Monitor className='w-8 h-8 text-white' />,
       title: 'Real-Time Monitoring',
       description:
-        '24/7 monitoring of your website performance with instant alerts and notifications.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        '24/7 monitoring of your website performance with instant alerts and notifications.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
     {
-      icon: <Gauge className='w-8 h-8 text-white' />,
-      title: 'Performance Metrics',
+      icon: <Gauge className='w-8 h-8 text-white' />
+      title: 'Performance Metrics'
       description:
-        'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <AlertTriangle className='w-8 h-8 text-white' />,
-      title: 'Issue Detection',
+      icon: <AlertTriangle className='w-8 h-8 text-white' />
+      title: 'Issue Detection'
       description:
-        'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-    },
+        'Automatically detect and alert on performance issues, downtime, and bottlenecks.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'
+    }
     {
-      icon: <TrendingUp className='w-8 h-8 text-white' />,
-      title: 'Performance Optimization',
+      icon: <TrendingUp className='w-8 h-8 text-white' />
+      title: 'Performance Optimization'
       description:
-        'AI-powered recommendations to improve your website speed and user experience.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500',
-    },
+        'AI-powered recommendations to improve your website speed and user experience.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'
+    }
   ];
-
   const metrics = [
     {
-      name: 'Core Web Vitals',
+      name: 'Core Web Vitals'
       description:
         'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
       icon: '⚡',
@@ -98,13 +101,12 @@ icon: <Monitor className='w-8 h-8 text-white' />,
       color: 'text-pink-400',
     },
   ];
-
   const pricing = [
     {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for small websites and blogs',
+      name: 'Starter'
+      price: '$29'
+      period: '/month'
+      description: 'Perfect for small websites and blogs'
       features: [
 '5 websites monitored',
         'Basic performance metrics',
@@ -157,12 +159,12 @@ description:
     // Simulate website analysis
     setTimeout(() => {
       setAnalysisResults({
-        url: 'https://example.com',
-        overallScore: 87,
-        lcp: '2.1s',
-        fid: '45ms',
-        cls: '0.08',
-        loadTime: '1.8s',
+        url: 'https://example.com'
+        overallScore: 87
+        lcp: '2.1s'
+        fid: '45ms'
+        cls: '0.08'
+        loadTime: '1.8s'
         recommendations: [
 'Optimize images and implement lazy loading',
           'Minimize render-blocking resources',
@@ -195,13 +197,11 @@ description:
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
             <Activity className='w-4 h-4 mr-2' />
@@ -221,6 +221,12 @@ description:
               onClick={handleAnalyzeWebsite}
               size='lg'
               className='bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow'
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button
+              onClick={handleAnalyzeWebsite}
+              size="lg"
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 text-white shadow-2xl hover-glow"
               disabled={isAnalyzing}
             >
               {isAnalyzing ? (
@@ -246,7 +252,6 @@ href='#pricing'
           </div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -259,7 +264,6 @@ href='#pricing'
               to keep your website fast and reliable.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -292,7 +296,6 @@ href='#pricing'
           </div>
         </div>
       </section>
-
       {/* Metrics Section */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -305,7 +308,6 @@ href='#pricing'
               and user experience.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {metrics.map((metric, index) => (
               <Card
@@ -325,7 +327,6 @@ href='#pricing'
           </div>
         </div>
       </section>
-
       {/* Demo Analysis Section */}
       {analysisResults && (
 <section className='section-padding bg-gradient-cursor-accent'>
@@ -339,7 +340,6 @@ href='#pricing'
                 for your own website.
               </p>
             </div>
-
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {/* Score Card */}
               <Card className='border-gradient-blue text-center'>
@@ -368,7 +368,6 @@ href='#pricing'
                   Good performance with room for improvement
                 </p>
               </Card>
-
               {/* Metrics Card */}
               <Card className='border-gradient-blue'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -416,7 +415,6 @@ href='#pricing'
                 </div>
               </Card>
             </div>
-
             {/* Recommendations */}
 <Card className='border-gradient-blue mt-8'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -434,7 +432,6 @@ href='#pricing'
           </div>
         </section>
       )}
-
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -474,7 +471,6 @@ href='#pricing'
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -486,7 +482,6 @@ href='#pricing'
                     </li>
                   ))}
                 </ul>
-
                 <Button
 href='/contact'
                   size='lg'
@@ -500,13 +495,11 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-            Ready to Monitor Your Website Performance?
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our monitoring platform to keep

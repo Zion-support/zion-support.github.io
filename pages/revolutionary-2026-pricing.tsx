@@ -1,8 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
   CheckCircle,
   Star,
   TrendingUp,
@@ -40,8 +35,7 @@ import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026'
 
   // Filter services based on category and price
   const filteredServices = useMemo(() => {
-    let filtered = all2026Services;
-
+    let filtered = all2026Services
     // Category filter
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
@@ -51,15 +45,9 @@ return (
             service.category.includes('Machine Learning')
           );
         } else if (selectedCategory === 'quantum') {
-          return (
-            service.category.includes('Quantum') ||
-            service.category.includes('Space')
-          );
+          return service.category.includes('Quantum') |service.category.includes('Space')
         } else if (selectedCategory === 'emerging') {
-          return (
-            service.category.includes('Emerging') ||
-            service.category.includes('Technology')
-          );
+          return service.category.includes('Emerging') |service.category.includes('Technology')
         } else if (selectedCategory === 'enterprise') {
           return (
             service.category.includes('Enterprise') ||
@@ -69,7 +57,6 @@ return (
         return true;
       });
     }
-
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -83,7 +70,6 @@ if (selectedPriceRange === 'medium')
         return true;
       });
     }
-
     // Sort services
     filtered.sort((a, b) => {
       if (sortBy === 'price-low') {
@@ -225,10 +211,8 @@ averagePrice:
             href='https://ziontechgroup.com/revolutionary-2026-pricing'
           />
         </Head>
-
         {/* Enhanced Navigation */}
         <EnhancedNavigation2026 />
-
         {/* Hero Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-purple-900/20 via-transparent to-cyan-900/20'></div>
@@ -279,7 +263,6 @@ className='text-center mb-16'
                 </div>
               </div>
             </motion.div>
-
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -314,7 +297,6 @@ className='bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl 
             </motion.div>
           </div>
         </section>
-
         {/* Filters */}
 <section className='py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -336,7 +318,6 @@ className='bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl 
                     </button>
                   ))}
                 </div>
-
                 {/* Price Range Filter */}
 <div className='flex flex-wrap gap-2'>
                   {priceRanges.map(range => (
@@ -353,7 +334,6 @@ className='bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl 
                     </button>
                   ))}
                 </div>
-
                 {/* Sort Options */}
 <div className='flex items-center space-x-4'>
                   <select
@@ -372,7 +352,6 @@ className='bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl 
             </div>
           </div>
         </section>
-
         {/* Services Pricing Grid */}
 <section className='py-12 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -444,7 +423,6 @@ className='group relative'
                             </div>
                           </div>
                         </div>
-
                         {/* Features */}
 <div className='mb-6'>
                           <h4 className='text-white font-semibold mb-3 flex items-center'>
@@ -465,7 +443,6 @@ className='group relative'
                               ))}
                           </ul>
                         </div>
-
                         {/* Service Info */}
 <div className='grid grid-cols-2 gap-4 text-sm mb-6'>
                           <div>
@@ -492,7 +469,6 @@ className='group relative'
                             </div>
                           </div>
                         </div>
-
                         {/* ROI and Market Info */}
 <div className='mb-6 p-3 bg-purple-900/20 rounded-lg'>
                           <div className='text-sm text-purple-300 mb-2'>
@@ -503,7 +479,6 @@ className='group relative'
                             <strong>Growth:</strong> {service.growthRate}
                           </div>
                         </div>
-
                         {/* Action Buttons */}
 <div className='flex flex-col gap-3'>
                           <Link
@@ -521,7 +496,6 @@ className='group relative'
                             Contact Sales
                           </a>
                         </div>
-
                         {/* Badges */}
 <div className='absolute top-4 right-4 flex flex-col gap-2'>
                           {service.popular && (
@@ -543,7 +517,6 @@ className='group relative'
             </AnimatePresence>
           </div>
         </section>
-
         {/* Pricing Comparison */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-6xl mx-auto'>
@@ -582,9 +555,9 @@ className='text-center'
                   Get enterprise-grade technology at competitive prices. Our
                   services deliver 1000%+ ROI, making them the smartest
                   investment for your business.
+                  making them the smartest investment for your business.
                 </p>
               </motion.div>
-
               {/* Technology */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -605,7 +578,6 @@ className='text-center'
                   competition with our innovative solutions.
                 </p>
               </motion.div>
-
               {/* Support */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -629,7 +601,6 @@ className='text-center'
             </div>
           </div>
         </section>
-
         {/* Call to Action */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>

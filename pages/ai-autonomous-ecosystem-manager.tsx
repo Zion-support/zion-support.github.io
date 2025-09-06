@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AIAutonomousEcosystemManager() {
-  
-    />
-  );
+			title;
+				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
+			]}
+			industries={["Platform Teams", "R&D", "Operations", "Security"]}
+			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager"
+		/>
+	)
+}

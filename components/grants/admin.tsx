@@ -1,42 +1,35 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
-
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [selected, setSelected] = useState<GrantApplication | null>(null);
-  const [milestones, setMilestones] = useState<Milestone[]>([]);
 
 const headers = useMemo(
     () =>
       token
         ? {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+            'Content-Type': 'application/json'
           }
-        : { 'Content-Type': 'application/json' },
+        : { 'Content-Type': 'application/json' }
     [token]
   );
-
   const load = () => {
     fetch('/api/grants?status=Submitted')
       .then(r => r.json())
-      .then(d => setItems(d.items || []));
-  };
-
+      .then(d => setItems(d.items |[]));
+  }
   useEffect(() => {
     load();
   }, []);
-
   const setStatus = async (
-    id: string,
+    id: string
     status: 'Under Review' | 'Approved' | 'Rejected'
   ) => {
     await fetch(`/api/grants/${id}/status`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({ status }),
+      method: 'POST'
+      headers
+      body: JSON.stringify({ status })
     });
     load();
   };
@@ -64,6 +57,9 @@ await fetch(
   return (
     <EnhancedLayout>
 <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
+  return (
+    <EnhancedLayout>
+      <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
       <div className='grid md:grid-cols-3 gap-6'>
         <div className='md:col-span-2'>
           <div className='mb-3 flex items-center gap-2'>
@@ -129,10 +125,10 @@ await fetch(
             {selected ? (
               <div className='space-y-2'>
                 {(milestones.length === 0
-                  ? selected.milestones || []
+                  ? selected.milestones |[]
                   : milestones
                 ).map((m, idx) => (
-                  <div key={m.id || idx} className='border rounded p-2'>
+                  <div key={m.id |idx} className='border rounded p-2'>
                     <input
                       className='w-full border rounded p-2 mb-2'
                       placeholder='Title'
@@ -141,8 +137,8 @@ await fetch(
                         setMilestones(ms => {
                           const copy = ms.length
                             ? [...ms]
-                            : [...(selected.milestones || [])];
-                          copy[idx] = { ...copy[idx], title: e.target.value };
+                            : [...(selected.milestones |[])];
+                          copy[idx] = { ...copy[idx], title: e.target.value }
                           return copy;
                         })
                       }
@@ -150,16 +146,16 @@ await fetch(
                     <textarea
                       className='w-full border rounded p-2 mb-2'
                       placeholder='Description'
-                      value={m.description || ''}
+                      value={m.description |''}
                       onChange={e =>
                         setMilestones(ms => {
                           const copy = ms.length
                             ? [...ms]
-                            : [...(selected.milestones || [])];
+                            : [...(selected.milestones |[])];
                           copy[idx] = {
-                            ...copy[idx],
-                            description: e.target.value,
-                          };
+                            ...copy[idx]
+                            description: e.target.value
+                          }
                           return copy;
                         })
                       }
@@ -168,16 +164,16 @@ await fetch(
                       <input
                         className='border rounded p-2'
                         placeholder='Due date (YYYY-MM-DD)'
-                        value={m.dueDate || ''}
+                        value={m.dueDate |''}
                         onChange={e =>
                           setMilestones(ms => {
                             const copy = ms.length
                               ? [...ms]
-                              : [...(selected.milestones || [])];
+                              : [...(selected.milestones |[])];
                             copy[idx] = {
-                              ...copy[idx],
-                              dueDate: e.target.value,
-                            };
+                              ...copy[idx]
+                              dueDate: e.target.value
+                            }
                             return copy;
                           })
                         }
@@ -186,16 +182,16 @@ await fetch(
                         className='border rounded p-2'
                         placeholder='Tranche (amount)'
                         type='number'
-                        value={m.trancheAmount || 0}
+                        value={m.trancheAmount |0}
                         onChange={e =>
                           setMilestones(ms => {
                             const copy = ms.length
                               ? [...ms]
-                              : [...(selected.milestones || [])];
+                              : [...(selected.milestones |[])];
                             copy[idx] = {
-                              ...copy[idx],
-                              trancheAmount: Number(e.target.value),
-                            };
+                              ...copy[idx]
+                              trancheAmount: Number(e.target.value)
+                            }
                             return copy;
                           })
                         }
@@ -217,13 +213,13 @@ await fetch(
                     className='px-2 py-1 border rounded'
                     onClick={() =>
                       setMilestones(ms => [
-                        ...(ms.length ? ms : selected.milestones || []),
+                        ...(ms.length ? ms : selected.milestones |[])
                         {
-                          id: `${Date.now()}-${Math.random()}`,
-                          title: '',
-                          trancheAmount: 0,
-                          trancheCurrency: 'USDC',
-                        } as any,
+                          id: `${Date.now()}-${Math.random()}`
+                          title: ''
+                          trancheAmount: 0
+                          trancheCurrency: 'USDC'
+                        } as any
                       ])
                     }
                   >

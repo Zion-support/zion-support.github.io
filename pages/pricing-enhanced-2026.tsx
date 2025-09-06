@@ -1,6 +1,3 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Check,
   Star,
@@ -201,11 +198,11 @@ services: [
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name: 'Starter'
+      description: 'Perfect for small businesses and startups'
+      price: billingCycle === 'monthly' ? 99 : 79
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 'Access to 100+ Core Services',
         'Basic AI Integration',
@@ -225,11 +222,11 @@ services: [
       color: 'from-blue-500 to-indigo-600',
     },
     {
-      name: 'Professional',
-      description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name: 'Professional'
+      description: 'Ideal for growing businesses and teams'
+      price: billingCycle === 'monthly' ? 299 : 239
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 'Access to 500+ Services',
         'Advanced AI & Quantum Features',
@@ -251,11 +248,11 @@ services: [
       color: 'from-purple-500 to-pink-600',
     },
     {
-      name: 'Enterprise',
-      description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name: 'Enterprise'
+      description: 'For large organizations and enterprises'
+      price: billingCycle === 'monthly' ? 999 : 799
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 'Access to ALL Services (1000+)',
         'Full AI & Quantum Suite',
@@ -389,6 +386,28 @@ description:
         </Head>
         {/* Enhanced Header Section */}
         <div className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
+  return (
+    <UltraFuturisticBackground variant="holographic" intensity="high">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+        <Head>
+          <title>Enhanced 2026 Pricing - Zion Tech Group</title>
+          <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
+          <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
+          <link rel="icon" href="/favicon.svg" />
+          {/* Open Graph */}
+          <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
+          <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
+          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+        </Head>
+        {/* Enhanced Header Section */}
+        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -403,7 +422,6 @@ className='max-w-7xl mx-auto text-center'
               innovative AI, quantum computing, and enterprise IT services.
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
-
             {/* Billing Cycle Toggle */}
 <div className='flex items-center justify-center space-x-4 mb-8'>
               <span
@@ -435,7 +453,6 @@ billingCycle === 'yearly'
                 Yearly <span className='text-cyan-400 text-sm'>(Save 20%)</span>
               </span>
             </div>
-
             {/* Contact Information */}
 <div className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto'>
               <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
@@ -458,7 +475,6 @@ billingCycle === 'yearly'
             </div>
           </motion.div>
         </div>
-
         {/* Enhanced Pricing Tiers */}
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -544,7 +560,6 @@ className='relative'
             </div>
           </div>
         </div>
-
         {/* Enhanced Service Categories */}
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -634,7 +649,6 @@ className='text-center mb-12'
             </div>
           </div>
         </div>
-
         {/* Featured Services Showcase */}
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 mb-20'>
           <div className='max-w-7xl mx-auto'>
@@ -725,7 +739,6 @@ className='text-center mb-12'
             </div>
           </div>
         </div>
-
         {/* Enhanced Footer CTA */}
 <div className='relative z-10 px-4 sm:px-6 lg:px-8 pb-20'>
           <div className='max-w-4xl mx-auto'>

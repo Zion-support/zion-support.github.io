@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
 import { ProfileBadges } from '../../../components/ui/ProfileBadges';
-
+  const [userId, setUserId] = useState('demo-user');
+  const [profile, setProfile] = useState<KycProfile | null>(null),
+  const [error, setError] = useState('');
+  async function load() {
+    try {
+      const res = null;
     }
   }
-
   useEffect(() => {
-    load();
+    load()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+  }, [])
   return (
     <>
       <Head>

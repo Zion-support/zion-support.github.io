@@ -1,9 +1,8 @@
-</div> </div> </div>)
-};
-
-const ReviewSummary: React.FC<Props> = ({ summary }) => {
-  return (
-<div className='enhanced-card flex items-center justify-between'>
+import React from 'react';
+import type { ReviewsSummary } from '../../types/reviews';
+import StarRating from './StarRating';
+type Props = any;
+export default ReviewSummary;
       <div>
         <div className='flex items-center gap-3'>
           <span className='text-2xl font-semibold'>

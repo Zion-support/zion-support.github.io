@@ -1,5 +1,3 @@
-import React from 'react';
-import FocusLock from 'react-focus-lock';
 import {
 Dialog,
   DialogContent,
@@ -23,8 +21,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { SendIcon, Mail } from 'lucide-react';
 import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
+import { toast  } from '@/hooks/use-toast';
+import { useAuth  } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
   isOpen: boolean;
@@ -47,7 +45,7 @@ const schema: yup.ObjectSchema<FormValues> = yup
     message: yup
       .string()
       .min(20, 'Message must be at least 20 characters')
-      .required('Message is required'),
+      .required('Message is required')
   })
   .required();
 
@@ -74,9 +72,9 @@ defaultValues: { subject: '', message: '' },
       setLoginOpen(true);
       return;
     }
-    const values = form.getValues();
-    setIsSubmitting(true);
-    setError(null);
+    const values = form.getValues()
+    setIsSubmitting(true)
+    setError(null)
     try {
       await api.post('/api/messages', {
 productId,
@@ -88,11 +86,10 @@ productId,
       form.reset();
       onClose();
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  }
+  const handleKeyDown = (e: React.KeyboardEvent,) => {
     if (e.key === 'Escape') {
       e.stopPropagation();
 onClose();
@@ -169,7 +166,7 @@ onClose();
                 <Button
                   onClick={handleSend}
                   className='w-full'
-                  disabled={!form.formState.isValid || isSubmitting}
+                  disabled={!form.formState.isValid |isSubmitting}
                 >
                   <SendIcon className='mr-2' />
                   {isSubmitting ? 'Sending...' : 'Send Message'}

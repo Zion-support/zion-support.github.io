@@ -1,89 +1,27 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Rocket,
-  Brain,
-  Atom,
-  Shield,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,
-  Star,
-  TrendingUp,
-  Target,
-  Layers,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Heart,
-  Leaf,
-  Car,
-  GraduationCap,
-  Scale,
-  Building,
-  Factory,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Sun,
-  Moon,
-  Wind,
-  Droplets,
-  Code,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const serviceCategories = [
-  {
-    title: '🚀 2028 Futuristic Innovations',
-    services: [
-{
-        name: 'AI Climate Prediction Platform',
-        href: '/ai-climate-prediction-platform',
-      },
-      {
-        name: 'Quantum Cybersecurity Firewall',
-        href: '/quantum-cybersecurity-firewall',
-      },
-      {
-        name: 'Autonomous Drone Delivery Network',
-        href: '/autonomous-drone-delivery-network',
-      },
-      {
-        name: 'AI Healthcare Diagnosis Platform',
-        href: '/ai-healthcare-diagnosis-platform',
-      },
-    ],
-  },
-  {
-    title: '🏙️ Smart City & Infrastructure',
+import { Phone, Mail, MapPin, Globe, Rocket, Brain, Atom;
+  Shield, Users, Briefcase, BookOpen, MessageCircle;
+  Star, TrendingUp, Target, Layers, Cpu, Database;
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car;
+  GraduationCap, Scale, Building, Factory, Camera;
+  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
+  Code
+ } from 'lucide-react';
+const contactInfo = null;
     services: [
       {
-        name: 'Smart City Infrastructure Management',
-        href: '/smart-city-infrastructure-management',
-      },
+        name: 'AI Climate Prediction Platform'
+        href: '/ai-climate-prediction-platform'
+      }
       {
-        name: 'IoT Energy Management System',
-        href: '/iot-energy-management-system',
-      },
+        name: 'Quantum Cybersecurity Firewall'
+        href: '/quantum-cybersecurity-firewall'
+      }
       {
-        name: 'Digital Twin Manufacturing Platform',
-        href: '/digital-twin-manufacturing-platform',
-      },
+        name: 'Autonomous Drone Delivery Network'
+        href: '/autonomous-drone-delivery-network'
+      }
       {
         name: 'Autonomous Manufacturing AI',
         href: '/autonomous-manufacturing-ai',
@@ -124,7 +62,6 @@ const serviceCategories = [
     ],
   },
 ];
-
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
@@ -133,7 +70,6 @@ const companyLinks = [
   { name: 'Contact', href: '/contact', icon: MessageCircle },
 { name: 'Support', href: '/support', icon: ShieldCheck },
 ];
-
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
   { name: 'API Reference', href: '/api', icon: Cpu },
@@ -161,6 +97,9 @@ const socialLinks = [
 export default function UltraFuturisticFooter2028() {
   return (
 <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>
+export default function UltraFuturisticFooter2028() {
+  return (
+    <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
@@ -182,13 +121,11 @@ export default function UltraFuturisticFooter2028() {
                 </p>
               </div>
             </div>
-
             <p className='text-purple-200 mb-6 leading-relaxed'>
               Leading the future with cutting-edge AI, quantum computing, and
               innovative technology solutions. Transforming businesses through
               intelligent automation and next-generation infrastructure.
             </p>
-
             {/* Contact Information */}
             <div className='space-y-3'>
               <div className='flex items-center space-x-3 text-purple-200'>
@@ -213,7 +150,6 @@ export default function UltraFuturisticFooter2028() {
                 </a>
               </div>
             </div>
-
             {/* Social Links */}
 <div className='flex space-x-4 mt-6'>
               {socialLinks.map(social => (
@@ -229,7 +165,6 @@ export default function UltraFuturisticFooter2028() {
               ))}
             </div>
           </div>
-
           {/* Service Categories */}
 <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
@@ -257,13 +192,11 @@ export default function UltraFuturisticFooter2028() {
               ))}
             </div>
           </div>
-
           {/* Quick Links */}
 <div className='lg:col-span-1'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
               Quick Links
             </h3>
-
             {/* Company Links */}
             <div className='mb-6'>
               <h4 className='font-medium text-purple-300 mb-3'>Company</h4>
@@ -281,7 +214,6 @@ export default function UltraFuturisticFooter2028() {
                 ))}
               </ul>
             </div>
-
             {/* Resource Links */}
 <div className='mb-6'>
               <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
@@ -299,7 +231,6 @@ export default function UltraFuturisticFooter2028() {
                 ))}
               </ul>
             </div>
-
             {/* Newsletter Signup */}
 <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>
@@ -320,7 +251,6 @@ export default function UltraFuturisticFooter2028() {
           </div>
         </div>
       </div>
-
       {/* Bottom Bar */}
 <div className='border-t border-purple-500/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -330,7 +260,6 @@ export default function UltraFuturisticFooter2028() {
               © 2028 Zion Tech Group. All rights reserved. Leading the future
               of technology.
             </div>
-
             {/* Legal Links */}
             <div className='flex items-center space-x-6 text-sm'>
               <Link
@@ -361,7 +290,6 @@ export default function UltraFuturisticFooter2028() {
           </div>
         </div>
       </div>
-
       {/* Floating Action Button */}
 <div className='fixed bottom-6 right-6 z-50'>
         <Link
@@ -371,7 +299,6 @@ export default function UltraFuturisticFooter2028() {
           <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />
         </Link>
       </div>
-
       {/* Background Effects */}
 <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>

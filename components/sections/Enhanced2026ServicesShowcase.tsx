@@ -1,42 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Brain,
-  Zap,
-  Shield,
-  Rocket,
-  Sparkles,
-  Star,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Lock,
-  Cloud,;
-} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud  } from 'lucide-react';
 import Link from 'next/link';
-const Enhanced2026ServicesShowcase = () => {
-  const featuredServices = [
+const Enhanced2026ServicesShowcase = null;
     {
-      id: 'ai-business-intelligence-elite-2026',
-      name: 'AI Business Intelligence Elite 2026',
-description:
-        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
-      price: '$299',
-      period: '/month',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      category: 'AI & Analytics',
-features: [
-        'Predictive Analytics',
-        'Real-time Insights',
-        'Custom Dashboards',
-        'AI-powered Reports',
-      ],
-    },
-    {
-      id: 'autonomous-ai-agents-platform-2026',
-      name: 'Autonomous AI Agents Platform 2026',
+      id: 'autonomous-ai-agents-platform-2026'
+      name: 'Autonomous AI Agents Platform 2026'
       description:
         'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
       price: '$199',
@@ -52,8 +21,8 @@ features: [
       ],
     },
     {
-      id: 'quantum-cybersecurity-suite-2026',
-      name: 'Quantum Cybersecurity Suite 2026',
+      id: 'quantum-cybersecurity-suite-2026'
+      name: 'Quantum Cybersecurity Suite 2026'
       description:
         'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',
       price: '$599',
@@ -120,34 +89,32 @@ features: [
       ],
     },
   ];
-
   const categories = [
     {
-      name: 'AI Services',
-      count: '150+',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-    },
+      name: 'AI Services'
+      count: '150+'
+      icon: Brain
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      name: 'Quantum Tech',
-      count: '75+',
-      icon: Sparkles,
-      color: 'from-blue-500 to-cyan-500',
-    },
+      name: 'Quantum Tech'
+      count: '75+'
+      icon: Sparkles
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      name: 'Emerging Tech',
-      count: '100+',
-      icon: Rocket,
-      color: 'from-green-500 to-emerald-500',
-    },
+      name: 'Emerging Tech'
+      count: '100+'
+      icon: Rocket
+      color: 'from-green-500 to-emerald-500'
+    }
     {
-      name: 'IT Solutions',
-      count: '200+',
-      icon: Cloud,
-      color: 'from-yellow-500 to-orange-500',
-    },
+      name: 'IT Solutions'
+      count: '200+'
+      icon: Cloud
+      color: 'from-yellow-500 to-orange-500'
+    }
   ];
-
   return (
     <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
       {/* Background Effects */}
@@ -172,7 +139,6 @@ className='text-center mb-16'
             emerging technology services designed to transform your business
           </p>
         </motion.div>
-
         {/* Category Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -205,7 +171,6 @@ className='group text-center'
             </motion.div>
           ))}
         </motion.div>
-
         {/* Featured Services Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
           {featuredServices.map((service, index) => (
@@ -236,12 +201,10 @@ className='group relative'
                     <p className='text-gray-400 text-sm'>{service.category}</p>
                   </div>
                 </div>
-
                 {/* Description */}
 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>
                   {service.description}
                 </p>
-
                 {/* Features */}
 <div className='mb-4'>
                   <ul className='space-y-1'>
@@ -256,7 +219,6 @@ className='group relative'
                     ))}
                   </ul>
                 </div>
-
                 {/* Price and CTA */}
 <div className='flex items-center justify-between'>
                   <div>
@@ -278,7 +240,6 @@ className='group relative'
             </motion.div>
           ))}
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

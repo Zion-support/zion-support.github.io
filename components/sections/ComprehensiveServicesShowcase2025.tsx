@@ -1,24 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Database,
-  Cloud,
-  Lock,
-  Rocket,
-  Users,
-  DollarSign,
-  Target,
-  Award,
-  Phone,;
-} from 'lucide-react';
+import { motion  } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone  } from 'lucide-react';
+import { advancedAIAutomation2025  } from '../../data/advanced-ai-automation-2025';
+import { advancedCybersecurity2025  } from '../../data/advanced-cybersecurity-2025';
+import { blockchainWeb32025  } from '../../data/blockchain-web3-2025';
+import { iotEdgeComputing2025  } from '../../data/iot-edge-computing-2025';
+import { healthcareBiotech2025  } from '../../data/healthcare-biotech-2025';
+import { fintechFinancial2025  } from '../../data/fintech-financial-2025';
+import { educationElearning2025 } from '../../data/education-elearning-2025';
+const ComprehensiveServicesShowcase2025 = null;
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025';
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025';
 import { blockchainWeb32025 } from '../../data/blockchain-web3-2025';
@@ -70,11 +60,10 @@ description: 'Revolutionary financial technology solutions',
 description: 'Advanced learning and educational technology',
     },
   ];
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -82,10 +71,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
 duration: 0.5,
       },
@@ -118,7 +107,6 @@ className='text-center mb-16'
             your business and drive success in the digital age.
           </p>
         </motion.div>
-
         {/* Service Categories */}
         <motion.div
           variants={containerVariants}
@@ -149,7 +137,6 @@ className='relative'
                   </p>
                 </div>
               </div>
-
               {/* Services Grid */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                 {category.services.map((service, serviceIndex) => (
@@ -169,7 +156,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         {service.description}
                       </p>
                     </div>
-
                     {/* Features */}
 <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
@@ -194,7 +180,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         )}
                       </ul>
                     </div>
-
                     {/* Pricing */}
 <div className='mb-4'>
                       <div className='flex items-center justify-between'>
@@ -210,7 +195,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         Market position: {service.marketPosition}
                       </div>
                     </div>
-
                     {/* ROI */}
 <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
@@ -226,7 +210,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         </div>
                       </div>
                     </div>
-
                     {/* Use Cases */}
 <div className='mb-4'>
                       <h5 className='text-sm font-medium text-purple-300 mb-2'>
@@ -245,7 +228,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                           ))}
                       </div>
                     </div>
-
                     {/* CTA Button */}
 <div className='mt-6'>
                       <a
@@ -256,7 +238,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
                         <ArrowRight className='w-4 h-4 ml-2' />
                       </a>
                     </div>
-
                     {/* Hover Effect Overlay */}
 <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
                   </motion.div>
@@ -265,7 +246,6 @@ className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 ba
             </motion.div>
           ))}
         </motion.div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

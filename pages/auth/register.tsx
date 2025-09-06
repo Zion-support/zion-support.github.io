@@ -1,15 +1,6 @@
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import SignupForm from '@/components/auth/SignupForm';
-import { AuthButtons } from '@/components/AuthButtons';
-import { fireEvent } from '@/lib/analytics';
-import { logInfo } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
 
     }
-  };
-
+  }
   return (
     <>
       <Head>
@@ -47,9 +38,7 @@ import { useRouter } from 'next/router';
               </Link>
             </p>
           </div>
-
           <SignupForm onSuccess={handleSuccess} />
-
           {/* Social signup options */}
 <div className='mt-6'>
             <div className='relative'>

@@ -1,43 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  DollarSign,
-  Home,
-  Users,
-  Briefcase,
-  BookOpen,
-  MessageCircle,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Microscope, DollarSign, Home, Users, Briefcase;
+  BookOpen, MessageCircle 
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: 'AI & Machine Learning 2026',
-    icon: Brain,
-    color: 'from-purple-600 to-pink-600',
-    description: 'Next-generation AI solutions',
+    title: 'AI & Machine Learning 2026'
+    icon: Brain
+    color: 'from-purple-600 to-pink-600'
+    description: 'Next-generation AI solutions'
     services: [
 {
         name: 'AI Consciousness Simulation',
@@ -46,17 +21,17 @@ const serviceCategories = [
         price: '$4,999/month',
       },
       {
-        name: 'Autonomous AI Agents',
-        href: '/autonomous-ai-agents-platform-2026',
-        description: 'Create autonomous AI agents',
-        price: '$199/month',
-      },
+        name: 'Autonomous AI Agents'
+        href: '/autonomous-ai-agents-platform-2026'
+        description: 'Create autonomous AI agents'
+        price: '$199/month'
+      }
       {
-        name: 'AI Healthcare Companion',
-        href: '/ai-healthcare-companion-2026',
-        description: 'Revolutionary healthcare AI',
-        price: '$399/month',
-      },
+        name: 'AI Healthcare Companion'
+        href: '/ai-healthcare-companion-2026'
+        description: 'Revolutionary healthcare AI'
+        price: '$399/month'
+      }
       {
         name: 'AI Content Creation Revolution',
         href: '/ai-content-creation-revolution',
@@ -78,17 +53,17 @@ const serviceCategories = [
         price: '$8,999/month',
       },
       {
-        name: 'Quantum Internet Security',
-        href: '/quantum-internet-security-gateway',
-        description: 'Unbreakable encryption',
-        price: '$3,999/month',
-      },
+        name: 'Quantum Internet Security'
+        href: '/quantum-internet-security-gateway'
+        description: 'Unbreakable encryption'
+        price: '$3,999/month'
+      }
       {
-        name: 'Quantum Financial Trading',
-        href: '/quantum-financial-trading-algorithm-platform',
-        description: 'Quantum trading algorithms',
-        price: '$12,999/month',
-      },
+        name: 'Quantum Financial Trading'
+        href: '/quantum-financial-trading-algorithm-platform'
+        description: 'Quantum trading algorithms'
+        price: '$12,999/month'
+      }
       {
         name: 'Quantum Internet Infrastructure',
         href: '/quantum-internet-infrastructure-platform',
@@ -110,17 +85,17 @@ const serviceCategories = [
         price: '$2,999/month',
       },
       {
-        name: 'Space Debris Management',
-        href: '/space-debris-management-ai-platform',
-        description: 'AI space safety',
-        price: '$5,999/month',
-      },
+        name: 'Space Debris Management'
+        href: '/space-debris-management-ai-platform'
+        description: 'AI space safety'
+        price: '$5,999/month'
+      }
       {
-        name: 'AI Climate Prediction',
-        href: '/ai-climate-prediction-platform',
-        description: 'Climate change prediction',
-        price: '$1,999/month',
-      },
+        name: 'AI Climate Prediction'
+        href: '/ai-climate-prediction-platform'
+        description: 'Climate change prediction'
+        price: '$1,999/month'
+      }
       {
         name: 'Autonomous Manufacturing',
         href: '/autonomous-manufacturing-ai-platform',
@@ -142,17 +117,17 @@ const serviceCategories = [
         price: 'Custom pricing',
       },
       {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration-2026',
-        description: 'Intelligent edge computing',
-        price: 'Custom pricing',
-      },
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration-2026'
+        description: 'Intelligent edge computing'
+        price: 'Custom pricing'
+      }
       {
-        name: '5G Private Networks',
-        href: '/5g-private-network-solutions-2026',
-        description: 'Enterprise 5G',
-        price: 'Custom pricing',
-      },
+        name: '5G Private Networks'
+        href: '/5g-private-network-solutions-2026'
+        description: 'Enterprise 5G'
+        price: 'Custom pricing'
+      }
       {
         name: 'Blockchain Infrastructure',
         href: '/blockchain-infrastructure-platform-2026',
@@ -174,17 +149,17 @@ const serviceCategories = [
         price: '$4,999/month',
       },
       {
-        name: 'Autonomous Healthcare AI',
-        href: '/autonomous-healthcare-ai-platform',
-        description: 'Self-learning healthcare',
-        price: '$2,499/month',
-      },
+        name: 'Autonomous Healthcare AI'
+        href: '/autonomous-healthcare-ai-platform'
+        description: 'Self-learning healthcare'
+        price: '$2,499/month'
+      }
       {
-        name: 'Quantum Machine Learning',
-        href: '/quantum-machine-learning-platform',
-        description: 'Quantum AI research',
-        price: '$6,999/month',
-      },
+        name: 'Quantum Machine Learning'
+        href: '/quantum-machine-learning-platform'
+        description: 'Quantum AI research'
+        price: '$6,999/month'
+      }
       {
         name: 'AI Legal Research',
         href: '/ai-legal-research-platform',
@@ -206,17 +181,17 @@ const serviceCategories = [
         price: '$899/month',
       },
       {
-        name: 'Autonomous Marketing AI',
-        href: '/autonomous-marketing-ai-platform',
-        description: 'Self-optimizing marketing',
-        price: '$1,499/month',
-      },
+        name: 'Autonomous Marketing AI'
+        href: '/autonomous-marketing-ai-platform'
+        description: 'Self-optimizing marketing'
+        price: '$1,499/month'
+      }
       {
-        name: 'AI Cybersecurity',
-        href: '/ai-cybersecurity-platform',
-        description: 'Next-gen security',
-        price: '$2,999/month',
-      },
+        name: 'AI Cybersecurity'
+        href: '/ai-cybersecurity-platform'
+        description: 'Next-gen security'
+        price: '$2,999/month'
+      }
       {
         name: 'AI Business Intelligence',
         href: '/autonomous-business-intelligence-network',
@@ -237,10 +212,10 @@ const companyLinks = [
     icon: Zap,
   },
   {
-    name: 'Ultimate 2026',
-    href: '/ultimate-2026-services-showcase',
-    icon: Sparkles,
-  },
+    name: 'Ultimate 2026'
+    href: '/ultimate-2026-services-showcase'
+    icon: Sparkles
+  }
   {
     name: '2026 Pricing',
     href: '/revolutionary-2026-pricing',
@@ -256,7 +231,6 @@ const UltraAdvancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 20);
@@ -267,11 +241,11 @@ setIsScrolled(window.scrollY > 20);
 
   const navigationItems = [
     {
-      name: 'AI Services',
-      href: '/services?category=ai',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Autonomous AI systems and consciousness interfaces',
+      name: 'AI Services'
+      href: '/services?category=ai'
+      icon: Brain
+      color: 'from-blue-500 to-cyan-500'
+      description: 'Autonomous AI systems and consciousness interfaces'
       subItems: [
 {
           name: 'AI Autonomous Agents',
@@ -279,25 +253,25 @@ setIsScrolled(window.scrollY > 20);
           description: 'Fully autonomous AI systems',
         },
         {
-          name: 'AI Consciousness',
-          href: '/services?category=ai-consciousness',
-          description: 'Consciousness simulation and interfaces',
-        },
+          name: 'AI Consciousness'
+          href: '/services?category=ai-consciousness'
+          description: 'Consciousness simulation and interfaces'
+        }
         {
-          name: 'AI Healthcare',
-          href: '/services?category=ai-healthcare',
-          description: 'Medical AI and diagnostics',
-        },
+          name: 'AI Healthcare'
+          href: '/services?category=ai-healthcare'
+          description: 'Medical AI and diagnostics'
+        }
         {
-          name: 'AI Education',
-          href: '/services?category=ai-education',
-          description: 'Educational AI systems',
-        },
+          name: 'AI Education'
+          href: '/services?category=ai-education'
+          description: 'Educational AI systems'
+        }
         {
-          name: 'AI Legal',
-          href: '/services?category=ai-legal',
-          description: 'Legal AI and compliance',
-        },
+          name: 'AI Legal'
+          href: '/services?category=ai-legal'
+          description: 'Legal AI and compliance'
+        }
         {
           name: 'AI Creative',
           href: '/services?category=ai-creative',
@@ -318,15 +292,15 @@ setIsScrolled(window.scrollY > 20);
           description: 'Space exploration and communication',
         },
         {
-          name: 'Quantum Computing',
-          href: '/services?category=quantum-computing',
-          description: 'Advanced quantum systems',
-        },
+          name: 'Quantum Computing'
+          href: '/services?category=quantum-computing'
+          description: 'Advanced quantum systems'
+        }
         {
-          name: 'Quantum AI',
-          href: '/services?category=quantum-ai',
-          description: 'Quantum-powered AI',
-        },
+          name: 'Quantum AI'
+          href: '/services?category=quantum-ai'
+          description: 'Quantum-powered AI'
+        }
         {
           name: 'Quantum Security',
           href: '/services?category=quantum-security',
@@ -347,15 +321,15 @@ setIsScrolled(window.scrollY > 20);
           description: 'Virtual world platforms',
         },
         {
-          name: 'Digital Reality',
-          href: '/services?category=digital-reality',
-          description: 'Immersive experiences',
-        },
+          name: 'Digital Reality'
+          href: '/services?category=digital-reality'
+          description: 'Immersive experiences'
+        }
         {
-          name: 'Holographic Tech',
-          href: '/services?category=holographic',
-          description: '3D holographic systems',
-        },
+          name: 'Holographic Tech'
+          href: '/services?category=holographic'
+          description: '3D holographic systems'
+        }
         {
           name: 'Consciousness Interface',
           href: '/services?category=consciousness-interface',
@@ -376,15 +350,15 @@ setIsScrolled(window.scrollY > 20);
           description: 'Cloud infrastructure and services',
         },
         {
-          name: 'Cybersecurity',
-          href: '/services?category=security',
-          description: 'Advanced security solutions',
-        },
+          name: 'Cybersecurity'
+          href: '/services?category=security'
+          description: 'Advanced security solutions'
+        }
         {
-          name: 'Data Analytics',
-          href: '/services?category=analytics',
-          description: 'Business intelligence and analytics',
-        },
+          name: 'Data Analytics'
+          href: '/services?category=analytics'
+          description: 'Business intelligence and analytics'
+        }
         {
           name: 'DevOps',
           href: '/services?category=devops',
@@ -429,12 +403,10 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
                 </div>
               </div>
             </Link>
-
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
-                  <button
                     onClick={() =>
                       setActiveDropdown(
                         activeDropdown === item.name ? null : item.name
@@ -477,7 +449,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                               </p>
                             </div>
                           </div>
-
                           <div className='space-y-2'>
                             {item.subItems.map(subItem => (
                               <Link
@@ -508,7 +479,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                   </AnimatePresence>
                 </div>
               ))}
-
               {/* Quick Links */}
 <div className='flex items-center space-x-6'>
                 <Link
@@ -531,7 +501,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                 </Link>
               </div>
             </div>
-
             {/* Contact Info - Desktop */}
 <div className='hidden lg:flex items-center space-x-4'>
               <div className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200'>
@@ -545,7 +514,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl borde
                 Get Started
               </Link>
             </div>
-
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -560,7 +528,6 @@ className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors durati
           </div>
         </div>
       </nav>
-
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -595,7 +562,6 @@ className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl borde
                   <X className='w-6 h-6' />
                 </button>
               </div>
-
               {/* Mobile Navigation Items */}
 <div className='space-y-4'>
                 {navigationItems.map(item => (
@@ -603,7 +569,6 @@ className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl borde
                     key={item.name}
                     className='border-b border-gray-700/50 pb-4'
                   >
-                    <Link
                       href={item.href}
                       className='flex items-center space-x-3 text-white hover:text-purple-300 transition-colors duration-200 py-2'
                       onClick={() => setIsOpen(false)}
@@ -615,7 +580,6 @@ className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl borde
                       </div>
                       <span className='font-medium'>{item.name}</span>
                     </Link>
-
                     {/* Mobile Sub-items */}
                     <div className='mt-3 ml-11 space-y-2'>
                       {item.subItems.slice(0, 3).map(subItem => (
@@ -631,7 +595,6 @@ className='absolute right-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl borde
                     </div>
                   </div>
                 ))}
-
                 {/* Quick Links */}
 <div className='space-y-3 pt-4'>
                   <Link
@@ -656,7 +619,6 @@ href='/contact'
                     Contact
                   </Link>
                 </div>
-
                 {/* Contact Info - Mobile */}
 <div className='pt-6 border-t border-gray-700/50 space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300'>
@@ -672,7 +634,6 @@ href='/contact'
                     <span className='text-sm'>{contactInfo.address}</span>
                   </div>
                 </div>
-
                 {/* Get Started Button - Mobile */}
 <div className='pt-4'>
                   <Link
@@ -688,7 +649,6 @@ href='/contact'
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Spacer for fixed navigation */}
 <div className='h-20'></div>
     </>

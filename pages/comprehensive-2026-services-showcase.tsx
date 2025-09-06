@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search,
   Filter,
@@ -35,8 +31,8 @@ import {
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
-import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
+import { nextGenAIServices2026  } from '../data/next-gen-ai-services-2026';
+import { revolutionaryITInfrastructure2026  } from '../data/revolutionary-it-infrastructure-2026';
 import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
 
   };
@@ -114,18 +110,17 @@ return (
             parseFloat(a.price.replace('$', '').replace(',', ''))
           );
         case 'rating':
-          return b.rating - a.rating;
+          return b.rating - a.rating
         case 'customers':
           return b.customers - a.customers;
 default:
           return a.popular ? -1 : 1;
       }
-    });
-
+    })
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -133,10 +128,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
 duration: 0.5,
       },
@@ -173,7 +168,6 @@ duration: 0.5,
           href='https://ziontechgroup.com/comprehensive-2026-services-showcase'
         />
       </Head>
-
       <UltraAdvancedNavigation />
 
 <div className='min-h-screen relative z-10'>
@@ -223,7 +217,6 @@ duration: 0.5,
                   <div className='text-gray-300'>Happy Customers</div>
                 </div>
               </div>
-
               {/* Contact Information */}
 <div className='bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-600/30 max-w-4xl mx-auto'>
                 <h3 className='text-2xl font-bold text-white mb-6 flex items-center justify-center gap-3'>
@@ -248,7 +241,6 @@ duration: 0.5,
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
 <section className='py-12 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -264,7 +256,6 @@ duration: 0.5,
                   className='w-full bg-gray-800/50 border border-gray-600/30 rounded-2xl pl-14 pr-6 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 />
               </div>
-
               {/* Filters and Controls */}
 <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
                 {/* Category Filter */}
@@ -287,7 +278,6 @@ duration: 0.5,
                     </button>
                   ))}
                 </div>
-
                 {/* Sort and View Controls */}
 <div className='flex items-center gap-4'>
                   <select
@@ -345,7 +335,6 @@ viewMode === 'list'
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
 <section className='py-12 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -419,7 +408,6 @@ viewMode === 'list'
                         </div>
                       </div>
                     </div>
-
                     {/* Service Details */}
 <div
                       className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
@@ -427,7 +415,6 @@ viewMode === 'list'
                       <p className='text-gray-300 mb-4 leading-relaxed'>
                         {service.description}
                       </p>
-
                       {/* Key Features */}
 <div className='mb-4'>
                         <h4 className='text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wider'>
@@ -452,7 +439,6 @@ viewMode === 'list'
                           )}
                         </div>
                       </div>
-
                       {/* Market Info */}
 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                         <div>
@@ -468,7 +454,6 @@ viewMode === 'list'
                           </div>
                         </div>
                       </div>
-
                       {/* ROI */}
 <div className='bg-gradient-to-r from-green-900/30 to-emerald-900/30 rounded-xl p-4 mb-6 border border-green-500/20'>
                         <div className='text-sm text-gray-400 mb-1'>
@@ -498,7 +483,6 @@ viewMode === 'list'
                 ))}
               </AnimatePresence>
             </motion.div>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
 <div className='text-center py-20'>
@@ -515,6 +499,9 @@ viewMode === 'list'
                     setSelectedCategory('all');
                   }}
                   className='bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors'
+                    setSelectedCategory('all')
+                  }}
+                  className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
                 >
                   Clear Filters
                 </button>
@@ -522,7 +509,6 @@ viewMode === 'list'
             )}
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>

@@ -2,92 +2,13 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-import {
-  Brain,
-  Star,
-  Users,
-  TrendingUp,
-  Zap,
-  Shield,
-  CheckCircle,
-  Clock,
-  Award,
-  Target,
-  Globe,
-  Sparkles,
-  Cpu,
-  Lock,
-  Cloud,
-  BarChart3,
-  Eye,
-  Heart,
-  Lightbulb,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  Globe as GlobeIcon,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const features = [
-  'Emotional intelligence training modules',
-  'Consciousness expansion exercises',
-  'Self-awareness development tools',
-  'Empathy and compassion training',
-  'Mindfulness and meditation guidance',
-  'Cognitive enhancement techniques',
-  'Social intelligence development',
-  'Creative consciousness exploration',
-  'Spiritual growth pathways',
-  'Personal transformation tracking',
+import { Brain, Star, Users, TrendingUp, Zap, Shield;
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+ } from 'lucide-react';
+const contactInfo = null;
 ];
-
-const useCases = [
-  'Personal development and growth',
-  'Professional leadership training',
-  'Therapeutic and healing practices',
-  'Educational enhancement',
-  'Corporate wellness programs',
-  'Mental health support',
-  'Spiritual development',
-  'Creative arts enhancement',
-  'Relationship improvement',
-  'Stress management and resilience',
-];
-
-const technology = [
-  'Advanced AI algorithms',
-  'Machine learning models',
-  'Natural language processing',
-  'Emotional recognition systems',
-  'Biometric feedback integration',
-  'Virtual reality experiences',
-  'Augmented reality overlays',
-  'Brain-computer interfaces',
-  'Quantum computing integration',
-  'Blockchain security',
-];
-
-const integrations = [
-  'Wearable devices',
-  'Mobile applications',
-  'Web platforms',
-  'Smart home systems',
-  'Healthcare platforms',
-  'Educational systems',
-  'Corporate wellness platforms',
-  'Social media networks',
-  'Fitness trackers',
-  'Meditation apps',
-];
-
 const testimonials = [
   {
     name: 'Dr. Sarah Chen',
@@ -134,7 +55,6 @@ export default function AIConsciousnessEvolution2025() {
           content='AI consciousness, emotional intelligence, self-awareness, personal development, consciousness evolution, AI training, Zion Tech Group'
         />
       </Head>
-
       {/* Hero Section */}
       <div className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         {/* Animated Background */}
@@ -142,7 +62,6 @@ export default function AIConsciousnessEvolution2025() {
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,0.15),transparent_50%)]'></div>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(236,72,153,0.15),transparent_50%)]'></div>
         </div>
-
         {/* Floating Elements */}
         <div className='absolute inset-0 overflow-hidden'>
           {[...Array(15)].map((_, i) => (
@@ -150,14 +69,13 @@ export default function AIConsciousnessEvolution2025() {
               key={i}
               className='absolute w-2 h-2 bg-purple-400 rounded-full opacity-30'
               animate={{
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
-              transition={{
-                duration: 8 + i * 2,
-                repeat: Infinity,
-                delay: i * 0.3,
+                x: [0, 100, 0]
+                y: [0, -100, 0]
+                opacity: [0.3, 0.8, 0.3]
+              }}              transition={{
+                duration: 8 + i * 2
+                repeat: Infinity
+                delay: i * 0.3
               }}
               style={{
                 left: `${Math.random() * 100}%`,
@@ -183,7 +101,6 @@ className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/2
               <Sparkles className='w-4 h-4 mr-2' />
               Revolutionary AI Technology
             </motion.div>
-
             <h1 className='text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6'>
               <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent'>
                 AI Consciousness
@@ -191,32 +108,30 @@ className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/2
               <br />
               <span className='text-white'>Evolution Platform</span>
             </h1>
-
             <p className='text-xl sm:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Experience the future of personal development with our
               revolutionary AI-powered consciousness evolution platform. Enhance
               your emotional intelligence, expand self-awareness, and unlock
               your full potential.
             </p>
-
             {/* Key Stats */}
             <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
               {[
                 {
-                  label: 'Success Rate',
-                  value: '94%',
-                  icon: <Award className='w-8 h-8' />,
-                },
+                  label: 'Success Rate'
+                  value: '94%'
+                  icon: <Award className='w-8 h-8' />
+                }
                 {
-                  label: 'Active Users',
-                  value: '12.5K+',
-                  icon: <Users className='w-8 h-8' />,
-                },
+                  label: 'Active Users'
+                  value: '12.5K+'
+                  icon: <Users className='w-8 h-8' />
+                }
                 {
-                  label: 'Improvement',
-                  value: '300%',
-                  icon: <TrendingUp className='w-8 h-8' />,
-                },
+                  label: 'Improvement'
+                  value: '300%'
+                  icon: <TrendingUp className='w-8 h-8' />
+                }
                 {
                   label: 'Satisfaction',
                   value: '4.9/5',
@@ -240,7 +155,6 @@ className='text-center'
                 </motion.div>
               ))}
             </div>
-
             {/* CTA Buttons */}
 <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <motion.button
@@ -263,7 +177,6 @@ className='border-2 border-purple-500/50 text-purple-300 hover:text-white hover:
           </motion.div>
         </div>
       </div>
-
       {/* Features Section */}
 <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -313,7 +226,6 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
           </div>
         </div>
       </section>
-
       {/* How It Works Section */}
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -348,15 +260,15 @@ description:
                 icon: <Brain className='w-12 h-12' />,
               },
               {
-                step: '02',
-                title: 'Personalized Training',
+                step: '02'
+                title: 'Personalized Training'
                 description:
-                  'AI-generated exercises and experiences tailored to your specific needs and goals.',
-                icon: <Target className='w-12 h-12' />,
-              },
+                  'AI-generated exercises and experiences tailored to your specific needs and goals.'
+                icon: <Target className='w-12 h-12' />
+              }
               {
-                step: '03',
-                title: 'Continuous Evolution',
+                step: '03'
+                title: 'Continuous Evolution'
                 description:
                   'Real-time feedback and adaptation ensure continuous growth and development.',
                 icon: <TrendingUp className='w-12 h-12' />,
@@ -392,7 +304,6 @@ className='text-center'
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
 <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -441,7 +352,6 @@ className='group bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg
           </div>
         </div>
       </section>
-
       {/* Technology Section */}
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -485,7 +395,6 @@ className='text-center group'
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
 <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -547,7 +456,6 @@ className='bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg borde
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -653,7 +561,6 @@ plan.popular
                   </div>
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-3 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -680,7 +587,6 @@ plan.popular
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -702,7 +608,6 @@ plan.popular
               with our revolutionary AI platform. Start your consciousness
               evolution journey today.
             </p>
-
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
               <button className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'>
                 Start Free Trial
@@ -711,26 +616,26 @@ plan.popular
                 Schedule Demo
               </button>
             </div>
-
             {/* Contact Info */}
 <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-6'>
               {[
                 {
-                  icon: <Phone className='w-6 h-6' />,
-                  label: 'Call Us',
-                  value: contactInfo.mobile,
-                },
+                  icon: <Phone className='w-6 h-6' />
+                  label: 'Call Us'
+                  value: contactInfo.mobile
+                }
                 {
-                  icon: <Mail className='w-6 h-6' />,
-                  label: 'Email Us',
-                  value: contactInfo.email,
-                },
+                  icon: <Mail className='w-6 h-6' />
+                  label: 'Email Us'
+                  value: contactInfo.email
+                }
                 {
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
                   value: contactInfo.address,
                 },
               ].map((contact, index) => (
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
                 <motion.div
                   key={contact.label}
                   initial={{ opacity: 0, y: 20 }}

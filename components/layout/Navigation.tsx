@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  Home,
-  Brain,
-  Cpu,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ChevronDown,;
-} from 'lucide-react';
+import { Menu, X, Home, Brain, Cpu, Rocket;
+  Phone, Mail, MapPin, Globe, ChevronDown
+ } from 'lucide-react';
 import Link from 'next/link';
-const Navigation: React.FC = () => {
+const Navigation: React.FC;
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 50);
@@ -35,9 +24,9 @@ setIsScrolled(window.scrollY > 50);
 icon: Home,
     },
     {
-      name: 'Services',
-      href: '/services',
-      icon: Rocket,
+      name: 'Services'
+      href: '/services'
+      icon: Rocket
       dropdown: [
 {
           name: 'AI Services',
@@ -46,17 +35,17 @@ icon: Home,
           description: 'Revolutionary AI solutions',
         },
         {
-          name: 'IT Services',
-          href: '/it-services',
-          icon: Cpu,
-          description: 'Enterprise IT solutions',
-        },
+          name: 'IT Services'
+          href: '/it-services'
+          icon: Cpu
+          description: 'Enterprise IT solutions'
+        }
         {
-          name: 'Micro SaaS',
-          href: '/micro-saas',
-          icon: Rocket,
-          description: 'Specialized software solutions',
-        },
+          name: 'Micro SaaS'
+          href: '/micro-saas'
+          icon: Rocket
+          description: 'Specialized software solutions'
+        }
         {
           name: 'Innovative Showcase',
           href: '/innovative-services-showcase',
@@ -81,7 +70,6 @@ icon: Home,
       icon: Phone,
     },
   ];
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -125,7 +113,6 @@ isScrolled
                 </div>
               </Link>
             </motion.div>
-
             {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
@@ -151,7 +138,6 @@ className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl ro
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
                                 const Icon = dropdownItem.icon;
-                                
                                   >
                                     <div className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover/item:bg-gradient-to-r group-hover/item:from-cyan-500/30 group-hover/item:to-purple-500/30 transition-all duration-300'>
                                       <Icon className='w-5 h-5 text-cyan-400' />
@@ -184,7 +170,6 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
 <div className='hidden lg:block'>
               <motion.a
@@ -196,7 +181,6 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
                 Get Started
               </motion.a>
             </div>
-
             {/* Mobile Menu Button */}
 <div className='lg:hidden'>
               <motion.button
@@ -214,7 +198,6 @@ className='flex items-center space-x-2 text-gray-300 hover:text-white transition
           </div>
         </div>
       </motion.nav>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -249,7 +232,6 @@ className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl bo
                     <X className='w-6 h-6' />
                   </motion.button>
                 </div>
-
                 {/* Mobile Menu Items */}
 <div className='space-y-4'>
                   {navigationItems.map(item => (
@@ -262,7 +244,6 @@ className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl bo
                           <div className='pl-4 space-y-2'>
                             {item.dropdown.map(dropdownItem => {
                               const Icon = dropdownItem.icon;
-                              
                                   onClick={() => setIsOpen(false)}
                                   className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300'
                                 >
@@ -295,7 +276,6 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                     </div>
                   ))}
                 </div>
-
                 {/* Contact Information */}
 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -316,7 +296,6 @@ className='flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 trans
                     </div>
                   </div>
                 </div>
-
                 {/* Mobile CTA */}
 <div className='mt-6'>
                   <motion.a

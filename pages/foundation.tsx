@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import Head from 'next/head',
 import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
 
@@ -25,7 +25,7 @@ import CharterGenerator from '../components/foundation/CharterGenerator';
 
 <section className='space-y-4' id='mou'>
           <h2 className='text-2xl font-semibold'>Partnership MOU Archive</h2>
-          <p className='text-gray-600 dark:text-gray-300'>
+          <p className='text-gray-600 dark: text-gray-300'>
             Public archive of Memoranda of Understanding (MOUs). Redactions may
             apply where legally required.
           </p>

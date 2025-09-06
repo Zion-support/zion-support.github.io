@@ -74,16 +74,9 @@ class SyntaxFixer {
       for (const { pattern, replacement } of this.patterns) {
         const newContent = fixedContent.replace(pattern, replacement);
         if (newContent !== fixedContent) {
-<<<<<<< HEAD
           fixedContent = newContent;
           hasChanges = true;
-        }
-=======
-    fixedContent = newContent,
-    hasChanges = true
-  }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      }
+        }      }
 
       if (hasChanges) {
         fs.writeFileSync(filePath, fixedContent);
@@ -150,12 +143,7 @@ class SyntaxFixer {
     console.log(`❌ Errors in ${this.errors.length} files`);
     
     if (this.errors.length > 0) {
-<<<<<<< HEAD
-      console.log('\n⚠️ Files with errors:');
-=======
-      console.log('\n⚠️ Files with errors: '),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      this.errors.forEach(({ file, error }) => {
+      console.log('\n⚠️ Files with errors:');      this.errors.forEach(({ file, error }) => {
         console.log(`  - ${file}: ${error}`);
       });
     }

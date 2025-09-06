@@ -1,5 +1,3 @@
-export const real2036AIServices = [
-  {
 id: 'ai-emotion-intelligence-platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',

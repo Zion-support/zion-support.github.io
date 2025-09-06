@@ -30,97 +30,54 @@ export interface InnovativeBusinessSolution {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
-  // AI Business Intelligence Suite
-  {
-id: 'ai-business-intelligence-suite',
-    name: 'AI Business Intelligence Suite',
-    tagline: 'Intelligent business insights and analytics',
+    id: 'ai-business-intelligence-suite';
+    name: 'AI Business Intelligence Suite';
+    tagline: 'Intelligent business insights and analytics';
     price: '$3,200',
-    period: '/month',
-    description:
-      'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
+    period: '/month';
+    description: 'Advanced AI-powered business intelligence platform that provides intelligent analytics, predictive insights, and automated reporting to help organizations make data-driven decisions and optimize business performance.',
     features: [
-      'AI-powered data analysis and insights',
-      'Predictive analytics and forecasting',
-      'Automated report generation',
-      'Real-time business monitoring',
-      'Custom dashboard creation',
-      'Data visualization and exploration',
-      'Business performance optimization',
-      'Integration with business systems',
-      'Advanced analytics and reporting',
-      'Custom business intelligence workflows',
-    ],
-    popular: true,
-    icon: '📈',
-    color: 'from-blue-500 to-indigo-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
-    marketPosition:
-      'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',
-    targetAudience: [
-      'Business analysts',
-      'Data scientists',
-      'Executives',
-      'Business intelligence teams',
-      'Technology companies',
-    ],
-    trialDays: 30,
-    setupTime: '3-4 weeks',
-    category: 'AI Business Intelligence',
-    realService: true,
-    technology: [
-      'Artificial Intelligence',
-      'Machine Learning',
-      'Business Analytics',
-      'Data Visualization',
-      'Python',
-      'TensorFlow',
-      'React',
-    ],
-    integrations: [
-      'ERP systems',
-      'CRM platforms',
-      'Databases',
-      'Cloud platforms',
-      'Business applications',
-      'API services',
-    ],
-    useCases: [
-      'Business analytics',
-      'Performance monitoring',
-      'Predictive insights',
-      'Decision support',
-      'Business optimization',
-    ],
-    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.',
-    competitors: ['Tableau', 'Power BI', 'QlikView', 'Looker'],
-    marketSize: '$7.8B business intelligence market',
-    growthRate: '28% annual growth',
-    variant: 'ai-business-intelligence',
+      'AI-powered data analysis and insightsPredictive analytics and forecastingAutomated report generationReal-time business monitoringCustom dashboard creationData visualization and explorationBusiness performance optimizationIntegration with business systems';
+      'Advanced analytics and reportingCustom business intelligence workflows'
+    ];
+    popular: true;
+    icon: '📈';
+    color: 'from-blue-500 to-indigo-600';
+    textColor: 'text-blue-400';
+    link: 'https://ziontechgroup.com/ai-business-intelligence-suite';
+    marketPosition: 'Leading AI-powered business intelligence platform with advanced analytics, predictive insights, and comprehensive business optimization capabilities.',
+    targetAudience: ['Business analystsData scientistsExecutivesBusiness intelligence teamsTechnology companies'];
+    trialDays: 30;
+    setupTime: '3-4 weeks';
+    category: 'AI Business Intelligence';
+    realService: true;
+    technology: ['Artificial IntelligenceMachine LearningBusiness AnalyticsData VisualizationPythonTensorFlowReact'];
+    integrations: ['ERP systemsCRM platformsDatabasesCloud platformsBusiness applicationsAPI services'];
+    useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'];
+    roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.';
+    competitors: ['TableauPower BIQlikViewLooker'];
+    marketSize: '$7.8B business intelligence market';
+    growthRate: '28% annual growth';
+    variant: 'ai-business-intelligence';
     contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails:
-      'Comprehensive AI-powered business intelligence platform with advanced analytics, predictive insights, and seamless business system integration.',
-    launchDate: '2025-02-01',
-    customers: 73,
-    rating: 4.8,
-    reviews: 48,
+    realImplementation: true;
+    implementationDetails: 'Comprehensive AI-powered business intelligence platform with advanced analytics, predictive insights, and seamless business system integration.',
+    launchDate: '2025-02-01';
+    customers: 73;
+    rating: 4.8;
+    reviews: 48
   },
 
   // AI Marketing Automation Platform
@@ -614,4 +571,7 @@ id: 'ai-business-intelligence-suite',
     rating: 4.7,
     reviews: 26,
   },
+];
+    reviews: 26
+  }
 ];

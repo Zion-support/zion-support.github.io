@@ -1,6 +1,20 @@
-}interface BlogPostPageProps {
-  /** * Preloaded blog post for static generation. Can be null if not found. */
-
+import React from 'react',
+import ReactMarkdown from 'react-markdown';
+import { useRouter  } from 'next/router';
+import AdvancedSEO from '@/components/seo/AdvancedSEO';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { AuthorBio  } from '@/components/blog/AuthorBio';
+import { SocialShareButtons  } from '@/components/blog/SocialShareButtons';
+import { CommentsSection  } from '@/components/blog/CommentsSection';
+import type { BlogPost } from '@/types/blog';
+import type { GetStaticPaths, GetStaticProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+function parseMarkdown(filePath: string): BlogPost | null {
+  if (!fs.existsSync(filePath)) {
+    return null
+  }
+  const raw = null;
 interface BlogPostPageProps {
   /**
    * Preloaded blog post for static generation. Can be null if not found.
@@ -8,11 +22,10 @@ interface BlogPostPageProps {
 initialPost: BlogPost | null;
 
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
-  const router = useRouter();
-  const { slug } = router.query;
-  const [post, setPost] = React.useState<BlogPost | null>(initialPost);
-  const [error, setError] = React.useState<string | null>(null);
-
+  const router = useRouter()
+  const { slug } = router.query
+  const [post, setPost] = React.useState<BlogPost | null>(initialPost)
+  const [error, setError] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
       setPost(initialPost);
@@ -35,8 +48,7 @@ const directFallback = BLOG_POSTS.find(p => p.slug === slug) || null;
         setError('Article not found');
       }
     }
-  }, [slug, initialPost]);
-
+  }, [slug, initialPost])
   if (error) {
 return <div>{error}</div>;
   }
@@ -118,7 +130,7 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
 }: {
   params?: { slug?: string };
 }) => {
-  const slug = params?.slug as string;
+  const slug = params?.slug as string
   // Validate slug to prevent malformed paths
   if (!/^[a-z0-9-]+$/.test(slug)) {
 return { notFound: true };

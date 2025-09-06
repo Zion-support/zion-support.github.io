@@ -1,51 +1,28 @@
-try {
-  const res = await fetch ('/api/ai/operator', {
-  method: 'POST', headers: {
-  'Content-Type': 'application/json', ... (authorizationToken ? {
-  Authorization: `Bearer $ {
-  authorizationToken 
-}` 
-}: process.env.NEXT PUBLIC OPERATOR TOKEN ? {
-  Authorization: `Bearer $ {
-  process.env.NEXT PUBLIC OPERATOR TOKEN 
-}` 
-}: {
-  
-}) 
-};
-
-export default function AIAssistant({
-  buttonLabel = 'Generate with AI',
-  title = 'AI Writing Assistant',
-  defaultPrompt,
-  systemPrompt,
-  onAccept,
-  authorizationToken,
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+export type AIAssistantProps = any;
 }: AIAssistantProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
-  const [output, setOutput] = useState('');
+  const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
 setPrompt(defaultPrompt);
   }, [defaultPrompt]);
-
   const callOperator = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/ai/operator', {
-        method: 'POST',
+      const res = await fetch("/api/ai/operator", {
+        method: "POST"
         headers: {
 'Content-Type': 'application/json',
           ...(authorizationToken
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
               ? {
-                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`,
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`
                 }
               : {}),
         },
@@ -63,20 +40,17 @@ setPrompt(defaultPrompt);
       setLoading(false);
     }
   }, [authorizationToken, prompt, systemPrompt]);
-
   const onCopy = useCallback(async () => {
     try {
 await navigator.clipboard.writeText(output);
     } catch {}
   }, [output]);
-
   const onOpen = useCallback(() => {
     setIsOpen(true);
-    setOutput('');
+    setOutput("");
     setIsEditing(false);
 setError(null);
   }, []);
-
   const onClose = useCallback(() => setIsOpen(false), []);
 
 const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
@@ -87,10 +61,15 @@ const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
 type='button'
         onClick={onOpen}
         className='inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800'
+  return (
+    <>
+      <button
+        type="button"
+        onClick={onOpen}
+        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
       >
         {buttonLabel}
       </button>
-
       {isOpen && (
 <div className='fixed inset-0 z-50 flex items-center justify-center'>
           <div className='absolute inset-0 bg-black/50' onClick={onClose} />
@@ -161,7 +140,10 @@ type='button'
 {error && <div className='text-red-600 text-sm'>{error}</div>}
 
               <div>
-                <label className='block text-xs font-medium mb-1'>
+                <label
+                  className="block text-xs font-medium mb-1"
+                  htmlFor="input-Output (markdown)"
+                >
                   Output (markdown)
                 </label>
                 {isEditing ? (

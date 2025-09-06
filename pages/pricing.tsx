@@ -1,211 +1,35 @@
-import React from 'react';
-import Head from 'next/head';
-import {
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  ChevronRight,
-  Crown,
-  Infinity,
-  Zap as ZapIcon2,
-  Shield as ShieldIcon,
-  Users as UsersIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon2,
-  Cloud as CloudIcon,
-  Smartphone as SmartphoneIcon,
-  Palette as PaletteIcon,
-  Search as SearchIcon,
-  MessageSquare as MessageSquareIcon,
-  FileText as FileTextIcon,
-  Calendar as CalendarIcon,
-  CreditCard as CreditCardIcon,
-  BarChart3 as BarChart3Icon,
-  Settings as SettingsIcon,
-  Zap as ZapIcon3,
-  Code as CodeIcon,
-  BookOpen as BookOpenIcon,
-  Activity as ActivityIcon,
-  Database as DatabaseIcon3,
-  Play as PlayIcon,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon,
-  Filter as FilterIcon,
-  Grid as GridIcon,
-  List as ListIcon,
-  ChevronDown as ChevronDownIcon,
-  ChevronUp as ChevronUpIcon,
-  Sparkles as SparklesIcon,
-  FlaskConical as FlaskConicalIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Globe2 as Globe2Icon,
-  Bot as BotIcon,
-  ChevronRight as ChevronRightIcon,;
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon  } from 'lucide-react';
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices  } from '../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services  } from '../data/innovative-micro-saas-v2';
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
-  enhancedRealMicroSaasServices,
-  getServicesByCategory,
-  getPopularServices,;
+  enhancedRealMicroSaasServices
+  getServicesByCategory
+    getPopularServices
 } from '../data/enhanced-real-micro-saas-services';
 import { nextGenerationAIServices } from '../data/next-generation-ai-services';
 import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
 import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
-
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
-    'monthly'
-  );
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-  };
-
-  const popularServices = getPopularServices();
-
-  // Combine all services for comprehensive pricing
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
-    ...nextGenerationAIServices,
-    ...cuttingEdgeITServices,
-    ...innovativeMicroSaasV2Services,
-  ];
-
-  // Enhanced service categories with pricing
-  const serviceCategories = [
-    {
-      name: 'Next-Generation AI',
-      description: 'Revolutionary AI platforms',
-services: [
-        'AI Multimodal Fusion',
-        'AI Autonomous Decision Engine',
-        'AI Emotional Intelligence',
-      ],
-      avgPrice: '$3,199/month',
-      savings: 'Save 60-80% vs. competitors',
-    },
-    {
-      name: 'Cutting-Edge IT Infrastructure',
-      description: 'Advanced infrastructure solutions',
-      services: [
-        'Zero Trust Architecture',
-        'Edge Computing Orchestration',
-        '5G Private Networks',
-      ],
-      avgPrice: '$4,999/month',
-      savings: 'Save 50-70% vs. competitors',
-    },
-    {
-      name: 'Innovative Micro SaaS',
-      description: 'Creative and practical SaaS tools',
-      services: [
-        'AI Brand Personality',
-        'Virtual Event Holograms',
-        'AI Meeting Transcriber',
-      ],
-      avgPrice: '$199/month',
-      savings: 'Save 40-60% vs. competitors',
-    },
-    {
-      name: 'Quantum & Space Technology',
-      description: 'Quantum computing and space solutions',
-      services: [
-        'Quantum AI Hybrid',
-        'Space Technology Platform',
-        'Quantum Cybersecurity',
-      ],
-      avgPrice: '$5,999/month',
-      savings: 'Save 70-85% vs. competitors',
-    },
-    {
-      name: 'Enterprise IT Services',
-      description: 'Comprehensive enterprise solutions',
-      services: ['Cloud Migration', 'DevOps Automation', 'Security Hardening'],
-      avgPrice: '$2,999/month',
-      savings: 'Save 45-65% vs. competitors',
-    },
-  ];
-
+  const contactInfo = null;
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
-      name: 'Starter',
-      description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 49 : 39,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      name: 'Starter'
+      description: 'Perfect for small businesses and startups'
+      price: billingCycle === 'monthly' ? 49 : 39
+      period: billingCycle === 'monthly' ? '/month' : '/month'
+      savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
 'Access to 50+ Core Services',
         'Basic AI Integration',
@@ -354,28 +178,27 @@ icon: <TrendingUp className='w-8 h-8' />,
       detail: 'Average ROI',
     },
     {
-      title: 'Time to Value',
-      description: 'Get up and running in under 24 hours',
-      icon: <Clock className='w-8 h-8' />,
-      metric: '<24h',
-      detail: 'Setup Time',
-    },
+      title: 'Time to Value'
+      description: 'Get up and running in under 24 hours'
+      icon: <Clock className='w-8 h-8' />
+      metric: '<24h'
+      detail: 'Setup Time'
+    }
     {
-      title: 'Global Reach',
-      description: 'Available in 150+ countries worldwide',
-      icon: <Globe className='w-8 h-8' />,
-      metric: '150+',
-      detail: 'Countries',
-    },
+      title: 'Global Reach'
+      description: 'Available in 150+ countries worldwide'
+      icon: <Globe className='w-8 h-8' />
+      metric: '150+'
+      detail: 'Countries'
+    }
     {
-      title: 'Enterprise Security',
-      description: 'Bank-level security with 99.99% uptime',
-      icon: <Shield className='w-8 h-8' />,
-      metric: '99.99%',
-      detail: 'Uptime SLA',
-    },
+      title: 'Enterprise Security'
+      description: 'Bank-level security with 99.99% uptime'
+      icon: <Shield className='w-8 h-8' />
+      metric: '99.99%'
+      detail: 'Uptime SLA'
+    }
   ];
-
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <Head>
@@ -393,7 +216,6 @@ icon: <TrendingUp className='w-8 h-8' />,
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -409,7 +231,6 @@ icon: <TrendingUp className='w-8 h-8' />,
           property='og:image'
           content='https://ziontechgroup.com/og-image.jpg'
         />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -425,7 +246,6 @@ icon: <TrendingUp className='w-8 h-8' />,
           content='https://ziontechgroup.com/og-image.jpg'
         />
       </Head>
-
       <div className='container mx-auto px-4 py-12'>
         {/* Hero Section */}
         <div className='text-center mb-16'>
@@ -437,7 +257,6 @@ icon: <TrendingUp className='w-8 h-8' />,
             generous free trials and access to our revolutionary AI & quantum
             computing services.
           </p>
-
           {/* New 2026 Pricing Link */}
           <div className='mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -489,7 +308,6 @@ icon: <TrendingUp className='w-8 h-8' />,
             </span>
           </div>
         </div>
-
         {/* Pricing Tiers */}
 <div className='mb-20'>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
@@ -513,12 +331,10 @@ icon: <TrendingUp className='w-8 h-8' />,
                   <div className='inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6'>
                     {tier.icon}
                   </div>
-
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {tier.name}
                   </h3>
                   <p className='text-gray-300 mb-6'>{tier.description}</p>
-
                   <div className='mb-6'>
                     <div className='flex items-baseline justify-center'>
                       <span className='text-5xl font-bold text-cyan-400'>
@@ -534,7 +350,6 @@ icon: <TrendingUp className='w-8 h-8' />,
                       </div>
                     )}
                   </div>
-
                   <ul className='text-left space-y-3 mb-8'>
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className='flex items-start'>
@@ -543,7 +358,6 @@ icon: <TrendingUp className='w-8 h-8' />,
                       </li>
                     ))}
                   </ul>
-
                   <Button
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.ctaVariant}
@@ -558,7 +372,6 @@ icon: <TrendingUp className='w-8 h-8' />,
             ))}
           </div>
         </div>
-
         {/* Value Propositions */}
 <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -591,7 +404,6 @@ className='text-center p-6'
             ))}
           </div>
         </div>
-
         {/* Service Category Pricing Examples */}
 <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -624,7 +436,6 @@ className='text-center p-6'
                     </div>
                   </div>
                 </div>
-
                 <ul className='space-y-2 mb-4'>
                   {category.services.map((service, idx) => (
                     <li
@@ -649,7 +460,6 @@ className='text-center p-6'
             ))}
           </div>
         </div>
-
         {/* Popular Services Pricing */}
 <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -675,7 +485,6 @@ className='p-6'
                     {service.category}
                   </div>
                 </div>
-
                 <div className='mb-4'>
                   <div className='text-xs text-gray-400 mb-2'>
                     Key Features:
@@ -702,7 +511,6 @@ className='p-6'
             ))}
           </div>
         </div>
-
         {/* FAQ Section */}
 <div className='mb-20'>
           <h2 className='text-3xl font-bold text-white mb-12 text-center'>
@@ -719,7 +527,6 @@ className='p-6'
                 trial.
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='holographic' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
                 Can I change my plan later?
@@ -730,7 +537,6 @@ className='p-6'
                 adjustments.
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='neural' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
                 What support is included?
@@ -740,7 +546,6 @@ className='p-6'
                 plans include priority support with dedicated account managers.
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='quantum' className='p-6'>
               <h3 className='text-lg font-bold text-white mb-3'>
                 Is there a setup fee?
@@ -752,7 +557,6 @@ className='p-6'
             </UltraFuturisticCard>
           </div>
         </div>
-
         {/* Contact Information */}
 <div className='mb-16'>
           <h2 className='text-3xl font-bold text-white mb-8 text-center'>
@@ -767,7 +571,6 @@ className='p-6'
               </p>
               <p className='text-gray-400 text-sm mt-2'>Available 24/7</p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard
               variant='holographic'
               className='text-center p-6'
@@ -781,7 +584,6 @@ className='p-6'
                 Quick response guaranteed
               </p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant='neural' className='text-center p-6'>
               <MapPin className='w-12 h-12 text-green-400 mx-auto mb-4' />
               <h3 className='text-xl font-bold text-white mb-3'>Address</h3>
@@ -792,7 +594,6 @@ className='p-6'
             </UltraFuturisticCard>
           </div>
         </div>
-
         {/* CTA Section */}
 <div className='text-center'>
           <UltraFuturisticCard
@@ -807,7 +608,6 @@ className='p-6'
               revolutionary AI & quantum computing services. No credit card
               required, instant setup, and full support included.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
               <Button
                 href='/services'
@@ -828,7 +628,6 @@ className='p-6'
                 <MessageSquare className='ml-2 w-5 h-5' />
               </Button>
             </div>
-
             <div className='text-sm text-gray-400'>
               <p>
                 ✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant

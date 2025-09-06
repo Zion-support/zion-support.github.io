@@ -1,24 +1,22 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
 function summarizeModules(
-  modules: Record<string, boolean>,
+  modules: Record<string, boolean>
   bonus: Record<string, boolean>
 ) {
   const active = [
     ...Object.entries(modules)
       .filter(([, v]) => v)
-      .map(([k]) => `/${k}`),
+      .map(([k]) => `/${k}`)
     ...Object.entries(bonus)
       .filter(([, v]) => v)
-      .map(([k]) => `/${k}`),
+      .map(([k]) => `/${k}`)
   ];
   return active.length ? active.sort().join(', ') : 'None';
 }
 
 function missionParagraph(
-  region: string,
-  instanceName: string,
-  modules: Record<string, boolean>,
+  region: string
+  instanceName: string
+  modules: Record<string, boolean>
   bonus: Record<string, boolean>
 ) {
   const activeCount =
@@ -28,15 +26,14 @@ function missionParagraph(
 }
 
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
-
   try {
-    const body = req.body || {};
+    const body = req.body |{}
     const {
       instanceName,
 defaultLanguage = 'en',
@@ -47,38 +44,35 @@ defaultLanguage = 'en',
       modules = {},
       bonusModules = {},
     } = body;
-
-    if (!instanceName || !deploymentRegion) {
+    if (!instanceName |!deploymentRegion) {
       return res.status(400).json({
-        error: 'Missing required fields: instanceName, deploymentRegion',
+        error: "Missing required fields: instanceName, deploymentRegion"
       });
     }
-
     // Simulated provisioning operations
     const now = new Date().toISOString();
-    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
-    
+    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date.now()}`;
     const outputActions = {
       zionGPT: {
-        initialized: true,
-        routes: ['/gpt', '/gpt/router'],
-        agents: ['proposal-writer', 'resume-generator'],
-      },
+        initialized: true
+        routes: ["/gpt", "/gpt/router"]
+        agents: ["proposal-writer", "resume-generator"]
+      }
       daoAndToken: {
-        token: tokenActivation ? 'ZION$' : 'disabled',
-        treasury: tokenActivation ? `${provisionId}-treasury` : null,
-        governanceMode,
-        votingDashboard: '/dao',
-      },
+        token: tokenActivation ? "ZION$" : "disabled"
+        treasury: tokenActivation ? `${provisionId}-treasury` : null
+        governanceMode
+        votingDashboard: "/dao"
+      }
       assets: {
-        whitepaper: '/whitepaper',
-        roadmap: '/roadmap',
+        whitepaper: "/whitepaper"
+        roadmap: "/roadmap"
         book: {
-          pdf: '/book/manifesto.pdf',
-          trailerScript: '/trailer/script',
-        },
-        summit: '/summit',
-      },
+          pdf: "/book/manifesto.pdf"
+          trailerScript: "/trailer/script"
+        }
+        summit: "/summit"
+      }
       publicPages: [
         '/about',
         '/manifesto',
@@ -128,5 +122,7 @@ version: 'Zion OS v1.0.0',
     });
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' });
+  } catch (err: any) {
+    return res.status(500).json({ error: err.message |"Internal error" });
   }
 }

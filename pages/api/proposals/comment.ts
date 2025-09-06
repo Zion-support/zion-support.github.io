@@ -1,6 +1,3 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
 const FILE_PATH = path.join(
   process.cwd(),
   'data',
@@ -15,18 +12,18 @@ async function ensure() {
   } catch {
     await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 });
   }
-
+}
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   await ensure();
-  if (req.method === 'GET') {
+  if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
     return res.status(200).json(data);
   }
-  if (req.method === 'POST') {
-    const body = req.body || {};
+  if (req.method === "POST") {
+    const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
     const comment = {
 id: Date.now().toString(),

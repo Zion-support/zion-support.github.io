@@ -1,7 +1,4 @@
-import React from 'react';
-import Head from 'next/head';
-
-const AutomationStatus: React.FC = () => {
+const AutomationStatus: NextPage;
   return (
     <div>
       <Head>

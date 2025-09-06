@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from 'next';
 
+const templates = null;
 const templates = {
   lulu: {
     sizes: [
@@ -21,22 +21,8 @@ const templates = {
   },
   blurb: {
     sizes: [
-      {
-        name: 'Standard Portrait',
-        widthIn: 8,
-        heightIn: 10,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-      {
-        name: 'Large Square',
-        widthIn: 12,
-        heightIn: 12,
-        bleedIn: 0.125,
-        marginIn: 0.75,
-      },
-    ],
-  },
+      { name: 'Standard Portrait', widthIn: 8, heightIn: 10, bleedIn: 0.125, marginIn: 0.75 }
+      { name: 'Large Square', widthIn: 12, heightIn: 12, bleedIn: 0.125, marginIn: 0.75 }]}
   amazon: {
     sizes: [
       {
@@ -60,4 +46,6 @@ const templates = {
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(templates);
 
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json(templates)
 }

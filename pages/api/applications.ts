@@ -1,8 +1,32 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile, writeJsonFile } from '../../utils/fileUtils';
+import type { Application } from '../../utils/types';
+import { rateLimit } from '../../utils/rateLimit';
+
+const FILE = 'data/applications.json';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
+  if (req.method !== 'POST') {
+    return res.status(405).end('Method Not Allowed');
+  }
 
+  try {
+    const application: Application = {
+      id: uuidv4(),
+      ...req.body,
+      createdAt: new Date().toISOString()
+    };
+
+    const applications = readJsonFile(FILE) || [];
+    applications.push(application);
+    writeJsonFile(FILE, applications);
+
+    res.status(200).json({ success: true, application });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to create application' });
+  }
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!rateLimit(req, res)) return
   if (req.method === 'GET') {
     const { jobId, talentSlug } = req.query;
     let apps = readJsonFile<Application[]>(FILE, []);
@@ -12,7 +36,6 @@ if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
     res.status(200).json({ applications: apps });
     return;
   }
-
   if (req.method === 'POST') {
     const { jobId, talentSlug, action } = req.body || {};
 if (!jobId || !talentSlug || !['apply', 'skip'].includes(action)) {

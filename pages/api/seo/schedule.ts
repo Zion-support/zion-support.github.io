@@ -1,31 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
+import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+const openai = null;
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const seedTopics = [
-      'AI Devs in Brazil',
-      'AI Devs in Kenya',
-      'AI Devs in Vietnam',
-      'Rent Servers in Kabul',
-      'Rent Servers in Nairobi',
-      'LLM Engineers in Toronto',
-      'Cybersecurity Experts in Berlin',
-      'Cloud Architects in Lisbon',
+      'AI Devs in Brazil'
+      'AI Devs in Kenya'
+      'AI Devs in Vietnam'
+      'Rent Servers in Kabul'
+      'Rent Servers in Nairobi'
+      'LLM Engineers in Toronto'
+      'Cybersecurity Experts in Berlin'
+      'Cloud Architects in Lisbon'
     ];
-
     const picks = seedTopics.sort(() => 0.5 - Math.random()).slice(0, 4);
-
     const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo');
     fs.mkdirSync(outDir, { recursive: true });
 
@@ -50,3 +43,6 @@ export default async function handler(
     console.error(e);
     return res.status(500).json({ error: 'Failed to schedule landing pages' });
   }
+    return res.status(500).json({ error: 'Failed to schedule landing pages' })
+  }
+}

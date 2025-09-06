@@ -1,32 +1,35 @@
-import { Fragment } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import Dashboard from '@/pages/Dashboard';
-import ClientDashboard from '@/pages/ClientDashboard';
-import TalentDashboard from '@/pages/TalentDashboard';
-import CreatorDashboard from '@/pages/CreatorDashboard';
-import Analytics from '@/pages/Analytics';
-import ProjectMilestones from '@/pages/ProjectMilestones';
-import ProjectDetails from '@/pages/ProjectDetails';
-import ProjectRoom from '@/pages/ProjectRoom';
-import MessagingInbox from '@/pages/MessagingInbox';
-import Payments from '@/pages/Payments';
-import Interviews from '@/pages/Interviews';
-import Notifications from '@/pages/Notifications';
-import ApplicationStatusTracker from '@/pages/ApplicationStatusTracker';
-import HiringTracker from '@/pages/HiringTracker';
-import PortfolioBuilder from '@/pages/PortfolioBuilder';
-import Referrals from '@/pages/Referrals';
-import DeveloperPortal from '@/pages/DeveloperPortal';
-import WalletPage from '@/pages/Wallet';
-import ContractBuilder from '@/pages/ContractBuilder';
 
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import Dashboard from "@/pages/Dashboard",
+import ClientDashboard from "@/pages/ClientDashboard",
+import TalentDashboard from "@/pages/TalentDashboard",
+import CreatorDashboard from "@/pages/CreatorDashboard",
+import Analytics from "@/pages/Analytics",
+import ProjectMilestones from "@/pages/ProjectMilestones",
+import ProjectDetails from "@/pages/ProjectDetails",
+import ProjectRoom from "@/pages/ProjectRoom",
+import MessagingInbox from "@/pages/MessagingInbox",
+import Payments from "@/pages/Payments",
+import Interviews from "@/pages/Interviews",
+import Notifications from "@/pages/Notifications",
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker",
+import HiringTracker from "@/pages/HiringTracker",
+import PortfolioBuilder from "@/pages/PortfolioBuilder",
+import Referrals from "@/pages/Referrals",
+import DeveloperPortal from "@/pages/DeveloperPortal",
+import WalletPage from "@/pages/Wallet";
+import ContractBuilder from "@/pages/ContractBuilder";
+<<<<<<< HEAD
+const DashboardRoutes = null;
+=======
 const DashboardRoutes = () => {
   return (
     <Routes>
       {/* Dashboard Routes */}
       <Route
-        path='/dashboard'
+        path="/dashboard"
         element={
           <ProtectedRoute>
             <Dashboard />
@@ -34,7 +37,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/client-dashboard'
+        path="/client-dashboard"
         element={
           <ProtectedRoute>
             <ClientDashboard />
@@ -42,7 +45,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/talent-dashboard'
+        path="/talent-dashboard"
         element={
           <ProtectedRoute>
             <TalentDashboard />
@@ -50,7 +53,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/creator-dashboard'
+        path="/creator-dashboard"
         element={
           <ProtectedRoute>
             <CreatorDashboard />
@@ -58,7 +61,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/analytics'
+        path="/analytics"
         element={
           <ProtectedRoute>
             <Analytics />
@@ -66,7 +69,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/project/:id/milestones'
+        path="/project/:id/milestones"
         element={
           <ProtectedRoute>
             <ProjectMilestones />
@@ -74,7 +77,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/project/:id'
+        path="/project/:id"
         element={
           <ProtectedRoute>
             <ProjectDetails />
@@ -82,7 +85,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/project/:id/room'
+        path="/project/:id/room"
         element={
           <ProtectedRoute>
             <ProjectRoom />
@@ -90,7 +93,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/messages'
+        path="/messages"
         element={
           <ProtectedRoute>
             <MessagingInbox />
@@ -98,7 +101,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/inbox'
+        path="/inbox"
         element={
           <ProtectedRoute>
             <MessagingInbox />
@@ -106,7 +109,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/payments'
+        path="/payments"
         element={
           <ProtectedRoute>
             <Payments />
@@ -114,7 +117,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/interviews'
+        path="/interviews"
         element={
           <ProtectedRoute>
             <Interviews />
@@ -122,7 +125,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/notifications'
+        path="/notifications"
         element={
           <ProtectedRoute>
             <Notifications />
@@ -130,7 +133,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/applications/track'
+        path="/applications/track"
         element={
           <ProtectedRoute>
             <ApplicationStatusTracker />
@@ -138,7 +141,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/hiring-tracker'
+        path="/hiring-tracker"
         element={
           <ProtectedRoute>
             <HiringTracker />
@@ -146,7 +149,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/portfolio-builder'
+        path="/portfolio-builder"
         element={
           <ProtectedRoute>
             <PortfolioBuilder />
@@ -154,7 +157,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/referrals'
+        path="/referrals"
         element={
           <ProtectedRoute>
             <Referrals />
@@ -162,7 +165,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/developers'
+        path="/developers"
         element={
           <ProtectedRoute>
             <DeveloperPortal />
@@ -170,7 +173,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/wallet'
+        path="/wallet"
         element={
           <ProtectedRoute>
             <WalletPage />
@@ -178,7 +181,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/dashboard/api-access'
+        path="/dashboard/api-access"
         element={
           <ProtectedRoute>
             <DeveloperPortal />
@@ -186,7 +189,7 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path='/contract-builder'
+        path="/contract-builder"
         element={
           <ProtectedRoute>
             <ContractBuilder />
@@ -194,6 +197,7 @@ const DashboardRoutes = () => {
         }
       />
     </Routes>
-  );
-};
+  )
+}
 export default DashboardRoutes;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

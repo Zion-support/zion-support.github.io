@@ -1,6 +1,3 @@
-'use client';
-
-import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   Mail,
@@ -20,12 +17,10 @@ const ContactForm: React.FC = () => {
     service: '',
 message: '',
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
     'idle' | 'success' | 'error'
   >('idle');
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -58,8 +53,7 @@ message: '',
     } finally {
       setIsSubmitting(false);
     }
-  };
-
+  }
   const services = [
 'AI Development',
     'Cloud Architecture',
@@ -69,7 +63,6 @@ message: '',
     'Data Analytics',
     'Other',
   ];
-
   const contactInfo = [
     {
       icon: Mail,
@@ -114,7 +107,6 @@ className='text-center mb-16'
               Conversation
             </span>
           </h2>
-
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             Ready to transform your business? Get in touch with our team of
             experts to discuss how we can help you achieve your technology
@@ -141,7 +133,6 @@ className='space-y-8'
                 needs. Reach out to us today.
               </p>
             </div>
-
             {/* Contact Details */}
 <div className='space-y-6'>
               {contactInfo.map((info, index) => (
@@ -168,7 +159,6 @@ className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-wh
                 </motion.a>
               ))}
             </div>
-
             {/* Additional Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -200,7 +190,6 @@ className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue
               </ul>
             </motion.div>
           </motion.div>
-
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -248,10 +237,8 @@ className='text-center py-12'
                       onChange={handleChange}
                       required
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter your full name'
-                    />
+                      placeholder='Enter your full name'                    />
                   </div>
-
                   <div>
                     <label
                       htmlFor='email'
@@ -287,10 +274,8 @@ className='text-center py-12'
                       value={formData.company}
                       onChange={handleChange}
                       className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
-                      placeholder='Enter company name'
-                    />
+                      placeholder='Enter company name'                    />
                   </div>
-
                   <div>
                     <label
                       htmlFor='phone'
@@ -309,7 +294,6 @@ className='text-center py-12'
                     />
                   </div>
                 </div>
-
                 <div>
 <label
                     htmlFor='service'
@@ -336,7 +320,6 @@ className='text-center py-12'
                     ))}
                   </select>
                 </div>
-
                 <div>
 <label
                     htmlFor='message'
@@ -355,7 +338,6 @@ className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-w
                     placeholder='Tell us about your project or inquiry...'
                   />
                 </div>
-
                 {submitStatus === 'error' && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -366,7 +348,6 @@ className='flex items-center space-x-2 text-red-400 bg-red-400/10 border border-
                     <span>Something went wrong. Please try again.</span>
                   </motion.div>
                 )}
-
                 <button
 type='submit'
                   disabled={isSubmitting}

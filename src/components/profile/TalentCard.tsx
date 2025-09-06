@@ -1,10 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import Link from 'next/link';
-import { TalentProfile } from '@/types/talent';
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import React and useState
+import Link from "next/link";
+import { TalentProfile } from "@/types/talent";
+import Image from 'next/image', // Import next/image
+import React, { useState } from 'react', // Import React and useState
 
 export interface TalentCardProps {
   talent: TalentProfile;
@@ -27,29 +24,47 @@ export function TalentCard({
   const handleViewProfile = () => {
     if (onViewProfile) {
       onViewProfile(talent.id);
+  isAuthenticated: boolean
+}
+export function TalentCard({
+  talent;
+  onViewProfile;
+  onRequestHire;
+  isSaved;
+  onToggleSave;
+  isAuthenticated
+}: TalentCardProps) {
+  const [avatarError, setAvatarError] = useState(false);
+  const handleViewProfile = null;
+  return (
+    <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>
+      <div className="p-6">
+        <div className="flex items-start">
+          <div className="relative mr-4">
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light relative"> {/* Added relative for Image */}
     }
-  };
-
+  }
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault()
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent) }
+      onRequestHire(talent)
     if (onRequestHire) {
 onRequestHire(talent);
     }
-  };
-
+  }
   const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
+    e.preventDefault()
+    e.stopPropagation()
+    if (onToggleSave) {
+      onToggleSave(talent.id, !isSaved)
     if (onToggleSave) {
 onToggleSave(talent.id, !isSaved);
     }
-  };
-
-  const skills = talent.skills?.slice(0, 5) || [];
-  const talentNameInitial = talent.full_name?.charAt(0) || 'T';
-
-  
+  }
+  const skills = talent.skills?.slice(0, 5) |[]
+  const talentNameInitial = talent.full_name?.charAt(0) |'T'
     >
       <div className='p-6'>
         <div className='flex items-start'>
@@ -79,7 +94,6 @@ onToggleSave(talent.id, !isSaved);
               </div>
             )}
           </div>
-
           <div className='flex-1'>
             <div className='flex justify-between items-start'>
               <h3 className='text-lg font-bold text-white'>
@@ -89,7 +103,10 @@ onToggleSave(talent.id, !isSaved);
                 variant='ghost'
                 size='sm'
                 className='p-1 h-auto text-zion-slate-light hover:text-zion-cyan'
-                onClick={handleToggleSave}
+                onClick={handleToggleSave}                variant="ghost"
+                size="sm"
+                className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
+                onClick = {handleToggleSave,}
               >
                 <Star
                   className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
@@ -100,7 +117,6 @@ onToggleSave(talent.id, !isSaved);
             <p className='text-zion-cyan font-medium'>
               {talent.professional_title}
             </p>
-
             <div className='mt-2 flex flex-wrap gap-3 text-sm'>
               {talent.location && (
                 <div className='flex items-center text-zion-slate-light'>
@@ -147,7 +163,6 @@ onToggleSave(talent.id, !isSaved);
               <div className='text-zion-slate-light'>Rate not specified</div>
             )}
           </div>
-
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
               <Button

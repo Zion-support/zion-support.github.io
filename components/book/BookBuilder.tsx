@@ -1,32 +1,13 @@
 import React, { useMemo, useState } from 'react';
-import {
-  Download,
-  Image as ImageIcon,
-  FileType,
-  BookOpen,
-  Settings,
-  Wand2,;
-} from 'lucide-react';
-import { buildPrintableHtml } from '../../utils/export/buildHtml';
-import type {
-  BookProject,
-  BookChapter,
-  VisualAsset,;
-} from '../../utils/book/bookTypes';
+import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2  } from 'lucide-react';
+import { buildPrintableHtml  } from '../../utils/export/buildHtml';
+import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
 import { defaultChapters } from '../../utils/book/defaultOutline';
-const initialProject: BookProject = {
-  meta: {
-    title: 'Zion OS: Building the Civilization Protocol',
-    subtitle: 'AI. Talent. Trust.',
-    author: 'Founder Name',
-    isbn: '',
-publisher: 'Zion Tech Solutions',
-  },
-  chapters: defaultChapters,
+const initialProject: BookProject;
   visuals: {
-    timelineImages: [],
-    daoVoteCharts: [],
-    uiScreens: [],
+    timelineImages: []
+    daoVoteCharts: []
+    uiScreens: []
     quoteCallouts: [
 {
         text: 'The marketplace is the new operating system.',
@@ -44,10 +25,9 @@ reader.readAsDataURL(file);
   });
 
 export default function BookBuilder() {
-  const [project, setProject] = useState<BookProject>(initialProject);
-  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER');
-  const [busy, setBusy] = useState<boolean>(false);
-
+  const [project, setProject] = useState<BookProject>(initialProject)
+  const [pageSize, setPageSize] = useState<'A4' | 'LETTER'>('LETTER')
+  const [busy, setBusy] = useState<boolean>(false)
   const coverPreview = useMemo(() => {
     return (
 <div className='w-full max-w-2xl border rounded-lg overflow-hidden shadow bg-white text-gray-900'>
@@ -77,7 +57,7 @@ export default function BookBuilder() {
   }, [project]);
 
   async function handleGenerateWithAI() {
-    setBusy(true);
+    setBusy(true)
     try {
       const res = await fetch('/api/book/generate', {
         method: 'POST',
@@ -95,11 +75,10 @@ body: JSON.stringify({
       setBusy(false);
     }
   }
-
   async function handleExportPdf() {
-    setBusy(true);
+    setBusy(true)
     try {
-      const html = buildPrintableHtml(project);
+      const html = buildPrintableHtml(project)
       const res = await fetch('/api/book/export/pdf', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -116,9 +95,8 @@ URL.revokeObjectURL(url);
       setBusy(false);
     }
   }
-
   async function handleExportEpub() {
-    setBusy(true);
+    setBusy(true)
     try {
       const res = await fetch('/api/book/export/epub', {
         method: 'POST',
@@ -369,6 +347,9 @@ URL.revokeObjectURL(url);
                   });
                 }}
                 placeholder='Attribution'
+                  setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
+                }}
+                placeholder="Attribution"
               />
               <div />
             </div>

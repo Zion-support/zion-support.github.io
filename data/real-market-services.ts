@@ -30,32 +30,23 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+  },
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number
+}
 
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-export const realMarketServices: RealMarketService[] = [
-  {
-id: 'llm-gateway-cost-control',
-    name: 'LLM Gateway & Cost Control',
+const contact = null;
     tagline:
-      'Centralize model access, control spend, add observability and guardrails',
-    price: '$299',
-    period: '/month',
+      'Centralize model access, control spend, add observability and guardrails'
+    price: '$299'
+    period: '/month'
     description:
-      'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',
+      'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.'
     features: [
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',

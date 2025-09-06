@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
-
+        <meta name;
             </p>
           </header>
-
           {/* Case Study Content */}
 <div className='max-w-4xl mx-auto'>
             {/* Company Overview */}
@@ -42,7 +41,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Challenge */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -78,7 +76,6 @@ import Link from 'next/link';
                 </ul>
               </div>
             </section>
-
             {/* Solution */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -134,12 +131,12 @@ import Link from 'next/link';
                     <p className='text-white/80'>
                       Advanced predictive models forecast patient outcomes,
                       readmission risks, and resource requirements.
+                      and resource requirements.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
-
             {/* Results */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -215,7 +212,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Technologies */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -241,7 +237,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Implementation */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -310,7 +305,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Call to Action */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20'>

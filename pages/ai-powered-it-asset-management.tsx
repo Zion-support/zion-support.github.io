@@ -1,8 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   Monitor,
   Brain,
   Cpu,
@@ -176,7 +171,6 @@ title: 'Cost Optimization',
             </motion.div>
           </div>
         </section>
-
         {/* Features Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -220,7 +214,6 @@ className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl bo
             </div>
           </div>
         </section>
-
         {/* Asset Types Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50'>
           <div className='max-w-7xl mx-auto'>
@@ -256,7 +249,6 @@ className='flex items-center space-x-3'
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -305,7 +297,6 @@ className='text-center'
             </div>
           </div>
         </section>
-
         {/* Capabilities Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-900/50'>
           <div className='max-w-7xl mx-auto'>
@@ -342,7 +333,6 @@ className='flex items-center space-x-3'
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>

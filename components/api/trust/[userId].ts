@@ -1,13 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { computeTrustScore  } from '../../../utils/trust/compute';
+import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
+import { supabase } from '../../../utils/supabase/client';
+async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
+  const apiKey = null;
 import { computeTrustScore } from '../../../utils/trust/compute';
 import type {
-  TrustMetricInputs,
-  TrustScoreBreakdown,;
+  TrustMetricInputs
+  TrustScoreBreakdown;
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
-
 async function analyzeWithGPT(
-  userId: string,
+  userId: string
   inputs: TrustMetricInputs
 ): Promise<{
   riskLevel: TrustScoreBreakdown['riskLevel'];
@@ -27,43 +31,38 @@ async function analyzeWithGPT(
       reasonSummary: 'Heuristic classification (no OpenAI key set).',
     };
   }
-
   try {
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`;
-
     const resp = await client.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4o-mini'
       messages: [
 {
           role: 'system',
           content:
-            'You are an impartial risk and trust analyst for a talent marketplace.',
-        },
-        { role: 'user', content: prompt },
-      ],
-      temperature: 0.2,
-      max_tokens: 200,
+            'You are an impartial risk and trust analyst for a talent marketplace.'
+        }
+        { role: 'user', content: prompt }
+      ]
+      temperature: 0.2
+      max_tokens: 200
     });
-
-    const content = resp.choices?.[0]?.message?.content || '';
+    const content = resp.choices?.[0]?.message?.content |'';
     const lower = content.toLowerCase();
     let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust';
     if (lower.includes('risk alert')) level = 'Risk Alert';
     else if (lower.includes('high trust')) level = 'High Trust';
-    else if (lower.includes('moderate trust')) level = 'Moderate Trust';
-
-    return { riskLevel: level, reasonSummary: content.trim() };
+    else if (lower.includes('moderate trust')) level = 'Moderate Trust'
+    return { riskLevel: level, reasonSummary: content.trim() }
   } catch (e: any) {
     return {
-      riskLevel: 'Moderate Trust',
-      reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}`,
-    };
+      riskLevel: 'Moderate Trust'
+      reasonSummary: `Analysis unavailable: ${e?.message |'unknown error'}`
+    }
   }
-
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   const { userId } = req.query;
@@ -73,7 +72,6 @@ export default async function handler(
   if (req.method === 'GET') {
     try {
       const analyze = req.query.analyze === 'true';
-
       // Fetch inputs from DB if available, else use mock defaults
 let inputs: TrustMetricInputs | null = null;
       try {
@@ -84,7 +82,6 @@ let inputs: TrustMetricInputs | null = null;
           .single();
         if (data) inputs = data.values as TrustMetricInputs;
       } catch {}
-
       if (!inputs) {
         inputs = {
 completionRate: 0.88,
@@ -102,7 +99,7 @@ completionRate: 0.88,
       }
 
       let reasonSummary: string | undefined;
-      let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined;
+      let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined
       if (analyze) {
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;
@@ -120,11 +117,10 @@ completionRate: 0.88,
         await supabase
           .from('trust_scores')
           .upsert(
-            { userId, breakdown: result, updatedAt: result.updatedAt },
+            { userId, breakdown: result, updatedAt: result.updatedAt }
             { onConflict: 'userId' }
           );
       } catch {}
-
       return res.status(200).json(result);
     } catch (e: any) {
       return res
@@ -132,15 +128,12 @@ completionRate: 0.88,
         .json({ error: e?.message || 'Failed to compute trust score' });
     }
   }
-
   if (req.method === 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined;
       if (!body) return res.status(400).json({ error: 'Missing body' });
-
       const inputs = body as TrustMetricInputs;
       const breakdown = await computeTrustScore(inputs);
-
       try {
 await supabase
           .from('trust_inputs')
@@ -148,18 +141,18 @@ await supabase
         await supabase
           .from('trust_scores')
           .upsert(
-            { userId, breakdown, updatedAt: breakdown.updatedAt },
+            { userId, breakdown, updatedAt: breakdown.updatedAt }
             { onConflict: 'userId' }
           );
       } catch {}
-
       return res.status(200).json(breakdown);
     } catch (e: any) {
       return res
         .status(500)
-        .json({ error: e?.message || 'Failed to save trust inputs' });
+        .json({ error: e?.message |'Failed to save trust inputs' });
     }
   }
-
   res.setHeader('Allow', 'GET, POST');
   return res.status(405).json({ error: 'Method not allowed' });
+  return res.status(405).json({ error: 'Method not allowed' })
+}

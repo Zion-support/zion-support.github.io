@@ -10,7 +10,8 @@ interface Particle {
   color: string;
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
-  maxLife: number;
+  maxLife: number
+}
 
 interface EnergyField {
   x: number;
@@ -18,13 +19,12 @@ interface EnergyField {
   radius: number;
   intensity: number;
   color: string;
-  pulse: number;
-
-export default function UltraFuturisticBackground2029({
-  children,
-}: {
-  children: React.ReactNode;
 }) {
+  pulse: number
+}
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
+  const canvasRef = null;
+            ease: "easeInOut"
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -33,10 +33,8 @@ const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -44,14 +42,12 @@ canvas.height = window.innerHeight;
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Mouse move handler for interactive effects
     const handleMouseMove = (e: MouseEvent) => {
 setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-
     // Initialize particles with different types
     const initParticles = () => {
       const particles: Particle[] = [];
@@ -110,33 +106,30 @@ pulse: Math.random() * Math.PI * 2,
 
     initParticles();
     initEnergyFields();
-
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw energy fields
 energyFieldsRef.current.forEach(field => {
         field.pulse += 0.02;
         const pulseIntensity = Math.sin(field.pulse) * 0.3 + 0.7;
-
         // Create radial gradient for energy field
         const gradient = ctx.createRadialGradient(
-          field.x,
-          field.y,
-          0,
-          field.x,
-          field.y,
+          field.x
+          field.y
+          0
+          field.x
+          field.y
           field.radius
         );
         gradient.addColorStop(
-          0,
+          0
           `${field.color}${Math.floor(field.intensity * pulseIntensity * 255)
             .toString(16)
             .padStart(2, '0')}`
         );
         gradient.addColorStop(
-          0.5,
+          0.5
           `${field.color}${Math.floor(
             field.intensity * pulseIntensity * 0.5 * 255
           )
@@ -144,13 +137,11 @@ energyFieldsRef.current.forEach(field => {
             .padStart(2, '0')}`
         );
         gradient.addColorStop(1, 'transparent');
-
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(field.x, field.y, field.radius, 0, Math.PI * 2);
         ctx.fill();
       });
-
       // Update and draw particles
       particlesRef.current.forEach((particle, index) => {
         particle.life--;
@@ -159,7 +150,6 @@ energyFieldsRef.current.forEach(field => {
           particle.x = Math.random() * canvas.width;
 particle.y = Math.random() * canvas.height;
         }
-
         // Interactive particle behavior based on mouse position
         const dx = mousePosition.x - particle.x;
         const dy = mousePosition.y - particle.y;
@@ -172,13 +162,11 @@ if (distance < 200) {
 
         particle.x += particle.vx;
         particle.y += particle.vy;
-
         // Wrap around edges
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-
         // Draw particle with type-specific effects
         ctx.save();
 
@@ -218,7 +206,6 @@ ctx.beginPath();
             .padStart(2, '0');
         ctx.fill();
         ctx.restore();
-
         // Draw connections between nearby particles
         particlesRef.current.forEach((otherParticle, otherIndex) => {
           if (index === otherIndex) return;
@@ -226,7 +213,6 @@ const distance = Math.sqrt(
             Math.pow(particle.x - otherParticle.x, 2) +
               Math.pow(particle.y - otherParticle.y, 2)
           );
-
           if (distance < 120) {
             const opacity = (1 - distance / 120) * 0.3;
             ctx.strokeStyle =
@@ -242,7 +228,6 @@ ctx.stroke();
           }
         });
       });
-
       // Draw quantum wave interference patterns
       const time = Date.now() * 0.001;
 for (let i = 0; i < 5; i++) {
@@ -269,7 +254,6 @@ ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time + i)})`;
 
         ctx.stroke();
       }
-
       // Draw neural network connections
       ctx.strokeStyle = 'rgba(255, 0, 255, 0.1)';
       ctx.lineWidth = 1;
@@ -288,16 +272,14 @@ ctx.beginPath();
     };
 
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
       if (animationRef.current) {
 cancelAnimationFrame(animationRef.current);
       }
-    };
+    }
   }, [mousePosition]);
-
   return (
     <div className='relative w-full h-full overflow-hidden'>
       {/* Animated background canvas */}
@@ -306,7 +288,6 @@ cancelAnimationFrame(animationRef.current);
         className='absolute inset-0 w-full h-full pointer-events-none'
         style={{ zIndex: -1 }}
       />
-
       {/* Floating geometric shapes */}
       <div className='absolute inset-0 pointer-events-none'>
         <motion.div
@@ -322,7 +303,6 @@ cancelAnimationFrame(animationRef.current);
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
           animate={{
@@ -335,7 +315,6 @@ ease: 'easeInOut',
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45'
           animate={{
@@ -348,7 +327,6 @@ ease: 'easeInOut',
 ease: 'easeInOut',
           }}
         />
-
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20'
           animate={{
@@ -362,11 +340,9 @@ ease: 'easeInOut',
           }}
         />
       </div>
-
       {/* Gradient overlays for depth */}
 <div className='absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20 pointer-events-none' />
       <div className='absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-blue-900/10 pointer-events-none' />
-
       {/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>

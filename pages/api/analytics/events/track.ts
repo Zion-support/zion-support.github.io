@@ -1,21 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 
-const LOG_DIR = path.join(process.cwd(), 'data', 'analytics');
-const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl');
-
-function ensureLogFile() {
-  if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR, { recursive: true });
-  if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '');
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method Not Allowed' });
+const LOG_DIR = path.join(process.cwd(), 'logs');
+const LOG_FILE = path.join(LOG_DIR, 'events.log');
 
   const {
     name,
@@ -40,8 +25,12 @@ at: at && typeof at === 'string' ? at : nowIso,
       '') as string,
   };
 
+  const event = req.body;
+  
   try {
-    ensureLogFile();
+    if (!fs.existsSync(LOG_DIR)) {
+      fs.mkdirSync(LOG_DIR, { recursive: true });
+    }
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n');
   } catch (e) {
     // ignore file errors in serverless

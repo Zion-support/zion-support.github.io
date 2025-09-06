@@ -1,44 +1,23 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Play,
-  CheckCircle,
-  DollarSign,
-  Clock,
-  Target,
-  Crown,;
-} from 'lucide-react';
-
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  ArrowRight, Star, TrendingUp, Users, Award, Play;
+  CheckCircle, DollarSign, Clock, Target, Crown
+ } from 'lucide-react';
 export default function UltraFuturisticHero2028() {
-  const features = [
-{
-      icon: Brain,
-      text: 'AI Consciousness Evolution',
-      color: 'from-emerald-500 to-teal-500',
-    },
+  const features = null;
+            and Autonomous AI Civilization. We're building tomorrow's solutions today.
     {
-      icon: Atom,
-      text: 'Quantum Time Manipulation',
-      color: 'from-violet-500 to-purple-500',
-    },
+      icon: Atom
+      text: 'Quantum Time Manipulation'
+      color: 'from-violet-500 to-purple-500'
+    }
     {
-      icon: Rocket,
-      text: 'Space Debris Management',
-      color: 'from-blue-500 to-cyan-500',
-    },
+      icon: Rocket
+      text: 'Space Debris Management'
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
       icon: Shield,
       text: 'Quantum Internet Security',
@@ -52,7 +31,6 @@ export default function UltraFuturisticHero2028() {
     { value: '15+', label: 'Quantum Technologies', icon: Atom },
 { value: '1000+', label: 'Happy Clients', icon: Users },
   ];
-
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black pt-20'>
       {/* Animated Background */}
@@ -62,7 +40,6 @@ export default function UltraFuturisticHero2028() {
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)] animate-pulse' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)] animate-pulse' />
       </div>
-
       {/* Floating Elements */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
         <motion.div
@@ -103,7 +80,6 @@ className='mb-8'
             <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse' />
           </div>
         </motion.div>
-
         {/* Main Heading */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -129,7 +105,6 @@ className='mb-8'
             Civilization. We're building tomorrow's solutions today.
           </p>
         </motion.div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -145,7 +120,6 @@ className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
             <span>Explore 2028 Services</span>
             <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform duration-300' />
           </motion.button>
-
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -155,7 +129,6 @@ className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4
             <span>Watch Demo</span>
           </motion.button>
         </motion.div>
-
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -186,7 +159,6 @@ className='group relative'
             ))}
           </div>
         </motion.div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -216,7 +188,6 @@ className='text-center group'
             ))}
           </div>
         </motion.div>
-
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -242,7 +213,6 @@ className='mb-16'
             </div>
           </div>
         </motion.div>
-
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -266,7 +236,6 @@ className='text-center'
           </div>
         </motion.div>
       </div>
-
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}

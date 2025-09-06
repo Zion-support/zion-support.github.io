@@ -1,31 +1,32 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Brain, Heart, Eye, MessageCircle, Users, Shield;
 import {
-  Brain,
-  Heart,
-  Eye,
-  MessageCircle,
-  Users,
-  Shield,
-  Zap,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Cpu,
-  Lock,
-  BarChart3,
-  Smartphone,
-  Database,
-  Cloud,
-  Server,
-  ShieldCheck,;
+  Brain
+  Heart
+  Eye
+  MessageCircle
+  Users
+  Shield
+  Zap
+  TrendingUp
+  CheckCircle
+  ArrowRight
+  Star
+  Phone
+  Mail
+  MapPin
+  Globe
+  Cpu
+  Lock
+  BarChart3
+  Smartphone
+  Database
+  Cloud
+  Server
+  ShieldCheck;
 } from 'lucide-react';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
@@ -89,8 +90,14 @@ description:
     'Optimize marketing campaigns with emotional insights',
     'Improve mental health support and monitoring',
     'Create empathetic AI interactions and experiences',
+  Zap, TrendingUp, CheckCircle, ArrowRight, Star;
+  Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3;
+  Smartphone, Database, Cloud, Server, ShieldCheck
+ } from 'lucide-react';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+const AIEmotionalIntelligencePlatform2029 = null;
   ];
-
   const useCases = [
     {
       title: 'Customer Service Automation',
@@ -130,7 +137,6 @@ color: 'from-purple-500 to-indigo-600',
 color: 'from-teal-500 to-cyan-600',
     },
   ];
-
   const pricing = {
     basic: {
 name: 'Starter',
@@ -195,7 +201,6 @@ period: '/month',
         />
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
-
         {/* Open Graph */}
         <meta
           property='og:title'
@@ -214,7 +219,6 @@ period: '/month',
           property='og:image'
           content='https://ziontechgroup.com/og-image.jpg'
         />
-
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta
@@ -229,7 +233,6 @@ period: '/month',
           name='twitter:image'
           content='https://ziontechgroup.com/twitter-image.jpg'
         />
-
         {/* Additional Meta Tags */}
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <meta name='theme-color' content='#8b5cf6' />
@@ -238,9 +241,7 @@ period: '/month',
           href='https://ziontechgroup.com/ai-emotional-intelligence-platform-2029'
         />
       </Head>
-
       <UltraFuturisticNavigation2029 />
-
       {/* Hero Section */}
 <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-32'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
@@ -262,7 +263,6 @@ className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from
               <Brain className='w-4 h-4 mr-2' />
               🚀 2029 Revolutionary AI Technology
             </motion.div>
-
             {/* Main Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -276,7 +276,6 @@ className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'
               <br />
               <span className='text-white'>Platform</span>
             </motion.h1>
-
             {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -288,7 +287,6 @@ className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-rela
               human emotions in real-time across all communication channels.
               Transform your business with emotional intelligence.
             </motion.p>
-
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -306,7 +304,6 @@ className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
                 </span>
                 <div className='absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-300'></div>
               </Link>
-
               <Link
                 href='#pricing'
                 className='group px-8 py-4 border-2 border-purple-500/50 hover:border-purple-400 text-purple-300 hover:text-white font-bold rounded-2xl text-lg transition-all duration-300 hover:bg-purple-500/10'
@@ -317,7 +314,6 @@ className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
                 </span>
               </Link>
             </motion.div>
-
             {/* Key Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -359,7 +355,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -411,7 +406,6 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
 <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -429,7 +423,7 @@ className='text-center mb-16'
               </span>
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience unprecedented improvements in customer satisfaction,
+              Experience unprecedented improvements in customer satisfaction
               team collaboration, and business outcomes.
             </p>
           </motion.div>
@@ -451,7 +445,6 @@ className='flex items-start space-x-4 p-6 rounded-xl bg-gradient-to-r from-purpl
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -502,7 +495,6 @@ className='group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-white
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -557,7 +549,6 @@ className='text-center mb-16'
                   </div>
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -569,7 +560,6 @@ className='text-center mb-16'
                     </li>
                   ))}
                 </ul>
-
                 <Link
 href='/contact'
                   className={`block w-full text-center py-3 px-6 rounded-xl font-bold transition-all duration-300 ${
@@ -585,7 +575,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
 <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -647,7 +636,6 @@ className='text-center p-6 rounded-2xl bg-gradient-to-b from-white/5 to-white/10
               <p className='text-gray-300'>{contactInfo.address}</p>
             </motion.div>
           </div>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -667,7 +655,6 @@ className='text-center'
           </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2028 />
     </>
 );

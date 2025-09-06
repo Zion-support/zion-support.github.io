@@ -19,80 +19,76 @@ export default function APITestingSuitePage() {
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
   const [apiKey, setApiKey] = useState('');
-
-  const features = [
-    {
 icon: <Code className='w-8 h-8 text-white' />,
       title: 'Comprehensive API Testing',
       description:
-        'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
-      gradient: 'from-indigo-400 to-purple-500',
-    },
+        'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.'
+      color: 'bg-gradient-to-br from-indigo-500 to-purple-600'
+      gradient: 'from-indigo-400 to-purple-500'
+    }
     {
-      icon: <Zap className='w-8 h-8 text-white' />,
-      title: 'Performance Testing',
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Performance Testing'
       description:
-        'Load testing, stress testing, and performance benchmarking for your APIs.',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      gradient: 'from-orange-400 to-red-500',
-    },
+        'Load testing, stress testing, and performance benchmarking for your APIs.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'
+    }
     {
-      icon: <Shield className='w-8 h-8 text-white' />,
-      title: 'Security Testing',
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Security Testing'
       description:
-        'Automated security testing including authentication, authorization, and vulnerability scanning.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Automated security testing including authentication, authorization, and vulnerability scanning.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-      title: 'Real-Time Monitoring',
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'Real-Time Monitoring'
       description:
-        '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
   ];
-
   const testTypes = [
     {
-      name: 'Functional Testing',
+      name: 'Functional Testing'
       description:
-        'Verify that your API endpoints work correctly and return expected responses.',
+        'Verify that your API endpoints work correctly and return expected responses.'
       tests: [
-        'Request/response validation',
-        'Status code verification',
-        'Data format checking',
-        'Error handling',
-      ],
-    },
+        'Request/response validation'
+        'Status code verification'
+        'Data format checking'
+        'Error handling'
+      ]
+    }
     {
-      name: 'Performance Testing',
+      name: 'Performance Testing'
       description:
-        'Ensure your APIs can handle expected load and perform under pressure.',
+        'Ensure your APIs can handle expected load and perform under pressure.'
       tests: [
-        'Load testing',
-        'Stress testing',
-        'Response time analysis',
-        'Throughput measurement',
-      ],
-    },
+        'Load testing'
+        'Stress testing'
+        'Response time analysis'
+        'Throughput measurement'
+      ]
+    }
     {
-      name: 'Security Testing',
+      name: 'Security Testing'
       description:
-        'Identify security vulnerabilities and ensure proper authentication and authorization.',
+        'Identify security vulnerabilities and ensure proper authentication and authorization.'
       tests: [
-        'Authentication testing',
-        'Authorization checks',
-        'Input validation',
-        'SQL injection testing',
-      ],
-    },
+        'Authentication testing'
+        'Authorization checks'
+        'Input validation'
+        'SQL injection testing'
+      ]
+    }
     {
-      name: 'Integration Testing',
+      name: 'Integration Testing'
       description:
-        'Test how your APIs integrate with other systems and services.',
+        'Test how your APIs integrate with other systems and services.'
       tests: [
         'End-to-end workflows',
         'Third-party integrations',
@@ -101,13 +97,12 @@ icon: <Code className='w-8 h-8 text-white' />,
       ],
     },
   ];
-
   const pricing = [
     {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for developers and small teams',
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for developers and small teams'
       features: [
 '100 API tests/month',
         'Basic test scenarios',
@@ -161,10 +156,10 @@ icon: <Code className='w-8 h-8 text-white' />,
     // Simulate API testing
     setTimeout(() => {
       setTestResults({
-        endpoint: apiEndpoint,
-        status: 'success',
-        responseTime: '245ms',
-        statusCode: 200,
+        endpoint: apiEndpoint
+        status: 'success'
+        responseTime: '245ms'
+        statusCode: 200
         tests: [
 {
             name: 'Response Time',
@@ -173,35 +168,35 @@ icon: <Code className='w-8 h-8 text-white' />,
             threshold: '<500ms',
           },
           {
-            name: 'Status Code',
-            status: 'pass',
-            value: '200',
-            threshold: '200',
-          },
+            name: 'Status Code'
+            status: 'pass'
+            value: '200'
+            threshold: '200'
+          }
           {
-            name: 'Response Format',
-            status: 'pass',
-            value: 'JSON',
-            threshold: 'Valid JSON',
-          },
+            name: 'Response Format'
+            status: 'pass'
+            value: 'JSON'
+            threshold: 'Valid JSON'
+          }
           {
-            name: 'Authentication',
-            status: 'pass',
-            value: 'Valid',
-            threshold: 'Authenticated',
-          },
+            name: 'Authentication'
+            status: 'pass'
+            value: 'Valid'
+            threshold: 'Authenticated'
+          }
           {
-            name: 'Rate Limiting',
-            status: 'pass',
-            value: 'Within limits',
-            threshold: 'No throttling',
-          },
-        ],
+            name: 'Rate Limiting'
+            status: 'pass'
+            value: 'Within limits'
+            threshold: 'No throttling'
+          }
+        ]
         recommendations: [
-          'Consider implementing response caching for better performance',
-          'Monitor response times during peak usage',
-          'Implement rate limiting headers for better API documentation',
-        ],
+          'Consider implementing response caching for better performance'
+          'Monitor response times during peak usage'
+          'Implement rate limiting headers for better API documentation'
+        ]
       });
       setIsTesting(false);
     }, 3000);
@@ -228,13 +223,11 @@ icon: <Code className='w-8 h-8 text-white' />,
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
             <Code className='w-4 h-4 mr-2' />
@@ -245,11 +238,10 @@ icon: <Code className='w-8 h-8 text-white' />,
           </h1>
           <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>
             Test, monitor, and optimize your APIs with our comprehensive testing
-            suite. Functional, performance, and security testing for REST,
+            suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
           </p>
-
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
@@ -258,8 +250,7 @@ icon: <Code className='w-8 h-8 text-white' />,
                 placeholder='API Endpoint (e.g., https://api.example.com/users)'
                 value={apiEndpoint}
                 onChange={e => setApiEndpoint(e.target.value)}
-                className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'
-              />
+                className='px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent'              />
               <input
                 type='text'
                 placeholder='API Key (optional)'
@@ -308,7 +299,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -321,7 +311,6 @@ href='/contact'
               APIs are reliable, performant, and secure.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -354,7 +343,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* Test Types Section */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -367,7 +355,6 @@ href='/contact'
               highest standards of quality and reliability.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {testTypes.map((type, index) => (
               <Card
@@ -395,7 +382,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* Demo Test Results */}
       {testResults && (
 <section className='section-padding bg-gradient-cursor-accent'>
@@ -409,7 +395,6 @@ href='/contact'
                 your own API endpoints.
               </p>
             </div>
-
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
               {/* Summary Card */}
               <Card className='border-gradient-indigo text-center'>
@@ -435,7 +420,6 @@ href='/contact'
                   </div>
                 </div>
               </Card>
-
               {/* Test Results */}
 <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -466,7 +450,6 @@ href='/contact'
                   ))}
                 </div>
               </Card>
-
               {/* Performance Metrics */}
 <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -494,7 +477,6 @@ href='/contact'
                 </div>
               </Card>
             </div>
-
             {/* Recommendations */}
 <Card className='border-gradient-indigo'>
               <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -512,7 +494,6 @@ href='/contact'
           </div>
         </section>
       )}
-
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -552,7 +533,6 @@ href='/contact'
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -564,7 +544,6 @@ href='/contact'
                     </li>
                   ))}
                 </ul>
-
                 <Button
 href='/contact'
                   size='lg'
@@ -578,13 +557,11 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-            Ready to Test Your APIs?
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing

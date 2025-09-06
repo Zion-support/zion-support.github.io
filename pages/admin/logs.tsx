@@ -1,54 +1,39 @@
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
-import fs from 'fs';
+import { useState, useEffect  } from 'react';
+import { GetServerSideProps  } from 'next';
+import fs from 'fs',
 import path from 'path';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import {
-  AlertTriangle,
-  Info,
-  AlertCircle,
-  XCircle,
-  Search,
-  Download,
-  RefreshCw,;
-} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw  } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-
 interface LogEntry {
   id: string;
+  timestamp: string;
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
   category: string;
-  component?: string;
-  timestamp: string;
-  sessionId?: string;
-  userId?: string;
-  error?: {
-    name: string;
-    stack?: string;
-  };
+    cause?: unknown
+  },
   performance?: {
-    duration: number;
     memory?: number;
-  };
+    timing?: number;
+    fps?: number
+  }
+}
 
 interface LogsPageProps {
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
-  lastUpdated: string;
+  lastUpdated: string
+}
 
+const LogLevelIcon = null;
+  lastUpdated: string;
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -76,8 +61,7 @@ critical: 'bg-red-200 text-red-900',
   };
 
   return <Badge className={colors[level]}>{level.toUpperCase()}</Badge>;
-};
-
+}
 export default function LogsPage({
   logs: initialLogs,
   errorCount,
@@ -99,7 +83,6 @@ const categories = Array.from(new Set(logs.map(log => log.category))).filter(
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(
     Boolean
   );
-
   useEffect(() => {
     // Simulate loading logs
     setTimeout(() => {
@@ -108,31 +91,25 @@ const categories = Array.from(new Set(logs.map(log => log.category))).filter(
       setLoading(false);
     }, 1000);
   }, []);
-
   useEffect(() => {
     let filtered = [...logs];
-
     if (searchTerm) {
       filtered = filtered.filter(
         log =>
-          log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          log.message.toLowerCase().includes(searchTerm.toLowerCase()) |
+          log.category.toLowerCase().includes(searchTerm.toLowerCase()) |
           (log.component &&
             log.component.toLowerCase().includes(searchTerm.toLowerCase()))
       );
     }
-
     if (levelFilter !== 'all') {
       filtered = filtered.filter(log => log.level === levelFilter);
     }
-
     if (categoryFilter !== 'all') {
       filtered = filtered.filter(log => log.category === categoryFilter);
     }
-
     setFilteredLogs(filtered);
   }, [logs, searchTerm, levelFilter, categoryFilter]);
-
   const getLevelColor = (level: string) => {
     switch (level) {
       case 'debug': return 'bg-blue-100 text-blue-800';
@@ -148,15 +125,12 @@ const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     const dataStr = JSON.stringify(filteredLogs, null, 2);
 const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
-
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
-
     const linkElement = document.createElement('a');
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
-  };
-
+  }
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();
   };
@@ -173,14 +147,11 @@ const parts = [];
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`);
     }
-
     return parts.length > 0 ? parts.join(', ') : null;
-  };
-
-  const errorCount = logs.filter(log => log.level === 'error' || log.level === 'critical').length;
+  }
+  const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
   const warningCount = logs.filter(log => log.level === 'warn').length;
   const totalCount = logs.length;
-
   return (
     <div className='container mx-auto p-6 space-y-6'>
       <div className='flex items-center justify-between'>
@@ -197,7 +168,6 @@ const parts = [];
             Export
           </Button>
         </div>
-
       {/* Summary Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
         <Card>
@@ -210,7 +180,6 @@ const parts = [];
             <p className='text-xs text-muted-foreground'>All log entries</p>
           </CardContent>
         </Card>
-
         <Card>
 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Errors</CardTitle>
@@ -223,7 +192,6 @@ const parts = [];
             </p>
           </CardContent>
         </Card>
-
         <Card>
 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Warnings</CardTitle>
@@ -236,7 +204,6 @@ const parts = [];
             <p className='text-xs text-muted-foreground'>Warning logs</p>
           </CardContent>
         </Card>
-
         <Card>
 <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>Last Updated</CardTitle>
@@ -250,7 +217,6 @@ const parts = [];
           </CardContent>
         </Card>
       </div>
-
       {/* Filters */}
       <Card>
         <CardHeader>
@@ -267,7 +233,6 @@ const parts = [];
                 onChange={e => setSearchTerm(e.target.value)}
               />
             </div>
-
             <Select value={levelFilter} onValueChange={setLevelFilter}>
               <SelectTrigger>
                 <SelectValue placeholder='All levels' />
@@ -281,7 +246,6 @@ const parts = [];
                 <SelectItem value='critical'>Critical</SelectItem>
               </SelectContent>
             </Select>
-
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
               <SelectTrigger>
 <SelectValue placeholder='All categories' />
@@ -295,7 +259,6 @@ const parts = [];
                 ))}
               </SelectContent>
             </Select>
-
             <Select value={sourceFilter} onValueChange={setSourceFilter}>
               <SelectTrigger>
 <SelectValue placeholder='All sources' />
@@ -336,9 +299,7 @@ const parts = [];
                       {formatTimestamp(log.timestamp)}
                     </span>
                   </div>
-
                   <div className='text-sm font-medium'>{log.message}</div>
-
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className='text-xs'>
                       <summary className='cursor-pointer text-muted-foreground hover:text-foreground'>
@@ -426,20 +387,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
         }
       }
     }
-
     // Sort logs by timestamp (newest first)
 logs.sort(
       (a, b) =>
         new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
     );
-
     // Calculate statistics
     const errorCount = logs.filter(
       log => log.level === 'error' || log.level === 'critical'
     ).length;
     const warningCount = logs.filter(log => log.level === 'warn').length;
     const totalCount = logs.length;
-
     return {
       props: {
         logs: logs.slice(0, 1000), // Limit to most recent 1000 logs

@@ -1,87 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
+import React from 'react',
+import Head from 'next/head',
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-import {
-  Stethoscope,
-  Brain,
-  Eye,
-  Heart,
-  Microscope,
-  Shield,
-  BarChart3,
-  TrendingUp,
-  Target,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Cpu,
-  Network,
-  Database,
-  Lock,
-  Clock,
-  DollarSign,
-  PieChart,
-  Activity,
-  Zap,
-  Pill,
-  Syringe,
-  Hospital,
-  Ambulance,;
-} from 'lucide-react';
-import Link from 'next/link';
-const AIHealthcareDiagnosticsPro: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-title: 'Advanced AI Diagnostics',
+const AIHealthcareDiagnosticsPro: React.FC;
       description:
-        'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.',
-      color: 'from-blue-500 to-cyan-500',
-    },
-    {
-      icon: Eye,
-      title: 'Multi-Modal Imaging',
-      description:
-        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.',
-      color: 'from-purple-500 to-pink-500',
-    },
-    {
-      icon: Heart,
-      title: 'Predictive Analytics',
-      description:
-        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.',
-      color: 'from-red-500 to-orange-500',
-    },
-    {
-      icon: Shield,
-      title: 'HIPAA Compliant',
-      description:
-        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.',
-      color: 'from-green-500 to-emerald-500',
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-time Monitoring',
-      description:
-        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.',
-      color: 'from-indigo-500 to-blue-500',
-    },
-    {
-      icon: Zap,
-      title: 'Automated Workflows',
-      description:
-        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',
-      color: 'from-yellow-500 to-orange-500',
-    },
-  ];
-
-  const useCases = [
-    {
-      icon: Microscope,
-title: 'Radiology & Imaging',
-      description:
-        'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.',
+        'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.'
       benefits: [
         '95% accuracy rate',
         '80% faster diagnosis',
@@ -293,14 +216,12 @@ name: 'Cardiology',
           href='https://ziontechgroup.com/ai-healthcare-diagnostics-pro'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         {/* Background Effects */}
         <div className='absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(56,189,248,0.15),transparent_50%)]'></div>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]'></div>
-
         {/* Floating Elements */}
         <div className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse'></div>
         <div className='absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000'></div>
@@ -326,11 +247,10 @@ className='mb-8'
             </h1>
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
               Transform healthcare delivery with the world's most advanced AI
-              diagnostic platform. Achieve 99.2% accuracy in disease detection,
+              diagnostic platform. Achieve 99.2% accuracy in disease detection
               reduce diagnosis time by 80%, and save countless lives through
               early intervention.
             </p>
-
             {/* Key Metrics */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>
               <motion.div
@@ -365,7 +285,6 @@ className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purp
                 <div className='text-gray-300'>Continuous Monitoring</div>
               </motion.div>
             </div>
-
             {/* CTA Buttons */}
 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
@@ -559,7 +478,6 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
@@ -616,7 +534,6 @@ plan.popular
                   </div>
                   <p className='text-gray-300'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -639,7 +556,6 @@ plan.popular
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
 <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
@@ -690,7 +606,6 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]'></div>
@@ -712,7 +627,6 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
               Join leading healthcare institutions worldwide who have already
               revolutionized patient care with AI-powered diagnostics.
             </p>
-
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'>
                 Schedule Demo
@@ -721,7 +635,6 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
                 Contact Sales
               </button>
             </div>
-
             <div className='mt-8 text-sm text-gray-400'>
               <p>
                 Questions? Call us at{' '}
@@ -733,7 +646,7 @@ className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-
                 </a>{' '}
                 or email{' '}
                 <a
-                  href='mailto:kleber@ziontechgroup.com'
+                  href='mailto: kleber@ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'
                 >
                   kleber@ziontechgroup.com

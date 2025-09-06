@@ -1,60 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
-interface KYCSubmission {
-  id: string;
-  userId: string;
-  status: 'pending' | 'approved' | 'rejected' | 'needs_info';
-  submittedAt: string;
-  documents: Array<{
-    id: string;
-    kind: string;
-    filename: string;
-    uploadedAt: string;
-  }>;
-
-const mockKYCData: KYCSubmission[] = [
-  {
-    id: '1',
-    userId: 'user123',
-    status: 'pending',
-    submittedAt: '2025-01-15T10:00:00Z',
-    documents: [
-      {
-        id: 'doc1',
-        kind: 'passport',
-        filename: 'passport.pdf',
-        uploadedAt: '2025-01-15T10:00:00Z'
-      }
-    ]
+import React, { useEffect, useState } from 'react',
+import Head from 'next/head',
+import type { KycProfile } from '../../utils/kyc';
+export default function AdminKycPage() {
+  const [queue, setQueue] = useState<KycProfile[]>([]);
+  const [reason, setReason] = useState<string>('');
+  async function load() {
+    const res = null;
+    if (data.ok) load()
   }
-];
-
-const AdminKYCPage: React.FC = () => {
-  const [submissions, setSubmissions] = useState<KYCSubmission[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading data
-    setTimeout(() => {
-      setSubmissions(mockKYCData);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  async function act(
-    userId: string,
-    action: 'approve' | 'reject' | 'needs_more_info'
-  ) {
-    const res = await fetch('/api/admin/kyc-queue', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, action, reason: reason || undefined }),
-    });
-    const data = await res.json();
-    if (data.ok) load();
-  }
-
   return (
     <>
       <Head>

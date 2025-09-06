@@ -1,59 +1,61 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Star, TrendingUp, Users, Award, Clock, Heart;
+  Brain, Atom, Shield, Rocket, Zap, Globe;
 import {
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  Heart,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Zap,
-  Globe,
-  CheckCircle,
-  ArrowRight,
-  Search,
-  Filter,
-  ChevronDown,
-  ChevronUp,
-  Eye,
-  Play,
-  Sparkles,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Cpu,
-  Database,
-  Network,
-  Server,
-  ShieldCheck,
-  GlobeIcon,
-  StarIcon,
-  TrendingUpIcon,
-  UsersIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  CpuIcon,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin,
-  Dna,
-  Target as TargetIcon,
-  Shield as ShieldIcon,
-  BookOpen,
-  Sparkles as SparklesIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Play as PlayIcon,;
+  Star
+  TrendingUp
+  Users
+  Award
+  Clock
+  Heart
+  Brain
+  Atom
+  Shield
+  Rocket
+  Zap
+  Globe
+  CheckCircle
+  ArrowRight
+  Search
+  Filter
+  ChevronDown
+  ChevronUp
+  Eye
+  Play
+  Sparkles
+  Target
+  Microscope
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Cpu
+  Database
+  Network
+  Server
+  ShieldCheck
+  GlobeIcon
+  StarIcon
+  TrendingUpIcon
+  UsersIcon
+  CheckCircleIcon
+  ArrowRightIcon
+  CpuIcon
+  DollarSign
+  Phone
+  Mail
+  MapPin
+  Dna
+  Target as TargetIcon
+  Shield as ShieldIcon
+  BookOpen
+  Sparkles as SparklesIcon
+  Zap as ZapIcon
+  Brain as BrainIcon
+  Play as PlayIcon;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
@@ -63,25 +65,32 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
 website: 'https://ziontechgroup.com',
 };
+  CheckCircle, ArrowRight, Search, Filter;
+  ChevronDown, ChevronUp, Eye, Play, Sparkles;
+  Target, Microscope, Lock, Cloud, BarChart3;
+  Settings, Cpu, Database, Network, Server;
+  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon;
+  UsersIcon, CheckCircleIcon, ArrowRightIcon;
+  CpuIcon, DollarSign, Phone, Mail, MapPin;
+  Dna, Target as TargetIcon, Shield as ShieldIcon;
+  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
+  Brain as BrainIcon, Play as PlayIcon
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
+const contactInfo = null;
 visible: {
   opacity: 1, transition: {
-  staggerChildren: 0.1 
-
-
-};
+  staggerChildren: 0.1
+}
 const itemVariants = {
   hidden: {
-  y: 20, opacity: 0 
-};
+  y: 20, opacity: 0
+}
 visible: {
   y: 0, opacity: 1, transition: {
-  duration: 0.5 
-
-
-};
-
+  duration: 0.5
 ];
-
 const stats = [
   {
     number: '15+',
@@ -114,7 +123,6 @@ export default function UltimateFuturisticServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
   const [viewMode, setViewMode] = useState('grid');
-
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
 const matchesSearch =
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -145,11 +153,10 @@ default:
         return b.popular ? 1 : -1;
     }
   });
-
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -199,7 +206,6 @@ duration: 0.5,
           href='https://ziontechgroup.com/ultimate-futuristic-services-showcase-2025'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black'></div>
@@ -246,7 +252,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
 <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -262,7 +267,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                 className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
               />
             </div>
-
             {/* Category Filter */}
 <div className='flex flex-wrap gap-3'>
               <select
@@ -277,7 +281,6 @@ className='flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full
                   </option>
                 ))}
               </select>
-
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -290,7 +293,6 @@ onChange={e => setSortBy(e.target.value)}
                 <option value='rating'>Highest Rated</option>
                 <option value='customers'>Most Customers</option>
               </select>
-
               {/* View Mode Toggle */}
               <div className='flex bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-1'>
                 <button
@@ -319,7 +321,6 @@ onChange={e => setSortBy(e.target.value)}
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
 <section className='py-16'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -349,7 +350,6 @@ viewMode === 'grid'
                     Popular
                   </div>
                 )}
-
                 {/* Service Header */}
 <div
                   className={`${viewMode === 'list' ? 'flex items-start space-x-6' : 'text-center'}`}
@@ -363,7 +363,6 @@ viewMode === 'grid'
                       {service.icon}
                     </div>
                   </div>
-
                   <div className={`${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors'>
                       {service.name}
@@ -371,7 +370,6 @@ viewMode === 'grid'
                     <p className='text-gray-300 text-sm mb-3'>
                       {service.tagline}
                     </p>
-
                     {/* Price */}
                     <div className='flex items-center justify-center space-x-2 mb-4'>
                       <span className='text-3xl font-bold text-white'>
@@ -381,12 +379,10 @@ viewMode === 'grid'
                     </div>
                   </div>
                 </div>
-
                 {/* Description */}
 <p className='text-gray-300 mb-6 leading-relaxed'>
                   {service.description}
                 </p>
-
                 {/* Features */}
                 <div className='mb-6'>
                   <h4 className='text-white font-semibold mb-3 flex items-center'>
@@ -410,7 +406,6 @@ viewMode === 'grid'
                     )}
                   </div>
                 </div>
-
                 {/* Service Details */}
 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                   <div className='text-gray-400'>
@@ -441,7 +436,6 @@ viewMode === 'grid'
                     </span>
                   </div>
                 </div>
-
                 {/* ROI and Market Info */}
 <div className='mb-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-lg border border-purple-500/20'>
                   <div className='text-sm'>
@@ -457,7 +451,6 @@ viewMode === 'grid'
                     </div>
                   </div>
                 </div>
-
                 {/* Action Buttons */}
 <div className='flex flex-col sm:flex-row gap-3'>
                   <Link
@@ -470,7 +463,6 @@ viewMode === 'grid'
                     <Eye className='w-5 h-5' />
                   </button>
                 </div>
-
                 {/* Contact Info */}
 <div className='mt-6 pt-6 border-t border-white/10'>
                   <div className='text-center text-sm text-gray-400'>
@@ -496,7 +488,6 @@ viewMode === 'grid'
               </motion.div>
             ))}
           </motion.div>
-
           {/* No Results */}
           {sortedServices.length === 0 && (
 <div className='text-center py-16'>
@@ -513,6 +504,9 @@ viewMode === 'grid'
                   setSelectedCategory('all');
                 }}
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300'
+                  setSelectedCategory('all')
+                }}
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Clear Filters
               </button>
@@ -520,7 +514,6 @@ viewMode === 'grid'
           )}
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>

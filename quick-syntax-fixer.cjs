@@ -21,11 +21,7 @@ class QuickSyntaxFixer {
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
-<<<<<<< HEAD
-=======
         .replace(/[\s\S]*?
-        .replace(/^>>>>>>>.*$/gm, '')
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -45,7 +41,7 @@ class QuickSyntaxFixer {
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: d: ${filePath}`);
+        this.log(`Fixe: ${filePath}`);
         return true;
       }
 
@@ -79,7 +75,7 @@ class QuickSyntaxFixer {
     }
 
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFile: s: this.fixedFiles };
+    return { fixedFile: this.fixedFiles };
   }
 }
 
@@ -90,11 +86,6 @@ if (require.main === module) {
   }
 
 module.exports = QuickSyntaxFixer;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -102,5 +93,3 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

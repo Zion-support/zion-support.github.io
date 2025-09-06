@@ -1,53 +1,38 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-import {
-  Search,
-  TrendingUp,
-  CheckCircle,
-  AlertTriangle,
-  ArrowRight,
-  Target,
-  BarChart3,
-  Globe,
-  Smartphone,
-  Zap,;
-} from 'lucide-react';
-
+import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
-
-  const features = [
-    {
 icon: <Search className='w-8 h-8 text-white' />,
       title: 'Comprehensive SEO Analysis',
       description:
-        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <Target className='w-8 h-8 text-white' />,
-      title: 'Keyword Research',
+      icon: <Target className='w-8 h-8 text-white' />
+      title: 'Keyword Research'
       description:
-        'Discover high-value keywords and analyze search intent to optimize your content strategy.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        'Discover high-value keywords and analyze search intent to optimize your content strategy.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-      title: 'Competitive Analysis',
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'Competitive Analysis'
       description:
-        "Analyze your competitors' SEO strategies and identify opportunities to outperform them.",
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500',
-    },
+        "Analyze your competitors' SEO strategies and identify opportunities to outperform them."
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'
+    }
     {
-      icon: <Zap className='w-8 h-8 text-white' />,
-      title: 'AI-Powered Insights',
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'AI-Powered Insights'
       description:
         'Get intelligent recommendations and actionable insights to improve your search rankings.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
@@ -56,7 +41,7 @@ icon: <Search className='w-8 h-8 text-white' />,
   ];
   const seoFactors = [
     {
-      category: 'On-Page SEO',
+      category: 'On-Page SEO'
       factors: [
 'Title tags optimization',
         'Meta descriptions',
@@ -108,13 +93,12 @@ icon: <Search className='w-8 h-8 text-white' />,
       color: 'text-orange-400',
     },
   ];
-
   const pricing = [
     {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small businesses and bloggers',
+      name: 'Starter'
+      price: '$39'
+      period: '/month'
+      description: 'Perfect for small businesses and bloggers'
       features: [
 '10 website analyses/month',
         'Basic SEO metrics',
@@ -168,12 +152,12 @@ icon: <Search className='w-8 h-8 text-white' />,
     // Simulate SEO analysis
     setTimeout(() => {
       setAnalysisResults({
-        url: url,
-        overallScore: 78,
-        onPageScore: 82,
-        technicalScore: 75,
-        contentScore: 80,
-        mobileScore: 85,
+        url: url
+        overallScore: 78
+        onPageScore: 82
+        technicalScore: 75
+        contentScore: 80
+        mobileScore: 85
         issues: [
 {
             type: 'error',
@@ -181,35 +165,35 @@ icon: <Search className='w-8 h-8 text-white' />,
             priority: 'high',
           },
           {
-            type: 'warning',
-            message: 'Title tag too long (65 characters)',
-            priority: 'medium',
-          },
+            type: 'warning'
+            message: 'Title tag too long (65 characters)'
+            priority: 'medium'
+          }
           {
-            type: 'info',
-            message: 'Consider adding more internal links',
-            priority: 'low',
-          },
-        ],
+            type: 'info'
+            message: 'Consider adding more internal links'
+            priority: 'low'
+          }
+        ]
         recommendations: [
-          'Optimize meta descriptions for better click-through rates',
-          'Improve page load speed by optimizing images',
-          'Add more relevant internal links to improve site structure',
-          'Implement schema markup for rich snippets',
-        ],
+          'Optimize meta descriptions for better click-through rates'
+          'Improve page load speed by optimizing images'
+          'Add more relevant internal links to improve site structure'
+          'Implement schema markup for rich snippets'
+        ]
         keywords: [
           {
-            keyword: 'website optimization',
-            volume: '12K',
-            difficulty: 'medium',
-          },
-          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' },
+            keyword: 'website optimization'
+            volume: '12K'
+            difficulty: 'medium'
+          }
+          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
           {
-            keyword: 'search engine optimization',
-            volume: '15K',
-            difficulty: 'high',
-          },
-        ],
+            keyword: 'search engine optimization'
+            volume: '15K'
+            difficulty: 'high'
+          }
+        ]
       });
       setIsAnalyzing(false);
     }, 4000);
@@ -236,13 +220,11 @@ icon: <Search className='w-8 h-8 text-white' />,
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
             <Search className='w-4 h-4 mr-2' />
@@ -257,7 +239,6 @@ icon: <Search className='w-8 h-8 text-white' />,
             recommendations to improve your search rankings and drive more
             organic traffic.
           </p>
-
           {/* URL Input */}
           <div className='max-w-2xl mx-auto mb-8'>
             <div className='flex flex-col sm:flex-row gap-4'>
@@ -277,6 +258,26 @@ icon: <Search className='w-8 h-8 text-white' />,
                 {isAnalyzing ? (
                   <>
 <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />
+          </p>
+          {/* URL Input */}
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <input
+                type="url"
+                placeholder="Enter your website URL (e.g., https://example.com)"
+                value={url}
+                onChange={(e) => setUrl(e.target.value)}
+                className="flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              />
+              <Button
+                onClick={handleAnalyzeSEO}
+                size="lg"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap"
+                disabled={isAnalyzing |!url.trim()}
+              >
+                {isAnalyzing ? (
+                  <>
+                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2" />
                     Analyzing...
                   </>
                 ) : (
@@ -309,7 +310,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -322,7 +322,6 @@ href='/contact'
               you dominate search rankings.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -355,7 +354,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* SEO Factors Section */}
 <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -368,7 +366,6 @@ href='/contact'
               actionable insights and recommendations.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
               <Card
@@ -398,7 +395,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* Demo Analysis Results */}
       {analysisResults && (
 <section className='section-padding bg-gradient-cursor-accent'>
@@ -412,7 +408,6 @@ href='/contact'
                 insights for your own website.
               </p>
             </div>
-
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8'>
               {/* Overall Score */}
               <Card className='border-gradient-green text-center'>
@@ -441,7 +436,6 @@ href='/contact'
                   Good SEO foundation with room for improvement
                 </p>
               </Card>
-
               {/* Detailed Scores */}
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -474,7 +468,6 @@ href='/contact'
                   </div>
                 </div>
               </Card>
-
               {/* Issues */}
 <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -501,7 +494,6 @@ href='/contact'
                 </div>
               </Card>
             </div>
-
             {/* Recommendations and Keywords */}
 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               <Card className='border-gradient-green'>
@@ -523,7 +515,6 @@ href='/contact'
                   Keyword Opportunities
                 </h3>
                 <div className='space-y-4'>
-                  {analysisResults.keywords.map((keyword, index) => (
                     <div
                       key={index}
                       className='border-b border-gray-700 pb-3 last:border-b-0'
@@ -560,7 +551,6 @@ href='/contact'
           </div>
         </section>
       )}
-
       {/* Pricing Section */}
 <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -600,7 +590,6 @@ href='/contact'
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -612,7 +601,6 @@ href='/contact'
                     </li>
                   ))}
                 </ul>
-
                 <Button
 href='/contact'
                   size='lg'
@@ -626,13 +614,11 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
-            Ready to Improve Your SEO Rankings?
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their

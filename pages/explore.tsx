@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -39,9 +39,6 @@ export default function ExplorePage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
-
-  const categories = [
-    {
       id: 'ai',
       name: 'AI & Machine Learning',
       icon: Brain,
@@ -202,7 +199,6 @@ default:
         return 0;
     }
   });
-
   return (
 <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
@@ -223,7 +219,6 @@ default:
       </Head>
 
       <SmartHeader />
-
       {/* Hero Section */}
 <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
@@ -252,7 +247,6 @@ default:
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filters */}
 <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
@@ -271,7 +265,6 @@ default:
                   />
                 </div>
               </div>
-
               {/* Sort Options */}
 <div className='flex items-center gap-4'>
                 <select
@@ -288,7 +281,6 @@ default:
           </div>
         </div>
       </section>
-
       {/* Featured Services */}
 <section className='px-6 pb-16'>
         <div className='max-w-7xl mx-auto'>
@@ -322,7 +314,6 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                   >
                     <service.icon className='w-8 h-8 text-white' />
                   </div>
-
                   <div className='flex items-center justify-between mb-3'>
                     <span
                       className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -339,20 +330,17 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
                       {service.category}
                     </span>
                   </div>
-
                   <h3 className='text-lg font-bold mb-2 text-white'>
                     {service.title}
                   </h3>
                   <p className='text-sm text-white/70 mb-4 leading-relaxed'>
                     {service.description}
                   </p>
-
                   <div className='mb-4'>
                     <span className='text-xl font-bold text-cyan-400'>
                       {service.price}
                     </span>
                   </div>
-
                   <a
                     href={`/services#${service.id}`}
                     className='inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium'
@@ -366,7 +354,6 @@ className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-
           </div>
         </div>
       </section>
-
       {/* Categories Grid */}
 <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
@@ -437,7 +424,6 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                       >
                         <category.icon className='w-10 h-10 text-white' />
                       </div>
-
                       {/* Category Info */}
                       <h3 className='text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300'>
                         {category.name}
@@ -445,7 +431,6 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
                       <p className='text-white/70 leading-relaxed mb-6'>
                         {category.description}
                       </p>
-
                       {/* Stats */}
                       <div className='flex items-center justify-between mb-6'>
                         <div className='text-center'>
@@ -478,7 +463,6 @@ className='group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-
           </AnimatePresence>
         </div>
       </section>
-
       {/* Technology Trends */}
 <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>
@@ -562,7 +546,6 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
                 >
                   <trend.icon className='w-8 h-8 text-white' />
                 </div>
-
                 <div className='flex items-center justify-between mb-3'>
                   <h3 className='text-xl font-bold text-white'>
                     {trend.title}
@@ -585,7 +568,6 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
                     {trend.trend}
                   </span>
                 </div>
-
                 <p className='text-white/70 leading-relaxed'>
                   {trend.description}
                 </p>
@@ -594,7 +576,6 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
@@ -629,7 +610,6 @@ className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-w
           </motion.div>
         </div>
       </section>
-
       <SmartFooter />
     </div>
 );

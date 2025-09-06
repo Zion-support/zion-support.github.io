@@ -1,9 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { getSessionFromReq, isInternalAgentRequest } from '../../utils/auth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   res.status(200).json({ message: 'OK' });
 

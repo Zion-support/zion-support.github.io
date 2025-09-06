@@ -1,18 +1,21 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users  } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function AIHRRecruitmentPage() {
+  const service = null;
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Users,;
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Users;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
 export default function AIHRRecruitmentPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-hr-recruitment')
@@ -103,7 +106,7 @@ export default function AIHRRecruitmentPage() {
             Accelerate your recruitment process with AI-powered tools that help you find and hire the best candidates.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700">
+            <a href="/contact" className="bg-teal-600 text-white px-6 py-3 rounded-lg hover: bg-teal-700">
               Get Started
             </a>
             <a href="/about" className="border border-teal-600 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50">

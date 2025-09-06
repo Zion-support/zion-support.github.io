@@ -19,7 +19,7 @@ class MergeConflictFixer {
     this.log('🔍 Finding files with merge conflicts...');
     
     try {
-      const result = execSync('grep -r "<<<<<<< HEAD" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.md" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next', { 
+      const result = execSync('grep -r "" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.md" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next', { 
         stdio: 'pipe',
         encoding: 'utf8'
       });
@@ -44,13 +44,11 @@ class MergeConflictFixer {
       const originalContent = content;
       
       // Remove merge conflict markers and keep the HEAD version
-      content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
-      
+      content = content.replace(/\n([\s\S]*?)([\s\S]*?)      
       // Clean up any remaining conflict markers
-      content = content.replace(/<<<<<<< HEAD\n?/g, '');
-      content = content.replace(/=======\n?/g, '');
-      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-      
+      content = content.replace(/\n?/g, '');
+      content = content.replace(/\n?/g, '');
+      content = content.replace(/      
       // Clean up common merge conflict artifacts
       content = content.replace(/\s*,\s*$/gm, ','); // Fix trailing commas
       content = content.replace(/,\s*}/g, '}'); // Fix trailing commas before closing braces

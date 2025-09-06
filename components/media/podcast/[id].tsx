@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-
+  const router = null;
   }, [id]);
-
   if (!episode) return <div>Loading…</div>;
-
   return (
 <div className='space-y-4'>
       <h1 className='text-2xl font-bold'>{episode.title}</h1>

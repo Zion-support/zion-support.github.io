@@ -1,8 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   Brain,
   Atom,
   Target,
@@ -98,13 +93,20 @@ services: practicalBusinessSolutionServices2029,
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'
                 >
+                emerging tech breakthroughs, and practical business solutions that will transform your business.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                  Explore Services
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link href="/contact" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300">
                   Get Started
                 </Link>
               </div>
             </motion.div>
           </div>
         </section>
-
         {/* Services Overview */}
 <section
           id='services'
@@ -170,7 +172,6 @@ viewport={{ once: true }}
             </div>
           </div>
         </section>
-
         {/* Featured Services */}
 <section className='py-20 bg-black'>
           <div className='container mx-auto px-4'>
@@ -254,7 +255,6 @@ viewport={{ once: true }}
                 </motion.div>
               ))}
             </div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -272,7 +272,6 @@ viewport={{ once: true }}
             </motion.div>
           </div>
         </section>
-
         {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
           <div className='container mx-auto px-4 text-center'>
@@ -324,7 +323,6 @@ viewport={{ once: true }}
             </motion.div>
           </div>
         </section>
-
         <UltraFuturisticFooter2029 />
       </div>
     </>

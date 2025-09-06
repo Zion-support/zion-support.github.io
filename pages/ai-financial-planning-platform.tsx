@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AiFinancialPlanningPlatform() {
-  
-    />
-  );
+			title;
+				"Headcount planning and hiring plans"
+			]}
+			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
+			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
+		/>
+	)
+}

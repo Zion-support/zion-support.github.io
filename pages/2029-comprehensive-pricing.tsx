@@ -1,8 +1,3 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   CheckCircle,
   Star,
   Zap,
@@ -33,9 +28,8 @@ import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-bu
 };
 
 export default function ComprehensivePricing2029() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState('monthly');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [billingCycle, setBillingCycle] = useState('monthly')
   const allServices = [
 ...aiAutonomousEcosystemServices2029,
     ...emergingTechBreakthroughServices2029,
@@ -103,14 +97,13 @@ export default function ComprehensivePricing2029() {
   };
 
   const getBillingText = (price: string) => {
-    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''));
+    const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     if (billingCycle === 'monthly') {
 return `$${numericPrice.toLocaleString()}/month`;
     } else {
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`;
     }
-  };
-
+  }
   return (
 <div className='min-h-screen bg-black text-white relative'>
       <FuturisticAnimatedBackground2029 />
@@ -130,9 +123,7 @@ return `$${numericPrice.toLocaleString()}/month`;
           href='https://ziontechgroup.com/2029-comprehensive-pricing'
         />
       </Head>
-
       <UltraFuturisticNavigation2029 />
-
       {/* Hero Section */}
 <section className='relative overflow-hidden py-32'>
         <div className='relative z-10 container mx-auto px-4 text-center'>
@@ -175,7 +166,6 @@ billingCycle === 'annual'
           </motion.div>
         </div>
       </section>
-
       {/* Category Filter */}
 <section className='py-12 bg-gradient-to-b from-black to-gray-900'>
         <div className='container mx-auto px-4'>
@@ -202,7 +192,6 @@ billingCycle === 'annual'
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
 <section className='py-20 bg-black'>
         <div className='container mx-auto px-4'>
@@ -261,7 +250,6 @@ viewport={{ once: true }}
                       )}
                     </div>
                   </div>
-
                   {/* Categories */}
 <div className='flex flex-wrap gap-2 mb-6 justify-center'>
                     {service.category.slice(0, 3).map((cat, catIndex) => (
@@ -273,7 +261,6 @@ viewport={{ once: true }}
                       </span>
                     ))}
                   </div>
-
                   {/* Key Features */}
 <div className='mb-6'>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -293,7 +280,6 @@ viewport={{ once: true }}
                         ))}
                     </ul>
                   </div>
-
                   {/* Key Benefits */}
 <div className='mb-6'>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -313,7 +299,6 @@ viewport={{ once: true }}
                         ))}
                     </ul>
                   </div>
-
                   {/* Market Info */}
 <div className='grid grid-cols-2 gap-4 mb-6 text-center'>
                     <div>
@@ -331,7 +316,6 @@ viewport={{ once: true }}
                       </div>
                     </div>
                   </div>
-
                   {/* CTA Buttons */}
 <div className='flex gap-3'>
                     <Link
@@ -353,7 +337,6 @@ viewport={{ once: true }}
           </div>
         </div>
       </section>
-
       {/* Enterprise Solutions */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
         <div className='container mx-auto px-4 text-center'>
@@ -441,7 +424,6 @@ viewport={{ once: true }}
           </motion.div>
         </div>
       </section>
-
       {/* Contact CTA */}
 <section className='py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20'>
         <div className='container mx-auto px-4 text-center'>
@@ -502,7 +484,6 @@ href='/2029-innovative-services-showcase'
           </motion.div>
         </div>
       </section>
-
       <UltraFuturisticFooter2029 />
     </div>
 );

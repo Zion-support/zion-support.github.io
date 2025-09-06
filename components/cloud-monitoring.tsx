@@ -1,120 +1,95 @@
-import React from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-import {
-  Activity,
-  BarChart3,
-  AlertTriangle,
-  Clock,
-  Database,
-  Globe,
-  Lock,
-  Shield,
-  TrendingUp,
-  Users,
-  Zap,
-  ArrowRight,
-  Play,
-  CheckCircle,
-  Star,
-  Server,
-  Cloud,
-  Eye,
-  Bell,
-  Settings,
-  Code,;
-} from 'lucide-react';
-
+import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
 export default function CloudMonitoringPage() {
-  const features = [
+  const features = null;
     {
-icon: <Activity className='w-8 h-8 text-white' />,
-      title: 'Real-time Monitoring',
+      icon: <Activity className='w-8 h-8 text-white' />
       description:
-        'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      gradient: 'from-green-400 to-emerald-500',
-    },
+        'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'
+    }
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />,
-      title: 'Advanced Analytics',
+      icon: <BarChart3 className='w-8 h-8 text-white' />
+      title: 'Advanced Analytics'
       description:
-        'Deep insights into performance metrics, resource utilization, and business intelligence.',
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-      gradient: 'from-blue-400 to-cyan-500',
-    },
+        'Deep insights into performance metrics, resource utilization, and business intelligence.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'
+    }
     {
-      icon: <AlertTriangle className='w-8 h-8 text-white' />,
-      title: 'Smart Alerting',
+      icon: <AlertTriangle className='w-8 h-8 text-white' />
+      title: 'Smart Alerting'
       description:
-        'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.',
-      color: 'bg-gradient-to-br from-red-500 to-pink-600',
-      gradient: 'from-red-400 to-pink-500',
-    },
+        'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.'
+      color: 'bg-gradient-to-br from-red-500 to-pink-600'
+      gradient: 'from-red-400 to-pink-500'
+    }
     {
-      icon: <Database className='w-8 h-8 text-white' />,
-      title: 'Multi-Cloud Support',
+      icon: <Database className='w-8 h-8 text-white' />
+      title: 'Multi-Cloud Support'
       description:
-        'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-      gradient: 'from-purple-400 to-indigo-500',
-    },
+        'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'
+    }
     {
-      icon: <Shield className='w-8 h-8 text-white' />,
-      title: 'Security Monitoring',
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Security Monitoring'
       description:
-        'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
-      gradient: 'from-yellow-400 to-orange-500',
-    },
+        'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.'
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600'
+      gradient: 'from-yellow-400 to-orange-500'
+    }
     {
-      icon: <Zap className='w-8 h-8 text-white' />,
-      title: 'Auto-scaling',
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Auto-scaling'
       description:
-        'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
-      gradient: 'from-teal-400 to-blue-500',
-    },
+        'Intelligent auto-scaling based on real-time metrics and predictive analytics.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'
+    }
   ];
-
   const monitoringCapabilities = [
     {
-      category: 'Infrastructure',
-      icon: <Server className='w-6 h-6 text-blue-400' />,
+      category: 'Infrastructure'
+      icon: <Server className='w-6 h-6 text-blue-400' />
       metrics: [
-        'CPU Usage',
-        'Memory Utilization',
-        'Disk I/O',
-        'Network Performance',
-        'Container Metrics',
-      ],
-    },
+        'CPU Usage'
+        'Memory Utilization'
+        'Disk I/O'
+        'Network Performance'
+        'Container Metrics'
+      ]
+    }
     {
-      category: 'Applications',
-      icon: <Code className='w-6 h-6 text-green-400' />,
+      category: 'Applications'
+      icon: <Code className='w-6 h-6 text-green-400' />
       metrics: [
-        'Response Time',
-        'Error Rates',
-        'Throughput',
-        'User Experience',
-        'API Performance',
-      ],
-    },
+        'Response Time'
+        'Error Rates'
+        'Throughput'
+        'User Experience'
+        'API Performance'
+      ]
+    }
     {
-      category: 'Databases',
-      icon: <Database className='w-6 h-6 text-purple-400' />,
+      category: 'Databases'
+      icon: <Database className='w-6 h-6 text-purple-400' />
       metrics: [
-        'Query Performance',
-        'Connection Pool',
-        'Index Usage',
-        'Replication Lag',
-        'Storage Growth',
-      ],
-    },
+        'Query Performance'
+        'Connection Pool'
+        'Index Usage'
+        'Replication Lag'
+        'Storage Growth'
+      ]
+    }
     {
-      category: 'Security',
-      icon: <Shield className='w-6 h-6 text-red-400' />,
+      category: 'Security'
+      icon: <Shield className='w-6 h-6 text-red-400' />
       metrics: [
         'Threat Detection',
         'Access Logs',
@@ -124,13 +99,12 @@ icon: <Activity className='w-8 h-8 text-white' />,
       ],
     },
   ];
-
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
+      name: 'Starter'
+      price: '$49'
+      period: '/month'
+      description: 'Perfect for small teams and startups'
       features: [
 'Up to 10 servers',
         'Basic monitoring',
@@ -193,7 +167,6 @@ icon: <Activity className='w-8 h-8 text-white' />,
     { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
 { name: 'Jira', icon: '📋', description: 'Issue tracking' },
   ];
-
   const useCases = [
     {
       title: 'DevOps Teams',
@@ -244,7 +217,6 @@ description:
       ],
     },
   ];
-
   return (
     <>
       <Head>
@@ -266,14 +238,12 @@ description:
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>
         <div className='absolute inset-0'>
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]' />
           <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]' />
         </div>
-
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <div className='mb-8'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
@@ -281,7 +251,6 @@ description:
               Real-time Infrastructure Monitoring
             </div>
           </div>
-
           <h1 className='text-4xl sm:text-5xl md:text-6xl font-black mb-8 text-white leading-tight'>
             Cloud Monitoring & Analytics
           </h1>
@@ -289,7 +258,6 @@ description:
             Monitor your entire infrastructure in real-time with AI-powered
             insights and intelligent alerting
           </p>
-
           <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
             <Button
               href='#pricing'
@@ -309,7 +277,6 @@ description:
               Watch Demo
             </Button>
           </div>
-
           {/* Stats */}
 <div className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
             <div className='text-center'>
@@ -339,7 +306,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -377,7 +343,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Monitoring Capabilities */}
 <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -390,7 +355,6 @@ description:
               and insights
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {monitoringCapabilities.map((capability, index) => (
               <Card
@@ -421,7 +385,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -434,7 +397,6 @@ description:
               monitoring
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -468,7 +430,6 @@ description:
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section id='pricing' className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -504,7 +465,6 @@ description:
                   </div>
                   <p className='text-gray-400'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -516,7 +476,6 @@ description:
                     </li>
                   ))}
                 </ul>
-
                 <Button
 href='/contact'
                   className={`w-full ${plan.buttonColor} text-white`}
@@ -530,7 +489,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
 <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -563,7 +521,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
 <section className='py-24 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />

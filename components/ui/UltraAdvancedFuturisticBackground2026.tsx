@@ -1,41 +1,24 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion  } from 'framer-motion';
 interface UltraAdvancedFuturisticBackground2026Props {
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';
-  colorScheme?:
-    | 'neural-network'
-    | 'quantum-field'
-    | 'cyberpunk'
-    | 'holographic'
-    | 'multidimensional';
+  intensity?: 'low' | 'medium' | 'high' | 'extreme',
+  colorScheme?: 'neural-network' | 'quantum-field' | 'cyberpunk' | 'holographic' | 'multidimensional';
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
   enableQuantumEffects?: boolean;
   enableNeuralNetworks?: boolean;
   enableMultidimensional?: boolean;
-children?: React.ReactNode;
+  children?: React.ReactNode
+}
 
-const UltraAdvancedFuturisticBackground2026: React.FC<
-  UltraAdvancedFuturisticBackground2026Props
-> = ({
-  intensity = 'high',
-  colorScheme = 'neural-network',
-  particleCount = 300,
-  animationSpeed = 2.0,
-  enableHolographic = true,
-  enableQuantumEffects = true,
-  enableNeuralNetworks = true,
-  enableMultidimensional = true,
-  children,
-}) => {
+const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBackground2026Props> = ({
+  intensity;
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
@@ -46,11 +29,9 @@ let animationFrameId: number;
     let holographicLayers: HolographicLayer[] = [];
 
       }
-    };
-
+    }
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-
     // Particle class
     class Particle {
 x: number;
@@ -73,26 +54,21 @@ x: number;
         this.life = Math.random() * 100 + 50;
 this.maxLife = this.life;
       }
-
       update() {
         this.x += this.vx;
         this.y += this.vy;
         this.life--;
-
         // Bounce off edges
-        if (this.x <= 0 || this.x >= canvas.width) this.vx *= -1;
-        if (this.y <= 0 || this.y >= canvas.height) this.vy *= -1;
-
+        if (this.x <= 0 |this.x >= canvas.width) this.vx *= -1;
+        if (this.y <= 0 |this.y >= canvas.height) this.vy *= -1;
         // Wrap around
         if (this.x < 0) this.x = canvas.width;
         if (this.x > canvas.width) this.x = 0;
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
-
         // Fade out
 this.alpha = this.life / this.maxLife;
       }
-
       draw() {
         ctx.save();
         ctx.globalAlpha = this.alpha;
@@ -103,7 +79,6 @@ this.alpha = this.life / this.maxLife;
 ctx.restore();
       }
     }
-
     // Neural network node class
     class NeuralNode {
 x: number;
@@ -118,13 +93,11 @@ x: number;
         this.activation = Math.random();
 this.pulse = 0;
       }
-
       update() {
         this.activation += (Math.random() - 0.5) * 0.1;
         this.activation = Math.max(0, Math.min(1, this.activation));
 this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;
       }
-
       draw() {
         ctx.save();
         ctx.globalAlpha = 0.8;
@@ -132,7 +105,6 @@ this.pulse = Math.sin(Date.now() * 0.001 + this.x * 0.01) * 0.5 + 0.5;
         ctx.beginPath();
         ctx.arc(this.x, this.y, 3 + this.pulse * 2, 0, Math.PI * 2);
         ctx.fill();
-
         // Draw connections
         this.connections.forEach(connection => {
           const distance = Math.sqrt(
@@ -151,7 +123,6 @@ ctx.stroke();
         ctx.restore();
       }
     }
-
     // Quantum field class
     class QuantumField {
 x: number;
@@ -166,7 +137,6 @@ x: number;
         this.intensity = Math.random() * 0.8 + 0.2;
 this.phase = Math.random() * Math.PI * 2;
       }
-
       update() {
         this.phase += 0.02 * animationSpeed;
       }
@@ -188,7 +158,6 @@ ctx.stroke();
         ctx.restore();
       }
     }
-
     // Holographic layer class
     class HolographicLayer {
 x: number;
@@ -212,7 +181,6 @@ this.color = getColorSchemeColor();
         this.rotation += 0.005 * animationSpeed;
 this.alpha = Math.sin(Date.now() * 0.001) * 0.1 + 0.2;
       }
-
       draw() {
         ctx.save();
         ctx.translate(this.x, this.y);
@@ -228,7 +196,6 @@ ctx.beginPath();
         ctx.restore();
       }
     }
-
     // Get color based on scheme
     function getColorSchemeColor(): string {
       const colors = {
@@ -242,12 +209,11 @@ ctx.beginPath();
       const schemeColors = colors[colorScheme] || colors['neural-network'];
       return schemeColors[Math.floor(Math.random() * schemeColors.length)];
     }
-
     // Initialize particles
     for (let i = 0; i < particleCount; i++) {
       particles.push(
         new Particle(
-          Math.random() * canvas.width,
+          Math.random() * canvas.width
           Math.random() * canvas.height
         )
       );
@@ -258,7 +224,7 @@ ctx.beginPath();
 for (let i = 0; i < 20; i++) {
         neuralNodes.push(
           new NeuralNode(
-            Math.random() * canvas.width,
+            Math.random() * canvas.width
             Math.random() * canvas.height
           )
         );
@@ -279,24 +245,21 @@ node.connections.push(otherNode);
 for (let i = 0; i < 8; i++) {
         quantumFields.push(
           new QuantumField(
-            Math.random() * canvas.width,
+            Math.random() * canvas.width
             Math.random() * canvas.height
           )
         );
       }
     }
-
     // Initialize holographic layers
     if (enableHolographic) {
 for (let i = 0; i < 5; i++) {
         holographicLayers.push(new HolographicLayer());
       }
     }
-
     // Animation loop
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       // Create gradient background
       const gradient = ctx.createRadialGradient(
 canvas.width / 2,
@@ -342,7 +305,6 @@ canvas.width / 2,
       gradient.addColorStop(1, currentBgColors[2]);
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       // Update and draw quantum fields
       if (enableQuantumEffects) {
         quantumFields.forEach(field => {
@@ -350,7 +312,6 @@ canvas.width / 2,
 field.draw();
         });
       }
-
       // Update and draw holographic layers
       if (enableHolographic) {
         holographicLayers.forEach(layer => {
@@ -358,7 +319,6 @@ field.draw();
 layer.draw();
         });
       }
-
       // Update and draw neural network
       if (enableNeuralNetworks) {
         neuralNodes.forEach(node => {
@@ -366,12 +326,10 @@ layer.draw();
 node.draw();
         });
       }
-
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.update();
         particle.draw();
-
         // Remove dead particles and create new ones
         if (particle.life <= 0) {
           particles[index] = new Particle(
@@ -380,16 +338,14 @@ Math.random() * canvas.width,
           );
         }
       });
-
       // Draw particle connections
-      if (intensity === 'extreme' || intensity === 'high') {
+      if (intensity === 'extreme' |intensity === 'high') {
         particles.forEach((particle, i) => {
           particles.slice(i + 1).forEach(otherParticle => {
             const distance = Math.sqrt(
 Math.pow(particle.x - otherParticle.x, 2) +
                 Math.pow(particle.y - otherParticle.y, 2)
             );
-
             if (distance < 100) {
               ctx.save();
               ctx.globalAlpha = ((100 - distance) / 100) * 0.3;
@@ -409,30 +365,26 @@ ctx.restore();
     };
 
     animate();
-
     return () => {
       window.removeEventListener('resize', resizeCanvas);
 cancelAnimationFrame(animationFrameId);
     };
   }, [
-    intensity,
-    colorScheme,
-    particleCount,
-    animationSpeed,
-    enableHolographic,
-    enableQuantumEffects,
-    enableNeuralNetworks,
-    enableMultidimensional,
+    intensity
+    colorScheme
+    particleCount
+    animationSpeed
+    enableHolographic
+    enableQuantumEffects
+    enableNeuralNetworks
+    enableMultidimensional
   ]);
-
-  
     >
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
       />
-
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className='absolute inset-0 pointer-events-none'>

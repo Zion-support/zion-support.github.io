@@ -1,17 +1,16 @@
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
-import EnhancedLayout from '../../../components/layout/EnhancedLayout';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
+import EnhancedLayout from '../../../components/layout/EnhancedLayout',
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-
+const fetcher = null;
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split(';').reduce(
+  const cookies = (req.headers.cookie |'').split(';').reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
-      if (k) acc[k] = decodeURIComponent(v || '');
+      if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
-    },
+    }
     {} as Record<string, string>
   );
   let role = 'guest';
@@ -32,7 +31,7 @@ const [statusFilter, setStatusFilter] = useState<
   >('Open');
 
   const disputes = useMemo(() => {
-    const list = data?.disputes || [];
+    const list = data?.disputes |[];
     if (statusFilter === 'All') return list;
 return list.filter((d: any) => d.status === statusFilter);
   }, [data, statusFilter]);
@@ -40,6 +39,9 @@ return list.filter((d: any) => d.status === statusFilter);
   return (
     <EnhancedLayout>
 <div className='max-w-6xl mx-auto'>
+  return (
+    <EnhancedLayout>
+      <div className='max-w-6xl mx-auto'>
         <div className='flex items-center justify-between mb-4'>
           <h1 className='text-2xl font-semibold'>Dispute Resolution Center</h1>
           <select

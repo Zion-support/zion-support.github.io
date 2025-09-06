@@ -1,84 +1,13 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {
-  TrendingUp,
-  Brain,
-  Shield,
-  Zap,
-  Target,
-  BarChart3,
-  Cpu,
-  Globe,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
+import { TrendingUp, Brain, Shield, Zap, Target;
+  BarChart3, Cpu, Globe, Users, Award;
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
+ } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
-const features = [
-  'Quantum-enhanced market prediction algorithms',
-  'Real-time market data processing',
-  'AI-powered risk assessment',
-  'Multi-asset portfolio optimization',
-  'Regulatory compliance automation',
-  'Backtesting and simulation engine',
-  'Custom strategy builder',
-  'Performance analytics dashboard',
+const contactInfo = null;
 ];
-
-const pricingPlans = [
-  {
-    name: 'Starter',
-    price: 199,
-    period: 'month',
-features: [
-      'Basic algorithms',
-      '5 asset classes',
-      'Daily rebalancing',
-      'Standard support',
-    ],
-    popular: false,
-  },
-  {
-    name: 'Professional',
-    price: 499,
-    period: 'month',
-features: [
-      'Advanced algorithms',
-      'All asset classes',
-      'Real-time rebalancing',
-      'Custom strategies',
-      'Priority support',
-    ],
-    popular: true,
-  },
-  {
-    name: 'Enterprise',
-    price: 1299,
-    period: 'month',
-features: [
-      'Quantum algorithms',
-      'White-label solution',
-      'API access',
-      'Dedicated support',
-      'Custom integrations',
-    ],
-    popular: false,
-  },
-];
-
 export default function QuantumTradingAlgorithm() {
   return (
     <Layout>
@@ -105,11 +34,9 @@ export default function QuantumTradingAlgorithm() {
           content='https://ziontechgroup.com/quantum-trading-algorithm'
         />
       </Head>
-
       {/* Hero Section */}
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>
@@ -141,7 +68,6 @@ className='mb-8'
               strategies.
             </p>
           </motion.div>
-
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -166,7 +92,6 @@ className='flex flex-col sm:flex-row gap-4 justify-center items-center'
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
 <section className='py-20 bg-gradient-to-b from-black to-slate-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -207,7 +132,6 @@ className='bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-g
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
 <section id='pricing' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -259,7 +183,6 @@ plan.popular
                     </span>
                   </div>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
                     <li
@@ -280,7 +203,6 @@ plan.popular
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
 <section
         id='contact'
@@ -317,7 +239,6 @@ className='text-center'
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -331,7 +252,6 @@ className='text-center'
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

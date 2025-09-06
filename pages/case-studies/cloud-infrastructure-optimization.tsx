@@ -1,10 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
-
+        <meta name;
             </p>
           </header>
-
           {/* Case Study Content */}
 <div className='max-w-4xl mx-auto'>
             {/* Company Overview */}
@@ -39,7 +38,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Challenge */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -73,7 +71,6 @@ import Link from 'next/link';
                 </ul>
               </div>
             </section>
-
             {/* Solution */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -129,12 +126,40 @@ import Link from 'next/link';
                     <p className='text-white/80'>
                       AI-powered cost optimization algorithms automatically
                       identify and implement cost-saving opportunities.
+                  monitors, and heals itself while optimizing costs and performance.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-blue-400 mb-3">Auto-scaling</h4>
+                    <p className="text-white/80">
+                      Intelligent scaling algorithms automatically adjust resources based on
+                      real-time demand and performance metrics.
+                    </p>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-blue-400 mb-3">Load Balancing</h4>
+                    <p className="text-white/80">
+                      Advanced load balancing distributes traffic efficiently across multiple
+                      instances for optimal performance.
+                    </p>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-blue-400 mb-3">Monitoring</h4>
+                    <p className="text-white/80">
+                      Comprehensive monitoring and alerting systems provide real-time visibility
+                      into infrastructure health and performance.
+                    </p>
+                  </div>
+                  <div className="bg-white/5 rounded-lg p-6 border border-white/10">
+                    <h4 className="text-xl font-semibold text-blue-400 mb-3">Cost Optimization</h4>
+                    <p className="text-white/80">
+                      AI-powered cost optimization algorithms automatically identify and
+                      implement cost-saving opportunities.
                     </p>
                   </div>
                 </div>
               </div>
             </section>
-
             {/* Results */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -204,7 +229,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Technologies */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -230,7 +254,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Implementation */}
 <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -285,7 +308,6 @@ import Link from 'next/link';
                 </div>
               </div>
             </section>
-
             {/* Call to Action */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20'>

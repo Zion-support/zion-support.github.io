@@ -1,7 +1,7 @@
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
-type Props = { vendor: Vendor | null };
+type Props = any;
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
@@ -21,35 +21,33 @@ if (!activeVendor)
       name: String(formData.get('name') || activeVendor.name),
       about: String(formData.get('about') || activeVendor.about || ''),
       servicesOffered: String(
-        formData.get('servicesOffered') ||
-          activeVendor.servicesOffered?.join(',') ||
+        formData.get('servicesOffered') |
+          activeVendor.servicesOffered?.join(',') |
           ''
       )
         .split(',')
         .map(s => s.trim())
-        .filter(Boolean),
+        .filter(Boolean)
     } as Vendor;
     // For MVP, update via direct API not implemented; keep local preview only
     setActiveVendor(updated);
   }
-
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 const packages = [
       ...(activeVendor.packages || []),
       {
-        id: `pkg_${Date.now()}`,
-        title: pkgTitle,
-        description: pkgDesc,
-        priceUsd: Number(pkgPrice),
-      },
+        id: `pkg_${Date.now()}`
+        title: pkgTitle
+        description: pkgDesc
+        priceUsd: Number(pkgPrice)
+      }
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
-
   return (
     <div className='space-y-8'>
       <div className='flex items-center justify-between'>
@@ -60,7 +58,6 @@ const packages = [
           </span>
         )}
       </div>
-
       <section className='space-y-4'>
         <h2 className='text-lg font-medium'>Profile</h2>
         <form
@@ -79,7 +76,7 @@ const packages = [
             <label className='block text-sm mb-1'>About</label>
             <textarea
               name='about'
-              defaultValue={activeVendor.about || ''}
+              defaultValue={activeVendor.about |''}
               rows={4}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />
@@ -88,7 +85,7 @@ const packages = [
             <label className='block text-sm mb-1'>Services Offered</label>
             <input
               name='servicesOffered'
-              defaultValue={activeVendor.servicesOffered?.join(', ') || ''}
+              defaultValue={activeVendor.servicesOffered?.join(', ') |''}
               className='w-full border rounded px-3 py-2 bg-transparent'
             />
           </div>
@@ -103,7 +100,6 @@ const packages = [
 <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-          {(activeVendor.packages || []).map(p => (
             <div
               key={p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'
@@ -149,14 +145,12 @@ const packages = [
         <h2 className='text-lg font-medium'>Project Pipeline</h2>
         <Pipeline vendorId={activeVendor.id} />
       </section>
-
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
 
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
-
   async function fetchItems() {
 const res = await fetch(
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
@@ -164,7 +158,6 @@ const res = await fetch(
     const data = await res.json();
     setItems(data.items || []);
   }
-
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
       method: 'POST',
@@ -172,12 +165,9 @@ const res = await fetch(
 body: JSON.stringify({ itemId, status }),
     });
     fetchItems();
-  }
-
   useEffect(() => {
     fetchItems();
   }, []);
-
   return (
     <div className='space-y-2'>
       {items.length === 0 && (

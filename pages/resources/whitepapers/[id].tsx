@@ -1,7 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
     category: 'Technology',
     pages: '45',
@@ -85,6 +81,14 @@ export default function WhitepaperPage() {
               href='/resources'
               className='px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
             >
+  if (!whitepaper) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold mb-4">Whitepaper Not Found</h1>
+            <p className="text-white/80 mb-8">The requested whitepaper could not be found.</p>
+            <Link href="/resources" className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300">
               Back to Resources
             </Link>
           </div>
@@ -92,7 +96,6 @@ export default function WhitepaperPage() {
       </div>
 );
   }
-
   return (
     <>
       <Head>
@@ -113,7 +116,6 @@ export default function WhitepaperPage() {
               ← Back to Resources
             </Link>
           </nav>
-
           {/* Header */}
 <header className='text-center mb-16'>
             <div className='mb-6'>
@@ -135,7 +137,6 @@ export default function WhitepaperPage() {
               <span>{whitepaper.publishDate}</span>
             </div>
           </header>
-
           {/* Whitepaper Content */}
 <div className='max-w-4xl mx-auto'>
             <section className='mb-12'>
@@ -193,7 +194,6 @@ export default function WhitepaperPage() {
                 </p>
               </div>
             </section>
-
             {/* Related Whitepapers */}
 <section className='mb-12'>
               <h2 className='text-2xl font-bold mb-6 text-white'>
@@ -222,7 +222,6 @@ export default function WhitepaperPage() {
                   ))}
               </div>
             </section>
-
             {/* CTA */}
 <section className='text-center'>
               <div className='bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20'>

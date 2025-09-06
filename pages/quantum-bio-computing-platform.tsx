@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 export default function QuantumBioComputingPlatformPage() {
@@ -12,7 +12,7 @@ export default function QuantumBioComputingPlatformPage() {
         />
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/quantum-bio-computing-platform'
+          href='https: //ziontechgroup.com/quantum-bio-computing-platform'
         />
       </Head>
       <div className='container mx-auto px-4 py-24 text-white space-y-6'>

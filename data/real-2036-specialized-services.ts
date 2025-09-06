@@ -1,5 +1,4 @@
-export type Real2036SpecializedService = {
-id: string;
+export type Real2036SpecializedService = any;
   name: string;
   tagline: string;
   description: string;
@@ -45,32 +44,31 @@ id: 'neuromorphic-computing-platform',
     marketSize: '$1.8B',
     targetAudience: 'Research institutions, AI companies, Semiconductor firms',
     competitiveAdvantage:
-      'Brain-inspired architecture, Ultra-efficiency, Real-time learning',
+      'Brain-inspired architecture, Ultra-efficiency, Real-time learning'
     integration: [
-      'AI frameworks',
-      'Edge devices',
-      'IoT platforms',
-      'Cloud services',
-    ],
+      'AI frameworks'
+      'Edge devices'
+      'IoT platforms'
+      'Cloud services'
+    ]
     useCases: [
-      'Edge AI processing',
-      'Autonomous systems',
-      'Cognitive computing',
-      'Energy-efficient AI',
-    ],
+      'Edge AI processing'
+      'Autonomous systems'
+      'Cognitive computing'
+      'Energy-efficient AI'
+    ]
     technology: [
-      'Neuromorphic chips',
-      'Spiking neural networks',
-      'Analog computing',
-      'Bio-inspired algorithms',
-    ],
-  },
-
+      'Neuromorphic chips'
+      'Spiking neural networks'
+      'Analog computing'
+      'Bio-inspired algorithms'
+    ]
+  }
   // Synthetic Biology Platform
   {
-    id: 'synthetic-biology-platform',
-    name: 'Synthetic Biology Platform',
-    tagline: 'Design and engineer biological systems with AI',
+    id: 'synthetic-biology-platform'
+    name: 'Synthetic Biology Platform'
+    tagline: 'Design and engineer biological systems with AI'
     description:
       'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.',
     category: 'Biotechnology',

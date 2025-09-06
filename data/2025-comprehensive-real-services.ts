@@ -17,8 +17,8 @@ id: string;
   contact: {
     phone: string;
     email: string;
-    address: string;
-  };
+    address: string
+  },
   trialDays: number;
   setupTime: string;
   competitors: string[];
@@ -26,67 +26,39 @@ id: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
-
-export const comprehensiveRealServices: ComprehensiveService[] = [
-  // AI & Machine Learning Services
-  {
-id: 'ai-content-factory-pro',
-    name: 'AI Content Factory Pro',
-    tagline:
-      'Enterprise-grade AI content generation with brand voice consistency',
-    description:
-      'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
-    price: '$49',
-    period: '/month',
+    id: 'ai-content-factory-pro';
+    name: 'AI Content Factory Pro';
+    tagline: 'Enterprise-grade AI content generation with brand voice consistency';
+    description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
+    price: '$49';
+    period: '/month';
     features: [
-      'GPT-4 powered content generation with 99.2% accuracy',
-      'Multi-language support (25+ languages) with cultural adaptation',
-      'Advanced SEO optimization with real-time keyword research',
-      'Brand voice training and consistency maintenance',
-      'Plagiarism detection with 99.8% accuracy',
-      'Content calendar and automated scheduling',
-      'Team collaboration with version control',
-      'Analytics dashboard with performance metrics',
-      'API access for enterprise integrations',
-      'Custom AI model training for industry-specific content',
-    ],
-    category: 'AI & Content Creation',
-    marketSize: '$15.2B',
-    targetAudience:
-      'Marketing agencies, content creators, enterprise businesses, e-commerce companies',
-    competitiveAdvantage:
-      'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities',
+      'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics';
+      'API access for enterprise integrationsCustom AI model training for industry-specific content'
+    ];
+    category: 'AI & Content Creation';
+    marketSize: '$15.2B';
+    targetAudience: 'Marketing agencies, content creators, enterprise businesses, e-commerce companies',
+    competitiveAdvantage: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities',
     useCases: [
-      'Blog content creation and optimization',
-      'Social media content generation',
-      'Product descriptions and marketing copy',
-      'Email marketing campaigns',
-      'Technical documentation and whitepapers',
-    ],
-    integrations: [
-      'WordPress',
-      'Shopify',
-      'HubSpot',
-      'Mailchimp',
-      'Google Analytics',
-      'SEMrush',
-    ],
-    compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-content-factory-pro',
+      'Blog content creation and optimizationSocial media content generationProduct descriptions and marketing copyEmail marketing campaignsTechnical documentation and whitepapers'
+    ];
+    integrations: ['WordPressShopifyHubSpotMailchimpGoogle AnalyticsSEMrush'];
+    compliance: ['GDPRCCPASOC2ISO 27001'];
+    website: 'https://ziontechgroup.com/ai-content-factory-pro';
     contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
+      phone: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    trialDays: 14,
-    setupTime: '5 minutes',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business'],
-    roi: 'Average customer sees 300% ROI within 3 months',
-    launchDate: '2024-01-15',
-    customers: 2500,
-    rating: 4.8,
-    reviews: 1250,
+    trialDays: 14;
+    setupTime: '5 minutes';
+    competitors: ['JasperCopy.aiWritesonicGrammarly Business'];
+    roi: 'Average customer sees 300% ROI within 3 months';
+    launchDate: '2024-01-15';
+    customers: 2500;
+    rating: 4.8;
+    reviews: 1250
   },
 
   // Customer Success & Support
@@ -624,4 +596,14 @@ id: 'ai-content-factory-pro',
     rating: 4.9,
     reviews: 520,
   },
+];
+    trialDays: 60;
+    setupTime: '4-6 weeks';
+    competitors: ['PTCSiemensGE DigitalRockwell Automation'];
+    roi: 'Average customer sees 600% ROI through operational improvements';
+    launchDate: '2024-01-10';
+    customers: 950;
+    rating: 4.9;
+    reviews: 520
+  }
 ];

@@ -1,12 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
+import { getServerSupabase } from '[^']*';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const code = null;
+      currency: 'USD'})
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   const code = (req.query.code as string)?.toLowerCase();
-  if (!code) return res.status(400).json({ error: 'Missing code' });
-
+  if (!code) return res.status($1).json({ $2 });
   const usingPlaceholder =
     (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
@@ -24,7 +26,6 @@ total_signups: 12,
         currency: 'USD',
       });
     }
-
     const supabase = getServerSupabase();
 
 const events = [
@@ -60,9 +61,9 @@ const payout_amount =
       total_job_creations,
 conversion_rate: total_signups
         ? total_profile_completions / total_signups
-        : 0,
-      payout_amount,
-      currency: 'USD',
+        : 0
+      payout_amount: total_profile_completions * 50
+      currency: "USD"
     });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });

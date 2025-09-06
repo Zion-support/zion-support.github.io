@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import {
@@ -17,45 +17,43 @@ Cpu,
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function EdgeComputingPage() {
-  const features = [
-    {
       icon: Cpu,
 title: 'Edge Orchestration',
       description:
-        'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.',
-      color: 'from-blue-500 to-cyan-500',
-    },
+        'Intelligent distribution and management of computing workloads across edge nodes for optimal performance.'
+      color: 'from-blue-500 to-cyan-500'
+    }
     {
-      icon: Network,
-      title: 'IoT Management',
+      icon: Network
+      title: 'IoT Management'
       description:
-        'Comprehensive management of IoT devices with real-time monitoring and automated control systems.',
-      color: 'from-purple-500 to-pink-500',
-    },
+        'Comprehensive management of IoT devices with real-time monitoring and automated control systems.'
+      color: 'from-purple-500 to-pink-500'
+    }
     {
-      icon: Zap,
-      title: 'Real-time Processing',
+      icon: Zap
+      title: 'Real-time Processing'
       description:
-        'Ultra-low latency data processing at the network edge for mission-critical applications.',
-      color: 'from-green-500 to-emerald-500',
-    },
+        'Ultra-low latency data processing at the network edge for mission-critical applications.'
+      color: 'from-green-500 to-emerald-500'
+    }
     {
-      icon: Shield,
-      title: 'Edge Security',
+      icon: Shield
+      title: 'Edge Security'
       description:
-        'Advanced security protocols designed specifically for distributed edge computing environments.',
-      color: 'from-red-500 to-orange-500',
-    },
+        'Advanced security protocols designed specifically for distributed edge computing environments.'
+      color: 'from-red-500 to-orange-500'
+    }
     {
-      icon: Database,
-      title: 'Data Synchronization',
+      icon: Database
+      title: 'Data Synchronization'
       description:
-        'Seamless data synchronization between edge nodes and central systems with conflict resolution.',
-      color: 'from-indigo-500 to-purple-500',
-    },
+        'Seamless data synchronization between edge nodes and central systems with conflict resolution.'
+      color: 'from-indigo-500 to-purple-500'
+    }
     {
-      icon: Globe,
-      title: 'Global Distribution',
+      icon: Globe
+      title: 'Global Distribution'
       description:
         'Worldwide edge network deployment with intelligent traffic routing and load balancing.',
       color: 'from-yellow-500 to-orange-500',
@@ -179,7 +177,6 @@ plan: 'Starter',
       </Head>
 
       <EnhancedNavigation />
-
       {/* Hero Section */}
 <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -218,7 +215,6 @@ href='#demo'
           </motion.div>
         </div>
       </section>
-
       {/* Features */}
 <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -262,7 +258,6 @@ className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duratio
           </div>
         </div>
       </section>
-
       {/* Benefits */}
 <section className='py-20 bg-slate-50'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -295,7 +290,6 @@ className='flex items-center space-x-3'
                 ))}
               </div>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -329,7 +323,6 @@ className='bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8'
           </div>
         </div>
       </section>
-
       {/* Use Cases */}
 <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -373,7 +366,6 @@ className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duratio
           </div>
         </div>
       </section>
-
       {/* Architecture */}
 <section className='py-20 bg-slate-900'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -387,7 +379,7 @@ className='text-center mb-16'
               Edge Computing Architecture
             </h2>
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>
-              Our distributed architecture ensures optimal performance,
+              Our distributed architecture ensures optimal performance
               reliability, and scalability.
             </p>
           </motion.div>
@@ -447,7 +439,6 @@ className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 te
           </div>
         </div>
       </section>
-
       {/* Pricing */}
 <section className='py-20 bg-white'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -495,7 +486,6 @@ className='text-center mb-16'
                   </div>
                   <p className='text-slate-600'>{plan.description}</p>
                 </div>
-
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map(feature => (
                     <li key={feature} className='flex items-center space-x-3'>
@@ -504,7 +494,6 @@ className='text-center mb-16'
                     </li>
                   ))}
                 </ul>
-
                 <a
 href='/contact'
                   className='block w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white text-center py-3 rounded-xl font-medium transition-all duration-200 transform hover:scale-105'
@@ -516,7 +505,6 @@ href='/contact'
           </div>
         </div>
       </section>
-
       {/* CTA */}
 <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-6 text-center'>
@@ -549,7 +537,6 @@ href='/contact'
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </>
 );

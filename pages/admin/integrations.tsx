@@ -1,29 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-
-interface ProviderMeta {
-  id: string;
-  name: string;
-  category: 'crm' | 'ats';
-  description?: string;
-
-interface ConnectionMap {
-  [providerId: string]: any;
-
-function StatusIcon({
-  status,
-}: {
-  status: 'connected' | 'warning' | 'disconnected';
-}) {
-  const label =
-    status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
-  return (
-    <span className='text-xl' title={status}>
-      {label}
-    </span>
-  );
-
-interface ConnectionMap {
   [key: string]: boolean;
 
 const AdminIntegrationsPage: React.FC = () => {
@@ -37,22 +13,20 @@ const [syncRules, setSyncRules] = useState<any>({
     autoSyncApplicants: true,
     autoUploadResumes: true,
   });
-
   async function refresh() {
     const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json()),
-      fetch('/api/integrations/status').then(r => r.json()),
+      fetch('/api/integrations/providers').then(r => r.json())
+      fetch('/api/integrations/status').then(r => r.json())
     ]);
-    setProviders(p.providers || []);
-    setConnections(s.connections || {});
+    setProviders(p.providers |[]);
+    setConnections(s.connections |{});
   }
-
   useEffect(() => {
     refresh();
   }, []);
 
   async function connect(providerId: string) {
-    setLoading(true);
+    setLoading(true)
     try {
       // Open mock oauth popup
 window.open(
@@ -62,9 +36,9 @@ window.open(
       );
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ providerId, syncRules }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ providerId, syncRules })
       });
       await refresh();
     } finally {
@@ -73,7 +47,7 @@ window.open(
   }
 
   async function disconnect(providerId: string) {
-    setLoading(true);
+    setLoading(true)
     try {
 await fetch('/api/integrations/disconnect', {
         method: 'POST',
@@ -87,7 +61,7 @@ await fetch('/api/integrations/disconnect', {
   }
 
   async function resync(providerId: string) {
-    setLoading(true);
+    setLoading(true)
     try {
 await fetch('/api/integrations/resync', {
         method: 'POST',
@@ -99,17 +73,15 @@ await fetch('/api/integrations/resync', {
       setLoading(false);
     }
   }
-
   const grouped = useMemo(
     () => ({
-      crm: providers.filter(p => p.category === 'crm'),
-      ats: providers.filter(p => p.category === 'ats'),
-    }),
+      crm: providers.filter(p => p.category === 'crm')
+      ats: providers.filter(p => p.category === 'ats')
+    })
     [providers]
   );
-
   function Card({ p }: { p: ProviderMeta }) {
-    const conn = connections[p.id] || { status: 'disconnected' };
+    const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
     return (
       <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40'>
@@ -181,8 +153,8 @@ await fetch('/api/integrations/resync', {
                     checked={!!syncRules.autoCreateContacts}
                     onChange={e =>
                       setSyncRules({
-                        ...syncRules,
-                        autoCreateContacts: e.target.checked,
+                        ...syncRules
+                        autoCreateContacts: e.target.checked
                       })
                     }
                   />{' '}
@@ -209,8 +181,8 @@ await fetch('/api/integrations/resync', {
                         checked={syncRules.pushNotesMode === 'manual'}
                         onChange={() =>
                           setSyncRules({
-                            ...syncRules,
-                            pushNotesMode: 'manual',
+                            ...syncRules
+                            pushNotesMode: 'manual'
                           })
                         }
                       />{' '}
@@ -227,8 +199,8 @@ await fetch('/api/integrations/resync', {
                     checked={!!syncRules.autoSyncApplicants}
                     onChange={e =>
                       setSyncRules({
-                        ...syncRules,
-                        autoSyncApplicants: e.target.checked,
+                        ...syncRules
+                        autoSyncApplicants: e.target.checked
                       })
                     }
                   />{' '}
@@ -240,8 +212,8 @@ await fetch('/api/integrations/resync', {
                     checked={!!syncRules.autoUploadResumes}
                     onChange={e =>
                       setSyncRules({
-                        ...syncRules,
-                        autoUploadResumes: e.target.checked,
+                        ...syncRules
+                        autoUploadResumes: e.target.checked
                       })
                     }
                   />{' '}
@@ -282,7 +254,6 @@ await fetch('/api/integrations/resync', {
         <p className='text-sm text-gray-600 mb-6'>
           Connect your CRM and ATS to sync contacts, applicants, and activity.
         </p>
-
         <section className='mb-8'>
           <h2 className='text-lg font-semibold mb-3'>CRM</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -291,7 +262,6 @@ await fetch('/api/integrations/resync', {
             ))}
           </div>
         </section>
-
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-3'>ATS</h2>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -300,7 +270,6 @@ await fetch('/api/integrations/resync', {
             ))}
           </div>
         </section>
-
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
           <div className='text-sm text-gray-600'>Polling endpoints:</div>
@@ -332,7 +301,6 @@ function ManualOverrideForm() {
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
-
   async function save() {
     setMessage('');
 const res = await fetch('/api/integrations/overrides', {
@@ -343,7 +311,6 @@ const res = await fetch('/api/integrations/overrides', {
     if (res.ok) setMessage('Saved');
     else setMessage('Error');
   }
-
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>
       <div className='grid grid-cols-1 gap-3'>

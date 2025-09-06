@@ -1,6 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-import { IntegrationsState } from './types';
 const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 

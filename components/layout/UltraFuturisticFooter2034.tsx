@@ -1,72 +1,20 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  Rocket,
-  Brain,
-  Atom,
-  Zap,
-  Sparkles,
-  Shield,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  ArrowRight,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
-  Github,
-  CheckCircle,
-  Award,
-  Star,
-  Crown,
-  Gem,
-  Infinity,
-  Heart,
-  ShieldCheck,
-  Users,
-  Briefcase,
-  BookOpen,
-  Target,
-  Microscope,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  Home,
-  Building,
-  DollarSign,
-  FileText,
-  MessageSquare,
-  MessageCircle,
-  Newspaper,
-  Handshake,
-  LifeBuoy,
-  Activity,
-  ShoppingCart,
-  UserCheck,
-  BarChart,
-  Palette,
-  Video,
-  LockIcon,
-  GlobeIcon,
-  CpuIcon,;
-} from 'lucide-react';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
-
+import { Rocket, Brain, Atom, Zap, Sparkles, Shield;
+  Phone, Mail, MapPin, Globe, ArrowRight;
+  Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
+  CheckCircle, Award, Star, Crown, Gem, Infinity;
+  Heart, ShieldCheck, Users, Briefcase, BookOpen;
+  Target, Microscope, Cpu, Database, Cloud, Lock;
+  Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
+  ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
+ } from 'lucide-react';
+const contactInfo = null;
 const serviceCategories = [
   {
-    title: '🧠 Revolutionary AI Services',
-    icon: Brain,
+    title: '🧠 Revolutionary AI Services'
+    icon: Brain
     services: [
 {
         name: 'AI Business Intelligence Pro',
@@ -74,15 +22,15 @@ const serviceCategories = [
         price: '$299/month',
       },
       {
-        name: 'AI Video Generation Platform',
-        href: '/ai-video-generation-platform',
-        price: '$499/month',
-      },
+        name: 'AI Video Generation Platform'
+        href: '/ai-video-generation-platform'
+        price: '$499/month'
+      }
       {
-        name: 'AI-Powered Cybersecurity',
-        href: '/ai-cybersecurity-platform',
-        price: '$799/month',
-      },
+        name: 'AI-Powered Cybersecurity'
+        href: '/ai-cybersecurity-platform'
+        price: '$799/month'
+      }
       {
         name: 'AI Drug Discovery Platform',
         href: '/ai-drug-discovery-platform',
@@ -100,15 +48,15 @@ const serviceCategories = [
         price: '$1,999/month',
       },
       {
-        name: 'Blockchain AI Platform',
-        href: '/blockchain-ai-platform',
-        price: '$899/month',
-      },
+        name: 'Blockchain AI Platform'
+        href: '/blockchain-ai-platform'
+        price: '$899/month'
+      }
       {
-        name: 'Edge AI Computing',
-        href: '/edge-ai-computing-platform',
-        price: '$599/month',
-      },
+        name: 'Edge AI Computing'
+        href: '/edge-ai-computing-platform'
+        price: '$599/month'
+      }
       {
         name: 'AI Climate Modeling',
         href: '/ai-climate-modeling-platform',
@@ -126,15 +74,15 @@ const serviceCategories = [
         price: '$399/month',
       },
       {
-        name: 'Customer Success Automation',
-        href: '/customer-success-automation',
-        price: '$199/month',
-      },
+        name: 'Customer Success Automation'
+        href: '/customer-success-automation'
+        price: '$199/month'
+      }
       {
-        name: 'HR Automation Suite',
-        href: '/hr-automation-suite',
-        price: '$179/month',
-      },
+        name: 'HR Automation Suite'
+        href: '/hr-automation-suite'
+        price: '$179/month'
+      }
       {
         name: 'Project Management AI',
         href: '/project-management-ai-platform',
@@ -152,15 +100,15 @@ const serviceCategories = [
         price: '$249/month',
       },
       {
-        name: 'Marketing Automation Suite',
-        href: '/marketing-automation-suite',
-        price: '$279/month',
-      },
+        name: 'Marketing Automation Suite'
+        href: '/marketing-automation-suite'
+        price: '$279/month'
+      }
       {
-        name: 'Financial Analytics Platform',
-        href: '/financial-analytics-platform',
-        price: '$349/month',
-      },
+        name: 'Financial Analytics Platform'
+        href: '/financial-analytics-platform'
+        price: '$349/month'
+      }
       {
         name: 'Legal Document Automation',
         href: '/legal-document-automation',
@@ -180,7 +128,6 @@ const quickLinks = [
   { name: 'Blog', href: '/blog', icon: MessageSquare },
 { name: 'Contact', href: '/contact', icon: MessageCircle },
 ];
-
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
   { name: 'Careers', href: '/careers', icon: Briefcase },
@@ -220,7 +167,6 @@ const certifications = [
   'Quantum Security Certified',
   'AI Ethics Compliant',
 ];
-
 const stats = [
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
@@ -231,13 +177,19 @@ const stats = [
 export default function UltraFuturisticFooter2034() {
   return (
 <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
+export default function UltraFuturisticFooter2034() {
+  return (
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+];
+export default function UltraFuturisticFooter2034() {
+  return (
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>
       </div>
-
       <div className='relative z-10'>
         {/* Main Footer Content */}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -267,13 +219,11 @@ className='space-y-6'
                     </p>
                   </div>
                 </div>
-
                 <p className='text-gray-300 leading-relaxed'>
                   Leading provider of cutting-edge AI, quantum computing, and
                   emerging technology solutions. Empowering businesses with
                   innovative tools for the future.
                 </p>
-
                 {/* Stats */}
                 <div className='grid grid-cols-2 gap-4'>
                   {stats.map((stat, index) => (
@@ -293,7 +243,6 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                     </motion.div>
                   ))}
                 </div>
-
                 {/* Contact Info */}
 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
@@ -311,7 +260,6 @@ className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-
                 </div>
               </motion.div>
             </div>
-
             {/* Services */}
 <div className='lg:col-span-2'>
               <motion.div
@@ -361,7 +309,6 @@ className='space-y-4'
                 </div>
               </motion.div>
             </div>
-
             {/* Quick Links & Social */}
 <div className='lg:col-span-1'>
               <motion.div
@@ -389,7 +336,6 @@ className='space-y-8'
                     ))}
                   </div>
                 </div>
-
                 {/* Company Links */}
                 <div>
 <h4 className='text-lg font-semibold text-white mb-4'>
@@ -408,7 +354,6 @@ className='space-y-8'
                     ))}
                   </div>
                 </div>
-
                 {/* Social Links */}
                 <div>
 <h4 className='text-lg font-semibold text-white mb-4'>
@@ -431,7 +376,6 @@ className='space-y-8'
               </motion.div>
             </div>
           </div>
-
           {/* Certifications */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -462,7 +406,6 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
             </div>
           </motion.div>
         </div>
-
         {/* Bottom Bar */}
 <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -482,7 +425,6 @@ className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-b
                   Terms of Service
                 </Link>
               </div>
-
               <div className='flex items-center space-x-2 text-gray-400'>
                 <Heart className='w-4 h-4 text-red-400' />
                 <span className='text-sm'>Made with ❤️ for the future</span>

@@ -1,26 +1,15 @@
-import React, { useState } from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,;
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { toast } from 'sonner';
-import { Check, Copy, ExternalLink } from 'lucide-react';
 
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false);
-  const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R');
-  const handleCopyApiKey = () => {
-    navigator.clipboard.writeText(apiKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-toast.success('API key copied to clipboard');
-  };
-
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+  const handleCopyApiKey = null;
   return (
     <div className='space-y-6'>
       <div className='grid md:grid-cols-3 gap-6'>
@@ -38,7 +27,6 @@ toast.success('API key copied to clipboard');
               Connect Zion with 3,000+ apps via Zapier. Use your API key below
               to set up integrations.
             </p>
-
             <div className='space-y-4'>
               <div className='space-y-2'>
                 <label className='text-sm font-medium'>Your Zion API Key</label>
@@ -46,8 +34,7 @@ toast.success('API key copied to clipboard');
                   <Input
                     value={apiKey}
                     readOnly
-                    className='font-mono text-sm'
-                  />
+                    className='font-mono text-sm'                  />
                   <Button
                     size='sm'
                     variant='outline'
@@ -77,8 +64,7 @@ toast.success('API key copied to clipboard');
           <CardContent>
             <ul className='space-y-2 text-sm'>
               <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />
-                <span>Add new Zion contacts to Mailchimp</span>
+                <Check className='h-4 w-4 text-green-500' />                <span>Add new Zion contacts to Mailchimp</span>
               </li>
               <li className='flex items-center gap-2'>
                 <Check className='h-4 w-4 text-green-500' />
@@ -111,7 +97,6 @@ toast.success('API key copied to clipboard');
             Use these webhook triggers to start Zaps when events happen in your
             Zion account.
           </p>
-
           <div className='grid md:grid-cols-3 gap-4'>
             <div className='border rounded-md p-4'>
               <h4 className='font-medium mb-2'>New Job Posted</h4>
@@ -120,9 +105,7 @@ toast.success('API key copied to clipboard');
               </p>
               <Button size='sm' variant='outline'>
                 Set Up Trigger
-              </Button>
-            </div>
-
+              </Button>            </div>
             <div className='border rounded-md p-4'>
               <h4 className='font-medium mb-2'>New Application</h4>
               <p className='text-xs text-muted-foreground mb-3'>
@@ -132,7 +115,6 @@ toast.success('API key copied to clipboard');
                 Set Up Trigger
               </Button>
             </div>
-
             <div className='border rounded-md p-4'>
               <h4 className='font-medium mb-2'>Contract Signed</h4>
               <p className='text-xs text-muted-foreground mb-3'>

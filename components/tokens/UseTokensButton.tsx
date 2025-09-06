@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import UseTokensModal, { RedemptionType } from './UseTokensModal';
 
 export default function UseTokensButton({
-  serviceId,
-  defaultType,
+  serviceId
+  defaultType
 }: {
   serviceId?: string;
   defaultType?: RedemptionType;
@@ -13,7 +11,7 @@ export default function UseTokensButton({
     <>
       <button
         onClick={() => setOpen(true)}
-        className='enhanced-button enhanced-button-primary'
+        className="enhanced-button enhanced-button-primary"
       >
         Use Tokens
       </button>

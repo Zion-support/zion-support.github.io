@@ -1,15 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 export default function BackupDROrchestratorPage() {
-  const service = extraServices.find(s =>
-    s.link.endsWith('/backup-dr-orchestrator')
   );
   if (!service) return null;
-
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -19,7 +16,6 @@ export default function BackupDROrchestratorPage() {
           rel='canonical'
           href='https://ziontechgroup.com/backup-dr-orchestrator'
         />
-      </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-10'>

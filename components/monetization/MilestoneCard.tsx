@@ -1,43 +1,39 @@
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
+type Props = any;
 type Props = {
   milestone: Milestone;
   projectId: string;
   role: 'client' | 'talent' | 'admin';
   onAction: (
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => Promise<void> | void;
-};
-
+}
 const statusSteps = [
-  'Pending',
-  'In Progress',
-  'Submitted',
-  'Approved',
-  'Paid',
+  'Pending'
+  'In Progress'
+  'Submitted'
+  'Approved'
+  'Paid'
 ] as const;
-
 export default function MilestoneCard({
-  milestone,
-  projectId,
-  role,
-  onAction,
+  milestone
+  projectId
+  role
+  onAction
 }: Props) {
   const [expanded, setExpanded] = useState(false);
-
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
-
   const canClientMarkInProgress =
     role !== 'talent' && milestone.status === 'Pending';
   const canTalentSubmit =
-    (role === 'talent' || role === 'admin') &&
+    (role === 'talent' |role === 'admin') &&
     milestone.status === 'In Progress';
   const canClientApprove =
     role !== 'talent' && milestone.status === 'Submitted';
   const canClientMarkPaid =
     role !== 'talent' && milestone.status === 'Approved';
-
   return (
     <div className='border rounded-lg p-4 bg-white shadow-sm'>
       <div className='flex items-start justify-between'>
@@ -56,6 +52,18 @@ export default function MilestoneCard({
       </div>
 
 <div className='mt-3'>
+  return (
+    <div className="border rounded-lg p-4 bg-white shadow-sm">
+      <div className="flex items-start justify-between">
+        <div>
+          <h3 className="text-lg font-semibold">{milestone.title}</h3>
+          <p className="text-sm text-gray-600">Due: {new Date(milestone.dueDate).toLocaleDateString()}</p>
+        </div>
+        <button className="text-sm text-blue-600" onClick={() => setExpanded((v) => !v)}>
+          {expanded ? 'Hide' : 'Details'}
+        </button>
+      </div>
+      <div className='mt-3'>
         <div className='flex items-center gap-2'>
           {statusSteps.map((step, idx) => (
             <div key={step} className='flex items-center'>
@@ -81,7 +89,6 @@ export default function MilestoneCard({
           Status: {milestone.status}
         </div>
       </div>
-
       {expanded && (
         <div className='mt-4 space-y-2 text-sm text-gray-800'>
           {milestone.description && <p>{milestone.description}</p>}

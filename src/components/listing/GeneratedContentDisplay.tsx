@@ -10,21 +10,27 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 interface GeneratedContent {
   description: string;
-tags: string[];
-suggestedPrice: {;
-  min: number;
-max: number ;
-};
-keyPoints: string[] ;
-}interface GeneratedContentDisplayProps {;
-  content: GeneratedContent;
-  onApply: () => void;
+  tags: string[];
+  suggestedPrice: {
+    min: number;
+    max: number
+  },
+  keyPoints: string[]
+}
 
+interface GeneratedContentDisplayProps {
+  content: GeneratedContent;
+  onApply: () => void
 export function GeneratedContentDisplay({
-  content,
-  onApply,
+  content
+  onApply
 }: GeneratedContentDisplayProps) {
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>
@@ -38,7 +44,6 @@ export function GeneratedContentDisplay({
           </h3>
           <p className='text-white'>{content.description}</p>
         </div>
-
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Tags
@@ -63,13 +68,13 @@ export function GeneratedContentDisplay({
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
-
         <div>
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Key Selling Points
           </h3>
           <ul className='list-disc pl-5 text-white space-y-1'>
             {content.keyPoints.map((point, index) => (
+            {content.keyPoints.map((point, index,) => (
               <li key={index}>{point}</li>
             ))}
           </ul>

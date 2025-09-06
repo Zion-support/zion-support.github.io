@@ -1,10 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(
-  process.cwd(),
-  'data',
-  'podcast',
+  process.cwd()
+  'data'
+  'podcast'
   'episodes.json'
 );
 
@@ -26,3 +27,5 @@ const simplified = episodes.map(e => ({
     audio: e.audio || {},
   }));
   return res.status(200).json({ episodes: simplified });
+  return res.status(200).json({ episodes: simplified })
+}

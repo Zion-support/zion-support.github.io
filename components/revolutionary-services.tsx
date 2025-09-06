@@ -1,96 +1,93 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import {
-  Check,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  ArrowRight,
-  ExternalLink,
-  TrendingUp,
-  Clock,
-  Target,
-  Building,
-  Rocket,
-  Award,
-  DollarSign,
-  ChartBar,
-  Lock,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain,
-  Atom,
-  Globe2,
-  Bot,
-  Eye,
-  Trophy,
-  FlaskConical as FlaskIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,;
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
-  revolutionaryMicroSaasServices,
-  revolutionaryServiceCategories,
-  getRevolutionaryServicesByCategory,
-  getPopularRevolutionaryServices,
-  getRevolutionaryServicesByPriceRange,;
+  revolutionaryMicroSaasServices
+  revolutionaryServiceCategories
+  getRevolutionaryServicesByCategory
+  getPopularRevolutionaryServices
+  getRevolutionaryServicesByPriceRange;
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';
 export default function RevolutionaryServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
-  const [selectedService, setSelectedService] = useState<any>(null);
-
-  const priceRanges = [
     { value: 'All', label: 'All Prices' },
 { value: '0-1000', label: '$0 - $1,000' },
     { value: '1001-2500', label: '$1,001 - $2,500' },
@@ -105,10 +102,8 @@ export default function RevolutionaryServicesPage() {
     { value: 'category', label: 'Category' },
 { value: 'roi', label: 'Highest ROI' },
   ];
-
   // Filter and sort services
   let filteredServices = revolutionaryMicroSaasServices;
-
   // Category filter
   if (selectedCategory !== 'All') {
 filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
@@ -121,14 +116,13 @@ const [min, max] = priceRange
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);
   }
-
   // Search filter
   if (searchQuery) {
 filteredServices = filteredServices.filter(
       service =>
-        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+        service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) |
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }
@@ -146,14 +140,13 @@ return (
       case 'category':
         return a.category.localeCompare(b.category);
       case 'roi':
-        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] |'0');
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] |'0');
         return bRoi - aRoi;
 default:
         return a.name.localeCompare(b.name);
     }
   });
-
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -162,7 +155,6 @@ website: 'https://ziontechgroup.com',
   };
 
   const popularServices = getPopularRevolutionaryServices();
-
   // Enhanced service categories with better descriptions
   const enhancedCategories = [
     {
@@ -172,92 +164,91 @@ description:
       icon: <Brain className='w-6 h-6' />,
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum AI & Cognitive Computing'
-      ).length,
-      color: 'from-purple-500 to-indigo-600',
-    },
-    {
-      name: 'Autonomous Manufacturing & Industry 4.0',
+      ).length
+      color: 'from-purple-500 to-indigo-600'
+    }
+      name: 'Autonomous Manufacturing & Industry 4.0'
       description:
-        'Next-generation autonomous manufacturing with zero human intervention',
-      icon: <Factory className='w-6 h-6' />,
+        'Next-generation autonomous manufacturing with zero human intervention'
+      icon: <Factory className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Autonomous Manufacturing & Industry 4.0'
-      ).length,
-      color: 'from-orange-500 to-red-600',
-    },
+      ).length
+      color: 'from-orange-500 to-red-600'
+    }
     {
-      name: 'Quantum Blockchain & DeFi',
+      name: 'Quantum Blockchain & DeFi'
       description:
-        'Quantum-secured blockchain platforms with infinite scalability',
-      icon: <Globe className='w-6 h-6' />,
+        'Quantum-secured blockchain platforms with infinite scalability'
+      icon: <Globe className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum Blockchain & DeFi'
-      ).length,
-      color: 'from-green-500 to-emerald-600',
-    },
+      ).length
+      color: 'from-green-500 to-emerald-600'
+    }
     {
-      name: 'AI Biomedical Research & Drug Discovery',
+      name: 'AI Biomedical Research & Drug Discovery'
       description:
-        'AI-powered platforms for accelerated drug discovery and medical research',
-      icon: <FlaskIcon className='w-6 h-6' />,
+        'AI-powered platforms for accelerated drug discovery and medical research'
+      icon: <FlaskIcon className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'AI Biomedical Research & Drug Discovery'
-      ).length,
-      color: 'from-blue-500 to-indigo-600',
-    },
+      ).length
+      color: 'from-blue-500 to-indigo-600'
+    }
     {
-      name: 'Quantum Cybersecurity & Threat Detection',
+      name: 'Quantum Cybersecurity & Threat Detection'
       description:
-        'Quantum-resistant cybersecurity with AI-powered threat detection',
-      icon: <ShieldCheck className='w-6 h-6' />,
+        'Quantum-resistant cybersecurity with AI-powered threat detection'
+      icon: <ShieldCheck className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum Cybersecurity & Threat Detection'
-      ).length,
-      color: 'from-red-500 to-pink-600',
-    },
+      ).length
+      color: 'from-red-500 to-pink-600'
+    }
     {
-      name: 'Space Technology & Satellite Optimization',
+      name: 'Space Technology & Satellite Optimization'
       description:
-        'Revolutionary platforms for space exploration and satellite optimization',
-      icon: <Rocket className='w-6 h-6' />,
+        'Revolutionary platforms for space exploration and satellite optimization'
+      icon: <Rocket className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Space Technology & Satellite Optimization'
-      ).length,
-      color: 'from-indigo-500 to-purple-600',
-    },
+      ).length
+      color: 'from-indigo-500 to-purple-600'
+    }
     {
-      name: 'AI Content Creation & Marketing',
-      description: 'Quantum-powered content creation at infinite scale',
-      icon: <FileText className='w-6 h-6' />,
+      name: 'AI Content Creation & Marketing'
+      description: 'Quantum-powered content creation at infinite scale'
+      icon: <FileText className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'AI Content Creation & Marketing'
-      ).length,
-      color: 'from-teal-500 to-cyan-600',
-    },
+      ).length
+      color: 'from-teal-500 to-cyan-600'
+    }
     {
-      name: 'Quantum Computing as a Service',
-      description: 'Enterprise quantum computing with real quantum processors',
-      icon: <Cpu className='w-6 h-6' />,
+      name: 'Quantum Computing as a Service'
+      description: 'Enterprise quantum computing with real quantum processors'
+      icon: <Cpu className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Quantum Computing as a Service'
-      ).length,
-      color: 'from-violet-500 to-purple-600',
-    },
+      ).length
+      color: 'from-violet-500 to-purple-600'
+    }
     {
-      name: 'Autonomous Vehicles & Smart Transportation',
+      name: 'Autonomous Vehicles & Smart Transportation'
       description:
-        'AI platforms for autonomous vehicles and smart transportation',
-      icon: <CarIcon className='w-6 h-6' />,
+        'AI platforms for autonomous vehicles and smart transportation'
+      icon: <CarIcon className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Autonomous Vehicles & Smart Transportation'
-      ).length,
-      color: 'from-emerald-500 to-green-600',
-    },
+      ).length
+      color: 'from-emerald-500 to-green-600'
+    }
     {
-      name: 'Smart Energy & Renewable Energy',
+      name: 'Smart Energy & Renewable Energy'
       description:
-        'AI platforms for smart energy grids and renewable energy optimization',
-      icon: <LeafIcon className='w-6 h-6' />,
+        'AI platforms for smart energy grids and renewable energy optimization'
+      icon: <LeafIcon className='w-6 h-6' />
       count: revolutionaryMicroSaasServices.filter(
         s => s.category === 'Smart Energy & Renewable Energy'
       ).length,
@@ -266,9 +257,9 @@ description:
   ];
 
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0 }
     visible: {
-      opacity: 1,
+      opacity: 1
       transition: {
 staggerChildren: 0.1,
       },
@@ -276,10 +267,10 @@ staggerChildren: 0.1,
   };
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0 }
     visible: {
-      y: 0,
-      opacity: 1,
+      y: 0
+      opacity: 1
       transition: {
 duration: 0.5,
       },
@@ -291,7 +282,7 @@ duration: 0.5,
       <div className='min-h-screen'>
         <Head>
           <title>
-            Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI,
+            Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
             Autonomous Systems, Space Technology
           </title>
           <meta
@@ -321,7 +312,6 @@ duration: 0.5,
             href='https://ziontechgroup.com/revolutionary-services'
           />
         </Head>
-
         {/* Hero Section */}
         <section className='relative py-20 overflow-hidden'>
           <div className='container mx-auto px-4 text-center'>
@@ -348,7 +338,6 @@ Experience the future of technology with our revolutionary micro
                 SaaS platform. Quantum AI, autonomous systems, space technology,
                 and cutting-edge solutions that redefine what's possible.
               </motion.p>
-
               {/* Service Count Stats */}
               <motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'
@@ -381,7 +370,6 @@ Experience the future of technology with our revolutionary micro
                   <div className='text-gray-400'>Average ROI</div>
                 </div>
               </motion.div>
-
               {/* CTA Buttons */}
 <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'
@@ -397,7 +385,6 @@ Experience the future of technology with our revolutionary micro
                       .getElementById('services-grid')
                       ?.scrollIntoView({ behavior: 'smooth' })
                   }
-                >
                   Explore Services
                   <ArrowRight className='ml-2 w-5 h-5' />
                 </Button>
@@ -415,7 +402,6 @@ Experience the future of technology with our revolutionary micro
             </div>
           </div>
         </section>
-
         {/* Contact Information Banner */}
 <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>
           <div className='container mx-auto px-4'>
@@ -435,7 +421,6 @@ Experience the future of technology with our revolutionary micro
             </div>
           </div>
         </section>
-
         {/* Category Navigation */}
 <section className='py-12'>
           <div className='container mx-auto px-4'>
@@ -464,7 +449,6 @@ variant='quantum-advanced'
                           : category.name
                       )
                     }
-                  >
                     <div
                       className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category.color} flex items-center justify-center text-white`}
                     >
@@ -486,7 +470,6 @@ variant='quantum-advanced'
             </motion.div>
           </div>
         </section>
-
         {/* Popular Services Showcase */}
 <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -509,7 +492,6 @@ variant='quantum-advanced'
                 that are transforming industries worldwide.
               </p>
             </motion.div>
-
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
               variants={containerVariants}
@@ -542,7 +524,6 @@ size='large'
                         {service.period}
                       </div>
                     </div>
-
                     <div className='space-y-3 mb-6'>
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <div key={idx} className='flex items-center gap-2'>
@@ -571,7 +552,6 @@ size='large'
             </motion.div>
           </div>
         </section>
-
         {/* Services Grid */}
 <section id='services-grid' className='py-16'>
           <div className='container mx-auto px-4'>
@@ -597,7 +577,6 @@ size='large'
                       </option>
                     ))}
                   </select>
-
                   <select
                     value={priceRange}
                     onChange={e => setPriceRange(e.target.value)}
@@ -609,7 +588,6 @@ size='large'
                       </option>
                     ))}
                   </select>
-
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
@@ -622,7 +600,6 @@ size='large'
                     ))}
                   </select>
                 </div>
-
                 <div className='flex items-center gap-4'>
                   <div className='relative'>
                     <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -652,7 +629,6 @@ size='large'
                 </div>
               </div>
             </motion.div>
-
             {/* Services Display */}
 <motion.div
               className={
@@ -693,7 +669,6 @@ size='large'
                         <div className='text-sm text-gray-400 mb-4'>
                           {service.period}
                         </div>
-
                         <div className='space-y-2 mb-6'>
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div
@@ -710,7 +685,6 @@ size='large'
                           <Button
                             variant='primary'
                             size='sm'
-                            onClick={() => window.open(service.link, '_blank')}
                             className='w-full'
                           >
                             Learn More
@@ -726,7 +700,6 @@ size='large'
                         </div>
                         <div className='flex-1'>
                           <div className='flex flex-col md:flex-row md:items-center md:justify-between mb-4'>
-                            <div>
                               <h3 className='text-xl font-bold text-white mb-2'>
                                 {service.name}
                               </h3>
@@ -743,7 +716,6 @@ size='large'
                               </div>
                             </div>
                           </div>
-
                           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                             <div>
                               <h4 className='text-sm font-semibold text-cyan-400 mb-2'>
@@ -785,7 +757,6 @@ size='large'
                               </div>
                             </div>
                           </div>
-
                           <div className='flex gap-2'>
                             <Button
                               variant='primary'
@@ -813,7 +784,6 @@ size='large'
                 </motion.div>
               ))}
             </motion.div>
-
             {filteredServices.length === 0 && (
 <motion.div
                 className='text-center py-16'
@@ -839,10 +809,14 @@ size='large'
                   Clear Filters
                 </Button>
               </motion.div>
+                             setPriceRange('All')
+                           }}
+                         >
+                           Clear Filters
+                         </Button>
             )}
           </div>
         </section>
-
         {/* Service Details Modal */}
         <AnimatePresence>
           {selectedService && (
@@ -889,7 +863,6 @@ className='text-gray-400 hover:text-white text-2xl'
                       <p className='text-gray-300 mb-6'>
                         {selectedService.description}
                       </p>
-
                       <div className='space-y-4'>
                         <div>
                           <h4 className='text-sm font-semibold text-purple-400 mb-2'>
@@ -903,7 +876,6 @@ className='text-gray-400 hover:text-white text-2xl'
                             {selectedService.marketPrice}
                           </div>
                         </div>
-
                         <div>
                           <h4 className='text-sm font-semibold text-green-400 mb-2'>
                             ROI & Market
@@ -929,12 +901,10 @@ className='text-gray-400 hover:text-white text-2xl'
                         </div>
                       </div>
                     </div>
-
                     <div>
 <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
                         Features & Capabilities
                       </h3>
-
                       <div className='space-y-4'>
                         <div>
                           <h4 className='text-sm font-semibold text-purple-400 mb-2'>
@@ -998,7 +968,6 @@ className='text-gray-400 hover:text-white text-2xl'
                         <div>Setup Time: {selectedService.setupTime}</div>
                         <div>Trial: {selectedService.trialDays} days</div>
                       </div>
-
                       <div className='flex gap-4'>
                         <Button
                           variant='primary'
@@ -1013,7 +982,7 @@ className='text-gray-400 hover:text-white text-2xl'
                           variant='futuristic'
                           onClick={() =>
                             window.open(
-                              'https://ziontechgroup.com/contact',
+                              'https://ziontechgroup.com/contact'
                               '_blank'
                             )
                           }
@@ -1029,7 +998,6 @@ className='text-gray-400 hover:text-white text-2xl'
             </motion.div>
           )}
         </AnimatePresence>
-
         {/* Contact Section */}
 <section className='py-20'>
           <div className='container mx-auto px-4 text-center'>
@@ -1047,7 +1015,6 @@ className='text-gray-400 hover:text-white text-2xl'
                 Join thousands of companies already transforming their business
                 with our revolutionary micro SaaS services.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <Button
                   variant='primary'
@@ -1070,7 +1037,6 @@ className='text-gray-400 hover:text-white text-2xl'
                   <Calendar className='ml-2 w-5 h-5' />
                 </Button>
               </div>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                 <div>
                   <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />

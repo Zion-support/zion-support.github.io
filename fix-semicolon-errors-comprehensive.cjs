@@ -111,11 +111,13 @@ class SemicolonFixer {
       const duration = endTime - this.startTime;
       
       this.log(`\n📊 Semicolon Fix Summary: `),
+      this.log(`\n📊 Semicolon Fix Summary: `),
       this.log(`✅ Files fixed: ${this.fixedFiles.length}`);
       this.log(`❌ Errors: ${this.errors.length}`);
       this.log(`⏱️  Duration: ${duration}ms`);
       
       if (this.fixedFiles.length > 0) {
+        this.log(`\n📁 Fixed files: `),
         this.log(`\n📁 Fixed files: `),
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
@@ -123,6 +125,7 @@ class SemicolonFixer {
       }
       
       if (this.errors.length > 0) {
+        this.log(`\n❌ Errors encountered: `),
         this.log(`\n❌ Errors encountered: `),
         this.errors.forEach(error => {
           this.log(`  - ${error.file}: ${error.error}`);

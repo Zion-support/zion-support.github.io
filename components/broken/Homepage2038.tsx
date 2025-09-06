@@ -1,34 +1,18 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038';
+import React from 'react',
+import Layout from './layout/Layout',
+import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  Brain,
-  Atom,
-  Shield,
-  Zap,
-  TrendingUp,
-  Globe,
-  Rocket,
-  Target,
-  Cpu,
-  Cloud,
-  Lock,
-  Users,
-  Award,
-  CheckCircle,
-  Sparkles,
-  Infinity,
-  Zap as Lightning,;
-} from 'lucide-react';
-
+import { ArrowRight, Star;
+  Brain, Atom, Shield, Zap, TrendingUp, Globe;
+  Rocket, Target, Cpu, Cloud, Lock, Users, Award;
+  CheckCircle, Sparkles, Infinity, Zap as Lightning
+ } from 'lucide-react';
 // Import new services
-import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services';
-import { innovative2038ITServices } from '../data/innovative-2038-it-services';
+import { innovative2038MicroSaasServices  } from '../data/innovative-2038-micro-saas-services';
+import { innovative2038ITServices  } from '../data/innovative-2038-it-services';
 import { innovative2038AIServices } from '../data/innovative-2038-ai-services';
+const Homepage2038: React.FC;
 const Homepage2038: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = innovative2038MicroSaasServices
@@ -74,15 +58,13 @@ className='inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cy
                 <span>Innovation Leader 2038</span>
                 <Sparkles className='w-4 h-4' />
               </motion.div>
-
               <h1 className='text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>
                 Zion Tech Group
               </h1>
               <p className='text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed'>
-                Pioneering the future of technology with revolutionary AI,
+                Pioneering the future of technology with revolutionary AI
                 quantum computing, and consciousness evolution solutions
               </p>
-
               {/* Enhanced CTA Section */}
               <div className='flex flex-col sm:flex-row gap-6 justify-center mb-10'>
                 <Link href='/get-started'>
@@ -135,7 +117,6 @@ className='flex flex-wrap items-center justify-center gap-8 text-sm text-gray-40
             </motion.div>
           </div>
         </section>
-
         {/* Company Stats */}
 <section className='py-24 px-4 bg-black/30 relative'>
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5'></div>
@@ -202,7 +183,6 @@ className='grid grid-cols-2 md:grid-cols-4 gap-8 text-center'
             </motion.div>
           </div>
         </section>
-
         {/* Featured AI Services */}
 <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -252,7 +232,6 @@ variant='consciousness'
             </div>
           </div>
         </section>
-
         {/* Featured Micro SAAS Services */}
 <section className='py-24 px-4 bg-black/20'>
           <div className='max-w-7xl mx-auto'>
@@ -302,7 +281,6 @@ variant='automation'
             </div>
           </div>
         </section>
-
         {/* Featured IT Services */}
 <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -352,7 +330,6 @@ variant='quantum'
             </div>
           </div>
         </section>
-
         {/* Why Choose Us */}
 <section className='py-24 px-4 bg-black/30'>
           <div className='max-w-7xl mx-auto'>
@@ -371,47 +348,46 @@ className='text-center mb-20'
                 human consciousness and computing
               </p>
             </motion.div>
-
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
                 {
-                  icon: <Brain className='w-12 h-12' />,
-                  title: 'AI Consciousness Evolution',
+                  icon: <Brain className='w-12 h-12' />
+                  title: 'AI Consciousness Evolution'
                   description:
-                    'Leading the development of artificial consciousness and emotional intelligence',
-                  color: 'from-purple-500 to-pink-500',
-                },
+                    'Leading the development of artificial consciousness and emotional intelligence'
+                  color: 'from-purple-500 to-pink-500'
+                }
                 {
-                  icon: <Atom className='w-12 h-12' />,
-                  title: 'Quantum Computing Power',
+                  icon: <Atom className='w-12 h-12' />
+                  title: 'Quantum Computing Power'
                   description:
-                    'Access to the most advanced quantum computing capabilities available',
-                  color: 'from-blue-500 to-cyan-500',
-                },
+                    'Access to the most advanced quantum computing capabilities available'
+                  color: 'from-blue-500 to-cyan-500'
+                }
                 {
-                  icon: <Shield className='w-12 h-12' />,
-                  title: 'Future-Proof Security',
+                  icon: <Shield className='w-12 h-12' />
+                  title: 'Future-Proof Security'
                   description:
-                    'Quantum-resistant encryption and zero-trust security frameworks',
-                  color: 'from-red-500 to-orange-500',
-                },
+                    'Quantum-resistant encryption and zero-trust security frameworks'
+                  color: 'from-red-500 to-orange-500'
+                }
                 {
-                  icon: <Rocket className='w-12 h-12' />,
-                  title: 'Innovation First',
+                  icon: <Rocket className='w-12 h-12' />
+                  title: 'Innovation First'
                   description:
-                    "Constantly pushing the boundaries of what's possible in technology",
-                  color: 'from-green-500 to-emerald-500',
-                },
+                    "Constantly pushing the boundaries of what's possible in technology"
+                  color: 'from-green-500 to-emerald-500'
+                }
                 {
-                  icon: <Users className='w-12 h-12' />,
-                  title: 'Global Expertise',
+                  icon: <Users className='w-12 h-12' />
+                  title: 'Global Expertise'
                   description:
-                    'World-class team with experience across cutting-edge technologies',
-                  color: 'from-indigo-500 to-purple-500',
-                },
+                    'World-class team with experience across cutting-edge technologies'
+                  color: 'from-indigo-500 to-purple-500'
+                }
                 {
-                  icon: <Award className='w-12 h-12' />,
-                  title: 'Proven Results',
+                  icon: <Award className='w-12 h-12' />
+                  title: 'Proven Results'
                   description:
                     'Track record of delivering transformative solutions to leading organizations',
                   color: 'from-yellow-500 to-orange-500',
@@ -442,7 +418,6 @@ className='text-center p-8 group hover:bg-white/5 rounded-2xl transition-all dur
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
 <section className='py-24 px-4'>
           <div className='max-w-4xl mx-auto text-center'>
@@ -460,7 +435,6 @@ className='space-y-8'
                 Join the revolution in AI consciousness, quantum computing, and
                 next-generation technology. Let's build the future together.
               </p>
-
               <div className='flex flex-col sm:flex-row gap-6 justify-center'>
                 <Link href='/contact'>
                   <motion.button

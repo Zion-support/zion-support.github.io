@@ -1,8 +1,9 @@
 import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-export default function AiPoweredDecisionEngine() {
-  
-    />
-  );
+			title;
+				"Versioned strategies with canary rollouts"
+			]}
+			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
+			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
+		/>
+	)
+}

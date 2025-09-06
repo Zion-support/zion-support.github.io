@@ -1,30 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Atom,
-  Shield,;
-} from 'lucide-react';
-
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield } from 'lucide-react';
 interface UltraFuturisticNavigationProps {
-  className?: string;
+  className?: string
+}
 
-export default function UltraFuturisticNavigation({
-  className = '',
-}: UltraFuturisticNavigationProps) {
+export default function UltraFuturisticNavigation({ className;
+  return (
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
   useEffect(() => {
     const handleScroll = () => {
 setIsScrolled(window.scrollY > 20);
@@ -36,9 +22,9 @@ setIsScrolled(window.scrollY > 20);
 
   const navigationItems = [
     {
-      name: 'Services',
-      href: '/services',
-      hasDropdown: true,
+      name: 'Services'
+      href: '/services'
+      hasDropdown: true
       dropdownItems: [
 {
           name: 'AI & Machine Learning',
@@ -47,23 +33,23 @@ setIsScrolled(window.scrollY > 20);
           color: 'from-purple-500 to-pink-600',
         },
         {
-          name: 'Quantum Computing',
-          href: '/services/quantum',
-          icon: Atom,
-          color: 'from-cyan-500 to-blue-600',
-        },
+          name: 'Quantum Computing'
+          href: '/services/quantum'
+          icon: Atom
+          color: 'from-cyan-500 to-blue-600'
+        }
         {
-          name: 'Cybersecurity',
-          href: '/services/cybersecurity',
-          icon: Shield,
-          color: 'from-red-500 to-pink-600',
-        },
+          name: 'Cybersecurity'
+          href: '/services/cybersecurity'
+          icon: Shield
+          color: 'from-red-500 to-pink-600'
+        }
         {
-          name: 'IT Solutions',
-          href: '/services/it-solutions',
-          icon: Rocket,
-          color: 'from-green-500 to-emerald-600',
-        },
+          name: 'IT Solutions'
+          href: '/services/it-solutions'
+          icon: Rocket
+          color: 'from-green-500 to-emerald-600'
+        }
         {
           name: 'View All Services',
           href: '/services',
@@ -89,6 +75,13 @@ address: '364 E Main St STE 1008 Middletown DE 19709',
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
           {/* Logo */}
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled
+        ? 'bg-gray-900/95 backdrop-blur-xl border-b border-gray-700/50 shadow-2xl'
+        : 'bg-transparent'
+    } ${className}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -107,7 +100,6 @@ className='flex items-center space-x-3'
               </div>
             </div>
           </motion.div>
-
           {/* Desktop Navigation */}
 <div className='hidden lg:flex items-center space-x-8'>
             {navigationItems.map((item, index) => (
@@ -174,7 +166,6 @@ className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px
               </div>
             ))}
           </div>
-
           {/* Contact Info & CTA */}
 <div className='hidden lg:flex items-center space-x-6'>
             {/* Contact Info */}
@@ -184,7 +175,6 @@ className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px
                 <span>{contactInfo.mobile}</span>
               </div>
             </div>
-
             {/* CTA Button */}
 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -196,7 +186,6 @@ className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px
               </Link>
             </motion.div>
           </div>
-
           {/* Mobile Menu Button */}
 <div className='lg:hidden'>
             <button
@@ -212,7 +201,6 @@ className='text-gray-300 hover:text-white transition-colors duration-300 py-2 px
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -236,7 +224,6 @@ onClick={() =>
                           )
                         }
                         className='flex items-center justify-between w-full text-left text-gray-300 hover:text-white transition-colors duration-300 py-3 px-4 rounded-lg hover:bg-gray-800/50'
-                      >
                         <span>{item.name}</span>
                         <ChevronDown
                           className={`w-4 h-4 transition-transform duration-300 ${
@@ -283,7 +270,6 @@ className='block text-gray-300 hover:text-white transition-colors duration-300 p
                   )}
                 </div>
               ))}
-
               {/* Mobile Contact Info */}
 <div className='pt-6 border-t border-gray-700/50 space-y-3'>
                 <div className='flex items-center space-x-3 text-gray-300'>
@@ -299,7 +285,6 @@ className='block text-gray-300 hover:text-white transition-colors duration-300 p
                   <span className='text-sm'>{contactInfo.address}</span>
                 </div>
               </div>
-
               {/* Mobile CTA */}
 <div className='pt-4'>
                 <Link

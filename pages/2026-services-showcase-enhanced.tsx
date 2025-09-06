@@ -1,7 +1,3 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search,
   Star,
@@ -196,8 +192,7 @@ website: 'https://ziontechgroup.com',
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
-    let filtered = all2026Services;
-
+    let filtered = all2026Services
     // Search filter
     if (searchTerm) {
 filtered = filtered.filter(
@@ -209,7 +204,6 @@ filtered = filtered.filter(
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
     // Category filter
     if (selectedCategory !== 'all') {
       if (selectedCategory === 'ai') {
@@ -250,7 +244,6 @@ filtered = filtered.filter(service => service.category.includes('AI'));
         );
       }
     }
-
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
@@ -264,7 +257,6 @@ if (selectedPriceRange === 'medium')
         return true;
       });
     }
-
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -274,16 +266,11 @@ return (
             parseInt(b.price.replace(/[^0-9]/g, ''))
           );
         case 'price-high':
-          return (
-            parseInt(b.price.replace(/[^0-9]/g, '')) -
-            parseInt(a.price.replace(/[^0-9]/g, ''))
-          );
+          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''))
         case 'popularity':
-          return b.rating * b.reviews - a.rating * a.reviews;
+          return (b.rating * b.reviews) - (a.rating * a.reviews)
         case 'newest':
-          return (
-            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-          );
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
         case 'rating':
           return b.rating - a.rating;
         default:
@@ -376,6 +363,30 @@ quantumServices: all2026Services.filter(s => s.category.includes('Quantum'))
         <section className='relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30'></div>
           <div className='max-w-7xl mx-auto relative z-10 text-center'>
+  return (
+    <UltraFuturisticBackground variant="holographic" intensity="high">
+      <div className="min-h-screen">
+        <Head>
+          <title>Enhanced 2026 Services Showcase - Zion Tech Group</title>
+          <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
+          <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
+          <link rel="icon" href="/favicon.svg" />
+          {/* Open Graph */}
+          <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
+          <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
+          <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
+          <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
+        </Head>
+        {/* Enhanced Header Section */}
+        <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
+          <div className="max-w-7xl mx-auto relative z-10 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -409,7 +420,6 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rou
                   </motion.div>
                 ))}
               </div>
-
               {/* Contact Information */}
 <div className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto'>
                 <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
@@ -433,7 +443,6 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rou
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Search and Filters */}
 <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -449,7 +458,6 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rou
                   className='w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 />
               </div>
-
               {/* Filters and Controls */}
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6'>
                 {/* Category Filter */}
@@ -469,7 +477,6 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rou
                     ))}
                   </select>
                 </div>
-
                 {/* Price Range Filter */}
                 <div>
 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -487,7 +494,6 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rou
                     ))}
                   </select>
                 </div>
-
                 {/* Sort Options */}
                 <div>
 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -505,7 +511,6 @@ className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rou
                     ))}
                   </select>
                 </div>
-
                 {/* View Mode Toggle */}
                 <div>
 <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -535,7 +540,6 @@ viewMode === 'list'
                   </div>
                 </div>
               </div>
-
               {/* Results Count */}
 <div className='text-center'>
                 <p className='text-gray-400'>
@@ -553,7 +557,6 @@ viewMode === 'list'
             </div>
           </div>
         </section>
-
         {/* Enhanced Services Grid */}
 <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -610,7 +613,6 @@ className={
                               </div>
                             )}
                           </div>
-
                           {/* Service Title and Tagline */}
 <h3 className='text-xl font-bold text-white mb-2'>
                             {service.name}
@@ -658,7 +660,6 @@ className={
                               </p>
                             )}
                           </div>
-
                           {/* Service Stats */}
 <div className='grid grid-cols-3 gap-2 mb-4 text-xs'>
                             <div className='text-center'>
@@ -682,7 +683,6 @@ className={
                               <div className='text-gray-400'>trial</div>
                             </div>
                           </div>
-
                           {/* Market Position */}
 <div className='mb-4 p-3 bg-gray-800/30 rounded-lg'>
                             <h4 className='text-xs font-semibold text-gray-200 mb-1'>
@@ -737,7 +737,6 @@ className={
             </AnimatePresence>
           </div>
         </section>
-
         {/* Enhanced Footer CTA */}
 <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>

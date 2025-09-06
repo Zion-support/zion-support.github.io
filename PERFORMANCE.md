@@ -9,7 +9,6 @@ undefined
 - [Monitoring](#monitoring)
 - [Benchmarking](#benchmarking)
 - [Best Practices](#best-practices)
- 
 
 ## Overview
 
@@ -22,7 +21,6 @@ We track these key performance indicators:
 - **Largest Contentful Paint (LCP)**: Target < 2.5s
 - **Cumulative Layout Shift (CLS)**: Target < 0.1
 - **Time to Interactive (TTI)**: Target < 3.8s
- 
 
 ## Getting Started
 
@@ -62,7 +60,6 @@ We track these key performance indicators:
 2. Explore the application features
 3. Check the documentation for more details
 4. Start contributing to the project
- 
 
 ## Examples
 
@@ -101,7 +98,6 @@ const app = new Application();
 app.configure(PERFORMANCE);
 app.start();
 ```
- 
 
 ## API Reference
 
@@ -135,7 +131,6 @@ Description of this property.
 ```typescript
 console.log(instance.propertyName);
 ```
- 
 
 ## Contributing
 
@@ -163,7 +158,6 @@ If you need help or have questions:
 - Search through existing issues
 - Create a new issue with a clear description
 - Join our community discussions
- 
 
 ## License
 

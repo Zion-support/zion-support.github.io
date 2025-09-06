@@ -66,6 +66,9 @@ function fixSyntaxErrors(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
+  
+  fs.writeFileSync(generateServicePath, content);
+  console.log('✅ [2025-09-06T09:26:05.801Z] ✅ Fixed pages/api/generate-service-description.ts');
 }
 
 console.log('Fixing remaining syntax errors...');

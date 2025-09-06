@@ -145,11 +145,7 @@ jobs:
     - name: Dependency update summary
       run: |
         echo "📢 Dependency Update Summary"
-<<<<<<< HEAD
-        echo "=========================="
-=======
-        echo "====="
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
         echo "Update Type: ${{ github.event.inputs.update_type }}"
         echo "Outdated packages: ${{ needs.check-dependencies.outputs.outdated_count }}"
         echo "Security vulnerabilities: ${{ needs.check-dependencies.outputs.vulnerabilities }}"

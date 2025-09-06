@@ -1,35 +1,22 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-export const newRealServices: EnhancedRealMicroSaasService[] = [
-  {
-id: 'llm-observability-suite',
-    name: 'LLM Observability Suite',
-    tagline: 'Track latency, cost, quality and drift across all prompts',
-    price: '$199',
-    period: '/month',
+const contact = null;
     description:
-      'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.',
+      'Production-grade observability for LLM apps: trace collection, cost attribution, evals, guardrails, and regression detection. Works with OpenAI-compatible and open-source models.'
     features: [
-      'Prompt and response tracing',
-      'Cost and token analytics',
-      'Automatic PII redaction',
-      'Offline and online evals',
-      'Guardrail policy engine',
-      'Drift and performance alerts',
-      'SDKs for JS, Python, Go',
-      'Grafana and Datadog exporters',
-    ],
-    popular: true,
-    icon: '📈',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/llm-observability-suite',
+      'Prompt and response tracing'
+      'Cost and token analytics'
+      'Automatic PII redaction'
+      'Offline and online evals'
+      'Guardrail policy engine'
+      'Drift and performance alerts'
+      'SDKs for JS, Python, Go'
+      'Grafana and Datadog exporters'
+    ]
+    popular: true
+    icon: '📈'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-400'
+    link: 'https://ziontechgroup.com/llm-observability-suite'
     marketPosition:
       'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.',
     targetAudience: 'AI product teams, platform engineers, data teams',

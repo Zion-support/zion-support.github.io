@@ -1,17 +1,9 @@
-import { useCallback, useMemo, useState } from 'react';
-import Head from 'next/head';
+import { useCallback, useMemo, useState  } from 'react';
+import Head from 'next/head',
 import DatePicker from 'react-datepicker';
-import type {
-  MediaBundle,
-  MediaAsset,
-  PressReleaseType,;
-} from '../../utils/mediaKit';
-import {
-  getDefaultAssets,
-  buildPressRelease,
-  buildTimeline,;
-} from '../../utils/mediaKit';
-
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+const KitPage = null;
 const KitPage = () => {
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
@@ -21,12 +13,10 @@ const KitPage = () => {
 const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
     []
   );
-
   const assets: MediaAsset[] = useMemo(
-    () => getDefaultAssets(bundle),
+    () => getDefaultAssets(bundle)
     [bundle]
   );
-
   const onGenerateTimeline = useCallback(() => {
     setTimeline(buildTimeline(startDate));
   }, [startDate]);
@@ -34,7 +24,6 @@ const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
   const onDownloadZip = useCallback(async () => {
     const JSZip = (await import('jszip')).default;
     const zip = new JSZip();
-
     // Add static/dynamic assets
 else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path);
@@ -42,7 +31,6 @@ else if (asset.type === 'binary' && asset.path) {
         zip.file(asset.filename, blob);
       }
     }
-
     // Add press releases
     const nowStr = new Date().toISOString().substring(0, 10);
 const prSeed = buildPressRelease('seed-round', {
@@ -59,13 +47,11 @@ const prSeed = buildPressRelease('seed-round', {
     zip.file('press-releases/seed-round.md', prSeed);
     zip.file('press-releases/launch.md', prLaunch);
     if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
-
     // Add timeline if generated
     if (timeline.length > 0) {
       const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
 zip.file('rollout-timeline.txt', tl);
     }
-
     const blob = await zip.generateAsync({ type: 'blob' });
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`);
@@ -76,7 +62,6 @@ zip.file('rollout-timeline.txt', tl);
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-
     const drawText = (text: string, x: number, y: number, size = 12) => {
 page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     };
@@ -104,7 +89,6 @@ page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
         y -= 14;
       });
     }
-
     const pdfBytes = await pdfDoc.save();
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const url = URL.createObjectURL(blob);
@@ -114,20 +98,19 @@ page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
     link.click();
     URL.revokeObjectURL(url);
   }, [assets, bundle, timeline]);
-
   const PressReleaseCard = ({
-    type,
-    title,
+    type
+    title
   }: {
     type: PressReleaseType;
     title: string;
   }) => {
     const nowStr = new Date().toISOString().substring(0, 10);
     const text = buildPressRelease(type, {
-      companyName,
-      date: nowStr,
-      raiseAmount,
-      tokenName,
+      companyName
+      date: nowStr
+      raiseAmount
+      tokenName
     });
     const onCopy = () => navigator.clipboard.writeText(text);
     return (
@@ -157,7 +140,6 @@ page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
           content='Zion media kit: brand, assets, legal, and rollout playbooks.'
         />
       </Head>
-
       <div className='space-y-8'>
         <header className='flex items-center justify-between'>
           <h1 className='text-2xl font-bold'>Media Kit</h1>
@@ -176,7 +158,6 @@ page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
             </button>
           </div>
         </header>
-
         <section className='grid md:grid-cols-3 gap-6'>
           <div className='p-4 border rounded-lg'>
             <h3 className='font-semibold mb-2'>Bundle</h3>

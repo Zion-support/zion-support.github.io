@@ -2,10 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
+const EPISODES_PATH = null;
+    return res.status(500).json({ error: error?.message || 'Synthesis failed' })
+};
 const EPISODES_PATH = path.join(
-  process.cwd(),
-  'data',
-  'podcast',
+  process.cwd()
+  'data'
+  'podcast'
   'episodes.json'
 );
 const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast');
@@ -16,62 +19,54 @@ function ensureStorage() {
 if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true });
-
 export default async function handler(
-  req: NextApiRequest,
+  req: NextApiRequest
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
-
-  const { episodeId } = req.body || {};
+  const { episodeId } = req.body |{}
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 const idx = episodes.findIndex(e => e.id === episodeId);
   if (idx === -1) return res.status(404).json({ error: 'Episode not found' });
-
   const episode = episodes[idx];
   const text = episode.transcript as string;
-
   const elevenKey = process.env.ELEVENLABS_API_KEY;
   const playhtKey = process.env.PLAYHT_API_KEY;
-
   const baseFilename = `${episode.id}-${Date.now()}`;
   const mp3Path = path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
   const wavPath = path.join(PUBLIC_DIR, `${baseFilename}.wav`);
   const mp4Path = path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
-
   let mp3Created = false;
-
   try {
     if (elevenKey) {
-      const voiceId = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM';
+      const voiceId = process.env.ELEVENLABS_VOICE_ID |'21m00Tcm4TlvDq8ikWAM';
       const resp = await axios.post(
 `https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
         {
-          text,
-          model_id: process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2',
-        },
-        {
-          responseType: 'arraybuffer',
-          headers: {
-            'xi-api-key': elevenKey,
-            'Content-Type': 'application/json',
-          },
+          text
+          model_id: process.env.ELEVENLABS_MODEL |'eleven_multilingual_v2'
         }
-      );
+        {
+          responseType: 'arraybuffer'
+          headers: {
+            'xi-api-key': elevenKey
+            'Content-Type': 'application/json'
+          }
+        }
       fs.writeFileSync(mp3Path, Buffer.from(resp.data));
       mp3Created = true;
     } else if (playhtKey) {
       const resp = await axios.post(
-        'https://api.play.ht/api/v2/tts',
-        { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
+        'https://api.play.ht/api/v2/tts'
+        { text, voice: process.env.PLAYHT_VOICE |'en-US-MichelleNeural' }
         {
-          responseType: 'arraybuffer',
+          responseType: 'arraybuffer'
           headers: {
-            Authorization: `Bearer ${playhtKey}`,
-            'Content-Type': 'application/json',
-          },
+            Authorization: `Bearer ${playhtKey}`
+            'Content-Type': 'application/json'
+          }
         }
       );
       fs.writeFileSync(mp3Path, Buffer.from(resp.data));
@@ -81,7 +76,6 @@ const idx = episodes.findIndex(e => e.id === episodeId);
       fs.writeFileSync(mp3Path, Buffer.alloc(0));
       mp3Created = true;
     }
-
     if (mp3Created) {
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
       fs.writeFileSync(wavPath, fs.readFileSync(mp3Path));
@@ -105,3 +99,5 @@ return res.status(200).json({ episode });
       .status(500)
       .json({ error: error?.message || 'Synthesis failed' });
   }
+}
+}

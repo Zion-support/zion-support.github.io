@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewSummary from '../../components/reviews/ReviewSummary';
 import ReviewCard from '../../components/reviews/ReviewCard';
 import type { PublicReview, ReviewsSummary } from '../../types/reviews';
-
-type Props = { clientId: string };
+type Props = any;
 const ClientPage: NextPage<Props> = ({ clientId }) => {
-  const [summary, setSummary] = useState<ReviewsSummary | null>(null);
-  const [reviews, setReviews] = useState<PublicReview[]>([]);
-
+  const [summary, setSummary] = useState<ReviewsSummary | null>(null)
+  const [reviews, setReviews] = useState<PublicReview[]>([])
   useEffect(() => {
     (async () => {
 const res = await fetch(

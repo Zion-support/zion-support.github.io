@@ -1,15 +1,17 @@
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
+  const [showResults, setShowResults] = useState(false);
+  const questions = null;
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 export default function ToolPage() {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState<{ [key: string]: number }>({});
-  const [showResults, setShowResults] = useState(false);
-
+  const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [answers, setAnswers] = useState<{ [key: string]: number }>({})
+  const [showResults, setShowResults] = useState(false)
   const questions = [
     {
-      id: 'current-automation',
-      question: 'What is your current level of automation?',
+      id: 'current-automation'
+      question: 'What is your current level of automation?'
       options: [
 'No automation - everything is manual',
         'Basic automation - some repetitive tasks automated',
@@ -30,8 +32,8 @@ export default function ToolPage() {
       ],
     },
     {
-      id: 'data-quality',
-      question: 'How would you assess your data quality and accessibility?',
+      id: 'data-quality'
+      question: 'How would you assess your data quality and accessibility?'
       options: [
 'Poor - data is scattered and unreliable',
         'Fair - some data available but needs cleaning',
@@ -41,8 +43,8 @@ export default function ToolPage() {
       ],
     },
     {
-      id: 'budget-commitment',
-      question: 'What is your budget commitment for automation initiatives?',
+      id: 'budget-commitment'
+      question: 'What is your budget commitment for automation initiatives?'
       options: [
 'No budget allocated',
         'Limited budget - under $50K',
@@ -52,8 +54,8 @@ export default function ToolPage() {
       ],
     },
     {
-      id: 'executive-support',
-      question: 'How strong is executive support for automation?',
+      id: 'executive-support'
+      question: 'How strong is executive support for automation?'
       options: [
 'No support - resistance to change',
         'Weak support - some interest but no action',
@@ -110,8 +112,7 @@ setCurrentQuestion(currentQuestion + 1);
     } else {
       setShowResults(true);
     }
-  };
-
+  }
   const resetAssessment = () => {
     setCurrentQuestion(0);
     setAnswers({});
@@ -119,7 +120,7 @@ setShowResults(false);
   };
 
   if (showResults) {
-    const result = calculateScore();
+    const result = calculateScore()
     return (
       <>
         <Head>
@@ -198,9 +199,7 @@ setShowResults(false);
       </>
 );
   }
-
-  const currentQ = questions[currentQuestion];
-
+  const currentQ = questions[currentQuestion]
   return (
     <>
       <Head>

@@ -1,17 +1,19 @@
-import useSWR from 'swr';
-import React, { useMemo, useState } from 'react';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GetServerSideProps } from 'next';
 import ModerationModal from '../../components/admin/ModerationModal';
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = null;
+    mutate()
+  }
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split(';').reduce(
+  const cookies = (req.headers.cookie |'').split(';').reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('=');
-      if (k) acc[k] = decodeURIComponent(v || '');
+      if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
-    },
+    }
     {} as Record<string, string>
   );
   let role = 'guest';
@@ -19,10 +21,9 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     role = cookies['x-user'] ? JSON.parse(cookies['x-user']).role : 'guest';
   } catch {}
   if (role !== 'admin')
-    return { redirect: { destination: '/', permanent: false } };
-  return { props: {} };
-};
-
+    return { redirect: { destination: '/', permanent: false } }
+  return { props: {} }
+}
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{
     status?: string;
@@ -39,7 +40,7 @@ export default function ContentReviewPage() {
 return p.toString();
   }, [filters]);
   const { data, mutate } = useSWR(
-    `/api/admin/moderation/flags${query ? `?${query}` : ''}`,
+    `/api/admin/moderation/flags${query ? `?${query}` : ''}`
     fetcher
   );
   const flags = data?.flags || [];
@@ -52,11 +53,11 @@ async function handleAction(
   ) {
     if (!selected) return;
     await fetch(
-      `/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`,
+      `/api/admin/moderation/flags/${encodeURIComponent(selected.id)}/action`
       {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ action, adminNotes }),
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ action, adminNotes })
       }
     );
     setSelected(null);
@@ -66,14 +67,17 @@ async function handleAction(
   return (
     <EnhancedLayout>
 <div className='max-w-7xl mx-auto'>
+  return (
+    <EnhancedLayout>
+      <div className='max-w-7xl mx-auto'>
         <div className='flex items-center justify-between mb-4'>
           <h1 className='text-2xl font-semibold'>Admin Content Review</h1>
         </div>
         <div className='mb-4 grid grid-cols-1 md:grid-cols-5 gap-3 text-sm'>
           <select
-            value={filters.status || ''}
+            value={filters.status |''}
             onChange={e =>
-              setFilters(f => ({ ...f, status: e.target.value || undefined }))
+              setFilters(f => ({ ...f, status: e.target.value |undefined }))
             }
             className='border rounded px-2 py-1'
           >
@@ -85,11 +89,11 @@ async function handleAction(
             <option value='banned'>Banned</option>
           </select>
           <select
-            value={filters.contentType || ''}
+            value={filters.contentType |''}
             onChange={e =>
               setFilters(f => ({
-                ...f,
-                contentType: e.target.value || undefined,
+                ...f
+                contentType: e.target.value |undefined
               }))
             }
             className='border rounded px-2 py-1'
@@ -102,19 +106,19 @@ async function handleAction(
           </select>
           <input
             placeholder='Reason contains...'
-            value={filters.reason || ''}
+            value={filters.reason |''}
             onChange={e =>
-              setFilters(f => ({ ...f, reason: e.target.value || undefined }))
+              setFilters(f => ({ ...f, reason: e.target.value |undefined }))
             }
             className='border rounded px-2 py-1'
           />
           <input
             placeholder='User email'
-            value={filters.userEmail || ''}
+            value={filters.userEmail |''}
             onChange={e =>
               setFilters(f => ({
-                ...f,
-                userEmail: e.target.value || undefined,
+                ...f
+                userEmail: e.target.value |undefined
               }))
             }
             className='border rounded px-2 py-1'
@@ -182,7 +186,6 @@ async function handleAction(
           </table>
         </div>
       </div>
-
       {selected && (
         <ModerationModal
           flag={selected}

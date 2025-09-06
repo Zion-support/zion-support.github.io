@@ -1,35 +1,18 @@
-import React from 'react';
-import Layout from './layout/Layout';
-import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
+import React from 'react',
+import Layout from './layout/Layout',
+import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {
-  ArrowRight,
-  Star,
-  Users,
-  Award,
-  Clock,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Zap,
-  TrendingUp,
-  Globe,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  Palette,
-  Target,
-  CheckCircle,
-  Sparkles,;
-} from 'lucide-react';
-
+import { ArrowRight, Star, Users, Award, Clock;
+  Brain, Atom, Shield, Rocket, Zap;
+  TrendingUp, Globe, Cpu, Database, Cloud;
+  Lock, Palette, Target, CheckCircle, Sparkles
+ } from 'lucide-react';
 // Import new service data
-import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025';
-import { realITServices2025 } from '../data/real-it-services-2025';
+import { realMicroSaasServices2025  } from '../data/real-micro-saas-services-2025';
+import { realITServices2025  } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
+const Homepage2037: React.FC;
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = realMicroSaasServices2025
@@ -73,13 +56,11 @@ const Homepage2037: React.FC = () => {
                   Revolutionary AI • Quantum Computing • Enterprise Solutions
                 </div>
               </div>
-
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed'>
-                Transform your business with cutting-edge AI, quantum computing,
+                Transform your business with cutting-edge AI, quantum computing
                 and enterprise solutions. We deliver innovative technology that
                 drives business transformation and shapes the future.
               </p>
-
               {/* Enhanced CTA buttons */}
               <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
                 <Link href='/contact'>
@@ -104,7 +85,6 @@ const Homepage2037: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Company Stats */}
 <section className='py-24 px-4 bg-black/40 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto'>
@@ -188,7 +168,6 @@ className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 ro
             </div>
           </div>
         </section>
-
         {/* Featured AI Services */}
 <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -255,7 +234,6 @@ className='text-center mt-12'
             </motion.div>
           </div>
         </section>
-
         {/* Featured Enterprise IT Services */}
 <section className='py-24 px-4 bg-black/20'>
           <div className='max-w-7xl mx-auto'>
@@ -322,7 +300,6 @@ className='text-center mt-12'
             </motion.div>
           </div>
         </section>
-
         {/* Featured Micro SAAS Services */}
 <section className='py-24 px-4'>
           <div className='max-w-7xl mx-auto'>
@@ -389,7 +366,6 @@ className='text-center mt-12'
             </motion.div>
           </div>
         </section>
-
         {/* Enhanced Why Choose Us Section */}
 <section className='py-24 px-4 bg-black/30'>
           <div className='max-w-7xl mx-auto'>
@@ -424,7 +400,7 @@ className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rou
                   AI-First Approach
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
-                  Leading-edge artificial intelligence solutions that adapt,
+                  Leading-edge artificial intelligence solutions that adapt
                   evolve, and transform your business operations
                 </p>
               </motion.div>
@@ -485,7 +461,6 @@ className='text-center p-8 bg-gradient-to-br from-green-500/10 to-teal-500/10 ro
             </div>
           </div>
         </section>
-
         {/* Enhanced Call to Action */}
 <section className='py-24 px-4'>
           <div className='max-w-5xl mx-auto text-center'>
@@ -498,7 +473,6 @@ className='relative'
             >
               {/* Background decoration */}
               <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl'></div>
-
               <div className='relative z-10 p-12 bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30'>
                 <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 via-cyan-400 to-teal-500 bg-clip-text text-transparent'>
                   Ready to Transform Your Business?
@@ -508,7 +482,6 @@ className='relative'
                   build something extraordinary together and shape the future of
                   your industry.
                 </p>
-
                 <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
                   <Link href='/contact'>
                     <motion.button

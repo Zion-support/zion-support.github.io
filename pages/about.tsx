@@ -1,7 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
 Brain,
   Shield,
   Users,
@@ -47,50 +43,23 @@ name: "John Smith",
   ];
 
   return (
-    <>
-      <Head>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts delivering cutting-edge technology solutions." />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="relative pt-20 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-4xl md:text-6xl font-bold text-white mb-6"
-              >
-                About Zion Tech Group
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto"
-              >
-                We're a team of passionate technologists dedicated to transforming businesses through innovative software solutions and cutting-edge technology.
-              </motion.p>
-            </div>
+    <Layout
+      title="About Us - Zion Tech Group"
+      description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
+    >
+      <div className="min-h-screen bg-gray-50 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              About Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Leading technology solutions provider specializing in AI
+              cybersecurity, and digital transformation.
+            </p>
           </div>
-        </section>
-
-        {/* Mission Section */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                Our Mission
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                To empower businesses with technology solutions that drive growth, efficiency, and innovation. 
-                We believe in the transformative power of technology and are committed to delivering solutions 
-                that not only meet today's needs but anticipate tomorrow's challenges.
-              </p>
-            </div>
+          <div className="text-center">
+            <p className="text-gray-600">About page is under construction.</p>
           </div>
         </section>
 

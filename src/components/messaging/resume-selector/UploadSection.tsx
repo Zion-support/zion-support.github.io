@@ -2,13 +2,15 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Upload, FileText } from 'lucide-react';
 
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
-
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 export function UploadSection({
-  customFile,
-  onFileUpload,
+  customFile
+  onFileUpload
 }: UploadSectionProps) {
   return (
     <div className='space-y-3'>

@@ -2,18 +2,10 @@ import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-
-export default function DocsPage() {
-  const contact = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-  };
-
+  const contact = null;
   const sections = [
     {
-      title: 'Getting Started',
+      title: 'Getting Started'
       links: [
         { name: 'Overview', href: '/enhanced-services-showcase' },
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
@@ -21,7 +13,7 @@ website: 'https://ziontechgroup.com',
       ],
     },
     {
-      title: 'AI Services Docs',
+      title: 'AI Services Docs'
       links: [
         { name: 'AI Guardrails', href: '/ai-guardrails' },
         { name: 'AI Evals', href: '/ai-evals' },
@@ -29,7 +21,7 @@ website: 'https://ziontechgroup.com',
       ],
     },
     {
-      title: 'IT & Platform Docs',
+      title: 'IT & Platform Docs'
       links: [
         { name: 'API Observability', href: '/api-observability' },
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
@@ -115,7 +107,6 @@ day: 'numeric',
         />
         <link rel='canonical' href='https://ziontechgroup.com/docs' />
       </Head>
-
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto space-y-10'>
           <div className='text-center'>
@@ -126,7 +117,6 @@ day: 'numeric',
               Quick links, references, and integration guides for our services.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {sections.map(s => (
               <Card

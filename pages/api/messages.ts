@@ -1,11 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { readJsonFile, writeJsonFile } from '../../utils/db';
+import { v4 as uuidv4 } from '[^']*';
+import { readJsonFile, writeJsonFile } from '[^']*';
 import type { Conversation, Message } from '../../utils/types';
-import { rateLimit } from '../../utils/rateLimit';
-
+import { rateLimit } from '[^']*';
+const FILE = null;
+  res.status(405).end('Method Not Allowed')
+}
     }
-
     const now = new Date().toISOString();
     const msg: Message = {
 id: uuidv4(),
@@ -20,17 +21,15 @@ id: uuidv4(),
     conversations[idx].messages.push(msg);
     conversations[idx].updatedAtIso = now;
     writeJsonFile<Conversation[]>(FILE, conversations);
-
     res.status(201).json({ message: msg });
 return;
   }
-
-  if (req.method === 'GET') {
+  if (req.method === "GET") {
     const { conversationId } = req.query;
     const conversations = readJsonFile<Conversation[]>(FILE, []);
 const conv = conversations.find(c => c.id === String(conversationId));
     if (!conv) {
-      res.status(404).json({ error: 'Conversation not found' });
+      res.status(404).json({ error: "Conversation not found" });
       return;
     }
     res.status(200).json({ conversation: conv });

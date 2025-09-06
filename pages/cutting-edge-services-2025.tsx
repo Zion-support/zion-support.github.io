@@ -1,7 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {
   CheckCircle,
   ArrowRight,
@@ -150,13 +146,31 @@ export default function CuttingEdgeServices2025() {
                 className='inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300'
               >
                 <Phone className='mr-2 w-5 h-5' />
+              quantum computing, enterprise IT, and innovative micro SAAS solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <motion.a
+                href="/contact"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </motion.a>
+              <motion.a
+                href="tel:+13024640950"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                <Phone className="mr-2 w-5 h-5" />
                 Call Now
               </motion.a>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Service Categories */}
 <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -290,7 +304,6 @@ className='flex-1 inline-flex items-center justify-center px-4 py-3 border borde
           </div>
         </div>
       </section>
-
       {/* Pricing Comparison */}
 <section className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-6'>
@@ -389,7 +402,6 @@ className='group'
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
 <section className='py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20'>
         <div className='max-w-4xl mx-auto text-center px-6'>

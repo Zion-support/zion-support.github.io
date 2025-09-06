@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:postcss.config.cjs.disabled
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 module.exports = {
   plugins: {
     tailwindcss: {},
     autoprefixer: {},
   },
 };
-<<<<<<< HEAD
-=======
-=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 },
 module.exports = {
   plugins: {
@@ -18,3 +13,4 @@ module.exports = {
     autoprefixer: {}}},
 >>>>>>> pr-11992:postcss.config.js
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

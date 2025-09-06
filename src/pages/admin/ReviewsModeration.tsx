@@ -1,25 +1,9 @@
-import { SEO } from '@/components/SEO';
-import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { useState, useEffect } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Star, AlertTriangle } from 'lucide-react';
-import { toast } from '@/components/ui/use-toast';
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState('pending');
+  const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const fetchReviews = null;
   const fetchReviews = async () => {
-    setIsLoading(true);
+    setIsLoading(true)
     try {
       // In a real application, you would fetch reviews from an API
       // For now, let's simulate a delay and return empty data
@@ -28,10 +12,10 @@ function ReviewsModerationContent() {
 setIsLoading(false);
     } catch (error) {
       logErrorToProduction(
-        error instanceof Error ? error.message : String(error),
-        error instanceof Error ? error : undefined,
+        error instanceof Error ? error.message : String(error)
+        error instanceof Error ? error : undefined
         { message: 'Error fetching reviews' }
-      );
+      )
       toast({
         title: 'Error',
         description: 'Failed to load reviews. Please try again later.',
@@ -46,9 +30,8 @@ fetchReviews();
   }, [activeTab]);
 
   const handleRefresh = () => {
-    fetchReviews();
-  };
-
+    fetchReviews()
+  }
   return (
     <>
       <SEO
@@ -64,7 +47,6 @@ fetchReviews();
             </p>
           </div>
         </div>
-
         <Card>
           <CardHeader>
             <CardTitle className='flex items-center gap-2'>
@@ -85,12 +67,14 @@ fetchReviews();
                 <TabsTrigger value='pending'>Pending Reviews</TabsTrigger>
                 <TabsTrigger value='reported'>Reported Reviews</TabsTrigger>
               </TabsList>
-
               <TabsContent value='pending' className='mt-0'>
                 <ReviewsModerationTable
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
+                  reviews = {reviews,}
+                  isLoading = {isLoading,}
+                  onRefresh = {handleRefresh,}
                 />
               </TabsContent>
 <TabsContent value='reported' className='mt-0'>

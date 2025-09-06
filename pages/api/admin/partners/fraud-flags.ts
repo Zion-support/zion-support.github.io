@@ -1,30 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../../utils/supabase/server';
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const code = (req.query.code as string)?.toLowerCase();
-  if (!code) return res.status(400).json({ error: 'Missing code' });
-
-  const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
-      'placeholder-key';
   try {
-    if (usingPlaceholder) {
-      return res.status(200).json({
-        flags: [
-          {
-            type: 'suspicious_ip',
-            severity: 'low',
-            note: 'Multiple visits from same IP',
-          },
-        ],
-      });
-    }
-
+    const code = req.query.code as string;
     const supabase = getServerSupabase();
+    const { data: flags } = await supabase.from('fraud_flags').select().eq('partner_code', code);
+    return res.status(200).json({ flags });
+    }
+    const supabase = getServerSupabase()
     const { data, error } = await supabase
       .from('referral_events')
       .select('ip_address, created_at')
@@ -40,8 +22,7 @@ export default async function handler(
       const key = (row as any).ip_address || 'unknown';
 counts.set(key, (counts.get(key) || 0) + 1);
     }
-
-    const flags: any[] = [];
+    const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 flags.push({
@@ -55,5 +36,9 @@ flags.push({
     });
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
+  }
+}
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
   }
 }
