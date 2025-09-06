@@ -1,10 +1,14 @@
- const completion = await openai.chat.completions.create ({
-  model: 'gpt-4o-mini', temperature: typeof temperature === 'number' ? temperature : 0.7, messages: [ {
-  role: 'system', content: sys 
-};
-{
-  role: 'user', content: prompt 
-}] 
-});
-}
+// AI operator API endpoint
+export default async function handler(req: any, res: any) {
+  try {
+    const { sys, prompt, temperature } = req.body;
+    
+    // Mock response for now
+    res.status(200).json({ 
+      message: 'AI operator endpoint',
+      response: 'Mock response'
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }

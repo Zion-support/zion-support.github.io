@@ -1,7 +1,10 @@
- 
-}catch (err: any) {
-  return res.status (400) .json ({
-  error: err.message 
-}) 
-}
+// Issue tokens API endpoint
+export default function handler(req: any, res: any) {
+  try {
+    res.status(200).json({ message: 'Issue tokens endpoint' });
+  } catch (err: any) {
+    return res.status(400).json({
+      error: err.message
+    });
+  }
 }

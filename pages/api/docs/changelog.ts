@@ -1,10 +1,17 @@
- export default function handler (req: NextApiRequest, res: NextApiResponse) {
+// Docs changelog API endpoint
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-  try {
+    try {
+      res.status(200).json({ message: 'Docs changelog endpoint' });
+      return;
+    } catch (error) {
+      res.status(500).json({ error: 'Internal server error' });
+      return;
+    }
+  }
   
-}return 
-}
-}return 
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
 }

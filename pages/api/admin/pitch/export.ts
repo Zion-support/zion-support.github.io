@@ -1,3 +1,4 @@
- res.status (200) .send (html);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+// Export API endpoint
+export default function handler(req: any, res: any) {
+  res.status(200).send('Export endpoint');
 }

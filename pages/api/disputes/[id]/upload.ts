@@ -1,18 +1,5 @@
- dispute.attachments.push ({
-  id: `$ {
-  Date.now () 
-}-$ {
-  safeName 
-}`;
-fileName: safeName;
-fileSize: buffer.length;
-mimeType: f.mimeType || 'application/octet-stream';
-path: filePath;
-uploadedAt: now;
-uploadedByUserId: user.id 
-}) 
-}
-}res.setHeader ('AllowPOST');
-return res.status (405) .end ('Method Not Allowed') 
-}
+// Disputes [id] upload API endpoint
+export default function handler(req: any, res: any) {
+  res.setHeader('Allow', 'POST');
+  return res.status(405).end('Method Not Allowed');
 }

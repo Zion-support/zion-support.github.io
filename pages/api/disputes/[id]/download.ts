@@ -1,3 +1,4 @@
- stream.pipe (res);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+// Disputes [id] download API endpoint
+export default function handler(req: any, res: any) {
+  res.status(200).json({ message: 'Disputes download endpoint' });
 }

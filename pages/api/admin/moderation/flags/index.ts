@@ -1,5 +1,5 @@
- (!status || f.status === status) && (!reason || f.reason.toLowerCase () .includes (reason.toLowerCase () ) ) && (!userEmail || f.userEmail.toLowerCase () .includes (userEmail.toLowerCase () ) ) && (!contentType || f.contentType === contentType) 
-}
-}res.setHeader ('AllowGET, POST');
-return res.status (405) .end ('Method Not Allowed') 
+// Moderation flags index API endpoint
+export default function handler(req: any, res: any) {
+  res.setHeader('Allow', 'GET, POST');
+  return res.status(405).end('Method Not Allowed');
 }
