@@ -83,6 +83,7 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     })
   };
 
+
   return (
     <ErrorBoundary 
       FallbackComponent={MarketplaceErrorFallback}

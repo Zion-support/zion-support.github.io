@@ -24,12 +24,14 @@ export function AIEnhancementPanel({
   showInstructions = true;
   initialContent = ''
 }: AIEnhancementPanelProps) {
-  const [options, setOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions;
+
+  const [ options, setOptions ] = useState<AIEnhancementOptions>({
+    ...defaultOptions,
     content: initialContent || defaultOptions.content}),
-  const [generatedContent, setGeneratedContent] = useState<string>('');
-  const [copied, setCopied] = useState(false);
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+  const [ generatedContent, setGeneratedContent ] = useState<string>(''),
+  const [ copied, setCopied ] = useState(false),
+  const { enhanceContent, isEnhancing  } = useAIContentEnhancer(),
+
 
   const handleGenerate = async () => {
     const result = await enhanceContent(options);
@@ -57,6 +59,7 @@ export function AIEnhancementPanel({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
   };
+
 
   return (
     <Card className="w-full max-w-2xl mx-auto">

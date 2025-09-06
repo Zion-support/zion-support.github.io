@@ -84,4 +84,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
       </Button>
     </div>
   )
+
 };
+

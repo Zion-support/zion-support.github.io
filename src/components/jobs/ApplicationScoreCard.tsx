@@ -13,7 +13,9 @@ interface ApplicationScoreCardProps {
 }
 
 export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false);
+
+  const [ isScoring, setIsScoring ] = useState(false),
+
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number';
@@ -37,13 +39,14 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
   };
 
   // Trigger the scoring process
-  const handleScore = async () => {
-    try {
-      setIsScoring(true);
+
+  const handleScore = async () => { try {
+      setIsScoring(true),
       
       // Call the trigger_resume_scoring function
-      const { error } = await supabase.rpc(
-        'trigger_resume_scoring';
+      const { error  } = await supabase.rpc(
+        'trigger_resume_scoring',
+
         { application_id: application.id }
       );
       
@@ -55,10 +58,11 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       let attempts = 0;
       const maxAttempts = 10;
       
-      const checkScore = async () => {
-        attempts++;
+
+      const checkScore = async () => { attempts++,
+
         
-        const { data, error } = await supabase
+        const { data, error  } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
@@ -92,6 +96,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       toast.error(`Failed to score resume: ${error.message}`)
     }
   };
+
 
   // Render the score result or button to score
   return (

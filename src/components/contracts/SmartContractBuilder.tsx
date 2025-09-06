@@ -25,21 +25,23 @@ export function SmartContractBuilder({
   talent;
   clientName;
   onContractGenerated}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form");
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+
+  const [ activeTab, setActiveTab ] = useState<string>("form"),
+  const [ generatedContract, setGeneratedContract ] = useState<string | null>(null),
+  const [ formValues, setFormValues ] = useState<ContractFormValues | undefined>(
     undefined
-  );
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
+  ),
+  const [ templateManagerOpen, setTemplateManagerOpen ] = useState(false),
+  const [ deployOptions, _setDeployOptions ] = useState<DeploymentOptions>({
     network: 'ethereum',
     useEscrow: true,
     deployToChain: false
-  });
-  const [deployStatus, setDeployStatus] = useState<string>('');
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null);
+  }),
+  const [ deployStatus, setDeployStatus ] = useState<string>(''),
+  const [ deploymentInfo, setDeploymentInfo ] = useState<SmartContractInfo | null>(null),
   
-  const { deploySmartContract } = useSmartContracts();
+  const { deploySmartContract  } = useSmartContracts(),
+
 
   const handleLoadTemplate = (templateData: ContractFormValues) => {
     setFormValues(templateData)
@@ -79,6 +81,7 @@ export function SmartContractBuilder({
     setGeneratedContract(contract);
     setActiveTab("preview")
   };
+
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

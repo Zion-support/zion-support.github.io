@@ -41,9 +41,11 @@ function highlight(text: string, term: string) {
 
 export default function SearchPage() {
   const router = useRouterReady(), // Use our custom hook
-  const [query, setQuery] = useState("");
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
+
+  const [ query, setQuery ] = useState(""),
+  const [ results, setResults ] = useState<SearchResult[]>([]),
+  const [ loading, setLoading ] = useState(false),
+
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
@@ -122,7 +124,9 @@ export default function SearchPage() {
             value={query}
             onChange={setQuery}
             onSelectSuggestion={(suggestion) => {
-              const searchTerm = suggestion.text.trim();
+
+              const searchTerm = suggestion.text.trim(),
+
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}

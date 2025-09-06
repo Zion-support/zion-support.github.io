@@ -1,4 +1,6 @@
-import { useRouter } from 'next/router', // Changed from useParams
+
+import { useRouter } from 'next/router'; // Changed from useParams
+
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -7,16 +9,16 @@ import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
-export default function ProductPage() {
 
-  const router = useRouter();
-  const { id: rawId } = router.query,
-  const id = typeof rawId === 'string' ? rawId : undefined;
-  const [product, setProduct] = useState(
+export default function ProductPage() { const router = useRouter(),
+  const { id: rawId  } = router.query,
+  const id = typeof rawId === 'string' ? rawId : undefined,
+  const [ product, setProduct ] = useState(
     NEW_PRODUCTS.find((p) => p.id === id) || null
-  );
-  const { items, dispatch } = useCart();
-  const [adding, setAdding] = useState(false);
+  ),
+  const { items, dispatch  } = useCart(),
+  const [ adding, setAdding ] = useState(false),
+
 
   useEffect(() => {
     // Update product if id changes and is available from router.query
@@ -67,6 +69,7 @@ export default function ProductPage() {
     toast.success(`1× ${product.title} added`);
     setTimeout(() => setAdding(false), 500)
   };
+
 
   return (
     <>

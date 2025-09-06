@@ -4,10 +4,12 @@ import { useWishlist } from '@/hooks/useWishlist';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger} from '@/components/ui/tooltip';
+
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from '@/components/ui/tooltip',
+
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
@@ -27,12 +29,13 @@ interface ProductCardProps {
   buyDisabled?: boolean
 }
 
-export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false }: ProductCardProps) {
-  const { isAuthenticated } = useAuth();
-  const { isWishlisted, toggle } = useWishlist();
-  const [imageError, setImageError] = useState(false);
-  const [isRedirecting, setIsRedirecting] = useState(false), // Added for loading state
-  const router = useRouter();
+
+export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled = false }: ProductCardProps) { const { isAuthenticated  } = useAuth(),
+  const { isWishlisted, toggle  } = useWishlist(),
+  const [ imageError, setImageError ] = useState(false),
+  const [ isRedirecting, setIsRedirecting ] = useState(false), // Added for loading state
+  const router = useRouter(),
+
 
   const stockStatus =
     product.stock === undefined
@@ -109,7 +112,8 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   const isMobile = useMediaQuery('(max-width: 768px)'),
   const isTablet = useMediaQuery('(max-width: 1200px)'),
 
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
+
 
   return (
     <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">

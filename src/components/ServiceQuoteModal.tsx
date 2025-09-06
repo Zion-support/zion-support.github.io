@@ -33,28 +33,30 @@ const TIMELINE_OPTIONS = [
   { label: "3-6 months", value: "3-6months" },
   { label: "6+ months", value: "6+months" }],
 export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteModalProps) {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     description: '',
     email: '',
     budget: BUDGET_RANGES[0]?.value || '0-5000',
     timeframe: TIMELINE_OPTIONS[0]?.value || 'lt-1month'}),
-  const [startDate, setStartDate] = useState<Date | undefined>(new Date());
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined);
-  const [currentStep, setCurrentStep] = useState<'details' | 'timeline' | 'contact'>('details');
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+  const [ startDate, setStartDate ] = useState<Date | undefined>(new Date()),
+  const [ endDate, setEndDate ] = useState<Date | undefined>(undefined),
+  const [ currentStep, setCurrentStep ] = useState<'details' | 'timeline' | 'contact'>('details'),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { const { name, value  } = e.target,
+
     setFormData(prev => ({ ...prev, [name]: value }))
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => { e.preventDefault(),
+    setIsSubmitting(true),
+
 
     try {
       // Call Supabase function to process the quote
-      const { data, error } = await supabase.functions.invoke('process-quote', {
+      const { data, error  } = await supabase.functions.invoke('process-quote', {
         body: {
           service: service ? {
             id: service.id,

@@ -17,9 +17,11 @@ const languages: Language[] = [
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "zh", name: "中文", flag: "🇨🇳" }],
-export function LanguageThemeSelector() {
-  const { theme, setTheme } = useTheme();
-  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+
+
+export function LanguageThemeSelector() { const { theme, setTheme  } = useTheme(),
+  const [ selectedLanguage, setSelectedLanguage ] = useState<string>("en"),
+
 
   return (
     <div className="space-y-8 px-4">

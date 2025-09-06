@@ -8,12 +8,13 @@ import { Button } from '@/components/ui/button';
 import { useCart } from '@/context/CartContext';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { useEffect } from 'react', // Added useEffect
 
-export default function WishlistPage() {
-  const { favorites, loading, toggleFavorite } = useFavorites();
-  const { user, isLoading: isAuthLoading } = useAuth(), // Added isAuthLoading
+import { useRouter } from 'next/router'; // Changed from useNavigate
+import { useEffect } from 'react'; // Added useEffect
+
+export default function WishlistPage() { const { favorites, loading, toggleFavorite  } = useFavorites(),
+  const { user, isLoading: isAuthLoading  } = useAuth(), // Added isAuthLoading
+
   const router = useRouter(), // Changed from navigate
 
   useEffect(() => {
@@ -27,7 +28,9 @@ export default function WishlistPage() {
     return null, // Or a loading spinner;
   }
 
-  const { items, dispatch } = useCart();
+
+  const { items, dispatch  } = useCart(),
+
 
   const addToCart = (item: { id: string, title?: string, price?: number }) => {
     if (items.some(i => i.id === item.id)) return;
@@ -44,11 +47,15 @@ export default function WishlistPage() {
   };
 
   const productMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
-    acc[p.id] = p;
+
+    acc[ p.id ] = p,
+
     return acc
   }, {});
   const talentMap = TALENT_PROFILES.reduce<Record<string, any>>((acc, t) => {
-    acc[t.id] = t;
+
+    acc[ t.id ] = t,
+
     return acc
   }, {});
 

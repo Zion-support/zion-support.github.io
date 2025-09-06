@@ -71,6 +71,7 @@ export function PartnerResources() {
       variant: "default"})
   };
 
+
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">

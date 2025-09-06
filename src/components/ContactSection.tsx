@@ -9,30 +9,34 @@ import z from "zod";
 import { Mail } from 'lucide-react'
 
 export function ContactSection() {
-  const [formData, setFormData] = useState({
+  const [ formData, setFormData ] = useState({
     name: "",
     email: "",
     subject: "",
     message: ""}),
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    subject?: string;
+
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ submitted, setSubmitted ] = useState(false),
+  const [ errors, setErrors ] = useState<{
+    name?: string,
+    email?: string,
+    subject?: string,
+
     message?: string
   }>({});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+
+  ) => { const { name, value  } = e.target,
+    setFormData((prev) => ({ ...prev, [name]: value })),
+
     setErrors((prev) => ({ ...prev, [name]: undefined }))
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+
+    e.preventDefault(),
 
     const schema = z.object({
       name: z.string().min(2, "Name is required");
@@ -84,6 +88,7 @@ export function ContactSection() {
           variant: "destructive"})
       })
   };
+
 
   return (
     <section className="py-20 bg-zion-blue" id="contact">

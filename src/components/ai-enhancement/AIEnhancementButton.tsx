@@ -22,10 +22,11 @@ export function AIEnhancementButton({
   variant = "ghost";
   size = "sm";
   contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
-  const [showActions, setShowActions] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+
+}: AIEnhancementButtonProps) { const { enhanceContent, isEnhancing  } = useAIContentEnhancer(),
+  const [ showActions, setShowActions ] = useState(false),
+  const [ generatedContent, setGeneratedContent ] = useState<string | null>(null),
+
   
   const handleEnhance = async () => {
     if ((!options.content || options.content.trim().length < contentLength) && 
@@ -65,7 +66,8 @@ export function AIEnhancementButton({
     setShowActions(false);
     setGeneratedContent(null)
   };
-  
+
+
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">

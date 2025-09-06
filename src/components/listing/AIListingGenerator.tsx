@@ -27,10 +27,11 @@ interface AIListingGeneratorProps {
   }
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null>(null);
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) { const { toast  } = useToast(),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ generatedContent, setGeneratedContent ] = useState<GeneratedContent | null>(null),
+
 
   const handleGenerate = async ({
     title;
@@ -42,11 +43,12 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     category: string,
     keyFeatures: string,
     targetAudience: string
-  }) => {
-    setIsLoading(true);
+
+  }) => { setIsLoading(true),
+
     
     try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+      const { data, error  } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
       });
 
@@ -84,6 +86,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       })
     }
   };
+
 
   return (
     <div className="space-y-6">

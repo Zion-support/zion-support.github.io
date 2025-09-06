@@ -16,10 +16,11 @@ interface FavoriteButtonProps {
   className?: string
 }
 
-export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-  const { isWishlisted, toggle } = useWishlist();
-  const { isAuthenticated } = useAuth();
-  const [loginOpen, setLoginOpen] = React.useState(false);
+
+export function FavoriteButton({ itemId, className }: FavoriteButtonProps) { const { isWishlisted, toggle  } = useWishlist(),
+  const { isAuthenticated  } = useAuth(),
+  const [ loginOpen, setLoginOpen ] = React.useState(false),
+
 
   const handleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -48,7 +49,9 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
           <TooltipTrigger asChild>
             <button
               className={cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
+
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors',
+
                 className
               )}
               onClick={handleClick}

@@ -54,7 +54,8 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     });
     // Navigate to messaging with this client
   };
-  
+
+
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>

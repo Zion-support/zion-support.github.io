@@ -1,9 +1,11 @@
 import React, {
-  useState;
-  useEffect;
-  useRef;
-  ReactNode;
-  useContext} from 'react';
+
+  useState,
+  useEffect,
+  useRef,
+  ReactNode,
+  useContext} from 'react',
+
 import { AuthContext } from '../../context/auth/AuthContext';
 import { useDebounce } from '../../hooks/useDebounce';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
@@ -31,10 +33,12 @@ export interface ChatAssistantProps {
     avatarUrl?: string;
     role?: string
   };
-  conversationId?: string;
-  initialMessages?: Message[];
-  onSendMessage: (message: string, conversationId?: string) => Promise<void>;
-  contextHeader?: ReactNode;
+
+  conversationId?: string,
+  initialMessages?: Message[],
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,
+  contextHeader?: ReactNode,
+
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[]
 }
@@ -53,21 +57,22 @@ export function ChatAssistant({
 
   // Hooks called unconditionally at the top
   const localStorageKey = `chatHistory-${recipient.id}`, // Key is always generated
-  const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage<
+  const [ storedGuestMessages, setStoredGuestMessages ] = useLocalStorage<
     Message[]
   >(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users
-    []);
-  const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]>([]);
-  const [loggedInMessages, setLoggedInMessages] =
-    useState<Message[]>(initialMessages);
 
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const [pendingApiCallParams, setPendingApiCallParams] = useState<{
+    []),
+  const [ displayGuestMessages, setDisplayGuestMessages ] = useState<Message[]>([]),
+  const [ loggedInMessages, setLoggedInMessages ] = useState<Message[]>(initialMessages),
+
+  const messagesEndRef = useRef<HTMLDivElement | null>(null),
+  const [ pendingApiCallParams, setPendingApiCallParams ] = useState<{
     message: string,
     conversationId?: string
-  } | null>(null);
-  const [showGuestModal, setShowGuestModal] = useState(false);
-  const [guestMessage, setGuestMessage] = useState<string | null>(null);
+  } | null>(null),
+  const [ showGuestModal, setShowGuestModal ] = useState(false),
+  const [ guestMessage, setGuestMessage ] = useState<string | null>(null),
+
 
   // Effect for guest user messages
   useEffect(() => {
@@ -132,7 +137,8 @@ export function ChatAssistant({
   };
 
   const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return;
+
+    if (!messageContent.trim()) return,
 
     if (!isGuest) {
       // Logged-in user
@@ -183,6 +189,7 @@ export function ChatAssistant({
   }, [isOpen, onClose]);
 
   if (!isOpen) return null;
+
 
   return (
     <div

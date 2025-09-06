@@ -17,10 +17,11 @@ interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
-  const { control, register, watch, setValue } = form;
-  const keywords = watch("keywords");
-  const platform = watch("platform");
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => { const { control, register, watch, setValue  } = form,
+  const keywords = watch("keywords"),
+  const platform = watch("platform"),
+
   
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
@@ -162,4 +163,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   )
+
 };
+

@@ -22,7 +22,9 @@ export function AIMatchingResults({
   projectDescription = "";
   serviceType: _serviceType = ""
 }: AIMatchingResultsProps) {
-  const [activeTab, setActiveTab] = useState("all");
+
+  const [ activeTab, setActiveTab ] = useState("all"),
+
   
   // Group matches by category
   const categories = {
@@ -104,7 +106,9 @@ export function AIMatchingResults({
                   >
                     <div className="flex">
                       <div className={cn(
-                        "w-2",
+
+                        "w-2";
+
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"

@@ -8,8 +8,10 @@ interface ChatInputProps {
 }
 
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
-  const [message, setMessage] = useState('');
-  const inputRef = useRef<HTMLTextAreaElement>(null);
+
+  const [ message, setMessage ] = useState(''),
+  const inputRef = useRef<HTMLTextAreaElement>(null),
+
 
   useEffect(() => {
     // Focus input when component mounts
@@ -33,6 +35,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       }
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">

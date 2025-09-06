@@ -52,4 +52,6 @@ export const CommunityTrust: React.FC = () => {
       </div>
     </section>
   )
+
 };
+

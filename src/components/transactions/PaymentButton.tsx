@@ -18,16 +18,17 @@ interface PaymentButtonProps {
 }
 
 export function PaymentButton({
-  amount;
-  serviceId;
-  providerId;
-  buttonText = "Purchase";
-  className;
-  onPaymentInitiated;
-  redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false);
-  const { isAuthenticated, user } = useAuth();
-  const router = useRouter();
+
+  amount,
+  serviceId,
+  providerId,
+  buttonText = "Purchase",
+  className,
+  onPaymentInitiated,
+  redirectUrl}: PaymentButtonProps) { const [ isProcessing, setIsProcessing ] = useState(false),
+  const { isAuthenticated, user  } = useAuth(),
+  const router = useRouter(),
+
   
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
@@ -48,7 +49,7 @@ export function PaymentButton({
       }
       
       // Call the create-checkout edge function
-      const { data, error } = await supabase.functions.invoke("create-checkout", {
+      const { data, error  } = await supabase.functions.invoke("create-checkout", {
         body: {
           amount;
           serviceId;

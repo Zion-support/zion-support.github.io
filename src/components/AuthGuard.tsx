@@ -15,15 +15,16 @@ interface AuthGuardProps {
 }
 
 export function AuthGuard({
-  children;
-  requireAuth = true;
-  requireRole;
-  redirectTo = '/auth/login';
-  fallback;
-  showToast = true;
-  allowGuest = false}: AuthGuardProps) {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+
+  children,
+  requireAuth = true,
+  requireRole,
+  redirectTo = '/auth/login',
+  fallback,
+  showToast = true,
+  allowGuest = false}: AuthGuardProps) { const { user, isAuthenticated, isLoading  } = useAuth(),
+  const router = useRouter(),
+
 
   useEffect(() => {
     // Don't redirect while auth is still loading
@@ -127,9 +128,10 @@ export function withAuthGuard<P extends object>(
 }
 
 // Hook for programmatic auth checks
-export function useAuthGuard() {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+
+export function useAuthGuard() { const { user, isAuthenticated, isLoading  } = useAuth(),
+  const router = useRouter(),
+
 
   const requireAuth = (options?: {
     redirectTo?: string;
@@ -181,8 +183,9 @@ export function useAuthGuard() {
   };
 
   const checkPermission = (permission: string): boolean => {
-    if (!isAuthenticated || !user) return false;
-    
+
+    if (!isAuthenticated || !user) return false,
+
     // Simple permission check - can be extended based on your permission system
     // Use type assertion for extensibility, as permissions might be added to user type later
     const userPermissions = (user as any).permissions || [];
@@ -190,10 +193,12 @@ export function useAuthGuard() {
   };
 
   return {
-    requireAuth;
-    requireRole;
-    checkPermission;
-    isAuthenticated;
+
+    requireAuth,
+    requireRole,
+    checkPermission,
+    isAuthenticated,
+
     user;
     isLoading}
 }

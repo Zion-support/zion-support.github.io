@@ -8,7 +8,8 @@ interface YoutubeEmbedProps {
 }
 
 export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
-  const [loaded, setLoaded] = useState(false);
+
+  const [ loaded, setLoaded ] = useState(false),
   const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`;
 
   return (

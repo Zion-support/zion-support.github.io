@@ -12,8 +12,10 @@ import {
   FormLabel;
   FormMessage} from "@/components/ui/form";
 import {
-  RadioGroup;
-  RadioGroupItem} from "@/components/ui/radio-group";
+
+  RadioGroup,
+  RadioGroupItem} from "@/components/ui/radio-group",
+
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
 interface ReviewFormValues {
@@ -30,8 +32,10 @@ interface ReviewFormProps {
   projectId: string,
   revieweeId: string,
   revieweeName: string,
-  onSubmit: (data: any) => Promise<boolean>, 
-  defaultValues?: Review;
+
+  onSubmit: (data: any) => Promise<boolean>,
+  defaultValues?: Review,
+
   isSubmitting: boolean
 }
 
@@ -42,7 +46,9 @@ export function ReviewForm({
   onSubmit;
   defaultValues;
   isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
+
+  const [ hoveredStar, setHoveredStar ] = useState<number>(0),
+
   
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
@@ -126,7 +132,7 @@ export function ReviewForm({
           rules={{
             required: "Please provide feedback",
             minLength: {
-              value: 20,
+              value: 20;
               message: "Review must be at least 20 characters"}}}
           render={({ field }: { field: any }) => (
             <FormItem>

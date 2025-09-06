@@ -1,10 +1,12 @@
 
 import {
-  Carousel;
-  CarouselContent;
-  CarouselItem;
-  CarouselNext;
-  CarouselPrevious} from "@/components/ui/carousel";
+
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious} from "@/components/ui/carousel",
+
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -12,7 +14,9 @@ import { Quote } from 'lucide-react'
 import Link from "next/link";
 import Image from "next/image";
 import { CASE_STUDIES } from "@/data/case-studies";
-const testimonials = CASE_STUDIES;
+
+const testimonials = CASE_STUDIES,
+
 
 export function TestimonialCarousel() {
   return (
@@ -28,7 +32,7 @@ export function TestimonialCarousel() {
         <div className="max-w-5xl mx-auto px-8">
           <Carousel
             opts={{
-              align: "start",
+              align: "start";
               loop: true}}
             className="w-full"
           >

@@ -29,14 +29,16 @@ export function SeverityIndicator({
         return <AlertTriangle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
           "text-amber-500"
-        )} />;
-      default:
-        return <CheckCircle className={cn(
-          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
+
+        )} />,
+      default: return <CheckCircle className={cn(
+          size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4",
+
           "text-green-500"
         )} />
     }
   };
+
 
   return (
     <div className={cn("flex items-center gap-1", className)}>

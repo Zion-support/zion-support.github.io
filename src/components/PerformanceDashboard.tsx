@@ -24,7 +24,7 @@ interface Improvement {
 }
 
 const PerformanceDashboard: React.FC = () => {
-  const [metrics] = useState<PerformanceMetrics>({
+  const [ metrics ] = useState<PerformanceMetrics>({
     buildSize: '959 MB',
     pageCount: 166,
     loadTime: 1.2,
@@ -221,4 +221,4 @@ const PerformanceDashboard: React.FC = () => {
   )
 };
 
-export default PerformanceDashboard, 
+export default PerformanceDashboard;

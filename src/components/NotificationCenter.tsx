@@ -11,11 +11,12 @@ import {
   NotificationHeader, 
   NotificationList, 
   NotificationFooter 
-} from '@/components/notifications';
+
+} from '@/components/notifications',
 import { FilterType } from '@/components/notifications/NotificationFilter';
-export const NotificationCenter: React.FC = () => {
-  const { 
-    filteredNotifications;
+export const NotificationCenter: React.FC = () => { const { 
+    filteredNotifications,
+
     unreadCount, 
     markAsRead, 
     markAllAsRead;
@@ -24,12 +25,14 @@ export const NotificationCenter: React.FC = () => {
     filter;
     setFilter;
     fetchNotifications
-  } = useNotifications();
+
+   } = useNotifications(),
   
-  const [open, setOpen] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [loadedOnce, setLoadedOnce] = useState(false);
-  const enqueueSnackbar = useEnqueueSnackbar();
+  const [ open, setOpen ] = useState(false),
+  const [ error, setError ] = useState<string | null>(null),
+  const [ loadedOnce, setLoadedOnce ] = useState(false),
+  const enqueueSnackbar = useEnqueueSnackbar(),
+
 
   // Refresh notifications when popover opens, but avoid duplicate
   useEffect(() => {
@@ -101,4 +104,6 @@ export const NotificationCenter: React.FC = () => {
       </PopoverContent>
     </Popover>
   )
+
 };
+

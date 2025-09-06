@@ -64,7 +64,8 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     hired: 5,
     rejected: 5},
 
-  const currentRank = statusRank[current];
+
+  const currentRank = statusRank[current],
   const statusRank_ = statusRank[status];
 
   if (currentRank < statusRank_) {

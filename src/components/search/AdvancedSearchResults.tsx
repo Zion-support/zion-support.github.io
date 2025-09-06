@@ -87,7 +87,8 @@ const SearchResultCard: React.FC<{
 
   const cardClass = viewMode === 'grid' 
     ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer"
-    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4";
+
+    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4",
 
   return (
     <div onClick={handleClick} className={cardClass}>
@@ -324,17 +325,19 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
 
 // Main Search Results Page Component
 export const AdvancedSearchResults: React.FC = () => {
-  const router = useRouter();
-  const [searchTerm, setSearchTerm] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [totalCount, setTotalCount] = useState(0);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [showFilters, setShowFilters] = useState(false);
+
+  const router = useRouter(),
+  const [ searchTerm, setSearchTerm ] = useState(''),
+  const [ results, setResults ] = useState<SearchResult[]>([]),
+  const [ loading, setLoading ] = useState(false),
+  const [ totalCount, setTotalCount ] = useState(0),
+  const [ currentPage, setCurrentPage ] = useState(1),
+  const [ hasMore, setHasMore ] = useState(false),
+  const [ viewMode, setViewMode ] = useState<'grid' | 'list'>('grid'),
+  const [ showFilters, setShowFilters ] = useState(false),
+
   
-  const [filters, setFilters] = useState<SearchFilters>({
+  const [ filters, setFilters ] = useState<SearchFilters>({
     types: [],
     category: '',
     minPrice: 0,
@@ -411,7 +414,10 @@ export const AdvancedSearchResults: React.FC = () => {
       setHasMore(data.hasMore);
 
       logInfo('Search completed', { 
-        term, resultCount: data.results.length,
+
+        term, 
+        resultCount: data.results.length,
+
         totalCount: data.totalCount 
       })
     } catch (error) {
@@ -546,7 +552,7 @@ export const AdvancedSearchResults: React.FC = () => {
       {searchTerm && (
         <div className="flex gap-6">
           {/* Desktop Filters Sidebar */}
-          <div className="hidden lg:block w-64 flex-shrink-0">
+          <div className="hidden lg: block w-64 flex-shrink-0">
             <div className="bg-card border rounded-lg p-4 sticky top-4">
               <div className="flex items-center justify-between mb-4">
                 <h2 className="font-semibold">Filters</h2>
@@ -631,4 +637,4 @@ export const AdvancedSearchResults: React.FC = () => {
   )
 };
 
-export default AdvancedSearchResults, 
+export default AdvancedSearchResults;

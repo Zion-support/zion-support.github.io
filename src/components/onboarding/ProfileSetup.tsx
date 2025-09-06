@@ -46,6 +46,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
     }
   };
 
+
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">

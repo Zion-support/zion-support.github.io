@@ -14,11 +14,12 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from '@/utils/productionLogger';
-export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
+
+export default function TenantOnboarding() { const { user  } = useAuth(),
+  const [ activeTab, setActiveTab ] = useState("company"),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ formData, setFormData ] = useState({
+
     brand_name: "",
     subdomain: "",
     logo_url: "",
@@ -37,8 +38,9 @@ export default function TenantOnboarding() {
     return // Use router.push('/unauthorized') or redirect in getServerSideProps;
   }
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => { const { name, value  } = e.target,
+
     setFormData(prev => ({ ...prev, [name]: value }))
   };
   
@@ -66,7 +68,7 @@ export default function TenantOnboarding() {
       };
       
       // Submit to Supabase
-      const { data, error } = await supabase
+      const { data, error  } = await supabase
         .from('whitelabel_tenants')
         .insert({
           brand_name: formData.brand_name,
@@ -112,6 +114,7 @@ export default function TenantOnboarding() {
       setIsSubmitting(false),
     }
   };
+
 
   return (
     <>

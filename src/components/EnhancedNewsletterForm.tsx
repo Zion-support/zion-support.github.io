@@ -4,13 +4,13 @@ import { useState, useRef } from "react";
 import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function EnhancedNewsletterForm() {
 
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+export function EnhancedNewsletterForm() { const [ email, setEmail ] = useState(""),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ isSubmitted, setIsSubmitted ] = useState(false),
+  const { toast  } = useToast(),
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+
 
   const lastSubmit = useRef(0);
 
@@ -56,6 +56,7 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">

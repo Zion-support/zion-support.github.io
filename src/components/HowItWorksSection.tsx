@@ -26,10 +26,11 @@ const getSteps = (t: any) => [
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
     icon: Check}],
-export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
-  const { t } = useTranslation();
+
+
+export function HowItWorksSection({ className, style }: HowItWorksSectionProps) { const { t  } = useTranslation(),
   const steps = getSteps(t);
-  
+
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">

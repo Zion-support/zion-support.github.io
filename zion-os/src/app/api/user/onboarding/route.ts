@@ -1,9 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function POST(request: NextRequest) {
-  try {
+export async function POST(request: NextRequest) { try {
     const body = await request.json();
-    const { userId, preferences } = body;
+    const { userId, preferences  } = body;
 
     // Mock user update - replace with actual database operation
     const updatedUser = {
@@ -11,7 +10,7 @@ export async function POST(request: NextRequest) {
       name: 'John Doe',
       email: 'john@example.com',
       role: 'user',
-      onboardingCompleted: true,
+      onboardingCompleted: true;
       preferences
     };
 

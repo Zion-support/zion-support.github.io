@@ -45,6 +45,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     }
   ];
 
+
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">

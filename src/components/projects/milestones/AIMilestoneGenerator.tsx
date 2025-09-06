@@ -27,9 +27,10 @@ export function AIMilestoneGenerator({
   projectType;
   onAddMilestones;
   onAddMilestone
-}: AIMilestoneGeneratorProps) {
-  const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
+
+}: AIMilestoneGeneratorProps) { const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones  } = useMilestoneGenerator(),
+  const [ selectedMilestones, setSelectedMilestones ] = useState<Record<string, boolean>>({}),
+
 
   const handleGenerateMilestones = async () => {
     if (!scope || !startDate || !projectType) {
@@ -47,8 +48,10 @@ export function AIMilestoneGenerator({
     // Initially select all milestones
     const initialSelection: Record<number, boolean> = {};
     generatedMilestones.forEach((_, index: number) => {
-      initialSelection[index] = true
-    });
+
+      initialSelection[ index ] = true
+    }),
+
     setSelectedMilestones(initialSelection)
   };
 

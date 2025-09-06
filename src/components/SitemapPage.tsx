@@ -162,4 +162,6 @@ export const SitemapPage: React.FC = () => {
       </div>
     </>
   )
+
 };
+

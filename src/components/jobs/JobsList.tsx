@@ -15,10 +15,11 @@ interface JobsListProps {
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+
+export function JobsList({ filter, onSelectJob }: JobsListProps) { const { user  } = useAuth(),
+  const [ jobs, setJobs ] = useState<Job[]>([]),
+  const [ isLoading, setIsLoading ] = useState(true),
+
 
   useEffect(() => {
     const fetchJobs = async () => {
@@ -34,7 +35,9 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           query = query.eq("status", filter)
         }
 
-        const { data, error } = await query;
+
+        const { data, error  } = await query,
+
 
         if (error) throw error;
         setJobs(data as Job[])
@@ -83,6 +86,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         return "bg-gray-100 text-gray-800"
     }
   };
+
 
   return (
     <div className="grid gap-6 md:grid-cols-2">

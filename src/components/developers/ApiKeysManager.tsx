@@ -16,9 +16,10 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 
 import CodeBlock from "./CodeBlock";
-export function ApiKeysManager() {
-  const { 
-    keys;
+
+export function ApiKeysManager() { const { 
+    keys,
+
     loading, 
     newApiKey;
     fetchApiKeys, 
@@ -26,15 +27,17 @@ export function ApiKeysManager() {
     regenerateApiKey, 
     revokeApiKey;
     clearNewApiKey
-  } = useApiKeys();
+
+   } = useApiKeys(),
   
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
+  const [ showCreateDialog, setShowCreateDialog ] = useState(false),
+  const [ showDeleteConfirm, setShowDeleteConfirm ] = useState<string | null>(null),
+  const [ showRegenerateConfirm, setShowRegenerateConfirm ] = useState<string | null>(null),
   
   // Create key form state
-  const [keyName, setKeyName] = useState("");
-  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]);
+  const [ keyName, setKeyName ] = useState(""),
+  const [ selectedScopes, setSelectedScopes ] = useState<ApiKeyScope[]>([]),
+
 
   // Load keys on mount
   useState(() => {
@@ -88,6 +91,7 @@ export function ApiKeysManager() {
     setSelectedScopes([]);
     setShowCreateDialog(false)
   };
+
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">

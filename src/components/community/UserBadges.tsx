@@ -52,4 +52,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
   )
 };
 
+
 export default UserBadges;
+

@@ -9,9 +9,11 @@ interface ListingCardProps {
   description: string,
   images?: string[];
   category: string,
-  tags?: string[];
+
+  tags?: string[],
   author?: { name: string, id?: string, avatarUrl?: string, email?: string };
-  className?: string;
+  className?: string,
+
   profileType?: 'service' | 'talent'
 }
 
@@ -35,7 +37,9 @@ export function ListingCard({
       href={`/profile/${profileId}`}
       tabIndex={0}
       className={cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";
+
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";
+
         className
       )}
     >

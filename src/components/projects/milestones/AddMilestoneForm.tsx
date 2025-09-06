@@ -8,18 +8,20 @@ import { format } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from '@/components/ui/form',
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
-  Popover;
-  PopoverContent;
-  PopoverTrigger} from '@/components/ui/popover';
+  Popover,
+  PopoverContent,
+  PopoverTrigger} from '@/components/ui/popover',
+
 import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
 const formSchema = z.object({
@@ -90,10 +92,11 @@ export function AddMilestoneForm({
     onSubmit({
       title: milestone.title,
       description: milestone.description,
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined;
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
   };
+
 
   return (
     <div className="space-y-6">

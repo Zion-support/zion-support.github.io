@@ -16,17 +16,18 @@ import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { ProfileContact } from "@/components/profile/ProfileContact";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useCurrency } from '@/hooks/useCurrency';
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a
+
+export default function ListingDetail() { // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter();
-  const id = router.query.id as string;
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const { user } = useAuth();
-  const { formatPrice } = useCurrency();
+  const router = useRouter(),
+  const id = router.query.id as string,
+  const [ selectedImageIndex, setSelectedImageIndex ] = useState(0),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ isContactDialogOpen, setIsContactDialogOpen ] = useState(false),
+  const [ isChatOpen, setIsChatOpen ] = useState(false),
+  const { user  } = useAuth(),
+  const { formatPrice  } = useCurrency(),
+
 
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);

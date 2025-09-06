@@ -14,16 +14,16 @@ import {logErrorToProduction} from '@/utils/productionLogger';
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
-export default function BlogPost() {
 
-  const router = useRouter();
-  const { slug } = router.query as { slug: string },
-  const [post, setPost] = useState<BlogPostType | null>(null);
-  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
-  const [showShareMenu, setShowShareMenu] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const timedOut = useSkeletonTimeout(20000);
+export default function BlogPost() { const router = useRouter(),
+  const { slug  } = router.query as { slug: string },
+  const [ post, setPost ] = useState<BlogPostType | null>(null),
+  const [ relatedPosts, setRelatedPosts ] = useState<BlogPostType[]>([]),
+  const [ showShareMenu, setShowShareMenu ] = useState(false),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
+  const timedOut = useSkeletonTimeout(20000),
+
   
   useEffect(() => {
     const fetchPost = async () => {
@@ -95,10 +95,11 @@ export default function BlogPost() {
 
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
-    if (!post) return '';
-    
-    const url = encodeURIComponent(window.location.href);
-    const title = encodeURIComponent(post.title);
+
+    if (!post) return '',
+    const url = encodeURIComponent(window.location.href),
+    const title = encodeURIComponent(post.title),
+
     
     switch (platform) {
       case 'facebook':
@@ -112,15 +113,19 @@ export default function BlogPost() {
   };
 
   const articleLd = {
-    "@context": "https://schema.org";
-    "@type": "BlogPosting";
+
+    "@context": "https: //schema.org",
+    "@type": "BlogPosting",
+
     headline: post.title,
     description: post.excerpt,
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
-      "@type": "Person";
-      name: post.author.name}},
+
+      "@type": "Person",
+      name: post.author.name}};
+
   return (
     <>
       <SEO

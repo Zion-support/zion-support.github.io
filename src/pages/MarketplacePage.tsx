@@ -76,14 +76,16 @@ const MarketplaceFilterControls = ({
   </div>
 );
 
+
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { toast } from '@/hooks/use-toast';
 // Product card
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
-  const { formatPrice } = useCurrency();
+
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => { const { formatPrice  } = useCurrency(),
+
   return (
   <Card className="h-full hover: shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -144,14 +146,15 @@ const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
 );
 
 // Main component
-function MarketplacePageContent() {
-  const router = useRouter();
-  const { t } = useTranslation();
-  const dispatch = useDispatch<AppDispatch>();
-  const { isAuthenticated } = useAuth();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
+
+function MarketplacePageContent() { const router = useRouter(),
+  const { t  } = useTranslation(),
+  const dispatch = useDispatch<AppDispatch>(),
+  const { isAuthenticated  } = useAuth(),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterCategory, setFilterCategory ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
+
 
   const fetchProducts = useCallback(async (page: number, limit: number) => {
     // Simulate API delay
@@ -206,18 +209,19 @@ function MarketplacePageContent() {
     }
   }, [sortBy, filterCategory, showRecommended]);
 
-  const {
-    items: products,
-    loading;
-    error;
-    hasMore;
-    total;
-    isFetching;
-    lastElementRef;
-    refresh;
-    scrollToTop;
+
+  const { items: products,
+    loading,
+    error,
+    hasMore,
+    total,
+    isFetching,
+    lastElementRef,
+    refresh,
+    scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchProducts, 12);
+   } = useInfiniteScrollPagination(fetchProducts, 12),
+
 
   // Refresh when filters change
   useEffect(() => {
@@ -242,7 +246,9 @@ function MarketplacePageContent() {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
   }, []);
 
-  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
+
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
@@ -364,7 +370,7 @@ function MarketplacePageContent() {
                     title: 'Added to cart',
                     description: `${item.title} has been added to your cart`,
                     action: {
-                      label: 'View Cart',
+                      label: 'View Cart';
                       onClick: () => router.push('/cart')}})
                 }}
               />

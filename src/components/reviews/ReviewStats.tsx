@@ -16,7 +16,8 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     if (totalReviews === 0) return 0;
     return (count / totalReviews) * 100
   };
-  
+
+
   return (
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">

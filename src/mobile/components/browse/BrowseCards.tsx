@@ -26,7 +26,9 @@ interface BrowseCardsProps {
 }
 
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]);
+
+  const [ savedItems, setSavedItems ] = useState<string[]>([]),
+
   
   const toggleSaved = (id: string) => {
     setSavedItems(prev => 
@@ -35,7 +37,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         : [...prev, id]
     )
   };
-  
+
+
   return (
     <div className="space-y-4 pb-24">
       {items.map((item) => (

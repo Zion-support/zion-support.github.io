@@ -19,23 +19,24 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "sonner";
-export function DisputeDetail() {
-  const router = useRouter();
-  const { disputeId } = router.query as { disputeId?: string };
-  const { user } = useAuth();
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
 
-  const [dispute, setDispute] = useState<Dispute | null>(null);
-  const [messages, setMessages] = useState<DisputeMessage[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [message, setMessage] = useState("");
-  const [adminNote, setAdminNote] = useState("");
-  const [isSending, setIsSending] = useState(false);
-  const [resolution, setResolution] = useState<{ summary: string, resolution_type: ResolutionType }>({
+export function DisputeDetail() { const router = useRouter(),
+  const { disputeId  } = router.query as { disputeId?: string },
+  const { user  } = useAuth(),
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage  } = useDisputes(),
+
+  const [ dispute, setDispute ] = useState<Dispute | null>(null),
+  const [ messages, setMessages ] = useState<DisputeMessage[]>([]),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ message, setMessage ] = useState(""),
+  const [ adminNote, setAdminNote ] = useState(""),
+  const [ isSending, setIsSending ] = useState(false),
+  const [ resolution, setResolution ] = useState<{ summary: string, resolution_type: ResolutionType }>({
   summary: "",
   resolution_type: "compromise"}),
    
-  const [activeTab, setActiveTab] = useState("overview");
+  const [ activeTab, setActiveTab ] = useState("overview"),
+
 
   // Check if user is admin (placeholder - implement proper admin check)
   const isAdmin = user?.userType === "admin";
@@ -68,9 +69,10 @@ export function DisputeDetail() {
   }, [disputeId, getDisputeById, getDisputeMessages, router]);
 
   const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return;
 
-    const success = await updateDisputeStatus(disputeId, status);
+    if (!disputeId) return,
+    const success = await updateDisputeStatus(disputeId, status),
+
     if (success) {
       // Update the dispute object with the new status
       setDispute({ ...dispute!, status: status })

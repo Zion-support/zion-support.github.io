@@ -16,9 +16,11 @@ type Screenshot = {
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const [ screenshots, setScreenshots ] = useState<Screenshot[]>([]),
+  const [ isDragging, setIsDragging ] = useState(false),
+  const fileInputRef = useRef<HTMLInputElement>(null),
+
   
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
@@ -28,8 +30,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/'));
-    
+
+    const imageFiles = files.filter(file => file.type.startsWith('image/')),
+
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files");
       return
@@ -61,8 +64,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   
   const removeScreenshot = (id: string) => {
     setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id);
-      
+
+      const filtered = prev.filter(screenshot => screenshot.id !== id),
+
       // Revoke object URL to avoid memory leaks
       const removed = prev.find(screenshot => screenshot.id === id);
       if (removed) {
@@ -90,7 +94,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.dataTransfer.files))
     }
   };
-  
+
+
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -156,4 +161,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardContent>
     </Card>
   )
+
 };
+

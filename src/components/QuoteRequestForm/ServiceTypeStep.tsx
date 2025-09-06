@@ -25,12 +25,14 @@ interface ServiceTypeStepProps {
 
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const debouncedQuery = useDebounce(searchQuery, 300);
-  const [listings, setListings] = useState<ListingItem[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const isMounted = useIsMounted();
+
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const debouncedQuery = useDebounce(searchQuery, 300),
+  const [ listings, setListings ] = useState<ListingItem[]>([]),
+  const [ loading, setLoading ] = useState(false),
+  const [ error, setError ] = useState<string | null>(null),
+  const isMounted = useIsMounted(),
+
 
   // Fetch services when the service type or query changes
   useEffect(() => {
@@ -107,6 +109,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     return item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   });
+
 
   return (
     <div className="space-y-6">

@@ -10,8 +10,9 @@ interface TutorialPageProps {
   tutorial?: TutorialType
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-  const router = useRouter();
-  const slug = router.query.slug as string | undefined;
+
+  const router = useRouter(),
+  const slug = router.query.slug as string | undefined,
   const tutorial = initialTutorial || TUTORIALS.find((t) => t.slug === slug);
 
   if (!tutorial) {

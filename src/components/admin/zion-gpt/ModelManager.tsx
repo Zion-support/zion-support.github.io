@@ -13,18 +13,22 @@ interface ModelVersionData extends ModelConfig {
 }
 
 export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
+
+  const [ models, setModels ] = useState<ModelVersionData[]>([]),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ activeJobs, setActiveJobs ] = useState<{[key: string]: boolean}>({}),
+
+
   // Fetch model data on component mount
   useEffect(() => {
     fetchModels()
   }, []);
 
-  const fetchModels = async () => {
-    try {
-      setIsLoading(true);
-      const { data, error } = await supabase
+
+  const fetchModels = async () => { try {
+      setIsLoading(true),
+      const { data, error  } = await supabase
+
         .from('model_versions')
         .select('*')
         .order('createdAt', { ascending: false }),
@@ -54,7 +58,7 @@ export function ZionGPTModelManager() {
       setActiveJobs(prev => ({ ...prev, [modelId]: true }));
       
       // Call an edge function that checks the OpenAI fine-tuning job status
-      const { data, error } = await supabase.functions.invoke('check-training-status', {
+      const { data, error  } = await supabase.functions.invoke('check-training-status', {
         body: { modelId }
       });
       
@@ -109,6 +113,7 @@ export function ZionGPTModelManager() {
       logErrorToProduction('Error toggling model active state:', { data: error })
     }
   };
+
 
   return (
     <Card className="w-full">

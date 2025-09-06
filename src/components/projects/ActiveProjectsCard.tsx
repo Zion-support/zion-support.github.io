@@ -7,9 +7,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
-export function ActiveProjectsCard() {
-  const { projects, isLoading } = useProjects();
-  const [activeProjects, setActiveProjects] = useState<Project[]>([]);
+
+export function ActiveProjectsCard() { const { projects, isLoading  } = useProjects(),
+  const [ activeProjects, setActiveProjects ] = useState<Project[]>([]),
+
   
   useEffect(() => {
     if (projects && !isLoading) {
@@ -19,7 +20,8 @@ export function ActiveProjectsCard() {
       setActiveProjects(active)
     }
   }, [projects, isLoading]);
-  
+
+
   if (isLoading) {
     return (
       <Card>

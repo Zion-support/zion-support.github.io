@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
-export function ProjectOfferBanner() {
-  const router = useRouter();
-  const { projects, isLoading } = useProjects();
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+
+export function ProjectOfferBanner() { const router = useRouter(),
+  const { projects, isLoading  } = useProjects(),
+  const [ pendingOffers, setPendingOffers ] = useState<Project[]>([]),
+  const [ dismissed, setDismissed ] = useState<Set<string>>(new Set()),
+
   
   useEffect(() => {
     if (projects && !isLoading) {
@@ -31,7 +32,8 @@ export function ProjectOfferBanner() {
   const handleViewOffer = (projectId: string) => {
     router.push(`/project/${projectId}`)
   };
-  
+
+
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
     return null;
   }

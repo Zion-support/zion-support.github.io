@@ -18,7 +18,8 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     md: 'h-4 w-4',
     lg: 'h-5 w-5'
   };
-  
+
+
   return (
     <TooltipProvider>
       <Tooltip>

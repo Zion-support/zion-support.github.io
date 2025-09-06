@@ -38,4 +38,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
   )
 };
 
+
 export default EmptyState;
+

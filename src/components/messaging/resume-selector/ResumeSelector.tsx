@@ -12,15 +12,15 @@ import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps } from './types';
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
 
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
-  const [customFile, setCustomFile] = useState<File | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) { const [ selectedOption, setSelectedOption ] = useState<'recent' | 'select' | 'upload'>('recent'),
+  const [ selectedResume, setSelectedResume ] = useState<ResumeOption | null>(null),
+  const [ resumeOptions, setResumeOptions ] = useState<ResumeOption[]>([]),
+  const [ customFile, setCustomFile ] = useState<File | null>(null),
+  const [ isLoading, setIsLoading ] = useState(false),
   
-  const { resume, fetchResume } = useResume();
+  const { resume, fetchResume  } = useResume(),
+
   
   // Fetch resume data when component mounts
   useEffect(() => {
@@ -60,8 +60,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   
   // Handle radio option change
   const handleOptionChange = (value: 'recent' | 'select' | 'upload') => {
-    setSelectedOption(value);
-    
+
+    setSelectedOption(value),
+
     if (value === 'recent' && resumeOptions.length > 0 && resumeOptions[0]) {
       setSelectedResume(resumeOptions[0]);
       onResumeSelected(resumeOptions[0])
@@ -85,8 +86,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      
+
+      const file = e.target.files[0],
+
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
         toast({
@@ -152,7 +154,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const handleGenerateResume = () => {
     window.open('/dashboard/talent/portfolio_blank')
   };
-  
+
+
   return (
     <div className="space-y-4">
       <h3 className="text-lg font-medium text-white">Attach Resume</h3>

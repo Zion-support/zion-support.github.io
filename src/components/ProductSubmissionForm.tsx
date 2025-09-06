@@ -6,16 +6,18 @@ import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/router";
-import Image from 'next/image', // Import next/image
+
+import Image from 'next/image'; // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -42,13 +44,14 @@ const productSchema = z.object({
 // Type for our form values
 type ProductFormValues = z.infer<typeof productSchema>;
 
-export function ProductSubmissionForm() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const router = useRouter();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
+
+export function ProductSubmissionForm() { const { user  } = useAuth(),
+  const { toast  } = useToast(),
+  const router = useRouter(),
+  const [ isSubmitting, setIsSubmitting ] = React.useState(false),
+  const [ imagePreview, setImagePreview ] = React.useState(null as string | null),
+  const [ activeTab, setActiveTab ] = React.useState("manual"),
+
   
   // Initialize the form
   const form = useForm<ProductFormValues>({
@@ -126,7 +129,10 @@ export function ProductSubmissionForm() {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
-      const { data: productRecord, error: productError } = await supabase
+
+      
+      const { data: productRecord, error: productError  } = await supabase
+
         .from('product_listings')
         .insert([productData])
         .select('id')
@@ -139,8 +145,10 @@ export function ProductSubmissionForm() {
       let imagePublicUrl: string | undefined,
       // If we have an image, upload it
       if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
-        const { error: uploadError } = await supabase.storage
+
+        const imagePath = `product_images/${productRecord.id}/${values.image.name}`,
+        const { error: uploadError  } = await supabase.storage
+
           .from('products')
           .upload(imagePath, values.image);
           
@@ -149,13 +157,13 @@ export function ProductSubmissionForm() {
         }
         
         // Get the public URL for the image
-        const { data: publicUrlData } = supabase.storage
+        const { data: publicUrlData  } = supabase.storage
           .from('products')
           .getPublicUrl(imagePath);
         imagePublicUrl = publicUrlData.publicUrl;
           
         // Update the product with the image URL
-        const { error: updateError } = await supabase
+        const { error: updateError  } = await supabase
           .from('product_listings')
           .update({
             images: [imagePublicUrl]
@@ -169,8 +177,10 @@ export function ProductSubmissionForm() {
 
       // Upload video if provided
       if (values.video) {
-        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
-        const { error: uploadError } = await supabase.storage
+
+        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`,
+        const { error: uploadError  } = await supabase.storage
+
           .from('products')
           .upload(videoPath, values.video);
 
@@ -178,11 +188,11 @@ export function ProductSubmissionForm() {
           throw new Error(uploadError.message)
         }
 
-        const { data: publicUrlData } = supabase.storage
+        const { data: publicUrlData  } = supabase.storage
           .from('products')
           .getPublicUrl(videoPath);
 
-        const { error: updateError } = await supabase
+        const { error: updateError  } = await supabase
           .from('product_listings')
           .update({ video_url: publicUrlData.publicUrl })
           .eq('id', productRecord.id);
@@ -194,8 +204,10 @@ export function ProductSubmissionForm() {
 
       // Upload model if provided
       if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
-        const { error: uploadError } = await supabase.storage
+
+        const modelPath = `product_models/${productRecord.id}/${values.model.name}`,
+        const { error: uploadError  } = await supabase.storage
+
           .from('products')
           .upload(modelPath, values.model);
 
@@ -203,11 +215,11 @@ export function ProductSubmissionForm() {
           throw new Error(uploadError.message)
         }
 
-        const { data: publicUrlData } = supabase.storage
+        const { data: publicUrlData  } = supabase.storage
           .from('products')
           .getPublicUrl(modelPath);
 
-        const { error: updateError } = await supabase
+        const { error: updateError  } = await supabase
           .from('product_listings')
           .update({ model_url: publicUrlData.publicUrl })
           .eq('id', productRecord.id);
@@ -265,8 +277,9 @@ export function ProductSubmissionForm() {
             <FormField
               control={form.control}
               name="title"
-              render={({ field }: { field: ControllerRenderProps<ProductFormValues, "title"> }) => {
-                const { onChange, onBlur, value, ref } = field;
+
+              render={({ field }: { field: ControllerRenderProps<ProductFormValues, "title"> }) => { const { onChange, onBlur, value, ref  } = field,
+
                 return (
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
@@ -461,7 +474,7 @@ export function ProductSubmissionForm() {
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            title: form.getValues("title"),
+            title: form.getValues("title");
             category: form.getValues("category")
           }}
         />

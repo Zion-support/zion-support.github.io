@@ -23,7 +23,8 @@ export function OnboardingTracker({
   title = "Complete Your Profile", 
   className 
 }: OnboardingTrackerProps) {
-  const completedSteps = steps.filter(step => step.completed).length;
+
+  const completedSteps = steps.filter(step => step.completed).length,
   const progress = Math.round((completedSteps / steps.length) * 100);
 
   return (

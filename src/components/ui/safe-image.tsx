@@ -26,8 +26,10 @@ export function SafeImage({
   priority = false;
   sizes;
   quality = 75}: SafeImageProps) {
-  const [hasError, setHasError] = useState(false);
-  const [currentSrc, setCurrentSrc] = useState(src);
+
+  const [ hasError, setHasError ] = useState(false),
+  const [ currentSrc, setCurrentSrc ] = useState(src),
+
 
   const handleError = () => {
     if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
@@ -42,6 +44,7 @@ export function SafeImage({
       setHasError(true)
     }
   };
+
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {

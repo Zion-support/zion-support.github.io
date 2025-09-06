@@ -18,10 +18,12 @@ interface IntegrationCardProps {
 }
 
 export function IntegrationCard({
-  title;
-  description;
-  icon;
-  status = "disconnected";
+
+  title,
+  description,
+  icon,
+  status = "disconnected",
+
   href;
   onConnect}: IntegrationCardProps) {
   return (

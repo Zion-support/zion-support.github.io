@@ -21,20 +21,23 @@ interface ChunkInfo {
   cached: boolean
 }
 
-export function BundleAnalyzer() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
+
+export function BundleAnalyzer() { const { user  } = useAuth(),
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
+
 
   if (!isAllowed) {
     return null
   }
 
-  const [bundleInfo, setBundleInfo] = useState<BundleInfo | null>(null);
-  const [chunks, setChunks] = useState<ChunkInfo[]>([]);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isCollecting, setIsCollecting] = useState(false);
-  const [shouldShow, setShouldShow] = useState(false);
+
+  const [ bundleInfo, setBundleInfo ] = useState<BundleInfo | null>(null),
+  const [ chunks, setChunks ] = useState<ChunkInfo[]>([]),
+  const [ isVisible, setIsVisible ] = useState(false),
+  const [ isCollecting, setIsCollecting ] = useState(false),
+  const [ shouldShow, setShouldShow ] = useState(false),
+
 
   useEffect(() => {
     // Only show in development or when explicitly enabled
@@ -67,7 +70,6 @@ export function BundleAnalyzer() {
       let totalSize = 0;
       let totalLoadTime = 0;
       const chunkData: ChunkInfo[] = [],
-
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
@@ -123,6 +125,7 @@ export function BundleAnalyzer() {
       collectBundleInfo()
     }
   };
+
 
   if (!shouldShow) {
     return null

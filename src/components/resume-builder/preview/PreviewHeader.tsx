@@ -11,8 +11,10 @@ interface PreviewHeaderProps {
 }
 
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-  const [isPrinting, setIsPrinting] = useState(false);
-  const isMobile = useIsMobile();
+
+  const [ isPrinting, setIsPrinting ] = useState(false),
+  const isMobile = useIsMobile(),
+
 
   const handleBrowserPrint = () => {
     setIsPrinting(true);
@@ -49,6 +51,7 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
       setIsPrinting(false)
     }, 1000)
   };
+
 
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>

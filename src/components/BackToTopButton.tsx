@@ -2,7 +2,9 @@ import { ArrowUp } from 'lucide-react'
 import { useEffect, useState } from "react";
 
 export function BackToTopButton() {
-  const [visible, setVisible] = useState(false);
+
+  const [ visible, setVisible ] = useState(false),
+
 
   useEffect(() => {
     const updateVisibility = () => {
@@ -19,6 +21,7 @@ export function BackToTopButton() {
     document.documentElement.scrollTo(opts);
     document.body.scrollTo(opts)
   };
+
 
   return (
     <button

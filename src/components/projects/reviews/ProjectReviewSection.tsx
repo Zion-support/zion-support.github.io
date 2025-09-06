@@ -11,10 +11,11 @@ interface ProjectReviewSectionProps {
   project: Project
 }
 
-export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
-  const { user } = useAuth();
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+
+export function ProjectReviewSection({ project }: ProjectReviewSectionProps) { const { user  } = useAuth(),
+  const { reviews, userReview, isLoading, reportReview  } = useReviews(project.id),
+  const [ isReviewModalOpen, setIsReviewModalOpen ] = useState(false),
+
   
   const isCompleted = project.status === "completed";
   const isClient = user?.id === project.client_id;
@@ -29,9 +30,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     ? talentProfile?.full_name || "Talent" 
     : clientProfile?.full_name || "Client";
 
-  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview;
+
+  const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null;
-  
+
   return (
     <Card className="mt-6">
       <CardHeader>

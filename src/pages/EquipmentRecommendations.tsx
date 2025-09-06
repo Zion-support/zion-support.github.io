@@ -8,11 +8,12 @@ import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
-export default function EquipmentRecommendations() {
-  const { isAuthenticated, user } = useAuth();
-  const [listings, setListings] = useState<ProductListing[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+
+export default function EquipmentRecommendations() { const { isAuthenticated, user  } = useAuth(),
+  const [ listings, setListings ] = useState<ProductListing[]>([]),
+  const [ loading, setLoading ] = useState<boolean>(false),
+  const [ error, setError ] = useState<boolean>(false),
+
 
   useEffect(() => {
     if (isAuthenticated && user?.id) {

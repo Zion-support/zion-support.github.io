@@ -166,5 +166,7 @@ const TalentCardComponent = ({
   )
 };
 
-export const TalentCard = React.memo(TalentCardComponent);
+
+export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard';
+

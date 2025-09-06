@@ -53,12 +53,13 @@ export function EmptyState({
   description;
   action;
   icon
-}: EmptyStateProps) {
-  const { t } = useTranslation();
-  const content = defaultContent[type];
-  const displayTitle = title || content.title;
-  const displayDescription = description || content.description;
-  const displayIcon = icon || content.icon;
+
+}: EmptyStateProps) { const { t  } = useTranslation(),
+  const content = defaultContent[type],
+  const displayTitle = title || content.title,
+  const displayDescription = description || content.description,
+  const displayIcon = icon || content.icon,
+
 
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
@@ -120,7 +121,9 @@ export function ProductsEmptyState({
   const action = onAddProduct
     ? { 
         label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
-        onClick: onAddProduct ;
+
+        onClick: onAddProduct 
+
       }
     : onRetry
     ? { label: 'Try Again', onClick: onRetry }
@@ -129,6 +132,7 @@ export function ProductsEmptyState({
   const customDescription = isAuthenticated 
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
+
 
   return (
     <EmptyState 

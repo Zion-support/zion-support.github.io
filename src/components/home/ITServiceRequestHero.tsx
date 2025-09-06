@@ -9,20 +9,19 @@ import axios from "axios";
 import { Loader2 } from 'lucide-react'
 import { useTranslation } from "react-i18next";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function ITServiceRequestHero() {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [company, setCompany] = useState("");
-  const [location, setLocation] = useState("");
-  const [details, setDetails] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-  const { t } = useTranslation();
+export function ITServiceRequestHero() { const [ name, setName ] = useState(""),
+  const [ email, setEmail ] = useState(""),
+  const [ phone, setPhone ] = useState(""),
+  const [ company, setCompany ] = useState(""),
+  const [ location, setLocation ] = useState(""),
+  const [ details, setDetails ] = useState(""),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const { toast  } = useToast(),
+  const { t  } = useTranslation(),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
 
     if (!name || !email || !location) {
       toast({
@@ -63,6 +62,7 @@ export function ITServiceRequestHero() {
       setIsSubmitting(false),
     }
   };
+
 
   return (
     <section

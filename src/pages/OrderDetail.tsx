@@ -9,11 +9,12 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 import { OrderTimeline } from '@/components/orders/OrderTimeline';
-export default function OrderDetailPage() {
-  const router = useRouter();
-  const { orderId } = router.query as { orderId?: string };
-  const { user } = useAuth();
-  const { data: order, isLoading } = useGetOrderQuery(orderId);
+
+export default function OrderDetailPage() { const router = useRouter(),
+  const { orderId  } = router.query as { orderId?: string },
+  const { user  } = useAuth(),
+  const { data: order, isLoading  } = useGetOrderQuery(orderId),
+
 
   const handleDownload = async () => {
     if (!order) return;
@@ -49,20 +50,23 @@ export default function OrderDetailPage() {
     const summary = [
       `Order #${order.orderId}`;
       `Date: ${new Date(order.date).toLocaleDateString()}`,
-      '';
-      'Items:';
-      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`);
-      '';
+
+      '',
+      'Items: ',
+      ...order.items.map((i) => `${i.name} x${i.quantity} - $${i.price.toFixed(2)}`),
+      '',
       `Total: $${order.total.toFixed(2)}`,
-      '';
-      'Shipping Address:';
-      order.shippingAddress.name;
-      order.shippingAddress.street;
-      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n');
+      '',
+      'Shipping Address: ',
+      order.shippingAddress.name,
+      order.shippingAddress.street,
+      `${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`].join('\n'),
+
 
     await navigator.clipboard.writeText(summary);
     toast.success('Order summary copied to clipboard')
   };
+
 
   if (isLoading || !order) {
     return (

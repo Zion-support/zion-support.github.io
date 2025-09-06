@@ -13,13 +13,16 @@ interface ReferralLinkProps {
 }
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
-  const [copied, setCopied] = useState(false);
+
+  const [ copied, setCopied ] = useState(false),
+
   
   const handleCopy = () => {
     onCopy();
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
   };
+
 
   return (
     <Card className="mt-6">

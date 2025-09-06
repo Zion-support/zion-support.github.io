@@ -152,6 +152,7 @@ export default function PageErrorBoundary({
     <PageErrorFallback {...props} pageName={pageName} />
   ));
 
+
   return (
     <ErrorBoundary
       FallbackComponent={FallbackComponent}

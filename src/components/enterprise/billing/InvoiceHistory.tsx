@@ -1,12 +1,14 @@
 
 import React from "react";
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
+
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, FileText, Search } from 'lucide-react'
@@ -69,6 +71,7 @@ export function InvoiceHistory() {
         return <Badge variant="outline">{status}</Badge>
     }
   };
+
 
   return (
     <div className="space-y-6">

@@ -26,11 +26,12 @@ function isProtectedRoute(href: string): boolean {
   return protectedRoutes.some(route => href.startsWith(route));
 }
 
-export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) {
-  const router = useRouter();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { t } = useTranslation();
+
+export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileMenuProps) { const router = useRouter(),
+  const { user  } = useAuth(),
+  const isAuthenticated = !!user,
+  const { t  } = useTranslation(),
+
 
   const baseItems = [
     {
@@ -102,10 +103,12 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
             href={item.href}
             aria-label={item.name}
             className={cn(
-              'flex items-center px-6 py-3 text-base font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
+
+              'flex items-center px-6 py-3 text-base font-medium focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary',
               item.matches(router.pathname)
                 ? 'bg-primary/20 text-primary border-l-4 border-primary'
-                : 'text-foreground hover:bg-primary/10 hover:text-primary';
+                : 'text-foreground hover: bg-primary/10 hover:text-primary',
+
             )}
             onClick={(e) => {
               const routeIsProtected = item.authRequired || isProtectedRoute(item.href);

@@ -17,30 +17,31 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export function WebhooksManager() {
-  const {
-    webhooks;
-    loading;
-    testResult;
-    fetchWebhooks;
-    createWebhook;
-    toggleWebhook;
-    deleteWebhook;
-    testWebhook;
+
+export function WebhooksManager() { const {
+    webhooks,
+    loading,
+    testResult,
+    fetchWebhooks,
+    createWebhook,
+    toggleWebhook,
+    deleteWebhook,
+    testWebhook,
     clearTestResult
-  } = useWebhooks();
+   } = useWebhooks(),
   
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showTestDialog, setShowTestDialog] = useState<string | null>(null);
-  const [showTestResult, setShowTestResult] = useState(false);
+  const [ showCreateDialog, setShowCreateDialog ] = useState(false),
+  const [ showDeleteConfirm, setShowDeleteConfirm ] = useState<string | null>(null),
+  const [ showTestDialog, setShowTestDialog ] = useState<string | null>(null),
+  const [ showTestResult, setShowTestResult ] = useState(false),
 
   // Create webhook form state
-  const [webhookName, setWebhookName] = useState("");
-  const [webhookUrl, setWebhookUrl] = useState("");
-  const [webhookSecret, setWebhookSecret] = useState("");
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
+  const [ webhookName, setWebhookName ] = useState(""),
+  const [ webhookUrl, setWebhookUrl ] = useState(""),
+  const [ webhookSecret, setWebhookSecret ] = useState(""),
+  const [ selectedEvents, setSelectedEvents ] = useState<WebhookEventType[]>([]),
+  const [ testEventType, setTestEventType ] = useState<WebhookEventType>('new_application'),
+
 
   // Load webhooks on mount
   useEffect(() => {

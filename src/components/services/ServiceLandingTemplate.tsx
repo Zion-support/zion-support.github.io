@@ -142,4 +142,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
       </section>
     </div>
   )
+
 };
+

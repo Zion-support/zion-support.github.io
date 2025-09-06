@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router', // Changed from useParams, useNavigate
+
+import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
+
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -17,8 +19,10 @@ interface Job {
   id: string,
   title: string,
   description: string,
-  company_name?: string;
-  budget: { min: number, max: number },
+
+  company_name?: string,
+  budget: { min: number, max: number };
+
   client_id: string,
   skills?: string[];
   created_at: string,
@@ -26,16 +30,17 @@ interface Job {
   deadline?: string
 }
 
-export default function JobDetails() {
-  const router = useRouter(), // Init router
-  const { jobId: rawJobId } = router.query, // Get jobId from query
-  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
-  const { job, isLoading, error } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
-  const { user, isAuthenticated } = useAuth();
+
+export default function JobDetails() { const router = useRouter(), // Init router
+  const { jobId: rawJobId  } = router.query, // Get jobId from query
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined,
+  const { job, isLoading, error  } = useJobDetails(jobId) as { job: Job | undefined, isLoading: boolean, error: any },
+  const { user, isAuthenticated  } = useAuth(),
   // navigate is now router
-  const { isWhitelabel, brandName } = useWhitelabel();
+  const { isWhitelabel, brandName  } = useWhitelabel(),
   
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const [ isApplyModalOpen, setIsApplyModalOpen ] = useState(false),
+
 
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified";
@@ -195,7 +200,7 @@ export default function JobDetails() {
             title: job.title,
             description: job.description,
             company_name: job.company_name ?? "Company",
-            budget: formatBudget(job.budget),
+            budget: formatBudget(job.budget);
             client_id: job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}

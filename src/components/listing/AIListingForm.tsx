@@ -23,12 +23,13 @@ interface AIListingFormProps {
   }
 }
 
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
+
+export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
+  const [ title, setTitle ] = useState(initialValues.title || ""),
+  const [ category, setCategory ] = useState(initialValues.category || ""),
+  const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
+  const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
+
 
   const handleSubmit = () => {
     if (!title || !category) {
@@ -47,6 +48,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       targetAudience
     })
   };
+
 
   return (
     <div className="space-y-4">

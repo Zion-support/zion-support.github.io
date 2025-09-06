@@ -47,9 +47,10 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
-          const Icon = type.icon;
+
+          const Icon = type.icon,
           const isSelected = selectedType === type.id;
-          
+
           return (
             <Button
               key={type.id}

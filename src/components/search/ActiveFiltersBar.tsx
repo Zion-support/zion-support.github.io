@@ -139,4 +139,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   )
 };
 
+
 export default ActiveFiltersBar;
+

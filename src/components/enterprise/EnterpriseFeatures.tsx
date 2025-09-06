@@ -26,7 +26,9 @@ const features = [
   {
     title: "Global Access",
     description: "Connect with talent across multiple regions with localized interfaces.",
-    icon: Globe}],
+
+    icon: Globe}];
+
 export function EnterpriseFeatures() {
   return (
     <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">

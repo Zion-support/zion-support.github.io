@@ -33,17 +33,18 @@ export function EnhancedSearchInput({
   onSelectSuggestion;
   placeholder = "Search...";
   searchSuggestions
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [valueOnFocus, setValueOnFocus] = useState<string | null>(null);
-  const [enterHandledPostFocus, setEnterHandledPostFocus] = useState(false);
-  const { t } = useTranslation();
-  const [apiSuggestions, setApiSuggestions] = useState<SearchSuggestion[]>([]);
-  const [loading, setLoading] = useState(false);
+
+}: EnhancedSearchInputProps) { const [ isFocused, setIsFocused ] = useState(false),
+  const [ filteredSuggestions, setFilteredSuggestions ] = useState<SearchSuggestion[]>([]),
+  const [ highlightedIndex, setHighlightedIndex ] = useState<number>(-1),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const containerRef = useRef<HTMLDivElement>(null),
+  const [ valueOnFocus, setValueOnFocus ] = useState<string | null>(null),
+  const [ enterHandledPostFocus, setEnterHandledPostFocus ] = useState(false),
+  const { t  } = useTranslation(),
+  const [ apiSuggestions, setApiSuggestions ] = useState<SearchSuggestion[]>([]),
+  const [ loading, setLoading ] = useState(false),
+
 
   const debounced = useDebounce(value, 200);
 

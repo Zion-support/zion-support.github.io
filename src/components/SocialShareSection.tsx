@@ -3,8 +3,9 @@ import { Button } from "./ui/button";
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
 import { toast } from "./ui/use-toast";
 import { useTranslation } from 'react-i18next';
-export function SocialShareSection() {
-  const { t } = useTranslation();
+
+export function SocialShareSection() { const { t  } = useTranslation(),
+
   
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = typeof window !== 'undefined'
@@ -66,6 +67,7 @@ export function SocialShareSection() {
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
       onClick: copyLinkToClipboard
     }];
+
 
   return (
     <section className="py-12 bg-zion-blue">

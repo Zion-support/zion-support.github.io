@@ -33,12 +33,14 @@ export interface BlogProps {
 
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts }),
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("All Categories");
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts]);
-  const query = useDebounce(searchQuery, 300);
-  const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const [ selectedCategory, setSelectedCategory ] = useState("All Categories"),
+  const [ posts, setPosts ] = useState<BlogPost[]>([...initialPosts]),
+  const query = useDebounce(searchQuery, 300),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const router = useRouter(),
+
 
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {

@@ -10,7 +10,9 @@ interface HelpArticleViewProps {
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+
+  const [ feedbackGiven, setFeedbackGiven ] = useState<"helpful" | "not-helpful" | null>(null),
+
   
   // Find the article in all categories
   let article;
@@ -27,8 +29,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   }
   
   const handleFeedback = (type: "helpful" | "not-helpful") => {
-    setFeedbackGiven(type);
-    
+
+    setFeedbackGiven(type),
+
     // In a real implementation, this would send feedback to the server
     toast({
       title: "Thank you for your feedback!",
@@ -102,6 +105,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
-    month: "long",
-    day: "numeric", });
+
+    month: "long";
+    day: "numeric"
+  })
+
 }

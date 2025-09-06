@@ -31,7 +31,9 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       title: "Total Rewards",
       value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : "-",
       icon: <Award className="h-5 w-5 text-muted-foreground" />,
-      description: "Credits earned from referrals"}],
+
+      description: "Credits earned from referrals"}];
+
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (

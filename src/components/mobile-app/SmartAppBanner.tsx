@@ -19,8 +19,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   googlePlayUrl = "/download",
   delay = 1500
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
+
+  const [ isVisible, setIsVisible ] = useState(false),
+  const isMobile = useIsMobile(),
+
   
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
@@ -88,5 +90,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
         </div>
       </div>
     </div>
-  );
+
+  )
 };
+

@@ -185,8 +185,9 @@ const EquipmentFilterControls = ({
 );
 
 // Equipment card
-const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency();
+
+const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => { const { formatPrice  } = useCurrency(),
+
   return (
     <Card className="h-full hover: shadow-lg transition-shadow">
       <CardHeader className="pb-3">
@@ -262,10 +263,12 @@ function EquipmentErrorFallback({ error, resetErrorBoundary }: { error: Error, r
 
 // Main component
 function EquipmentPageContent() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
+
+  const router = useRouter(),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterCategory, setFilterCategory ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
+
 
   // Generate a consistent seed based on current filters for deterministic data
   const dataSeed = useMemo(() => {
@@ -339,18 +342,19 @@ function EquipmentPageContent() {
     }
   }, [sortBy, filterCategory, showRecommended, dataSeed]);
 
-  const {
-    items: equipment,
-    loading;
-    error;
-    hasMore;
-    total;
-    isFetching;
-    lastElementRef;
-    refresh;
-    scrollToTop;
+
+  const { items: equipment,
+    loading,
+    error,
+    hasMore,
+    total,
+    isFetching,
+    lastElementRef,
+    refresh,
+    scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchEquipment, 12);
+   } = useInfiniteScrollPagination(fetchEquipment, 12),
+
 
   // Refresh when filters change
   useEffect(() => {
@@ -371,12 +375,15 @@ function EquipmentPageContent() {
     return ["AI Hardware", "Servers & Compute", "Networking", "Storage Systems", "Power & Cooling"]
   }, []);
 
-  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
+
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
+
 
   // Loading state
   if (loading && equipment.length === 0) {

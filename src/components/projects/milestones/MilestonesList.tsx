@@ -36,7 +36,9 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onApprove;
   onReject
 }) => {
-  const [showAddForm, setShowAddForm] = useState(false);
+
+  const [ showAddForm, setShowAddForm ] = useState(false),
+
   
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data);
@@ -119,4 +121,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     </div>
   )
+
 };
+

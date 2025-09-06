@@ -21,8 +21,10 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       message = "This dispute has been resolved";
       break;
     case 'closed':
-      variant = "outline";
-      message = "This dispute has been closed";
+
+      variant = "outline",
+      message = "This dispute has been closed",
+
       break;
     default:
       break

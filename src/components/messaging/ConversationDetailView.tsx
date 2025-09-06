@@ -9,17 +9,17 @@ import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useAuth } from '@/hooks/useAuth';
 import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
-export function ConversationDetailView() {
-  const { user } = useAuth();
-  const { 
-    activeConversation;
+
+export function ConversationDetailView() { const { user  } = useAuth(),
+  const { activeConversation,
     activeMessages, 
     sendMessage, 
     loadMessages
-  } = useMessaging();
-  const [messageText, setMessageText] = useState('');
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLTextAreaElement | null>(null);
+   } = useMessaging(),
+  const [ messageText, setMessageText ] = useState(''),
+  const messagesEndRef = useRef<HTMLDivElement>(null),
+  const inputRef = useRef<HTMLTextAreaElement | null>(null),
+
   
   useEffect(() => {
     if (activeConversation) {
@@ -86,6 +86,7 @@ export function ConversationDetailView() {
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description);
+
 
   return (
     <div className="flex-1 flex flex-col h-full">

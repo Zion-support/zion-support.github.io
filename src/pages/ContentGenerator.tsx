@@ -15,19 +15,19 @@ import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
-export default function ContentGenerator() {
 
-  const { user, isLoading } = useAuth();
-  const router = useRouter();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog');
-  const [customPrompt, setCustomPrompt] = useState('');
-  const [topic, setTopic] = useState('');
-  const [keywords, setKeywords] = useState('');
-  const [autoPublish, setAutoPublish] = useState(false);
-  const [includeImage, setIncludeImage] = useState(true);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [previewContent, setPreviewContent] = useState<any>(null);
-  const [testEmail, setTestEmail] = useState('');
+export default function ContentGenerator() { const { user, isLoading  } = useAuth(),
+  const router = useRouter(),
+  const [ contentType, setContentType ] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'>('blog'),
+  const [ customPrompt, setCustomPrompt ] = useState(''),
+  const [ topic, setTopic ] = useState(''),
+  const [ keywords, setKeywords ] = useState(''),
+  const [ autoPublish, setAutoPublish ] = useState(false),
+  const [ includeImage, setIncludeImage ] = useState(true),
+  const [ isGenerating, setIsGenerating ] = useState(false),
+  const [ previewContent, setPreviewContent ] = useState<any>(null),
+  const [ testEmail, setTestEmail ] = useState(''),
+
 
   useEffect(() => {
     if (!isLoading && !user) {
@@ -35,13 +35,14 @@ export default function ContentGenerator() {
     }
   }, [user, isLoading, router]);
 
-  const generateContent = async () => {
-    setIsGenerating(true);
-    setPreviewContent(null);
+
+  const generateContent = async () => { setIsGenerating(true),
+    setPreviewContent(null),
     
     try {
-      const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0);
-      const { data, error } = await supabase.functions.invoke('generate-seo-content', {
+      const keywordsArray = keywords.split().map(k => k.trim()).filter(k => k.length > 0),
+      const { data, error  } = await supabase.functions.invoke('generate-seo-content', {
+
         body: {
           contentType;
           userPrompt: customPrompt || topic, // Use customPrompt if available, else topic
@@ -76,8 +77,7 @@ export default function ContentGenerator() {
       return
     }
     
-    try {
-      const { data, error } = await supabase.functions.invoke('send-newsletter', {
+    try { const { data, error  } = await supabase.functions.invoke('send-newsletter', {
         body: {
           subject: previewContent.subject,
           previewText: previewContent.previewText,
@@ -95,6 +95,7 @@ export default function ContentGenerator() {
       toast.error("Failed to send test newsletter. Please try again.")
     }
   };
+
 
   // Check if user is still loading
   if (isLoading) {

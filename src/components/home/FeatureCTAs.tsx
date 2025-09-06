@@ -12,8 +12,9 @@ interface FeatureCTAsProps {
   style?: React.CSSProperties
 }
 
-export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
-  const { t } = useTranslation();
+
+export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t  } = useTranslation(),
+
   const features = [
     {
       key: 'ai_talent_matching',

@@ -15,11 +15,13 @@ const FALLBACK_RESPONSES = [
 ];
 
 export function SupportChatbot() {
-  const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<Msg[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [typing, setTyping] = useState(false);
-  const endRef = useRef<HTMLDivElement | null>(null);
+
+  const [ open, setOpen ] = useState(false),
+  const [ messages, setMessages ] = useState<Msg[]>([]),
+  const [ loading, setLoading ] = useState(false),
+  const [ typing, setTyping ] = useState(false),
+  const endRef = useRef<HTMLDivElement | null>(null),
+
 
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: 'smooth' }) }, [messages]);
 
@@ -113,6 +115,7 @@ export function SupportChatbot() {
       setTyping(false)
     }
   };
+
 
   if (!open) {
     return (

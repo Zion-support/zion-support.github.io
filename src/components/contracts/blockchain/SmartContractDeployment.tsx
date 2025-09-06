@@ -21,7 +21,7 @@ export function SmartContractDeployment({
   onDeploy;
   isDeploying
 }: SmartContractDeploymentProps) {
-  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
+  const [ deploymentOptions, setDeploymentOptions ] = useState<DeploymentOptions>({
     network: 'none',
     useEscrow: true,
     deployToChain: false,

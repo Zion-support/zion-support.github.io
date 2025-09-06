@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
+
+import { X } from 'lucide-react'; // X is imported but not used, consider removing if not needed.
 import { Button } from '@/components/ui/button';
 import { safeSessionStorage } from '@/utils/safeStorage';
-const SHOWN_KEY = 'pwaInstallShown';
-const DISMISS_KEY = 'pwaInstallDismissUntil';
+const SHOWN_KEY = 'pwaInstallShown',
+const DISMISS_KEY = 'pwaInstallDismissUntil',
+
 const DISMISS_MS = 24 * 60 * 60 * 1000, // 24 hours
 
 // Define BeforeInstallPromptEvent interface
@@ -26,8 +28,10 @@ declare global {
 }
 
 export const InstallPrompt: React.FC = () => {
-  const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null);
-  const [visible, setVisible] = useState(false);
+
+  const [ promptEvent, setPromptEvent ] = useState<BeforeInstallPromptEvent | null>(null),
+  const [ visible, setVisible ] = useState(false),
+
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -66,10 +70,11 @@ export const InstallPrompt: React.FC = () => {
     }
   }, []);
 
-  const install = async () => {
-    if (!promptEvent) return;
-    promptEvent.prompt();
-    const { outcome } = await promptEvent.userChoice;
+
+  const install = async () => { if (!promptEvent) return,
+    promptEvent.prompt(),
+    const { outcome  } = await promptEvent.userChoice,
+
     if (outcome === 'accepted') {
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('eventpwa_install_accepted')
@@ -121,4 +126,6 @@ export const InstallPrompt: React.FC = () => {
   )
 };
 
+
 export default InstallPrompt;
+

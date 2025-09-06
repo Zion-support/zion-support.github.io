@@ -16,10 +16,12 @@ interface AIMatchmakerProps {
 }
 
 export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
-  const [query, setQuery] = useState("");
-  const [isMatchmaking, setIsMatchmaking] = useState(false);
-  const [matches, setMatches] = useState([] as MatchResult[]);
-  const [hasSearched, setHasSearched] = useState(false);
+
+  const [ query, setQuery ] = useState(""),
+  const [ isMatchmaking, setIsMatchmaking ] = useState(false),
+  const [ matches, setMatches ] = useState([] as MatchResult[]),
+  const [ hasSearched, setHasSearched ] = useState(false),
+
 
   const handleSearch = async () => {
     if (!query.trim()) {
@@ -74,7 +76,8 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item);
-  
+
+
   return (
     <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">

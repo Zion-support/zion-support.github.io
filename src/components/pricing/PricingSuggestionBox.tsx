@@ -90,4 +90,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>
     </Card>
   )
+
 };
+

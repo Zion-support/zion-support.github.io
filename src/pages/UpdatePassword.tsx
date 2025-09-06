@@ -10,12 +10,14 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+
 import { toast } from "@/hooks/use-toast";
 import { cleanupAuthState } from "@/utils/authUtils";
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -34,11 +36,13 @@ const updatePasswordSchema = z
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 
 export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const router = useRouter();
+
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ accessToken, setAccessToken ] = useState<string | null>(null),
+  const [ error, setError ] = useState<string | null>(null),
+  const [ success, setSuccess ] = useState(false),
+  const router = useRouter(),
+
 
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
@@ -76,7 +80,7 @@ export default function UpdatePassword() {
         access_token: accessToken,
         refresh_token: ''}),
       // Update the password
-      const { error } = await supabase.auth.updateUser({
+      const { error  } = await supabase.auth.updateUser({
         password: data.password}),
       if (error) {
         toast({
@@ -115,6 +119,7 @@ export default function UpdatePassword() {
       form.setFocus(firstError)
     }
   };
+
 
   return (
     <>

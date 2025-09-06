@@ -62,4 +62,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>
   )
+
 };
+

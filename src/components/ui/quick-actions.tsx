@@ -19,17 +19,20 @@ interface QuickAction {
   dangerous?: boolean
 }
 
-export function QuickActions() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
+
+export function QuickActions() { const { user  } = useAuth(),
+  const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+  const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin,
+
 
   if (!isAllowed) {
     return null
   }
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isProcessing, setIsProcessing] = useState<string | null>(null);
+
+  const [ isVisible, setIsVisible ] = useState(false),
+  const [ isProcessing, setIsProcessing ] = useState<string | null>(null),
+
 
   const executeAction = async (actionId: string, action: () => void) => {
     setIsProcessing(actionId);
@@ -91,8 +94,9 @@ export function QuickActions() {
         // Preload critical fonts
         const criticalFonts = [
           '/fonts/inter-var.woff2/fonts/cal-sans.woff2'
-        ];
-        
+
+        ],
+
         criticalFonts.forEach(font => {
           const link = document.createElement('link');
           link.rel = 'preload';
@@ -176,7 +180,9 @@ export function QuickActions() {
   const categoryColors = {
     performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
     development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
-    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
+
+    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'};
+
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">

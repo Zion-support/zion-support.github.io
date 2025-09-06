@@ -17,21 +17,21 @@ interface ApplyToJobFormProps {
   onSuccess?: () => void
 }
 
-export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
-  const { user } = useAuth();
-  const { applyToJob } = useJobApplications();
-  const { resumes, isLoading: isResumesLoading } = useResume(),
-  const router = useRouter();
+
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) { const { user  } = useAuth(),
+  const { applyToJob  } = useJobApplications(),
+  const { resumes, isLoading: isResumesLoading  } = useResume(),
+  const router = useRouter(),
   
-  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
-  const [selectedResumeId, setSelectedResumeId] = useState<string>("");
-  const [resumeFile, setResumeFile] = useState<File | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [ coverLetter, setCoverLetter ] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
+  const [ selectedResumeId, setSelectedResumeId ] = useState<string>(""),
+  const [ resumeFile, setResumeFile ] = useState<File | null>(null),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ error, setError ] = useState<string | null>(null),
   
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+    e.preventDefault(),
+
     if (!user) {
       toast.error("You must be logged in to apply");
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`);
@@ -67,7 +67,8 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setIsSubmitting(false);
     }
   };
-  
+
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>

@@ -26,7 +26,9 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
-      avatar: "/placeholder.svg"}],
+
+      avatar: "/placeholder.svg"}];
+
   return (
     <ServiceLandingTemplate
       title="IT Support Services"

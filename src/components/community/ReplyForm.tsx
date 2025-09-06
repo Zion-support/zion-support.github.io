@@ -9,7 +9,9 @@ import {
   FormField;
   FormItem;
   FormMessage
-} from "@/components/ui/form";
+
+} from "@/components/ui/form",
+
 import { Card, CardContent } from "@/components/ui/card";
 
 interface ReplyFormProps {
@@ -22,7 +24,9 @@ interface ReplyFormValues {
 }
 
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+
   
   const form = useForm<ReplyFormValues>({
     defaultValues: {
@@ -72,4 +76,6 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   )
 };
 
+
 export default ReplyForm;
+

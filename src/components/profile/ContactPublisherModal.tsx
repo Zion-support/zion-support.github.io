@@ -1,20 +1,24 @@
 import React from 'react';
 import FocusLock from 'react-focus-lock';
 import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle} from '@/components/ui/dialog';
+
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle} from '@/components/ui/dialog',
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
-  Form;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormMessage} from '@/components/ui/form';
+
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage} from '@/components/ui/form',
+
 import { useForm, type Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -49,15 +53,16 @@ const schema: yup.ObjectSchema<FormValues> = yup
   .required();
 
 export function ContactPublisherModal({
-  isOpen;
-  onClose;
-  publisherName;
-  publisherEmail;
-  productId}: ContactPublisherModalProps) {
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [error, setError] = React.useState<string | null>(null);
-  const [loginOpen, setLoginOpen] = React.useState(false);
+
+  isOpen,
+  onClose,
+  publisherName,
+  publisherEmail,
+  productId}: ContactPublisherModalProps) { const { user  } = useAuth(),
+  const [ isSubmitting, setIsSubmitting ] = React.useState(false),
+  const [ error, setError ] = React.useState<string | null>(null),
+  const [ loginOpen, setLoginOpen ] = React.useState(false),
+
 
   const form = useForm<FormValues>({
     resolver: yupResolver(schema) as Resolver<FormValues>,
@@ -91,6 +96,7 @@ export function ContactPublisherModal({
       onClose()
     }
   };
+
 
   return (
     <>

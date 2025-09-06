@@ -10,8 +10,9 @@ interface QuickAccessProps {
   style?: React.CSSProperties
 }
 
-export function QuickAccess({ className, style }: QuickAccessProps) {
-  const { t } = useTranslation();
+
+export function QuickAccess({ className, style }: QuickAccessProps) { const { t  } = useTranslation(),
+
   const quickLinks = [
     {
       title: t('home.tool_ai_matcher'),
@@ -87,4 +88,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
   );
 }
 
+
 export default QuickAccess;
+

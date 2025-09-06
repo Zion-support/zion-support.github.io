@@ -11,12 +11,12 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from 'lucide-react'
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
-export default function SavedTalentsPage() {
 
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const router = useRouter();
+export default function SavedTalentsPage() { const { user  } = useAuth(),
+  const [ savedTalents, setSavedTalents ] = useState<TalentProfile[]>([]),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const router = useRouter(),
+
   // Using router.asPath instead of useLocation
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function SavedTalentsPage() {
           return
         }
 
-        const { data, error } = await supabase
+        const { data, error  } = await supabase
           .from("saved_talents")
           .select(
             `
@@ -100,9 +100,8 @@ export default function SavedTalentsPage() {
         return
       }
   
-      if (isCurrentlySaved) {
-        // Remove from saved talents
-        const { error } = await supabase
+      if (isCurrentlySaved) { // Remove from saved talents
+        const { error  } = await supabase
           .from('saved_talents')
           .delete()
           .eq('user_id', user.id)
@@ -118,9 +117,8 @@ export default function SavedTalentsPage() {
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
-      } else {
-        // Add to saved talents
-        const { error } = await supabase
+      } else { // Add to saved talents
+        const { error  } = await supabase
           .from('saved_talents')
           .insert([{ user_id: user.id, talent_id: talentId }]),
         if (error) {
@@ -128,7 +126,7 @@ export default function SavedTalentsPage() {
         }
   
         // Fetch the updated talent profile and add it to the list
-        const { data: talentData, error: talentError } = await supabase
+        const { data: talentData, error: talentError  } = await supabase
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
@@ -158,6 +156,7 @@ export default function SavedTalentsPage() {
         variant: "destructive"})
     }
   };
+
 
   return (
     <>

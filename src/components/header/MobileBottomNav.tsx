@@ -12,12 +12,13 @@ interface MobileBottomNavProps {
   unreadCount?: number
 }
 
-export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const router = useRouter();
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length;
+
+export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) { const router = useRouter(),
+  const { user  } = useAuth(),
+  const isAuthenticated = !!user,
+  const { items: wishlistItems  } = useWishlist(), // Renamed to avoid conflict
+  const favoritesCount = wishlistItems.length,
+
 
   const cartContextValue = useCart(), // Call hook at top level
   let cartCount = 0;
@@ -92,7 +93,9 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             href={item.href}
             aria-label={item.name}
             className={cn(
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary";
+
               item.matches(router.pathname)
                 ? "text-primary"
                 : "text-foreground/70 hover:text-foreground"

@@ -6,7 +6,9 @@ import {
   DropdownMenuItem, 
   DropdownMenuSeparator;
   DropdownMenuTrigger 
-} from '@/components/ui/dropdown-menu';
+
+} from '@/components/ui/dropdown-menu',
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -18,12 +20,13 @@ interface ResumeVersionSelectorProps {
   onResumeChange: (resumeId: string) => void
 }
 
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
-  const { createResume, fetchResume } = useResume();
-  const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState('');
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) { const { createResume, fetchResume  } = useResume(),
+  const [ saveDialogOpen, setSaveDialogOpen ] = useState(false),
+  const [ newResumeTitle, setNewResumeTitle ] = useState(''),
+  const [ existingResumes, setExistingResumes ] = useState<Resume[]>([]),
+  const [ isLoading, setIsLoading ] = useState(false),
+
   
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
@@ -38,6 +41,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       setIsLoading(false)
     }
   };
+
 
   return (
     <div className="flex items-center gap-2">

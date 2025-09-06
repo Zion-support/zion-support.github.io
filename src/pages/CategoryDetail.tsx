@@ -65,9 +65,11 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     router.push('/categories');
     return null
   }
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-  const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
+
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ listings, setListings ] = useState(MARKETPLACE_LISTINGS),
+  const [ category, setCategory ] = useState<{title: string, description: string, icon: JSX.Element}>({
+
     title: "",
     description: "",
     icon: <Bot className="w-6 h-6" />
@@ -209,8 +211,9 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
 
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId);
-    
+
+    const listing = listings.find(item => item.id === listingId),
+
     if (listing) {
       toast({
         title: "Quote Requested",
@@ -235,6 +238,7 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
     : 'Category | Zion Marketplace';
   const seoDescription =
     category.description || 'Explore listings in this category.';
+
 
   return (
     <>

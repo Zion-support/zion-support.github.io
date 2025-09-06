@@ -67,4 +67,6 @@ export const MobileLaunchHero: React.FC = () => {
       </div>
     </section>
   )
+
 };
+

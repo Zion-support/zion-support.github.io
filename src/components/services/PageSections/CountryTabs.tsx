@@ -3,12 +3,14 @@ import { Search } from 'lucide-react'
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import {
-  Pagination;
-  PaginationContent;
-  PaginationItem;
-  PaginationButton;
-  PaginationNext;
-  PaginationPrevious} from '@/components/ui/pagination';
+
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationButton,
+  PaginationNext,
+  PaginationPrevious} from '@/components/ui/pagination',
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
@@ -28,8 +30,10 @@ export function CountryTabs({
   onQuote;
   searchQuery;
   setSearchQuery}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 50;
+
+  const [ currentPage, setCurrentPage ] = useState(1),
+  const countriesPerPage = 50,
+
 
   useEffect(() => {
     setCurrentPage(1)

@@ -15,18 +15,18 @@ import { toast } from '@/hooks/use-toast';
 import { Share, Users } from 'lucide-react'
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
-export default function ReferralsPage() {
-  const router = useRouter(), // Changed from navigate
-  const { isAuthenticated } = useAuth();
-  const {
-    isLoading;
-    referralCode;
-    referrals;
-    rewards;
-    stats;
-    getReferralLink;
-    copyReferralLink;
-    shareOnSocialMedia} = useReferrals();
+
+export default function ReferralsPage() { const router = useRouter(), // Changed from navigate
+  const { isAuthenticated  } = useAuth(),
+  const { isLoading,
+    referralCode,
+    referrals,
+    rewards,
+    stats,
+    getReferralLink,
+    copyReferralLink,
+    shareOnSocialMedia } = useReferrals(),
+
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -39,6 +39,7 @@ export default function ReferralsPage() {
   }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
   const referralLink = getReferralLink();
+
 
   return (
     <div className="container max-w-7xl py-10">

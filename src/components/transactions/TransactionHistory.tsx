@@ -33,10 +33,11 @@ interface Transaction {
   }
 }
 
-export function TransactionHistory() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
+
+export function TransactionHistory() { const { user  } = useAuth(),
+  const { toast  } = useToast(),
+  const [ filter, setFilter ] = useState<'all' | 'pending' | 'completed' | 'escrow'>(
+
     () => (safeStorage.getItem('transaction_filter') as any) || 'all'
   );
 
@@ -44,17 +45,20 @@ export function TransactionHistory() {
     safeStorage.setItem('transaction_filter', filter)
   }, [filter]);
   
-  const { data: transactions, isLoading, error, refetch } = useQuery({
-    queryKey: ['transactions', user?.id, filter];
+
+  const { data: transactions, isLoading, error, refetch  } = useQuery({
+    queryKey: ['transactions', user?.id, filter],
     queryFn: async () => {
-      if (!user) return [];
-      
+      if (!user) return [],
+
       // Build the query based on filters
       let query = supabase
         .from('transactions')
         .select(`
-          *;
-          provider:profiles!provider_id(display_name);
+
+          *,
+          provider: profiles!provider_id(display_name),
+
           service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
@@ -69,15 +73,19 @@ export function TransactionHistory() {
       
       query = query.order('created_at', { ascending: false }),
       
-      const { data, error } = await query;
+
+      const { data, error  } = await query,
+
       
       if (error) throw error;
       return data as Transaction[]
     };
     enabled: !!user}),
-  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
-    try {
-      const { data, error } = await supabase.functions.invoke('manage-transaction', {
+
+
+  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => { try {
+      const { data, error  } = await supabase.functions.invoke('manage-transaction', {
+
         body: { transactionId, action }
       });
       
@@ -153,7 +161,9 @@ export function TransactionHistory() {
     }
   }, 
 
-  const { formatPrice } = useCurrency();
+
+  const { formatPrice  } = useCurrency(),
+
 
   const formatCurrency = (amount: number) => {
     return formatPrice(amount)
@@ -252,6 +262,7 @@ export function TransactionHistory() {
               const counterpartyName = isClient 
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client';
+
 
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">

@@ -9,12 +9,14 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-  const [customParam, setCustomParam] = useState<string>("");
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
+
+export function PartnerReferralLinks() { const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia  } = useReferrals(),
+  const [ isDialogOpen, setIsDialogOpen ] = useState(false),
+  const [ selectedCampaign, setSelectedCampaign ] = useState<string>("default"),
+  const [ customParam, setCustomParam ] = useState<string>(""),
+  const [ generatedLinks, setGeneratedLinks ] = useState<{name: string, link: string}[]>([]),
+  
+
   // Get the base referral link
   const baseLink = getReferralLink();
   
@@ -73,6 +75,7 @@ export function PartnerReferralLinks() {
     link.click();
     document.body.removeChild(link)
   };
+
 
   return (
     <div className="space-y-6">

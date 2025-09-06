@@ -61,4 +61,6 @@ export const MobileFeatureShowcase: React.FC = () => {
       </div>
     </section>
   )
+
 };
+

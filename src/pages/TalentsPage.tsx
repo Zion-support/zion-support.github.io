@@ -215,12 +215,14 @@ const TalentLoadingGrid: React.FC<{ count?: number }> = ({ count = 8 }) => (
 
 // Main enhanced talents page with infinite scroll
 export default function TalentsPage() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterSpecialization, setFilterSpecialization] = useState('');
-  const [filterAvailability, setFilterAvailability] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [totalGenerated, setTotalGenerated] = useState(0);
+
+  const router = useRouter(),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterSpecialization, setFilterSpecialization ] = useState(''),
+  const [ filterAvailability, setFilterAvailability ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
+  const [ totalGenerated, setTotalGenerated ] = useState(0),
+
 
   // Fetch function for infinite scroll with AI talent generation
   const fetchTalents = useCallback(async (page: number, limit: number) => {
@@ -288,18 +290,19 @@ export default function TalentsPage() {
   }, [sortBy, filterSpecialization, filterAvailability, showRecommended, totalGenerated]);
 
   // Use infinite scroll hook
-  const {
-    items: talents,
-    loading;
-    error;
-    hasMore;
-    total;
-    isFetching;
-    lastElementRef;
-    refresh;
-    scrollToTop;
+
+  const { items: talents,
+    loading,
+    error,
+    hasMore,
+    total,
+    isFetching,
+    lastElementRef,
+    refresh,
+    scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchTalents, 16);
+   } = useInfiniteScrollPagination(fetchTalents, 16),
+
 
   // Refresh when filters change
   useEffect(() => {
@@ -319,7 +322,9 @@ export default function TalentsPage() {
   }, [talents]);
 
   // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
+
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800)
@@ -327,6 +332,7 @@ export default function TalentsPage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
+
 
   // Loading state
   if (loading && talents.length === 0) {

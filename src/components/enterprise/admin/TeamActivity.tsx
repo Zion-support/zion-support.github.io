@@ -1,12 +1,14 @@
 
 import React from "react";
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
+
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from 'lucide-react'
 import { Button } from "@/components/ui/button";
@@ -84,6 +86,7 @@ export function TeamActivity() {
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
   };
+
 
   return (
     <div className="space-y-6">

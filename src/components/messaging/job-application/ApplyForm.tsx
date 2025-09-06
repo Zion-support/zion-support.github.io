@@ -17,17 +17,18 @@ interface ApplyFormProps {
   onApplySuccess?: (jobId: string) => Promise<void>
 }
 
-export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
-  const { createConversation } = useMessaging();
-  const { applyToJob } = useJobApplications();
-  const [message, setMessage] = useState(
+
+export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) { const { createConversation  } = useMessaging(),
+  const { applyToJob  } = useJobApplications(),
+  const [ message, setMessage ] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
-  );
-  const [proposalLink, setProposalLink] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [activeTab, setActiveTab] = useState<string>("message");
-  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
-  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+  ),
+  const [ proposalLink, setProposalLink ] = useState(''),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ activeTab, setActiveTab ] = useState<string>("message"),
+  const [ selectedResume, setSelectedResume ] = useState<ResumeOption | null>(null),
+  const [ selectedResumeId, setSelectedResumeId ] = useState<string | null>(null),
+
   
   const handleResumeSelected = (resume: ResumeOption) => {
     setSelectedResume(resume);
@@ -115,6 +116,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       setIsSubmitting(false),
     }
   };
+
 
   return (
     <>

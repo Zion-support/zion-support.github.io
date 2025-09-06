@@ -78,4 +78,6 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
       </a>
     </div>
   )
+
 };
+

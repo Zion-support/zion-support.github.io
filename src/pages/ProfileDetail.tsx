@@ -13,11 +13,13 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
-  const router = useRouter();
-  const profileId = router.query.profileId as string;
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
+  const router = useRouter(),
+  const profileId = router.query.profileId as string,
+  const [ profileData, setProfileData ] = useState<any>(null),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
+
 
   useEffect(() => {
     const fetchProfile = async () => {
@@ -29,7 +31,7 @@ export default function ProfileDetail() {
           return
         }
 
-        const { data, error } = await supabase
+        const { data, error  } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
@@ -214,13 +216,15 @@ export default function ProfileDetail() {
           </div>
 
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-4 lg:col-span-1">
+          <div className="col-span-4 lg: col-span-1">
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0;
+
+                professional_title: profileData?.professional_title || '';
+                hourly_rate: profileData?.hourly_rate || 0
+
               }}
             />
             {/* Contact Information */}

@@ -42,6 +42,7 @@ const faqs = [
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}];
 
+
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">

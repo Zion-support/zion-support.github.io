@@ -35,8 +35,9 @@ class ChunkErrorHandler {
     })
   }
 
-  private handleScriptError(event: ErrorEvent): void {
-    const { error, filename } = event;
+
+  private handleScriptError(event: ErrorEvent): void { const { error, filename  } = event,
+
     
     if (this.isChunkError(error, filename)) {
       event.preventDefault(), // Prevent the error from bubbling up
@@ -45,8 +46,9 @@ class ChunkErrorHandler {
   }
 
   private handlePromiseRejection(event: PromiseRejectionEvent): void {
-    const error = event.reason;
-    
+
+    const error = event.reason,
+
     if (this.isChunkError(error)) {
       event.preventDefault(), // Prevent unhandled rejection
       this.handleChunkError(error, { source: 'promise' })
@@ -108,17 +110,17 @@ class ChunkErrorHandler {
         this.reloadPage();
         break;
         
-      case 2:
-        // Second attempt: Clear caches and retry
-        await this.clearCaches();
-        await this.delay(this.RETRY_DELAY * 2);
-        this.reloadPage();
-        break;
+
+      case 2: // Second attempt: Clear caches and retry
+        await this.clearCaches(),
+        await this.delay(this.RETRY_DELAY * 2),
+        this.reloadPage(),
+        break,
         
-      case 3:
-        // Third attempt: Hard refresh with cache bypass
-        this.hardRefresh();
-        break;
+      case 3: // Third attempt: Hard refresh with cache bypass
+        this.hardRefresh(),
+        break,
+
         
       default:
         this.showFatalErrorMessage()

@@ -91,10 +91,12 @@ const MOCK_SUPPORT_REQUESTS = [
 ];
 
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<string | null>(null);
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
+
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const [ statusFilter, setStatusFilter ] = useState<string | null>(null),
+  const [ priorityFilter, setPriorityFilter ] = useState<string | null>(null),
+  const [ categoryFilter, setCategoryFilter ] = useState<string | null>(null),
+
   
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -136,7 +138,8 @@ export default function SupportRequests() {
     setPriorityFilter(null);
     setCategoryFilter(null)
   };
-  
+
+
   return (
     <>
       <SEO 

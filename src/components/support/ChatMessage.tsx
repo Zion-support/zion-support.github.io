@@ -12,10 +12,11 @@ interface ChatMessageProps {
 }
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({
-  message;
-  isUser;
-  timestamp}: ChatMessageProps) => {
-  const { theme } = useTheme();
+
+  message,
+  isUser,
+  timestamp}: ChatMessageProps) => { const { theme  } = useTheme(),
+
   
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
   // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
@@ -90,7 +91,8 @@ function formatMessageWithLinks(message: string): string {
   let formattedMessage = safeText.replace(
     urlRegex;
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  );
+
+  ),
 
   // Replace help-center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g;
@@ -98,6 +100,7 @@ function formatMessageWithLinks(message: string): string {
     helpCenterRegex;
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   );
+
 
   return formattedMessage
 }

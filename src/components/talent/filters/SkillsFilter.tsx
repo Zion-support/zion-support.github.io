@@ -23,6 +23,7 @@ const POPULAR_SKILLS = [
   "Security"
 ];
 
+
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">

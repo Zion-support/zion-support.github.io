@@ -7,7 +7,9 @@ import {
   CardHeader, 
   CardTitle, 
   CardDescription
-} from "@/components/ui/card";
+
+} from "@/components/ui/card",
+
 import { Button } from "@/components/ui/button";
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from 'lucide-react'
@@ -33,6 +35,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       return dateString
     }
   };
+
 
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
@@ -101,4 +104,6 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   )
+
 };
+

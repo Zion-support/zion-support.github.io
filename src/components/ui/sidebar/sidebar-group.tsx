@@ -12,7 +12,9 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   ({ title, icon, defaultExpanded = true, showChevron = true, className, children, ...props }, ref) => {
-    const [expanded, setExpanded] = React.useState(defaultExpanded);
+
+    const [ expanded, setExpanded ] = React.useState(defaultExpanded),
+
 
     return (
       <div
@@ -43,5 +45,7 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
   }
 );
 
-SidebarGroup.displayName = "SidebarGroup";
+
+SidebarGroup.displayName = "SidebarGroup",
 export { SidebarGroup };
+

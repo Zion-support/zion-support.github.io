@@ -29,9 +29,10 @@ export function TemplateSaveForm({
   onComplete;
   editTemplate;
   currentValues
-}: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
+
+}: TemplateSaveFormProps) { const [ saving, setSaving ] = useState(false),
+  const { createTemplate, updateTemplate  } = useContractTemplates(),
+
   
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -55,7 +56,7 @@ export function TemplateSaveForm({
       } else if (currentValues) {
         await createTemplate.mutateAsync({
           title: values.title,
-          templateData: currentValues,
+          templateData: currentValues;
           isDefault: values.isDefault})
       }
       
@@ -64,7 +65,8 @@ export function TemplateSaveForm({
       setSaving(false)
     }
   };
-  
+
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

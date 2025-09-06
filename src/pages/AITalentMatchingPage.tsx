@@ -27,7 +27,9 @@ export default function AITalentMatchingPage() {
       name: "Raj Patel",
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
-      avatar: "/placeholder.svg"}],
+
+      avatar: "/placeholder.svg"}];
+
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"

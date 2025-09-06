@@ -17,11 +17,12 @@ interface InterviewCardProps {
   onRefresh: () => Promise<void>
 }
 
-export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
-  const { user } = useAuth();
-  const { respondToInterview, cancelInterview } = useInterviews();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+
+export function InterviewCard({ interview, onRefresh }: InterviewCardProps) { const { user  } = useAuth(),
+  const { respondToInterview, cancelInterview  } = useInterviews(),
+  const [ isResponseDialogOpen, setIsResponseDialogOpen ] = useState(false),
+  const [ isLoading, setIsLoading ] = useState(false),
+
   
   const isClient = user?.id === interview.client_id;
   const isTalent = user?.id === interview.talent_id;
@@ -34,9 +35,10 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const endTime = new Date(interviewDate);
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
   const formattedEndTime = format(endTime, 'h: mm a'),
-  
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
+
+  const isInterviewPending = interview.status === 'requested',
+  const isInterviewConfirmed = interview.status === 'confirmed',
+
   const isInterviewLive = isInterviewConfirmed && !isPast(interviewDate) && isPast(new Date(interviewDate.getTime() - 5 * 60000)), // 5 minutes before
   const isInterviewPast = isPast(interviewDate);
   
@@ -120,6 +122,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       return interview.client_name || 'Client'
     }
   };
+
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">

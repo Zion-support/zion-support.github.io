@@ -17,7 +17,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   const job = match.job;
   
   if (!job) return null;
-  
+
+
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
       <CardHeader className="p-4 pb-2">

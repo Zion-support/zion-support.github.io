@@ -53,7 +53,7 @@ export const safeEnv = {
 
 // Safe environment getter function
 export function getEnv(key: string, defaultValue = ''): string {
-  if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && typeof (globalThis as any).process.env[key] === 'string') {
+  if (typeof (globalThis as any).process !== 'undefined' && (globalThis as any).process.env && typeof (globalThis as any).process.env[ key ] = == 'string') {
     return (globalThis as any).process.env[key]
   }
   return defaultValue

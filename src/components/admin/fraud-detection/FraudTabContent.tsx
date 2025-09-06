@@ -17,8 +17,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab will show fraud flags that are still pending admin review.
           </p>
         </div>
-      );
-    
+
+      ),
+
     case 'dangerous':
       return (
         <div className="bg-red-50 dark: bg-red-950/20 p-8 rounded-lg text-center">
@@ -28,8 +29,9 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows high-priority dangerous flags requiring immediate attention.
           </p>
         </div>
-      );
-    
+
+      ),
+
     case 'actioned':
       return (
         <div className="bg-green-50 dark: bg-green-950/20 p-8 rounded-lg text-center">
@@ -39,9 +41,10 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.
           </p>
         </div>
-      );
-    
+
+      ),
     default:
       return null
   }
 };
+

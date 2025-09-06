@@ -4,12 +4,13 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function FooterNewsletter(): React.ReactElement {
-  const [email, setEmail] = useState('');
-  const [honeypot, setHoneypot] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [emailError, setEmailError] = useState('');
-  const { toast } = useToast();
+
+export function FooterNewsletter(): React.ReactElement { const [ email, setEmail ] = useState(''),
+  const [ honeypot, setHoneypot ] = useState(''),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ emailError, setEmailError ] = useState(''),
+  const { toast  } = useToast(),
+
 
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -63,6 +64,7 @@ export function FooterNewsletter(): React.ReactElement {
       setIsSubmitting(false),
     }
   };
+
 
   return (
     <form

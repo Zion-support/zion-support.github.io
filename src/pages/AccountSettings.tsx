@@ -14,13 +14,13 @@ import { Label } from '@/components/ui/label';
 import { toast } from 'sonner';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
-export default function AccountSettings() {
 
-  const { user } = useAuth();
-  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
-  const [didHandle, setDidHandle] = useLocalStorage('did_handle', '');
-  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+export default function AccountSettings() { const { user  } = useAuth(),
+  const [ displayWeb3, setDisplayWeb3 ] = useLocalStorage('display_web3', false),
+  const [ didHandle, setDidHandle ] = useLocalStorage('did_handle', ''),
+  const [ enableBackup, setEnableBackup ] = useLocalStorage('enable_backup', false),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+
 
   const handleSave = () => {
     setIsSubmitting(true);
@@ -78,6 +78,7 @@ export default function AccountSettings() {
       toast.error(error.message || 'Failed to connect wallet')
     }
   };
+
 
   return (
     <>

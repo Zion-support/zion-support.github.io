@@ -8,12 +8,14 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { format } from 'date-fns';
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from '@/components/ui/form',
+
 import { WorkExperience } from '@/types/resume';
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume } from '@/hooks/useResume';
@@ -39,10 +41,11 @@ interface WorkExperienceFormProps {
   onBack: () => void
 }
 
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
-  const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) { const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading  } = useResume(),
+  const [ editingId, setEditingId ] = useState<string | null>(null),
+  const [ error, setError ] = useState<string | null>(null),
+
 
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
@@ -321,9 +324,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     form.reset({
                       company_name: '',
                       role_title: '',
-                      start_date: format(new Date(), 'yyyy-MM-dd');
-                      is_current: false,
-                      description: '',
+
+                      start_date: format(new Date(), 'yyyy-MM-dd'),
+                      is_current: false;
+                      description: '';
+
                       location: ''})
                   } else {
                     onBack()

@@ -15,10 +15,11 @@ interface GeneratedDescriptionDisplayProps {
 export function GeneratedDescriptionDisplay({ 
   description,
   onSave 
-}: GeneratedDescriptionDisplayProps) {
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
+
+}: GeneratedDescriptionDisplayProps) { const { toast  } = useToast(),
+  const [ isEditing, setIsEditing ] = useState(false),
+  const [ editedDescription, setEditedDescription ] = useState(description),
+
 
   const handleSave = () => {
     onSave(editedDescription);
@@ -28,6 +29,7 @@ export function GeneratedDescriptionDisplay({
       description: "Your edited description has been saved."
     })
   };
+
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">

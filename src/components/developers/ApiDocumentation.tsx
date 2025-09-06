@@ -77,8 +77,10 @@ export function ApiDocumentation() {
   }
 });
 
-const data = await response.json();
-logInfo(data),`;
+
+const data = await response.json(),
+logInfo(data)`,
+
                 python: `import requests
 
 headers = {
@@ -143,8 +145,10 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
   }
 });
 
-const data = await response.json();
-logInfo(data),`;
+
+const data = await response.json(),
+logInfo(data)`,
+
                 python: `import requests
 
 headers = {
@@ -172,11 +176,13 @@ print(data)`
       "min": 5000;
       "max": 10000;
       "currency": "USD"
-    };
-    "status": "active";
-    "client_id": "user_xyz789";
-    "created_at": "2025-05-15T10:30:00Z";
-    "deadline": "2025-06-30T23:59:59Z";
+
+    },
+    "status": "active",
+    "client_id": "user_xyz789",
+    "created_at": "2025-05-15T10: 30:00Z",
+    "deadline": "2025-06-30T23: 59:59Z",
+
     "application_count": 12
   }
 }`
@@ -233,8 +239,10 @@ print(data)`
   })
 });
 
-const data = await response.json();
-logInfo(data),`;
+
+const data = await response.json(),
+logInfo(data)`,
+
                 python: `import requests
 import json
 
@@ -253,8 +261,10 @@ payload = {
 }
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/jobs';
-    headers=headers;
+
+    'https: //api.ziontechgroup.com/v1/jobs',
+    headers=headers,
+
     data=json.dumps(payload)
 )
 
@@ -273,10 +283,12 @@ print(data)`
       "min": 5000;
       "max": 10000;
       "currency": "USD"
-    };
-    "status": "new";
-    "client_id": "user_xyz789";
-    "created_at": "2025-05-16T14:22:10Z";
+
+    },
+    "status": "new",
+    "client_id": "user_xyz789",
+    "created_at": "2025-05-16T14: 22:10Z",
+
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`
@@ -307,8 +319,10 @@ print(data)`
   }
 });
 
-const data = await response.json();
-logInfo(data),`;
+
+const data = await response.json(),
+logInfo(data)`,
+
                 python: `import requests
 
 headers = {
@@ -367,8 +381,10 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
   }
 });
 
-const data = await response.json();
-logInfo(data),`;
+
+const data = await response.json(),
+logInfo(data)`,
+
                 python: `import requests
 
 headers = {
@@ -467,8 +483,10 @@ print(data)`
   })
 });
 
-const data = await response.json();
-logInfo(data),`;
+
+const data = await response.json(),
+logInfo(data)`,
+
                 python: `import requests
 import json
 import { Badge } from '@/components/ui/badge';
@@ -485,8 +503,10 @@ payload = {
 }
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/quotes';
-    headers=headers;
+
+    'https: //api.ziontechgroup.com/v1/quotes',
+    headers=headers,
+
     data=json.dumps(payload)
 )
 
@@ -536,8 +556,10 @@ print(data)`
   }
 });
 
-const data = await response.json();
-logInfo(data),`;
+
+const data = await response.json(),
+logInfo(data)`,
+
                 python: `import requests
 
 headers = {
@@ -556,20 +578,24 @@ print(data)`
                 success: `{
   "data": [
     {
-      "id": "quote_def456";
-      "talent_id": "talent_abc123";
-      "project_name": "E-commerce Website Redesign";
-      "project_summary": "Redesign our outdated e-commerce website with modern UI";
-      "budget_display": "$8,000 - $12,000";
-      "status": "new";
-      "created_at": "2025-05-16T14:30:15Z";
-      "viewed_at": null;
+
+      "id": "quote_def456",
+      "talent_id": "talent_abc123",
+      "project_name": "E-commerce Website Redesign",
+      "project_summary": "Redesign our outdated e-commerce website with modern UI",
+      "budget_display": "$8,000 - $12,000",
+      "status": "new",
+      "created_at": "2025-05-16T14: 30:15Z",
+      "viewed_at": null,
+
       "replied_at": null
     };
     // More quotes...
   ];
   "meta": {
-    "total": 5;
+
+    "total": 5,
+
     "page": 1;
     "limit": 20
   }
@@ -621,7 +647,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   logInfo('Received valid webhook:', { data: event }),
   // Respond to acknowledge receipt
   res.status(200).send('Webhook received')
-}),`}
+})`}
                 language="javascript"
                 showLineNumbers={true}
               />
@@ -660,15 +686,17 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               
               <CodeBlock
                 code={`{
-  "event_type": "new_application";
-  "event_id": "evt_abc123def456";
-  "timestamp": "2025-05-16T15:30:00Z";
+
+  "event_type": "new_application",
+  "event_id": "evt_abc123def456",
+  "timestamp": "2025-05-16T15: 30:00Z",
   "data": {
-    "application_id": "app_123456";
-    "job_id": "job_abc123";
-    "talent_id": "talent_xyz789";
-    "applied_at": "2025-05-16T15:28:30Z";
-    "status": "new";
+    "application_id": "app_123456",
+    "job_id": "job_abc123",
+    "talent_id": "talent_xyz789",
+    "applied_at": "2025-05-16T15: 28:30Z",
+    "status": "new",
+
     "match_score": 85
   }
 }`}
@@ -787,8 +815,9 @@ function EndpointSection({
   codeExamples;
   responseExamples
 }: EndpointSectionProps) {
-  const [activeTab, setActiveTab] = useState("curl");
-  
+
+  const [ activeTab, setActiveTab ] = useState("curl");
+
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">

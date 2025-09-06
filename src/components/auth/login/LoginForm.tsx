@@ -10,12 +10,14 @@ import { useAuth } from "@/context/auth/AuthProvider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -28,13 +30,14 @@ const loginSchema = z.object({
 
 type LoginFormValues = z.infer<typeof loginSchema>;
 
-export function LoginForm() {
-  const { isLoading, login } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isResending, setIsResending] = useState(false);
-  const [verificationMessage, setVerificationMessage] = useState('');
-  const router = useRouter();
+
+export function LoginForm() { const { isLoading, login  } = useAuth(),
+  const [ showPassword, setShowPassword ] = useState(false),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ isResending, setIsResending ] = useState(false),
+  const [ verificationMessage, setVerificationMessage ] = useState(''),
+  const router = useRouter(),
+
   
   const form = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema) as any,
@@ -43,7 +46,8 @@ export function LoginForm() {
       password: "",
       rememberMe: false}}),
   const onSubmit = async (data: LoginFormValues) => {
-    if (isSubmitting) return;
+
+    if (isSubmitting) return,
 
     try {
       setIsSubmitting(true);
@@ -102,6 +106,7 @@ export function LoginForm() {
     }
     router.push(`/verify-status?email=${encodeURIComponent(email)}`)
   };
+
 
   return (
     <Form {...form}>

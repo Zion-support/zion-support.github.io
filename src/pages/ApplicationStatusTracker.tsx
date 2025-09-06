@@ -7,7 +7,8 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
   const isMobile = useIsMobile();
-  
+
+
   return (
     <>
       <SEO 

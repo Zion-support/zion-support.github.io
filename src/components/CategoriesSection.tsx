@@ -2,7 +2,9 @@
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
+
+import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
+
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.
@@ -78,9 +80,10 @@ export function CategoriesSection({
   className;
   style;
   categories: fetchedCategories, // Rename prop for clarity
-}: CategoriesSectionProps) {
-  const { t } = useTranslation();
-  const defaultCategories = getDefaultCategories(t);
+
+}: CategoriesSectionProps) { const { t  } = useTranslation(),
+  const defaultCategories = getDefaultCategories(t),
+
   
   // Use fetchedCategories if provided, otherwise fallback to defaultCategories
   const displayCategories = fetchedCategories && fetchedCategories.length > 0
@@ -95,7 +98,9 @@ export function CategoriesSection({
     : defaultCategories.map(cat => ({
         ...cat;
         title: cat.name,
-        icon: getIcon(cat.iconName)})),
+
+        icon: getIcon(cat.iconName)}));
+
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (

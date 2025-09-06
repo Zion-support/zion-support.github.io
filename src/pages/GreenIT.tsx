@@ -20,6 +20,7 @@ export default function GreenIT() {
       icon: Leaf}
   ];
 
+
   return (
     <>
       <SEO

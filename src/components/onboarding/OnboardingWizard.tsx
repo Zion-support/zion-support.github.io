@@ -24,10 +24,11 @@ interface OnboardingWizardProps {
   className?: string
 }
 
-export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
-  const [currentStep, setCurrentStep] = useState(0);
+
+export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) { const [ currentStep, setCurrentStep ] = useState(0),
   const router = useRouter(), // Changed from useNavigate to useRouter
-  const { user } = useAuth();
+  const { user  } = useAuth(),
+
   
   // Define steps based on user type
   const clientSteps: WizardStep[] = [

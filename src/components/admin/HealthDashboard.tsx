@@ -45,10 +45,12 @@ interface HealthData {
 }
 
 const HealthDashboard: React.FC = () => {
-  const [healthData, setHealthData] = useState<HealthData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [autoRefresh, setAutoRefresh] = useState(true);
+
+  const [ healthData, setHealthData ] = useState<HealthData | null>(null),
+  const [ loading, setLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
+  const [ autoRefresh, setAutoRefresh ] = useState(true),
+
 
   const fetchHealthData = async () => {
     try {
@@ -393,4 +395,4 @@ const HealthDashboard: React.FC = () => {
   )
 };
 
-export default HealthDashboard, 
+export default HealthDashboard;

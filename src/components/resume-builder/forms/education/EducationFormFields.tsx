@@ -10,12 +10,14 @@ import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
+
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from '@/components/ui/form',
+
 import { useState } from 'react';
 import { EducationFormFieldsProps } from './types';
 import { Education } from '@/types/resume';
@@ -35,8 +37,10 @@ type EducationFormValues = z.infer<typeof educationSchema>;
 export function EducationFormFields({ 
   isEditing, onSubmit, onCancel 
 }: EducationFormFieldsProps) {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ error, setError ] = useState<string | null>(null),
+
 
   const form = useForm<EducationFormValues>({
     resolver: zodResolver(educationSchema),
@@ -49,7 +53,9 @@ export function EducationFormFields({
       description: '',
       location: ''}}),
   const handleSubmit = async (data: EducationFormValues) => {
-    setIsLoading(true);
+
+    setIsLoading(true),
+
     setError(null);
     try {
       await onSubmit(data)
@@ -59,6 +65,7 @@ export function EducationFormFields({
       setIsLoading(false)
     }
   };
+
 
   return (
     <Form {...form}>

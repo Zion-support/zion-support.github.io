@@ -7,6 +7,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     setExperienceRange([values[0] || 0, values[1] || 15])
   };
 
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button

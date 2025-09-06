@@ -1,12 +1,14 @@
 
 import React from "react";
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
+
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "@/hooks/use-toast";
@@ -76,9 +78,10 @@ export function RoleManagement() {
   };
 
   const roleDescriptions: Record<string, string> = {
-    "Admin": "Full access to all features and settings";
-    "Recruiter": "Can manage candidates and job postings";
-    "Manager": "Can view candidates and create jobs";
+
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"};
 
   return (

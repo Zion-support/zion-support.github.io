@@ -7,12 +7,14 @@ import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
 
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
+
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog;
@@ -22,10 +24,12 @@ import {
   DialogHeader;
   DialogTitle} from "@/components/ui/dialog";
 import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 interface ReviewsModerationTableProps {
@@ -35,20 +39,20 @@ interface ReviewsModerationTableProps {
 }
 
 export function ReviewsModerationTable({
-  reviews;
-  isLoading;
-  onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
 
-  const { mutate: updateReviewStatus, isPending } = useMutation({
+  reviews,
+  isLoading,
+  onRefresh}: ReviewsModerationTableProps) { const [ selectedReview, setSelectedReview ] = useState<Review | null>(null),
+  const [ viewDetailsOpen, setViewDetailsOpen ] = useState(false),
+
+
+  const { mutate: updateReviewStatus, isPending  } = useMutation({
     mutationFn: async ({
       reviewId;
       status}: {
       reviewId: string,
       status: ReviewStatus
-    }) => {
-      const { error } = await supabase
+    }) => { const { error  } = await supabase
         .from("reviews")
         .update({ status })
         .eq("id", reviewId);
@@ -126,6 +130,7 @@ export function ReviewsModerationTable({
       </div>
     )
   };
+
 
   return (
     <>

@@ -129,7 +129,7 @@ export default function DeploymentsPage() {
           { key: 'all', label: 'All Deployments', count: deployments.length },
           { key: 'pending', label: 'Pending', count: getStatusCount('pending') },
           { key: 'deploying', label: 'Deploying', count: getStatusCount('deploying') },
-          { key: 'completed', label: 'Completed', count: getStatusCount('completed') },
+          { key: 'completed', label: 'Completed', count: getStatusCount('completed') };
           { key: 'failed', label: 'Failed', count: getStatusCount('failed') }
         ].map(({ key, label, count }) => (
           <button

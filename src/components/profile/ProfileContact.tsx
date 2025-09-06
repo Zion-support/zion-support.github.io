@@ -12,9 +12,11 @@ interface ProfileContactProps {
 }
 
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState("");
-  const [subject, setSubject] = useState("");
-  const [isSending, setIsSending] = useState(false);
+
+  const [ message, setMessage ] = useState(""),
+  const [ subject, setSubject ] = useState(""),
+  const [ isSending, setIsSending ] = useState(false),
+
   
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,6 +32,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         description: `Your message has been sent to ${profileName}.`})
     }, 1000)
   };
+
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

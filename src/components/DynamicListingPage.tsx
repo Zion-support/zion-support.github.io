@@ -6,14 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
-  Select;
-  SelectValue;
-  SelectTrigger;
-  SelectContent;
-  SelectItem} from "@/components/ui/select";
+
+  Select,
+  SelectValue,
+  SelectTrigger,
+  SelectContent,
+  SelectItem} from "@/components/ui/select",
 import { Checkbox } from "@/components/ui/checkbox";
 import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
+import "react-loading-skeleton/dist/skeleton.css",
+
 import { Slider } from "@/components/ui/slider";
 import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
@@ -45,35 +47,41 @@ export function DynamicListingPage({
   categoryFilters;
   initialPrice = { min: 0, max: 10000 },
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+  const router = useRouter(),
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const [ selectedCategories, setSelectedCategories ] = useState<string[]>([]),
+
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
-  };
-  const clearCategories = () => setSelectedCategories([]);
-  const [view, setView] = useState<ListingView>("grid");
-  const isGrid = view === "grid";
+
+  },
+  const clearCategories = () => setSelectedCategories([]),
+  const [ view, setView ] = useState<ListingView>("grid"),
+  const isGrid = view === "grid",
+
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className="h-4 w-4" />
   ) : (
     <LayoutGrid className="h-4 w-4" />
-  );
-  const [isLoading, setIsLoading] = useState(false);
-  const [priceRange, setPriceRange] = useState<PriceRange>({
+
+  ),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ priceRange, setPriceRange ] = useState<PriceRange>({
     min: 0,
     max: 10000}),
 
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const [selectedBrand, setSelectedBrand] = useState("all");
-  const [specQuery, setSpecQuery] = useState("");
-  const [selectedAvailability, setSelectedAvailability] = useState("all");
-  const [sortOption, setSortOption] = useState("newest");
+  const [ selectedRating, setSelectedRating ] = useState<number | null>(null),
+  const [ selectedBrand, setSelectedBrand ] = useState("all"),
+  const [ specQuery, setSpecQuery ] = useState(""),
+  const [ selectedAvailability, setSelectedAvailability ] = useState("all"),
+  const [ sortOption, setSortOption ] = useState("newest"),
+
 
   const brandOptions = Array.from(
     new Set(allListings.map((l) => l.brand).filter(Boolean));
@@ -91,13 +99,15 @@ export function DynamicListingPage({
     }
   }, [allListings]);
 
-  const [currentPriceFilter, setCurrentPriceFilter] = useState<
+  const [ currentPriceFilter, setCurrentPriceFilter ] = useState<
     [number, number]
   >([0, initialPrice.max]);
 
   const handleSliderChange = (values: number[]) => {
-    const [min, max] = values.map(Number);
-    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
+
+    const [ min, max ] = values.map(Number),
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return,
+
     setCurrentPriceFilter([min, max])
   };
 
@@ -175,9 +185,10 @@ export function DynamicListingPage({
   }
 
   const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true);
 
-    const listing = allListings.find((item) => item.id === listingId);
+    setIsLoading(true),
+    const listing = allListings.find((item) => item.id === listingId),
+
 
     setTimeout(() => {
       setIsLoading(false);
@@ -517,11 +528,13 @@ export function DynamicListingPage({
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setSearchQuery("");
-                    clearCategories();
-                    setCurrentPriceFilter([0, priceRange.max]);
-                    setSelectedRating(null);
-                    setSelectedBrand("all");
+
+                    setSearchQuery(""),
+                    clearCategories(),
+                    setCurrentPriceFilter([0, priceRange.max]),
+                    setSelectedRating(null),
+                    setSelectedBrand("all"),
+
                     setSpecQuery("");
                     setSelectedAvailability("all")
                   }}

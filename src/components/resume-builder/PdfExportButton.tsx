@@ -22,10 +22,12 @@ interface PdfExportButtonProps {
 }
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
-  const [isExporting, setIsExporting] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [includePortfolio, setIncludePortfolio] = useState(true);
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+
+  const [ isExporting, setIsExporting ] = useState(false),
+  const [ theme, setTheme ] = useState<'light' | 'dark'>('light'),
+  const [ includePortfolio, setIncludePortfolio ] = useState(true),
+  const [ fontFamily, setFontFamily ] = useState<FontFamily>('default'),
+
 
   const handleExport = async () => {
     if (isExporting) return;
@@ -68,6 +70,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       setIsExporting(false)
     }
   };
+
 
   return (
     <DropdownMenu>

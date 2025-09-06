@@ -9,15 +9,18 @@ interface SuggestedJobsProps {
   talentId?: string;
 }
 
-export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-  const { user } = useAuth();
-  const currentTalentId = talentId || user?.id;
+
+export function SuggestedJobs({ talentId }: SuggestedJobsProps) { const { user  } = useAuth(),
+  const currentTalentId = talentId || user?.id,
+
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
       newMatches,
-      viewedMatches,
+
+      viewedMatches, 
+
       appliedMatches 
     } 
   } = useJobSuggestions(currentTalentId);
@@ -28,7 +31,8 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   };
 
   const handleDecline = (matchId: string) => {
-    updateJobMatchStatus(matchId, 'declined');
+
+    updateJobMatchStatus(matchId, 'declined')
   };
 
   if (isLoading) {

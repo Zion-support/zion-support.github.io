@@ -10,14 +10,16 @@ import { useAuth } from "@/hooks/useAuth";
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle} from "@/components/ui/alert-dialog";
+
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle} from "@/components/ui/alert-dialog",
+
 import { useState } from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
@@ -31,11 +33,12 @@ export function TemplateList({
   isLoading;
   onSelect;
   onEdit
-}: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null>(null);
-  const { deleteTemplate, setDefaultTemplate } = useContractTemplates();
-  const { user } = useAuth();
-  const router = useRouter();
+
+}: TemplateListProps) { const [ templateToDelete, setTemplateToDelete ] = useState<string | null>(null),
+  const { deleteTemplate, setDefaultTemplate  } = useContractTemplates(),
+  const { user  } = useAuth(),
+  const router = useRouter(),
+
 
   const handleDeleteClick = (templateId: string) => {
     setTemplateToDelete(templateId)
@@ -56,6 +59,7 @@ export function TemplateList({
     }
     await setDefaultTemplate.mutateAsync(templateId)
   };
+
 
   if (isLoading) {
     return (

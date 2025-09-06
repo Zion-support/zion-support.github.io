@@ -29,14 +29,15 @@ interface AIListingGeneratorProps {
   }
 }
 
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+
+export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) { const { toast  } = useToast(),
+  const [ title, setTitle ] = useState(initialValues.title || ""),
+  const [ category, setCategory ] = useState(initialValues.category || ""),
+  const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
+  const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ generatedContent, setGeneratedContent ] = useState(null as GeneratedContent | null),
+
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
@@ -67,8 +68,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
 
     setIsLoading(true);
     
-    try {
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {
+    try { const { data, error  } = await supabase.functions.invoke('ai-listing-generator', {
         body: { title, category, keyFeatures, targetAudience }
       });
 
@@ -106,6 +106,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       })
     }
   };
+
 
   return (
     <div className="space-y-6">

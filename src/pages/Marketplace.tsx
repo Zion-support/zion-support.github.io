@@ -227,24 +227,25 @@ const FilterControls: React.FC<{
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
-export default function Marketplace() {
-  const router = useRouter();
-  const { t } = useTranslation();
-  const { toast } = useToast();
-  const { isAuthenticated, user } = useAuth();
-  const firstRenderRef = useRef(true);
-  const isRefreshingAfterFilterChange = useRef(false), // New ref to track refresh state
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [priceRange, setPriceRange] = useState<[number, number]>([MIN_PRICE, MAX_PRICE]);
-  const [minAiScore, setMinAiScore] = useState(0);
-  const [minRating, setMinRating] = useState(0);
-  const [filterAvailability, setFilterAvailability] = useState('');
-  const [filterLocation, setFilterLocation] = useState('');
-  const { handleApiError, retryQuery } = useApiErrorHandling();
+export default function Marketplace() { const router = useRouter(),
+  const { t  } = useTranslation(),
+  const { toast  } = useToast(),
+  const { isAuthenticated, user  } = useAuth(),
+  const firstRenderRef = useRef(true),
+  const isRefreshingAfterFilterChange = useRef(false), // New ref to track refresh state
+  const [ isAuthModalOpen, setIsAuthModalOpen ] = useState(false),
+
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterCategory, setFilterCategory ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
+  const [ priceRange, setPriceRange ] = useState<[number, number]>([MIN_PRICE, MAX_PRICE]),
+  const [ minAiScore, setMinAiScore ] = useState(0),
+  const [ minRating, setMinRating ] = useState(0),
+  const [ filterAvailability, setFilterAvailability ] = useState(''),
+  const [ filterLocation, setFilterLocation ] = useState(''),
+  const { handleApiError, retryQuery  } = useApiErrorHandling(),
+
 
   // Handle Add Product button with authentication check
   const handleAddProduct = useCallback(() => {
@@ -367,8 +368,7 @@ export default function Marketplace() {
   }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 
   // useInfiniteScrollPagination hook
-  const {
-    items: products, // These are the products to render
+  const { items: products, // These are the products to render
     loading,          // True when initially loading or when fetchProducts is running
     error,            // Contains the error object if fetchProducts throws
     hasMore,          // True if the API indicates more items are available
@@ -376,7 +376,7 @@ export default function Marketplace() {
     lastElementRef,   // Ref for the last element to trigger loading more
     refresh,          // Function to reload data from page 1
     scrollToTop       // Function to scroll to the top of the page
-  } = useInfiniteScrollPagination(fetchProducts, 16), // 16 items per page
+   } = useInfiniteScrollPagination(fetchProducts, 16), // 16 items per page
 
   // Effect to refresh data when filters change
   useEffect(() => {
@@ -437,7 +437,9 @@ export default function Marketplace() {
   }, []).filter(Boolean) as string[];
 
   // Show scroll to top button
-  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
+
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 800)

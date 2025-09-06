@@ -8,14 +8,18 @@ import {
   TableHead, 
   TableHeader, 
   TableRow 
-} from "@/components/ui/table";
+
+} from "@/components/ui/table",
+
 import { Button } from "@/components/ui/button";
 import { 
   DropdownMenu;
   DropdownMenuContent, 
   DropdownMenuItem, 
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
+
+} from "@/components/ui/dropdown-menu",
+
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { formatDate } from "@/utils/dateUtils";
@@ -185,4 +189,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
       </Table>
     </div>
   )
+
 };
+

@@ -16,11 +16,13 @@ interface ApiPlaygroundProps {
 }
 
 export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {
-  const [apiKey, setApiKey] = useState("demo_key_123");
-  const [paramValues, setParamValues] = useState<Record<string, string>>({});
-  const [body, setBody] = useState("{}");
-  const [response, setResponse] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+
+  const [ apiKey, setApiKey ] = useState("demo_key_123"),
+  const [ paramValues, setParamValues ] = useState<Record<string, string>>({}),
+  const [ body, setBody ] = useState("{}"),
+  const [ response, setResponse ] = useState<string | null>(null),
+  const [ loading, setLoading ] = useState(false),
+
 
   const handleParamChange = (name: string, value: string) => {
     setParamValues((prev) => ({ ...prev, [name]: value }))
@@ -79,8 +81,9 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       const statusInfo = `HTTP ${res.status} ${res.statusText}\n\n`;
       setResponse(statusInfo + responseText)
     } catch (err: any) {
-      let errorMessage = 'Request failed';
-      
+
+      let errorMessage = 'Request failed',
+
       if (err.name === 'AbortError') {
         errorMessage = 'Request timed out (15s)'
       } else if (err.message?.includes('Failed to fetch')) {
@@ -124,4 +127,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
   );
 }
 
+
 export default ApiPlayground;
+

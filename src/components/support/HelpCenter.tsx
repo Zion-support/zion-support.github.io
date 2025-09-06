@@ -10,9 +10,11 @@ import { HELP_CATEGORIES } from "./help-content";
 import { Search } from 'lucide-react'
 
 export default function HelpCenter() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+
+  const [ selectedCategory, setSelectedCategory ] = useState<string | null>(null),
+  const [ selectedArticle, setSelectedArticle ] = useState<string | null>(null),
+  const [ searchQuery, setSearchQuery ] = useState(""),
+
   
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId);
@@ -31,7 +33,8 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   };
-  
+
+
   return (
     <>
       <div className="container mx-auto px-4 py-8">

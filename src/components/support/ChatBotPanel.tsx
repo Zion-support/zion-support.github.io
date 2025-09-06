@@ -24,18 +24,20 @@ type Message = {
 };
 
 export function ChatBotPanel() {
-  const [messages, setMessages] = useState<Message[]>([
+  const [ messages, setMessages ] = useState<Message[]>([
     {
       id: "welcome",
       content: "Hi! How can I help you?",
       sender: "bot",
       timestamp: new Date()}]),
-  const [inputValue, setInputValue] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [failedAttempts, setFailedAttempts] = useState(0);
-  const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const { theme } = useTheme();
+
+  const [ inputValue, setInputValue ] = useState(""),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ failedAttempts, setFailedAttempts ] = useState(0),
+  const scrollAreaRef = useRef<HTMLDivElement>(null),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const { theme  } = useTheme(),
+
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
@@ -52,8 +54,9 @@ export function ChatBotPanel() {
   }, []);
 
   const handleSendMessage = async (text: string = inputValue) => {
-    if (!text.trim()) return;
-    
+
+    if (!text.trim()) return,
+
     const userMessage: Message = {
       id: `user-${Date.now()}`,
       content: text,
@@ -138,8 +141,9 @@ export function ChatBotPanel() {
   const suggestEscalation = () => {
     const escalationMessage: Message = {
       id: `bot-escalation-${Date.now()}`,
-      content: 
-        "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?";
+
+      content: "I'm having trouble understanding your request. Would you like to speak with a human support agent or send an email to our support team?",
+
       sender: "bot",
       timestamp: new Date()},
     

@@ -22,13 +22,14 @@ export default function GuestCheckoutModal({
   open;
   onOpenChange;
   onSubmit}: GuestCheckoutModalProps) {
-  const [email, setEmail] = useState('');
-  const [address, setAddress] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [ email, setEmail ] = useState(''),
+  const [ address, setAddress ] = useState(''),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+    e.preventDefault(),
+
     if (!email || !address) {
       alert('Please fill in all required fields');
       return
@@ -41,6 +42,7 @@ export default function GuestCheckoutModal({
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>

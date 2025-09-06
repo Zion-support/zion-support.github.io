@@ -1,14 +1,18 @@
 import { formatDistanceToNow } from "date-fns";
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button";
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
+
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar"; // Renamed to avoid conflict
+
 import { TableRow, TableCell } from "@/components/ui/table";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { StatusBadge } from "./StatusBadge";
 import { ScoreBadge } from "./ScoreBadge";
 import { ApplicationActions } from "./ApplicationActions";
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import useState
+
+import Image from 'next/image'; // Import next/image
+import React, { useState } from 'react'; // Import useState
+
 
 interface ApplicationRowProps {
   application: JobApplication,
@@ -25,7 +29,8 @@ export function ApplicationRow({
   onStatusChange;
   onViewScore
 }: ApplicationRowProps) {
-  const [avatarError, setAvatarError] = useState(false);
+
+  const [ avatarError, setAvatarError ] = useState(false),
   const talentName = application.talent_profile?.full_name || "Unknown";
 
   return (

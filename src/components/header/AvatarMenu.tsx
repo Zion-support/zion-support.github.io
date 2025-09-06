@@ -11,10 +11,10 @@ import {
   DropdownMenuLabel} from '@/components/ui/dropdown-menu';
 import { User as UserIcon, Package } from 'lucide-react'
 import { LogOut } from 'lucide-react'; // Assuming lucide-react is used
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 
-export const AvatarMenu: React.FC = () => {
-  const { user, logout, avatarUrl } = useAuth();
+
+export const AvatarMenu: React.FC = () => { const { user, logout, avatarUrl  } = useAuth(),
+
 
   if (!user) return null;
 
@@ -72,4 +72,6 @@ export const AvatarMenu: React.FC = () => {
   )
 };
 
+
 export default AvatarMenu;
+

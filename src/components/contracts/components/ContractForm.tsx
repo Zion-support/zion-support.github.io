@@ -36,14 +36,15 @@ interface ContractFormProps {
 }
 
 export function ContractForm({
-  talent;
-  clientName;
-  initialValues;
-  onFormValuesChange;
-  onContractGenerated}: ContractFormProps) {
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
-  const { toast } = useToast();
+
+  talent,
+  clientName,
+  initialValues,
+  onFormValuesChange,
+  onContractGenerated}: ContractFormProps) { const [ isGenerating, setIsGenerating ] = useState(false),
+  const [ generatedMilestones, setGeneratedMilestones ] = useState<GeneratedMilestone[]>([]),
+  const { toast  } = useToast(),
+
 
   const form = useForm<ContractFormValues>({
     resolver: zodResolver(formSchema),
@@ -78,8 +79,9 @@ export function ContractForm({
   }, [form, onFormValuesChange]);
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
-    setGeneratedMilestones(milestones);
-    
+
+    setGeneratedMilestones(milestones),
+
     // If payment terms isn't already set to milestone, update it
     if (form.getValues("paymentTerms") !== "milestone") {
       form.setValue("paymentTerms", "milestone")
@@ -105,13 +107,14 @@ export function ContractForm({
       logErrorToProduction('Error generating contract:', { data: error }),
       toast({
         title: "Contract Generation Failed",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
+        description: error instanceof Error ? error.message : "Something went wrong. Please try again.";
         variant: "destructive"})
     } finally {
       setIsGenerating(false)
     }
   };
-  
+
+
   return (
     <>
       <DialogHeader>

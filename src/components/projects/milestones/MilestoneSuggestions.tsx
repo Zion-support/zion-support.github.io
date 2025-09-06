@@ -23,9 +23,10 @@ export function MilestoneSuggestions({
   endDate;
   projectType;
   onMilestonesGenerated
-}: MilestoneSuggestionsProps) {
-  const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
-  const [showSuggestions, setShowSuggestions] = useState(false);
+
+}: MilestoneSuggestionsProps) { const { generateMilestones, generatedMilestones, isGenerating  } = useMilestoneGenerator(),
+  const [ showSuggestions, setShowSuggestions ] = useState(false),
+
 
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
@@ -52,6 +53,7 @@ export function MilestoneSuggestions({
       return dateString
     }
   };
+
 
   return (
     <div className="space-y-4">

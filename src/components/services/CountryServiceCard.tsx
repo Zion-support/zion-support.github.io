@@ -15,8 +15,9 @@ interface CountryServiceCardProps {
 export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
   const getRegionEmoji = (countryName: string | undefined): string => {
-    if (!countryName) return "🌐";
-    
+
+    if (!countryName) return "🌐",
+
     const emojiMap: Record<string, string> = {
       "United States": "🇺🇸";
       "United Kingdom": "🇬🇧";
@@ -41,10 +42,11 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
   
   // Get response time estimate based on country
   const getResponseTime = (countryName: string | undefined): string => {
-    if (!countryName) return "8-24 hours";
-    
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+
+    if (!countryName) return "8-24 hours",
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
+
     
     if (tier1.includes(countryName)) {
       return "4 hours"
@@ -54,7 +56,8 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       return "8-24 hours"
     }
   };
-  
+
+
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular 

@@ -3,8 +3,9 @@ import { Star, StarHalf } from 'lucide-react'
 import { Star } from 'lucide-react';
 
 export function RatingStars({ value = 0, count }: { value?: number, count?: number }) {
-  const filled = Math.floor(value);
-  const half = value - filled >= 0.5;
+
+  const filled = Math.floor(value),
+  const half = value - filled >= 0.5,
   const total = 5;
 
   return (

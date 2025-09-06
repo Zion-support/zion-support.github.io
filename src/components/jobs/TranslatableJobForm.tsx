@@ -16,29 +16,34 @@ interface TranslatableJobFormProps {
   isSubmitting?: boolean;
 }
 
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
+
+export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) { const { t  } = useTranslation(),
+  const { translateContent, isTranslating  } = useTranslationService(),
+  const { supportedLanguages, currentLanguage  } = useLanguage(),
   
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
+  const [ activeTab, setActiveTab ] = useState<SupportedLanguage>(currentLanguage),
+
   
   // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
+  const [ title, setTitle ] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""
-  });
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
+
+    ar: ""}),
+  
+  const [ description, setDescription ] = useState<Record<SupportedLanguage, string>>({
+
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""
-  });
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
+
+    ar: ""}),
+  
+  const [ requirements, setRequirements ] = useState<Record<SupportedLanguage, string>>({
+
     en: "",
     es: "",
     fr: "",
@@ -46,8 +51,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     ar: ""
   });
   
-  const [budget, setBudget] = useState("");
-  const [deadline, setDeadline] = useState("");
+
+  const [ budget, setBudget ] = useState(""),
+  const [ deadline, setDeadline ] = useState(""),
+
   
   // Handle text changes
   const handleTitleChange = (value: string) => {
@@ -64,8 +71,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
   
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
+
+    e.preventDefault(),
+
     // Complete any missing translations with auto-translation
     await ensureAllTranslations();
     
@@ -117,8 +125,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       return;
     }
     
-    try {
-      const { translations, error } = await translateContent(content, 'job', sourceLanguage);
+
+    try { const { translations, error  } = await translateContent(content, 'job', sourceLanguage),
+
       
       if (error) {
         toast({
@@ -177,7 +186,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       await Promise.all(promises);
     }
   };
-  
+
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>

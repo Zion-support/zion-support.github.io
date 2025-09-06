@@ -28,10 +28,12 @@ interface BundleChunk {
 }
 
 export function PerformanceDashboard() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [chunks, setChunks] = useState<BundleChunk[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+
+  const [ metrics, setMetrics ] = useState<PerformanceMetrics | null>(null),
+  const [ chunks, setChunks ] = useState<BundleChunk[]>([]),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const [ lastUpdated, setLastUpdated ] = useState<Date | null>(null),
+
 
   const collectMetrics = async () => {
     try {
@@ -173,6 +175,7 @@ export function PerformanceDashboard() {
 
     return () => clearInterval(interval)
   }, []);
+
 
   return (
     <div className="space-y-6">

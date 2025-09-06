@@ -40,9 +40,11 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 ];
 
 export default function Status() {
-  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false);
-  const [showFallback, setShowFallback] = useState(false);
-  const [uptime, setUptime] = useState<number | null>(null);
+
+  const [ externalStatusLoaded, setExternalStatusLoaded ] = useState(false),
+  const [ showFallback, setShowFallback ] = useState(false),
+  const [ uptime, setUptime ] = useState<number | null>(null),
+
   const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
   useEffect(() => {
     // Try to load external status page, fallback after timeout
@@ -126,6 +128,7 @@ export default function Status() {
     parts.push(`${minutes}m`);
     return parts.join(' ')
   };
+
 
   return (
     <>

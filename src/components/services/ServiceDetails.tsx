@@ -57,14 +57,12 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
     
     const timezone = timeZones[country] || timeZones["default"] || "Local timezone";
     
-    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
-           `Response times are typically within 4 hours for metropolitan areas. ` +
-           `Please have site access permissions and contact details ready for our technicians. ` +
-           `For remote locations, additional travel fees may apply.`
-  };
+
+    return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ``Response times are typically within 4 hours for metropolitan areas. ``Please have site access permissions and contact details ready for our technicians. ``For remote locations, additional travel fees may apply.`
+  },
   
   const datacenters = getDatacenters(country);
-  
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>

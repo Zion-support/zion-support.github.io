@@ -9,9 +9,10 @@ import { PlusCircle, Save, Trash } from 'lucide-react'
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
-export function WebhookManager() {
-  const { 
-    webhooks;
+
+export function WebhookManager() { const { 
+    webhooks,
+
     loading, 
     error;
     testResult;
@@ -20,9 +21,11 @@ export function WebhookManager() {
     toggleWebhook;
     deleteWebhook;
     testWebhook
-  } = useWebhooks();
+
+   } = useWebhooks(),
+
   
-  const [newWebhook, setNewWebhook] = useState({
+  const [ newWebhook, setNewWebhook ] = useState({
     name: "",
     url: "",
     selectedEvent: "" as WebhookEventType,
@@ -89,7 +92,8 @@ export function WebhookManager() {
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {
     await testWebhook(webhookId, eventType)
   };
-  
+
+
   return (
     <div className="space-y-8">
       <Card>

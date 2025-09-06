@@ -5,17 +5,18 @@ import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
 import {
-  Breadcrumb;
-  BreadcrumbList;
-  BreadcrumbItem;
-  BreadcrumbLink;
-  BreadcrumbSeparator} from '@/components/ui/breadcrumb';
+
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator} from '@/components/ui/breadcrumb',
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
 export default function CaseStudy() {
-  const router = useRouter();
-  const slug = router.query.slug as string;
-  const study = CASE_STUDIES.find((s) => s.slug === slug);
+  const router = useRouter(),
+  const slug = router.query.slug as string,
+  const study = CASE_STUDIES.find((s) => s.slug === slug),
   const breadcrumbs = getBreadcrumbsForPath(`/case-studies/${slug}`);
 
   if (!study) {

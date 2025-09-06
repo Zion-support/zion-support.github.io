@@ -22,11 +22,12 @@ export interface HireRequestFormProps {
   onSubmitSuccess?: () => void
 }
 
-export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {
-  const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
+export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) { const { form, isSubmitting, onSubmit  } = useHireRequestForm({ 
     talent, 
-    onClose: onSubmitSuccess || onClose, 
-    initialJobTitle;
+
+    onClose: onSubmitSuccess || onClose,
+    initialJobTitle,
+
     userDetails 
   });
   

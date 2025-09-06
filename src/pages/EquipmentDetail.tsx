@@ -68,24 +68,25 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
 }
 
 // Build sample data from the shared equipment listings
-export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
-  equipmentListings.reduce((acc, item) => {
-    acc[item.id] = convertProductListingToEquipmentDetails(item);
+
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails  } = equipmentListings.reduce((acc, item) => {
+    acc[ item.id ] = convertProductListingToEquipmentDetails(item),
     return acc
   }, {} as { [key: string]: EquipmentDetails }),
-export default function EquipmentDetail() {
-  const router = useRouter();
-  const { id } = router.query as { id?: string };
-  const { isAuthenticated, user } = useAuth();
-  const { items, dispatch } = useCart();
-  const { formatPrice } = useCurrency();
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [quantity, setQuantity] = useState(1);
-  const [isAdding, setIsAdding] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
-  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>();
+export default function EquipmentDetail() { const router = useRouter(),
+  const { id  } = router.query as { id?: string },
+  const { isAuthenticated, user  } = useAuth(),
+  const { items, dispatch  } = useCart(),
+  const { formatPrice  } = useCurrency(),
+  const [ selectedImageIndex, setSelectedImageIndex ] = useState(0),
+  const [ quantity, setQuantity ] = useState(1),
+  const [ isAdding, setIsAdding ] = useState(false),
+  const [ loading, setLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
+
+  const [ equipment, setEquipment ] = useState<EquipmentDetails | undefined>(),
+
 
   useEffect(() => {
     async function loadEquipment() {
@@ -252,7 +253,7 @@ export default function EquipmentDetail() {
         description={equipment.description}
         openGraph={{
           title: `${equipment.name} - Zion Marketplace`,
-          description: equipment.description,
+          description: equipment.description;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
         }}
       />

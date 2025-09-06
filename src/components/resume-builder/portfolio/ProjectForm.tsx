@@ -39,11 +39,12 @@ interface ProjectFormProps {
   onCancel: () => void
 }
 
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
-  const { user } = useAuth();
-  const { addProject, updateProject } = usePortfolio();
-  const [isLoading, setIsLoading] = useState(false);
-  const isEditing = !!project;
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) { const { user  } = useAuth(),
+  const { addProject, updateProject  } = usePortfolio(),
+  const [ isLoading, setIsLoading ] = useState(false),
+  const isEditing = !!project,
+
   
   const form = useForm<ProjectFormValues>({
     resolver: zodResolver(projectSchema),
@@ -58,9 +59,10 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   });
   
   const onSubmit = async (data: ProjectFormValues) => {
-    if (!user) return;
-    
-    setIsLoading(true);
+
+    if (!user) return,
+    setIsLoading(true),
+
     
     try {
       const projectData: PortfolioProject = {
@@ -92,7 +94,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       setIsLoading(false)
     }
   };
-  
+
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

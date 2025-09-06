@@ -7,12 +7,12 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { LoginModal } from '@/components/auth/LoginModal';
 import { Button } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function PointsBadge() {
 
-  const { isAuthenticated } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
+export function PointsBadge() { const { isAuthenticated  } = useAuth(),
+  const { ledger, balance, loading, fetchLedger  } = usePoints(),
+  const [ loginOpen, setLoginOpen ] = useState(false),
+  const [ isRefreshing, setIsRefreshing ] = useState(false),
+
 
   const points = balance;
 
@@ -47,6 +47,7 @@ export function PointsBadge() {
       setIsRefreshing(false)
     }
   };
+
 
   return (
     <TooltipProvider>

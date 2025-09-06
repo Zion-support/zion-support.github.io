@@ -10,7 +10,9 @@ interface CountrySelectorProps {
 }
 
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
-  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
+
+  const [ topCountries, setTopCountries ] = useState<CountryPricing[]>([]),
+
   
   // Set top/popular countries
   useEffect(() => {
@@ -26,6 +28,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
     const country = onsiteServicePricing.find(item => item.country === countryName) || null;
     onCountryChange(country)
   };
+
 
   return (
     <div className="mb-6">

@@ -45,6 +45,7 @@ export function ConversationsList({
     )
   };
 
+
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
       <div className="p-3 border-b border-zion-purple/20">

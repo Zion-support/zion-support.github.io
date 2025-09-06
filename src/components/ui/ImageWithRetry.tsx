@@ -21,8 +21,10 @@ export function ImageWithRetry({
   retryClassName;
   ...props
 }: ImageWithRetryProps) {
-  const [currentSrc, setCurrentSrc] = useState(src);
-  const [failed, setFailed] = useState(false);
+
+  const [ currentSrc, setCurrentSrc ] = useState(src),
+  const [ failed, setFailed ] = useState(false),
+
 
   const handleError = () => {
     setFailed(true);
@@ -59,4 +61,6 @@ export function ImageWithRetry({
   );
 }
 
+
 export default ImageWithRetry;
+

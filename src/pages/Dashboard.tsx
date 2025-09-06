@@ -29,15 +29,16 @@ const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").th
 // Lazy load notification functions
 const loadNotificationFunctions = () => import("@/utils/notifications");
 
-export default function Dashboard() {
-  const { logout } = useAuth();
-  const { user, loading } = useRequireAuth(), // This will handle authentication and redirects
-  const { toast } = useToast();
+
+export default function Dashboard() { const { logout  } = useAuth(),
+  const { user, loading  } = useRequireAuth(), // This will handle authentication and redirects
+  const { toast  } = useToast(),
   
   // Add safe checks for user ID to prevent premature API calls
-  const userId = user?.id;
-  const { data: orders = [], isLoading: ordersLoading } = useGetOrdersQuery(userId),
-  const { favorites } = useFavorites();
+  const userId = user?.id,
+  const { data: orders = [], isLoading: ordersLoading  } = useGetOrdersQuery(userId),
+  const { favorites  } = useFavorites(),
+
 
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any;
@@ -67,10 +68,11 @@ export default function Dashboard() {
     );
   }
 
-  const handleTestNotification = async () => {
-    try {
-      const { createTestNotification } = await loadNotificationFunctions();
-      const result = await createTestNotification(user?.id ?? "");
+
+  const handleTestNotification = async () => { try {
+      const { createTestNotification  } = await loadNotificationFunctions(),
+      const result = await createTestNotification(user?.id ?? ""),
+
       if (result.success) {
         toast({
           title: "Test notification created",
@@ -164,9 +166,11 @@ export default function Dashboard() {
                     <Button 
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
-                      onClick={async () => {
+                      onClick={ async () => {
                         try {
-                          const { createOnboardingNotification } = await loadNotificationFunctions();
+
+                          const { createOnboardingNotification  } = await loadNotificationFunctions(),
+
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
@@ -191,9 +195,11 @@ export default function Dashboard() {
                     <Button 
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
-                      onClick={async () => {
+                      onClick={ async () => {
                         try {
-                          const { createSystemNotification } = await loadNotificationFunctions();
+
+                          const { createSystemNotification  } = await loadNotificationFunctions(),
+
                           await createSystemNotification({
                             userId: user?.id ?? "",
                             title: "New Feature Available!",
@@ -208,7 +214,7 @@ export default function Dashboard() {
                         } catch (error) {
                           toast({
                             title: "Error sending notification",
-                            description: "Please try again",
+                            description: "Please try again";
                             variant: "destructive"})
                         };
                       }}

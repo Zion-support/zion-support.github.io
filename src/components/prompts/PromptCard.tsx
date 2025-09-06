@@ -7,7 +7,9 @@ interface PromptCardProps {
 }
 
 export function PromptCard({ prompt }: PromptCardProps) {
-  const [copied, setCopied] = useState(false);
+
+  const [ copied, setCopied ] = useState(false),
+
 
   const handleCopy = () => {
     navigator.clipboard.writeText(prompt.text);
@@ -19,6 +21,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
     const encoded = encodeURIComponent(prompt.text);
     window.open(`/zion-gpt?prompt=${encoded}`, '_blank')
   };
+
 
   return (
     <div className="p-4 border rounded-md bg-background flex flex-col justify-between">

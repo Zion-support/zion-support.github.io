@@ -20,7 +20,9 @@ import { Card, CardContent } from "@/components/ui/card";
 type JobPostStep = "details" | "requirements" | "budget" | "preview";
 
 export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+
+  const [ currentStep, setCurrentStep ] = useState<JobPostStep>("details"),
+
   
   const goToNextStep = () => {
     if (currentStep === "details") {
@@ -162,10 +164,12 @@ function DetailsStep() {
 }
 
 function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
+  const [ skills, setSkills ] = useState<string[]>([
     "React", "TypeScript", "Node.js"
-  ]);
-  const [newSkill, setNewSkill] = useState("");
+
+  ]),
+  const [ newSkill, setNewSkill ] = useState(""),
+
   
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
@@ -173,11 +177,11 @@ function RequirementsStep() {
       setNewSkill("")
     }
   };
-  
+
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill))
   };
-  
+
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Job Requirements</h2>

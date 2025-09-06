@@ -6,7 +6,9 @@ import {
   DialogHeader, 
   DialogTitle, 
   DialogDescription 
-} from "@/components/ui/dialog";
+
+} from "@/components/ui/dialog",
+
 import { Button } from "@/components/ui/button";
 import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
@@ -112,4 +114,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       </DialogContent>
     </Dialog>
   )
+
 };
+

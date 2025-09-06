@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router', // Changed from react-router-dom
+
+import { useRouter } from 'next/router'; // Changed from react-router-dom
+
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -33,13 +35,15 @@ const SignupSchema = Yup.object({
 
 export default function Signup() {
   const router = useRouter(), // Changed from navigate
-  const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
-  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false);
-  const [authServiceAvailable, setAuthServiceAvailable] = useState(true);
-  const [healthCheckLoading, setHealthCheckLoading] = useState(true);
-  const [healthCheckError, setHealthCheckError] = useState<string | null>(null);
+
+  const [ loading, setLoading ] = useState(false),
+  const [ errorMessage, setErrorMessage ] = useState(''),
+  const [ successMessage, setSuccessMessage ] = useState(''),
+  const [ emailVerificationRequired, setEmailVerificationRequired ] = useState(false),
+  const [ authServiceAvailable, setAuthServiceAvailable ] = useState(true),
+  const [ healthCheckLoading, setHealthCheckLoading ] = useState(true),
+  const [ healthCheckError, setHealthCheckError ] = useState<string | null>(null),
+
   
   // Check if this is a partner signup
   const isPartnerSignup = router.query.type === 'partner';

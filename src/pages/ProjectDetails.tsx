@@ -22,15 +22,17 @@ import {
   TabsList;
   TabsTrigger} from "@/components/ui/tabs";
 import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle;
-  AlertDialogTrigger} from "@/components/ui/alert-dialog";
+
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+
 import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
@@ -42,19 +44,20 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star, Calendar } from 'lucide-react';
 
-function ProjectDetailsContent() {
-  const router = useRouter();
+
+function ProjectDetailsContent() { const router = useRouter(),
   // Get projectId from Next.js router query params
-  const { projectId } = router.query as { projectId?: string };
-  const { user } = useAuth();
-  const { getProjectById, updateProjectStatus } = useProjects();
+  const { projectId  } = router.query as { projectId?: string },
+  const { user  } = useAuth(),
+  const { getProjectById, updateProjectStatus  } = useProjects(),
   
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
+  const [ project, setProject ] = useState<Project | null>(null),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ notes, setNotes ] = useState<any[]>([]),
+  const [ newNote, setNewNote ] = useState(""),
+  const [ isSubmittingNote, setIsSubmittingNote ] = useState(false),
+  const [ activeTab, setActiveTab ] = useState("details"),
+
   
   // Load project data
   useEffect(() => {
@@ -83,9 +86,8 @@ function ProjectDetailsContent() {
     loadProject()
   }, [projectId]);
   
-  const fetchProjectNotes = async (projectId: string) => {
-    try {
-      const { data, error } = await supabase
+  const fetchProjectNotes = async (projectId: string) => { try {
+      const { data, error  } = await supabase
         .from("project_notes")
         .select(`
           *;
@@ -106,13 +108,14 @@ function ProjectDetailsContent() {
     }
   };
   
-  const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return;
+
+  const handleSubmitNote = async () => { if (!newNote.trim() || !project || !user) return,
+
     
     setIsSubmittingNote(true);
     
     try {
-      const { data, error } = await supabase
+      const { data, error  } = await supabase
         .from("project_notes")
         .insert({
           project_id: project.id,
@@ -141,9 +144,10 @@ function ProjectDetailsContent() {
   };
   
   const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
-    
-    const success = await updateProjectStatus(project.id, newStatus);
+
+    if (!project) return,
+    const success = await updateProjectStatus(project.id, newStatus),
+
     
     if (success) {
       setProject({
@@ -217,10 +221,11 @@ function ProjectDetailsContent() {
     return null
   }
   
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
+
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-  
+
   return (
     <>
       <SEO 

@@ -4,12 +4,14 @@ import { Dispute, DisputeStatus } from "@/types/disputes";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
+
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+
 import Skeleton from "@/components/ui/skeleton";
 import { formatDistanceToNow } from "date-fns";
 import { ShieldAlert } from 'lucide-react'
@@ -20,7 +22,9 @@ type DisputesListProps = {
 };
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+
+  const [ statusFilter, setStatusFilter ] = useState<DisputeStatus | "all">("all"),
+
 
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
@@ -39,6 +43,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         return "default"
     }
   };
+
 
   if (isLoading) {
     return (

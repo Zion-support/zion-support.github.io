@@ -386,7 +386,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
-  const [error, setError] = React.useState<Error | null>(null)
+  const [ error, setError ] = React.useState<Error | null>(null)
 
   React.useEffect(() => {
     if (error) {
@@ -403,7 +403,7 @@ export const useErrorBoundary = () => {
 
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
+  Component: React.ComponentType<P>;
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
 ) => {
   const WrappedComponent = (props: P) => (

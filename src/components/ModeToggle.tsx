@@ -9,10 +9,10 @@ import { useTheme } from "@/components/ThemeProvider"
 import { logIssue } from "@/utils/logIssue"
 import { useEffect, useState } from "react"
 
-export function ModeToggle() {
 
-  const { theme, toggleTheme } = useTheme();
-  const [isClient, setIsClient] = useState(false);
+export function ModeToggle() { const { theme, toggleTheme  } = useTheme(),
+  const [ isClient, setIsClient ] = useState(false),
+
 
   // Ensure we're on the client side to avoid hydration mismatches
   useEffect(() => {
@@ -72,6 +72,7 @@ export function ModeToggle() {
         variant: "destructive"})
     }
   };
+
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues

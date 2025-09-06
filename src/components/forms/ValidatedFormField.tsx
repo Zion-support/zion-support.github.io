@@ -43,9 +43,11 @@ export function ValidatedFormField({
   disabled = false;
   showValidIcon = true;
   debounceMs = 300}: ValidatedFormFieldProps) {
-  const [showPassword, setShowPassword] = useState(false);
-  const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle');
-  const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null);
+
+  const [ showPassword, setShowPassword ] = useState(false),
+  const [ validationState, setValidationState ] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),
+  const [ debounceTimer, setDebounceTimer ] = useState<NodeJS.Timeout | null>(null),
+
 
   const fieldValue = form.watch(name);
   const fieldError = form.formState.errors[name];
@@ -123,7 +125,9 @@ export function ValidatedFormField({
       case 'valid':
         return 'border-green-500 focus: border-green-500 focus:ring-green-500/20',
       case 'invalid':
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20';
+
+        return 'border-red-500 focus: border-red-500 focus:ring-red-500/20',
+
       default:
         return ''
     }
@@ -331,6 +335,8 @@ export const commonValidations = {
       if (value && !validationPatterns.phone.test(value)) {
         return 'Please enter a valid phone number'
       }
-      return null;
-    };
-  }},
+
+      return null
+    }
+  }};
+

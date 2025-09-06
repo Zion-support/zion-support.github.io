@@ -35,11 +35,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleScreenShare;
   className 
 }) => {
-  const [isMuted, setIsMuted] = useState(false);
-  const [isVideoEnabled, setIsVideoEnabled] = useState(true);
-  const [isScreenSharing, setIsScreenSharing] = useState(false);
-  const [isAudioOnly, setIsAudioOnly] = useState(false);
-  const [callDuration, setCallDuration] = useState(0);
+
+  const [ isMuted, setIsMuted ] = useState(false),
+  const [ isVideoEnabled, setIsVideoEnabled ] = useState(true),
+  const [ isScreenSharing, setIsScreenSharing ] = useState(false),
+  const [ isAudioOnly, setIsAudioOnly ] = useState(false),
+  const [ callDuration, setCallDuration ] = useState(0),
+
 
   // Call duration timer
   React.useEffect(() => {
@@ -220,4 +222,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       </CardContent>
     </Card>
   )
+
 };
+

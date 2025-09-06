@@ -7,10 +7,11 @@ import { ProjectCard } from './ProjectCard';
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null);
+
+export function PortfolioBuilder() { const { projects, fetchProjects, deleteProject, isLoading  } = usePortfolio(),
+  const [ showAddProject, setShowAddProject ] = useState(false),
+  const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
+
   
   useEffect(() => {
     fetchProjects()

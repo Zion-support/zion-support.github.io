@@ -9,7 +9,9 @@ export const CreateResumeForm = ({
   onCancel;
   isLoading 
 }: CreateResumeFormProps) => {
-  const [newResumeTitle, setNewResumeTitle] = useState('');
+
+  const [ newResumeTitle, setNewResumeTitle ] = useState(''),
+
 
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return;
@@ -51,4 +53,6 @@ export const CreateResumeForm = ({
       </CardContent>
     </Card>
   )
+
 };
+

@@ -4,8 +4,10 @@ import { safeStorage } from "@/utils/safeStorage";
 import { X } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile";
 export const AppStoreBanner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const isMobile = useIsMobile();
+
+  const [ isVisible, setIsVisible ] = useState(false),
+  const isMobile = useIsMobile(),
+
   
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed before
@@ -54,4 +56,6 @@ export const AppStoreBanner: React.FC = () => {
       </div>
     </div>
   )
+
 };
+

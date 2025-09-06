@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router', // Changed from useParams
+
+import { useRouter } from 'next/router'; // Changed from useParams
 import { supabase } from '@/integrations/supabase/client';
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel'; // Re-use the preview panel
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react'
-import Link from 'next/link', // For a back button, changed from react-router-dom
+import Link from 'next/link'; // For a back button, changed from react-router-dom
+
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Placeholder for user context/role checking
 // In a real app, this would come from an auth context
-const useAuth = () => {
-    // const { user } = useUserContext(), // Example from a real app
+const useAuth = () => { // const { user  } = useUserContext(), // Example from a real app
     // return { isAdmin: user?.role === 'admin', isAuthenticated: !!user },
     return { isAdmin: false, isAuthenticated: false }, // Default to non-admin, not authenticated for this example
 };
@@ -26,14 +27,15 @@ interface SharedWhitepaper {
   is_public: boolean
 }
 
-const WhitepaperViewPage: React.FC = () => {
-  const router = useRouter();
-  const { id: rawId } = router.query,
-  const id = typeof rawId === 'string' ? rawId : undefined;
-  const [sharedData, setSharedData] = useState<SharedWhitepaper | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const { isAdmin } = useAuth(), // Get admin status
+
+const WhitepaperViewPage: React.FC = () => { const router = useRouter(),
+  const { id: rawId  } = router.query,
+  const id = typeof rawId === 'string' ? rawId : undefined,
+  const [ sharedData, setSharedData ] = useState<SharedWhitepaper | null>(null),
+  const [ loading, setLoading ] = useState(true),
+  const [ error, setError ] = useState<string | null>(null),
+  const { isAdmin  } = useAuth(), // Get admin status
+
 
   useEffect(() => {
     const fetchWhitepaper = async () => {
@@ -42,10 +44,11 @@ const WhitepaperViewPage: React.FC = () => {
         setLoading(false);
         return
       }
-      setLoading(true);
-      setError(null);
-      try {
-        const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
+
+      setLoading(true),
+      setError(null),
+      try { const { data: responseData, error: funcError  } = await supabase.functions.invoke('get-shared-whitepaper', {
+
           body: { id }}),
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
         if (responseData && (responseData as any).error) throw new Error((responseData as any).error);
@@ -104,7 +107,10 @@ const WhitepaperViewPage: React.FC = () => {
     );
   }
 
-  const { whitepaper_data: whitepaper } = sharedData,
+
+  const { whitepaper_data: whitepaper  } = sharedData,
+
+
   return (
     <div className="container mx-auto p-4 md: p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
@@ -129,4 +135,6 @@ const WhitepaperViewPage: React.FC = () => {
   )
 };
 
+
 export default WhitepaperViewPage;
+

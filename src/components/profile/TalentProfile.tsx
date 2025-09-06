@@ -23,8 +23,9 @@ export function TalentProfile({
   profile;
   onRequestHire;
   onMessageTalent
-}: TalentProfileProps) {
-  const { isAuthenticated } = useAuth();
+
+}: TalentProfileProps) { const { isAuthenticated  } = useAuth(),
+
   
   // Create proper availability object from talent profile
   const availability: Availability = {
@@ -46,7 +47,8 @@ export function TalentProfile({
     description: proj.description,
     date: new Date().toISOString() // Default date since we don't have this data
   })) || [];
-  
+
+
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Profile Header */}

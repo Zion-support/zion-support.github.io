@@ -30,8 +30,9 @@ export function MilestoneCard({
   dueDate;
   onApprove;
   onReject
-}: MilestoneCardProps) {
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+
+}: MilestoneCardProps) { const { isUnderDispute, disputeStatus  } = useDisputeCheck(projectId, id),
+
   
   function getStatusBadgeColor() {
     switch (status) {

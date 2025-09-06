@@ -81,8 +81,9 @@ const ServiceFilterControls = ({
 );
 
 // Service card
-const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
-  const { formatPrice } = useCurrency();
+
+const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => { const { formatPrice  } = useCurrency(),
+
   return (
   <Card className="h-full hover: shadow-lg transition-shadow">
     <CardHeader className="pb-3">
@@ -134,11 +135,13 @@ const ServicesLoadingGrid = ({ count = 8 }: { count?: number }) => (
 
 // Main component
 export default function ServicesPage() {
-  const router = useRouter();
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterCategory, setFilterCategory] = useState('');
-  const [showRecommended, setShowRecommended] = useState(false);
-  const [totalGenerated, setTotalGenerated] = useState(0);
+
+  const router = useRouter(),
+  const [ sortBy, setSortBy ] = useState('newest'),
+  const [ filterCategory, setFilterCategory ] = useState(''),
+  const [ showRecommended, setShowRecommended ] = useState(false),
+  const [ totalGenerated, setTotalGenerated ] = useState(0),
+
 
   const fetchServices = useCallback(async (page: number, limit: number) => {
     await new Promise(resolve => setTimeout(resolve, 400));
@@ -188,17 +191,18 @@ export default function ServicesPage() {
     }
   }, [sortBy, filterCategory, showRecommended, totalGenerated]);
 
-  const {
-    items: services,
-    loading;
-    error;
-    hasMore;
-    isFetching;
-    lastElementRef;
-    scrollToTop;
-    refresh;
+
+  const { items: services,
+    loading,
+    error,
+    hasMore,
+    isFetching,
+    lastElementRef,
+    scrollToTop,
+    refresh,
     total
-  } = useInfiniteScrollPagination(fetchServices, 12);
+   } = useInfiniteScrollPagination(fetchServices, 12),
+
 
   useEffect(() => {
     refresh();
@@ -214,12 +218,15 @@ export default function ServicesPage() {
     return Array.from(new Set(services.map(s => s.category).filter(Boolean)))
   }, [services]);
 
-  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  const [ showScrollTop, setShowScrollTop ] = useState(false),
+
   useEffect(() => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
+
 
   if (loading && services.length === 0) {
     return (

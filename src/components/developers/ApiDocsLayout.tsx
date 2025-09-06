@@ -16,9 +16,11 @@ interface ApiDocsLayoutProps {
 }
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-  const router = useRouter();
-  const currentPath = router.pathname;
-  const [searchValue, setSearchValue] = useState("");
+
+  const router = useRouter(),
+  const currentPath = router.pathname,
+  const [ searchValue, setSearchValue ] = useState(""),
+
 
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
@@ -93,4 +95,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   );
 }
 
+
 export default ApiDocsLayout;
+

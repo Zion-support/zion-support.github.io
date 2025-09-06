@@ -10,8 +10,9 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 
-function ProjectsContent() {
-  const { projects, isLoading } = useProjects();
+
+function ProjectsContent() { const { projects, isLoading  } = useProjects(),
+
 
   return (
     <>

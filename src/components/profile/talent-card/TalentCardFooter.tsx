@@ -13,10 +13,11 @@ interface TalentCardFooterProps {
   onRequestHire?: (profile: TalentProfile) => void
 }
 
-export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const router = useRouter();
+
+export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) { const [ isHireModalOpen, setIsHireModalOpen ] = useState(false),
+  const { userDetails  } = useAuthStatus(),
+  const router = useRouter(),
+
 
   // Create a compatible UserProfile from UserDetails
   const userProfile: UserProfile = {
@@ -35,8 +36,9 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
   // Handle request to hire
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
+
+    e.stopPropagation(),
+
     if (onRequestHire) {
       onRequestHire(profile)
     } else {
@@ -47,8 +49,9 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
 
   // Handle view profile
   const handleViewProfile = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
+
+    e.stopPropagation(),
+
     // Navigate to the talent profile page
     router.push(`/talent/${profile.id || ''}`);
     
@@ -57,6 +60,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onViewProfile(profile.id || '')
     }
   };
+
 
   return (
     <>

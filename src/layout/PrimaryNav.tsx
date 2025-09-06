@@ -20,16 +20,17 @@ import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
-export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { user } = useAuth();
-  const isLoggedIn = !!user;
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const router = useRouter();
-  const [query, setQuery] = useState('');
-  const suggestions = generateSearchSuggestions();
+
+export function PrimaryNav() { const [ mobileMenuOpen, setMobileMenuOpen ] = useState(false),
+  const [ loginOpen, setLoginOpen ] = useState(false),
+  const { user  } = useAuth(),
+  const isLoggedIn = !!user,
+  const isMobile = useIsMobile(),
+  const { t  } = useTranslation(),
+  const router = useRouter(),
+  const [ query, setQuery ] = useState(''),
+  const suggestions = generateSearchSuggestions(),
+
 
   let unreadCount = 0;
   try {

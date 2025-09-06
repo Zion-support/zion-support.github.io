@@ -22,9 +22,10 @@ interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
 
-export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
+
+export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) { const { toast  } = useToast(),
+  const [ isLoading, setIsLoading ] = useState(false),
+
   
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -32,11 +33,12 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       title: "",
       keyFeatures: "",
       targetAudience: ""}}),
-  const handleSubmit = async (data: FormData) => {
-    setIsLoading(true);
-    
+
+
+  const handleSubmit = async (data: FormData) => { setIsLoading(true),
+
     try {
-      const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
+      const { data: response, error  } = await supabase.functions.invoke('generate-service-description', {
         body: { 
           title: data.title,
           keyFeatures: data.keyFeatures,
@@ -64,13 +66,14 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       logErrorToProduction('Error generating description:', { data: error }),
       toast({
         title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.",
+        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";
         variant: "destructive"
       })
     } finally {
       setIsLoading(false)
     }
   };
+
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">

@@ -19,9 +19,10 @@ export function AIEnhancementButton({
   onEnhanced;
   buttonText = "Enhance with AI";
   className
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useResumeEnhancer();
-  const [error, setError] = useState<string | null>(null);
+
+}: AIEnhancementButtonProps) { const { enhanceContent, isEnhancing  } = useResumeEnhancer(),
+  const [ error, setError ] = useState<string | null>(null),
+
   
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
@@ -40,7 +41,8 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   };
-  
+
+
   return (
     <Button
       type="button"

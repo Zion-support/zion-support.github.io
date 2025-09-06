@@ -625,5 +625,6 @@ export const Icon: React.FC<IconProps> = ({
   return <LucideIconComponent size={size} className={className} {...props} />
 };
 
+
 export default Icon, // Default export the Icon component
 export const Icons = iconMap, // Export the map if you need to refer to available icons

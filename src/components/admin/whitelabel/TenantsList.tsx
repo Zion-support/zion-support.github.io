@@ -8,30 +8,35 @@ import {
   TableHead, 
   TableHeader, 
   TableRow 
-} from '@/components/ui/table';
+
+} from '@/components/ui/table',
 import { Button } from '@/components/ui/button';
 import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
+
 import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
 import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from 'lucide-react'
 import { format } from 'date-fns';
 export function TenantsList() {
-  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+
+  const [ tenants, setTenants ] = useState<WhitelabelTenant[]>([]),
+  const [ isLoading, setIsLoading ] = useState(true),
+
 
   useEffect(() => {
     loadTenants()
   }, []);
 
-  const loadTenants = async () => {
-    try {
-      setIsLoading(true);
-      const { data, error } = await supabase
+
+  const loadTenants = async () => { try {
+      setIsLoading(true),
+      const { data, error  } = await supabase
+
         .from('whitelabel_tenants')
         .select('*')
         .order('created_at', { ascending: false }),
@@ -49,9 +54,8 @@ export function TenantsList() {
     }
   };
 
-  const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
-    try {
-      const { error } = await supabase
+  const toggleTenantStatus = async (tenant: WhitelabelTenant) => { try {
+      const { error  } = await supabase
         .from('whitelabel_tenants')
         .update({ is_active: !(tenant as any).is_active })
         .eq('id', (tenant as any).id);
@@ -75,11 +79,10 @@ export function TenantsList() {
     }
   };
 
-  const verifyDns = async (tenant: WhitelabelTenant) => {
-    try {
+  const verifyDns = async (tenant: WhitelabelTenant) => { try {
       // In a real implementation, this would verify DNS records
       // For now, we'll just mark it as verified
-      const { error } = await supabase
+      const { error  } = await supabase
         .from('whitelabel_tenants')
         .update({ dns_verified: true })
         .eq('id', (tenant as any).id);
@@ -102,6 +105,7 @@ export function TenantsList() {
         description: error.message})
     }
   };
+
 
   return (
     <div className="space-y-4">

@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 import { StarIcon } from 'lucide-react'
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
-import { Badge } from '@/components/ui/badge';
-import { Star } from 'lucide-react';
+
+
 
 interface ListingScoreCardProps {
   title: string,
@@ -34,12 +34,14 @@ export function ListingScoreCard({
   reviewCount = 0;
   className
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false);
-  const [authorImageError, setAuthorImageError] = useState(false);
+
+  const [ mainImageError, setMainImageError ] = useState(false),
+  const [ authorImageError, setAuthorImageError ] = useState(false),
 
   return (
     <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group";
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group",
+
       className
     )}>
       {image && !mainImageError && (
@@ -85,7 +87,11 @@ export function ListingScoreCard({
               {[1, 2, 3, 4, 5].map((star) => (
                 <StarIcon 
                   key={star}
-                  className={cn("h-4 w-4", star <= Math.round(rating) 
+
+                  className={cn(
+                    "h-4 w-4";
+                    star <= Math.round(rating) 
+
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
                   )}

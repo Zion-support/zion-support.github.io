@@ -30,18 +30,19 @@ interface PartnerProfile {
   commission_rate?: number
 }
 
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]);
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
-  const [commissionRate, setCommissionRate] = useState(25);
-  const { user, isAuthenticated } = useAuth();
-  const router = useRouter();
+
+export default function PartnerManager() { const [ partners, setPartners ] = useState<PartnerProfile[]>([]),
+  const [ filteredPartners, setFilteredPartners ] = useState<PartnerProfile[]>([]),
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const [ activeTab, setActiveTab ] = useState("pending"),
+  const [ selectedPartner, setSelectedPartner ] = useState<PartnerProfile | null>(null),
+  const [ isDetailsOpen, setIsDetailsOpen ] = useState(false),
+  const [ isSettingsOpen, setIsSettingsOpen ] = useState(false),
+  const [ commissionRate, setCommissionRate ] = useState(25),
+  const { user, isAuthenticated  } = useAuth(),
+  const router = useRouter(),
+
 
   useEffect(() => {
     if (!isAuthenticated) {
@@ -52,12 +53,13 @@ export default function PartnerManager() {
     fetchPartners()
   }, [isAuthenticated, router]);
 
-  const fetchPartners = async () => {
-    try {
-      setIsLoading(true);
+
+  const fetchPartners = async () => { try {
+      setIsLoading(true),
+
       // In a real application, check admin permissions here
       
-      const { data, error } = await supabase
+      const { data, error  } = await supabase
         .from('partner_profiles')
         .select('*')
         .order('created_at', { ascending: false }),
@@ -162,8 +164,9 @@ export default function PartnerManager() {
   };
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
-    let filtered = partners;
-    
+
+    let filtered = partners,
+
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
@@ -288,8 +291,9 @@ export default function PartnerManager() {
   };
 
   const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null;
-    
+
+    if (flags === 0) return null,
+
     return (
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
         <Flag className="h-3 w-3" />
@@ -614,8 +618,10 @@ function PartnerTable({
   partners, 
   isLoading, 
   onViewDetails, 
-  onUpdateStatus;
-  onOpenSettings;
+
+  onUpdateStatus,
+  onOpenSettings,
+
   getStatusBadge;
   getFraudFlagBadge
 }: PartnerTableProps) {

@@ -69,4 +69,6 @@ export const AppTestimonials: React.FC = () => {
       </div>
     </section>
   )
+
 };
+

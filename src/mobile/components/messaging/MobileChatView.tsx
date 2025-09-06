@@ -30,8 +30,10 @@ interface MobileChatViewProps {
 }
 
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState("");
-  const router = useRouter();
+
+  const [ newMessage, setNewMessage ] = useState(""),
+  const router = useRouter(),
+
   
   const handleSend = () => {
     if (newMessage.trim() !== "") {

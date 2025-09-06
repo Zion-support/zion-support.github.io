@@ -49,14 +49,16 @@ export function CategoryListingPage({
     { label: 'Highly Rated', value: 'high-rating' },
     { label: 'Best AI Match', value: 'best-match' }]
 }: CategoryListingPageProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSort, setSelectedSort] = useState(
+
+  const [ searchQuery, setSearchQuery ] = useState(""),
+  const [ selectedSort, setSelectedSort ] = useState(
     () => safeStorage.getItem('category_selected_sort') || sortOptions[0]?.value || 'newest'
-  );
-  const [selectedFilter, setSelectedFilter] = useState(
+  ),
+  const [ selectedFilter, setSelectedFilter ] = useState(
     () => safeStorage.getItem('category_selected_filter') || filterOptions[0]?.value || 'all'
-  );
-  const [isLoading, setIsLoading] = useState(false);
+  ),
+  const [ isLoading, setIsLoading ] = useState(false),
+
 
   useEffect(() => {
     safeStorage.setItem('category_selected_sort', selectedSort)

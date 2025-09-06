@@ -35,10 +35,12 @@ export function OptimizedImage({
   lazy = true;
   ...props
 }: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(!lazy || priority);
-  const imgRef = useRef<HTMLDivElement>(null);
+
+  const [ isLoading, setIsLoading ] = useState(true),
+  const [ hasError, setHasError ] = useState(false),
+  const [ isInView, setIsInView ] = useState(!lazy || priority),
+  const imgRef = useRef<HTMLDivElement>(null),
+
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -172,9 +174,10 @@ export function OptimizedImage({
 // Higher-order component for easy migration from regular img tags
 export function withImageOptimization<P extends { src: string, alt: string }>(
   Component: React.ComponentType<P>
-) {
-  return function OptimizedComponent(props: P) {
-    const { src, alt, ...otherProps } = props;
+
+) { return function OptimizedComponent(props: P) {
+    const { src, alt, ...otherProps  } = props,
+
     
     return (
       <OptimizedImage

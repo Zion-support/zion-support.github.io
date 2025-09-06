@@ -33,10 +33,10 @@ export interface CategoriesProps {
   categories?: CategoryType[]
 }
 
-export default function Categories({ categories: initialCategories = [] }: CategoriesProps) {
-  const { data, error } = useSWR<CategoryType[]>('/api/categories', fetcher, {
+export default function Categories({ categories: initialCategories = [] }: CategoriesProps) { const { data, error  } = useSWR<CategoryType[]>('/api/categories', fetcher, {
     fallbackData: initialCategories}),
-  const categories = data || [];
+
+  const categories = data || [],
   const isLoading = !data && !error;
 
   return (

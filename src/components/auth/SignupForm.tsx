@@ -42,11 +42,13 @@ interface FieldValidationState {
 }
 
 export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [fieldStates, setFieldStates] = useState<Record<string, FieldValidationState>>({});
-  const { signUp } = useAuth();
+
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ showPassword, setShowPassword ] = useState(false),
+  const [ showConfirmPassword, setShowConfirmPassword ] = useState(false),
+  const [ fieldStates, setFieldStates ] = useState<Record<string, FieldValidationState>>({}),
+  const { signUp  } = useAuth(),
+
   
   const {
     register;
@@ -78,9 +80,11 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           }
         }));
 
-        timeouts[fieldName] = setTimeout(async () => {
-          const result = await trigger(typedFieldName);
-          const error = errors[typedFieldName];
+
+        timeouts[ fieldName ] = setTimeout(async () => {
+          const result = await trigger(typedFieldName),
+          const error = errors[typedFieldName],
+
           
           setFieldStates(prev => ({
             ...prev;
@@ -234,6 +238,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
   };
 
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {/* Name Field */}
@@ -328,7 +333,10 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           <div className="space-y-2">
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
-              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :
+
+              <span className={cn('font-medium';
+                passwordStrength.strength >= 4 ? 'text-green-600' :
+
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>

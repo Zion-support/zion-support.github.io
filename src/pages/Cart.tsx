@@ -6,8 +6,10 @@ import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
 import type { RootState, AppDispatch } from '@/store';
 import {
-  removeItem as removeItemAction;
-  updateQuantity as updateQuantityAction} from '@/store/cartSlice';
+
+  removeItem as removeItemAction,
+  updateQuantity as updateQuantityAction} from '@/store/cartSlice',
+
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
@@ -23,14 +25,15 @@ import { useWishlist } from '@/hooks/useWishlist';
 import { toast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-export default function CartPage() {
-  const { t } = useTranslation();
+
+export default function CartPage() { const { t  } = useTranslation(),
   const items = useSelector((s: RootState) => s.cart.items),
-  const dispatch = useDispatch<AppDispatch>();
-  const { user, isAuthenticated } = useAuth();
-  const [loading, setLoading] = useState(false);
-  const [guestOpen, setGuestOpen] = useState(false);
-  const { toggle: toggleWishlist, isWishlisted } = useWishlist();
+  const dispatch = useDispatch<AppDispatch>(),
+  const { user, isAuthenticated  } = useAuth(),
+  const [ loading, setLoading ] = useState(false),
+  const [ guestOpen, setGuestOpen ] = useState(false),
+  const { toggle: toggleWishlist, isWishlisted  } = useWishlist(),
+
 
   const updateQuantity = (id: string, qty: number) => {
     dispatch(updateQuantityAction({ id, quantity: qty }))
@@ -57,13 +60,14 @@ export default function CartPage() {
         : `${name} has been added to your wishlist`})
   };
 
-  const handleCheckout = async (details?: { email?: string, address?: string }) => {
-    setLoading(true);
+
+  const handleCheckout = async (details?: { email?: string, address?: string }) => { setLoading(true),
+
     try {
       const stripe = await getStripe();
       if (!stripe) throw new Error('Stripe.js failed to load');
 
-      const { data } = await axios.post('/api/checkout-session', {
+      const { data  } = await axios.post('/api/checkout-session', {
         cartItems: items,
         customer_email: details?.email || user?.email,
         shipping_address: details?.address}),
@@ -71,7 +75,9 @@ export default function CartPage() {
       const sessionId = data.sessionId as string | undefined;
       if (!sessionId) throw new Error('Session ID missing in response');
 
-      const { error } = await stripe.redirectToCheckout({ sessionId });
+
+      const { error  } = await stripe.redirectToCheckout({ sessionId }),
+
       if (error) logErrorToProduction('Stripe redirect error:', { data: error.message })
     } catch (err: any) {
       logErrorToProduction('Checkout error:', { data: err }),
@@ -94,8 +100,9 @@ export default function CartPage() {
   // Only add shipping for physical items
   const hasPhysicalItems = items.some(item => 
     !item.type || item.type === 'physical' // Default to physical if type not specified
-  );
-  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+
+  ),
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0,
   const total = subtotal + tax + shipping;
 
   // Empty cart state

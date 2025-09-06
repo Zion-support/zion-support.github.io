@@ -18,15 +18,15 @@ export function TalentCardSaveButton({
   isSaved;
   onToggleSave;
   isAuthenticated
-}: TalentCardSaveButtonProps) {
-  const { toast } = useToast();
-  const router = useRouter();
+
+}: TalentCardSaveButtonProps) { const { toast  } = useToast(),
+  const router = useRouter(),
   // Using router.asPath for current path
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
+  const [ localIsSaved, setLocalIsSaved ] = React.useState(isSaved),
   
   // Handle save toggle
   const handleSaveToggle = (e: React.MouseEvent) => {
-    e.stopPropagation();
+    e.stopPropagation(),
 
     if (!isAuthenticated) {
       toast({
@@ -61,7 +61,9 @@ export function TalentCardSaveButton({
     >
       <Heart 
         className={cn(
-          "h-4 w-4 transition-colors",
+
+          "h-4 w-4 transition-colors";
+
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
         )} 
       />

@@ -6,13 +6,17 @@ import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
   Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
-} from "@/components/ui/form";
+
+} from "@/components/ui/form",
+
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
-} from "@/components/ui/select";
+
+} from "@/components/ui/select",
+
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "@/components/ui/use-toast";
@@ -54,16 +58,17 @@ const talentSchema = z.object({
 
 type TalentFormValues = z.infer<typeof talentSchema>;
 
-export function TalentOnboardingForm() {
-  const { user } = useAuth();
-  const router = useRouter();
-  const [currentStep, setCurrentStep] = useState(1);
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null);
-  const [cvFileName, setCvFileName] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccessScreen, setShowSuccessScreen] = useState(false);
+
+export function TalentOnboardingForm() { const { user  } = useAuth(),
+  const router = useRouter(),
+  const [ currentStep, setCurrentStep ] = useState(1),
+  const [ profilePictureUrl, setProfilePictureUrl ] = useState<string | null>(null),
+  const [ cvFileName, setCvFileName ] = useState<string | null>(null),
+  const [ isSubmitting, setIsSubmitting ] = useState(false),
+  const [ showSuccessScreen, setShowSuccessScreen ] = useState(false),
   
-  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+  const { enhanceProfile, isGenerating  } = useTalentProfileEnhancer(),
+
   
   const totalSteps = 4;
   
@@ -88,12 +93,14 @@ export function TalentOnboardingForm() {
         portfolioLinks: [{ url: "" }],
         cv: undefined}},
     mode: "onChange"}),
-  const { fields: projectFields, append: appendProject, remove: removeProject } = 
-    useFieldArray({
+
+  
+  const { fields: projectFields, append: appendProject, remove: removeProject  } = useFieldArray({
       name: "experience.keyProjects",
       control: form.control}),
-  const { fields: linkFields, append: appendLink, remove: removeLink } = 
-    useFieldArray({
+    
+  const { fields: linkFields, append: appendLink, remove: removeLink  } = useFieldArray({
+
       name: "availability.portfolioLinks",
       control: form.control}),
   // Handle profile picture upload
@@ -114,8 +121,10 @@ export function TalentOnboardingForm() {
 
   // Handle CV upload
   const handleCvUpload = async (file: File) => {
-    const fileName = `cv-${user?.id}-${Date.now()}`;
-    const { error: cvError } = await supabase.storage
+
+    const fileName = `cv-${user?.id}-${Date.now()}`,
+    const { error: cvError  } = await supabase.storage
+
       .from('resumes')
       .upload(fileName, file);
       
@@ -128,7 +137,7 @@ export function TalentOnboardingForm() {
     const { data: { publicUrl } } = supabase.storage
       .from('resumes')
       .getPublicUrl(fileName);
-    
+
     return publicUrl
   };
 

@@ -20,9 +20,10 @@ import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 import { Zap } from 'lucide-react';
 
-export default function LandingPage() {
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+
+export default function LandingPage() { const { t  } = useTranslation(),
+  const { isRTL  } = useLanguage(),
+
   
   // Tools and features showcase
   const toolsFeatures = [
@@ -63,6 +64,7 @@ export default function LandingPage() {
       link: "/mobile-launch"
     }
   ];
+
 
   return (
     <div className="min-h-screen bg-zion-blue text-white">

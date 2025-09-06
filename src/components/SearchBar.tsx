@@ -36,14 +36,16 @@ interface SearchBarProps {
  * SearchBar component that allows users to search for content.
  */
 export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
-  const router = useRouter();
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
-  const [focused, setFocused] = useState(false);
-  const [highlightedIndex, setHighlightedIndex] = useState(-1);
-  const listId = 'searchbar-autocomplete-list';
-  const debounced = useDebounce(value, 150);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter(),
+  const [ suggestions, setSuggestions ] = useState<SearchSuggestion[]>([]),
+  const [ focused, setFocused ] = useState(false),
+  const [ highlightedIndex, setHighlightedIndex ] = useState(-1),
+  const listId = 'searchbar-autocomplete-list',
+  const debounced = useDebounce(value, 150),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const containerRef = useRef<HTMLDivElement>(null),
+
 
   useEffect(() => {
     if (!debounced) {
@@ -165,10 +167,12 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
                 }
                 break;
               case 'Escape':
-                e.preventDefault();
-                setFocused(false);
-                setHighlightedIndex(-1);
-                inputRef.current?.blur();
+
+                e.preventDefault(),
+                setFocused(false),
+                setHighlightedIndex(-1),
+                inputRef.current?.blur(),
+
                 break;
               default: break
             }

@@ -13,9 +13,10 @@ interface ProfileRatingsProps {
   ratingCount?: number
 }
 
-export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview  } = useReviews(),
+  const [ ratingDistribution, setRatingDistribution ] = useState<Record<number, number>>({}),
+
   
   // Calculate rating distribution
   useEffect(() => {
@@ -24,7 +25,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1
+          distribution[ review.rating ] = (distribution[review.rating] || 0) + 1
         }
       });
       
@@ -36,7 +37,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   useEffect(() => {
     fetchUserReviews(userId)
   }, [userId]);
-  
+
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">

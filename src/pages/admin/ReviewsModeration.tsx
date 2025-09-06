@@ -9,9 +9,11 @@ import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+
+  const [ activeTab, setActiveTab ] = useState("pending"),
+  const [ reviews, setReviews ] = useState([]),
+  const [ isLoading, setIsLoading ] = useState(true),
+
   
   const fetchReviews = async () => {
     setIsLoading(true);
@@ -38,7 +40,8 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {
     fetchReviews()
   };
-  
+
+
   return (
     <>
       <SEO
