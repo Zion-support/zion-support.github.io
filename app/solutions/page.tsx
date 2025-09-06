@@ -1,268 +1,156 @@
-import {
-  {
-    step: '01'
-    title: 'Discovery & Assessment'
-    description: 'We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.'
-    icon: LightBulbIcon}
-  {
-    step: '02'
-    title: 'Solution Design'
-    description: 'Our experts design custom AI solutions tailored to your specific business needs and objectives.'
-    icon: CpuChipIcon}
-  {
-    step: '03'
-    title: 'Development & Testing'
-    description: 'We develop and rigorously test your AI solution to ensure optimal performance and reliability.'
-    icon: CogIcon}
-  {
-    step: '04'
-    title: 'Deployment & Training'
-    description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.'
-    icon: RocketLaunchIcon}
-  {
-      {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
-              AI Solutions for{' '}
-              operations and drive unprecedented growth and innovation.
-            </p>
-          </div>
-        </div>
-      </div>
-      {/* Flagship Solutions */}
-      <div className=&quot;mx - auto max - w-7xl px - 6 sm:px - 6 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Our Solutions</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Flagship AI Platforms;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Revolutionary technology that pushes the boundaries of what's possible in artificial intelligence.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {flagship_solutions.map ((solution) => (
-              <div key={solution.name} className=&quot;bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                <div className=&quot;flex items - center gap - x-3 mb - 4&quot;>;
-                  <solution.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  <h3 className=&quot;text - xl font - semibold text - white & quot;>{solution.name}</h3>;
-                </div>;
-                <p className=&quot;text - gray - 300 mb - 6&quot;>{solution.description}</p>;
-                <div className=&quot;space - y-3 mb - 6&quot;>;
-                  {solution.features.map ((feature) => (
-                    <div key={feature} className=&quot;flex items - center gap - 2&quot;>;
-                      <div className=&quot;h - 2 w - 2 bg - blue - 400 rounded - full & quot;></div>;
-                      <span className=&quot;text - sm text - gray - 300 & quot;>{feature}</span>;
-                    </div>))}
-                </div>;
-                <a;
-                  href={solution.href}
-                >
-                  Learn more <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            ))}
-          </div>;
-        </div>;
-      </div>;
-      {/* Industry Applications */}
-            Transforming Every Sector
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our AI solutions are designed to adapt and excel across diverse industries
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Transforming Every Sector
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            Our AI solutions are designed to adapt and excel across diverse industries, 
-            delivering measurable results and competitive advantages.
-          </p>
-        </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <dl className=&quot;grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2&quot;>
-            {industryApplications.map((industry) => (
-              <div key={industry.name} className=&quot;flex flex-col group&quot;>
-                <dt className=&quot;flex items-center gap-x-3 text-base font-semibold leading-7 text-white&quot;>
-                  <industry.icon className=&quot;h-5 w-5 flex-none text-blue-400&quot; aria-hidden=&quot;true&quot; />
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Industries</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Transforming Every Sector;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Our AI solutions are designed to adapt and excel across diverse industries,
-            delivering measurable results and competitive advantages.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {industry_applications.map ((industry) => (
-              <div key={industry.name} className=&quot;flex flex - col group & quot;>;
-                <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
-                  <industry.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
-                  {industry.name}
-                </dt>;
-                <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
-                  <p className=&quot;flex - auto mb - 4&quot;>{industry.description}</p>;
-                  <div className=&quot;space - y-2 & quot;>;
-                    {industry.use_cases.map ((use_case) => (
-                      <div key={use_case} className=&quot;flex items - center gap - 2&quot;>;
-                        <div className=&quot;h - 1.5 w - 1.5 bg - blue - 400 rounded - full & quot;></div>;
-                        <span className=&quot;text - sm text - gray - 400 & quot;>{use_case}</span>;
-                      </div>))}
-                  </div>;
-                </dd>;
-              </div>))}
-          </dl>;
-        </div>;
-      </div>;
-      {/* Implementation Process */}
-            Our Proven Process
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            From initial assessment to ongoing optimization, we guide you through every step
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our Proven Process
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            From initial assessment to ongoing optimization, we guide you through every step 
-            of your AI transformation journey.
-          </p>
-        </div>
-        <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
-          <div className=&quot;grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5&quot;>
-            {implementationSteps.map((step, index) => (
-              <div key={step.step} className=&quot;relative&quot;>
-                {index < implementationSteps.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700&quot;></div>
-                )}
-                <div className=&quot;bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105&quot;>
-                  <div className=&quot;mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4&quot;>
-                    <step.icon className=&quot;h-8 w-8 text-blue-400&quot; />
-                  </div>
-                  <div className=&quot;text-sm font-semibold text-blue-400 mb-2&quot;>{step.step}</div>
-                  <h3 className=&quot;text-lg font-semibold text-white mb-2&quot;>{step.title}</h3>
-                  <p className=&quot;text-sm text-gray-300&quot;>{step.description}</p>
-                </div>
-              </div>
-            ))}
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Implementation</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Our Proven Process;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            From initial assessment to ongoing optimization, we guide you through every step;
-            of your AI transformation journey.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <div className=&quot;grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 5&quot;>;
-            {implementation_steps.map ((step, index) => (
-              <div key={step.step} className=&quot;relative & quot;>;
-                {index < implementation_steps.length - 1 && (
-                  <div className=&quot;hidden lg:block absolute top - 8 left - 8 w - full h - 0.5 bg - gray - 700 & quot;></div>)}
-                <div className=&quot;bg - white / 5 p - 6 rounded - 2xl backdrop - blur - sm text - center hover:bg - white / 10 transition - all duration - 300 hover:scale - 105 & quot;>;
-                  <div className=&quot;mx - auto flex h - 16 w - 16 items - center justify - center rounded - full bg - blue - 600 / 20 mb - 4&quot;>;
-                    <step.icon className=&quot;h - 8 w - 8 text - blue - 400 & quot; />;
-                  </div>;
-                  <div className=&quot;text - sm font - semibold text - blue - 400 mb - 2&quot;>{step.step}</div>;
-                  <h3 className=&quot;text - lg font - semibold text - white mb - 2&quot;>{step.title}</h3>;
-                  <p className=&quot;text - sm text - gray - 300 & quot;>{step.description}</p>;
-                </div>;
-              </div>))}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our Proven Process
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            From initial assessment to ongoing optimization, we guide you through every step 
-            of your AI transformation journey.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
-            {implementationSteps.map((step, index) => (
-              <div key={step.step} className="relative">
-                {index < implementationSteps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700"></div>
-                )}
-                <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4">
-                    <step.icon className="h-8 w-8 text-blue-400" />
-                  </div>
-                  <div className="text-sm font-semibold text-blue-400 mb-2">{step.step}</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-sm text-gray-300">{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>;
-        </div>;
-      </div>;
-      {/* CTA section */}
-            Ready to transform your business?
-          </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Let's discuss how our AI solutions can accelerate your growth and give you a
-            Ready to transform your business?
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Let's discuss how our AI solutions can accelerate your growth and give you a 
-            competitive edge in your industry.
-          </p>
-          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>
-            <a
-              href=&quot;/contact&quot;
-              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105&quot;
-            >
-              Get Started
-            </Link>
-            <a href=&quot;/services&quot; className=&quot;text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200&quot;>
-              View Services <span aria-hidden=&quot;true&quot;>→</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Ready to transform your business?
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Let's discuss how our AI solutions can accelerate your growth and give you a 
-            competitive edge in your industry.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="/contact"
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-            >
-              Get Started
-            </Link>
-            <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Services <span aria-hidden="true">→</span>
-            </Link>
-          </div>        </div>
-      </div>
-    </div>
-  )
+import React from 'react';
+
+export const metadata = {
+  title: "Solutions | Zion Tech Group",
+  description: "Discover our comprehensive technology solutions designed to transform your business and drive growth.",
 };
 
-export default Page;
+export default function SolutionsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive growth.
+          </p>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">How We Work</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-slate-800 p-6 rounded-lg text-center">
+              <div className="text-4xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-white mb-4">Discovery & Assessment</h3>
+              <p className="text-gray-300">
+                We analyze your current systems, identify opportunities, and develop a comprehensive AI strategy.
+              </p>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg text-center">
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="text-xl font-semibold text-white mb-4">Solution Design</h3>
+              <p className="text-gray-300">
+                Our experts design custom AI solutions tailored to your specific business needs and objectives.
+              </p>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg text-center">
+              <div className="text-4xl mb-4">⚙️</div>
+              <h3 className="text-xl font-semibold text-white mb-4">Development & Testing</h3>
+              <p className="text-gray-300">
+                We develop and rigorously test your AI solution to ensure optimal performance and reliability.
+              </p>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg text-center">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-semibold text-white mb-4">Deployment & Training</h3>
+              <p className="text-gray-300">
+                Seamless deployment with comprehensive training for your team to maximize solution adoption.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Industry Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">Healthcare</h3>
+              <p className="text-gray-300 mb-4">
+                AI-powered diagnostic tools, patient management systems, and medical data analytics.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>• Medical Image Analysis</li>
+                <li>• Predictive Health Analytics</li>
+                <li>• Electronic Health Records</li>
+                <li>• Telemedicine Platforms</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">Financial Services</h3>
+              <p className="text-gray-300 mb-4">
+                Fraud detection, algorithmic trading, risk assessment, and personalized financial services.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>• Fraud Detection Systems</li>
+                <li>• Algorithmic Trading</li>
+                <li>• Credit Risk Assessment</li>
+                <li>• Robo-Advisors</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">Manufacturing</h3>
+              <p className="text-gray-300 mb-4">
+                Smart manufacturing, predictive maintenance, quality control, and supply chain optimization.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>• Predictive Maintenance</li>
+                <li>• Quality Control Systems</li>
+                <li>• Supply Chain Optimization</li>
+                <li>• Industrial IoT</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">Retail & E-commerce</h3>
+              <p className="text-gray-300 mb-4">
+                Personalized shopping experiences, inventory management, and customer analytics.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>• Recommendation Engines</li>
+                <li>• Inventory Optimization</li>
+                <li>• Customer Analytics</li>
+                <li>• Chatbots & Virtual Assistants</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">Education</h3>
+              <p className="text-gray-300 mb-4">
+                Personalized learning platforms, intelligent tutoring systems, and educational analytics.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>• Adaptive Learning Systems</li>
+                <li>• Intelligent Tutoring</li>
+                <li>• Student Performance Analytics</li>
+                <li>• Virtual Classrooms</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold text-white mb-4">Government</h3>
+              <p className="text-gray-300 mb-4">
+                Smart city solutions, citizen services automation, and data-driven policy making.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>• Smart City Infrastructure</li>
+                <li>• Citizen Service Automation</li>
+                <li>• Data Analytics & Insights</li>
+                <li>• Digital Government Platforms</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss your specific needs and create a custom solution that drives real business value.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}

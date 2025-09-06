@@ -5,6 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: 'Zion Tech Group - Leading AI and Technology Solutions',
   description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
   keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
@@ -36,12 +37,17 @@ export const metadata: Metadata = {
   },
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#000000',
+=======
+  title: 'Zion Tech Group - AI-Powered Solutions',
+  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
+  keywords: 'AI solutions, business automation, digital transformation, software development, tech consulting',
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
