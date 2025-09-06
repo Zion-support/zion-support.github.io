@@ -3,48 +3,26 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 function load(): Record<string, KycProfile> {
   try {
-
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw)
-
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
-<<<<<<< HEAD
   fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
 }
-
-
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
   if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
+
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
   const validation = validateKycSubmission(profile);
-
-
       ? 'clear'
       : amlResult && amlResult.status === 'match'
         ? 'match'
         : 'review';
   // Flags and risk scoring
-
-  const flags = new Set<string>(profile && profile.flags || []);
-  if (amlResult && amlResult.status !== 'clear') flags && flags.add('aml_alert');
-  const name = (
-    profile && profile.fullLegalName ||
-    profile && profile.businessName ||
-    ''
-  ).toLowerCase();
-  if (name && name.includes('test') || name && name.includes('demo') || name && name.includes('fake'))
-    flags && flags.add('fraud_risk');
-  const ip = (
-    (req && req.headers['x-forwarded-for'] as string) ||
-    req && req.socket.remoteAddress ||
-
     ''
   )
     .split(',')[0]
@@ -52,26 +30,6 @@ function save(db: Record<string, KycProfile>) {
   if (ip) {
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag
 
-    const sameIpCount = Object && Object.values(db).filter(p =>
-      (p && p.auditTrail || []).some(
-        a => a && a.action === 'kyc_submitted' && (a && a.details as any)?.ip === ip
-      )
-    ).length;
-<<<<<<< HEAD
-    if (sameIpCount >= 2) flags && flags.add('duplicate_ip');  }
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
-
-function load(): Record<string, KycProfile> {
-  try {
-    const raw = fs.readFileSync(FILE, 'utf8');
-    return JSON.parse(raw);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Compute simple risk score
   let riskScore = 10; // base low risk
   if (flags && flags.has('aml_alert')) riskScore += 50;
@@ -82,10 +40,7 @@ function load(): Record<string, KycProfile> {
   profile && profile.riskScore = riskScore;
   profile && profile.status = 'submitted';
   const now = new Date().toISOString();
-
-
 }
-<<<<<<< HEAD
 import type { KycProfile } from '../../../utils / kyc';
 import {validateKycSubmission} from '../../../utils / kyc';
 import {getAmlProvider} from '../../../utils / aml';
@@ -212,9 +167,3 @@ if ( {) {
 ;
 res.status (200).json ({ ok: true, profile, aml: aml_result });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  profile.lastUpdatedAt = now;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

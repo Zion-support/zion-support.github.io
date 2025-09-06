@@ -1,0 +1,16 @@
+import React from 'react';
+import Link from 'next/link';
+              {socialLinks.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </footer>
+  );
+}

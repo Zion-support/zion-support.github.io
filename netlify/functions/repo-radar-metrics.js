@@ -1,21 +1,9 @@
-
-
 function runNode(relPath, args = []) {
-
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
-
   const res = spawnSync('node', [abs, ...args], {
     stdio: 'pipe'
     encoding: 'utf8'
   });
   return {
-
-    status: res && res.status || 0,
-    stdout: res && res.stdout || '',
-    stderr: res && res.stderr || '',
-  };
-exports && exports.config = { schedule: '*/30 * * * *' };
-
 
 exports && exports.handler = async () => {
   const logs = [];
@@ -23,32 +11,18 @@ exports && exports.handler = async () => {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
 
-    if (stdout) logs && logs.push(stdout);
-    if (stderr) logs && logs.push(stderr);
-    logs && logs.push(`exit=${status}`);
-    return status;
-  };
-
-
     return status;
   }
   step('repo:radar-metrics', () =>
     runNode('automation/repo-radar-metrics && metrics.cjs')
   );
-
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-  return {
-    statusCode: 200,
-    headers: { 'content-type': 'text/plain' },
-    body: logs && logs.join('\n'),
-  };
-};function runNode(relPath, args = []) {
-  const abs = path && path.resolve(__dirname, '....', relPath),
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
+
 exports && exports.config = { schedule: '*/30 * * * *' },
+
 exports && exports.handler = async () => {
   const logs = [],
   const step = (name, fn) => {
@@ -59,12 +33,14 @@ exports && exports.handler = async () => {
     logs && logs.push(`exit=${status}`),
     return status
   },
+
   step('repo:radar-metrics', () => runNode('automation/repo-radar-metrics && metrics.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
-
-
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
@@ -137,3 +113,4 @@ exports.handler = async () => {
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
 },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

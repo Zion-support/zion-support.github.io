@@ -1,11 +1,10 @@
-
-
+export default function WebinarsPage() {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import SEO from '../components/SEO';
+export default function WebinarsPage() {
+>>>>>>> origin/automation-improvements-final
 	return (
 		<>
 			<SEO title="Webinars | Zion Tech Group" description="Upcoming webinars and on-demand sessions." canonical="/webinars" />
@@ -15,8 +14,6 @@ import React from 'react';
 			</div>
 		</>
 	)
-
-
 >>>>>>> origin/automation-improvements-final
 =======
 }

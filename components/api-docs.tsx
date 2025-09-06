@@ -1,10 +1,5 @@
 import { GetServerSideProps } from 'next';
-
-
   };      permanent: true}}
-
-}
-
 
 export default function ApiDocsRedirect() {;
   return null;
@@ -12,19 +7,6 @@ export default function ApiDocsRedirect() {;
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
-
-
-
-      destination: '/developers/docs',
-      permanent: true}}
-};
-
-
-
-
-export default function ApiDocsRedirect() {
-  return null;
-
       destination: '/developers / docs',
       permanent: true,
     },
@@ -35,20 +17,3 @@ export default /**
  * ApiDocsRedirect - Function description
  */
 function ApiDocsRedirect() {
-=======
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-<<<<<<< HEAD
-      destination: '/developers/docs'
-      permanent: true
-    }
-  };      permanent: true}}
-}
-
-=======
-
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

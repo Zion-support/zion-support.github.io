@@ -1,25 +1,9 @@
-
-
+export interface Session {
+  user_id: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-
-
-  // Check for internal agent headers or IPs;
-  const userAgent = req.headers['user-agent'] || '';
-
-
-  const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
-  return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
-}
-
-=======
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-}
-
 =======
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -164,14 +148,7 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
-
-
-
-
-=======
-};
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

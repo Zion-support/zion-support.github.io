@@ -1,5 +1,10 @@
-
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import jwt from "jsonwebtoken";
+import { ethers } from "ethers";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -7,15 +12,11 @@
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
-
-    const cookieHeader = req && req.headers.cookie || "";
-    const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
-    if (!match) return res && res.status(400).json({ error: "Missing nonce" });
-
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
+
     const token = jwt && jwt.sign(
       { sub: address && address.toLowerCase(), chain: "evm", chainId },
       JWT_SECRET,
@@ -28,12 +29,7 @@
     return res && res.status(200).json({ ok: true });
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
-
-
   }
-
-}
-
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
@@ -87,13 +83,4 @@ function handler() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-
-  }
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

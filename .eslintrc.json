@@ -1,33 +1,19 @@
 {
-
-
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
-
-    "es2021": true
-  },
-  "globals": {
-    "IntersectionObserver": "readonly",
-    "HTMLElement": "readonly",
-    "HTMLButtonElement": "readonly",
-    "KeyboardEvent": "readonly",
-    "HTMLImageElement": "readonly",
-    "alert": "readonly"
-
+=======
+>>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "no-undef": "error",
-    "react/no-unescaped-entities": "off"
-
+=======
+>>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   },
   "ignorePatterns": [
@@ -101,9 +87,8 @@
     "security-reports/",
     "pages.__backup/",
     "pages-disabled/",
-
-    "pages.disabled_auto/"
-
+=======
+>>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ]
 }

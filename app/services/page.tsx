@@ -87,67 +87,39 @@ export default function ServicesOverviewPage() {
           icon="⛓️"
         />
         <ServiceCard
-          href="/services/email-automation-suite"
-          title="Email Automation Suite"
-          description="AI-powered email marketing with advanced segmentation and personalization"
-          bullets={["AI personalization", "Advanced analytics", "Smart segmentation"]}
-          icon="📧"
+          href="/services/ai-customer-insights"
+          title="AI Customer Insights"
+          description="Transform customer data into actionable insights with AI-powered analytics"
+          bullets={["Predictive analytics", "Sentiment analysis", "Customer journey mapping", "Real-time dashboards"]}
+          icon="🧠"
         />
         <ServiceCard
-          href="/services/social-media-scheduler"
-          title="Social Media Scheduler"
-          description="AI-powered social media management with intelligent scheduling and analytics"
-          bullets={["Smart scheduling", "Content creation", "Cross-platform publishing"]}
-          icon="📱"
+          href="/services/automated-workflow-builder"
+          title="Workflow Automation"
+          description="Build powerful business automation workflows without coding"
+          bullets={["Visual workflow designer", "500+ integrations", "AI optimization", "Real-time monitoring"]}
+          icon="⚡"
         />
         <ServiceCard
-          href="/services/ai-chatbot-builder"
-          title="AI Chatbot Builder"
-          description="No-code AI chatbot platform with advanced NLP and multi-language support"
-          bullets={["No-code builder", "Advanced NLP", "Easy integrations"]}
-          icon="🤖"
-        />
-        <ServiceCard
-          href="/services/lead-generation-tool"
-          title="Lead Generation Tool"
-          description="AI-powered lead generation with automated prospecting and qualification"
-          bullets={["AI prospecting", "Automated outreach", "Lead scoring"]}
-          icon="🎯"
-        />
-        <ServiceCard
-          href="/services/ai-content-writer"
-          title="AI Content Writer"
-          description="Advanced AI-powered content creation with SEO optimization and brand voice training"
-          bullets={["Multi-format support", "SEO optimization", "Brand voice training"]}
-          icon="✍️"
-        />
-        <ServiceCard
-          href="/services/website-analyzer"
-          title="Website Analyzer"
-          description="Comprehensive website analysis with SEO audit and performance monitoring"
-          bullets={["SEO audit", "Performance monitoring", "Competitive intelligence"]}
-          icon="🔍"
-        />
-        <ServiceCard
-          href="/services/ai-video-generator"
-          title="AI Video Generator"
-          description="Create professional videos with AI-powered editing and voice synthesis"
-          bullets={["AI video editing", "Voice synthesis", "Multi-format export"]}
-          icon="🎬"
+          href="/services/ai-document-processor"
+          title="AI Document Processor"
+          description="Intelligent document processing with OCR and data extraction"
+          bullets={["Smart OCR engine", "AI data extraction", "Automated workflows", "99% accuracy"]}
+          icon="📄"
         />
         <ServiceCard
           href="/services/cybersecurity-suite"
           title="Cybersecurity Suite"
-          description="Enterprise-grade security solutions with threat detection and 24/7 monitoring"
-          bullets={["Threat detection", "Vulnerability assessment", "Compliance management"]}
+          description="Comprehensive security solutions with threat detection and monitoring"
+          bullets={["Threat detection", "Vulnerability assessment", "Compliance management", "24/7 SOC monitoring"]}
           icon="🛡️"
         />
         <ServiceCard
-          href="/services/ai-data-analytics"
-          title="AI Data Analytics"
-          description="Advanced AI-powered analytics with predictive modeling and real-time insights"
-          bullets={["Predictive modeling", "Real-time dashboards", "Business intelligence"]}
-          icon="📊"
+          href="/services/ai-chatbot-platform"
+          title="AI Chatbot Platform"
+          description="Build intelligent chatbots with natural language processing"
+          bullets={["NLP capabilities", "Multi-channel deployment", "Machine learning", "Visual builder"]}
+          icon="🤖"
         />
         <ServiceCard
           href="/services/ai-code-reviewer"

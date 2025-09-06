@@ -1,7 +1,4 @@
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -9,36 +6,11 @@ const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsinde
 async function ensureStore() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
-
-
-    if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-
-  if (req && req.method === "POST") {
-    const body = req && req.body || {};
-    const data = await fs && fs.readJson(FILE_PATH);
-    const item = {
-      id: body && body.id,
-      title: body && body.title,
-      targetInstitution: body && body.targetInstitution,
-      regionalScope: body && body.regionalScope,
-      type: body && body.type,
-      status: body && body.status || "Draft",
-      createdAt: new Date().toISOString(),
-    };
-    data && data.items.unshift(item);
-    await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
-    return res && res.status(201).json(item);
-  }
-  res && res.status(405).json({ error: "Method not allowed" });
-
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs - extra';
 import path from './path';
@@ -88,28 +60,3 @@ if ( {) {
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
   }
-  res.status (405).json ({ error: "Method not allowed" });
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

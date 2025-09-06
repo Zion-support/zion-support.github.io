@@ -1,7 +1,57 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import nacl from 'tweetnacl';
+import bs58 from 'bs58';
+import jwt from 'jsonwebtoken';
 
-
+const JWT_SECRET = process.env.JWT_SECRET |'dev-secret-change-me'
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).end()
+  const { message, signature, publicKey } = req.body |{}
+  if (!message |!signature |!publicKey) return res.status(400).json({ error: 'Missing fields' })
+  try {
+    return res.status(200).json({ ok: true })
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message |'Verify failed' })
+  }
 =======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next',
+import nacl from 'tweetnacl',
+import bs58 from 'bs58',
+import jwt from 'jsonwebtoken',
+const JWT_SECRET = process.env.JWT_SECRET || 'dev - secret - change - me',
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).end (), ) {
+  $2
+}
+  const { message, signature, public_key } = req.body || {},
+  if (return res.status (400).json ({ error: 'Missing fields' }), ) {
+  $2
+}
+  try {
+    const cookie_header = req.headers.cookie || '',
+    const match = cookie_header.match (/siwe - nonce=([^]+)/),
+    if (return res.status (400).json ({ error: 'Missing nonce' }), ) {
+  $2
+}
+    const nonce = match[1],
+    if (.includes (`Nonce: ${nonce}`)) return res.status (400).json ({ error: 'Nonce mismatch' }), ) {
+  $2
+}
+    const sig_bytes = bs58.decode (signature),
+    const msg_bytes = new TextEncoder ().encode (message),
+    const pubKeyBytes = bs58.decode (public_key),
+    const ok = nacl.sign.detached.verify (msg_bytes, sig_bytes, pubKeyBytes),
+    if (return res.status (401).json ({ error: 'Invalid signature' }), ) {
+  $2
+}
+    const token = jwt.sign ({ sub: public_key, chain: 'sol' }, JWT_SECRET, { expires_in: '7d' }),
+    res.set_header ('Set - Cookie', `web3 - session=${token}, HttpOnly, Path=/, SameSite = Lax, Max - Age=${7 * 24 * 3600}`),
+    return res.status (200).json ({ ok: true });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message || 'Verify failed' });
+  }
+}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

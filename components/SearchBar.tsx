@@ -4,9 +4,11 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
@@ -18,15 +20,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useRef, useEffect } from 'react';
-
-import Link from 'next / link';
-;
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -36,36 +29,6 @@ interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
-
-const SearchBar: React.FC = () => {
-  const [query, set_query] = useState ('');
-  const [results, set_results] = useState < SearchResult[]>([]);
-  const [is_open, setIsOpen] = useState (false);
-  const [is_loading, setIsLoading] = useState (false);
-  const search_ref = useRef < HTMLDivElement>(null);
-  const input_ref = useRef < HTMLInputElement>(null);
-;
-  // Mock search data - in a real app, this would come from an API;
-  const search_data: SearchResult[] = [;
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro - saas',
-      type: 'category',
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai - services',
-      type: 'category',
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it - services',
-      type: 'category',
-    },
-
     {
       title: 'Cloud Cost Guard'
       description: 'FinOps Assistant for anomaly detection and cost optimization'
@@ -85,97 +48,10 @@ const SearchBar: React.FC = () => {
       type: 'page'
     }
   ];
-
-
-  // Mock search data - in a real app, this would come from an API;
-  const searchData: SearchResult[] = [;
-    {;
-      title: 'Micro SaaS Products',;
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',;
-      url: '/micro-saas',;
-      type: 'category',;
-    },;
-    {;
-      title: 'AI Services',;
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',;
-      url: '/ai-services',;
-      type: 'category',;
-    },;
-    {;
-      title: 'IT Services',;
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',;
-      url: '/it-services',;
-      type: 'category',;
-    },;
-    {;
-      title: 'Cloud Cost Guard',;
-      description: 'FinOps Assistant for anomaly detection and cost optimization',;
-      url: '/services',;
-      type: 'service',;
-    },;
-    {;
-      title: 'Contact Us',;
-      description: 'Get in touch with our experts for consultation and quotes',;
-      url: '/contact',;
-      type: 'page',;
-    },;
-    {;
-      title: 'Pricing',;
-      description: 'View our transparent pricing for all services',;
-      url: '/pricing',;
-      type: 'page',;
-    },;
-  ];
-  const handleSearch = async (searchQuery: string) => {;
-    if (!searchQuery && searchQuery.trim()) {;
-      setResults([]);
-      setIsOpen(false);
-      return,;
-
-    }
-    setIsLoading(true);
-
-
-    // Simulate API delay;
-    await new Promise(resolve => setTimeout(resolve, 300));
-    const filteredResults = searchData && searchData.filter(item =>;
-      item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-
-  };
-
-  const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const value = e && e.target.value;
-    setQuery(value);
-    handleSearch(value),;
-  };
-  const handleResultClick = () => {;
-    setIsOpen(false),;
-    setQuery('');
-  };
-  const handleKeyDown = (e: React && React.KeyboardEvent) => {;
-    if (e && e.key === 'Escape') {;
-    setIsOpen(false),;
-    inputRef && inputRef.current?.blur();
-  }
-<<<<<<< HEAD
-  };
-  useEffect(() => {;
-    const handleClickOutside = (event: MouseEvent) => {;
-      if (searchRef && searchRef.current && !searchRef && searchRef.current.contains(event && event.target as Node)) {;
-        setIsOpen(false),;
-      }
-    };
-    document && document.addEventListener('mousedown', handleClickOutside);
-    return () => {;
-      document && document.removeEventListener('mousedown', handleClickOutside);
-    };
-
   }, []);
   return (
     <div ref={searchRef} className="relative w-full max-w-md">;
@@ -208,10 +84,6 @@ const SearchBar: React.FC = () => {
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
           </div>;
         )}
-
-      </div>;
-
-
       {/* Search Results Dropdown */}
       {isOpen && (;
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">;
@@ -251,7 +123,6 @@ const SearchBar: React.FC = () => {
       )}
     </div>;
   );
-
 ;
   const handle_search = async (search_query: string) => {
     if () {) {
@@ -380,11 +251,4 @@ if ( {) {
     </div>);
 }
 ;
-
-=======
-
-};
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SearchBar;

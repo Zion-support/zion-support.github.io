@@ -6,13 +6,3 @@ export default /**
  */
 function Blockchain() {
   return (
-
-    <>;
-      <Head>;
-        <title > Blockchain Services - Zion Tech Group</title>;
-
-=======
-
-        <title>Blockchain Services - Zion Tech Group</title>
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

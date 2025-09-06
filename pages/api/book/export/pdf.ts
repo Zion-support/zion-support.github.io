@@ -1,5 +1,3 @@
-
-
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -10,32 +8,11 @@
 
     res.setHeader('Content-Typeapplication/pdf');
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"');
-
-    res.status(200).send(pdfBuffer);
-  } catch (error) {
-    try { await browser.close() } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    res.status(200).send(pdfBuffer)
+  } catch (e: any) {
+    try { await browser.close() } catch {}
+    res.status(500).json({ error: e?.message |'Failed to render PDF' })
   }
-}
-    res.status(500).json({ error: e?.message || 'Failed to render PDF' });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-  }
-
-}
-
-}
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
 export const config = {
@@ -65,7 +42,6 @@ if ( {) {
     headless: true,
     args: ['--no - sandbox--disable - setuid - sandbox']}),
   try {
-const page = await browser.new_page (),
     await page.set_content (html, { wait_until: 'networkidle0' }),
     const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),
     await browser.close (),
@@ -75,36 +51,3 @@ const page = await browser.new_page (),
   } catch (e: any) {
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
-=======
-=======
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const config = {;
-  api: {;
-    bodyParser: {;
-      sizeLimit: '10mb'}}};
-export default async function handler(req, res) {
-  try {
-  if (req.method !== '$1') {
-    res.status(405).json({ error: 'Method not allowed' });
-    return;
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-  }
-}
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

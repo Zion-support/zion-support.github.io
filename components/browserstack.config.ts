@@ -1,6 +1,3 @@
-
-    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
-
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -40,18 +37,12 @@ default define_config ({
     }
     {
       name: Mobile Safari',      use: {
-        browserName: webkit',        ...devices['iPhone 12']}
+        browser_name: webkit',        ...devices['i_phone 12']}
     }
   ];
-
-});
-
 =======
   reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

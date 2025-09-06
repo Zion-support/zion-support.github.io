@@ -1,0 +1,7 @@
+import React, { useMemo, useState } from 'react'
+export type LegalStructure = 'Cayman Foundation' | 'Swiss Verein' | 'US 501(c)(6)' | 'DAO-native Wrapper'
+  const [legalStructure, setLegalStructure] = useState<LegalStructure>('Cayman Foundation'
+  const [protocolName, setProtocolName] = useState('Zion'
+  const [tokenSymbol, setTokenSymbol] = useState('ZION$'
+    const name = protocolName.trim() || 'Zion'
+    const symbol = tokenSymbol.trim() || 'ZION$'
