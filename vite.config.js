@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-=======
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default defineConfig({
   plugins: [react()],
   server: {
