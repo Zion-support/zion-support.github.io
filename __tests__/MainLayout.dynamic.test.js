@@ -1,0 +1,9 @@
+import _React from 'react';  import '@testing-library/jest-dom'; import MainLayoutdynamic from '../components/MainLayout.dynamic'; describe('MainLayoutdynamic',() => { test('renders without crashing',() => { render(<MainLayoutdynamic />); expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainLayoutdynamic />)}); test('handles user interactions',() => { render(<MainLayoutdynamic />)}); test('applies correct styling',() => { render(<MainLayoutdynamic />)})});
+describe('MainLayout', () => {
+  test('renders without crashing', () => {
+    render(<MainLayout />);
+    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument();
+  });
+
+  test('displays correct content', () => {
+});

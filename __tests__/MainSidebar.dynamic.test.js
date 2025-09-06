@@ -1,0 +1,7 @@
+import _React from 'react';  import '@testing-library/jest-dom'; import MainSidebardynamic from '../components/MainSidebar.dynamic'; describe('MainSidebardynamic',() => { test('renders without crashing',() => { render(<MainSidebardynamic />); expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<MainSidebardynamic />)}); test('handles user interactions',() => { render(<MainSidebardynamic />)}); test('applies correct styling',() => { render(<MainSidebardynamic />)})});
+describe('MainSidebar', () => {
+  test('renders without crashing', () => {
+    render(<MainSidebar />);
+    expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument();
+  });
+});

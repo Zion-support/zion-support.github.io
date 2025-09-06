@@ -1,43 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 interface ResponsiveState {
-  screenWidth: number;
-  screenHeight: number;
-  orientation: "landscape" | "portrait";
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
+  width: number;
+  height: number;
 }
 
-const useResponsive = (): ResponsiveState => {
+export const useResponsive = (): ResponsiveState => {
   const [state, setState] = useState<ResponsiveState>({
-    screenWidth: 1920,
-    screenHeight: 1080,
-    orientation: "landscape",
     isMobile: false,
     isTablet: false,
-    isDesktop: true,
+    isDesktop: false,
+    width: 0,
+    height: 0,
   });
-
-  useEffect(() => {
-    const updateDimensions = () => {
-      setState({
-        screenWidth: window.innerWidth,
-        screenHeight: window.innerHeight,
-        orientation:
-          window.innerWidth > window.innerHeight ? "landscape" : "portrait",
-        isMobile: window.innerWidth < 768,
-        isTablet: window.innerWidth >= 768 && window.innerWidth < 1024,
-        isDesktop: window.innerWidth >= 1024,
-      });
-    };
-
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-    return () => window.removeEventListener("resize", updateDimensions);
-  }, []);
-
-  return state;
-};
-
-export default useResponsive;
+    updateDimensions(),;
+    window && window.addEventListener(;
+  'resize', updateDimensions),;
+    return () => window && window.removeEventListener(;
+  'resize', updateDimensions)}, []),;
+  return state},;
+export default useResponsive,;import { useState, useEffect } from 'react';

@@ -1,0 +1,104 @@
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+
+const FaqSection: React.FC = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "What services does Zion Tech Group offer?",
+      answer: "We offer comprehensive AI solutions, IT services, cloud infrastructure, cybersecurity, data analytics, and digital transformation services. Our team specializes in cutting-edge technologies to help businesses modernize and scale."
+    },
+    {
+      question: "How long does a typical project take?",
+      answer: "Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while comprehensive digital transformations may take 3-6 months. We provide detailed timelines during our initial consultation."
+    },
+    {
+      question: "Do you provide ongoing support after implementation?",
+      answer: "Yes, we offer 24/7 support and maintenance services. Our support packages include monitoring, updates, troubleshooting, and optimization to ensure your systems run smoothly and efficiently."
+    },
+    {
+      question: "What industries do you serve?",
+      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, and government. Our solutions are tailored to meet the specific needs and compliance requirements of each industry."
+    },
+    {
+      question: "How do you ensure data security and compliance?",
+      answer: "We implement enterprise-grade security measures including encryption, access controls, regular audits, and compliance with industry standards like SOC 2, HIPAA, and GDPR. Security is our top priority in every solution we deliver."
+    },
+    {
+      question: "What makes Zion Tech Group different from competitors?",
+      answer: "Our combination of cutting-edge technology expertise, proven methodology, 24/7 support, and commitment to client success sets us apart. We focus on delivering measurable ROI and long-term partnerships rather than just technical implementations."
+    }
+  ];
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section className="py-16 px-4 bg-white">
+      <div className="container mx-auto max-w-4xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-xl text-gray-600">
+            Find answers to common questions about our services and processes.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-200"
+            >
+              <button
+                className="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+                onClick={() => toggleFaq(index)}
+              >
+                <span className="text-lg font-semibold text-gray-900 pr-4">
+                  {faq.question}
+                </span>
+                <div className="flex-shrink-0">
+                  {openIndex === index ? (
+                    <ChevronUp className="w-6 h-6 text-blue-600" />
+                  ) : (
+                    <ChevronDown className="w-6 h-6 text-gray-500" />
+                  )}
+                </div>
+              </button>
+              
+              {openIndex === index && (
+                <div className="px-6 pb-4">
+                  <p className="text-gray-600 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <div className="bg-blue-50 rounded-xl p-8">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">
+              Still Have Questions?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Our team is here to help. Contact us for personalized answers to your specific questions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Contact Us
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors">
+                Schedule a Call
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FaqSection;
