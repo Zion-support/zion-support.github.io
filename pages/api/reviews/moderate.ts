@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, writeReviews } from '../../../utils/dataStore';
-const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key';
-type Action = 'approve' | 'remove' | 'edit';
+const ADMIN_KEY = process.env.ADMIN_KEY || 'dev-admin-key',
+type Action = 'approve' | 'remove' | 'edit',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const key = req.headers['x-admin-key'];
+  const key = req.headers['x-admin-key'],
   if (key !== ADMIN_KEY) {
     return res.status(401).json({ error: 'Unauthorized' })
   }
@@ -17,16 +17,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       action: Action,
       reviewId: string,
       updates?: { rating?: number, text?: string }
-    };
-    const reviews = await readReviews();
-    const idx = reviews.findIndex((r) => r.id === reviewId);
-    if (idx < 0) return res.status($1).json({$2});
+    },
+    const reviews = await readReviews(),
+    const idx = reviews.findIndex((r) => r.id === reviewId),
+    if (idx < 0) return res.status($1).json({$2}),
     if (action === 'approve') {
       reviews[idx].approved = true
     } else if (action === 'remove') {
       reviews[idx].removed = true
     } else if (action === 'edit') {
-      if (!updates) return res.status($1).json({$2});
+      if (!updates) return res.status($1).json({$2}),
       if (typeof updates.rating === 'number') {
         if (updates.rating < 1 || updates.rating > 5) {
           return res.status(400).json({ error: 'Rating must be 1-5' })

@@ -3,14 +3,14 @@ export function getSourceMapWithExistence() {
   return {
     nodes: [],
     edges: []
-  };
+  },
 }
 
 export function getGitStatus() {
   return {
     connected: false,
     branch: 'main'
-  };
+  },
 }
 
 export function deployBasicTemplateForPath(path: string) {
@@ -18,5 +18,5 @@ export function deployBasicTemplateForPath(path: string) {
     path,
     deployed: true,
     template: 'basic'
-  };
+  },
 }

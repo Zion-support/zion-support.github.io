@@ -4,5 +4,5 @@ export function getDesignMap() {
     components: [],
     pages: [],
     styles: []
-  };
+  },
 }

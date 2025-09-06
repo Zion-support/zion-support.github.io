@@ -10,4 +10,4 @@ export const supabase = {
     update: () => Promise.resolve({ data: null, error: null }),
     delete: () => Promise.resolve({ data: null, error: null })
   })
-};
+},

@@ -6,10 +6,10 @@ export const searchAll = (parsed: any, access: any) => {
     talent: [],
     jobs: [],
     projects: []
-  };
-};
+  },
+},
 
 export const suggestDidYouMean = (query: string) => {
   // Placeholder implementation
-  return null;
-};
+  return null,
+},

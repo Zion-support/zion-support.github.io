@@ -1,53 +1,52 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
   level?: string;
   fallback?: ReactNode;
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean,
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props),
+    this.state = { hasError: false },
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo),
     this.setState({
       error,
       errorInfo
-    });
+    }),
 
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, { extra: errorInfo });
+      (window as any).Sentry.captureException(error, { extra: errorInfo }),
     }
   }
 
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload(),
+  },
 
   handleGoHome = () => {
-    window.location.href = '/';
-  };
+    window.location.href = '/',
+  },
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback,
       }
 
       return (
@@ -111,7 +110,7 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="text-white/50 text-sm">
                 If this problem persists, please contact our support team at{' '}
                 <a 
-                  href="mailto:support@ziontechgroup.com" 
+                  href="mailto: support@ziontechgroup.com" 
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
                   support@ziontechgroup.com
@@ -120,10 +119,10 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
+      ),
     }
 
-    return this.props.children;
+    return this.props.children,
   }
 }
 

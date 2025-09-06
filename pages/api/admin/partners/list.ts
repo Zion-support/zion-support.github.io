@@ -6,7 +6,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     if (usingPlaceholder) {
       return res.status(200).json({ partners: [
         { code: 'aihub', name: 'AI Hub', status: 'approved', commission_rate: 0.2 },
-        { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }]})
+        { code: 'promptpro', name: 'Prompt Pro', status: 'pending', commission_rate: 0.15 }]});
     }
 
     const supabase = getServerSupabase();
@@ -15,8 +15,8 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       .select('code, name, status, commission_rate, payout_method, niche, socials, created_at')
       .order('created_at', { ascending: false });
     if (error) return res.status(500).json({ error: error.message });
-    return res.status(200).json({ partners: data })
+    return res.status(200).json({ partners: data });
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
+    return res.status(500).json({ error: e?.message });
   }
 }

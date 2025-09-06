@@ -4,11 +4,6 @@ import { motion } from 'framer-motion';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function ServicesShowcase2026V3() {
@@ -16,13 +11,8 @@ export default function ServicesShowcase2026V3() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
+
+  },
 
   return (
     <UltraQuantumHolographicBackground 
@@ -48,38 +38,7 @@ export default function ServicesShowcase2026V3() {
         <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v3" />
       </Head>
 
-<<<<<<< HEAD
-      <div className='min-h-screen'>
-=======
-    website: 'https://ziontechgroup.com'
-  };
 
-  return (
-    <UltraQuantumHolographicBackground 
-      intensity="extreme" 
-      colorScheme="neural-network"
-      particleCount={500}
-      animationSpeed={3}
-    >
-      <Head>
-        <title>Revolutionary 2026 Services Showcase | Zion Tech Group</title>
-        <meta name="description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
-        <meta name="keywords" content="2026 services, AI services, quantum computing, micro SAAS, emerging technology, blockchain, metaverse, autonomous systems, biotech AI, climate AI" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
-        <meta property="og:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions. Transform your business with revolutionary services designed for the future." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-v3" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Revolutionary 2026 Services Showcase | Zion Tech Group" />
-        <meta name="twitter:description" content="Discover our cutting-edge 2026 micro SAAS, AI, and emerging technology solutions." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
-        <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v3" />
-      </Head>
-
-      <div className="min-h-screen">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
       <div className="min-h-screen">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -87,14 +46,7 @@ export default function ServicesShowcase2026V3() {
         <UltraAdvancedNavigation2026 />
 
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-7xl mx-auto text-center'>
-=======
-        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
@@ -104,12 +56,7 @@ export default function ServicesShowcase2026V3() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
-=======
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                 Revolutionary 2026 Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
@@ -121,23 +68,7 @@ export default function ServicesShowcase2026V3() {
                   href="#services"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-                  className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'
-=======
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                Revolutionary 2026 Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Experience the future of technology with our cutting-edge micro SAAS, AI, and emerging technology solutions. 
-                Transform your business with services designed for tomorrow's challenges.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                <motion.a
-                  href="#services"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -148,12 +79,7 @@ export default function ServicesShowcase2026V3() {
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200'
-=======
-                  className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
                   className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -166,12 +92,7 @@ export default function ServicesShowcase2026V3() {
         </section>
 
         {/* Services Showcase */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div id='services'>
-=======
-        <div id="services">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
         <div id="services">
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -179,14 +100,7 @@ export default function ServicesShowcase2026V3() {
         </div>
 
         {/* Contact Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
-          <div className='max-w-4xl mx-auto text-center'>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
@@ -197,35 +111,14 @@ export default function ServicesShowcase2026V3() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  Ready to Transform Your Business?
-                </span>
-              </h2>
-              <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
-                Join thousands of businesses already leveraging our revolutionary 2026 services to achieve unprecedented growth and innovation.
-              </p>
-<<<<<<< HEAD
 
-              <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Ready to Transform Your Business?
                 </span>
               </h2>
               <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses already leveraging our revolutionary 2026 services to achieve unprecedented growth and innovation.
               </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
               
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -234,20 +127,7 @@ export default function ServicesShowcase2026V3() {
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'
-                >
-                  <span>Call {contactInfo.mobile}</span>
-                </motion.a>
 
-=======
-                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
-                >
-                  <span>Call {contactInfo.mobile}</span>
-                </motion.a>
-                
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
                 >
@@ -259,12 +139,7 @@ export default function ServicesShowcase2026V3() {
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200'
-=======
-                  className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
@@ -273,14 +148,7 @@ export default function ServicesShowcase2026V3() {
                 </motion.a>
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20'>
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
-=======
-              <div className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
                   <div>
                     <div className="text-white font-medium">{contactInfo.mobile}</div>
                     <div className="text-gray-400 text-sm">Mobile</div>
@@ -290,26 +158,7 @@ export default function ServicesShowcase2026V3() {
                     <div className="text-gray-400 text-sm">Email</div>
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <div className='text-white font-medium'>
-                      {contactInfo.address}
-                    </div>
-                    <div className='text-gray-400 text-sm'>Address</div>
-=======
-              <div className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                  <div>
-                    <div className="text-white font-medium">{contactInfo.mobile}</div>
-                    <div className="text-gray-400 text-sm">Mobile</div>
-                  </div>
-                  <div>
-                    <div className="text-white font-medium">{contactInfo.email}</div>
-                    <div className="text-gray-400 text-sm">Email</div>
-                  </div>
-                  <div>
-                    <div className="text-white font-medium">{contactInfo.address}</div>
-                    <div className="text-gray-400 text-sm">Address</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+
 =======
                     <div className="text-white font-medium">{contactInfo.address}</div>
                     <div className="text-gray-400 text-sm">Address</div>
@@ -322,12 +171,8 @@ export default function ServicesShowcase2026V3() {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  ),
+
 =======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

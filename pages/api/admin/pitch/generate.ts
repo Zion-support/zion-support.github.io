@@ -22,6 +22,7 @@ Target Raise: ${inputs?.targetRaise}
 Key Metrics: ${JSON.stringify(metrics)}
 
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
+
     let content = '';
     try {
       const chat = await client.chat.completions.create({
@@ -34,14 +35,14 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
       });
       content = chat.choices?.[0]?.message?.content || '';
     } catch (err) {
-      content = ''
+      content = '';
     }
 
     const slides = seed.map((title, idx) => ({ id: `${idx + 1}`, title, content: extractSection(content, title) }));
     const version = `v${new Date().toISOString()}`;
-    res.status(200).json({ slides, version })
+    res.status(200).json({ slides, version });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Generation failed' })
+    res.status(500).json({ error: e?.message || 'Generation failed' });
   }
 }
 
@@ -52,7 +53,7 @@ function extractSection(body: string, title: string): string {
   const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
   if (matchIdx >= 0) {
     const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
-    return snippet.trim()
+    return snippet.trim();
   }
-  return ''
+  return '';
 }

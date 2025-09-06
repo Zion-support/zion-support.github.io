@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -26,9 +25,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   noindex = false,
   nofollow = false
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
-  const imageUrl = ogImage.startsWith('http') ? ogImage : `https://zion.app${ogImage}`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
+  const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : ''),
+  const imageUrl = ogImage.startsWith('http') ? ogImage : `https: //zion.app${ogImage}`,
 
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -48,11 +47,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     },
     sameAs: [
       'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup'
+      'https: //twitter.com/ziontechgroup'
     ]
-  };
+  },
 
-  const mergedStructuredData = structuredData || defaultStructuredData;
+  const mergedStructuredData = structuredData || defaultStructuredData,
 
   return (
     <Head>
@@ -134,7 +133,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
     </Head>
-  );
+  ),
 };
 
 export default SEOHead;

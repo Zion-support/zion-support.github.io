@@ -1,42 +1,19 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-<<<<<<< HEAD
-    Menu,
-    X
-  } from 'lucide-react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  Menu;
-  X;
-} from 'lucide-react';
-
-=======
-import React from 'react';
-import Link from 'next/link';
-import Button from '../ui/Button';
->>>>>>> pr-11992
 const Header: React.FC = () => {
-  const [, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [, setIsScrolled] = useState(false),
+  const [isMenuOpen, setIsMenuOpen] = useState(false),
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      setIsScrolled(window.scrollY > 0),
+    },
+    window.addEventListener('scroll', handleScroll),
+    return () => window.removeEventListener('scroll', handleScroll),
+  }, []),
 
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
@@ -84,11 +61,6 @@ const Header: React.FC = () => {
       </AnimatePresence>
     </header>
   )
-};
+},
 
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-export default Header;
-=======
-export default Header;
->>>>>>> pr-11992
+

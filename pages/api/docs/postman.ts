@@ -24,10 +24,10 @@ function toPostman() {
       { key: 'baseUrl', value: 'https://api.zion.os' },
       { key: 'token', value: '' }
     ]
-  };
+  },
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Type', 'application/json'),
   res.status(200).json(toPostman());
 }

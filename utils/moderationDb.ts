@@ -1,20 +1,20 @@
 export interface ModerationFlag {
-  id: string;
-  userId: string;
-  userEmail: string;
-  contentType: string;
-  contentId: string;
-  reason: string;
-  status: ModerationStatus;
-  createdAt: string;
+  id: string,
+  userId: string,
+  userEmail: string,
+  contentType: string,
+  contentId: string,
+  reason: string,
+  status: ModerationStatus,
+  createdAt: string,
   adminNotes?: string;
 }
 
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned',
 
 export async function getFlagById(id: string): Promise<ModerationFlag | null> {
   // Mock implementation - in a real app, this would query a database
-  return null;
+  return null,
 }
 
 export async function updateFlagStatus(
@@ -37,5 +37,5 @@ export async function createFlag(flag: Omit<ModerationFlag, 'id' | 'createdAt'>)
     ...flag,
     id: 'mock-flag-id',
     createdAt: new Date().toISOString()
-  };
+  },
 }

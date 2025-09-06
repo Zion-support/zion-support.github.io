@@ -13,5 +13,5 @@ export function getServerSupabase() {
         eq: (column: string, value: any) => Promise.resolve({ data: null, error: null })
       })
     })
-  };
+  },
 }

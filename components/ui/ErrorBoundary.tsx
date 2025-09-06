@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
-
 interface Props {
   children: ReactNode,
   fallback?: ReactNode;
@@ -16,22 +15,22 @@ class ErrorBoundary extends Component<Props, State> {
     hasError: false
   },
   public static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // eslint-disable-next-line no-console
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo),
   }
 
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined }),
-  };
+  },
 
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback,
       }
 
       return (
@@ -65,10 +64,10 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      ),;
+      ),,
     }
 
-    return this.props.children;
+    return this.props.children,
   }
 }
 

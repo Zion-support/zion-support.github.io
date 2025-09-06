@@ -1,32 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
-
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
   price?: string | {
     monthly?: number;
     yearly?: number;
     currency?: string;
     trialDays?: number;
     setupTime?: string;
-  };
+  },
   period?: string;
   pricing?: any;
-  features: string[];
+  features: string[],
   popular?: boolean;
   category?: string;
-  icon?: React.ReactNode;
+  icon?: React.ReactNode,
   badge?: string;
   href?: string;
   onClick?: () => void;
 }
 
 interface UltraFuturisticServiceCard2026Props {
-  service: Service;
+  service: Service,
   className?: string;
   onClick?: () => void;
 }
@@ -38,19 +37,19 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
 }) => {
   const handleClick = () => {
     if (onClick) {
-      onClick();
+      onClick(),
     } else if (service.onClick) {
-      service.onClick();
+      service.onClick(),
     }
-  };
+  },
 
   const formatPrice = (price: any) => {
-    if (typeof price === 'string') return price;
+    if (typeof price === 'string') return price,
     if (typeof price === 'object' && price.monthly) {
-      return `$${price.monthly}/mo`;
+      return `$${price.monthly}/mo`,
     }
-    return 'Contact Us';
-  };
+    return 'Contact Us',
+  },
 
   return (
     <motion.div
@@ -110,7 +109,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
               <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                 <Check className="w-3 h-3 text-white" />
               </div>
-              <span className="text-slate-300 text-sm group-hover:text-slate-200 transition-colors duration-300">
+              <span className="text-slate-300 text-sm group-hover: text-slate-200 transition-colors duration-300">
                 {feature}
               </span>
             </div>
@@ -139,9 +138,9 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
       {/* Enhanced Hover Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover:from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
     </motion.div>
-  );
-});
+  ),
+}),
 
-UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
+UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026',
 
-export default UltraFuturisticServiceCard2026;
+export default UltraFuturisticServiceCard2026,

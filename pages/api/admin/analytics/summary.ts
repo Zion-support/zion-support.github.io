@@ -4,7 +4,7 @@ import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 type EventRow = {
   name: string,
-  page?: string;
+  page?: string,
   userType?: string;
   properties?: Record<string, any>;
   at: string;
@@ -25,12 +25,12 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         const t = new Date(obj.at);
         if (start && t < start) continue;
         if (end && t > end) continue;
-        rows.push(obj)
+        rows.push(obj);
       } catch {}
     }
-    return rows
+    return rows;
   } catch {
-    return []
+    return [];
   }
 }
 
@@ -40,7 +40,7 @@ function featureFromPath(page?: string): string {
   if (p.includes('/services') || p.includes('ai')) return 'AI services';
   if (p.includes('talent') || p.includes('job')) return 'job board';
   if (p.includes('rental')) return 'rentals';
-  return 'other'
+  return 'other';
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -56,7 +56,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     byFeature[f] = (byFeature[f] || 0) + 1;
     byEvent[r.name] = (byEvent[r.name] || 0) + 1;
     const day = r.at.slice(0, 10);
-    byDay[day] = (byDay[day] || 0) + 1
+    byDay[day] = (byDay[day] || 0) + 1;
   }
 
   const pagesMostUsed = Object.entries(byFeature)

@@ -4,75 +4,72 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-function fixImports(content) {
-  // Fix import statements with missing commas
-  content = content.replace(
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"][^'"]+['"];?/g,
-    (match, imports) => {
-      // Split by semicolons and fix each part
-      const parts = imports.split(';').map(part => {
-        // Remove any existing commas at the end and add proper commas
-        return part.trim().replace(/,$/, '').split(',').map(item => item.trim()).join(', ');
-      });
-      
-      // Join all parts with commas
-      const fixedImports = parts.join(', ');
-      
-      // Reconstruct the import statement
-      const fromPart = match.match(/from\s*['"][^'"]+['"];?/);
-      return `import { ${fixedImports} } ${fromPart}`;
-    }
-  );
-  
-  return content;
-}
+console.log('🔧 Fixing import statement syntax errors...');
 
-function fixFile(filePath) {
+// Function to fix import statements in a file
+function fixImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let modified = false;
     
-    content = fixImports(content);
+    // Fix import statements that have commas instead of semicolons
+    const importFix = content.replace(/^import\s+.*?,\s*$/gm, (match) => {
+      const fixed = match.replace(/,\s*$/, ';');
+      if (fixed !== match) {
+        modified = true;
+        console.log(`  ✓ Fixed import statement`);
+      }
+      return fixed;
+    });
     
-    if (content !== originalContent) {
+    content = importFix;
+    
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed imports in: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`  ❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function main() {
-  const patterns = [
-    'components/**/*.tsx',
-    'components/**/*.ts',
-    'pages/**/*.tsx',
-    'pages/**/*.ts',
-    'src/**/*.tsx',
-    'src/**/*.ts'
-  ];
+// Find all TypeScript and JavaScript files
+const patterns = [
+  'pages/api/**/*.ts',
+  'pages/api/**/*.js',
+  'components/**/*.tsx',
+  'components/**/*.ts',
+  'utils/**/*.ts',
+  'lib/**/*.ts'
+];
+
+let totalFiles = 0;
+let fixedFiles = 0;
+
+patterns.forEach(pattern => {
+  const files = glob.sync(pattern, { cwd: process.cwd() });
+  totalFiles += files.length;
   
-  let totalFixed = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    files.forEach(file => {
-      if (fixFile(file)) {
-        totalFixed++;
-      }
-    });
+  files.forEach(file => {
+    const fullPath = path.join(process.cwd(), file);
+    
+    if (fixImports(fullPath)) {
+      fixedFiles++;
+      console.log(`  ✅ Fixed imports: ${file}`);
+    }
   });
-  
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+});
+
+console.log(`\n🎉 Import fixes summary:`);
+console.log(`  📁 Total files processed: ${totalFiles}`);
+console.log(`  🔧 Files modified: ${fixedFiles}`);
+
+if (fixedFiles > 0) {
+  console.log(`\n✨ Successfully fixed ${fixedFiles} files!`);
+} else {
+  console.log(`\n✨ No import fixes needed.`);
 }
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixFile, fixImports };
+console.log('\n🏁 Import statement fixes complete!');

@@ -11,6 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`;
+
     let title = slide.title;
     let content = slide.content;
     try {
@@ -25,13 +26,13 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
       const raw = chat.choices?.[0]?.message?.content || '{}';
       const parsed = JSON.parse(raw);
       title = parsed.title || title;
-      content = parsed.content || content
+      content = parsed.content || content;
     } catch (err) {
       // keep original if AI fails
     }
 
-    res.status(200).json({ title, content })
+    res.status(200).json({ title, content });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || 'Rewrite failed' })
+    res.status(500).json({ error: e?.message || 'Rewrite failed' });
   }
 }

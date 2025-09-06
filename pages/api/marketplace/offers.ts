@@ -10,7 +10,7 @@ function bad(res: NextApiResponse, message: string, code = 400) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method === "GET") {
-      const user = getDemoUser(req);
+      const user = getDemoUser(req),
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id }),
         return res.json({ ok: true, offers })
@@ -24,39 +24,39 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
-      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
+      const client = assertClient(req),
+      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {},
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields")
       }
 
       const offer: Offer = {
-        id: uuidv4();
+        id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client.id,
         talentSlug,
     startDateIso,
-        scopeSummary;
+        scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl;
         status: "SENT"},
-      saveOffer(offer);
+      saveOffer(offer),
       return res.status(201).json({ ok: true, offer })
     }
 
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
-      const { id, action, changeRequestNote } = req.body || {};
-      if (!id || !action) return bad(res, "Missing id or action");
-      const existing = getOfferById(id);
-      if (!existing) return bad(res, "Offer not found", 404);
-      const user = assertTalentOrClientForOffer(req, existing, req.headers["x-demo-talent-slug"] as string);
+      const { id, action, changeRequestNote } = req.body || {},
+      if (!id || !action) return bad(res, "Missing id or action"),
+      const existing = getOfferById(id),
+      if (!existing) return bad(res, "Offer not found", 404),
+      const user = assertTalentOrClientForOffer(req, existing, req.headers["x-demo-talent-slug"] as string),
       if (action === "accept") {
-        if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
-        existing.status = "CONFIRMED";
+        if (user.role !== "talent") return bad(res, "Only talent can accept", 403),
+        existing.status = "CONFIRMED",
         // Create a project upon acceptance
         const project: Project = {
-          id: uuidv4();
+          id: uuidv4(),
           title: `Project with ${existing.talentSlug}`,
           summary: existing.scopeSummary,
           clientId: existing.clientId,
@@ -73,24 +73,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                   uploadedAtIso: new Date().toISOString()}]
             : [],
           notes: []},
-        saveProject(project);
-        existing.projectId = project.id;
-        saveOffer(existing);
+        saveProject(project),
+        existing.projectId = project.id,
+        saveOffer(existing),
         return res.json({ ok: true, offer: existing, project })
       }
 
       if (action === "request_changes") {
-        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
-        existing.status = "CHANGES_REQUESTED";
-        existing.changeRequestNote = changeRequestNote || "";
-        saveOffer(existing);
+        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403),
+        existing.status = "CHANGES_REQUESTED",
+        existing.changeRequestNote = changeRequestNote || "",
+        saveOffer(existing),
         return res.json({ ok: true, offer: existing })
       }
 
       if (action === "decline") {
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
-        existing.status = "DECLINED";
-        saveOffer(existing);
+        if (user.role !== "talent") return bad(res, "Only talent can decline", 403),
+        existing.status = "DECLINED",
+        saveOffer(existing),
         return res.json({ ok: true, offer: existing })
       }
 
@@ -99,7 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return bad(res, "Method not allowed", 405)
   } catch (e: any) {
-    const status = e?.statusCode || 500;
+    const status = e?.statusCode || 500,
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
 }

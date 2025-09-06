@@ -1,13 +1,13 @@
 // Mock token service utility
 export interface TokenTransaction {
-  id: string;
-  userId: string;
-  amount: number;
-  reason: string;
-  timestamp: number;
+  id: string,
+  userId: string,
+  amount: number,
+  reason: string,
+  timestamp: number,
 }
 
-const transactions: TokenTransaction[] = [];
+const transactions: TokenTransaction[] = [],
 
 export function getAllTransactions(): TokenTransaction[] {
   return transactions;
@@ -20,9 +20,9 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     amount,
     reason,
     timestamp: Date.now()
-  };
-  transactions.push(transaction);
-  return transaction;
+  },
+  transactions.push(transaction),
+  return transaction,
 }
 
 export function getConfig() {
@@ -30,7 +30,7 @@ export function getConfig() {
     enabled: true,
     rate: 1.0,
     maxPerDay: 1000
-  };
+  },
 }
 
 export function setConfig(config: any) {
@@ -44,7 +44,7 @@ export function revokeTokens(userId: string, amount: number, reason: string): To
     amount: -amount, // Negative amount for revocation
     reason,
     timestamp: Date.now()
-  };
-  transactions.push(transaction);
-  return transaction;
+  },
+  transactions.push(transaction),
+  return transaction,
 }

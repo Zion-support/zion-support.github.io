@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- return (<UltraAdvancedFuturisticBackground> <Head> </li>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
@@ -12,13 +6,13 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAICognitivePage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive')),
 
   if (!service) {
     return null
   }
 
-  const contactInfo = service.contactInfo;
+  const contactInfo = service.contactInfo,
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -89,10 +83,7 @@ export default function QuantumAICognitivePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  );
+  ),
 }
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+

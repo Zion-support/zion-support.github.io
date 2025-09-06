@@ -3,11 +3,11 @@ import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
-const DATA_DIR = path.join(process.cwd(), 'datakyc');
-const FILE = path.join(DATA_DIR, 'profiles.json');
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),
+const FILE = path.join(DATA_DIR, 'profiles.json'),
 function load(): Record<string, KycProfile> {
   try {
-    const raw = fs.readFileSync(FILE, 'utf8');
+    const raw = fs.readFileSync(FILE, 'utf8'),
     return JSON.parse(raw)
   } catch {
     return {}
@@ -20,18 +20,18 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' }),
   const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {
-    userId?: string;
+    userId?: string,
     role?: KycRole;
     fullLegalName?: string;
     businessName?: string;
     businessRegistrationNumber?: string;
-  };
-  if (!userId || !role) return res.status(400).json({ error: 'userId and role are required' });
-  const db = load();
-  const now = new Date().toISOString();
-  const existing = db[userId];
+  },
+  if (!userId || !role) return res.status(400).json({ error: 'userId and role are required' }),
+  const db = load(),
+  const now = new Date().toISOString(),
+  const existing = db[userId],
   const profile: KycProfile = existing || {
     userId,
     role,
@@ -44,18 +44,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     createdAt: now,
     lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]
-  } as KycProfile;
-  profile.role = role;
-  if (fullLegalName) profile.fullLegalName = fullLegalName;
-  if (businessName) profile.businessName = businessName;
-  if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
-  profile.lastUpdatedAt = now;
+  } as KycProfile,
+  profile.role = role,
+  if (fullLegalName) profile.fullLegalName = fullLegalName,
+  if (businessName) profile.businessName = businessName,
+  if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber,
+  profile.lastUpdatedAt = now,
   db[userId] = profile;
-  save(db);
+  save(db),
   res.status(200).json({
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)
-  });
+  }),
 }

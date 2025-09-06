@@ -23,7 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: string,
       categories?: Review['categories'];
       anonymous?: boolean
-    };
+    },
     if (!projectId || !fromRole || !fromId) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
@@ -34,7 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(400).json({ error: 'Review text is required' })
     }
 
-    const project = await findProjectById(projectId);
+    const project = await findProjectById(projectId),
     if (!project) {
       return res.status(404).json({ error: 'Project not found' })
     }
@@ -43,18 +43,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const toRole = counterpartRole(fromRole),
-    const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
-    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
+    const toId = toRole === 'talent' ? project.talentSlug : project.clientId,
+    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug,
     if (expectedFromId !== fromId) {
       return res.status(403).json({ error: 'Invalid reviewer for this project' })
     }
 
-    const existing = await hasExistingReview(projectId, fromRole, fromId);
+    const existing = await hasExistingReview(projectId, fromRole, fromId),
     if (existing) {
       return res.status(409).json({ error: 'You have already submitted a review for this project' })
     }
 
-    const now = new Date().toISOString();
+    const now = new Date().toISOString(),
     const review: Review = {
       id: uuidv4(),
       projectId,
@@ -64,14 +64,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       toId,
     rating,
       text: String(text).trim(),
-      categories;
+      categories,
       anonymous: Boolean(anonymous),
       approved: false, // requires admin approval
       reported: false,
       reports: [],
       removed: false,
       createdAt: now},
-    await upsertReview(review);
+    await upsertReview(review),
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })

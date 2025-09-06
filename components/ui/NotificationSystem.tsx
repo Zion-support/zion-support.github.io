@@ -1,57 +1,56 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-
-export type Toast = { id: string; message: string; tone?: 'default' | 'success' | 'error' };
+export type Toast = { id: string, message: string, tone?: 'default' | 'success' | 'error' },
 
 type NotificationContextValue = {
-  notify: (message: string, tone?: 'default' | 'success' | 'error') => void;
-};
+  notify: (message: string, tone?: 'default' | 'success' | 'error') => void,
+},
 
-const NotificationContext = createContext<NotificationContextValue | undefined>(undefined);
+const NotificationContext = createContext<NotificationContextValue | undefined>(undefined),
 
 export const useNotifications = () => {
-  const context = useContext(NotificationContext);
+  const context = useContext(NotificationContext),
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error('useNotifications must be used within a NotificationProvider'),
   }
-  return context;
+  return context,
 };
 
 type NotificationProviderProps = {
-  children: ReactNode;
-};
+  children: ReactNode,
+},
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
-  const [toasts, setToasts] = useState<Toast[]>([]);
+  const [toasts, setToasts] = useState<Toast[]>([]),
 
   const notify = useCallback((message: string, tone: 'default' | 'success' | 'error' = 'default') => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newToast: Toast = { id, message, tone };
+    const id = Math.random().toString(36).substr(2, 9),
+    const newToast: Toast = { id, message, tone },
     
-    setToasts(prev => [...prev, newToast]);
+    setToasts(prev => [...prev, newToast]),
     
     // Auto remove after 5 seconds
     setTimeout(() => {
-      setToasts(prev => prev.filter(toast => toast.id !== id));
+      setToasts(prev => prev.filter(toast => toast.id !== id)),
     }, 5000);
   }, []);
 
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }, []);
+    setToasts(prev => prev.filter(toast => toast.id !== id)),
+  }, []),
 
   return (
     <NotificationContext.Provider value={{ notify }}>
       {children}
       <NotificationContainer toasts={toasts} onRemove={removeToast} />
     </NotificationContext.Provider>
-  );
+  ),
 };
 
 type NotificationContainerProps = {
-  toasts: Toast[];
-  onRemove: (id: string) => void;
-};
+  toasts: Toast[],
+  onRemove: (id: string) => void,
+},
 
 const NotificationContainer: React.FC<NotificationContainerProps> = ({ toasts, onRemove }) => {
   return (
@@ -87,5 +86,5 @@ const NotificationContainer: React.FC<NotificationContainerProps> = ({ toasts, o
         ))}
       </AnimatePresence>
     </div>
-  );
-};
+  ),
+},

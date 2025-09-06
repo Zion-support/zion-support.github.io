@@ -1,12 +1,11 @@
 import React from 'react';
 import EnhancedCard from './EnhancedCard';
-
 export type MarketplaceCardProps = {
-  title: string;
-  subtitle?: string;
+  title: string,
+  subtitle?: string,
   description?: string;
-  footer?: React.ReactNode;
-};
+  footer?: React.ReactNode,
+},
 
 export default function EnhancedMarketplaceCard({ title, subtitle, description, footer }: MarketplaceCardProps) {
   return (
@@ -28,5 +27,5 @@ export default function EnhancedMarketplaceCard({ title, subtitle, description, 
         )}
       </div>
     </EnhancedCard>
-  );
+  ),
 }

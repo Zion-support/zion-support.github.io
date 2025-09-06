@@ -4,10 +4,10 @@ import { parseUserFromRequest } from '../../../utils/auth';
 import { DisputeCase, DisputeReason } from '../../../types/disputes';
 import { generateCaseId } from '../../../utils/fsdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = parseUserFromRequest(req);
+  const user = parseUserFromRequest(req),
   if (req.method === 'GET') {
-    const all = await readAllDisputes();
-    let filtered = all;
+    const all = await readAllDisputes(),
+    let filtered = all,
     if (user.role !== 'admin') {
       filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
     }
@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   if (req.method === 'POST') {
-    const now = new Date().toISOString();
+    const now = new Date().toISOString(),
     const {
       projectId,
     entityType,
@@ -25,12 +25,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     reason,
       reasonDetails,
       description
-    } = req.body || {};
+    } = req.body || {},
     if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
       return res.status(400).json({ error: 'Missing required fields' })
     }
 
-    const id = generateCaseId();
+    const id = generateCaseId(),
     const dispute: DisputeCase = {
       id,
       projectId: String(projectId),
@@ -46,11 +46,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     description,
       attachments: [],
       messages: []
-    };
-    await createDispute(dispute);
-    return res.status(201).json({ dispute });
+    },
+    await createDispute(dispute),
+    return res.status(201).json({ dispute }),
   }
 
-  res.setHeader('AllowGET,POST');
+  res.setHeader('AllowGET,POST'),
   return res.status(405).end('Method Not Allowed')
 }

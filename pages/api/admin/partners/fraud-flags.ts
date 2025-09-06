@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (usingPlaceholder) {
       return res.status(200).json({ flags: [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]})
+        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }]});
     }
 
     const supabase = getServerSupabase();
@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const counts = new Map<string, number>();
     for (const row of data || []) {
       const key = (row as any).ip_address || 'unknown';
-      counts.set(key, (counts.get(key) || 0) + 1)
+      counts.set(key, (counts.get(key) || 0) + 1);
     }
 
     const flags: any[] = [];
@@ -31,6 +31,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
     return res.status(200).json({ flags });
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
+    return res.status(500).json({ error: e?.message });
   }
 }

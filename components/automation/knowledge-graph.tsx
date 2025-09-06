@@ -1,54 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- 
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface Node { id: string, tokens: string[] }
-interface Edge { source: string, target: string, weight: number, terms: string[] }
-interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 
 type Props = { report: Report | null },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
-    const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
+    const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json'),
+    const raw = fs.readFileSync(file, 'utf8'),
+    const data = JSON.parse(raw),
     return { props: { report: data }, revalidate: 86400 }
   } catch {
     return { props: { report: null }, revalidate: 86400 }
   }
-};
-<<<<<<< HEAD
-) ) 
-}</ul> </section> <section>) ) 
-}</ul> </section> </div>) 
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface Node { id: string, tokens: string[] }
-interface Edge { source: string, target: string, weight: number, terms: string[] }
-interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
+},
 
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 }
-  } catch {
-    return { props: { report: null }, revalidate: 86400 }
-  }
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function KnowledgeGraph({ report }: Props) {
-  if (!report) return <div>No knowledge graph yet.</div>;
+  if (!report) return <div>No knowledge graph yet.</div>,
   return (
     <div className="space-y-6">
       <header className="space-y-1">
@@ -79,10 +45,5 @@ export default function KnowledgeGraph({ report }: Props) {
         </ul>
       </section>
     </div>
-  );
-<<<<<<< HEAD
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  ),
+

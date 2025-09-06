@@ -7,5 +7,5 @@ export const parseSearchQuery = (query: string) => {
     location: '',
     budget: null,
     type: 'all'
-  };
-};
+  },
+},

@@ -10,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const current = tokenStore.getConfig();
     const updated = { ...current, ...body };
     tokenStore.setConfig(updated);
-    return res.status(200).json(updated)
+    return res.status(200).json(updated);
   }
   return res.status(405).json({ error: "Method not allowed" })
 }

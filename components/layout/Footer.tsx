@@ -14,10 +14,10 @@ import {
   Database,
   Shield,
   Zap
-} from 'lucide-react';
+} from 'lucide-react',
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const services = [
     { name: 'Web Development', href: '/services/web-development' },
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
     { name: 'Database Management', href: '/services/database-management' },
     { name: 'Security Services', href: '/services/security' },
     { name: 'Performance Optimization', href: '/services/performance' }
-  ];
+  ],
 
   const company = [
     { name: 'About Us', href: '/about' },
@@ -35,14 +35,14 @@ const Footer: React.FC = () => {
     { name: 'Contact', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'Instagram', href: '#', icon: Instagram }
-  ];
+  ],
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-400 hover:text-white transition-colors">
+                <a href="tel: +13024640950" className="text-gray-400 hover:text-white transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
@@ -155,7 +155,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  ),
+},
 
 export default Footer;

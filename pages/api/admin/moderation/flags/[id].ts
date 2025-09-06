@@ -13,6 +13,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ flag });
   }
 
-  res.setHeader('AllowGET');
-  return res.status(405).end('Method Not Allowed')
+  res.setHeader('Allow', 'GET');
+  return res.status(405).end('Method Not Allowed');
 }

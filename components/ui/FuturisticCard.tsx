@@ -3,7 +3,7 @@ type Props = {
   title: string,
   description: string,
   cta?: React.ReactNode
-};
+},
 
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (
@@ -15,5 +15,5 @@ export default function FuturisticCard({ title, description, cta }: Props) {
         {cta && <div className="mt-3">{cta}</div>}
       </div>
     </div>
-  );
+  ),
 }

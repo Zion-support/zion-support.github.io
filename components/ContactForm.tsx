@@ -5,7 +5,7 @@ interface FormData {
   company: string, phone: string,
   service: string,
   message: string,
-};
+},
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -14,25 +14,25 @@ const ContactForm: React.FC = () => {
     phone: '',
     service: '',
     message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  }),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({
       ...prev,
       [name]: value,
-    }));
+    })),
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-    try {;
+    e.preventDefault(),
+    setIsSubmitting(true),
+    setSubmitStatus('idle'),
+    try {,
       // Simulate form submission,
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 2000)),
+      setSubmitStatus('success'),
       setFormData({
         name: '',
         email: '',
@@ -40,13 +40,13 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: '',
-      });
+      }),
       
-      setSubmitStatus('success');
+      setSubmitStatus('success'),
     } catch {
-      setSubmitStatus('error');
+      setSubmitStatus('error'),
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
               Name *
@@ -184,7 +184,7 @@ const ContactForm: React.FC = () => {
         </button>
       </form>
     </div>
-  );
-};
+  ),
+},
 
 export default ContactForm;

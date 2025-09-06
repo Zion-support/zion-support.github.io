@@ -1,9 +1,8 @@
 import React, { ReactNode } from 'react';
 import Header from '../Header';
 import Footer from './Footer';
-
 interface LayoutProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -15,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </main>
       <Footer />
     </div>
-  );
-};
+  ),
+},
 
 export default Layout;

@@ -4,10 +4,10 @@ export const detectIntent = async (message: string) => {
   return {
     intentMatched: false,
     matchedArticleIds: []
-  };
-};
+  },
+},
 
 export const getMatchedArticles = async (articleIds: string[]) => {
   // Placeholder implementation
-  return [];
-};
+  return [],
+},
