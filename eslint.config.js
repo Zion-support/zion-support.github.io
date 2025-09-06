@@ -3,6 +3,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import globals from 'globals';
 
 export default [
   {
@@ -38,6 +39,7 @@ export default [
       "zion_academy/",
       "temp_backup/",
       "temp_broken_files/",
+      "temp_exclude/",
       "test_build/",
       "*.test.js",
       "*.test.ts",

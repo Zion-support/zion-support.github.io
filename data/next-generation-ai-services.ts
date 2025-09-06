@@ -36,17 +36,7 @@ export interface NextGenerationAIService {
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number
+  reviews: number;
 }
 
 export const nextGenerationAIServices: NextGenerationAIService[] = [
@@ -69,8 +59,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Supply chain optimization',
       'Predictive analytics',
       'Risk assessment and mitigation',
-      'Performance optimization',    ],
-
+      'Performance optimization'
     ],
 
     popular: true,
@@ -108,8 +97,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-12-01',
     customers: 150,
     rating: 4.9,
-    reviews: 89,  },
-
+    reviews: 89
   },
 
   // Quantum AI Computing Platform
@@ -131,8 +119,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum neural networks',
       'Quantum optimization algorithms',
       'Quantum chemistry simulations',
-      'Quantum financial modeling',    ],
-
+      'Quantum financial modeling'
     ],
 
     popular: true,
@@ -170,8 +157,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-11-15',
     customers: 75,
     rating: 4.8,
-    reviews: 45,  },
-
+    reviews: 45
   },
 
   // Neural Interface Development Platform
@@ -193,8 +179,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Neural data visualization',
       'API for custom applications',
       'Compliance with medical standards',
-      '24/7 neural interface support',    ],
-
+      '24/7 neural interface support'
     ],
 
     popular: true,
@@ -232,8 +217,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-10-01',
     customers: 120,
     rating: 4.7,
-    reviews: 67,  },
-
+    reviews: 67
   },
 
   // AI-Powered Space Exploration Platform
@@ -257,8 +241,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Mission optimization algorithms',
       'Multi-satellite coordination',
       'Earth observation analytics',
-      'Space weather monitoring',    ],
-
+      'Space weather monitoring'
     ],
 
     popular: true,
@@ -296,8 +279,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-09-15',
     customers: 45,
     rating: 4.9,
-    reviews: 28,  },
-
+    reviews: 28
   },
 
   // Biotech AI Drug Discovery Platform
@@ -319,8 +301,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Biomarker discovery',
       'Personalized medicine algorithms',
       'Drug interaction prediction',
-      'Regulatory compliance tools',    ],
-
+      'Regulatory compliance tools'
     ],
 
     popular: true,
@@ -358,8 +339,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-08-01',
     customers: 85,
     rating: 4.8,
-    reviews: 52,  },
-
+    reviews: 52
   },
 
   // Quantum Financial Trading Platform
@@ -381,8 +361,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Regulatory compliance tools',
       'Performance analytics dashboard',
       'API for broker integration',
-      '24/7 trading operations',    ],
-
+      '24/7 trading operations'
     ],
 
     popular: true,
@@ -420,8 +399,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     launchDate: '2024-07-15',
     customers: 95,
     rating: 4.7,
-    reviews: 58,  },
-
+    reviews: 58
   },
 
   // AI-Powered Metaverse Development Platform
@@ -445,8 +423,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'VR/AR integration',
       'Blockchain integration',
       'Performance optimization',
-      'Analytics and insights',    ],
-
+      'Analytics and insights'
     ],
 
     popular: true,
@@ -509,8 +486,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Fleet management',
       'Safety monitoring',
       'Regulatory compliance',
-      'Performance analytics',    ],
-
+      'Performance analytics'
     ],
 
     popular: true,
@@ -571,8 +547,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Quantum network monitoring',
       'API for enterprise integration',
       '24/7 quantum security operations',
-      'Unhackable communication channels',    ],
-
+      'Unhackable communication channels'
     ],
 
     popular: true,
@@ -635,8 +610,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
       'Performance analytics',
       'Predictive analytics',
       'Automation workflows',
-      'Compliance management',    ],
-
+      'Compliance management'
     ],
 
     popular: true,

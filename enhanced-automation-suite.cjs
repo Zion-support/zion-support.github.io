@@ -337,7 +337,7 @@ class EnhancedAutomationSuite {
       };
     }
   }
-;
+
   generateDetailedReport() {
     const totalDuration = Date.now() - this.startTime;
     const successfulTasks = Object.values(this.results).filter(
