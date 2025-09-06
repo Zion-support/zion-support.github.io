@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
 
 class ErrorBoundary extends React.Component {
@@ -176,6 +178,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 export default Layout;
 =======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Header from './Header';
@@ -253,4 +256,24 @@ export default function Layout({
     </>
   );
 }
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+  );
+};
+
+export default Layout;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

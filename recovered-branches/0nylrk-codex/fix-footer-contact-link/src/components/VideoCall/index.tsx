@@ -1,30 +1,16 @@
+import React from "react";
+export { VideoCallRoom } from "../video/VideoCallRoom";
 
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+// Stub implementation for any LiveKit exports that might be used
+export const VideoCall: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   return <div>{children}</div>;
 };
 
-export const LiveKitRoom: React.FC<{children?: React.ReactNode}> = ({children}) => {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React from 'react',;
-export { VideoCallRoom } from '../video/VideoCallRoom',;
-
-// Stub implementation for any LiveKit exports that might be used;
-export const VideoCall: React.FC<{children?: React && React.ReactNode}> = ({children}) => {;
+export const LiveKitRoom: React.FC<{ children?: React.ReactNode }> = ({
+  children,
+}) => {
   return <div>{children}</div>;
 };
 <<<<<<< HEAD

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/comprehensive-services.tsx
 =======
 <<<<<<< HEAD
@@ -5,6 +7,7 @@
 =======
 <<<<<<< HEAD
 >>>>>>> main:corrupted_backup/comprehensive-services.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
@@ -333,6 +336,8 @@ const "ComprehensiveServicesPage": React.FC = () => {
   )
 }
 export default ComprehensiveServicesPage
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/pages._archive_corrupted/comprehensive-services.tsx
 =======
 <<<<<<< HEAD
@@ -342,3 +347,4 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
 =======
 =======
 >>>>>>> main:corrupted_backup/comprehensive-services.tsx
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

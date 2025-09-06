@@ -7,6 +7,7 @@ interface LoadingSpinnerProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...', 
@@ -17,11 +18,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text,
   className = ''
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-54a3
+=======
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  className = '',
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    lg: 'w-12 h-12',
   };
 
   return (

@@ -20,7 +20,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'Digital Transformation', description: 'Complete digital transformation services', url: '/services/transformation' },
     { title: 'About Us', description: 'Learn more about Zion Tech Group', url: '/about' },
     { title: 'Contact', description: 'Get in touch with our team', url: '/contact' },
-    { title: 'Pricing', description: 'View our service packages and pricing', url: '/pricing' }
+    { title: 'Pricing', description: 'View our service packages and pricing', url: '/pricing' },
   ];
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     if (query.trim()) {
       const filtered = searchItems.filter(item =>
         item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase())
+        item.description.toLowerCase().includes(query.toLowerCase()),
       );
       setResults(filtered);
     } else {
@@ -71,7 +71,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
             ref={inputRef}
             type="text"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={e => setQuery(e.target.value)}
             placeholder="Search services, pages, or topics..."
             className="flex-1 outline-none text-lg"
           />

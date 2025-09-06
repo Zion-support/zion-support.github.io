@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 import React from 'react';
 import { render } from '@testing-library/react';
 
@@ -6,6 +10,7 @@ import { render } from '@testing-library/react';
 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
@@ -47,9 +52,9 @@ import App from './src/App';
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 describe('App', () => {
-  it('should render without crashing', () => {
-    // Simple test that just checks if the component can be imported
-    expect(true).toBe(true);
+  it('renders without crashing', () => {
+    render(<App />);
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 <<<<<<< HEAD
 });
@@ -100,4 +105,18 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 });
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { render } from '@testing-library/react';
+
+describe('App', () => {
+  it('should render without crashing', () => {
+    // Simple test that just checks if the component can be imported
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
 >>>>>>> main
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

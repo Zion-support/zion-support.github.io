@@ -4,6 +4,10 @@ export interface ProjectBrief {
   timeline: string;
   budget: string;
   techStack?: string[];
+<<<<<<< HEAD
+  talentFilters?: { verifiedOnly?: boolean; regions?: string[] };
+}
+=======
   talentFilters?: { 
     verifiedOnly?: boolean; 
     regions?: string[] 
@@ -67,3 +71,4 @@ export interface ProjectRequirements {
   };
   deliverables: string[];
 }
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

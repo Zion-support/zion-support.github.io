@@ -21,7 +21,7 @@ export interface TokenTransaction {
   id: string;
   user_id: string;
   amount: number;
-  type: 'issue' | 'redeem' | 'transfer';
+  type: "issue" | "redeem" | "transfer";
   reason: string;
   timestamp: number;
 
@@ -30,6 +30,15 @@ export interface TokenTransaction {
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
+<<<<<<< HEAD
+
+export function issueTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+): TokenTransaction {
+  const transaction: TokenTransaction = {
+=======
 <<<<<<< HEAD
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
@@ -42,27 +51,40 @@ let transactions: TokenTransaction[] = [];
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
-    type: 'issue',
+    type: "issue",
     reason,
-    timestamp: Date.now();
+    timestamp: Date.now(),
   };
+<<<<<<< HEAD
+
+=======
   
 <<<<<<< HEAD
 =======
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   transactions.push(transaction);
   return transaction;
 }
-export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
+
+export function redeemTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+): TokenTransaction {
   const transaction: TokenTransaction = {
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
+    type: "redeem",
+=======
 <<<<<<< HEAD
 =======
 
@@ -96,11 +118,16 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     type: 'redeem',
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     reason,
-    timestamp: Date.now();
+    timestamp: Date.now(),
   };
+<<<<<<< HEAD
+
+=======
   
 <<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   transactions.push(transaction);
   return transaction;
 =======
@@ -132,6 +159,14 @@ export interface TokenConfig {
   updatedAt: Date;
 }
 
+<<<<<<< HEAD
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>,
+): void {
+  const current = getConfig();
+  // Update the configuration
+  Object.assign(current, partial);
+=======
 export interface TokenBalance {
   address: string;
   balance: string;
@@ -234,6 +269,7 @@ export function set_config (
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 <<<<<<< HEAD
 

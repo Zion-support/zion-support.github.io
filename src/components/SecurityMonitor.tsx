@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 export const SecurityMonitor = () => {
   useEffect(() => {
     // Monitor for suspicious activities
-    const handleSecurityEvent = (event) => {
+    const handleSecurityEvent = event => {
       // Log security events
       console.log('Security event detected:', event);
-      
+
       // Send to security monitoring service
       if (process.env.NODE_ENV === 'production') {
         // Send to monitoring service
@@ -18,8 +18,8 @@ export const SecurityMonitor = () => {
             type: event.type,
             timestamp: new Date().toISOString(),
             userAgent: navigator.userAgent,
-            url: window.location.href
-          })
+            url: window.location.href,
+          }),
         });
       }
     };

@@ -1,4 +1,33 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-800 text-white py-8 mt-auto">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+import { FooterNewsletter } from '@/components/FooterNewsletter';
+import { 
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  ChevronUp,
+} from 'lucide-react';
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -55,11 +84,46 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+=======
+
+        <div className="border-t border-slate-700 mt-8 pt-8 flex justify-between items-center">
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
           <p className="text-gray-400">
             &copy; 2025 Zion Tech Group. All rights reserved.
           </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        <div className='mt-8 flex justify-end'>
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+          <button
+            type='button'
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+              });
+            }}
+            className='flex items-center space-x-1 text-foreground/80 hover:text-primary text-sm transition-colors cursor-pointer'
+            aria-label='Back to top'
+          >
+            <ChevronUp className='h-4 w-4' aria-hidden='true' />
+            <span>Back to Top</span>
+          </button>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
+>>>>>>> origin/fix-website-loading-errors-final
+=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
         </div>
       </div>
     </motion.footer>
