@@ -30,6 +30,9 @@ export default [
       '**/*.test.*',
       '**/*.spec.*',
       'backup-problematic-files/**',
+      'backup/**',
+      'cache/**',
+      'clean-build/**',
       'temp_conflicts/**',
       'temp_broken_files/**',
       'temp_backup/**',
@@ -40,7 +43,15 @@ export default [
       'ultimate-*.js',
       'ultimate-*.cjs',
       'tools/**',
-      'tests/**'
+      'tests/**',
+      '**/backup-problematic-files/**',
+      '**/backup/**',
+      '**/temp_*/**',
+      '**/zion-*/**',
+      '**/test-*/**',
+      '**/ultimate-*/**',
+      '**/tools/**',
+      '**/tests/**'
     ],
     languageOptions: {
       parser: typescriptParser,
