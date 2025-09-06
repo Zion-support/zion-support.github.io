@@ -24,8 +24,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       alt={alt}
       width={width}
       height={height}
-<<<<<<< HEAD
-=======
       className={className}
       priority={priority}
       quality={quality}
@@ -34,6 +32,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     />
   );
 };
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export default OptimizedImage;

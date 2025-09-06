@@ -1,12 +1,7 @@
 {
-  "name": "bolt.new.zion.app",
-  "version": "0.1.0",
+  "name": "ziontechgroup-site",
+  "version": "1.0.0",
   "private": true,
-  "type": "module",
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -35,5 +30,9 @@
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   }
 }

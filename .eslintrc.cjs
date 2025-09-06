@@ -1,14 +1,4 @@
 module.exports = {
-<<<<<<< HEAD
-  extends: [
-    "next/core-web-vitals"
-  ],
-  rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
-  }
-};
-=======
   extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -24,9 +14,9 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true,
-    dom: true
+    es6: true
   },
   globals: {
     KeyboardEvent: 'readonly',
->>>>>>> 205f16ce4ac3a8c2ac0b2e278708c4357550db22
+  }
+};

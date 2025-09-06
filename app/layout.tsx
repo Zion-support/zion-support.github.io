@@ -6,19 +6,19 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with our comprehensive suite of intelligent services.',
-  keywords: 'AI solutions, micro SaaS, IT services, blockchain, cybersecurity, cloud services',
+  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services. Enterprise-grade AI, micro SaaS, and IT solutions.',
+  keywords: 'AI solutions, micro SaaS, IT services, blockchain, cybersecurity, cloud services, business automation, digital transformation, software development, tech consulting',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with our comprehensive suite of intelligent services.',
+    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with our comprehensive suite of intelligent services.',
+    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
   },
 }
 
